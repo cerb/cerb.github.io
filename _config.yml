@@ -1,0 +1,66 @@
+# Site settings
+title: "Cerb"
+company: "Webgroup Media, LLC."
+copyright: 2002-2016
+email: support@webgroupmedia.com
+description: >
+  Cerb is a fast, flexible toolkit for web-based collaboration and workflow automation. It has continuously evolved for more than 14 years based on the feedback of thousands of organizations.
+url: "http://cerb.io"
+baseurl: ""
+logo: assets/cerb_logo.png
+facebook_username: cerbapp
+twitter_username: cerb_app
+github_username:  wgm
+timezone: America/Los_Angeles
+encoding: utf-8
+
+# Blog
+permalink: /blog/:year/:month/:day/:title/
+excerpt_separator: ""
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path/
+  integrations:
+    output: true
+    permalink: /integrations/:path/
+
+# Build settings
+markdown: kramdown
+kramdown:
+  parse_block_html: false
+gems:
+#  - jekyll-paginate
+  - jekyll-redirect-from
+
+# Pagination
+#paginate: 10
+#paginate_path: "/blog/page:num/"
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "docs"
+      jumbotron:
+        title: Documentation
+  -
+    scope:
+      path: ""
+      type: "integrations"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "posts"
+      jumbotron:
+        title: Blog
+        tagline: Stay up to date on the latest project news

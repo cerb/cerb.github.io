@@ -1,0 +1,192 @@
+/* Header */
+
+header {
+	h1, nav { display: inline-block; }
+}
+
+nav {
+
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	li { display: inline-block; }
+}
+
+.main-nav, .mobile-nav {
+	margin-top: 15px;
+	
+	ul {
+		display: inline-block;
+		float: right;
+	}
+
+	li {
+		margin-right: 10px;
+
+		a {
+			@include border-radius(5px);
+			color: #666;
+			font-weight: 900;
+			font-size: 14px;
+			padding: 0.5em 0.5em;
+			text-transform: uppercase;
+
+			&:hover {
+				background-color: #eee;
+			}
+		}
+
+		&.current {
+			a {
+				background-color: #666;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.mobile-nav {
+	margin-top: 0px;
+	padding-top: 10px;
+	text-align: center;
+	
+	ul {
+		float: none;
+	}
+	
+	li {
+		margin-right: 5px;
+		margin-bottom: 0.6em;
+	}
+}
+
+.contact-list,
+.social-media-list {
+	list-style: none;
+	margin-left: 0;
+	
+	a, a:link, a:visited {
+		text-decoration: underline;
+		font-weight: 800;
+	}
+}
+
+/**
+ * Page content
+ */
+
+.post-meta {
+	font-size: $small-font-size;
+	color: $grey-color;
+}
+
+.post-link {
+	display: block;
+	font-size: 24px;
+}
+
+/**
+ * Posts
+ */
+.post-header {
+	margin-bottom: $spacing-unit/3;
+}
+
+.post-title {
+	font-size: 42px;
+	letter-spacing: -1px;
+	line-height: 1;
+	
+	a {
+		color: #000;
+	}
+
+	@include media-query($on-laptop) {
+			font-size: 36px;
+	}
+}
+
+.post-content {
+	margin-bottom: $spacing-unit;
+
+	h1 {
+		margin-bottom: 5px;
+	}
+
+	h2 {
+		font-size: 32px;
+
+		@include media-query($on-laptop) {
+				font-size: 28px;
+		}
+	}
+
+	h3 {
+		font-size: 26px;
+
+		@include media-query($on-laptop) {
+				font-size: 22px;
+		}
+	}
+
+	h4 {
+		font-size: 20px;
+
+		@include media-query($on-laptop) {
+				font-size: 18px;
+		}
+	}
+}
+
+.show-on-mobiles {
+	display: none;
+}
+
+@media screen and (max-width: 568px) {
+	.show-on-mobiles {
+		display: block !important;
+	}
+	
+	a .show-on-mobiles {
+		display: inline !important;
+	}
+}
+
+@media (max-width: 768px) {
+	.main-nav ul {
+		text-align: right;
+	}
+}
+@media (max-width: 830px) {
+	.main-nav {
+		.show-on-mobiles { display: inline; }
+		.hide-on-mobiles { display: none; }
+	}
+}
+
+article {
+	&.post {
+		margin-top: 10px;
+	}
+}
+
+/* Helper class taken from Bootstrap.
+	 Hides an element to all devices except screen readers.
+*/
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+p.rss-subscribe {
+	float: right;
+	font-size: 16px;
+}

@@ -1,0 +1,31 @@
+{% assign docs = site.data.docs | map: 'docs' | join: ',' | split: ',' %}
+
+{% for document in docs %}
+	{% assign document_url = document | prepend:"/docs/" | append:"/" %}
+	{% if document_url == page.url %}
+		<div class="section-nav">
+			<div class="left">
+					{% if forloop.first %}
+						<span class="prev disabled">Prev</span>
+					{% else %}
+						{% assign previous = forloop.index0 | minus: 1 %}
+						{% assign prev_url = docs[previous] | prepend:"/docs/" | append:"/" %}
+						{% assign prev_page = site.docs | where:"url",prev_url | first %}
+						<a href="{{ prev_url }}" class="prev">&lt; Back</a>
+					{% endif %}
+			</div>
+			<div class="right align-right">
+					{% if forloop.last %}
+						<span class="next disabled">Next</span>
+					{% else %}
+						{% assign next = forloop.index0 | plus: 1 %}
+						{% assign next_url = docs[next] | prepend:"/docs/" | append:"/" %}
+						{% assign next_page = site.docs | where:"url",next_url | first %}
+						<a href="{{ next_url }}" class="next">Next: {{next_page.title}} &gt;</a>
+					{% endif %}
+			</div>
+		</div>
+		<div class="clear"></div>
+		{% break %}
+	{% endif %}
+{% endfor %}

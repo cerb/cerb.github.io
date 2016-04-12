@@ -1,0 +1,379 @@
+---
+layout: page
+title: "Cerb Cloud"
+permalink: /pricing/cloud
+jumbotron:
+  title: Cerb Cloud Subscriptions
+  tagline: Deploy a reliable, fine-tuned, fully-managed Cerb environment in the Cloud
+---
+
+<table class="cerb-pricing-matrix">
+	<thead>
+		<tr>
+			<th></th>
+			<th>Startup</th>
+			<th>Professional</th>
+			<th>Enterprise</th>
+		</tr>
+	</thead>
+	
+	<tbody class="matrix">
+		<tr>
+			<td>Monthly base price:</td>
+			<td>$60</td>
+			<td>$200</td>
+			<td>$600</td>
+		</tr>
+
+		<tr>
+			<td>Total workers:</td>
+			<td>unlimited</td>
+			<td>unlimited</td>
+			<td>unlimited</td>
+		</tr>
+	
+		<tr>
+			<td>Seats [<a href="#seats">?</a>]:</td>
+			<td>3</td>
+			<td>5</td>
+			<td>10</td>
+		</tr>
+
+		<tr>
+			<td>Extra seats [<a href="#volume-discount">?</a>]:</td>
+			<td>+$20</td>
+			<td>+$40</td>
+			<td>+$60</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td><a href="/try">free trial</a></td>
+			<td><a href="/try">free trial</a></td>
+			<td><a href="/try">free trial</a></td>
+		</tr>
+	</tbody>
+
+	<tbody class="section">
+		<tr>
+			<td colspan="4">Infrastructure</td>
+		</tr>
+	</tbody>
+
+	<tbody class="matrix">
+		<tr>
+			<td>SSL Encryption:</td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+	
+		<tr>
+			<td>High-Availability:</td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+	
+		<tr>
+			<td>Auto-Scaling:</td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+
+		<tr>
+			<td>Resource Cache:</td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+	
+		<tr>
+			<td>Custom Domain [<a href="#custom-domains">?</a>]:</td>
+			<td><span class="no"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+	</tbody>
+	
+	<tbody class="section">
+		<tr>
+			<td colspan="4">Database</td>
+		</tr>
+	</tbody>
+
+	<tbody class="matrix">
+		<tr>
+			<td>Point-in-Time Backups:</td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+	
+		<tr>
+			<td>Cluster Failover:</td>
+			<td><span class="no"></span></td>
+			<td><span class="no"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+	</tbody>
+
+	<tbody class="section">
+		<tr>
+			<td colspan="4">Mail</td>
+		</tr>
+	</tbody>
+	
+	<tbody class="matrix">
+		<tr>
+			<td>External Mailboxes:</td>
+			<td>1</td>
+			<td>5</td>
+			<td>10</td>
+		</tr>
+	
+		<tr>
+			<td>Mailbox Scheduler:</td>
+			<td>15 mins</td>
+			<td>5 mins</td>
+			<td>5 mins</td>
+		</tr>
+	
+		<tr>
+			<td>Sender Domains:</td>
+			<td>1</td>
+			<td>5</td>
+			<td>25</td>
+		</tr>
+	
+		<tr>
+			<td>DKIM/SPF:</td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>	
+
+		<tr>
+			<td>Instant MX Delivery [<a href="#instant-mx">?</a>]:</td>
+			<td><span class="no"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+	</tbody>
+
+	<tbody class="section">
+		<tr>
+			<td colspan="4">Portals</td>
+		</tr>
+	</tbody>
+	
+	<tbody class="matrix">
+		<tr>
+			<td>Portals/CNAMEs:</td>
+			<td>1</td>
+			<td>5</td>
+			<td>10</td>
+		</tr>
+	</tbody>
+	
+	<tbody class="section">
+		<tr>
+			<td colspan="4">Integration</td>
+		</tr>
+	</tbody>
+
+	<tbody class="matrix">
+		<tr>
+			<td>VA Behavior Scheduler:</td>
+			<td>15 mins</td>
+			<td>5 mins</td>
+			<td>1 min</td>
+		</tr>
+	
+		<tr>
+			<td>Plugin Scheduler:</td>
+			<td>15 mins</td>
+			<td>5 mins</td>
+			<td>1 min</td>
+		</tr>
+	
+		<tr>
+			<td>Plugin Library:</td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>	
+	
+		<tr>
+			<td>Webhooks:</td>
+			<td><span class="no"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+	
+		<tr>
+			<td>API:</td>
+			<td><span class="no"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+	
+		<tr>
+			<td>Custom Plugins [<a href="#custom-plugins">?</a>]:</td>
+			<td><span class="no"></span></td>
+			<td><span class="no"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+	</tbody>
+	
+	<tbody class="section">
+		<tr>
+			<td colspan="4">Support/SLA</td>
+		</tr>
+	</tbody>
+	
+	<tbody class="matrix">
+		<tr>
+			<td>Weekdays:</td>
+			<td>next day</td>
+			<td>same day</td>
+			<td>same day</td>
+		</tr>
+	
+		<tr>
+			<td>Weekends:</td>
+			<td><span class="no"></span></td>
+			<td>next day</td>
+			<td>same day</td>
+		</tr>
+	
+		<tr>
+			<td>Holidays:</td>
+			<td><span class="no"></span></td>
+			<td>next day</td>
+			<td>next day</td>
+		</tr>
+	
+		<tr>
+			<td>Phone Support:</td>
+			<td><span class="no"></span></td>
+			<td><span class="no"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+
+		<tr>
+			<td>Developer Live Chat:</td>
+			<td><span class="no"></span></td>
+			<td><span class="no"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+	
+		<tr>
+			<td>Urgent Escalations [<a href="#urgent-escalations">?</a>]:</td>
+			<td>$250/incident</td>
+			<td>$250/incident</td>
+			<td>1 per month</td>
+		</tr>
+	
+		<tr>
+			<td>Technical Services:</td>
+			<td>$125/hour</td>
+			<td>$100/hour</td>
+			<td>$85/hour</td>
+		</tr>
+	</tbody>
+	
+</table>
+
+<br>
+
+# Frequently asked questions:
+
+<div id="seats"></div>
+
+## What are seats?
+
+Seats determine the maximum number of workers who can use Cerb at the same time.
+
+For example, a team of 30 workers who are evenly split into three, non-overlapping 8-hour shifts (morning, day, night) would only require 10 seats. That's the highest number of workers who would ever be logged in at the same time.
+
+You aren't paying per worker account, so there isn't a penalty for inviting everyone to participate: full-time staff, part-time contributors, busy executives, interns, temps, contractors, partners, and volunteers.
+
+<div id="custom-domains"></div>
+
+## Can I use my own domain name, rather than *.cerb.me?
+
+Yes, with a _Professional_ or _Enterprise_ subscription.
+
+We'll always use an `*.cerb.me` domain to identify your Cerb Cloud instance internally, but you can use a DNS _CNAME_ record to access your site with a custom domain like `support.example.com`. You can also use a custom domain for each community portal you deploy.
+
+Keep in mind that you'll need to provide an SSL certificate for each custom domain you use. We provide wildcard SSL certificates for `*.cerb.me` and the generic portal domains like `*.official.support` and `*.user.community`.
+
+<div id="custom-plugins"></div>
+
+## Can I install custom plugins in Cerb Cloud?
+
+Every Cerb Cloud instance can use any of the plugins in the official Plugin Library. These plugins have been developed or audited by our development team and they are guaranteed to be safe.
+
+_Enterprise_ subscriptions have the ability to install custom third-party plugins, but these must be reviewed and approved by our development team prior to use. You'll be asked to create a [GitHub](https://github.com/) repository for the plugin if you haven't already. If the repository is private, then you will need to grant access to the `wgm` account.
+
+<div id="annual-discount"></div>
+
+## Is there a discount for paying annually?
+
+Yes! We offer a 10% discount for subscriptions that are billed annually rather than monthly.
+
+This reflects the fact that we can better forecast our costs and lock in longer term discounted rates (longer leases, reservations, bulk purchasing). We pass along the cost reduction.
+
+Contact us to switch your subscription to annual billing and we'll add the discount automatically.
+
+<div id="volume-discount"></div>
+
+## Do you provide a volume discount for Cerb Cloud subscriptions?
+
+Yes! Volume discounts are available for _Professional_ and _Enterprise_ subscriptions with __more than 25 seats__.
+
+<div class="grid">
+<div class="unit half" align="center">
+{% include tables/volume_discount.html caption="Professional Volume Discount" base_cost=40.00 %}
+</div>
+<div class="unit half" align="center">
+{% include tables/volume_discount.html caption="Enterprise Volume Discount" base_cost=60.00 %}
+</div>
+</div>
+
+If you have multiple Cerb Cloud subscriptions on your account, the sum of all seats of the same subscription type determines your volume discount. This is particularly beneficial for large companies with many subsidiaries using independent instances of Cerb, and outsourced support companies who use distinct Cerb environments for each client to provide their services.
+
+<div id="instant-mx"></div>
+
+## What is Instant MX Delivery?
+
+In most Cerb environments, a list of POP3/IMAP mailboxes is checked for new messages every few minutes. This works well enough for a couple mailboxes, but it can be very inefficient at scale.
+
+Rather than checking mailboxes for new mail, Instant MX Delivery allows you to redirect a copy of your incoming email to a special address (like `incoming@example.cerb.email`) that delivers directly into your Cerb Cloud instance. This is the fastest way to receive new email in Cerb Cloud.
+
+_"MX"_ refers to the _mail exchanger_ records in DNS, which specify where email is to be delivered for a given domain. Cerb Cloud doesn't require you to modify your own MX records. For instance, you can still deliver your company email to Google Apps like usual, while redirecting certain messages to your Cerb Cloud account.
+
+<div id="urgent-escalations"></div>
+
+## What are Urgent Escalations?
+
+An __urgent escalation__ will move one incident of your choice to the front of our priority support queue and summon a highly experienced member of our development team at any time (early hours, overnight, weekends, holidays).
+
+You will receive a response within one hour. Urgent escalations include one hour of hands-on assistance at no extra cost. If you approve any additional required time, the standard hourly rate for technical services will apply.
+
+Urgent escalations are not required for Cerb Cloud infrastructure issues, as that is covered by standard support for all subscriptions. Instead, they may be used when workflow is severely impacted by other issues like accidental deletion of data, configuration issues, problems with external mail providers, etc. For standalone licenses, an urgent escalation may be used to call in help for issues like server failures, database corruption, scaling, etc.
+
+<div id="enterprise-seats"></div>
+
+## Why does the Enterprise subscription require at least 10 seats?
+
+That's the point where it becomes cost effective for us to provide the extra services.
+
+The _Enterprise_ subscriptions can scale up to a pool of resources that are entirely dedicated to a single instance of Cerb. The database cluster for instant failover requires at least twice the resources of a _Startup_ or _Professional_ subscription (and more if there are extra read replicas for scaling).
+
+Similarly, the additional _Enterprise_ support commitments require highly experienced developers on call.
+
+Consider these two extremes: 1 instance with 50 seats, and 50 instances with 1 seat each. Both result in roughly the same amount of revenue on 50 seats (the former qualifies for a volume discount), but the latter potentially requires 50 times the amount of resources and support. The quality of our support and service would suffer.
+

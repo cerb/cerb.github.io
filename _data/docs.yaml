@@ -1,0 +1,58 @@
+- title: Introduction
+  docs:
+  - home
+  - philosophy
+
+- title: Getting Started
+  docs:
+  - installation
+  - cerb-cloud
+
+- title: Using Cerb
+  docs:
+  - ui
+  - workspaces
+  - cards
+  - profiles
+  - notifications
+  - custom_fields
+  - virtual_attendants
+  - snippets
+  # - mobile
+  # - plugins
+
+- title: Configuration
+  docs:
+  # - upgrading
+  # - security
+
+- title: Administration
+  docs:
+  # - upgrading
+  # - security
+
+- title: Developers
+  docs:
+  - writing-plugins
+  # - plugins
+  # - api
+    # - getting_started
+    # - authentication
+    # - requests
+    # - responses
+    # - modules
+
+- title: Plugins
+  docs:
+  # - api
+  # - twitter
+  # - webhooks
+    # - json_body
+    # - ip_restrict
+    # - cors
+
+- title: Meta
+  docs:
+  #- license
+  #- privacy
+  #- history

@@ -1,0 +1,22 @@
+---
+layout: default
+title: "Documentation"
+permalink: /docs/
+---
+
+	<section class="docs">
+		<div class="grid">
+
+			<div class="unit three-fourths">
+				<article>
+					{{ content }}
+					{% include section_nav.html %}
+				</article>
+			</div>
+
+			{% include docs_contents.html %}
+
+			<div class="clear"></div>
+
+		</div>
+	</section>

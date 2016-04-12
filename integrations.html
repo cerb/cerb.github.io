@@ -1,0 +1,22 @@
+---
+layout: page
+title: "Integrations"
+permalink: /integrations/
+redirect_from: /cookbook/
+jumbotron:
+  title: Integrations
+  tagline: Cerb integrates with many popular apps and services
+---
+
+<div class="integrations">
+
+<div class="grid no-gutters">
+	{% for integration in site.integrations %}
+		<div class="cerb-integration unit one-third">
+			<a href="{{ integration.url }}">{{ integration.title }}</a>
+			<div>{{ integration.integrate.what }}</div>
+		</div>
+	{% endfor %}
+</div>
+
+</div>

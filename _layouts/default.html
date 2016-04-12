@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	{% include head.html %}
+
+	<body>
+
+		{% include header.html %}
+		
+		{% if page.jumbotron and page.jumbotron.title %}
+		<header class="jumbotron {{page.jumbotron.style}}">
+			<div class="wrapper">
+				<h1>{{ page.jumbotron.title }}</h1>
+				
+				{% if page.jumbotron.tagline %}
+					<p>{{page.jumbotron.tagline}}</p>
+				{% endif %}
+			</div>
+		</header>
+		{% endif %}
+		
+		<div class="page-content">
+			<div class="wrapper">
+				{{ content }}
+			</div>
+		</div>
+
+		{% include footer.html %}
+
+	</body>
+
+</html>

@@ -1,0 +1,64 @@
+<footer>
+
+	<div class="wrapper">
+		
+		<div class="grid">
+			<div class="unit two-fifths">
+				<b>Contact</b>
+				
+				<ul class="contact-list">
+					<li>Webgroup Media, LLC.<br>PO BOX 1206<br>Brea, CA 92822 USA</li>
+					<li><br></li>
+					<li><a href="tel:+1-714-671-9090">+1.714.671.9090</a></li>
+					<li><br></li>
+					<li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+				</ul>
+			</div>
+
+			<div class="unit one-fifth">
+				<ul class="social-media-list">
+					<b>Follow</b>
+					
+					{% if site.github_username %}
+					<li>
+						{% include icons/icon-github.html username=site.github_username %}
+					</li>
+					{% endif %}
+
+					{% if site.facebook_username %}
+					<li>
+						{% include icons/icon-facebook.html username=site.facebook_username %}
+					</li>
+					{% endif %}
+
+					{% if site.twitter_username %}
+					<li>
+						{% include icons/icon-twitter.html username=site.twitter_username %}
+					</li>
+					{% endif %}
+					
+					<li>
+						{% include icons/icon-linkedin.html username="Cerb" %}
+					</li>
+				</ul>
+			</div>
+
+			<div class="unit two-fifths">
+				<b>About</b>
+				<p>
+					We're a commercial open source company that was founded in 2001 to build web-based software. 
+					We're lean, profitable, and organically bootstrapped. We share 100% of our source code due 
+					to a fundamental belief that bits and bytes have less value than experience and mutually advantageous, 
+					long-term relationships.
+				</p>
+			</div>
+			
+			<div class="unit whole">
+				Cerb&trade;, Devblocks&trade; &copy; Copyright {{ site.copyright }} by {{ site.company }}
+			</div>
+
+		</div>
+		
+	</div>
+
+</footer>
