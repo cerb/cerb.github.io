@@ -15,8 +15,8 @@
   - cards
   - profiles
   - notifications
-  - custom_fields
-  - virtual_attendants
+  - custom-fields
+  - virtual-attendants
   - snippets
   # - mobile
   # - plugins
