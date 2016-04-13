@@ -9,7 +9,7 @@
 	{% assign cost_block = 0.00 %}
 	{% assign cost_seat_base = include.base_cost %}
 	<tbody>
-	{% for n in (0...7) %}
+	{% for n in (0...11) %}
 		{% assign from = n | times:25 | plus:1 %}
 		{% assign to = from | plus:24 %}
 		{% assign discount = n | times:0.075 %}
