@@ -12,7 +12,7 @@ jumbotron:
 		<tr>
 			<th></th>
 			<th>Startup</th>
-			<th>Professional</th>
+			<th>Pro</th>
 			<th>Enterprise</th>
 		</tr>
 	</thead>
@@ -33,7 +33,7 @@ jumbotron:
 		</tr>
 	
 		<tr>
-			<td>Seats [<a href="#seats">?</a>]:</td>
+			<td>Included Seats [<a href="#seats">?</a>]:</td>
 			<td>3</td>
 			<td>5</td>
 			<td>10</td>
@@ -304,7 +304,7 @@ You aren't paying per worker account, so there isn't a penalty for inviting ever
 
 ## Can I use my own domain name, rather than *.cerb.me?
 
-Yes, with a _Professional_ or _Enterprise_ subscription.
+Yes, with a _Pro_ or _Enterprise_ subscription.
 
 We'll always use an `*.cerb.me` domain to identify your Cerb Cloud instance internally, but you can use a DNS _CNAME_ record to access your site with a custom domain like `support.example.com`. You can also use a custom domain for each community portal you deploy.
 
@@ -332,11 +332,11 @@ Contact us to switch your subscription to annual billing and we'll add the disco
 
 ## Do you provide a volume discount for Cerb Cloud subscriptions?
 
-Yes! Volume discounts are available for _Professional_ and _Enterprise_ subscriptions with __more than 25 seats__.
+Yes! Volume discounts are available for _Pro_ and _Enterprise_ subscriptions with __more than 25 seats__.
 
 <div class="grid">
 <div class="unit half" align="center">
-{% include tables/volume_discount.html caption="Professional Volume Discount" base_cost=40.00 %}
+{% include tables/volume_discount.html caption="Pro Volume Discount" base_cost=40.00 %}
 </div>
 <div class="unit half" align="center">
 {% include tables/volume_discount.html caption="Enterprise Volume Discount" base_cost=60.00 %}
@@ -371,7 +371,7 @@ Urgent escalations are not required for Cerb Cloud infrastructure issues, as tha
 
 That's the point where it becomes cost effective for us to provide the extra services.
 
-The _Enterprise_ subscriptions can scale up to a pool of resources that are entirely dedicated to a single instance of Cerb. The database cluster for instant failover requires at least twice the resources of a _Startup_ or _Professional_ subscription (and more if there are extra read replicas for scaling).
+The _Enterprise_ subscriptions can scale up to a pool of resources that are entirely dedicated to a single instance of Cerb. The database cluster for instant failover requires at least twice the resources of a _Startup_ or _Pro_ subscription (and more if there are extra read replicas for scaling).
 
 Similarly, the additional _Enterprise_ support commitments require highly experienced developers on call.
 
