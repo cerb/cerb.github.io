@@ -10,6 +10,22 @@ sup {
 	}
 }
 
+div.cerb-screenshot {
+	position:relative;
+	margin-bottom: 10px;
+	
+	img {
+		border:1px solid rgb(220,220,220);
+		@include border-radius(5px);
+		
+		&.cerb-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+
 header {
 	&.wip {
 		padding: 10px;
@@ -128,23 +144,6 @@ div.page-content {
 
 .docs {
 	.content { padding: 0; }
-	
-	div.cerb-screenshot {
-		position:relative;
-		margin-bottom: 10px;
-		
-		img {
-			border:1px solid rgb(220,220,220);
-			@include border-radius(5px);
-			
-			&.cerb-overlay {
-				position: absolute;
-				top: 0;
-				left: 0;
-			}
-		}
-	}
-	
 	
 	aside {
 		//padding: 10px;

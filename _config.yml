@@ -34,6 +34,7 @@ kramdown:
 gems:
 #  - jekyll-paginate
   - jekyll-redirect-from
+  - jekyll-gist
 
 # Pagination
 #paginate: 10
