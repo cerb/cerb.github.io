@@ -10,6 +10,9 @@
 	
 		<label for="subdomain">Preferred URL:</label>
 		<span class="dim">https://</span><input type="text" class="form-inline" name="subdomain" placeholder="example" maxlength="16" size="20" autocomplete="off" spellcheck="false"><span class="dim">.cerb.me</span>
+		
+		<div class="g-recaptcha" data-sitekey="6LeOPh0TAAAAANiEBFZLURt43IkCTUMOPUSMoxL9"></div>
+		
 		<div>
 			<input type="button" class="submit" value="Confirm">
 			<div class="status"></div>
@@ -24,6 +27,37 @@ $(function() {
 	$frm.find('input.submit').click(function() {
 		// [TODO] Spinner
 		
+		// Captcha
+		$frm.find('textarea[name=g-recaptcha-response]').val(grecaptcha.getResponse());
+		
+		$.ajax({
+			method: 'POST',
+			url: 'https://cerb.official.support/forms/cloud/signup',
+			crossDomain: true,
+			dataType: 'json',
+			data: $frm.serialize(),
+			success: function(res) {
+				if(res && res.error) {
+					grecaptcha.reset();
+					
+					var $warn = $('<div class="warning"/>').text(res.error);
+					$frm.find('div.status').html($warn);
+					return;
+				}
+				
+				if(res && res.success) {
+					var $success = $('<div class="success"/>').text(res.success);
+					$frm.find('div.status').html($success);
+					$frm.find('input.submit').hide();
+				}
+			},
+			error: function(e) {
+				grecaptcha.reset();
+				
+				var $warn = $('<div class="error"/>').text("An unexpected error occurred. Please try again later.");
+				$frm.find('div.status').html($warn);
+				return;
+			}
 		})
 	});
 });
