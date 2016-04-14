@@ -69,7 +69,7 @@ jumbotron:
 
 # Log in to your server
 
-The following general instructions assume that you have console access to a Linux-based server that meets the requirements above.  You should already have a webserver, database, and PHP installed before proceeding.
+The following general instructions assume that you have console access to a Linux-based server that meets the above requirements.  You should already have a webserver, database, and PHP installed before proceeding.
 
 # Download the source code from GitHub
 
@@ -89,11 +89,21 @@ When deploying Cerb on a production server you should use **Git** to manage the 
 
 You won't need to download the entire project again after your initial installation. You also won't have to hassle with copying your `framework.config.php` configuration file or storage directory when upgrading, or repeating any of your custom modifications to the source code.
 
-You can download Cerb using Git with a single command:
+You can download Cerb into a specific directory with a single command:
 
 {% highlight bash %}
 $ git clone git://github.com/wgm/cerb.git cerb
 {% endhighlight %}
+
+You would access Cerb at a URL with a base path like `https://example.com/cerb`.  You can change the last argument above to whatever path you want: `support`, `helpdesk`, etc.
+
+To download Cerb into the root of your domain instead, use:
+
+{% highlight bash %}
+$ git clone git://github.com/wgm/cerb.git .
+{% endhighlight %}
+
+This results in a URL without a base path, like `https://support.example.com/`
 
 # Set permissions
 
@@ -148,6 +158,6 @@ To start the installer, open your browser to the location where you downloaded C
 
 <div class="cerb-box warning">
 	<p>
-		After the installer finishes running, be sure to remove the <b>/install</b> directory.
+		After the installer is complete, be sure to remove the <b>/install</b> directory.
 	</p>
 </div>
