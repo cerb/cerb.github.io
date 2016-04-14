@@ -1,13 +1,13 @@
 ---
-layout: page
-title: Slack
+title: Create a simple Cerb bot using Slack slash commands
 permalink: /integrations/slack/slash-commands
-jumbotron:
-  title: Cerb + Slack
-  tagline: Integrate with Slack messaging for teams
+excerpt: |
+  Slack makes it very easy to interact with third-party apps and services using their _slash commands_ feature. To demonstrate this functionality, we'll add a new chat command named **/cerb** and instruct Slack to send those messages to a webhook in Cerb where we'll process them in real-time using a Virtual Attendant behavior...
 ---
 
-# Create a simple Cerb bot using Slack Slash Commands
+# {{ page.title }}
+
+## Introduction
 
 Slack makes it very easy to interact with third-party apps and services using their _slash commands_ feature.
 
@@ -127,10 +127,11 @@ Your friendly new bot doesn't do much yet, but you have a great starting point w
 
 You could modify the behavior we created to do anything that Virtual Attendants are capable of (which is a lot): add events to calendars, create reminders, add tasks, report about Cerb metrics, trigger webhooks in other services, post to social media, etc.
 
-You could create a custom fieldset on workers to store their Slack user name, and the Virtual Attendant can use that field to look up their worker record when they send messages.  The bot can then personalize its actions to use their calendar, their tasks, and so on.
+You could create a custom fieldset on workers to store their Slack user name, and the Virtual Attendant can use that field to look up a message sender's worker record.  The bot can then personalize its actions to use their calendar, their tasks, and so on.
 
-You could use our [Wit.ai](/integrations/wit-ai) integration examples to support natural language in your Slack bot.  Wit.ai converts freeform text into _"intents"_.  For instance, instead of only supporting the _"hi"_ command, your bot could learn the various ways people _intend_ to **say_hello**: _hi, hello, what's up?, how are you?, hola, allo, yo, hey, etc_.
+You could use our [Wit.ai](/integrations/wit-ai) integration examples to support natural language in your Slack bot.  Wit.ai converts freeform text into _"intents"_.  For instance, instead of only supporting the _"hi"_ command, your bot could learn the various ways people _intend_ to **say\_hello**: _hi, hello, what's up?, how are you?, hola, allo, yo, hey, etc_.
 
 ## References
+
 [^webhook]: <https://en.wikipedia.org/wiki/Webhook>
 [^http-post]: <https://en.wikipedia.org/wiki/POST_(HTTP)>

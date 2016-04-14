@@ -65,3 +65,35 @@ defaults:
       jumbotron:
         title: Blog
         tagline: Stay up to date on the latest project news
+  -
+    scope:
+      path: "recipes/aws-lambda"
+    values:
+      layout: "integration"
+      jumbotron:
+        title: Cerb + AWS Lambda
+        tagline: Integrate with Lambda functions in Amazon Web Services
+  -
+    scope:
+      path: "recipes/recaptcha"
+    values:
+      layout: "integration"
+      jumbotron:
+        title: Cerb + reCAPTCHA
+        tagline: Integrate with reCAPTCHA to combat abuse and spam in forms
+  -
+    scope:
+      path: "recipes/slack"
+    values:
+      layout: "integration"
+      jumbotron:
+        title: Cerb + Slack
+        tagline: Integrate with Slack messaging for teams
+  -
+    scope:
+      path: "recipes/webhooks"
+    values:
+      layout: "integration"
+      jumbotron:
+        title: Cerb + Webhooks
+        tagline: Integrate with arbitrary webhook notifications

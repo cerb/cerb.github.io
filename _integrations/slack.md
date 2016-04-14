@@ -5,6 +5,9 @@ integrate:
 jumbotron:
   title: Cerb + Slack
   tagline: Integrate with Slack messaging for teams
+app: slack
+recipes:
+  - slash-commands
 ---
 
-### [Create a simple Cerb bot using Slack Slash Commands](/integrations/slack/slash-commands)
+{% include integration_recipes.md app=page.app recipes=page.recipes %}
