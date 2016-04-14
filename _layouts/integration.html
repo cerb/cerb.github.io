@@ -1,0 +1,29 @@
+---
+layout: default
+title: "Integrations"
+permalink: /integrations/
+---
+
+	<section class="integration">
+		<div class="grid">
+
+			<div class="unit four-fifths">
+				<article>
+					{{ content }}
+				</article>
+			</div>
+
+			<div class="unit one-fifth">
+				<aside>
+					<ul>
+					{% for integration in site.integrations %}
+					<li {% if page.url contains integration.url %}class="current"{% endif %}><a href="{{ integration.url }}">{{ integration.title }}</a></li>
+					{% endfor %}
+					</ul>
+				</aside>
+			</div>
+
+			<div class="clear"></div>
+
+		</div>
+	</section>

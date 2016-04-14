@@ -55,7 +55,7 @@ defaults:
       path: ""
       type: "integrations"
     values:
-      layout: "page"
+      layout: "integration"
   -
     scope:
       path: ""

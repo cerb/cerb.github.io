@@ -204,6 +204,39 @@ div.page-content {
 	}
 }
 
+section.integration {
+	article {
+		h1 {
+			line-height: 1.2em;
+			
+			a {
+				color: #000;
+			}
+		}
+	}
+	
+	aside {
+		ul {
+			list-style: none;
+			padding: 0;
+			margin-left: 0px;
+			
+			li {
+				font-size: 14px;
+				
+				a {
+					color: #888;
+				}
+				
+				&.current a {
+					color: #F40;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
 div.pricing {
 	h1 {
 		a {
