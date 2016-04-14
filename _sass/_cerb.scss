@@ -1,3 +1,7 @@
+h1 {
+	line-height: 1.2em;
+}
+
 sup {
 	margin-left: 2px;
 	
@@ -47,7 +51,6 @@ header {
 		&.jumbotron-medium {
 			h1 {
 				font-size: 24px;
-				line-height: 1.2em;
 				margin: 0px 0px 0px 0px;
 				padding: 0;
 			}
@@ -59,7 +62,6 @@ header {
 	
 		h1 {
 			font-size: 36px;
-			line-height: 1.2em;
 			margin: 0px 0px 0px 0px;
 			padding: 0;
 		}
@@ -207,8 +209,6 @@ div.page-content {
 section.integration {
 	article {
 		h1 {
-			line-height: 1.2em;
-			
 			a {
 				color: #000;
 			}
@@ -507,5 +507,51 @@ form.cerb-form {
 	input[type="button"]:hover
 	{
 		background: lighten(rgb(110,160,50), 5%);
+	}
+}
+
+div.cerb-box {
+	padding: 10px 20px;
+	margin: 10px 0px;
+	@include border-radius(5px);
+	
+	p {
+		margin: 0;
+		padding: 0;
+	}
+	
+	&.note {
+		color: rgb(151,99,32);
+		background-color:rgb(252,240,187);
+	
+		p {
+			&:before {
+				content: 'Note: ';
+				font-weight: bold;
+				font-size: 120%;
+			}
+		}
+	
+		a {
+			color: #e08600;
+		}
+	}
+	
+	&.warning {
+		color: #ec3e53;
+		background-color: #fcd6d9;
+	
+		p {
+			&:before {
+				content: 'Warning: ';
+				font-weight: bold;
+				font-size: 120%;
+			}
+		}
+	
+		a {
+			color: #ec3e53;
+			text-decoration: underline;
+		}
 	}
 }

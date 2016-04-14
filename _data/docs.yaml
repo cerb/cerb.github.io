@@ -6,7 +6,6 @@
 - title: Getting Started
   docs:
   - installation
-  - cerb-cloud
 
 - title: Using Cerb
   docs:
@@ -28,8 +27,9 @@
 
 - title: Administration
   docs:
-  # - upgrading
   # - security
+  # - upgrading
+  # - scaling
 
 - title: Developers
   docs:
