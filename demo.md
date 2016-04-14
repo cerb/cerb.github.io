@@ -40,4 +40,4 @@ If you switch to a Cerb Cloud subscription, you can even use these email address
 
 ## How many workers can I invite to a Cerb Cloud evaluation?
 
-All Cerb Cloud evaluations start in the _Professional_ tier. This provides unlimited worker accounts with __(5) five__ concurrent workers (_seats_). Contact us if you need to test with more seats, we'd be happy to raise the limit.
+All Cerb Cloud evaluations start in the _Pro_ tier. This provides unlimited worker accounts with __five__ seats (concurrent workers). Contact us if you need to test with more seats and we can raise the limit.
