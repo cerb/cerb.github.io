@@ -2,28 +2,27 @@
 title: Privacy
 layout: page
 jumbotron:
-  title: Privacy
+  title: Privacy Policy
+  tagline: Our commitment to protecting your privacy and data
 ---
 
-# Privacy Statement and Disclosure
+__Webgroup Media, LLC (WGM)__ is a commercial open source company that has been leading and supporting the community development of Cerb since its inception in January 2002. In connection with this business, we operate the [cerb.io](http://cerb.io) project website, as well as Cerb Cloud, a subscription-based "software as a service" offering on the cerb.me, cerb.cloud, and cerb.email domains.
 
-__Webgroup Media LLC (WGM)__ is a commercial open source company that has been leading and supporting the community development of Cerb since January 2002. In connection with this business, we operate the [cerberusweb.com](http://cerberusweb.com) project website, as well as an On-Demand ("software as a service") network of applications hosted by subscription as subdomains of the cerb.me domain.
-
-It is WGM's policy to respect your privacy regarding any information we may collect while operating our websites and services. We do not sell any personally identifiable information or data stored by On-Demand services to third-parties. We do not directly share your information with third-parties without explicit permission except to comply with the law or to provide necessary infrastructure in connection with the services you request; however, there is some passive risk of exposure to third-party access inherent in web-based services that is outlined in detail below. We do our best to mitigate and minimize these risks on your behalf.
+It is WGM's policy to respect your privacy regarding any information we may collect while operating our websites and services. We do not sell any personally identifiable information or data stored in Cerb Cloud to third-parties. We do not directly share your information with third-parties without explicit permission except to comply with the law or to provide necessary infrastructure in connection with the services you request; however, there is some passive risk of exposure to third-party access inherent in web-based services that is outlined in detail below. We do our best to mitigate and minimize these risks on your behalf.
 
 ## Website Visitors
 
-Like most website operators, WGM collects non-personally identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. WGM's purpose in collecting non-personally identifying information is to better understand how WGM's visitors use its website. From time to time, WGM may release non-personally identifying information in the aggregate; e.g., by publishing a report on trends in the usage of its website.
+Like most website operators, WGM collects non-personally identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. WGM's purpose in collecting non-personally identifying information is to better understand how WGM's visitors use its website. From time to time, WGM may release non-personally identifying information in the aggregate; e.g., by publishing a report on trends in the usage of its software or websites.
 
 WGM also collects potentially personally identifying information like Internet Protocol (IP) addresses for website visitors and workers. WGM only discloses IP addresses under the same circumstances that it uses and discloses personally identifying information as described below.
 
 ## Gathering of Personally Identifying Information
 
-Certain visitors to WGM's websites choose to interact in ways that require us to gather personally identifying information. The amount and type of information that WGM gathers depends on the nature of the interaction. For example, we ask workers who sign up for On-Demand services to provide an email address. Those who engage in financial transactions with WGM (e.g. by purchasing products and services) are asked to provide additional information, including as necessary the personal and financial information required to process those transactions. In each case, WGM collects such information only insofar as is necessary or appropriate to fulfill the purpose of the visitor's interaction with WGM. WGM does not disclose personally identifying information other than as described below. Visitors can always refuse to supply personally identifying information, with the caveat that it may prevent them from purchasing or engaging in certain services.
+Certain visitors to WGM's websites choose to interact in ways that require us to gather personally identifying information. The amount and type of information that WGM gathers depends on the nature of the interaction. For example, we ask workers who sign up for Cerb Cloud to provide an email address. Those who choose to engage in financial transactions with us (e.g. by purchasing products and services) are asked to provide additional information, including as necessary the personal and financial information required to process those transactions. In each case, WGM collects such information only insofar as is necessary or appropriate to fulfill the purpose of the visitor's interaction. WGM does not disclose personally identifying information other than as described below. Visitors can always refuse to supply personally identifying information, with the caveat that it may prevent them from purchasing licenses or engaging in certain services.
 
 ## Aggregated Statistics
 
-WGM may collect statistics about the behavior of visitors to its websites or workers of its On-Demand software. For instance, WGM may gather metrics about individual Cerb instances like the number of workers, addresses, conversations, messages, and attachments; the composition of file attachments such as distributions of sizes or file types; or the amount of activity over a given time period. This information is used to improve the usability and performance of products and services provided by WGM.
+WGM may collect statistics about the behavior of visitors to its websites or users of its Cerb Cloud service. For instance, WGM may gather metrics about individual Cerb instances like the number of workers, addresses, conversations, messages, and attachments; the composition of file attachments, such as distributions of sizes or file types; or the amount of activity over a given time period. This information is used to improve the usability and performance of products and services provided by WGM, as well as to curtail abuse.
 
 WGM may display this aggregate, anonymous information publicly or provide it to others. However, WGM does not disclose personally identifying information other than as described below.
 
@@ -37,17 +36,17 @@ If you are a registered user of a WGM product or service like Cerb and have supp
 
 WGM takes reasonable precautions to protect your data and personally identifying information.
 
-We do not have physical access to any of our servers or online storage mediums.  See the section about "Third-Party Data Centers" for the upstream security policies of SoftLayer, Amazon Web Services, and Linode.  These servers are protected within state-of-the-art data centers.
+We do not have physical access to any of our servers or online storage mediums.  See the section about "Third-Party Data Centers" for the upstream security policies of Amazon Web Services, IBM/SoftLayer, and Linode.  These servers are protected within state-of-the-art data centers.
 
 WGM performs 24/7/365 monitoring of our network and service infrastructure.  This includes metrics like server load, process information, account access, service utilization, and network activity.
 
-Web-based communication with our servers is protected through 256-bit encryption via Secure Socket Layer (SSL) technology. This feature is included with all On-Demand applications when URLs are prefixed with "https://".  It is the responsibility of clients and their representatives to ensure the use of SSL; and upon request we can configure your application to require the use of SSL.
+Web-based communication with our servers is protected through 256-bit encryption via Secure Socket Layer (SSL) technology when URLs are prefixed with "https://". This feature is required and automatically enforced for all Cerb Cloud subscriptions.  It is the responsibility of clients and their representatives to ensure the use of SSL elsewhere.
 
-We do not store credit card information on our servers.  For one-time transactions we do not save credit card or bank account numbers anywhere, although we do store email-based receipts that include contact information, payment type, transaction IDs, and authorization codes.  For recurring transactions, payment information is stored with vendors who adhere to the Payment Card Industry Data Security Standards (PCI DSS).  We use [FreshBooks](http://www.freshbooks.com>) for sending invoices and collecting payments, and they protect financial information with AES encryption.  We process credit card transactions through our merchant account at Authorize.net.  Depending on a client's preferred payment method, these transactions may alternatively take place through other vendors like PayPal, or through wire transfers to Wells Fargo Bank.  We do not have access to client credit card numbers or bank account information through any of these vendors.
+We do not store credit card information on our servers.  For one-time transactions we do not save credit card or bank account numbers anywhere, although we do store email-based receipts that include contact information, payment type, transaction IDs, and authorization codes.  For recurring transactions, payment information is stored with vendors who adhere to the Payment Card Industry Data Security Standards (PCI DSS).  We contract with  [FreshBooks](http://www.freshbooks.com>) for sending invoices and collecting payments, and they protect financial information with AES encryption.  We process credit card transactions through our merchant account at Authorize.net.  Depending on a client's preferred payment method, these transactions may alternatively take place through other vendors like Freshbooks or PayPal, or through wire transfers to Wells Fargo Bank.  We do not have access to client credit card numbers or bank account information through any of these vendors.
 
-WGM technicians securely access our servers using Secure Shell (SSH) encryption.  Logins are authenticated with [RSA keys](http://en.wikipedia.org/wiki/RSA_(algorithm)) rather than simple passwords.  We do not provide general purpose client access (e.g. SSH, Telnet, FTP) to machines housing multi-tenant On-Demand data.
+WGM technicians securely access our servers using Secure Shell (SSH) encryption.  Logins are authenticated with [RSA keys](http://en.wikipedia.org/wiki/RSA_(algorithm)) rather than simple passwords.  Two-factor authentication is used with vendors and services that support it.  We do not provide direct client access (e.g. SSH, Telnet, FTP) to machines housing Cerb Cloud data for multiple tenants.  Instances with a need for direct access are hosted on isolated private servers.
 
-We have disabled insecure features in our PHP environment (e.g. process control, shell command execution, remote file includes) to protect against arbitrary code execution.  To protect against cross-site scripting (XSS), we "[escape](http://en.wikipedia.org/wiki/HTML#Character_and_entity_references>)" all user-provided data that is displayed in a web browser.
+We have disabled insecure features in our PHP environment (e.g. process control, shell command execution, remote file includes) to protect against arbitrary code execution.  To protect against cross-site scripting (XSS), we "[escape](http://en.wikipedia.org/wiki/HTML#Character_and_entity_references>)" all user-provided data that is displayed in a web browser. Cerb also contains security mechanisms to combat cross-site request forgery (CSRF), and other common attack vectors.
 
 ## Disclosure of Security Breaches
 
@@ -55,7 +54,7 @@ WGM will notify you as soon as possible if a security breach results in the pote
 
 ## Third-Party Data Centers, Cloud Computing, and Virtualization
 
-WGM remotely provisions, administers, and maintains servers in various data centers throughout the world and WGM does not maintain a physical presence in any of them. Most On-Demand services are currently provided from machines exclusively leased and operated by WGM from SoftLayer in their Seattle and Dallas facilities. However, other services, like our project portal, are provided from virtual servers in cloud computing and storage environments at Amazon Web Services, Linode, and Slicehost (Rackspace Cloud). In virtual environments, many users from various organizations share a pool of resources like computational power and storage capacity, although provisioned resources are isolated from one another to a similar degree as leased machines in a datacenter.
+WGM remotely provisions, administers, and maintains servers in various data centers throughout the world and does not maintain a physical presence in any of them. Most legacy Cerb On-Demand services are provided from machines exclusively leased and operated by WGM from IBM/SoftLayer in their Seattle facility. Cerb Cloud, and other related services, like our project website, are provided from virtual servers in cloud computing and storage environments at Amazon Web Services, Linode, and GitHub. In virtual environments, many users from various organizations share a pool of resources like computational power and storage capacity, although provisioned resources are isolated from one another to a similar degree as leased machines in a datacenter.
 
 Due to the remote nature of leased servers, colocation, cloud computing, and virtualization, authorized technicians from our vendors and service providers may have temporary access to our servers in order to perform physical maintenance and upgrades, or to provide hands-on assistance with troubleshooting issues like RAID degradation and hardware failures.
 
@@ -64,26 +63,23 @@ In such events we defer to upstream privacy policies:
 -  <https://aws.amazon.com/privacy>
 -  <http://www.softlayer.com/privacy-agreement>
 -  <https://www.linode.com/privacy>
+-  <https://help.github.com/articles/github-privacy-policy/>
 
 ## Backups
 
-Cerb has two main components for storing customer data: (1) the database, and (2) the /storage/ filesystem which contains large, immutable content like email attachments. Data may be stored on a single machine, or distributed among several machines, on our On-Demand network. Generally, that data will be housed on WGM's dedicated servers in SoftLayer's datacenters.
+Cerb has two main components for storing customer data: (1) the database, and (2) the /storage/ filesystem which contains immutable objects like email attachments. Data is usually distributed among several machines in our Cerb Cloud network within Amazon Web Services.
 
-If you communicate with WGM, or use On-Demand services provided by WGM, your information will be regularly copied for the express purpose of maintaining backups for continuity and disaster recovery. Nightly backups and redundant storage are kept on machines controlled remotely by WGM. Backups may be transferred to Amazon's Simple Storage Service (S3) for long-term, off-site archival.
-
-When WGM runs nightly backups, we make full backups of the database, and incremental backups of the /storage/ filesystem.  These are stored in the same datacenter, and are often attached to the same server, but on an alternate, redundant storage medium.
-
-Twice per week (usually Wednesday and Sunday) we off-site the latest backups to our private buckets on Amazon's S3 service.  We also rotate these to keep a weekly backup for a few months of history, and at least the most recent three backups.
+If you communicate with WGM, or use Cerb Cloud services provided by WGM, your information will be routinely copied for the express purpose of maintaining backups for continuity and disaster recovery.
 
 ## Disposal of Data and Backups
 
-Upon cancellation, we remove all client data from the On-Demand network and send a final backup to Amazon S3.  We will attempt to make arrangements for this backup to be transferred to the client before permanently destroying our copies of the data.  Without an explicit request for their immediate removal, backups may be persisted for several months.
+Upon cancellation, we remove all live client data from the Cerb Cloud network and send a final backup to Amazon S3.  We will attempt to make arrangements for this backup to be transferred to the client before permanently destroying our final copy.  Without an explicit request for their immediate removal, backups may be persisted for several years.
 
 We will comply with any written, and duly authenticated, client requests for the immediate destruction of all account data and backups.
 
 ## Testimonials
 
-WGM displays a list of clients and testimonials on our websites. We do not disclose the names of licensed organizations, or their representatives, without explicit permission, except in the event that a client freely discloses their identity through postings on public forums or social networks.
+WGM displays a list of clients and testimonials on our websites. We do not disclose the names of licensed organizations, or their representatives, without explicit permission, except in the event that a client freely discloses their identity through postings on public forums or social media networks.
 
 ## Cookies
 
@@ -95,12 +91,14 @@ If WGM, or substantially all of its assets were acquired, or in the unlikely eve
 
 ## Ads
 
-In the rare event that ads appear in any of our applications or on any of our websites, they may be delivered to users by advertising partners, who may set cookies. These cookies allow the ad server to recognize your computer each time they send you an online advertisement to compile information about you or others who use your computer. This information allows ad networks to, among other things, deliver targeted advertisements that they believe will be of most interest to you. This Privacy Policy covers the use of cookies by WGM and does not cover the use of cookies by any advertisers.
+We do not display third-party advertising on our websites or in our applications.
+
+When ads appear on our social media profiles, they are delivered to users by advertisers who may set cookies. These cookies allow the ad server to recognize your computer each time they send you an online advertisement to compile information about you or others who use your computer. This information allows ad networks to, among other things, deliver targeted advertisements that they believe will be of most interest to you. This Privacy Policy covers the use of cookies by WGM and does not cover the use of cookies by any advertisers.
 
 ## Privacy Policy Changes
 
-Although most changes are likely to be minor, WGM may change its Privacy Policy from time to time, and in WGM's sole discretion. WGM encourages visitors to frequently check this page for any changes to its Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.
+Although most changes are likely to be minor, WGM may modify this Privacy Policy from time to time in its sole discretion. You are encouraged to frequently check this page for any changes to the Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.
 
 ## License
 
-This privacy policy is available under a [Creative Commons Sharealike](http://creativecommons.org/licenses/by-sa/2.5/) license derived from original groundwork by [Automattic](http://automattic.com/privacy/). WGM has no professional affiliation with Automattic.
+This privacy policy is available under a [Creative Commons Sharealike](http://creativecommons.org/licenses/by-sa/2.5/) license derived from original groundwork by [Automattic](http://automattic.com/privacy/). WGM is not affiliated with Automattic.

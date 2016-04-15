@@ -2,13 +2,13 @@
 title: License
 layout: page
 jumbotron:
-  title: License
-  tagline: Terms and conditions
+  title: Software License
+  tagline: The terms and conditions by which we license Cerb to you
 ---
 
 # Devblocks Public License 1.0 (DPL)
 
-The following are the terms and conditions by which __Webgroup Media LLC (WGM)__
+The following are the terms and conditions by which __Webgroup Media, LLC__
 ("Licensor") grants you a License to use, modify, and redistribute this
 software, which is protected as the exclusive intellectual property of
 Licensor by U.S. copyright law.
@@ -44,7 +44,7 @@ agree to be bound thereby.
 
    -  You must not alter or obliterate any copyright notices found in
       this software or its source code.
-   -  Your website and documentation must provide a clear link to this
+   -  Your website and documentation must provide a clearly visible link to this
       software's official website. You must clearly state that your
       modifications are an unofficial version that is derived from this
       software.
