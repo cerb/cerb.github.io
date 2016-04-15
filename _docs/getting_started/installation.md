@@ -3,7 +3,7 @@ title: Installation
 permalink: /docs/installation/
 jumbotron:
   title: Installation
-  tagline: Deploying Cerb on your own server
+  tagline: Deploy Cerb on your own server
 ---
 
 <div class="cerb-box note">
@@ -47,7 +47,7 @@ jumbotron:
 		- json
 		- mailparse
 		- mbstring
-		- mysql
+		- mysqli
 		- pcre
 		- session
 		- simplexml

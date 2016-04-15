@@ -3,6 +3,7 @@ title: Friendly URLs
 permalink: /docs/friendly-urls/
 jumbotron:
   title: Friendly URLs
+  tagline: Enable professional looking URLs
 ---
 
 You may notice that your URLs look a bit ugly with the omnipresent `/index.php/` in the path by default. 
