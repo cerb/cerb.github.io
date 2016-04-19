@@ -24,6 +24,7 @@
 
 - title: Configuration
   docs:
+  - mail-transports
   # - upgrading
   # - security
 
