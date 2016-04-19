@@ -21,9 +21,7 @@ __Cerb__ is a fast, flexible toolkit for web-based collaboration and workflow au
 
 * __Dashboards__ for real-time reporting, monitoring, goal tracking, and operational intelligence.
 
-* __Contact management__ for managing customer relationships.
-
-* __Targeted broadcasting__ of personalized messages to thousands of contacts with segmentation and dynamic templates.
+* __Contact management__ for maintaining customer relationships.
 
 * __Notifications__ for keeping an entire team informed about new activity on watched records.
 
@@ -31,24 +29,32 @@ __Cerb__ is a fast, flexible toolkit for web-based collaboration and workflow au
 
 * __Knowledge management__ for distributing accumulated experience.
 
+* __Broadcasting__ of targeted, personalized messages to thousands of contacts with segmentation and dynamic templates.
+
 * __Mobile functionality__ for remaining productive while on the go.
 
 * __Devblocks, a plugin-driven web development framework__, for rapidly implementing new functionality.
 
-* A library of __browser-installable plugins__ for extending functionality and integrating with other applications and services (Facebook, Twitter, Twilio, Freshbooks, Amazon S3, JIRA, HipChat, etc).
+* A library of __browser-installable plugins__ for extending functionality and integrating with other applications and services (Facebook, Twitter, Twilio, Slack, Freshbooks, Amazon S3, JIRA, HipChat, etc).
 
 * A __REST-based API__ for automation and integration with third-party applications and services.
 
 * __Webhooks__ that trigger Virtual Attendant behaviors in response to external events (survey submitted, invoice paid, Slack /command, etc).
 
-* __Portals__ for providing support resources and building communities around your brands.
+* __Portals__ for providing self-serve support resources and building online communities around your brands.
 
 * ... Time tracking, call logging, opportunity management, __and much more__.
 
 Cerb has continuously evolved for more than 14 years based on community feedback from thousands of teams.
 
-The software is distributed under the [Devblocks Public License](/license) as a commercial open source project. The full source code is publicly available on [GitHub](https://github.com/wgm/cerb).
+The software is distributed under the [Devblocks Public License](/license) as a commercial open source project. The full source code is publicly available on GitHub[^github].
 
 Licenses are based on the maximum number of workers able to log in at the same time (i.e. seats). The software can be deployed on independent servers, or as a fully-managed, cloud-based service.
 
-Cerb is developed in the [PHP](http://php.net) programming language. Relational data is stored in [MySQL](http://mysql.com). See the [credits](/credits) for a full list of third-party libraries, resources, and contributors.
+Cerb is developed in the PHP[^php] programming language. Relational data is stored in MySQL[^mysql]. See the [credits](/docs/credits) for a full list of third-party libraries, resources, and contributors.
+
+# References 
+
+[^github]: <https://github.com/wgm/cerb>
+[^php]: <http://php.net>
+[^mysql]: <http://mysql.com>
