@@ -6,6 +6,8 @@ jumbotron:
   tagline: Enable professional looking URLs
 ---
 
+# Enabling friendly URLs
+
 You may notice that your URLs look a bit ugly with the omnipresent `/index.php/` in the path by default. 
 
 This URL is doesn't look very professional:

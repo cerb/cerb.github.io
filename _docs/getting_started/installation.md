@@ -7,7 +7,7 @@ jumbotron:
 ---
 
 <div class="cerb-box note">
-	<p>If you're using <b>Cerb Cloud</b> you can <a href="/docs/ui">skip this section</a>. We've already handled the installation for you.</p>
+	<p>If <b>Cerb</b> is already installed and you want to learn how to use it, you can <a href="/docs/ui">skip ahead to Using Cerb</a>.  If you're using <b>Cerb Cloud</b> you can <a href="/docs/quick-start">skip ahead to Quick Start</a>. We've already handled the installation for you.</p>
 </div>
 
 # Requirements
@@ -116,7 +116,7 @@ You only need to enable write access to the webserver in two locations:
 - `storage/`
 	This is where any data unique to your installation is stored: third-party plugins, attachments, temporary files, caches, etc.
 
-Give ownership of all the files to the webserver daemon using `chown`, and make the two locations above writable using `chmod`::
+Give ownership of all the files to the webserver daemon using `chown`, and make the two locations above writable using `chmod`:
 
 {% highlight bash %}
 $ cd cerb
@@ -233,7 +233,7 @@ This establishes your first, shared outgoing email address.  You'll probably wan
 You can also configure a personalized name for the email address, such as your organization name.
 
 <div class="cerb-box note">
-	<p>For everything to work properly, this email address **absolutely must** route back into Cerb so that you receive new messages. This is usually accomplished by configuring a POP/IMAP mailbox for Cerb to download mail from.</p>
+	<p>For everything to work properly, this email address <b>absolutely must</b> route back into Cerb so that you receive new messages. This is usually accomplished by configuring a POP/IMAP mailbox for Cerb to download mail from.</p>
 </div>
 
 Once you're done, click the **Continue** button.
@@ -290,7 +290,7 @@ In this step you'll create the administrator account that you use to log in.
 
 ### Name
 
-This is simply your first (given) and last name (surname).
+This is simply your first and last name (given and surname).
 
 ### Email Address
 
