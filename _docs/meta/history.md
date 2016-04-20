@@ -5,4 +5,4 @@ jumbotron:
   title: History
 ---
 
-This is some content
+...

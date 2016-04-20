@@ -6,4 +6,4 @@ jumbotron:
   tagline: ...
 ---
 
-This is some content
+(( properties, counter buttons, card popups ))

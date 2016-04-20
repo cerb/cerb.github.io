@@ -12,16 +12,29 @@
 
 - title: Using Cerb
   docs:
+  - logging-in
   - ui
+  - components
+
+- title: The Toolkit
+  docs:
   - workspaces
+  - worklists
+  - dashboards
   - cards
   - profiles
-  - notifications
   - custom-fields
-  - virtual-attendants
+  - watchers
+  - activity-log
+  - notifications
   - snippets
+  - virtual-attendants
   # - mobile
   # - plugins
+
+- title: Email
+  docs:
+  - signatures
 
 - title: Configuration
   docs:

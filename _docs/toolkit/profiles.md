@@ -6,4 +6,10 @@ jumbotron:
   tagline: Record management
 ---
 
-This is some content
+(( properties))
+
+(( custom fieldsets ))
+
+(( activity log ))
+
+(( links ))

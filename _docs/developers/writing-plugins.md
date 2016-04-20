@@ -6,4 +6,3 @@ jumbotron:
   tagline: Add new functionality to Cerb with your own custom plugins
 ---
 
-This is some content

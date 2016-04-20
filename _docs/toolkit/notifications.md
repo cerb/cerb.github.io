@@ -6,4 +6,3 @@ jumbotron:
   tagline: Watch any record and receive notifications about new activity
 ---
 
-This is some content

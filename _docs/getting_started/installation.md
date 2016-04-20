@@ -7,7 +7,7 @@ jumbotron:
 ---
 
 <div class="cerb-box note">
-	<p>If <b>Cerb</b> is already installed and you want to learn how to use it, you can <a href="/docs/ui">skip ahead to Using Cerb</a>.  If you're using <b>Cerb Cloud</b> you can <a href="/docs/quick-start">skip ahead to Quick Start</a>. We've already handled the installation for you.</p>
+	<p>If <b>Cerb</b> is already installed and you want to learn how to use it, you can <a href="/docs/logging-in">skip ahead to Using Cerb</a>.  If you're using <b>Cerb Cloud</b> you can <a href="/docs/quick-start">skip ahead to Quick Start</a>. We've already handled the installation for you.</p>
 </div>
 
 # Requirements

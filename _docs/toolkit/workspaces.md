@@ -6,12 +6,11 @@ jumbotron:
   tagline: Productivity-boosting public and private workspaces
 ---
 
-## Pages
+# Pages
 
-## Tabs
+(( types, ownership, extensions: workspace ))
 
-## Worklists
+# Tabs
 
-## Dashboards
+(( extensions: worklists, dashboards ))
 
-## Widgets

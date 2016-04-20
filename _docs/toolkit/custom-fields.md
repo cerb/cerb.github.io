@@ -6,4 +6,4 @@ jumbotron:
   tagline: Seamlessly track your own data on any record type
 ---
 
-This is some content
+(( types, globals, custom fieldsets, ownership ))

@@ -10,7 +10,7 @@ jumbotron:
 
 # Behaviors
 
-## Conditions
+# Conditions
 
-## Actions
+# Actions
 
