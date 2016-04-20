@@ -1,7 +1,7 @@
 ---
 title: Credits
 permalink: /docs/credits/
-layout: page
+layout: docs
 jumbotron:
   title: Credits
   tagline: Cerb wouldn't exist without these building blocks and contributions.
