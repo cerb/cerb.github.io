@@ -1,0 +1,25 @@
+---
+layout: page
+title: "Clients"
+permalink: /clients/
+jumbotron:
+  title: Meet some of the thousands of organizations we've worked with.
+  style: jumbotron-medium
+---
+
+<table width="100%" cellspacing="10" cellpadding="">
+	{% for testimonial in site.data.testimonials %}
+	<tr>
+		<td>
+			<span class="client-logo client-{{ testimonial.client }}"></span>
+		</td>
+		<td style="font-size: 90%; padding-left: 10px; border-left: 1px solid rgb(200,200,200);">
+			{{ testimonial.quote }}
+			<br>
+			<b style="margin-left: 15px;">- {{ testimonial.author }}</b>
+		</td>
+	</tr>
+	{% endfor %}
+</table>
+
+<img src="/assets/cerb-clients.png">
