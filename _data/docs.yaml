@@ -42,6 +42,9 @@
   - setup
   - upgrading
   - security
+  - performance
+  - scaling
+  - backups
 
 #- title: Administration
 #  docs:
