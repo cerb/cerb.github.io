@@ -32,11 +32,11 @@ You'll never receive an invoice until you request one.
 
 Nope! A Cerb evaluation won't impact the way you're currently handling incoming or outgoing email (unless you want it to).
 
-With Cerb Cloud, we provide you with a subdomain worth of temporary email addresses, like __*@example.cerb.email__. You can send and receive email from any of these addresses (e.g. billing@, support@, sales@), which makes it much easier to learn about automatically routing work to the appropriate groups/buckets in Cerb.
+With Cerb Cloud, we provide you with a subdomain worth of temporary email addresses, like __*@example.cerb.email__. You can send and receive email from any of these addresses (e.g. billing@, support@, sales@), which makes it much practice routing work to the appropriate groups/buckets in Cerb.
 
-We also configure SPF, DKIM, and DMARC records for these temporary email addresses so you can [test our mail deliverability](http://mail-tester.com).
+We also configure SPF, DKIM, and DMARC records for these temporary email addresses so you can [test our mail deliverability](http://cerb.io/docs/quick-start/#send-a-message-to-test-mail-deliverability).
 
-If you switch to a Cerb Cloud subscription, you can even use these email addresses in production, but you'll probably want to use your own domains.  We'll help you configure the SPF, DKIM, and DMARc records on your domains to optimize your mail deliverability from Cerb as well.
+If you switch to a Cerb Cloud subscription, you can even use these email addresses in production, but you'll probably want to use your own domains.  We'll help you configure the SPF, DKIM, and DMARC records on your domains to optimize your mail deliverability from Cerb as well.
 
 ## How many workers can I invite to a Cerb Cloud evaluation?
 

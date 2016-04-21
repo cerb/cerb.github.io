@@ -3,7 +3,7 @@ title: Dashboards
 permalink: /docs/dashboards/
 jumbotron:
   title: Dashboards
-  #tagline: ...
+  tagline: Build a real-time information command center
 ---
 
 # Layout

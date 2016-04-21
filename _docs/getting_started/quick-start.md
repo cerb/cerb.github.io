@@ -88,7 +88,7 @@ To add a new group, click the **(+)** icon in the blue bar of the worklist, and 
 
 # Configure email signatures
 
-[configuring email signatures](/docs/mail#signatures)
+Review the instructions for [configuring email signatures](/docs/mail#signatures).
 
 # Send a message to test mail deliverability
 
