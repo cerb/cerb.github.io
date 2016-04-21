@@ -5,8 +5,12 @@ toc:
   title: Routing
 jumbotron:
   title: Mail Routing
-  tagline: ...
+  breadcrumbs:
+  - 
+    label: Setup
+    url: /docs/setup/
 ---
 
 Navigate to **Setup** >> **Mail** >> **Routing**.
 
+{% include setup_toc.html %}

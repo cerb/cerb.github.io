@@ -3,7 +3,10 @@ title: Sender Addresses
 permalink: /docs/setup/sender-addresses/
 jumbotron:
   title: Sender Addresses
-  tagline: ...
+  breadcrumbs:
+  - 
+    label: Setup
+    url: /docs/setup/
 ---
 
 Navigate to **Setup** >> **Mail** >> **Sender Addresses**.
@@ -31,6 +34,8 @@ Each sender address has the following options:
 (( SMTP server MAIL FROM auth ))
 
 For optimal email deliverability, make sure you've configured SPF, DKIM, and DMARC records in DNS for all sender domains. We'll test this a little later.
+
+{% include setup_toc.html %}
 
 # References
 

@@ -6,11 +6,15 @@ jumbotron:
   tagline: A guide for Administrators
 ---
 
-Click on **Setup** in the top-right of the navigation bar.
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/setup/setup_menus.png" class="screenshot">
+</div>
+
+The **Setup** page in the top right of the navigation bar provides a central location for administrators to configure Cerb and any plugins that have been installed.  The page is divided into sections, each with a blue menu designated by a downward-pointing arrow. You can hover over each menu with your mouse to display the configuration options for that section.
 
 - **Configure**
-	- Branding
-	- Localization
+	- [Branding](/docs/setup/branding)
+	- [Localization](/docs/setup/localization)
 	- Security
 	- Custom Fields
 	- License
@@ -49,5 +53,5 @@ Click on **Setup** in the top-right of the navigation bar.
 	- Attachments
 
 - **Plugins**
-	- Installed Plugins
-	- Plugin Library
+	- [Installed Plugins](/docs/setup/plugins)
+	- [Plugin Library](/docs/setup/plugin-library)

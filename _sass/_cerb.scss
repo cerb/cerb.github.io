@@ -48,6 +48,12 @@ header {
 	}
 	
 	&.jumbotron {
+    p.jumbotron-breadcrumbs {
+      a {
+        color: white;
+      }
+    }
+    
 		&.jumbotron-medium {
 			h1 {
 				font-size: 24px;
@@ -254,6 +260,7 @@ div.pricing {
 	//text-align: center;
 	padding-top: 20px;
 	position: relative;
+  margin: 0px 0px 50px 0px;
 	//margin: 40px -20px 10px;
 
 	a,

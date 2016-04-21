@@ -10,6 +10,16 @@
 		{% if page.jumbotron and page.jumbotron.title %}
 		<header class="jumbotron {{page.jumbotron.style}}">
 			<div class="wrapper">
+				{% for crumb in page.jumbotron.breadcrumbs %}
+					<p class="jumbotron-breadcrumbs">
+						{% if crumb.url %}
+						<a href="{{ crumb.url }}">{{ crumb.label }}</a>
+						{% else %}
+						{{ crumb.label }}
+						{% endif %}
+					</p>
+				{% endfor %}
+				
 				<h1>{{ page.jumbotron.title }}</h1>
 				
 				{% if page.jumbotron.tagline %}

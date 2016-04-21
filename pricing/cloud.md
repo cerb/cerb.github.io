@@ -47,7 +47,7 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		</tr>
 	
 		<tr>
-			<td>Included Seats [<a href="#seats">?</a>]:</td>
+			<td>Included seats [<a href="#seats">?</a>]:</td>
 			<td>3</td>
 			<td>5</td>
 			<td>10</td>

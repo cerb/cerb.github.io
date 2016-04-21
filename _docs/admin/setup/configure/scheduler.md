@@ -3,7 +3,10 @@ title: Scheduler
 permalink: /docs/setup/scheduler/
 jumbotron:
   title: Scheduler
-  #tagline: ...
+  breadcrumbs:
+  - 
+    label: Setup
+    url: /docs/setup/
 ---
 
 Navigate to **Setup** >> **Configure** >> **Scheduler**.
@@ -28,6 +31,7 @@ The `/cron` page doesn't require a login to use. Instead, it is protected with a
 
 ## Configuring the scheduler in Windows
 
+{% include setup_toc.html %}
 
 # References
 

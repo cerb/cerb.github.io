@@ -3,7 +3,10 @@ title: Mail Transports
 permalink: /docs/setup/mail-transports/
 jumbotron:
   title: Mail Transports
-  tagline: ...
+  breadcrumbs:
+  - 
+    label: Setup
+    url: /docs/setup/
 ---
 
 Navigate to **Setup** >> **Mail** >> **Mail Transports**.
@@ -31,6 +34,8 @@ Several validation systems are used by mail servers to help approve legitimate e
 - **RBL:** Real-time Blackhole Lists[^rbl] are shared registries of network addresses that have been previously reported for sending spam. A mail server may use one or more RBLs to reject mail from these senders. RBLs can be effective in reducing spam, but they are also responsible for blocking a lot of legitimate email in the process. A shared network address may be used to send email on behalf of multiple organizations, and all of them would be blocked if any one of them is reported for sending spam. A particular network address (especially in cloud computing) may become tainted by briefly being used to send spam, after which it is _released_ back into the shared pool for subsequent use by someone else.
 
 When you create a new SMTP mail transport, you should verify that you have properly configured your SPF, DKIM, and DMARC records, and you should check the most popular RBL lists[^rbl-check] to make sure your SMTP IP isn't listed.
+
+{% include setup_toc.html %}
 
 # References
 
