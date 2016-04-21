@@ -32,7 +32,7 @@ Navigate to **Setup** >> **Mail** >> **Mail Transports**.
 
 Your first mail transport was created during the [installation](/docs/installation/#step-7-outgoing-mail) process.
 
-If you need to add additional transports (e.g. for the distinct mail servers of separate subsidiaries or brands), review the instructions for [configuring mail transports](/docs/mail-transports).
+If you need to add additional transports (e.g. for the distinct mail servers of separate subsidiaries or brands), review the instructions for [configuring mail transports](/docs/setup/mail-transports).
 
 You should also verify that your mail server IPs aren't listed on any Real-time Blackhole Lists (RBL)[^rbl-check].
 
@@ -50,9 +50,9 @@ The simplest configuration is to use a single sender address for all outgoing ma
 
 Alternatively, you may configure distinct sender addresses per department, team, project, subsidiary, or brand. Keep in mind that, depending on your mail server, you may be restricted to a list of verified sender addresses. You may need to use a different mail transport per identity.
 
-Each sender address can specify a default [mail transport](/docs/mail-transports), personalized `From:` name, and message signature.
+Each sender address can specify a default [mail transport](/docs/setup/mail-transports), personalized `From:` name, and message signature.
 
-If you need to add additional sender addresses, review the instructions for [configuring sender addresses](/docs/sender-addresses).
+If you need to add additional sender addresses, review the instructions for [configuring sender addresses](/docs/setup/sender-addresses).
 
 For optimal email deliverability, make sure you've configured SPF, DKIM, and DMARC records in DNS for all sender domains. We'll test this a little later.
 
@@ -84,7 +84,7 @@ Lastly, you can assign a **profile image** to each group as a visual cue.
 
 (( link to 'configuring groups' ))
 
-# Configure your message signatures
+# Configure email signatures
 
 Email signatures[^signatures] are an important part of branding in professional correspondence -- sometimes they are even mandatory to comply with local laws. They provide additional contact information (similar to a business card), as well as links to an organization's website, social media profiles, etc.
 
@@ -195,23 +195,51 @@ Let's give these new workers something to do.
 
 Navigate to **Setup** >> **Mail** >> **Mailboxes**.
 
+This page lists the mailboxes that Cerb checks for new messages.
+
+If you need to add a new mailbox, click the **(+)** icon in the blue bar at the top of the worklist and review the instructions for [configuring incoming mailboxes](/docs/setup/mailboxes).
+
+<div class="cerb-box note">
+<p>If you're using <b>Cerb Cloud</b>, you can alternatively redirect your incoming mail to <code>support@&lt;you&gt;.cerb.email</code> for instant delivery. Replace <code>&lt;you&gt;</code> with the name of your instance. With this delivery method you won't need to set up a mailbox here.</p>
+</div>
+
+<div class="cerb-box warning">
+<p>Cerb deletes messages from your mailbox after it downloads them (unless the mail server prevents this behavior, like Google Apps). If this is not desirable, you should send a copy of all incoming email to a separate mailbox and add that to Cerb.</p>
+</div>
+
 # Routing
+
+You can configure rules to automatically route new mail to groups based on message properties.
 
 Navigate to **Setup** >> **Mail** >> **Routing**.
 
-# Scheduler
+For example, you may want to route messages addressed to `support@*` to the **Support** group, `orders@*` to **Sales**, and `receipts@*` to **Billing**.  As mentioned earlier, these messages will be delivered to the **Inbox** bucket in those groups, and group managers can configure additional sorting from there.
 
-For Cerb's scheduled jobs to run in the background (e.g. checking mailboxes every 5 minutes, search indexing, maintenance), you need to configure a program to automatically request a special URL every minute.  On Unix-based systems, this is accomplished with a cronjob[^cronjob].
+If you want to add a new routing rule, click the **Add** button and review the instructions for <a href="/docs/setup/mail-routing">configuring mail routing</a>.
+
+# Scheduler
 
 Navigate to **Setup** >> **Configure** >> **Scheduler**.
 
-(( IP access ))
+The **scheduler** is responsible for planning and running _jobs_. A **job** is a specific task -- checking your mailboxes for new messages, search indexing new records, running nightly maintenance, etc.  There are several built-in jobs, and new jobs can be added using plugins.
+
+Each job is repeated at a specific _interval_ -- a number of minutes, hours, or days. A job can be _disabled_ to temporarily prevent it from running.
+
+Several jobs can run at the same time without preventing workers from continuing to use the system. While running, a job is _locked_ to prevent additional instances from starting.
+
+Each job has a `run now` link to immediately run the job with logging enabled from inside the web browser. This is useful for troubleshooting and development, but the scheduler should be automated in production environments so that the jobs run without human intervention.
+
+For Cerb's scheduled jobs to automatically run in the background, you need to configure a third-party tool to request the `/cron` page every minute.  On Unix-based systems this is accomplished with a cronjob[^cronjob]. On Windows Server you can add a Scheduled Task[^windows-scheduled-task].
+
+<div class="cerb-box note">
+<p>If you're using <b>Cerb Cloud</b>, we handle this for you.</p>
+</div>
+
+The `/cron` page doesn't require a login to use. Instead, it is protected with an IP address[^ip] whitelist. You can authorize additional IPs from the **Setup** >> **Configure** >> **Security** page, or from the `AUTHORIZED_IPS_DEFAULTS` option in the `framework.config.php` file.
 
 (( Linux crontab example ))
 
 (( Windows example ))
-
-(( worst case, browser reload ))
 
 # Security
 
@@ -246,3 +274,7 @@ Navigate to **Setup** >> **Plugins** >> **Installed Plugins**.
 [^signatures]: <https://en.wikipedia.org/wiki/Signature_block>
 
 [^cronjob]: <https://en.wikipedia.org/wiki/Cron>
+
+[^windows-scheduled-task]: <https://technet.microsoft.com/en-us/library/cc748993.aspx>
+
+[^ip]: <https://en.wikipedia.org/wiki/IP_address>
