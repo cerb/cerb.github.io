@@ -36,12 +36,11 @@
   docs:
   - signatures
 
-- title: Configuration
+- title: Administration
   docs:
-  - mail-transports
-  - sender-addresses
-  # - upgrading
-  # - security
+  - setup
+  - upgrading
+  - security
 
 #- title: Administration
 #  docs:
