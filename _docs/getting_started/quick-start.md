@@ -8,7 +8,7 @@ jumbotron:
 
 <div class="cerb-box note">
 <p>
-	This guide assumes that you have a fresh instance of Cerb and you're an administrator who is performing the initial configuration.  If Cerb is already configured and you want to learn how to use it, you can <a href="/docs/logging-in">skip ahead to Using Cerb</a>.
+	This guide assumes that you have a fresh instance of Cerb and you're an administrator who is performing the initial configuration.  If Cerb is already configured and you want to learn how to use it, you can <a href="/docs/records">skip ahead</a>.
 </p>
 </div>
 
@@ -30,25 +30,27 @@ Next, let's make sure you're ready to send outgoing mail.
 
 Navigate to **Setup** >> **Mail** >> **Mail Transports**.
 
-Your first mail transport was created during the [installation](/docs/installation/#step-7-outgoing-mail) process.
+In Cerb, outgoing email messages are sent using **mail transports**.
+
+This page displays your available mail transports.  Your first transport was created during the [installation](/docs/installation/#step-7-outgoing-mail) process.
 
 If you need to add additional transports (e.g. for the distinct mail servers of separate subsidiaries or brands), review the instructions for [configuring mail transports](/docs/setup/mail-transports).
 
 You should also verify that your mail server IPs aren't listed on any Real-time Blackhole Lists (RBL)[^rbl-check].
 
 <div class="cerb-box note">
-<p>If you're using <b>Cerb Cloud</b>, you'll notice that we've already configured a default SMTP mail transport for you. You can still use your own SMTP server by creating a new transport.</p>
+<p>If you're using <b>Cerb Cloud</b>, you'll notice that we've already configured a default SMTP mail transport for you. If needed, you can still use your own SMTP server by creating a new transport.</p>
 </div>
 
 # Configure sender addresses
 
 Navigate to **Setup** >> **Mail** >> **Sender Addresses**.
 
-These are the sender addresses that you can send email from.
+These are the addresses that you can send email from.
 
-The simplest configuration is to use a single sender address for all outgoing mail. This could be an address like `support@`, `help@`, `contact@`, or `team@`.  In this configuration, you can still receive email in any number of mailboxes.
+The simplest configuration is to use a single sender address for all outgoing mail. This could be an address like `support@`, `help@`, `contact@`, or `team@`.  In this configuration, you can still receive email from any number of mailboxes.
 
-Alternatively, you may configure distinct sender addresses per department, team, project, subsidiary, or brand. Keep in mind that, depending on your mail server, you may be restricted to a list of verified sender addresses. You may need to use a different mail transport per identity.
+Alternatively, you may configure distinct sender addresses per department, team, project, subsidiary, or brand. Depending on your mail server, you may be restricted to a list of verified sender addresses. You may need to use a different mail transport per identity.
 
 Each sender address can specify a default [mail transport](/docs/setup/mail-transports), personalized `From:` name, and message signature.
 
@@ -82,48 +84,11 @@ Each group may be designated as **public** or **private**.  The content of a pub
 
 Lastly, you can assign a **profile image** to each group as a visual cue.
 
-(( link to 'configuring groups' ))
+To add a new group, click the **(+)** icon in the blue bar of the worklist, and review the instructions for [configuring groups](/docs/setup/groups).
 
 # Configure email signatures
 
-Email signatures[^signatures] are an important part of branding in professional correspondence -- sometimes they are even mandatory to comply with local laws. They provide additional contact information (similar to a business card), as well as links to an organization's website, social media profiles, etc.
-
-Many organizations mandate a consistent signature style, and Cerb automatically handles this requirement by default.
-
-Signatures are automatically personalized for each worker using **placeholders** -- special words that are replaced with field values from a target record.  The most common placeholders for worker signatures are {% raw %}`{{first_name}}`, `{{last_name}}`, `{{full_name}}`, and `{{title}}`.{% endraw %}
-
-Conventionally, signatures begin with two dashes, a space, and a new line; allowing them to be consistently detected by email software.
-
-Your first signature template may look something like this:
-
-{% highlight text %}
-{% raw %}
--- 
-{{full_name}}, {{title}}
-Example, Inc. - http://example.com/
-{% endraw %}
-{% endhighlight %}
-
-When workers are composing a message, their signature is represented by a `#signature` marker. This a special kind of placeholder that serves several purposes.  First, the signature marker declutters the outgoing message by not showing a worker their own signature in every message.  More importantly, it allows the signature to be moved or modified by plugins, HTML templates, and Virtual Attendants.
-
-You may recall that sender addresses provide a default signature for outgoing messages.  That is called a _default_ signature because buckets and HTML templates can provide alternate signatures to be used instead.
-
-Signatures are selected in this order:
-
-1. The signature of the current HTML template (selected on a per-message basis).
-1. The signature of the current bucket.
-1. The signature of the current bucket's sender address.
-1. The signature of the current group inbox.
-1. The signature of the current group inbox's sender address.
-1. The signature of the default sender address. 
-
-We refer to this as _cascading signatures_.  You don't need to set a signature in all of those places.  If a given signature above is blank (e.g. an HTML template isn't being used, and the current bucket doesn't define a signature) then the next non-blank signature is used as a default.  This process repeats all the way until the signature of the default sender address is used.  If that is blank then no signature is added.
-
-This may seem like a complicated process, but it happens automatically, uniformly, and saves workers from the hassle of having to pick the appropriate signature from a list for every outgoing message.  When conversations move between groups and buckets (e.g. changing brands), the signature automatically changes in response.  When an HTML template is used, the signature of the current message can be moved into the appropriate part of the layout, modified, or ignored entirely. Workers don't have to waste any time thinking about it.
-
-The simplest way to set up a global signature is to add it to your default sender address, and then leave the signature option blank everywhere else.
-
-To set up a different signature per brand, you can set the signature on each group's inbox, and that signature will be used for all the buckets within the group from a single place.
+[configuring email signatures](/docs/mail#signatures)
 
 # Send a message to test mail deliverability
 
@@ -213,7 +178,9 @@ You can configure rules to automatically route new mail to groups based on messa
 
 Navigate to **Setup** >> **Mail** >> **Routing**.
 
-For example, you may want to route messages addressed to `support@*` to the **Support** group, `orders@*` to **Sales**, and `receipts@*` to **Billing**.  As mentioned earlier, these messages will be delivered to the **Inbox** bucket in those groups, and group managers can configure additional sorting from there.
+For example, you may want to route messages addressed to `support@*` to the **Support** group, `orders@*` to **Sales**, and `receipts@*` to **Billing**.
+
+As mentioned earlier, these messages will be delivered to the **Inbox** bucket in those groups, and group managers can configure additional sorting from there.
 
 If you want to add a new routing rule, click the **Add** button and review the instructions for <a href="/docs/setup/mail-routing">configuring mail routing</a>.
 
@@ -221,25 +188,15 @@ If you want to add a new routing rule, click the **Add** button and review the i
 
 Navigate to **Setup** >> **Configure** >> **Scheduler**.
 
-The **scheduler** is responsible for planning and running _jobs_. A **job** is a specific task -- checking your mailboxes for new messages, search indexing new records, running nightly maintenance, etc.  There are several built-in jobs, and new jobs can be added using plugins.
+The **scheduler** is responsible for planning and running _jobs_. A **job** is a specific task -- checking your mailboxes for new messages, search indexing new records, performing nightly maintenance, triggering Virtual Attendant scheduled behaviors, etc.  There are several built-in jobs, and new jobs can be added using plugins.
 
-Each job is repeated at a specific _interval_ -- a number of minutes, hours, or days. A job can be _disabled_ to temporarily prevent it from running.
+For Cerb's scheduled jobs to automatically run in the background, you need to configure a third-party tool to request the `/cron` page every minute.
 
-Several jobs can run at the same time without preventing workers from continuing to use the system. While running, a job is _locked_ to prevent additional instances from starting.
-
-Each job has a `run now` link to immediately run the job with logging enabled from inside the web browser. This is useful for troubleshooting and development, but the scheduler should be automated in production environments so that the jobs run without human intervention.
-
-For Cerb's scheduled jobs to automatically run in the background, you need to configure a third-party tool to request the `/cron` page every minute.  On Unix-based systems this is accomplished with a cronjob[^cronjob]. On Windows Server you can add a Scheduled Task[^windows-scheduled-task].
+Review the instructions for <a href="/docs/setup/scheduler">configuring the scheduler</a>.
 
 <div class="cerb-box note">
 <p>If you're using <b>Cerb Cloud</b>, we handle this for you.</p>
 </div>
-
-The `/cron` page doesn't require a login to use. Instead, it is protected with an IP address[^ip] whitelist. You can authorize additional IPs from the **Setup** >> **Configure** >> **Security** page, or from the `AUTHORIZED_IPS_DEFAULTS` option in the `framework.config.php` file.
-
-(( Linux crontab example ))
-
-(( Windows example ))
 
 # Security
 
@@ -270,11 +227,3 @@ Navigate to **Setup** >> **Plugins** >> **Installed Plugins**.
 [^abstraction]: <https://en.wikipedia.org/wiki/Abstraction_(computer_science)>
 
 [^autonomy]: <https://en.wikipedia.org/wiki/Autonomy>
-
-[^signatures]: <https://en.wikipedia.org/wiki/Signature_block>
-
-[^cronjob]: <https://en.wikipedia.org/wiki/Cron>
-
-[^windows-scheduled-task]: <https://technet.microsoft.com/en-us/library/cc748993.aspx>
-
-[^ip]: <https://en.wikipedia.org/wiki/IP_address>

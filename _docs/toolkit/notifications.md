@@ -6,3 +6,6 @@ jumbotron:
   tagline: Watch any record and receive notifications about new activity
 ---
 
+(( @mentions ))
+
+(( notifications popup from alert in top right ))

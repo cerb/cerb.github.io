@@ -26,9 +26,9 @@ Click on **Setup** in the top-right of the navigation bar.
 	- Scheduled Behavior
 	
 - **Workers &amp; Groups**
-	- Groups
-	- Roles
-	- Workers
+	- [Groups](/docs/setup/groups)
+	- [Roles](/docs/setup/roles)
+	- [Workers](/docs/setup/workers)
 	
 - **Mail**
 	- Settings

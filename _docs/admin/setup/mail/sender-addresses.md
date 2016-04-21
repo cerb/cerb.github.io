@@ -8,7 +8,11 @@ jumbotron:
 
 Navigate to **Setup** >> **Mail** >> **Sender Addresses**.
 
-These are the email addresses that you can send mail from.
+These are the addresses that you can send email from.
+
+The simplest configuration is to use a single sender address for all outgoing mail. This could be an address like support@, help@, contact@, or team@. In this configuration, you can still receive email from any number of mailboxes.
+
+Alternatively, you may configure distinct sender addresses per department, team, project, subsidiary, or brand. Depending on your mail server, you may be restricted to a list of verified sender addresses. You may need to use a different mail transport per identity.
 
 Each sender address has the following options:
 
@@ -26,7 +30,7 @@ Each sender address has the following options:
 
 (( SMTP server MAIL FROM auth ))
 
-Make sure you've configured SPF, DKIM, and DMARC records in DNS for all sender domains.
+For optimal email deliverability, make sure you've configured SPF, DKIM, and DMARC records in DNS for all sender domains. We'll test this a little later.
 
 # References
 
