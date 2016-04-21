@@ -1,6 +1,6 @@
 ---
 title: Mail Transports
-permalink: /docs/mail-transports/
+permalink: /docs/setup/mail-transports/
 jumbotron:
   title: Mail Transports
   tagline: ...

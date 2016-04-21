@@ -1,6 +1,6 @@
 ---
 title: Sender Addresses
-permalink: /docs/sender-addresses/
+permalink: /docs/setup/sender-addresses/
 jumbotron:
   title: Sender Addresses
   tagline: ...
