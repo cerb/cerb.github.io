@@ -7,3 +7,6 @@ jumbotron:
   #tagline: ...
 ---
 
+# Contact us
+
+<a href="/contact/">How can we help?</a>
