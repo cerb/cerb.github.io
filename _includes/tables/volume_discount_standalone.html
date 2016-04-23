@@ -1,0 +1,27 @@
+<table class="matrix">
+	<caption>{{ include.caption }}</caption>
+	
+	<thead>
+		<th>Seats</th>
+		<th>Cost/Seat</th>
+	</thead>
+
+	{% assign cost_block = 0.00 %}
+	{% assign cost_seat_base = include.base_cost %}
+	<tbody>
+	{% for n in (0...11) %}
+		{% assign from = n | times:25 | plus:1 %}
+		{% assign to = from | plus:24 %}
+		{% assign discount = n | times:0.075 %}
+		{% assign reduction = 1 | minus:discount %}
+		{% assign cost_seat = cost_seat_base | times:reduction %}
+		{% assign cost_block = cost_seat | times:25 | plus:cost_block %}
+		<tr>
+			<td>{{from}}-{{to}}{% if forloop.last %}+{% endif %}</td>
+			{% assign avg_cost = cost_block|divided_by:to %}
+			{% assign len = ''|append:avg_cost|size %}
+			<td>${{avg_cost|round}}</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>

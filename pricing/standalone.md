@@ -1,27 +1,88 @@
 ---
 layout: page
-title: "Cerb Standalone"
+title: "Cerb License"
 permalink: /pricing/license
 jumbotron:
-  title: Cerb Standalone Licenses
+  title: Standalone Cerb Licenses
   tagline: Deploy Cerb on your own hardware
 ---
 
-__Cerb Standalone__ runs on your own hardware. Licenses provide one year of priority support and software updates, but never expire for the versions you've paid for.
+A __standalone Cerb license__ runs on your own hardware. You handle installation, upgrades, backups, monitoring, tuning, scaling, security, troubleshooting, etc. The software requires a web server with PHP 5.3+ and MySQL 5.1+.
 
-* You handle installation, upgrades, backups, monitoring, tuning, scaling, security, troubleshooting, etc. The software requires a web server with PHP 5.3+ and MySQL 5.1+.
+* Licensed based on **seats** (the maximum number of workers who can log in at the same time). An **unlimited** number of worker accounts can share the available seats.
 
-* Allow __unlimited__ worker accounts and are priced based on concurrent workers (__seats__).
+* Includes **one year** of priority support and software updates. Your license **never expires** for versions released during your software updates coverage, and there is no ongoing cost to continue using those versions.
 
-* Include __1 year__ of priority support and software updates.
+* Ideal for sensitive environments (HIPAA, Safe Harbor, etc).
 
-* Will __never__ expire for the versions released during your active software updates term.
+<table class="cerb-pricing-matrix">
+	<thead>
+		<tr>
+			<th></th>
+			<th>Evaluation [<a href="#evaluation">?</a>]</th>
+			<th>Academic [<a href="#academic">?</a>]</th>
+			<th>Commercial/Gov</th>
+		</tr>
+	</thead>
+	
+	<tbody class="matrix">
+		<tr>
+			<td>Base Price:</td>
+			<td>$0</td>
+			<td>$240</td>
+			<td>$300</td>
+		</tr>
+		
+		<tr>
+			<td>Total workers:</td>
+			<td>unlimited</td>
+			<td>unlimited</td>
+			<td>unlimited</td>
+		</tr>
+		
+		<tr>
+			<td>Included seats [<a href="#seats">?</a>]:</td>
+			<td>3</td>
+			<td>1</td>
+			<td>1</td>
+		</tr>
 
-* Are ideal for sensitive environments (HIPAA, etc).
+		<tr>
+			<td>Extra seats [<a href="#volume-discount">?</a>]:</td>
+			<td><span class="no"></span></td>
+			<td>+$240</td>
+			<td>+$300</td>
+		</tr>
+		
+		<tr>
+			<td>Software updates:</td>
+			<td><span class="no"></span></td>
+			<td>1 year</td>
+			<td>1 year</td>
+		</tr>
 
-* **$300** (USD) per seat.
+		<tr>
+			<td>Priority support:</td>
+			<td><span class="no"></span></td>
+			<td>1 year</td>
+			<td>1 year</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td><a href="/contact/community-license">request</a></td>
+			<td><a href="">purchase</a></td>
+			<td><a href="">purchase</a></td>
+		</tr>
+
+	</tbody>
+	
+</table>
+<br>
 
 # Frequently asked questions
+
+<div id="seats"></div>
 
 ## What are seats?
 
@@ -30,3 +91,51 @@ Seats determine the maximum number of workers who can use Cerb at the same time.
 For example, a team of 30 workers who are evenly split into three, non-overlapping 8-hour shifts (morning, day, night) would only require 10 seats. That's the highest number of workers who would ever be logged in at the same time.
 
 You aren't paying per worker account, so there isn't a penalty for inviting everyone to participate: full-time staff, part-time contributors, busy executives, interns, temps, contractors, partners, and volunteers.
+
+<div id="community"></div>
+
+## What is an evaluation license?
+
+(( startup, non-profit, charity, open-source ))
+
+(( no expiration, one renewal per year ))
+
+<div id="academic"></div>
+
+## What are academic licenses?
+
+<div id="government"></div>
+
+## What are government licenses?
+
+<div id="non-profit"></div>
+
+## Do you provide discounts to non-profits and charities?
+
+<div id="opensource"></div>
+
+## Do you provide discounts to open-source projects?
+
+<div id="renewal"></div>
+
+## Do you provide a renewal discount?
+
+Yes! We automatically add a 10% _"timely renewal_" discount to your invoice for any existing licenses that have not been expired for more than 30 days.
+
+<div id="volume-discount"></div>
+
+## Do you provide a volume discount for standalone Cerb licenses?
+
+Yes! Volume discounts are available for _Academic_, _Commercial_, and _Government_ licenses with __more than 25 seats__.
+
+<div class="grid">
+<div class="unit half" align="center">
+{% include tables/volume_discount_standalone.html caption="Academic Volume Discount" base_cost=240.00 %}
+</div>
+<div class="unit half" align="center">
+{% include tables/volume_discount_standalone.html caption="Commercial/Gov Volume Discount" base_cost=300.00 %}
+</div>
+</div>
+
+If you have multiple **non-expired** Cerb licenses on your account, the sum of all seats of the same license type determines your volume discount. This is particularly beneficial for large companies with many subsidiaries using independent instances of Cerb, and outsourced support companies who use distinct Cerb environments for each client to provide their services.
+

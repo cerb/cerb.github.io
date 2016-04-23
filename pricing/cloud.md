@@ -350,16 +350,20 @@ Yes! Volume discounts are available for _Pro_ and _Enterprise_ subscriptions wit
 
 <div class="grid">
 <div class="unit half" align="center">
-{% include tables/volume_discount.html caption="Pro Volume Discount" base_cost=40.00 %}
+{% include tables/volume_discount_cloud.html caption="Pro Volume Discount" base_cost=40.00 %}
 </div>
 <div class="unit half" align="center">
-{% include tables/volume_discount.html caption="Enterprise Volume Discount" base_cost=60.00 %}
+{% include tables/volume_discount_cloud.html caption="Enterprise Volume Discount" base_cost=60.00 %}
 </div>
 </div>
 
 If you have multiple Cerb Cloud subscriptions on your account, the sum of all seats of the same subscription type determines your volume discount. This is particularly beneficial for large companies with many subsidiaries using independent instances of Cerb, and outsourced support companies who use distinct Cerb environments for each client to provide their services.
 
 <div id="instant-mx"></div>
+
+## Do you provide academic discounts?
+
+Yes!
 
 ## What is Instant MX Delivery?
 
