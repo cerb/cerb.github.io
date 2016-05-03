@@ -70,9 +70,9 @@ A __standalone Cerb license__ runs on your own hardware. You handle installation
 
 		<tr>
 			<td></td>
-			<td><a href="/contact/community-license">request</a></td>
 			<td><a href="">purchase</a></td>
 			<td><a href="">purchase</a></td>
+			<td><a href="/contact/evaluation-license">request</a></td>
 		</tr>
 
 	</tbody>
@@ -92,9 +92,9 @@ For example, a team of 30 workers who are evenly split into three, non-overlappi
 
 You aren't paying per worker account, so there isn't a penalty for inviting everyone to participate: full-time staff, part-time contributors, busy executives, interns, temps, contractors, partners, and volunteers.
 
-<div id="community"></div>
+<div id="evaluation"></div>
 
-## What is an evaluation license?
+## What are evaluation licenses?
 
 (( startup, non-profit, charity, open-source ))
 

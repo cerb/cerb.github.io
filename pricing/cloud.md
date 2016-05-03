@@ -35,7 +35,7 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		<tr>
 			<td>Monthly base price:</td>
 			<td>$60</td>
-			<td>$200</td>
+			<td>$120</td>
 			<td>$600</td>
 		</tr>
 
@@ -49,7 +49,7 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		<tr>
 			<td>Included seats [<a href="#seats">?</a>]:</td>
 			<td>3</td>
-			<td>5</td>
+			<td>3</td>
 			<td>10</td>
 		</tr>
 
@@ -131,6 +131,16 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
+
+		<!--
+		<tr>
+			<td>External Backups: [<a href="#backups-sync">?</a>]</td>
+			<td><span class="no"></span></td>
+			<td><span class="no"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+		-->
+			
 	</tbody>
 
 	<tbody class="section">
