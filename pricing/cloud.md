@@ -1,7 +1,8 @@
 ---
 layout: page
 title: "Cerb Cloud"
-permalink: /pricing/cloud
+permalink: /cloud
+redirect_from: /pricing/cloud
 jumbotron:
   title: Cerb Cloud Subscriptions
   tagline: Deploy a reliable, fine-tuned, fully-managed Cerb environment in the Cloud
