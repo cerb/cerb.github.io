@@ -160,7 +160,7 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 	
 		<tr>
 			<td>Mailbox Scheduler:</td>
-			<td>15 mins</td>
+			<td>10 mins</td>
 			<td>5 mins</td>
 			<td>5 mins</td>
 		</tr>
@@ -211,14 +211,14 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 	<tbody class="matrix">
 		<tr>
 			<td>VA Behavior Scheduler:</td>
-			<td>15 mins</td>
+			<td>10 mins</td>
 			<td>5 mins</td>
 			<td>1 min</td>
 		</tr>
 	
 		<tr>
 			<td>Plugin Scheduler:</td>
-			<td>15 mins</td>
+			<td>10 mins</td>
 			<td>5 mins</td>
 			<td>1 min</td>
 		</tr>
