@@ -98,14 +98,14 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		</tr>
 
 		<tr>
-			<td>Resource Cache:</td>
+			<td>Resource Cache [<a href="#what-is-a-resource-cache">?</a>]:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
 	
 		<tr>
-			<td>Custom Domain [<a href="#custom-domains">?</a>]:</td>
+			<td>Custom URL [<a href="#custom-domains">?</a>]:</td>
 			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
@@ -120,6 +120,13 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 
 	<tbody class="matrix">
 		<tr>
+			<td>Nightly Snapshots:</td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+		
+		<tr>
 			<td>Point-in-Time Backups:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
@@ -132,44 +139,78 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
-
-		<!--
-		<tr>
-			<td>External Backups: [<a href="#backups-sync">?</a>]</td>
-			<td><span class="no"></span></td>
-			<td><span class="no"></span></td>
-			<td><span class="yes"></span></td>
-		</tr>
-		-->
-			
 	</tbody>
-
+	
 	<tbody class="section">
 		<tr>
-			<td colspan="4">Mail</td>
+			<td colspan="4">Storage</td>
 		</tr>
 	</tbody>
 	
 	<tbody class="matrix">
 		<tr>
-			<td>External Mailboxes:</td>
+			<td>Limit:</td>
+			<td>10GB</td>
+			<td>50GB</td>
+			<td>100GB+</td>
+		</tr>
+	</tbody>
+
+	<tbody class="section">
+		<tr>
+			<td colspan="4">Incoming Mail</td>
+		</tr>
+	</tbody>
+
+	<tbody class="matrix">
+		<tr>
+			<td>Redirect Mailbox [<a href="#redirect-mailbox">?</a>]:</td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+
+		<tr>
+			<td>Instant Delivery [<a href="#instant-delivery">?</a>]:</td>
+			<td><span class="no"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+		
+		<tr>
+			<td>External Mailbox Checks:</td>
 			<td>1</td>
 			<td>5</td>
-			<td>10</td>
+			<td>10+</td>
 		</tr>
 	
 		<tr>
-			<td>Mailbox Scheduler:</td>
+			<td>Mailbox Check Interval:</td>
 			<td>10 mins</td>
 			<td>5 mins</td>
 			<td>5 mins</td>
 		</tr>
+	</tbody>
+
+	<tbody class="section">
+		<tr>
+			<td colspan="4">Outgoing Mail</td>
+		</tr>
+	</tbody>
 	
+	<tbody class="matrix">
+		<tr>
+			<td>Cerb Cloud SMTP:</td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>	
+
 		<tr>
 			<td>Sender Domains:</td>
-			<td>1</td>
-			<td>5</td>
-			<td>25</td>
+			<td>3</td>
+			<td>10</td>
+			<td>20+</td>
 		</tr>
 	
 		<tr>
@@ -178,30 +219,45 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>	
-
-		<tr>
-			<td>Instant MX Delivery [<a href="#instant-mx">?</a>]:</td>
-			<td><span class="no"></span></td>
-			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
-		</tr>
 	</tbody>
 
 	<tbody class="section">
 		<tr>
-			<td colspan="4">Portals</td>
+			<td colspan="4">Full-Text Search</td>
+		</tr>
+	</tbody>
+
+	<tbody class="matrix">
+		<tr>
+			<td>Term matching (all/any):</td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+		
+		<tr>
+			<td>Elasticsearch [<a href="#elasticsearch">?</a>]:</td>
+			<td><span class="no"></span></td>
+			<td><span class="no"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+	</tbody>
+	
+	<tbody class="section">
+		<tr>
+			<td colspan="4">Community Portals</td>
 		</tr>
 	</tbody>
 	
 	<tbody class="matrix">
 		<tr>
-			<td>Portals/CNAMEs:</td>
+			<td>Limit:</td>
 			<td>1</td>
 			<td>5</td>
-			<td>10</td>
+			<td>10+</td>
 		</tr>
 	</tbody>
-	
+
 	<tbody class="section">
 		<tr>
 			<td colspan="4">Integration</td>
@@ -370,19 +426,39 @@ Yes! Volume discounts are available for _Pro_ and _Enterprise_ subscriptions wit
 
 If you have multiple Cerb Cloud subscriptions on your account, the sum of all seats of the same subscription type determines your volume discount. This is particularly beneficial for large companies with many subsidiaries using independent instances of Cerb, and outsourced support companies who use distinct Cerb environments for each client to provide their services.
 
-<div id="instant-mx"></div>
-
 ## Do you provide academic discounts?
 
-Yes!
+Yes! Contact us for more details.
 
-## What is Instant MX Delivery?
+## What is a Resource Cache?
+
+Static resources like images, stylesheets, and scripts are sent to browsers from a high-performance, memory-based cache. This is useful because resources in Cerb can also come from plugins and higher latency repositories like S3.
+
+Even though your own browser will cache these files, the same resources could be requested thousands of times per day from various devices, community portal visitors, workers with caching disabled, etc.  Without the cache, these requests would create a higher load on the application servers and increase the average response time.
+
+<div id="redirect-mailbox"></div>
+
+## What is a Redirect Mailbox?
 
 In most Cerb environments, a list of POP3/IMAP mailboxes is checked for new messages every few minutes. This works well enough for a couple mailboxes, but it can be very inefficient at scale.
 
-Rather than checking mailboxes for new mail, Instant MX Delivery allows you to redirect a copy of your incoming email to a special address (like `incoming@example.cerb.email`) that delivers directly into your Cerb Cloud instance. This is the fastest way to receive new email in Cerb Cloud.
+Rather than checking mailboxes for new mail, a Redirect Mailbox allows you to redirect a copy of your incoming email to a special address (like `incoming@example.cerb.email`) that delivers directly into your Cerb Cloud instance. This is the fastest way to receive new email in Cerb Cloud.
 
-_"MX"_ refers to the _mail exchanger_ records in DNS, which specify where email is to be delivered for a given domain. Cerb Cloud doesn't require you to modify your own MX records. For instance, you can still deliver your company email to Google Apps like usual, while redirecting certain messages to your Cerb Cloud account.
+Cerb Cloud doesn't require you to modify your own MX records. For instance, you can still deliver your company email to Google Apps like usual, while redirecting certain messages to your Cerb Cloud account.
+
+<div id="instant-delivery"></div>
+
+## What is Instant Delivery?
+
+When mail is received by your Redirect Mailbox, it will be delivered into Cerb instantly rather than being queued for delivery.
+
+<div id="elasticsearch"></div>
+
+## What is Elasticsearch?
+
+By default, full-text searching in Cerb is handled by MySQL Fulltext[^mysql-fulltext]. This provides a working solution _"out of the box"_, but it is neither full-featured nor efficient.  It works best when matching a few distinct terms against thousands of documents.
+
+In contrast, Elasticsearch[^elasticsearch] is a distributed, scalable, high-performance search engine with powerful full-text search features. It can search against millions of documents in milliseconds using terms, compound queries, phrases, etc.
 
 <div id="urgent-escalations"></div>
 
@@ -406,3 +482,8 @@ Similarly, the additional _Enterprise_ support commitments require highly experi
 
 Consider these two extremes: 1 instance with 50 seats, and 50 instances with 1 seat each. Both result in roughly the same amount of revenue on 50 seats (the former qualifies for a volume discount), but the latter potentially requires 50 times the amount of resources and support. The quality of our support and service would suffer.
 
+# References
+
+[^mysql-fulltext]: <http://dev.mysql.com/doc/refman/5.7/en/fulltext-search.html>
+
+[^elasticsearch]: <https://www.elastic.co/products/elasticsearch>
