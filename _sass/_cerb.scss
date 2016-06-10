@@ -328,6 +328,23 @@ table.matrix {
 	}
 }
 
+table.cerb-feature-comparison {
+	width: 100%;
+	border-spacing: 0;
+	
+	> tbody > tr > td {
+		vertical-align: top;
+		width: 33%;
+	}
+	
+	td {
+		div.price {
+			font-size: 120%;
+			font-weight: bold;
+		}
+	}
+}
+
 table.cerb-pricing-matrix {
 	width: 100%;
 	border-spacing: 0;

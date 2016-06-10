@@ -22,6 +22,67 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 
 * __Durable__: We archive a sequence of full daily database backups, as well as the incremental point-in-time changes in between. Long term object storage (like attachments) are redundantly stored in several geographically separate locations. We can also arrange for backups to be routinely transfered to you.
 
+<table class="cerb-feature-comparison">
+	<tr>
+		<td>
+			<h1>Startup</h1>
+			<div class="price">$20/seat/month</div>
+			<div>(minimum 1 seat)</div>
+			<br>
+			<div>Features include:</div>
+			<ul>
+				<li>High availability</li>
+				<li>Automated scaling</li>
+				<li>Automated backups</li>
+				<li>SSL encryption</li>
+				<li>Instant inbound mail delivery</li>
+				<li>Outgoing mail w/ SPF+DKIM</li>
+				<li>External mailbox check</li>
+				<li>Plugin Library</li>
+				<li>Community portals</li>
+				<li>Virtual Attendants</li>
+				<li>Next day support</li>
+			</ul>
+		</td>
+		
+		<td>
+			<h1>Pro</h1>
+			<div class="price">$40/seat/month</div>
+			<div>(minimum 3 seats)</div>
+			<br>
+			<div>All Startup features, plus:</div>
+			<ul>
+				<li>Priority, same day support</li>
+				<li>Webhooks</li>
+				<li>API</li>
+				<li>Custom URL</li>
+				<li>More &amp; faster mailbox checks</li>
+				<li>More sender domains</li>
+				<li>More community portals</li>
+			</ul>
+		</td>
+
+		<td>
+			<h1>Enterprise</h1>
+			<div class="price">$60/seat/month</div>
+			<div>(minimum 10 seats)</div>
+			<br>
+			<div>All Pro features, plus:</div>
+			<ul>
+				<li>Top priority, same day support</li>
+				<li>Weekend &amp; holiday support</li>
+				<li>Real-time chat w/ developers</li>
+				<li>Phone support</li>
+				<li>Database cluster w/failover</li>
+				<li>Elasticsearch [<a href="#elasticsearch">?</a>]</li>
+				<li>Custom plugins</li>
+				<li>Urgent escalations [<a href="#urgent-escalations">?</a>]</li>
+				<li>Discounted technical services [<a href="#technical-services">?</a>]</li>
+			</ul>
+		</td>
+	</tr>
+</table>
+
 <table class="cerb-pricing-matrix">
 	<thead>
 		<tr>
@@ -35,9 +96,9 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 	<tbody class="matrix">
 		<tr>
 			<td>Monthly base price:</td>
-			<td>$60</td>
-			<td>$120</td>
-			<td>$600</td>
+			<td>$20/seat</td>
+			<td>$40/seat</td>
+			<td>$60/seat</td>
 		</tr>
 
 		<tr>
@@ -48,24 +109,38 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		</tr>
 	
 		<tr>
-			<td>Included seats [<a href="#seats">?</a>]:</td>
-			<td>3</td>
+			<td>Minimum seats [<a href="#seats">?</a>]:</td>
+			<td>1</td>
 			<td>3</td>
 			<td>10</td>
 		</tr>
 
 		<tr>
-			<td>Extra seats [<a href="#volume-discount">?</a>]:</td>
-			<td>+$20</td>
-			<td>+$40</td>
-			<td>+$60</td>
+			<td>Extra seats:</td>
+			<td>+$20/mo</td>
+			<td>+$40/mo</td>
+			<td>+$60/mo</td>
+		</tr>
+
+		<tr>
+			<td>Annual prepayment discount:</td>
+			<td>5%</td>
+			<td>10%</td>
+			<td>10%</td>
+		</tr>
+
+		<tr>
+			<td>Volume discounts [<a href="#volume-discount">?</a>]:</td>
+			<td><span class="no"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
 		</tr>
 
 		<tr>
 			<td></td>
-			<td><a href="/demo/">free trial</a></td>
-			<td><a href="/demo/">free trial</a></td>
-			<td><a href="/demo/">free trial</a></td>
+			<td></td>
+			<td><a href="/demo/">free 30 day evaluation</a></td>
+			<td></td>
 		</tr>
 	</tbody>
 
@@ -77,35 +152,35 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 
 	<tbody class="matrix">
 		<tr>
-			<td>SSL Encryption:</td>
+			<td>High availability:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
 	
 		<tr>
-			<td>High-Availability:</td>
-			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
-		</tr>
-	
-		<tr>
-			<td>Auto-Scaling:</td>
+			<td>Automated scaling:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
 
 		<tr>
-			<td>Resource Cache [<a href="#what-is-a-resource-cache">?</a>]:</td>
+			<td>Automated backups:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
-	
+		
 		<tr>
-			<td>Custom URL [<a href="#custom-domains">?</a>]:</td>
+			<td>SSL encryption:</td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+		
+		<tr>
+			<td>Custom URL w/ SSL [<a href="#custom-urls">?</a>]:</td>
 			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
@@ -120,19 +195,12 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 
 	<tbody class="matrix">
 		<tr>
-			<td>Nightly Snapshots:</td>
-			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
-		</tr>
-		
-		<tr>
-			<td>Point-in-Time Backups:</td>
-			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
+			<td>Read Replicas:</td>
+			<td><span class="no"></span></td>
+			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
-	
+
 		<tr>
 			<td>Cluster Failover:</td>
 			<td><span class="no"></span></td>
@@ -141,21 +209,6 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		</tr>
 	</tbody>
 	
-	<tbody class="section">
-		<tr>
-			<td colspan="4">Storage</td>
-		</tr>
-	</tbody>
-	
-	<tbody class="matrix">
-		<tr>
-			<td>Limit:</td>
-			<td>10GB</td>
-			<td>50GB</td>
-			<td>100GB+</td>
-		</tr>
-	</tbody>
-
 	<tbody class="section">
 		<tr>
 			<td colspan="4">Incoming Mail</td>
@@ -172,23 +225,23 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 
 		<tr>
 			<td>Instant Delivery [<a href="#instant-delivery">?</a>]:</td>
-			<td><span class="no"></span></td>
+			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
 		
 		<tr>
-			<td>External Mailbox Checks:</td>
-			<td>1</td>
-			<td>5</td>
-			<td>10+</td>
+			<td>Included Mailbox Checks [<a href="#mailbox-checks">?</a>]:</td>
+			<td>1 check every 5 mins</td>
+			<td>5 checks every 1 min</td>
+			<td>10 checks every 1 min</td>
 		</tr>
-	
+
 		<tr>
-			<td>Mailbox Check Interval:</td>
-			<td>10 mins</td>
-			<td>5 mins</td>
-			<td>5 mins</td>
+			<td>Extra Mailbox Checks:</td>
+			<td>+$5/mo</td>
+			<td>+$5/mo</td>
+			<td>+$5/mo</td>
 		</tr>
 	</tbody>
 
@@ -207,54 +260,60 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		</tr>	
 
 		<tr>
-			<td>Sender Domains:</td>
-			<td>3</td>
-			<td>10</td>
-			<td>20+</td>
-		</tr>
-	
-		<tr>
-			<td>DKIM/SPF:</td>
+			<td>SPF/DKIM:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>	
+
+		<tr>
+			<td>Included sender domains [<a href="#sender-domains">?</a>]:</td>
+			<td>1</td>
+			<td>10</td>
+			<td>25</td>
+		</tr>
+
+		<tr>
+			<td>Extra sender domains:</td>
+			<td>+$1/mo</td>
+			<td>+$1/mo</td>
+			<td>+$1/mo</td>
+		</tr>
 	</tbody>
 
 	<tbody class="section">
 		<tr>
-			<td colspan="4">Full-Text Search</td>
+			<td colspan="4">Community Portal Hosting</td>
 		</tr>
 	</tbody>
 
 	<tbody class="matrix">
 		<tr>
-			<td>Term matching (all/any):</td>
-			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
-		</tr>
-		
-		<tr>
-			<td>Elasticsearch [<a href="#elasticsearch">?</a>]:</td>
-			<td><span class="no"></span></td>
-			<td><span class="no"></span></td>
-			<td><span class="yes"></span></td>
-		</tr>
-	</tbody>
-	
-	<tbody class="section">
-		<tr>
-			<td colspan="4">Community Portals</td>
-		</tr>
-	</tbody>
-	
-	<tbody class="matrix">
-		<tr>
-			<td>Limit:</td>
+			<td>Included portals:</td>
 			<td>1</td>
 			<td>5</td>
-			<td>10+</td>
+			<td>10</td>
+		</tr>
+
+		<tr>
+			<td>Extra portals:</td>
+			<td>+$10/month</td>
+			<td>+$10/month</td>
+			<td>+$10/month</td>
+		</tr>
+
+		<tr>
+			<td>Custom URL:</td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+
+		<tr>
+			<td>SSL certificate:</td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
 		</tr>
 	</tbody>
 
@@ -265,20 +324,6 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 	</tbody>
 
 	<tbody class="matrix">
-		<tr>
-			<td>VA Behavior Scheduler:</td>
-			<td>10 mins</td>
-			<td>5 mins</td>
-			<td>1 min</td>
-		</tr>
-	
-		<tr>
-			<td>Plugin Scheduler:</td>
-			<td>10 mins</td>
-			<td>5 mins</td>
-			<td>1 min</td>
-		</tr>
-	
 		<tr>
 			<td>Plugin Library:</td>
 			<td><span class="yes"></span></td>
@@ -333,35 +378,28 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<td>Holidays:</td>
 			<td><span class="no"></span></td>
 			<td>next day</td>
-			<td>next day</td>
+			<td>same day</td>
 		</tr>
 	
 		<tr>
-			<td>Phone Support:</td>
+			<td>Phone support:</td>
 			<td><span class="no"></span></td>
 			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
 
 		<tr>
-			<td>Developer Live Chat:</td>
+			<td>Developer live chat:</td>
 			<td><span class="no"></span></td>
 			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
 	
 		<tr>
-			<td>Urgent Escalations [<a href="#urgent-escalations">?</a>]:</td>
-			<td>$250/incident</td>
-			<td>$250/incident</td>
-			<td>1 per month</td>
-		</tr>
-	
-		<tr>
-			<td>Technical Services:</td>
-			<td>$125/hour</td>
-			<td>$100/hour</td>
-			<td>$85/hour</td>
+			<td>Technical service discounts [<a href="#technical-services">?</a>]:</td>
+			<td><span class="no"></span></td>
+			<td><span class="no"></span></td>
+			<td><span class="yes"></span></td>
 		</tr>
 	</tbody>
 	
@@ -381,9 +419,9 @@ For example, a team of 30 workers who are evenly split into three, non-overlappi
 
 You aren't paying per worker account, so there isn't a penalty for inviting everyone to participate: full-time staff, part-time contributors, busy executives, interns, temps, contractors, partners, and volunteers.
 
-<div id="custom-domains"></div>
+<div id="custom-urls"></div>
 
-## Can I use my own domain name, rather than *.cerb.me?
+## Can I use my own URL, rather than *.cerb.me?
 
 Yes, with a _Pro_ or _Enterprise_ subscription.
 
@@ -430,27 +468,33 @@ If you have multiple Cerb Cloud subscriptions on your account, the sum of all se
 
 Yes! Contact us for more details.
 
-## What is a Resource Cache?
+<div id="mailbox-checks"></div>
 
-Static resources like images, stylesheets, and scripts are sent to browsers from a high-performance, memory-based cache. This is useful because resources in Cerb can also come from plugins and higher latency repositories like S3.
+## What are External Mailbox Checks?
 
-Even though your own browser will cache these files, the same resources could be requested thousands of times per day from various devices, community portal visitors, workers with caching disabled, etc.  Without the cache, these requests would create a higher load on the application servers and increase the average response time.
+Cerb Cloud can download new mail from POP3 or IMAP mailboxes at any mail provider who provides external access.
+
+There is no limit to the number of external mailboxes you can configure, but your subscription level determines how many mailboxes we'll check for new mail at a time, and how often.  Each time the scheduler runs, we'll start with the least recently checked mailbox.
+
+Checking many mailboxes can be very inefficient.  Mail delivery is never instantaneous and mailboxes may have to wait in a queue before being checked.  Some mail servers are also slow to send responses, which can add 20+ seconds to each mailbox check.
+
+You can redirect mail for multiple accounts into a single "dropbox" account to make external mailbox checks more efficient.  This is also how the redirect mailbox works in our instant delivery service, which we highly recommend using instead of external mailbox checks.
 
 <div id="redirect-mailbox"></div>
 
 ## What is a Redirect Mailbox?
 
-In most Cerb environments, a list of POP3/IMAP mailboxes is checked for new messages every few minutes. This works well enough for a couple mailboxes, but it can be very inefficient at scale.
+In most Cerb environments, a list of POP3/IMAP external mailboxes is checked for new messages every few minutes. This works well enough for a couple mailboxes, but it can be very inefficient at scale.
 
 Rather than checking mailboxes for new mail, a Redirect Mailbox allows you to redirect a copy of your incoming email to a special address (like `incoming@example.cerb.email`) that delivers directly into your Cerb Cloud instance. This is the fastest way to receive new email in Cerb Cloud.
 
-Cerb Cloud doesn't require you to modify your own MX records. For instance, you can still deliver your company email to Google Apps like usual, while redirecting certain messages to your Cerb Cloud account.
+Cerb Cloud doesn't require you to modify your own MX records. For instance, you can still deliver your company email to Google Apps like usual, while redirecting mail for certain accounts to Cerb Cloud.
 
 <div id="instant-delivery"></div>
 
 ## What is Instant Delivery?
 
-When mail is received by your Redirect Mailbox, it will be delivered into Cerb instantly rather than being queued for delivery.
+When mail is received by your Redirect Mailbox, it will be delivered into Cerb instantly (within seconds) rather than being queued for delivery.  This enables you to respond more quickly to your customers.
 
 <div id="elasticsearch"></div>
 
@@ -459,6 +503,21 @@ When mail is received by your Redirect Mailbox, it will be delivered into Cerb i
 By default, full-text searching in Cerb is handled by MySQL Fulltext[^mysql-fulltext]. This provides a working solution _"out of the box"_, but it is neither full-featured nor efficient.  It works best when matching a few distinct terms against thousands of documents.
 
 In contrast, Elasticsearch[^elasticsearch] is a distributed, scalable, high-performance search engine with powerful full-text search features. It can search against millions of documents in milliseconds using terms, compound queries, phrases, etc.
+
+<div id="technical-services"></div>
+
+## What are technical services?
+
+Technical services include:
+
+* Custom development of features and plugins
+* Data recovery due to user error
+* Importing data from other apps and services
+* Web-based team training sessions
+
+Our standard rate for technical services is **$125/hour**, billed in 15 minute increments.
+
+Enterprise subscriptions receive a discounted rate of **$85/hour** on technical services, billed in 30 minute increments.
 
 <div id="urgent-escalations"></div>
 
