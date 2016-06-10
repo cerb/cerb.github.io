@@ -70,9 +70,9 @@ A __standalone Cerb license__ runs on your own hardware. You handle installation
 
 		<tr>
 			<td></td>
-			<td><a href="">purchase</a></td>
-			<td><a href="">purchase</a></td>
-			<td><a href="/contact/evaluation-license">request</a></td>
+			<td><a href="/contact/evaluation-license">start evaluation</a></td>
+			<td><a href="/contact/buy-license">purchase</a></td>
+			<td><a href="/contact/buy-license">purchase</a></td>
 		</tr>
 
 	</tbody>
