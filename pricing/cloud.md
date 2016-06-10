@@ -346,6 +346,13 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		</tr>
 	
 		<tr>
+			<td>Elasticsearch [<a href="#elasticsearch">?</a>]:</td>
+			<td><span class="no"></span></td>
+			<td><span class="no"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>
+		
+		<tr>
 			<td>Custom Plugins [<a href="#custom-plugins">?</a>]:</td>
 			<td><span class="no"></span></td>
 			<td><span class="no"></span></td>
