@@ -3,37 +3,77 @@ layout: page
 title: Contact Us
 permalink: /contact/
 jumbotron: 
-  title: Contact Us
+  title: Support
   #tagline: ...
+  breadcrumbs:
+  -
+    label: Contact Us
+    url: /contact/
 ---
 
-# Support
+<script src='https://www.google.com/recaptcha/api.js'></script>
 
-- <a href="/contact/support/">I have a question about Cerb</a>
-- I need technical assistance with Cerb on my own server
+<form id="frmContact" class="cerb-form" action="javascript:;" method="POST" onsubmit="return false;">
+	<fieldset>
+		<legend>How can we help?</legend>
+	
+		<label for="name">Name:</label>
+		<input type="text" name="name" value="" placeholder="Your Name" autocomplete="off" spellcheck="false">
+	
+		<label for="email">Email Address:</label>
+		<input type="text" name="email" value="" placeholder="you@example.com" autocomplete="off" spellcheck="false">
+	
+		<label for="message">Message:</label>
+		<textarea name="message" placeholder="Please describe your question or issue." autocomplete="off" rows="10"></textarea>
+		
+		<div class="g-recaptcha" data-sitekey="6LeOPh0TAAAAANiEBFZLURt43IkCTUMOPUSMoxL9"></div>
+		
+		<div>
+			<input type="button" class="submit" value="Confirm">
+			<div class="status"></div>
+		</div>
+	</fieldset>
+</form>
 
-# Sales
-
-- <a href="/contact/evaluation-license">I need an evaluation license for Cerb on my own server</a>
-- I have a question about pricing or discounts
-
-# Cerb Cloud
-
-- <a href="/demo/">I'd like to sign up for a demo of Cerb Cloud</a>
-- I need to change the seat limit on my account
-- I need to add a new sender domain
-
-# Development
-
-- I found a bug
-- I have a feature request or suggestion
-- I have a code-related question about the project, plugins, or API
-- I'd like to hire a Cerb developer for a project
-
-# Billing
-
-- I'd like to talk about an invoice
-
-# Corporate
-
-- I'd like to discuss a partnership or investment
+<script type="text/javascript">
+$(function() {
+	var $frm = $('#frmContact');
+	
+	$frm.find('input.submit').click(function() {
+		// [TODO] Spinner
+		
+		// Captcha
+		$frm.find('textarea[name=g-recaptcha-response]').val(grecaptcha.getResponse());
+		
+		$.ajax({
+			method: 'POST',
+			url: 'https://cerb.official.support/forms/contact',
+			crossDomain: true,
+			dataType: 'json',
+			data: $frm.serialize(),
+			success: function(res) {
+				if(res && res.error) {
+					grecaptcha.reset();
+					
+					var $warn = $('<div class="warning"/>').text(res.error);
+					$frm.find('div.status').html($warn);
+					return;
+				}
+				
+				if(res && res.success) {
+					var $success = $('<div class="success"/>').text(res.success);
+					$frm.find('div.status').html($success);
+					$frm.find('input.submit').hide();
+				}
+			},
+			error: function(e) {
+				grecaptcha.reset();
+				
+				var $warn = $('<div class="error"/>').text("An unexpected error occurred. Please try again later.");
+				$frm.find('div.status').html($warn);
+				return;
+			}
+		})
+	});
+});
+</script>
