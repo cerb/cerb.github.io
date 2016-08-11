@@ -206,6 +206,8 @@ Review the [security considerations](/docs/security).
 
 Navigate to **Setup** >> **Plugins** >> **Installed Plugins**.
 
+This is where you'll find the available plugins that expand Cerb's functionality.
+
 # References
 
 [^rbl-check]: <http://www.anti-abuse.org/multi-rbl-check/>

@@ -76,16 +76,16 @@ The following general instructions assume that you have console access to a Linu
 Navigate to your website's document directory on the filesystem. The directory will usually be named something like `htdocs`, `httpdocs`, `public_html`, or `www`.
 
 {% highlight bash %}
-$ cd /path/to/support.example.com/httpdocs
+$ cd /path/to/example.com/httpdocs
 {% endhighlight %}
 
 When deploying Cerb on a production server you should use **Git** to manage the project files. This provides many useful capabilities:
 
-* You can quickly upgrade by just fetching files that have changed since your last update.
-* You can see the local changes that you have made to any project files.
-* You can easily reset files back to their default condition.
-* You can see what changes *would* occur before performing an upgrade.
-* You can continuously merge your local changes with our future updates.
+* Quickly upgrade by just fetching files that have changed since your last update.
+* See the local changes that you have made to any project files.
+* Easily reset files back to their default condition.
+* See what changes *would* occur before performing an upgrade.
+* Continuously merge your local changes with our future updates.
 
 You won't need to download the entire project again after your initial installation. You also won't have to hassle with copying your `framework.config.php` configuration file or storage directory when upgrading, or repeating any of your custom modifications to the source code.
 
@@ -134,7 +134,7 @@ You must use your own user and group for `www-data` in the example above.
 
 # Create the database
 
-Create a new MySQL database using the console or your favorite GUI.
+Create a new MySQL database using the console or your favorite GUI tool.
 
 From the MySQL console, you can issue the following SQL statements:
 
@@ -146,7 +146,7 @@ GRANT ALL PRIVILEGES ON cerb.*
  IDENTIFIED BY 'secret_password';
 {% endhighlight %}
 
-Substitute your own database name and login in place of `cerb`, and replace `secret_password` with something that's actually a secret. If you're connecting to a remote database, change `@localhost` to the network address of the webserver.
+Substitute your own database name and login in place of `cerb`, and replace `secret_password` with something that's actually a secret. If you're connecting to a remote database, change `@localhost` to the network address of the webserver where you'll be connecting from.
 
 If you're concerned about granting `ALL PRIVILEGES`, the minimum required privileges for the database user are: `SELECT, INSERT, UPDATE, DELETE, CREATE, ALTER, DROP, INDEX, CREATE TEMPORARY TABLES`.
 
@@ -158,11 +158,11 @@ To start the installer, open your browser to the location where you downloaded C
 
 ## Step 1: Requirements Check
 
+The first step of the installer checks if your server meets the requirements for installing Cerb. Correct any problems before proceeding, and then click the **Next Step** button.
+
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/installation/installer_requirements.png" class="screenshot">
 </div>
-
-The first step of the installer checks if your server meets the requirements for installing Cerb. Correct any problems before proceeding, and then click the **Next Step** button.
 
 ## Step 2: License
 
@@ -174,7 +174,7 @@ Review the software license agreement and then click the **I Accept** button.
 
 Leave this at the default of **MySQLi** (the MySQL Improved extension).
 
-Cerb currently only supports MySQL[^mysql] databases. You can also use one of the MySQL-based forks[^mysql-forks], like Amazon Aurora, MariaDB, Percona, or WebScaleSQL.
+Cerb currently only supports MySQL[^mysql] databases. You can also use one of the MySQL-based forks[^mysql-forks], like Amazon Aurora, MariaDB, Percona, or WebScaleSQL.  We recommend MySQL or Amazon Aurora, as they receive the most testing.
 
 ### Engine
 
@@ -218,7 +218,7 @@ If it can't write the file, it will generate the file for you to manually copy a
 
 ## Step 5: Database Initialization
 
-If successful, the installer will create your initial database structure. This may take a while because the database is created by incrementally running the updates from each previous version; so don’t worry if it doesn’t look like anything is happening right away.
+If successful, the installer will create your initial database structure. This may take a while because the database is created by incrementally running the updates from each previous version.  Don’t worry if it doesn’t look like anything is happening right away.
 
 ## Step 6: General Settings
 
@@ -282,7 +282,7 @@ This is the password established by your SMTP provider.
 
 It is highly recommended that you enable encryption if you use a remote SMTP server.  Cerb supports both TLS[^tls] and SSL[^ssl] encryption, and your selection will depend on the configuration of your email provider.  Given recent SSL vulnerabilities, TLS is considered to be more secure.
 
-As mention in the port configuration above, Google Apps requires you to pair the right encryption method to the given port.  With Google Apps, we recommend port `587` for the port and `TLS` for encryption.
+As mentioned in the port configuration above, Google Apps requires you to pair the right encryption method to the corresponding port.  With Google Apps, we recommend port `587` for the port and `TLS` for encryption.
 
 ## Step 8: Admin Account
 
@@ -294,7 +294,7 @@ This is simply your first and last name (given and surname).
 
 ### Email Address
 
-Your personal email address.  This is how you will authenticate during logins, and it's where your notifications and account recovery details will be sent.  For that reason, this **should not** be an email address managed by Cerb.
+Your **personal** email address.  This is how you will authenticate during logins, and it's where your notifications and account recovery details will be sent.  For that reason, this **should not** be an email address managed by Cerb.
 
 This will likely be something like `you@company.com` or `you@gmail.com`.
 
@@ -302,15 +302,15 @@ This will likely be something like `you@company.com` or `you@gmail.com`.
 
 It is recommended that you choose a strong password here that you don't use anywhere else.  It should be fairly long, contain a mix of alphanumeric characters and symbols, in both upper and lower cases.
 
-We highly recommend using a password manager like 1Password[^1password] to maintain strong password security practices.
+We highly recommend using a password manager like 1Password[^1password] to maintain strong password security practices.  You can also enable two-factor authentication for even stronger security.
 
 ### Timezone
 
-Cerb will use your timezone setting to display and interpret dates using your local timezone.  The installer attempts to automatically detect this for you, but you can adjust it if necessary.
+Cerb will use your timezone setting to display and interpret dates using your local timezone.  The installer attempts to automatically detect this for you, but you can adjust it as necessary.
 
 ## Step 9: Register
 
-In the final step of the installer you are given the opportunity to introduce yourself to us in exchange for a free 3-seat license to help you get started. There are no strings attached. This free license provides full functionality, with no expiration, but it does not include priority support or future updates. We hope that you find the software useful, and we’re looking forward to growing along with you.
+In the final step of the installer you are given the opportunity to introduce yourself to us in exchange for a free 3-seat community license to help you get started. There are no strings attached. This community license provides full functionality, with no expiration, but it does not include priority support or future updates. We hope that you find the software useful, and we’re looking forward to growing along with you.
 
 If you choose not to register your copy of Cerb then the software will default to _Evaluation Mode_, which is limited to a single seat but has no other restrictions.
 

@@ -57,7 +57,7 @@ A __standalone Cerb license__ runs on your own hardware. The software requires a
 			<td>1 year</td>
 		</tr>
 
-		<tr>
+		<tr style="font-weight:bold; font-size:150%;">
 			<td></td>
 			<td><a href="/docs/installation">get started</a></td>
 			<td><!--<a href="/contact/buy-license">purchase</a>--></td>
