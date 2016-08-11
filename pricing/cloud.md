@@ -230,18 +230,12 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		</tr>
 		
 		<tr>
-			<td>Remote Mailbox Checks [<a href="#mailbox-checks">?</a>]:</td>
+			<td>Remote Mailboxes [<a href="#mailbox-checks">?</a>]:</td>
 			<td>1 check every 5 mins</td>
 			<td>5 checks every 1 min</td>
 			<td>10 checks every 1 min</td>
 		</tr>
 
-		<tr>
-			<td>Extra Mailbox Checks:</td>
-			<td>+$5/mo</td>
-			<td>+$5/mo</td>
-			<td>+$5/mo</td>
-		</tr>
 	</tbody>
 
 	<tbody class="section">
@@ -252,32 +246,33 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 	
 	<tbody class="matrix">
 		<tr>
-			<td>Cerb Cloud SMTP:</td>
+			<td>Cerb Cloud SMTP w/ SPF [<a href="#spf">?</a>]:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>	
-
+		
 		<tr>
-			<td>SPF/DKIM:</td>
-			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
-		</tr>	
-
-		<tr>
-			<td>Included sender domains [<a href="#sender-domains">?</a>]:</td>
+			<td>DKIM domain signatures [<a href="#dkim">?</a>]:</td>
 			<td>1</td>
 			<td>10</td>
 			<td>25</td>
 		</tr>
 
 		<tr>
-			<td>Extra sender domains:</td>
+			<td>Additional DKIM domains:</td>
 			<td>+$1/mo</td>
 			<td>+$1/mo</td>
 			<td>+$1/mo</td>
 		</tr>
+		
+		<tr>
+			<td>Remote SMTP:</td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>	
+
 	</tbody>
 
 	<tbody class="section">
@@ -295,13 +290,6 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		</tr>
 
 		<tr>
-			<td>Extra portals:</td>
-			<td>+$10/month</td>
-			<td>+$10/month</td>
-			<td>+$10/month</td>
-		</tr>
-
-		<tr>
 			<td>Custom URL:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
@@ -313,6 +301,13 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
+		</tr>
+
+		<tr>
+			<td>Extra portals:</td>
+			<td>+$10/month</td>
+			<td>+$10/month</td>
+			<td>+$10/month</td>
 		</tr>
 	</tbody>
 
@@ -352,7 +347,7 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		</tr>
 		
 		<tr>
-			<td>Custom Plugins [<a href="#custom-plugins">?</a>]:</td>
+			<td>Third-party plugins [<a href="#custom-plugins">?</a>]:</td>
 			<td><span class="no"></span></td>
 			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
@@ -441,7 +436,7 @@ Keep in mind that you'll need to provide an SSL certificate for each custom doma
 
 Every Cerb Cloud instance can use any of the plugins in the official Plugin Library. These plugins have been developed or audited by our development team and they are guaranteed to be safe.
 
-_Enterprise_ subscriptions have the ability to install custom third-party plugins, but these must be reviewed and approved by our development team prior to use. You'll be asked to create a [GitHub](https://github.com/) repository for the plugin if you haven't already. If the repository is private, then you will need to grant access to the `wgm` account.
+_Enterprise_ subscriptions have the ability to install custom third-party plugins, but these must be reviewed and approved by our development team prior to use. You'll be asked to create a [GitHub](https://github.com/) repository for the plugin if you haven't already. If the repository is private, then you will need to grant access to the `cerb` account.
 
 <div id="annual-discount"></div>
 
@@ -453,6 +448,18 @@ This reflects the fact that we can better forecast our costs and lock in longer 
 
 Contact us to switch your subscription to annual billing and we'll add the discount automatically.
 
+<div id="academic"></div>
+
+## Do you provide academic discounts?
+
+Yes! We offer a 20% discount to qualified academic institutions. Please contact us for details.
+
+<div id="nonprofit"></div>
+
+## Do you offer a discount to charities and non-profits?
+
+Yes! Please contact us for details.
+
 <div id="volume-discount"></div>
 
 ## Do you provide a volume discount for Cerb Cloud subscriptions?
@@ -461,22 +468,38 @@ Yes! Volume discounts are available for _Pro_ and _Enterprise_ subscriptions wit
 
 <div class="grid">
 <div class="unit half" align="center">
-{% include tables/volume_discount_cloud.html caption="Pro Volume Discount" base_cost=40.00 %}
+{% include tables/volume_discount_cloud.html caption="Pro Volume Pricing" base_cost=40.00 %}
 </div>
 <div class="unit half" align="center">
-{% include tables/volume_discount_cloud.html caption="Enterprise Volume Discount" base_cost=60.00 %}
+{% include tables/volume_discount_cloud.html caption="Enterprise Volume Pricing" base_cost=60.00 %}
 </div>
 </div>
 
 If you have multiple Cerb Cloud subscriptions on your account, the sum of all seats of the same subscription type determines your volume discount. This is particularly beneficial for large companies with many subsidiaries using independent instances of Cerb, and outsourced support companies who use distinct Cerb environments for each client to provide their services.
 
-## Do you provide academic discounts?
+<div id="smtp"></div>
 
-Yes! Contact us for more details.
+## Do I need my own email server to use Cerb Cloud?
+
+No, we provide a cloud-based SMTP service for outgoing mail with SPF and DKIM support.  We also provide a redirect mailbox for delivering incoming mail.
+
+You can easily configure Cerb to use remote mail services if desired.
+
+<div id="spf"></div>
+
+## What does SPF mean with respect to outgoing mail?
+
+Sender Policy Framework[^spf] (**SPF**) defines the format of a simple text record that you add to the DNS[^dns] for each domain you send email from. This record lists a series of network addresses that are permitted to send email on your behalf.  For instance, if you specify that only your organization's own SMTP server is permitted to send email for your domain, then other mail servers will be far more suspicious of messages that purport to be from you but originate elsewhere. This helps combat _spoofing_[^spoofing], where malicious senders attempt to trick recipients into believing a message was sent by you.
+
+<div id="dkim"></div>
+
+## What are DKIM signatures?
+
+DomainKeys Identified Mail[^dkim] (**DKIM**) attempts to detect spoofing and tampering by cryptographically signing an email message using a secret key (which should only be known by authorized senders). Any mail server can verify this digital signature by retrieving the corresponding public key from the DNS for a given sender domain. When a DKIM signature is successfully validated, a mail server can be confident that a message originated from a source that was authorized by the owner of the sender's domain name. This confidence score is generally highest when the domain of the DKIM signature matches that of the envelope sender and the `From:` header.
 
 <div id="mailbox-checks"></div>
 
-## What are Remote Mailbox Checks?
+## What are remote mailbox checks?
 
 Cerb Cloud can download new mail from POP3 or IMAP mailboxes at any mail provider who provides external access.
 
@@ -488,7 +511,7 @@ You can redirect mail for multiple accounts into a single "dropbox" account to m
 
 <div id="redirect-mailbox"></div>
 
-## What is a Redirect Mailbox?
+## What is a redirect mailbox?
 
 In most Cerb environments, a list of POP3/IMAP remote mailboxes is checked for new messages every few minutes. This works well enough for a couple mailboxes, but it can be very inefficient at scale.
 
@@ -498,9 +521,11 @@ Cerb Cloud doesn't require you to modify your own MX records. For instance, you 
 
 <div id="instant-delivery"></div>
 
-## What is Instant Delivery?
+## How fast is incoming mail delivered into Cerb?
 
-When mail is received by your Redirect Mailbox, it will be delivered into Cerb instantly (within seconds) rather than being queued for delivery.  This enables you to respond more quickly to your customers.
+When mail is received by your redirect mailbox it will be delivered into Cerb instantly (within seconds).  This enables you to respond more quickly to your customers.
+
+If you choose to use remote mailboxes instead, new mail will generally be downloaded every few minutes.
 
 <div id="elasticsearch"></div>
 
@@ -521,13 +546,13 @@ Technical services include:
 * Importing data from other apps and services
 * Web-based team training sessions
 
-Our standard rate for technical services is **$125/hour**, billed in 15 minute increments.
+Our standard rate for technical services is **$120/hour**, billed in 15 minute increments.
 
-Enterprise subscriptions receive a discounted rate of **$85/hour** on technical services, billed in 30 minute increments.
+Enterprise subscriptions receive a discounted rate of **$100/hour** on technical services, billed in 15 minute increments.
 
 <div id="urgent-escalations"></div>
 
-## What are Urgent Escalations?
+## What are urgent escalations?
 
 An __urgent escalation__ will move one incident of your choice to the front of our priority support queue and summon a highly experienced member of our development team at any time (early hours, overnight, weekends, holidays).
 
@@ -543,12 +568,21 @@ That's the point where it becomes cost effective for us to provide the extra ser
 
 The _Enterprise_ subscriptions can scale up to a pool of resources that are entirely dedicated to a single instance of Cerb. The database cluster for instant failover requires at least twice the resources of a _Startup_ or _Pro_ subscription (and more if there are extra read replicas for scaling).
 
-Similarly, the additional _Enterprise_ support commitments require highly experienced developers on call.
+Similarly, the additional _Enterprise_ support commitments require highly experienced developers on call around the clock.
 
-Consider these two extremes: 1 instance with 50 seats, and 50 instances with 1 seat each. Both result in roughly the same amount of revenue on 50 seats (the former qualifies for a volume discount), but the latter potentially requires 50 times the amount of resources and support. The quality of our support and service would suffer.
+Consider these two extremes: 1 client with 50 seats, and 50 clients with 1 seat each. Both clients result in roughly the same amount of revenue for 50 seats (the single client qualifies for a volume discount), but the 50 clients variation potentially requires 50 times the amount of resources like storage and support (negatively affecting the quality and responsiveness of our services).  The enterprise option is predicated on having our full attention at all times.
 
 # References
 
 [^mysql-fulltext]: <http://dev.mysql.com/doc/refman/5.7/en/fulltext-search.html>
 
 [^elasticsearch]: <https://www.elastic.co/products/elasticsearch>
+
+[^spf]: <https://en.wikipedia.org/wiki/Sender_Policy_Framework>
+
+[^dkim]: <https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail>
+
+[^dns]: <https://en.wikipedia.org/wiki/Domain_Name_System>
+
+[^spoofing]: <https://en.wikipedia.org/wiki/Email_spoofing>
+
