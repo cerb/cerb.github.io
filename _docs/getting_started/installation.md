@@ -64,7 +64,7 @@ jumbotron:
 - MySQL 5.1 or later
 
 <div class="cerb-box note">
-	<p>If you are unable to meet these requirements, consider <a href="/demo">Cerb Cloud</a>.</p>
+	<p>If you are unable to meet these requirements, consider <a href="/cloud/try/">Cerb Cloud</a>.</p>
 </div>
 
 # Log in to your server

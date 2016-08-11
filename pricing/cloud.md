@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Cerb Cloud"
-permalink: /cloud
+permalink: /cloud/
 redirect_from: /pricing/cloud
 jumbotron:
   title: Cerb Cloud Subscriptions
@@ -139,7 +139,7 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		<tr>
 			<td></td>
 			<td></td>
-			<td><a href="/demo/">free 30 day evaluation</a></td>
+			<td><a href="/cloud/try/">get started</a></td>
 			<td></td>
 		</tr>
 	</tbody>
