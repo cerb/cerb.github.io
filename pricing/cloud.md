@@ -137,9 +137,9 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 
 		<tr>
 			<td></td>
-			<td></td>
-			<td><a href="/cloud/try/">get started</a></td>
-			<td></td>
+			<td><a href="/cloud/try/">free trial</a></td>
+			<td><a href="/cloud/try/">free trial</a></td>
+			<td><a href="/cloud/try/">free trial</a></td>
 		</tr>
 	</tbody>
 

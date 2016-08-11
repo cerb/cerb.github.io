@@ -17,11 +17,11 @@ jumbotron:
 		<input type="text" name="email" value="" placeholder="you@example.com" autocomplete="off" spellcheck="false">
 	
 		<label for="message">How can we help?</label>
-		<textarea name="message" placeholder="..." autocomplete="off" rows="10"></textarea>
+		<textarea name="message" placeholder="" autocomplete="off" rows="10"></textarea>
 		
 		<div class="g-recaptcha" data-sitekey="6LeOPh0TAAAAANiEBFZLURt43IkCTUMOPUSMoxL9"></div>
 		
-		<div>
+		<div style="margin-top:20px;">
 			<input type="button" class="submit" value="Confirm">
 			<div class="status"></div>
 		</div>
