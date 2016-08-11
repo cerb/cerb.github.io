@@ -135,11 +135,11 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<td><span class="yes"></span></td>
 		</tr>
 
-		<tr>
+		<tr style="font-weight:bold; font-size:150%;">
 			<td></td>
-			<td><a href="/cloud/try/">free trial</a></td>
-			<td><a href="/cloud/try/">free trial</a></td>
-			<td><a href="/cloud/try/">free trial</a></td>
+			<td><a href="/cloud/try#startup" style="text-decoration:underline;">free trial</a></td>
+			<td><a href="/cloud/try#pro" style="text-decoration:underline;">free trial</a></td>
+			<td></td>
 		</tr>
 	</tbody>
 

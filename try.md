@@ -48,4 +48,4 @@ If you switch to a Cerb Cloud subscription, you can even use these email address
 
 ## How many workers can I invite to a Cerb Cloud trial?
 
-All Cerb Cloud trials start in the _Pro_ tier. This provides unlimited worker accounts with __five__ seats (concurrent workers). Contact us if you need to test with more seats and we can raise the limit.
+All Cerb Cloud trials start in the _Pro_ tier. This provides unlimited worker accounts with __three__ seats (concurrent workers). Contact us if you need to test with more seats and we can raise the limit.
