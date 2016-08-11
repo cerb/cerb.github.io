@@ -3,28 +3,21 @@ layout: page
 title: Contact Us
 permalink: /contact/
 jumbotron: 
-  title: Support
+  title: Contact Us
   #tagline: ...
-  breadcrumbs:
-  -
-    label: Contact Us
-    url: /contact/
 ---
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
 
 <form id="frmContact" class="cerb-form" action="javascript:;" method="POST" onsubmit="return false;">
 	<fieldset>
-		<legend>How can we help?</legend>
+		<legend>Contact by email</legend>
 	
-		<label for="name">Name:</label>
-		<input type="text" name="name" value="" placeholder="Your Name" autocomplete="off" spellcheck="false">
-	
-		<label for="email">Email Address:</label>
+		<label for="email">What email address should we reply to?</label>
 		<input type="text" name="email" value="" placeholder="you@example.com" autocomplete="off" spellcheck="false">
 	
-		<label for="message">Message:</label>
-		<textarea name="message" placeholder="Please describe your question or issue." autocomplete="off" rows="10"></textarea>
+		<label for="message">How can we help?</label>
+		<textarea name="message" placeholder="..." autocomplete="off" rows="10"></textarea>
 		
 		<div class="g-recaptcha" data-sitekey="6LeOPh0TAAAAANiEBFZLURt43IkCTUMOPUSMoxL9"></div>
 		
@@ -47,7 +40,7 @@ $(function() {
 		
 		$.ajax({
 			method: 'POST',
-			url: 'https://cerb.official.support/forms/contact',
+			url: 'https://cerb.official.support/forms/cloud/contact',
 			crossDomain: true,
 			dataType: 'json',
 			data: $frm.serialize(),
