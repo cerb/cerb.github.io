@@ -7,57 +7,47 @@ jumbotron:
   tagline: Deploy Cerb on your own hardware
 ---
 
-A __standalone Cerb license__ runs on your own hardware. You handle installation, upgrades, backups, monitoring, tuning, scaling, security, troubleshooting, etc. The software requires a web server with PHP 5.3+ and MySQL 5.1+.
+A __standalone Cerb license__ runs on your own hardware. The software requires a web server with PHP 5.3+ and MySQL 5.1+. You are responsible for installation, upgrades, backups, monitoring, tuning, scaling, security, troubleshooting, etc.
 
-* Licensed based on **seats** (the maximum number of workers who can log in at the same time). An **unlimited** number of worker accounts can share the available seats.
+* Community licenses permit you to use Cerb with some limitations **at no cost** and **without a time limit**.  For a small team, this may be all that is ever needed. For larger teams, this provides a risk-free evaluation to determine if Cerb is a good fit.
 
-* Includes **one year** of priority support and software updates. Your license **never expires** for versions released during your software updates coverage, and there is no ongoing cost to continue using those versions.
+* Pro licenses include **one year** of priority support and ongoing software updates. Your license to use the software **never expires** for versions released during your software updates coverage, and there is no cost to continue using those versions indefinitely.
 
-* Ideal for sensitive environments (HIPAA, Safe Harbor, etc).
+* The cost of a license is based on the number of permitted **seats** -- the maximum number of workers who can log in at the same time. An **unlimited** number of worker accounts can share the available seats. The most idle worker is logged out when a new worker attempts to log in. There is no limit on the number of clients your workers can interact with.
+
+* A standalone license is ideal for sensitive environments (HIPAA, Safe Harbor, Sarbanes-Oxley, etc). Otherwise, a fully managed <a href="/cloud">Cerb Cloud</a> instance may be a better option.
 
 <table class="cerb-pricing-matrix">
 	<thead>
 		<tr>
 			<th></th>
-			<th>Evaluation [<a href="#evaluation">?</a>]</th>
-			<th>Academic [<a href="#academic">?</a>]</th>
-			<th>Commercial/Gov</th>
+			<th>Community</th>
+			<th>Pro</th>
 		</tr>
 	</thead>
 	
 	<tbody class="matrix">
 		<tr>
-			<td>Base Price:</td>
-			<td>$0</td>
-			<td>$240</td>
-			<td>$300</td>
+			<td>Price:</td>
+			<td>$0 for 3 seats [<a href="#seats">?</a>]</td>
+			<td>$300/seat [<a href="#seats">?</a>]</td>
 		</tr>
 		
 		<tr>
-			<td>Total workers:</td>
-			<td>unlimited</td>
+			<td>Workers:</td>
 			<td>unlimited</td>
 			<td>unlimited</td>
 		</tr>
 		
 		<tr>
-			<td>Included seats [<a href="#seats">?</a>]:</td>
-			<td>3</td>
-			<td>1</td>
-			<td>1</td>
-		</tr>
-
-		<tr>
-			<td>Extra seats [<a href="#volume-discount">?</a>]:</td>
-			<td><span class="no"></span></td>
-			<td>+$240</td>
-			<td>+$300</td>
+			<td>Clients:</td>
+			<td>unlimited</td>
+			<td>unlimited</td>
 		</tr>
 		
 		<tr>
 			<td>Software updates:</td>
 			<td><span class="no"></span></td>
-			<td>1 year</td>
 			<td>1 year</td>
 		</tr>
 
@@ -65,14 +55,12 @@ A __standalone Cerb license__ runs on your own hardware. You handle installation
 			<td>Priority support:</td>
 			<td><span class="no"></span></td>
 			<td>1 year</td>
-			<td>1 year</td>
 		</tr>
 
 		<tr>
 			<td></td>
-			<td><a href="/contact/evaluation-license">start evaluation</a></td>
-			<td><a href="/contact/buy-license">purchase</a></td>
-			<td><a href="/contact/buy-license">purchase</a></td>
+			<td><a href="/docs/installation">get started</a></td>
+			<td><!--<a href="/contact/buy-license">purchase</a>--></td>
 		</tr>
 
 	</tbody>
@@ -80,7 +68,9 @@ A __standalone Cerb license__ runs on your own hardware. You handle installation
 </table>
 <br>
 
-# Frequently asked questions
+# Frequently asked questions:
+
+<br>
 
 <div id="seats"></div>
 
@@ -88,39 +78,49 @@ A __standalone Cerb license__ runs on your own hardware. You handle installation
 
 Seats determine the maximum number of workers who can use Cerb at the same time.
 
-For example, a team of 30 workers who are evenly split into three, non-overlapping 8-hour shifts (morning, day, night) would only require 10 seats. That's the highest number of workers who would ever be logged in at the same time.
+For example, a team of 30 workers who are evenly split into three, non-overlapping shifts (morning, day, night) would only require 10 seats. That's the highest number of workers who would ever be logged in at the same time.
 
 You aren't paying per worker account, so there isn't a penalty for inviting everyone to participate: full-time staff, part-time contributors, busy executives, interns, temps, contractors, partners, and volunteers.
 
-<div id="evaluation"></div>
+<div id="starter"></div>
 
-## What are evaluation licenses?
+## What is a starter license?
 
-(( startup, non-profit, charity, open-source ))
+Starter licenses are the best way to evaluate if Cerb meets your needs.
 
-(( no expiration, one renewal per year ))
+A starter license provides 3 seats at no cost. The license is valid for the latest version of Cerb at the time it is created. The right to run that version of the software will never expire.
 
-<div id="academic"></div>
+Starter licenses don't provide access to priority support or ongoing software updates.  They are eligible for a single "get current" upgrade once per 12 month period.  Aside from that, they have no feature-related limitations.
 
-## What are academic licenses?
-
-<div id="government"></div>
-
-## What are government licenses?
-
-<div id="non-profit"></div>
-
-## Do you provide discounts to non-profits and charities?
-
-<div id="opensource"></div>
-
-## Do you provide discounts to open-source projects?
+Registered charities and qualifying open source projects may be eligible for a higher seat limit and ongoing software updates at no cost.
 
 <div id="renewal"></div>
 
-## Do you provide a renewal discount?
+## Do you provide a renewal discount for existing licenses?
 
-Yes! We automatically add a 10% _"timely renewal_" discount to your invoice for any existing licenses that have not been expired for more than 30 days.
+Yes! We automatically add a 10% _"timely renewal_" discount to your invoice for any existing Pro licenses that have not been expired for more than 30 days.
+
+<div id="academic"></div>
+
+## Do you provide an academic discount?
+
+Yes. We offer a 20% discount in support of academic institutions.
+
+To qualify for an academic discount, institutions must be accredited by an agency recognized by the U.S. Department of Education (or their own national equivalent).  All publicly funded K-12 and preschools automatically qualify.
+
+<div id="non-profit"></div>
+
+## What qualifies a charity or non-profit organization for a free license?
+
+To receive a free Cerb license with ongoing software updates and more than 3 seats, a charity or non-profit must have a charter that seeks to improve the public good and be registered as a 501(c)(3) organization (or their own national equivalent).  The organization should be primarily funded through public donations or grants, and such contributions should be tax deductible by the donors.
+
+<div id="opensource"></div>
+
+## What qualifies an open source project for a free license?
+
+To receive a free Cerb license with ongoing software updates and more than 3 seats, an open source project must have a website explaining the purpose of the project, all source code available in a public repository like GitHub, and a self-deployed option with no licensing costs.
+
+An open source license should only be used for that purpose, and not mixed with other commercial activity.
 
 <div id="volume-discount"></div>
 
