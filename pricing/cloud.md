@@ -37,11 +37,11 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 				<li>SSL encryption</li>
 				<li>Instant inbound mail delivery</li>
 				<li>Outgoing mail w/ SPF+DKIM</li>
-				<li>External mailbox check</li>
+				<li>Remote mailbox check</li>
 				<li>Plugin Library</li>
 				<li>Community portals</li>
 				<li>Virtual Attendants</li>
-				<li>Next day support</li>
+				<li>Next business day support</li>
 			</ul>
 		</td>
 		
@@ -52,7 +52,7 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<br>
 			<div>All Startup features, plus:</div>
 			<ul>
-				<li>Priority, same day support</li>
+				<li>Priority, same business day support</li>
 				<li>Webhooks</li>
 				<li>API</li>
 				<li>Custom URL</li>
@@ -69,8 +69,7 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<br>
 			<div>All Pro features, plus:</div>
 			<ul>
-				<li>Top priority, same day support</li>
-				<li>Weekend &amp; holiday support</li>
+				<li>Top priority, same day support, including weekends &amp; holidays</li>
 				<li>Real-time chat w/ developers</li>
 				<li>Phone support</li>
 				<li>Database cluster w/failover</li>
@@ -231,7 +230,7 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		</tr>
 		
 		<tr>
-			<td>Included Mailbox Checks [<a href="#mailbox-checks">?</a>]:</td>
+			<td>Remote Mailbox Checks [<a href="#mailbox-checks">?</a>]:</td>
 			<td>1 check every 5 mins</td>
 			<td>5 checks every 1 min</td>
 			<td>10 checks every 1 min</td>
@@ -477,21 +476,21 @@ Yes! Contact us for more details.
 
 <div id="mailbox-checks"></div>
 
-## What are External Mailbox Checks?
+## What are Remote Mailbox Checks?
 
 Cerb Cloud can download new mail from POP3 or IMAP mailboxes at any mail provider who provides external access.
 
-There is no limit to the number of external mailboxes you can configure, but your subscription level determines how many mailboxes we'll check for new mail at a time, and how often.  Each time the scheduler runs, we'll start with the least recently checked mailbox.
+There is no limit to the number of remote mailboxes you can configure, but your subscription level determines how many mailboxes we'll check for new mail at a time, and how often.  Each time the scheduler runs, we'll start with the least recently checked mailbox.
 
 Checking many mailboxes can be very inefficient.  Mail delivery is never instantaneous and mailboxes may have to wait in a queue before being checked.  Some mail servers are also slow to send responses, which can add 20+ seconds to each mailbox check.
 
-You can redirect mail for multiple accounts into a single "dropbox" account to make external mailbox checks more efficient.  This is also how the redirect mailbox works in our instant delivery service, which we highly recommend using instead of external mailbox checks.
+You can redirect mail for multiple accounts into a single "dropbox" account to make remote mailbox checks more efficient.  This is also how the redirect mailbox works in our instant delivery service, which we highly recommend using instead of remote mailbox checks.
 
 <div id="redirect-mailbox"></div>
 
 ## What is a Redirect Mailbox?
 
-In most Cerb environments, a list of POP3/IMAP external mailboxes is checked for new messages every few minutes. This works well enough for a couple mailboxes, but it can be very inefficient at scale.
+In most Cerb environments, a list of POP3/IMAP remote mailboxes is checked for new messages every few minutes. This works well enough for a couple mailboxes, but it can be very inefficient at scale.
 
 Rather than checking mailboxes for new mail, a Redirect Mailbox allows you to redirect a copy of your incoming email to a special address (like `incoming@example.cerb.email`) that delivers directly into your Cerb Cloud instance. This is the fastest way to receive new email in Cerb Cloud.
 
