@@ -1,11 +1,15 @@
 ---
 title: Send commands to a Cerb bot using Slack
 permalink: /integrations/slack/slash-commands
-excerpt: |
-  Slack makes it very easy to interact with third-party apps and services using their slash commands feature. To demonstrate this functionality, we'll add a new chat command named /cerb and instruct Slack to send those messages to a webhook in Cerb where we'll process them in real-time using a Virtual Attendant behavior.
+layout: integration
+jumbotron:
+  title: Send commands to a Cerb bot using Slack
+  tagline: ""
+  breadcrumbs:
+  -
+    label: Integrations &raquo; Slack &raquo;
+    url: /integrations/slack/
 ---
-
-# {{ page.title }}
 
 ## Introduction
 

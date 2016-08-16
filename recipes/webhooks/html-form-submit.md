@@ -1,11 +1,15 @@
 ---
 title: Submit web forms directly to bots in Cerb
 permalink: /integrations/webhooks/html-form-submit
-excerpt: |
-  ...
+layout: integration
+jumbotron:
+  title: Submit web forms directly to bots in Cerb
+  tagline: ""
+  breadcrumbs:
+  -
+    label: Integrations &raquo; Webhooks &raquo;
+    url: /integrations/webhooks/
 ---
-
-# {{ page.title }}
 
 ## Introduction
 

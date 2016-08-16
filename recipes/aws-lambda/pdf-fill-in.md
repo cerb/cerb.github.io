@@ -1,11 +1,15 @@
 ---
 title: Fill in PDF forms with bots using AWS Lambda
 permalink: /integrations/aws-lambda/pdf-fill-in
-excerpt: |
-  ...
+layout: integration
+jumbotron:
+  title: Fill in PDF forms with bots using AWS Lambda
+  tagline: ""
+  breadcrumbs:
+  -
+    label: Integrations &raquo; AWS Lambda &raquo;
+    url: /integrations/aws-lambda/
 ---
-
-# {{ page.title }}
 
 ## Introduction
 
