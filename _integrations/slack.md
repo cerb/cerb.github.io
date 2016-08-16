@@ -10,4 +10,4 @@ recipes:
   - slash-commands
 ---
 
-{% include integration_recipes.md app=page.app recipes=page.recipes %}
+{% include integration_recipes.html app=page.app recipes=page.recipes %}

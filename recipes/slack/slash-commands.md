@@ -1,8 +1,8 @@
 ---
-title: Create a simple Cerb bot using Slack slash commands
+title: Send commands to a Cerb bot using Slack
 permalink: /integrations/slack/slash-commands
 excerpt: |
-  Slack makes it very easy to interact with third-party apps and services using their _slash commands_ feature. To demonstrate this functionality, we'll add a new chat command named **/cerb** and instruct Slack to send those messages to a webhook in Cerb where we'll process them in real-time using a Virtual Attendant behavior...
+  Slack makes it very easy to interact with third-party apps and services using their slash commands feature. To demonstrate this functionality, we'll add a new chat command named /cerb and instruct Slack to send those messages to a webhook in Cerb where we'll process them in real-time using a Virtual Attendant behavior.
 ---
 
 # {{ page.title }}
@@ -11,15 +11,15 @@ excerpt: |
 
 Slack makes it very easy to interact with third-party apps and services using their _slash commands_ feature.
 
-To demonstrate this functionality, we'll add a new chat command named **/cerb** and instruct Slack to send those messages to a webhook[^webhook] in Cerb where we'll process them in real-time using a [Virtual Attendant](/docs/virtual-attendants) behavior.
+To demonstrate this functionality, we'll add a new chat command named **/cerb** and instruct Slack to send those messages to a webhook[^webhook] that triggers a [Virtual Attendant](/docs/virtual-attendants) behavior in Cerb.
 
 ## Enable the Webhooks plugin in Cerb
 
 When a channel member uses our new **/cerb** command, Slack will deliver their message as an HTTP POST[^http-post] request to a URL we provide.
 
-You could use any web-based technology to process these POST requests, interact with Cerb through the [API](/docs/api), and send a response back to Slack.
+You can use any web-based technology to process these POST requests and send a response back to Slack.
 
-Since version 6.9 (Jan 2015), Cerb makes this process even simpler with the introduction of the [Webhooks](/docs/webhooks) plugin.  This plugin enables Cerb to catch webhook requests directly and route them to Virtual Attendant behaviors.  These browser-built behaviors can process a request, perform actions in Cerb or interact with third-party services, and then send an appropriate response.
+Cerb makes this process even simpler with its [Webhooks](/docs/webhooks) plugin.  This plugin enables Cerb to catch webhook requests and route them to Virtual Attendant behaviors.  These browser-built behaviors can process a request, perform actions in Cerb or interact with third-party services, and then send an appropriate response.
 
 As an administrator, you can verify that the Webhooks plugin is installed and enabled in your Cerb environment by navigating to **Setup** >> **Plugins** >> **Installed Plugins**.
 

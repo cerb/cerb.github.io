@@ -12,10 +12,12 @@ jumbotron:
 
 <div class="grid no-gutters">
 	{% for integration in site.integrations %}
+		{% if integration.integrate.state != "draft" %}
 		<div class="cerb-integration unit one-third">
 			<a href="{{ integration.url }}">{{ integration.title }}</a>
 			<div>{{ integration.integrate.what }}</div>
 		</div>
+		{% endif %}
 	{% endfor %}
 </div>
 

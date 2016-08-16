@@ -1,5 +1,5 @@
 ---
-title: Secure logins with two-factor authentication using Google Authenticator
+title: Boost login security with two-factor authentication using Google Auth
 permalink: /integrations/google-auth/two-factor-auth
 excerpt: |
   ...

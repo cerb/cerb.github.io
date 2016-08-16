@@ -13,9 +13,9 @@ jumbotron:
 
 __Cerb__ is a fast, flexible toolkit for web-based collaboration and workflow automation:
 
-* High-volume __email management__ that scales to millions of conversations per year.
+* High-volume __email management__ with shared mailboxes that scales to millions of conversations per year.
 
-* Virtual Attendants for creating powerful, event-driven, __automated behaviors__ without any computer programming experience required.
+* Bots for creating powerful, event-driven, __automated behaviors__ without any computer programming experience required.
 
 * Custom __shared workspaces__ for augmenting team collaboration.
 

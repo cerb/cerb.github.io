@@ -17,7 +17,9 @@ permalink: /integrations/
 				<aside>
 					<ul>
 					{% for integration in site.integrations %}
-					<li {% if page.url contains integration.url %}class="current"{% endif %}><a href="{{ integration.url }}">{{ integration.title }}</a></li>
+						{% if integration.integrate.state != "draft" %}
+						<li {% if page.url contains integration.url %}class="current"{% endif %}><a href="{{ integration.url }}">{{ integration.title }}</a></li>
+						{% endif %}
 					{% endfor %}
 					</ul>
 				</aside>

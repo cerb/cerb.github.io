@@ -1,0 +1,13 @@
+<div class="grid no-gutters">
+{% for recipe in include.recipes %}
+{% assign recipe_url = "/integrations/" | append: include.app | append: "/" | append: recipe %}
+{% assign p = site.pages | where:"url",recipe_url | first %}
+	{% if p %}
+	<div class="unit half">
+		<div style="margin:5px;padding:20px;text-align:center;background-color:rgb(230,230,230);border-radius:10px;">
+			<a href="{{ p.url }}" style="color:rgb(50,50,50);font-weight:600;font-size:130%;line-height:1.2em;">{{ p.title }}</a>
+		</div>
+	</div>
+	{% endif %}
+{% endfor %}
+</div>

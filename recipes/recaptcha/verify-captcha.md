@@ -1,5 +1,5 @@
 ---
-title: Verify reCAPTCHA humanness tests from Cerb Virtual Attendants
+title: Verify humanness from bots using reCAPTCHA
 permalink: /integrations/recaptcha/verify-captcha
 excerpt: |
   ...

@@ -2,6 +2,7 @@
 title: Google Authenticator
 integrate:
   what: Authentication
+  state: live
 jumbotron:
   title: Cerb + Google Authenticator
   tagline: Integrate with Google Authenticator two-factor authentication
@@ -10,4 +11,4 @@ recipes:
   - two-factor-auth
 ---
 
-{% include integration_recipes.md app=page.app recipes=page.recipes %}
+{% include integration_recipes.html app=page.app recipes=page.recipes %}

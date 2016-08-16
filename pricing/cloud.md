@@ -38,9 +38,9 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 				<li>Instant inbound mail delivery</li>
 				<li>Outgoing mail w/ SPF+DKIM</li>
 				<li>Remote mailbox check</li>
+				<li>Bots</li>
 				<li>Plugin Library</li>
 				<li>Community portals</li>
-				<li>Virtual Attendants</li>
 				<li>Next business day support</li>
 			</ul>
 		</td>

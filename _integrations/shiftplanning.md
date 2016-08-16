@@ -1,7 +1,8 @@
 ---
 title: ShiftPlanning
 integrate:
-  what: Scheduling
+  what: Staff scheduling
+  state: draft
 jumbotron:
   title: Cerb + ShiftPlanning
   tagline: Integrate with ShiftPlanning schedules

@@ -2,6 +2,7 @@
 title: AWS Lambda
 integrate:
   what: Serverless code functions
+  state: live
 jumbotron:
   title: Cerb + AWS Lambda
   tagline: Integrate with Lambda functions in Amazon Web Services
@@ -10,4 +11,4 @@ recipes:
   - pdf-fill-in
 ---
 
-{% include integration_recipes.md app=page.app recipes=page.recipes %}
+{% include integration_recipes.html app=page.app recipes=page.recipes %}

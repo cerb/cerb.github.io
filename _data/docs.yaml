@@ -10,6 +10,15 @@
   - friendly-urls
   - quick-start
 
+- title: Using Cerb
+  docs:
+  - logging-in
+  - ui
+  - components
+  - mail
+  - tasks
+  - calendars
+  
 - title: The Toolkit
   docs:
   - records
@@ -23,20 +32,11 @@
   - dashboards
   - activity-log
   - snippets
-  - virtual-attendants
+  - bots
   - portals
   # - mobile
   # - plugins
-
-- title: Using Cerb
-  docs:
-  - logging-in
-  - ui
-  - components
-  - mail
-  - tasks
-  - calendars
-
+  
 - title: Administration
   docs:
   - setup

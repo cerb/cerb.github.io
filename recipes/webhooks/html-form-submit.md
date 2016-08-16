@@ -1,5 +1,5 @@
 ---
-title: Handle HTML form submission with Cerb webhooks and Virtual Attendants
+title: Submit web forms directly to bots in Cerb
 permalink: /integrations/webhooks/html-form-submit
 excerpt: |
   ...

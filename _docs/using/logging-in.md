@@ -6,3 +6,4 @@ jumbotron:
   tagline: Signing in to your Cerb account
 ---
 
+(( authentication ))
