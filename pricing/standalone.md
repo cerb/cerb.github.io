@@ -29,7 +29,7 @@ A __standalone Cerb license__ runs on your own hardware. The software requires a
 	<tbody class="matrix">
 		<tr>
 			<td>Price:</td>
-			<td>$0 for 3 seats [<a href="#seats">?</a>]</td>
+			<td>$3 seats for free [<a href="#seats">?</a>]</td>
 			<td>$300/seat [<a href="#seats">?</a>]</td>
 		</tr>
 		
@@ -57,9 +57,9 @@ A __standalone Cerb license__ runs on your own hardware. The software requires a
 			<td>1 year</td>
 		</tr>
 
-		<tr style="font-weight:bold; font-size:150%;">
+		<tr style="font-weight:bold; font-size:125%; text-decoration: underline;">
 			<td></td>
-			<td><a href="/docs/installation">get started</a></td>
+			<td><a href="/docs/installation">installation instructions</a></td>
 			<td><!--<a href="/contact/buy-license">purchase</a>--></td>
 		</tr>
 
