@@ -22,7 +22,7 @@ jumbotron:
 		<div class="g-recaptcha" data-sitekey="6LeOPh0TAAAAANiEBFZLURt43IkCTUMOPUSMoxL9"></div>
 		
 		<div style="margin-top:20px;">
-			<input type="button" class="submit" value="Confirm">
+			<input type="button" class="submit" value="Send message">
 			<div class="status"></div>
 		</div>
 	</fieldset>
