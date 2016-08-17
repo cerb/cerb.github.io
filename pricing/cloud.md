@@ -39,7 +39,7 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<td>Monthly price:</td>
 			<td>$20/seat</td>
 			<td>$40/seat</td>
-			<td>$60/seat</td>
+			<td>$60/seat (min. 10)</td>
 		</tr>
 	</tbody>
 
@@ -437,6 +437,16 @@ By default, full-text searching in Cerb is handled by MySQL Fulltext[^mysql-full
 
 In contrast, Elasticsearch[^elasticsearch] is a distributed, scalable, high-performance search engine with powerful full-text search features. It can search against millions of documents in milliseconds using terms, compound queries, phrases, etc.
 
+<div id="urgent-escalations"></div>
+
+## What are urgent escalations?
+
+An __urgent escalation__ will move one incident of your choice to the front of our priority support queue and summon a highly experienced member of our development team at any time (early hours, overnight, weekends, holidays).
+
+You will receive a response within one hour. Urgent escalations include one hour of hands-on assistance at no extra cost. If you approve any additional required time, the standard hourly rate for technical services will apply.
+
+Urgent escalations are not required for Cerb Cloud infrastructure issues, as that is covered by standard support for all subscriptions. Instead, they may be used when workflow is severely impacted by other issues like accidental deletion of data, configuration issues, problems with external mail providers, etc. For standalone licenses, an urgent escalation may be used to call in help for issues like server failures, database corruption, scaling, etc.
+
 <div id="technical-services"></div>
 
 ## What are technical services?
@@ -449,16 +459,6 @@ Technical services include:
 * Web-based team training sessions
 
 Our standard rate for technical services is **$100/hour**, billed in 15 minute increments.
-
-<div id="urgent-escalations"></div>
-
-## What are urgent escalations?
-
-An __urgent escalation__ will move one incident of your choice to the front of our priority support queue and summon a highly experienced member of our development team at any time (early hours, overnight, weekends, holidays).
-
-You will receive a response within one hour. Urgent escalations include one hour of hands-on assistance at no extra cost. If you approve any additional required time, the standard hourly rate for technical services will apply.
-
-Urgent escalations are not required for Cerb Cloud infrastructure issues, as that is covered by standard support for all subscriptions. Instead, they may be used when workflow is severely impacted by other issues like accidental deletion of data, configuration issues, problems with external mail providers, etc. For standalone licenses, an urgent escalation may be used to call in help for issues like server failures, database corruption, scaling, etc.
 
 <div id="enterprise-seats"></div>
 
