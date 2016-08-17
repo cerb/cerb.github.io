@@ -2,7 +2,7 @@
 title: reCAPTCHA
 integrate:
   what: Anti-spam
-  state: live
+  state: draft
 jumbotron:
   title: Cerb + reCAPTCHA
   tagline: Integrate with reCAPTCHA to combat abuse and spam in forms

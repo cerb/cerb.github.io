@@ -9,7 +9,7 @@ jumbotron:
 app: hipchat
 recipes:
   - room-notifications
-  - slash-commands
+#  - slash-commands
 ---
 
 {% include integration_recipes.html app=page.app recipes=page.recipes %}

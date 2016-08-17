@@ -2,7 +2,7 @@
 title: Twitter
 integrate:
   what: Social network
-  state: live
+  state: draft
 jumbotron:
   title: Cerb + Twitter
   tagline: Integrate with Twitter

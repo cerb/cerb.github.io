@@ -2,7 +2,7 @@
 title: Google Authenticator
 integrate:
   what: Authentication
-  state: live
+  state: draft
 jumbotron:
   title: Cerb + Google Authenticator
   tagline: Integrate with Google Authenticator two-factor authentication
