@@ -41,33 +41,12 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<td>$40/seat</td>
 			<td>$60/seat</td>
 		</tr>
-
-		<tr>
-			<td>Total workers:</td>
-			<td>unlimited</td>
-			<td>unlimited</td>
-			<td>unlimited</td>
-		</tr>
-	
+		
 		<tr>
 			<td>Minimum seats [<a href="#seats">?</a>]:</td>
-			<td>1</td>
-			<td>3</td>
+			<td><span class="no"></span></td>
+			<td><span class="no"></span></td>
 			<td>10</td>
-		</tr>
-
-		<tr>
-			<td>Extra seats:</td>
-			<td>+$20/mo</td>
-			<td>+$40/mo</td>
-			<td>+$60/mo</td>
-		</tr>
-
-		<tr>
-			<td>Annual prepayment discount:</td>
-			<td>5%</td>
-			<td>10%</td>
-			<td>10%</td>
 		</tr>
 
 		<tr>
@@ -76,13 +55,7 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
-
-		<tr style="font-weight:bold; font-size:150%;">
-			<td></td>
-			<td><a href="/cloud/try#startup" style="text-decoration:underline;">free trial</a></td>
-			<td><a href="/cloud/try#pro" style="text-decoration:underline;">free trial</a></td>
-			<td></td>
-		</tr>
+		
 	</tbody>
 
 	<tbody class="section">
@@ -143,7 +116,7 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		</tr>
 
 		<tr>
-			<td>Cluster Failover:</td>
+			<td>Instant Cluster Failover:</td>
 			<td><span class="no"></span></td>
 			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
@@ -158,19 +131,12 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 
 	<tbody class="matrix">
 		<tr>
-			<td>Redirect Mailbox [<a href="#redirect-mailbox">?</a>]:</td>
+			<td>Instant Delivery Mailbox [<a href="#redirect-mailbox">?</a>]:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
 
-		<tr>
-			<td>Instant Delivery [<a href="#instant-delivery">?</a>]:</td>
-			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
-		</tr>
-		
 		<tr>
 			<td>Remote Mailboxes [<a href="#mailbox-checks">?</a>]:</td>
 			<td>1 check every 5 mins</td>
@@ -202,13 +168,6 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		</tr>
 
 		<tr>
-			<td>Additional DKIM domains:</td>
-			<td>+$1/mo</td>
-			<td>+$1/mo</td>
-			<td>+$1/mo</td>
-		</tr>
-		
-		<tr>
 			<td>Remote SMTP:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
@@ -225,7 +184,7 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 
 	<tbody class="matrix">
 		<tr>
-			<td>Included portals:</td>
+			<td>Included portals [<a href="#portals">?</a>]:</td>
 			<td>1</td>
 			<td>5</td>
 			<td>10</td>
@@ -245,12 +204,6 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<td><span class="yes"></span></td>
 		</tr>
 
-		<tr>
-			<td>Extra portals:</td>
-			<td>+$10/month</td>
-			<td>+$10/month</td>
-			<td>+$10/month</td>
-		</tr>
 	</tbody>
 
 	<tbody class="section">
@@ -260,6 +213,13 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 	</tbody>
 
 	<tbody class="matrix">
+		<tr>
+			<td>Bots:</td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>	
+
 		<tr>
 			<td>Plugin Library:</td>
 			<td><span class="yes"></span></td>
@@ -350,9 +310,15 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 	
 </table>
 
-<br>
+<br/>
 
 # Frequently asked questions:
+
+<br/>
+
+## Do you offer a free trial of Cerb Cloud?
+
+Yes! You can <a href="/cloud/try#pro">sign up here</a> for a 30-day free trial. There's no obligation and we don't need any payment information on file.
 
 <div id="seats"></div>
 
@@ -441,6 +407,12 @@ Sender Policy Framework[^spf] (**SPF**) defines the format of a simple text reco
 
 DomainKeys Identified Mail[^dkim] (**DKIM**) attempts to detect spoofing and tampering by cryptographically signing an email message using a secret key (which should only be known by authorized senders). Any mail server can verify this digital signature by retrieving the corresponding public key from the DNS for a given sender domain. When a DKIM signature is successfully validated, a mail server can be confident that a message originated from a source that was authorized by the owner of the sender's domain name. This confidence score is generally highest when the domain of the DKIM signature matches that of the envelope sender and the `From:` header.
 
+## What is the cost of additional DKIM sender domains?
+
+Your subscription provides a certain number of DKIM domain signatures.  Additional sender domains are $1/month each.
+
+This only applies when you use Cerb Cloud SMTP for outgoing mail.  If you're using another email provider, their own rate structure will apply.
+
 <div id="mailbox-checks"></div>
 
 ## What are remote mailbox checks?
@@ -452,6 +424,10 @@ There is no limit to the number of remote mailboxes you can configure, but your 
 Checking many mailboxes can be very inefficient.  Mail delivery is never instantaneous and mailboxes may have to wait in a queue before being checked.  Some mail servers are also slow to send responses, which can add 20+ seconds to each mailbox check.
 
 You can redirect mail for multiple accounts into a single "dropbox" account to make remote mailbox checks more efficient.  This is also how the redirect mailbox works in our instant delivery service, which we highly recommend using instead of remote mailbox checks.
+
+## What is the cost of additional mailbox checks?
+
+Your subscription provides a certain number of mailbox checks at a specific interval (e.g. 5 checks every 1 minute). Additional mailbox checks at the same interval are $2/month each.
 
 <div id="redirect-mailbox"></div>
 
@@ -470,6 +446,14 @@ Cerb Cloud doesn't require you to modify your own MX records. For instance, you 
 When mail is received by your redirect mailbox it will be delivered into Cerb instantly (within seconds).  This enables you to respond more quickly to your customers.
 
 If you choose to use remote mailboxes instead, new mail will generally be downloaded every few minutes.
+
+<div id="portals"></div>
+
+## What is the cost of additional community portals?
+
+Your subscription provides a certain number of community portals. These include SSL certificates.
+
+Additional community portals are $10/month each.
 
 <div id="elasticsearch"></div>
 
