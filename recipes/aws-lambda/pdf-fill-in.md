@@ -1,6 +1,6 @@
 ---
 title: Fill in PDF forms with bots using AWS Lambda
-permalink: /integrations/aws-lambda/pdf-fill-in
+permalink: /examples/aws-lambda/pdf-fill-in
 layout: integration
 jumbotron:
   title: Fill in PDF forms with bots using AWS Lambda
@@ -8,7 +8,7 @@ jumbotron:
   breadcrumbs:
   -
     label: Integrations &raquo; AWS Lambda &raquo;
-    url: /integrations/aws-lambda/
+    url: /examples/aws-lambda/
 ---
 
 ## Introduction

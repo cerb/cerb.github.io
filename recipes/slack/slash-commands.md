@@ -1,14 +1,14 @@
 ---
 title: Send commands to a Cerb bot using Slack
-permalink: /integrations/slack/slash-commands
+permalink: /examples/slack/slash-commands
 layout: integration
 jumbotron:
   title: Send commands to a Cerb bot using Slack
   tagline: ""
   breadcrumbs:
   -
-    label: Integrations &raquo; Slack &raquo;
-    url: /integrations/slack/
+    label: Examples &raquo; Slack &raquo;
+    url: /examples/slack/
 ---
 
 ## Introduction
@@ -133,7 +133,7 @@ You could modify the behavior we created to do anything that Virtual Attendants 
 
 You could create a custom fieldset on workers to store their Slack user name, and the Virtual Attendant can use that field to look up a message sender's worker record.  The bot can then personalize its actions to use their calendar, their tasks, and so on.
 
-You could use our [Wit.ai](/integrations/wit-ai) integration examples to support natural language in your Slack bot.  Wit.ai converts freeform text into _"intents"_.  For instance, instead of only supporting the _"hi"_ command, your bot could learn the various ways people _intend_ to **say\_hello**: _hi, hello, what's up?, how are you?, hola, allo, yo, hey, etc_.
+You could use our [Wit.ai](/examples/wit-ai) integration examples to support natural language in your Slack bot.  Wit.ai converts freeform text into _"intents"_.  For instance, instead of only supporting the _"hi"_ command, your bot could learn the various ways people _intend_ to **say\_hello**: _hi, hello, what's up?, how are you?, hola, allo, yo, hey, etc_.
 
 ## References
 

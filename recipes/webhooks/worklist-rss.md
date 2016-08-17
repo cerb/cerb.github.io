@@ -1,14 +1,14 @@
 ---
 title: Generate an RSS feed for any worklist
-permalink: /integrations/webhooks/worklist-rss
+permalink: /examples/webhooks/worklist-rss
 layout: integration
 jumbotron:
   title: Generate an RSS feed for any worklist
   tagline: ""
   breadcrumbs:
   -
-    label: Integrations &raquo; Webhooks &raquo;
-    url: /integrations/webhooks/
+    label: Examples &raquo; Webhooks &raquo;
+    url: /examples/webhooks/
 ---
 
 ## Introduction

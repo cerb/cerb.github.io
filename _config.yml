@@ -25,7 +25,7 @@ collections:
     permalink: /docs/:path/
   integrations:
     output: true
-    permalink: /integrations/:path/
+    permalink: /examples/:path/
 
 # Build settings
 markdown: kramdown

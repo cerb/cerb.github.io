@@ -1,14 +1,14 @@
 ---
 title: Send SMS notifications from Cerb bots using Twilio
-permalink: /integrations/twilio/sms-notifications
+permalink: /examples/twilio/sms-notifications
 layout: integration
 jumbotron:
   title: Send SMS notifications from Cerb bots using Twilio
   tagline: ""
   breadcrumbs:
   -
-    label: Integrations &raquo; Twilio &raquo;
-    url: /integrations/twilio/
+    label: Examples &raquo; Twilio &raquo;
+    url: /examples/twilio/
 ---
 
 ## Introduction

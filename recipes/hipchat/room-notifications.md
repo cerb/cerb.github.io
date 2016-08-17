@@ -1,14 +1,14 @@
 ---
 title: Send room notifications to HipChat from a Cerb bot
-permalink: /integrations/hipchat/room-notifications
+permalink: /examples/hipchat/room-notifications
 layout: integration
 jumbotron:
   title: Send room notifications to HipChat from a Cerb bot
   tagline: ""
   breadcrumbs:
   -
-    label: Integrations &raquo; HipChat &raquo;
-    url: /integrations/hipchat/
+    label: Examples &raquo; HipChat &raquo;
+    url: /examples/hipchat/
 ---
 
 ## Introduction
