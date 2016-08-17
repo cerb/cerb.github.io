@@ -142,14 +142,28 @@ div.page-content {
 			margin-bottom: 5px;
 		}
 	
-		p {
+		p, ul {
 			margin: 0;
 			padding: 0;
 			font-size: 20px;
 			font-weight: 200;
 			line-height: 1.2em;
 		}
-	
+		
+		ul {
+			text-align: left;
+			list-style: circle;
+			margin-top: 10px;
+			
+			li {
+				margin-bottom: 10px;
+				
+				b {
+					font-weight: 600;
+				}
+			}
+		}
+		
 		div.screenshot {
 			margin: 20px 0px 0px 0px;
 			

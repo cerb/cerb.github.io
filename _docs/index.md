@@ -11,37 +11,39 @@ jumbotron:
 
 # What is Cerb?
 
-__Cerb__ is a fast, flexible toolkit for web-based collaboration and workflow automation:
+**Cerb** enhances the productivity of online teams with web-based collaboration and automation tools:
 
-* High-volume __email management__ with shared mailboxes that scales to millions of conversations per year.
+* High-volume __email management__ that scales to millions of conversations per year.
 
-* Bots for creating powerful, event-driven, __automated behaviors__ without any computer programming experience required.
+* **Shared mailboxes** that provide a single point of contact for clients no matter who is on duty.
 
-* Custom __shared workspaces__ for augmenting team collaboration.
+* **Bots** for creating powerful, event-driven, __automated behaviors__ from a web browser without any computer programming experience required.
+
+* Custom __shared workspaces__ to foster team collaboration.
 
 * __Dashboards__ for real-time reporting, monitoring, goal tracking, and operational intelligence.
 
-* __Contact management__ for maintaining customer relationships.
+* __Contact management__ for tracking important details and nurturing customer relationships.
 
-* __Notifications__ for keeping an entire team informed about new activity on watched records.
+* __Notifications__ for keeping the right people informed about activity on any record.
 
-* __Task management__ for coordinating and prioritizing projects.
+* __Task management__ for organizing, prioritizing, and delegating units of work.
 
 * __Knowledge management__ for distributing accumulated experience.
 
 * __Broadcasting__ of targeted, personalized messages to thousands of contacts with segmentation and dynamic templates.
 
-* __Mobile functionality__ for remaining productive while on the go.
+* __Mobile functionality__ for remaining productive while away from your desk.
 
-* __Devblocks, a plugin-driven web development framework__, for rapidly implementing new functionality.
+* __Devblocks, a plugin-driven web development framework__ for rapidly implementing new functionality.
 
 * A library of __browser-installable plugins__ for extending functionality and integrating with other applications and services (Facebook, Twitter, Twilio, Slack, Freshbooks, Amazon S3, JIRA, HipChat, etc).
 
 * A __REST-based API__ for automation and integration with third-party applications and services.
 
-* __Webhooks__ that trigger Virtual Attendant behaviors in response to external events (survey submitted, invoice paid, Slack /command, etc).
+* __Webhooks__ that trigger bot behaviors in response to external events (survey submitted, invoice paid, Slack /command, etc).
 
-* __Portals__ for providing self-serve support resources and building online communities around your brands.
+* __Portals__ for building customer-facing online communities around your brands.
 
 * ... Time tracking, call logging, opportunity management, __and much more__.
 
