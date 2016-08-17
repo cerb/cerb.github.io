@@ -17,6 +17,8 @@ A __standalone Cerb license__ runs on your own hardware. The software requires a
 
 * A standalone license is ideal for sensitive environments (HIPAA, Safe Harbor, Sarbanes-Oxley, etc). Otherwise, a fully managed <a href="/cloud">Cerb Cloud</a> instance may be a better option.
 
+* Read the <a href="/docs/installation">installation instructions</a> to get started.
+
 <br/>
 
 {% include tables/standalone_feature_comparison.html %}
@@ -26,6 +28,10 @@ A __standalone Cerb license__ runs on your own hardware. The software requires a
 # Frequently asked questions:
 
 <br/>
+
+## How do I install Cerb on my own hardware?
+
+Read the <a href="/docs/installation">installation instructions</a> to get started.
 
 <div id="seats"></div>
 

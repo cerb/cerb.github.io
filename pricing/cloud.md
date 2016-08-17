@@ -8,7 +8,7 @@ jumbotron:
   tagline: Deploy a reliable, fine-tuned, fully-managed Cerb environment in the Cloud
 ---
 
-__Cerb Cloud__ is a subscription-based service that provides a finely tuned, ready-to-use instance of Cerb in an ideal environment. All you need to do is open a modern web browser, invite your team, and start putting Cerb's tools to work. We'll handle everything else.
+__Cerb Cloud__ is a subscription-based service that provides a finely tuned, ready-to-use instance of Cerb in an ideal environment. All you need is a web browser and your team can start putting Cerb's tools to work. We'll handle everything else.
 
 * __Fully managed__: We install Cerb and its dependencies in an ideal environment, apply updates and security patches, monitor and scale the infrastructure, optimize performance, maintain backups, interface with email service providers for deliverability, provide application support and other technical services, and more. You can focus on what you do best.
 
