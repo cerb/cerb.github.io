@@ -17,60 +17,15 @@ A __standalone Cerb license__ runs on your own hardware. The software requires a
 
 * A standalone license is ideal for sensitive environments (HIPAA, Safe Harbor, Sarbanes-Oxley, etc). Otherwise, a fully managed <a href="/cloud">Cerb Cloud</a> instance may be a better option.
 
-<table class="cerb-pricing-matrix">
-	<thead>
-		<tr>
-			<th></th>
-			<th>Community</th>
-			<th>Pro</th>
-		</tr>
-	</thead>
-	
-	<tbody class="matrix">
-		<tr>
-			<td>Price:</td>
-			<td>$3 seats for free [<a href="#seats">?</a>]</td>
-			<td>$300/seat [<a href="#seats">?</a>]</td>
-		</tr>
-		
-		<tr>
-			<td>Workers:</td>
-			<td>unlimited</td>
-			<td>unlimited</td>
-		</tr>
-		
-		<tr>
-			<td>Clients:</td>
-			<td>unlimited</td>
-			<td>unlimited</td>
-		</tr>
-		
-		<tr>
-			<td>Software updates:</td>
-			<td><span class="no"></span></td>
-			<td>1 year</td>
-		</tr>
+<br/>
 
-		<tr>
-			<td>Priority support:</td>
-			<td><span class="no"></span></td>
-			<td>1 year</td>
-		</tr>
+{% include tables/standalone_feature_comparison.html %}
 
-		<tr style="font-weight:bold; font-size:125%; text-decoration: underline;">
-			<td></td>
-			<td><a href="/docs/installation">installation instructions</a></td>
-			<td><!--<a href="/contact/buy-license">purchase</a>--></td>
-		</tr>
-
-	</tbody>
-	
-</table>
-<br>
+<br/>
 
 # Frequently asked questions:
 
-<br>
+<br/>
 
 <div id="seats"></div>
 
@@ -82,15 +37,15 @@ For example, a team of 30 workers who are evenly split into three, non-overlappi
 
 You aren't paying per worker account, so there isn't a penalty for inviting everyone to participate: full-time staff, part-time contributors, busy executives, interns, temps, contractors, partners, and volunteers.
 
-<div id="starter"></div>
+<div id="community-license"></div>
 
-## What is a starter license?
+## What is a community license?
 
-Starter licenses are the best way to evaluate if Cerb meets your needs.
+Community licenses are the best way to evaluate if Cerb meets your needs.
 
-A starter license provides 3 seats at no cost. The license is valid for the latest version of Cerb at the time it is created. The right to run that version of the software will never expire.
+A community license provides 3 seats at no cost. The license is valid for the latest version of Cerb at the time it is created. The right to run that version of the software will never expire.
 
-Starter licenses don't provide access to priority support or ongoing software updates.  They are eligible for a single "get current" upgrade once per 12 month period.  Aside from that, they have no feature-related limitations.
+Community licenses don't provide access to priority support or ongoing software updates.  They are eligible for a single "get current" upgrade once per 12 month period.  Aside from that, they have no feature-related limitations.
 
 Registered charities and qualifying open source projects may be eligible for a higher seat limit and ongoing software updates at no cost.
 

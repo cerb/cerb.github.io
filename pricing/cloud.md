@@ -22,65 +22,7 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 
 * __Durable__: We archive a sequence of full daily database backups, as well as the incremental point-in-time changes in between. Long term object storage (like attachments) are redundantly stored in several geographically separate locations. We can also arrange for backups to be routinely transfered to you.
 
-<table class="cerb-feature-comparison">
-	<tr>
-		<td>
-			<h1>Startup</h1>
-			<div class="price">$20/seat/month</div>
-			<div>(minimum 1 seat)</div>
-			<br>
-			<div>Features include:</div>
-			<ul>
-				<li>High availability</li>
-				<li>Automated scaling</li>
-				<li>Automated backups</li>
-				<li>SSL encryption</li>
-				<li>Instant inbound mail delivery</li>
-				<li>Outgoing mail w/ SPF+DKIM</li>
-				<li>Remote mailbox check</li>
-				<li>Bots</li>
-				<li>Plugin Library</li>
-				<li>Community portals</li>
-				<li>Next business day support</li>
-			</ul>
-		</td>
-		
-		<td>
-			<h1>Pro</h1>
-			<div class="price">$40/seat/month</div>
-			<div>(minimum 3 seats)</div>
-			<br>
-			<div>All Startup features, plus:</div>
-			<ul>
-				<li>Priority, same business day support</li>
-				<li>Webhooks</li>
-				<li>API</li>
-				<li>Custom URL</li>
-				<li>More &amp; faster mailbox checks</li>
-				<li>More sender domains</li>
-				<li>More community portals</li>
-			</ul>
-		</td>
-
-		<td>
-			<h1>Enterprise</h1>
-			<div class="price">$60/seat/month</div>
-			<div>(minimum 10 seats)</div>
-			<br>
-			<div>All Pro features, plus:</div>
-			<ul>
-				<li>Top priority, same day support, including weekends &amp; holidays</li>
-				<li>Real-time chat w/ developers</li>
-				<li>Phone support</li>
-				<li>Database cluster w/failover</li>
-				<li>Elasticsearch [<a href="#elasticsearch">?</a>]</li>
-				<li>Custom plugins</li>
-				<li>Urgent escalations [<a href="#urgent-escalations">?</a>]</li>
-				<li>Discounted technical services [<a href="#technical-services">?</a>]</li>
-			</ul>
-		</td>
-	</tr>
-</table>
+{% include tables/cloud_feature_comparison.html %}
 
 <table class="cerb-pricing-matrix">
 	<thead>
@@ -339,12 +281,14 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<td><span class="yes"></span></td>
 		</tr>
 	
+		<!--
 		<tr>
 			<td>Elasticsearch [<a href="#elasticsearch">?</a>]:</td>
 			<td><span class="no"></span></td>
 			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
+		-->
 		
 		<tr>
 			<td>Third-party plugins [<a href="#custom-plugins">?</a>]:</td>

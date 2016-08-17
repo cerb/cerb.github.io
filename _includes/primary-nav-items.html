@@ -5,14 +5,14 @@
 	<li class="{% if page.url == '/clients/' %}current{% endif %}">
 		<a href="/clients/">Clients</a>
 	</li>
+	<li class="{% if page.url contains '/integrations/' %}current{% endif %}">
+		<a href="/integrations/">Integrations</a>
+	</li>
 	<li class="{% if page.url == '/pricing/' %}current{% endif %}">
 		<a href="/pricing/">Pricing</a>
 	</li>
 	<li class="{% if page.url == '/cloud/try/' %}current{% endif %}">
 		<a href="/cloud/try/">Try</a>
-	</li>
-	<li class="{% if page.url contains '/integrations/' %}current{% endif %}">
-		<a href="/integrations/">Integrations</a>
 	</li>
 	<li class="{% if page.url contains '/docs/' %}current{% endif %}">
 		<a href="/docs/home/">Docs</a>
