@@ -1,12 +1,12 @@
 <ul>
 	<li class="{% if page.url == '/' %}current{% endif %}">
-		<a href="/">Home</a>
-	</li>
-	<li class="{% if page.url == '/clients/' %}current{% endif %}">
-		<a href="/clients/">Clients</a>
+		<a href="/">About</a>
 	</li>
 	<li class="{% if page.url contains '/integrations/' %}current{% endif %}">
 		<a href="/integrations/">Integrations</a>
+	</li>
+	<li class="{% if page.url == '/clients/' %}current{% endif %}">
+		<a href="/clients/">Clients</a>
 	</li>
 	<li class="{% if page.url == '/pricing/' %}current{% endif %}">
 		<a href="/pricing/">Pricing</a>

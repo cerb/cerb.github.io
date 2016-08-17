@@ -36,26 +36,11 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 	
 	<tbody class="matrix">
 		<tr>
-			<td>Monthly base price:</td>
+			<td>Monthly price:</td>
 			<td>$20/seat</td>
 			<td>$40/seat</td>
 			<td>$60/seat</td>
 		</tr>
-		
-		<tr>
-			<td>Minimum seats [<a href="#seats">?</a>]:</td>
-			<td><span class="no"></span></td>
-			<td><span class="no"></span></td>
-			<td>10</td>
-		</tr>
-
-		<tr>
-			<td>Volume discounts [<a href="#volume-discount">?</a>]:</td>
-			<td><span class="no"></span></td>
-			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
-		</tr>
-		
 	</tbody>
 
 	<tbody class="section">
@@ -94,7 +79,7 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		</tr>
 		
 		<tr>
-			<td>Custom URL w/ SSL [<a href="#custom-urls">?</a>]:</td>
+			<td>Personalized URL w/ SSL [<a href="#custom-urls">?</a>]:</td>
 			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
@@ -109,14 +94,14 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 
 	<tbody class="matrix">
 		<tr>
-			<td>Read Replicas:</td>
+			<td>Read replicas:</td>
 			<td><span class="no"></span></td>
 			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
 
 		<tr>
-			<td>Instant Cluster Failover:</td>
+			<td>Instant cluster failover:</td>
 			<td><span class="no"></span></td>
 			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
@@ -131,17 +116,17 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 
 	<tbody class="matrix">
 		<tr>
-			<td>Instant Delivery Mailbox [<a href="#redirect-mailbox">?</a>]:</td>
+			<td>Instant delivery mailbox [<a href="#redirect-mailbox">?</a>]:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
 
 		<tr>
-			<td>Remote Mailboxes [<a href="#mailbox-checks">?</a>]:</td>
-			<td>1 check every 5 mins</td>
-			<td>5 checks every 1 min</td>
-			<td>10 checks every 1 min</td>
+			<td>Remote mail checks [<a href="#mailbox-checks">?</a>]:</td>
+			<td>1 mailbox / 5 mins</td>
+			<td>5 mailboxes / 1 min</td>
+			<td>10 mailboxes / 1 min</td>
 		</tr>
 
 	</tbody>
@@ -154,21 +139,21 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 	
 	<tbody class="matrix">
 		<tr>
-			<td>Cerb Cloud SMTP w/ SPF [<a href="#spf">?</a>]:</td>
+			<td>High-volume mail server:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>	
 		
 		<tr>
-			<td>DKIM domain signatures [<a href="#dkim">?</a>]:</td>
+			<td>Domain signatures (DKIM) [<a href="#dkim">?</a>]:</td>
 			<td>1</td>
 			<td>10</td>
 			<td>25</td>
 		</tr>
 
 		<tr>
-			<td>Remote SMTP:</td>
+			<td>Remote mail servers:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
@@ -178,27 +163,27 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 
 	<tbody class="section">
 		<tr>
-			<td colspan="4">Community Portal Hosting</td>
+			<td colspan="4">Community Portals</td>
 		</tr>
 	</tbody>
 
 	<tbody class="matrix">
 		<tr>
-			<td>Included portals [<a href="#portals">?</a>]:</td>
+			<td>Customer-facing portals [<a href="#portals">?</a>]:</td>
 			<td>1</td>
 			<td>5</td>
 			<td>10</td>
 		</tr>
 
 		<tr>
-			<td>Custom URL:</td>
+			<td>Personalized URL:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
 
 		<tr>
-			<td>SSL certificate:</td>
+			<td>Included SSL certificate:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
@@ -221,7 +206,7 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		</tr>	
 
 		<tr>
-			<td>Plugin Library:</td>
+			<td>Plugin library:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
@@ -251,7 +236,7 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		-->
 		
 		<tr>
-			<td>Third-party plugins [<a href="#custom-plugins">?</a>]:</td>
+			<td>Unofficial plugins [<a href="#custom-plugins">?</a>]:</td>
 			<td><span class="no"></span></td>
 			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
@@ -260,48 +245,41 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 	
 	<tbody class="section">
 		<tr>
-			<td colspan="4">Support/SLA</td>
+			<td colspan="4">Support</td>
 		</tr>
 	</tbody>
 	
 	<tbody class="matrix">
 		<tr>
-			<td>Weekdays:</td>
-			<td>next day</td>
-			<td>same day</td>
-			<td>same day</td>
+			<td>Scope:</td>
+			<td>General guidance</td>
+			<td>Specific use cases</td>
+			<td>Implementation consultation</td>
 		</tr>
 	
 		<tr>
-			<td>Weekends:</td>
-			<td><span class="no"></span></td>
-			<td>next day</td>
-			<td>same day</td>
+			<td>Hours:</td>
+			<td>Weekdays, 8a-6p Pacific</td>
+			<td>Weekdays, 8a-6p Pacific</td>
+			<td>24x7</td>
 		</tr>
-	
+		
 		<tr>
-			<td>Holidays:</td>
-			<td><span class="no"></span></td>
-			<td>next day</td>
+			<td>Response time:</td>
+			<td>&lt; 24 hours</td>
 			<td>same day</td>
-		</tr>
-	
-		<tr>
-			<td>Phone support:</td>
-			<td><span class="no"></span></td>
-			<td><span class="no"></span></td>
-			<td><span class="yes"></span></td>
+			<td>same day</td>
 		</tr>
 
 		<tr>
-			<td>Developer live chat:</td>
-			<td><span class="no"></span></td>
-			<td><span class="no"></span></td>
-			<td><span class="yes"></span></td>
+			<td>Methods:</td>
+			<td>email</td>
+			<td>email, phone</td>
+			<td>email, phone, developer chat</td>
 		</tr>
-	
+		
 		<tr>
-			<td>Technical service discounts [<a href="#technical-services">?</a>]:</td>
+			<td>Urgent escalations [<a href="#urgent-escalations">?</a>]:</td>
 			<td><span class="no"></span></td>
 			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
@@ -425,10 +403,6 @@ Checking many mailboxes can be very inefficient.  Mail delivery is never instant
 
 You can redirect mail for multiple accounts into a single "dropbox" account to make remote mailbox checks more efficient.  This is also how the redirect mailbox works in our instant delivery service, which we highly recommend using instead of remote mailbox checks.
 
-## What is the cost of additional mailbox checks?
-
-Your subscription provides a certain number of mailbox checks at a specific interval (e.g. 5 checks every 1 minute). Additional mailbox checks at the same interval are $2/month each.
-
 <div id="redirect-mailbox"></div>
 
 ## What is a redirect mailbox?
@@ -474,9 +448,7 @@ Technical services include:
 * Importing data from other apps and services
 * Web-based team training sessions
 
-Our standard rate for technical services is **$120/hour**, billed in 15 minute increments.
-
-Enterprise subscriptions receive a discounted rate of **$100/hour** on technical services, billed in 15 minute increments.
+Our standard rate for technical services is **$100/hour**, billed in 15 minute increments.
 
 <div id="urgent-escalations"></div>
 
