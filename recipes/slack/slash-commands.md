@@ -23,17 +23,9 @@ When a channel member uses our new **/cerb** command, Slack will deliver their m
 
 You can use any web-based technology to process these POST requests and send a response back to Slack.
 
-Cerb makes this process even simpler with its [Webhooks](/docs/webhooks) plugin.  This plugin enables Cerb to catch webhook requests and route them to Virtual Attendant behaviors.  These browser-built behaviors can process a request, perform actions in Cerb or interact with third-party services, and then send an appropriate response.
+Cerb makes this process really simple with its [Webhooks](/plugins/webhooks) plugin.  This plugin enables Cerb to listen for arbitrary webhook requests and route them to bots.  Bot behaviors can process a request, perform actions in Cerb or interact with third-party services, and then send an appropriate response back to the caller.
 
-As an administrator, you can verify that the Webhooks plugin is installed and enabled in your Cerb environment by navigating to **Setup** >> **Plugins** >> **Installed Plugins**.
-
-Search for _"webhooks"_:
-
-* If the plugin exists and is enabled, you're all set.
-
-* If the plugin exists and is disabled, then click **Configure** and enable it.
-
-* If the plugin doesn't exist, install it from the **Plugin Library** tab.
+If the webhooks plugin isn't already enabled, you can [follow these instructions](/plugins/webhooks#installation) to install it.
 
 ## Create the Virtual Attendant behavior in Cerb
 
