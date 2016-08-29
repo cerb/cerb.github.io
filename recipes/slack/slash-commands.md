@@ -46,7 +46,7 @@ Navigate to **Search** >> **Virtual Attendant** and click the **(+)** icon in th
 Enter the following details:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/integrations/slack/slash-commands/create_va.png" class="screenshot">
+<img src="/assets/images/examples/slack/slash-commands/create_va.png" class="screenshot">
 </div>
 
 (You can find a logo image at <https://brandfolder.com/slack>)
@@ -62,21 +62,21 @@ Select the **Import** tab and paste the following behavior to import it:
 You should now see the following:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/integrations/slack/slash-commands/va_behavior.png" class="screenshot">
+<img src="/assets/images/examples/slack/slash-commands/va_behavior.png" class="screenshot">
 </div>
 
 If so, we're ready to create the webhook that triggers this behavior.
 
 ## Create the new webhook in Cerb
 
-Navigate to **Setup** >> **Configure** >> **Webhooks**.
+Navigate to **Setup** &raquo; **Configure** &raquo; **Webhooks**.
 
 Click the **(+)** icon in the blue bar of the worklist to create a new webhook.
 
 Enter the following details:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/integrations/slack/slash-commands/create_webhook.png" class="screenshot">
+<img src="/assets/images/examples/slack/slash-commands/create_webhook.png" class="screenshot">
 </div>
 
 Click the **Save Changes** button.
@@ -90,13 +90,13 @@ Now that we have our webhook listener and Virtual Attendant behavior in place, w
 Visit the [Slack App Directory](https://slack.com/apps/build) and click the **Make a Custom Integration** button on the right.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/integrations/slack/slash-commands/slack_custom_integration.png" class="screenshot">
+<img src="/assets/images/examples/slack/slash-commands/slack_custom_integration.png" class="screenshot">
 </div>
 
 Select **Slash Commands** from the menu.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/integrations/slack/slash-commands/slack_slash_commands.png" class="screenshot">
+<img src="/assets/images/examples/slack/slash-commands/slack_slash_commands.png" class="screenshot">
 </div>
 
 Name the command **/cerb** and click the green **Add Slash Command Integration** button.
@@ -122,7 +122,7 @@ Finally, click the green **Save Integration** button at the bottom of the page.
 Join one of your Slack channels and try out the new **/cerb** command.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/integrations/slack/slash-commands/bot_chat.png" class="screenshot">
+<img src="/assets/images/examples/slack/slash-commands/bot_chat.png" class="screenshot">
 </div>
 
 ## Where to go from here
