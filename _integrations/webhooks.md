@@ -2,13 +2,13 @@
 title: Webhooks
 integrate:
   what: HTTP Notifications
-  state: draft
+  state: live
 jumbotron:
   title: Cerb + Webhooks
   tagline: Integrate with arbitrary webhook notifications
 app: webhooks
 recipes:
-  - html-form-submit
+#  - html-form-submit
   - worklist-rss
 ---
 
