@@ -8,7 +8,7 @@ jumbotron:
   tagline: Integrate with arbitrary webhook notifications
 app: webhooks
 recipes:
-#  - html-form-submit
+  - html-form-submit
   - worklist-rss
 ---
 
