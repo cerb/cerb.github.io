@@ -27,8 +27,3 @@ Search for _"webhooks"_:
 
 * If the plugin doesn't exist, install it from the **Plugin Library** tab.
 
-## Adding a new webhook listener
-
-
-
-## Examples
