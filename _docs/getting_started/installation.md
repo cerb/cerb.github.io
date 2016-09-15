@@ -38,7 +38,7 @@ jumbotron:
 	- lighttpd
 	- Microsoft Internet Information Server (IIS)
 
-- PHP 5.3 or later
+- PHP 5.4 or later
 	- With the following extensions enabled:
 		- curl
 		- dom
@@ -48,13 +48,14 @@ jumbotron:
 		- mailparse
 		- mbstring
 		- mysqli
+		- openssl
 		- pcre
 		- session
 		- simplexml
 		- spl
 		- xml
 		- memcached _(optional)_
-		- oauth _(optional)_
+		- redis _(optional)_
 	- With these _php.ini_ settings:
 		- file_uploads = On
 		- memory_limit = 64M _(or higher)_
