@@ -10,15 +10,15 @@ jumbotron:
 
 __Cerb Cloud__ is a subscription-based service that provides a finely tuned, ready-to-use instance of Cerb in an ideal environment. All you need is a web browser and your team can start putting Cerb's tools to work. We'll handle everything else.
 
-* __Fully managed__: We install Cerb and its dependencies in an ideal environment, apply updates and security patches, monitor and scale the infrastructure, optimize performance, maintain backups, interface with email service providers for deliverability, provide application support and other technical services, and more. You can focus on what you do best.
+* __Fully managed__: We install Cerb and its dependencies in an ideal environment, apply updates and security patches, monitor and scale the infrastructure, optimize performance, maintain backups, interface with email service providers for deliverability, provide application support and other technical services, and everything else. You can focus on what you do best.
 
-* __High performing__: Cerb is already designed to be fast and efficient. Cerb Cloud further accelerates performance by optimizing the underlying infrastructure and taking advantage of distributed services in the cloud. The database is continuously tuned for your workload. Resource requests (images, scripts, stylesheets, and fonts) are served instantly from a memory cache. Frequently accessed application data is retrieved from a memory-based cache cluster to reduce database latency. Background jobs are managed by an automatic scheduler.
+* __Highly available__: Failed components are automatically replaced and redundant capacity allows your service to continue uninterrupted. The Enterprise tier provides a database cluster with near-instant automated failover, and the other tiers recover from database failures automatically within minutes.
 
 * __Scalable__: Your Cerb environment can scale seamlessly from a single worker who sends a couple of messages per day, to hundreds of concurrent workers with a history spanning millions of conversations. Resources can seamlessly "scale up" and "scale out". New resources are automatically provisioned and added to load balancers in response to traffic needs (web servers, cache servers, incoming and outgoing mail servers, etc).
 
-* __Secure__: All traffic between you and your Cerb instance is encrypted with SSL. We support "Perfect Forward Secrecy", which is a strategy that protects your past encrypted transmissions even if they are intercepted and recorded (even we can't decrypt them once your session ends). Our resources operate in a "private cloud" with private networks for traffic between components, and firewall rules in front of public components that expose a minimally necessary attack surface. Our own access to those resources requires RSA keys and two-factor authentication.
+* __High performing__: Cerb is already designed to be fast and efficient. Cerb Cloud further accelerates performance by optimizing the underlying infrastructure and taking advantage of distributed services in the cloud. The database is continuously tuned for your workload. Resource requests (images, scripts, stylesheets, and fonts) are served instantly from a memory cache. Frequently accessed application data is retrieved from a memory-based cache cluster to reduce database latency. Background jobs are managed by an automated scheduler.
 
-* __Highly available__: Failed components are automatically replaced, and redundant capacity allows your service to continue uninterrupted. The Enterprise tier provides a database cluster with near-instant automated failover, and the other tiers recover from database failures automatically within minutes.
+* __Secure__: All traffic between you and your Cerb instance is encrypted with SSL. We support "Perfect Forward Secrecy", which is a strategy that protects your past encrypted transmissions even if they are intercepted and recorded (even we can't decrypt them once your session ends). Our resources operate in a "private cloud" with private networks for traffic between components, and firewall rules in front of public components that expose a minimally necessary attack surface. Our own access to those resources requires RSA keys and two-factor authentication.
 
 * __Durable__: We archive a sequence of full daily database backups, as well as the incremental point-in-time changes in between. Long term object storage (like attachments) are redundantly stored in several geographically separate locations. We can also arrange for backups to be routinely transfered to you.
 
@@ -28,7 +28,6 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 	<thead>
 		<tr>
 			<th></th>
-			<th>Startup</th>
 			<th>Pro</th>
 			<th>Enterprise</th>
 		</tr>
@@ -37,9 +36,8 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 	<tbody class="matrix">
 		<tr>
 			<td>Monthly price:</td>
-			<td>$20/seat</td>
 			<td>$40/seat</td>
-			<td>$60/seat (min. 10)</td>
+			<td>$60/seat</td>
 		</tr>
 	</tbody>
 
@@ -54,12 +52,10 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<td>High availability:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
 		</tr>
 	
 		<tr>
 			<td>Automated scaling:</td>
-			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
@@ -68,19 +64,16 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<td>Automated backups:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
 		</tr>
 		
 		<tr>
 			<td>SSL encryption:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
 		</tr>
 		
 		<tr>
 			<td>Personalized URL w/ SSL [<a href="#custom-urls">?</a>]:</td>
-			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
@@ -96,13 +89,11 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		<tr>
 			<td>Read replicas:</td>
 			<td><span class="no"></span></td>
-			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
 
 		<tr>
 			<td>Instant cluster failover:</td>
-			<td><span class="no"></span></td>
 			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
@@ -119,14 +110,12 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<td>Instant delivery mailbox [<a href="#redirect-mailbox">?</a>]:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
 		</tr>
 
 		<tr>
 			<td>Remote mail checks [<a href="#mailbox-checks">?</a>]:</td>
-			<td>1 mailbox / 5 mins</td>
-			<td>5 mailboxes / 1 min</td>
-			<td>10 mailboxes / 1 min</td>
+			<td>5 mailboxes / min</td>
+			<td>10 mailboxes / min</td>
 		</tr>
 
 	</tbody>
@@ -142,19 +131,16 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<td>High-volume mail server:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
 		</tr>	
 		
 		<tr>
 			<td>Domain signatures (DKIM) [<a href="#dkim">?</a>]:</td>
-			<td>1</td>
 			<td>10</td>
-			<td>25</td>
+			<td>25+</td>
 		</tr>
 
 		<tr>
 			<td>Remote mail servers:</td>
-			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>	
@@ -170,21 +156,18 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 	<tbody class="matrix">
 		<tr>
 			<td>Customer-facing portals [<a href="#portals">?</a>]:</td>
-			<td>1</td>
 			<td>5</td>
-			<td>10</td>
+			<td>10+</td>
 		</tr>
 
 		<tr>
 			<td>Personalized URL:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
 		</tr>
 
 		<tr>
 			<td>Included SSL certificate:</td>
-			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
@@ -202,26 +185,22 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<td>Bots:</td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
 		</tr>	
 
 		<tr>
-			<td>Plugin library:</td>
-			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
-			<td><span class="yes"></span></td>
-		</tr>	
-	
-		<tr>
 			<td>Webhooks:</td>
-			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
 	
 		<tr>
+			<td>Plugins:</td>
+			<td><span class="yes"></span></td>
+			<td><span class="yes"></span></td>
+		</tr>	
+	
+		<tr>
 			<td>API:</td>
-			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
@@ -236,8 +215,7 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 		-->
 		
 		<tr>
-			<td>Unofficial plugins [<a href="#custom-plugins">?</a>]:</td>
-			<td><span class="no"></span></td>
+			<td>3rd party plugins [<a href="#custom-plugins">?</a>]:</td>
 			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
@@ -250,37 +228,34 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 	</tbody>
 	
 	<tbody class="matrix">
+		<!--
 		<tr>
 			<td>Scope:</td>
-			<td>General guidance</td>
 			<td>Specific use cases</td>
 			<td>Implementation consultation</td>
 		</tr>
+		-->
 	
 		<tr>
 			<td>Hours:</td>
-			<td>Weekdays, 8a-6p Pacific</td>
 			<td>Weekdays, 8a-6p Pacific</td>
 			<td>24x7</td>
 		</tr>
 		
 		<tr>
 			<td>Response time:</td>
-			<td>&lt; 24 hours</td>
 			<td>same day</td>
 			<td>same day</td>
 		</tr>
 
 		<tr>
 			<td>Methods:</td>
-			<td>email</td>
 			<td>email, phone</td>
 			<td>email, phone, developer chat</td>
 		</tr>
 		
 		<tr>
 			<td>Urgent escalations [<a href="#urgent-escalations">?</a>]:</td>
-			<td><span class="no"></span></td>
 			<td><span class="no"></span></td>
 			<td><span class="yes"></span></td>
 		</tr>
@@ -466,7 +441,7 @@ Our standard rate for technical services is **$100/hour**, billed in 15 minute i
 
 That's the point where it becomes cost effective for us to provide the extra services.
 
-The _Enterprise_ subscriptions can scale up to a pool of resources that are entirely dedicated to a single instance of Cerb. The database cluster for instant failover requires at least twice the resources of a _Startup_ or _Pro_ subscription (and more if there are extra read replicas for scaling).
+The _Enterprise_ subscriptions can scale up to a pool of resources that are entirely dedicated to a single instance of Cerb. The database cluster for instant failover requires at least twice the resources of a _Pro_ subscription (and more if there are extra read replicas for scaling).
 
 Similarly, the additional _Enterprise_ support commitments require highly experienced developers on call around the clock.
 
