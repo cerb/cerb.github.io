@@ -8,7 +8,7 @@ jumbotron:
 
 # Enabling friendly URLs
 
-You may notice that your URLs look a bit ugly with the omnipresent `/index.php/` in the path by default. 
+You may notice that your URLs look a bit ugly with `/index.php/` in every path by default. 
 
 This URL is doesn't look very professional:
 <div class="cerb-screenshot">

@@ -38,7 +38,7 @@ jumbotron:
 	- lighttpd
 	- Microsoft Internet Information Server (IIS)
 
-- PHP 5.4 or later
+- PHP 5.5 or later
 	- With the following extensions enabled:
 		- curl
 		- dom
@@ -58,11 +58,11 @@ jumbotron:
 		- redis _(optional)_
 	- With these _php.ini_ settings:
 		- file_uploads = On
-		- memory_limit = 64M _(or higher)_
+		- memory_limit = 128M _(or higher)_
 		- upload_max_filesize = 32M _(or higher)_
 		- post_max_size = 32M _(or higher)_
 
-- MySQL 5.1 or later
+- MySQL 5.5 or later
 
 <div class="cerb-box note">
 	<p>If you are unable to meet these requirements, consider <a href="/cloud/try/">Cerb Cloud</a>.</p>
@@ -229,7 +229,7 @@ This is the page title that shows up by default on browser tabs and in URL bookm
 
 ### Default Sender
 
-This establishes your first, shared outgoing email address.  You'll probably want to use something like `support@example.com` (where `example.com` is your own domain name).
+This establishes your first shared outgoing email address.  You'll probably want to use something like `support@example.com` (where `example.com` is your own domain name).
 
 You can also configure a personalized name for the email address, such as your organization name.
 

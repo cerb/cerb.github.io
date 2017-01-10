@@ -26,4 +26,4 @@ jumbotron:
 
 * A **watcher** is a worker who wants to be notified about all new activity on a specific record. For example, a supervisor may be a watcher on all new tickets to monitor the quality of the messages that workers are sending to contacts.
 
-* **Bots** are programmable agents that can perform most of the same actions as workers. They automate common workflows by responding to **events** with **behaviors** that can be completely built within a web browser -- even by workers with no computer programming experience. For instance, a VA can send an automated response every time a new conversation is started.  Any number of bots may be managed by groups and workers.
+* **Bots** are programmable agents that can perform most of the same actions as workers. They automate common workflows by responding to **events** with **behaviors** that can be completely built within a web browser -- even by workers with no computer programming experience. For instance, a bot can send an automated response every time a new conversation is started.  Any number of bots may be managed by groups and workers.

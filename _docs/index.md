@@ -15,13 +15,15 @@ jumbotron:
 
 * High-volume __email management__ that scales to millions of conversations per year.
 
-* **Shared mailboxes** that provide a single point of contact for clients no matter who is on duty.
+* __Shared mailboxes__ that provide a single point of contact for clients no matter who is on duty.
 
-* **Bots** for creating powerful, event-driven, __automated behaviors__ from a web browser without any computer programming experience required.
+* __Bots__ for creating powerful, event-driven, __automated behaviors__ from a web browser without any computer programming experience required.
 
 * Custom __shared workspaces__ to foster team collaboration.
 
 * __Dashboards__ for real-time reporting, monitoring, goal tracking, and operational intelligence.
+
+* __Connected accounts__ for integration with third-party apps and services.
 
 * __Contact management__ for tracking important details and nurturing customer relationships.
 

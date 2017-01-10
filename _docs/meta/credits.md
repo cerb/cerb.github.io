@@ -22,9 +22,8 @@ jumbotron:
 
 # Infrastructure
 
+- Amazon Web Services
 - GitHub
-- AWS
-- Jekyll
 
 # Libraries
 
@@ -54,6 +53,9 @@ jumbotron:
 
 - [qTip](http://craigsworks.com/projects/qtip/) is a tooltip plugin for the jQuery framework.
 	- We use qTip to show tooltips on several legacy reports.
+
+- [php-encryption](https://github.com/defuse/php-encryption) is a secure library for encrypting data in PHP.
+	- We use php-encryption to secure connected account credentials, settings, etc.
 	
 - PHPUnit
 - Selenium
@@ -65,7 +67,7 @@ jumbotron:
 
 # Developers
 
-- [Jeff Standen](http://www.linkedin.com/in/jeffstanden) is the founding partner at Webgroup Media LLC. He has been Cerb's software architect and lead programmer from the first line of code in January 2002[^bdfl]. He brings more than 22 years of software development experience to the project.
+- [Jeff Standen](http://www.linkedin.com/in/jeffstanden) is the founding partner at Webgroup Media LLC. He has been Cerb's software architect and lead programmer from the first line of code in January 2002[^bdfl]. He brings more than 23 years of software development experience to the project.
 
 - [Dan Hildebrandt](http://www.linkedin.com/in/danielhildebrandt) is a partner at Webgroup Media LLC and an active Cerb developer since 2005.
 
