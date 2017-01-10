@@ -8,7 +8,7 @@ jumbotron:
   tagline: Integrate with Twilio messaging, voice, and video
 app: twilio
 recipes:
-  - sms-notifications
+  - send-sms
 ---
 
 {% include integration_recipes.html app=page.app recipes=page.recipes %}
