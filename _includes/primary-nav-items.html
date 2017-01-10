@@ -2,6 +2,11 @@
 	<li class="{% if page.url == '/' %}current{% endif %}">
 		<a href="/">About</a>
 	</li>
+	{% comment %}
+	<li class="{% if page.url contains '/tour/' %}current{% endif %}">
+		<a href="/tour/">Tour</a>
+	</li>
+	{% endcomment %}
 	<li class="{% if page.url contains '/examples/' %}current{% endif %}">
 		<a href="/examples/">Examples</a>
 	</li>

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Cerb License"
-permalink: /pricing/license
+permalink: /pricing/license/
 jumbotron:
   title: Standalone Cerb Licenses
   tagline: Deploy Cerb on your own hardware

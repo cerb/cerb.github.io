@@ -2,7 +2,6 @@
 layout: page
 title: "Cerb Cloud"
 permalink: /cloud/
-redirect_from: /pricing/cloud
 jumbotron:
   title: Cerb Cloud Subscriptions
   tagline: Deploy a reliable, fine-tuned, fully-managed Cerb environment in the Cloud
@@ -205,15 +204,6 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<td><span class="yes"></span></td>
 		</tr>
 	
-		<!--
-		<tr>
-			<td>Elasticsearch [<a href="#elasticsearch">?</a>]:</td>
-			<td><span class="no"></span></td>
-			<td><span class="no"></span></td>
-			<td><span class="yes"></span></td>
-		</tr>
-		-->
-		
 		<tr>
 			<td>3rd party plugins [<a href="#custom-plugins">?</a>]:</td>
 			<td><span class="no"></span></td>
@@ -404,14 +394,6 @@ Your subscription provides a certain number of community portals. These include 
 
 Additional community portals are $10/month each.
 
-<div id="elasticsearch"></div>
-
-## What is Elasticsearch?
-
-By default, full-text searching in Cerb is handled by MySQL Fulltext[^mysql-fulltext]. This provides a working solution _"out of the box"_, but it is neither full-featured nor efficient.  It works best when matching a few distinct terms against thousands of documents.
-
-In contrast, Elasticsearch[^elasticsearch] is a distributed, scalable, high-performance search engine with powerful full-text search features. It can search against millions of documents in milliseconds using terms, compound queries, phrases, etc.
-
 <div id="urgent-escalations"></div>
 
 ## What are urgent escalations?
@@ -450,8 +432,6 @@ Consider these two extremes: 1 client with 50 seats, and 50 clients with 1 seat 
 # References
 
 [^mysql-fulltext]: <http://dev.mysql.com/doc/refman/5.7/en/fulltext-search.html>
-
-[^elasticsearch]: <https://www.elastic.co/products/elasticsearch>
 
 [^spf]: <https://en.wikipedia.org/wiki/Sender_Policy_Framework>
 
