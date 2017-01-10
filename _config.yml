@@ -1,11 +1,11 @@
 # Site settings
 title: "Cerb"
 company: "Webgroup Media, LLC."
-copyright: 2002-2016
+copyright: 2002-2017
 email: support@webgroupmedia.com
 description: >
   Cerb enhances the productivity of online teams with web-based collaboration and automation tools.
-url: "http://cerb.io"
+url: "http://cerb.ai"
 baseurl: ""
 logo: assets/cerb_logo.png
 facebook_username: cerbapp
