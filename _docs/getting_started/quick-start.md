@@ -64,7 +64,7 @@ For optimal email deliverability, make sure you've configured SPF, DKIM, and DMA
 
 # Create groups
 
-Navigate to **Setup** >> **Workers &amp; Groups** >> **Groups**.
+Navigate to **Search** >> **Groups**.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/quick-start/groups.png" class="screenshot">
@@ -74,7 +74,7 @@ In Cerb, workers with similar skills and responsibilities are organized into **g
 
 This _abstraction_[^abstraction] provides many conveniences and efficiencies for collaboration.  Work can quickly and effortlessly be assigned to an appropriate group as a whole, without first having to figure out which specific worker is both responsible for it and available to handle it. An inquiry about buying one of your products can be assigned to the Sales group, and an existing customer with a technical question could be assigned to the Support group.
 
-Groups are designed to be _autonomous_[^autonomy]. One or more **managers** can configure the group without requiring an administrator. Aside from work, group members may also collectively share access to resources like Virtual Attendants, snippets, and custom fieldsets.
+Groups are designed to be _autonomous_[^autonomy]. One or more **managers** can configure the group without requiring an administrator. Aside from work, group members may also collectively share access to resources like bots, snippets, and custom fieldsets.
 
 The units of work assigned to a group are organized into any number of **buckets**, which can be thought of like folders of related messages in a traditional email reader.  Every group has a default **inbox** bucket to collect new assignments.  From there, new work is manually or automatically sorted into the appropriate buckets.
 
@@ -106,7 +106,7 @@ We're going to send a test message from Cerb to the **mail-tester.com** service.
 
 1. Open Cerb in another browser window or tab.
 
-1. Navigate to **Search** >> **Ticket**.
+1. Navigate to **Search** >> **Tickets**.
 
 1. Click the **(+)** icon in the gray bar above the worklist.
 
@@ -140,7 +140,7 @@ If you received a less than perfect score, scroll down to see the details.  You 
 
 Before we invite the rest of your team, you should establish the permissions that grant or restrict functionality for each worker.
 
-Navigate to **Setup** >> **Workers &amp; Groups** >> **Roles**.
+Navigate to **Search** >> **Roles**.
 
 In Cerb, worker permissions are managed using **roles**.  Multiple roles can be assigned to a single worker, and a worker is granted a particular privilege if any of their roles permit it.
 
@@ -150,7 +150,7 @@ The _Default_ role was automatically created for you during installation.  It si
 
 Now that you've set up your groups and roles, and verified that outgoing mail works, let's invite the rest of your team to use Cerb.
 
-Navigate to **Setup** >> **Workers &amp; Groups** >> **Workers**.
+Navigate to **Search** >> **Workers**.
 
 Click the **(+)** icon in the blue bar of the worklist to add new workers.  At minimum, provide a first name, personal email address, and group memberships.  If you leave the password field blank, then setup instructions will be sent to the worker's email address.
 
@@ -188,7 +188,7 @@ If you want to add a new routing rule, click the **Add** button and review the i
 
 Navigate to **Setup** >> **Configure** >> **Scheduler**.
 
-The **scheduler** is responsible for planning and running _jobs_. A **job** is a specific task -- checking your mailboxes for new messages, search indexing new records, performing nightly maintenance, triggering Virtual Attendant scheduled behaviors, etc.  There are several built-in jobs, and new jobs can be added using plugins.
+The **scheduler** is responsible for planning and running _jobs_. A **job** is a specific task: checking your mailboxes for new messages, search indexing new records, performing nightly maintenance, triggering scheduled bot behaviors, etc.  There are several built-in jobs, and new jobs can be added using plugins.
 
 For Cerb's scheduled jobs to automatically run in the background, you need to configure a third-party tool to request the `/cron` page every minute.
 
