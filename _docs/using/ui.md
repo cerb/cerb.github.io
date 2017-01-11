@@ -6,65 +6,24 @@ jumbotron:
   tagline: Layout and navigation
 ---
 
-# Global Navigation
+## Tabs
 
-The global navigation controls are at the top of every page in Cerb.
+On many pages, content is organized using tabs. Clicking on a tab displays the content for that section while hiding all other sections. The last active tab is automatically remembered; so if you leave a page and come back, everything will be the same as how you left it.
 
-<div class="cerb-screenshot">
-<img src="/assets/images/docs/ui/top_navigation.png">
-</div>
+## Buttons
 
-# Logo
+Many actions are represented as buttons which respond to taps and mouse clicks.
 
-You can click on the logo in the top left from anywhere in Cerb to quickly return to your default page. This is a shortcut for clicking on the the first page in your navbar.
+Some buttons are _split_ with a down arrow on the right side. Clicking on the left side of the button runs the default action, which is often described by the label. Clicking on the right side displays a menu for selecting an alternate action.
 
-<div class="cerb-screenshot">
-<img src="/assets/images/docs/ui/top_navigation.png">
-<img src="/assets/images/docs/ui/overlay_logo.png" class="cerb-overlay">
-</div>
+## Menus
 
-# Notifications
+Menus provide a list of related options.
 
-When you have unread notifications, a red alert box will appear in the top right. You can click on it to view them in a popup.
+## Worklists
 
-<div class="cerb-screenshot">
-<img src="/assets/images/docs/ui/top_navigation.png">
-<img src="/assets/images/docs/ui/overlay_notifications.png" class="cerb-overlay">
-</div>
+Worklists are a filterable, pageable, sortable, and customizable set of records displayed using rows and columns.
 
-# Worker menu
+## Popups
 
-Clicking on your name in the top right reveals the worker menu with actions specific to your account.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/docs/ui/top_navigation.png">
-<img src="/assets/images/docs/ui/overlay_worker_menu.png" class="cerb-overlay">
-</div>
-
-# Navbar
-
-The navigation bar displays shortcuts to your favorite workspace pages.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/docs/ui/top_navigation.png">
-<img src="/assets/images/docs/ui/overlay_navbar.png" class="cerb-overlay">
-</div>
-
-<div class="cerb-box note">
-	<p>
-		You can use your mouse to drag workspace pages into a different order. The first item in your navbar is your default page -- it's where you'll go when you click on the logo in the top left.
-	</p>
-</div>
-
-# Search
-
-You can quickly view and filter records of any type from the search menu in the right of the navbar. Each search page is essentially a temporary workspace.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/docs/ui/top_navigation.png">
-<img src="/assets/images/docs/ui/overlay_search.png" class="cerb-overlay">
-</div>
-
-# Setup
-
-If you're an administrator, you'll see a **Setup** link in the far right of the navbar.
+Popups provide additional functionality in a floating window. This allows you to accomplish many tasks without leaving the current screen.
