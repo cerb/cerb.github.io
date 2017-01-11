@@ -24,7 +24,7 @@ The owner of a workspace can also add special **required filters** to a worklist
 
 ### Deep searching
 
-Cerb also (quite impressively) allows for **deep searching**, which means that you can filter a worklist based on the fields of records related to those that you're currently looking, and then filter again based on fields related to those deeper records, and so on into the abyss.  So you can build a worklist of email messages sent by organizations in the health care industry who have an enterprise SLA and also have at least one female contact whose name starts with the letter 'M'.  This is one of Cerb's distinguishing features.
+Cerb also allows for **deep searching**, which means that you can filter a worklist based on the fields of records related to those that you're currently looking, and then filter again based on fields related to those deeper records, and so on into the abyss.  So you can build a worklist of email messages sent by organizations in the health care industry who have an enterprise SLA and also have at least one female contact whose name starts with the letter 'M'.  This is one of Cerb's distinguishing features.
 
 ### Sorting
 
