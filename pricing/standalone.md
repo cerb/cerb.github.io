@@ -7,7 +7,7 @@ jumbotron:
   tagline: Deploy Cerb on your own hardware
 ---
 
-A __standalone Cerb license__ runs on your own hardware. The software requires a web server with PHP 5.4+ and MySQL 5.1+. You are responsible for installation, upgrades, backups, monitoring, tuning, scaling, security, troubleshooting, etc.
+A __standalone Cerb license__ runs on your own hardware. The software requires a web server with PHP 5.5+ and MySQL 5.5+. You are responsible for installation, upgrades, backups, monitoring, tuning, scaling, security, troubleshooting, etc.
 
 * Community licenses permit you to use Cerb with some limitations **at no cost** and **without a time limit**.  For a small team, this may be all that is ever needed. For larger teams, this provides a risk-free evaluation to determine if Cerb is a good fit.
 

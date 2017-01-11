@@ -2,7 +2,6 @@
   docs:
   - home
   - philosophy
-  - terminology
 
 - title: Getting Started
   docs:
@@ -14,29 +13,35 @@
   docs:
   - logging-in
   - ui
-  - components
-  - mail
-  - tasks
-  - calendars
-  
-- title: The Toolkit
-  docs:
+  - navigation
   - records
-  - custom-fields
-  - profiles
-  - worklists
-  - cards
-  - notifications
-  - watchers
   - workspaces
-  - dashboards
-  - activity-log
-  - snippets
+  - cards
+  - profiles
+  - workers
+  - groups
+  - contacts
+  - tickets
+#  - mail
+#  - tasks
+#  - calendars
+
+- title: Bots
+  docs:
   - bots
-  - portals
-  # - mobile
-  # - plugins
+  - behaviors
+  - classifiers
+  - connected-accounts
   
+- title: Plugins
+  docs:
+  # - api
+  # - twitter
+  # - webhooks
+    # - json_body
+    # - ip_restrict
+    # - cors
+
 - title: Administration
   docs:
   - setup
@@ -45,6 +50,7 @@
   - security
   - performance
   - scaling
+  - portals
 
 #- title: Administration
 #  docs:
@@ -62,15 +68,6 @@
     # - requests
     # - responses
     # - modules
-
-#- title: Plugins
-#  docs:
-  # - api
-  # - twitter
-  # - webhooks
-    # - json_body
-    # - ip_restrict
-    # - cors
 
 - title: Meta
   docs:

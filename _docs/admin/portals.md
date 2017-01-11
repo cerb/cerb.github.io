@@ -3,7 +3,7 @@ title: Portals
 permalink: /docs/portals/
 jumbotron:
   title: Portals
-  tagline: ...
+  #tagline: ...
 ---
 
-(( community portals, plugins/extensions, Support Center ))
+((Support Center, extensions))
