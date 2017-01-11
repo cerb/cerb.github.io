@@ -12,7 +12,6 @@
 - title: Using Cerb
   docs:
   - logging-in
-  - ui
   - navigation
   - records
   - workspaces
