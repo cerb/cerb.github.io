@@ -29,11 +29,6 @@ The **Setup** page in the top right of the navigation bar provides a central loc
 	- Virtual Attendants
 	- Scheduled Behavior
 	
-- **Workers &amp; Groups**
-	- [Groups](/docs/setup/groups)
-	- [Roles](/docs/setup/roles)
-	- [Workers](/docs/setup/workers)
-	
 - **Mail**
 	- Settings
 	- [Mailboxes](/docs/setup/mailboxes)
