@@ -40,11 +40,11 @@
 - title: Administration
   docs:
   - setup
+  - backups
   - upgrading
   - security
   - performance
   - scaling
-  - backups
 
 #- title: Administration
 #  docs:

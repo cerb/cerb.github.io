@@ -6,6 +6,10 @@ jumbotron:
   #tagline: ...
 ---
 
+<div class="cerb-box note">
+	<p>If you're using <b>Cerb Cloud</b> then we handle upgrades for you already.</p>
+</div>
+
 The officially supported way of upgrading Cerb is by using **Git**[^git], a distributed version control system.  The official project is hosted on [GitHub](http://github.com/wgm/cerb). This environment makes it much easier for people to collaborate and share improvements.
 
 You can use Git to quickly update your local Cerb files to the latest version. The major advantage of version control is that it will attempt to automatically merge official code improvements with any local configuration and customization you have performed. Git also gives you the ability to list all your changes to any project files, and to easily restore to an official version when desirable.
