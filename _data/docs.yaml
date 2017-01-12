@@ -5,12 +5,6 @@
 
 - title: Getting Started
   docs:
-  - installation
-  - friendly-urls
-  - quick-start
-
-- title: Using Cerb
-  docs:
   - logging-in
   - navigation
   - records
@@ -24,13 +18,6 @@
 #  - tasks
 #  - calendars
 
-- title: Bots
-  docs:
-  - bots
-  - behaviors
-  - classifiers
-  - connected-accounts
-  
 - title: Plugins
   docs:
   # - api
@@ -40,8 +27,18 @@
     # - ip_restrict
     # - cors
 
+- title: Building Bots
+  docs:
+  - behaviors
+  - classifiers
+  - connected-accounts
+  - webhooks
+  
 - title: Administration
   docs:
+  - installation
+  - friendly-urls
+  - quick-start
   - setup
   - backups
   - upgrading
