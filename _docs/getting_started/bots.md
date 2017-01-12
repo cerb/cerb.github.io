@@ -18,7 +18,7 @@ Events can be grouped into two categories:
 
 - **Interactive** events are initiated by an actor (worker, bot, webhook) with an exchange of information between the bot and the actor. This includes conversational behaviors, as well as behaviors that serve as shortcuts for repeating a sequence of actions when directly instructed.
 
-## Elements of Behavior
+## Behavior
 
 A behavior is described by a **decision tree** made up of **nodes** -- a collection of relatively simple building blocks that can be chained together to do complex things.  There are five kinds of nodes: decisions, outcomes, actions, loops, and subroutines.
 

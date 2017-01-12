@@ -3,7 +3,7 @@
   - home
   - philosophy
 
-- title: Getting Started
+- title: Using Cerb
   docs:
   - logging-in
   - navigation
@@ -14,26 +14,17 @@
   - contacts
   - tickets
   - bots
+  - classifiers
+  - connected-accounts
+  - webhooks
   - plugins
 #  - mail
 #  - tasks
 #  - calendars
 
-- title: Plugins
-  docs:
-  # - api
-  # - twitter
-  # - webhooks
-    # - json_body
-    # - ip_restrict
-    # - cors
-
-- title: Building Bots
-  docs:
-  - behaviors
-  - classifiers
-  - connected-accounts
-  - webhooks
+#- title: Building Bots
+#  docs:
+#  - behaviors
   
 - title: Administration
   docs:
@@ -56,8 +47,8 @@
 
 - title: Developers
   docs:
-  - writing-plugins
-  # - plugins
+  - api
+  - developing-plugins
   # - api
     # - getting_started
     # - authentication
