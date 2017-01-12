@@ -603,6 +603,25 @@ div.cerb-box {
 			text-decoration: underline;
 		}
 	}
+
+	&.geek-out {
+		color: rgb(24,104,151);
+		background-color:rgb(225,242,252);
+	
+		p {
+			&:before {
+				content: 'Geek out: ';
+				font-weight: bold;
+				font-size: 120%;
+			}
+		}
+	
+		a {
+			color: #e08600;
+			text-decoration: underline;
+		}
+	}
+
 }
 
 span.client-logo { display: inline-block; width: 155px; height: 75px; }
