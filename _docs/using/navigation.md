@@ -3,7 +3,7 @@ title: Navigation
 permalink: /docs/navigation/
 jumbotron:
   title: Navigation
-  tagline: Getting around in Cerb
+  tagline: Finding your way around the interface
 ---
 
 The global navigation controls are at the top of every page in Cerb.

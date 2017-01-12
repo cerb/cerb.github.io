@@ -3,7 +3,7 @@ title: Tickets
 permalink: /docs/tickets/
 jumbotron:
   title: Tickets
-  #tagline: ...
+  tagline: Conversations with your audience
 ---
 
 A **ticket** is a specific conversational interaction between workers and contacts, including all of the related email **messages** and other data.

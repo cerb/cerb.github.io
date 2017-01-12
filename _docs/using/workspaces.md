@@ -3,7 +3,7 @@ title: Workspaces
 permalink: /docs/workspaces/
 jumbotron:
   title: Workspaces
-  #tagline: ...
+  tagline: Stay on the same page while collaborating from anywhere
 ---
 
 A **workspace** is a page designed to optimize a particular workflow.  Workspaces can be shared by everyone, shared within a group or role, or private to a specific worker.  Since you can add any number of workspace pages to your [navigation bar](/docs/navigation), you can personalize Cerb into your own mission control.
