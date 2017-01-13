@@ -2,6 +2,8 @@
 title: Documentation
 permalink: /docs/home/
 redirect_from: /docs/
+redirect_from: /book/
+redirect_from: /book/latest/
 toc:
   title: What is Cerb?
 jumbotron:

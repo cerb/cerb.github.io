@@ -19,13 +19,13 @@ jumbotron:
 
 If the Twilio plugin isn't already enabled, you can [follow these instructions](/plugins/twilio#installation) to install and configure it.
 
-## Create the Virtual Attendant behavior in Cerb
+## Create the bot behavior in Cerb
 
 Once the Twilio plugin is enabled, you'll be able to add **Send SMS via Twilio** actions to bot behaviors.
 
 First, let's create a new bot to keep things organized.
 
-Navigate to **Search** >> **Virtual Attendant** and click the **(+)** icon in the blue bar to add a new record.
+Navigate to **Search** &raquo; **Bots** and click the **(+)** icon in the blue bar to add a new record.
 
 Enter the following details:
 

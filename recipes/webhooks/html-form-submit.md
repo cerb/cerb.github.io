@@ -35,7 +35,7 @@ Once the Webhooks plugin is enabled, you'll be able to create new bot behaviors 
 
 Let's create a new bot to keep things organized.
 
-Navigate to **Search** >> **Virtual Attendant** and click the **(+)** icon in the blue bar to add a new record.
+Navigate to **Search** &raquo; **Bots** and click the **(+)** icon in the blue bar to add a new record.
 
 Enter the following details:
 

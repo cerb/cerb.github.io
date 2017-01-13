@@ -11,7 +11,7 @@ jumbotron:
 
 Navigate to **Setup** >> **Configure** >> **Scheduler**.
 
-The **scheduler** is responsible for planning and running _jobs_. A **job** is a specific task -- checking your mailboxes for new messages, search indexing new records, performing nightly maintenance, triggering Virtual Attendant scheduled behaviors, etc.  There are several built-in jobs, and new jobs can be added using plugins.
+The **scheduler** is responsible for planning and running _jobs_. A **job** is a specific task -- checking your mailboxes for new messages, search indexing new records, performing nightly maintenance, triggering bot scheduled behaviors, etc.  There are several built-in jobs, and new jobs can be added using plugins.
 
 Each job is repeated at a specific _interval_ -- a number of minutes, hours, or days. A job can be _disabled_ to temporarily prevent it from running.
 

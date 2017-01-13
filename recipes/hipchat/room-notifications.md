@@ -62,7 +62,7 @@ Now we'll create the behavior in Cerb that POSTs to this URL when a bot wants to
 
 Log in to Cerb as an administrator.
 
-From **Search &raquo; Virtual Attendant**, click **(+)** in the top right of the worklist to add a new bot.
+From **Search &raquo; Bots**, click **(+)** in the top right of the worklist to add a new bot.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/hipchat/room-notifications/cerb-new-bot.png" class="screenshot">
@@ -70,7 +70,7 @@ From **Search &raquo; Virtual Attendant**, click **(+)** in the top right of the
 
 You can find the HipChat logo on their Twitter profile[^hipchat-twitter].
 
-Optionally, you can also restrict **Events** to _Custom virtual attendant behavior_ and **Actions** to _Execute an HTTP request_.
+Optionally, you can also restrict **Events** to _Custom bot behavior_ and **Actions** to _Execute an HTTP request_.
 
 Once finished, click the **Save Changes** button.
 
@@ -102,7 +102,7 @@ The new behavior has been automatically created for you:
 <img src="/assets/images/guides/hipchat/room-notifications/cerb-behavior.png" class="screenshot">
 </div>
 
-Now let's test the behavior to make sure it's working properly. Click on the **Custom virtual attendant behavior** node and select **Simulate Behavior** from the menu:
+Now let's test the behavior to make sure it's working properly. Click on the **Custom bot behavior** node and select **Simulate Behavior** from the menu:
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/hipchat/room-notifications/cerb-behavior-sim-menu.png" class="screenshot">

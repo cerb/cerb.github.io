@@ -32,7 +32,7 @@ Example, Inc. - http://example.com/
 {% endraw %}
 {% endhighlight %}
 
-When workers are composing a message, their signature is represented by a `#signature` marker. This a special kind of placeholder that serves several purposes.  First, the signature marker declutters the outgoing message by not showing a worker their own signature in every message.  More importantly, it allows the signature to be moved or modified by plugins, HTML templates, and Virtual Attendants.
+When workers are composing a message, their signature is represented by a `#signature` marker. This a special kind of placeholder that serves several purposes.  First, the signature marker declutters the outgoing message by not showing a worker their own signature in every message.  More importantly, it allows the signature to be moved or modified by plugins, HTML templates, and bots.
 
 You may recall that sender addresses provide a default signature for outgoing messages.  That is called a _default_ signature because buckets and HTML templates can provide alternate signatures to be used instead.
 

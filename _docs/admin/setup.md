@@ -26,7 +26,6 @@ The **Setup** page in the top right of the navigation bar provides a central loc
 	- Sessions
 	- Community Portals
 	- Skills
-	- Virtual Attendants
 	- Scheduled Behavior
 	
 - **Mail**

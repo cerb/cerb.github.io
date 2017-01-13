@@ -13,7 +13,7 @@ jumbotron:
 
 ## Introduction
 
-This plugin enables Cerb to catch webhook requests and route them to Virtual Attendant behaviors.  These browser-built behaviors can process a request, perform actions in Cerb or interact with third-party services, and then send an appropriate response.
+This plugin enables Cerb to catch webhook requests and route them to bot behaviors.  These browser-built behaviors can process a request, perform actions in Cerb or interact with third-party services, and then send an appropriate response.
 
 ## Installation
 

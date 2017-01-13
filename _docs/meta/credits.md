@@ -40,7 +40,7 @@ jumbotron:
 	- We use Swift Mailer to compose MIME messages and send all outgoing mail.
 
 - [Twig](http://www.twig-project.org/) is an open source template engine for the PHP programming language by Fabien Potencier. It focuses on being fast, secure, and flexible.
-	- We use Twig for placeholder and scripting functionality in snippets and Virtual Attendant behaviors.
+	- We use Twig for placeholder and scripting functionality in snippets and bot behaviors.
 
 - [Parsedown](http://michelf.com/projects/php-markdown/) is a PHP library for converting lightweight Markdown[^markdown] text into HTML.
 	-  We use Markdown for formatting in HTML messages and knowledgebase articles.
