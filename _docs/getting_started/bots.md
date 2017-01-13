@@ -74,7 +74,7 @@ The above decision tree describes five final outcomes within two decisions witho
 
 ### Actions
 
-When activated by a behavior reaching it, an **action** node performs one or more operations in response.  There are actions to allow bots to do almost anything a normal worker can do.  The available actions depend on the specific event that triggered the behavior.
+When activated by a behavior reaching it, an **action** node performs one or more operations in response.  There are actions to allow bots to do almost anything that a normal worker can do.  The available actions depend on the specific event that triggered the behavior.
 
 Cerb comes with many built-in actions: setting a variable, sending an email, closing a ticket, creating a task, making an HTTP request, commenting on a record, loading filtered records from a worklist, notifying a worker, triggering another behavior to run, etc.
 

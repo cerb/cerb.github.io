@@ -8,7 +8,7 @@ jumbotron:
 
 Many modern apps and services provide **webhooks**[^webhooks] for real-time _"push notifications"_ about events.  These notifications are usually simple HTTP POSTs[^http-post] with either request parameters or JSON/XML payloads that are sent to a URL you provide.  This is in contrast to the less efficient _"pull"_ approach, where a service is constantly polled at regular intervals to check for new changes.
 
-With Cerb's [webhooks plugin](/docs/plugins/cerb.webhook) you can build powerful automation behaviors in response to webhooks, entirely from your web browser, and without writing custom code or plugins.  Each _webhook listener_ is given a unique URL that is assigned to a specific [bot](/docs/bots) behavior.  With that URL in hand, you can simply paste it into the appropriate field in whatever service you're integrating with.  By default, these URLs don't require any authentication, but you can enforce any authentication you need within the bot behavior.
+With Cerb's [webhooks plugin](/docs/plugins/cerb.webhook) you can build powerful automation behaviors in response to webhooks, entirely from your web browser, and without writing custom code or plugins.  Each _webhook listener_ is given a unique URL that is assigned to a specific [bot](/docs/bots) behavior.  With that URL in hand, you can simply paste it into the appropriate field in whatever service you're integrating with.  By default, these URLs don't require authentication, but you can enforce any authentication method you need within the bot behavior.
 
 Here are some common webhook integrations:
 

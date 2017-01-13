@@ -6,23 +6,42 @@ jumbotron:
   tagline: Remember anything about everything
 ---
 
-At the core of Cerb is a data management system for organizing collections of **records**.  A record is a distinctly identifiable entity: an email address, a contact, an email message, a task, etc.  The different types of records are called **contexts**.  Each record within a context is assigned a unique numeric identified ("**ID**").
+At the core of Cerb is a data management system for organizing collections of **records**.  A record is a distinctly identifiable entity: email address, contact, email message, task, etc.  The different types of records are called **contexts**.  Each record within a context is assigned a unique numeric identifier (**ID**).
 
 ## Fields
 
-Each record is made up of **fields**.
+Each record contains a set of **fields** to describe its attributes. Some fields are _built-in_, like the name and email address of a contact, or the subject and body of an email message. These fields can't be changed.
 
-Some fields are **built-in**, like the name and email address of a contact, or the subject and body of an email message. These fields can't be changed.
+## Custom Fields
 
-New fields can also be added to records based on the needs of a particular organization.  These are called **custom fields**.  Related custom fields can be grouped into **fieldsets**.
+New **custom fields** can also be added to records based on the needs of a particular organization.
+
+You can add many kinds of custom fields:
+
+- Checkbox
+- Date
+- File
+- Files: Multiple
+- Multiple Checkboxes
+- Number
+- Picklist
+- Record Link
+- Text: Multiple Lines
+- Text: Single Line
+- URL
+- Worker
+
+## Fieldsets
+
+Related custom fields can be grouped together into a **fieldset**. Fieldsets can also be used to classify a record.  For instance, when using the [asset tracking plugin](/docs/plugins/cerberusweb.assets), you can add fieldsets for _Automobile_ and _Computer_ with appropriate fields and then filter worklists by those types.
 
 ## Cards
 
 A **card** summarizes a particular record in a popup window. This allows information to be retrieved and displayed quickly from anywhere in Cerb without leaving the current page.
 
-Cards also provide shortcuts to common functionality for a given record.  For example, when viewing the card of a contact you'll see their ticket history broken down by status: all, open, waiting, and closed.  When viewing the card of a ticket, you can also open the cards of any participant or message on that ticket.  You can can read the entire conversation on a ticket without leaving the card.
+Cards also provide shortcuts to common functionality for a given record.  For example, when viewing the card of a contact you'll see their ticket history broken down by status: all, open, waiting, and closed.  When viewing the card of a ticket, you can also open the cards of any participant or message on that ticket.  You can read the entire conversation on a ticket without leaving its card.
 
-If you have permission to modify a record, you'll see an edit button at the top of its card.
+If you have permission to modify a record, you'll see an _Edit_ button at the top of its card.
 
 ## Profiles
 
@@ -30,7 +49,7 @@ The full page view of a particular record is called its **profile**.  This expan
 
 ## Links
 
-The relationships between records can be described by **links**.  For instance, if a task is associated with a particular client organization then those records can be linked together.
+The relationships between records is described by **links**.  For instance, if a task is associated with a particular client organization, those records can be linked together.
 
 When records are linked, they'll be displayed on each other's cards and profiles for quick traversal.
 
@@ -46,4 +65,4 @@ A **watcher** is a worker who wants to receive a notification about all new acti
 
 ## Activity Log
 
-The **activity log** records a history of events that have affected a record.  For instance, when a task is closed, or a customer responds to an email, these are recorded in the log.
+The **activity log** records a history of events that have affected a record.  For instance, when a task is closed, or a customer responds to an email, these activities are logged.
