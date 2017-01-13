@@ -8,8 +8,8 @@ description: >
 url: "http://cerb.ai"
 baseurl: ""
 logo: assets/cerb_logo.png
-facebook_username: cerbapp
-twitter_username: cerb_app
+facebook_username: cerb.app
+twitter_username: cerb_ai
 github_username:  wgm
 timezone: America/Los_Angeles
 encoding: utf-8
