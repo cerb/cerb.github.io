@@ -1,14 +1,14 @@
 ---
 title: Submit web forms directly to bots in Cerb
-permalink: /examples/webhooks/html-form-submit
+permalink: /guides/webhooks/html-form-submit/
 layout: integration
 jumbotron:
   title: Submit web forms directly to bots in Cerb
   tagline: ""
   breadcrumbs:
   -
-    label: Examples &raquo; Webhooks &raquo;
-    url: /examples/webhooks/
+    label: Guides &raquo; Webhooks &raquo;
+    url: /guides/webhooks/
 ---
 
 ## Introduction
@@ -40,7 +40,7 @@ Navigate to **Search** >> **Virtual Attendant** and click the **(+)** icon in th
 Enter the following details:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/examples/webhooks/html-form-submit/create_va.png" class="screenshot">
+<img src="/assets/images/guides/webhooks/html-form-submit/create_va.png" class="screenshot">
 </div>
 
 Click the **Save Changes** button.  Then click your new bot in the worklist to view its profile.
@@ -61,7 +61,7 @@ Select the **Import** tab and paste the copied behavior.
 You should now see the following:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/examples/webhooks/html-form-submit/va_behavior.png" class="screenshot">
+<img src="/assets/images/guides/webhooks/html-form-submit/va_behavior.png" class="screenshot">
 </div>
 
 Now we're ready to create the webhook that triggers this behavior.
@@ -75,7 +75,7 @@ Click the **(+)** icon in the blue bar of the worklist to create a new webhook.
 Enter the following details:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/examples/webhooks/html-form-submit/create_webhook.png" class="screenshot">
+<img src="/assets/images/guides/webhooks/html-form-submit/create_webhook.png" class="screenshot">
 </div>
 
 Click the **Save Changes** button.
@@ -97,7 +97,7 @@ It's a good idea to verify all the tests in your form validation.  Without typin
 You should see a warning:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/examples/webhooks/html-form-submit/form_warning.png" class="screenshot">
+<img src="/assets/images/guides/webhooks/html-form-submit/form_warning.png" class="screenshot">
 </div>
 
 This warning message is coming directly from your bot behavior through the webhook.  Currently, the example behavior is just verifying that the field isn't blank; but you can extend the behavior to perform any kind of validation you need.  You can even add and validate a reCAPTCHA to foil non-human submissions of your form.
@@ -109,7 +109,7 @@ Now let's test a successful outcome.  Enter an email address and a message, then
 You should see a success message:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/examples/webhooks/html-form-submit/form_success.png" class="screenshot">
+<img src="/assets/images/guides/webhooks/html-form-submit/form_success.png" class="screenshot">
 </div>
 
 ## Restrict access to your webhook URL

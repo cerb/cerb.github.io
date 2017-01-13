@@ -1,14 +1,14 @@
 ---
 title: Send SMS messages from Cerb bots using Twilio
-permalink: /examples/twilio/send-sms
+permalink: /guides/twilio/send-sms/
 layout: integration
 jumbotron:
   title: Send SMS messages from Cerb bots using Twilio
   tagline: ""
   breadcrumbs:
   -
-    label: Examples &raquo; Twilio &raquo;
-    url: /examples/twilio/
+    label: Guides &raquo; Twilio &raquo;
+    url: /guides/twilio/
 ---
 
 ## Introduction
@@ -30,7 +30,7 @@ Navigate to **Search** >> **Virtual Attendant** and click the **(+)** icon in th
 Enter the following details:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/examples/twilio/send-sms/create_va.png" class="screenshot">
+<img src="/assets/images/guides/twilio/send-sms/create_va.png" class="screenshot">
 </div>
 
 (You can find a logo image at <https://demo.twilio.com/logo.png>)
@@ -46,7 +46,7 @@ Select the **Import** tab and paste the following behavior to import it:
 You should now see the following:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/examples/slack/slash-commands/va_behavior.png" class="screenshot">
+<img src="/assets/images/guides/slack/slash-commands/va_behavior.png" class="screenshot">
 </div>
 
 ## References

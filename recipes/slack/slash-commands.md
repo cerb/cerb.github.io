@@ -1,14 +1,14 @@
 ---
 title: Send commands to a Cerb bot using Slack
-permalink: /examples/slack/slash-commands
+permalink: /guides/slack/slash-commands/
 layout: integration
 jumbotron:
   title: Send commands to a Cerb bot using Slack
   tagline: ""
   breadcrumbs:
   -
-    label: Examples &raquo; Slack &raquo;
-    url: /examples/slack/
+    label: Guides &raquo; Slack &raquo;
+    url: /guides/slack/
 ---
 
 ## Introduction
@@ -38,7 +38,7 @@ Navigate to **Search** >> **Virtual Attendant** and click the **(+)** icon in th
 Enter the following details:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/examples/slack/slash-commands/create_va.png" class="screenshot">
+<img src="/assets/images/guides/slack/slash-commands/create_va.png" class="screenshot">
 </div>
 
 (You can find a logo image at <https://brandfolder.com/slack>)
@@ -54,7 +54,7 @@ Select the **Import** tab and paste the following behavior to import it:
 You should now see the following:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/examples/slack/slash-commands/va_behavior.png" class="screenshot">
+<img src="/assets/images/guides/slack/slash-commands/va_behavior.png" class="screenshot">
 </div>
 
 If so, we're ready to create the webhook that triggers this behavior.
@@ -68,7 +68,7 @@ Click the **(+)** icon in the blue bar of the worklist to create a new webhook.
 Enter the following details:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/examples/slack/slash-commands/create_webhook.png" class="screenshot">
+<img src="/assets/images/guides/slack/slash-commands/create_webhook.png" class="screenshot">
 </div>
 
 Click the **Save Changes** button.
@@ -82,13 +82,13 @@ Now that we have our webhook listener and Virtual Attendant behavior in place, w
 Visit the [Slack App Directory](https://slack.com/apps/build) and click the **Make a Custom Integration** button on the right.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/examples/slack/slash-commands/slack_custom_integration.png" class="screenshot">
+<img src="/assets/images/guides/slack/slash-commands/slack_custom_integration.png" class="screenshot">
 </div>
 
 Select **Slash Commands** from the menu.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/examples/slack/slash-commands/slack_slash_commands.png" class="screenshot">
+<img src="/assets/images/guides/slack/slash-commands/slack_slash_commands.png" class="screenshot">
 </div>
 
 Name the command **/cerb** and click the green **Add Slash Command Integration** button.
@@ -114,7 +114,7 @@ Finally, click the green **Save Integration** button at the bottom of the page.
 Join one of your Slack channels and try out the new **/cerb** command.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/examples/slack/slash-commands/bot_chat.png" class="screenshot">
+<img src="/assets/images/guides/slack/slash-commands/bot_chat.png" class="screenshot">
 </div>
 
 ## Where to go from here
@@ -125,7 +125,7 @@ You could modify the behavior we created to do anything that Virtual Attendants 
 
 You could create a custom fieldset on workers to store their Slack user name, and the Virtual Attendant can use that field to look up a message sender's worker record.  The bot can then personalize its actions to use their calendar, their tasks, and so on.
 
-You could use our [Wit.ai](/examples/wit-ai) integration examples to support natural language in your Slack bot.  Wit.ai converts freeform text into _"intents"_.  For instance, instead of only supporting the _"hi"_ command, your bot could learn the various ways people _intend_ to **say\_hello**: _hi, hello, what's up?, how are you?, hola, allo, yo, hey, etc_.
+You could use our [classifiers](/docs/classifiers) feature to support natural language in your Slack bot.  A classifier can convert freeform text into _"intents"_.  For instance, instead of only supporting the _"hi"_ command, your bot could learn the various ways people _intend_ to **say\_hello**: _hi, hello, what's up?, how are you?, hola, allo, yo, hey, etc_.
 
 ## References
 

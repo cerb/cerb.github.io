@@ -1,14 +1,14 @@
 ---
 title: Improve email deliverability with Mailgun
-permalink: /examples/mailgun/mailgun-smtp
+permalink: /guides/mailgun/mailgun-smtp/
 layout: integration
 jumbotron:
   title: Improve email deliverability with Mailgun
   tagline: ""
   breadcrumbs:
   -
-    label: Examples &raquo; Mailgun &raquo;
-    url: /examples/mailgun/
+    label: Guides &raquo; Mailgun &raquo;
+    url: /guides/mailgun/
 ---
 
 ## Introduction

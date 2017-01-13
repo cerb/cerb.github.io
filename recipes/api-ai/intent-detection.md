@@ -1,14 +1,14 @@
 ---
 title: Intent detection in Cerb bot behaviors using Api.ai
-permalink: /examples/api-ai/intent-detection
+permalink: /guides/api-ai/intent-detection/
 layout: integration
 jumbotron:
   title: Intent detection in Cerb bot behaviors using Api.ai
   tagline: ""
   breadcrumbs:
   -
-    label: Examples &raquo; Api.ai &raquo;
-    url: /examples/api-ai/
+    label: Guides &raquo; Api.ai &raquo;
+    url: /guides/api-ai/
 ---
 
 ## Introduction

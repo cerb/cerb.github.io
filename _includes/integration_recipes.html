@@ -1,6 +1,6 @@
 <div class="grid no-gutters">
 {% for recipe in include.recipes %}
-{% assign recipe_url = "/examples/" | append: include.app | append: "/" | append: recipe %}
+{% assign recipe_url = "/guides/" | append: include.app | append: "/" | append: recipe | append: "/" %}
 {% assign p = site.pages | where:"url",recipe_url | first %}
 	{% if p %}
 	<div class="unit half">

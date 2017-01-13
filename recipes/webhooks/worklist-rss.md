@@ -1,14 +1,14 @@
 ---
 title: Generate an RSS feed for any worklist
-permalink: /examples/webhooks/worklist-rss
+permalink: /guides/webhooks/worklist-rss/
 layout: integration
 jumbotron:
   title: Generate an RSS feed for any worklist
   tagline: ""
   breadcrumbs:
   -
-    label: Examples &raquo; Webhooks &raquo;
-    url: /examples/webhooks/
+    label: Guides &raquo; Webhooks &raquo;
+    url: /guides/webhooks/
 ---
 
 ## Introduction
@@ -34,7 +34,7 @@ Navigate to **Search** >> **Virtual Attendant** and click the **(+)** icon in th
 Enter the following details:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/examples/webhooks/worklist-rss/create_va.png" class="screenshot">
+<img src="/assets/images/guides/webhooks/worklist-rss/create_va.png" class="screenshot">
 </div>
 
 (You can [find an RSS icon on Google Images](https://images.google.com/?q=rss+icon))
@@ -56,7 +56,7 @@ Select the **Import** tab and paste the following behavior to import it:
 You should now see the following:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/examples/webhooks/worklist-rss/va_behavior.png" class="screenshot">
+<img src="/assets/images/guides/webhooks/worklist-rss/va_behavior.png" class="screenshot">
 </div>
 
 By default, this behavior retrieves the 20 most recently updated open tickets.  You can edit the behavior to change the worklist type or filters.
@@ -72,7 +72,7 @@ Click the **(+)** icon in the blue bar of the worklist to create a new webhook.
 Enter the following details:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/examples/webhooks/worklist-rss/create_webhook.png" class="screenshot">
+<img src="/assets/images/guides/webhooks/worklist-rss/create_webhook.png" class="screenshot">
 </div>
 
 Click the **Save Changes** button.
@@ -84,7 +84,7 @@ A new webhook will be added to the worklist.  You can copy the **URL** to your c
 Paste your new URL into an RSS reader (or parse it as XML[^xml] from any script).  You should see a list of records from the worklist.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/examples/webhooks/worklist-rss/newsflow_app.png" class="screenshot">
+<img src="/assets/images/guides/webhooks/worklist-rss/newsflow_app.png" class="screenshot">
 </div>
 
 ## Where to go from here
