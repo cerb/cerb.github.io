@@ -30,6 +30,7 @@ collections:
 # Build settings
 markdown: kramdown
 kramdown:
+  auto_ids: true
   parse_block_html: false
 gems:
 #  - jekyll-paginate
