@@ -52,12 +52,12 @@ header {
 	}
 	
 	&.jumbotron {
-    p.jumbotron-breadcrumbs {
-      a {
-        color: white;
-      }
-    }
-    
+		p.jumbotron-breadcrumbs {
+			a {
+				color: white;
+			}
+		}
+		
 		&.jumbotron-medium {
 			h1 {
 				font-size: 24px;
@@ -117,7 +117,45 @@ div.page-content {
 }
 
 .blog {
-	margin-top: 30px;
+	margin-top: 20px;
+	
+	ul#markdown-toc {
+		a {
+		}
+		
+		> li {
+			> a {
+				font-weight: bold;
+			}
+			
+			ul li {
+			}
+		}
+	}
+	
+	div.screenshot {
+		margin-left: 20px;
+		margin-bottom: 10px;
+		border: 1px solid rgb(220, 220, 220);
+		display: inline-block;
+	}
+	
+	h1.post-title {
+		margin-bottom: 0;
+	}
+	
+	ul.blog-post-group {
+		list-style: disc;
+		margin-bottom: 20px;
+		
+		li {
+			margin-bottom:10px;
+			
+			a {
+				font-weight: bold;
+			}
+		}
+	}
 }
 
 .home {
@@ -284,7 +322,7 @@ div.pricing {
 	//text-align: center;
 	padding-top: 20px;
 	position: relative;
-  margin: 0px 0px 50px 0px;
+	margin: 0px 0px 50px 0px;
 	//margin: 40px -20px 10px;
 
 	a,
@@ -319,7 +357,7 @@ footer {
 	font-weight: 200;
 	margin-top: 30px;
 	//border-top: 1px solid $grey-color-light;
-	padding: $spacing-unit/2  0;
+	padding: $spacing-unit/2	0;
 	background-color: rgb(51,51,51);
 	width: 100%;
 	

@@ -6,7 +6,7 @@ jumbotron:
   tagline: Our commitment to protecting your privacy and data
 ---
 
-**Webgroup Media, LLC (henceforth "WGM", "our", "us", and "we")** is a commercial open source company founded in April 2001. Our developers started the software project known as **Cerb** in January 2002 and have improved and maintained it ever since. In connection with our business, we operate the [cerb.ai](https://cerb.ai) project website, as well as **Cerb Cloud**, a subscription-based _"software as a service"_ offering, on the cerb.me, cerb.cloud, and cerb.email domains.
+**Webgroup Media, LLC (henceforth "WGM", "our", "us", and "we")** is a commercial open source company founded in April 2001. Our developers started the **Cerb** project in January 2002 and have improved and maintained the software ever since. In connection with our business, we operate the [cerb.ai](https://cerb.ai) project website, as well as **Cerb Cloud**, a subscription-based _"software as a service"_ offering, on the cerb.me, cerb.cloud, and cerb.email domains.
 
 It is our policy to respect your privacy regarding any information we may collect while operating our websites and services. We do not sell any personally identifiable information or data stored in Cerb Cloud to third-parties. We do not directly share your information with third-parties without explicit permission except to comply with the law or to provide necessary infrastructure in connection with the services you request; however, there is some passive risk of exposure to third-party access inherent in web-based services that is outlined in detail below. We do our best to mitigate and minimize these risks on your behalf.
 
