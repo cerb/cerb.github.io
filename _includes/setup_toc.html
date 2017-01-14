@@ -8,7 +8,7 @@
 			{% assign previous = forloop.index0 | minus: 1 %}
 			{% assign key = site.data.setup_toc[previous] %}
 			{% assign doc = site.docs | where:"id",key | first %}
-			<a href="{{ doc.url }}" class="prev">&lt; Back</a>
+			<a href="{{ doc.url }}" class="prev">&lt; Back: {{ doc.title }}</a>
 		{% endif %}
 	</div>
 	<div class="right align-right">

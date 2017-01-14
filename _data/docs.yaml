@@ -18,7 +18,8 @@
   - connected-accounts
   - webhooks
   - plugins
-#  - mail
+  - portals
+  - mobile
 #  - tasks
 #  - calendars
 
@@ -37,13 +38,6 @@
   - security
   - performance
   - scaling
-  - portals
-
-#- title: Administration
-#  docs:
-  # - security
-  # - upgrading
-  # - scaling
 
 - title: Developers
   docs:

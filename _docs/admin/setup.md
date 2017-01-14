@@ -10,42 +10,65 @@ jumbotron:
 <img src="/assets/images/docs/setup/setup_menus.png" class="screenshot">
 </div>
 
-The **Setup** page in the top right of the navigation bar provides a central location for administrators to configure Cerb and any plugins that have been installed.  The page is divided into sections, each with a blue menu designated by a downward-pointing arrow. You can hover over each menu with your mouse to display the configuration options for that section.
+The **setup** page in the top right of the navigation bar provides a central location for administrators to configure Cerb and any plugins that have been installed.
 
-- **Configure**
+The page is divided into sections, each with a blue menu designated by a downward-pointing arrow. You can hover over each menu to display the configuration options for that section.
+
+## Configure
+
+- **System**
 	- [Branding](/docs/setup/branding)
+	- [Cache](/docs/setup/cache)
+	- [License](/docs/setup/license)
 	- [Localization](/docs/setup/localization)
-	- Security
-	- Custom Fields
-	- License
 	- [Scheduler](/docs/setup/scheduler)
-	- Cache
-	- Search
-	- Avatars
-	- Snippets
-	- Sessions
-	- Community Portals
-	- Skills
-	- Scheduled Behavior
+	- [Search](/docs/setup/search)
+	- [Security](/docs/setup/security)
+	- [Sessions](/docs/setup/sessions)
+- **Contexts**
+	- [Avatars](/docs/setup/avatars)
+	- [Cards](/docs/setup/cards)
+	- [Custom Fields](/docs/setup/custom-fields)
+	- [Skills](/docs/setup/skills)
+	- [Snippets](/docs/setup/snippets)
 	
-- **Mail**
-	- Settings
+## Mail
+
+- **Incoming Mail**
+	- [Settings](/docs/setup/mail-setings)
 	- [Mailboxes](/docs/setup/mailboxes)
 	- [Routing](/docs/setup/mail-routing)
-	- Filtering
-	- Failed Messages
-	- Import Message
-	- External Relay
+	- [Filtering](/docs/setup/mail-filtering)
+	- [Failed Messages](/docs/setup/mail-failed)
+	- [Import Message](/docs/setup/mail-import)
+	- [External Relay](/docs/setup/mail-relay)
+- **Outgoing Mail**
 	- [Mail Transports](/docs/setup/mail-transports)
 	- [Sender Addresses](/docs/setup/sender-addresses)
-	- Queue
-	- HTML Templates
+	- [Queue](/docs/setup/mail-queue)
+	- [HTML Templates](/docs/setup/mail-html)
 
-- **Storage**
-	- Content
-	- Profiles
-	- Attachments
+## Storage
 
-- **Plugins**
-	- [Installed Plugins](/docs/setup/plugins)
-	- [Plugin Library](/docs/setup/plugin-library)
+- [Overview](/docs/setup/storage-overview)
+- [Profiles](/docs/setup/storage-profiles)
+- [Objects](/docs/setup/storage-objects)
+
+## Bots
+
+- [Search](/docs/setup/bots-search)
+- [Classifiers](/docs/setup/classifiers)
+- [Scheduled Behavior](/docs/setup/scheduled-behavior)
+
+## Services
+
+- [Connected Accounts](/docs/setup/connected-accounts)
+
+## Portals
+
+- [Search](/docs/setup/portals)
+
+## Plugins
+
+- [Installed Plugins](/docs/setup/plugins)
+- [Plugin Library](/docs/setup/plugin-library)

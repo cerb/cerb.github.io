@@ -11,7 +11,7 @@
 						{% assign previous = forloop.index0 | minus: 1 %}
 						{% assign prev_url = docs[previous] | prepend:"/docs/" | append:"/" %}
 						{% assign prev_page = site.docs | where:"url",prev_url | first %}
-						<a href="{{ prev_url }}" class="prev">&lt; Back</a>
+						<a href="{{ prev_url }}" class="prev">&lt; Back: {{ prev_page.title }}</a>
 					{% endif %}
 			</div>
 			<div class="right align-right">
@@ -21,7 +21,7 @@
 						{% assign next = forloop.index0 | plus: 1 %}
 						{% assign next_url = docs[next] | prepend:"/docs/" | append:"/" %}
 						{% assign next_page = site.docs | where:"url",next_url | first %}
-						<a href="{{ next_url }}" class="next">Next: {{next_page.title}} &gt;</a>
+						<a href="{{ next_url }}" class="next">Next: {{ next_page.title }} &gt;</a>
 					{% endif %}
 			</div>
 		</div>
