@@ -1,0 +1,26 @@
+{% for post in site.posts %}
+	{% if post.url == page.url %}
+		<div class="section-nav">
+			<div class="left">
+					{% if forloop.first %}
+						<span class="prev disabled">Prev</span>
+					{% else %}
+						{% assign previous = forloop.index0 | minus: 1 %}
+						{% assign prev_page = site.posts[previous] %}
+						<a href="{{ prev_page.url }}" class="prev">&lt; Newer: {{prev_page.title}}</a>
+					{% endif %}
+			</div>
+			<div class="right align-right">
+					{% if forloop.last %}
+						<span class="next disabled">Next</span>
+					{% else %}
+						{% assign next = forloop.index0 | plus: 1 %}
+						{% assign next_page = site.posts[next] %}
+						<a href="{{ next_page.url }}" class="next">Older: {{next_page.title}} &gt;</a>
+					{% endif %}
+			</div>
+		</div>
+		<div class="clear"></div>
+		{% break %}
+	{% endif %}
+{% endfor %}

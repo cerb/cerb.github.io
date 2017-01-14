@@ -3,8 +3,6 @@ layout: page
 ---
 
 <div class="blog">
-	<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-	
 	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
 		<header class="post-header">
@@ -14,6 +12,8 @@ layout: page
 
 		<div class="post-content" itemprop="articleBody">
 			{{ content }}
+			
+			{% include blog_nav.html %}
 		</div>
 
 	</article>
