@@ -20,11 +20,15 @@ By saving a worklist in a workspace, you'll always have an up-to-date view of ma
 
 The most useful feature of worklists is their ability to pull out interesting sets of records from your data using **filters**.  A filter is simply some criterion that a record must satisfy in order to be included in the list.  Filters target a specific field, and often provide both an **operator** and **value**.  For text, common operators are "starts with" and "contains this phrase".  For numbers, you may want fields that are equal to a value, not equal, greater/less than, between, etc.
 
+### Required Filters
+
 The owner of a workspace can also add special **required filters** to a worklist that cannot be changed by other users of the worklist.  For instance, if a worklist is meant to only show open conversations from clients with a service level agreement, then no additional filtering can change that constraint.  Every other filter will act only against those matching records.
 
 ### Deep searching
 
-Cerb also allows for **deep searching**, which means that you can filter a worklist based on the fields of records related to those that you're currently looking, and then filter again based on fields related to those deeper records, and so on into the abyss.  So you can build a worklist of email messages sent by organizations in the health care industry who have an enterprise SLA and also have at least one female contact whose name starts with the letter 'M'.  This is one of Cerb's distinguishing features.
+Cerb also allows for **deep searching**, which means that you can filter a worklist based on the fields of records related to those that you're currently looking at, and then filter again based on fields related to those deeper records, and so on.
+
+For instance, you can build a worklist of email messages sent by organizations in the health care industry who have an enterprise SLA and also have at least one female contact whose name starts with the letter 'M'.  This is one of Cerb's distinguishing features.
 
 ### Sorting
 
@@ -44,9 +48,9 @@ Another useful feature in Cerb is the ability to **subtotal** worklists by group
 
 ### Import/Export
 
-Once you have a worklist filtered the way you want it, you can export data in CSV (comma-separated), JSON, or XML formats.  You also aren't limited to the fields displayed by the worklist; you can choose any fields, including those from related records.
+Once you have a worklist filtered the way you want it, you can **export** data in CSV (comma-separated), JSON, or XML formats.  You also aren't limited to the fields displayed by the worklist; you can choose any fields, including those from related records.
 
-Similarly, you can also import records on most worklists in CSV format.  You'll be given the opportunity to map columns in your import file to record fields.
+Similarly, you can also **import** records on most worklists in CSV format.  You'll be given the opportunity to map columns in your import file to record fields.
 
 ### Bulk update
 

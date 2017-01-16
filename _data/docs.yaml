@@ -5,23 +5,24 @@
 
 - title: Using Cerb
   docs:
+  - welcome
   - logging-in
   - navigation
-  - records
-  - workspaces
   - workers
   - groups
   - contacts
+  - records
+  - workspaces
   - tickets
+#  - tasks
+#  - calendars
   - bots
   - classifiers
   - connected-accounts
   - webhooks
   - plugins
-  - portals
-  - mobile
-#  - tasks
-#  - calendars
+#  - portals
+#  - mobile
 
 #- title: Building Bots
 #  docs:

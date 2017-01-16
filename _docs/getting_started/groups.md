@@ -6,9 +6,9 @@ jumbotron:
   tagline: Teams of workers with a common purpose
 ---
 
-[Workers](/docs/workers) with similar skills and responsibilities are organized into **groups**. How members are assigned to a group is completely up to you, but groups generally map to existing departments or teams: Sales, Support, Development, Billing, Corporate.
+[Workers](/docs/workers) with similar skills and responsibilities are organized into **groups**.  Each worker in a group is a **member**. A member with the authority to administer the group is a **manager**. Groups can have any number of managers.
 
-Each worker in a group is a **member**. A member with the authority to administer the group is a **manager**. Groups can have any number of managers.
+How members are assigned to a group is completely up to you, but groups generally map to existing departments or teams: Sales, Support, Development, Billing, Corporate, etc.
 
 The units of work assigned to a group are organized into any number of **buckets**, which can be thought of like folders: Leads, Receipts, Newsletters, Refunds, Spam.
 
