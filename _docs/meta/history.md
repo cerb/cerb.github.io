@@ -1,8 +1,9 @@
 ---
 title: Release History
 permalink: /docs/history/
-redirect_from: /versions/
-redirect_from: /releases/
+redirect_from:
+  - /versions/
+  - /releases/
 jumbotron:
   title: Release History
   tagline: Cerb has been constantly improved for the past 15+ years

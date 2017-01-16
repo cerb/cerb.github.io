@@ -1,9 +1,10 @@
 ---
 title: Documentation
 permalink: /docs/home/
-redirect_from: /docs/
-redirect_from: /book/
-redirect_from: /book/latest/
+redirect_from:
+  - /docs/
+  - /book/
+  - /book/latest/
 toc:
   title: What is Cerb?
 jumbotron:
@@ -13,7 +14,7 @@ jumbotron:
 
 # What is Cerb?
 
-**Cerb** enhances the productivity of online teams with web-based collaboration and automation tools:
+**Cerb** enhances the productivity of online teams with web-based collaboration and automation tools.
 
 * High-volume __email management__ that scales to millions of conversations per year.
 
