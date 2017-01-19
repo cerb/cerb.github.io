@@ -39,6 +39,10 @@ Related custom fields can be grouped together into a **fieldset**. Fieldsets can
 
 A **card** summarizes a particular record in a popup window. This allows information to be retrieved and displayed quickly from anywhere in Cerb without leaving the current page.
 
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/using-cerb/records/card.png" class="screenshot">
+</div>
+
 Cards also provide shortcuts to common functionality for a given record.  For example, when viewing the card of a contact you'll see their ticket history broken down by status: all, open, waiting, and closed.  When viewing the card of a ticket, you can also open the cards of any participant or message on that ticket.  You can read the entire conversation on a ticket without leaving its card.
 
 If you have permission to modify a record, you'll see an _Edit_ button at the top of its card.
@@ -57,12 +61,24 @@ When records are linked, they'll be displayed on each other's cards and profiles
 
 **Comments** can be added to records as a form of note-taking.  For instance, as progress is made on a task it can be documented with comments.  This allows workers to quickly share information.  Workers can also be addressed with an @mention to send them a notification about the comment.
 
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/using-cerb/records/comments.png" class="screenshot">
+</div>
+
 Comments on a record are visible from its card and profile.
 
 ## Watchers
 
 A **watcher** is a worker who wants to receive a notification about all new activity on a specific record. For example, a supervisor may be a watcher on all new tickets in a specific group to monitor the quality of the messages being sent to customers.
 
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/using-cerb/records/watchers.png" class="screenshot">
+</div>
+
 ## Activity Log
 
 The **activity log** records a history of events that have affected a record.  For instance, when a task is closed, or a customer responds to an email, these activities are logged.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/using-cerb/records/log.png" class="screenshot">
+</div>

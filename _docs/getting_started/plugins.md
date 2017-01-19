@@ -18,6 +18,10 @@ Another benefit of plugins is that they allow functionality to be _completely re
 
 [Administrators](/docs/workers) can discover and install plugins from the [plugin library](/docs/setup/plugin-library).  All of the plugins found in the official plugin library have been audited and approved by Cerb's developers. They are safe to use.
 
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/using-cerb/plugins/plugin_library.png" class="screenshot">
+</div>
+
 Plugins are _versioned_ so that new updates can be downloaded automatically. Each plugin version is certified to work with a specific range of Cerb versions, and incompatible plugins won't be shown.
 
 <div class="cerb-box warning">

@@ -12,21 +12,21 @@ The global navigation controls are at the top of every page in Cerb.
 <img src="/assets/images/docs/ui/navbar.png">
 </div>
 
-## Logo
-
-You can click on the logo in the top left from anywhere in Cerb to quickly return to your default page. This is a shortcut for clicking on the the first page in your navbar.
-
 ## Pages
 
-The pages bar displays shortcuts to your favorite [workspace pages](/docs/workspaces).
+The _navigation bar_ displays shortcuts to your favorite [workspace pages](/docs/workspaces).
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/ui/pages.png">
 </div>
 
-You can use your mouse to drag workspace pages into a different order. The first item in your navbar is your default page -- it's where you'll go when you click on the logo in the top left.
+You can use your mouse to drag workspace pages into a different order. The first item in your navbar is your default page.
 
-You can add new pages by clicking on the down arrow at the end of the list.
+New pages are added by clicking on the downward-pointing arrow at the end of the list.
+
+## Logo
+
+You can click on the logo in the top left from anywhere in Cerb to quickly return to your default page. This is a shortcut for clicking on the the first page in your [navigation bar](#pages).
 
 ## Worker Menu
 

@@ -8,4 +8,6 @@ jumbotron:
 
 The clients, customers, partners, and other individuals that workers interact with are **contacts**.
 
-Contacts are grouped together into **organizations**.
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/using-cerb/contacts/contacts.png" class="screenshot">
+</div>
