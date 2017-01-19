@@ -6,7 +6,7 @@ jumbotron:
   tagline: The audience you serve
 ---
 
-The clients, customers, partners, and other individuals that workers interact with are **contacts**.
+**Contacts** are the clients, customers, partners, and other individuals that workers interact with.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/using-cerb/contacts/contacts.png" class="screenshot">

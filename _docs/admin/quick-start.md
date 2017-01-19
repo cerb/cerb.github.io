@@ -14,29 +14,19 @@ jumbotron:
 
 # Add your logo
 
-First, let's start personalizing your new Cerb environment by changing the logo image in the top left.
+Let's personalize your new Cerb environment with your own logo.
 
-Navigate to **Setup** >> **Configure** >> **Branding**.
+Navigate to **Setup** &raquo; **Configure** &raquo; **Branding**.
 
-In the **Logo URL** field, enter a link to an image of your logo.  For example: `http://example.com/logo.png`
-
-You can also use the **Favicon URL** from your organization's website.  This is the icon that people see when they add links to their bookmarks.  For example: `http://example.com/favicon.ico`
-
-When finished, click the **Save Changes** button.
+Review the instructions for [adding your own logo](/docs/setup/branding/).
 
 # Configure outgoing mail transports
 
 Next, let's make sure you're ready to send outgoing mail.
 
-Navigate to **Setup** >> **Mail** >> **Mail Transports**.
+Navigate to **Setup** &raquo; **Mail** &raquo; **Mail Transports**.
 
-In Cerb, outgoing email messages are sent using **mail transports**.
-
-This page displays your available mail transports.  Your first transport was created during the [installation](/docs/installation/#step-7-outgoing-mail) process.
-
-If you need to add additional transports (e.g. for the distinct mail servers of separate subsidiaries or brands), review the instructions for [configuring mail transports](/docs/setup/mail-transports).
-
-You should also verify that your mail server IPs aren't listed on any Real-time Blackhole Lists (RBL)[^rbl-check].
+Review your [mail transports](/docs/setup/mail-transports/).
 
 <div class="cerb-box note">
 <p>If you're using <b>Cerb Cloud</b>, you'll notice that we've already configured a default SMTP mail transport for you. If needed, you can still use your own SMTP server by creating a new transport.</p>
@@ -44,17 +34,9 @@ You should also verify that your mail server IPs aren't listed on any Real-time 
 
 # Configure sender addresses
 
-Navigate to **Setup** >> **Mail** >> **Sender Addresses**.
+Navigate to **Setup** &raquo; **Mail** &raquo; **Sender Addresses**.
 
-These are the addresses that you can send email from.
-
-The simplest configuration is to use a single sender address for all outgoing mail. This could be an address like `support@`, `help@`, `contact@`, or `team@`.  In this configuration, you can still receive email from any number of mailboxes.
-
-Alternatively, you may configure distinct sender addresses per department, team, project, subsidiary, or brand. Depending on your mail server, you may be restricted to a list of verified sender addresses. You may need to use a different mail transport per identity.
-
-Each sender address can specify a default [mail transport](/docs/setup/mail-transports), personalized `From:` name, and message signature.
-
-If you need to add additional sender addresses, review the instructions for [configuring sender addresses](/docs/setup/sender-addresses).
+Review your [sender addresses](/docs/setup/sender-addresses/). These determine the `From:` email address when you send messages.
 
 For optimal email deliverability, make sure you've configured SPF, DKIM, and DMARC records in DNS for all sender domains. We'll test this a little later.
 
@@ -64,31 +46,17 @@ For optimal email deliverability, make sure you've configured SPF, DKIM, and DMA
 
 # Create groups
 
-Navigate to **Search** >> **Groups**.
+You should set up a few groups to distribute work.
 
-<div class="cerb-screenshot">
-<img src="/assets/images/docs/quick-start/groups.png" class="screenshot">
-</div>
+Navigate to **Search** &raquo; **Groups**.
 
-In Cerb, workers with similar skills and responsibilities are organized into **groups**.  How **members** are assigned to a group is completely up to you, but groups generally map to existing departments or teams.
+Review your [groups](/docs/groups/).
 
-This _abstraction_[^abstraction] provides many conveniences and efficiencies for collaboration.  Work can quickly and effortlessly be assigned to an appropriate group as a whole, without first having to figure out which specific worker is both responsible for it and available to handle it. An inquiry about buying one of your products can be assigned to the Sales group, and an existing customer with a technical question could be assigned to the Support group.
-
-Groups are designed to be _autonomous_[^autonomy]. One or more **managers** can configure the group without requiring an administrator. Aside from work, group members may also collectively share access to resources like bots, snippets, and custom fieldsets.
-
-The units of work assigned to a group are organized into any number of **buckets**, which can be thought of like folders of related messages in a traditional email reader.  Every group has a default **inbox** bucket to collect new assignments.  From there, new work is manually or automatically sorted into the appropriate buckets.
-
-Each member of a group may have a varying level of **responsibility** for each bucket. This allows the list of available work within the group to be prioritized in a personal way for each member; which makes finding the next thing to work on very easy for everyone.
-
-Each group may be designated as **public** or **private**.  The content of a public group is visible to everyone, including non-members. The content of a private group is only visible to its members.
-
-Lastly, you can assign a **profile image** to each group as a visual cue.
-
-To add a new group, click the **(+)** icon in the blue bar of the worklist, and review the instructions for [configuring groups](/docs/setup/groups).
+To add a new group, click the **(+)** icon in the blue bar of the worklist.
 
 # Configure email signatures
 
-Review the instructions for [configuring email signatures](/docs/mail#signatures).
+Review the instructions for [configuring email signatures](/docs/setup/sender-addresses#signatures).
 
 # Send a message to test mail deliverability
 
@@ -162,7 +130,7 @@ Navigate to **Setup** >> **Mail** >> **Mailboxes**.
 
 This page lists the mailboxes that Cerb checks for new messages.
 
-If you need to add a new mailbox, click the **(+)** icon in the blue bar at the top of the worklist and review the instructions for [configuring incoming mailboxes](/docs/setup/mailboxes).
+Review your [mailboxes](/docs/setup/mailboxes/).
 
 <div class="cerb-box note">
 <p>If you're using <b>Cerb Cloud</b>, you can alternatively redirect your incoming mail to <code>support@&lt;you&gt;.cerb.email</code> for instant delivery. Replace <code>&lt;you&gt;</code> with the name of your instance. With this delivery method you won't need to set up a mailbox here.</p>
@@ -174,25 +142,15 @@ If you need to add a new mailbox, click the **(+)** icon in the blue bar at the 
 
 # Routing
 
-You can configure rules to automatically route new mail to groups based on message properties.
-
 Navigate to **Setup** >> **Mail** >> **Routing**.
 
-For example, you may want to route messages addressed to `support@*` to the **Support** group, `orders@*` to **Sales**, and `receipts@*` to **Billing**.
-
-As mentioned earlier, these messages will be delivered to the **Inbox** bucket in those groups, and group managers can configure additional sorting from there.
-
-If you want to add a new routing rule, click the **Add** button and review the instructions for <a href="/docs/setup/mail-routing">configuring mail routing</a>.
+Review your [mail routing rules](/docs/setup/mail-routing/).
 
 # Scheduler
 
 Navigate to **Setup** >> **Configure** >> **Scheduler**.
 
-The **scheduler** is responsible for planning and running _jobs_. A **job** is a specific task: checking your mailboxes for new messages, search indexing new records, performing nightly maintenance, triggering scheduled bot behaviors, etc.  There are several built-in jobs, and new jobs can be added using plugins.
-
-For Cerb's scheduled jobs to automatically run in the background, you need to configure a third-party tool to request the `/cron` page every minute.
-
-Review the instructions for <a href="/docs/setup/scheduler">configuring the scheduler</a>.
+Review the instructions for [configuring the scheduler](/docs/setup/scheduler/).
 
 <div class="cerb-box note">
 <p>If you're using <b>Cerb Cloud</b>, we handle this for you.</p>
@@ -200,17 +158,15 @@ Review the instructions for <a href="/docs/setup/scheduler">configuring the sche
 
 # Security
 
-Review the [security considerations](/docs/security).
+Review the [security considerations](/docs/security/).
 
 # Plugins
 
 Navigate to **Setup** >> **Plugins** >> **Installed Plugins**.
 
-This is where you'll find the available plugins that expand Cerb's functionality.
+This is where you'll find the available [plugins](/docs/plugins/) that expand Cerb's functionality.
 
 # References
-
-[^rbl-check]: <http://www.anti-abuse.org/multi-rbl-check/>
 
 [^abstraction]: <https://en.wikipedia.org/wiki/Abstraction_(computer_science)>
 

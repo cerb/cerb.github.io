@@ -3,7 +3,6 @@
 <div class="section-nav">
 	<div class="left">
 		{% if forloop.first %}
-		<a href="/docs/setup/" class="prev">&lt; Setup</a>
 		{% else %}
 			{% assign previous = forloop.index0 | minus: 1 %}
 			{% assign key = site.data.setup_toc[previous] %}
@@ -13,7 +12,6 @@
 	</div>
 	<div class="right align-right">
 		{% if forloop.last %}
-		<a href="/docs/upgrading" class="next">Next: Upgrading &gt;</a>
 		{% else %}
 			{% assign next = forloop.index0 | plus: 1 %}
 			{% assign key = site.data.setup_toc[next] %}
