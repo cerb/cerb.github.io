@@ -108,7 +108,7 @@ Each event automatically provides potentially hundreds of keys for you to use.  
 
 Dictionaries are efficient because they only load data when a bot actually needs it.  Even though a bot can refer to _"the industry of the organization of the sender of the ticket"_, the dictionary will wait until the bot asks for it.  When similar keys are requested again (another field from that same organization) the data will already be loaded.
 
-Any _action_ node add new keys to a dictionary, and almost every outcome and action can use dictionary keys in addition to literal text.
+Any _action_ node can add new keys to a dictionary, and almost every outcome and action can use dictionary keys in addition to literal text.
 
 <div class="cerb-box geek-out">
 	<p>Dictionaries are a hierarchal key/value datastore represented as a flat list of keys delimited with underscores.  Metadata at each level allows for lazy-expansion based on a requested traversed path.  A set of deep keys can also be loaded efficiently across an array of dictionaries.</p>
@@ -137,5 +137,5 @@ When using a [connected account](/docs/connected-accounts) to authenticate again
 We've mentioned **conversational behaviors** in a few places already.  They're a special form of _interactive behaviors_ where the current state of a decision tree can be paused and then resumed after new input is received.  The most common use case is when building a chat bot that prompts a user for some information and then waits for a response.
 
 <div class="cerb-box geek-out">
-	<p>This may seem fairly straightforward, but it's actually one of the most complex features in Cerb.  Not only does a resumed behavior need to remember its current node and dictionary, but it may also be within two levels deep in subroutines and on the tenth iteration of a loop.  Recursion, recursion, recursion.  Since this is a stateless HTTP request, and Cerb typically responds within tens of milliseconds before closing the connection, the entire state of the decision tree needs to be quickly rebuilt and replayed up to that point on the next HTTP request without any duplicate effects.</p>
+	<p>This may seem fairly straightforward, but it's actually one of the most complex features in Cerb.  Not only does a resumed behavior need to remember its current node and dictionary, but it may also be two levels deep in subroutines and on the tenth iteration of a loop.  Recursion, recursion, recursion.  Since this is a stateless HTTP request, and Cerb typically responds within tens of milliseconds before closing the connection, the entire state of the decision tree needs to be quickly rebuilt and replayed up to that point on the next HTTP request without any duplicate effects.</p>
 </div>
