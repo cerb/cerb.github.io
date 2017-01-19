@@ -6,9 +6,9 @@ jumbotron:
   tagline: Conversations with your audience
 ---
 
-A **ticket** is a specific conversational interaction between workers and contacts, including all of the related email **messages** and other data.
+A **ticket** is a conversational interaction between [workers](/docs/workers/) and [contacts](/docs/contacts/), including all of the related email **messages** and other data.
 
-Every ticket is automatically assigned a unique, non-sequential reference **mask**, like `RYS-07092-910`. A contact can provide the first three letters of the mask for quick lookups. The term _mask_ refers to the fact that the randomized reference number (opposed to a numeric ID) doesn't disclose information about your total number of tickets or your daily email volume.
+Every ticket is automatically assigned a unique, non-sequential reference **mask**, like `RYS-07092-012`. A contact can provide the first three letters of the mask for quick lookups. The term _mask_ refers to the fact that the randomized reference number (opposed to a numeric ID) doesn't disclose information about your total number of tickets or your daily email volume.
 
 The contacts involved in a conversation are referred to as **participants**.  By default, all participants receive a copy of worker replies to the conversation.
 
@@ -37,9 +37,61 @@ If a contact adds a new message to a ticket that is _waiting_ or _closed_ it wil
 
 By default, when a ticket is _deleted_ you will have 7 days from its last activity to change it to a different status before it's removed permanently.  This is called the _undo window_.
 
+### Drafts
+
+**Drafts** automatically save the current progress of a worker's message before they send it. This allows a composed message to be resumed at a later date, and it provides a _backup_ (e.g. the browser crashes or otherwise unintentionally closes).
+
+Drafts are displayed in a ticket's conversation timeline, which instantly lets _other_ workers know that a response is being sent so they can move on to a different ticket.  This prevents _duplication of effort_.
+
+Similarly, a trainee can ask a supervisor to review their draft before they send a message to a client.
+
+### Snippets
+
+[Workers](/docs/workers/) and [bots](/docs/bots) can use **snippets** to quickly insert predefined text into messages. You can think of snippets as _copying and pasting_ from a giant shared clipboard.
+
+However, unlike the traditional _paste_ action, snippets also support sophisticated scripting functionality with **placeholders** and **conditional logic**.  This means that the content of a snippet can change based on when and where you use it.
+
+In a common use case, an auto-responder message will use placeholders in a snippet like:
+
+{% raw %}
+<figure class="highlight">
+<pre>
+<code class="language-text">Hi <b>{{first_name}}</b>,
+
+Thanks for contacting us!
+
+A new support ticket has been opened in response to your message:
+
+Reference #: <b>{{mask}}</b>
+Subject: <b>{{subject}}</b>
+
+We'll be in contact shortly.</code>
+</pre>
+</figure>
+{% endraw %}
+
+The above snippet results in the following text when used by a [bot](/docs/bots/) on a new ticket:
+
+<figure class="highlight">
+<pre>
+<code class="language-text">Hi <b>Charlotte</b>,
+
+Thanks for contacting us!
+
+A new support ticket has been opened in response to your message:
+
+Reference #: <b>CRB-01092-002</b>
+Subject: <b>Do you accept purchase orders?</b>
+
+We'll be in contact shortly.</code>
+</pre>
+</figure>
+
 ### Importance
 
-Tickets also have an **importance** field that determines their priority. It's a numeric range between 0 and 100 where a higher number indicates a higher priority. The default value is 50 (neither important nor unimportant).  When sorting a worklist by importance, all you really need to think about is whether a ticket should be a little more or a little less important.  The importance field can also be adjusted by [bots](/docs/bots) in response to service level committments, escalations, etc.
+Ticket priority is determined by the **importance** field. You'll encounter importance as a simple slider where you can nudge it up or down as needed.
+
+The importance field can also be automatically adjusted by [bots](/docs/bots) in response to service level committments, escalations, etc.
 
 ### Response times
 
