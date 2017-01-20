@@ -9,10 +9,8 @@ jumbotron:
     url: /docs/setup/
 ---
 
-Navigate to **Setup** >> **Plugins** >> **Plugin Library**.
+Navigate to **Setup** >> **Plugins** >> **Plugin Library**
 
-<div class="cerb-screenshot">
-<img src="/assets/images/docs/setup/plugin-library.png" class="screenshot">
-</div>
+See: [Plugin Library](/docs/plugins/#library)
 
 {% include setup_toc.html %}

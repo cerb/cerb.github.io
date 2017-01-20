@@ -11,6 +11,8 @@ jumbotron:
     url: /docs/setup/
 ---
 
-Navigate to **Setup** >> **Mail** >> **HTML Templates**.
+Navigate to **Setup** >> **Mail** >> **HTML Templates**
+
+On this page you can manage the templates that specify layouts and styles for outgoing messages in HTML format.
 
 {% include setup_toc.html %}

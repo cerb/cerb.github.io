@@ -14,7 +14,7 @@ jumbotron:
 
 # What is Cerb?
 
-**Cerb** enhances the productivity of online teams with web-based collaboration and automation tools.
+**Cerb** enhances the productivity of online teams with web-based collaboration and automation tools:
 
 * High-volume __email management__ that scales to millions of conversations per year.
 

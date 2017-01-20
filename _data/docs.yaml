@@ -38,12 +38,12 @@
   - security
   - backups
   - upgrading
-  - scaling
+#  - scaling
 
 - title: Developers
   docs:
-  - api
-  - developing-plugins
+#  - api
+#  - developing-plugins
   # - api
     # - getting_started
     # - authentication

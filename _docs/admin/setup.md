@@ -35,7 +35,7 @@ The page is divided into sections, each with a blue menu designated by a downwar
 ## Mail
 
 - **Incoming Mail**
-	- [Settings](/docs/setup/mail-setings)
+	- [Settings](/docs/setup/mail-settings)
 	- [Mailboxes](/docs/setup/mailboxes)
 	- [Routing](/docs/setup/mail-routing)
 	- [Filtering](/docs/setup/mail-filtering)
@@ -56,8 +56,6 @@ The page is divided into sections, each with a blue menu designated by a downwar
 
 ## Bots
 
-- [Search](/docs/setup/bots-search)
-- [Classifiers](/docs/setup/classifiers)
 - [Scheduled Behavior](/docs/setup/scheduled-behavior)
 
 ## Services

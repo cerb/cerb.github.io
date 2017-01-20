@@ -9,15 +9,21 @@ jumbotron:
     url: /docs/setup/
 ---
 
-Navigate to **Setup** >> **Mail** >> **Mail Transports**.
+Navigate to **Setup** >> **Mail** >> **Mail Transports**
 
-In Cerb, outgoing email messages are sent using **mail transports**.  By default there are two types of mail transports available:
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/setup/mail_transports.png" class="screenshot">
+</div>
+
+In Cerb, outgoing email messages are sent using **mail transports**.  This page displays your available mail transports.  Your first transport was created during the [installation](/docs/installation/#step-7-outgoing-mail) process.
+
+By default there are two types of mail transports available:
 
 - **SMTP**: This transport delivers outgoing email messages to a mail server using the Simple Mail Transfer Protocol[^smtp]. That server is then responsible for routing messages to the appropriate recipients.
 
 - **Null**: This transport pretends to deliver outgoing email messages and discards them.  It's useful for development, testing, and evaluation environments where you want to be absolutely sure that no live email is being sent.
 
-Plugins can also implement new types of mail transports.  For example, you could deliver outgoing messages using a web-based API.
+[Plugins](/docs/plugins/) can also implement new types of mail transports.  For example, you could deliver outgoing messages using a web-based API.
 
 You're not limited to a single mail transport, either.  You can choose a different transport for each of the email addresses you send mail from.  If you send messages on behalf of several different organizations or brands, you may actually be required to use multiple SMTP servers for authentication or compliance.
 

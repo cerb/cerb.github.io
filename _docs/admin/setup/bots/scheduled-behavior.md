@@ -11,6 +11,10 @@ jumbotron:
     url: /docs/setup/#bots
 ---
 
-Navigate to **Setup** >> **Bots** >> **Scheduled Behavior**.
+Navigate to **Setup** >> **Bots** >> **Scheduled Behavior**
+
+This page displays the currently scheduled [bot](/docs/bots/) behaviors from the _Schedule Behavior_ [action](/docs/bots/#actions).  Each behavior is associated with a specific target record.
+
+You can click on a behavior to reschedule or delete it.
 
 {% include setup_toc.html %}

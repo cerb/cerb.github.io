@@ -9,15 +9,21 @@ jumbotron:
     url: /docs/setup/
 ---
 
-Navigate to **Setup** >> **Configure** >> **Scheduler**.
+Navigate to **Setup** >> **Configure** >> **Scheduler**
 
-The **scheduler** is responsible for planning and running _jobs_. A **job** is a specific task -- checking your mailboxes for new messages, search indexing new records, performing nightly maintenance, triggering bot scheduled behaviors, etc.  There are several built-in jobs, and new jobs can be added using plugins.
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/setup/scheduler.png" class="screenshot">
+</div>
 
-Each job is repeated at a specific _interval_ -- a number of minutes, hours, or days. A job can be _disabled_ to temporarily prevent it from running.
+The **scheduler** is responsible for planning and running _jobs_.
 
-Several jobs can run at the same time without preventing workers from continuing to use the system. While running, a job is _locked_ to prevent additional instances from starting.
+A **job** is an automated background task: checking your mailboxes for new messages, search indexing new records, performing nightly maintenance, triggering [bot](/docs/bots/) scheduled behaviors, etc.  There are several built-in jobs, and [plugins](/docs/plugins/) can add new jobs.
 
-Each job has a `run now` link to immediately run the job with logging enabled from inside the web browser. This is useful for troubleshooting and development, but the scheduler should be automated in production environments so that the jobs run without human intervention.
+Each job is repeated at a specific _interval_ -- a number of minutes, hours, or days. A job can be _disabled_ to prevent it from running.
+
+Different jobs can run at the same time. A job is _locked_ while running to prevent multiple copies of itself from starting.
+
+Each job has a _"run now"_ link that will immediately run the job with logging enabled from inside your web browser. This is useful for troubleshooting and development, but the scheduler should be automated in production environments so that the jobs run without human intervention.
 
 For Cerb's scheduled jobs to automatically run in the background, you need to configure a third-party tool to request the `/cron` page every minute.  On Unix-based systems this is accomplished with a cronjob[^cronjob]. On Windows Server you can add a Scheduled Task[^windows-scheduled-task].
 
@@ -25,11 +31,9 @@ For Cerb's scheduled jobs to automatically run in the background, you need to co
 <p>If you're using <b>Cerb Cloud</b>, we handle this for you.</p>
 </div>
 
-The `/cron` page doesn't require a login to use. Instead, it is protected with an IP address[^ip] whitelist. You can authorize additional IPs from the **Setup** >> **Configure** >> **Security** page, or from the `AUTHORIZED_IPS_DEFAULTS` option in the `framework.config.php` file.
+We recommend using **curl** or **wget** to request your scheduler URL every minute.
 
-## Configuring the scheduler in Linux
-
-## Configuring the scheduler in Windows
+The `/cron` page doesn't require a login to use. Instead, it is protected with an IP address[^ip] whitelist. You can authorize additional IPs from the [Security](/docs/setup/security/) section, or from the `AUTHORIZED_IPS_DEFAULTS` setting in the `framework.config.php` file.
 
 {% include setup_toc.html %}
 

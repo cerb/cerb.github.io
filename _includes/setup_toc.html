@@ -3,20 +3,22 @@
 <div class="section-nav">
 	<div class="left">
 		{% if forloop.first %}
+		<a href="/docs/quick-start" class="prev">&lt; Quick Start</a>
 		{% else %}
 			{% assign previous = forloop.index0 | minus: 1 %}
 			{% assign key = site.data.setup_toc[previous] %}
 			{% assign doc = site.docs | where:"id",key | first %}
-			<a href="{{ doc.url }}" class="prev">&lt; Back: {{ doc.title }}</a>
+			<a href="{{ doc.url }}" class="prev">&lt; {{ doc.title }}</a>
 		{% endif %}
 	</div>
 	<div class="right align-right">
 		{% if forloop.last %}
+		<a href="/docs/security" class="next">Security &gt;</a>
 		{% else %}
 			{% assign next = forloop.index0 | plus: 1 %}
 			{% assign key = site.data.setup_toc[next] %}
 			{% assign doc = site.docs | where:"id",key | first %}
-			<a href="{{ doc.url }}" class="next">Next: {{ doc.title }} &gt;</a>
+			<a href="{{ doc.url }}" class="next">{{ doc.title }} &gt;</a>
 		{% endif %}
 	</div>
 </div>
