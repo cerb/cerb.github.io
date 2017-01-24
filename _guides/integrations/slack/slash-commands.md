@@ -13,10 +13,14 @@ jumbotron:
 ---
 
 ## Introduction
+{:.no_toc}
 
 Slack makes it very easy to interact with third-party apps and services using their _slash commands_ feature.
 
 To demonstrate this functionality, we'll add a new chat command named **/cerb** and instruct Slack to send those messages to a webhook[^webhook] that triggers a [bot](/docs/bots) behavior in Cerb.
+
+* TOC
+{:toc}
 
 ## Enable the webhooks plugin in Cerb
 

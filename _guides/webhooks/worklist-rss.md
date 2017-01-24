@@ -12,12 +12,16 @@ jumbotron:
 ---
 
 ## Introduction
+{:.no_toc}
 
 Let's assume that you want to monitor the records in a Cerb worklist from a third-party app or service.  You could use the REST API, but that requires worker authentication and custom code that you need to host somewhere.
 
 An alternative, simpler approach is to use a Cerb bot to display any worklist in RSS[^rss] format. Many tools already exist to monitor an RSS feed for new content. Zapier[^zapier-rss] can run actions based on new RSS feed items. You can even subscribe to RSS feeds within Outlook.
 
 We'll host this RSS feed on a custom URL in Cerb using a webhook[^webhook] listener.
+
+* TOC
+{:toc}
 
 ## Enable the Webhooks plugin in Cerb
 

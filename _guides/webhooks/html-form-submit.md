@@ -12,6 +12,7 @@ jumbotron:
 ---
 
 ## Introduction
+{:.no_toc}
 
 Let's assume that you have a static[^static-site] website for your company and you need to add a contact form to it.  You're using something like Jekyll[^jekyll] to generate the site because you want it to be simple to maintain, fast to serve, secure to host, and effortless to scale. You don't want to implement form processing with a dynamic[^dynamic-site] programming language on the backend[^backend] server because it will sacrifice those benefits.
 
@@ -24,6 +25,9 @@ You can do all of this with Cerb bot behaviors that you build entirely from your
 In this article, we'll build a simple contact form on a static site.  When the form is submitted, we'll POST to a webhook that runs a bot behavior in Cerb.  The bot will validate the form and handle CORS access control (submitting a form to a different host than your website). The bot will communicate any issues back to the browser in real-time.
 
 You can use these fundamental concepts to respond to any kind of web requests with bots in Cerb.
+
+* TOC
+{:toc}
 
 ## Enable the Webhooks plugin in Cerb
 
