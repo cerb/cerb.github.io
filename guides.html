@@ -7,20 +7,41 @@ redirect_from:
   - /integrations/
 jumbotron:
   title: Guides
-  tagline: Cerb automates and integrates with many apps and services that you're already using
+  tagline: Master Cerb with step-by-step instructions
 ---
 
 <div class="integrations">
-
-<div class="grid no-gutters">
-	{% for integration in site.integrations %}
-		{% if integration.integrate.state != "draft" %}
-		<div class="cerb-integration unit one-third">
-			<a href="{{ integration.url }}">{{ integration.title }}</a>
-			<div>{{ integration.integrate.what }}</div>
-		</div>
+	{% assign topics = site.guides | group_by: 'topic' %}
+	
+	{% for topic in topics %}
+		<h1>{{ topic.name }}</h1>
+		
+		{% if topic.name == 'Integrations' %}
+			{% assign subtopics = topic.items | group_by: 'subtopic' %}
+		
+			<div style="margin-left:15px;">
+			{% for subtopic in subtopics %}
+				<h2>{{ subtopic.name }}</h2>
+		
+				<ul class="articles">
+				{% for guide in subtopic.items %}
+					<li>
+						<a href="{{ guide.url }}">{{ guide.title }}</a>
+					</li>
+				{% endfor %}
+				</ul>
+			{% endfor %}
+			</div>
+		
+		{% else %}
+			<ul class="articles">
+			{% for guide in topic.items %}
+				<li>
+					<a href="{{ guide.url }}">{{ guide.title }}</a>
+				</li>
+			{% endfor %}
+			</ul>
 		{% endif %}
+		
 	{% endfor %}
-</div>
-
 </div>

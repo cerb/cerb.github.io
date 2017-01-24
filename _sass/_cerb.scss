@@ -260,7 +260,35 @@ div.page-content {
 }
 
 .integrations {
-	margin-top: 40px;
+	margin-top: 10px;
+	
+	h1 {
+		margin-top: 20px;
+		margin-bottom: 15px;
+	}
+	
+	h2 {
+		border: 0 !important;
+		margin-bottom: 5px;
+	}
+	
+	ul.articles {
+		list-style: none;
+		margin-left: 0px;
+		
+		li {
+			padding: 10px;
+			
+			a {
+				font-weight: 500;
+				//color: black;
+			}
+			
+			&:nth-child(odd) {
+				background-color:rgb(240,240,240);
+			}
+		}
+	}
 	
 	div.cerb-integration {
 		text-align: center;
@@ -276,6 +304,8 @@ div.page-content {
 
 section.integration {
 	article {
+		margin-top: 15px;
+		
 		h1 {
 			a {
 				color: #000;

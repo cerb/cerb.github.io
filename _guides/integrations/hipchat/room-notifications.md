@@ -1,23 +1,28 @@
 ---
 title: Send room notifications to HipChat from a Cerb bot
-permalink: /guides/hipchat/room-notifications/
 layout: integration
+topic: Integrations
+subtopic: HipChat
 jumbotron:
   title: Send room notifications to HipChat from a Cerb bot
   tagline: ""
   breadcrumbs:
   -
-    label: Guides &raquo; HipChat &raquo;
-    url: /guides#hipchat
+    label: Guides &raquo; Integrations &raquo; HipChat &raquo;
+    url: /guides/#hipchat
 ---
 
 ## Introduction
+{:.no_toc}
 
 This article will demonstrate how to send messages to HipChat from a Cerb bot.
 
 When you create a custom integration in [HipChat](https://hipchat.com) you're given a unique URL with a built-in authentication token. This allows you to send messages to the specified room from a third-party application using a simple HTTP POST[^http-post].
 
 Rather than using this URL directly in various actions within a Cerb bot, we're going to create a reusable behavior for sending a notification to HipChat that several other bots can use.  This protects the pre-authenticated HipChat URL, and it also improves maintainability since you make changes to the behavior in a single place.
+
+* TOC
+{:toc}
 
 ## Add an integration in HipChat
 
@@ -65,6 +70,12 @@ Log in to Cerb as an administrator.
 From **Search &raquo; Bots**, click **(+)** in the top right of the worklist to add a new bot.
 
 <div class="cerb-screenshot">
+<img src="/assets/images/guides/common/worklist-add.png" class="screenshot">
+</div>
+
+Enter the following:
+
+<div class="cerb-screenshot">
 <img src="/assets/images/guides/hipchat/room-notifications/cerb-new-bot.png" class="screenshot">
 </div>
 
@@ -74,19 +85,21 @@ Optionally, you can also restrict **Events** to _Custom bot behavior_ and **Acti
 
 Once finished, click the **Save Changes** button.
 
-Click **HipChat Bot** in the worklist:
+Open the card for **HipChat Bot** in the worklist.  You can click the link in the yellow notification that appeared above the worklist when you created the record.
+
+Click the **Behaviors** button near the button of the popup.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/hipchat/room-notifications/cerb-bot-worklist.png" class="screenshot">
+<img src="/assets/images/guides/hipchat/room-notifications/popup-behaviors-button.png" class="screenshot">
 </div>
 
-On the **Behaviors** tab, click the **Create Behavior** button:
+Click the **(+)** icon in the behaviors worklist to add a new behavior.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/hipchat/room-notifications/cerb-new-behavior.png" class="screenshot">
+<img src="/assets/images/guides/common/worklist-add.png" class="screenshot">
 </div>
 
-Select the **Import** tab and paste the following behavior:
+Select **Import** at the top and paste the following behavior:
 
 {% gist cerb/b95c1f67df59049f6781eecef72c8a3d %}
 
@@ -96,7 +109,7 @@ Cerb will prompt you for the URL that HipChat generated for you in the first ste
 <img src="/assets/images/guides/hipchat/room-notifications/cerb-behavior-import.png" class="screenshot">
 </div>
 
-The new behavior has been automatically created for you:
+Open the card for the newly created behavior.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/hipchat/room-notifications/cerb-behavior.png" class="screenshot">

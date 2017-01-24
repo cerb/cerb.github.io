@@ -1,14 +1,15 @@
 ---
 title: Send commands to a Cerb bot using Slack
-permalink: /guides/slack/slash-commands/
 layout: integration
+topic: Integrations
+subtopic: Slack
 jumbotron:
   title: Send commands to a Cerb bot using Slack
   tagline: ""
   breadcrumbs:
   -
-    label: Guides &raquo; Slack &raquo;
-    url: /guides#slack
+    label: Guides &raquo; Integrations &raquo; Slack &raquo;
+    url: /guides/#slack
 ---
 
 ## Introduction
@@ -23,7 +24,7 @@ When a channel member uses our new **/cerb** command, Slack will deliver their m
 
 You can use any web-based technology to process these POST requests and send a response back to Slack.
 
-Cerb makes this process really simple with its [webhooks plugin](/docs/webhooks).  This plugin enables Cerb to listen for arbitrary webhook requests and route them to bots.  Bot behaviors can process a request, perform actions in Cerb or interact with third-party services, and then send an appropriate response back to the caller.
+Cerb makes this process really simple with its [webhooks](/docs/webhooks) [plugin](/docs/plugins/).  You can install it from the [Plugin Library](/docs/plugins/#library).  The plugin enables Cerb to listen for arbitrary webhook requests and route them to bots.  Bot behaviors can process a request, perform actions in Cerb or interact with third-party services, and then send an appropriate response back to the caller.
 
 ## Create the bot behavior in Cerb
 
@@ -31,28 +32,44 @@ Once the Webhooks plugin is enabled, you'll be able to create new bot behaviors 
 
 First, let's create a new bot to keep things organized.
 
-Navigate to **Search** >> **Bots** and click the **(+)** icon in the blue bar to add a new record.
+Navigate to **Search** >> **Bots** and click the **(+)** icon above the worklist to add a new record.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/common/worklist-add.png" class="screenshot">
+</div>
 
 Enter the following details:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/slack/slash-commands/create_va.png" class="screenshot">
+<img src="/assets/images/guides/slack/slash-commands/create-va.png" class="screenshot">
 </div>
 
 (You can find a logo image at <https://brandfolder.com/slack>)
 
-Click the **Save Changes** button.  Then [peek](/docs/workspaces/#peek) your new bot in the worklist to view its profile.
+Click the **Save Changes** button.
 
-Click the **Behaviors** button, then click **(+)** above the worklist.
+Click on the name of your new bot in the yellow notification bubble that appears above the worklist to open its [card](/docs/records/#cards).
 
-Select the **Import** tab and paste the following behavior to import it:
+On the card popup, click the **Behaviors** button:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/slack/slash-commands/popup-behaviors-button.png" class="screenshot">
+</div>
+
+Then click **(+)** above the worklist:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/common/worklist-add.png" class="screenshot">
+</div>
+
+Select **Import** at the top of the popup and paste the following behavior:
 
 {% gist cerb/d51a3b54eadf29df3286c02490486bf5 %}
 
 You should now see the following:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/slack/slash-commands/va_behavior.png" class="screenshot">
+<img src="/assets/images/guides/slack/slash-commands/va-behavior.png" class="screenshot">
 </div>
 
 If so, we're ready to create the webhook that triggers this behavior.

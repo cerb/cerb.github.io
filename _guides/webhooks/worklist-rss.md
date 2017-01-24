@@ -1,14 +1,14 @@
 ---
 title: Generate an RSS feed for any worklist
-permalink: /guides/webhooks/worklist-rss/
 layout: integration
+topic: Webhooks
 jumbotron:
   title: Generate an RSS feed for any worklist
   tagline: ""
   breadcrumbs:
   -
     label: Guides &raquo; Webhooks &raquo;
-    url: /guides#webhooks
+    url: /guides/#webhooks
 ---
 
 ## Introduction
@@ -21,7 +21,7 @@ We'll host this RSS feed on a custom URL in Cerb using a webhook[^webhook] liste
 
 ## Enable the Webhooks plugin in Cerb
 
-If the webhooks plugin isn't already enabled, you can [follow these instructions](/plugins/webhooks#installation) to install it.
+If the webhooks plugin isn't already enabled, install it from the [Plugin Library](/docs/plugins/#library).
 
 ## Create the bot behavior in Cerb
 

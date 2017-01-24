@@ -1,13 +1,14 @@
 ---
 title: Submit web forms directly to bots in Cerb
 layout: integration
+topic: Webhooks
 jumbotron:
   title: Submit web forms directly to bots in Cerb
   tagline: ""
   breadcrumbs:
   -
     label: Guides &raquo; Webhooks &raquo;
-    url: /guides#webhooks
+    url: /guides/#webhooks
 ---
 
 ## Introduction
@@ -26,7 +27,7 @@ You can use these fundamental concepts to respond to any kind of web requests wi
 
 ## Enable the Webhooks plugin in Cerb
 
-If the webhooks plugin isn't already enabled, you can [follow these instructions](/plugins/webhooks#installation) to install it.
+If the webhooks plugin isn't already enabled, install it from the [Plugin Library](/docs/plugins/#library).
 
 ## Create the bot behavior in Cerb
 
@@ -34,22 +35,38 @@ Once the Webhooks plugin is enabled, you'll be able to create new bot behaviors 
 
 Let's create a new bot to keep things organized.
 
-Navigate to **Search** &raquo; **Bots** and click the **(+)** icon in the blue bar to add a new record.
+Navigate to **Search** &raquo; **Bots** and click the **(+)** icon in the toolbar above the worklist to add a new record:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/common/worklist-add.png" class="screenshot">
+</div>
 
 Enter the following details:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/webhooks/html-form-submit/create_va.png" class="screenshot">
+<img src="/assets/images/guides/webhooks/html-form-submit/create-va.png" class="screenshot">
 </div>
 
-Click the **Save Changes** button.  Then click your new bot in the worklist to view its profile.
+Click the **Save Changes** button.  Then click your the name of your new bot in the yellow notification bubble above the worklist to open its [card](/docs/records/#cards).
 
-On the **Behaviors** tab, click the **Create Behavior** button.
+On the popup, click the **Behaviors** button:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/webhooks/html-form-submit/popup-behaviors-button.png" class="screenshot">
+</div>
+
+Click the **(+)** icon above the behaviors worklist to add a new behavior:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/common/worklist-add.png" class="screenshot">
+</div>
 
 Copy the following behavior script to your clipboard:
 [va-behaviors-webhook-form-submit.json](https://gist.githubusercontent.com/cerb/7d88841702493445cfb3b22e215984f9/raw/33fa719e97c61d4f563755ee9a2e38c4c277c8af/va-behaviors-webhook-form-submit.json)
 
-Select the **Import** tab and paste the copied behavior.
+Select **Import** at the top of the popup and paste the copied behavior.
+
+Click the **Save Changes** button.
 
 <div class="cerb-box note">
 	<p>
@@ -57,10 +74,10 @@ Select the **Import** tab and paste the copied behavior.
 	</p>
 </div>
 
-You should now see the following:
+Open the card for your new behavior.  You should now see the following:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/webhooks/html-form-submit/va_behavior.png" class="screenshot">
+<img src="/assets/images/guides/webhooks/html-form-submit/va-behavior.png" class="screenshot">
 </div>
 
 Now we're ready to create the webhook that triggers this behavior.
@@ -74,7 +91,7 @@ Click the **(+)** icon in the blue bar of the worklist to create a new webhook.
 Enter the following details:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/webhooks/html-form-submit/create_webhook.png" class="screenshot">
+<img src="/assets/images/guides/webhooks/html-form-submit/create-webhook.png" class="screenshot">
 </div>
 
 Click the **Save Changes** button.
@@ -83,11 +100,11 @@ A new webhook will be added to the worklist.  You can copy the **URL** to your c
 
 ## Open the example form in jsFiddle
 
-Use the live demo below, or [open the example form in jsFiddle](https://jsfiddle.net/cerb/omut2vr0/).
+Use the live demo below, or [open the example form in jsFiddle](https://jsfiddle.net/cerb/omut2vr0/10/).
 
 Paste your webhook URL into the first text box, where it says <code>&lt;paste your webhook URL here&gt;</code>.
 
-<iframe width="100%" height="550" src="//jsfiddle.net/cerb/omut2vr0/embedded/result,js,html,css/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<script async src="https://jsfiddle.net/cerb/omut2vr0/10/embed/result,js,html,css/"></script>
 
 ## Test form validation warnings
 

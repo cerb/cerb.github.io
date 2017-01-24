@@ -23,7 +23,7 @@ collections:
   docs:
     output: true
     permalink: /docs/:path/
-  integrations:
+  guides:
     output: true
     permalink: /guides/:path/
 

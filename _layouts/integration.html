@@ -4,28 +4,12 @@ title: "Guides"
 permalink: /guides/
 ---
 
-	<section class="integration">
-		<div class="grid">
+<section class="integration">
+	<article>
+		{{ content }}
+	</article>
+</section>
 
-			<div class="unit four-fifths">
-				<article>
-					{{ content }}
-				</article>
-			</div>
-
-			<div class="unit one-fifth">
-				<aside>
-					<ul>
-					{% for integration in site.integrations %}
-						{% if integration.integrate.state != "draft" %}
-						<li {% if page.url contains integration.url %}class="current"{% endif %}><a href="{{ integration.url }}">{{ integration.title }}</a></li>
-						{% endif %}
-					{% endfor %}
-					</ul>
-				</aside>
-			</div>
-
-			<div class="clear"></div>
-
-		</div>
-	</section>
+{% if page.next or page.previous %}
+{% include prev_next.html %}
+{% endif %}
