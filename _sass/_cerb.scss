@@ -615,8 +615,8 @@ form.cerb-form {
 		font-size: 1.3em;
 		text-align: left;
 		font-style: normal;
-		border: 1px solid darken(rgb(110,160,50), 10%);
-		border-width: 1px 1px 3px;
+		border: 0; // 1px solid darken(rgb(110,160,50), 10%);
+		//border-width: 1px 1px 3px;
 		margin-bottom: 10px;
 		@include border-radius(5px);
 	}

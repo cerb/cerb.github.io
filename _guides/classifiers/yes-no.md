@@ -23,7 +23,7 @@ What we really care about is whether the response indicates one of the following
 - no
 - maybe
 
-That's exactly what a classifier does for us -- it weighs the evidence it's given and makes a prediction.  It's important to understand that classifiers don't need to have previously encountered the same response before in order to make an accurate prediction for it.
+That's exactly what a classifier does for us -- it weighs the evidence it's given and makes a prediction.  It's important to understand that classifiers can use their training to make accurate predictions even for responses they've never seen.
 
 If a user responds to the bot with _"sure, make it happen!"_, the classifier may predict with 99.82% confidence that the user meant _"yes"_.  If, instead, the user says _"stop, I don't want this"_, the classifier may predict with 82.97% confidence that they meant _"no"_.
 
