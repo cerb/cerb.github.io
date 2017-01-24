@@ -25,7 +25,7 @@ What we really care about is whether the response indicates one of the following
 
 That's exactly what a classifier does for us -- it weighs the evidence it's given and makes a prediction.  It's important to understand that classifiers can use their training to make accurate predictions even for responses they've never seen.
 
-If a user responds to the bot with _"sure, make it happen!"_, the classifier may predict with 99.82% confidence that the user meant _"yes"_.  If, instead, the user says _"stop, I don't want this"_, the classifier may predict with 82.97% confidence that they meant _"no"_.
+If a user responds to the bot with _"sure, make it happen!"_, the classifier may predict with 99.82% confidence that the user meant _"yes"_.  If instead the user says _"stop, I don't want this"_, the classifier may predict with 82.97% confidence that they meant _"no"_.
 
 With that information, a bot can pick the appropriate [outcome](/docs/bots/#decisions-and-outcomes) for a _"Did they say yes?"_ decision.
 
@@ -280,6 +280,10 @@ Click the **Train** button below the prediction.
 
 In the **Classification:** field, hover over **answer.maybe** and click the **(x)** icon (top right) to delete it.  Type the letter _"y"_ instead and select **answer.yes** from the autocomplete menu.
 
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/classifiers/yes-no/train.png" class="screenshot">
+</div>
+
 Click the **Save Changes** button.
 
 The card will refresh, and you'll now see 153 training examples.
@@ -297,3 +301,8 @@ It's interesting to watch the classifier consider new evidence when making a pre
 You'll also see that some ambiguity is recognized by the classifier:
 
 * _"I'm not going to say no"_ is predicted to mean _maybe_.
+
+## Next steps
+
+* Use the classifier in a conversational bot behavior.
+* Try making a more complex classifier for sentiment analysis or intent detection.

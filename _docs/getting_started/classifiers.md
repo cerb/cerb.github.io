@@ -10,7 +10,7 @@ jumbotron:
 
 Here are some common examples:
 
-- A 'Yes/No' classifier can learn to sort affirmative and negative responses in natural language _(e.g. nope, sure, please do, belay that, never mind)_. Any conversational bot behavior can use that classifier to handle confirmation prompts.
+- [A 'Yes/No' classifier](/guides/classifiers/yes-no/) can learn to sort affirmative and negative responses in natural language _(e.g. nope, sure, please do, belay that, never mind)_. Any conversational bot behavior can use that classifier to handle confirmation prompts.
 
 - A 'Sentiment Analysis' classifier can learn to sort feedback into positive, neutral, and negative categories _(e.g. amazing, not bad, the worst thing ever)_.
 
