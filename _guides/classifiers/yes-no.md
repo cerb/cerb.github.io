@@ -1,0 +1,299 @@
+---
+title: Build a yes/no classifier
+layout: integration
+topic: Classifiers
+jumbotron:
+  title: Build a yes/no classifier
+  tagline: ""
+  breadcrumbs:
+  -
+    label: Guides &raquo; Classifiers &raquo;
+    url: /guides/#classifiers
+---
+
+[Classifiers](/docs/classifiers/) take text written in natural language and learn to _classify_ it for you.  [Bots](/docs/bots/) can use classifiers to make smarter decisions.
+
+For instance, let's assume that we have a conversational bot who asks a question like _"Are you sure?"_ to confirm the user's intent before performing some action.
+
+While we could force people to literally say _"yes"_ or _"no_" in response, they will have a much better experience if the bot attempts to understand them using natural language.  It gets complicated.  Even for such a simple question, there are hundreds of potential responses that a typical human could say to answer affirmatively or negatively.
+
+What we really care about is whether the response indicates one of the following three intents:
+
+- yes
+- no
+- maybe
+
+That's exactly what a classifier does for us -- it weighs the evidence it's given and makes a prediction.  It's important to understand that classifiers don't need to have previously encountered the same response before in order to make an accurate prediction for it.
+
+If a user responds to the bot with _"sure, make it happen!"_, the classifier may predict with 99.82% confidence that the user meant _"yes"_.  If, instead, the user says _"stop, I don't want this"_, the classifier may predict with 82.97% confidence that they meant _"no"_.
+
+With that information, a bot can pick the appropriate [outcome](/docs/bots/#decisions-and-outcomes) for a _"Did they say yes?"_ decision.
+
+In this guide, we'll quickly build the above classifier so that you can use it in your own bot behaviors.
+
+* TOC
+{:toc}
+
+## Create a new classifier
+
+Let's start by creating a new classifier.
+
+Open a classifiers [worklist](/docs/workspaces/#worklists) from **Search** &raquo; **Classifiers**.
+
+Click the **(+)** icon above the the worklist.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/common/worklist-add.png" class="screenshot">
+</div>
+
+Name the classifier _"Yes/No"_ and make _Cerb_ the owner. This will allow every bot to share it.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/classifiers/yes-no/new-classifier.png" class="screenshot">
+</div>
+
+Click the **Save Changes** button.
+
+## Import training data
+
+Classifiers are trained with as many human-verified, real-world examples as you can provide.  In the interest of time, we'll use the bulk import feature to add some training data.  You can add additional training examples at any time.
+
+Open the [card](/docs/records/#cards) for the newly created **Yes/No** classifier.  As a shortcut, you can click its name in the yellow notification that appeared above the worklist when you added the record.
+
+Once the popup opens, click the **Import** button at the top.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/classifiers/yes-no/card-import.png" class="screenshot">
+</div>
+
+Select all of the examples below and copy them to your clipboard:
+
+<textarea rows="10" cols="60" style="width:100%;height:250px;" readonly="readonly">
+answer.maybe,"I don't have a clue"
+answer.maybe,"I don't have a clue"
+answer.maybe,"I don't know"
+answer.maybe,"I don't know"
+answer.maybe,"I have no clue"
+answer.maybe,"I have no idea"
+answer.maybe,"I may agree"
+answer.maybe,"I might agree"
+answer.maybe,"I think so"
+answer.maybe,"I think so"
+answer.maybe,"I'm not sure if I agree"
+answer.maybe,"I'm not sure if I agree"
+answer.maybe,"I'm not sure if I agree"
+answer.maybe,"I'm not sure if I agree"
+answer.maybe,"I'm not sure if I agree"
+answer.maybe,"I'm not sure"
+answer.maybe,"no idea"
+answer.maybe,"not sure"
+answer.maybe,"not sure"
+answer.maybe,dunno
+answer.maybe,maybe
+answer.maybe,maybe
+answer.maybe,meh
+answer.maybe,perhaps
+answer.maybe,possibly
+answer.maybe,unsure
+answer.maybe,wait
+answer.no,"I changed my mind"
+answer.no,"I don't agree"
+answer.no,"I don't agree"
+answer.no,"I don't agree"
+answer.no,"I don't agree"
+answer.no,"I don't agree"
+answer.no,"absolutely not"
+answer.no,"belay that"
+answer.no,"cut it out"
+answer.no,"don't do anything"
+answer.no,"don't do it"
+answer.no,"forget it"
+answer.no,"never mind"
+answer.no,"no thanks"
+answer.no,"no way"
+answer.no,"on second thought, don't do it"
+answer.no,"please don't"
+answer.no,"scratch that"
+answer.no,cancel
+answer.no,denied
+answer.no,disengage
+answer.no,don't
+answer.no,end
+answer.no,exit
+answer.no,halt
+answer.no,n
+answer.no,nah
+answer.no,nay
+answer.no,nay
+answer.no,neg
+answer.no,negative
+answer.no,negatory
+answer.no,nein
+answer.no,nevermind
+answer.no,nevermind
+answer.no,no
+answer.no,no
+answer.no,no
+answer.no,nope
+answer.no,nope
+answer.no,nyet
+answer.no,quit
+answer.no,skip
+answer.no,stop
+answer.no,stop
+answer.yes,"I agree"
+answer.yes,"I agree"
+answer.yes,"I agree"
+answer.yes,"I agree"
+answer.yes,"I agree"
+answer.yes,"I agree"
+answer.yes,"I agree"
+answer.yes,"I agree"
+answer.yes,"I agree"
+answer.yes,"I'm sure"
+answer.yes,"I'm sure"
+answer.yes,"I'm sure"
+answer.yes,"I'm sure"
+answer.yes,"I'm sure"
+answer.yes,"aye aye"
+answer.yes,"carry on"
+answer.yes,"do it"
+answer.yes,"do it"
+answer.yes,"do it"
+answer.yes,"get on with it then"
+answer.yes,"go ahead"
+answer.yes,"i agree"
+answer.yes,"make it happen"
+answer.yes,"make it so"
+answer.yes,"most assuredly"
+answer.yes,"perfect, thanks"
+answer.yes,"please do"
+answer.yes,"rock on"
+answer.yes,"that's correct"
+answer.yes,"that's right"
+answer.yes,"uh huh"
+answer.yes,"yeah, do it"
+answer.yes,"yes, do it"
+answer.yes,"yes, please"
+answer.yes,"you got it"
+answer.yes,absolutely
+answer.yes,absolutely
+answer.yes,absolutely
+answer.yes,affirmative
+answer.yes,alright
+answer.yes,assuredly
+answer.yes,aye
+answer.yes,certainly
+answer.yes,confirmed
+answer.yes,continue
+answer.yes,continue
+answer.yes,correct
+answer.yes,da
+answer.yes,good
+answer.yes,hooray
+answer.yes,ja
+answer.yes,ok
+answer.yes,ok
+answer.yes,ok
+answer.yes,okay
+answer.yes,proceed
+answer.yes,righto
+answer.yes,sure
+answer.yes,sure
+answer.yes,sure
+answer.yes,sure
+answer.yes,sure
+answer.yes,sure
+answer.yes,sure
+answer.yes,sure
+answer.yes,sure
+answer.yes,thanks
+answer.yes,totally
+answer.yes,true
+answer.yes,y
+answer.yes,ya
+answer.yes,ya
+answer.yes,yay
+answer.yes,yea
+answer.yes,yeah
+answer.yes,yeah
+answer.yes,yep
+answer.yes,yeppers
+answer.yes,yes
+answer.yes,yes
+</textarea>
+
+Paste the examples into the textbox on the import popup:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/classifiers/yes-no/import-training.png" class="screenshot">
+</div>
+
+Click the **Import** button to train the classifier.
+
+## Test predictions
+
+After training with the above steps, you should now see 3 classifications and 152 training examples on the classifier's card:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/classifiers/yes-no/card-search-buttons.png" class="screenshot">
+</div>
+
+Let's see how well the classifier works.
+
+In the **Train Classifier** section, try a few examples by typing them and pressing <tt>ENTER</tt>:
+
+* yep
+* no thanks
+* not sure
+* stop
+* go ahead
+
+You should see a prediction for each, like:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/classifiers/yes-no/card-prediction.png" class="screenshot">
+</div>
+
+The classifier correctly predicts the intent for each of those examples. However, that's not too impressive since each of those examples is found in the training data.
+
+You can also try something like:
+
+* that's not what I wanted
+* that is what I want
+
+The classifier correctly predicts _no_ and _yes_ for those, respectively; even though you won't find _"want"_ mentioned anywhere in the training data.
+
+## Continue training the classifier
+
+This classifier already does a pretty good job, but it doesn't cover everything.
+
+Enter _"k!"_ in **Train Classifier** and press <tt>ENTER</tt>:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/classifiers/yes-no/card-prediction-maybe.png" class="screenshot">
+</div>
+
+We know that _"k!"_ should be considered as a _yes_ response, but we're getting back _maybe_.  This is where the machine _learning_ comes in.
+
+Click the **Train** button below the prediction.
+
+In the **Classification:** field, hover over **answer.maybe** and click the **(x)** icon (top right) to delete it.  Type the letter _"y"_ instead and select **answer.yes** from the autocomplete menu.
+
+Click the **Save Changes** button.
+
+The card will refresh, and you'll now see 153 training examples.
+
+If you type _"k!"_ again you should now get a _yes_ prediction.
+
+You may need to train the same example multiple times in order to properly teach the model how to classify it.  This can occur when you have similar responses with different classifications, like _"sure"_ (yes) and _"not sure"_ (maybe).
+
+It's interesting to watch the classifier consider new evidence when making a prediction:
+
+* _"sure"_ is predicted to mean _yes_.
+* _"sure, wait"_ is predicted to mean _maybe_.
+* _"sure, wait -- don't do it, I changed my mind"_ is predicted to mean _no_.
+
+You'll also see that some ambiguity is recognized by the classifier:
+
+* _"I'm not going to say no"_ is predicted to mean _maybe_.
