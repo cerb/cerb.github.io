@@ -49,13 +49,15 @@ Conventionally, signatures begin with two dashes, a space, and a new line; makin
 
 Your first signature template may look something like this:
 
-{% highlight text %}
+<pre>
+<code class="language-twig">
 {% raw %}
 -- 
 {{full_name}}, {{title}}
 Example, Inc. - http://example.com/
 {% endraw %}
-{% endhighlight %}
+</code>
+</pre>
 
 When workers are composing a message, their signature is represented by a `#signature` marker. This a special kind of placeholder that serves several purposes.  First, the signature marker declutters the outgoing message by not showing a worker their own signature in every message.  More importantly, it allows the signature to be moved or modified by [plugins](/docs/plugins/), HTML templates, and [bots](/docs/bots/).
 

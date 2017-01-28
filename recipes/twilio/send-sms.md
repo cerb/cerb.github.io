@@ -41,7 +41,12 @@ On the **Behaviors** tab, click the **Create Behavior** button.
 
 Select the **Import** tab and paste the following behavior to import it:
 
-{% gist cerb/d51a3b54eadf29df3286c02490486bf5 %}
+<pre>
+<code class="language-json">
+{% raw %}
+{% endraw %}
+</code>
+</pre>
 
 You should now see the following:
 

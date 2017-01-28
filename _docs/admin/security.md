@@ -65,11 +65,13 @@ Browser access to the following locations should be forbidden:
 
 With **nginx**, you can use the following directive in your server configuration:
 
-{% highlight nginx %}
+<pre>
+<code class="language-nginx">
 location ~ ^/cerb/(\.git|api|features|libs|storage)/ {
     return 403;
 }
-{% endhighlight %}
+</code>
+</pre>
 
 Make sure that Nginx only sends requests for `/index.php` and `/ajax.php` to PHP.
 
@@ -77,39 +79,61 @@ Make sure that Nginx only sends requests for `/index.php` and `/ajax.php` to PHP
 
 If you're using the provided `.htaccess` file for [friendly URLs](/docs/friendly-urls) in Apache[^apache], then we've already given you some defaults for blocking access to these directories:
 
-{% highlight apache %}
+<pre>
+<code class="language-apache">
 RewriteRule ^(.*/)?\.git(/|$) - [F,L]
 RewriteRule ^(.*/)?api(/|$) - [F,L]
 RewriteRule ^(.*/)?features(/|$) - [F,L]
 RewriteRule ^(.*/)?libs(/|$) - [F,L]
 RewriteRule ^(.*/)?storage(/|$) - [F,L]
-{% endhighlight %}
+</code>
+</pre>
 
 You can also prevent PHP from executing in certain locations (such as `storage/`) with the following directive in a `<VirtualHost>` block or an `.htaccess` file:
 
-{% highlight text %}
+<pre>
+<code class="language-apache">
 php_flag engine off
-{% endhighlight %}
+</code>
+</pre>
 
 ## File permissions
 
 Cerb's files should be owned by your webserver user.  The webserver should have _read privileges_ on all files and directories, but only _write privileges_ on the `storage/` directory.
 
-The following permissions are recommended:
+The following permissions are recommended.
 
-{% highlight bash %}
-# Set the owner and group of files to the webserver user
+Set the owner and group of files to the webserver user:
+
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 chown -R www-data:www-data .
+</code>
+</pre>
 
-# Make files read-only by the webserver, and nobody else
+Make files read-only by the webserver, and nobody else:
+
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 find . -type f -exec chmod 400 {} \;
+</code>
+</pre>
 
-# Make directories read/list-only by the webserver, and nobody else
+Make directories read/list-only by the webserver, and nobody else:
+
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 find . -type d -exec chmod 500 {} \;
+</code>
+</pre>
 
-# Make everything in storage/ writeable by the webserver user
+Make everything in storage/ writeable by the webserver user:
+
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 chmod -R u+w storage/
-{% endhighlight %}
+</code>
+</pre>
 
 <div class="cerb-box note">
 	<p>Your webserver's user and group may be something other than <tt>www-data</tt>.</p>
@@ -123,9 +147,11 @@ chmod -R u+w storage/
 
 It's a good idea to restrict PHP functions that allow arbitrary commands to be executed on the system.  In the `php.ini` file you can use the following option:
 
-{% highlight ini %}
+<pre>
+<code class="language-ini">
 disable_functions = pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wifcontinued,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigprocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority,show_source,system,exec,passthru,proc_nice,proc_open,popen,shell_exec,
-{% endhighlight %}
+</code>
+</pre>
 
 ## Considerations for HTTP Authentication and IP-based security
 

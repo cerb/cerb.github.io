@@ -68,7 +68,138 @@ Then click **(+)** above the worklist:
 
 Select **Import** at the top of the popup and paste the following behavior:
 
-{% gist cerb/d51a3b54eadf29df3286c02490486bf5 %}
+<pre style="max-height:29.25em;">
+<code class="language-json">
+{% raw %}
+{
+  "behavior":{
+    "title":"Message from \/cerb in Slack",
+    "is_disabled":false,
+    "is_private":false,
+    "event":{
+      "key":"event.webhook.received",
+      "label":"Webhook received"
+    },
+    "nodes":[
+      {
+        "type":"switch",
+        "title":"Command:",
+        "nodes":[
+          {
+            "type":"outcome",
+            "title":"help",
+            "params":{
+              "groups":[
+                {
+                  "any":0,
+                  "conditions":[
+                    {
+                      "condition":"http_param",
+                      "name":"text",
+                      "oper":"is",
+                      "value":"help"
+                    }
+                  ]
+                }
+              ]
+            },
+            "nodes":[
+              {
+                "type":"action",
+                "title":"Send help text",
+                "params":{
+                  "actions":[
+                    {
+                      "action":"set_http_header",
+                      "name":"Content-Type",
+                      "value":"application\/json"
+                    },
+                    {
+                      "action":"set_http_body",
+                      "value":"{\r\n    \"response_type\": \"in_channel\",\r\n    \"text\": \"You can use these commands:\",\r\n    \"attachments\": [\r\n        {\r\n             \"text\":\"*\/cerb help*: This message.\",\r\n            \"mrkdwn_in\": [\"text\"]\r\n        },\r\n        {\r\n            \"text\":\"*\/cerb hi*: Say hello!\",\r\n            \"mrkdwn_in\": [\"text\"]\r\n        }\r\n    ]\r\n}"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type":"outcome",
+            "title":"hi",
+            "params":{
+              "groups":[
+                {
+                  "any":0,
+                  "conditions":[
+                    {
+                      "condition":"http_param",
+                      "name":"text",
+                      "oper":"is",
+                      "value":"hi"
+                    }
+                  ]
+                }
+              ]
+            },
+            "nodes":[
+              {
+                "type":"action",
+                "title":"Say \"Hello, &lt;user&gt;!\"",
+                "params":{
+                  "actions":[
+                    {
+                      "action":"set_http_header",
+                      "name":"Content-Type",
+                      "value":"application\/json"
+                    },
+                    {
+                      "action":"set_http_body",
+                      "value":"{\r\n    \"response_type\": \"in_channel\",\r\n    \"text\": \"Hello, {{http_params.user_name}}!\"\r\n}"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "type":"outcome",
+            "title":"...else",
+            "params":{
+              "groups":[
+                {
+                  "any":0,
+                  "conditions":[]
+                }
+              ]
+            },
+            "nodes":[
+              {
+                "type":"action",
+                "title":"Say \"I'm not sure...\"",
+                "params":{
+                  "actions":[
+                    {
+                      "action":"set_http_header",
+                      "name":"Content-Type",
+                      "value":"application\/json"
+                    },
+                    {
+                      "action":"set_http_body",
+                      "value":"{\r\n    \"response_type\": \"in_channel\",\r\n    \"text\": \"I'm not sure what you're asking. Try **\/cerb help**\",\r\n    \"mrkdwn_in\": [\"text\"]\r\n}"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+{% endraw %}
+</code>
+</pre>
 
 You should now see the following:
 

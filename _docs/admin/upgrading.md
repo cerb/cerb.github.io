@@ -16,9 +16,11 @@ You can use Git to quickly update your local Cerb files to the latest version. T
 
 On Unix-based servers you can check if Git is installed by typing:
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 git --version
-{% endhighlight %}
+</code>
+</pre>
 
 If you need to install Git, it's usually available in a package named `git`. The actual package name will depend on your operating system.
 
@@ -30,31 +32,39 @@ If you can't use Git, you really should consider using [Cerb Cloud](/cloud) rath
 
 - Change directory to your cerb installation.
 
-{% highlight php %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 cd /path/to/cerb/
-{% endhighlight %}
+</code>
+</pre>
 
 # Update using Git on a Unix-based server
 
 Verify that you're using Git:
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 git status
-{% endhighlight %}
+</code>
+</pre>
 
 You can also verify that a `.git` directory exists. If the above command returns an error, or the `.git` directory doesn't exist, then you probably installed the software a different way.  You should reinstall Cerb from GitHub[^svn-to-git].
 
 Restore the `/install` directory:
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 git checkout -- install
-{% endhighlight %}
+</code>
+</pre>
 
 Update the list of branches from the remote repository:
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 git fetch origin
-{% endhighlight %}
+</code>
+</pre>
 
 <div class="cerb-box note">
 	<p>
@@ -64,33 +74,43 @@ git fetch origin
 
 Stash your uncommitted local changes (like your `framework.config.php` configuration file).  This leaves you with a clean version of the project files that simplifies merging:
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 git stash
-{% endhighlight %}
+</code>
+</pre>
 
 Switch to the `stable` branch if it's not your current branch:
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 git checkout stable
-{% endhighlight %}
+</code>
+</pre>
 
 Update to the latest stable version:
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 git pull origin stable
-{% endhighlight %}
-    
+</code>
+</pre>
+
 Reapply your local file changes:
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 git stash pop
-{% endhighlight %}
+</code>
+</pre>
 
 Remove the `/install` directory:
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 rm -Rf install
-{% endhighlight %}
+</code>
+</pre>
 
 # Dealing with conflicts
 
@@ -98,15 +118,19 @@ If you encounter conflicts while updating, you can attempt to resolve them manua
 
 Ensure that you have no remaining conflicts before continuing with the upgrade.
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 git status
-{% endhighlight %}
+</code>
+</pre>
 
 A handy tool to visualize and reconcile conflicts is built into Git:
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 git mergetool
-{% endhighlight %}
+</code>
+</pre>
 
 # Finishing the Upgrade
 
@@ -116,22 +140,45 @@ You should set file ownership and permissions again after updating your files.
 
 ### Unix-based servers
 
-{% highlight bash %}
-# Change directory to your Cerb installation
+Change directory to your Cerb installation:
+
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 cd /path/to/cerb/
+</code>
+</pre>
 
-# Set owner:group to the webserver (this may be different in your environment)
+Set owner:group to the webserver (this may be different in your environment):
+
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 chown -R www-data:www-data .
+</code>
+</pre>
 
-# Set file permissions to read-only for owner and deny everything else
+Set file permissions to read-only for owner and deny everything else:
+
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 find . -type f -exec chmod 400 {} \;
+</code>
+</pre>
 
-# Set directory permissions to read-only for owner and deny everything else
+Set directory permissions to read-only for owner and deny everything else:
+
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 find . -type d -exec chmod 500 {} \;
+</code>
+</pre>
 
-# Recursively grant write permission to owner on the storage directory
+Recursively grant write permission to owner on the storage directory:
+
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 chmod -R u+w storage/
-{% endhighlight%}
+</code>
+</pre>
 
 <div class="cerb-box note">
 	<p>
@@ -161,11 +208,11 @@ How to tell if you need to update your Community Portal file:
 - Select any portal to edit it.
 - Click the **Installation** tab.
 - Compare the following line from the output with your deployed `index.php`:
-{% highlight php %}
-<?php
-//...
+<pre>
+<code class="language-php">
 define('SCRIPT_LAST_MODIFY', 1234567890); // last change
-{% endhighlight %}
+</code>
+</pre>
 
 - If the number is different you should replace the `index.php` file for your community portal with the new version from Cerb.
 
@@ -179,9 +226,11 @@ define('SCRIPT_LAST_MODIFY', 1234567890); // last change
 
 Delete the `install/` directory if it exists:
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 rm -Rf install/
-{% endhighlight %}
+</code>
+</pre>
 
 # References
 

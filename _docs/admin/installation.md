@@ -76,9 +76,11 @@ The following general instructions assume that you have console access to a Linu
 
 Navigate to your website's document directory on the filesystem. The directory will usually be named something like `htdocs`, `httpdocs`, `public_html`, or `www`.
 
-{% highlight bash %}
-$ cd /path/to/example.com/httpdocs
-{% endhighlight %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
+cd /path/to/example.com/httpdocs
+</code>
+</pre>
 
 When deploying Cerb on a production server you should use **Git** to manage the project files. This provides many useful capabilities:
 
@@ -92,17 +94,21 @@ You won't need to download the entire project again after your initial installat
 
 You can download Cerb into a specific directory with a single command:
 
-{% highlight bash %}
-$ git clone git://github.com/wgm/cerb.git cerb
-{% endhighlight %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
+git clone git://github.com/wgm/cerb.git cerb
+</code>
+</pre>
 
 You would access Cerb at a URL with a base path like `https://example.com/cerb`.  You can change the last argument above to whatever path you want: `support`, `helpdesk`, etc.
 
 To download Cerb into the root of your domain instead, use:
 
-{% highlight bash %}
-$ git clone git://github.com/wgm/cerb.git .
-{% endhighlight %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
+git clone git://github.com/wgm/cerb.git .
+</code>
+</pre>
 
 This results in a URL without a base path, like `https://support.example.com/`
 
@@ -119,11 +125,13 @@ You only need to enable write access to the webserver in two locations:
 
 Give ownership of all the files to the webserver daemon using `chown`, and make the two locations above writable using `chmod`:
 
-{% highlight bash %}
-$ cd cerb
-$ chown -R www-data:www-data .
-$ chmod -R u+w framework.config.php storage
-{% endhighlight %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
+cd cerb
+chown -R www-data:www-data .
+chmod -R u+w framework.config.php storage
+</code>
+</pre>
 
 You must use your own user and group for `www-data` in the example above.
 
@@ -139,13 +147,15 @@ Create a new MySQL database using the console or your favorite GUI tool.
 
 From the MySQL console, you can issue the following SQL statements:
 
-{% highlight sql %}
+<pre>
+<code class="language-sql">
 CREATE DATABASE cerb CHARACTER SET utf8;
 
 GRANT ALL PRIVILEGES ON cerb.*  
  TO cerb@localhost 
  IDENTIFIED BY 'secret_password';
-{% endhighlight %}
+</code>
+</pre>
 
 Substitute your own database name and login in place of `cerb`, and replace `secret_password` with something that's actually a secret. If you're connecting to a remote database, change `@localhost` to the network address of the webserver where you'll be connecting from.
 

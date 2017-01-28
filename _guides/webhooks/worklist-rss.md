@@ -49,7 +49,87 @@ On the **Behaviors** tab, click the **Create Behavior** button.
 
 Select the **Import** tab and paste the following behavior to import it:
 
-{% gist cerb/69afc6bc1f43fefb0fa4f75780b7853a %}
+<pre style="max-height:29.25em;">
+<code class="language-json">
+{% raw %}
+{
+  "behavior":{
+    "title":"New tickets as RSS",
+    "is_disabled":false,
+    "is_private":false,
+    "event":{
+      "key":"event.webhook.received",
+      "label":"Webhook received"
+    },
+    "variables":{
+      "var_new_tickets":{
+        "key":"var_new_tickets",
+        "label":"New Tickets",
+        "type":"ctx_cerberusweb.contexts.ticket",
+        "is_private":"1",
+        "params":[
+          
+        ]
+      }
+    },
+    "nodes":[
+      {
+        "type":"action",
+        "title":"Load a page of new tickets",
+        "params":{
+          "actions":[
+            {
+              "action":"var_new_tickets",
+              "search_mode":"quick_search",
+              "quick_search":"status:o",
+              "limit":"first",
+              "limit_count":"20",
+              "mode":"add",
+              "worklist_model":{
+                "options":{
+                  "disable_recommendations":"1"
+                },
+                "columns":[
+                  "t_group_id",
+                  "t_bucket_id",
+                  "t_owner_id",
+                  "t_updated_date"
+                ],
+                "params":{
+                },
+                "limit":10,
+                "sort_by":"t_updated_date",
+                "sort_asc":false,
+                "subtotals":"",
+                "context":"cerberusweb.contexts.ticket"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type":"action",
+        "title":"Output RSS",
+        "params":{
+          "actions":[
+            {
+              "action":"set_http_header",
+              "name":"Content-Type",
+              "value":"application\/rss+xml; charset=utf-8"
+            },
+            {
+              "action":"set_http_body",
+              "value":"&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\r\n&lt;rss version=\"2.0\" xmlns:atom=\"http:\/\/www.w3.org\/2005\/Atom\"&gt;\r\n  &lt;channel&gt;\r\n    &lt;title&gt;Recently updated tickets in Cerb&lt;\/title&gt;\r\n    &lt;description&gt;Tickets that need worker attention&lt;\/description&gt;\r\n    &lt;link&gt;https:\/\/example.com\/&lt;\/link&gt;\r\n    &lt;atom:link href=\"https:\/\/example.com\/feed.xml\" rel=\"self\" type=\"application\/rss+xml\"\/&gt;\r\n    &lt;pubDate&gt;{{''|date('r')}}&lt;\/pubDate&gt;\r\n    &lt;lastBuildDate&gt;{{''|date('r')}}&lt;\/lastBuildDate&gt;\r\n    &lt;generator&gt;Cerb&lt;\/generator&gt;\r\n    {% for ticket in var_new_tickets %}\r\n      &lt;item&gt;\r\n        &lt;title&gt;{{ ticket.subject | e }}&lt;\/title&gt;\r\n        &lt;description&gt;&lt;![CDATA[\r\n            &lt;p&gt;\r\n              &lt;b&gt;Sender:&lt;\/b&gt; {{ ticket.latest_message_sender__label | e}}\r\n            &lt;\/p&gt;\r\n            &lt;p&gt;\r\n              &lt;b&gt;Bucket:&lt;\/b&gt; {{ticket.group__label | e}}: {{ticket.bucket__label | e}}\r\n            &lt;\/p&gt;\r\n            &lt;p&gt;\r\n              {{ ticket.latest_message_content | e | nl2br}}\r\n            &lt;\/p&gt;\r\n        ]]&gt;&lt;\/description&gt;\r\n        &lt;pubDate&gt;{{ ticket.updated | date('r') }}&lt;\/pubDate&gt;\r\n        &lt;link&gt;{{ ticket.url | e }}&lt;\/link&gt;\r\n        &lt;guid isPermaLink=\"true\"&gt;{{ ticket.url | e }}&lt;\/guid&gt;\r\n      &lt;\/item&gt;\r\n    {% endfor %}\r\n  &lt;\/channel&gt;\r\n&lt;\/rss&gt;\r\n"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+{% endraw %}
+</code>
+</pre>
 
 <div class="cerb-box note">
 	<p>

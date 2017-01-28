@@ -68,7 +68,8 @@ Once the popup opens, click the **Import** button at the top.
 
 Select all of the examples below and copy them to your clipboard:
 
-<textarea rows="10" cols="60" style="width:100%;height:250px;" readonly="readonly">
+<pre style="max-height: 29.25em;">
+<code class="language-text">
 answer.maybe,"I don't have a clue"
 answer.maybe,"I don't have a clue"
 answer.maybe,"I don't know"
@@ -221,7 +222,8 @@ answer.yes,yep
 answer.yes,yeppers
 answer.yes,yes
 answer.yes,yes
-</textarea>
+</code>
+</pre>
 
 Paste the examples into the textbox on the import popup:
 

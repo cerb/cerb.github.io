@@ -25,9 +25,11 @@ For convenience and security, it's a good idea to make a *backups* user on the l
 
 You can add a new *backups* user with the following command:
 
-{% highlight bash %}
+<pre class="command-line" data-user="root" data-host="host">
+<code class="language-bash">
 adduser --system --home /backups backups
-{% endhighlight %}
+</code>
+</pre>
 
 ## Create a backups database user with a shadow password
 
@@ -35,12 +37,14 @@ In addition to the *backups* user on the system, it's a really smart idea to mak
 
 In MySQL you can add a read-only user with the following query:
 
-{% highlight sql %}
- GRANT SELECT, RELOAD, LOCK TABLES 
- ON *.* 
- TO backups@localhost 
- IDENTIFIED BY 's3cret';
-{% endhighlight %}
+<pre>
+<code class="language-sql">
+GRANT SELECT, RELOAD, LOCK TABLES 
+ON *.* 
+TO backups@localhost 
+IDENTIFIED BY 's3cret';
+</code>
+</pre>
 
 <div class="cerb-box note">
 	<p>
@@ -52,16 +56,29 @@ Next, we're going to create a shadow file[^shadow-file] to securely store your d
 
 When writing to the file, it's better to use an editor like <tt>vi</tt> rather than redirecting the output of <tt>echo</tt>, since you don't want to leave your password in your command history.  We'll use <tt>echo</tt> here for simplicity:
 
-{% highlight bash %}
-# Write your password to the shadow file
+Write your password to the shadow file:
+
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 echo -n "s3cret" > ~backups/.db.shadow;
+</code>
+</pre>
 
-# Make the backups user the owner of the shadow file
+Make the backups user the owner of the shadow file:
+
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 chown backups ~backups/.db.shadow;
+</code>
+</pre>
 
-# Make the file read-only by the owner and invisible to everyone else
+Make the file read-only by the owner and invisible to everyone else:
+
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 chmod 400 ~backups/.db.shadow;
-{% endhighlight %}
+</code>
+</pre>
 
 In the examples below we'll use this shadow file in place of literally typing the password on the command line. In
 addition to enabling automation, this also helps prevent sensitive information from being visible to other users in the
@@ -99,12 +116,14 @@ The database stores the majority of Cerb's data. The only exceptions are the lar
 
 **Usage:**
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host" data-output="2-4">
+<code class="language-bash">
 mysqldump -Q --master-data=2 --single-transaction \
    -u backups \
    -p`cat ~backups/.db.shadow` \
    cerb_database > cerb_database.sql
-{% endhighlight %}
+</code>
+</pre>
 
 ## Enabling MySQL's binary logs
 
@@ -112,11 +131,13 @@ MySQL's binary logs keep a record of all SQL queries that modify a database (e.g
 
 In the `my.cnf` file you need to make sure these options are enabled:
 
-{% highlight ini %}
+<pre>
+<code class="language-ini">
 log_bin                 = /backups/mysql-binlogs/mysql-bin.log
 expire_logs_days        = 2 
 max_binlog_size         = 2000M
-{% endhighlight %}
+</code>
+</pre>
 
 You can customize the settings for your own environment:
 
@@ -140,9 +161,11 @@ You should make frequent backups of MySQL's binary logs when they are enabled. I
 
 Change to the directory where the log files are stored:
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 cd ~backups/mysql-binlogs/
-{% endhighlight %}
+</code>
+</pre>
 
 <div class="cerb-box note">
 	<p>
@@ -152,25 +175,31 @@ cd ~backups/mysql-binlogs/
 
 Now we want to flush the binary logs so a new log file is opened:
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 mysqladmin -u backups -p`cat ~backups/.db.shadow` flush-logs
-{% endhighlight %}
+</code>
+</pre>
 
 After a `FLUSH`, we can now archive and remove the older log files.  We recommend using `lzop` for archival due to its nice balance of performance and compression, but there's nothing wrong with using other tools like `zip`, `gzip`, `bzip`, etc.
 
 The following command will archive all binary log files *except* the currently active one:
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 lzop `head -n -1 mysql-bin.index | xargs`
-{% endhighlight %}
+</code>
+</pre>
 	
 You can then copy or move these compressed log files to a new location. We recommend archiving binlog backups in Amazon S3.
 
 If you're using Amazon Web Services, the command to copy the files to S3 might look like:
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 aws s3 cp *.lzo s3://your-bucket/mysql-binlogs/`hostname -s`/
-{% endhighlight %}
+</code>
+</pre>
 
 <div class="cerb-box note">
 	<p>
@@ -180,17 +209,21 @@ aws s3 cp *.lzo s3://your-bucket/mysql-binlogs/`hostname -s`/
 	
 Once you've copied the binary logs to a different location, you may optionally delete them.  This is important if you have limited disk space, because a busy server can easily generate several gigabytes of log files per day:
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 rm *.lzo
-{% endhighlight %}
-	
+</code>
+</pre>
+
 Finally, you should instruct MySQL to purge the old log files.  This is important because you don't want to waste server resources by constantly archiving and copying an increasingly long list of files.  You only want to deal with new files since your last backup::
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host" data-output="2">
+<code class="language-bash">
 mysql -u backups -p`cat ~backups/.db.shadow` \
    -e "PURGE MASTER LOGS TO '`basename \`tail -n 1 mysql-bin.index\``'"
-{% endhighlight %}
-	
+</code>
+</pre>
+
 <div class="cerb-box note">
 	<p>
 		The above command will remove all binary log files <i>except</i> the currently active one.
@@ -225,16 +258,20 @@ Since the bulk of the `storage/` directory is comprised of files that will never
 
 **Usage: (to local filesystem)**
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 rsync -a --verbose --delete /path/to/cerb/storage ~backups/storage
-{% endhighlight %}
+</code>
+</pre>
 
 **Usage: (to SSH)**
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host" data-output="2">
+<code class="language-bash">
 rsync -aze ssh --verbose --delete /path/to/cerb/storage \
-backups@remotehost:~backups/storage
-{% endhighlight %}
+  backups@remotehost:~backups/storage
+</code>
+</pre>
 
 **Tips:**
 
@@ -288,9 +325,11 @@ We highly recommend using the Amazon Web Services command line interface (AWS CL
 
 **Usage:**
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
 aws s3 cp *.gz s3://yourbucket/backups/`hostname -s`/dbs/`date +%Y%m%d`/
-{% endhighlight %}
+</code>
+</pre>
 
 <div class="cerb-box note">
 	<p>
@@ -310,10 +349,12 @@ You can also use `aws` to send incremental filesystem backups to S3 (just like `
 
 **Usage:**
 
-{% highlight bash %}
+<pre class="command-line" data-user="user" data-host="host" data-output="2">
+<code class="language-bash">
 aws s3 sync --exclude "tmp/*" \
-   /path/to/cerb/storage/ s3://yourbucket/cerb/storage/
-{% endhighlight %}
+  /path/to/cerb/storage/ s3://yourbucket/cerb/storage/
+</code>
+</pre>
 
 ### Using Amazon's Web Console
 

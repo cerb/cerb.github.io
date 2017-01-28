@@ -52,14 +52,16 @@ You should see your POST URL:
 
 With the above URL we can use the HipChat room notification API[^hipchat-notify-api] to send messages from Cerb.  For instance, here's a new message in JSON[^json] format:
 
-{% highlight json %}
+<pre style="max-height: 29.25em;">
+<code class="language-json">
 {
-    "color": "random",
-    "message": "This is a new message.",
-    "notify": false,
-    "message_format": "text"
+  "color": "random",
+  "message": "This is a new message.",
+  "notify": false,
+  "message_format": "text"
 }
-{% endhighlight %}
+</code>
+</pre>
 
 ## Build the reusable bot behavior in Cerb
 
@@ -101,7 +103,69 @@ Click the **(+)** icon in the behaviors worklist to add a new behavior.
 
 Select **Import** at the top and paste the following behavior:
 
-{% gist cerb/b95c1f67df59049f6781eecef72c8a3d %}
+<pre style="max-height:29.25em;">
+<code class="language-json">
+{% raw %}
+{
+  "behavior":{
+    "title":"Send a notification to HipChat",
+    "is_disabled":false,
+    "is_private":false,
+    "event":{
+      "key":"event.macro.bot",
+      "label":"Custom bot behavior"
+    },
+    "variables":{
+      "var_message":{
+        "key":"var_message",
+        "label":"Message",
+        "type":"S",
+        "is_private":"0",
+        "params":{
+          "widget":"multiple"
+        }
+      },
+      "var_color":{
+        "key":"var_color",
+        "label":"Color",
+        "type":"D",
+        "is_private":"0",
+        "params":{
+          "options":"random\r\ngray\r\ngreen\r\npurple\r\nred\r\nyellow"
+        }
+      }
+    },
+    "configure": [
+      {
+        "label": "What is your HipChat POST URL?",
+        "path": "behavior.nodes[0].params.actions[0].http_url",
+        "type": "S"
+      }
+    ],    
+    "nodes":[
+      {
+        "type":"action",
+        "title":"Send notification to HipChat",
+        "params":{
+          "actions":[
+            {
+              "action":"core.va.action.http_request",
+              "http_verb":"post",
+              "http_url":"",
+              "http_headers":"Content-Type: application\/json",
+              "http_body":"{% set json = {} %}\r\n{% set json = dict_set(json, 'color', var_color) %}\r\n{% set json = dict_set(json, 'message', var_message) %}\r\n{% set json = dict_set(json, 'notify', true) %}\r\n{% set json = dict_set(json, 'message_format', 'html') %}\r\n{{json|json_encode|json_pretty}}",
+              "run_in_simulator":"1",
+              "response_placeholder":"_http_response"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+{% endraw %}
+</code>
+</pre>
 
 Cerb will prompt you for the URL that HipChat generated for you in the first step above.  Paste it into the text box and click the **Continue** button:
 
