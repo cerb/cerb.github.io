@@ -11,6 +11,9 @@ jumbotron:
     url: /guides/#classifiers
 ---
 
+# Introduction
+{:.no_toc}
+
 [Classifiers](/docs/classifiers/) take text written in natural language and learn to _classify_ it for you.  [Bots](/docs/bots/) can use classifiers to make smarter decisions.
 
 For instance, let's assume that we have a conversational bot who asks a question like _"Are you sure?"_ to confirm the user's intent before performing some action.
@@ -34,7 +37,7 @@ In this guide, we'll quickly build the above classifier so that you can use it i
 * TOC
 {:toc}
 
-## Create a new classifier
+# Create a new classifier
 
 Let's start by creating a new classifier.
 
@@ -54,7 +57,7 @@ Name the classifier _"Yes/No"_ and make _Cerb_ the owner. This will allow every 
 
 Click the **Save Changes** button.
 
-## Import training data
+# Import training data
 
 Classifiers are trained with as many human-verified, real-world examples as you can provide.  In the interest of time, we'll use the bulk import feature to add some training data.  You can add additional training examples at any time.
 
@@ -66,7 +69,7 @@ Once the popup opens, click the **Import** button at the top.
 <img src="/assets/images/guides/classifiers/yes-no/card-import.png" class="screenshot">
 </div>
 
-Select all of the examples below and copy them to your clipboard:
+Copy the following training data to your clipboard:
 
 <pre style="max-height: 29.25em;">
 <code class="language-text">
@@ -233,7 +236,27 @@ Paste the examples into the textbox on the import popup:
 
 Click the **Import** button to train the classifier.
 
-## Test predictions
+<div class="cerb-box geek-out">
+<p>
+<br>
+<br>
+<b>Why are there so many duplicate examples in the training data?</b>
+<br>
+<br>
+Classifiers are statistical. The same token (a word or phrase) may be considered as evidence for multiple classifications based on the training data.  The number of occurrences factors into the prediction. You need many training examples to help the classifier make better predictions in the face of ambiguity.
+<br>
+<br>
+The ideal model shouldn't <i>overfit</i> or <i>underfit</i> the training data.  For instance, the presence of the word "sure" shouldn't automatically be classified as <b>answer.yes</b>, because there are variations like "not sure" which mean <b>answer.maybe</b>.  You'll often find that when you have a short phrase (e.g. "i agree", "sure"), the occurrences of those tokens are spread across the possible classifications.  If you were to do a <i>one-vs-all</i> comparison, "sure" may occur far less often in <b>answer.yes</b> than in the rest of the classifications.
+<br>
+<br>
+Another thing to consider is that if there are many ways to say the same thing, like "hello", then the significance of any particular way to say it is diminished.  The phrase "hi" becomes one of 50 ways to say hello, which are then all considered to be equally likely (each with a 2% chance; 1 in 50).  That also affects the comparisons between classifications, where "hi" may be more than 2% probable somewhere else.  When saying hello, we know that "hi" is not equally probable with "howdy" or "yo"; someone is much more likely to say "hi".
+<br>
+<br>
+The primary way to represent that increased likelihood is through frequency in the training data. The classifier would learn that there are 50 ways to say hello, but that "hi" is far more common than most of the alternatives.
+</p>
+</div>
+
+# Test predictions
 
 After training with the above steps, you should now see 3 classifications and 152 training examples on the classifier's card:
 
@@ -266,7 +289,7 @@ You can also try something like:
 
 The classifier correctly predicts _no_ and _yes_ for those, respectively; even though you won't find _"want"_ mentioned anywhere in the training data.
 
-## Continue training the classifier
+# Continue training the classifier
 
 This classifier already does a pretty good job, but it doesn't cover everything.
 
@@ -304,7 +327,7 @@ You'll also see that some ambiguity is recognized by the classifier:
 
 * _"I'm not going to say no"_ is predicted to mean _maybe_.
 
-## Next steps
+# Next steps
 
 * Use the classifier in a conversational bot behavior.
 * Try making a more complex classifier for sentiment analysis or intent detection.
