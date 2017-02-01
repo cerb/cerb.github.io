@@ -1,0 +1,28 @@
+{% for topic in site.data.api_toc %}
+{% if page.id == topic %}
+<div class="section-nav">
+	<div class="left">
+		{% if forloop.first %}
+		<a href="/docs/upgrading/" class="prev">&lt; Upgrading</a>
+		{% else %}
+			{% assign previous = forloop.index0 | minus: 1 %}
+			{% assign key = site.data.api_toc[previous] %}
+			{% assign doc = site.docs | where:"id",key | first %}
+			<a href="{{ doc.url }}" class="prev">&lt; {{ doc.title }}</a>
+		{% endif %}
+	</div>
+	<div class="right align-right">
+		{% if forloop.last %}
+		<a href="/docs/history/" class="next">Release History &gt;</a>
+		{% else %}
+			{% assign next = forloop.index0 | plus: 1 %}
+			{% assign key = site.data.api_toc[next] %}
+			{% assign doc = site.docs | where:"id",key | first %}
+			<a href="{{ doc.url }}" class="next">{{ doc.title }} &gt;</a>
+		{% endif %}
+	</div>
+</div>
+<div class="clear"></div>
+{% break %}
+{% endif %}
+{% endfor %}

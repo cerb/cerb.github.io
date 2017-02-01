@@ -40,9 +40,9 @@
   - upgrading
 #  - scaling
 
-#- title: Developers
-#  docs:
-#  - api
+- title: Developers
+  docs:
+  - api
 #  - developing-plugins
   # - api
     # - getting_started
