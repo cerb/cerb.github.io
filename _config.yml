@@ -34,7 +34,6 @@ kramdown:
   parse_block_html: false
 gems:
   - jekyll-redirect-from
-  - jekyll-prism-plugin
 
 # Defaults
 defaults:
