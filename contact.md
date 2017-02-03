@@ -10,6 +10,8 @@ jumbotron:
 <script src='https://www.google.com/recaptcha/api.js'></script>
 
 <form id="frmContact" class="cerb-form" action="javascript:;" method="POST" onsubmit="return false;">
+	<input type="hidden" name="g-recaptcha-response" value="">
+	
 	<fieldset>
 		<legend>Contact by email</legend>
 	
@@ -36,7 +38,7 @@ $(function() {
 		// [TODO] Spinner
 		
 		// Captcha
-		$frm.find('textarea[name=g-recaptcha-response]').val(grecaptcha.getResponse());
+		$frm.find('input:hidden[name=g-recaptcha-response]').val(grecaptcha.getResponse());
 		
 		$.ajax({
 			method: 'POST',
