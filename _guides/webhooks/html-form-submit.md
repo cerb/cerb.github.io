@@ -11,7 +11,7 @@ jumbotron:
     url: /guides/#webhooks
 ---
 
-## Introduction
+# Introduction
 {:.no_toc}
 
 Let's assume that you have a static[^static-site] website for your company and you need to add a contact form to it.  You're using something like Jekyll[^jekyll] to generate the site because you want it to be simple to maintain, fast to serve, secure to host, and effortless to scale. You don't want to implement form processing with a dynamic[^dynamic-site] programming language on the backend[^backend] server because it will sacrifice those benefits.
@@ -29,11 +29,11 @@ You can use these fundamental concepts to respond to any kind of web requests wi
 * TOC
 {:toc}
 
-## Enable the Webhooks plugin in Cerb
+# Enable the Webhooks plugin in Cerb
 
 If the webhooks plugin isn't already enabled, install it from the [Plugin Library](/docs/plugins/#library).
 
-## Create the bot behavior in Cerb
+# Create the bot behavior in Cerb
 
 Once the Webhooks plugin is enabled, you'll be able to create new bot behaviors on the **Webhook received** event.
 
@@ -272,7 +272,7 @@ Open the card for your new behavior.  You should now see the following:
 
 Now we're ready to create the webhook that triggers this behavior.
 
-## Create the new webhook in Cerb
+# Create the new webhook in Cerb
 
 Navigate to **Setup** &raquo; **Configure** &raquo; **Webhooks**.
 
@@ -288,7 +288,7 @@ Click the **Save Changes** button.
 
 A new webhook will be added to the worklist.  You can copy the **URL** to your clipboard, since we'll be using it in the next step.
 
-## Open the example form in jsFiddle
+# Open the example form in jsFiddle
 
 Use the live demo below, or [open the example form in jsFiddle](https://jsfiddle.net/cerb/omut2vr0/10/).
 
@@ -318,7 +318,7 @@ You should see a success message:
 <img src="/assets/images/guides/webhooks/html-form-submit/form_success.png" class="screenshot">
 </div>
 
-## Restrict access to your webhook URL
+# Restrict access to your webhook URL
 
 By default, the bot will allow any website to POST to your webhook URL.  In CORS parlance, it's using <code>Access-Control-Allow-Origin: *</code>.
 
@@ -330,7 +330,7 @@ You can add a challenge like reCAPTCHA to your form o help prevent abuse.  This 
 
 You can also optionally hide your webhook URL behind a proxy, which protects the location of your Cerb installation, and gives you an additional layer of audit logging.  For instance, you can forward POST requests for <code>/contact/submit</code> on your webserver to your webhook URL.
 
-## References
+# References
 
 [^backend]: <https://en.wikipedia.org/wiki/Front_and_back_ends>
 [^cors]: <https://en.wikipedia.org/wiki/Cross-origin_resource_sharing>
