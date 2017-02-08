@@ -292,9 +292,9 @@ A new webhook will be added to the worklist.  You can copy the **URL** to your c
 
 Use the live demo below, or [open the example form in jsFiddle](https://jsfiddle.net/cerb/omut2vr0/10/).
 
-Paste your webhook URL into the first text box, where it says <code>&lt;paste your webhook URL here&gt;</code>.
+Switch to the **Result** tab below. Paste your webhook URL into the first text box, where it says <code>&lt;paste your webhook URL here&gt;</code>.
 
-<script async src="https://jsfiddle.net/cerb/omut2vr0/10/embed/result,js,html,css/"></script>
+<script async src="https://jsfiddle.net/cerb/omut2vr0/10/embed/"></script>
 
 ## Test form validation warnings
 
