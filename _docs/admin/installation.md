@@ -62,7 +62,7 @@ jumbotron:
 		- upload_max_filesize = 32M _(or higher)_
 		- post_max_size = 32M _(or higher)_
 
-- MySQL 5.5 or later
+- MySQL 5.6 or later
 
 <div class="cerb-box note">
 	<p>If you are unable to meet these requirements, consider <a href="/cloud/try/">Cerb Cloud</a>.</p>
