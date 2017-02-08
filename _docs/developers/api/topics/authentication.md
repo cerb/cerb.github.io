@@ -49,7 +49,7 @@ secret\n
     
 * **url_query_string**
 
-	The query string parameters sorted in alphabetical order.  For example, the parameters `name=Cerb`, `age=12`, and `status=active` would be sorted as `?age=12&name=Cerb&status=active`
+	The query string parameters sorted in alphabetical order.  For example, the parameters `name=Cerb`, `age=15`, and `status=active` would be sorted as `?age=15&name=Cerb&status=active`
     
 * **payload**
 	
@@ -74,6 +74,67 @@ Cerb-Auth: &lt;access_key&gt;:&lt;signature&gt;
 <div class="cerb-box warning"><p>
 	All of these security considerations are moot if your secret key isn't stored securely.  Make sure that custom scripts aren't world-readable on the server.  You should always give API credentials the least amount of privileges required to perform the desired actions.
 </p></div>
+
+## Example
+
+Let's look at an example signature for testing your own authentication implementation.
+
+For this request:
+
+<pre>
+<code class="language-http">
+POST /rest/tickets/search.json?show_meta=0 HTTP/1.1
+Date: Wed, 08 Feb 2017 19:53:35 GMT
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Host: cerb.example
+Connection: close
+Content-Length: 27
+
+expand=custom_&q=status%3Ao
+</code>
+</pre>
+
+Using these credentials:
+
+* Access key: `pjlfmn339fgh`
+* Secret key: `fw4y9fjjd5tqjlsk3u9zkjjr154xbftc`
+
+The authentication header is comprised of `<access-key>:<signature>`:
+
+<pre>
+<code class="language-http">
+Cerb-Auth: pjlfmn339fgh:0cfe2f3b06552c060c8e77f7a0c875ee
+</code>
+</pre>
+
+In PHP, the signature is generated as follows:
+
+<pre>
+<code class="language-php">
+$secret_hash = md5('fw4y9fjjd5tqjlsk3u9zkjjr154xbftc');
+
+$string_to_sign = <<< EOF
+POST
+Wed, 08 Feb 2017 19:53:35 GMT
+/rest/tickets/search.json
+show_meta=0
+expand=custom_&q=status%3Ao
+$secret_hash
+
+EOF;
+
+echo md5($string_to_sign);
+</code>
+</pre>
+
+This outputs:
+
+<pre>
+<code class="language-text">
+0cfe2f3b06552c060c8e77f7a0c875ee
+</code>
+</pre>
+
 
 # References
 
