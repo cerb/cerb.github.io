@@ -2,9 +2,11 @@
 layout: page
 title: "Cerb Cloud"
 permalink: /cloud/
+redirect_from:
+  - /cloud/try/
 jumbotron:
-  title: Cerb Cloud Subscriptions
-  tagline: Deploy a reliable, fine-tuned, fully-managed Cerb environment in the Cloud
+  title: Cerb Cloud
+  tagline: Deploy a fully-managed Cerb environment in the Cloud
 ---
 
 __Cerb Cloud__ is a subscription-based service that provides a finely tuned, ready-to-use instance of Cerb in an ideal environment. All you need is a web browser and your team can start putting Cerb's tools to work. We'll handle everything else.
@@ -23,7 +25,8 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 
 {% include tables/cloud_feature_comparison.html %}
 
-<table class="cerb-pricing-matrix">
+{% comment %}
+<table class="cerb-pricing-matrix" id="cerb-cloud-feature-matrix" style="display:block;">
 	<thead>
 		<tr>
 			<th></th>
@@ -244,24 +247,18 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 			<td>email, phone, developer chat</td>
 		</tr>
 		
-		<tr>
-			<td>Urgent escalations [<a href="#urgent-escalations">?</a>]:</td>
-			<td><span class="no"></span></td>
-			<td><span class="yes"></span></td>
-		</tr>
 	</tbody>
 	
 </table>
+{% endcomment %}
+
+<br/>
+
+{% include forms/cloud_signup.html %}
 
 <br/>
 
 # Frequently asked questions:
-
-<br/>
-
-## Do you offer a free trial of Cerb Cloud?
-
-Yes! You can <a href="/cloud/try#pro">sign up here</a> for a 30-day free trial. There's no obligation and we don't need any payment information on file.
 
 <div id="seats"></div>
 
@@ -277,19 +274,45 @@ You aren't paying per worker account, so there isn't a penalty for inviting ever
 
 ## Can I use my own URL, rather than *.cerb.me?
 
-Yes, with a _Pro_ or _Enterprise_ subscription.
-
-We'll always use an `*.cerb.me` domain to identify your Cerb Cloud instance internally, but you can use a DNS _CNAME_ record to access your site with a custom domain like `support.example.com`. You can also use a custom domain for each community portal you deploy.
+Yes! We'll always use an `*.cerb.me` domain to identify your Cerb Cloud instance internally, but you can use a DNS _CNAME_ record to access your site with a custom domain like `support.example.com`. You can also use a custom domain for each community portal you deploy.
 
 Keep in mind that you'll need to provide an SSL certificate for each custom domain you use. We provide wildcard SSL certificates for `*.cerb.me` and the generic portal domains like `*.official.support` and `*.user.community`.
+
+## How many workers can I invite to a Cerb Cloud trial?
+
+All Cerb Cloud trials start in the _Pro_ tier. This provides unlimited worker accounts with __three__ seats (concurrent workers). [Contact us](/contact/) if you need to test with more seats and we can raise the limit.
+
+## Do you require a credit card to start a free trial?
+
+No! All we require is a valid email address to contact you. You will never receive an invoice until you request one.
+
+## What if I plan to eventually host Cerb myself?
+
+We still recommend that you start with a Cerb Cloud trial, so your team can immediately get to work learning about Cerb rather than getting bogged down with installation requirements and troubleshooting.
+
+This also allows us to provide the highest level of assistance during your evaluation. We provide temporary email accounts so you can easily test incoming and outgoing messages, we've already installed the prerequisites for every plugin, etc.
+
+All of your Cerb Cloud configuration and data can be exported to a standalone instance of Cerb at any time. Once you're confident that Cerb is a good fit for your team, we're happy to help you with that migration.
+
+If you still need to evaluate Cerb in your own environment, you can simply [grab a copy of the project from GitHub](https://github.com/wgm/cerb) and follow the [installation instructions](/docs/installation).
+
+## Will a Cerb Cloud trial require me to change how I currently handle email?
+
+Nope! A Cerb evaluation won't impact the way you're currently handling incoming or outgoing email (unless you want it to).
+
+With Cerb Cloud, we provide you with a subdomain worth of temporary email addresses, like __*@example.cerb.email__. You can send and receive email from any of these addresses (e.g. billing@, support@, sales@), which makes it much practice routing work to the appropriate groups/buckets in Cerb.
+
+We also configure SPF, DKIM, and DMARC records for these temporary email addresses so you can [test our mail deliverability](http://cerb.io/docs/quick-start/#send-a-message-to-test-mail-deliverability).
+
+If you switch to a Cerb Cloud subscription, you can even use these email addresses in production, but you'll probably want to use your own domains.  We'll help you configure the SPF, DKIM, and DMARC records on your domains to optimize your mail deliverability from Cerb as well.
 
 <div id="custom-plugins"></div>
 
 ## Can I install custom plugins in Cerb Cloud?
 
-Every Cerb Cloud instance can use any of the plugins in the official Plugin Library. These plugins have been developed or audited by our development team and they are guaranteed to be safe.
+Every Cerb Cloud instance can use any of the [plugins](/docs/plugins/) in the official [Plugin Library](/docs/plugins/#library). These plugins have been developed or audited by our development team and they are guaranteed to be safe.
 
-_Enterprise_ subscriptions have the ability to install custom third-party plugins, but these must be reviewed and approved by our development team prior to use. You'll be asked to create a [GitHub](https://github.com/) repository for the plugin if you haven't already. If the repository is private, then you will need to grant access to the `cerb` account.
+_Enterprise_ subscriptions have the ability to install custom third-party plugins. These plugins must be reviewed and approved by our development team prior to use. You'll be asked to create a [GitHub](https://github.com/) repository for the plugin if you haven't already. If the repository is private, then you will need to grant access to the `cerb` account.
 
 <div id="annual-discount"></div>
 
@@ -299,25 +322,25 @@ Yes! We offer a 10% discount for subscriptions that are billed annually rather t
 
 This reflects the fact that we can better forecast our costs and lock in longer term discounted rates (longer leases, reservations, bulk purchasing). We pass along the cost reduction.
 
-Contact us to switch your subscription to annual billing and we'll add the discount automatically.
+[Contact us](/contact/) to switch your subscription to annual billing and we'll add the discount automatically.
 
 <div id="academic"></div>
 
 ## Do you provide academic discounts?
 
-Yes! We offer a 20% discount to qualified academic institutions. Please contact us for details.
+Yes! We offer a 20% discount to qualified academic institutions. Please [contact us](/contact/) for details.
 
 <div id="nonprofit"></div>
 
 ## Do you offer a discount to charities and non-profits?
 
-Yes! Please contact us for details.
+Yes! Please [contact us](/contact/) for details.
 
 <div id="volume-discount"></div>
 
 ## Do you provide a volume discount for Cerb Cloud subscriptions?
 
-Yes! Volume discounts are available for _Pro_ and _Enterprise_ subscriptions with __more than 25 seats__.
+Yes! Volume discounts are available for subscriptions with __more than 25 seats__.
 
 <div class="grid">
 <div class="unit half" align="center">
@@ -338,6 +361,8 @@ No, we provide a cloud-based SMTP service for outgoing mail with SPF and DKIM su
 
 You can easily configure Cerb to use remote mail services if desired.
 
+{% comment %}
+
 <div id="spf"></div>
 
 ## What does SPF mean with respect to outgoing mail?
@@ -355,6 +380,8 @@ DomainKeys Identified Mail[^dkim] (**DKIM**) attempts to detect spoofing and tam
 Your subscription provides a certain number of DKIM domain signatures.  Additional sender domains are $1/month each.
 
 This only applies when you use Cerb Cloud SMTP for outgoing mail.  If you're using another email provider, their own rate structure will apply.
+
+{% endcomment %}
 
 <div id="mailbox-checks"></div>
 
@@ -388,21 +415,12 @@ If you choose to use remote mailboxes instead, new mail will generally be downlo
 
 <div id="portals"></div>
 
+{% comment %}
 ## What is the cost of additional community portals?
 
 Your subscription provides a certain number of community portals. These include SSL certificates.
 
 Additional community portals are $10/month each.
-
-<div id="urgent-escalations"></div>
-
-## What are urgent escalations?
-
-An __urgent escalation__ will move one incident of your choice to the front of our priority support queue and summon a highly experienced member of our development team at any time (early hours, overnight, weekends, holidays).
-
-You will receive a response within one hour. Urgent escalations include one hour of hands-on assistance at no extra cost. If you approve any additional required time, the standard hourly rate for technical services will apply.
-
-Urgent escalations are not required for Cerb Cloud infrastructure issues, as that is covered by standard support for all subscriptions. Instead, they may be used when workflow is severely impacted by other issues like accidental deletion of data, configuration issues, problems with external mail providers, etc. For standalone licenses, an urgent escalation may be used to call in help for issues like server failures, database corruption, scaling, etc.
 
 <div id="technical-services"></div>
 
@@ -417,6 +435,8 @@ Technical services include:
 
 Our standard rate for technical services is **$100/hour**, billed in 15 minute increments.
 
+{% endcomment %}
+
 <div id="enterprise-seats"></div>
 
 ## Why does the Enterprise subscription require at least 10 seats?
@@ -429,6 +449,7 @@ Similarly, the additional _Enterprise_ support commitments require highly experi
 
 Consider these two extremes: 1 client with 50 seats, and 50 clients with 1 seat each. Both clients result in roughly the same amount of revenue for 50 seats (the single client qualifies for a volume discount), but the 50 clients variation potentially requires 50 times the amount of resources like storage and support (negatively affecting the quality and responsiveness of our services).  The enterprise option is predicated on having our full attention at all times.
 
+{% comment %}
 # References
 
 [^mysql-fulltext]: <http://dev.mysql.com/doc/refman/5.7/en/fulltext-search.html>
@@ -441,3 +462,11 @@ Consider these two extremes: 1 client with 50 seats, and 50 clients with 1 seat 
 
 [^spoofing]: <https://en.wikipedia.org/wiki/Email_spoofing>
 
+{% endcomment %}
+
+<div class="section-nav">
+	<div class="right align-right">
+		<a href="/try/" class="next">Try Cerb for free &gt;</a>
+	</div>
+</div>
+<div class="clear"></div>

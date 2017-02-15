@@ -10,17 +10,14 @@
 	<li class="{% if page.url == '/clients/' %}current{% endif %}">
 		<a href="/clients/">Clients</a>
 	</li>
+	<li class="{% if page.url == '/try/' %}current{% endif %}">
+		<a href="/try/">Demo</a>
+	</li>
 	<li class="{% if page.url contains '/docs/' %}current{% endif %}">
 		<a href="/docs/home/">Docs</a>
 	</li>
 	<li class="{% if page.url contains '/guides/' %}current{% endif %}">
 		<a href="/guides/">Guides</a>
-	</li>
-	<li class="{% if page.url == '/pricing/' %}current{% endif %}">
-		<a href="/pricing/">Pricing</a>
-	</li>
-	<li class="{% if page.url == '/cloud/try/' %}current{% endif %}">
-		<a href="/cloud/try/">Try</a>
 	</li>
 	<li class="{% if page.url contains '/blog/' %}current{% endif %}">
 		<a href="/blog/">Blog</a>

@@ -1,13 +1,15 @@
 ---
 layout: page
-title: "Cerb License"
-permalink: /pricing/license/
+title: "Download Cerb"
+permalink: /download/
+redirect_from:
+  - /pricing/license/
 jumbotron:
-  title: Standalone Cerb Licenses
+  title: Download Cerb
   tagline: Deploy Cerb on your own hardware
 ---
 
-A __standalone Cerb license__ runs on your own hardware. The software requires a web server with PHP 5.5+ and MySQL 5.6+. You are responsible for installation, upgrades, backups, monitoring, tuning, scaling, security, troubleshooting, etc.
+A standalone __Cerb license__ runs on your own hardware. The software requires a web server with PHP 5.5+ and MySQL 5.6+. You are responsible for installation, upgrades, backups, monitoring, tuning, scaling, security, troubleshooting, etc.
 
 * Community licenses permit you to use Cerb with some limitations **at no cost** and **without a time limit**.  For a small team, this may be all that is ever needed. For larger teams, this provides a risk-free evaluation to determine if Cerb is a good fit.
 
@@ -26,8 +28,6 @@ A __standalone Cerb license__ runs on your own hardware. The software requires a
 <br/>
 
 # Frequently asked questions:
-
-<br/>
 
 ## How do I install Cerb on my own hardware?
 
