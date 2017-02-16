@@ -15,7 +15,7 @@ jumbotron:
 
 # List Bots
 
-**GET /va/list.json**
+**GET /bots/list.json**
 
 Retrieve the bots accessible by the current worker.  This includes bots owned by the worker, their groups or roles, or the application.
 
@@ -41,13 +41,13 @@ Includes additional information in the response.  The following tokens may be pr
 
 <pre>
 <code class="language-php">
-$out = $cerb->get($base_url . 'va/list.json?expand=owner,behaviors');
+$out = $cerb->get($base_url . 'bots/list.json?expand=owner,behaviors');
 </code>
 </pre>
 
 # Retrieve Bot
 
-**GET /va/`<id>`.json**
+**GET /bots/`<id>`.json**
 
 Retrieve a bot record by ID.
 
@@ -73,13 +73,13 @@ Includes additional information in the response.  The following tokens may be pr
 
 <pre>
 <code class="language-php">
-$out = $cerb->get($base_url . 'va/123.json?expand=owner,behaviors');
+$out = $cerb->get($base_url . 'bots/123.json?expand=owner,behaviors');
 </code>
 </pre>
 
 # Run Bot Behavior
 
-**POST /va/behavior/`<id>`/run.json**
+**POST /bots/behavior/`<id>`/run.json**
 
 Execute the specified bot _Custom API Request_ behavior.  The response will provide the values from the behavior's dictionary at conclusion.  A common strategy is to use the _Set custom placeholder_ action in the bot behavior in order to send information back to the API caller.
 
@@ -103,7 +103,7 @@ $postfields = array(
   	array('var_worker',1),
   	array('var_tickets',json_encode(array(1024,1025,1026))),
 );
-$out = $cerb->post($base_url . 'va/behavior/123/run.json', $postfields);
+$out = $cerb->post($base_url . 'bots/behavior/123/run.json', $postfields);
 </code>
 </pre>
 
