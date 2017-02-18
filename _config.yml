@@ -48,7 +48,7 @@ defaults:
   -
     scope:
       path: ""
-      type: "integrations"
+      type: "guides"
     values:
       layout: "integration"
   -
@@ -59,4 +59,4 @@ defaults:
       layout: "posts"
       jumbotron:
         title: Blog
-        tagline: Stay up to date on the latest project news
+        tagline: Release announcements, helpful tips, and community discussion
