@@ -9,21 +9,23 @@ jumbotron:
   tagline: Deploy Cerb on your own hardware
 ---
 
-A standalone __Cerb license__ runs on your own hardware. The software requires a web server with PHP 5.5+ and MySQL 5.6+. You are responsible for installation, upgrades, backups, monitoring, tuning, scaling, security, troubleshooting, etc.
+A __standalone Cerb license__ runs on your own hardware. The software requires a web server with PHP 5.5+ and MySQL 5.6+. You are responsible for installation, upgrades, backups, monitoring, tuning, scaling, security, troubleshooting, and all hardware resources.
 
-* Community licenses permit you to use Cerb with some limitations **at no cost** and **without a time limit**.  For a small team, this may be all that is ever needed. For larger teams, this provides a risk-free evaluation to determine if Cerb is a good fit.
+* **Starter** licenses permit you to use Cerb with some limitations **at no cost** and **without a time limit**.  For a small team, this may be all that is ever needed. For larger teams, this provides a risk-free evaluation to determine if Cerb is a good fit.
 
 * Pro licenses include **one year** of priority support and ongoing software updates. Your license to use the software **never expires** for versions released during your software updates coverage, and there is no cost to continue using those versions indefinitely.
 
-* The cost of a license is based on the number of permitted **seats** -- the maximum number of workers who can log in at the same time. An **unlimited** number of worker accounts can share the available seats. The most idle worker is logged out when a new worker attempts to log in. There is no limit on the number of clients your workers can interact with.
+* The cost of a license is based on the number of permitted **seats** -- the maximum number of workers who can log in at the same time. An **unlimited** number of worker accounts can share the available seats. The most idle worker is logged out when a new worker attempts to log in. There are no other limitations.
 
-* A standalone license is ideal for sensitive environments (HIPAA, Safe Harbor, Sarbanes-Oxley, etc). Otherwise, a fully managed <a href="/cloud">Cerb Cloud</a> instance may be a better option.
+* Deploying on your own hardware is ideal for highly regulated environments (HIPAA, Safe Harbor, Sarbanes-Oxley, etc). Otherwise, a fully managed <a href="/cloud">Cerb Cloud</a> instance may be the better option.
 
 * Read the <a href="/docs/installation">installation instructions</a> to get started.
 
+{% include tables/standalone_feature_comparison.html %}
+
 <br/>
 
-{% include tables/standalone_feature_comparison.html %}
+{% include forms/license_signup.html %}
 
 <br/>
 
@@ -43,15 +45,13 @@ For example, a team of 30 workers who are evenly split into three, non-overlappi
 
 You aren't paying per worker account, so there isn't a penalty for inviting everyone to participate: full-time staff, part-time contributors, busy executives, interns, temps, contractors, partners, and volunteers.
 
-<div id="community-license"></div>
+<div id="starter-license"></div>
 
-## What is a community license?
+## What is a Starter license?
 
-Community licenses are the best way to evaluate if Cerb meets your needs.
+A starter license provides 3 seats at no cost. The license is valid for the latest version of Cerb at the time it is created. The right to run that version of the software will never expire.
 
-A community license provides 3 seats at no cost. The license is valid for the latest version of Cerb at the time it is created. The right to run that version of the software will never expire.
-
-Community licenses don't provide access to priority support or ongoing software updates.  They are eligible for a single "get current" upgrade once per 12 month period.  Aside from that, they have no feature-related limitations.
+Starter licenses don't provide access to priority support or ongoing software updates.  They are eligible for a single "get current" upgrade once per 12 month period.  Aside from that, they have no feature-related limitations.
 
 Registered charities and qualifying open source projects may be eligible for a higher seat limit and ongoing software updates at no cost.
 
