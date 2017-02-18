@@ -18,7 +18,7 @@ jumbotron:
 -  We're not interested in holding back useful improvements just to have a more marketable announcement.
 -  We aim to publish updates every few weeks based on community feedback.
 -  We don't want to make hostages out of bug fixes and usability tweaks.  We won't charge you for them.
--  All of our development and [planning tools](http://www.wgmdev.com/jira/browse/CHD) are open to the community.
+-  All of our development and [planning tools](https://github.com/jstanden/cerb/issues) are open to the community.
 
 ## We believe in platforms and toolkits
 
