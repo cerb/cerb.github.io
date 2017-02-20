@@ -3,8 +3,10 @@ title: "Cerb"
 company: "Webgroup Media, LLC."
 copyright: 2002-2017
 email: support@webgroupmedia.com
+#description: >
+#  Cerb enhances the productivity of online teams with web-based collaboration and automation tools.
 description: >
-  Cerb enhances the productivity of online teams with web-based collaboration and automation tools.
+  Cerb boosts the productivity of online teams with bot-powered email and workflow automation.
 url: "https://cerb.ai"
 baseurl: ""
 logo: assets/cerb_logo.png
