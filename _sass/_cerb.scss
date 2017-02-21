@@ -575,19 +575,20 @@ form.cerb-form {
 
 	fieldset{
 		border: none;
-	}
+		
+		legend {
+			font-size: 1.8em;
+			font-weight: bold;
+			color: rgb(110,160,50);
+		}
 	
-	legend {
-		font-size: 1.8em;
-		font-weight: bold;
-		color: rgb(110,160,50);
-	}
-	
-	label {
-		display: block;
-		font-weight: bold;
-		margin-bottom: 5px;
-		//color: rgb(110,160,50);
+		>	label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 5px;
+			//color: rgb(110,160,50);
+		}
+
 	}
 	
 	input[type="text"],

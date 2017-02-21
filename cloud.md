@@ -9,7 +9,7 @@ jumbotron:
   tagline: Deploy a fully-managed Cerb environment in the Cloud
 ---
 
-{% include forms/cloud_signup.html %}
+{% include forms/signup.html deploy="cloud" %}
 
 __Cerb Cloud__ is a subscription-based service that provides a finely tuned, ready-to-use instance of Cerb in an ideal environment. All you need is a web browser and your team can start putting Cerb's tools to work. We'll handle everything else.
 
@@ -235,9 +235,3 @@ Consider these two extremes: 1 client with 50 seats, and 50 clients with 1 seat 
 
 {% endcomment %}
 
-<div class="section-nav">
-	<div class="right align-right">
-		<a href="/try/" class="next">Try Cerb for free &gt;</a>
-	</div>
-</div>
-<div class="clear"></div>

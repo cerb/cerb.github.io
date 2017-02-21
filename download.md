@@ -9,19 +9,14 @@ jumbotron:
   tagline: Deploy Cerb on your own hardware
 ---
 
-{% include forms/license_signup.html %}
+{% include forms/signup.html deploy="download" %}
 
-A __standalone Cerb license__ runs on your own hardware. The software requires a web server with PHP 5.5+ and MySQL 5.6+. You are responsible for installation, upgrades, backups, monitoring, tuning, scaling, security, troubleshooting, and all hardware resources.
-
-* **Starter** licenses permit you to use Cerb with some limitations **at no cost** and **without a time limit**.  For a small team, this may be all that is ever needed. For larger teams, this provides a risk-free evaluation to determine if Cerb is a good fit.
-
-* Pro licenses include **one year** of priority support and ongoing software updates. Your license to use the software **never expires** for versions released during your software updates coverage, and there is no cost to continue using those versions indefinitely.
-
-* The cost of a license is based on the number of permitted **seats** -- the maximum number of workers who can log in at the same time. An **unlimited** number of worker accounts can share the available seats. The most idle worker is logged out when a new worker attempts to log in. There are no other limitations.
-
-* Deploying on your own hardware is ideal for highly regulated environments (HIPAA, Safe Harbor, Sarbanes-Oxley, etc). Otherwise, a fully managed <a href="/cloud">Cerb Cloud</a> instance may be the better option.
-
-* Read the <a href="/docs/installation">installation instructions</a> to get started.
+* Installed on your own hardware (web, database, mail, storage, cache)
+* You're responsible for installation, upgrades, scaling, monitoring, security, and backups
+* Requires PHP 5.5+ and MySQL 5.6+
+* Ideal for regulatory compliance (HIPAA, Safe Harbor, Sarbanes-Oxley)
+* Your first **3 seats are free** with full functionality and **no time limit**
+* Migrate to [Cerb Cloud](/cloud/) at any time
 
 {% include tables/standalone_feature_comparison.html %}
 

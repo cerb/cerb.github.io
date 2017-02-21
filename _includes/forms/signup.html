@@ -1,0 +1,103 @@
+{% if include.deploy != "cloud" and include.deploy != "download" %}{% assign deploy = "cloud" %}{% else %}{% assign deploy = include.deploy %}{% endif %}
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<form id="frmCerbSignup" class="cerb-form" action="javascript:;" method="POST" onsubmit="return false;" style="margin-bottom:1.5em;">
+	<input type="hidden" name="g-recaptcha-response" value="">
+	
+	<fieldset>
+		<legend style="color:black;">Get started with Cerb at no cost</legend>
+		
+		<label for="deploy">Deploy:</label>
+		<div style="margin: 0px 0px 10px 10px;">
+			<label><input type="radio" name="deploy" value="cloud" {% if "cloud" == deploy %}checked="checked"{% endif %}> Cloud</label>
+			<label><input type="radio" name="deploy" value="license" {% if "download" == deploy %}checked="checked"{% endif %}> Download</label>
+		</div>
+	
+		<label for="org">Organization:</label>
+		<input type="text" name="org" value="" placeholder="Example, Inc." autocomplete="off" spellcheck="false">
+	
+		<label for="email">Email Address:</label>
+		<input type="text" name="email" value="" placeholder="you@example.com" autocomplete="off" spellcheck="false">
+	
+		<label for="subdomain" {% if deploy != 'cloud' %}style="display:none;"{% endif %}>Preferred URL:</label>
+		<div {% if deploy != 'cloud' %}style="display:none;"{% endif %}>
+			<span class="dim">https://</span><input type="text" class="form-inline" name="subdomain" placeholder="example" maxlength="16" size="20" autocomplete="off" spellcheck="false"><span class="dim">.cerb.me</span>
+		</div>
+		
+		<div class="g-recaptcha" data-sitekey="6LeOPh0TAAAAANiEBFZLURt43IkCTUMOPUSMoxL9"></div>
+		
+		<div style="margin-top:20px;">
+			<input type="button" class="submit" value="Sign up">
+			<div class="status"></div>
+			
+			<div class="terms">
+				<div class="terms-cloud" {% if "cloud" != deploy %}style="display:none;"{% endif %}>
+					<small><b>Terms:</b> The free Cerb Cloud trial is provided for at least 30 days.  We'll keep it around for as long as you're using it. No payment details are required to get started. You won't receive an invoice from us unless you request it.</small>
+				</div>
+				<div class="terms-download" {% if "download" != deploy %}style="display:none;"{% endif %}>
+					<small><b>Terms:</b> You can use your free 3-seat Cerb license forever at no cost. You can decide to upgrade to a Pro license at any time. You're entitled to one free renewal of this license every 12 months, at which point you can upgrade to the latest version.</small>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</form>
+
+<script type="text/javascript">
+$(function() {
+	var $frm = $('#frmCerbSignup');
+	var $subdomain = $frm.find('label[for=subdomain]');
+	var $terms = $frm.find('div.terms');
+	var $submit = $frm.find('input.submit');
+	
+	$frm.find('input[name=deploy]').change(function(e) {
+		if('license' == $(this).val()) {
+			$subdomain.hide().next('div').hide();
+			$terms.find('.terms-cloud').hide();
+			$terms.find('.terms-download').fadeIn();
+		} else {
+			$subdomain.fadeIn().next('div').fadeIn();
+			$terms.find('.terms-download').hide();
+			$terms.find('.terms-cloud').fadeIn();
+		}
+	});
+	
+	$submit.click(function() {
+		$submit.val('Sending...').prop('disable', true);
+		
+		// Captcha
+		$frm.find('input:hidden[name=g-recaptcha-response]').val(grecaptcha.getResponse());
+		
+		$.ajax({
+			method: 'POST',
+			url: 'https://cerb.official.support/forms/cloud/signup',
+			crossDomain: true,
+			dataType: 'json',
+			data: $frm.serialize(),
+			success: function(res) {
+				if(res && res.error) {
+					grecaptcha.reset();
+					
+					$submit.val('Sign up').prop('disable', false);
+					var $warn = $('<div class="warning"/>').text(res.error);
+					$frm.find('div.status').html($warn);
+					return;
+				}
+				
+				if(res && res.success) {
+					var $status = $('<div class="status"/>');
+					var $success = $('<div class="success"/>').text(res.success).appendTo($status);
+					$frm.html('').append($status);
+				}
+			},
+			error: function(e) {
+				grecaptcha.reset();
+				
+				$submit.val('Sign up').prop('disable', false);
+				var $warn = $('<div class="error"/>').text("An unexpected error occurred. Please try again later.");
+				$frm.find('div.status').html($warn);
+				return;
+			}
+		})
+	});
+});
+</script>
