@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Try Cerb
+excerpt: Cerb brings order to a busy team inbox with bot powered email management and workflow automation. Start a free evaluation with no time limit.
 permalink: /try/
 redirect_from:
   - /buy/
