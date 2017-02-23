@@ -7,7 +7,6 @@
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else %}{{ site.description }}{% endif %}">
 
 	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-	<link rel="stylesheet" href="{{ "/assets/css/prism.css" | prepend: site.baseurl }}">
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 	
@@ -32,5 +31,5 @@
 	<meta name="msapplication-wide310x150logo" content="/assets/favicon/mstile-310x150.png" />
 	<meta name="msapplication-square310x310logo" content="/assets/favicon/mstile-310x310.png" />
 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 </head>

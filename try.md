@@ -9,7 +9,7 @@ redirect_from:
   - /pricing/
   - /trial/
 jumbotron: 
-  title: Try Cerb for free with no time limit
+  title: Try Cerb
   tagline: In the cloud or on your own hardware
 ---
 
