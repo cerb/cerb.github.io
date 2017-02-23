@@ -6,6 +6,9 @@ jumbotron:
   #tagline: ...
 ---
 
+* TOC
+{:toc}
+
 <div class="cerb-box note">
 	<p>If you're using <b>Cerb Cloud</b> then we handle backups for you already.</p>
 </div>

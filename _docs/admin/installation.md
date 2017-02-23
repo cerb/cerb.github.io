@@ -6,6 +6,9 @@ jumbotron:
   tagline: Deploy Cerb on your own server
 ---
 
+* TOC
+{:toc}
+
 <div class="cerb-box note">
 	<p>If you're using <b>Cerb Cloud</b> you can <a href="/docs/quick-start">jump to Quick Start</a>. We've already handled the installation for you.</p>
 </div>

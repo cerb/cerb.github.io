@@ -6,6 +6,9 @@ jumbotron:
   tagline: Run through this checklist and you're ready for business!
 ---
 
+* TOC
+{:toc}
+
 <div class="cerb-box note">
 <p>
 	This guide assumes that you have a fresh instance of Cerb and you're an administrator who is performing the initial configuration.  If Cerb is already configured and you want to learn how to use it, you can <a href="/docs/welcome">jump to the worker guide</a>.
