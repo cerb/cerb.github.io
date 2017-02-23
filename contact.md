@@ -7,10 +7,8 @@ jumbotron:
   #tagline: ...
 ---
 
-<script src='https://www.google.com/recaptcha/api.js'></script>
-
 <form id="frmContact" class="cerb-form" action="javascript:;" method="POST" onsubmit="return false;">
-	<input type="hidden" name="g-recaptcha-response" value="">
+	{% comment %}<input type="hidden" name="g-recaptcha-response" value="">{% endcomment %}
 	
 	<fieldset>
 		<legend>Contact by email</legend>
@@ -21,7 +19,7 @@ jumbotron:
 		<label for="message">How can we help?</label>
 		<textarea name="message" placeholder="" autocomplete="off" rows="10"></textarea>
 		
-		<div class="g-recaptcha" data-sitekey="6LeOPh0TAAAAANiEBFZLURt43IkCTUMOPUSMoxL9"></div>
+		{% comment %}<div class="g-recaptcha" data-sitekey="6LeOPh0TAAAAANiEBFZLURt43IkCTUMOPUSMoxL9"></div>{% endcomment %}
 		
 		<div style="margin-top:20px;">
 			<input type="button" class="submit" value="Send message">
@@ -38,7 +36,7 @@ $(function() {
 		// [TODO] Spinner
 		
 		// Captcha
-		$frm.find('input:hidden[name=g-recaptcha-response]').val(grecaptcha.getResponse());
+		//$frm.find('input:hidden[name=g-recaptcha-response]').val(grecaptcha.getResponse());
 		
 		$.ajax({
 			method: 'POST',
@@ -48,7 +46,7 @@ $(function() {
 			data: $frm.serialize(),
 			success: function(res) {
 				if(res && res.error) {
-					grecaptcha.reset();
+					//grecaptcha.reset();
 					
 					var $warn = $('<div class="warning"/>').text(res.error);
 					$frm.find('div.status').html($warn);
@@ -56,13 +54,13 @@ $(function() {
 				}
 				
 				if(res && res.success) {
-					var $success = $('<div class="success"/>').text(res.success);
-					$frm.find('div.status').html($success);
-					$frm.find('input.submit').hide();
+					var $status = $('<div class="status"/>');
+					var $success = $('<div class="success"/>').text(res.success).appendTo($status);
+					$frm.css('border','0').html('').append($status);
 				}
 			},
 			error: function(e) {
-				grecaptcha.reset();
+				//grecaptcha.reset();
 				
 				var $warn = $('<div class="error"/>').text("An unexpected error occurred. Please try again later.");
 				$frm.find('div.status').html($warn);
