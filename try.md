@@ -13,9 +13,8 @@ jumbotron:
   tagline: In the cloud or on your own hardware
 ---
 
-<table class="cerb-feature-comparison">
-	<tr>
-		<td valign="top" align="center">
+<div class="grid">
+	<div class="unit half">
 			<div style="display:inline-block;text-align:left;">
 				<h1><a href="/cloud/">Cloud</a></h1>
 				<ul>
@@ -30,8 +29,9 @@ jumbotron:
 					<li><a href="/cloud/">Learn more &raquo;</a></li>
 				</ul>
 			</div>
-		</td>
-		<td valign="top" align="center">
+	</div>
+	
+	<div class="unit half">
 			<div style="display:inline-block;text-align:left;">
 				<h1><a href="/download/">Download</a></h1>
 				<ul>
@@ -45,8 +45,7 @@ jumbotron:
 					<li><a href="/download/">Learn more &raquo;</a></li>
 				</ul>
 			</div>
-		</td>
-	</tr>
-</table>
+	</div>
+</div>
 
 {% include forms/signup.html deploy="cloud" %}
