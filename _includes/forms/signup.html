@@ -61,8 +61,8 @@ $(function() {
 	});
 	
 	$submit.click(function() {
-		$submit.val('Sending...').prop('disable', true);
-		
+		$submit.val('Sending...').attr('disabled', 'true');
+
 		// Captcha
 		//$frm.find('input:hidden[name=g-recaptcha-response]').val(grecaptcha.getResponse());
 		
@@ -73,25 +73,28 @@ $(function() {
 			dataType: 'json',
 			data: $frm.serialize(),
 			success: function(res) {
+				$submit.val('Sign up').removeAttr('disabled');
+				
 				if(res && res.error) {
 					//grecaptcha.reset();
-					
-					$submit.val('Sign up').prop('disable', false);
 					var $warn = $('<div class="warning"/>').text(res.error);
 					$frm.find('div.status').html($warn);
 					return;
 				}
 				
 				if(res && res.success) {
-					var $status = $('<div class="status"/>');
-					var $success = $('<div class="success"/>').text(res.success).appendTo($status);
-					$frm.css('border','0').html('').append($status);
+					{% comment %}
+					//var $status = $('<div class="status"/>');
+					//var $success = $('<div class="success"/>').text(res.success).appendTo($status);
+					//$frm.css('border','0').html('').append($status);
+					{% endcomment %}
+					window.document.location.href = '/signup/thanks/';
 				}
 			},
 			error: function(e) {
+				$submit.val('Sign up').removeAttr('disabled');
 				//grecaptcha.reset();
 				
-				$submit.val('Sign up').prop('disable', false);
 				var $warn = $('<div class="error"/>').text("An unexpected error occurred. Please try again later.");
 				$frm.find('div.status').html($warn);
 				return;
