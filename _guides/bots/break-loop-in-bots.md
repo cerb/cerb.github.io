@@ -1,5 +1,6 @@
 ---
 title: "Break out of a loop in a bot behavior"
+excerpt: When certain conditions are met, you may need to immediately stop looping through a collection in a bot behavior. Here's how to accomplish that.
 layout: integration
 topic: Bots
 jumbotron:
@@ -154,10 +155,6 @@ Switch to **Import** mode and paste the following behavior:
 
 Click the **Save Changes** button.
 
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/common/worklist-add.png" class="screenshot">
-</div>
-
 # Understanding how the behavior works
 
 Open the new behavior's card from the worklist. You should see:
@@ -189,6 +186,10 @@ In the following decision, the **Yes** outcome just checks if the value of `roll
 The **Stop looping** action is where we use an undocumented trick to stop the loop early.  Each loop variable also creates a second variable with the suffix `__stack` that contains the remaining items to loop through.  Each iteration through the loop pops off the first element and the loop continues until the stack is empty.
 
 We called our loop variable `attempts`, so our stack is at `attempts__stack`.  Using a **Set custom placeholder**, we can change the contents of the stack in the middle of a loop.  In this case, we're emptying the stack by replacing it with a value of `[]` (an empty JSON array).
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/bots/break-loops/behavior-action-break.png" class="screenshot">
+</div>
 
 # Testing the behavior
 

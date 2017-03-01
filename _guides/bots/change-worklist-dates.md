@@ -1,5 +1,6 @@
 ---
 title: "Change how dates are displayed in worklists using bots"
+excerpt: "This guide demonstrates how to modify the style and content of worklists using bot behaviors."
 layout: integration
 topic: Bots
 jumbotron:

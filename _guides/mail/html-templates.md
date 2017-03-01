@@ -1,10 +1,10 @@
 ---
-title: "Sending email on company letterhead"
+title: "Send email on company letterhead"
 excerpt: In this example we'll create a letterhead mail template and demonstrate how to use it when sending mail from the browser or using bots.
 layout: integration
 topic: Mail
 jumbotron:
-  title: Sending email on company letterhead
+  title: Send email on company letterhead
   tagline: ""
   breadcrumbs:
   -

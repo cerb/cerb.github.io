@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tip: Quickly delete quoted text while replying"
-excerpt: You can use the #delete command in a reply to quickly remove huge blocks of quoted text.
+excerpt: You can use the delete command in a reply to quickly remove huge blocks of quoted text.
 author: The Cerb Team
 date: 2017-02-27 14:50:00 -0700
 permalink: /tips/quickly-delete-quoted-text/
