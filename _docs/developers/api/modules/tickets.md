@@ -42,15 +42,16 @@ Create a ticket object.
 |-|-|-
 | `group_id` | integer | **required**
 | `bucket_id` | integer
-| `org_id` | id | [organization](/docs/api/organizations/)
 | `to` | string | **required**
 | `cc` | string
 | `bcc` | string
 | `subject` | string | **required**
 | `content` | string | **required**
 | `content_format` | string | `markdown` for HTML or blank for plaintext
-| `html_template_id` id | [html template](/docs/api/mail-html-template/)
-| `file_id[]` | ids | Upload with [attachments](/docs/api/attachments/)
+| `org_id` | id | [organization](/docs/api/modules/organizations/)
+| `owner_id` | id | [worker](/docs/api/modules/workers/)
+| `html_template_id` | id | [html template](/docs/api/modules/mail-html-template/)
+| `file_id[]` | ids | Upload with [attachments](/docs/api/modules/attachments/)
 | `status` | integer | 0=open, 1=closed, 2=waiting
 | `reopen_at` | mixed | unix timestamp or string (e.g. "Friday 2pm", "+2 hours")
 | `custom_*` | mixed | 
@@ -94,8 +95,10 @@ Update a ticket object.
 |---
 | Field | Type | 
 |-|-|-
-| `bucket_id` | integer
-| `group_id` | integer
+| `bucket_id` | id | [bucket](/docs/api/modules/groups/)
+| `group_id` | id | [group](/docs/api/modules/groups/)
+| `org_id` | id | [organization](/docs/api/modules/organizations/)
+| `owner_id` | id | [worker](/docs/api/modules/workers/)
 | `status_id` | integer | 0=open, 1=waiting, 2=closed, 3=deleted
 | `subject` | string
 | `custom_*` | mixed | 
@@ -106,7 +109,7 @@ Update a ticket object.
 <pre>
 <code class="language-php">
 $postfields = array(
-    array('subject','I replaced this sübject through the Web-API'),
+    array('subject','I replaced this subject through the Web-API'),
     array('custom_5','+1 hour'), // date custom field
     array('custom_6',"Line 1\nLine 2\nLine 3"), // multi-line
     array('custom_4','Option 3'), // picklist
@@ -137,24 +140,24 @@ Reply to a ticket message as a worker.
 | Field | Type | 
 |-|-|-
 | `bcc` | string | A comma-separated list of email addresses that will privately receive a copy of this message.
-| `bucket_id` | id | Move the ticket to a new [bucket](/docs/api/groups/)
+| `bucket_id` | id | Move the ticket to a new [bucket](/docs/api/modules/groups/)
 | `cc` | string | A comma-separated list of email addresses that will publicly receive a copy of this message.
 | `content_format` | string | `markdown` for HTML or blank for plaintext
 | `custom_*` | mixed | 
 | `dont_keep_copy` | boolean | Send the reply by email without saving a copy in Cerb: 0=no, 1=yes
 | `dont_send` | boolean | Save the reply in Cerb without sending email: 0=no, 1=yes
-| `file_id[]` | ids | Upload with [attachments](/docs/api/attachments/)
-| `group_id` | id | Move the ticket to a new [group](/docs/api/groups/)
-| `html_template_id` | id | [mail template](/docs/api/mail-html-template/)
+| `file_id[]` | ids | Upload with [attachments](/docs/api/modules/attachments/)
+| `group_id` | id | Move the ticket to a new [group](/docs/api/modules/groups/)
+| `html_template_id` | id | [mail template](/docs/api/modules/mail-html-template/)
 | `is_autoreply` | boolean | Automatically include auto-reply mail headers: 0=no, 1=yes
 | `is_broadcast` | boolean | Set the broadcast flag: 0=no, 1=yes
 | `is_forward` | boolean | Send the message without updating the ticket with the new subject or requesters: 0=no, 1=yes
-| `owner_id` | id | Assign the ticket to a [worker](/docs/api/workers/), or `0` to unassign from the current owner
+| `owner_id` | id | Assign the ticket to a [worker](/docs/api/modules/workers/), or `0` to unassign from the current owner
 | `reopen_at` | mixed | unix timestamp or string (e.g. "Friday 2pm", "+2 hours")
 | `status` | integer | 0=open, 1=closed, 2=waiting
 | `subject` | string | Update the ticket's subject
 | `to` | string | A comma-separated list of email addresses to include as recipients. If blank, it uses the ticket's current requesters
-| `worker_id` | id | The specific [worker](/docs/api/workers/) to send the message as. This defaults to the current API user, and can only be changed by administrators
+| `worker_id` | id | The specific [worker](/docs/api/modules/workers/) to send the message as. This defaults to the current API user, and can only be changed by administrators
 
 {% comment %}
 	'html_template_id'

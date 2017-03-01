@@ -44,7 +44,7 @@ Create a time tracking object.
 | `created` | timestamp
 | `is_closed` | integer
 | `mins` | integer
-| `worker_id` | integer | [worker](/docs/api/workers/)
+| `worker_id` | integer | [worker](/docs/api/modules/workers/)
 | `custom_*` | mixed | 
 
 ### Example
@@ -92,7 +92,7 @@ Update a time tracking object.
 | `created` | timestamp
 | `is_closed` | integer
 | `mins` | integer
-| `worker_id` | integer | [worker](/docs/api/workers/)
+| `worker_id` | integer | [worker](/docs/api/modules/workers/)
 | `custom_*` | mixed | 
 
 ### Example
@@ -138,7 +138,7 @@ Perform a search for time tracking objects.
 | `id` | integer
 | `is_closed` | integer
 | `mins` | integer
-| `worker_id` | integer | [worker](/docs/api/workers/)
+| `worker_id` | integer | [worker](/docs/api/modules/workers/)
 | `custom_*` | mixed | 
 
 **subtotals[]**
