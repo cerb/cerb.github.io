@@ -31,15 +31,45 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 
 # Frequently asked questions:
 
+<br/>
+
 <div id="seats"></div>
 
 ## What are seats?
 
 Seats determine the maximum number of workers who can use Cerb at the same time.
 
-For example, a team of 30 workers who are evenly split into three, non-overlapping 8-hour shifts (morning, day, night) would only require 10 seats. That's the highest number of workers who would ever be logged in at the same time.
+For example, a team of 30 workers who are evenly split into three 8-hour shifts (morning, day, night) would only require 10 seats. That's the highest number of workers who would ever be logged in at the same time.
 
 You aren't paying per worker account, so there isn't a penalty for inviting everyone to participate: full-time staff, part-time contributors, busy executives, interns, temps, contractors, partners, and volunteers.
+
+## How many workers can I invite to a Cerb Cloud trial?
+
+All Cerb Cloud trials start in the _Pro_ tier. This provides unlimited worker accounts with __three__ seats. [Contact us](/contact/) if you need to test with more seats and we can raise the limit.
+
+## Do you require a credit card to start a free trial?
+
+No! All we require is a valid email address to contact you. You will <b>never</b> receive an invoice until you request one.
+
+## Do I need my own email server to use Cerb Cloud?
+
+No, we provide a high-volume SMTP service for outgoing mail with SPF and DKIM support.  We also provide a redirect mailbox for instantly delivering incoming mail.
+
+You can easily configure Cerb to use remote mail services if desired.
+
+With Cerb Cloud, we provide you with a subdomain worth of temporary email addresses, like __*@example.cerb.email__. You can send and receive email from any of these addresses (e.g. billing@, support@, sales@), which makes it much practice routing work to the appropriate groups/buckets in Cerb.
+
+We also configure SPF, DKIM, and DMARC records for these temporary email addresses so you can [test our mail deliverability](http://cerb.io/docs/quick-start/#send-a-message-to-test-mail-deliverability).
+
+If you switch to a Cerb Cloud subscription, you can even use these email addresses in production, but you'll probably want to use your own domains.  We'll help you configure the SPF, DKIM, and DMARC records on your domains to optimize your mail deliverability from Cerb as well.
+
+<div id="instant-delivery"></div>
+
+## How fast is incoming mail delivered into Cerb?
+
+When mail is received by your redirect mailbox it will be delivered into Cerb instantly (within seconds).  This enables you to respond more quickly to your customers.
+
+If you choose to use remote mailboxes instead, new mail will generally be downloaded every few minutes.
 
 <div id="custom-urls"></div>
 
@@ -48,14 +78,6 @@ You aren't paying per worker account, so there isn't a penalty for inviting ever
 Yes! We'll always use an `*.cerb.me` domain to identify your Cerb Cloud instance internally, but you can use a DNS _CNAME_ record to access your site with a custom domain like `support.example.com`. You can also use a custom domain for each community portal you deploy.
 
 Keep in mind that you'll need to provide an SSL certificate for each custom domain you use. We provide wildcard SSL certificates for `*.cerb.me` and the generic portal domains like `*.official.support` and `*.user.community`.
-
-## How many workers can I invite to a Cerb Cloud trial?
-
-All Cerb Cloud trials start in the _Pro_ tier. This provides unlimited worker accounts with __three__ seats (concurrent workers). [Contact us](/contact/) if you need to test with more seats and we can raise the limit.
-
-## Do you require a credit card to start a free trial?
-
-No! All we require is a valid email address to contact you. You will never receive an invoice until you request one.
 
 ## What if I plan to eventually host Cerb myself?
 
@@ -66,16 +88,6 @@ This also allows us to provide the highest level of assistance during your evalu
 All of your Cerb Cloud configuration and data can be exported to a standalone instance of Cerb at any time. Once you're confident that Cerb is a good fit for your team, we're happy to help you with that migration.
 
 If you still need to evaluate Cerb in your own environment, you can simply [grab a copy of the project from GitHub](https://github.com/wgm/cerb) and follow the [installation instructions](/docs/installation).
-
-## Will a Cerb Cloud trial require me to change how I currently handle email?
-
-Nope! A Cerb evaluation won't impact the way you're currently handling incoming or outgoing email (unless you want it to).
-
-With Cerb Cloud, we provide you with a subdomain worth of temporary email addresses, like __*@example.cerb.email__. You can send and receive email from any of these addresses (e.g. billing@, support@, sales@), which makes it much practice routing work to the appropriate groups/buckets in Cerb.
-
-We also configure SPF, DKIM, and DMARC records for these temporary email addresses so you can [test our mail deliverability](http://cerb.io/docs/quick-start/#send-a-message-to-test-mail-deliverability).
-
-If you switch to a Cerb Cloud subscription, you can even use these email addresses in production, but you'll probably want to use your own domains.  We'll help you configure the SPF, DKIM, and DMARC records on your domains to optimize your mail deliverability from Cerb as well.
 
 <div id="custom-plugins"></div>
 
@@ -126,12 +138,6 @@ If you have multiple Cerb Cloud subscriptions on your account, the sum of all se
 
 <div id="smtp"></div>
 
-## Do I need my own email server to use Cerb Cloud?
-
-No, we provide a cloud-based SMTP service for outgoing mail with SPF and DKIM support.  We also provide a redirect mailbox for delivering incoming mail.
-
-You can easily configure Cerb to use remote mail services if desired.
-
 {% comment %}
 
 <div id="spf"></div>
@@ -151,8 +157,6 @@ DomainKeys Identified Mail[^dkim] (**DKIM**) attempts to detect spoofing and tam
 Your subscription provides a certain number of DKIM domain signatures.  Additional sender domains are $1/month each.
 
 This only applies when you use Cerb Cloud SMTP for outgoing mail.  If you're using another email provider, their own rate structure will apply.
-
-{% endcomment %}
 
 <div id="mailbox-checks"></div>
 
@@ -176,17 +180,8 @@ Rather than checking mailboxes for new mail, a Redirect Mailbox allows you to re
 
 Cerb Cloud doesn't require you to modify your own MX records. For instance, you can still deliver your company email to Google Apps like usual, while redirecting mail for certain accounts to Cerb Cloud.
 
-<div id="instant-delivery"></div>
-
-## How fast is incoming mail delivered into Cerb?
-
-When mail is received by your redirect mailbox it will be delivered into Cerb instantly (within seconds).  This enables you to respond more quickly to your customers.
-
-If you choose to use remote mailboxes instead, new mail will generally be downloaded every few minutes.
-
 <div id="portals"></div>
 
-{% comment %}
 ## What is the cost of additional community portals?
 
 Your subscription provides a certain number of community portals. These include SSL certificates.
@@ -221,6 +216,7 @@ Similarly, the additional _Enterprise_ support commitments require highly experi
 Consider these two extremes: 1 client with 50 seats, and 50 clients with 1 seat each. Both clients result in roughly the same amount of revenue for 50 seats (the single client qualifies for a volume discount), but the 50 clients variation potentially requires 50 times the amount of resources like storage and support (negatively affecting the quality and responsiveness of our services).  The enterprise option is predicated on having our full attention at all times.
 
 {% comment %}
+
 # References
 
 [^mysql-fulltext]: <http://dev.mysql.com/doc/refman/5.7/en/fulltext-search.html>
@@ -234,4 +230,7 @@ Consider these two extremes: 1 client with 50 seats, and 50 clients with 1 seat 
 [^spoofing]: <https://en.wikipedia.org/wiki/Email_spoofing>
 
 {% endcomment %}
+
+
+[Start a free trial](#top)
 

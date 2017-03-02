@@ -16,13 +16,15 @@ jumbotron:
 * Requires PHP 5.5+ and MySQL 5.6+
 * Ideal for regulatory compliance (HIPAA, Safe Harbor, Sarbanes-Oxley)
 * Your first **3 seats are free** with full functionality and **no time limit**
-* Migrate to [Cerb Cloud](/cloud/) at any time
+* Optionally migrate to [Cerb Cloud](/cloud/) at any time
 
 {% include tables/standalone_feature_comparison.html %}
 
 <br/>
 
 # Frequently asked questions:
+
+<br/>
 
 ## How do I install Cerb on my own hardware?
 

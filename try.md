@@ -18,14 +18,14 @@ jumbotron:
 			<div style="display:inline-block;text-align:left;">
 				<h1><a href="/cloud/">Cloud</a></h1>
 				<ul>
-					<li>Highly available and scalable in the cloud</li>
-					<li>We handle installation, upgrades, scaling, monitoring, security, and backups</li>
-					<li>Includes high-volume inbound and outbound email</li>
-					<li>Always the <b>latest stable version</b> with <b>same-day bug fixes</b></li>
-					<li>Same day priority support by email and phone</li>
-					<li>All you need is a web browser</li>
-					<li><b>$40/month</b> per seat</li>
-					<li><b>50% discount</b> on your first three seats</li>
+					<li>Everything Cerb has to offer: collaborative workspaces, bot automation, plugins, community portals, etc.</li>
+					<li>Highly available and scalable in the cloud as a fully managed service</li>
+					<li>Always on the latest stable version with same-day bug fixes</li>
+					<li>Automated backups and same day support</li>
+					<li>Instant delivery of inbound mail</li>
+					<li>Highly deliverable outgoing mail</li>
+					<li>Easily test incoming and outgoing email with preconfigured <b>@cerb.email</b> mailboxes</li>
+					<li>You can bring your own URL</li>
 					<li><a href="/cloud/">Learn more &raquo;</a></li>
 				</ul>
 			</div>
@@ -35,13 +35,12 @@ jumbotron:
 			<div style="display:inline-block;text-align:left;">
 				<h1><a href="/download/">Download</a></h1>
 				<ul>
-					<li>Installed on your own hardware (web, database, mail, storage, cache)</li>
-					<li>You're responsible for installation, upgrades, scaling, monitoring, security, and backups</li>
+					<li>Self-hosted on your own hardware</li>
+					<li>We'll send you a free 3-seat license to get started</li>
+					<li>Includes 100% of our source code from GitHub</li>
 					<li>Requires PHP 5.5+ and MySQL 5.6+</li>
+					<li>You're responsible for installation, upgrades, scaling, monitoring, security, and backups</li>
 					<li>Ideal for regulatory compliance</li>
-					<li>Your first <b>3 seats are free</b> with full functionality</li>
-					<li><b>$25/month</b> per seat (annually) for <b>software updates</b> and <b>priority support</b></li>
-					<li><b>10% discount</b> for timely renewals</li>
 					<li><a href="/download/">Learn more &raquo;</a></li>
 				</ul>
 			</div>

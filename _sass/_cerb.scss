@@ -457,7 +457,7 @@ table.matrix {
 	}
 }
 
-table.cerb-feature-comparison {
+.cerb-feature-comparison {
 	width: 100%;
 	border-spacing: 0;
 	
@@ -472,12 +472,10 @@ table.cerb-feature-comparison {
 		}
 	}
 	
-	td {
-		div.price {
-			font-size: 120%;
-			font-weight: bold;
-			margin-bottom: 10px;
-		}
+	div.price {
+		font-size: 120%;
+		font-weight: bold;
+		margin-bottom: 10px;
 	}
 }
 
