@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tip: Drag and drop attachments"
-excerpt: Attach files to messages more quickly by dragging and dropping them from your computer.
+excerpt: Quickly attach files to messages by dragging and dropping them from your computer.
 author: The Cerb Team
 date: 2017-03-01 17:20:00 -0700
 permalink: /tips/drag-drop-attachments/
