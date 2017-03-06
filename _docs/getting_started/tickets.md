@@ -23,7 +23,7 @@ Related tickets from the same participants can be **merged** together into a sin
 <img src="/assets/images/docs/using-cerb/tickets/ticket.png" class="screenshot">
 </div>
 
-### Status
+### Statuses
 
 The **status** of a ticket is always one of the following:
 
