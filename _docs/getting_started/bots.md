@@ -8,6 +8,9 @@ jumbotron:
 
 A **bot** is a virtual [worker](/docs/workers) who automatically performs its duties through a collection of predefined **behaviors**.
 
+* TOC
+{:toc}
+
 ## Events
 
 Each bot behavior is triggered in response to a specific **event**. There are dozens of built-in events, and plugins or [webhooks](/docs/webhooks) can introduce new events for nearly anything.

@@ -14,6 +14,9 @@ In some other software projects, plugins are an afterthought and quite limited i
 
 Another benefit of plugins is that they allow functionality to be _completely removed_ when it is not being used by a particular organization. This keeps Cerb fast and lean.
 
+* TOC
+{:toc}
+
 ## Library
 
 [Administrators](/docs/workers) can discover and install plugins from the [plugin library](/docs/setup/plugin-library).  All of the plugins found in the official plugin library have been audited and approved by Cerb's developers. They are safe to use.

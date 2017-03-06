@@ -8,6 +8,9 @@ jumbotron:
 
 At the core of Cerb is a data management system for organizing collections of **records**.  A record is a distinctly identifiable entity: email address, contact, email message, task, etc.  The different types of records are called **contexts**.  Each record within a context is assigned a unique numeric identifier (**ID**).
 
+* TOC
+{:toc}
+
 ## Fields
 
 Each record contains a set of **fields** to describe its attributes. Some fields are _built-in_, like the name and email address of a contact, or the subject and body of an email message. These fields can't be changed.

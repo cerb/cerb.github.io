@@ -12,6 +12,9 @@ You can add any number of workspace pages to your [navigation bar](/docs/navigat
 
 Workspaces use **tabs** to organize their content into sections; much like dividers are used to partition pages in a large binder. There are many kinds of tabs, but the two most common are worklists and dashboards.
 
+* TOC
+{:toc}
+
 # Worklists
 
 A **worklist** is a filterable, pageable, sortable, and customizable set of records displayed using rows and columns.  Each row of a worklist is a matching record and each column is a particular field from each record. The displayed columns can be customized on a worklist based on your particular need.

@@ -7,6 +7,9 @@ jumbotron:
   tagline: Cerb wouldn't exist without these building blocks and contributions.
 ---
 
+* TOC
+{:toc}
+
 # Platform
 
 - **Devblocks** is a software development framework created by Webgroup Media that has evolved in parallel with Cerb. It provides the application framework, development platform, plugin architecture, and software development philosophy for all Cerb functionality and third-party plugins.

@@ -16,6 +16,9 @@ The specific worker who is responsible for a ticket is its **owner**.
 
 Related tickets from the same participants can be **merged** together into a single ticket, which combines all of the messages and comments.  Conversely, if a ticket conversation diverges into multiple topics that would be better handled by other groups or workers, one or more messages can be **split** off into new tickets.
 
+* TOC
+{:toc}
+
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/using-cerb/tickets/ticket.png" class="screenshot">
 </div>

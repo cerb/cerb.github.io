@@ -10,6 +10,9 @@ jumbotron:
 
 It is our policy to respect your privacy regarding any information we may collect while operating our websites and services. We do not sell any personally identifiable information or data stored in Cerb Cloud to third-parties. We do not directly share your information with third-parties without explicit permission except to comply with the law or to provide necessary infrastructure in connection with the services you request; however, there is some passive risk of exposure to third-party access inherent in web-based services that is outlined in detail below. We do our best to mitigate and minimize these risks on your behalf.
 
+* TOC
+{:toc}
+
 ## Website Visitors
 
 Like most website operators, we collect non-personally identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. Our purpose in collecting non-personally identifying information is to better understand how visitors use our website. From time to time, we may release non-personally identifying information in the aggregate; e.g., by publishing a report on trends in the usage of its software or websites.

@@ -24,6 +24,9 @@ Ironically, the default URLs are ugly because Cerb's underlying design is secure
 
 Cerb supports URL rewriting to make the URLs shorter and more user-friendly.  This isn't enabled by default because it requires your webserver to support it.
 
+* TOC
+{:toc}
+
 ## Enabling friendly URLs with Nginx
 
 This is all you should need to do to enable friendly URLs in Nginx:

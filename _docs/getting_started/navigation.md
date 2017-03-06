@@ -12,6 +12,9 @@ The global navigation controls are at the top of every page in Cerb.
 <img src="/assets/images/docs/ui/navbar.png">
 </div>
 
+* TOC
+{:toc}
+
 ## Pages
 
 The _navigation bar_ displays shortcuts to your favorite [workspace pages](/docs/workspaces).

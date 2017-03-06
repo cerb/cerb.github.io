@@ -22,6 +22,9 @@ Rights (TRIPS).
 By using this software, you acknowledge having read this License and
 agree to be bound thereby.
 
+* TOC
+{:toc}
+
 ## Definitions
 
 * The terms _"reproduce"_, _"reproduction"_, and _"distribution"_ have the same meaning here as under U.S. copyright law.
