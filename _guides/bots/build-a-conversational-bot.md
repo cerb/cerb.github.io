@@ -2,6 +2,7 @@
 title: Build a conversational bot behavior
 layout: integration
 topic: Bots
+permalink: /guides/bots/conversational-bots/
 jumbotron:
   title: Build a conversational bot behavior
   tagline: ""
