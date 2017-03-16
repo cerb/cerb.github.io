@@ -20,7 +20,7 @@ Work can effortlessly be assigned to the most appropriate group as a whole, rath
 
 For instance, an inquiry about buying one of your products can be assigned to the _Sales_ group, and a technical question can be assigned to the _Support_ group.  Then those groups can decide how to best handle their own assignments.
 
-Access to resources like [bots](/docs/bots/), [snippets](/docs/snippets/), and [custom fieldsets](/docs/records/#fieldsets) may also be shared by the members of a group.
+Access to resources like [bots](/docs/bots/), [snippets](/docs/tickets/#snippets), and [custom fieldsets](/docs/records/#fieldsets) may also be shared by the members of a group.
 
 ## Management
 
