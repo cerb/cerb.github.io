@@ -75,6 +75,11 @@ jumbotron:
 
 The following general instructions assume that you have console access to a Linux-based server that meets the above requirements.  You should already have a webserver, database, and PHP installed before proceeding.
 
+You can follow one of these guides to set up a new server:
+
+* [Installing Cerb on Ubuntu 16.04 with Nginx and PHP-FPM](/guides/installation/ubuntu/)
+* [Installing Cerb on Amazon Linux with Nginx and PHP-FPM](/guides/installation/amazon-linux/)
+
 # Download the source code from GitHub
 
 Navigate to your website's document directory on the filesystem. The directory will usually be named something like `htdocs`, `httpdocs`, `public_html`, or `www`.
@@ -184,13 +189,13 @@ Review the software license agreement and then click the **I Accept** button.
 
 ## Step 3: Database Setup
 
-### Driver
+**Driver**
 
 Leave this at the default of **MySQLi** (the MySQL Improved extension).
 
 Cerb currently only supports MySQL[^mysql] databases. You can also use one of the MySQL-based forks[^mysql-forks], like Amazon Aurora, MariaDB, Percona, or WebScaleSQL.  We recommend MySQL or Amazon Aurora, as they receive the most testing.
 
-### Engine
+**Engine**
 
 MySQL supports many _storage engines_[^mysql-storage-engines] that offer different functionality, strengths, and trade-offs.  Of those, Cerb is well-tested with the two most common:
 
@@ -202,25 +207,25 @@ In general, we recommend that you use InnoDB.  If you're in an environment that 
 
 This isn't a life-or-death decision.  You can easily switch between storage engines at any time (and even use different storage engines for each table).
 
-### Host
+**Host**
 
 This is the IP or hostname of your MySQL server.
 
 If MySQL is installed on the same server as your web server, this value is usually _localhost_.
 
-### Database Name
+**Database Name**
 
 The name of the database on the MySQL server that you created earlier with the `CREATE DATABASE` statement.
 
-### Username
+**Username**
 
 The username that you created earlier with the `GRANT ALL PRIVILEGES ... TO <user>@host` statement.
 
-### Password
+**Password**
 
 The password that you created earlier with the `GRANT ALL PRIVILEGES ... IDENTIFIED BY '<password>'` statement.
 
-### Test Settings
+**Test Settings**
 
 Once you've entered your database connection details, click the **Test Settings** button to verify them.
 
@@ -236,11 +241,11 @@ If successful, the installer will create your initial database structure. This m
 
 ## Step 6: General Settings
 
-### Browser Title
+**Browser Title**
 
 This is the page title that shows up by default on browser tabs and in URL bookmarks.
 
-### Default Sender
+**Default Sender**
 
 This establishes your first shared outgoing email address.  You'll probably want to use something like `support@example.com` (where `example.com` is your own domain name).
 
@@ -256,7 +261,7 @@ Once you're done, click the **Continue** button.
 
 This step configures your first outgoing mail transport. Once you become familiar with Cerb, you can configure several outgoing mail transports for fail-over, branding, etc.
 
-### Mail Transport Type
+**Mail Transport Type**
 
 When you intend to deliver real email to your contacts, you'll be using an **SMTP**[^smtp] transport.
 
@@ -264,7 +269,7 @@ If you use a mail delivery service like Google Apps[^smtp-google-apps] or Mailgu
 
 If this is going to be a development or evaluation instance, you can select **None** to discard all outgoing mail without delivering it.  You won't need to enter any other details with this option.
 
-### Host
+**Host**
 
 This is the IP or hostname of your SMTP server.
 
@@ -272,7 +277,7 @@ For Google Apps, you would use `smtp.gmail.com`.
 
 If you want to use a local mail server (like Postfix) that is installed on the same server as Cerb, you can usually enter `localhost` here.
 
-### Port
+**Port**
 
 This is the port where your SMTP server accepts new mail for relay.
 
@@ -282,17 +287,17 @@ Generally, you'll use port `465` or `587`, depending on your configuration.
 
 With Google Apps, `465` is used for SSL and `587` for TLS.
 
-### Authentication User
+**Authentication User**
 
 This is your username when SMTP Authentication is required.
 
 With Google Apps (and many other providers), it's your full Gmail or Google Apps email address.
 
-### Authentication Password
+**Authentication Password**
 
 This is the password established by your SMTP provider.
 
-### Encryption
+**Encryption**
 
 It is highly recommended that you enable encryption if you use a remote SMTP server.  Cerb supports both TLS[^tls] and SSL[^ssl] encryption, and your selection will depend on the configuration of your email provider.  Given recent SSL vulnerabilities, TLS is considered to be more secure.
 
@@ -302,23 +307,23 @@ As mentioned in the port configuration above, Google Apps requires you to pair t
 
 In this step you'll create the administrator account that you use to log in.
 
-### Name
+**Name**
 
 This is simply your first and last name (given and surname).
 
-### Email Address
+**Email Address**
 
 Your **personal** email address.  This is how you will authenticate during logins, and it's where your notifications and account recovery details will be sent.  For that reason, this **should not** be an email address managed by Cerb.
 
 This will likely be something like `you@company.com` or `you@gmail.com`.
 
-### Password
+**Password**
 
 It is recommended that you choose a strong password here that you don't use anywhere else.  It should be fairly long, contain a mix of alphanumeric characters and symbols, in both upper and lower cases.
 
 We highly recommend using a password manager like 1Password[^1password] to maintain strong password security practices.  You can also enable two-factor authentication for even stronger security.
 
-### Timezone
+**Timezone**
 
 Cerb will use your timezone setting to display and interpret dates using your local timezone.  The installer attempts to automatically detect this for you, but you can adjust it as necessary.
 
