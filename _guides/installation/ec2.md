@@ -1,11 +1,11 @@
 ---
-title: Launching EC2 instances in Amazon Web Services
+title: Launch EC2 instances in Amazon Web Services
 layout: integration
 topic: Installation
 excerpt: This guide explains how to create an EC2 instance in preparation for installing Cerb.
 permalink: /guides/installation/ec2/
 jumbotron:
-  title: Launching EC2 instances in Amazon Web Services
+  title: Launch EC2 instances in Amazon Web Services
   tagline: ""
   breadcrumbs:
   -
