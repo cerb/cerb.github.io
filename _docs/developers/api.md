@@ -26,6 +26,7 @@ The API uses per-application credentials and per-worker permissions to authorize
 # Libraries
 
 - [PHP](/docs/api/libraries/php/)
+- [Python](/docs/api/libraries/python/)
 - [Perl](/docs/api/libraries/perl/)
 - [Node.js](/docs/api/libraries/nodejs/)
 - [Apex](/docs/api/libraries/apex/)
