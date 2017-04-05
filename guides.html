@@ -15,14 +15,14 @@ jumbotron:
 	{% assign topics = site.guides | group_by: 'topic' %}
 	
 	{% for topic in topics %}
-		<h1>{{ topic.name }}</h1>
+		<h1 id="{{ topic.name | slugify }}">{{ topic.name }}</h1>
 		
 		{% if topic.name == 'Integrations' %}
 			{% assign subtopics = topic.items | group_by: 'subtopic' %}
 		
 			<div style="margin-left:15px;">
 			{% for subtopic in subtopics %}
-				<h2>{{ subtopic.name }}</h2>
+				<h2 id="{{ subtopic.name | slugify }}">{{ subtopic.name }}</h2>
 		
 				<ul class="articles">
 				{% for guide in subtopic.items %}
