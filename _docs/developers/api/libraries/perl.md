@@ -10,7 +10,7 @@ jumbotron:
     url: /docs/api/
 ---
 
-# Cerb6_WebAPI.pm
+# Cerb_WebAPI.pm
 
 <pre>
 <code class="language-perl">
@@ -27,7 +27,7 @@ use URI::Escape;
 use Digest::MD5 qw(md5_hex);
 use WWW::Curl::Easy;
 
-package Cerb6_WebAPI;
+package Cerb_WebAPI;
 
 sub new {
   my $class = shift;

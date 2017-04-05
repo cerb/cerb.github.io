@@ -191,7 +191,9 @@ $cerb = new Cerb_WebAPI($access_key, $secret_key);
 
 if(null != ($content_type = $cerb->getContentType())) {
 	header("Content-Type: " . $content_type);
-	echo $out;</code>
+	echo $out;
+}
+</code>
 </pre>
 
 {% include api_toc.html %}

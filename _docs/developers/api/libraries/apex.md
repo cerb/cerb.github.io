@@ -18,7 +18,7 @@ This class can be included by **Salesforce** applications to simplify interactio
 <code class="language-java">
 /***********************************************************************
   Cerb for Salesforce
-  (c) Copyright 2015 WebGroup Media LLC
+  (c) Copyright 2017 WebGroup Media LLC
   @author Jeff Standen <jeff@webgroupmedia.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy

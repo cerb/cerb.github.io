@@ -17,8 +17,8 @@ This module can be included by **Node.js** applications to simplify interaction 
 <pre>
 <code class="language-javascript">
 /***********************************************************************
-Cerb6 Web-API Library for Node.js
-(c) Copyright 2013 WebGroup Media LLC
+Cerb Web-API Library for Node.js
+(c) Copyright 2017 WebGroup Media LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -151,7 +151,7 @@ Usage
 <code class="language-javascript">
 var cerb = require('./cerb.lib.js');
 
-var cerb_base_url = "https://www.example.com/cerb/rest/";
+var cerb_base_url = "https://cerb.example.com/rest/";
 var cerb_api_key = 'xxxxxxxxxxxxxxx';
 var cerb_api_secret = 'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
 
