@@ -13,6 +13,35 @@ jumbotron:
 * TOC
 {:toc}
 
+# Create
+
+**POST /groups/create.json**
+
+Create a group object.
+
+### Parameters
+{: .no_toc}
+
+|---
+| Field | Type | 
+|-|-|-
+| `name` | string
+| `is_private` | bit | `0`=public, `1`=private
+| `custom_*` | mixed | 
+
+### Example
+{: .no_toc}
+
+<pre>
+<code class="language-php">
+$postfields = array(
+  array('name', 'Quality Assurance'),
+  array('is_private', 0),
+);
+$out = $cerb->post($base_url . 'groups/create.json', $postfields);
+</code>
+</pre>
+
 # Retrieve
 
 **GET /groups/`<id>`.json**
@@ -40,6 +69,77 @@ Retrieve a group object.
 <pre>
 <code class="language-php">
 $out = $cerb->get($base_url . 'groups/1.json?expand=buckets,members');
+</code>
+</pre>
+
+# Update
+
+**PUT /groups/`<id>`.json**
+
+Update a group object.
+
+### Parameters
+{: .no_toc}
+
+|---
+| Field | Type | 
+|-|-|-
+| `name` | string
+| `is_private` | bit | `0`=public, `1`=private
+| `custom_*` | mixed | 
+
+### Example
+{: .no_toc}
+
+<pre>
+<code class="language-php">
+$postfields = array(
+    array('name','Quality Assurance'),
+);
+$out = $cerb->put($base_url . 'groups/123.json', $postfields);
+</code>
+</pre>
+
+# Members
+
+**PUT /groups/members.json**
+
+Modify group rosters.
+
+### Parameters
+{: .no_toc}
+
+|---
+| Field | Type | 
+|-|-|-
+| `json` | changes string in JSON format
+
+### Example
+{: .no_toc}
+
+<pre>
+<code class="language-php">
+$changes = [
+  "groups" => [
+    "1" => [
+      "workers" => [
+        "1" => "manager",
+        "2" => "remove",
+        "3" => "member",
+      ],
+    ],
+    "2" => [
+      "workers" => [
+        "2" => "remove",
+      ],
+    ],
+  ],
+];
+
+$postfields = array(
+    array('json', json_encode($changes)),
+);
+$out = $cerb->put($base_url . 'groups/123.json', $postfields);
 </code>
 </pre>
 
@@ -95,7 +195,7 @@ Perform a search for group objects.
 <pre>
 <code class="language-php">
 $postfields = array(
-     array('q','Support'),
+     array('q','name:Support'),
      array('expand','buckets,members'),
      array('sortBy','name'),
      array('sortAsc','1'),
