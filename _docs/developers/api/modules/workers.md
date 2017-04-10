@@ -40,12 +40,21 @@ Create a worker object.
 |---
 | Field | Type | 
 |-|-|-
+| `auth` | string | e.g. `login.password`, `login.ldap`
+| `dob` | string | YYYY-MM-DD
 | `email` | string | **required**
 | `first_name` | string 
+| `gender` | string | `F`=female, `M`=male, or unknown
 | `is_disabled` | bit | `0`=active, `1`=disabled
 | `is_superuser` | bit | `0`=worker, `1`=superuser
 | `last_name` | string 
+| `language` | string | e.g. `en_US`
+| `location` | string
+| `mention` | string
+| `mobile` | string
 | `password` | string 
+| `phone` | string
+| `timezone` | string | e.g. [America/Los_Angeles](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 | `title` | string 
 | `updated` | timestamp 
 | `custom_*` | mixed | 
@@ -92,12 +101,21 @@ Update a worker object.
 |---
 | Field | Type | 
 |-|-|-
+| `auth` | string | e.g. `login.password`, `login.ldap`
+| `dob` | string | YYYY-MM-DD
 | `email` | string 
 | `first_name` | string 
+| `gender` | string | `F`=female, `M`=male, or unknown
 | `is_disabled` | bit | `0`=active, `1`=disabled
 | `is_superuser` | bit | `0`=worker, `1`=superuser
+| `language` | string | e.g. `en_US`
 | `last_name` | string 
+| `location` | string
+| `mention` | string
+| `mobile` | string
 | `password` | string 
+| `phone` | string
+| `timezone` | string | e.g. [America/Los_Angeles](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 | `title` | string 
 | `updated` | timestamp 
 | `custom_*` | mixed | 
@@ -142,25 +160,34 @@ Perform a search for worker objects.
 |-|-|-
 | `email` | string
 | `first_name` | string
+| `gender` | string
 | `id` | integer
-| `is_disabled` | bit | `0`=active, `1`=disabled
-| `is_superuser` | bit | `0`=worker, `1`=superuser
+| `is_disabled` | bit
+| `is_superuser` | bit
+| `language` | string
 | `last_name` | string
+| `location` | string
+| `timezone` | string
 | `title` | string
 | `updated` | timestamp
-| `custom_*` | mixed | 
+| `custom_*` | mixed
 
 **subtotals[]**
 
 |---
 | Field | Description
 |-|-
+| `auth` | Authentication method
 | `fieldsets` | Custom fieldsets on workers
 | `first_name` | Workers by first name
+| `gender` | Workers by gender
 | `is_disabled` | Workers by active/disabled
 | `is_superuser` | Workers by superuser/worker
+| `language` | Workers by last name
 | `last_name` | Workers by last name
 | `links` | Objects linked to workers
+| `location` | Workers by location
+| `timezone` | Workers by timezone
 | `title` | Workers by title
 
 ### Examples
