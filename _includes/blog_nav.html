@@ -7,7 +7,7 @@
 					{% else %}
 						{% assign previous = forloop.index0 | minus: 1 %}
 						{% assign prev_page = site.posts[previous] %}
-						<a href="{{ prev_page.url }}" class="prev">&lt; Newer: {{prev_page.title}}</a>
+						<a href="{{ prev_page.url }}" class="prev">&lt; Newer: {{prev_page.title|truncate(20)}}</a>
 					{% endif %}
 			</div>
 			<div class="right align-right">
@@ -16,7 +16,7 @@
 					{% else %}
 						{% assign next = forloop.index0 | plus: 1 %}
 						{% assign next_page = site.posts[next] %}
-						<a href="{{ next_page.url }}" class="next">Older: {{next_page.title}} &gt;</a>
+						<a href="{{ next_page.url }}" class="next">Older: {{next_page.title|truncate(20)}} &gt;</a>
 					{% endif %}
 			</div>
 		</div>
