@@ -51,6 +51,7 @@ Perform a search for activity log records.
 |---
 | Key | Description
 |-|-
+| `activity` | The activity performed (e.g. commented, replied)
 | `actor` | The actor (worker, bot, contact) who performed the activity
 | `target` | The record being acted on
 
