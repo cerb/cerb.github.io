@@ -124,11 +124,13 @@ class API(object):
 Usage
 =====
 
+Retrieving the current worker's record:
+
 <pre>
 <code class="language-python">
 from Cerb7 import API as Cerb7
 
-cerb = Cerb7('<access key>','<secret key>','https://cerb.example.com/rest')
+cerb = Cerb7('&lt;access key&gt;','&lt;secret key&gt;','https://cerb.example.com/rest')
 
 me = cerb.get('workers/me?expand=address_')
 
@@ -136,6 +138,28 @@ print me["id"]
 print me["_label"]
 print me["address_address"]
 print me["gender"]
+</code>
+</pre>
+
+Creating a new ticket:
+
+<pre>
+<code class="language-python">
+from Cerb7 import API as Cerb7
+
+cerb = Cerb7('&lt;access key&gt;','&lt;secret key&gt;','https://cerb.example.com/rest')
+
+payload = {
+  'expand': 'bucket_,group_,custom_',
+  'group_id': '1',
+  'bucket_id': '5',
+  'to': 'customer@example.com',
+  'subject': 'This is a new ticket',
+  'content_format': 'markdown',
+  'content': 'This is\na multi-line\nmessage\n\n-- \nSignature',
+  'status': '0', # 0=open, 1=closed, 2=waiting
+}
+response = cerb.post('tickets/compose', payload )
 </code>
 </pre>
 
