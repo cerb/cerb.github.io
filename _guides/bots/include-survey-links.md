@@ -1,6 +1,6 @@
 ---
 title: "Include survey links on outgoing messages with bots"
-excerpt: 
+excerpt: Let’s assume that you want to include a survey link at the bottom of each outgoing message to measure customer satisfaction.
 layout: integration
 topic: Bots
 jumbotron:
