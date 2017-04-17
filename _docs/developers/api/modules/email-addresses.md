@@ -37,10 +37,8 @@ Create a new email address object using the following fields:
 | Field | Type | 
 |-|-|-
 | `email` | string | **required**
-| `first_name` | string
 | `is_banned` | bit
 | `is_defunct` | bit
-| `last_name` | string
 | `org_id` | integer
 | `updated` | timestamp
 | `custom_*` | mixed | 
@@ -51,9 +49,7 @@ Create a new email address object using the following fields:
 <code class="language-php">
 $postfields = array(
     array('email','gaius.baltar@localhost'),
-    array('first_name','Gaius'),
-    array('last_name','Baltar'),
-    array('custom_16','http://www.cerberusweb.com/'),
+    array('custom_16','https://cerb.ai/'),
 );
 $out = $cerb->post($base_url . 'addresses/create.json', $postfields);
 </code>
@@ -69,10 +65,8 @@ Update an existing email address object using any of the following fields:
 | Field | Type | 
 |-|-|-
 | `email` | string
-| `first_name` | string
 | `is_banned` | bit
 | `is_defunct` | bit
-| `last_name` | string
 | `org_id` | integer
 | `updated` | timestamp
 | `custom_*` | mixed |
@@ -83,9 +77,7 @@ Update an existing email address object using any of the following fields:
 <code class="language-php">
 $postfields = array(
     array('email','gaius.baltar@cerberusdemo.com'),
-    array('first_name','Gaius'),
-    array('last_name','Baltar'),
-    array('custom_16','http://www.cerberusdemo.com/'),
+    array('custom_16','https://cerb.ai/'),
 );
 $out = $cerb->post($base_url . 'addresses/1.json', $postfields);
 </code>
@@ -118,10 +110,8 @@ Perform a search for address objects.
 |-|-|-
 | `id` | integer
 | `email` | string
-| `first_name` | string
 | `is_banned` | bit
 | `is_defunct` | bit
-| `last_name` | string
 | `num_nonspam` | integer
 | `num_spam` | integer
 | `org_id` | integer
@@ -134,11 +124,9 @@ Perform a search for address objects.
 |---
 | Field | Type | 
 |-|-|-
-| `first_name` | Contact first name
 | `fieldsets` | Custom fieldsets on the addresses
 | `is_banned` | Whether senders are banned or not
 | `is_defunct` | Whether senders are defunct or not
-| `last_name` | Contact last name
 | `links` | Objects linked to addresses
 | `org_name` | Contact organization name
 | `watchers` | Watchers on addresses
