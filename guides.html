@@ -12,20 +12,21 @@ jumbotron:
 ---
 
 <div class="integrations">
-	{% assign topics = site.guides | group_by: 'topic' %}
+	{% assign topics = site.guides | sort: 'id' | group_by: 'topic' %}
 	
 	{% for topic in topics %}
 		<h1 id="{{ topic.name | slugify }}">{{ topic.name }}</h1>
 		
 		{% if topic.name == 'Integrations' %}
-			{% assign subtopics = topic.items | group_by: 'subtopic' %}
+			{% assign subtopics = topic.items | sort: 'id' | group_by: 'subtopic' %}
 		
 			<div style="margin-left:15px;">
 			{% for subtopic in subtopics %}
 				<h2 id="{{ subtopic.name | slugify }}">{{ subtopic.name }}</h2>
 		
 				<ul class="articles">
-				{% for guide in subtopic.items %}
+				{% assign items = subtopic.items | sort: 'title' %}
+				{% for guide in items %}
 					<li>
 						<a href="{{ guide.url }}">{{ guide.title }}</a>
 					</li>
@@ -36,7 +37,8 @@ jumbotron:
 		
 		{% else %}
 			<ul class="articles">
-			{% for guide in topic.items %}
+			{% assign items = topic.items | sort: 'title' %}
+			{% for guide in items %}
 				<li>
 					<a href="{{ guide.url }}">{{ guide.title }}</a>
 				</li>
