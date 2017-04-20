@@ -455,12 +455,12 @@ Copy and paste the following behavior fragment into the large textbox on the imp
     },
     "configure": [
       {
-        "label": "Polly Bot:",
+        "label": "Polly Bot behavior:",
         "path": "behavior_fragment.nodes[0].params.actions[0].behavior_id",
         "type": "chooser",
         "params": {
-          "context": "cerberusweb.contexts.bot",
-          "query": "\"Polly Bot\"",
+          "context": "cerberusweb.contexts.behavior",
+          "query": "bot:(Polly) presigned",
           "single": true
         }
       }
