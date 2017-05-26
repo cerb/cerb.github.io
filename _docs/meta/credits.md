@@ -48,6 +48,8 @@ jumbotron:
 - [Parsedown](http://michelf.com/projects/php-markdown/) is a PHP library for converting lightweight Markdown[^markdown] text into HTML.
 	-  We use Markdown for formatting in HTML messages and knowledgebase articles.
 
+- [Ace](https://ace.c9.io) is a high performance code editor for the web. It provides syntax highlighting in 110+ languages, themes, code autocompletion, indent/outdent, parentheses matching, code folding, and much more.
+
 - [Amazon S3 PHP Class](http://undesigned.org.za/2007/10/22/amazon-s3-php-class) is a PHP library by Donovan Schönknecht for working with Amazon's S3[^s3] web service.
 	- We use the Amazon S3 PHP Class to provide the option to use Amazon's S3 service as long-term storage for infrequently accessed but heavy content (e.g. message content and attachments).
 
