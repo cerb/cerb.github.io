@@ -35,6 +35,7 @@ Perform a search for activity log records.
 |---
 | Field | Type
 |-|-
+| `activity` | string
 | `created` | timestamp
 | `id` | integer
 
