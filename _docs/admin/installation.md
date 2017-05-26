@@ -25,7 +25,7 @@ jumbotron:
 	- Mozilla Firefox
 	- Apple Safari
 	- Opera
-	- Internet Explorer (10.0+)
+	- Internet Explorer (11.0+)
 
 ## Server requirements
 
@@ -41,7 +41,7 @@ jumbotron:
 	- lighttpd
 	- Microsoft Internet Information Server (IIS)
 
-- PHP 5.5 or later
+- PHP 7.0 or later
 	- With the following extensions enabled:
 		- curl
 		- dom

@@ -38,7 +38,7 @@ jumbotron:
 					<li>Self-hosted on your own hardware</li>
 					<li>We'll send you a free 3-seat license to get started</li>
 					<li>Includes 100% of our source code from GitHub</li>
-					<li>Requires PHP 5.5+ and MySQL 5.6+</li>
+					<li>Requires PHP 7.0+ and MySQL 5.6+</li>
 					<li>You're responsible for installation, upgrades, scaling, monitoring, security, and backups</li>
 					<li>Ideal for regulatory compliance</li>
 					<li><a href="/download/">Learn more &raquo;</a></li>

@@ -13,7 +13,7 @@ jumbotron:
 
 * Installed on your own hardware (web, database, mail, storage, cache)
 * You're responsible for installation, upgrades, scaling, monitoring, security, and backups
-* Requires PHP 5.5+ and MySQL 5.6+
+* Requires PHP 7.0+ and MySQL 5.6+
 * Ideal for regulatory compliance (HIPAA, Safe Harbor, Sarbanes-Oxley)
 * Your first **3 seats are free** with full functionality and **no time limit**
 * Optionally migrate to [Cerb Cloud](/cloud/) at any time
