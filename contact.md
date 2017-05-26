@@ -8,7 +8,7 @@ jumbotron:
 ---
 
 <form id="frmContact" class="cerb-form" action="javascript:;" method="POST" onsubmit="return false;">
-	{% comment %}<input type="hidden" name="g-recaptcha-response" value="">{% endcomment %}
+	<input type="hidden" name="g-recaptcha-response" value="">
 	
 	<fieldset>
 		<legend>Contact by email</legend>
@@ -19,7 +19,7 @@ jumbotron:
 		<label for="message">How can we help?</label>
 		<textarea name="message" placeholder="" autocomplete="off" rows="10"></textarea>
 		
-		{% comment %}<div class="g-recaptcha" data-sitekey="6LeOPh0TAAAAANiEBFZLURt43IkCTUMOPUSMoxL9"></div>{% endcomment %}
+		<div class="g-recaptcha" data-sitekey="6LeOPh0TAAAAANiEBFZLURt43IkCTUMOPUSMoxL9"></div>
 		
 		<div style="margin-top:20px;">
 			<input type="button" class="submit" value="Send message">
@@ -27,6 +27,8 @@ jumbotron:
 		</div>
 	</fieldset>
 </form>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
 
 <script type="text/javascript">
 $(function() {
@@ -36,7 +38,7 @@ $(function() {
 		// [TODO] Spinner
 		
 		// Captcha
-		//$frm.find('input:hidden[name=g-recaptcha-response]').val(grecaptcha.getResponse());
+		$frm.find('input:hidden[name=g-recaptcha-response]').val(grecaptcha.getResponse());
 		
 		$.ajax({
 			method: 'POST',
@@ -46,7 +48,7 @@ $(function() {
 			data: $frm.serialize(),
 			success: function(res) {
 				if(res && res.error) {
-					//grecaptcha.reset();
+					grecaptcha.reset();
 					
 					var $warn = $('<div class="warning"/>').text(res.error);
 					$frm.find('div.status').html($warn);
@@ -60,7 +62,7 @@ $(function() {
 				}
 			},
 			error: function(e) {
-				//grecaptcha.reset();
+				grecaptcha.reset();
 				
 				var $warn = $('<div class="error"/>').text("An unexpected error occurred. Please try again later.");
 				$frm.find('div.status').html($warn);
