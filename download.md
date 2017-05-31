@@ -54,13 +54,13 @@ Registered charities and qualifying open source projects may be eligible for a h
 
 ## Do you provide a renewal discount for existing licenses?
 
-Yes! We automatically add a 10% _"timely renewal_" discount to your invoice for any existing Pro licenses that have not been expired for more than 30 days.
+Yes! We automatically add a 20% _"timely renewal_" discount to your invoice for any existing Pro licenses that have not been expired for more than 30 days.
 
 <div id="academic"></div>
 
 ## Do you provide an academic discount?
 
-Yes. We offer a 20% discount in support of academic institutions.
+Yes. We offer a 25% discount in support of academic institutions.
 
 To qualify for an academic discount, institutions must be accredited by an agency recognized by the U.S. Department of Education (or their own national equivalent).  All publicly funded K-12 and preschools automatically qualify.
 
@@ -86,10 +86,10 @@ Yes! Volume discounts are available for _Academic_, _Commercial_, and _Governmen
 
 <div class="grid">
 <div class="unit half" align="center">
-{% include tables/volume_discount_standalone.html caption="Academic Volume Discount" base_cost=240.00 %}
+{% include tables/volume_discount_standalone.html caption="Academic Volume Discount" base_cost=270.00 %}
 </div>
 <div class="unit half" align="center">
-{% include tables/volume_discount_standalone.html caption="Commercial/Gov Volume Discount" base_cost=300.00 %}
+{% include tables/volume_discount_standalone.html caption="Commercial/Gov Volume Discount" base_cost=360.00 %}
 </div>
 </div>
 
