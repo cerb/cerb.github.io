@@ -113,6 +113,8 @@ $postfields = array(
     array('custom_5','+1 hour'), // date custom field
     array('custom_6',"Line 1\nLine 2\nLine 3"), // multi-line
     array('custom_4','Option 3'), // picklist
+    array('custom_3[]','Option 1'), // multi-checkbox (add)
+    array('custom_3[]','-Option 2'), // multi-checkbox (remove)
 );
 $out = $cerb->put($base_url . 'tickets/1.json', $postfields);
 </code>
