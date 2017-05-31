@@ -8,7 +8,7 @@ jumbotron:
 
 ## We believe in commercial open source
 
--  We've never felt entirely comfortable using tools that hide their source code, so we share __100%__ of ours on [GitHub](http://github.com/wgm/cerb).
+-  We've never felt entirely comfortable using tools that hide their source code, so we share __100%__ of ours on [GitHub](http://github.com/cerb/cerb-release).
 - Our collaborative community shares thousands of critical eyes and minds, and shoddy work wouldn't make it past their constructive scrutiny. 
 -  There will always be people who bypass the licensing, steal code, or copycat our innovative concepts. We're not going to be paranoid about it and mistrust everyone.
 - If people have to be forced into financially supporting our work, then we went very wrong somewhere.  Our target audience wants us to succeed.

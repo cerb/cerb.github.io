@@ -139,7 +139,7 @@ You should now be ready to install Cerb.
 <code class="language-bash">
 cd /usr/share/nginx/html/
 
-sudo git clone https://github.com/wgm/cerb.git
+sudo git clone https://github.com/cerb/cerb-release.git
 
 sudo chown -R apache:apache cerb
 

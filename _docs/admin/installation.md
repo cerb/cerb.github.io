@@ -104,7 +104,7 @@ You can download Cerb into a specific directory with a single command:
 
 <pre class="command-line" data-user="user" data-host="host">
 <code class="language-bash">
-git clone git://github.com/wgm/cerb.git cerb
+git clone git://github.com/cerb/cerb-release.git cerb
 </code>
 </pre>
 
@@ -114,7 +114,7 @@ To download Cerb into the root of your domain instead, use:
 
 <pre class="command-line" data-user="user" data-host="host">
 <code class="language-bash">
-git clone git://github.com/wgm/cerb.git .
+git clone git://github.com/cerb/cerb-release.git .
 </code>
 </pre>
 

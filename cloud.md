@@ -87,7 +87,7 @@ This also allows us to provide the highest level of assistance during your evalu
 
 All of your Cerb Cloud configuration and data can be exported to a standalone instance of Cerb at any time. Once you're confident that Cerb is a good fit for your team, we're happy to help you with that migration.
 
-If you still need to evaluate Cerb in your own environment, you can simply [grab a copy of the project from GitHub](https://github.com/wgm/cerb) and follow the [installation instructions](/docs/installation).
+If you still need to evaluate Cerb in your own environment, you can simply [grab a copy of the project from GitHub](https://github.com/cerb/cerb-release) and follow the [installation instructions](/docs/installation).
 
 <div id="custom-plugins"></div>
 

@@ -62,6 +62,6 @@ Cerb is developed in the PHP[^php] programming language. Relational data is stor
 
 # References 
 
-[^github]: <https://github.com/wgm/cerb>
+[^github]: <https://github.com/cerb/cerb-release>
 [^php]: <http://php.net>
 [^mysql]: <http://mysql.com>

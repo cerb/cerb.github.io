@@ -13,7 +13,7 @@ jumbotron:
 	<p>If you're using <b>Cerb Cloud</b> then we handle upgrades for you already.</p>
 </div>
 
-The officially supported way of upgrading Cerb is by using **Git**[^git], a distributed version control system.  The official project is hosted on [GitHub](http://github.com/wgm/cerb). This environment makes it much easier for people to collaborate and share improvements.
+The officially supported way of upgrading Cerb is by using **Git**[^git], a distributed version control system.  The latest stable build of the project can be found on [GitHub](http://github.com/cerb/cerb-release). This environment makes it much easier for people to collaborate and share improvements.
 
 You can use Git to quickly update your local Cerb files to the latest version. The major advantage of version control is that it will attempt to automatically merge official code improvements with any local configuration and customization you have performed. Git also gives you the ability to list all your changes to any project files, and to easily restore to an official version when desirable.
 
@@ -61,19 +61,24 @@ git checkout -- install
 </code>
 </pre>
 
-Update the list of branches from the remote repository:
+Verify that you're using the proper remote repository:
 
-<pre class="command-line" data-user="user" data-host="host">
+<pre class="command-line" data-user="user" data-host="host" data-output="2-3">
 <code class="language-bash">
-git fetch origin
+git remote -v
+origin	https://github.com/cerb/cerb-release.git (fetch)
+origin	https://github.com/cerb/cerb-release.git (push)
 </code>
 </pre>
 
-<div class="cerb-box note">
-	<p>
-		If this gives an error, you can check your list of remotes with the <tt>git remote</tt> command. Use another remote in place of <tt>origin</tt>.
-	</p>
-</div>
+If your `origin` isn't `https://github.com/cerb/cerb-release.git`, then run the following commands:
+
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
+git remote rm origin
+git remote add origin https://github.com/cerb/cerb-release.git
+</code>
+</pre>
 
 Stash your uncommitted local changes (like your `framework.config.php` configuration file).  This leaves you with a clean version of the project files that simplifies merging:
 
@@ -83,11 +88,11 @@ git stash
 </code>
 </pre>
 
-Switch to the `stable` branch if it's not your current branch:
+Switch to the `master` branch if it's not your current branch:
 
 <pre class="command-line" data-user="user" data-host="host">
 <code class="language-bash">
-git checkout stable
+git checkout master
 </code>
 </pre>
 
@@ -95,7 +100,7 @@ Update to the latest stable version:
 
 <pre class="command-line" data-user="user" data-host="host">
 <code class="language-bash">
-git pull origin stable
+git pull origin master
 </code>
 </pre>
 
@@ -107,7 +112,7 @@ git stash pop
 </code>
 </pre>
 
-Remove the `/install` directory:
+Remove the `./install` directory:
 
 <pre class="command-line" data-user="user" data-host="host">
 <code class="language-bash">
@@ -159,7 +164,7 @@ chown -R www-data:www-data .
 </code>
 </pre>
 
-Set file permissions to read-only for owner and deny everything else:
+Set read file permissions for owner and deny everything else:
 
 <pre class="command-line" data-user="user" data-host="host">
 <code class="language-bash">
@@ -167,7 +172,7 @@ find . -type f -exec chmod 400 {} \;
 </code>
 </pre>
 
-Set directory permissions to read-only for owner and deny everything else:
+Set read/list directory permissions for owner and deny everything else:
 
 <pre class="command-line" data-user="user" data-host="host">
 <code class="language-bash">
@@ -221,19 +226,9 @@ define('SCRIPT_LAST_MODIFY', 1234567890); // last change
 
 <div class="cerb-box note">
 	<p>
-		This is only required if you used the bundled <tt>index.php</tt> file to deploy a portal. This step isn't necessary if you use a true reverse proxy (e.g. Apache <b>mod_proxy</b> or Nginx) to serve your community portals.
+		This is only required if you used the bundled <tt>index.php</tt> file to deploy a portal. This step isn't necessary if you use a true reverse proxy (e.g. Nginx or Apache <b>mod_proxy</b>) to serve your community portals.
 	</p>
 </div>
-
-## Install directory
-
-Delete the `install/` directory if it exists:
-
-<pre class="command-line" data-user="user" data-host="host">
-<code class="language-bash">
-rm -Rf install/
-</code>
-</pre>
 
 # References
 
