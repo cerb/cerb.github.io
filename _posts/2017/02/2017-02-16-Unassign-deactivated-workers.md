@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Tip: Remove assignments from deactivated workers"
+excerpt: Clear assignments on records owned by worker accounts that are deactivated.
 author: The Cerb Team
 date: 2017-02-16 10:00:00 -0700
 permalink: /tips/unassign-deactivated-workers/

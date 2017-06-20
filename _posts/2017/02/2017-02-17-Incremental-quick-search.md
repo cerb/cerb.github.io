@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Tip: Incremental quick search"
+excerpt: Add new filters to a worklist using quick search without replacing the existing filters.
 author: The Cerb Team
 date: 2017-02-17 10:30:00 -0700
 permalink: /tips/incremental-quick-search/
