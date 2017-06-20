@@ -45,7 +45,7 @@ You aren't paying per worker account, so there isn't a penalty for inviting ever
 
 ## How many workers can I invite to a Cerb Cloud trial?
 
-All Cerb Cloud trials start in the _Pro_ tier. This provides unlimited worker accounts with __three__ seats. [Contact us](/contact/) if you need to test with more seats and we can raise the limit.
+By default, your trial allows unlimited worker accounts with __3__ seats. [Contact us](/contact/) if you need to test with more seats and we can raise the limit.
 
 ## Do you require a credit card to start a free trial?
 
@@ -111,7 +111,7 @@ This reflects the fact that we can better forecast our costs and lock in longer 
 
 ## Do you provide academic discounts?
 
-Yes! We offer a 20% discount to qualified academic institutions. Please [contact us](/contact/) for details.
+Yes! We offer a 25% discount to qualified academic institutions. Please [contact us](/contact/) for details.
 
 <div id="nonprofit"></div>
 

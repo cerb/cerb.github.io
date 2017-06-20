@@ -17,6 +17,7 @@ jumbotron:
 	<div class="unit half">
 			<div style="display:inline-block;text-align:left;">
 				<h1><a href="/cloud/">Cloud</a></h1>
+				<h4>From <b>$40</b>/month per seat</h4>
 				<ul>
 					<li>Everything Cerb has to offer: collaborative workspaces, bot automation, plugins, community portals, etc.</li>
 					<li>Highly available and scalable in the cloud as a fully managed service</li>
@@ -34,6 +35,7 @@ jumbotron:
 	<div class="unit half">
 			<div style="display:inline-block;text-align:left;">
 				<h1><a href="/download/">Download</a></h1>
+				<h4><b>$30</b>/month per seat (annual)</h4>
 				<ul>
 					<li>Self-hosted on your own hardware</li>
 					<li>We'll send you a free 3-seat license to get started</li>
