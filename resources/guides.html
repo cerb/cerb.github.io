@@ -1,17 +1,22 @@
 ---
 layout: page
-title: "Guides"
-permalink: /guides/
+title: "How-to Guides"
+excerpt:
+permalink: /resources/guides/
 redirect_from:
+  - /guides/
   - /cookbook/
   - /integrations/
-  - /tips/
 jumbotron:
-  title: Guides
-  tagline: Master Cerb with step-by-step instructions
+  title: How-to Guides
+  tagline: 
+  breadcrumbs:
+  - 
+    label: Resources
+    url: /resources/
 ---
 
-<div class="integrations">
+<div class="integrations" style="margin-left:20px;">
 	{% assign topics = site.guides | sort: 'id' | group_by: 'topic' %}
 	
 	{% for topic in topics %}
@@ -22,7 +27,7 @@ jumbotron:
 		
 			<div style="margin-left:15px;">
 			{% for subtopic in subtopics %}
-				<h2 id="{{ subtopic.name | slugify }}">{{ subtopic.name }}</h2>
+				<b id="{{ subtopic.name | slugify }}">{{ subtopic.name }}</b>
 		
 				<ul class="articles">
 				{% assign items = subtopic.items | sort: 'title' %}
@@ -47,20 +52,4 @@ jumbotron:
 		{% endif %}
 		
 	{% endfor %}
-	
-	<h1 id="tips">Tips</h1>
-	
-	<ul class="articles">
-	
-	{% assign posts = site.posts | sort: 'title' %}
-	{% for post in posts %}
-	{% if post.tags contains 'tips' %}
-	<li>
-		<a href="{{ post.url }}">{{ post.title | remove_first: "Tip: " }}</a>
-	</li>
-	{% endif %}
-	{% endfor %}
-
-	</ul>
-	
 </div>

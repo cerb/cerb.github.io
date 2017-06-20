@@ -26,6 +26,9 @@ collections:
   guides:
     output: true
     permalink: /guides/:path/
+  packages:
+    output: true
+    permalink: /packages/:path/
 
 # Build settings
 markdown: kramdown
@@ -49,6 +52,12 @@ defaults:
     scope:
       path: ""
       type: "guides"
+    values:
+      layout: "integration"
+  -
+    scope:
+      path: ""
+      type: "packages"
     values:
       layout: "integration"
   -

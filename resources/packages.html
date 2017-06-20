@@ -1,0 +1,27 @@
+---
+layout: page
+title: "Packages"
+excerpt:
+permalink: /resources/packages/
+jumbotron:
+  title: Pre-built Workflow Packages
+  tagline: 
+  breadcrumbs:
+  - 
+    label: Resources
+    url: /resources/
+---
+
+<div class="integrations">
+	{% assign packages = site.packages | sort: 'id' %}
+	
+	<ul class="articles">
+	{% for package in packages %}
+		<li>
+			<a href="{{ package.url }}">{{ package.title }}</a>
+			<br>
+			{{ package.excerpt }}
+		</li>
+	{% endfor %}
+	</ul>
+</div>
