@@ -9,8 +9,11 @@ jumbotron:
   tagline: ""
   breadcrumbs:
   -
+    label: Resources &raquo;
+    url: /resources/
+  -
     label: Packages &raquo;
-    url: /packages/
+    url: /resources/packages/
 ---
 
 * TOC

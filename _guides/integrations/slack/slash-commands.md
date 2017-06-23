@@ -8,8 +8,17 @@ jumbotron:
   tagline: ""
   breadcrumbs:
   -
-    label: Guides &raquo; Integrations &raquo; Slack &raquo;
-    url: /guides/#slack
+    label: Resources &raquo;
+    url: /resources/
+  -
+    label: Guides &raquo;
+    url: /resources/guides/
+  -
+    label: Integrations &raquo;
+    url: /resources/guides/#integrations
+  -
+    label: Slack &raquo;
+    url: /resources/guides/#slack
 ---
 
 ## Introduction

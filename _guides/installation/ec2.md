@@ -9,8 +9,14 @@ jumbotron:
   tagline: ""
   breadcrumbs:
   -
-    label: Guides &raquo; Installation &raquo;
-    url: /guides/#installation
+    label: Resources &raquo;
+    url: /resources/
+  -
+    label: Guides &raquo;
+    url: /resources/guides/
+  -
+    label: Installation &raquo;
+    url: /resources/guides/#installation
 ---
 
 # Introduction

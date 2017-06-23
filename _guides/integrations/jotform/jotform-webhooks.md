@@ -9,8 +9,17 @@ jumbotron:
   tagline: ""
   breadcrumbs:
   -
-    label: Guides &raquo; Integrations &raquo; JotForm &raquo;
-    url: /guides/#jotform
+    label: Resources &raquo;
+    url: /resources/
+  -
+    label: Guides &raquo;
+    url: /resources/guides/
+  -
+    label: Integrations &raquo;
+    url: /resources/guides/#integrations
+  -
+    label: JotForm &raquo;
+    url: /resources/guides/#jotform
 ---
 
 # Introduction

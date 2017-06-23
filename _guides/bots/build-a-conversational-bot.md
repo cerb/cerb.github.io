@@ -8,8 +8,14 @@ jumbotron:
   tagline: ""
   breadcrumbs:
   -
-    label: Guides &raquo; Bots &raquo;
-    url: /guides/#bots
+    label: Resources &raquo;
+    url: /resources/
+  -
+    label: Guides &raquo;
+    url: /resources/guides/
+  -
+    label: Bots &raquo;
+    url: /resources/guides/#bots
 ---
 
 <iframe width="720" height="405" src="https://www.youtube.com/embed/p0zgNT-tEYU" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

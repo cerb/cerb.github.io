@@ -7,8 +7,14 @@ jumbotron:
   tagline: ""
   breadcrumbs:
   -
-    label: Guides &raquo; Classifiers &raquo;
-    url: /guides/#classifiers
+    label: Resources &raquo;
+    url: /resources/
+  -
+    label: Guides &raquo;
+    url: /resources/guides/
+  -
+    label: Classifiers &raquo;
+    url: /resources/guides/#classifiers
 ---
 
 # Introduction

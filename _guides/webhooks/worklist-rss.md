@@ -7,8 +7,14 @@ jumbotron:
   tagline: ""
   breadcrumbs:
   -
-    label: Guides &raquo; Webhooks &raquo;
-    url: /guides/#webhooks
+    label: Resources &raquo;
+    url: /resources/
+  -
+    label: Guides &raquo;
+    url: /resources/guides/
+  -
+    label: Webhooks &raquo;
+    url: /resources/guides/#webhooks
 ---
 
 ## Introduction

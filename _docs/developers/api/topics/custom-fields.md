@@ -6,7 +6,10 @@ jumbotron:
   tagline: ""
   breadcrumbs:
   -
-    label: Developers &raquo; API
+    label: Docs &raquo;
+    url: /docs/home/
+  -
+    label: API &raquo;
     url: /docs/api/
 ---
 

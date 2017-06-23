@@ -8,8 +8,17 @@ jumbotron:
   tagline: ""
   breadcrumbs:
   -
-    label: Guides &raquo; Integrations &raquo; HipChat &raquo;
-    url: /guides/#hipchat
+    label: Resources &raquo;
+    url: /resources/
+  -
+    label: Guides &raquo;
+    url: /resources/guides/
+  -
+    label: Integrations &raquo;
+    url: /resources/guides/#integrations
+  -
+    label: HipChat &raquo;
+    url: /resources/guides/#hipchat
 ---
 
 ## Introduction

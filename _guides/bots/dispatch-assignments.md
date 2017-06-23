@@ -8,8 +8,14 @@ jumbotron:
   tagline: ""
   breadcrumbs:
   -
-    label: Guides &raquo; Bots &raquo;
-    url: /guides/#bots
+    label: Resources &raquo;
+    url: /resources/
+  -
+    label: Guides &raquo;
+    url: /resources/guides/
+  -
+    label: Bots &raquo;
+    url: /resources/guides/#bots
 ---
 
 * TOC
