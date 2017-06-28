@@ -37,6 +37,12 @@ If you're sending automatic replies from various bots (e.g. per group), then the
 
 This example should catch most automatic responses, but you can continue to expand on it to meet your own needs. Feel free to share your improvements in the comments at the bottom of the page.
 
+<div class="cerb-box note">
+	<p>
+		In Cerb 8.0+ you can <a href="/packages/auto-reply-bot">import the Auto-Reply Bot package</a> instead.
+	</p>
+</div>
+
 # Importing the behavior
 
 You can quickly import the example behavior to get started.

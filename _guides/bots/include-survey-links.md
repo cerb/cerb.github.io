@@ -27,6 +27,12 @@ Let's assume that you want to include a survey link at the bottom of each outgoi
 
 In this guide, we'll create a Survey Bot that can add survey links to the bottom of every message. This should enable integration with most popular survey and customer satisfaction tools.
 
+<div class="cerb-box note">
+	<p>
+		In Cerb 8.0+ you can <a href="/packages/customer-satisfaction">import the Customer Satisfaction Surveys package</a> instead.
+	</p>
+</div>
+
 # Creating the behavior
 
 Navigate to **Search >> Bots**.

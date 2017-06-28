@@ -29,11 +29,11 @@ Most email management applications support automatic responses in some form.  Th
 
 In this example, we'll create a behavior that sends an automatic response for every incoming email message that opens a new conversation.  In other words, when a customer replies to an existing conversation it won't result in them receiving another automated confirmation message.  Our behavior will also attempt to detect when the sender is also automated (including out of office and vacation auto-responders), and avoid sending them a confirmation.  Finally, we'll cover a few advanced topics like sending different responses (based on day, time, SLA, group), detecting intent, and sending rich messages with images and graphical layouts.
 
-{% comment %}
-We'll [ignore automated messages](/guides/bots/detect-automated-messages/) from other systems.
-email to recipients, or send email
-keep in history or not
-{% endcomment %}
+<div class="cerb-box note">
+	<p>
+		In Cerb 8.0+ you can <a href="/packages/auto-reply-bot">import the Auto-Reply Bot package</a> instead.
+	</p>
+</div>
 
 # Creating the behavior
 
