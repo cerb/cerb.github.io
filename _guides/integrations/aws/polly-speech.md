@@ -418,18 +418,12 @@ You can do anything with the audio stream URL at this point.  For instance:
 
 A common use case for audio streams is adding speech responses to conversational bots within Cerb.
 
-For a working example we're going to extend the bot from the [Build a conversational bot behavior](/guides/bots/conversational-bots/) guide.  If you haven't already, you should complete that guide before continuing here.
+For a working example we're going to extend the bot from the [Chat Bot](/packages/chat-bot/) package.  If you haven't already, you should complete that guide before continuing here.
 
 Start a chat with your bot by clicking on the bot icon in the lower right of your browser:
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/bots/conversational-bots/cerb-bot-convo-bubble.png" class="screenshot">
-</div>
-
-<div class="cerb-box note">
-	<p>
-		If there are other conversational bots in your environment, a different one may answer your chat request. You can type <tt>@cerb</tt> to switch to the correct bot.
-	</p>
 </div>
 
 In the chat window that opens, click on **Cerb**'s name above the first message to open its card:
