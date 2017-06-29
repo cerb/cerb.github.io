@@ -23,13 +23,7 @@ jumbotron:
 
 # Introduction
 
-<iframe width="720" height="405" src="https://www.youtube.com/embed/p0zgNT-tEYU" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-<div class="cerb-box note">
-	<p>
-		The process shown in the above video has changed significantly in <b>Cerb 8.0</b> with the introduction of <b>bot interactions</b>. This package includes the most recent version.
-	</p>
-</div>
+<iframe src="https://player.vimeo.com/video/223537123" width="880" height="495" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 This package adds a preconfigured [bot](/docs/bots/) with some helpful text-based conversational interactions.
 
