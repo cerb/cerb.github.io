@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Sneak peek: Recurrent Behaviors and Proactive Interactions"
+title: "Sneak peek: Recurrent behaviors and proactive interactions"
 excerpt: Two upcoming features give bots the ability to get your attention when they need it.
 author: The Cerb Team
 date: 2017-06-28 18:00:00 -0700
