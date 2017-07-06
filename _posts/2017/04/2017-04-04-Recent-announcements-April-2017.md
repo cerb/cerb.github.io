@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Recent announcements from Cerb: 1 sneak peek, 1 security notice, 6 maintenance updates, 6 how-to-guides, and 10 new tips"
-excerpt: "A summary of Cerb announcements between late Feb and early April 2017"
+title: "Recent announcements from Cerb: April 2017"
+excerpt: "A summary of recent Cerb news: 1 sneak peek, 1 security notice, 6 maintenance updates, 6 how-to guides, and 10 tips."
 author: The Cerb Team
 date: 2017-04-04 19:35:00 -0700
 tags: cerb announcements
