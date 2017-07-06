@@ -27,6 +27,10 @@ jumbotron:
 
 # Introduction
 
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/facebook/plugin/cerb-and-facebook.png" class="screenshot">
+</div>
+
 In this guide we'll walk through the process of linking a Facebook page to Cerb. You'll be able to use Facebook's full API from bots in Cerb to automate whatever you need.
 
 # Install the Facebook plugin
