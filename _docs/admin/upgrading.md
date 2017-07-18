@@ -77,6 +77,7 @@ If your `origin` isn't `https://github.com/cerb/cerb-release.git`, then run the 
 <code class="language-bash">
 git remote rm origin
 git remote add origin https://github.com/cerb/cerb-release.git
+git fetch origin
 </code>
 </pre>
 
