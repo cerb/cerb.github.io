@@ -212,6 +212,21 @@ Perform a search for ticket objects.
 | `sortBy` | The field to sort results by | string
 | `subtotals[]` | Multiple subtotal sets can be returned | string 
 
+**expand**
+	
+Includes additional information in the response.  The following tokens may be provided in a comma-separated list:
+
+|---
+| Field | Description
+|-|-
+| `custom_*` | Include custom field values for each ticket.
+| `latest_incoming_activity` | Include a timestamp for the latest incoming activity on each ticket.
+| `latest_outgoing_activity` | Include a timestamp for the latest outgoing activity on each ticket.
+| `owner` | Include full owner records.
+| `requesters` | Include full participant records for each ticket.
+| `signatures` | Include a signature for each ticket's group/bucket.
+| `watchers` | Include watcher records for each ticket.
+
 **sortBy**
 
 |---
