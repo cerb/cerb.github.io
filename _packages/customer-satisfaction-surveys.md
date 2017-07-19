@@ -31,7 +31,7 @@ The following metrics are tracked:
 
 This video shows the whole process in action:
 
-<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcerbapp%2Fvideos%2F1642293019144081%2F&show_text=0&width=880" width="880" height="495" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+<iframe src="https://player.vimeo.com/video/217069803" width="880" height="495" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 # Installing the required plugin
 
