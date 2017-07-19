@@ -64,7 +64,6 @@ Update an existing email address object using any of the following fields:
 |---
 | Field | Type | 
 |-|-|-
-| `email` | string
 | `is_banned` | bit
 | `is_defunct` | bit
 | `org_id` | integer
