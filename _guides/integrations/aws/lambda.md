@@ -25,6 +25,10 @@ jumbotron:
 # Introduction
 {:.no_toc}
 
+<div>
+<img src="/assets/images/guides/aws/lambda/cerb-and-lambda.png" class="screenshot">
+</div>
+
 You can automate all kinds of workflows with bots in Cerb; but sometimes you need to accomplish something that isn't possible with the built-in functionality.  Fortunately, with connected accounts and the **Execute HTTP Request** action, your bots can automate nearly anything by interacting with third-party services.
 
 One of the most powerful ways to extend bot automation is with Lambda[^aws-lambda] from Amazon Web Services (AWS).
