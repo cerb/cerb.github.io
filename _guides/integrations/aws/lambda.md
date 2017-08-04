@@ -1,0 +1,1212 @@
+---
+title: Run AWS Lambda functions from a Cerb bot
+excerpt: Add new capabilities to Cerb bots using Lambda from Amazon Web Services.
+layout: integration
+topic: Integrations
+subtopic: Amazon Web Services
+jumbotron:
+  title: Run AWS Lambda functions from a Cerb bot
+  tagline: ""
+  breadcrumbs:
+  -
+    label: Resources &raquo;
+    url: /resources/
+  -
+    label: Guides &raquo;
+    url: /resources/guides/
+  -
+    label: Integrations &raquo;
+    url: /resources/guides/#integrations
+  -
+    label: AWS &raquo;
+    url: /resources/guides/#amazon-web-services
+---
+
+# Introduction
+{:.no_toc}
+
+You can automate all kinds of workflows with bots in Cerb; but sometimes you need to accomplish something that isn't possible with the built-in functionality.  Fortunately, with connected accounts and the **Execute HTTP Request** action, your bots can automate nearly anything by interacting with third-party services.
+
+One of the most powerful ways to extend bot automation is with Lambda[^aws-lambda] from Amazon Web Services (AWS).
+
+AWS Lambda is a cloud-based service for building microservices at scale without managing any servers. You can write code in Node.js, Java, or Python, and bundle any third-party libraries.  Amazon automatically takes care of deploying, scaling, and load balancing your code across multiple containers[^aws-containers].
+
+Generally, you send inputs to a Lambda function with an HTTP request to their API.  The function does something interesting with those inputs and then returns output.
+
+This simple concept allows you to add countless new capabilities to bots in Cerb.
+
+For instance, you can write a Lambda function for taking form data and filling in the editable fields of a PDF file. This can be quickly accomplished using Node.js or Python and the pdftk library. Bots would send form data to the function and receive a download URL for the generated PDF.
+
+We'll demonstrate Lambda integration in this guide by adding DNS[^dns] lookup functionality to a conversational bot.
+
+* TOC
+{:toc}
+
+# Log in to Amazon Web Services
+
+We'll start by logging in to the [AWS Management Console](https://console.aws.amazon.com/iam/).
+
+If you don't have an AWS account, you can sign up for free at: <https://aws.amazon.com>
+
+## Add a new Lambda function
+
+Navigate to Lambda from the **Services** menu at the top.
+
+Click the blue **Create a Lambda function** button.
+
+Filter the runtime to **Node.js 6.10** (or latest version).
+
+Select **Blank Function**.
+
+Click the blue **Next** button.
+
+In **Configure function**:
+
+* **Name:** CerbDnsLookup
+* **Description:** Resolve IPs and hostnames
+
+In **Lambda function code**, paste the following:
+
+<pre>
+<code class="language-javascript">
+{% raw %}
+'use strict';
+const dns = require('dns');
+
+exports.handler = (event, context, callback) => {
+  if(undefined === event.mode || 0 === event.mode.length) {
+    callback("The 'mode' parameter is required.");
+    return;
+  }
+
+  if(undefined === event.value || 0 === event.value.length) {
+    callback("The 'value' parameter is required.");
+    return;
+  }
+
+  switch(event.mode) {
+    // Reverse
+    case 'reverse':
+      dns.reverse(event.value, function(err, hostnames) {
+        if(err) {
+          callback(err);
+          return;
+        }
+
+        callback(null, hostnames);
+      });
+      break;
+
+    // MX
+    case 'mx':
+      dns.resolveMx(event.value, function(err, exchanges) {
+        if(err) {
+          callback(err);
+          return;
+        }
+
+        callback(null, exchanges);
+      });
+      break;
+
+    // Resolve
+    default:
+      dns.resolve(event.value, function(err, addresses) {
+        if(err) {
+          callback(err);
+          return;
+        }
+
+        callback(null, addresses);
+      });
+      break;
+  }
+};
+{% endraw %}
+</code>
+</pre>
+
+In **Lambda function handler and role**:
+
+* **Role:** Choose an existing role (if one exists), or create a new one.  This determines what services and resources the Lambda function can access.  For this example you don't need to add anything to the defaults.
+
+You can ignore **Advanced settings** for now.  Later on you may need to configure a Lambda function to run inside an existing Virtual Private Cloud (VPC).
+
+Click the blue **Next** button in the bottom right.
+
+Click the blue **Create function** button in the bottom right.
+
+Now we can give Cerb bots access to this function.
+
+## Add a new policy
+
+Navigate to IAM from the **Services** menu at the top of the page.
+
+We need to create a new _policy_ in your Amazon Web Services (AWS) account to describe the services that your Cerb bot is allowed to use.  This is accomplished with the Identity Access Management (IAM) service.
+
+We're going to create a new IAM policy that provides:
+
+- Invoke access to AWS Lambda functions prefixed with **Cerb***
+- Read-only access to the user's own account info
+
+Select **Policies** in the navigation on the left.
+
+Click the **Create Policy** button.
+
+In the **Create Your Own Policy** section, click the **Select** button.
+
+Enter the following:
+
+- **Policy Name:** CerbLambda
+
+- **Description:** Programmatic access to AWS Lambda from Cerb bots
+
+- **Policy Document:** _(copy and paste the policy below)_
+
+<pre>
+<code class="language-json">
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CerbLambdaGetUser",
+      "Effect": "Allow",
+      "Action": [
+        "iam:GetUser"
+      ],
+      "Resource": [
+        "arn:aws:iam::*:user/${aws:username}"
+      ]
+    },
+    {
+      "Sid": "CerbLambdaInvoke",
+      "Effect": "Allow",
+      "Action": [
+        "lambda:InvokeAsync",
+        "lambda:InvokeFunction"
+      ],
+      "Resource": [
+        "arn:aws:lambda:*:*:function:Cerb*"
+      ]
+    }
+  ]
+}
+</code>
+</pre>
+
+<div class="cerb-box note">
+	<p>
+		The default policy above allows access to any Lambda function that starts with <b>Cerb*</b> in any region for any authorized account. You can restrict access to specific Lambda functions (and regions/accounts) by listing their ARNs in the <b>Resource</b> section of <b>CerbLambdaInvoke</b>.
+	</p>
+</div>
+
+Click the blue **Create Policy** button in the bottom right.
+
+## Create a new user
+
+<div class="cerb-box note">
+	<p>If you already have an IAM user for Cerb bots you can attach the new policy and <a href="#enable-the-aws-plugin-in-cerb">skip ahead</a>.</p>
+</div>
+
+Now that we have a policy, we're ready to create the new user account for our Cerb bot to use.
+
+Select **Users** in the left navigation.
+
+Click the blue **Add user** button at the top of the page.
+
+Type `Cerb` in **User name**.
+
+In **Access type**, check _Programmatic access_.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/aws/common/aws-iam-create-user.png" class="screenshot">
+</div>
+
+Click the blue **Next: Permissions** button in the bottom right.
+
+## Attach existing policies
+
+Let's add the policy we just created.
+
+Select **Attach existing policies directly**.
+
+Type `Cerb` in the search box and select **CerbLambda**.
+
+Click the blue **Next: Review** button in the bottom right.
+
+Verify the new user and click the blue **Create user** button in the bottom right.
+
+## Save your new credentials
+
+Click the **Download .csv** button to save a copy of your new credentials.  You'll need these in a moment when adding a new connected account in Cerb.
+
+That's everything we need to do in AWS. You can close the AWS Management Console.
+
+# Enable the AWS plugin in Cerb
+
+To add the AWS service provider for connected accounts in Cerb, we need to install a plugin.
+
+Click **setup** in the top right of Cerb (you must be an admin).
+
+Hover over the **Plugins** menu and select **Plugin Library**.
+
+Type `aws` in the search box above the worklist and press `<ENTER>`.
+	
+Find the **Amazon Web Services (AWS) Integration** plugin in the worklist and click its **Download and install** button.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/aws/common/cerb-plugin-aws-install.png" class="screenshot">
+</div>
+
+On the popup, click **Download and install** again to confirm.
+
+In the **Status:** field, select _Enabled_.
+
+Click the **Save Changes** button.
+
+# Add a connected account in Cerb
+
+Now we can create a connected account to securely store our AWS user credentials.
+
+Open the [search menu](/docs/navigation/#search) and select **Connected Accounts**.
+
+Click the **(+)** icon above the worklist to add a new account.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/common/worklist-add.png" class="screenshot">
+</div>
+
+Click on **Amazon Web Services**.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/aws/common/cerb-connected-account-add.png" class="screenshot">
+</div>
+
+This will open a popup that asks you for your programmatic user credentials.
+
+Enter the following:
+
+- **Name:** `AWS (Cerb)`
+- **Owner:** Cerb
+- **Access Key ID:** `<the access key you downloaded earlier>`
+- **Secret Access Key:** `<the secret key you downloaded earlier>`
+	
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/aws/common/cerb-connected-account-creds.png" class="screenshot">
+</div>
+
+Click the **Save Changes** button.
+
+If everything was configured properly, you'll see the new connected account in your worklist.
+
+That's all for connected accounts.  You can close the connected accounts search popup.
+
+# Import AWS Lambda Bot in Cerb
+
+Now we're ready to create the bot that interacts with AWS using our connected account.
+
+Navigate to **Setup >> Configure >> Import Package**.
+
+Copy and paste the following behavior into the large text box:
+
+<pre style="max-height: 29.25em;">
+<code class="language-json">
+{% raw %}
+{
+  "package": {
+  "name": "AWS Lambda Bot",
+  "cerb_version": "8.0.5",
+  "revision": 1,
+  "requires": {
+    "cerb_version": "8.0.0",
+    "plugins": [
+      "wgm.aws"
+    ]
+  },
+  "configure": {
+    "prompts": [
+      {
+        "type": "chooser",
+        "label": "AWS Account:",
+        "key": "aws_account_id",
+        "params": {
+          "context": "cerberusweb.contexts.connected_account",
+          "query": "service:aws"
+        }
+      },
+      {
+        "type": "text",
+        "label": "AWS Region:",
+        "key": "aws_region",
+        "params": {
+          "default": "us-west-2"
+        }
+      }
+    ],
+    "placeholders": [
+    ]
+  }
+  },
+  "bots": [
+    {
+      "uid": "bot_33",
+      "name": "AWS Lambda Bot",
+      "owner": {
+        "context": "cerberusweb.contexts.app",
+        "id": 0
+      },
+      "is_disabled": false,
+      "params": {
+        "config": null,
+        "events": {
+          "mode": "all",
+          "items": []
+        },
+        "actions": {
+          "mode": "all",
+          "items": []
+        }
+      },
+      "image": "data:image/png;base64,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",
+      "behaviors": [
+        {
+          "uid": "behavior_180",
+          "title": "DNS conversational behavior",
+          "is_disabled": false,
+          "is_private": true,
+          "priority": 50,
+          "event": {
+            "key": "event.message.chat.worker",
+            "label": "Conversation with worker"
+          },
+          "nodes": [
+            {
+              "type": "action",
+              "title": "Hi!",
+              "status": "live",
+              "params": {
+                "actions": [
+                  {
+                    "action": "send_message",
+                    "message": "Hi, {{worker_first_name}}!",
+                    "format": "",
+                    "delay_ms": "250"
+                  },
+                  {
+                    "action": "send_message",
+                    "message": "I can perform DNS lookups for you.",
+                    "format": "",
+                    "delay_ms": "1000"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "loop",
+              "title": "Menu",
+              "status": "live",
+              "params": {
+                "foreach_json": "[\"*\"]",
+                "as_placeholder": "iterations"
+              },
+              "nodes": [
+                {
+                  "type": "action",
+                  "title": "What would you like to look up?",
+                  "status": "live",
+                  "params": {
+                    "actions": [
+                      {
+                        "action": "send_message",
+                        "message": "What would you like to look up?",
+                        "format": "",
+                        "delay_ms": "500"
+                      },
+                      {
+                        "action": "prompt_buttons",
+                        "options": "Hostname\r\nIP\r\nMX\r\nBye",
+                        "color_from": "#4795f7",
+                        "color_mid": "#4795f7",
+                        "color_to": "#4795f7",
+                        "style": ""
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "action",
+                  "title": "Save mode",
+                  "status": "live",
+                  "params": {
+                    "actions": [
+                      {
+                        "action": "_set_custom_var",
+                        "value": "{{message}}",
+                        "format": "",
+                        "is_simulator_only": "0",
+                        "var": "dns_mode"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "switch",
+                  "title": "Action:",
+                  "status": "live",
+                  "nodes": [
+                    {
+                      "type": "outcome",
+                      "title": "Hostname",
+                      "status": "live",
+                      "params": {
+                        "groups": [
+                          {
+                            "any": 0,
+                            "conditions": [
+                              {
+                                "condition": "message",
+                                "oper": "is",
+                                "value": "Hostname"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "nodes": [
+                        {
+                          "type": "action",
+                          "title": "What hostname?",
+                          "status": "live",
+                          "params": {
+                            "actions": [
+                              {
+                                "action": "send_message",
+                                "message": "What hostname would you like to find an IP for?",
+                                "format": "",
+                                "delay_ms": "1000"
+                              },
+                              {
+                                "action": "prompt_text",
+                                "placeholder": "e.g. cerb.ai"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "action",
+                          "title": "Run behavior",
+                          "status": "live",
+                          "params": {
+                            "actions": [
+                              {
+                                "action": "_run_behavior",
+                                "on": "_trigger_va_id",
+                                "behavior_id": "{{{uid.behavior_181}}}",
+                                "var_mode": "resolve",
+                                "var_value": "{{message}}",
+                                "run_in_simulator": "0",
+                                "var": "_behavior"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "action",
+                          "title": "parseResponse()",
+                          "status": "live",
+                          "params": {
+                            "actions": [
+                              {
+                                "action": "_run_subroutine",
+                                "subroutine": "parseResponse()"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "outcome",
+                      "title": "IP",
+                      "status": "live",
+                      "params": {
+                        "groups": [
+                          {
+                            "any": 0,
+                            "conditions": [
+                              {
+                                "condition": "message",
+                                "oper": "is",
+                                "value": "IP"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "nodes": [
+                        {
+                          "type": "action",
+                          "title": "What IP?",
+                          "status": "live",
+                          "params": {
+                            "actions": [
+                              {
+                                "action": "send_message",
+                                "message": "What IP would you like to find a hostname for?",
+                                "format": "",
+                                "delay_ms": "1000"
+                              },
+                              {
+                                "action": "prompt_text",
+                                "placeholder": "e.g. 8.8.8.8"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "action",
+                          "title": "Run behavior",
+                          "status": "live",
+                          "params": {
+                            "actions": [
+                              {
+                                "action": "_run_behavior",
+                                "on": "_trigger_va_id",
+                                "behavior_id": "{{{uid.behavior_181}}}",
+                                "var_mode": "reverse",
+                                "var_value": "{{message}}",
+                                "run_in_simulator": "0",
+                                "var": "_behavior"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "action",
+                          "title": "parseResponse()",
+                          "status": "live",
+                          "params": {
+                            "actions": [
+                              {
+                                "action": "_run_subroutine",
+                                "subroutine": "parseResponse()"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "outcome",
+                      "title": "MX",
+                      "status": "live",
+                      "params": {
+                        "groups": [
+                          {
+                            "any": 0,
+                            "conditions": [
+                              {
+                                "condition": "message",
+                                "oper": "is",
+                                "value": "MX"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "nodes": [
+                        {
+                          "type": "action",
+                          "title": "What hostname?",
+                          "status": "live",
+                          "params": {
+                            "actions": [
+                              {
+                                "action": "send_message",
+                                "message": "What hostname would you like to find mail servers for?",
+                                "format": "",
+                                "delay_ms": "1000"
+                              },
+                              {
+                                "action": "prompt_text",
+                                "placeholder": "e.g. cerb.email"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "action",
+                          "title": "Run behavior",
+                          "status": "live",
+                          "params": {
+                            "actions": [
+                              {
+                                "action": "_run_behavior",
+                                "on": "_trigger_va_id",
+                                "behavior_id": "{{{uid.behavior_181}}}",
+                                "var_mode": "mx",
+                                "var_value": "{{message}}",
+                                "run_in_simulator": "0",
+                                "var": "_behavior"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "action",
+                          "title": "parseResponse()",
+                          "status": "live",
+                          "params": {
+                            "actions": [
+                              {
+                                "action": "_run_subroutine",
+                                "subroutine": "parseResponse()"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "outcome",
+                      "title": "Bye",
+                      "status": "live",
+                      "params": {
+                        "groups": [
+                          {
+                            "any": 0,
+                            "conditions": []
+                          }
+                        ]
+                      },
+                      "nodes": [
+                        {
+                          "type": "action",
+                          "title": "Bye!",
+                          "status": "live",
+                          "params": {
+                            "actions": [
+                              {
+                                "action": "send_message",
+                                "message": "Bye!",
+                                "format": "",
+                                "delay_ms": "1000"
+                              },
+                              {
+                                "action": "window_close"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "subroutine",
+              "title": "parseResponse()",
+              "status": "live",
+              "nodes": [
+                {
+                  "type": "switch",
+                  "title": "Have a response?",
+                  "status": "live",
+                  "nodes": [
+                    {
+                      "type": "outcome",
+                      "title": "No, error",
+                      "status": "live",
+                      "params": {
+                        "groups": [
+                          {
+                            "any": 0,
+                            "conditions": [
+                              {
+                                "condition": "_custom_script",
+                                "tpl": "{% if _behavior.response_json is iterable and _behavior.response_json.errorMessage is not empty %}true{% endif %}",
+                                "oper": "is",
+                                "value": "true"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "nodes": [
+                        {
+                          "type": "action",
+                          "title": "Error!",
+                          "status": "live",
+                          "params": {
+                            "actions": [
+                              {
+                                "action": "send_message",
+                                "message": "I had trouble: {{_behavior.response_json.errorMessage}}",
+                                "format": "",
+                                "delay_ms": "1000"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "outcome",
+                      "title": "Yes",
+                      "status": "live",
+                      "params": {
+                        "groups": [
+                          {
+                            "any": 0,
+                            "conditions": [
+                              {
+                                "condition": "_custom_script",
+                                "tpl": "{{_behavior.response_json}}",
+                                "oper": "!is",
+                                "value": ""
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      "nodes": [
+                        {
+                          "type": "switch",
+                          "title": "Type:",
+                          "status": "live",
+                          "nodes": [
+                            {
+                              "type": "outcome",
+                              "title": "MX",
+                              "status": "live",
+                              "params": {
+                                "groups": [
+                                  {
+                                    "any": 0,
+                                    "conditions": [
+                                      {
+                                        "condition": "_custom_script",
+                                        "tpl": "{{dns_mode}}",
+                                        "oper": "is",
+                                        "value": "MX"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              "nodes": [
+                                {
+                                  "type": "action",
+                                  "title": "Respond",
+                                  "status": "live",
+                                  "params": {
+                                    "actions": [
+                                      {
+                                        "action": "send_message",
+                                        "message": "{% if _behavior.response_json is iterable %}\r\n{% set exchanges = _behavior.response_json|sort %}\r\n{% for value in exchanges %}\r\n* [{{value.priority}}] {{value.exchange}}\r\n{% endfor %}\r\n{% endif %}",
+                                        "format": "markdown",
+                                        "delay_ms": "500"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "outcome",
+                              "title": "(Other)",
+                              "status": "live",
+                              "params": {
+                                "groups": [
+                                  {
+                                    "any": 0,
+                                    "conditions": []
+                                  }
+                                ]
+                              },
+                              "nodes": [
+                                {
+                                  "type": "action",
+                                  "title": "Respond",
+                                  "status": "live",
+                                  "params": {
+                                    "actions": [
+                                      {
+                                        "action": "send_message",
+                                        "message": "{% if _behavior.response_json is iterable %}\r\n{% for value in _behavior.response_json %}\r\n* {{value}}\r\n{% endfor %}\r\n{% else %}\r\n{{_behavior.response_json}}\r\n{% endif %}",
+                                        "format": "markdown",
+                                        "delay_ms": "500"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "outcome",
+                      "title": "No",
+                      "status": "live",
+                      "params": {
+                        "groups": [
+                          {
+                            "any": 0,
+                            "conditions": []
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uid": "behavior_178",
+          "title": "Get interactions for worker",
+          "is_disabled": false,
+          "is_private": false,
+          "priority": 50,
+          "event": {
+            "key": "event.interactions.get.worker",
+            "label": "Conversation get interactions for worker",
+            "params": {
+              "listen_points": "global\r\n"
+            }
+          },
+          "nodes": [
+            {
+              "type": "switch",
+              "title": "Point:",
+              "status": "live",
+              "nodes": [
+                {
+                  "type": "outcome",
+                  "title": "global",
+                  "status": "live",
+                  "params": {
+                    "groups": [
+                      {
+                        "any": 0,
+                        "conditions": [
+                          {
+                            "condition": "point",
+                            "oper": "is",
+                            "value": "global"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "nodes": [
+                    {
+                      "type": "action",
+                      "title": "Return interactions",
+                      "status": "live",
+                      "params": {
+                        "actions": [
+                          {
+                            "action": "return_interaction",
+                            "behavior_id": "{{{uid.behavior_179}}}",
+                            "name": "DNS lookup",
+                            "interaction": "dns.lookup",
+                            "interaction_params_json": ""
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uid": "behavior_179",
+          "title": "Handle interaction with worker",
+          "is_disabled": false,
+          "is_private": false,
+          "priority": 50,
+          "event": {
+            "key": "event.interaction.chat.worker",
+            "label": "Conversation handle interaction with worker"
+          },
+          "nodes": [
+            {
+              "type": "switch",
+              "title": "Interaction:",
+              "status": "live",
+              "nodes": [
+                {
+                  "type": "outcome",
+                  "title": "dns.lookup",
+                  "status": "live",
+                  "params": {
+                    "groups": [
+                      {
+                        "any": 0,
+                        "conditions": [
+                          {
+                            "condition": "interaction",
+                            "oper": "is",
+                            "value": "dns.lookup"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "nodes": [
+                    {
+                      "type": "action",
+                      "title": "Run behavior",
+                      "status": "live",
+                      "params": {
+                        "actions": [
+                          {
+                            "action": "switch_behavior",
+                            "return": "0",
+                            "behavior_id": "{{{uid.behavior_180}}}",
+                            "var": "_behavior"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uid": "behavior_181",
+          "title": "Invoke CerbDnsLookup Lambda function",
+          "is_disabled": false,
+          "is_private": true,
+          "priority": 50,
+          "event": {
+            "key": "event.macro.bot",
+            "label": "Custom behavior on bot"
+          },
+          "variables": {
+            "var_mode": {
+              "key": "var_mode",
+              "label": "Mode",
+              "type": "D",
+              "is_private": "0",
+              "params": {
+                "options": "resolve\r\nreverse\r\nmx"
+              }
+            },
+            "var_value": {
+              "key": "var_value",
+              "label": "Value",
+              "type": "S",
+              "is_private": "0",
+              "params": {
+                "widget": "single"
+              }
+            }
+          },
+          "nodes": [
+            {
+              "type": "action",
+              "title": "Invoke CerbDnsLookup Lambda function",
+              "status": "live",
+              "params": {
+                "actions": [
+                  {
+                    "action": "_set_custom_var",
+                    "value": "{% set json = {} %}\r\n{% set json = dict_set(json, 'mode', var_mode) %}\r\n{% set json = dict_set(json, 'value', var_value) %}\r\n{{json|json_encode}}",
+                    "format": "json",
+                    "is_simulator_only": "0",
+                    "var": "request_json"
+                  },
+                  {
+                    "action": "core.va.action.http_request",
+                    "http_verb": "post",
+                    "http_url": "https://lambda.{{{aws_region}}}.amazonaws.com/2015-03-31/functions/CerbDnsLookup/invocations",
+                    "http_headers": "Date: {{'now'|date('r', 'UTC')}}\r\nX-AMZ-Client-Context: {{\"{}\"|base64_encode}}\r\nX-AMZ-Date: {{'now'|date('Ymd\\\\THis\\\\Z', 'UTC')}}",
+                    "http_body": "{{request_json|json_encode}}",
+                    "auth": "connected_account",
+                    "auth_connected_account_id": "{{{aws_account_id}}}",
+                    "options": {
+                      "raw_response_body": "1"
+                    },
+                    "run_in_simulator": "1",
+                    "response_placeholder": "_http_response"
+                  },
+                  {
+                    "action": "_set_custom_var",
+                    "value": "{{_http_response.body|json_pretty}}",
+                    "format": "json",
+                    "is_simulator_only": "0",
+                    "var": "response_json"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{% endraw %}
+</code>
+</pre>
+
+Click the **Import** button.
+
+Cerb will prompt you to link your **AWS Account:** before creating the behavior.  Click the chooser button and select **AWS (Cerb)**.
+
+You will also be prompted to enter the AWS region where you created the Lambda function.  You can find this at the beginning of the ARN for your function (e.g. <code>arn:aws:lambda:<b>us-west-2</b>:</code>).
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/aws/lambda/package-import-config.png" class="screenshot">
+</div>
+
+Click the **Import** button again.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/aws/lambda/imported.png" class="screenshot">
+</div>
+
+# Test the bot
+
+Click on the floating bot interaction button in the bottom right of the browser.  If you don't see the button (e.g. this is your first bot), refresh the page.
+
+Select **AWS Lambda Bot >> DNS lookup**.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/aws/lambda/interaction-menu.png" class="screenshot">
+</div>
+
+The bot will greet you and offer a selection of DNS tools:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/aws/lambda/interaction-convo.png" class="screenshot">
+</div>
+
+Select **Hostname** and type `cerb.ai`.  You should be given a list of IPs:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/aws/lambda/interaction-convo-dnslookup.png" class="screenshot">
+</div>
+
+You can also do reverse lookups. Select **IP** and type `8.8.8.8` (Google's DNS service):
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/aws/lambda/interaction-convo-dnslookup-reverse.png" class="screenshot">
+</div>
+
+Your new bot just:
+
+1. Asked you for some input
+1. Made a decision based on your intention
+1. Authorized an API request to AWS Lambda using your connected account credentials
+1. Invoked the Lambda function with some input and captured the output
+1. Responded to you with formatted output
+
+You can run any Lambda function by following this process.  The process of adding subsequent functions is much simpler since you've already set up the AWS plugin, IAM policy, AWS user, and connected account in Cerb.
+
+Any bot with access to an AWS connected account can run Lambda functions.
+
+At this point, you can rename, extend, or disable AWS Lambda Bot according to your needs.
+
+# Learn how the bot works
+
+Even though the bot was automatically created for you, it's useful to understand how everything works so you can make changes and create your own behaviors later.
+
+From **Search >> Bots**, open the card for **AWS Lambda Bot**.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/aws/lambda/bot-card.png" class="screenshot">
+</div>
+
+Click on the **Behaviors** button.
+
+You'll see four behaviors:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/aws/lambda/bot-behaviors.png" class="screenshot">
+</div>
+
+* **Get interactions for worker** lets Cerb know that this bot provides a new global interaction.
+* **Handle interaction with worker** starts a conversational behavior when a worker selects the interaction from the global menu.
+* **DNS conversational behavior** handles the conversation flow with the worker.
+* **Invoke CerbDnsLookup Lambda function** wraps the AWS Lambda API call so it can be reused by any behavior.
+
+Conversational bot functionality is covered in detail [here](/packages/chat-bot/), so we won't dig into the first two behaviors in this guide.
+
+Open the [card](/docs/records#cards) for **DNS conversational behavior**:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/aws/lambda/bot-behavior-convo.png" class="screenshot">
+</div>
+
+This behavior is marked _private_, so it's only accessible by this bot.
+
+When a conversation starts, the bot greets the worker and offers them a menu of choices using a button prompt.  This menu is inside of an infinite loop so that a worker can take multiple actions in a single interaction.
+
+The bot reacts to worker's button click (e.g. Hostname, IP, MX, Bye) in the **Action:** decision.  Each action is handled by a separate _outcome_.
+
+Within those outcomes, the bot asks follow up questions and then executes the **Run behavior** action with that input:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/aws/lambda/bot-behavior-convo-runbehavior.png" class="screenshot">
+</div>
+
+This is pretty simple.  The bot just runs the **Invoke CerbDnsLookup Lambda function** private behavior and passes it the **Mode:** and **Value:** arguments.  The mode is determined by the outcome (resolve, reverse, mx), and the value is the last message from the worker (a hostname or IP).  We're saving the behavior's final state in the `_behavior` placeholder.
+
+In the interest of keeping this example simple we're not doing a lot of error checking on the input, but the Lambda function does return useful errors to the bot that are displayed to the worker.
+
+Now let's look at the **Invoke CerbDnsLookup** behavior, which does the actual work to talk to the AWS Lambda service:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/aws/lambda/bot-behavior-invoke.png" class="screenshot">
+</div>
+
+This _private_ behavior is on the **Custom behavior on bot** event, which means that it only runs when it's manually triggered by a bot (as opposed to automatically running in response to events, like new email deliveries).
+
+It has two _public_ behavior variables that serve as inputs: **Mode** and **Value**.  These are set by the conversational behavior based on the worker's responses.
+
+The behavior only has a single **Invoke CerbDnsLookup Lambda function** action set:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/aws/lambda/bot-behavior-invoke-action.png" class="screenshot">
+</div>
+
+In the **Set custom placeholder** action, we build a JSON[^json] payload for Lambda and save it as the `request_json` placeholder.  We use the `JSON` format to save the placeholder as an object rather than text (i.e. we parse the JSON).  This is a really simple object with `mode` and `value` as keys, and the behavior variables as values.
+
+In **Execute HTTP Request**, we create a `POST` request to the AWS Lambda API. 
+
+* The **URL:** includes the AWS region and function name.  
+* In **Request headers:** we set three headers.  `Date:` and `X-AMZ-Date:` are used during authorization to combat replay attacks[^replay-attack].  The `X-AMZ-Client-Context:` header is optional and we're just setting it to a blank object in Base64[^base64] format.
+* In **Request body:** we output the `request_json` placeholder in JSON format.
+* In **Authentication:** our AWS connected account is selected to securely authenticate the request.
+* Under **Options:** we prevent the bot from attempting to automatically parse the response by `Content-Type:`.
+* We enable **Allow execute HTTP request in simulator mode** to simplify testing. You can click the **Simulator** button at the bottom of this popup to run the behavior directly without a conversation taking place.
+* Finally, we save the HTTP response data in the `_http_response` placeholder.
+
+In the last **Set custom placeholder** action we format the Lambda response and save it to the `response_json` placeholder.  This is what the calling behavior uses to respond to the worker.
+
+That's it!  You can copy this behavior to implement other Lambda functions as reusable bot behaviors in Cerb.
+
+# References
+
+[^aws-lambda]: Amazon Web Services: Lambda - <https://aws.amazon.com/lambda/>
+
+[^aws-containers]: Amazon Web Services: What are Containers? - <https://aws.amazon.com/containers/>
+
+[^base64]: Wikipedia: Base64 - <https://en.wikipedia.org/wiki/Base64>
+
+[^dns]: Wikipedia: Domain Name System (DNS) - <https://en.wikipedia.org/wiki/Domain_Name_System>
+
+[^json]: Wikipedia: JavaScript Object Notation (JSON) - <https://en.wikipedia.org/wiki/JSON>
+
+[^replay-attack]: Wikipedia: Replay attack - <https://en.wikipedia.org/wiki/Replay_attack>

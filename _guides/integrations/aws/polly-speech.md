@@ -111,7 +111,7 @@ Type `Cerb` in **User name**.
 In **Access type**, check _Programmatic access_.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/polly-speech/aws-iam-create-user.png" class="screenshot">
+<img src="/assets/images/guides/aws/common/aws-iam-create-user.png" class="screenshot">
 </div>
 
 Click the blue **Next: Permissions** button in the bottom right.
@@ -129,7 +129,7 @@ Click the blue **Next: Review** button in the bottom right.
 Verify the new user and click the blue **Create user** button in the bottom right.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/polly-speech/aws-iam-create-confirm.png" class="screenshot">
+<img src="/assets/images/guides/aws/common/aws-iam-create-confirm.png" class="screenshot">
 </div>
 
 ## Save your new credentials
@@ -151,7 +151,7 @@ Type `aws` in the search box above the worklist and press `<ENTER>`.
 Find the **Amazon Web Services (AWS) Integration** plugin in the worklist and click its **Download and install** button.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/polly-speech/cerb-plugin-aws-install.png" class="screenshot">
+<img src="/assets/images/guides/aws/common/cerb-plugin-aws-install.png" class="screenshot">
 </div>
 
 On the popup, click **Download and install** again to confirm.
@@ -175,7 +175,7 @@ Click the **(+)** icon above the worklist to add a new account.
 Click on **Amazon Web Services**.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/polly-speech/cerb-connected-account-add.png" class="screenshot">
+<img src="/assets/images/guides/aws/common/cerb-connected-account-add.png" class="screenshot">
 </div>
 
 This will open a popup that asks you for your programmatic user credentials.
@@ -187,7 +187,7 @@ Enter the following:
 - **Secret Access Key:** `<the secret key you downloaded earlier>`
 	
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/polly-speech/cerb-connected-account-creds.png" class="screenshot">
+<img src="/assets/images/guides/aws/common/cerb-connected-account-creds.png" class="screenshot">
 </div>
 
 Click the **Save Changes** button.
@@ -201,7 +201,7 @@ By default, new connected accounts are owned by you.  When something is owned by
 Open the [card](/docs/records/#cards) for your new connected account.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/polly-speech/cerb-connected-account-card.png" class="screenshot">
+<img src="/assets/images/guides/aws/common/cerb-connected-account-card.png" class="screenshot">
 </div>
 
 Click the **Edit** button at the top of the card.
@@ -209,7 +209,7 @@ Click the **Edit** button at the top of the card.
 In the **Owner:** field, remove yourself and select _Cerb_ as the new owner.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/polly-speech/cerb-connected-account-card-edit.png" class="screenshot">
+<img src="/assets/images/guides/aws/common/cerb-connected-account-card-edit.png" class="screenshot">
 </div>
 
 Click the **Save Changes** button.
