@@ -100,7 +100,7 @@ $postfields = array(
     array('postal','99999'),
     array('country','United States'),
 );
-$out = $cerb->post($base_url . 'orgs/1.json', $postfields);
+$out = $cerb->put($base_url . 'orgs/1.json', $postfields);
 </code>
 </pre>
 
