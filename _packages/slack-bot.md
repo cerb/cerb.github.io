@@ -421,7 +421,7 @@ Click on the **Simulator** button at the top of the card.
 
 Click the **Simulate** button.
 
-You should see a JSON response with fields from your linked Facebook page.
+You should see a JSON response about the sent message.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/packages/slack-bot/simulator.png" class="screenshot">
