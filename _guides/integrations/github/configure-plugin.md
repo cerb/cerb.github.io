@@ -55,11 +55,11 @@ Next, you need to create a new oauth app on GitHub for Cerb to connect to. Revie
 
 1. Click the green **Register a new application** button.
 
-1. Enter the following details replacing https://example.cerb.me with the URL to your Cerb installation:
+1. Enter the following details replacing `https://example.cerb.me` with the URL to your Cerb installation:
 - **App Name:** Cerb
-- **Homepage URL:** https://example.cerb.me/
+- **Homepage URL:** `https://example.cerb.me`
 - **Application description:** {leave blank}
-- **Authorization callback URL:** https://example.cerb.me/oauth/callback/wgm.github.service.provider
+- **Authorization callback URL:** `https://example.cerb.me`/oauth/callback/wgm.github.service.provider
 
 	<div class="cerb-screenshot">
 	<img src="/assets/images/guides/github/plugin/github-new-app.png" class="screenshot">
