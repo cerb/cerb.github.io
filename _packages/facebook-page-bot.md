@@ -23,6 +23,10 @@ jumbotron:
 
 This package creates **Facebook Page Bot** for demonstrating integration between Cerb and Facebook pages using the [Graph API](https://developers.facebook.com/docs/graph-api).
 
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/facebook/plugin/cerb-and-facebook.png" class="screenshot">
+</div>
+
 # Configure the Facebook plugin
 
 If you haven't already, follow [these instructions](/guides/integrations/facebook/configure-plugin/) to install and configure the Facebook plugin, and add your first connected account.
