@@ -57,6 +57,8 @@ jumbotron:
 		- simplexml
 		- spl
 		- xml
+		- tidy _(recommended)_
+		- gnupg _(recommended)_
 		- memcached _(optional)_
 		- redis _(optional)_
 	- With these _php.ini_ settings:
