@@ -153,6 +153,4 @@ If everything was configured properly, you'll see the new connected account in y
 
 You can use the connected account you just created to access [LinkedIn's REST API](https://developer.linkedin.com/docs/rest-api) from bot behaviors in Cerb.  This is typically accomplished using the **Execute HTTP Request** action from a bot, and selecting the connected account in the **Authentication:** section.
 
-{% comment %}
 You can import the [LinkedIn Bot](/packages/linkedin-bot/) package for a working example.
-{% endcomment %}
