@@ -81,6 +81,7 @@ In the **API (Enable OAuth Settings)** section:
 - **Selected OAuth Scopes:**
 	- Perform requests on your behalf at any time (refresh_token, offline_access)
 	- Access and manage your data (api)
+	- Provide access to your data via the Web (web)
 
 	<div class="cerb-screenshot">
 	<img src="/assets/images/guides/salesforce/plugin/new-app-oauth.png" class="screenshot">
@@ -151,6 +152,4 @@ If everything was configured properly, you'll see the new connected account in y
 
 You can use the connected account you just created to access the [Saleforce REST API](https://developer.salesforce.com/page/REST_API) from bot behaviors in Cerb.  This is typically accomplished using the **Execute HTTP Request** action from a bot, and selecting the connected account in the **Authentication:** section.
 
-{% comment %}
 You can import the [Salesforce Bot](/packages/salesforce-bot/) package for a working example.
-{% endcomment %}
