@@ -122,6 +122,4 @@ If everything was configured properly, you'll see the new connected account in y
 
 You can use the connected account you just created to access [GitHub's API](https://developer.github.com/v3/) from bot behaviors in Cerb.  This is typically accomplished using the **Execute HTTP Request** action from a bot, and selecting the connected account in the **Authentication:** section.
 
-{% comment %}
 You can import the [GitHub Bot](/packages/github-bot/) package for a working example.
-{% endcomment %}
