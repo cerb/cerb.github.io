@@ -136,7 +136,7 @@ Cjt59T4=
 
 The important thing to keep in mind with public keys is that you trust their source.  Encryption doesn't do you any good if you're tricked into sending secret messages to the wrong person.
 
-OpenPGP opts for a decentralized a _"web of trust"_ where peers _sign_ each others keys to certify their authenticity.  This is in contrast to the issuance of SSL certifications, which relies on a central authority.
+OpenPGP opts for a decentralized _"web of trust"_ where peers _sign_ each others keys to certify their authenticity.  This is in contrast to the issuance of SSL certificates, which relies on a central authority.
 
 We highly recommend using a service like Keybase[^keybase], which not only verifies the email address of a public key, but also allows the key owner to prove their identity by verifying ownership of domain names, profiles on various services (e.g. Twitter, GitHub), Bitcoin wallets, etc.
 
