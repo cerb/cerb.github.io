@@ -22,9 +22,9 @@
   - bots
   - classifiers
   - connected-accounts
+  - portals
   - webhooks
   - plugins
-#  - portals
 #  - mobile
 
 #- title: Building Bots
