@@ -12,22 +12,25 @@ The _owner_ of a connected account determines how it's shared.  For instance, a 
 
 Plugins can implement new service providers. Cerb currently has plugins for:
 
-- Amazon Web Services
+- [Amazon Web Services](/guides/integrations/aws/lambda/)
 - Api.ai
 - Cerb
 - Clickatell
-- Facebook
+- [Facebook](/guides/integrations/facebook/configure-plugin/)
 - Freshbooks
-- GitHub
+- [GitHub](/guides/integrations/github/configure-plugin/)
+- GitLab
 - Google
 - HipChat
 - JIRA
-- LinkedIn
+- [LinkedIn](/guides/integrations/linkedin/configure-plugin/)
 - Nest
-- Salesforce
-- Slack
+- [Salesforce](/guides/integrations/salesforce/configure-plugin/)
+- [Slack](/guides/integrations/slack/configure-plugin/)
+- Spotify
+- [Stripe](/guides/integrations/stripe/configure-plugin/)
 - Twilio
-- Twitter
+- [Twitter](/guides/integrations/twitter/configure-plugin/)
 
 [Bots](/docs/bots) can use connected accounts to cryptographically sign (or otherwise authenticate) arbitrary HTTP requests.  This opens up entire service provider APIs[^api] to bots, rather than only offering a few hand-picked actions.
 
