@@ -10,7 +10,7 @@ jumbotron:
 
 You may notice that your URLs look a bit ugly with `/index.php/` in every path by default. 
 
-This URL is doesn't look very professional:
+This URL doesn't look very professional:
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/friendly-urls/friendly_urls.png" class="screenshot">
 </div>
