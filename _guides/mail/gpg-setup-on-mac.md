@@ -42,7 +42,11 @@ it easy to install software on your Mac. Please visit [http://brew.sh](http://br
 
 To generate your keys, you need to install GnuPG (aka GPG). GPG is a free software alternative to the closed source commercial PGP. To install GPG with Homebrew, it's as simple as:
 
-$ `brew install gpg pinentry-mac`
+<pre class="command-line" data-user="user" data-host="mac">
+<code class="language-bash">
+brew install gpg pinentry-mac
+</code>
+</pre>
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/mail/gpg/install-gpg.png" class="screenshot">
@@ -59,7 +63,13 @@ allows you to store the password in your Mac's Keychain. As Homebrew helpfully p
 
 To enable it, you first need to run GPG to have it setup its directory structure.
 
-This can be accomplished by simply running `gpg --list-keys` in a terminal window as seen below.
+This can be accomplished by simply running:
+
+<pre class="command-line" data-user="user" data-host="mac">
+<code class="language-bash">
+gpg --list-keys
+</code>
+</pre>
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/mail/gpg/initial-run.png" class="screenshot">
@@ -72,7 +82,13 @@ We do this by editing the file `$HOME/.gnupg/gpg-agent.conf`. You can use VIM (o
 <img src="/assets/images/guides/mail/gpg/pinentry-mac-setup.png" class="screenshot">
 </div>
 
-Or you can run this: `echo "pinentry-program /usr/local/bin/pinentry-mac" >> $HOME/.gnupg/gpg-agent.conf` and accomplish the same thing.
+Or you can accomplish the same thing by running this:
+
+<pre class="command-line" data-user="user" data-host="mac">
+<code class="language-bash">
+echo "pinentry-program /usr/local/bin/pinentry-mac" >> $HOME/.gnupg/gpg-agent.conf
+</code>
+</pre>
 
 After setting pinentry-mac up, when GPG prompts you for a passphrase, you'll see something like this:
 
@@ -93,7 +109,12 @@ This way if your subkey is ever compromised, it's a simple process to revoke and
 
 To generate the master key, follow these steps:
 
-1. Run `gpg --expert --full-generate-key` to start the process.
+1. To start the process:
+<pre class="command-line" data-user="user" data-host="mac">
+<code class="language-bash">
+gpg --expert --full-generate-key
+</code>
+</pre>
 1. When prompted for what kind of key, pick option: `(8) RSA (set your own capabilities)`.
 1. Next you want to toggle off the sign and encrypt capabilities from the key.
    * When prompted for capabilities, type `s` and hit enter to toggle off the Sign capability.
@@ -118,9 +139,18 @@ If you are unsure about any of the above, the screenshot below shows the entire 
 
 Now that your master key is created, we want to set the preferences on the key to ensure current best practices.
 
-1. To edit the key, you need to run `gpg --edit-key YOUR@EMAIL.com` in a Terminal.
+1. To edit the key, you need to run:
+<pre class="command-line" data-user="user" data-host="mac">
+<code class="language-bash">
+gpg --edit-key YOUR@EMAIL.com
+</code>
+</pre>
 1. Paste in the following to set the preferences:
-   * `setpref SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed`
+<pre>
+<code class="language-bash">
+setpref SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
+</code>
+</pre>
 1. Type `y` to confirm.
 1. Type `save` to save and exit.
 
@@ -132,7 +162,12 @@ Now that your master key is created, we want to set the preferences on the key t
 
 Now that you have your master key, we need to create the subkey used for Encrypt and Sign in Cerb. The process for this is similar to what you have already done before.
 
-1. To add the subkey, you need to first run `gpg --expert --edit-key YOUR@EMAIL.com`.
+1. To add the subkey, you need to first run:
+<pre class="command-line" data-user="user" data-host="mac">
+<code class="language-bash">
+gpg --expert --edit-key YOUR@EMAIL.com
+</code>
+</pre>
 1. At the prompt, type `addkey`.
 1. Choose option: `(8) RSA (set your own capabilities)` as before.
 1. Unlike before, the capabilities are already set the way we want ("Sign Encrypt"), so type `q` to finish capability selection.
@@ -154,17 +189,29 @@ Now that you have your master key, we need to create the subkey used for Encrypt
 
 To export your private key, run the following replacing `YOUR@EMAIL.com` in both places with your email address used when creating the key.
 
-$ `gpg --export-secret-keys --armor YOUR@EMAIL.com > YOUR@EMAIL.com.private.gpg-key`
+<pre class="command-line" data-user="user" data-host="mac">
+<code class="language-bash">
+gpg --export-secret-keys --armor YOUR@EMAIL.com > YOUR@EMAIL.com.private.gpg-key
+</code>
+</pre>
 
 We will also export the public key to keep with the private key:
 
-$ `gpg --export --armor YOUR@EMAIL.com > YOUR@EMAIL.com.public.gpg-key`
+<pre class="command-line" data-user="user" data-host="mac">
+<code class="language-bash">
+gpg --export --armor YOUR@EMAIL.com > YOUR@EMAIL.com.public.gpg-key
+</code>
+</pre>
 
 Next, we will create a revocation certificate for the key in case it is ever compromised:
 
-1. Run: `gpg --output YOUR@EMAIL.com.gpg-revocation-certificate --gen-revoke YOUR@EMAIL.com` to start the process.
-1. Follow the prompts to create the revocation certificate. For reason, we suggest `1 = Key has been compromised`.
-1. Hit enter on the description line (it's not needed).
+<pre class="command-line" data-user="user" data-host="mac">
+<code class="language-bash">
+gpg --output YOUR@EMAIL.com.gpg-revocation-certificate --gen-revoke YOUR@EMAIL.com
+</code>
+</pre>
+
+Follow the prompts to create the revocation certificate. For reason, we suggest `1 = Key has been compromised` and you can hit enter on the description line (it's not needed).
 
 Now that we have these three files created, back them up on a USB drive and put in a very safe place (safety deposit box is a common suggestion).
 After copying them to a USB drive, we highly recommend deleting the file ending in `.private.gpg-key` and `.gpg-revocation-certificate` immediately.
@@ -180,7 +227,11 @@ Now that the master key is preserved safely, we need to remove the passphrase fo
 This isn't a standard process, so GPG is persistent in making sure it's what you really want to do.
 
 1. Edit the key as before via:
-   * `gpg --edit-key YOUR@EMAIL.com`
+<pre class="command-line" data-user="user" data-host="mac">
+<code class="language-bash">
+gpg --edit-key YOUR@EMAIL.com
+</code>
+</pre>
 1. At the prompt, type `passwd`.
 1. You will first be prompted for your existing passphrase.
 1. When prompted for a new passphrase, hit enter.
@@ -207,12 +258,24 @@ The screenshots below illustrate the process and the prompts you must acknowledg
 Now that your GPG keys are backed up and currently not secured by a password, we need to delete the master key locally for security reasons.
 
 1. First we need to get the keygrip for the master key so we know what to delete:
-   * `gpg --with-keygrip --list-keys YOUR@EMAIL.com`
+<pre class="command-line" data-user="user" data-host="mac">
+<code class="language-bash">
+gpg --with-keygrip --list-keys YOUR@EMAIL.com
+</code>
+</pre>
    * Take note of the first `Keygrip =` line in the output, consult the below screenshot as needed.
 1. Now that you have the key grip, you need to use it to delete the master key locally from your keyring:
-   * `rm $HOME/.gnupg/private-keys-v1.d/<YOUR KEY GRIP>.key`
+<pre class="command-line" data-user="user" data-host="mac">
+<code class="language-bash">
+rm $HOME/.gnupg/private-keys-v1.d/{YOUR KEY GRIP}.key
+</code>
+</pre>
 1. Finally we want to make sure it's really gone:
-   * `gpg --list-secret-keys`
+<pre class="command-line" data-user="user" data-host="mac">
+<code class="language-bash">
+gpg --list-secret-keys
+</code>
+</pre>
 
 As shown in the below screenshot, make sure that there is a `#` after `sec` at the beginning of the 3rd line. This indicates that the master key is offline as it should be.
 
@@ -224,7 +287,11 @@ As shown in the below screenshot, make sure that there is a `#` after `sec` at t
 
 With all that out of the way, we need to export the subkey we created to use it with Cerb. Run this in a Terminal to export the subkey:
 
-$ `gpg --armor --export-secret-subkeys YOUR@EMAIL.com > YOUR@EMAIL.com.subkey.gpg-key`
+<pre class="command-line" data-user="user" data-host="mac">
+<code class="language-bash">
+gpg --armor --export-secret-subkeys YOUR@EMAIL.com > YOUR@EMAIL.com.subkey.gpg-key
+</code>
+</pre>
 
 You will use the contents of this file to enable Cerb to decrypt encrypted email sent to it in the next step.
 
@@ -263,13 +330,29 @@ this isn't possible so you will need to use the above instructions to do it via 
 
 1. Change into the directory where you have Cerb installed.
 1. Tell GPG where to find the keystore used by Cerb:
-   * `export GNUPGHOME=$(pwd)/storage/.gnupg/`
+<pre class="command-line" data-user="user" data-host="cerb-webserver">
+<code class="language-bash">
+export GNUPGHOME=$(pwd)/storage/.gnupg/
+</code>
+</pre>
 1. Check to see if you have existing private keys:
-   * `gpg --list-secret-keys`
+<pre class="command-line" data-user="user" data-host="cerb-webserver">
+<code class="language-bash">
+gpg --list-secret-keys
+</code>
+</pre>
 1. Import the subkey you created previously:
-   * `gpg --import /path/to/YOUR@EMAIL.com.subkey.gpg-key`
+<pre class="command-line" data-user="user" data-host="cerb-webserver">
+<code class="language-bash">
+gpg --import /path/to/YOUR@EMAIL.com.subkey.gpg-key
+</code>
+</pre>
 1. Verify the key exists now and that the master key is offline as before:
-   * `gpg --list-secret-keys`
+<pre class="command-line" data-user="user" data-host="cerb-webserver">
+<code class="language-bash">
+gpg --list-secret-keys
+</code>
+</pre>
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/mail/gpg/cerb-console-import.png" class="screenshot">
@@ -282,7 +365,11 @@ There are a number of different public key servers commonly used, so we recommen
 
 You'll need your public key to do this, so if you don't still have it from the [Export keys for safe storage](#export-keys-for-safe-storage) step earlier, you can re-export it now with:
 
-$ `gpg --export --armor YOUR@EMAIL.com > YOUR@EMAIL.com.public.gpg-key`
+<pre class="command-line" data-user="user" data-host="mac">
+<code class="language-bash">
+gpg --export --armor YOUR@EMAIL.com > YOUR@EMAIL.com.public.gpg-key
+</code>
+</pre>
 
 ### Using Keybase
 
@@ -320,7 +407,7 @@ Key-server.io's public key server is accessible at [http://pgp.key-server.io](ht
 <img src="/assets/images/guides/mail/gpg/key-server-io-public-key-server.png" class="screenshot">
 </div>
 
-# Links to further reading:
+# Links to further reading
 
 * [https://alexcabal.com/creating-the-perfect-gpg-keypair/](https://alexcabal.com/creating-the-perfect-gpg-keypair/)
 * [https://spin.atomicobject.com/2013/11/24/secure-gpg-keys-guide/](https://spin.atomicobject.com/2013/11/24/secure-gpg-keys-guide/)
