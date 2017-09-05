@@ -1,6 +1,6 @@
 ---
 title: Synchronize Cerb ticket data to Salesforce objects
-excerpt: 
+excerpt: A step-by-step guide for synchronizing Cerb data into Salesforce custom objects
 layout: integration
 topic: Integrations
 subtopic: Salesforce
