@@ -1,10 +1,10 @@
 ---
-title: Creating GPG keys for Cerb (on macOS)
+title: Create a GPG encryption key-pair on macOS
 excerpt: In this example we will show you how to create your GPG keys and setup Cerb to receive encrypted emails.
 layout: integration
 topic: Mail
 jumbotron:
-  title: Creating GPG keys for Cerb (on macOS)
+  title: Create a GPG encryption key-pair on macOS
   tagline: ""
   breadcrumbs:
   -
@@ -23,11 +23,9 @@ jumbotron:
 
 # Introduction
 
-To automatically decrypt a received encrypted message in Cerb, you need to have the corresponding private key in your keyring. If you receive an encrypted message that can’t be decrypted, Cerb will
-leave the encrypted content as an attachment on the message that you can decrypt offline. This is the most secure option, but the content of the message won’t be readable or searchable within Cerb.
+To automatically decrypt a received encrypted message in Cerb, you need to have the corresponding private key in your keyring. If you receive an encrypted message that can’t be decrypted, Cerb will leave the encrypted content as an attachment on the message that you can decrypt offline. This is the most secure option, but the content of the message won’t be readable or searchable within Cerb.
 
-If you want automatic decryption of messages, you need to consider the security implications of leaving your private key on the server. At the minimum, we recommend that you create a subkey
-following the steps documented here so you won't be storing your master key on the server.
+If you want automatic decryption of messages, you need to consider the security implications of leaving your private key on the server. At the minimum, we recommend that you create a subkey following the steps documented here so you won't be storing your master key on the server.
 
 If you are running Linux or Windows, the instructions below can be used with some modifications. We will release platform specific guides for them in the future.
 
