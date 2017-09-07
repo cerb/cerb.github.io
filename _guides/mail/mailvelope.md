@@ -139,7 +139,7 @@ Otherwise, you can use the following method:
 	<img src="/assets/images/guides/mail/mailvelope/mailvelope-encrypt.png" class="screenshot">
 	</div>
 
-1. You should now see the encrypted message contents starting with **-----BEGIN PGP MESSAGE-----**.
+1. You should now see the encrypted message contents starting with `-----BEGIN PGP MESSAGE-----`.
 
 1. In **Properties**, check the box for **Start a new conversation without sending a copy of this message to the recipients**, and set the status to **Open**.
 
