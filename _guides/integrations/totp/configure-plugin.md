@@ -18,8 +18,8 @@ jumbotron:
     label: Integrations &raquo;
     url: /resources/guides/#integrations
   -
-    label: Google Authenticator &raquo;
-    url: /resources/guides/#totp
+    label: Security &raquo;
+    url: /resources/guides/#security
 ---
 
 * TOC
