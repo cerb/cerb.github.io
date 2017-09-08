@@ -33,6 +33,8 @@ In this guide we'll walk through the process of linking Cerb to LDAP for authent
 <img src="/assets/images/guides/ldap/plugin/cerb-and-ldap.png" class="screenshot">
 </div>
 
+Enterprises commonly use LDAP to provide a central place to store usernames and passwords. This allows many different applications and services (like Cerb) to connect to the LDAP server to validate users.
+
 # Install the LDAP plugin
 
 First, you need to install and enable the LDAP plugin in Cerb.
