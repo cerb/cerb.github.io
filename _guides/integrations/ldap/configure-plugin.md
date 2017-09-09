@@ -27,7 +27,7 @@ jumbotron:
 
 # Introduction
 
-Enterprises commonly store contact information throughout the their organization using an open industry standard called **Lightweight Directory Access Protocol (LDAP)**[^ldap]. This can serve as a corporate email and telephone directory; but more importantly, it can also provide a centralized authentication mechanism for various applications and services.
+Enterprises commonly store and share contact information throughout their organization using an open industry standard called **Lightweight Directory Access Protocol (LDAP)**[^ldap]. This can serve as a corporate email and telephone directory; but more importantly, it can also provide a centralized authentication mechanism for various applications and services.
 
 Cerb can use LDAP to authenticate worker logins. This guide will walk through the process of configuring this integration.
 
