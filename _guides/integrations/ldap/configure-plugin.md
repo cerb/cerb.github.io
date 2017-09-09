@@ -27,13 +27,13 @@ jumbotron:
 
 # Introduction
 
-In this guide we'll walk through the process of linking Cerb to LDAP for authenticating worker logins.
+Enterprises commonly store contact information throughout the their organization using an open industry standard called **Lightweight Directory Access Protocol (LDAP)**[^ldap]. This can serve as a corporate email and telephone directory; but more importantly, it can also provide a centralized authentication mechanism for various applications and services.
+
+Cerb can use LDAP to authenticate worker logins. This guide will walk through the process of configuring this integration.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/ldap/plugin/cerb-and-ldap.png" class="screenshot">
 </div>
-
-Enterprises commonly use LDAP to provide a central place to store usernames and passwords. This allows many different applications and services (like Cerb) to connect to the LDAP server to validate users.
 
 # Install the LDAP plugin
 
@@ -79,7 +79,7 @@ Now we can create connected accounts to securely store LDAP credentials in Cerb.
 
 If everything was configured properly, you'll see the new connected account in your worklist.
 
-# Configure LDAP worker authentication settings
+# Configure LDAP settings
 
 1. Navigate to **Setup >> Services >> LDAP**.
 
@@ -95,9 +95,17 @@ If everything was configured properly, you'll see the new connected account in y
     <img src="/assets/images/guides/ldap/plugin/worker-auth-config.png" class="screenshot">
     </div>
 
-# Add / Configure workers for LDAP authentication
+# Enable LDAP authentication for workers
 
-1. Navigate to **Search >> Workers**.
+LDAP needs to be enabled for each worker.  Keep in mind that workers can have different authentication methods, so LDAP can be enabled for only specific workers if desired.
+
+First, navigate to **Search >> Workers**.
+
+### Enable LDAP for new workers
+
+<div class="cerb-box note">
+<p>For security reasons, a worker account with a matching email address must exist within Cerb before that person can log in using LDAP.</p>
+</div>
 
 1. Click the **(+)** icon above the worklist to add a new worker.
 
@@ -111,13 +119,28 @@ If everything was configured properly, you'll see the new connected account in y
     <img src="/assets/images/guides/ldap/plugin/add-worker-ldap.png" class="screenshot">
     </div>
 
+### Enable LDAP for existing workers
+
+1. Open the card for a worker you want to enable LDAP for.
+
+1. Click the **Edit** button.
+
+1. In the **Login** section, pick **LDAP** in the **Authentication** dropdown.
+
+1. Click the **Save Changes** button.
+
 # Logging in as an LDAP user
 
-On the login page, users will login as before, but will be prompted to enter their LDAP password.
+When an LDAP-enabled worker visits the login page, they'll be prompted for their LDAP password rather than their standard Cerb password.
 
   <div class="cerb-screenshot">
   <img src="/assets/images/guides/ldap/plugin/ldap-login-password.png" class="screenshot">
   </div>
 
-If workers's ask what the password they were emailed by Cerb is, that is in case the LDAP server is offline.
+<div class="cerb-box note">
+<p>Currently, workers are always assigned a password within Cerb. When an external login authenticator like LDAP is enabled, this password is ignored. If there is a problem with the LDAP server, an administrator can quickly switch logins back to standard Cerb passwords as a stopgap.</p>
+</div>
 
+# References
+
+[^ldap]: Wikipedia: Lightweight Directory Access Protocol (LDAP) - <https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol>
