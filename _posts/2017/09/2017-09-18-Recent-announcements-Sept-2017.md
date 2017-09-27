@@ -9,9 +9,9 @@ tags: cerb announcements
 
 ## 1 major feature update
 
-A few weeks ago, we released the 8.1 major feature update:
+A few weeks ago, we released a major feature update:
 
-* [8.1](/releases/8.1/) with 33 improvements.
+* [8.1](/releases/8.1/) with 33 improvements
 
 ## 3 maintenance updates
 
@@ -23,6 +23,8 @@ In the past month, there have been three maintenance updates with a total of 35 
 
 ## 1 preview
 
+We posted a preview of a highly requested new feature -- creating new record types entirely from the browser with no plugins:
+
 * [Create records for anything without using plugins in Cerb 8.2](/blog/2017/09/08/Custom-records/)
 
 ## 1 package
@@ -33,7 +35,7 @@ We expanded the library of pre-built workflow packages that you can import in a 
 
 ## 8 how-to guides
 
-We added these step-by-step how-to guides:
+We added these instructional how-to guides:
 
 * [Configure the Google Authenticator plugin](/guides/integrations/totp/configure-plugin/)
 * [Configure the LDAP plugin for worker authentication](/guides/integrations/ldap/configure-plugin/)
