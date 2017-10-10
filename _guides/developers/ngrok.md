@@ -35,7 +35,7 @@ To get started, you'll need to [download ngrok](https://ngrok.com/download) from
 
 On Linux, you can usually install ngrok from your package manager (e.g. apt, yum).
 
-On Mac, you can also install ngrok using Homebrew[^homebrew].
+On Mac, you can also install ngrok using Homebrew[^homebrew] (note: you will need to install via `brew cask install ngok`).
 
 # Start ngrok
 
@@ -53,6 +53,10 @@ When ngrok starts, it generates an HTTP and HTTPS URL for you to use.  This mean
 
 You can copy these links from the console and use them like any other public URL.
 
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/ngrok/console.png" class="screenshot">
+</div>
+
 # Test ngrok
 
 Paste your ngrok HTTPS URL into your web browser.  If you have a copy of Cerb running on `localhost:80` then you (and anyone else) will be able to use it as if it was installed on a public web server.
@@ -66,6 +70,10 @@ ngrok also has a web interface that starts on `http://127.0.0.1:4040` by default
 This allows you to inspect incoming requests and outgoing responses, which is incredibly helpful when you're debugging functionality like webhooks.
 
 You also have the option of _replaying_ a previous request from this web interface, which makes your job a lot easier when developing webhooks. You won't have to waste your time constantly triggering an event and waiting for the webhook request to show up.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/ngrok/web-monitor.png" class="screenshot">
+</div>
 
 # Next steps
 
