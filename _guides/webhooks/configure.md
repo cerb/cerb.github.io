@@ -73,6 +73,10 @@ First you need to enable the webhooks plugin in Cerb.
 
 	1. Click the **Save Changes** button.
 
+	<div class="cerb-screenshot">
+	<img src="/assets/images/guides/webhooks/configure/enable-plugin.png" class="screenshot">
+	</div>
+
 # Import a bot behavior to handle the webhook
 
 Navigate to **Setup >> Configure >> Import Package**.
@@ -171,6 +175,14 @@ Paste the following into the textbox:
 
 Click the **Import** button.
 
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/webhooks/configure/import-package.png" class="screenshot">
+</div>
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/webhooks/configure/import-success.png" class="screenshot">
+</div>
+
 # Create the webhook
 
 1. Navigate to **Setup >> Services >> Webhooks**.  In Cerb [8.2](/releases/8.2/) or later you can also use **Search >> Webhooks**.
@@ -183,6 +195,10 @@ Click the **Import** button.
 1. Click the **Save Changes** button.
 
 1. Copy the webhook **URL** from the worklist.
+
+	<div class="cerb-screenshot">
+	<img src="/assets/images/guides/webhooks/configure/add-webhook.png" class="screenshot">
+	</div>
 	
 # Test the webhook
 
