@@ -45,6 +45,10 @@ Let's create a new bot called **Example Bot**:
 
 1. Click the **Save Changes** button.
 
+    <div class="cerb-screenshot">
+    <img src="/assets/images/guides/bots/load-records/create-bot.png" class="screenshot">
+    </div>
+
 # Create a behavior
 
 Now we'll create a behavior on the new bot:
@@ -60,6 +64,10 @@ Now we'll create a behavior on the new bot:
 	* **Visibility:** Private
 	* **Name:** `Load organization's tickets`
 	* **Status:** Enabled
+
+    <div class="cerb-screenshot">
+    <img src="/assets/images/guides/bots/load-records/bot-behavior1.png" class="screenshot">
+    </div>
 	
 Now let's add a behavior variable for storing the organization's ticket records.
 
@@ -69,7 +77,11 @@ Now let's add a behavior variable for storing the organization's ticket records.
 
 1. In the new **List:Tickets** entry, set it **Private** and name it `Tickets`.
 
-Click the **Save Changes** button to save the new behavior.
+1. Click the **Save Changes** button to save the new behavior.
+
+    <div class="cerb-screenshot">
+    <img src="/assets/images/guides/bots/load-records/bot-behavior2.png" class="screenshot">
+    </div>
 
 # Load ticket records as an action
 
@@ -95,6 +107,10 @@ Finally, we'll load ticket records into the behavior based on the current organi
 	</pre>
 	
 1. Click the **Save Changes** button to save the new action.
+
+    <div class="cerb-screenshot">
+    <img src="/assets/images/guides/bots/load-records/new-actions1.png" class="screenshot">
+    </div>
 
 # Use the variable's records
 
@@ -133,6 +149,10 @@ Let's look at an example of each.
 	
 1. Click the **Save Changes** button to save the action.
 
+    <div class="cerb-screenshot">
+    <img src="/assets/images/guides/bots/load-records/new-actions2.png" class="screenshot">
+    </div>
+
 ## As a target in actions
 
 1. At the bottom of the card, click on **Custom behavior on organization** and select **Add Actions** from the menu.
@@ -157,9 +177,15 @@ Let's look at an example of each.
 	
 1. Click the **Save Changes** button to save the action.
 
+    <div class="cerb-screenshot">
+    <img src="/assets/images/guides/bots/load-records/new-actions3.png" class="screenshot">
+    </div>
+
+
 <div class="cerb-box note">
 <p>You can use the <b>Behavior run</b> or <b>Behavior schedule</b> actions to run a <b>Custom behavior on ticket</b> behavior on each ticket record in the list.</p>
 </div>
+
 
 # Test the behavior
 
