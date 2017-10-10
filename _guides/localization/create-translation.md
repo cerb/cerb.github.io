@@ -90,6 +90,10 @@ First, make sure the Translation Editor plugin is enabled.
 
 	1. Click the **Save Changes** button.
 
+	<div class="cerb-screenshot">
+	<img src="/assets/images/guides/localization/enable-plugin.png" class="screenshot">
+	</div>
+
 # Create a new language
 
 1. Navigate to: **Setup >> Configure >> Translation Editor**
@@ -101,6 +105,10 @@ First, make sure the Translation Editor plugin is enabled.
 1. If your new language is closely related to an existing language (e.g. British English >> American English, Mexican Spanish >> Castilian Spanish) then you can **Copy New Text From** that language.  Otherwise, use the default of **leave blank**.
 
 1. Click the **Save Changes** button.
+
+	<div class="cerb-screenshot">
+	<img src="/assets/images/guides/localization/add-language.png" class="screenshot">
+	</div>
 
 # Translate text
 
@@ -120,6 +128,10 @@ First, make sure the Translation Editor plugin is enabled.
 
 1. After each page of translations is complete, click the **Save Changes** button.  This will refresh the worklist with the next page of entries needing translation.  You're done when there aren't any non-translated entries left.
 
+	<div class="cerb-screenshot">
+	<img src="/assets/images/guides/localization/editor.png" class="screenshot">
+	</div>
+
 # Sharing translations
 
 To share your new translation:
@@ -137,6 +149,10 @@ To share your new translation:
 1. Click the **Export** button below the worklist.
 
 1. Your browser will download the translation as an `.xml` file TMX format.  You can share this file in email, include it in a pull request on GitHub, etc.
+
+	<div class="cerb-screenshot">
+	<img src="/assets/images/guides/localization/export.png" class="screenshot">
+	</div>
 
 # References
 

@@ -67,6 +67,10 @@ First, make sure the Translation Editor plugin is enabled.
 
 	1. Click the **Save Changes** button.
 
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/localization/enable-plugin.png" class="screenshot">
+</div>
+
 # Download a language pack
 
 Cerb is distributed with the most popular language packs.
@@ -99,6 +103,10 @@ You can now import the language pack with the translations plugin.
 
 You should see your new language added to the translation worklist.
 
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/localization/import.png" class="screenshot">
+</div>
+
 # Configure the language
 
 ### Setting your own language preference
@@ -109,6 +117,10 @@ You should see your new language added to the translation worklist.
 
 1. On the **Settings** tab, in the **Localization** section, select a **Language**.
 
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/localization/user-locale.png" class="screenshot">
+</div>
+
 ### Modifying someone else's language preference
 
 1. Select a worker or contact record from the **Search** menu.
@@ -116,6 +128,10 @@ You should see your new language added to the translation worklist.
 1. Edit their record.
 
 1. Select a **Language**.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/localization/worker-locale.png" class="screenshot">
+</div>
 
 # References
 
