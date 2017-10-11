@@ -29,8 +29,6 @@ In these situations, you can use behavior variables to load matching records of 
 
 In this guide, we'll create an organization behavior that loads a list of the organization's tickets into a behavior variable.
 
-(100 limit -- use a cursor for more)
-
 # Create a bot
 
 Let's create a new bot called **Example Bot**:
@@ -111,6 +109,10 @@ Finally, we'll load ticket records into the behavior based on the current organi
     <div class="cerb-screenshot">
     <img src="/assets/images/guides/bots/load-records/new-actions1.png" class="screenshot">
     </div>
+
+<div class="cerb-box note">
+<p>List variables can currently hold a maximum of 100 records. You can use loops to process more pages.</p>
+</div>
 
 # Use the variable's records
 
