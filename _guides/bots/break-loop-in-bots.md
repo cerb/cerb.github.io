@@ -3,6 +3,7 @@ title: "Break out of a loop in a bot behavior"
 excerpt: When certain conditions are met, you may need to immediately stop looping through a collection in a bot behavior. Here's how to accomplish that.
 layout: integration
 topic: Bots
+subtopic: Scripting
 jumbotron:
   title: Break out of a loop in a bot behavior
   tagline: ""

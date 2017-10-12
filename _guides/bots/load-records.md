@@ -3,6 +3,7 @@ title: "Load arbitrary records into a behavior variable"
 excerpt: You can use behavior variables to load matching records of any type from any event. This guide outlines the steps to loading records into a behavior variable.
 layout: integration
 topic: Bots
+subtopic: Scripting
 jumbotron:
   title: Load arbitrary records into a behavior variable
   tagline: ""

@@ -22,12 +22,13 @@ jumbotron:
 	{% for topic in topics %}
 		<h1 id="{{ topic.name | slugify }}">{{ topic.name }}</h1>
 		
-		{% if topic.name == 'Integrations' %}
+		{% if topic.name == 'Bots' or topic.name == 'Integrations' or topic.name == 'Developers' %}
 			{% assign subtopics = topic.items | sort: 'id' | group_by: 'subtopic' %}
 		
 			<div style="margin-left:15px;">
-			{% for subtopic in subtopics %}
-				<b id="{{ subtopic.name | slugify }}">{{ subtopic.name }}</b>
+			{% assign subs = subtopics|sort:'name' %}
+			{% for subtopic in subs %}
+				<b id="{{ topic.name | append: '-' | append: subtopic.name | slugify }}">{{ subtopic.name }}</b>
 		
 				<ul class="articles">
 				{% assign items = subtopic.items | sort: 'title' %}

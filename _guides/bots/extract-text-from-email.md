@@ -2,6 +2,7 @@
 title: "Extract text from email messages using bots"
 layout: integration
 topic: Bots
+subtopic: Mail
 jumbotron:
   title: Extract text from email messages using bots
   tagline: ""

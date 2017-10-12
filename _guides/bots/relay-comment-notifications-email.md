@@ -3,6 +3,7 @@ title: "Relay worker comment notifications to email"
 excerpt: In this guide we'll build a worker-owned bot for instantly relaying new notifications to email. This can be customized to notify in various ways (Slack, SMS, etc).
 layout: integration
 topic: Bots
+subtopic: Mail
 jumbotron:
   title: Relay worker comment notifications to email
   tagline: ""

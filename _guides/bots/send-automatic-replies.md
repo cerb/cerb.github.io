@@ -3,6 +3,7 @@ title: "Send automatic replies from bots"
 excerpt: Bots can send personalized automatic responses to clients. They can even predict the sender's intent and offer suggestions before you've read the message.
 layout: integration
 topic: Bots
+subtopic: Mail
 jumbotron:
   title: Send automatic replies from bots
   tagline: ""

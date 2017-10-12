@@ -3,6 +3,7 @@ title: "Detect automated messages"
 excerpt: In this example we'll create a reusable bot behavior that can check the most common headers on a message to see if it came from an automated sender.
 layout: integration
 topic: Bots
+subtopic: Mail
 jumbotron:
   title: Detect automated messages
   tagline: ""
