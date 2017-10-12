@@ -17,7 +17,7 @@ jumbotron:
 
 ## Enable the Twilio plugin in Cerb
 
-If the Twilio plugin isn't already enabled, you can [follow these instructions](/plugins/twilio#installation) to install and configure it.
+Verify that the [Twilio plugin](/plugins/wgm.twilio/) is installed and enabled.
 
 ## Create the bot behavior in Cerb
 
