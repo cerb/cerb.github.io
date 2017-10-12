@@ -46,36 +46,7 @@ In this guide, we'll build a project board for organizing our current tasks.  We
 
 First, let's make sure the **Project Boards** plugin is enabled:
 
-1. Navigate to **Setup >> Plugins >> Installed Plugins**.
-
-1. Search for: `project boards`
-
-1. 
-	***If the plugin is enabled:***
-
-	You're all set!
-
-	***If the plugin is disabled:***
-
-	1. Click the **Configure** button.
-
-	1. Set the **Status** to **Enabled**.
-
-	1. Click the **Save Changes** button.
-
-	***If the plugin isn't installed:***
-
-	1. Switch to the **Plugin Library** tab.
-
-	1. Search for `project boards`.
-
-	1. Click the **Download and install** button.
-
-	1. Click the **Download and install** button on the popup.
-
-	1. Set the **Status** to **Enabled**.
-
-	1. Click the **Save Changes** button.
+{% include plugins/install-instructions.md keyword="project boards" library=true %}
 
 # Create a project board
 

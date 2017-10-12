@@ -50,22 +50,7 @@ This guide walks through the process of installing a new language pack.
 
 First, make sure the Translation Editor plugin is enabled.
 
-1. Navigate to **Setup >> Plugins >> Installed Plugins**.
-
-2. Search for: `translation`
-
-3. 
-	***If the plugin is enabled:***
-
-	You're all set!
-
-	***If the plugin is disabled:***
-
-	1. Click the **Configure** button.
-
-	1. Set the **Status** to **Enabled**.
-
-	1. Click the **Save Changes** button.
+{% include plugins/install-instructions.md keyword="translation" library=false %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/localization/enable-plugin.png" class="screenshot">

@@ -40,42 +40,11 @@ You can create webhook URLs in Cerb and associate them with specific bot behavio
 
 # Enable the webhooks plugin
 
-First you need to enable the webhooks plugin in Cerb.
+If you haven't already, you need to [install the webhooks plugin](/plugins/cerb.webhooks/).
 
-1. Navigate to **Setup >> Plugins >> Installed Plugins**.
-
-1. Search for: `webhooks`
-
-1. 
-	***If the plugin is enabled:***
-
-	You're all set!
-
-	***If the plugin is disabled:***
-
-	1. Click the **Configure** button.
-
-	1. Set the **Status** to **Enabled**.
-
-	1. Click the **Save Changes** button.
-
-	***If the plugin isn't installed:***
-
-	1. Switch to the **Plugin Library** tab.
-
-	1. Search for `webhooks`.
-
-	1. Click the **Download and install** button.
-
-	1. Click the **Download and install** button on the popup.
-
-	1. Set the **Status** to **Enabled**.
-
-	1. Click the **Save Changes** button.
-
-	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/webhooks/configure/enable-plugin.png" class="screenshot">
-	</div>
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/webhooks/configure/enable-plugin.png" class="screenshot">
+</div>
 
 # Import a bot behavior to handle the webhook
 
