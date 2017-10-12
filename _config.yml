@@ -29,6 +29,9 @@ collections:
   packages:
     output: true
     permalink: /packages/:path/
+  plugins:
+    output: true
+    permalink: /plugins/:path/
 
 # Build settings
 markdown: kramdown
@@ -58,6 +61,12 @@ defaults:
     scope:
       path: ""
       type: "packages"
+    values:
+      layout: "integration"
+  -
+    scope:
+      path: ""
+      type: "plugins"
     values:
       layout: "integration"
   -

@@ -14,6 +14,8 @@ In some other software projects, plugins are an afterthought and quite limited i
 
 Another benefit of plugins is that they allow functionality to be _completely removed_ when it is not being used by a particular organization. This keeps Cerb fast and lean.
 
+Browse the [full list of plugins](/resources/plugins/).
+
 * TOC
 {:toc}
 
