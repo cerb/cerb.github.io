@@ -3,7 +3,7 @@ title: "Dispatch assignments to available workers using bots"
 excerpt: In this guide we'll build a dispatcher bot that assigns new tickets to available group members using a round-robin rotation.
 layout: integration
 topic: Bots
-subtopic: Behaviors
+subtopic: Workflow Automation
 jumbotron:
   title: Dispatch assignments to available workers using bots
   tagline: ""

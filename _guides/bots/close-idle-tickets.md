@@ -3,7 +3,7 @@ title: "Close idle tickets with bots"
 excerpt: "In this guide we'll create a bot that automatically closes tickets that have been waiting for a client reply for more than 30 days."
 layout: integration
 topic: Bots
-subtopic: Behaviors
+subtopic: Workflow Automation
 jumbotron:
   title: Close idle tickets with bots
   tagline: ""
