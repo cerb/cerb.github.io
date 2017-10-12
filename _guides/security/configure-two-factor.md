@@ -1,11 +1,12 @@
 ---
-title: Configure the Google Authenticator plugin
-excerpt: A step-by-step guide for configuring Cerb's Google Authenticator plugin to improve the security of worker accounts.
+title: Configure two-factor authentication
+excerpt: A step-by-step guide for configuring Cerb's two-factor authentication plugin to improve the security of worker accounts.
 layout: integration
-topic: Integrations
-subtopic: Security
+topic: Security
+redirect_from:
+  - /guides/integrations/totp/configure-plugin/
 jumbotron:
-  title: Configure the Google Authenticator plugin
+  title: Configure two-factor authentication
   tagline: ""
   breadcrumbs:
   -
