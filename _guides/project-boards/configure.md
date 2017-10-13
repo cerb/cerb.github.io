@@ -25,6 +25,10 @@ jumbotron:
 
 Cerb [8.0](/releases/8.0/#project-boards) (June 2017) introduced **project boards** as a better way to visualize and organize multi-step workflows.
 
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/project-boards/configure/board.png" class="screenshot">
+</div>
+
 Project boards are based on the kanban[^kanban-dev] development process, which itself was derived from improvements to just-in-time production pioneered by Japanese manufacturer Toyota in the 1940s[^kanban].
 
 With kanban, each project has a board, and each unit of work in that project is represented by a **card**.  Cards are organized into columns on the board based on their stage of completion. Typically, cards move from left to right through the columns of the process.
@@ -52,6 +56,10 @@ First, let's make sure the **Project Boards** plugin is enabled:
 
 1. Navigate to **Search >> Project Boards**.
 
+	<div class="cerb-screenshot">
+	<img src="/assets/images/guides/project-boards/configure/search-projects.png" class="screenshot">
+	</div>
+
 1. Click the **(+)** icon above the worklist.
 
 1. Set the **Name** to `My assignments`.
@@ -64,6 +72,10 @@ First, let's make sure the **Project Boards** plugin is enabled:
 	status:[o,w]
 	</code>
 	</pre>
+	
+	<div class="cerb-screenshot">
+	<img src="/assets/images/guides/project-boards/configure/project-config-tasks.png" class="screenshot">
+	</div>
 
 1. Click the **Save Changes** button.
 
@@ -77,20 +89,32 @@ Use the **(+) Add** button in the first column's placeholder to add three new co
 * In Progress
 * Completed!
 
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/project-boards/configure/project-columns.png" class="screenshot">
+</div>
+
 You only need to type the **Name** for each column and then click **Save Changes**.
 
 ## Add cards to the board
 
-Let's add some cards to the board by clicking the **(+)** icon in the **In Progress** column.
+Let's add some cards to the board.  Click on the **(+)** icon at the top of the **In Progress** column.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/project-boards/configure/project-add-task-in-progress.png" class="screenshot">
+</div>
 
 First, add a task for creating the project board:
 
-1. Click **(+)** above the worklist to create a new task.
+1. Click **(+)** at the top of the worklist to create a new task.
 
 1. Enter the following details:
 	* **Name:** `Create a project board`
 	* **Status:** open
 	* **Owner:** (click the **me** button)
+	
+	<div class="cerb-screenshot">
+	<img src="/assets/images/guides/project-boards/configure/task-new.png" class="screenshot">
+	</div>
 
 1. Click the **Save Changes** button on the card.
 
@@ -103,9 +127,17 @@ Now let's add the new cards to our board by clicking the **Save Changes** button
 
 We now have a project board with three _in progress_ tasks.
 
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/project-boards/configure/tasks-in-progress.png" class="screenshot">
+</div>
+
 ## Drag your first card
 
 We've already created a project board, so let's drag the **Create a project board** card to the right and drop it in the **Completed!** column.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/project-boards/configure/task-completed-no-automation.png" class="screenshot">
+</div>
 
 You'll notice that by default nothing special happens.  The status on the task doesn't change, and it looks the same as the other cards.  This is because there's nothing special about the **Completed!** column -- it's just a label. Our underlying task is the same.
 
@@ -153,6 +185,10 @@ We'll need a bot:
 	* **Image:** Use an emoji like 🎯. If you aren't feeling creative today, use an orange (`#feaf03`) background.
 1. Click the **Save Changes** button.
 
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/project-boards/configure/bot-new.png" class="screenshot">
+</div>
+
 Then we need a new behavior on the bot:
 
 1. Open the bot's card by clicking on **Project Bot** in the yellow notification above the worklist.
@@ -162,6 +198,10 @@ Then we need a new behavior on the bot:
 	* **Event:** Custom >> Behavior On >> Task
 	* **Name:** Close task
 1. Click the **Save Changes** button.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/project-boards/configure/behavior-close-task-new.png" class="screenshot">
+</div>
 
 Now let's make the behavior do something:
 
@@ -173,6 +213,10 @@ Now let's make the behavior do something:
 1. In the new **Set task status** action, select the **Closed** status.
 1. Click the **Save Changes** button.
 
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/project-boards/configure/behavior-close-task-action.png" class="screenshot">
+</div>
+
 That's all for the behavior.  You can close all of the popups by clicking on them and pressing the `<ESC>` key.
 
 ## Add the behavior to the project board
@@ -182,6 +226,9 @@ We want our new behavior to run every time we drop a card in the **Completed!** 
 1. Click the gear button (⚙️) at the top of the **Completed!** column.
 1. Click the **Edit** button.
 1. Click the **(+) Behaviors** button.
+	<div class="cerb-screenshot">
+	<img src="/assets/images/guides/project-boards/configure/column-add-behavior.png" class="screenshot">
+	</div>
 1. Sort the behaviors worklist by the **Updated** column in descending order (most recent first) and select the **Close task** behavior we just created.
 1. Click the **Save Changes** button.
 1. Click the **Save Changes** button on the project column card to finalize it.
@@ -196,6 +243,10 @@ Now you'll notice that the **Status** of that card automatically changes to **cl
 # Add visual cues with custom templates
 
 By default, when cards are added to your project board, Cerb displays the most common fields based on their record type.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/project-boards/configure/column-card-defaults.png" class="screenshot">
+</div>
 
 However, you also have complete control to change how each card is displayed.
 
@@ -221,6 +272,10 @@ To demonstrate this, let's make the cards for closed tasks more obvious.  We don
 1. Click the **Save Changes** button to close the project board editor.
 
 The project board will automatically refresh.  The cards in the completed column now show a green checkmark with the word **Completed!**.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/project-boards/configure/column-completed-template.png" class="screenshot">
+</div>
 
 <div class="cerb-box note">
 <p>You may have noticed that we didn't provide an alternate template for cards that aren't completed.  If our custom template is blank, Cerb uses its own default template.</p>
