@@ -1,6 +1,6 @@
 ---
 title: Share secure access to a local development environment with ngrok
-excerpt: 
+excerpt: Ngrok creates a temporary public URL for sharing secure access to your local development environment.
 layout: integration
 topic: Developers
 subtopic: Tools
