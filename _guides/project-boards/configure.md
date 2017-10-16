@@ -35,7 +35,7 @@ With kanban, each project has a board, and each unit of work in that project is 
 
 One of the core principles of kanban is limiting the amount of work in progress.  For instance, while there may be a large number of cards in a leftmost column named **"TODO"**, there is an agreed upon limit of 2-3 cards in the next **"In Progress"** column.  Cerb does not enforce these limits for you, but a useful convention is adding the limit to the end of the column name -- like **"In Progress (3)"**.
 
-One of the most compelling advantages of the kanban process is its simplicity -- it can be implemented with a physical white board that has been divided into columns, with a stack of index cards (or Post-it&reg; notes) for the tasks.
+One of the most compelling advantages of the kanban process is its simplicity.  It can be implemented with a physical white board that has been divided into columns, with a stack of index cards (or Post-it&reg; notes) for the tasks.
 
 However, Cerb's digital implementation of kanban provides several enhancements:
 
