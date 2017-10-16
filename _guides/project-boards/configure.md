@@ -21,6 +21,10 @@ jumbotron:
 * TOC
 {:toc}
 
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/project-boards/configure/cerb-and-project-boards.png" class="screenshot">
+</div>
+
 # Introduction
 
 Cerb [8.0](/releases/8.0/#project-boards) (June 2017) introduced **project boards** as a better way to visualize and organize multi-step workflows.
