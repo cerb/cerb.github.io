@@ -27,7 +27,8 @@ Create a task object.
 |-|-|-
 | `completed` | timestamp
 | `due` | timestamp
-| `is_completed` | bit
+| `reopen_at` | timestamp
+| `status_id` | integer | `0`=open, `1`=closed, `2`=waiting
 | `title` | string | **required**
 | `updated` | timestamp
 | `custom_*` | mixed | 
@@ -73,7 +74,8 @@ Update a task object.
 |-|-|-
 | `completed` | timestamp
 | `due` | timestamp
-| `is_completed` | bit
+| `reopen_at` | timestamp
+| `status_id` | integer | `0`=open, `1`=closed, `2`=waiting
 | `title` | string
 | `updated` | timestamp
 | `custom_*` | mixed | 
@@ -119,7 +121,7 @@ Perform a search for task objects.
 | `completed` | timestamp
 | `due` | timestamp
 | `id` | integer
-| `is_completed` | bit
+| `status_id` | integer
 | `title` | string
 | `updated` | timestamp
 | `watchers` | integer[]
@@ -131,7 +133,7 @@ Perform a search for task objects.
 | Field | Description | 
 |-|-|-
 | `fieldsets` | Custom fieldsets on the addresses
-| `is_completed` | Tasks by completion status
+| `status_id` | Tasks by status
 | `links` | Objects linked to addresses
 | `watchers` | Watchers on addresses
 
