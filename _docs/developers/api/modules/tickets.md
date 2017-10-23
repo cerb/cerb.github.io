@@ -52,7 +52,7 @@ Create a ticket object.
 | `owner_id` | id | [worker](/docs/api/modules/workers/)
 | `html_template_id` | id | [html template](/docs/api/modules/mail-html-template/)
 | `file_id[]` | ids | Upload with [attachments](/docs/api/modules/attachments/)
-| `status_id` | integer | 0=open, 1=closed, 2=waiting
+| `status_id` | integer | 0=open, 1=waiting, 2=closed, 3=deleted
 | `reopen_at` | mixed | unix timestamp or string (e.g. "Friday 2pm", "+2 hours")
 | `custom_*` | mixed | 
 
@@ -71,7 +71,7 @@ $postfields = array(
     array('bcc','bcc@example.com'), // optional
     array('subject','Testing compose from API'),
     array('content','This is the raw message with an attachment'),
-    array('status','1'), // 0=open, 1=closed, 2=waiting
+    array('status','1'), // 0=open, 1=waiting, 2=closed, 3=deleted
     array('reopen_at', strtotime('+1 day')),
     array('file_id[]', '368'), // optional, can send multiple instances
     array('html_template_id', '1'), // optional
@@ -156,7 +156,7 @@ Reply to a ticket message as a worker.
 | `is_forward` | boolean | Send the message without updating the ticket with the new subject or requesters: 0=no, 1=yes
 | `owner_id` | id | Assign the ticket to a [worker](/docs/api/modules/workers/), or `0` to unassign from the current owner
 | `reopen_at` | mixed | unix timestamp or string (e.g. "Friday 2pm", "+2 hours")
-| `status_id` | integer | 0=open, 1=closed, 2=waiting
+| `status_id` | integer | 0=open, 1=waiting, 2=closed, 3=deleted
 | `subject` | string | Update the ticket's subject
 | `to` | string | A comma-separated list of email addresses to include as recipients. If blank, it uses the ticket's current requesters
 | `worker_id` | id | The specific [worker](/docs/api/modules/workers/) to send the message as. This defaults to the current API user, and can only be changed by administrators
@@ -184,7 +184,7 @@ $postfields = array(
     array('custom_6',"Line 1\nLine 2\nLine 3"), // multi-line custom field
     array('file_id[]', '368'), // optional, can send multiple instances
     array('reopen_at', strtotime('+1 day')),
-    array('status','1'), // 0=open, 1=closed, 2=waiting
+    array('status','1'), // 0=open, 1=waiting, 2=closed, 3=deleted
     array('subject','Testing compose from API'), // optional
     array('to','customer@example.com'), // optional
     array('html_template_id', '1'), // optional
