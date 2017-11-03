@@ -69,6 +69,10 @@ class Cerb_WebAPI {
 	public function post($url, $payload=array()) {
 		return $this->_connect('POST', $url, $payload);
 	}
+	
+	public function patch($url, $payload=array()) {
+		return $this->_connect('PATCH', $url, $payload);
+	}
 
 	public function delete($url) {
 		return $this->_connect('DELETE', $url);
@@ -126,6 +130,12 @@ class Cerb_WebAPI {
 			case 'GET':
 				break;
 		
+			case 'PATCH':
+				$header[] = 'Content-Length: ' .  strlen($postfields);
+				curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PATCH');
+				curl_setopt($ch, CURLOPT_POSTFIELDS, $postfields);
+				break;
+			
 			case 'PUT':
 				$header[] = 'Content-Length: ' .  strlen($postfields);
 				curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
