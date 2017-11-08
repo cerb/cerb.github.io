@@ -223,7 +223,7 @@ Paste the following package into the large text box:
                   {
                     "action": "_run_behavior",
                     "on": "_trigger_va_id",
-                    "behavior_id": "{{{behavior_5}}}",
+                    "behavior_id": "{{{uid.behavior_5}}}",
                     "run_in_simulator": "1",
                     "var": "_behavior"
                   },
@@ -280,7 +280,7 @@ Paste the following package into the large text box:
                   },
                   {
                     "action": "prompt_text",
-                    "placeholder": "(e.g. PC Load Letter!? What the fuck does that mean?)"
+                    "placeholder": "(e.g. PC Load Letter!? What the frak does that mean?)"
                   },
                   {
                     "action": "_set_custom_var",
@@ -317,7 +317,7 @@ Paste the following package into the large text box:
                   {
                     "action": "_run_behavior",
                     "on": "_trigger_va_id",
-                    "behavior_id": "{{{behavior_10}}}",
+                    "behavior_id": "{{{uid.behavior_10}}}",
                     "var_repository": "{{prompt_repository}}",
                     "var_title": "{{prompt_title}}",
                     "var_body": "Created via Cerb bot",
@@ -446,7 +446,7 @@ Paste the following package into the large text box:
                           {
                             "action": "switch_behavior",
                             "return": "0",
-                            "behavior_id": "{{{behavior_8}}}",
+                            "behavior_id": "{{{uid.behavior_8}}}",
                             "var": "_behavior"
                           }
                         ]
@@ -478,7 +478,7 @@ Paste the following package into the large text box:
                   {
                     "action": "_run_behavior",
                     "on": "_trigger_va_id",
-                    "behavior_id": "{{{behavior_4}}}",
+                    "behavior_id": "{{{uid.behavior_4}}}",
                     "run_in_simulator": "1",
                     "var": "_behavior"
                   },
