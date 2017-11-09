@@ -48,7 +48,7 @@ Create a record object.
 |---
 | Field | Type | 
 |-|-|-
-| `field[]` | mixed | **required** This field can be provided multiple times for each field to set. The field names are found when [retrieving](#retrieve) a record.
+| `fields[]` | mixed | **required** This field can be provided multiple times for each field to set. The field names are found when [retrieving](#retrieve) a record.
 
 ### Example
 {: .no_toc}
@@ -57,9 +57,9 @@ Create a record object.
 <code class="language-php">
 $postfields = [
     ['expand','custom_'],
-    ['field[email]','customer@cerb.example'],
-    ['field[is_banned]','0'],
-    ['field[custom_123]','Some value'],
+    ['fields[email]','customer@cerb.example'],
+    ['fields[is_banned]','0'],
+    ['fields[custom_123]','Some value'],
 ];
 $out = $cerb->post($base_url . 'records/address/create.json', $postfields);
 </code>
@@ -77,7 +77,7 @@ Update a record object.
 |---
 | Field | Type | 
 |-|-|-
-| `field[]` | mixed | **required** This field can be provided multiple times for each field to set. The field names are found when [retrieving](#retrieve) a record.
+| `fields[]` | mixed | **required** This field can be provided multiple times for each field to set. The field names are found when [retrieving](#retrieve) a record.
 
 ### Example
 {: .no_toc}
@@ -105,7 +105,7 @@ Update an existing record if matched, or create a new record otherwise.
 |---
 | Field | Type | 
 |-|-|-
-| `field[]` | mixed | **required** This field can be provided multiple times for each field to set. The field names are found when [retrieving](#retrieve) a record.
+| `fields[]` | mixed | **required** This field can be provided multiple times for each field to set. The field names are found when [retrieving](#retrieve) a record.
 | `query` | string | The quick search query for detecting a match. This must return either `0` (create) or `1` (update) results. Anything else returns an error.
 
 ### Example
