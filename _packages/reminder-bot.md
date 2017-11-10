@@ -19,6 +19,10 @@ jumbotron:
 * TOC
 {:toc}
 
+<div class="cerb-screenshot">
+<img src="/assets/images/packages/reminder-bot/cerb-reminders.png" class="screenshot">
+</div>
+
 # Introduction
 
 This package adds **Reminder Bot**, which provides conversational interactions for setting reminders from any record's card or profile page.
