@@ -14,6 +14,8 @@ The REST-based[^rest] Web API[^api] provides the ability to remote control Cerb 
 
 The API uses per-application credentials and per-worker permissions to authorize API requests. It supports returning data in XML or JSON.
 
+Before continuing, [follow these instructions](/guides/api/configure-plugin/) to enable the Web API plugin and generate a key-pair.
+
 # Topics
 
 - [Authentication](/docs/api/topics/authentication/)
