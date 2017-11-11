@@ -19,6 +19,10 @@ You can think of the access key as a username.  A single worker may have multipl
 
 Similarly, the secret key is like a password.  However, unlike a traditional password, the secret key isn't directly transmitted back to the server for verification.  Instead, the secret key is combined with public details about the HTTP request (verb, path, date, query string, payload) to cryptographically _sign_ it.  Since the server also knows the secret key for each access key, it can create its own signature using the same combination of secret key and HTTP request details.  If the signatures match then the request is authenticated.
 
+# Creating an API key-pair
+
+First, [enable the Web API plugin](/guides/api/configure-plugin/) and create a key-pair.
+
 # Authenticating with the provided libraries
 
 The process of signing a request is automatically handled by the official libraries for PHP, Perl, Python, and Node.js.
