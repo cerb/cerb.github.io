@@ -1,6 +1,6 @@
 ---
 title: Tickets
-permalink: /docs/api/modules/tickets/
+permalink: /docs/api/deprecated/tickets/
 jumbotron:
   title: Tickets
   tagline: ""
@@ -16,6 +16,21 @@ jumbotron:
 
 * TOC
 {:toc}
+
+# Retrieve
+
+**GET /tickets/`<id>`.json**
+
+Retrieve a ticket object.
+
+### Example
+{: .no_toc}
+
+<pre>
+<code class="language-php">
+$out = $cerb->get($base_url . 'tickets/1.json');
+</code>
+</pre>
 
 # Compose
 
@@ -69,6 +84,43 @@ $postfields = array(
     array('custom_4','Option 3'), // picklist
 );
 $out = $cerb->post($base_url . 'tickets/compose.json', $postfields);
+</code>
+</pre>
+
+# Update
+
+**PUT /tickets/`<id>`.json**
+
+Update a ticket object.
+
+### Parameters
+{: .no_toc}
+
+|---
+| Field | Type | 
+|-|-|-
+| `bucket_id` | id | [bucket](/docs/api/modules/groups/)
+| `group_id` | id | [group](/docs/api/modules/groups/)
+| `org_id` | id | [organization](/docs/api/modules/organizations/)
+| `owner_id` | id | [worker](/docs/api/modules/workers/)
+| `status_id` | integer | 0=open, 1=waiting, 2=closed, 3=deleted
+| `subject` | string
+| `custom_*` | mixed | 
+
+### Example
+{: .no_toc}
+
+<pre>
+<code class="language-php">
+$postfields = array(
+    array('subject','I replaced this subject through the Web-API'),
+    array('custom_5','+1 hour'), // date custom field
+    array('custom_6',"Line 1\nLine 2\nLine 3"), // multi-line
+    array('custom_4','Option 3'), // picklist
+    array('custom_3[]','Option 1'), // multi-checkbox (add)
+    array('custom_3[]','-Option 2'), // multi-checkbox (remove)
+);
+$out = $cerb->put($base_url . 'tickets/1.json', $postfields);
 </code>
 </pre>
 
@@ -142,6 +194,117 @@ $postfields = array(
     array('html_template_id', '1'), // optional
 );
 $out = $cerb->post($base_url . 'tickets/reply.json', $postfields);</code>
+</pre>
+
+# Search
+
+**POST /tickets/search.json**
+
+Perform a search for ticket objects.
+
+### Parameters
+{: .no_toc}
+
+|---
+| Field | Description | Type
+|-|-|-
+| `expand` | The keys to expand for each object as a comma-separated list | string
+| `limit` | The number of results to display per page | integer
+| `page` | The page of results to display given limit | integer
+| `q` | Filters to add using quick search syntax | string
+| `sortAsc` | `0` _(descending)_ or `1` _(ascending)_ | bit
+| `sortBy` | The field to sort results by | string
+| `subtotals[]` | Multiple subtotal sets can be returned | string 
+
+**expand**
+	
+Includes additional information in the response.  The following tokens may be provided in a comma-separated list:
+
+|---
+| Field | Description
+|-|-
+| `custom_*` | Include custom field values for each ticket.
+| `latest_incoming_activity` | Include a timestamp for the latest incoming activity on each ticket.
+| `latest_outgoing_activity` | Include a timestamp for the latest outgoing activity on each ticket.
+| `owner` | Include full owner records.
+| `requesters` | Include full participant records for each ticket.
+| `signatures` | Include a signature for each ticket's group/bucket.
+| `watchers` | Include watcher records for each ticket.
+
+**sortBy**
+
+|---
+| Field | Type | 
+|-|-|-
+| `bucket_id` | integer
+| `content` | string | Use `oper[]=fulltext`
+| `created` | timestamp
+| `first_wrote` | string | 
+| `group_id` | integer
+| `id` | integer
+| `mask` | string | 
+| `org_id` | integer
+| `org_name` | string
+| `requester` | string | 
+| `status_id` | integer | 0=open, 1=waiting, 2=closed, 3=deleted
+| `subject` | string | 
+| `updated` | timestamp
+| `custom_*` | mixed | 
+
+**subtotals[]**
+
+|---
+| Field | Type | 
+|-|-|-
+| `fieldsets` | Custom fieldsets on the tickets
+| `first_wrote` | Tickets by first sender email
+| `group` | Tickets by group/bucket
+| `last_action` | Tickets by last action
+| `last_wrote` | Tickets by latest sender email
+| `links` | Objects linked to tickets
+| `org_name` | Tickets by organization
+| `owner` | Tickets by owner
+| `spam_training` | Tickets by spam classification
+| `status_id` | Tickets by status
+| `subject` | Tickets by subject
+| `watchers` | Watchers on tickets
+
+### Examples
+{: .no_toc}
+
+<pre>
+<code class="language-php">
+$postfields = array(
+    array('q','owner:me status:o'),
+    array('sortBy','updated'),
+    array('sortAsc','1'),
+    array('page','1'),
+);
+$out = $cerb->post($base_url . 'tickets/search.json', $postfields);
+</code>
+</pre>
+
+<pre>
+<code class="language-php">
+$postfields = array(
+    array('criteria[]','is_deleted'),
+    array('oper[]','='),
+    array('value[]','0'),
+    array('criteria[]','group_id'),
+    array('oper[]','='),
+    array('value[]','1'),
+    array('criteria[]','bucket_id'),
+    array('oper[]','='),
+    array('value[]','0'),
+    array('criteria[]','mask'),
+    array('oper[]','like'),
+    array('value[]','e*'),
+    array('sortBy','mask'),
+    array('sortAsc','1'),
+    array('page','1'),
+);
+$out = $cerb->post($base_url . 'tickets/search.json', $postfields);
+</code>
 </pre>
 
 {% include api_toc.html %}

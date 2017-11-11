@@ -16,15 +16,24 @@ The API uses per-application credentials and per-worker permissions to authorize
 
 # Topics
 
-- [Credentials](/docs/api/topics/credentials/)
 - [Authentication](/docs/api/topics/authentication/)
 - [Requests](/docs/api/topics/requests/)
 - [Responses](/docs/api/topics/responses/)
 - [Custom Fields](/docs/api/topics/custom-fields/)
 
+# Records
+
+{% for doc in site.docs %}{% assign path = doc.url|slice:0,18 %}{% if path == '/docs/api/records/' %}- [{{doc.title}}]({{doc.url}})
+{% endif %}{% endfor %}
+
 # Modules
 
 {% for doc in site.docs %}{% assign path = doc.url|slice:0,18 %}{% if path == '/docs/api/modules/' %}- [{{doc.title}}]({{doc.url}})
+{% endif %}{% endfor %}
+
+### (Deprecated Modules)
+
+{% for doc in site.docs %}{% assign path = doc.url|slice:0,21 %}{% if path == '/docs/api/deprecated/' %}- [{{doc.title}}]({{doc.url}})
 {% endif %}{% endfor %}
 
 # Libraries

@@ -26,7 +26,7 @@ Some actions require a **payload**, which uses the standard HTTP POST web form f
 
 # Verbs
 
-There are four verbs: `GET`, `PUT`, `POST`, and `DELETE`.
+There are four verbs: `GET`, `PUT`, `POST`, `PATCH`, and `DELETE`.
 
 ## GET
 
@@ -86,6 +86,25 @@ criteria[]=mask&oper[]=like&value[]=ABC*
 
 <div class="cerb-box note"><p>
 	Like with a <tt>PUT</tt> request, the payload encoding of a <tt>POST</tt> is handled automatically by the official libraries.  The payload format is described by the documentation for each module and action.
+</p></div>
+
+## PATCH
+
+A `PATCH` request partially modifies a record. Currently, patching is only used by [upserts](/docs/api/modules/records/#upsert).
+
+For instance, this request upserts (updates or inserts) an organization record and returns results in JSON format:
+
+<pre>
+<code class="language-http">
+PATCH /rest/records/org/upsert.json
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+
+query=name:"Apple"&fields[name]=Apple
+</code>
+</pre>
+
+<div class="cerb-box note"><p>
+	Like with a <tt>PUT</tt> request, the payload encoding of a <tt>PATCH</tt> is handled automatically by the official libraries.  The payload format is described by the documentation for each module and action.
 </p></div>
 
 ## DELETE

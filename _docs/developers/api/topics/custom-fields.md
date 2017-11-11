@@ -33,6 +33,7 @@ A custom field is created with one of the following types:
 | **(F) File** | A file contained within the storage service.
 | **(I) Multiple File** | Multiple files contained within the storage service.
 | **(L) Record Link** | A link to another record.
+| **(M) List** | A list of multiple text values.
 | **(N) Number** | An unsigned 32-bit whole number.
 | **(S) Single Line** | A single line of text.
 | **(T) Multiple Lines** | Multiple lines of text, with linefeeds preserved.
@@ -48,7 +49,9 @@ A fieldset is an optional collection of custom fields that can be added to a rec
 
 ## Building a list of the available custom fields
 
-The available custom fields and fieldsets for a specific record type can be retrieved using the [Contexts](/docs/api/modules/contexts/) module:
+As of [Cerb 8.2.1](/releases/8.2.1/) you can retrieve custom field information using the [/records](/docs/api/modules/records/) API.
+
+The available custom fields and fieldsets for a specific record type can also be retrieved using the [Contexts](/docs/api/modules/contexts/) module:
 
 <pre>
 <code class="language-http">

@@ -12,7 +12,7 @@ jumbotron:
 
 The **records** API can abstractly create, retrieve, update, upsert, and search all record types in Cerb from a single endpoint. Over the course of the next few releases this API will replace the standalone endpoints.
 
-These endpoints specify a record `<type>` in the path. You can use any `alias` from [/contexts/list](/docs/api/modules/contexts/#list).
+These endpoints specify a record `<uri>` in the path. You can use any `alias` from [/contexts/list](/docs/api/modules/contexts/#list).
 
 * TOC
 {:toc}
@@ -23,7 +23,7 @@ These endpoints specify a record `<type>` in the path. You can use any `alias` f
 
 # Retrieve
 
-**GET /records/`<type>`/`<id>`.json**
+**GET /records/`<uri>`/`<id>`.json**
 
 Retrieve a record object.
 
@@ -38,7 +38,7 @@ $out = $cerb->get($base_url . 'records/asset/1.json');
 
 # Create
 
-**POST /records/`<type>`/create.json**
+**POST /records/`<uri>`/create.json**
 
 Create a record object.
 
@@ -67,7 +67,7 @@ $out = $cerb->post($base_url . 'records/address/create.json', $postfields);
 
 # Update
 
-**PUT /records/`<type>`/`<id>`.json**
+**PUT /records/`<uri>`/`<id>`.json**
 
 Update a record object.
 
@@ -95,7 +95,7 @@ $out = $cerb->put($base_url . 'records/group/1.json', $postfields);
 
 # Upsert
 
-**PATCH /records/`<type>`/upsert.json**
+**PATCH /records/`<uri>`/upsert.json**
 
 Update an existing record if matched, or create a new record otherwise.
 
@@ -125,7 +125,7 @@ $out = $cerb->patch($base_url . 'records/org/upsert.json', $postfields);
 
 # Search
 
-**POST /records/`<type>`/search.json**
+**POST /records/`<uri>`/search.json**
 
 Search for record objects.
 
@@ -172,7 +172,7 @@ $out = $cerb->post($base_url . 'records/attachments/search.json', $postfields);
 
 # Delete
 
-**DELETE /records/`<type>`/`<id>`.json**
+**DELETE /records/`<uri>`/`<id>`.json**
 
 Delete a record object.
 

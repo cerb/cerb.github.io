@@ -10,72 +10,12 @@ jumbotron:
     url: /docs/api/
 ---
 
+<div class="cerb-box note">
+<p>This module is deprecated as of <a href="/releases/8.2/">Cerb 8.2</a> and will be removed in a later version. You should use the <a href="/docs/api/modules/records/">/records</a> API instead.</p>
+</div>
+
 * TOC
 {:toc}
-
-# List Bots
-
-**GET /bots/list.json**
-
-Retrieve the bots accessible by the current worker.  This includes bots owned by the worker, their groups or roles, or the application.
-
-**Parameters:**
-
-|---
-| Field | Description | Type
-|-|-|-
-| `expand` | The keys to expand for each object as a comma-separated list | string
-
-### expand
-{: .no_toc}
-	
-Includes additional information in the response.  The following tokens may be provided in a comma-separated list:
-
-|---
-| Field | Description
-|-|-
-| `behaviors` | Retrieve behavior records for each bot.
-| `owner` | Retrieve owner records.
-
-**Example:**
-
-<pre>
-<code class="language-php">
-$out = $cerb->get($base_url . 'bots/list.json?expand=owner,behaviors');
-</code>
-</pre>
-
-# Retrieve Bot
-
-**GET /bots/`<id>`.json**
-
-Retrieve a bot record by ID.
-
-### Parameters
-{: .no_toc}
-
-|---
-| Field | Description | Type
-|-|-|-
-| `expand` | The keys to expand for each object as a comma-separated list | string
-
-**expand**
-	
-Includes additional information in the response.  The following tokens may be provided in a comma-separated list:
-
-|---
-| Field | Description
-|-|-
-| `behaviors` | Retrieve behavior records for each bot.
-| `owner` | Retrieve owner records.
-
-**Example:**
-
-<pre>
-<code class="language-php">
-$out = $cerb->get($base_url . 'bots/123.json?expand=owner,behaviors');
-</code>
-</pre>
 
 # Run Bot Behavior
 
