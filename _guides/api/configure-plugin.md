@@ -1,10 +1,10 @@
 ---
-title: "Configure the Web Services API plugin"
-excerpt: 
+title: "Configure the REST API plugin"
+excerpt: The REST API plugin provides the ability to remote control Cerb from other apps and services.
 layout: integration
 topic: API
 jumbotron:
-  title: Configure the Web Services API plugin
+  title: Configure the REST API plugin
   tagline: ""
   breadcrumbs:
   -
@@ -24,8 +24,6 @@ jumbotron:
 # Introduction
 
 The REST-based[^rest] [Web API](/docs/api/) provides the ability to remote control Cerb for automation, synchronization, and integration. For example, you can use the API from other applications and services to create tickets, search records, monitor notifications, manage tasks, and interact with [bots](/docs/bots/).
-
-The API can return data in JSON or XML.
 
 # Enable the API plugin
 

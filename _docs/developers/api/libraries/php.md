@@ -188,9 +188,10 @@ Usage
 
 <pre>
 <code class="language-php">
+<?php
 require_once("CerbApi.php");
 
-$base_url = 'http://cerb.example.com/rest/'; // URL to your Cerb install
+$base_url = 'https://cerb.example/rest/'; // URL to your Cerb install
 $access_key = "u7gawte5ecc8"; // Access Key
 $secret_key = "e6fxngx3f5kwnk53zmt3lhama8gyazrj";  // Secret Key
 
