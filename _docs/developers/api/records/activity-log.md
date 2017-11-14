@@ -32,7 +32,7 @@ Refer to the [/records](/docs/api/modules/records/) API.
 <code class="language-http">
 GET /rest/records/activity_log/1.json?expand=custom_&show_meta=0 HTTP/1.1
 Cerb-Auth: XXXX:XXXX
-Date: Fri, 10 Nov 2017 22:21:26 GMT
+Date: {{'now'|date:"%a, %d %b %Y %T %Z"}}
 Host: cerb.example
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 </code>
@@ -68,7 +68,7 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 <code class="language-http">
 GET /rest/records/activity_log/search.json?q=activity:worker.logged_in&show_meta=0 HTTP/1.1
 Cerb-Auth: XXXX:XXXX
-Date: Fri, 10 Nov 2017 22:44:45 GMT
+Date: {{'now'|date:"%a, %d %b %Y %T %Z"}}
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Host: cerb.example
 </code>
@@ -112,7 +112,7 @@ Host: cerb.example
 <code class="language-http">
 POST /rest/records/activity_log/create.json?show_meta=0 HTTP/1.1
 Cerb-Auth: XXXX:XXXX
-Date: Fri, 10 Nov 2017 22:47:53 GMT
+Date: {{'now'|date:"%a, %d %b %Y %T %Z"}}
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Host: cerb.example
 </code>
@@ -129,6 +129,8 @@ fields[activity_point]=custom.other
 &fields[target_id]=3
 </code>
 </pre>
+
+* The `POST` fields should be URL-encoded. They are decoded here for readability.
 
 **Response:**
 
