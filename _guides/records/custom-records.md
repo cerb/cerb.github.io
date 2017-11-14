@@ -1,6 +1,6 @@
 ---
 title: "Create custom records"
-excerpt: 
+excerpt: New record types can be created in the browser without writing code. These have all the functionality of built-in records.
 layout: integration
 topic: Records
 subtopic: Custom Records
@@ -18,6 +18,10 @@ jumbotron:
     label: Records &raquo;
     url: /resources/guides/#records
 ---
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/records/custom-records/custom-records.png" class="screenshot">
+</div>
 
 * TOC
 {:toc}
