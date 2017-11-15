@@ -11,7 +11,7 @@ jumbotron:
     url: /docs/setup/
 ---
 
-Navigate to **Setup** >> **Mail** >> **Routing**
+Navigate to **Setup >> Mail >> Incoming Mail >> Mail Routing**.
 
 You can configure rules to automatically route new mail to groups based on message properties.
 

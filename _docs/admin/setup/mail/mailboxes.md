@@ -9,7 +9,7 @@ jumbotron:
     url: /docs/setup/
 ---
 
-Navigate to **Setup** &raquo; **Mail** &raquo; **Mailboxes**
+Navigate to **Setup >> Mail >> Incoming Mail >> Mailboxes**
 
 This page configures the mailboxes that will be checked for new mail.
 

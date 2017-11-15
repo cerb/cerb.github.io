@@ -9,7 +9,7 @@ jumbotron:
     url: /docs/setup/
 ---
 
-Navigate to **Setup** >> **Mail** >> **Mail Transports**
+Navigate to **Setup >> Mail >> Outgoing Mail >> Email Transports**
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/setup/mail_transports.png" class="screenshot">

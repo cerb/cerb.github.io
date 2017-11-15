@@ -19,7 +19,7 @@ jumbotron:
 
 Let's personalize your new Cerb environment with your own logo.
 
-Navigate to **Setup** &raquo; **Configure** &raquo; **Branding**.
+Navigate to **Setup** &raquo; **Configure** &raquo; **Branding**
 
 Review the instructions for [adding your own logo](/docs/setup/branding/).
 
@@ -27,7 +27,7 @@ Review the instructions for [adding your own logo](/docs/setup/branding/).
 
 Next, let's make sure you're ready to send outgoing mail.
 
-Navigate to **Setup** &raquo; **Mail** &raquo; **Mail Transports**.
+Navigate to **Setup >> Mail >> Outgoing Mail >> Email Transports**
 
 Review your [mail transports](/docs/setup/mail-transports/).
 
@@ -37,7 +37,7 @@ Review your [mail transports](/docs/setup/mail-transports/).
 
 # Configure sender addresses
 
-Navigate to **Setup** &raquo; **Mail** &raquo; **Sender Addresses**.
+Navigate to **Setup >> Mail >> Outgoing Mail >> Sender Addresses**
 
 Review your [sender addresses](/docs/setup/sender-addresses/). These determine the `From:` email address when you send messages.
 
@@ -51,7 +51,7 @@ For optimal email deliverability, make sure you've configured SPF, DKIM, and DMA
 
 You should set up a few groups to distribute work.
 
-Navigate to **Search** &raquo; **Groups**.
+Navigate to **Search** &raquo; **Groups**
 
 Review your [groups](/docs/groups/).
 
@@ -59,7 +59,9 @@ To add a new group, click the **(+)** icon in the blue bar of the worklist.
 
 # Configure email signatures
 
-Review the instructions for [configuring email signatures](/docs/setup/sender-addresses#signatures).
+Navigate to **Search >> Email Signatures** to manage your email signatures.
+
+You can configure email signatures on groups and buckets.
 
 # Send a message to test mail deliverability
 
@@ -111,7 +113,7 @@ If you received a less than perfect score, scroll down to see the details.  You 
 
 Before we invite the rest of your team, you should establish the permissions that grant or restrict functionality for each worker.
 
-Navigate to **Search** >> **Roles**.
+Navigate to **Search** >> **Roles**
 
 In Cerb, worker permissions are managed using **roles**.  Multiple roles can be assigned to a single worker, and a worker is granted a particular privilege if any of their roles permit it.
 
@@ -121,7 +123,7 @@ The _Default_ role was automatically created for you during installation.  It si
 
 Now that you've set up your groups and roles, and verified that outgoing mail works, let's invite the rest of your team to use Cerb.
 
-Navigate to **Search** >> **Workers**.
+Navigate to **Search** >> **Workers**
 
 Click the **(+)** icon in the blue bar of the worklist to add new workers.  At minimum, provide a first name, personal email address, and group memberships.  If you leave the password field blank, then setup instructions will be sent to the worker's email address.
 
@@ -129,7 +131,7 @@ Click the **(+)** icon in the blue bar of the worklist to add new workers.  At m
 
 Let's give these new workers something to do.
 
-Navigate to **Setup** >> **Mail** >> **Mailboxes**.
+Navigate to **Setup >> Mail >> Incoming Mail >> Mailboxes**
 
 This page lists the mailboxes that Cerb checks for new messages.
 
@@ -145,13 +147,13 @@ Review your [mailboxes](/docs/setup/mailboxes/).
 
 # Routing
 
-Navigate to **Setup** >> **Mail** >> **Routing**.
+Navigate to **Setup >> Mail >> Incoming Mail >> Mail Routing**
 
 Review your [mail routing rules](/docs/setup/mail-routing/).
 
 # Scheduler
 
-Navigate to **Setup** >> **Configure** >> **Scheduler**.
+Navigate to **Setup** >> **Configure** >> **Scheduler**
 
 Review the instructions for [configuring the scheduler](/docs/setup/scheduler/).
 
@@ -165,7 +167,7 @@ Review the [security considerations](/docs/security/).
 
 # Plugins
 
-Navigate to **Setup** >> **Plugins** >> **Installed Plugins**.
+Navigate to **Setup** >> **Plugins** >> **Installed Plugins**
 
 This is where you'll find the available [plugins](/docs/plugins/) that expand Cerb's functionality.
 

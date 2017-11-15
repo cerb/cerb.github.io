@@ -15,13 +15,14 @@
 - /docs/setup/mailboxes
 - /docs/setup/mail-routing
 - /docs/setup/mail-filtering
-- /docs/setup/mail-failed
 - /docs/setup/mail-import
+- /docs/setup/mail-failed
 - /docs/setup/mail-relay
 - /docs/setup/mail-transports
 - /docs/setup/sender-addresses
+- /docs/setup/mail-outgoing
+- /docs/setup/mail-templates
 - /docs/setup/mail-queue
-- /docs/setup/mail-html
 - /docs/setup/storage-overview
 - /docs/setup/storage-profiles
 - /docs/setup/storage-objects

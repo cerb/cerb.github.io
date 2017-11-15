@@ -39,14 +39,15 @@ The page is divided into sections, each with a blue menu designated by a downwar
 	- [Mailboxes](/docs/setup/mailboxes)
 	- [Routing](/docs/setup/mail-routing)
 	- [Filtering](/docs/setup/mail-filtering)
-	- [Failed Messages](/docs/setup/mail-failed)
 	- [Import Message](/docs/setup/mail-import)
+	- [Failed Messages](/docs/setup/mail-failed)
 	- [External Relay](/docs/setup/mail-relay)
 - **Outgoing Mail**
-	- [Mail Transports](/docs/setup/mail-transports)
+	- [Email Transports](/docs/setup/mail-transports)
 	- [Sender Addresses](/docs/setup/sender-addresses)
+	- [Settings](/docs/setup/mail-outgoing)
+	- [Automated Email Templates](/docs/setup/mail-templates)
 	- [Queue](/docs/setup/mail-queue)
-	- [HTML Templates](/docs/setup/mail-html)
 
 ## Storage
 
