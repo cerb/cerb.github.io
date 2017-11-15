@@ -194,9 +194,10 @@ div.page-content {
 		margin: 0px 0px 20px 0px;
 	
 		h1 {
-			margin: 5px 0 5px 0;
+			margin: 20px 0px;
 			padding: 0;
 			font-weight: bold;
+			font-size: 2.5em;
 		}
 	
 		p, ul {
@@ -217,7 +218,7 @@ div.page-content {
 		}
 		
 		div.screenshot {
-			margin: 20px 0px 0px 0px;
+			margin: 40px 0px 0px 0px;
 			
 			img {
 				border: 1px solid rgb(235,235,235);
@@ -734,7 +735,21 @@ div.cerb-box {
 			text-decoration: underline;
 		}
 	}
+}
 
+button.cerb-bot-button {
+	font-size: 32px;
+	color: white;
+	border-radius: 20px;
+	border: 0;
+	background-color: rgb(60, 130, 230);
+	padding: 10px 20px;
+	font-weight: bold;
+	cursor: pointer;
+	
+	&:hover {
+		background-color: lighten(rgb(60, 130, 230), 10%);
+	}
 }
 
 span.client-logo { display: inline-block; width: 155px; height: 75px; }
