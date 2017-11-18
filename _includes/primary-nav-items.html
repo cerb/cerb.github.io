@@ -2,27 +2,21 @@
 	<li class="{% if page.url == '/' %}current{% endif %}">
 		<a href="/">About</a>
 	</li>
-	{% comment %}
-	<li class="{% if page.url contains '/tour/' %}current{% endif %}">
-		<a href="/tour/">Tour</a>
-	</li>
-	{% endcomment %}
-	<li class="{% if page.url == '/clients/' %}current{% endif %}">
-		<a href="/clients/">Clients</a>
-	</li>
 	<li class="{% if page.url == '/try/' %}current{% endif %}">
 		<a href="/try/">Free Trial</a>
 	</li>
 	<li class="{% if page.url contains '/resources/' or page.url contains '/guides/' or page.url contains '/packages/' %}current{% endif %}">
 		<a href="/resources/">Learn</a>
 	</li>
-	<li class="{% if page.url contains '/docs/' %}current{% endif %}">
-		<a href="/docs/home/">Docs</a>
+	<li class="{% if page.url == '/clients/' %}current{% endif %}">
+		<a href="/clients/">Testimonials</a>
 	</li>
-	<li class="{% if page.url contains '/blog/' %}current{% endif %}">
+	<li class="{% if page.url contains '/blog/' or page.url contains '/releases/' %}current{% endif %}">
 		<a href="/blog/">Blog</a>
 	</li>
+	{% comment %}
 	<li class="{% if page.url contains '/contact/' %}current{% endif %}">
 		<a href="/contact/">Contact</a>
 	</li>
+	{% endcomment %}
 </ul>
