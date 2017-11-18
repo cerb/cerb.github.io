@@ -28,6 +28,8 @@ jumbotron:
 					<li>Easily test incoming and outgoing email with preconfigured <b>@cerb.email</b> mailboxes</li>
 					<li>Use your own domain name</li>
 				</ul>
+				
+				<button type="button" class="cerb-button" data-cerb-bot-interaction="cloud.signup">Try Cerb Cloud free</button>
 			</div>
 	</div>
 	
@@ -43,6 +45,8 @@ jumbotron:
 					<li>You're responsible for installation, upgrades, scaling, monitoring, security, and backups</li>
 					<li>Ideal for regulatory compliance (HIPAA, Safe Harbor, Sarbanes-Oxley)</li>
 				</ul>
+				
+				<button type="button" class="cerb-button" data-cerb-bot-interaction="license.free">Get a free 3-seat license</button>
 			</div>
 	</div>
 </div>
