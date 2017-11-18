@@ -13,11 +13,11 @@
 	<li class="{% if page.url == '/try/' %}current{% endif %}">
 		<a href="/try/">Free Trial</a>
 	</li>
+	<li class="{% if page.url contains '/resources/' or page.url contains '/guides/' or page.url contains '/packages/' %}current{% endif %}">
+		<a href="/resources/">Learn</a>
+	</li>
 	<li class="{% if page.url contains '/docs/' %}current{% endif %}">
 		<a href="/docs/home/">Docs</a>
-	</li>
-	<li class="{% if page.url contains '/resources/' or page.url contains '/guides/' or page.url contains '/packages/' %}current{% endif %}">
-		<a href="/resources/">Resources</a>
 	</li>
 	<li class="{% if page.url contains '/blog/' %}current{% endif %}">
 		<a href="/blog/">Blog</a>
