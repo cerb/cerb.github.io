@@ -85,7 +85,7 @@ The response is a dictionary with several keys:
 }</code>
 </pre>
 
-A dictionary is an array of **keys** and their associated **values**.  You may recognize some of the keys in the example above, because these dictionaries are also used by features like [bots](/docs/bots/), snippets, [dashboard widgets](/docs/workspaces/#dashboards), and [worklist](/docs/workspaces/#worklists) exports.
+A dictionary is an array of **keys** and their associated **values**.  You may recognize some of the keys in the example above, because these dictionaries are also used by features like [bots](/docs/bots/), snippets, [dashboard widgets](/docs/dashboards/), and [worklist](/docs/workspaces/#worklists) exports.
 
 Dictionaries have a hierarchal structure, but all of the keys within a dictionary are at the same level.  Keys are logically partitioned using namespaces to represent distinct records with parent/child relationships.
 

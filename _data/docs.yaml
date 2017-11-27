@@ -3,7 +3,7 @@
   - home
   - philosophy
 
-- title: Using Cerb
+- title: Concepts
   docs:
   - welcome
   - logging-in
@@ -14,8 +14,9 @@
   - contacts
   - orgs
   - records
-  - workspaces
   - notifications
+  - workspaces
+  - dashboards
   - tickets
 #  - tasks
 #  - calendars

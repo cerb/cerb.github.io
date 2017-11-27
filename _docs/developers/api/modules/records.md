@@ -18,7 +18,7 @@ These endpoints specify a record `<uri>` in the path. You can use any `alias` fr
 {:toc}
 
 <div class="cerb-box note">
-<p>This API is available in <a href="/releases/8.2"><b>Cerb 8.2</b></a> or later.</p>
+<p>This API is available in <a href="/releases/8.2/"><b>Cerb 8.2</b></a> or later.</p>
 </div>
 
 # Retrieve
