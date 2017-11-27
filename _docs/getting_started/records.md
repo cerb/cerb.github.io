@@ -25,6 +25,7 @@ You can add many kinds of custom fields:
 - Date
 - File
 - Files: Multiple
+- List
 - Multiple Checkboxes
 - Number
 - Picklist
@@ -36,7 +37,11 @@ You can add many kinds of custom fields:
 
 ## Fieldsets
 
-Related custom fields can be grouped together into a **fieldset**. Fieldsets can also be used to classify a record.  For instance, when using the [asset tracking plugin](/docs/plugins/cerberusweb.assets), you can add fieldsets for _Automobile_ and _Computer_ with appropriate fields and then filter worklists by those types.
+Related custom fields can be grouped together into a **fieldset**. Fieldsets can also be used to classify a record.  For instance, when using the [asset tracking plugin](/docs/plugins/cerberusweb.assets/), you can add fieldsets for _Automobile_ and _Computer_ with appropriate fields and then filter worklists by those types.
+
+## Custom Records
+
+You can also create [custom records](/guides/records/custom-records/) for your own data.
 
 ## Cards
 
