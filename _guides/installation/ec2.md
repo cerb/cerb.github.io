@@ -70,7 +70,7 @@ For Cerb, the proper instance type depends on many factors:
 * How large your database is
 * If you'll utilize other services, like RDS for the database and EFS for storage
 
-In [Cerb Cloud](/cloud/) we currently use **t2.medium** instances for our web servers, since we also use auto-scaling, elastic load balancing, Relational Database Service (RDS), and Elastic Filesystem (EFS). We scale by adding more instances rather than increasing the resources on a single instance.
+In [Cerb Cloud](/try/) we currently use **t2.medium** instances for our web servers, since we also use auto-scaling, elastic load balancing, Relational Database Service (RDS), and Elastic Filesystem (EFS). We scale by adding more instances rather than increasing the resources on a single instance.
 
 Generally, **m4.large** or **t2.medium** will suit most purposes.  You can always scale up your instance type later, so this isn't a decision you're stuck with.
 

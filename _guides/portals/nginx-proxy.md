@@ -26,7 +26,7 @@ We provide a simple, PHP-based reverse proxy script for hosting [community porta
 However, we highly recommend that you use a production-ready proxy like nginx[^nginx] to serve community portals.  With this approach you can completely ignore the `index.php` script.
 
 <div class="cerb-box note">
-<p>If you're a <a href="/cloud/">Cerb Cloud</a> subscriber, we include high-availability community portal hosting. This is already handled for you.</p>
+<p>If you're a <a href="/try/">Cerb Cloud</a> subscriber, we include high-availability community portal hosting. This is already handled for you.</p>
 </div>
 
 # Add a virtual host to Nginx

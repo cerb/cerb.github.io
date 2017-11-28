@@ -3,6 +3,8 @@ title: Configure webhooks
 excerpt: Webhooks provide a way to trigger bot behaviors when external events occur in other applications and services.
 layout: integration
 topic: Webhooks
+redirect_from:
+  - /guides/webhooks/
 jumbotron:
   title: Configure webhooks
   tagline: ""

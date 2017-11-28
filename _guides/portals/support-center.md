@@ -71,7 +71,7 @@ Click the **Save Changes** button.
 
 ### Cerb Cloud
 
-If you're a [Cerb Cloud](/cloud/) subscriber, we include high-availability community portal hosting. This is already handled for you.
+If you're a [Cerb Cloud](/try/) subscriber, we include high-availability community portal hosting. This is already handled for you.
 
 ### Nginx (recommended)
 
