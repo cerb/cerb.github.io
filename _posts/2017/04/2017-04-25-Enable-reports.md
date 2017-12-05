@@ -8,7 +8,7 @@ permalink: /tips/enable-reports/
 tags: cerb tips mailbag
 ---
 
-You can use [dashboards](/docs/workspaces/#dashboards) to build your own reports.  Cerb also ships with several built-in reports that you can access from a workspace page.
+You can use [dashboards](/docs/dashboards/) to build your own reports.  Cerb also ships with several built-in reports that you can access from a workspace page.
 
 Navigate to **Setup >> Plugins >> Installed Plugins**.
 
