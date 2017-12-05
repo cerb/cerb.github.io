@@ -10,13 +10,112 @@ jumbotron:
     url: /docs/api/
 ---
 
-The Python library for the Cerb API was contributed by [SteveMcGrath](https://github.com/SteveMcGrath) on GitHub.
+The Python library for the Cerb API was originally contributed by [SteveMcGrath](https://github.com/SteveMcGrath).
 
-You can find it at: <https://github.com/cerb-plugins/CerbAPI-Python.git>
+# Cerb.py (Python 3.x)
 
-# Cerb7.py
+<pre style="max-height:29.5em;">
+<code class="language-python">
+import httplib2
+import hashlib
+import base64
+import sys
+import json
+from urllib.parse import urlencode
+from urllib.request import splitquery
+from email.utils import formatdate
 
-<pre>
+DEBUG = False
+
+class API(object):
+  accessKey     = None
+  secretKey     = None
+  host          = None
+  base          = None
+
+  def __init__(self, username, password, base='http://localhost/cerb/rest'):
+    self.accessKey  = username
+    self.secretKey  = password
+    self.base       = base
+    self.ext        = 'json'
+
+  def get(self, url):
+    return self.__connect('GET', url)
+
+  def put(self, url, payload):
+    return self.__connect('PUT', url, payload)
+
+  def post(self, url, payload):
+    return self.__connect('POST', url, payload)
+
+  def delete(self, url):
+    return self.__connect('DELETE', url)
+
+  def __connect(self, verb, url, payload={}):
+    headers   = {
+        'Date': formatdate(),
+        'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
+    }
+    splitUrl  = splitquery(url)
+    path      = splitUrl[0]
+    if splitUrl[1] is not None:
+      query   = splitUrl[1]
+      fullUrl = '%s/%s.%s?%s' % (self.base, path, self.ext, query)
+    else:
+      query   = ''
+      fullUrl = '%s/%s.%s' % (self.base, path, self.ext)
+    verb      = verb.upper()
+    http      = httplib2.Http()
+
+    # Building the Authentication
+    md5       = hashlib.md5()
+    md5.update(self.secretKey.encode('utf-8'))
+    secret    = md5.hexdigest()
+    fpath     = splitquery('/' + '/'.join(fullUrl.split('/')[3:]))[0]
+    payload   = urlencode(payload)
+    signMe    = '%s\n%s\n%s\n%s\n%s\n%s\n' % (verb,
+                                              headers['Date'],
+                                              fpath,
+                                              query,
+                                              payload,
+                                              secret
+                                             )
+    md5      = hashlib.md5()
+    md5.update(signMe.encode('utf-8'))
+    headers['Cerb-Auth']  = '%s:%s' % (self.accessKey, md5.hexdigest())
+
+    # Now we perform the request
+    if verb == 'PUT' or verb == 'POST':
+      headers['Content-Length'] = str(len(str(payload)))
+      response, data = http.request(fullUrl,
+                                    verb,
+                                    headers=headers,
+                                    body=payload)
+    else:
+      response, data = http.request(fullUrl,
+                                    verb,
+                                    headers=headers)
+
+    if DEBUG:
+      print('--- REQUEST ---')
+      print(verb, fullUrl)
+      print('HEADERS:')
+      for header in headers:
+        print('%20s : %s' % (header, headers[header]))
+      print('PAYLOAD:\n%s' % payload)
+      print('\n--- RESPONSE ---')
+      print('HEADERS:')
+      for header in response:
+        print('%20s : %s' % (header, response[header]))
+      print('PAYLOAD:')
+      print(data)
+    return json.loads(data)
+</code>
+</pre>
+
+# Cerb.py (Python 2.x)
+
+<pre style="max-height:29.5em;">
 <code class="language-python">
 import httplib2
 import urllib
@@ -128,9 +227,9 @@ Retrieving the current worker's record:
 
 <pre>
 <code class="language-python">
-from Cerb7 import API as Cerb7
+from Cerb import API as Cerb
 
-cerb = Cerb7('&lt;access key&gt;','&lt;secret key&gt;','https://cerb.example.com/rest')
+cerb = Cerb('&lt;access key&gt;','&lt;secret key&gt;','https://cerb.example.com/rest')
 
 me = cerb.get('workers/me?expand=address_')
 
@@ -145,9 +244,9 @@ Creating a new ticket:
 
 <pre>
 <code class="language-python">
-from Cerb7 import API as Cerb7
+from Cerb import API as Cerb
 
-cerb = Cerb7('&lt;access key&gt;','&lt;secret key&gt;','https://cerb.example.com/rest')
+cerb = Cerb('&lt;access key&gt;','&lt;secret key&gt;','https://cerb.example.com/rest')
 
 payload = {
   'expand': 'bucket_,group_,custom_',
