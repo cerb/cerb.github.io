@@ -326,7 +326,7 @@ Now that you understand how key expansion works, you may be wondering how to fig
 
 By default, most responses include special **meta data** keys, which provide a list of the labels and data types for all of the available keys in the dictionary.  You'll find these in the `_labels` and `_types` keys of a typical single dictionary response, and in the `results_meta` section of a multiple-dictionary response like search results.
 
-The `show_meta` option in a request URL determines whether this information is provided or not.  The option is enabled by default, and disabling it (by setting it to `0`) can save bandwidth and CPU cycles for subsequent requests.
+The `show_meta` option in a request URL determines whether this information is provided or not.  The option is disabled by default to save bandwidth and CPU cycles for subsequent requests. You can enable it by setting it to `1`.
 
 The labels meta data is also useful for understanding what is stored in a particular key.  In most cases the key names are intuitive (e.g. `ticket_latest_message_sender_first_name`), but custom fields are particularly cryptic.  For example, the meta data could tell you that the key `custom_123` is a *date* custom field, with the label "Due date".  With this information, you could use the key's value appropriately.
 
