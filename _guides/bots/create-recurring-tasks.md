@@ -24,9 +24,13 @@ jumbotron:
 
 # Introduction
 
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/bots/create-recurring-tasks/recurring-tasks.png" class="screenshot">
+</div>
+
 Many teams need a way to create the same set of tasks on a repeating schedule (e.g. every day, week, month).
 
-This is very easy to do in Cerb with the introduction of [recurrent behaviors](/releases/8.1/#recurrent-behaviors) and the [records API](/releases/8.2/##create-any-record-from-any-bot-behavior).
+This is very easy to do in Cerb with the introduction of [recurrent behaviors](/releases/8.1/#recurrent-behaviors) and the [records API](/releases/8.2/#create-any-record-from-any-bot-behavior).
 
 In this guide, we'll import the **Recurring Task Bot** package and examine how it works.
 
