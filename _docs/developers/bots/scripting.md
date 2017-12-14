@@ -14,6 +14,10 @@ jumbotron:
     url: /docs/building-bots/
 ---
 
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/building-bots/scripting/banner.png" class="screenshot">
+</div>
+
 The primary purpose of bot behaviors is to automatically perform actions in response to events.
 
 Many of these actions need to generate text:
