@@ -41,7 +41,7 @@ Clicking on your name in the top right reveals the worker menu with actions spec
 
 ## Notifications
 
-When you have unread notifications, a red alert box will appear in the top right. You can click on it to view them in a popup.
+When you have unread [notifications](/docs/notifications/), a red alert box will appear in the top right. You can click on it to view them in a popup.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/ui/notifications.png">
