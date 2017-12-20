@@ -3,7 +3,7 @@ layout: post
 title: "Recent Cerb announcements: December 2017"
 excerpt: "A summary of recent Cerb news: 0 major update, 4 maintenance updates, 5 how-to guides, and 0 pre-built package."
 author: The Cerb Team
-date: 2017-12-15 00:00:00 -0700
+date: 2017-12-26 00:00:00 -0700
 tags: cerb announcements
 ---
 
