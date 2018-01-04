@@ -125,7 +125,7 @@ $out = $cerb->patch($base_url . 'records/org/upsert.json', $postfields);
 
 # Search
 
-**POST /records/`<uri>`/search.json**
+**GET /records/`<uri>`/search.json**
 
 Search for record objects.
 
@@ -160,13 +160,14 @@ Return subtotal results based on the given fields. These options vary depending 
 
 <pre>
 <code class="language-php">
-$postfields = array(
-    array('q','mimetype:"image/png" size:>200kb sort:-size'),
-    array('sortBy','size'),
-    array('sortAsc','0'),
-    array('page','1'),
+$query = http_build_query([
+  'q' => 'mimetype:"image/png" size:>200kb sort:-size page:1',
+]);
+
+$out = $cerb->get($base_url . 
+  'records/attachments/search.json?' .
+  $query
 );
-$out = $cerb->post($base_url . 'records/attachments/search.json', $postfields);
 </code>
 </pre>
 
