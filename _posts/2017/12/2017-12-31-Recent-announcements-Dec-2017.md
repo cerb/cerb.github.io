@@ -1,16 +1,17 @@
 ---
 layout: post
 title: "Recent Cerb announcements: December 2017"
-excerpt: "A summary of recent Cerb news: 0 major update, 4 maintenance updates, 5 how-to guides, and 0 pre-built package."
+excerpt: "A summary of recent Cerb news: 5 maintenance updates and 5 how-to guides."
 author: The Cerb Team
-date: 2017-12-26 00:00:00 -0700
+date: 2017-12-31 00:00:00 -0700
 tags: cerb announcements
 ---
 
-## 4 maintenance updates
+## 5 maintenance updates
 
-There have been six recent maintenance updates with a total of 90 minor features and fixes from community feedback:
+There have been five recent maintenance updates with a total of 100 minor features and fixes from community feedback:
 
+* [8.2.7](/releases/8.2.7/) with 10 improvements
 * [8.2.6](/releases/8.2.6/) with 10 improvements
 * [8.2.5](/releases/8.2.5/) with 17 improvements
 * [8.2.4](/releases/8.2.4/) with 37 improvements
@@ -25,14 +26,6 @@ We added these instructional how-to guides:
 * [Bot Scripting Commands](/docs/building-bots/scripting/commands/)
 * [Bot Scripting Functions](/docs/building-bots/scripting/functions/)
 * [Bot Scripting Filters](/docs/building-bots/scripting/filters/)
-
-## 0 packages
-
-We expanded the library of pre-built workflow packages that you can import in a single step:
-
-{% comment %}
-* [Reminder Bot](/packages/reminder-bot/)
-{% endcomment %}
 
 ## Thanks for using Cerb!
 
