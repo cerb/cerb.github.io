@@ -423,7 +423,7 @@ For a working example we're going to extend the bot from the [Chat Bot](/package
 Start a chat with your bot by clicking on the bot icon in the lower right of your browser:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/bots/conversational-bots/cerb-bot-convo-bubble.png" class="screenshot">
+<img src="/assets/images/guides/aws/polly-speech/cerb-bot-convo-bubble.png" class="screenshot">
 </div>
 
 In the chat window that opens, click on **Cerb**'s name above the first message to open its card:
