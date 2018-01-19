@@ -20,6 +20,7 @@ jumbotron:
 			<div style="display:inline-block;text-align:left;">
 				<h1><b>Cloud</b></h1>
 				<ul>
+					<li><b>$40/month per seat</b></li>
 					<li>Highly available and scalable in the cloud as a fully managed service</li>
 					<li>Always on the latest stable version with same-day urgent bug fixes</li>
 					<li>Automated backups and same day support</li>
@@ -27,6 +28,8 @@ jumbotron:
 					<li>Highly deliverable, high-volume outgoing mail</li>
 					<li>Easily test incoming and outgoing email with preconfigured <b>@cerb.email</b> mailboxes</li>
 					<li>Use your own domain name</li>
+					<li>10% discount for annual payments</li>
+					<li>Enterprise options available</li>
 				</ul>
 				
 				<button type="button" class="cerb-button" data-cerb-bot-interaction="cloud.signup">Try Cerb Cloud free</button>
@@ -37,6 +40,7 @@ jumbotron:
 			<div style="display:inline-block;text-align:left;">
 				<h1><b>On-Premises</b></h1>
 				<ul>
+					<li><b>$30/month per seat</b> (billed annually)</li>
 					<li>Self-hosted on your hardware</li>
 					<li>We'll send you a free 3-seat license to get started</li>
 					<li>Your license never expires for versions released during your software updates term</li>
@@ -44,6 +48,8 @@ jumbotron:
 					<li>Requires PHP 7.0+ and MySQL 5.6+</li>
 					<li>You're responsible for installation, upgrades, scaling, monitoring, security, and backups</li>
 					<li>Ideal for regulatory compliance (HIPAA, Safe Harbor, Sarbanes-Oxley)</li>
+					<li>20% discount for timely renewals</li>
+					<li>Free 3-seat starter license (w/o updates)</li>
 				</ul>
 				
 				<button type="button" class="cerb-button" data-cerb-bot-interaction="license.free">Get a free 3-seat license</button>
