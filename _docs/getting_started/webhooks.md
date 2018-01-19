@@ -34,7 +34,7 @@ Here are some common webhook integrations:
   - [Send slash commands to a Cerb bot](/guides/integrations/slack/slash-commands/)
 
 - **Twilio**
-  - Correspond with a Cerb bot through mobile text messages.
+  - [Correspond with a Cerb bot through mobile text messages](/guides/integrations/twilio/configure-plugin/)
 
 - **Zapier**
   - Zapier[^zapier] helps integrate hundreds of apps and services.  You can use their existing 'webhook' action to create new webhooks that ping Cerb bots for thousands of different events.  For instance, _"when an RSS feed changes"_, _"when a new file is added to Dropbox"_, _"when your brand is mentioned on Twitter"_, _"when a new event is added to your Google Calendar"_, etc.

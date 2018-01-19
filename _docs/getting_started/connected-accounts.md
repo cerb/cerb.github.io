@@ -23,13 +23,14 @@ Plugins can implement new service providers. Cerb currently has plugins for:
 - Google
 - HipChat
 - JIRA
+- [LDAP](/guides/integrations/ldap/configure-plugin/)
 - [LinkedIn](/guides/integrations/linkedin/configure-plugin/)
 - Nest
 - [Salesforce](/guides/integrations/salesforce/configure-plugin/)
 - [Slack](/guides/integrations/slack/configure-plugin/)
 - Spotify
 - [Stripe](/guides/integrations/stripe/configure-plugin/)
-- Twilio
+- [Twilio](/guides/integrations/twilio/configure-plugin/)
 - [Twitter](/guides/integrations/twitter/configure-plugin/)
 
 [Bots](/docs/bots) can use connected accounts to cryptographically sign (or otherwise authenticate) arbitrary HTTP requests.  This opens up entire service provider APIs[^api] to bots, rather than only offering a few hand-picked actions.
