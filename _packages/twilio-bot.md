@@ -47,7 +47,7 @@ Paste the following package into the large text box:
     "requires": {
       "cerb_version": "8.2.0",
       "plugins": [
-
+        "wgm.twilio"
       ]
     },
     "configure": {

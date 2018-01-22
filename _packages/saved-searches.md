@@ -1,5 +1,5 @@
 ---
-title: Default Saved Searches
+title: Saved Searches
 excerpt: A collection of preconfigured saved searches.
 layout: integration
 topic: Packages
