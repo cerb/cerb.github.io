@@ -7,6 +7,10 @@ date: 2018-01-31 00:00:00 -0700
 tags: cerb announcements
 ---
 
+<div class="cerb-screenshot">
+<img src="/assets/images/blog/2018/01/30/jan-2018.png" class="screenshot">
+</div>
+
 ## 3 maintenance updates
 
 There are 3 recent maintenance updates with a total of 25 minor features and fixes from community feedback:
