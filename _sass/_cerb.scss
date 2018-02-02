@@ -34,6 +34,18 @@ div.cerb-screenshot {
 	}
 }
 
+ul.cerb-convo-bubbles {
+	list-style:none;
+	margin:0;
+
+	> li {
+		background-color:rgb(230,230,230);
+		padding:5px 10px;
+		margin:5px 0px;
+		border-radius:10px 10px 10px 0px;
+	}
+}
+
 header {
 	&.wip {
 		padding: 10px;
