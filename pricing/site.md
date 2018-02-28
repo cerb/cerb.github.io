@@ -19,7 +19,7 @@ vertical-align: bottom;
     color: rgb(120, 111, 114);
     padding: 5px 10px;
     border-bottom: 0;
-    width: 45%;
+    width: 40%;
     text-align: center;
     display: inline-block;
     border-radius: 5px 5px 0 0;
@@ -30,7 +30,7 @@ vertical-align: bottom;
     background: -moz-linear-gradient(270deg, white, #c8c8c8);
     background: -o-linear-gradient(top, white, #c8c8c8);
     background: -ms-linear-gradient(top, white, #c8c8c8);
-    background: linear-gradient(top, white, #c8c8c8);"><a href="/try/" style="color:inherit;">Cerb Cloud</a></h1>
+    background: linear-gradient(top, white, #c8c8c8);"><a href="/pricing/" style="color:inherit;">Cerb Cloud</a></h1>
     
 <h1 id="site-license" style="
 vertical-align: bottom;
@@ -41,7 +41,7 @@ vertical-align: bottom;
     border-radius: 5px 5px 0px 0px;
     margin: 0;
     margin-left: -5px;
-    width: 45%;
+    width: 40%;
     text-align: center;
     border-bottom: 1px solid white;
     z-index: 2;
@@ -61,7 +61,7 @@ position: relative;
     vertical-align: top;
     border-top: 1px solid rgb(150, 150, 150);"></div>
 
-<b>Starting at $30/month per seat</b> (billed annually)
+<b>Starting at $100/month for 5 seats</b> (billed annually)
 
 <div>
 	<ul>
@@ -80,15 +80,17 @@ position: relative;
 	<div class="unit one-third">
 			<div style="display:inline-block;text-align:left;">
 				<h2 style="color:rgb(2,109,36);"><b>Startup</b></h2>
-				<b>$30/month per seat</b> (billed annually)
+				<b>$100/month</b> (billed annually)
 				<ul>
+					<li><b>5</b> <abbr title="The maximum number of workers who can use Cerb at the same time.">seats</abbr></li>
+					<li><b>$35/month</b> per additional seat</li>
 					<li>Everything Cerb has to offer</li>
 					<li>
 						Standard support:
 							<ul>
+								<li>By email</li>
 								<li>Weekdays, office hours</li>
 								<li>Same-day response</li>
-								<li>Email</li>
 							</ul>
 					</li>
 				</ul>
@@ -98,19 +100,19 @@ position: relative;
 	<div class="unit one-third">
 			<div style="display:inline-block;text-align:left;">
 				<h2 style="color:rgb(43,118,255);"><b>Corporate</b></h2>
-				<b>$399/month</b> (billed annually)
+				<b>$875/month</b> (billed annually)
 				<ul>
-					<li><b>10</b> <abbr title="The maximum number of workers who can use Cerb at the same time.">seats</abbr></li>
-					<li><b>$40/month</b> per additional seat</li>
+					<li><b>25</b> <abbr title="The maximum number of workers who can use Cerb at the same time.">seats</abbr></li>
+					<li><b>$45/month</b> per additional seat</li>
 					<li>Everything Cerb has to offer</li>
 					<li>
 							Priority support:
 							<ul>
-								<li>Weekdays, extended hours</li>
+								<li>By email, phone, or live screen sharing</li>
+								<li>24/7 coverage</li>
 								<li>Same-day response</li>
-								<li>Email, Phone</li>
-								<li>Live assistance configuring workspaces and bots</li>
-								<li>Live assistance with major release upgrades</li>
+								<li>Live assistance with configuring Cerb (e.g. workspaces, bots, custom fields)</li>
+								<li>Live assistance with all software updates</li>
 							</ul>
 					</li>
 				</ul>
@@ -126,11 +128,12 @@ position: relative;
 					<li>
 						Top-priority enterprise support:
 						<ul>
+							<li>By email, phone, or live screen sharing</li>
 							<li>24/7 coverage</li>
 							<li>1-2 hour response time</li>
-							<li>Email, Phone, Chat</li>
-							<li>Live assistance configuring workspaces and bots</li>
+							<li>Live assistance with configuring Cerb (e.g. workspaces, bots, custom fields)</li>
 							<li>Live assistance with all software updates</li>
+							<li>Live assistance with infrastructure (scaling, monitoring, backups, etc)</li>
 						</ul>
 					</li>
 				</ul>

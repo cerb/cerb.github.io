@@ -23,7 +23,7 @@ vertical-align: bottom;
     display: inline-block;
     border-radius: 5px 5px 0px 0px;
     margin: 0;
-    width: 45%;
+    width: 40%;
     text-align: center;
     border-bottom: 1px solid white;
     z-index: 2;
@@ -43,7 +43,7 @@ vertical-align: bottom;
     color: rgb(120, 111, 114);
     padding: 5px 10px;
     border-bottom: 0;
-    width: 45%;
+    width: 40%;
     text-align: center;
     display: inline-block;
     border-radius: 5px 5px 0 0;
@@ -66,7 +66,7 @@ position: relative;
     vertical-align: top;
     border-top: 1px solid rgb(150, 150, 150);"></div>
 
-<b>Starting at $99/month for 5 seats</b><sup>1</sup>
+<b>Starting at $75/month for 5 seats</b>
 
 <ul>
 	<li>Everything you need to deploy Cerb.</li>
@@ -85,10 +85,10 @@ position: relative;
 	<div class="unit one-third">
 			<div style="display:inline-block;text-align:left;">
 				<h2 style="color:rgb(2,109,36);"><b>Startup</b></h2>
-				<b>$99/month</b> (billed annually)
+				<b>$75/month</b> (billed annually)
 				<ul>
 					<li><b>5</b> <abbr title="The maximum number of workers who can use Cerb at the same time.">seats</abbr></li>
-					<li><b>$20/month</b> per additional seat</li>
+					<li><b>$25/month</b> per additional seat</li>
 					<li>Everything Cerb has to offer</li>
 					<li>
 						Infrastructure:
@@ -99,9 +99,9 @@ position: relative;
 					<li>
 						Standard support:
 							<ul>
+								<li>By email</li>
 								<li>Weekdays, office hours</li>
 								<li>Same-day response</li>
-								<li>Email</li>
 							</ul>
 					</li>
 				</ul>
@@ -111,10 +111,10 @@ position: relative;
 	<div class="unit one-third">
 			<div style="display:inline-block;text-align:left;">
 				<h2 style="color:rgb(43,118,255);"><b>Corporate</b></h2>
-				<b>$750/month</b> (billed annually)
+				<b>$625/month</b> (billed annually)
 				<ul>
 					<li><b>25</b> <abbr title="The maximum number of workers who can use Cerb at the same time.">seats</abbr></li>
-					<li><b>$30/month</b> per additional seat</li>
+					<li><b>$35/month</b> per additional seat</li>
 					<li>Everything Cerb has to offer</li>
 					<li>
 						Infrastructure:
@@ -125,10 +125,10 @@ position: relative;
 					<li>
 							Priority support:
 							<ul>
-								<li>Weekdays, extended hours</li>
+								<li>By email, phone, or live screen sharing</li>
+								<li>24/7 coverage</li>
 								<li>Same-day response</li>
-								<li>Email, Phone</li>
-								<li>Live assistance configuring workspaces and bots</li>
+								<li>Live assistance with configuring Cerb (e.g. workspaces, bots, custom fields)</li>
 							</ul>
 					</li>
 				</ul>
@@ -153,10 +153,10 @@ position: relative;
 					<li>
 						Top-priority enterprise support:
 						<ul>
+							<li>By email, phone, or live screen sharing</li>
 							<li>24/7 coverage</li>
 							<li>1-2 hour response time</li>
-							<li>Email, Phone, Chat</li>
-							<li>Live assistance configuring workspaces and bots</li>
+							<li>Live assistance with configuring Cerb (e.g. workspaces, bots, custom fields)</li>
 							<li>Maintenance and upgrades on your schedule</li>
 						</ul>
 					</li>
