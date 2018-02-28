@@ -70,7 +70,7 @@ jumbotron:
 - MySQL 5.6 or later
 
 <div class="cerb-box note">
-	<p>If you are unable to meet these requirements, consider <a href="/try/">Cerb Cloud</a>.</p>
+	<p>If you are unable to meet these requirements, consider <a href="/pricing/">Cerb Cloud</a>.</p>
 </div>
 
 # Log in to your server

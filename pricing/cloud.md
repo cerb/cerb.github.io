@@ -1,66 +1,181 @@
 ---
 layout: page
-title: Try Cerb
-excerpt: Cerb brings order to a busy team inbox with bot powered email management and workflow automation. Start a free evaluation with no time limit.
-permalink: /try/
+title: Pricing
+excerpt: Deploy Cerb in the cloud or on your own hardware. Start a free trial.
+permalink: /pricing/
 redirect_from:
   - /buy/
   - /cloud/
   - /demo/
-  - /download/
-  - /pricing/
+  - /pricing/cloud/
   - /trial/
+  - /try/
 jumbotron: 
-  title: Try Cerb
-  tagline: In the cloud or on your own hardware
+  title: Pricing
+  tagline: Deploy Cerb in the cloud or on your own hardware
 ---
 
-<div class="grid">
-	<div class="unit half">
+<h1 id="cloud" style="
+vertical-align: bottom;
+    position: relative;
+    border: 1px solid rgb(150, 150, 150);
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 5px 5px 0px 0px;
+    margin: 0;
+    width: 45%;
+    text-align: center;
+    border-bottom: 1px solid white;
+    z-index: 2;
+    color: rgb(18, 101, 186);
+    background: -webkit-linear-gradient(top, #eff9ff, white);
+    background: -moz-linear-gradient(270deg, #eff9ff, white);
+    background: -o-linear-gradient(top, #eff9ff, white);
+    background: -ms-linear-gradient(top, #eff9ff, white);
+    background: linear-gradient(top, #eff9ff, white);">Cerb Cloud</h1>
+    
+<h1 id="site-license" style="
+vertical-align: bottom;
+    background-color: rgb(232, 232, 232);
+    font-size: 32px;
+    font-weight: normal;
+    border: 1px solid rgb(181, 181, 181);
+    color: rgb(120, 111, 114);
+    padding: 5px 10px;
+    border-bottom: 0;
+    width: 45%;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+    margin: 0;
+    margin-left: -5px;
+    z-index: 2;
+    cursor: pointer;
+    background: -webkit-linear-gradient(top, white, #c8c8c8);
+    background: -moz-linear-gradient(270deg, white, #c8c8c8);
+    background: -o-linear-gradient(top, white, #c8c8c8);
+    background: -ms-linear-gradient(top, white, #c8c8c8);
+    background: linear-gradient(top, white, #c8c8c8);"><a href="/pricing/site/" style="color:inherit;">Site License</a></h1>
+    
+<div style="
+position: relative;
+    top: -1px;
+    z-index: 0;
+    margin: 0 0 10px 0;
+    padding: 0;
+    vertical-align: top;
+    border-top: 1px solid rgb(150, 150, 150);"></div>
+
+<b>Starting at $99/month for 5 seats</b><sup>1</sup>
+
+<ul>
+	<li>Everything you need to deploy Cerb.</li>
+	<li>Highly available and auto-scalable in the cloud as a fully managed service.</li>
+	<li>Implements all of our best practices for security, upgrades, backups, and performance.</li>
+	<li>Always on the latest stable version with same-day urgent bug fixes.</li>
+	<li>Automated, redundant, point-in-time backups.</li>
+	<li>24/7 monitoring with on-duty system administrators.</li>
+	<li>Cerb Cloud SMTP service for highly deliverable, high-volume outgoing mail (SPF, DKIM, DMARC).</li>
+	<li>Cerb Cloud MX service for instant delivery of inbound mail (no mailboxes required).</li>
+	<li>Deploy unlimited community portals (conversational bots, Support Centers).</li>
+	<li>We provide a default URL and SSL certificate, but you can bring your own domain names and certificates (support.example.com, etc).</li>
+</ul>
+
+<div class="grid" style="margin-left:15px;">
+	<div class="unit one-third">
 			<div style="display:inline-block;text-align:left;">
-				<h1><b>Cloud</b></h1>
+				<h2 style="color:rgb(2,109,36);"><b>Startup</b></h2>
+				<b>$99/month</b> (billed annually)
 				<ul>
-					<li><b>$40/month per seat</b></li>
-					<li>Highly available and scalable in the cloud as a fully managed service</li>
-					<li>Always on the latest stable version with same-day urgent bug fixes</li>
-					<li>Automated backups and same day support</li>
-					<li>Instant delivery of inbound mail</li>
-					<li>Highly deliverable, high-volume outgoing mail</li>
-					<li>Easily test incoming and outgoing email with preconfigured <b>@cerb.email</b> mailboxes</li>
-					<li>Use your own domain name</li>
-					<li>10% discount for annual payments</li>
-					<li>Enterprise options available</li>
+					<li><b>5</b> <abbr title="The maximum number of workers who can use Cerb at the same time.">seats</abbr></li>
+					<li><b>$20/month</b> per additional seat</li>
+					<li>Everything Cerb has to offer</li>
+					<li>
+						Infrastructure:
+						<ul>
+							<li>Shared, multi-tenant</li>
+						</ul>
+					</li>
+					<li>
+						Standard support:
+							<ul>
+								<li>Weekdays, office hours</li>
+								<li>Same-day response</li>
+								<li>Email</li>
+							</ul>
+					</li>
 				</ul>
-				
-				<button type="button" class="cerb-button" data-cerb-bot-interaction="cloud.signup">Try Cerb Cloud free</button>
 			</div>
 	</div>
 	
-	<div class="unit half">
+	<div class="unit one-third">
 			<div style="display:inline-block;text-align:left;">
-				<h1><b>On-Premises</b></h1>
+				<h2 style="color:rgb(43,118,255);"><b>Corporate</b></h2>
+				<b>$750/month</b> (billed annually)
 				<ul>
-					<li><b>$30/month per seat</b> (billed annually)</li>
-					<li>Self-hosted on your hardware</li>
-					<li>We'll send you a free 3-seat license to get started</li>
-					<li>Your license never expires for versions released during your software updates term</li>
-					<li>Includes 100% of our source code from GitHub</li>
-					<li>Requires PHP 7.0+ and MySQL 5.6+</li>
-					<li>You're responsible for installation, upgrades, scaling, monitoring, security, and backups</li>
-					<li>Ideal for regulatory compliance (HIPAA, Safe Harbor, Sarbanes-Oxley)</li>
-					<li>20% discount for timely renewals</li>
-					<li>Free 3-seat starter license (w/o updates)</li>
+					<li><b>25</b> <abbr title="The maximum number of workers who can use Cerb at the same time.">seats</abbr></li>
+					<li><b>$30/month</b> per additional seat</li>
+					<li>Everything Cerb has to offer</li>
+					<li>
+						Infrastructure:
+						<ul>
+							<li>Dedicated database server</li>
+						</ul>
+					</li>
+					<li>
+							Priority support:
+							<ul>
+								<li>Weekdays, extended hours</li>
+								<li>Same-day response</li>
+								<li>Email, Phone</li>
+								<li>Live assistance configuring workspaces and bots</li>
+							</ul>
+					</li>
 				</ul>
-				
-				<button type="button" class="cerb-button" data-cerb-bot-interaction="license.free">Get a free 3-seat license</button>
+			</div>
+	</div>
+
+	<div class="unit one-third">
+			<div style="display:inline-block;text-align:left;">
+				<h2 style="color:rgb(165,73,3);"><b>Enterprise</b></h2>
+				<b>Contact us</b>
+				<ul>
+					<li><b>50+</b> <abbr title="The maximum number of workers who can use Cerb at the same time.">seats</abbr></li>
+					<li>Everything Cerb has to offer</li>
+					<li>
+						Infrastructure:
+						<ul>
+							<li>Dedicated database cluster, read replicas, instant failover</li>
+							<li>Optional dedicated web servers, mail servers, etc</li>
+							<li>Deploy in any supported AWS region worldwide</li>
+						</ul>
+					</li>
+					<li>
+						Top-priority enterprise support:
+						<ul>
+							<li>24/7 coverage</li>
+							<li>1-2 hour response time</li>
+							<li>Email, Phone, Chat</li>
+							<li>Live assistance configuring workspaces and bots</li>
+							<li>Maintenance and upgrades on your schedule</li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 	</div>
 </div>
 
-<br/>
+<button type="button" class="cerb-button" data-cerb-bot-interaction="cloud.signup">Start a free 30 day trial</button>
+
 <br/>
 
-<h1 id="cloud" style="font-size:2.5em;margin-bottom:20px;">FAQ: Cerb</h1>
+<p>
+	<sup>1</sup> <i>Prices for Cerb Cloud reflect a 20% discount for annual billing. Monthly billing is available.</i>
+</p>
+
+<br/>
+
+<h1 id="faq" style="font-size:2.5em;margin-bottom:20px;">FAQ</h1>
 
 <div id="seats"></div>
 
@@ -71,8 +186,6 @@ Seats determine the maximum number of workers who can use Cerb at the same time.
 For example, a team of 30 workers who are evenly split into three, non-overlapping shifts (morning, day, night) would only require 10 seats. That's the highest number of workers who would ever be logged in at the same time.
 
 You aren't paying per worker account, so there isn't a penalty for inviting everyone to participate: full-time staff, part-time contributors, busy executives, interns, temps, contractors, partners, and volunteers.
-
-<h1 id="cloud" style="font-size:2.5em;margin-bottom:20px;">FAQ: Cerb Cloud</h1>
 
 ## What is Cerb Cloud?
 
@@ -90,19 +203,11 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 
 * __Durable__: We archive a sequence of full daily database backups, as well as the incremental point-in-time changes in between. Long term object storage (like attachments) are redundantly stored in several geographically separate locations. We can also arrange for backups to be routinely transfered to you.
 
-## How much does Cerb Cloud cost?
-
-{% include tables/cloud_feature_comparison.html %}
-
-## Is there a discount for paying annually?
-
-Yes! We offer a 10% discount for subscriptions that are billed annually rather than monthly.
-
-This reflects the fact that we can better forecast our costs and lock in longer term discounted rates (longer leases, reservations, bulk purchasing). We pass along the cost reduction.
-
-<a href="javascript:;" data-cerb-bot-interaction="contact">Contact us</a> to switch your subscription to annual billing and we'll add the discount automatically.
-
 <div id="academic"></div>
+
+## Do you require a credit card to start a free trial?
+
+No! All we require is a valid email address to contact you. You will <b>never</b> receive an invoice until you request one.
 
 ## Do you provide academic discounts?
 
@@ -114,30 +219,9 @@ Yes! We offer a 25% discount to qualified academic institutions. Please <a href=
 
 Yes! Please <a href="javascript:;" data-cerb-bot-interaction="contact">contact us</a> for details.
 
-<div id="volume-discount"></div>
-
-## Do you provide a volume discount for Cerb Cloud subscriptions?
-
-Yes! Volume discounts are available for subscriptions with __more than 25 seats__.
-
-<div class="grid">
-<div class="unit half" align="center">
-{% include tables/volume_discount_cloud.html caption="Pro Volume Pricing" base_cost=40.00 %}
-</div>
-<div class="unit half" align="center">
-{% include tables/volume_discount_cloud.html caption="Enterprise Volume Pricing" base_cost=60.00 %}
-</div>
-</div>
-
-If you have multiple Cerb Cloud subscriptions on your account, the sum of all seats of the same subscription type determines your volume discount. This is particularly beneficial for large companies with many subsidiaries using independent instances of Cerb, and outsourced support companies who use distinct Cerb environments for each client to provide their services.
-
 ## How many workers can I invite to a Cerb Cloud trial?
 
-By default, your trial allows unlimited worker accounts with __3__ seats. <a href="javascript:;" data-cerb-bot-interaction="contact">Contact us</a> if you need to test with more seats and we can raise the limit.
-
-## Do you require a credit card to start a free trial?
-
-No! All we require is a valid email address to contact you. You will <b>never</b> receive an invoice until you request one.
+By default, your trial allows unlimited worker accounts with __10__ seats. <a href="javascript:;" data-cerb-bot-interaction="contact">Contact us</a> if you need to test with more seats and we can raise the limit.
 
 ## Do I need my own email server to use Cerb Cloud?
 
@@ -145,7 +229,7 @@ No, we provide a high-volume SMTP service for outgoing mail with SPF and DKIM su
 
 You can easily configure Cerb to use remote mail services if desired.
 
-With Cerb Cloud, we provide you with a subdomain worth of temporary email addresses, like __*@example.cerb.email__. You can send and receive email from any of these addresses (e.g. billing@, support@, sales@), which makes it much practice routing work to the appropriate groups/buckets in Cerb.
+With Cerb Cloud, we provide you with a subdomain worth of temporary email addresses, like __*@example.cerb.email__. You can send and receive email from any of these addresses (e.g. billing@, support@, sales@), which makes it much easier to practice routing work to the appropriate groups/buckets in Cerb.
 
 We also configure SPF, DKIM, and DMARC records for these temporary email addresses so you can [test our mail deliverability](http://cerb.io/docs/quick-start/#send-a-message-to-test-mail-deliverability).
 
@@ -167,7 +251,7 @@ Yes! We'll always use an `*.cerb.me` domain to identify your Cerb Cloud instance
 
 Keep in mind that you'll need to provide an SSL certificate for each custom domain you use. We provide wildcard SSL certificates for `*.cerb.me` and the generic portal domains like `*.official.support` and `*.user.community`.
 
-## What if I plan to eventually host Cerb myself?
+## What if I plan to eventually switch to a site license?
 
 We still recommend that you start with a Cerb Cloud trial, so your team can immediately get to work learning about Cerb rather than getting bogged down with installation requirements and troubleshooting.
 
@@ -177,6 +261,7 @@ All of your Cerb Cloud configuration and data can be exported to a standalone in
 
 If you still need to evaluate Cerb in your own environment, you can simply [grab a copy of the project from GitHub](https://github.com/cerb/cerb-release) and follow the [installation instructions](/docs/installation).
 
+{% comment %}
 <div id="custom-plugins"></div>
 
 ## Can I install custom plugins in Cerb Cloud?
@@ -185,7 +270,7 @@ Every Cerb Cloud instance can use any of the [plugins](/docs/plugins/) in the of
 
 _Enterprise_ subscriptions have the ability to install custom third-party plugins. These plugins must be reviewed and approved by our development team prior to use. You'll be asked to create a [GitHub](https://github.com/) repository for the plugin if you haven't already. If the repository is private, then you will need to grant access to the `cerb` account.
 
-<div id="annual-discount"></div>
+{% endcomment %}
 
 <div id="smtp"></div>
 
@@ -253,80 +338,3 @@ Technical services include:
 Our standard rate for technical services is **$100/hour**, billed in 15 minute increments.
 
 {% endcomment %}
-
-<div id="enterprise-seats"></div>
-
-## Why does the Enterprise subscription require at least 10 seats?
-
-That's the point where it becomes cost effective for us to provide the extra services.
-
-The _Enterprise_ subscriptions can scale up to a pool of resources that are entirely dedicated to a single instance of Cerb. The database cluster for instant failover requires at least twice the resources of a _Pro_ subscription (and more if there are extra read replicas for scaling).
-
-Similarly, the additional _Enterprise_ support commitments require highly experienced developers on call around the clock.
-
-Consider these two extremes: 1 client with 50 seats, and 50 clients with 1 seat each. Both clients result in roughly the same amount of revenue for 50 seats (the single client qualifies for a volume discount), but the 50 clients variation potentially requires 50 times the amount of resources like storage and support (negatively affecting the quality and responsiveness of our services).  The enterprise option is predicated on having our full attention at all times.
-
-<h1 id="on-premises" style="font-size:2.5em;margin-bottom:20px;">FAQ: Cerb On-Premises</h1>
-
-## How do I install Cerb on my own hardware?
-
-Read the <a href="/docs/installation">installation instructions</a> to get started.
-
-## How much does Cerb On-Premises cost?
-
-{% include tables/standalone_feature_comparison.html %}
-
-<div id="renewal"></div>
-
-## Do you provide a renewal discount for existing licenses?
-
-Yes! We automatically add a 20% _"timely renewal_" discount to your invoice for any license that has not been expired for more than 30 days.
-
-<div id="volume-discount-licenses"></div>
-
-## Do you provide a volume discount for standalone Cerb licenses?
-
-Yes! Volume discounts are available for _Academic_, _Commercial_, and _Government_ licenses with __more than 25 seats__.
-
-<div class="grid">
-<div class="unit half" align="center">
-{% include tables/volume_discount_standalone.html caption="Academic Volume Discount" base_cost=270.00 %}
-</div>
-<div class="unit half" align="center">
-{% include tables/volume_discount_standalone.html caption="Commercial/Gov Volume Discount" base_cost=360.00 %}
-</div>
-</div>
-
-If you have multiple **non-expired** Cerb licenses on your account, the sum of all seats of the same license type determines your volume discount. This is particularly beneficial for large companies with many subsidiaries using independent instances of Cerb, and outsourced support companies who use distinct Cerb environments for each client to provide their services.
-
-<div id="academic"></div>
-
-## Do you provide an academic discount?
-
-Yes. We offer a 25% discount in support of academic institutions.
-
-To qualify for an academic discount, institutions must be accredited by an agency recognized by the U.S. Department of Education (or their own national equivalent).  All publicly funded K-12 and preschools automatically qualify.
-
-<div id="non-profit"></div>
-
-## What qualifies a charity or non-profit organization for a free license?
-
-To receive a free Cerb license with ongoing software updates and more than 3 seats, a charity or non-profit must have a charter that seeks to improve the public good and be registered as a 501(c)(3) organization (or their own national equivalent).  The organization should be primarily funded through public donations or grants, and such contributions should be tax deductible by the donors.
-
-<div id="opensource"></div>
-
-## What qualifies an open source project for a free license?
-
-To receive a free Cerb license with ongoing software updates and more than 3 seats, an open source project must have a website explaining the purpose of the project, 100% of source code available in a public repository like GitHub, and an on-premises option without licensing costs.
-
-An open source license should only be used for that purpose, and not mixed with other commercial activity.
-
-<div id="starter-license"></div>
-
-## What is a starter license?
-
-A starter license provides 3 seats at no cost. The license is valid for the latest version of Cerb at the time it is created. The right to run that version of the software will never expire.
-
-Starter licenses don't provide access to priority support or ongoing software updates.  They are eligible for a single "get current" upgrade once per 12 month period.  Aside from that, they have no feature-related limitations.
-
-Registered charities and qualifying open source projects may be eligible for a higher seat limit and ongoing software updates at no cost.

@@ -10,6 +10,6 @@ Even after more than 15 years, **Cerb** is still vibrantly active and [constantl
 
 The next several pages will give you an overview of Cerb's most interesting features.
 
-You don't need to have a copy of Cerb to follow along, but it wouldn't hurt to [sign up for a free Cerb Cloud trial](/try/) or [install Cerb on your server](/docs/installation/) first.
+You don't need to have a copy of Cerb to follow along, but it wouldn't hurt to [sign up for a free Cerb Cloud trial](/pricing/) or [install Cerb on your server](/docs/installation/) first.
 
 Let's get started.

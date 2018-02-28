@@ -21,6 +21,6 @@ Licenses are based on the maximum number of workers able to log in at the same t
 
 If you [purchased a Cerb license](/download/) you can enter it here to increase your seats.  Without a license, Cerb operates in **evaluation mode** with a single seat but no other restrictions.
 
-If you have a [Cerb Cloud](/try/) subscription then you won't see this section.
+If you have a [Cerb Cloud](/pricing/) subscription then you won't see this section.
 
 {% include setup_toc.html %}

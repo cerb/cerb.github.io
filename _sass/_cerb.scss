@@ -6,6 +6,11 @@ h1 {
 	line-height: 1.2em;
 }
 
+abbr {
+	border-bottom: 1px dotted rgb(99,99,99);
+	cursor: help;
+}
+
 sup {
 	margin-left: 2px;
 	

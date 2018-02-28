@@ -27,7 +27,7 @@ git --version
 
 If you need to install Git, it's usually available in a package named `git`. The actual package name will depend on your operating system.
 
-If you can't use Git, you really should consider using [Cerb Cloud](/try/) rather than managing it yourself.
+If you can't use Git, you really should consider using [Cerb Cloud](/pricing/) rather than managing it yourself.
 
 # Preparation
 
