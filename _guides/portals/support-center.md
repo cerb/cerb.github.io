@@ -41,7 +41,7 @@ Type `support` in the search box and verify that the Support Center plugin is in
 
 Now we're ready to create a new Support Center.
 
-Navigate to **Setup >> Portals >> Search**.
+Navigate to **Search >> Community Portals**.
 
 Click the **(+)** icon above the worklist.
 
@@ -49,16 +49,26 @@ Enter the following values:
 
 * **Name:** `Support Center`
 * **Type:** `Support Center`
+* **Path:** `support`
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/portals/support-center/create.png" class="screenshot">
+</div>
 
 Click the **Save Changes** button.
 
 # Configure the Support Center
+
+Click on **Support Center** in the community portal worklist to open its profile.
+
+Select the **Configure** tab.
 
 ### Branding
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/portals/support-center/branding.png" class="screenshot">
 </div>
+
 ### Modules
 
 <div class="cerb-screenshot">
@@ -69,17 +79,5 @@ Click the **Save Changes** button.
 
 # Deploy the Support Center
 
-### Cerb Cloud
-
-If you're a [Cerb Cloud](/try/) subscriber, we include high-availability community portal hosting. This is already handled for you.
-
-### Nginx (recommended)
-
-See: [Host community portals using Nginx](/guides/portals/nginx-proxy/)
-
-### Cerb's PHP proxy script
-
-Select the **Installation** tab.
-
-You can deploy the `index.php` file in the web path of any web server capable of running PHP scripts (Nginx, Apache, IIS, etc).
+Switch to the **Deploy** tab and follow the instructions.
 
