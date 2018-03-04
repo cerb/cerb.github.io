@@ -35,10 +35,10 @@ Paste the following package into the large text box:
 {
   "package": {
     "name": "Test Custom Fieldset",
-    "cerb_version": "8.2.7",
+    "cerb_version": "8.3.0",
     "revision": 1,
     "requires": {
-      "cerb_version": "8.2.7",
+      "cerb_version": "8.3.0",
       "plugins": [
 
       ]
@@ -79,12 +79,34 @@ Paste the following package into the large text box:
       "custom_fieldset_id": "{{{uid.fieldset_test}}}"
     },
     {
+      "uid": "field_currency",
+      "_context": "custom_field",
+      "name": "Currency",
+      "type": "Y",
+      "context": "{{{record_type}}}",
+      "params": {
+        "currency_id": "1"
+      },
+      "custom_fieldset_id": "{{{uid.fieldset_test}}}"
+    },
+    {
       "uid": "field_date",
       "_context": "custom_field",
       "name": "Date",
       "type": "E",
       "context": "{{{record_type}}}",
       "params": {
+      },
+      "custom_fieldset_id": "{{{uid.fieldset_test}}}"
+    },
+    {
+      "uid": "field_decimal",
+      "_context": "custom_field",
+      "name": "Decimal",
+      "type": "O",
+      "context": "{{{record_type}}}",
+      "params": {
+        "decimal_at": "2"
       },
       "custom_fieldset_id": "{{{uid.fieldset_test}}}"
     },

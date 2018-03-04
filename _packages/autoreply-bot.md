@@ -229,6 +229,45 @@ Paste the following package into the large text box:
               "nodes": [
                 {
                   "type": "outcome",
+                  "title": "Yes, it's a bounce",
+                  "status": "live",
+                  "params": {
+                    "groups": [
+                      {
+                        "any": 1,
+                        "conditions": [
+                          {
+                            "condition": "sender_address",
+                            "oper": "like",
+                            "value": "postmaster@*"
+                          },
+                          {
+                            "condition": "sender_address",
+                            "oper": "like",
+                            "value": "mailer-daemon@*"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "nodes": [
+                    {
+                      "type": "action",
+                      "title": "true()",
+                      "status": "live",
+                      "params": {
+                        "actions": [
+                          {
+                            "action": "_run_subroutine",
+                            "subroutine": "true()"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "outcome",
                   "title": "Yes, it has an Auto-Submitted header",
                   "status": "live",
                   "params": {

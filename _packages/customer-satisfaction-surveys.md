@@ -29,10 +29,6 @@ The following metrics are tracked:
 - **Customer Satisfaction (CSAT)** - at each response, how satisfied a client was with the interaction.
 - **Customer Effort Score (CES)** - at resolution, how satisfied a client was with the entire process of resolving their issue.
 
-This video shows the whole process in action:
-
-<iframe src="https://player.vimeo.com/video/217069803" width="880" height="495" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
 # Installing the required plugin
 
 Navigate to **Setup >> Plugins >> Plugin Library**.
@@ -57,10 +53,10 @@ Paste the following package into the large text box:
 {
   "package": {
     "name": "Customer Satisfaction Workflow",
-    "cerb_version": "8.0.1",
+    "cerb_version": "8.3.0",
     "revision": 1,
     "requires": {
-      "cerb_version": "8.0.1",
+      "cerb_version": "8.3.0",
       "plugins": [
         "cerb.bots.portal.widget"
       ]
@@ -73,14 +69,6 @@ Paste the following package into the large text box:
           "key": "product_name",
           "params": {
             "placeholder": "Cerb"
-          }
-        },
-        {
-          "type": "text",
-          "label": "Portal URL:",
-          "key": "portal_url",
-          "params": {
-            "placeholder": "https://cerb.portal/"
           }
         }
       ],
@@ -239,7 +227,7 @@ Paste the following package into the large text box:
       "params": {
         "config": {
           "hmac_secret": "{{{hmac_secret}}}",
-          "portal_url": "{{{portal_url}}}"
+          "portal_url": "{{{default.base_url}}}portal/satisfaction/"
         },
         "events": {
           "mode": "allow",
@@ -2411,7 +2399,7 @@ Paste the following package into the large text box:
               "extension_id": "core.workspace.widget.counter",
               "pos": "0002",
               "params": {
-                "datasource": "core.workspace.widget.datasource.worklist",
+                "datasource": "core.workspace.widget.datasource.worklist.metric",
                 "context": "cerberusweb.contexts.contact",
                 "search_mode": "quick_search",
                 "quick_search": "netPromoter.rating:!null",
@@ -2458,7 +2446,7 @@ Paste the following package into the large text box:
               "extension_id": "core.workspace.widget.counter",
               "pos": "0003",
               "params": {
-                "datasource": "core.workspace.widget.datasource.worklist",
+                "datasource": "core.workspace.widget.datasource.worklist.metric",
                 "context": "cerberusweb.contexts.contact",
                 "search_mode": "quick_search",
                 "quick_search": "netPromoter.rating:&gt;8",
@@ -2505,7 +2493,7 @@ Paste the following package into the large text box:
               "extension_id": "core.workspace.widget.counter",
               "pos": "0004",
               "params": {
-                "datasource": "core.workspace.widget.datasource.worklist",
+                "datasource": "core.workspace.widget.datasource.worklist.metric",
                 "context": "cerberusweb.contexts.contact",
                 "search_mode": "quick_search",
                 "quick_search": "netPromoter.rating:&lt;7",
@@ -2565,7 +2553,7 @@ Paste the following package into the large text box:
                 "chart_display": "",
                 "series": [
                   {
-                    "datasource": "core.workspace.widget.datasource.worklist",
+                    "datasource": "core.workspace.widget.datasource.worklist.series",
                     "label": "Detractors",
                     "context": "cerberusweb.contexts.contact",
                     "search_mode": "quick_search",
@@ -2610,7 +2598,7 @@ Paste the following package into the large text box:
                     "fill_color": "rgba(207,44,29,0.15)"
                   },
                   {
-                    "datasource": "core.workspace.widget.datasource.worklist",
+                    "datasource": "core.workspace.widget.datasource.worklist.series",
                     "label": "Passives",
                     "context": "cerberusweb.contexts.contact",
                     "search_mode": "quick_search",
@@ -2659,7 +2647,7 @@ Paste the following package into the large text box:
                     "fill_color": "rgba(254,175,3,0.15)"
                   },
                   {
-                    "datasource": "core.workspace.widget.datasource.worklist",
+                    "datasource": "core.workspace.widget.datasource.worklist.series",
                     "label": "Promoters",
                     "context": "cerberusweb.contexts.contact",
                     "search_mode": "quick_search",
@@ -2751,7 +2739,7 @@ Paste the following package into the large text box:
                   "#FEAF03",
                   "#57970A"
                 ],
-                "datasource": "core.workspace.widget.datasource.worklist",
+                "datasource": "core.workspace.widget.datasource.worklist.metric",
                 "context": "cerberusweb.contexts.message",
                 "search_mode": "quick_search",
                 "quick_search": "customerSatisfaction.rating:!null",
@@ -2792,7 +2780,7 @@ Paste the following package into the large text box:
               "extension_id": "core.workspace.widget.counter",
               "pos": "0001",
               "params": {
-                "datasource": "core.workspace.widget.datasource.worklist",
+                "datasource": "core.workspace.widget.datasource.worklist.metric",
                 "context": "cerberusweb.contexts.message",
                 "search_mode": "quick_search",
                 "quick_search": "customerSatisfaction.rating:!null",
@@ -2837,7 +2825,7 @@ Paste the following package into the large text box:
                 "chart_display": "",
                 "series": [
                   {
-                    "datasource": "core.workspace.widget.datasource.worklist",
+                    "datasource": "core.workspace.widget.datasource.worklist.series",
                     "label": "Positive",
                     "context": "cerberusweb.contexts.message",
                     "search_mode": "quick_search",
@@ -2878,7 +2866,7 @@ Paste the following package into the large text box:
                     "fill_color": "rgba(87,151,10,0.15)"
                   },
                   {
-                    "datasource": "core.workspace.widget.datasource.worklist",
+                    "datasource": "core.workspace.widget.datasource.worklist.series",
                     "label": "Neutral",
                     "context": "cerberusweb.contexts.message",
                     "search_mode": "quick_search",
@@ -2912,7 +2900,7 @@ Paste the following package into the large text box:
                     "fill_color": "rgba(254,175,3,0.15)"
                   },
                   {
-                    "datasource": "core.workspace.widget.datasource.worklist",
+                    "datasource": "core.workspace.widget.datasource.worklist.series",
                     "label": "Negative",
                     "context": "cerberusweb.contexts.message",
                     "search_mode": "quick_search",
@@ -3013,7 +3001,7 @@ Paste the following package into the large text box:
                   "#98AD0C",
                   "#66AD11"
                 ],
-                "datasource": "core.workspace.widget.datasource.worklist",
+                "datasource": "core.workspace.widget.datasource.worklist.metric",
                 "context": "cerberusweb.contexts.ticket",
                 "search_mode": "quick_search",
                 "quick_search": "customerEffort.rating:!null",
@@ -3054,7 +3042,7 @@ Paste the following package into the large text box:
               "extension_id": "core.workspace.widget.counter",
               "pos": "0001",
               "params": {
-                "datasource": "core.workspace.widget.datasource.worklist",
+                "datasource": "core.workspace.widget.datasource.worklist.metric",
                 "context": "cerberusweb.contexts.ticket",
                 "search_mode": "quick_search",
                 "quick_search": "customerEffort.rating:!null",
@@ -3108,7 +3096,7 @@ Paste the following package into the large text box:
                 "chart_display": "",
                 "series": [
                   {
-                    "datasource": "core.workspace.widget.datasource.worklist",
+                    "datasource": "core.workspace.widget.datasource.worklist.series",
                     "label": "Agree",
                     "context": "cerberusweb.contexts.ticket",
                     "search_mode": "quick_search",
@@ -3155,7 +3143,7 @@ Paste the following package into the large text box:
                     "fill_color": "rgba(87,151,10,0.15)"
                   },
                   {
-                    "datasource": "core.workspace.widget.datasource.worklist",
+                    "datasource": "core.workspace.widget.datasource.worklist.series",
                     "label": "Undecided",
                     "context": "cerberusweb.contexts.ticket",
                     "search_mode": "quick_search",
@@ -3202,7 +3190,7 @@ Paste the following package into the large text box:
                     "fill_color": "rgba(254,175,3,0.15)"
                   },
                   {
-                    "datasource": "core.workspace.widget.datasource.worklist",
+                    "datasource": "core.workspace.widget.datasource.worklist.series",
                     "label": "Disagree",
                     "context": "cerberusweb.contexts.ticket",
                     "search_mode": "quick_search",
@@ -3277,14 +3265,16 @@ Paste the following package into the large text box:
       ]
     }
   ],
-  "portals": [
+  "records": [
     {
       "uid": "portal_surveys",
+      "_context": "community_portal",
       "name": "Satisfaction Survey Bot",
       "extension_id": "cerb.bots.portal",
+      "uri": "satisfaction",
       "params": {
         "bot_name": "Survey Bot",
-        "cors_allow_origin": "{{{portal_url}}}",
+        "cors_allow_origin": "{{{default.base_url}}}",
         "interaction_behavior_id": "{{{uid.behavior_309}}}",
         "page_title": "Survey Bot",
         "page_hide_icon": "1",
@@ -3303,8 +3293,6 @@ You'll be prompted to enter two pieces of information:
 
 * **Product Name**: The name of your product, service, or organization.  This is used to personalize the surveys (e.g. _"How likely are you to recommend [product name] to your friends and colleagues?"_).
 
-* **Portal URL**: This is where you plan to host the community portal for customer-facing bots, and it will be used when generating survey links. You can modify this later by editing **Satisfaction Bot**.
-
 Click the **Import** button again.
 
 The following records will be created:
@@ -3315,13 +3303,13 @@ The following records will be created:
 
 # Installing the community portal
 
-Navigate to **Setup >> Portals >> Search**.
+Navigate to **Search >> Community Portals**.
 
 Click on **Satisfaction Survey Bot**.
 
-Switch to the **Installation** tab.
+Switch to the **Deploy** tab.
 
-Copy the `index.php` content and deploy it to your web server at the **Portal URL** you configured above.
+Follow the instructions.
 
 At the URL, you should see something like:
 
@@ -3387,9 +3375,7 @@ You should see your first NPS rating:
 
 When the new customer satisfaction custom fieldsets are created they are owned by Cerb, which makes them editable by workers. You can prevent this by changing their owner to the bot. The fields will be hidden from workers, but the results will still be shown on the dashboard.
 
-Navigate to **Setup >> Configure >> Custom Fields**.
-
-Switch to the **Fieldsets** tab.
+Navigate to **Search >> Custom Fieldsets**.
 
 Change the owner of the three fieldsets to **Bots >> Satisfaction Bot**:
 
