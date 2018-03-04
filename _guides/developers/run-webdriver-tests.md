@@ -131,11 +131,11 @@ You should see output like:
 <code class="language-text">
 PHPUnit 5.7.21 by Sebastian Bergmann and contributors.
 
-.............................................                     45 / 45 (100%)
+.............................................                     52 / 52 (100%)
 
 Time: 122 ms, Memory: 12.00MB
 
-OK (45 tests, 225 assertions)
+OK (52 tests, 263 assertions)
 </code>
 </pre>
 
@@ -165,12 +165,6 @@ Time: 4.85 seconds, Memory: 14.00MB
 
 This means that no issues were encountered while running the installer and creating Cerb's database schema.
 
-### Finish the installation
-
-Navigate to <http://localhost:8080/index.php/> and complete the installation.
-
-Close the browser window when finished.
-
 # Run the WebDriver tests
 
 Now we'll configure the WebDriver tests to automatically create sample data using Cerb's web interface.
@@ -191,14 +185,15 @@ define('BROWSER_URL', 'http://localhost:8080/index.php');
 </code>
 </pre>
 
-By default, WebDriver will attempt to run the tests in the Safari browser.  You can choose a different browser by uncommenting only one of these lines:
+By default, WebDriver will attempt to run the tests in the Chrome browser.  You can choose a different browser by uncommenting only one of these lines:
 
 <pre>
 <code class="language-php">
 // Pick one:
-$capabilities = DesiredCapabilities::safari();
+//$capabilities = DesiredCapabilities::phantomjs();
+//$capabilities = DesiredCapabilities::safari();
 //$capabilities = DesiredCapabilities::firefox();
-//$capabilities = DesiredCapabilities::chrome();
+$capabilities = DesiredCapabilities::chrome();
 </code>
 </pre>
 
@@ -232,11 +227,11 @@ At the end, you should have output like:
 <code class="language-text">
 PHPUnit 5.7.21 by Sebastian Bergmann and contributors.
 
-.................................................                 49 / 49 (100%)
+..................................................                50 / 50 (100%)
 
-Time: 3.51 minutes, Memory: 9.06MB
+Time: 2.36 minutes, Memory: 9.06MB
 
-OK (49 tests, 87 assertions)
+OK (50 tests, 88 assertions)
 </code>
 </pre>
 
