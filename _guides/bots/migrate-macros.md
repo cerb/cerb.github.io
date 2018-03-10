@@ -99,566 +99,744 @@ Ideally, all existing macros would be converted into conversational behaviors to
 
 The most frequently used macros can then be converted into conversational behaviors first, with the "long tail" of less frequently used macros being converted over time.
 
-# Import the Macro Bot package
+# Migrating legacy macros to bot interactions
 
-We've created a **Macro Bot** package to demonstrate how to run existing macros from interactions.
+We've created a migration script that automatically builds interactions for each bot that has macro behaviors. The script generates a package for each bot that you can import into Cerb 8.3.1 or later.
 
-Navigate to **Setup >> Configure >> Import Package**.
+### Save the migration script
 
-Copy and paste the following JSON:
+Copy the migration script below and save it to the web path on your web server.  You can use your Cerb path, but remember to remove the files when you're done so the files don't remain downloadable.
 
+**cerb-migrate-bot-macros.php**:
 <pre style="max-height:29.5em;">
-<code class="language-json">
+<code class="language-php">
 {% raw %}
-{
-	"package": {
-		"name": "Macro Bot",
-		"revision": 1,
-		"requires": {
-			"cerb_version": "8.2.9",
-			"plugins": [
+<?php
+if(false == (@$json = json_decode(file_get_contents('bots.json'), true)))
+	die("Failed to open the bots.json file.");
 
-			]
-		},
-		"configure": {
-			"prompts": [
+if(!isset($json['bots']))
+	die("No bots in the JSON file.");
 
+$macros_to_contexts = [
+	'event.macro.address' => 'cerberusweb.contexts.address',
+	'event.macro.asset' => 'cerberusweb.contexts.asset',
+	'event.macro.bot' => 'cerberusweb.contexts.bot',
+	'event.macro.calendar' => 'cerberusweb.contexts.calendar',
+	'event.macro.calendar_event' => 'cerberusweb.contexts.calendar_event',
+	'event.macro.call' => 'cerberusweb.contexts.call',
+	'event.macro.contact' => 'cerberusweb.contexts.contact',
+	'event.macro.crm.opportunity' => 'cerberusweb.contexts.opportunity',
+	'event.macro.domain' => 'cerberusweb.contexts.datacenter.domain',
+	'event.macro.feeditem' => 'cerberusweb.contexts.feed.item',
+	'event.macro.group' => 'cerberusweb.contexts.group',
+	'event.macro.jira_issue' => 'cerberusweb.contexts.jira.issue',
+	'event.macro.jira_project' => 'cerberusweb.contexts.jira.project',
+	'event.macro.kb_article' => 'cerberusweb.contexts.kb_article',
+	'event.macro.message' => 'cerberusweb.contexts.message',
+	'event.macro.notification' => 'cerberusweb.contexts.notification',
+	'event.macro.org' => 'cerberusweb.contexts.org',
+	'event.macro.reminder' => 'cerberusweb.contexts.reminder',
+	'event.macro.sensor' => 'cerberusweb.contexts.datacenter.sensor',
+	'event.macro.server' => 'cerberusweb.contexts.datacenter.server',
+	'event.macro.task' => 'cerberusweb.contexts.task',
+	'event.macro.ticket' => 'cerberusweb.contexts.ticket',
+	'event.macro.timetracking' => 'cerberusweb.contexts.timetracking',
+	'event.macro.worker' => 'cerberusweb.contexts.worker',
+];
+
+foreach($json['bots'] as $bot_id => &$bot) {
+	if(!isset($bot['behaviors']))
+		continue;
+	
+	$macros = [];
+	$listen_points = [];
+	
+	$package_data = [
+		'package' => [
+			'name' => sprintf('Convert %s macros to interactions', $bot['name']),
+			'revision' => 1,
+			'requires' => [
+				'cerb_version' => '8.3.1',
+				'plugins' => [],
 			],
-			"placeholders": [
-
-			]
+			'configure' => [
+				'prompts' => [],
+				'placeholders' => [],
+			],
+		],
+		'behaviors' => [
+		],
+	];
+	
+	$get_interactions_data = [
+		'uid' => 'behavior_get_interactions_' . $bot_id,
+		'bot_id' => $bot_id,
+		'title' => 'Get macro interactions for worker',
+		'is_disabled' => false,
+		'is_private' => false,
+		'priority' => 50,
+		'event' => [
+			'key' => 'event.interactions.get.worker',
+			'label' => 'Conversation get interactions for worker',
+			'params' => [
+				'listen_points' => '',
+			],
+		],
+		'nodes' => [
+			[
+				'type' => 'switch',
+				'title' => 'Interaction Point:',
+				'status' => 'live',
+				'nodes' => [],
+			],
+		],
+	];
+	
+	$handle_interaction_data = [
+		'uid' => 'behavior_handle_interaction_' . $bot_id,
+		'bot_id' => $bot_id,
+		'title' => 'Handle macro interaction with worker',
+		'is_disabled' => false,
+		'is_private' => false,
+		'priority' => 50,
+		'event' => [
+			'key' => 'event.interaction.chat.worker',
+			'label' => 'Conversation handle interaction with worker',
+		],
+		'nodes' => [
+			[
+				'type' => 'switch',
+				'title' => 'Interaction:',
+				'status' => 'live',
+				'nodes' => [],
+			],
+		],
+	];
+	
+	$convo_run_macro_data = [
+		'uid' => 'behavior_convo_run_macro_' . $bot_id,
+		'bot_id' => $bot_id,
+		'title' => 'Convo: Run a macro behavior for worker',
+		'is_disabled' => false,
+		'is_private' => false,
+		'priority' => 50,
+		'event' => [
+			'key' => 'event.message.chat.worker',
+			'label' => 'Conversation with worker',
+		],
+		'variables' => [
+			'var_context' => [
+				'key' => 'var_context',
+				'label' => 'Context',
+				'type' => 'S',
+				'is_private' => '0',
+				'params' => [
+					'widget' => 'single',
+				]
+			],
+			'var_context_id' => [
+				'key' => 'var_context_id',
+				'label' => 'Context ID',
+				'type' => 'N',
+				'is_private' => '0',
+				'params' => [],
+			],
+			'var_records' => [
+				'key' => 'var_records',
+				'label' => 'Records',
+				'type' => 'contexts',
+				'is_private' => 1,
+				'params' => [],
+			],
+		],
+		'nodes' => [
+			[
+				'type' => 'action',
+				'title' => 'Load record',
+				'status' => 'live',
+				'params' => [
+					'actions' => [
+						[
+							'action' => 'var_records',
+							'context' => 'var_context',
+							'search_mode' => 'quick_search',
+							'quick_search' => 'id:{{var_context_id}}',
+							'limit' => 'first',
+							'limit_count' => '1',
+							'mode' => 'replace',
+						]
+					],
+				],
+			],
+			[
+				'type' => 'switch',
+				'title' => 'Empty?',
+				'status' => 'live',
+				'nodes' => [],
+			],
+			[
+				'type' => 'switch',
+				'title' => 'Interaction:',
+				'status' => 'live',
+				'nodes' => [],
+			],
+			[
+				'type' => 'action',
+				'title' => 'Thanks!',
+				'status' => 'live',
+				'params' => [
+					'actions' => [
+						[
+							'action' => 'prompt_buttons',
+							'options' => 'Thanks!',
+							'color_from' => '#4795f7',
+							'color_mid' => '#4795f7',
+							'color_to' => '#4795f7',
+							'style' => '',
+						],
+					],
+				],
+			],
+			[
+				'type' => 'action',
+				'title' => 'Close chat window',
+				'status' => 'live',
+				'params' => [
+					'actions' => [
+						[
+							'action' => 'send_message',
+							'message' => 'Bye!',
+							'format' => '',
+							'delay_ms' => '1000',
+						],
+						[
+							'action' => 'window_close',
+						],
+					],
+				],
+			],
+		],
+	];
+	
+	foreach($bot['behaviors'] as &$behavior) {
+		// We only care about macros
+		if('event.macro.' != substr($behavior['event']['key'], 0, 12))
+			continue;
+		
+		// Skip macros on bots
+		if('event.macro.bot' == $behavior['event']['key'])
+			continue;
+		
+		// We only care about enabled public macros
+		if($behavior['is_private'] || $behavior['is_disabled'])
+			continue;
+		
+		// It must be a macro we have a context for
+		if(false == (@$listen_point = $macros_to_contexts[$behavior['event']['key']]))
+			continue;
+		
+		$behavior_id = explode('_', $behavior['uid'])[1];
+		$macros[] = $behavior_id;
+		
+		// Add the listen point to the behaviors
+		if(!isset($listen_points[$listen_point])) {
+			$get_interactions_data['event']['params']['listen_points'] .= 'record:' . $listen_point . "\r\n";
+			
+			// Keep track of where we added the listen point in the switch
+			$listen_points[$listen_point] = count($get_interactions_data['nodes'][0]['nodes']);
+			
+			$get_interactions_data['nodes'][0]['nodes'][] = [
+				'type' => 'outcome',
+				'title' => 'record:' . $listen_point,
+				'status' => 'live',
+				'params' => [
+					'groups' => [
+						[
+							'any' => 0,
+							'conditions' => [
+								[
+									'condition' => 'point',
+									'oper' => 'is',
+									'value' => 'record:' . $listen_point,
+								],
+							],
+						],
+					],
+				],
+				'nodes' => [
+					[
+						'type' => 'action',
+						'title' => 'Return interactions',
+						'status' => 'live',
+						'params' => [
+							'actions' => [],
+						],
+					],
+				],
+			];
 		}
-	},
-	"records": [
-
-	],
-	"bots": [
-		{
-			"uid": "bot_macro",
-			"name": "Macro Bot",
-			"owner": {
-				"context": "cerberusweb.contexts.app",
-				"id": 0
-			},
-			"is_disabled": false,
-			"params": {
-				"config": null,
-				"events": {
-					"mode": "all",
-					"items": [
-
-					]
-				},
-				"actions": {
-					"mode": "all",
-					"items": [
-
-					]
+		
+		$get_interactions_data['nodes'][0]['nodes'][$listen_points[$listen_point]]['nodes'][0]['params']['actions'][] = [
+			'action' => 'return_interaction',
+			'behavior_id' => '{{{uid.behavior_handle_interaction_' . $bot_id . '}}}',
+			'name' => $behavior['title'],
+			'interaction' => $behavior['uid'],
+			"interaction_params_json" => "{% set json = {} %}\r\n{% set json = dict_set(json, 'context', point_params._context) %}\r\n{% set json = dict_set(json, 'context-id', point_params.id) %}\r\n{{json|json_encode|json_pretty}}",
+		];
+		
+		$handle_interaction_data['nodes'][0]['nodes'][] = [
+			'type' => 'outcome',
+			'title' => $behavior['title'],
+			'status' => 'live',
+			'params' => [
+				'groups' => [
+					[
+						'any' => 0,
+						'conditions' => [
+							[
+								'condition' => 'interaction',
+								'oper' => 'is',
+								'value' => $behavior['uid'],
+							],
+						],
+					],
+				],
+			],
+			'nodes' => [
+				[
+					'type' => 'action',
+					'title' => 'Start convo',
+					'status' => 'live',
+					'params' => [
+						'actions' => [
+							[
+								'action' => 'switch_behavior',
+								'return' => 0,
+								'behavior_id' => '{{{uid.behavior_convo_run_macro_' . $bot_id . '}}}',
+								'var_context' => "{{interaction_params['context']}}",
+								'var_context_id' => "{{interaction_params['context-id']}}",
+								'var' =>  '_behavior',
+							]
+						],
+					],
+				],
+			],
+		];
+		
+		$node_idx = count($convo_run_macro_data['nodes'][2]['nodes']);
+		
+		$convo_run_macro_data['nodes'][2]['nodes'][] = [
+			'type' => 'outcome',
+			'title' => $behavior['title'],
+			'status' => 'live',
+			'params' => [
+				'groups' => [
+					[
+						'any' => 0,
+						'conditions' => [
+							[
+								'condition' => 'interaction',
+								'oper' => 'is',
+								'value' => $behavior['uid'],
+							],
+						],
+					],
+				],
+			],
+			'nodes' => [
+				[
+					'type' => 'action',
+					'title' => 'Run macro behavior',
+					'status' => 'live',
+					'params' => [
+						'actions' => [
+							[
+								'action' => '_run_behavior',
+								'on' => 'var_records',
+								'behavior_id' => $behavior_id,
+								'run_in_simulator' => '0',
+								'var' =>  '_behavior',
+							],
+						],
+					],
+				],
+				[
+					'type' => 'action',
+					'title' => 'Respond with summary',
+					'status' => 'live',
+					'params' => [
+						'actions' => [
+							[
+								'action' => 'send_message',
+								'message' => "{% set record = var_records|first %}\r\nI ran \r\n<div class=\"bubble\">\r\n\t<a href=\"javascript:;\" class=\"cerb-peek-trigger\" data-context=\"cerberusweb.contexts.behavior\" data-context-id=\"{{_behavior.behavior_id}}\">{{_behavior.behavior__label}}</a>\r\n</div>\r\n on \r\n<div class=\"bubble\">\r\n\t<a href=\"javascript:;\" class=\"cerb-peek-trigger\" data-context=\"{{record._context}}\" data-context-id=\"{{record.id}}\">{{record._label}}</a>\r\n</div>\r\n for you.",
+								'format' => 'html',
+								'delay_ms' =>  '1000',
+							]
+						],
+					],
+				],
+			],
+		];
+		
+		// See if we have variables in this behavior we need to prompt for
+		if(isset($behavior['variables'])) {
+			//var_dump($behavior['variables']);
+			
+			$action_vars =& $convo_run_macro_data['nodes'][2]['nodes'][$node_idx]['nodes'][0]['params']['actions'][0];
+			$actions =& $convo_run_macro_data['nodes'][2]['nodes'][$node_idx]['nodes'];
+			
+			foreach($behavior['variables'] as $variable) {
+				// Only public inputs
+				if($variable['is_private'])
+					continue;
+				
+				$key = $variable['key'];
+				$type = $variable['type'];
+				
+				switch($type) {
+					// Checkbox
+					case 'C':
+						$prompt = [
+							'type' => 'action',
+							'title' => 'Prompt for ' . $variable['label'],
+							'status' => 'live',
+							'params' => [
+								'actions' => [
+									[
+										'action' => 'send_message',
+										'message' => $variable['label'] . '?',
+										'format' => '',
+										'delay_ms' => '1000',
+									],
+									[
+										'action' => 'prompt_buttons',
+										'options' => "yes\r\nno",
+										'color_from' => '#4795f7',
+										'color_mid' => '#4795f7',
+										'color_to' => '#4795f7',
+										'style' => '',
+										'var' => 'prompt_' . $key,
+										'var_format' => "{{message == 'yes' ? 1 : 0}}",
+										'var_validate' => '',
+									]
+								],
+							],
+						];
+						
+						array_splice($actions, -2, 0, [$prompt]);
+						$action_vars[$key] = '{{prompt_' . $key . '}}';
+						break;
+					
+					// Picklist
+					case 'D':
+						$prompt = [
+							'type' => 'action',
+							'title' => 'Prompt for ' . $variable['label'],
+							'status' => 'live',
+							'params' => [
+								'actions' => [
+									[
+										'action' => 'send_message',
+										'message' => $variable['label'] . '?',
+										'format' => '',
+										'delay_ms' => '1000',
+									],
+									[
+										'action' => 'prompt_buttons',
+										'options' => @$variable['params']['options'],
+										'color_from' => '#4795f7',
+										'color_mid' => '#4795f7',
+										'color_to' => '#4795f7',
+										'style' => '',
+										'var' => 'prompt_' . $key,
+										'var_format' => "{{message}}",
+										'var_validate' => '',
+									]
+								],
+							],
+						];
+						
+						array_splice($actions, -2, 0, [$prompt]);
+						$action_vars[$key] = '{{prompt_' . $key . '}}';
+						break;
+					
+					// Date
+					case 'E':
+						$prompt = [
+							'type' => 'action',
+							'title' => 'Prompt for ' . $variable['label'],
+							'status' => 'live',
+							'params' => [
+								'actions' => [
+									[
+										'action' => 'send_message',
+										'message' => $variable['label'] . '?',
+										'format' => '',
+										'delay_ms' => '1000',
+									],
+									[
+										'action' => 'prompt_date',
+										'placeholder' => "e.g. \"tomorrow 5pm\"",
+										'default' => '',
+										'mode' => '',
+										'var' => 'prompt_' . $key,
+										'var_format' => "{{message|date('U')}}",
+										'var_validate' => "{% if 0 == prompt_var_date %}\r\nPlease enter a valid date.\r\n{% endif %}",
+									]
+								],
+							],
+						];
+						
+						array_splice($actions, -2, 0, [$prompt]);
+						$action_vars[$key] = '{{prompt_' . $key . '}}';
+						break;
+					
+					// Number
+					case 'N':
+						$prompt = [
+							'type' => 'action',
+							'title' => 'Prompt for ' . $variable['label'],
+							'status' => 'live',
+							'params' => [
+								'actions' => [
+									[
+										'action' => 'send_message',
+										'message' => $variable['label'] . '?',
+										'format' => '',
+										'delay_ms' => '1000',
+									],
+									[
+										'action' => 'prompt_text',
+										'placeholder' => 'Enter a number...',
+										'default' => '',
+										'mode' => '',
+										'var' => 'prompt_' . $key,
+										'var_format' => "{{message|replace({',':''})|number_format(0,'','')}}",
+										'var_validate' => "{% if message is not numeric %}\r\nYou must enter a number.\r\n{% endif %}",
+									]
+								],
+							],
+						];
+						
+						array_splice($actions, -2, 0, [$prompt]);
+						$action_vars[$key] = '{{prompt_' . $key . '}}';
+						break;
+					
+					// Text
+					case 'S':
+						$prompt = [
+							'type' => 'action',
+							'title' => 'Prompt for ' . $variable['label'],
+							'status' => 'live',
+							'params' => [
+								'actions' => [
+									[
+										'action' => 'send_message',
+										'message' => $variable['label'] . '?',
+										'format' => '',
+										'delay_ms' => '1000',
+									],
+									[
+										'action' => 'prompt_text',
+										'placeholder' => '',
+										'default' => '',
+										'mode' => '',
+										'var' => 'prompt_' . $key,
+										'var_format' => '',
+										'var_validate' => '',
+									]
+								],
+							],
+						];
+						
+						array_splice($actions, -2, 0, [$prompt]);
+						$action_vars[$key] = '{{prompt_' . $key . '}}';
+						break;
+						
+					// Worker
+					case 'W':
+						$prompt = [
+							'type' => 'action',
+							'title' => 'Prompt for ' . $variable['label'],
+							'status' => 'live',
+							'params' => [
+								'actions' => [
+									[
+										'action' => 'send_message',
+										'message' => $variable['label'] . '?',
+										'format' => '',
+										'delay_ms' => '1000',
+									],
+									[
+										'action' => 'prompt_chooser',
+										'context' => 'cerberusweb.contexts.worker',
+										'query' => 'isDisabled:n',
+										'selection' => 'single',
+										'autocomplete' => '1',
+										'var' => 'prompt_' . $key,
+										'var_format' => '',
+										'var_validate' => '',
+									]
+								],
+							],
+						];
+						
+						array_splice($actions, -2, 0, [$prompt]);
+						$action_vars[$key] = '{{prompt_' . $key . '}}';
+						break;
 				}
-			},
-			"image": null,
-			"behaviors": [
-				{
-					"uid": "behavior_9",
-					"title": "Comment on task",
-					"is_disabled": false,
-					"is_private": false,
-					"priority": 50,
-					"event": {
-						"key": "event.macro.task",
-						"label": "Custom behavior on task"
-					},
-					"variables": {
-						"var_comment_text": {
-							"key": "var_comment_text",
-							"label": "Comment Text",
-							"type": "S",
-							"is_private": "0",
-							"params": {
-								"widget": "multiple"
-							}
-						}
-					},
-					"nodes": [
-						{
-							"type": "action",
-							"title": "Comment",
-							"status": "live",
-							"params": {
-								"actions": [
-									{
-										"action": "create_comment",
-										"on": "task_id",
-										"content": "{{var_comment_text}}"
-									}
-								]
-							}
-						}
-					]
-				},
-				{
-					"uid": "behavior_6",
-					"title": "Get interactions for worker",
-					"is_disabled": false,
-					"is_private": false,
-					"priority": 50,
-					"event": {
-						"key": "event.interactions.get.worker",
-						"label": "Conversation get interactions for worker",
-						"params": {
-							"listen_points": "record:cerberusweb.contexts.task\r\n\r\n"
-						}
-					},
-					"nodes": [
-						{
-							"type": "switch",
-							"title": "Interaction Point:",
-							"status": "live",
-							"nodes": [
-								{
-									"type": "outcome",
-									"title": "record:cerberusweb.contexts.task",
-									"status": "live",
-									"params": {
-										"groups": [
-											{
-												"any": 0,
-												"conditions": [
-													{
-														"condition": "point",
-														"oper": "is",
-														"value": "record:cerberusweb.contexts.task"
-													}
-												]
-											}
-										]
-									},
-									"nodes": [
-										{
-											"type": "action",
-											"title": "Return interactions",
-											"status": "live",
-											"params": {
-												"actions": [
-													{
-														"action": "return_interaction",
-														"behavior_id": "{{{uid.behavior_7}}}",
-														"name": "Comment on task",
-														"interaction": "task.comment",
-														"interaction_params_json": "{\r\n\t\"id\": \"{{point_params.id}}\"\r\n}"
-													}
-												]
-											}
-										}
-									]
-								}
-							]
-						}
-					]
-				},
-				{
-					"uid": "behavior_7",
-					"title": "Handle interaction with worker",
-					"is_disabled": false,
-					"is_private": false,
-					"priority": 50,
-					"event": {
-						"key": "event.interaction.chat.worker",
-						"label": "Conversation handle interaction with worker"
-					},
-					"nodes": [
-						{
-							"type": "switch",
-							"title": "Interaction:",
-							"status": "live",
-							"nodes": [
-								{
-									"type": "outcome",
-									"title": "task.comment",
-									"status": "live",
-									"params": {
-										"groups": [
-											{
-												"any": 0,
-												"conditions": [
-													{
-														"condition": "interaction",
-														"oper": "is",
-														"value": "task.comment"
-													}
-												]
-											}
-										]
-									},
-									"nodes": [
-										{
-											"type": "action",
-											"title": "Run behavior",
-											"status": "live",
-											"params": {
-												"actions": [
-													{
-														"action": "switch_behavior",
-														"return": "0",
-														"behavior_id": "{{{uid.behavior_8}}}",
-														"var_interaction": "{{interaction}}",
-														"var_task_id": "{{interaction_params.id}}",
-														"var": "_behavior"
-													}
-												]
-											}
-										}
-									]
-								}
-							]
-						}
-					]
-				},
-				{
-					"uid": "behavior_8",
-					"title": "Run legacy task macros",
-					"is_disabled": false,
-					"is_private": false,
-					"priority": 50,
-					"event": {
-						"key": "event.message.chat.worker",
-						"label": "Conversation with worker"
-					},
-					"variables": {
-						"var_interaction": {
-							"key": "var_interaction",
-							"label": "Interaction",
-							"type": "S",
-							"is_private": "0",
-							"params": {
-								"widget": "single"
-							}
-						},
-						"var_task_id": {
-							"key": "var_task_id",
-							"label": "Task ID",
-							"type": "N",
-							"is_private": "0",
-							"params": [
-
-							]
-						},
-						"var_task": {
-							"key": "var_task",
-							"label": "Task",
-							"type": "ctx_cerberusweb.contexts.task",
-							"is_private": "1",
-							"params": [
-
-							]
-						}
-					},
-					"nodes": [
-						{
-							"type": "action",
-							"title": "Load task record",
-							"status": "live",
-							"params": {
-								"actions": [
-									{
-										"action": "var_task",
-										"search_mode": "quick_search",
-										"quick_search": "id:{{var_task_id}}",
-										"limit": "first",
-										"limit_count": "10",
-										"mode": "replace",
-										"worklist_model": null
-									}
-								]
-							}
-						},
-						{
-							"type": "switch",
-							"title": "Interaction:",
-							"status": "live",
-							"nodes": [
-								{
-									"type": "outcome",
-									"title": "task.comment",
-									"status": "live",
-									"params": {
-										"groups": [
-											{
-												"any": 0,
-												"conditions": [
-													{
-														"condition": "var_interaction",
-														"oper": "is",
-														"value": "task.comment"
-													}
-												]
-											}
-										]
-									},
-									"nodes": [
-										{
-											"type": "action",
-											"title": "What should I comment?",
-											"status": "live",
-											"params": {
-												"actions": [
-													{
-														"action": "send_message",
-														"message": "What should I say in the comment?",
-														"format": "",
-														"delay_ms": "1000"
-													},
-													{
-														"action": "prompt_text",
-														"placeholder": "",
-														"default": "This is a new comment on the task.",
-														"mode": "multiple"
-													}
-												]
-											}
-										},
-										{
-											"type": "action",
-											"title": "Save prompt response",
-											"status": "live",
-											"params": {
-												"actions": [
-													{
-														"action": "_set_custom_var",
-														"value": "{{message}}",
-														"format": "",
-														"is_simulator_only": "0",
-														"var": "prompt_text"
-													}
-												]
-											}
-										},
-										{
-											"type": "action",
-											"title": "Run behavior",
-											"status": "live",
-											"params": {
-												"actions": [
-													{
-														"action": "_run_behavior",
-														"on": "var_task",
-														"behavior_id": "{{{uid.behavior_9}}}",
-														"var_comment_text": "{{prompt_text}}",
-														"run_in_simulator": "0",
-														"var": "_behavior"
-													}
-												]
-											}
-										}
-									]
-								}
-							]
-						},
-						{
-							"type": "action",
-							"title": "Respond",
-							"status": "live",
-							"params": {
-								"actions": [
-									{
-										"action": "send_message",
-										"message": "Done!",
-										"format": "",
-										"delay_ms": "1000"
-									},
-									{
-										"action": "send_message",
-										"message": "{% set task = var_task|first %}\r\n&lt;ul class=\"bubbles\" style=\"padding:0;\"&gt;\r\n\t&lt;li&gt;\r\n\t\t&lt;a href=\"javascript:;\" class=\"cerb-peek-trigger\" data-context=\"{{task._context}}\" data-context-id=\"{{task.id}}\"&gt;{{task._label}}&lt;/a&gt;\r\n\t&lt;/li&gt;\r\n&lt;/ul&gt;",
-										"format": "html",
-										"delay_ms": "1000"
-									}
-								]
-							}
-						},
-						{
-							"type": "action",
-							"title": "Thanks!",
-							"status": "live",
-							"params": {
-								"actions": [
-									{
-										"action": "prompt_buttons",
-										"options": "Thanks!",
-										"color_from": "#4795f7",
-										"color_mid": "#4795f7",
-										"color_to": "#4795f7",
-										"style": ""
-									}
-								]
-							}
-						},
-						{
-							"type": "action",
-							"title": "Close chat window",
-							"status": "live",
-							"params": {
-								"actions": [
-									{
-										"action": "window_close"
-									}
-								]
-							}
-						}
-					]
-				}
-			]
+			}
 		}
-	]
+		
+		//var_dump($behavior);
+	}
+	
+	if($macros) {
+		echo "<h1>", $bot['name'], "</h1>";
+		
+		$package_data['behaviors'][] = $get_interactions_data;
+		$package_data['behaviors'][] = $handle_interaction_data;
+		$package_data['behaviors'][] = $convo_run_macro_data;
+		
+		echo "<textarea style='height:250px;width:95%;'>";
+		echo json_encode($package_data, JSON_PRETTY_PRINT);
+		echo "</textarea>";
+	}
 }
 {% endraw %}
 </code>
 </pre>
 
-Click the **Import** button.
+### Export your existing bot macros
 
-You should see a summary like the following:
+1. Navigate to the `/debug` page in your Cerb install.
+
+1. Select the **Export Bots** option.
+
+1. Download and save the file as `bots.json` in the same directory as the PHP script above.
+
+### Run the migration script
+
+Open the PHP script in your web browser from the URL on your web server.
+
+You should see a textarea for each bot that contains a package file:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/bots/migrate-macros/script-export-package.png" class="screenshot">
+</div>
+
+### Import packages
+
+Once you've upgraded to Cerb 8.3.1 or later, you can import the generated packages to wrap your legacy macro behaviors in bot interactions.
+
+1. Navigate to **Setup >> Configure >> Import Package**.
+
+1. Paste a package into the text box.
+
+1. Click the **Import** button.
+
+You should see that three new behaviors have been created on the target bot:
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/bots/migrate-macros/imported.png" class="screenshot">
 </div>
 
-# Using Macro Bot
+### Clean up
 
-The example in Macro Bot is implemented for task records.
+Remove the `bots.json` file and `cerb-migrate-bot-macros.php` script from your web server.
 
-1. Navigate to **Search >> Tasks**.
+# Using the new bot interactions
 
-1. Select (or create) a task.
+1. Navigate to the profile page of a record where you had macros.
 
-1. Open its profile page.
-
-1. Click on the Cerb icon in the toolbar, and select **Macro Bot >> Comment on task**:
+1. Click on the Cerb icon in the toolbar:
 
 	<div class="cerb-screenshot">
 	<img src="/assets/images/guides/bots/migrate-macros/menu.png" class="screenshot">
 	</div>
-	
-1. The bot will begin a conversation and ask you for the text of the comment to be created.  You can type something, or keep the default of _"This is a new comment on the task"_.  Press `<ENTER>` when done.
-	
-	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/bots/migrate-macros/convo-comment.png" class="screenshot">
-	</div>
-	
-1. The bot will use a task macro behavior to add a comment to the task.  You'll be given a link to the card of the task once it's done.  Click the link to open the card:
+
+1. You should see a bot interaction for each of your old macros.
+
+1. Click on one of the interactions.
+
+1. The bot will prompt you for any required input:
 
 	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/bots/migrate-macros/convo-task-card.png" class="screenshot">
+	<img src="/assets/images/guides/bots/migrate-macros/convo-prompts.png" class="screenshot">
 	</div>
 
-1. You should see the comment on the task, created by the legacy macro behavior:
+1. The bot will then run the macro on your behalf:
 
 	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/bots/migrate-macros/convo-task-card-comment.png" class="screenshot">
+	<img src="/assets/images/guides/bots/migrate-macros/convo-finished.png" class="screenshot">
 	</div>
 	
 1. Click on the blue **Thanks!** button to end the chat.
 
-# Examining Macro Bot
+# Extending bot interactions
 
-Now let's look at how Macro Bot handles these interactions.
+Now let's look at how your bots handle these interactions.
 
 1. Navigate to **Search >> Bots**.
 
-1. Open the card for **Macro Bot**.
+1. Open the card for one of the bots where you just imported interactions.
 
 1. Click on the **Behaviors** button near the bottom of the card:
 
 	<div class="cerb-screenshot">
 	<img src="/assets/images/guides/bots/migrate-macros/card-macro-bot.png" class="screenshot">
 	</div>
-
-1. A search popup will open with the bot's four behaviors in a worklist:
-
-	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/bots/migrate-macros/macro-bot-behaviors.png" class="screenshot">
-	</div>
 	
 Let's examine these behaviors in more detail.
 
-### Get interactions for worker
+### Get macro interactions for worker
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/bots/migrate-macros/macro-bot-behavior-get-interactions.png" class="screenshot">
 </div>
 
-The **Get interactions for worker** behavior listens on the `record:cerberusweb.contexts.task` interaction point. This is the Cerb button on task profile pages and card popups.
+The **Get macro interactions for worker** behavior listens on various record-based interaction points. This is the Cerb button on profile pages and card popups.
 
-The behavior returns one interaction named **task.comment** with the label **Comment on task** (it could have returned more). The interaction starts with the parameter `id`, which is set to the ID of the current task.  The task's full dictionary of placeholders is available from `point_params`.
+Depending on how your macros are set up, you may see multiple interaction points.
 
-When the interaction starts, it runs the **Handle interaction with worker** behavior below.
+The available interactions are returned for the point where the worker is -- a contact record, a ticket, etc.
 
-### Handle interaction with worker
+When an interaction is triggered, we add parameters for the `context` and `context-id` of the current record and send everything to the **Handle macro interaction with worker** behavior below.
+
+### Handle macro interaction with worker
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/bots/migrate-macros/macro-bot-behavior-handle-interaction.png" class="screenshot">
 </div>
 
-The **Handle interaction with worker** behavior runs when a worker starts a specific interaction. In the example above, this would be when the worker selects a macro (_Comment on task_) from a task profile page or card popup.
+The **Handle macro interaction with worker** behavior runs when a worker triggers a specific interaction.
 
-A decision determines which interaction was selected as an outcome. In our example above, the outcome would be **task.comment**. A **Use behavior** action then starts the **Run legacy task macros** conversational behavior below.  It is given the interaction and task ID as inputs.  Its results are returned as a `_behavior` placeholder.
+A decision determines which interaction was selected as an outcome. A **Use behavior** action then starts the **Convo: Run a macro behavior for worker** conversational behavior below.  It is given the `context` and `context-id` for the current record as inputs.  Its results will be returned as a `_behavior` placeholder.
 
-### Comment on task
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/bots/migrate-macros/macro-bot-behavior-comment.png" class="screenshot">
-</div>
-
-The **Comment on task** behavior is a simple example of a legacy macro behavior.
-
-It accepts **Comment Text** as an input variable of type _multiple line text_.
-
-It then uses the **Create comment** action to post a comment on the target task record.
-
-In practice, legacy macros are generally much more involved.
-
-Once you understand how interactions work, you can delete this sample behavior and use your own.
-
-### Run legacy task macros
+### Convo: Run a macro behavior for worker
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/bots/migrate-macros/macro-bot-behavior-run-macros-load.png" class="screenshot">
+<img src="/assets/images/guides/bots/migrate-macros/macro-bot-behavior-run-macros.png" class="screenshot">
 </div>
 
-At this point, a chat window opens in the browser and a conversation begins between the worker and Macro Bot.
+At this point, a chat window opens in the browser and a conversation begins between the bot and worker.
 
-The **Run legacy task macros** conversational behavior starts.  The first thing it does is load the current task record into a variable so its placeholders can be used later on. This also allows the task record to be used as a target for actions. This is what enables all of your existing legacy macro behaviors to be used during the interaction.
+The **Convo: Run a macro behavior for worker** conversational behavior starts.  The first thing it does is load the current record into a variable so its placeholders can be used later on. This also allows the record to be used as a target for actions. This is what enables all of your existing legacy macro behaviors to be used during the interaction.
 
-Next, a decision determines which interaction should be used as the outcome.  In this case it would be **task.comment**.
+Next, a decision determines which interaction should be used as the outcome.
 
-The bot then collects the inputs needed to run the **Comment on task** macro behavior.
+The bot then collects the inputs needed to run the the macro (if any).
 
-It asks the worker for the comment text:
+It saves the worker's response in a series of placeholders named `prompt_*` and runs the macro behavior on their behalf. The macro's response is saved in the `_behavior` placeholder.
 
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/bots/migrate-macros/macro-bot-behavior-run-macros-prompt.png" class="screenshot">
-</div>
-
-It saves the worker's response in a placeholder named `prompt_text` and runs the macro behavior on their behalf. The macro's response is saved in the `_behavior` placeholder:
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/bots/migrate-macros/macro-bot-behavior-run-macros-run-behavior.png" class="screenshot">
-</div>
-
-After any macro runs in the previous step, the bot provides a link to the task's card popup, and prompts with a 'Thanks!' button.  The conversation ends when the worker clicks the button:
+After the macro runs, the bot provides a link to the record's card popup, and prompts with a 'Thanks!' button.  The conversation ends when the worker clicks the button:
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/bots/migrate-macros/macro-bot-behavior-run-macros-output.png" class="screenshot">
 </div>
 
-This simple demonstration is a bit contrived because a worker could just comment on the record themselves. Generally, macros automate a sequence of actions that would be tedious and time-consuming for a worker to manually repeat.
-
-# Extending Macro Bot
-
-You can reuse the same **Get interactions** and **Handle interaction** behaviors on Macro Bot for all of your existing macros.
-
-You can reuse the same **Run legacy task macros** conversational behavior for all of your existing task macros.  You can copy it for other record types (e.g. tickets).
-
-In the outcome for each interaction, the bot would prompt the worker for information depending on the inputs of each macro.  Macro Bot can run macro behaviors on any other bot as long as they are marked public. Private behaviors can only be used by behaviors on the same bot.
+You can modify this response for each interaction to make your bots more helpful.
 
 The bot also doesn't have to provide output when there isn't an error.  You can use the **Close chat window** action to end the conversation immediately after running the macro.
 
