@@ -29,7 +29,7 @@ jumbotron:
 
 ## Server requirements
 
-- Any of these operating systems:
+- Any of these 64-bit operating systems:
 	- Linux _(recommended, using Ubuntu LTS)_
 	- BSD
 	- Mac OS X
@@ -41,7 +41,7 @@ jumbotron:
 	- lighttpd
 	- Microsoft Internet Information Server (IIS)
 
-- PHP 7.0 or later
+- PHP 7.0 (64-bit) or later
 	- With the following extensions enabled:
 		- curl
 		- dom
