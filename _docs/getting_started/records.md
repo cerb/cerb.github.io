@@ -22,7 +22,9 @@ New **custom fields** can also be added to records based on the needs of a parti
 You can add many kinds of custom fields:
 
 - Checkbox
+- Currency
 - Date
+- Decimal
 - File
 - Files: Multiple
 - List

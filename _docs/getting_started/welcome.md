@@ -6,7 +6,7 @@ jumbotron:
   tagline: Let's get you up to speed.
 ---
 
-Even after more than 15 years, **Cerb** is still vibrantly active and [constantly evolving](/docs/history/) based on community feedback. Thousands of teams use Cerb to share inboxes, boost collaboration, and automate workflows.
+Even after more than 16 years, **Cerb** is still vibrantly active and [constantly evolving](/docs/history/) based on community feedback. Thousands of teams use Cerb to share inboxes, boost collaboration, and automate workflows.
 
 The next several pages will give you an overview of Cerb's most interesting features.
 

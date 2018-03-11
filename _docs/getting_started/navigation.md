@@ -6,14 +6,14 @@ jumbotron:
   tagline: Finding your way around the interface
 ---
 
+* TOC
+{:toc}
+
 The global navigation controls are at the top of every page in Cerb.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/ui/navbar.png">
 </div>
-
-* TOC
-{:toc}
 
 ## Pages
 

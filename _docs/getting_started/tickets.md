@@ -6,6 +6,9 @@ jumbotron:
   tagline: Conversations with your audience
 ---
 
+* TOC
+{:toc}
+
 A **ticket** is a conversational interaction between [workers](/docs/workers/) and [contacts](/docs/contacts/), including all of the related email **messages** and other data.
 
 Every ticket is automatically assigned a unique, non-sequential reference **mask**, like `RYS-07092-012`. A contact can provide the first three letters of the mask for quick lookups. The term _mask_ refers to the fact that the randomized reference number (opposed to a numeric ID) doesn't disclose information about your total number of tickets or your daily email volume.
@@ -15,9 +18,6 @@ The contacts involved in a conversation are referred to as **participants**.  By
 The specific worker who is responsible for a ticket is its **owner**.
 
 Related tickets from the same participants can be **merged** together into a single ticket, which combines all of the messages and comments.  Conversely, if a ticket conversation diverges into multiple topics that would be better handled by other groups or workers, one or more messages can be **split** off into new tickets.
-
-* TOC
-{:toc}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/using-cerb/tickets/ticket.png" class="screenshot">
@@ -52,14 +52,13 @@ Similarly, a trainee can ask a supervisor to review their draft before they send
 
 [Workers](/docs/workers/) and [bots](/docs/bots) can use **snippets** to quickly insert predefined text into messages. You can think of snippets as _copying and pasting_ from a giant shared clipboard.
 
-However, unlike the traditional _paste_ action, snippets also support sophisticated scripting functionality with **placeholders** and **conditional logic**.  This means that the content of a snippet can change based on when and where you use it.
+However, unlike the traditional _paste_ action, snippets also support [sophisticated scripting functionality](/docs/building-bots/scripting/) with **placeholders** and **conditional logic**.  This means that the content of a snippet can change based on when and where you use it.
 
 In a common use case, an auto-responder message will use placeholders in a snippet like:
 
 {% raw %}
-<figure class="highlight">
 <pre>
-<code class="language-text">Hi <b>{{first_name}}</b>,
+<code class="language-twig">Hi <b>{{first_name}}</b>,
 
 Thanks for contacting us!
 
@@ -70,12 +69,10 @@ Subject: <b>{{subject}}</b>
 
 We'll be in contact shortly.</code>
 </pre>
-</figure>
 {% endraw %}
 
 The above snippet results in the following text when used by a [bot](/docs/bots/) on a new ticket:
 
-<figure class="highlight">
 <pre>
 <code class="language-text">Hi <b>Charlotte</b>,
 
@@ -88,7 +85,6 @@ Subject: <b>Do you accept purchase orders?</b>
 
 We'll be in contact shortly.</code>
 </pre>
-</figure>
 
 ### Importance
 

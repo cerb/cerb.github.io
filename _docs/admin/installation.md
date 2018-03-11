@@ -21,18 +21,19 @@ jumbotron:
 
 - An Internet or intranet connection to the server (e.g. Ethernet, Wi-Fi, mobile data)
 - The latest version of any of these modern HTML5 web browsers, with Javascript enabled:
-	- Google Chrome
 	- Mozilla Firefox
 	- Apple Safari
 	- Opera
-	- Internet Explorer (11.0+)
+	- Google Chrome
+	- Microsoft Edge
+	- (Internet Explorer is no longer supported)
 
 ## Server requirements
 
 - Any of these 64-bit operating systems:
 	- Linux _(recommended, using Ubuntu LTS)_
 	- BSD
-	- Mac OS X
+	- macOS
 	- Windows
 
 - Any of these webserver applications:
@@ -40,6 +41,7 @@ jumbotron:
 	- Apache
 	- lighttpd
 	- Microsoft Internet Information Server (IIS)
+	- Built-in PHP webserver (for development and evaluation)
 
 - PHP 7.0 (64-bit) or later
 	- With the following extensions enabled:

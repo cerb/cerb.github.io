@@ -170,9 +170,3 @@ Review the [security considerations](/docs/security/).
 Navigate to **Setup** >> **Plugins** >> **Installed Plugins**
 
 This is where you'll find the available [plugins](/docs/plugins/) that expand Cerb's functionality.
-
-# References
-
-[^abstraction]: <https://en.wikipedia.org/wiki/Abstraction_(computer_science)>
-
-[^autonomy]: <https://en.wikipedia.org/wiki/Autonomy>

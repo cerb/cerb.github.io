@@ -7,10 +7,10 @@ jumbotron:
   tagline: Keep the right people informed about recent activity
 ---
 
-**Notifications** keep [workers](/docs/workers/) informed about recent activity when they're watching a [record](/docs/records/) or someone directs a [comment](/docs/records/#comments) at them.
-
 * TOC
 {:toc}
+
+**Notifications** keep [workers](/docs/workers/) informed about recent activity when they're watching a [record](/docs/records/) or someone directs a [comment](/docs/records/#comments) at them.
 
 ## Unread notifications
 

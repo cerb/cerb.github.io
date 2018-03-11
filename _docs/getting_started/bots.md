@@ -6,10 +6,10 @@ jumbotron:
   tagline: Powerful automated behaviors built from your web browser
 ---
 
-A **bot** is a virtual [worker](/docs/workers) who automatically performs its duties through a collection of predefined **behaviors**.
-
 * TOC
 {:toc}
+
+A **bot** is a virtual [worker](/docs/workers) who automatically performs its duties through a collection of predefined **behaviors**.
 
 ## Events
 

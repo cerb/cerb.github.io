@@ -6,12 +6,12 @@ jumbotron:
   tagline: Visual insight from highly customizable widgets
 ---
 
+* TOC
+{:toc}
+
 # Dashboards
 
 **Dashboards** extend [workspaces](/docs/workspaces/) by providing visual insight with highly customizable **widgets**.
-
-* TOC
-{:toc}
 
 ### Calendars
 

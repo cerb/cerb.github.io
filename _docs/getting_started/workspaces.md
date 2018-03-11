@@ -93,4 +93,4 @@ For instance, when looking at a long list of indistinguishable leads that need a
 
 When you need to view the profile page of each matching record in sequence, click the **explore** button below a worklist.  This will create a consistent snapshot of the worklist at the current point-in-time and allow you to navigate through it.  You can even send an explore set to another worker using its permalink.
 
-You can use the <tt>[</tt> and <tt>]</tt> keyboard shortcuts to navigate backward and forward through the list, respectively.
+You can use the `[` and `]` keyboard shortcuts to navigate backward and forward through the list, respectively.
