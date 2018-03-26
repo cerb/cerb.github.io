@@ -40,6 +40,7 @@ Includes additional information in the response.  The following tokens may be pr
 |-|-
 | `attachments` | Retrieve attachment information
 | `content` | Retrieve full message content
+| `content_html` | Retrieve HTML message content
 | `headers` | Retrieve all message email headers
 
 ### Example
@@ -77,6 +78,7 @@ Perform a search for message objects.
 | Field | Type | 
 |-|-|-
 | `content` | Retrieve full message content
+| `content_html` | Retrieve HTML message content
 | `headers` | Retrieve all message email headers
 
 **sortBy**
