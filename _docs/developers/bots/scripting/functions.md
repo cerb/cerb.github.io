@@ -572,6 +572,12 @@ You can decode an XML[^xml] string into an XML object with the **xml_decode** fu
 
 Use the [xml_xpath](#xml_xpath) function to extract values with XPath[^xpath] queries.
 
+`xml_decode(xml_string,namespaces,mode)`
+
+* **xml_string**: The string of XML to convert into an object.
+* **namespaces**: An optional array of namespaces.
+* **mode**: Use `html` to convert an HTML DOM into an XML document.
+
 <pre>
 <code class="language-twig">
 {% raw %}
