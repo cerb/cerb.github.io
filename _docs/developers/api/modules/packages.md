@@ -26,7 +26,7 @@ Import a pre-built workflow package. You must have **administrator** privileges 
 |---
 | Field | Type | 
 |-|-|-
-| `package_json` | string | See: [Packages](/resources/packages/)
+| `package_json` | string | See: [Packages](/guides/packages/building/)
 | `prompts[]` | array | (varies by package)
 
 ### Example

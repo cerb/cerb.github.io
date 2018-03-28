@@ -26,6 +26,8 @@ jumbotron:
 
 * __Dashboards__ for real-time reporting, monitoring, goal tracking, and operational intelligence.
 
+* __Packages__ for importing pre-built records and workflows.
+
 * __Project boards__ for coordinating tasks and visualizing the current progress.
 
 * __Connected accounts__ for integration with third-party apps and services.
