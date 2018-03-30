@@ -6,6 +6,10 @@ jumbotron:
   tagline: Importable blueprints for records and workflows
 ---
 
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/packages/packages.png" class="screenshot">
+</div>
+
 **Packages** are a blueprint for importing a related set of pre-configured records into Cerb. A single package can contain workspaces, dashboards, bots, project boards, custom records, custom fieldsets, tasks, tickets, contacts, etc.
 
 You'll find pre-built packages in the [Package Library](/resources/packages/).

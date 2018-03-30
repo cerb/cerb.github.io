@@ -1,6 +1,7 @@
 ---
 title: Create a reusable set of related records in a single package
 excerpt: You can include any number of records in a single package and define how they relate to each other.
+social_image_url: /assets/images/guides/packages/packages.png
 layout: integration
 topic: Packages
 jumbotron:
@@ -17,6 +18,10 @@ jumbotron:
     label: Packages &raquo;
     url: /resources/guides/#packages
 ---
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/packages/packages.png" class="screenshot">
+</div>
 
 * TOC
 {:toc}

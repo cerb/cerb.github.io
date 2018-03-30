@@ -1,6 +1,7 @@
 ---
 title: Build a new package
 excerpt: Packages are a blueprint for importing a related set of pre-configured records.
+social_image_url: /assets/images/guides/packages/packages.png
 layout: integration
 topic: Packages
 jumbotron:
@@ -17,6 +18,10 @@ jumbotron:
     label: Packages &raquo;
     url: /resources/guides/#packages
 ---
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/packages/packages.png" class="screenshot">
+</div>
 
 * TOC
 {:toc}
