@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Pricing
+title: Pricing for Cerb Cloud subscriptions
 excerpt: Deploy Cerb in the cloud or on your own hardware. Start a free trial.
 permalink: /pricing/
 redirect_from:
@@ -11,8 +11,9 @@ redirect_from:
   - /trial/
   - /try/
 jumbotron: 
-  title: Pricing
-  tagline: Deploy Cerb in the cloud or on your own hardware
+  title: Pricing for Cerb Cloud subscriptions
+  tagline: A fully managed Cerb environment in an ideal environment
+keywords: pricing price cost subscription
 ---
 
 <h1 id="cloud" style="

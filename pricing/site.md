@@ -1,13 +1,14 @@
 ---
 layout: page
-title: Pricing
+title: Pricing for Cerb site licenses
 excerpt: Deploy Cerb in the cloud or on your own hardware. Start a free trial.
 permalink: /pricing/site/
 redirect_from:
   - /download/
 jumbotron: 
-  title: Pricing
-  tagline: Deploy Cerb in the cloud or on your own hardware
+  title: Pricing for Cerb site licenses
+  tagline: Deploy Cerb on your own hardware
+keywords: pricing price cost download
 ---
 
 <h1 id="cloud" style="

@@ -1,5 +1,6 @@
 ---
 title: Privacy
+excerpt: Our policy is to respect your privacy regarding any data we may collect on our websites and services.
 layout: page
 jumbotron:
   title: Privacy Policy

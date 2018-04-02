@@ -26,7 +26,7 @@ For instance, with the **Support Center** portal, customers can:
 * Search knowledgebase articles
 * ...and more
 
-# Related resources
+## Guides
 
 * [Create a new Support Center community portal](/guides/portals/support-center/)
 * [Host community portals using Nginx](/guides/portals/nginx-proxy/)

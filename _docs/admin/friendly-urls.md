@@ -1,6 +1,7 @@
 ---
 title: Friendly URLs
 permalink: /docs/friendly-urls/
+excerpt: Cerb supports rewriting to make the URLs shorter and more user-friendly.
 jumbotron:
   title: Friendly URLs
   tagline: Enable professional looking URLs

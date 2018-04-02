@@ -1,9 +1,11 @@
 ---
 title: Upgrading
 permalink: /docs/upgrading/
+excerpt: You can use Git to quickly update your local Cerb files to the latest version.
 jumbotron:
   title: Upgrading
   #tagline: ...
+keywords: upgrade
 ---
 
 * TOC

@@ -1,6 +1,7 @@
 ---
 title: Backups
 permalink: /docs/backups/
+excerpt: To fully protect your Cerb data you need to backup both the MySQL database and the storage filesystem.
 jumbotron:
   title: Backups
   #tagline: ...

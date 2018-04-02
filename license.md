@@ -1,9 +1,10 @@
 ---
 title: License
+excerpt: The terms and conditions by which we license Cerb to you.
 layout: page
 jumbotron:
   title: Software License
-  tagline: The terms and conditions by which we license Cerb to you
+  tagline: The terms and conditions by which we license Cerb to you.
 ---
 
 # Devblocks Public License 1.0 (DPL)

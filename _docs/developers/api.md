@@ -1,9 +1,10 @@
 ---
 title: API
 permalink: /docs/api/
+excerpt: Programmatically interact with Cerb from other apps and services.
 jumbotron:
   title: API
-  tagline: Programmatically interact with Cerb from other apps and services
+  tagline: Programmatically interact with Cerb from other apps and services.
   breadcrumbs:
   -
     label: Docs &raquo;

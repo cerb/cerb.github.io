@@ -1,9 +1,10 @@
 ---
 title: Security
 permalink: /docs/security/
+excerpt: Best practices for securing your Cerb installation.
 jumbotron:
   title: Security
-  #tagline: ...
+  tagline: Best practices for securing your Cerb installation.
 ---
 
 {% comment %}
