@@ -1,0 +1,156 @@
+---
+layout: page
+title: "Search"
+excerpt: Search Cerb documentation, guides, packages, tips, blog posts, and more.
+permalink: /search/
+jumbotron:
+  title: Search
+  tagline: Search Cerb documentation, guides, packages, tips, blog posts, and more.
+---
+
+<div id="search" class="search" style="min-height:500px;">
+
+<form action="#" method="GET" onsubmit="return false;">
+	<input type="text" name="q" value="" style="width:97%;padding:5px;font-size:24px;" placeholder="What can we help you find?" autofocus="autofocus">
+</form>
+
+<div class="search-stats" style="color:rgb(150,150,150);font-size:0.9em;"></div>
+
+<div class="search-results" style="margin-top:20px;"></div>
+
+<script type="text/javascript">
+	function getUrlParameter(name) {
+		name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+		var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+		var results = regex.exec(location.search);
+		return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+	};
+	
+	document.addEventListener("DOMContentLoaded", function(event) {
+		var $search = document.querySelector('#search');
+		var $form = $search.querySelector('FORM');
+		var $input = $form.querySelector('input[type=text]');
+		var q = getUrlParameter('q');
+		
+		var $spinner = document.createElement('div');
+		var $spinner_img = document.createElement('img');
+		$spinner_img.setAttribute('src', '');
+		$spinner.appendChild($spinner_img);
+		
+		$input.addEventListener("keyup", function(e) {
+			if(13 != e.keyCode)
+				return;
+			
+			var xhr = new XMLHttpRequest();
+			var url = "https://cerb-ai-staging-2820505987.us-west-2.bonsaisearch.net/cerb.ai/_search";
+			var q = $input.value;
+			var $stats = $search.querySelector('div.search-stats');
+			var $results = $search.querySelector('div.search-results');
+			
+			$results.innerHTML = '';
+			
+			var post = {
+				"query": {
+					"query_string": {
+						"query": q,
+						"fields": ["title^5","text"],
+						"default_operator": "and"
+					}
+				},
+				"size": 100,
+				"_source": ["title","url","excerpt"],
+				"highlight": {
+					"pre_tags": ["<b>"],
+					"post_tags": ["</b>"],
+					"fields": {
+						"text": {"fragmenter": "simple", "order": "score", "boundary_scanner": "sentence", "fragment_size": 250, "number_of_fragments": 1}
+					}
+				}
+			};
+			
+			xhr.open('POST', url, true);
+			xhr.setRequestHeader('Content-Type', 'application/json');
+			
+			xhr.onreadystatechange = function() {
+				if(xhr.readyState == 4) {
+					if(xhr.status == 200) {
+						var json = JSON.parse(xhr.responseText);
+						var took = json.took;
+						var total = json.hits.total
+					
+						$stats.innerText = total + " results found in " + took + "ms";
+						$results.innerHTML = '';
+					
+						for(idx in json.hits.hits) {
+							var hit = json.hits.hits[idx];
+						
+							if(undefined == hit._source.title || undefined == hit._source.url)
+								continue;
+						
+							var $result = document.createElement('div');
+							$result.style['margin-bottom'] = '20px';
+						
+							var $a = document.createElement('a');
+							$a.innerText = hit._source.title;
+							$a.setAttribute('href', hit._source.url);
+							$a.style['font-size'] = '1.1em';
+							$result.appendChild($a);
+						
+							var $url_div = document.createElement('div');
+							$url_div.style['font-size'] = '0.8em';
+						
+							var $url = document.createElement('a');
+							$url.setAttribute('href', hit._source.url);
+							$url.innerText = hit._source.url;
+							$url.style['color'] = 'rgb(120,120,120)';
+							$url_div.appendChild($url);
+						
+							$result.appendChild($url_div);
+						
+							if(undefined != hit.highlight && undefined != hit.highlight.text && hit.highlight.text.length > 0) {
+								var $ul = document.createElement('ul');
+								$ul.style['padding'] = '0';
+								$ul.style['margin-bottom'] = '0';
+							
+								for(idx in hit.highlight.text) {
+									var $excerpt = document.createElement('li');
+									$excerpt.innerHTML = hit.highlight.text[idx] + '...';
+									$excerpt.style['font-size'] = '0.9em';
+									$ul.appendChild($excerpt);
+								}
+							
+								$result.appendChild($ul);
+							
+							} else if(undefined != hit._source.excerpt) {
+								var $excerpt = document.createElement('div');
+								$excerpt.innerText = hit._source.excerpt;
+								$excerpt.style['font-size'] = '0.9em';
+								$result.appendChild($excerpt);
+							}
+						
+							$results.appendChild($result);
+						}
+						
+					} else { // Not a 200 response
+						$stats.innerText = '';
+						$results.innerText = 'There was an error with your search. Please check the syntax and try again.';
+						
+					}
+				}
+			}
+			
+			xhr.send(JSON.stringify(post));
+		});
+		
+		// If we had a query argument, run it now
+		if(q.length > 0) {
+			$input.value = q;
+			
+			var event = new Event('keyup');
+			event.keyCode = 13;
+			$input.dispatchEvent(event);
+		}
+	});
+</script>
+
+</div>

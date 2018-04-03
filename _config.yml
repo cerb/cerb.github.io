@@ -41,6 +41,7 @@ kramdown:
   parse_block_html: false
 plugins:
   - jekyll-redirect-from
+#  - searchyll
 
 # Defaults
 defaults:
@@ -79,3 +80,10 @@ defaults:
       jumbotron:
         title: Blog
         tagline: Release announcements, helpful tips, and community discussion
+
+#elasticsearch:
+#  url: https://cerb-ai-staging-2820505987.us-west-2.bonsaisearch.net
+#  number_of_shards: 10
+#  number_of_replicas: 3
+#  index_name: "cerb.ai"
+#  default_type: "post"
