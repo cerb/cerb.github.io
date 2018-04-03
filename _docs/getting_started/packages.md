@@ -1,6 +1,7 @@
 ---
 title: Packages
 permalink: /docs/packages/
+excerpt: Packages are a blueprint for importing a related set of pre-configured records into Cerb.
 jumbotron:
   title: Packages
   tagline: Importable blueprints for records and workflows

@@ -14,13 +14,13 @@ jumbotron:
     url: /resources/
 ---
 
-<div class="integrations">
+<div class="integrations" style="column-width:400px;margin-bottom:20px;">
 	<ul class="articles">
 
 	{% assign posts = site.posts | sort: 'title' %}
 	{% for post in posts %}
 	{% if post.tags contains 'tips' %}
-	<li>
+	<li style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
 		<a href="{{ post.url }}" style="font-size:120%;">{{ post.title | remove_first: "Tip: " }}</a>
 		<br>
 		{{ post.excerpt }}

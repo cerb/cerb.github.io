@@ -16,7 +16,7 @@ jumbotron:
     url: /resources/
 ---
 
-<div class="integrations" style="margin-left:20px;">
+<div class="integrations" style="margin-left:20px;column-width:400px;">
 	{% assign topics = site.guides | sort: 'id' | group_by: 'topic' %}
 	
 	{% for topic in topics %}
@@ -30,7 +30,7 @@ jumbotron:
 			{% for subtopic in subs %}
 				<b id="{{ topic.name | append: '-' | append: subtopic.name | slugify }}">{{ subtopic.name }}</b>
 		
-				<ul class="articles">
+				<ul class="articles" style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
 				{% assign items = subtopic.items | sort: 'title' %}
 				{% for guide in items %}
 					<li>

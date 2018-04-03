@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Packages"
-excerpt:
+excerpt: Packages are a blueprint for importing a related set of pre-configured records into Cerb.
 permalink: /resources/packages/
 redirect_from:
   - /packages/
@@ -14,12 +14,12 @@ jumbotron:
     url: /resources/
 ---
 
-<div class="integrations">
+<div class="integrations" style="column-width:400px;">
 	{% assign packages = site.packages | sort: 'id' %}
 	
 	<ul class="articles">
 	{% for package in packages %}
-		<li>
+		<li style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
 			<a href="{{ package.url }}">{{ package.title }}</a>
 			<br>
 			{{ package.excerpt }}
