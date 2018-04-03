@@ -2,6 +2,7 @@
 layout: post
 title: "Recent Cerb announcements: March 2018"
 excerpt: "A summary of recent Cerb news: the 8.3 feature update, 6 maintenance updates, 6 guides, 2 tips, and 1 package."
+social_image_url: /assets/images/blog/2018/03/31/march-2018.png
 author: The Cerb Team
 date: 2018-03-31 00:00:00 -0700
 tags: cerb announcements
