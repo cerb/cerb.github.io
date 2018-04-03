@@ -7,11 +7,9 @@ date: 2018-03-31 00:00:00 -0700
 tags: cerb announcements
 ---
 
-{% comment %}
 <div class="cerb-screenshot">
-<img src="/assets/images/blog/2018/03/31/mar-2018.png" class="screenshot">
+<img src="/assets/images/blog/2018/03/31/march-2018.png" class="screenshot">
 </div>
-{% endcomment %}
 
 ## 1 major feature update
 
