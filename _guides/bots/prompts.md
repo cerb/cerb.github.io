@@ -1,6 +1,7 @@
 ---
 title: Prompt for input from conversational bots
 excerpt: You can now format, validate, and save a copy of responses within the prompt action itself.
+social_image_url: /assets/images/guides/bots/prompts/prompts.png
 layout: integration
 topic: Bots
 subtopic: Conversational Bots
@@ -21,6 +22,10 @@ jumbotron:
     label: Conversational Bots &raquo;
     url: /resources/guides/#bots-conversational-bots
 ---
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/bots/prompts/prompts.png" class="screenshot">
+</div>
 
 * TOC
 {:toc}

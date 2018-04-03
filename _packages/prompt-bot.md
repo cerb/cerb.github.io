@@ -1,6 +1,7 @@
 ---
 title: Prompt Bot
 excerpt: A conversational bot that demonstrates formatting and validation in prompts.
+social_image_url: /assets/images/guides/bots/prompts/prompts.png
 layout: integration
 topic: Packages
 permalink: /packages/prompt-bot/
@@ -15,6 +16,10 @@ jumbotron:
     label: Packages &raquo;
     url: /resources/packages/
 ---
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/bots/prompts/prompts.png" class="screenshot">
+</div>
 
 * TOC
 {:toc}
