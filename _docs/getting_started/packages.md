@@ -15,8 +15,8 @@ jumbotron:
 
 You'll find pre-built packages in the [Package Library](/resources/packages/).
 
-## Guides
+## Resources
 
-* [Building packages](/guides/packages/building/)
-* [Create a reusable set of related records in a single package](/guides/packages/create-records/)
-* [Importing packages](/guides/packages/importing/)
+* [Guide: Building packages](/guides/packages/building/)
+* [Guide: Create a reusable set of related records in a single package](/guides/packages/create-records/)
+* [Guide: Importing packages](/guides/packages/importing/)
