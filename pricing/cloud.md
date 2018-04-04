@@ -82,6 +82,8 @@ position: relative;
 	<li>We provide a default URL and SSL certificate, but you can bring your own domain names and certificates (support.example.com, etc).</li>
 </ul>
 
+<button type="button" class="cerb-button" data-cerb-bot-interaction="cloud.signup">Start a free 30 day trial</button>
+
 <div class="grid" style="margin-left:15px;">
 	<div class="unit one-third">
 			<div style="display:inline-block;text-align:left;">
@@ -165,8 +167,6 @@ position: relative;
 			</div>
 	</div>
 </div>
-
-<button type="button" class="cerb-button" data-cerb-bot-interaction="cloud.signup">Start a free 30 day trial</button>
 
 <br/>
 

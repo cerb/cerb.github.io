@@ -77,6 +77,8 @@ position: relative;
 	</ul>
 </div>
 
+<button type="button" class="cerb-button" data-cerb-bot-interaction="license.free">Get a free 3-seat starter license</button>
+
 <div class="grid" style="margin-left:15px;">
 	<div class="unit one-third">
 			<div style="display:inline-block;text-align:left;">
@@ -141,8 +143,6 @@ position: relative;
 			</div>
 	</div>
 </div>
-
-<button type="button" class="cerb-button" data-cerb-bot-interaction="license.free">Get a free 3-seat starter license</button>
 
 <br/>
 
