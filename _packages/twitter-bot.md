@@ -55,7 +55,7 @@ Paste the following package into the large text box:
       "prompts": [
         {
           "type": "chooser",
-          "label": "twitter account:",
+          "label": "Twitter account:",
           "key": "twitter_account_id",
           "params": {
             "context": "cerberusweb.contexts.connected_account",
@@ -163,7 +163,7 @@ Paste the following package into the large text box:
                     "action": "core.va.action.http_request",
                     "http_verb": "get",
                     "http_url": "https://api.twitter.com/1.1/statuses/mentions_timeline.json",
-                    "http_headers": "User-Agent: Cer",
+                    "http_headers": "User-Agent: Cerb",
                     "http_body": "",
                     "auth": "connected_account",
                     "auth_connected_account_id": "{{{twitter_account_id}}}",
