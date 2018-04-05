@@ -14,7 +14,7 @@ jumbotron:
 
 # What is Cerb?
 
-**Cerb** is heavy-duty email management and workflow automation for online teams. It has continuously evolved for more than 16 years based on feedback from thousands of teams.
+**Cerb** is an automatable collaborative inbox for your team. It has continuously evolved for more than 16 years based on feedback from thousands of teams.
 
 Back when we first started working on Cerb in 2002, it was common for team communication to take place between personal email accounts. The conversation history of a team became fragmented in all of these individual inboxes. If a team member was unavailable, their part of the team's knowledge was also unavailable.
 

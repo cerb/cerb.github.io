@@ -55,6 +55,10 @@ ul.cerb-convo-bubbles {
 	display: none;
 }
 
+.cerb-text-center {
+	text-align: center;
+}
+
 header {
 	&.wip {
 		padding: 10px;
@@ -211,11 +215,11 @@ div.page-content {
 	}
 	
 	div.feature {
-		text-align: center;
+		text-align: left;
 		margin: 0px 0px 20px 0px;
 	
 		h1 {
-			margin: 20px 0px;
+			margin: 20px 0px 5px 0px;
 			padding: 0;
 			font-weight: bold;
 			font-size: 2.5em;
@@ -239,7 +243,7 @@ div.page-content {
 		}
 		
 		div.screenshot {
-			margin: 40px 0px 0px 0px;
+			margin: 25px 0px 0px 0px;
 			
 			img {
 				border: 1px solid rgb(235,235,235);
