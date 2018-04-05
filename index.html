@@ -21,38 +21,43 @@ jumbotron:
 
 	<div class="unit two-thirds">
 		<p>
-			<ul class="cerb-convo-bubbles">
+			<ul id="cerb-convo-bubbles" class="cerb-convo-bubbles">
 				<li>
-					Starting in early 2002, <b>Cerb</b>'s first mission was to bring team email to the web so everyone could collaborate with a shared history from anywhere on any device. New messages were delivered to shared inboxes and routed to the best group or worker. Only the appropriate people were notified. Everyone knew what everyone else was working on. When someone became unavailable, any other team member could pick up right where they left off.
+					Starting in early 2002, <b>Cerb</b>'s first mission was to bring team email to the web so everyone could collaborate with a shared history from anywhere on any device.
+				</li>
+				
+				<li>
+					New messages were delivered to shared inboxes and routed to the best group or worker. Only the appropriate people were notified. Everyone knew what everyone else was working on. When someone became unavailable, any other team member could pick up right where they left off.
 				</li>
 				
 				<li>
 					Teams functioned more efficiently -- there was less junk email, less duplication of effort, and customers received faster replies.
-					Today, this web-based method of working is the new normal. Mission accomplished!
+					Today, this web-based method of working is the new normal. <b>Mission accomplished!</b>
 				</li>
 				
 				<li>
-					Cerb's new mission is to embrace automation and empower teams with the tools they need to quickly build and share their own solutions -- with nothing more than a web browser.
+					Cerb's <b>new mission</b> is to embrace automation and give teams the tools to build new features with nothing more than a web browser.
+					<span id="cerb-convo-read-more" style="text-decoration:underline;cursor:pointer;">(more)</span>
 				</li>
-
-				<li>
+				
+				<li class="cerb-hidden">
 					At its core, Cerb is a <a href="/docs/records/">digital record keeper</a>. It collects your team's data and distributes work to the right people -- things like email, calls, projects, and tasks.
 				</li>
 				
-				<li>
+				<li class="cerb-hidden">
 					When you first start using Cerb it's a blank slate.
 					You can <a href="/guides/records/custom-records/">create new kinds of records</a>, and add extra fields to any record, to keep track of every important detail. Records can be annotated with comments for sharing notes. You can link them together for future reference.
 				</li>
 
-				<li>
+				<li class="cerb-hidden">
 					Team members can create their own <a href="/docs/workspaces/">shared workspaces</a> and dashboards to collaborate as needed, focusing on what's important for the task at hand.
 				</li>
 
-				<li>
+				<li class="cerb-hidden">
 					Common workflows can be automated with Cerb by building virtual team members called &quot;<a href="/docs/bots/">bots</a>&quot;. Bots can respond to email, create and modify records, start chats to gather information, exchange data with third-party services, send reminders, notify people, monitor metrics, and do practically anything else that a human team member can.
 				</li>
 
-				<li>
+				<li class="cerb-hidden">
 					Cerb can also be quickly customized to meet your needs through the use of &quot;<a href="/docs/packages/">packages</a>&quot; -- shared blueprints for importing a set of pre-built records and bot behaviors.				
 				</li>
 			</ul>
@@ -115,6 +120,21 @@ jumbotron:
 			<a href="/pricing/" class="cerb-button">Try Cerb for free</a>
 		</p>
 	</div>
-	
 </div>
+
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+	var $convo = document.querySelector('#cerb-convo-bubbles');
+	var $more = document.querySelector('#cerb-convo-read-more');
 	
+	// Expand the convo bubbles when '(more)' is clicked
+	$more.addEventListener('click', function() {
+		this.classList.add('cerb-hidden');
+		
+		$hidden_bubbles = $convo.querySelectorAll('li.cerb-hidden');
+		
+		for(i = 0; i < $hidden_bubbles.length; ++i)
+			$hidden_bubbles[i].classList.remove('cerb-hidden');
+	});
+});
+</script>

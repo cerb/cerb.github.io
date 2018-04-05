@@ -26,7 +26,7 @@ Fast forward to today, and this web-based method of working is the new normal. M
 
 Integrating these applications is an entire industry. It involves consultants who have to review your particular use case and build a personalized solution. To most people it's an arcane process, and one that all too frequently costs more than promised, and takes longer to deliver than expected.
 
-Cerb's new mission is to embrace automation and empower teams with the tools they need to quickly build and share their own solutions -- with nothing more than a web browser.
+Cerb's new mission is to embrace automation and give teams the tools to build new features with nothing more than a web browser.
 
 When you first start using Cerb it's a blank slate. At its core, Cerb is a [digital record keeper](/docs/records/). It collects your team's data and distributes work to the right people -- things like email, calls, projects, and tasks.
 
