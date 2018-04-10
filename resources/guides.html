@@ -28,9 +28,10 @@ jumbotron:
 			<div style="margin-left:15px;">
 			{% assign subs = subtopics|sort:'name' %}
 			{% for subtopic in subs %}
+			<div style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
 				<b id="{{ topic.name | append: '-' | append: subtopic.name | slugify }}">{{ subtopic.name }}</b>
 		
-				<ul class="articles" style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
+				<ul class="articles">
 				{% assign items = subtopic.items | sort: 'title' %}
 				{% for guide in items %}
 					<li>
@@ -38,6 +39,7 @@ jumbotron:
 					</li>
 				{% endfor %}
 				</ul>
+			</div>
 			{% endfor %}
 			</div>
 		
