@@ -1,6 +1,7 @@
 ---
 title: Dropbox Bot
 excerpt: A bot demonstrating integration between Cerb and Dropbox.
+social_image_url: /assets/images/guides/dropbox/cerb-and-dropbox.png
 layout: integration
 topic: Packages
 permalink: /packages/dropbox-bot/
@@ -24,7 +25,7 @@ jumbotron:
 This package creates **Dropbox Bot** for demonstrating integration between Cerb and [Dropbox's API](https://www.dropbox.com/developers/documentation/http/documentation).
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/dropbox/cerb-and-dropbox.png" class="screenshot">
+<img src="{{page.social_image_url}}" class="screenshot">
 </div>
 
 # Configure the Dropbox plugin

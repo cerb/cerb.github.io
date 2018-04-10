@@ -1,6 +1,7 @@
 ---
 title: Configure the Dropbox plugin
 excerpt: A step-by-step guide for configuring Cerb's Dropbox plugin.
+social_image_url: /assets/images/guides/dropbox/cerb-and-dropbox.png
 layout: integration
 topic: Integrations
 subtopic: Dropbox
@@ -28,7 +29,7 @@ jumbotron:
 # Introduction
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/dropbox/cerb-and-dropbox.png" class="screenshot">
+<img src="{{page.social_image_url}}" class="screenshot">
 </div>
 
 In this guide we'll walk through the process of linking Cerb to Dropbox. You'll be able to use Dropbox's full API from bots in Cerb to automate whatever you need.
