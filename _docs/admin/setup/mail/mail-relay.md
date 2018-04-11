@@ -1,5 +1,6 @@
 ---
 title: External Relay
+excerpt: The email relay allows workers to respond to messages from external mail applications.
 permalink: /docs/setup/mail-relay/
 toc:
   title: External Relay
@@ -11,7 +12,7 @@ jumbotron:
     url: /docs/setup/
 ---
 
-Navigate to **Setup** >> **Mail** >> **External Relay**
+Navigate to **Setup >> Mail >> Incoming >> External Relay**.
 
 The email relay allows workers to respond to messages from external mail applications (e.g. Gmail, mobile phones, Outlook, etc) instead of requiring them to always use Cerb in the web browser.
 
@@ -28,5 +29,9 @@ In the event that the worker relay doesn't function properly in your environment
 <div class="cerb-box note">
 	<p>Many mail servers will reject messages sent from "spoofed" senders. You should leave the <tt>From:</tt> setting at the default unless you have verified that your mail server allows for spoofed messages.</p>
 </div>
+
+## Resources
+
+* [Guide: Respond to messages from an external email client](/guides/mail/relaying/)
 
 {% include setup_toc.html %}
