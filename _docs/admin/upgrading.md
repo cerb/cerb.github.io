@@ -236,4 +236,4 @@ define('SCRIPT_LAST_MODIFY', 1234567890); // last change
 # References
 
 [^git]: <http://en.wikipedia.org/wiki/Git_(software)>
-[^svn-to-git]: <http://cerbweb.com/support/kb/article/71-Switching_a_Cerb5_installation_from_Subversion_to_Git>
+[^svn-to-git]: <https://cerb.official.support/kb/article/71-Switching_a_Cerb5_installation_from_Subversion_to_Git>
