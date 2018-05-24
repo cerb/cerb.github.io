@@ -14,11 +14,21 @@ It is our policy to respect your privacy regarding any information we may collec
 * TOC
 {:toc}
 
-## Privacy Shield
+# Privacy Shield
 
-We are committed to complying with the [Privacy Shield Principles](https://www.privacyshield.gov/) designed to safeguard the privacy of personal data.
+We are committed to complying with the [Privacy Shield Principles](https://www.privacyshield.gov/) designed to safeguard the privacy of personal data. This applies to all data we collect, including from entities within the EU and Switzerland.
 
-## What Personal Data is Collected by WGM?
+{% comment %}
+Webgroup Media, LLC complies with the EU-U.S. and Swiss-U.S. Privacy Shield Frameworks as set forth by the U.S. Department of Commerce regarding the collection, use, and retention of personal information transferred from the European Union and/or Switzerland to the United States.
+
+Webgroup Media, LLC has certified to the Department of Commerce that it adheres to the Privacy Shield Principles. If there is any conflict between the terms in this privacy policy and the Privacy Shield Principles, the Privacy Shield Principles shall govern.  To learn more about the Privacy Shield program, and to view our certification, please visit <https://www.privacyshield.gov/>.
+{% endcomment %}
+
+## Data Protection Addendum
+
+If you require a signed Data Protection Addendum (DPA) for [GDPR](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) compliance, you may [download ours here](/assets/documents/WGM_GDPR_DPA.pdf). This document formalizes the contract between data exporter and data importer, as well as describing the rights of data subjects. Please review the terms and return a signed copy to [team@cerb.ai](mailto:team@cerb.ai).
+
+# What Personal Data is Collected by WGM?
 
 We develop and sell Cerb, a software application (as-a-service and on-premises) for sharing team inboxes, building collaborative workspaces, managing customer relationships, and automating business workflows.
 
@@ -34,9 +44,23 @@ Like most website operators, we collect non-personally identifying information o
 
 We also collect "potentially personally identifying" information like Internet Protocol (IP) addresses for website visitors and workers. We only disclose IP addresses under the same circumstances that we use and disclose personally identifying information as described below.
 
+## Cookies
+
+A cookie is a string of information that a website stores on a visitor's computer, and that the visitor's browser provides to the website each time the visitor returns. We use cookies to identify and track visitors, observe their usage of our website, and store their website access preferences. Visitors who do not wish to have cookies placed on their computers should set their browsers to refuse cookies before using our websites, with the drawback that certain features of our websites may not function properly without the aid of cookies. Web-based products like Cerb require cookies to be enabled, although their use is limited to maintaining a logged-in session within the software.
+
+## Ads
+
+We do not display third-party advertising on our websites or in our applications.
+
+When ads appear on our social media profiles, they are delivered to users by advertisers who may set cookies. These cookies allow the ad server to recognize your computer each time they send you an online advertisement to compile information about you or others who use your computer. This information allows ad networks to, among other things, deliver targeted advertisements that they believe will be of most interest to you. This Privacy Policy covers the use of cookies by us and does not cover the use of cookies by any advertisers.
+
 ## Gathering of Personally Identifying Information
 
 Certain visitors to our websites choose to interact in ways that require us to gather personally identifying information. The amount and type of information that we gather depends on the nature of the interaction. For example, we ask workers who sign up for Cerb Cloud to provide an email address. Those who choose to engage in financial transactions with us (e.g. by purchasing products and services) are asked to provide additional information, including as necessary the personal and financial information required to process those transactions. In each case, we collect such information only insofar as is necessary or appropriate to fulfill the purpose of the visitor's interaction. We do not disclose personally identifying information other than as described below. Visitors can always refuse to supply personally identifying information, with the caveat that it may prevent them from purchasing licenses or engaging in certain services.
+
+## Testimonials
+
+We display a list of clients and testimonials on our websites. We do not disclose the names of licensed organizations, or their representatives, without explicit permission, except in the event that a client freely discloses their identity through postings on public forums or social media networks.
 
 ## Aggregated Statistics
 
@@ -44,7 +68,7 @@ We may collect statistics about the behavior of visitors to our websites or user
 
 We may display this aggregate, anonymous information publicly or provide it to others. However, we do not disclose personally identifying information other than as described below.
 
-## Protection of Certain Personally Identifying Information
+# Protection of Certain Personally Identifying Information
 
 We disclose personally identifying information only to those of our employees, contractors and affiliated organizations that (i) need to know that information in order to process it on our behalf or to provide products and services available through our websites, and (ii) that have agreed not to disclose it to others. Some of those employees, contractors, and affiliated organizations may be located outside of your home country; and by using our websites and services you consent to the transfer of such information to them.
 
@@ -52,7 +76,7 @@ We will not rent or sell personally identifying information to anyone. Other tha
 
 If you are a registered user of Cerb and have supplied your email address, we may occasionally send you an email to tell you about new features or to solicit your feedback. We primarily use our social network profiles to communicate this type of information, and we expect to keep email broadcasts to a minimum. If you send us a request (e.g. via a support email or one of our feedback mechanisms), we reserve the right to anonymously republish it in order to help us clarify or respond to your request, or to help us support other users. We take all measures reasonably necessary to protect against the unauthorized access, use, alteration, or destruction, of potentially personally identifying information.
 
-## Security and Safeguards
+# Security and Safeguards
 
 We take reasonable precautions to protect your data and personally identifying information.
 
@@ -102,23 +126,9 @@ Upon cancellation, we remove all live client data from the Cerb Cloud network an
 
 We will comply with any written, and duly authenticated, client requests for the immediate destruction of all account data and backups.
 
-## Testimonials
-
-We display a list of clients and testimonials on our websites. We do not disclose the names of licensed organizations, or their representatives, without explicit permission, except in the event that a client freely discloses their identity through postings on public forums or social media networks.
-
-## Cookies
-
-A cookie is a string of information that a website stores on a visitor's computer, and that the visitor's browser provides to the website each time the visitor returns. We use cookies to identify and track visitors, observe their usage of our website, and store their website access preferences. Visitors who do not wish to have cookies placed on their computers should set their browsers to refuse cookies before using our websites, with the drawback that certain features of our websites may not function properly without the aid of cookies. Web-based products like Cerb require cookies to be enabled, although their use is limited to maintaining a logged-in session within the software.
-
-## Business Transfers
+# Business Transfers
 
 If WGM or substantially all of its assets were acquired, or in the event that we go out of business or enter bankruptcy, user information would be one of the assets that is transferred or acquired by a third party. You acknowledge that such transfers may occur, and that any acquirer of WGM may continue to use your personal information as set forth in this policy.
-
-## Ads
-
-We do not display third-party advertising on our websites or in our applications.
-
-When ads appear on our social media profiles, they are delivered to users by advertisers who may set cookies. These cookies allow the ad server to recognize your computer each time they send you an online advertisement to compile information about you or others who use your computer. This information allows ad networks to, among other things, deliver targeted advertisements that they believe will be of most interest to you. This Privacy Policy covers the use of cookies by us and does not cover the use of cookies by any advertisers.
 
 ## Resolving Complaints
 
@@ -132,7 +142,7 @@ JAMS is a US-based private alternate dispute resolution provider, and we have co
 
 ### Independent Arbitration
 
-Under certain limited circumstances, European Union individuals may invoke binding Privacy Shield arbitration as a last resort if all other forms of dispute resolution have been unsuccessful. To learn more about this method of resolution and its availability to you, please read more about Privacy Shield.
+Under certain limited circumstances, European Union individuals may invoke binding Privacy Shield arbitration as a last resort if all other forms of dispute resolution have been unsuccessful. To learn more about this method of resolution and its availability to you, please read more about [Privacy Shield](https://www.privacyshield.gov/).
 
 We are subject to the jurisdiction of the Federal Trade Commission.
 
