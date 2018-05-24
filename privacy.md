@@ -14,9 +14,23 @@ It is our policy to respect your privacy regarding any information we may collec
 * TOC
 {:toc}
 
+## Privacy Shield
+
+We are committed to complying with the [Privacy Shield Principles](https://www.privacyshield.gov/) designed to safeguard the privacy of personal data.
+
+## What Personal Data is Collected by WGM?
+
+We develop and sell Cerb, a software application (as-a-service and on-premises) for sharing team inboxes, building collaborative workspaces, managing customer relationships, and automating business workflows.
+
+We maintain profiles on our customers and their organizations based on past interactions (e.g. email address, gender, date of birth, IP addresses, public social media photos, organizational affiliation and job title, email support history, and order history).
+
+With Cerb Cloud, we act as a data processor for companies around the world. Due to the customizable design of Cerb, our clients (as data controllers) may store any kind of personal data about their own clients (as data subjects). Depending on the nature of our clients' organization, or the type of email they receive (e.g. newsletters, receipts, test results), this may include sensitive personal data -- race/ethnicity, political opinions, religion, health, sexuality, etc.
+
+Aside from what processing is necessary to provide the service (e.g. web server access logs, storage, aggregate usage info), we do not directly process personal information within our clients' databases.
+
 ## Website Visitors
 
-Like most website operators, we collect non-personally identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. Our purpose in collecting non-personally identifying information is to better understand how visitors use our website. From time to time, we may release non-personally identifying information in the aggregate; e.g., by publishing a report on trends in the usage of its software or websites.
+Like most website operators, we collect non-personally identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. Our purpose in collecting non-personally identifying information is to better understand how visitors use our website. From time to time, we may release non-personally identifying information in the aggregate; e.g., by publishing a report on trends in the usage of our software or websites.
 
 We also collect "potentially personally identifying" information like Internet Protocol (IP) addresses for website visitors and workers. We only disclose IP addresses under the same circumstances that we use and disclose personally identifying information as described below.
 
@@ -105,6 +119,22 @@ If WGM or substantially all of its assets were acquired, or in the event that we
 We do not display third-party advertising on our websites or in our applications.
 
 When ads appear on our social media profiles, they are delivered to users by advertisers who may set cookies. These cookies allow the ad server to recognize your computer each time they send you an online advertisement to compile information about you or others who use your computer. This information allows ad networks to, among other things, deliver targeted advertisements that they believe will be of most interest to you. This Privacy Policy covers the use of cookies by us and does not cover the use of cookies by any advertisers.
+
+## Resolving Complaints
+
+If you have concerns about the way WGM is handling your User Personal Information, please let us know immediately. You may email us directly at [team@cerb.ai](mailto:team@cerb.ai) with the subject line "Privacy Shield Concerns." We will respond within 45 days at the latest.
+
+### Dispute Resolution Process
+
+In the unlikely event that a dispute arises between you and WGM regarding our handling of your User Personal Information, we will do our best to resolve it. If we cannot, we have selected JAMS, an independent dispute resolution provider, to handle unresolved Privacy Shield complaints. If we are unable to resolve your concerns after a good faith effort to address them, you may [contact JAMS and submit a Privacy Shield claim](https://www.jamsadr.com/eu-us-privacy-shield).
+
+JAMS is a US-based private alternate dispute resolution provider, and we have contracted with JAMS to provide an independent recourse mechanism for any of our users for privacy concerns at **no cost to you**. You do not need to appear in court; you may conduct this dispute resolution process via telephone or video conference. If you are not based in the EU or EEA, but you would still like to use the JAMS arbitration process to resolve your dispute, please let us know and we will provide access to you.
+
+### Independent Arbitration
+
+Under certain limited circumstances, European Union individuals may invoke binding Privacy Shield arbitration as a last resort if all other forms of dispute resolution have been unsuccessful. To learn more about this method of resolution and its availability to you, please read more about Privacy Shield.
+
+We are subject to the jurisdiction of the Federal Trade Commission.
 
 ## Privacy Policy Changes
 
