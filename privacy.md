@@ -126,11 +126,7 @@ Upon cancellation, we remove all live client data from the Cerb Cloud network an
 
 We will comply with any written, and duly authenticated, client requests for the immediate destruction of all account data and backups.
 
-# Business Transfers
-
-If WGM or substantially all of its assets were acquired, or in the event that we go out of business or enter bankruptcy, user information would be one of the assets that is transferred or acquired by a third party. You acknowledge that such transfers may occur, and that any acquirer of WGM may continue to use your personal information as set forth in this policy.
-
-## Resolving Complaints
+# Resolving Complaints
 
 If you have concerns about the way WGM is handling your User Personal Information, please let us know immediately. You may email us directly at [team@cerb.ai](mailto:team@cerb.ai) with the subject line "Privacy Shield Concerns." We will respond within 45 days at the latest.
 
@@ -146,10 +142,14 @@ Under certain limited circumstances, European Union individuals may invoke bindi
 
 We are subject to the jurisdiction of the Federal Trade Commission.
 
-## Privacy Policy Changes
+# Business Transfers
+
+If WGM or substantially all of its assets were acquired, or in the event that we go out of business or enter bankruptcy, user information would be one of the assets that is transferred or acquired by a third party. You acknowledge that such transfers may occur, and that any acquirer of WGM may continue to use your personal information as set forth in this policy.
+
+# Privacy Policy Changes
 
 Although most changes are likely to be minor, we may modify this Privacy Policy from time to time at our sole discretion. You are encouraged to frequently check this page for any changes to the Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.
 
-## License
+# License
 
 This privacy policy is available under a [Creative Commons Sharealike](http://creativecommons.org/licenses/by-sa/2.5/) license derived from original groundwork by [Automattic](http://automattic.com/privacy/). WGM is not affiliated with Automattic.
