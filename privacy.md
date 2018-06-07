@@ -128,7 +128,9 @@ We will comply with any written, and duly authenticated, client requests for the
 
 # Resolving Complaints
 
-If you have concerns about the way WGM is handling your User Personal Information, please let us know immediately. You may email us directly at [team@cerb.ai](mailto:team@cerb.ai) with the subject line "Privacy Shield Concerns." We will respond within 45 days at the latest.
+We are subject to the jurisdiction of the Federal Trade Commission.
+
+If you have concerns about the way WGM is handling your personal data, please let us know immediately. You may email us directly at [team@cerb.ai](mailto:team@cerb.ai) with the subject line "Privacy Shield Concerns." We will respond within 45 days at the latest.
 
 ### Dispute Resolution Process
 
@@ -139,8 +141,6 @@ JAMS is a US-based private alternate dispute resolution provider, and we have co
 ### Independent Arbitration
 
 Under certain limited circumstances, European Union individuals may invoke binding Privacy Shield arbitration as a last resort if all other forms of dispute resolution have been unsuccessful. To learn more about this method of resolution and its availability to you, please read more about [Privacy Shield](https://www.privacyshield.gov/).
-
-We are subject to the jurisdiction of the Federal Trade Commission.
 
 # Business Transfers
 
