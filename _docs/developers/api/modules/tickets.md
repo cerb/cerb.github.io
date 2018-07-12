@@ -41,7 +41,7 @@ Create a ticket object.
 | `owner_id` | id | [worker](/docs/api/modules/workers/)
 | `html_template_id` | id | [html template](/docs/api/modules/mail-html-template/)
 | `file_id[]` | ids | Upload with [attachments](/docs/api/modules/attachments/)
-| `status_id` | integer | 0=open, 1=waiting, 2=closed, 3=deleted
+| `status` | integer | 0=open, 1=waiting, 2=closed, 3=deleted
 | `reopen_at` | mixed | unix timestamp or string (e.g. "Friday 2pm", "+2 hours")
 | `custom_*` | mixed | 
 
@@ -108,7 +108,7 @@ Reply to a ticket message as a worker.
 | `is_forward` | boolean | Send the message without updating the ticket with the new subject or requesters: 0=no, 1=yes
 | `owner_id` | id | Assign the ticket to a [worker](/docs/api/modules/workers/), or `0` to unassign from the current owner
 | `reopen_at` | mixed | unix timestamp or string (e.g. "Friday 2pm", "+2 hours")
-| `status_id` | integer | 0=open, 1=waiting, 2=closed, 3=deleted
+| `status` | integer | 0=open, 1=waiting, 2=closed, 3=deleted
 | `subject` | string | Update the ticket's subject
 | `to` | string | A comma-separated list of email addresses to include as recipients. If blank, it uses the ticket's current requesters
 | `worker_id` | id | The specific [worker](/docs/api/modules/workers/) to send the message as. This defaults to the current API user, and can only be changed by administrators
