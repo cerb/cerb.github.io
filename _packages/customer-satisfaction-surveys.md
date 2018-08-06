@@ -53,10 +53,10 @@ Paste the following package into the large text box:
 {
   "package": {
     "name": "Customer Satisfaction Workflow",
-    "cerb_version": "8.3.0",
+    "cerb_version": "9.0.0",
     "revision": 1,
     "requires": {
-      "cerb_version": "8.3.0",
+      "cerb_version": "9.0.0",
       "plugins": [
         "cerb.bots.portal.widget"
       ]
@@ -329,7 +329,7 @@ Paste the following package into the large text box:
                 "actions": [
                   {
                     "action": "render_html",
-                    "html": "{% set labels = [\r\n  \"\",\r\n  \"Strongly Disagree\",\r\n  \"Disagree\",\r\n  \"Somewhat Disagree\",\r\n  \"Undecided\",\r\n  \"Somewhat Agree\",\r\n  \"Agree\",\r\n  \"Strongly Agree\"\r\n] %}\r\n{% set colors = [\r\n  '#CF2C1D',\r\n  '#CF2C1D',\r\n  '#DE5714',\r\n  '#EE830C',\r\n  '#FEAF04',\r\n  '#CBAE06',\r\n  '#98AD0B',\r\n  '#66AD11'\r\n] %}\r\n{% for rating in var_ratings %}\r\n&lt;div&gt;\r\n&lt;span style=\"float:left;display:inline-block;background-color:{{colors[rating.custom_{{{uid.field_83}}}]}};padding:5px 10px;text-align:center;font-weight:bold;color:white;border-radius:15px;margin:0px 5px 5px 0px;text-shadow:0px 0px 5px #666666;\"&gt;{{labels[rating.custom_{{{uid.field_83}}}]}}&lt;/span&gt;\r\n{% if rating.custom_{{{uid.field_91}}} %}\r\n&lt;i&gt;\"{{rating.custom_{{{uid.field_91}}}}}\"&lt;/i&gt; - \r\n{% endif %}\r\n&lt;a href=\"javascript:;\" class=\"cerb-peek-trigger no-underline\" data-context=\"{{rating._context}}\" data-context-id=\"{{rating.id}}\"&gt;&lt;b&gt;{{rating.subject}}&lt;/b&gt;&lt;/a&gt;\r\n&lt;small style=\"color:gray;\"&gt;{{rating.custom_{{{uid.field_80}}}|date_pretty}}&lt;/small&gt;\r\n&lt;/div&gt;\r\n&lt;br style=\"clear:both;\"&gt;\r\n{% endfor %}\r\n&lt;a href=\"javascript:;\" class=\"cerb-search-trigger\" data-context=\"cerberusweb.contexts.ticket\" data-query=\"customerEffort.rating:!null\"&gt;see more...&lt;/a&gt;\r\n\r\n&lt;script type=\"text/javascript\"&gt;\r\n$(function() {\r\n  var $widget = $('#widget{{widget_id}}');\r\n  $widget.find('.cerb-peek-trigger').cerbPeekTrigger();\r\n  $widget.find('.cerb-search-trigger').cerbSearchTrigger();\r\n});\r\n&lt;/script&gt;"
+                    "html": "{% set labels = [\r\n  \"\",\r\n  \"Strongly Disagree\",\r\n  \"Disagree\",\r\n  \"Somewhat Disagree\",\r\n  \"Undecided\",\r\n  \"Somewhat Agree\",\r\n  \"Agree\",\r\n  \"Strongly Agree\"\r\n] %}\r\n{% set colors = [\r\n  '#CF2C1D',\r\n  '#CF2C1D',\r\n  '#DE5714',\r\n  '#EE830C',\r\n  '#FEAF04',\r\n  '#CBAE06',\r\n  '#98AD0B',\r\n  '#66AD11'\r\n] %}\r\n{% for rating in var_ratings %}\r\n<div>\r\n<span style=\"float:left;display:inline-block;background-color:{{colors[rating.custom_{{{uid.field_83}}}]}};padding:5px 10px;text-align:center;font-weight:bold;color:white;border-radius:15px;margin:0px 5px 5px 0px;text-shadow:0px 0px 5px #666666;\">{{labels[rating.custom_{{{uid.field_83}}}]}}</span>\r\n{% if rating.custom_{{{uid.field_91}}} %}\r\n<i>\"{{rating.custom_{{{uid.field_91}}}}}\"</i> - \r\n{% endif %}\r\n<a href=\"javascript:;\" class=\"cerb-peek-trigger no-underline\" data-context=\"{{rating._context}}\" data-context-id=\"{{rating.id}}\"><b>{{rating.subject}}</b></a>\r\n<small style=\"color:gray;\">{{rating.custom_{{{uid.field_80}}}|date_pretty}}</small>\r\n</div>\r\n<br style=\"clear:both;\">\r\n{% endfor %}\r\n<a href=\"javascript:;\" class=\"cerb-search-trigger\" data-context=\"cerberusweb.contexts.ticket\" data-query=\"customerEffort.rating:!null\">see more...</a>\r\n\r\n<script type=\"text/javascript\">\r\n$(function() {\r\n  var $widget = $('#widget{{widget_id}}');\r\n  $widget.find('.cerb-peek-trigger').cerbPeekTrigger();\r\n  $widget.find('.cerb-search-trigger').cerbSearchTrigger();\r\n});\r\n</script>"
                   }
                 ]
               }
@@ -885,7 +885,7 @@ Paste the following package into the large text box:
                 "actions": [
                   {
                     "action": "render_html",
-                    "html": "{% set colors = ['#CF2C1D','#CF2C1D','#CF2C1D','#CF2C1D','#CF2C1D','#FEAF04','#FEAF04','#FEAF04','#FEAF04','#579709','#579709'] %}\r\n{% for rating in var_ratings %}\r\n&lt;div&gt;\r\n&lt;span style=\"float:left;display:inline-block;background-color:{{colors[rating.custom_{{{uid.field_82}}}]}};line-height:30px;text-align:center;font-size:22px;font-weight:bold;color:white;width:30px;border-radius:15px;margin:0px 5px 5px 0px;\"&gt;{{rating.custom_{{{uid.field_82}}}}}&lt;/span&gt;\r\n{{cerb_avatar_image('worker',rating.worker_id,rating.worker_updated)}} \r\n&lt;a href=\"javascript:;\" class=\"cerb-peek-trigger no-underline\" data-context=\"{{rating.worker__context}}\" data-context-id=\"{{rating.worker_id}}\"&gt;&lt;b&gt;{{rating.worker__label}}&lt;/b&gt;&lt;/a&gt;'s reply on &lt;a href=\"javascript:;\" class=\"cerb-peek-trigger no-underline\" data-context=\"{{rating._context}}\" data-context-id=\"{{rating.id}}\"&gt;&lt;b&gt;{{rating.ticket__label}}&lt;/b&gt;&lt;/a&gt;\r\n{% if rating.custom_{{{uid.field_85}}} %}\r\n- &lt;i&gt;\"{{rating.custom_{{{uid.field_85}}}}}\"&lt;/i&gt; \r\n{% endif %}\r\n&lt;small style=\"color:gray;\"&gt;{{rating.custom_{{{uid.field_84}}}|date_pretty}}&lt;/small&gt;\r\n&lt;/div&gt;\r\n&lt;br style=\"clear:both;\"&gt;\r\n{% endfor %}\r\n&lt;a href=\"javascript:;\" class=\"cerb-search-trigger\" data-context=\"cerberusweb.contexts.message\" data-query=\"customerSatisfaction.rating:!null\"&gt;see more...&lt;/a&gt;\r\n\r\n&lt;script type=\"text/javascript\"&gt;\r\n$(function() {\r\n  var $widget = $('#widget{{widget_id}}');\r\n  $widget.find('.cerb-peek-trigger').cerbPeekTrigger();\r\n  $widget.find('.cerb-search-trigger').cerbSearchTrigger();\r\n});\r\n&lt;/script&gt;"
+                    "html": "{% set colors = ['#CF2C1D','#CF2C1D','#CF2C1D','#CF2C1D','#CF2C1D','#FEAF04','#FEAF04','#FEAF04','#FEAF04','#579709','#579709'] %}\r\n{% for rating in var_ratings %}\r\n<div>\r\n<span style=\"float:left;display:inline-block;background-color:{{colors[rating.custom_{{{uid.field_82}}}]}};line-height:30px;text-align:center;font-size:22px;font-weight:bold;color:white;width:30px;border-radius:15px;margin:0px 5px 5px 0px;\">{{rating.custom_{{{uid.field_82}}}}}</span>\r\n{{cerb_avatar_image('worker',rating.worker_id,rating.worker_updated)}} \r\n<a href=\"javascript:;\" class=\"cerb-peek-trigger no-underline\" data-context=\"{{rating.worker__context}}\" data-context-id=\"{{rating.worker_id}}\"><b>{{rating.worker__label}}</b></a>'s reply on <a href=\"javascript:;\" class=\"cerb-peek-trigger no-underline\" data-context=\"{{rating._context}}\" data-context-id=\"{{rating.id}}\"><b>{{rating.ticket__label}}</b></a>\r\n{% if rating.custom_{{{uid.field_85}}} %}\r\n- <i>\"{{rating.custom_{{{uid.field_85}}}}}\"</i> \r\n{% endif %}\r\n<small style=\"color:gray;\">{{rating.custom_{{{uid.field_84}}}|date_pretty}}</small>\r\n</div>\r\n<br style=\"clear:both;\">\r\n{% endfor %}\r\n<a href=\"javascript:;\" class=\"cerb-search-trigger\" data-context=\"cerberusweb.contexts.message\" data-query=\"customerSatisfaction.rating:!null\">see more...</a>\r\n\r\n<script type=\"text/javascript\">\r\n$(function() {\r\n  var $widget = $('#widget{{widget_id}}');\r\n  $widget.find('.cerb-peek-trigger').cerbPeekTrigger();\r\n  $widget.find('.cerb-search-trigger').cerbSearchTrigger();\r\n});\r\n</script>"
                   }
                 ]
               }
@@ -1451,7 +1451,7 @@ Paste the following package into the large text box:
                   {
                     "action": "_get_worklist_metric",
                     "context": "cerberusweb.contexts.contact",
-                    "query": "netPromoter.rating:&gt;8",
+                    "query": "netPromoter.rating:>8",
                     "metric_func": "count",
                     "metric_field": "cf_{{{uid.field_76}}}",
                     "var": "total_promoters"
@@ -1459,14 +1459,14 @@ Paste the following package into the large text box:
                   {
                     "action": "_get_worklist_metric",
                     "context": "cerberusweb.contexts.contact",
-                    "query": "netPromoter.rating:&lt;7",
+                    "query": "netPromoter.rating:<7",
                     "metric_func": "count",
                     "metric_field": "c_id",
                     "var": "total_detractors"
                   },
                   {
                     "action": "_set_custom_var",
-                    "value": "{% if total_ratings &gt; 0 %}\r\n{{(((total_promoters / total_ratings) - (total_detractors / total_ratings)) * 100)|round}}\r\n{% else %}\r\n0\r\n{% endif %}",
+                    "value": "{% if total_ratings > 0 %}\r\n{{(((total_promoters / total_ratings) - (total_detractors / total_ratings)) * 100)|round}}\r\n{% else %}\r\n0\r\n{% endif %}",
                     "format": "",
                     "is_simulator_only": "0",
                     "var": "nps"
@@ -1482,14 +1482,14 @@ Paste the following package into the large text box:
                 "actions": [
                   {
                     "action": "_set_custom_var",
-                    "value": "{% if nps &lt; 0 %}\r\nrgb(120,0,0);\r\n{% elseif nps &lt; 50 %}\r\nrgb(245,190,40);\r\n{% else %}\r\nrgb(90,190,0);\r\n{% endif %}",
+                    "value": "{% if nps < 0 %}\r\nrgb(120,0,0);\r\n{% elseif nps < 50 %}\r\nrgb(245,190,40);\r\n{% else %}\r\nrgb(90,190,0);\r\n{% endif %}",
                     "format": "",
                     "is_simulator_only": "0",
                     "var": "color"
                   },
                   {
                     "action": "render_html",
-                    "html": "&lt;div style=\"font-size:36px;font-weight:bold;text-align:center;color:{{color}};\"&gt;\r\n{{nps}}\r\n&lt;/div&gt;"
+                    "html": "<div style=\"font-size:36px;font-weight:bold;text-align:center;color:{{color}};\">\r\n{{nps}}\r\n</div>"
                   }
                 ]
               }
@@ -1565,7 +1565,7 @@ Paste the following package into the large text box:
                 "actions": [
                   {
                     "action": "render_html",
-                    "html": "{% set colors = ['#CF2C1D','#CF2C1D','#CF2C1D','#CF2C1D','#CF2C1D','#CF2C1D','#CF2C1D','#FEAF04','#FEAF04','#579709','#579709'] %}\r\n{% for rating in var_ratings %}\r\n&lt;div&gt;\r\n&lt;span style=\"float:left;display:inline-block;background-color:{{colors[rating.custom_{{{uid.field_76}}}]}};line-height:30px;text-align:center;font-size:22px;font-weight:bold;color:white;width:30px;border-radius:15px;margin:0px 5px 5px 0px;\"&gt;{{rating.custom_{{{uid.field_76}}}}}&lt;/span&gt;\r\n{{cerb_avatar_image('contact',rating.id,rating.updated)}} \r\n&lt;a href=\"javascript:;\" class=\"cerb-peek-trigger no-underline\" data-context=\"{{rating._context}}\" data-context-id=\"{{rating.id}}\"&gt;&lt;b&gt;{{rating._label}}&lt;/b&gt;&lt;/a&gt;\r\n{% if rating.custom_{{{uid.field_77}}} %}\r\n said, \r\n&lt;i&gt;\"{{rating.custom_{{{uid.field_77}}}}}\"&lt;/i&gt; \r\n{% endif %}\r\n&lt;small style=\"color:gray;\"&gt;{{rating.custom_{{{uid.field_78}}}|date_pretty}}&lt;/small&gt;\r\n&lt;/div&gt;\r\n&lt;br style=\"clear:both;\"&gt;\r\n{% endfor %}\r\n&lt;a href=\"javascript:;\" class=\"cerb-search-trigger\" data-context=\"cerberusweb.contexts.contact\" data-query=\"netPromoter.rating:!null\"&gt;see more...&lt;/a&gt;\r\n\r\n&lt;script type=\"text/javascript\"&gt;\r\n$(function() {\r\n  var $widget = $('#widget{{widget_id}}');\r\n  $widget.find('.cerb-peek-trigger').cerbPeekTrigger();\r\n  $widget.find('.cerb-search-trigger').cerbSearchTrigger();\r\n});\r\n&lt;/script&gt;"
+                    "html": "{% set colors = ['#CF2C1D','#CF2C1D','#CF2C1D','#CF2C1D','#CF2C1D','#CF2C1D','#CF2C1D','#FEAF04','#FEAF04','#579709','#579709'] %}\r\n{% for rating in var_ratings %}\r\n<div>\r\n<span style=\"float:left;display:inline-block;background-color:{{colors[rating.custom_{{{uid.field_76}}}]}};line-height:30px;text-align:center;font-size:22px;font-weight:bold;color:white;width:30px;border-radius:15px;margin:0px 5px 5px 0px;\">{{rating.custom_{{{uid.field_76}}}}}</span>\r\n{{cerb_avatar_image('contact',rating.id,rating.updated)}} \r\n<a href=\"javascript:;\" class=\"cerb-peek-trigger no-underline\" data-context=\"{{rating._context}}\" data-context-id=\"{{rating.id}}\"><b>{{rating._label}}</b></a>\r\n{% if rating.custom_{{{uid.field_77}}} %}\r\n said, \r\n<i>\"{{rating.custom_{{{uid.field_77}}}}}\"</i> \r\n{% endif %}\r\n<small style=\"color:gray;\">{{rating.custom_{{{uid.field_78}}}|date_pretty}}</small>\r\n</div>\r\n<br style=\"clear:both;\">\r\n{% endfor %}\r\n<a href=\"javascript:;\" class=\"cerb-search-trigger\" data-context=\"cerberusweb.contexts.contact\" data-query=\"netPromoter.rating:!null\">see more...</a>\r\n\r\n<script type=\"text/javascript\">\r\n$(function() {\r\n  var $widget = $('#widget{{widget_id}}');\r\n  $widget.find('.cerb-peek-trigger').cerbPeekTrigger();\r\n  $widget.find('.cerb-search-trigger').cerbSearchTrigger();\r\n});\r\n</script>"
                   }
                 ]
               }
@@ -1600,7 +1600,7 @@ Paste the following package into the large text box:
                   {
                     "action": "_get_worklist_metric",
                     "context": "cerberusweb.contexts.contact",
-                    "query": "netPromoter.rating:&gt;8",
+                    "query": "netPromoter.rating:>8",
                     "metric_func": "count",
                     "metric_field": "cf_{{{uid.field_76}}}",
                     "var": "total_promoters"
@@ -1608,14 +1608,14 @@ Paste the following package into the large text box:
                   {
                     "action": "_get_worklist_metric",
                     "context": "cerberusweb.contexts.contact",
-                    "query": "netPromoter.rating:&lt;7",
+                    "query": "netPromoter.rating:<7",
                     "metric_func": "count",
                     "metric_field": "c_id",
                     "var": "total_detractors"
                   },
                   {
                     "action": "_set_custom_var",
-                    "value": "{% if total_ratings &gt; 0 %}\r\n{{(((total_promoters / total_ratings) - (total_detractors / total_ratings)) * 100)|round}}\r\n{% else %}\r\n0\r\n{% endif %}",
+                    "value": "{% if total_ratings > 0 %}\r\n{{(((total_promoters / total_ratings) - (total_detractors / total_ratings)) * 100)|round}}\r\n{% else %}\r\n0\r\n{% endif %}",
                     "format": "",
                     "is_simulator_only": "0",
                     "var": "nps"
@@ -2348,16 +2348,18 @@ Paste the following package into the large text box:
         {
           "uid": "workspace_tab_47",
           "name": "NPS",
-          "extension_id": "core.workspace.tab",
+          "extension_id": "core.workspace.tab.dashboard",
           "params": {
-            "num_columns": "2"
+            "layout": "sidebar_left"
           },
           "widgets": [
             {
               "uid": "workspace_widget_48",
               "label": "Net Promoter Score (NPS)",
               "extension_id": "core.workspace.widget.gauge",
-              "pos": "0000",
+              "zone": "sidebar",
+              "width_units": 4,
+              "pos": 0,
               "params": {
                 "metric_min": "-100",
                 "threshold_labels": [
@@ -2388,7 +2390,9 @@ Paste the following package into the large text box:
               "uid": "workspace_widget_41",
               "label": "Net Promoter Score (NPS)",
               "extension_id": "core.workspace.widget.bot",
-              "pos": "0001",
+              "zone": "sidebar",
+              "width_units": 4,
+              "pos": 1,
               "params": {
                 "behavior_id": "{{{uid.behavior_298}}}"
               }
@@ -2397,7 +2401,9 @@ Paste the following package into the large text box:
               "uid": "workspace_widget_42",
               "label": "Total Ratings",
               "extension_id": "core.workspace.widget.counter",
-              "pos": "0002",
+              "zone": "sidebar",
+              "width_units": 4,
+              "pos": 2,
               "params": {
                 "datasource": "core.workspace.widget.datasource.worklist.metric",
                 "context": "cerberusweb.contexts.contact",
@@ -2444,12 +2450,14 @@ Paste the following package into the large text box:
               "uid": "workspace_widget_43",
               "label": "Promoters",
               "extension_id": "core.workspace.widget.counter",
-              "pos": "0003",
+              "zone": "sidebar",
+              "width_units": 4,
+              "pos": 3,
               "params": {
                 "datasource": "core.workspace.widget.datasource.worklist.metric",
                 "context": "cerberusweb.contexts.contact",
                 "search_mode": "quick_search",
-                "quick_search": "netPromoter.rating:&gt;8",
+                "quick_search": "netPromoter.rating:>8",
                 "metric_func": "count",
                 "metric_field": "c_id",
                 "metric_type": "number",
@@ -2475,7 +2483,7 @@ Paste the following package into the large text box:
                   "params": {
                     "5909156532ff1": {
                       "field": "cf_{{{uid.field_76}}}",
-                      "operator": "&gt;",
+                      "operator": ">",
                       "value": 8
                     }
                   },
@@ -2491,12 +2499,14 @@ Paste the following package into the large text box:
               "uid": "workspace_widget_44",
               "label": "Detractors",
               "extension_id": "core.workspace.widget.counter",
-              "pos": "0004",
+              "zone": "sidebar",
+              "width_units": 4,
+              "pos": 4,
               "params": {
                 "datasource": "core.workspace.widget.datasource.worklist.metric",
                 "context": "cerberusweb.contexts.contact",
                 "search_mode": "quick_search",
-                "quick_search": "netPromoter.rating:&lt;7",
+                "quick_search": "netPromoter.rating:<7",
                 "metric_func": "count",
                 "metric_field": "c_id",
                 "metric_type": "number",
@@ -2522,7 +2532,7 @@ Paste the following package into the large text box:
                   "params": {
                     "5909156532ff1": {
                       "field": "cf_{{{uid.field_76}}}",
-                      "operator": "&gt;",
+                      "operator": ">",
                       "value": 8
                     }
                   },
@@ -2538,7 +2548,9 @@ Paste the following package into the large text box:
               "uid": "workspace_widget_55",
               "label": "Recent Ratings",
               "extension_id": "core.workspace.widget.bot",
-              "pos": "1001",
+              "zone": "content",
+              "width_units": 4,
+              "pos": 1,
               "params": {
                 "behavior_id": "{{{uid.behavior_300}}}"
               }
@@ -2547,7 +2559,9 @@ Paste the following package into the large text box:
               "uid": "workspace_widget_56",
               "label": "Ratings Over Time (YTD)",
               "extension_id": "core.workspace.widget.chart",
-              "pos": "1002",
+              "zone": "content",
+              "width_units": 4,
+              "pos": 2,
               "params": {
                 "chart_type": "bar",
                 "chart_display": "",
@@ -2557,7 +2571,7 @@ Paste the following package into the large text box:
                     "label": "Detractors",
                     "context": "cerberusweb.contexts.contact",
                     "search_mode": "quick_search",
-                    "quick_search": "netPromoter.rating:&lt;7 AND netPromoter.date:\"Jan 1 to now\"",
+                    "quick_search": "netPromoter.rating:<7 AND netPromoter.date:\"Jan 1 to now\"",
                     "xaxis_field": "cf_{{{uid.field_78}}}",
                     "xaxis_tick": "month",
                     "xaxis_format": "",
@@ -2577,7 +2591,7 @@ Paste the following package into the large text box:
                       "params": {
                         "590a7375deff4": {
                           "field": "cf_{{{uid.field_76}}}",
-                          "operator": "&lt;",
+                          "operator": "<",
                           "value": 7
                         },
                         "590a7375df002": {
@@ -2651,7 +2665,7 @@ Paste the following package into the large text box:
                     "label": "Promoters",
                     "context": "cerberusweb.contexts.contact",
                     "search_mode": "quick_search",
-                    "quick_search": "netPromoter.rating:&gt;8 AND netPromoter.date:\"Jan 1 to now\"",
+                    "quick_search": "netPromoter.rating:>8 AND netPromoter.date:\"Jan 1 to now\"",
                     "xaxis_field": "cf_{{{uid.field_78}}}",
                     "xaxis_tick": "month",
                     "xaxis_format": "",
@@ -2680,7 +2694,7 @@ Paste the following package into the large text box:
                       "params": {
                         "59091c50ef940": {
                           "field": "cf_{{{uid.field_76}}}",
-                          "operator": "&gt;",
+                          "operator": ">",
                           "value": 8
                         }
                       },
@@ -2712,16 +2726,18 @@ Paste the following package into the large text box:
         {
           "uid": "workspace_tab_51",
           "name": "CSAT",
-          "extension_id": "core.workspace.tab",
+          "extension_id": "core.workspace.tab.dashboard",
           "params": {
-            "num_columns": "3"
+            "layout": "sidebar_left"
           },
           "widgets": [
             {
               "uid": "workspace_widget_58",
               "label": "Avg. Customer Satisfaction Score (CSAT)",
               "extension_id": "core.workspace.widget.gauge",
-              "pos": "0000",
+              "zone": "sidebar",
+              "width_units": 4,
+              "pos": 0,
               "params": {
                 "metric_min": "1",
                 "threshold_labels": [
@@ -2778,7 +2794,9 @@ Paste the following package into the large text box:
               "uid": "workspace_widget_59",
               "label": "# Ratings",
               "extension_id": "core.workspace.widget.counter",
-              "pos": "0001",
+              "zone": "sidebar",
+              "width_units": 4,
+              "pos": 1,
               "params": {
                 "datasource": "core.workspace.widget.datasource.worklist.metric",
                 "context": "cerberusweb.contexts.message",
@@ -2819,7 +2837,9 @@ Paste the following package into the large text box:
               "uid": "workspace_widget_60",
               "label": "CSAT Ratings Over Time (90 days)",
               "extension_id": "core.workspace.widget.chart",
-              "pos": "1000",
+              "zone": "content",
+              "width_units": 4,
+              "pos": 2,
               "params": {
                 "chart_type": "bar",
                 "chart_display": "",
@@ -2952,7 +2972,9 @@ Paste the following package into the large text box:
               "uid": "workspace_widget_61",
               "label": "Recent Ratings",
               "extension_id": "core.workspace.widget.bot",
-              "pos": "2000",
+              "zone": "content",
+              "width_units": 4,
+              "pos": 1,
               "params": {
                 "behavior_id": "{{{uid.behavior_318}}}"
               }
@@ -2962,16 +2984,18 @@ Paste the following package into the large text box:
         {
           "uid": "workspace_tab_50",
           "name": "CES",
-          "extension_id": "core.workspace.tab",
+          "extension_id": "core.workspace.tab.dashboard",
           "params": {
-            "num_columns": "3"
+            "layout": "sidebar_left"
           },
           "widgets": [
             {
               "uid": "workspace_widget_57",
               "label": "\"The {{{product_name}}} team made it easy to resolve my issue\"",
               "extension_id": "core.workspace.widget.gauge",
-              "pos": "0000",
+              "zone": "sidebar",
+              "width_units": 4,
+              "pos": 0,
               "params": {
                 "metric_min": "0",
                 "threshold_labels": [
@@ -3040,7 +3064,9 @@ Paste the following package into the large text box:
               "uid": "workspace_widget_62",
               "label": "# Ratings",
               "extension_id": "core.workspace.widget.counter",
-              "pos": "0001",
+              "zone": "sidebar",
+              "width_units": 4,
+              "pos": 1,
               "params": {
                 "datasource": "core.workspace.widget.datasource.worklist.metric",
                 "context": "cerberusweb.contexts.ticket",
@@ -3090,7 +3116,9 @@ Paste the following package into the large text box:
               "uid": "workspace_widget_64",
               "label": "Ratings Over Time (90 days)",
               "extension_id": "core.workspace.widget.chart",
-              "pos": "1000",
+              "zone": "content",
+              "width_units": 4,
+              "pos": 2,
               "params": {
                 "chart_type": "bar",
                 "chart_display": "",
@@ -3100,7 +3128,7 @@ Paste the following package into the large text box:
                     "label": "Agree",
                     "context": "cerberusweb.contexts.ticket",
                     "search_mode": "quick_search",
-                    "quick_search": "customerEffort.rating:&gt;4 customerEffort.date:\"-90 days\"",
+                    "quick_search": "customerEffort.rating:>4 customerEffort.date:\"-90 days\"",
                     "xaxis_field": "cf_{{{uid.field_80}}}",
                     "xaxis_tick": "month",
                     "xaxis_format": "",
@@ -3194,7 +3222,7 @@ Paste the following package into the large text box:
                     "label": "Disagree",
                     "context": "cerberusweb.contexts.ticket",
                     "search_mode": "quick_search",
-                    "quick_search": "customerEffort.rating:&lt;4 customerEffort.date:\"-90 days\"",
+                    "quick_search": "customerEffort.rating:<4 customerEffort.date:\"-90 days\"",
                     "xaxis_field": "cf_{{{uid.field_80}}}",
                     "xaxis_tick": "month",
                     "xaxis_format": "",
@@ -3255,7 +3283,9 @@ Paste the following package into the large text box:
               "uid": "workspace_widget_63",
               "label": "Recent Ratings",
               "extension_id": "core.workspace.widget.bot",
-              "pos": "2000",
+              "zone": "content",
+              "width_units": 4,
+              "pos": 1,
               "params": {
                 "behavior_id": "{{{uid.behavior_320}}}"
               }
