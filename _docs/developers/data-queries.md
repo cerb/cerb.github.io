@@ -1,11 +1,11 @@
 ---
 title: Data Queries
-excerpt: Data queries retrieve data with simple textual queries and prepares the results for visualizations.
+excerpt: Retrieve complex data using simple text queries and prepare the results for visualizations.
 permalink: /docs/data-queries/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 jumbotron:
   title: Data Queries
-  tagline: 
+  tagline: Retrieve complex data using simple text queries and drive visualizations
 ---
 
 <div class="cerb-screenshot">
