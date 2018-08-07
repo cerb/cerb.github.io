@@ -22,6 +22,7 @@
 #  - tasks
 #  - calendars
   - bots
+  - data-queries
   - classifiers
   - connected-accounts
   - portals
