@@ -2,13 +2,14 @@
 title: Packages
 permalink: /docs/packages/
 excerpt: Packages are a blueprint for importing a related set of pre-configured records into Cerb.
+social_image_url: /assets/images/guides/packages/packages.png
 jumbotron:
   title: Packages
   tagline: Importable blueprints for records and workflows
 ---
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/packages/packages.png" class="screenshot">
+<img src="{{page.social_image_url}}" class="screenshot">
 </div>
 
 **Packages** are a blueprint for importing a related set of pre-configured records into Cerb. A single package can contain workspaces, dashboards, bots, project boards, custom records, custom fieldsets, tasks, tickets, contacts, etc.
