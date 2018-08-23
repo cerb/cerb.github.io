@@ -7,7 +7,9 @@ jumbotron:
 ---
 
 At the core of Cerb is a data management system for organizing collections of **records**.  A record is a distinctly identifiable entity: email address, contact, email message, task, etc.  The different types of records are called **contexts**.  Each record within a context is assigned a unique numeric identifier (**ID**).
-
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/using-cerb/records/records.png" class="screenshot">
+</div>
 * TOC
 {:toc}
 
