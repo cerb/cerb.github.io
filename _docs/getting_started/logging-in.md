@@ -20,7 +20,7 @@ After clicking **Continue** you'll be shown your personalized authentication for
 <img src="/assets/images/docs/logging-in/login_auth.png" class="screenshot">
 </div>
 
-After entering your credentials, click the **Sign On** button.
+After entering your credentials, click the **Log In** button.
 
 If successful, your new session will begin and you'll be redirected to your profile page.
 
