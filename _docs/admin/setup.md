@@ -16,58 +16,61 @@ The page is divided into sections, each with a blue menu designated by a downwar
 
 ## Configure
 
-- **System**
-	- [Branding](/docs/setup/branding)
-	- [Cache](/docs/setup/cache)
-	- [License](/docs/setup/license)
-	- [Localization](/docs/setup/localization)
-	- [Scheduler](/docs/setup/scheduler)
-	- [Search](/docs/setup/search)
-	- [Security](/docs/setup/security)
-	- [Sessions](/docs/setup/sessions)
-- **Contexts**
-	- [Avatars](/docs/setup/avatars)
-	- [Cards](/docs/setup/cards)
-	- [Custom Fields](/docs/setup/custom-fields)
-	- [Skills](/docs/setup/skills)
-	- [Snippets](/docs/setup/snippets)
-	
+- [Branding](/docs/setup/branding/)
+- [Cache](/docs/setup/cache/)
+- [Import Package](/docs/setup/import-package/)
+- [License](/docs/setup/license/)
+- [Localization](/docs/setup/localization/)
+- [Scheduler](/docs/setup/scheduler/)
+- [Search](/docs/setup/search/)
+- [Security](/docs/setup/security/)
+- [Sessions](/docs/setup/sessions/)
+
+## Records 
+
+- [Configure](/docs/setup/records-configure/)
+- [Avatars](/docs/setup/avatars/)
+- [Custom Fields](/docs/setup/custom-fields/)
+- [Skills](/docs/setup/skills/)
+- [Snippets](/docs/setup/snippets/)
+
+## Team
+
+- [Roles](/docs/setup/team-roles/)
+- [Groups](/docs/setup/team-groups/)
+- [Workers](/docs/setup/team-workers/)
+
 ## Mail
 
-- **Incoming Mail**
-	- [Settings](/docs/setup/mail-settings)
-	- [Mailboxes](/docs/setup/mailboxes)
-	- [Routing](/docs/setup/mail-routing)
-	- [Filtering](/docs/setup/mail-filtering)
-	- [Import Message](/docs/setup/mail-import)
-	- [Failed Messages](/docs/setup/mail-failed)
-	- [External Relay](/docs/setup/mail-relay)
-- **Outgoing Mail**
-	- [Email Transports](/docs/setup/mail-transports)
-	- [Sender Addresses](/docs/setup/sender-addresses)
-	- [Settings](/docs/setup/mail-outgoing)
-	- [Automated Email Templates](/docs/setup/mail-templates)
-	- [Queue](/docs/setup/mail-queue)
+### Incoming Mail
 
-## Storage
+- [Settings](/docs/setup/mail-settings/)
+- [Mailboxes](/docs/setup/mailboxes/)
+- [Routing](/docs/setup/mail-routing/)
+- [Filtering](/docs/setup/mail-filtering/)
+- [Import Message](/docs/setup/mail-import/)
+- [Failed Messages](/docs/setup/mail-failed/)
+- [External Relay](/docs/setup/mail-relay/)
 
-- [Overview](/docs/setup/storage-overview)
-- [Profiles](/docs/setup/storage-profiles)
-- [Objects](/docs/setup/storage-objects)
+### Outgoing Mail
 
-## Bots
-
-- [Scheduled Behavior](/docs/setup/scheduled-behavior)
+- [Email Transports](/docs/setup/mail-transports/)
+- [Sender Addresses](/docs/setup/sender-addresses/)
+- [Settings](/docs/setup/mail-outgoing/)
+- [Automated Email Templates](/docs/setup/mail-templates/)
+- [Queue](/docs/setup/mail-queue/)
 
 ## Services
 
-- [Connected Accounts](/docs/setup/connected-accounts)
+- [Connected Accounts](/docs/setup/connected-accounts/)
 
-## Portals
+## Storage
 
-- [Search](/docs/setup/portals)
+- [Overview](/docs/setup/storage-overview/)
+- [Profiles](/docs/setup/storage-profiles/)
+- [Objects](/docs/setup/storage-objects/)
 
 ## Plugins
 
-- [Installed Plugins](/docs/setup/plugins)
-- [Plugin Library](/docs/setup/plugin-library)
+- [Installed Plugins](/docs/setup/plugins/)
+- [Plugin Library](/docs/setup/plugin-library/)

@@ -1,15 +1,20 @@
 ---
-title: Cards
-permalink: /docs/setup/cards/
+title: Records
+permalink: /docs/setup/records-configure/
 jumbotron:
-  title: Cards
+  title: Records
   breadcrumbs:
   - 
     label: Setup
     url: /docs/setup/
 ---
 
-Navigate to **Setup** >> **Configure** >> **Cards**
+Navigate to **Setup** >> **Records** >> **Configure**
+
+{% comment %}
+* This screenshot is out of date.
+* This content is out of date.
+{% endcomment %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/setup/cards.png" class="screenshot">
@@ -20,3 +25,4 @@ Navigate to **Setup** >> **Configure** >> **Cards**
 In this section you can configure the [fields](/docs/records/#fields) that are displayed on a card for each record type. This is particularly useful when using [custom fields](/docs/records/#custom-fields).
 
 {% include setup_toc.html %}
+
