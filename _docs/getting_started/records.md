@@ -13,12 +13,9 @@ At the core of Cerb is a data management system for organizing collections of **
 
 ## Fields
 
-Each record contains a set of **fields** to describe its attributes. 
-Additionally, a field in a record can be the _ID_ of another context. A 
-contact can have an email address _field_ that is linked to the record
-of email address.
-Some fields are _built-in_, like the name and email address of a contact, 
-or the subject and body of an email message. These fields can't be changed.
+Each record contains a set of **fields** to describe its attributes. Additionally, a field in a record can be the _ID_ of another context. A contact can have an email address _field_ that is linked to the record of email address.
+
+Some fields are _built-in_, like the name and email address of a contact, or the subject and body of an email message. These fields can't be changed.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/using-cerb/records/records.png" class="screenshot">
