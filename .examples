@@ -1,0 +1,94 @@
+# Heading
+
+## Formatting
+
+**Bold**
+
+_Italics_
+
+`$variable`
+
+~~~
+1 2 3
+ 4 5
+~~~
+
+## Paragraphs
+
+These are all going to be 
+one the same line
+
+These two paragraphs will be...
+
+...completely separate because they have spaces between them
+
+## Links
+
+[this is a link to the docs index](/docs/home/)
+
+## Ordered list
+
+1. One
+2. Two
+3. Three
+
+## Unordered list
+
+* Red
+* Green
+* Blue
+
+## Code syntax highlighting
+
+### Bash
+
+<pre>
+<code class="language-bash">
+sudo apt-get update
+</code>
+</pre>
+
+### JSON
+
+<pre>
+<code class="language-json">
+{
+  "package": {
+    "name": "Customer Satisfaction Workflow",
+    "cerb_version": "9.0.0",
+    "revision": 1,
+    "requires": {
+      "cerb_version": "9.0.0",
+      "plugins": [
+        "cerb.bots.portal.widget"
+      ]
+    }
+  }
+}
+</code>
+</pre>
+
+### PHP
+
+<pre>
+<code class="language-php">
+class DevblocksSearchFieldContextKeys {
+	public $where_key = null;
+	public $field_key = null;
+	public $dict_key = null;
+	
+	function __construct($where_key, $field_key=null, $dict_key=null) {
+		$this->where_key = $where_key;
+		$this->field_key = $field_key;
+		$this->dict_key = $dict_key;
+	}
+};
+</code>
+</pre>
+
+## Screenshots
+
+<div class="cerb-screenshot">
+<img src="/assets/images/releases/9.0/profile-new-tab.png" class="screenshot">
+</div>
+
