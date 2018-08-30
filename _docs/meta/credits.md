@@ -72,7 +72,7 @@ jumbotron:
 
 # Developers
 
-- [Jeff Standen](http://www.linkedin.com/in/jeffstanden) is the founding partner at Webgroup Media LLC. He has been Cerb's software architect and lead programmer from the first line of code in January 2002[^bdfl]. He brings more than 23 years of software development experience to the project.
+- [Jeff Standen](http://www.linkedin.com/in/jeffstanden) is the founding partner at Webgroup Media LLC. He has been Cerb's software architect and lead programmer from the first line of code in January 2002[^bdfl]. He brings more than 24 years of software development experience to the project.
 
 - [Dan Hildebrandt](http://www.linkedin.com/in/danielhildebrandt) is a partner at Webgroup Media LLC and an active Cerb developer since 2005.
 
