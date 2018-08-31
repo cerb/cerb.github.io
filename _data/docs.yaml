@@ -6,8 +6,6 @@
 - title: Concepts
   docs:
   - welcome
-  - logging-in
-  - navigation
   - workers
   - groups
   - roles
@@ -31,6 +29,16 @@
   - plugins
 #  - mobile
 
+- title: UI Reference
+  docs:
+  - logging-in
+  - navigation
+
+- title: Developers
+  docs:
+  - api
+  - building-bots
+
 - title: Administration
   docs:
   - installation
@@ -41,11 +49,6 @@
   - backups
   - upgrading
 #  - scaling
-
-- title: Developers
-  docs:
-  - api
-  - building-bots
 
 - title: Meta
   docs:
