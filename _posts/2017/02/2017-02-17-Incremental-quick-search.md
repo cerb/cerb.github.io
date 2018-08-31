@@ -8,7 +8,7 @@ permalink: /tips/incremental-quick-search/
 tags: cerb tips mailbag
 ---
 
-You've probably noticed that when you quick search a [worklist](/docs/workspaces/#worklists) it replaces the existing filters using the new query.  This is efficient and convenient when you want to change all of the filters at once.  Sometimes, however, you just want to add a few more filters and keep the existing ones.
+You've probably noticed that when you quick search a [worklist](/docs/worklists/) it replaces the existing filters using the new query.  This is efficient and convenient when you want to change all of the filters at once.  Sometimes, however, you just want to add a few more filters and keep the existing ones.
 
 To add new filters to a previously filtered worklist, start your quick search with `+`.
 

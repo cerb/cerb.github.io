@@ -8,7 +8,7 @@ permalink: /tips/quickly-close-popups/
 tags: cerb tips mailbag
 ---
 
-Cerb allows you to get a lot done from a single page using popups. For instance, when viewing a [ticket](/docs/tickets/) [worklist](/docs/workspaces/#worklists) you can open [cards](/docs/records/#cards) for each row to quickly review them:
+Cerb allows you to get a lot done from a single page using popups. For instance, when viewing a [ticket](/docs/tickets/) [worklist](/docs/worklists/) you can open [cards](/docs/cards/) for each row to quickly review them:
 
 <div class="cerb-screenshot">
 <img src="/assets/images/tips/quickly-close-popups/popup.png" class="screenshot">

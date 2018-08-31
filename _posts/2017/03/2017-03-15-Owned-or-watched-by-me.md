@@ -8,7 +8,7 @@ permalink: /tips/owned-or-watched-by-me/
 tags: cerb tips mailbag
 ---
 
-In [earlier versions](/docs/history/) of Cerb you had to create two [worklists](/docs/workspaces/#worklists) to display your watched [tickets](/docs/tickets/) and your assignments.
+In [earlier versions](/docs/history/) of Cerb you had to create two [worklists](/docs/worklists/) to display your watched [tickets](/docs/tickets/) and your assignments.
 
 Now you can display both on a single worklist with a simple quick search:
 

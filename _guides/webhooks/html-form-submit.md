@@ -57,7 +57,7 @@ Enter the following details:
 <img src="/assets/images/guides/webhooks/html-form-submit/create-va.png" class="screenshot">
 </div>
 
-Click the **Save Changes** button.  Then click your the name of your new bot in the yellow notification bubble above the worklist to open its [card](/docs/records/#cards).
+Click the **Save Changes** button.  Then click your the name of your new bot in the yellow notification bubble above the worklist to open its [card](/docs/cards/).
 
 On the popup, click the **Behaviors** button:
 

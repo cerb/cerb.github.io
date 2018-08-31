@@ -40,7 +40,7 @@ Navigate to **Search >> Bots**.
 
 Select an existing group-owned bot or create a new one.  The bot should be able to create behaviors on the **Conversation moved in group** event.
 
-Open the bot's [card](/docs/records/#cards) from the [worklist](/docs/workspaces/#worklists).
+Open the bot's [card](/docs/cards/) from the [worklist](/docs/worklists/).
 
 Click **Behaviors** on the bot's card:
 
@@ -242,7 +242,7 @@ Click the **Save Changes** button.
 
 # Understanding how the behavior works
 
-Click on the behavior name in the yellow notification above the [worklist](/docs/workspaces/#worklists).  You should see:
+Click on the behavior name in the yellow notification above the [worklist](/docs/worklists/).  You should see:
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/bots/dispatch-assignments/behavior.png" class="screenshot">

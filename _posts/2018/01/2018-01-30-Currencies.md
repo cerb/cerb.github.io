@@ -36,7 +36,7 @@ When you install or update Cerb, we create the following default currencies:
 * Euros
 * Bitcoin
 
-To add a new currency, you can navigate to **Search >> Currencies** and click the **(+)** icon above the [worklist](/docs/workspaces/#worklists).
+To add a new currency, you can navigate to **Search >> Currencies** and click the **(+)** icon above the [worklist](/docs/worklists/).
 
 You can configure a default currency so workers don't have to select their preferred currency every time they create a new record.
 

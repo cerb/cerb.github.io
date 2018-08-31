@@ -48,7 +48,7 @@ With conversational computing, you could simply say (or type):
 
 `find open tickets from Ghoux Games since last Monday`
 
-Your chat bot says, _"Here's what I found"_, and a [worklist](/docs/workspaces/#worklists) instantly popups up with exactly what you're looking for. 
+Your chat bot says, _"Here's what I found"_, and a [worklist](/docs/worklists/) instantly popups up with exactly what you're looking for. 
 
 A few years ago that would have still been in the realm of science fiction.  Today you probably already converse with virtual personal assistants[^ipa] like Alexa, Siri, Cortana, or Google Assistant.
 

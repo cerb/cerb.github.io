@@ -24,7 +24,7 @@ jumbotron:
 
 # Introduction
 
-By default, dates in [worklists](/docs/workspaces/#worklists) throughout Cerb are shown in a _relative_ format.  This means that you see something like `5 mins ago` (relative to the current time) instead of an _absolute_ date like `{{ site.time | date: '%A, %B %d %Y %l:%M%P %Z'}}`.
+By default, dates in [worklists](/docs/worklists/) throughout Cerb are shown in a _relative_ format.  This means that you see something like `5 mins ago` (relative to the current time) instead of an _absolute_ date like `{{ site.time | date: '%A, %B %d %Y %l:%M%P %Z'}}`.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/bots/worklist-dates/dates_pretty.png" class="screenshot">

@@ -12,7 +12,7 @@ As an administrator, you can deactivate worker accounts by clicking on **Workers
 
 A deactivated worker may still be assigned to historical records.  You can use the new [deep quick search](/docs/workspaces#deep-searching) feature in Cerb 7.3 to find records owned by worker accounts that are deactivated.
 
-For instance, you can search a [ticket](/docs/tickets/) [worklist](/docs/workspaces/#worklists) with this query:
+For instance, you can search a [ticket](/docs/tickets/) [worklist](/docs/worklists/) with this query:
 
 <pre>
 <code class="language-text">

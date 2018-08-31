@@ -42,9 +42,7 @@ Navigate to **Search >> Bots**.
 
 Select an existing bot or create a new one.  The bot should be able to create behaviors on the **Custom bot behavior** event.
 
-Open the bot's [card](/docs/records/#cards) from the [worklist](/docs/workspaces/#worklists).
-
-Click **Behaviors** on the bot's card.
+Open the bot's [card](/docs/cards/) from the **behaviors** [worklist](/docs/worklists/) on the bot's card.
 
 Click on the **(+)** icon above the behaviors worklist to add a new behavior.
 

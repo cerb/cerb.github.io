@@ -47,7 +47,7 @@ In this guide, we'll quickly build the above classifier so that you can use it i
 
 Let's start by creating a new classifier.
 
-Open a classifiers [worklist](/docs/workspaces/#worklists) from **Search** &raquo; **Classifiers**.
+Open a classifiers [worklist](/docs/worklists/) from **Search** &raquo; **Classifiers**.
 
 Click the **(+)** icon above the the worklist.
 
@@ -67,7 +67,7 @@ Click the **Save Changes** button.
 
 Classifiers are trained with as many human-verified, real-world examples as you can provide.  In the interest of time, we'll use the bulk import feature to add some training data.  You can add additional training examples at any time.
 
-Open the [card](/docs/records/#cards) for the newly created **Yes/No** classifier.  As a shortcut, you can click its name in the yellow notification that appeared above the worklist when you added the record.
+Open the [card](/docs/cards/) for the newly created **Yes/No** classifier.  As a shortcut, you can click its name in the yellow notification that appeared above the worklist when you added the record.
 
 Once the popup opens, click the **Import** button at the top.
 

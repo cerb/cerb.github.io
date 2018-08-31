@@ -198,7 +198,7 @@ If everything was configured properly, you'll see the new connected account in y
 
 By default, new connected accounts are owned by you.  When something is owned by a worker it's private and only they can see it.  We want Polly Bot to be usable by everyone, so we need to transfer ownership of the new connected account to Cerb.
 
-Open the [card](/docs/records/#cards) for your new connected account.
+Open the [card](/docs/cards/) for your new connected account.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/aws/common/cerb-connected-account-card.png" class="screenshot">
@@ -247,7 +247,7 @@ Click the **Save Changes** button.
 
 We've already built the behavior for you, and you can use Cerb's import feature to quickly create it.
 
-Open the [card](/docs/records/#cards) for your new bot.  You can just click its name in the yellow notification above the worklist.
+Open the [card](/docs/cards/) for your new bot.  You can just click its name in the yellow notification above the worklist.
 
 Click the **Behaviors** button on the card.
 
@@ -343,7 +343,7 @@ Cerb will prompt you to link your **AWS Account:** before creating the behavior.
 
 Click the **Save Changes** button.
 
-You'll see a new behavior named **Get presigned speech URL** was created for you in the _Behavior Search_ [worklist](/docs/workspaces/#worklists) on the search popup.
+You'll see a new behavior named **Get presigned speech URL** was created for you in the _Behavior Search_ [worklist](/docs/worklists/) on the search popup.
 
 ## Learn how the behavior works
 

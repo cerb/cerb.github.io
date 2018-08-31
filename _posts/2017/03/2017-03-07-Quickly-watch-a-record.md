@@ -8,7 +8,7 @@ permalink: /tips/quickly-watch-records-from-worklists/
 tags: cerb tips mailbag
 ---
 
-Most [worklists](/docs/workspaces/#worklists) have a column of [watcher](/docs/records/#watchers) buttons where you can subscribe to a record and receive [notifications](/docs/notifications/) of new activity:
+Most [worklists](/docs/worklists/) have a column of [watcher](/docs/records/#watchers) buttons where you can subscribe to a record and receive [notifications](/docs/notifications/) of new activity:
 
 <div class="cerb-screenshot">
 <img src="/assets/images/tips/quickly-watch-records/watchers.png" class="screenshot">

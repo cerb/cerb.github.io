@@ -61,7 +61,7 @@ Enter the following details:
 
 Click the **Save Changes** button.
 
-Click on the name of your new bot in the yellow notification bubble that appears above the worklist to open its [card](/docs/records/#cards).
+Click on the name of your new bot in the yellow notification bubble that appears above the worklist to open its [card](/docs/cards/).
 
 On the card popup, click the **Behaviors** button:
 

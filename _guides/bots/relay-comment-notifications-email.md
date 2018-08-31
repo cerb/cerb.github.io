@@ -38,7 +38,7 @@ Navigate to **Search >> Bots**.
 
 Select an existing worker-owned bot or create a new one.  The bot should be able to create behaviors on the **New notification for me** event.
 
-Open the bot's [card](/docs/records/#cards) from the [worklist](/docs/workspaces/#worklists).
+Open the bot's [card](/docs/cards/) from the [worklist](/docs/worklists/).
 
 Click **Behaviors** on the bot's card.
 

@@ -192,7 +192,7 @@ Click the **Save Changes** button.
 
 # Understanding how the behavior works
 
-If you open the new behavior's [card](/docs/records/#cards), you'll see the following decision tree:
+If you open the new behavior's [card](/docs/cards/), you'll see the following decision tree:
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/bots/auto-replies/autoreply-behavior.png" class="screenshot">

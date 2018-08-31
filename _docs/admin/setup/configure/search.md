@@ -15,7 +15,7 @@ Navigate to **Setup** >> **Configure** >> **Search**
 <img src="/assets/images/docs/setup/search.png" class="screenshot">
 </div>
 
-Many [worklists](/docs/workspaces/#worklists) provide a full-text[^fts] search [filter](/docs/workspaces/#filters) to match [record](/docs/records/) content based on terms and phrases.
+Many [worklists](/docs/worklists/) provide a full-text[^fts] search [filter](/docs/workspaces/#filters) to match [record](/docs/records/) content based on terms and phrases.
 
 For instance, you may need to search your email history for the phrase: `"facebook ads" receipt`.
 
