@@ -20,7 +20,6 @@
 #  - tasks
 #  - calendars
   - bots
-  - data-queries
   - classifiers
   - connected-accounts
   - portals
@@ -37,6 +36,7 @@
 - title: Developers
   docs:
   - api
+  - data-queries
   - building-bots
 
 - title: Administration
