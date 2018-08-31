@@ -7,26 +7,36 @@
   docs:
   - welcome
   - workers
-  - groups
   - roles
+  - groups
+  - buckets
+  - responsibilities
   - contacts
   - orgs
   - records
+  - custom-fields
+  - profiles
+  - cards
+  - worklists
+  - activity-log
   - notifications
-  - reminders
+  - watchers
+  - comments
+  - links
   - workspaces
   - dashboards
+  - reminders
   - tickets
-#  - tasks
-#  - calendars
+  - snippets
   - bots
+  #- calendars
+  #- project-boards
   - classifiers
   - connected-accounts
   - portals
   - webhooks
   - packages
   - plugins
-#  - mobile
 
 - title: UI Reference
   docs:
@@ -48,7 +58,7 @@
   - security
   - backups
   - upgrading
-#  - scaling
+  #- scaling
 
 - title: Meta
   docs:

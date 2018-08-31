@@ -6,10 +6,9 @@ jumbotron:
   tagline: Let's get you up to speed.
 ---
 
-Even after more than 16 years, **Cerb** is still vibrantly active and [constantly evolving](/docs/history/) based on community feedback. Thousands of teams use Cerb to share inboxes, boost collaboration, and automate workflows.
+This section will give you a high-level overview of [Cerb's](/docs/home/#what-is-cerb) most important concepts.
 
-The next several pages will give you an overview of Cerb's most interesting features.
-
-You don't need to have a copy of Cerb to follow along, but it wouldn't hurt to [sign up for a free Cerb Cloud trial](/pricing/) or [install Cerb on your server](/docs/installation/) first.
+Cerb is **fully customizable** set of tools that have been crafted and honed for more than 16 years. You can use these building blocks to design new functionality and efficiently meet your own particular business challenges.
 
 Let's get started.
+

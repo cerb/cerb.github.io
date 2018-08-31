@@ -6,94 +6,56 @@ jumbotron:
   tagline: Remember anything about everything
 ---
 
-At the core of Cerb is a data management system for organizing collections of **records**.  A record is a distinctly identifiable entity: email address, contact, email message, task, etc.  The different types of records are called **contexts**.  Each record within a context is assigned a unique numeric identifier (**ID**).
+At the core of Cerb is a data management system for organizing business data into collections of **records**.
 
-* TOC
-{:toc}
+There are two pieces of information that are needed to distinctly identify any record:
 
-## Fields
+1. A **type** (e.g. contact, organization, reminder, task, worker).
 
-Each record contains a set of **fields** to describe its attributes. Additionally, a field in a record can be the _ID_ of another context. A contact can have an email address _field_ that is linked to the record of email address.
+1. The numeric **ID** that is unique within that particular type. These are automatically assigned when a new record is created.
 
-Some fields are _built-in_, like the name and email address of a contact, or the subject and body of an email message. These fields can't be changed.
+Each record type has a set of **fields** to describe the attributes of its records.
 
-<div class="cerb-screenshot">
-<img src="/assets/images/docs/using-cerb/records/records.png" class="screenshot">
-</div>
-## Custom Fields
+Fields also have types: text, number, date, picklist, yes/no, file, record link, etc.
 
-New **custom fields** can also be added to records based on the needs of a particular organization.
+The standard record types include a few _built-in_ fields that are required by Cerb and can't be changed.
 
-You can add many kinds of custom fields:
+Most record types have a human-friendly _name_ and keep track of the _timestamps_ when they were created or last updated.
 
-- Checkbox
-- Currency
-- Date
-- Decimal
-- File
-- Files: Multiple
-- List
-- Multiple Checkboxes
-- Number
-- Picklist
-- Record Link
-- Text: Multiple Lines
-- Text: Single Line
-- URL
-- Worker
+Some record types have a _status_ (e.g. open, waiting, closed), or an _owner_ who is responsible for them.
 
-## Fieldsets
+Consider a basic _worker_ record:
 
-Related custom fields can be grouped together into a **fieldset**. Fieldsets can also be used to classify a record.  For instance, when using the [asset tracking plugin](/docs/plugins/cerberusweb.assets/), you can add fieldsets for _Automobile_ and _Computer_ with appropriate fields and then filter worklists by those types.
+|---
+| Field | Type | Value
+|-|-|-
+| ID | number | `1`
+| First name | text | `Kina`
+| Last name | text | `Halpue`
+| Job title | text | `Support Manager`
+| Email address | record | `kina@cerb.example`
+| Mobile number | phone | `+1-555-123-4567`
+| Location | text | `Los Angeles, California, USA`
+| Gender | text | `female`
+| Created at | date | `2002-01-09 04:27:01 UTC`
+| Updated at | date | `2018-08-30 10:32:00 UTC`
 
-## Custom Records
+And compare that to a basic _task_ record:
 
-You can also create [custom records](/guides/records/custom-records/) for your own data.
+|---
+| Field | Type | Value
+|-|-|-
+| ID | number | `1`
+| Name | text | `Master Cerb's concepts`
+| Owner | record | `you`
+| Created at | date | `2018-08-30 13:15:00 UTC`
+| Updated at | date | `2018-08-30 13:15:00 UTC`
+| Due at | date | `2018-09-30 23:59:59 UTC`
 
-## Cards
+You can add [custom fields](/docs/custom-fields/) to any record type for storing your own attributes. Perhaps you have different service level agreement obligations for each client, employee numbers for workers, etc.
 
-A **card** summarizes a particular record in a popup window. This allows information to be retrieved and displayed quickly from anywhere in Cerb without leaving the current page.
+You can even [create your own record types](/guides/records/custom-records/) for storing any kind of data:
 
-<div class="cerb-screenshot">
-<img src="/assets/images/docs/using-cerb/records/card.png" class="screenshot">
-</div>
+* You could create records for your products, services, licenses, and subscriptions; and link clients to them. During support, everyone on your team would know exactly what your relationship is with each contact.
 
-Cards also provide shortcuts to common functionality for a given record.  For example, when viewing the card of a contact you'll see their ticket history broken down by status: all, open, waiting, and closed.  When viewing the card of a ticket, you can also open the cards of any participant or message on that ticket.  You can read the entire conversation on a ticket without leaving its card.
-
-If you have permission to modify a record, you'll see an _Edit_ button at the top of its card.
-
-## Profiles
-
-The full page view of a particular record is called its **profile**.  This expands on the information summarized by a card.
-
-## Links
-
-The relationships between records is described by **links**.  For instance, if a task is associated with a particular client organization, those records can be linked together.
-
-When records are linked, they'll be displayed on each other's cards and profiles for quick traversal.
-
-## Comments
-
-**Comments** can be added to records as a form of note-taking.  For instance, as progress is made on a task it can be documented with comments.  This allows workers to quickly share information.  Workers can also be addressed with an @mention to send them a notification about the comment.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/docs/using-cerb/records/comments.png" class="screenshot">
-</div>
-
-Comments on a record are visible from its card and profile.
-
-## Watchers
-
-A **watcher** is a worker who wants to receive a notification about all new activity on a specific record. For example, a supervisor may be a watcher on all new tickets in a specific group to monitor the quality of the messages being sent to customers.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/docs/using-cerb/records/watchers.png" class="screenshot">
-</div>
-
-## Activity Log
-
-The **activity log** records a history of events that have affected a record.  For instance, when a task is closed, or a customer responds to an email, these activities are logged.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/docs/using-cerb/records/log.png" class="screenshot">
-</div>
+* An educational institution could create records for students, instructors, courses, and rooms; and link those to assets (like tablets and projectors) and support requests. If an instructor opened a support request about their projector being broken, you'd know exactly what model it is and where to find it on campus.

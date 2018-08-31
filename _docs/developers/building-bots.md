@@ -17,9 +17,13 @@ jumbotron:
 * nodes: decision, outcome, action, loop, subroutine
 * events
 * bot configuration JSON (global settings)
+* conversation bots
+	* prompts: types, formats, validation
 /guides/integrations/aws/lambda/
+# Interactions
 {% endcomment %}
 
 # Scripting
 
 See: [Bot Scripting](/docs/building-bots/scripting/)
+
