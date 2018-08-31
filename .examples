@@ -38,6 +38,20 @@ These two paragraphs will be...
 * Green
 * Blue
 
+## Blurbs
+
+### Note
+
+<div class="cerb-box note">
+<p>This is a note.</p>
+</div>
+
+### Warning
+
+<div class="cerb-box warning">
+<p>This is a dire warning.</p>
+</div>
+
 ## Code syntax highlighting
 
 ### Bash
