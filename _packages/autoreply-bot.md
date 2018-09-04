@@ -597,7 +597,9 @@ Click the **Behaviors** button.
 
 Click on **Automatically respond to new conversations**.
 
-Click on the **Send auto-reply message** node and select **Edit** from the menu.
+Click on the **Send auto-reply message** node at the bottom of the **Behavior Tree** widget. 
+
+Select **Edit** from the menu.
 
 Modify the **Content:** to suit your needs.
 
