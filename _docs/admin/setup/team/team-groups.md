@@ -11,7 +11,7 @@ jumbotron:
 
 Navigate to **Setup** >> **Team** >> **Groups**
 
-
+You can configure [groups](/docs/groups/) here.
 
 {% include setup_toc.html %}
 

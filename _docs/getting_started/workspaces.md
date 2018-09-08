@@ -10,5 +10,10 @@ A **workspace** is a page designed to optimize a particular workflow.  Workspace
 
 You can add any number of workspace pages to your [navigation bar](/docs/navigation/#pages) and personalize Cerb into your own mission control.
 
-Workspaces use **tabs** to organize their content into sections; much like dividers are used to partition pages in a large binder. There are many kinds of tabs, but the two most common are [worklists](/docs/worklists/) and [dashboards](/docs/dashboards/).
+Workspaces use **tabs** to organize their content into sections; much like dividers are used to partition pages in a large binder
 
+The two most common types of tabs on workspaces are [worklists](/docs/worklists/) and [dashboards](/docs/dashboards/).
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/using-cerb/workspaces/workspace-home.png" class="screenshot">
+</div>

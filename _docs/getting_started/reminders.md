@@ -14,7 +14,7 @@ A reminder can be [linked](/docs/links/) to any number of [records](/docs/record
 When a reminder is triggered, it may run any number of [bot](/docs/bots/) behaviors. These are typically different methods for contacting a worker depending on the urgency of the reminder (e.g. notification, email, mobile text message, Slack, etc).
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/getting-started/reminder.png" class="screenshot">
+<img src="/assets/images/docs/using-cerb/reminders/reminder.png" class="screenshot">
 </div>
 
 ## Related resources
