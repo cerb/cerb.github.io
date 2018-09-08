@@ -659,7 +659,16 @@ You should quote it.
 
 ## regexp
 
-You can use regular expressions[^regexp] with the **regexp** filter to match or extract patterns in text:
+You can use regular expressions[^regexp] with the **regexp** filter to match or extract patterns.
+
+`|regexp(pattern,group)`
+
+* `pattern`
+	The regular expression pattern to match.
+* `group`:
+	The matching group `()` from the pattern to extract as a string.
+
+Example:
 
 <pre>
 <code class="language-twig">
@@ -673,6 +682,24 @@ Amazon Order #: {{order_id}}
 
 ```
 Amazon Order #: Z-1234-5678-9
+```
+
+If you need to escape characters in your regexp pattern, you should use a [set](/docs/building-bots/scripting/commands/#set) block rather than a string:
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set pattern %}
+#\[.*?\] (.*)#
+{% endset %}
+{% set bracketed_text = "[ABC-123-45678] Order Processing - 7 Days" %}
+{{bracketed_text|regexp(pattern, 1)}}
+{% endraw %}
+</code>
+</pre>
+
+```
+Order Processing - 7 Days
 ```
 
 ## replace
