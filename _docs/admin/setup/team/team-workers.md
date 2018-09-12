@@ -11,7 +11,7 @@ jumbotron:
 
 Navigate to **Setup** >> **Team** >> **Workers**
 
-
+You can configure [workers](/docs/workers/) here.
 
 {% include setup_toc.html %}
 

@@ -11,7 +11,7 @@ jumbotron:
 
 Navigate to **Setup** >> **Team** >> **Roles**
 
-
+You can configure [roles](/docs/roles/) here.
 
 {% include setup_toc.html %}
 
