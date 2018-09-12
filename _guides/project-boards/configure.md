@@ -351,7 +351,7 @@ Replace the content of the template editor with the following template:
 
 {% else %}
 
-{% if date(due) < date() and due is not empty%}
+{% if date(due) < date() and due > 0%}
 
 &lt;div style="font-size:120%;"&gt;
     &lt;span class="glyphicons glyphicons-clock" style="color:rgb(150,0,0);"&gt;&lt;/span&gt; Overdue
@@ -359,19 +359,19 @@ Replace the content of the template editor with the following template:
 
 {% endif %}
 
-&lt;div style="font-size:100%;""&gt;
+&lt;div style="font-size:100%;"&gt;
 Status: {{status}}
-&lt;/div"&gt;
-&lt;div style="font-size:100%;""&gt;
+&lt;/div&gt;
+&lt;div style="font-size:100%;"&gt;
     Updated: {{updated|date_pretty}}
-&lt;/div"&gt;
-&lt;div style="font-size:100%;""&gt;
+&lt;/div&gt;
+&lt;div style="font-size:100%;"&gt;
     Importance: {{importance}}
-&lt;/div"&gt;
+&lt;/div&gt;
 {% if owner_id != "" %}
-&lt;div style="font-size:100%;""&gt;
+&lt;div style="font-size:100%;"&gt;
     Owner: {{owner__label}}
-&lt;/div"&gt;
+&lt;/div&gt;
 {% endif %}
 {% endif %}
 
