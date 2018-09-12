@@ -305,7 +305,7 @@ Not every task is completed on time; what if we want to add a visual cue when a 
     
     {% else %}
     
-    {% if date(due) < date() %}
+    {% if date(due) < date() and due is not empty%}
     
     &lt;div style="font-size:120%;"&gt;
 		&lt;span class="glyphicons glyphicons-clock" style="color:rgb(150,0,0);"&gt;&lt;/span&gt; Overdue
@@ -351,7 +351,7 @@ Replace the content of the template editor with the following template:
 
 {% else %}
 
-{% if date(due) < date() %}
+{% if date(due) < date() and due is not empty%}
 
 &lt;div style="font-size:120%;"&gt;
     &lt;span class="glyphicons glyphicons-clock" style="color:rgb(150,0,0);"&gt;&lt;/span&gt; Overdue
