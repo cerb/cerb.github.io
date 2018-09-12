@@ -256,11 +256,13 @@ However, you also have complete control to change how each card is displayed.
 
 To demonstrate this, let's make the cards for closed tasks more obvious.  We don't need to see all those fields once something is completed.
 
-1. Click the gear button (⚙️) at the top of the project board's profile page.
+1. Navigate to the project board's profile page from **Search >> Project Boards**.
+1. Select the desired project board you wish to work on.
+1. Click the gear button (⚙️ Edit) at the top of the project board's profile page.
 1. Scroll down to **Task** and click into the **Card custom template** text box.
 1. Paste the following template:
 	<pre>
-	<code class="language-twig">
+	<code class="language-javascript line-numbers">
 	{% raw %}
 	{% if is_completed %}
 
@@ -285,11 +287,111 @@ The project board will automatically refresh.  The cards in the completed column
 <p>You may have noticed that we didn't provide an alternate template for cards that aren't completed.  If our custom template is blank, Cerb uses its own default template.</p>
 </div>
 
+### Using conditional logic with tasks
+
+Not every task is completed on time; what if we want to add a visual cue when a task is  past due?
+
+1. Click the gear button (⚙️ Edit) on the same project board profile from above.
+1. Scroll down to **Task** and click into the **Card custom template** text box.
+1. Replace the content of the template editor with the following template:
+	<pre>
+	<code class="language-javascript line-numbers">
+	{% raw %}
+    {% if is_completed %}
+
+	&lt;div style="font-size:120%;"&gt;
+		&lt;span class="glyphicons glyphicons-circle-ok" style="color:rgb(0,150,0);"&gt;&lt;/span&gt; Completed!
+	&lt;/div&gt;
+    
+    {% else %}
+    
+    {% if date(due) < date() %}
+    
+    &lt;div style="font-size:120%;"&gt;
+		&lt;span class="glyphicons glyphicons-clock" style="color:rgb(150,0,0);"&gt;&lt;/span&gt; Overdue
+	&lt;/div&gt;
+    
+    {% endif %}
+    {% endif %}
+	{% endraw %}
+	</code>
+	</pre>
+
+{% comment%}<div class="cerb-box note">
+<p>If you are modifying the same task from earlier, you will need to either completely replace what was pasted into the template editor or insert the "elseif" block between the original "if" statement and the "endif" statement.</p>
+</div>{% endcomment%}
+
+Now we have two different visual cues. Overdue will only be active if the task is not already complete **and** the task was already due. We changed the icon color to red to make the cue seem less pleasant and changed the icon to a clock due to the nature of the cue.
+
+Let's break down how to manually modify each of the sections of code we just blindly copy and pasted into the template editor from earlier:
+
+1. The beginning of each visual cue has some form of an "if" statement because we don't want every task to be modified. The "if" statement executes if the boolean within it calculates to `true`. 
+To that end, you can insert placeholders anywhere in the editor, including inside "if" statements. In the sample code above, we only marked tasks overdue if their {due} placeholder was before the current timestamp.
+
+1. After each "if" statement there is a body that executes the desired actions if we are in the correct state. All of these actions will override Cerb's default template. These changes can include removing the owner of a task if there is no owner, removing the reopened field when it has never been reopened to begin with, and more. We added a clock icon with red color using the `<div>` block while also increasing the font to 120% of the default font. The color is modified with traditional RGB coloring. 
+
+<div class="cerb-box note">
+<p>More of the actions available to you are <a href="https://cerb.ai/docs/building-bots/scripting/">here</a> on Twig's site.</p>
+</div>
+
+### Modifying baseline cards for tasks
+
+It's great that we have an obvious notification for overdue tasks, but it would also be helpful to see other fields when the task is still open. Let's add that information back. You could use this same process to customize the fields displayed on each card -- even showing different fields as a card moves through each column in the project board's workflow.
+
+Replace the content of the template editor with the following template:
+
+<pre>
+<code class="language-javascript line-numbers">
+{% raw %}
+{% if is_completed %}
+
+&lt;div style="font-size:120%;"&gt;
+    &lt;span class="glyphicons glyphicons-circle-ok" style="color:rgb(0,150,0);"&gt;&lt;/span&gt; Completed!
+&lt;/div&gt;
+
+{% else %}
+
+{% if date(due) < date() %}
+
+&lt;div style="font-size:120%;"&gt;
+    &lt;span class="glyphicons glyphicons-clock" style="color:rgb(150,0,0);"&gt;&lt;/span&gt; Overdue
+&lt;/div&gt;
+
+{% endif %}
+
+&lt;div style="font-size:100%;""&gt;
+Status: {{status}}
+&lt;/div"&gt;
+&lt;div style="font-size:100%;""&gt;
+    Updated: {{updated|date_pretty}}
+&lt;/div"&gt;
+&lt;div style="font-size:100%;""&gt;
+    Importance: {{importance}}
+&lt;/div"&gt;
+{% if owner_id != "" %}
+&lt;div style="font-size:100%;""&gt;
+    Owner: {{owner__label}}
+&lt;/div"&gt;
+{% endif %}
+{% endif %}
+
+{% endraw %}
+</code>
+</pre>
+
+Now we have all the information back from before. Using the `<div>` blocks, you can display the information needed for tasks in a specific dashboard. Using the double brackets, placeholders can be called inside of the `<div>` blocks to access information about the task.
+
+Notice how the `updated` placeholder has a filter applied to it. The output of the placeholder is in seconds, so we needed to use a filter to convert it into a format more human readable. 
+
+Lastly, we added a few quality of life improvements. Now all of our tasks will show all of our desired information for tasks open and waiting whether they are or are not overdue. Also, tasks without owners will not display a blank owner field like Cerb's default template.
+
 # Conclusion
 
-Now you can drag the **Add a new template for completed tasks** card to the right and drop it in the **Completed!** column.
+You can now create and populate a project board with customized cards and columns. 
 
-The bot behavior automatically closes the task, and the project board changes the card to the simple checkmark custom template.
+Columns can perform behaviors on cards such as marking a task complete or displaying a warning when a task is overdue.
+
+Cards are customizable in both the information they contain and the information they display. Everything from the font size to the color of an icon are easily edited.
 
 You can use the project board concepts you just learned to better organize and automate any kind of multi-step workflow.
 
