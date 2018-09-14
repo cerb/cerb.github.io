@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Pricing for Cerb site licenses
-excerpt: Deploy Cerb in the cloud or on your own hardware. Start a free trial.
+title: Pricing for self-hosted Cerb licenses
+excerpt: Deploy Cerb in the cloud or host it yourself. Start a free trial.
 permalink: /pricing/site/
 redirect_from:
   - /download/
 jumbotron: 
-  title: Pricing for Cerb site licenses
-  tagline: Deploy Cerb on your own hardware
+  title: Pricing for self-hosted Cerb licenses
+  tagline: Deploy a self-managed copy of Cerb installation on your own hardware
 keywords: pricing price cost download
 ---
 
@@ -143,6 +143,8 @@ position: relative;
 			</div>
 	</div>
 </div>
+
+{% include testimonials.html %}
 
 <br/>
 

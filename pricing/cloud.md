@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Pricing for Cerb Cloud subscriptions
-excerpt: Deploy Cerb in the cloud or on your own hardware. Start a free trial.
+excerpt: Deploy Cerb in the cloud or host it yourself. Start a free trial.
 permalink: /pricing/
 redirect_from:
   - /buy/
@@ -12,7 +12,7 @@ redirect_from:
   - /try/
 jumbotron: 
   title: Pricing for Cerb Cloud subscriptions
-  tagline: A fully managed Cerb environment in an ideal environment
+  tagline: Deploy a fully managed copy of Cerb in a fast, secure, and highly available environment
 keywords: pricing price cost subscription
 ---
 
@@ -56,7 +56,7 @@ vertical-align: bottom;
     background: -moz-linear-gradient(270deg, white, #c8c8c8);
     background: -o-linear-gradient(top, white, #c8c8c8);
     background: -ms-linear-gradient(top, white, #c8c8c8);
-    background: linear-gradient(top, white, #c8c8c8);"><a href="/pricing/site/" style="color:inherit;">Site License</a></h1>
+    background: linear-gradient(top, white, #c8c8c8);"><a href="/pricing/site/" style="color:inherit;">Self-hosted</a></h1>
     
 <div style="
 position: relative;
@@ -173,6 +173,8 @@ position: relative;
 <p>
 	<sup>1</sup> <i>Prices for Cerb Cloud reflect a 20% discount for annual billing. Monthly billing is available.</i>
 </p>
+
+{% include testimonials.html %}
 
 <br/>
 

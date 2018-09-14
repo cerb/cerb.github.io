@@ -14,6 +14,8 @@ jumbotron:
     url: /resources/
 ---
 
+{% include testimonials.html %}
+
 <div class="integrations" style="column-width:400px;">
 	{% assign packages = site.packages | sort: 'id' %}
 	

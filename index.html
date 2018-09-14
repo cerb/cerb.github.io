@@ -1,52 +1,62 @@
 ---
 layout: default
-title: An automatable collaborative inbox for your team
+title: Collaboration and workflow automation for teams
 excerpt: Cerb is your shared inbox for teamwork, digital record-keeper, and tireless helper who's eager to learn.
 jumbotron:
-  title: An automatable collaborative inbox for your team.
+  title: Collaboration and workflow automation for teams
   style: jumbotron-center
+testimonials:
+  featured: [ 0,1,2,4,6,8,25 ]
 ---
 
 <div class="grid feature">
-	<div class="unit one-third align-center">
-		<img src="/assets/images/home/cerby.png" data-cerb-bot-interaction="" style="cursor:pointer;">
-		<div>
-			Latest update:
+	<div class="unit one-third align-left" style="margin-top:10px;">
+		<div style="display:inline-block;vertical-align:top;margin-right:10px;">
+			<img src="/assets/images/home/cerby.png" data-cerb-bot-interaction="" style="cursor:pointer;height:80px;">
+		</div>
+		<div style="display:inline-block;text-align:left;">
+			<b>Latest update:</b>
 			<br>
 			<a href="/releases/9.0.4/" style="font-weight:bold;font-size:150%;">9.0.4</a>
 			<br>
 			September 7, 2018
 		</div>
 	</div>
-
-	<div class="unit two-thirds">
-		<p>
-			<ul id="cerb-convo-bubbles" class="cerb-convo-bubbles">
-				<li>
-					Starting in early 2002, <b>Cerb</b>'s first mission was to bring team email to the web so everyone could collaborate with a shared history from anywhere on any device.
-				</li>
-				
-				<li>
-					New messages were delivered to shared inboxes and routed to the best group or worker. Only the appropriate people were notified. Everyone knew what everyone else was working on. When someone became unavailable, any other team member could pick up right where they left off.
-				</li>
-				
-				<li>
-					Teams functioned more efficiently -- there was less junk email, less duplication of effort, and customers received faster replies.
-					Today, this web-based method of working is the new normal. Mission accomplished!
-				</li>
-				
-				<li>
-					Cerb's <b>new mission</b> is to build on this platform by embracing automation and giving teams the tools to build new features with nothing more than a web browser.
-				</li>
-				
-				<li class="cerb-hidden">
-					Cerb can also be quickly customized to meet your needs through the use of &quot;<a href="/docs/packages/">packages</a>&quot; -- shared blueprints for importing a set of pre-built records and bot behaviors.
-				</li>
-			</ul>
-		</p>
-		<p style="text-align:right;">
-			<a href="javascript:;" data-cerb-bot-interaction="signup" class="cerb-button" style="border-radius:20px 20px 0px 20px;">Start a free trial</a>
-		</p>
+	
+	<div id="cerb-testimonials" class="unit two-thirds" style="margin-top:10px;">
+		{% for testimonial_index in page.testimonials.featured %}
+		{% assign testimonial = site.data.testimonials[testimonial_index] %}
+		<table class="cerb-testimonial" width="100%" cellspacing="0" cellpadding="0" style="display:none;">
+			<tr>
+				<td style="font-size: 90%;padding-right: 10px; border-right: 1px solid rgb(200,200,200);">
+					<q>{{ testimonial.quote }}</q>
+					<div style="margin-left: 15px;">
+						<b>- {{ testimonial.author }}</b>
+					</div>
+				</td>
+				<td style="padding-left:10px;">
+					<span class="client-logo client-{{ testimonial.client }}"></span>
+				</td>
+			</tr>
+		</table>
+		{% endfor %}
+		
+		<noscript>
+			{% assign testimonial = site.data.testimonials|first %}
+			<table class="cerb-testimonial" width="100%" cellspacing="0" cellpadding="0" style="display:none;">
+				<tr>
+					<td style="font-size: 90%;padding-right: 10px; border-right: 1px solid rgb(200,200,200);">
+						<q>{{ testimonial.quote }}</q>
+						<div style="margin-left: 15px;">
+							<b>- {{ testimonial.author }}</b>
+						</div>
+					</td>
+					<td style="padding-left:10px;">
+						<span class="client-logo client-{{ testimonial.client }}"></span>
+					</td>
+				</tr>
+			</table>
+		</noscript>
 	</div>
 </div>
 
@@ -130,3 +140,16 @@ jumbotron:
 		</p>
 	</div>
 </div>
+
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function(event) {
+		try {
+			var $testimonials_container = document.querySelector('#cerb-testimonials');
+			var $testimonials = $testimonials_container.querySelectorAll('.cerb-testimonial');
+			var len = $testimonials.length;
+			var r = Math.floor(Math.random()*len);
+			
+			$testimonials[r].style['display'] = 'block';
+		} catch(e) {}
+	});
+</script>
