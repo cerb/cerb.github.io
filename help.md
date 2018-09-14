@@ -3,10 +3,27 @@ layout: page
 title: Help
 permalink: /help/
 jumbotron: 
-  title: Help
-  #tagline: ...
+  title: How can we help?
+  tagline: 
 ---
 
-# Contact us
+## Bot
 
-<a href="/contact/">How can we help?</a>
+<a href="javascript:;" data-cerb-bot-interaction="" class="cerb-button">Hello?</a>
+
+## Email
+
+[team@cerb.ai](mailto:team@cerb.ai)
+
+## Phone
+
+[+1.714.671.9090](tel:+1.714.671.9090)
+
+## Mail
+
+**Webgroup Media, LLC.**  
+PO Box 1206  
+Brea, California 92822  
+United States
+
+{% include testimonials.html %}
