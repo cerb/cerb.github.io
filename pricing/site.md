@@ -51,7 +51,7 @@ vertical-align: bottom;
     background: -moz-linear-gradient(270deg, #eff9ff, white);
     background: -o-linear-gradient(top, #eff9ff, white);
     background: -ms-linear-gradient(top, #eff9ff, white);
-    background: linear-gradient(top, #eff9ff, white);">Site License</h1>
+    background: linear-gradient(top, #eff9ff, white);">Self-hosted</h1>
     
 <div style="
 position: relative;
@@ -103,9 +103,9 @@ position: relative;
 	<div class="unit one-third">
 			<div style="display:inline-block;text-align:left;">
 				<h2 style="color:rgb(43,118,255);"><b>Corporate</b></h2>
-				<b>$875/month</b> (billed annually)
+				<b>$700/month</b> (billed annually)
 				<ul>
-					<li><b>25</b> <abbr title="The maximum number of workers who can use Cerb at the same time.">seats</abbr></li>
+					<li><b>20</b> <abbr title="The maximum number of workers who can use Cerb at the same time.">seats</abbr></li>
 					<li><b>$45/month</b> per additional seat</li>
 					<li>Everything Cerb has to offer</li>
 					<li>
@@ -198,7 +198,7 @@ To receive a free Cerb license with ongoing software updates and more than 3 sea
 
 ## What qualifies an open source project for a free license?
 
-To receive a free Cerb license with ongoing software updates and more than 3 seats, an open source project must have a website explaining the purpose of the project, 100% of source code available in a public repository like GitHub, and an on-premises option without licensing costs.
+To receive a free Cerb license with ongoing software updates and more than 3 seats, an open source project must have a website explaining the purpose of the project, 100% of source code available in a public repository like GitHub, and a self-hosted option with an open source license.
 
 An open source license should only be used for that purpose, and not mixed with other commercial activity.
 

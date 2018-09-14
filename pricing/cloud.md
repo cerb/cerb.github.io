@@ -91,7 +91,7 @@ position: relative;
 				<b>$75/month</b> (billed annually)
 				<ul>
 					<li><b>5</b> <abbr title="The maximum number of workers who can use Cerb at the same time.">seats</abbr></li>
-					<li><b>$25/month</b> per additional seat</li>
+					<li><b>+$25/month</b> per extra seat</li>
 					<li>Everything Cerb has to offer</li>
 					<li>
 						Infrastructure:
@@ -100,11 +100,18 @@ position: relative;
 						</ul>
 					</li>
 					<li>
-						Standard support:
+						Priority support:
 							<ul>
 								<li>By email</li>
-								<li>Weekdays, office hours</li>
+								<li>Weekday office hours</li>
 								<li>Same-day response</li>
+								<li>24/7 coverage for infrastructure</li>
+							</ul>
+					</li>
+					<li>
+							Autonomy:
+							<ul>
+								<li>Mandatory upgrades (with 1 week of prior notice)</li>
 							</ul>
 					</li>
 				</ul>
@@ -114,24 +121,31 @@ position: relative;
 	<div class="unit one-third">
 			<div style="display:inline-block;text-align:left;">
 				<h2 style="color:rgb(43,118,255);"><b>Corporate</b></h2>
-				<b>$625/month</b> (billed annually)
+				<b>$600/month</b> (billed annually)
 				<ul>
-					<li><b>25</b> <abbr title="The maximum number of workers who can use Cerb at the same time.">seats</abbr></li>
-					<li><b>$35/month</b> per additional seat</li>
+					<li><b>20</b> <abbr title="The maximum number of workers who can use Cerb at the same time.">seats</abbr></li>
+					<li><b>+$35/month</b> per extra seat</li>
 					<li>Everything Cerb has to offer</li>
 					<li>
 						Infrastructure:
 						<ul>
 							<li>Dedicated database server</li>
+							<li>Staging environment to test new features prior to upgrading</li>
 						</ul>
 					</li>
 					<li>
-							Priority support:
+							Higher priority support:
 							<ul>
 								<li>By email, phone, or live screen sharing</li>
 								<li>24/7 coverage</li>
 								<li>Same-day response</li>
 								<li>Live assistance with configuring Cerb (e.g. workspaces, bots, custom fields)</li>
+							</ul>
+					</li>
+					<li>
+							Autonomy:
+							<ul>
+								<li>Schedule major software updates at your convenience (within 1 month)</li>
 							</ul>
 					</li>
 				</ul>
@@ -149,8 +163,9 @@ position: relative;
 						Infrastructure:
 						<ul>
 							<li>Dedicated database cluster, read replicas, instant failover</li>
-							<li>Optional dedicated web servers, mail servers, etc</li>
-							<li>Deploy in any supported AWS region worldwide</li>
+							<li>Staging environment to test new features prior to upgrading</li>
+							<li>Optional dedicated resources (e.g. web servers, mail servers)</li>
+							<li>Deploy in any supported region worldwide</li>
 						</ul>
 					</li>
 					<li>
@@ -160,8 +175,13 @@ position: relative;
 							<li>24/7 coverage</li>
 							<li>1-2 hour response time</li>
 							<li>Live assistance with configuring Cerb (e.g. workspaces, bots, custom fields)</li>
-							<li>Maintenance and upgrades on your schedule</li>
 						</ul>
+					</li>
+					<li>
+							Autonomy:
+							<ul>
+								<li>Schedule major software updates at your convenience (within 3 months)</li>
+							</ul>
 					</li>
 				</ul>
 			</div>
@@ -182,14 +202,6 @@ position: relative;
 
 <div id="seats"></div>
 
-## What are seats?
-
-Seats determine the maximum number of workers who can use Cerb at the same time.
-
-For example, a team of 30 workers who are evenly split into three, non-overlapping shifts (morning, day, night) would only require 10 seats. That's the highest number of workers who would ever be logged in at the same time.
-
-You aren't paying per worker account, so there isn't a penalty for inviting everyone to participate: full-time staff, part-time contributors, busy executives, interns, temps, contractors, partners, and volunteers.
-
 ## What is Cerb Cloud?
 
 __Cerb Cloud__ is a subscription-based service that provides a finely tuned, ready-to-use instance of Cerb in an ideal environment. All you need is a web browser and your team can start putting Cerb's tools to work. We'll handle everything else.
@@ -205,6 +217,14 @@ __Cerb Cloud__ is a subscription-based service that provides a finely tuned, rea
 * __Secure__: All traffic between you and your Cerb instance is encrypted with SSL. We support "Perfect Forward Secrecy", which is a strategy that protects your past encrypted transmissions even if they are intercepted and recorded (even we can't decrypt them once your session ends). Our resources operate in a "private cloud" with private networks for traffic between components, and firewall rules in front of public components that expose a minimally necessary attack surface. Our own access to those resources requires RSA keys and two-factor authentication.
 
 * __Durable__: We archive a sequence of full daily database backups, as well as the incremental point-in-time changes in between. Long term object storage (like attachments) are redundantly stored in several geographically separate locations. We can also arrange for backups to be routinely transfered to you.
+
+## What are seats?
+
+Seats determine the maximum number of workers who can use Cerb at the same time.
+
+For example, a team of 30 workers who are evenly split into three, non-overlapping shifts (morning, day, night) would only require 10 seats. That's the highest number of workers who would ever be logged in at the same time.
+
+You aren't paying per worker account, so there isn't a penalty for inviting everyone to participate: full-time staff, part-time contributors, busy executives, interns, temps, contractors, partners, and volunteers.
 
 <div id="academic"></div>
 
@@ -254,13 +274,13 @@ Yes! We'll always use an `*.cerb.me` domain to identify your Cerb Cloud instance
 
 Keep in mind that you'll need to provide an SSL certificate for each custom domain you use. We provide wildcard SSL certificates for `*.cerb.me` and the generic portal domains like `*.official.support` and `*.user.community`.
 
-## What if I plan to eventually switch to a site license?
+## What if I plan to eventually switch to a self-hosted license?
 
 We still recommend that you start with a Cerb Cloud trial, so your team can immediately get to work learning about Cerb rather than getting bogged down with installation requirements and troubleshooting.
 
 This also allows us to provide the highest level of assistance during your evaluation. We provide temporary email accounts so you can easily test incoming and outgoing messages, we've already installed the prerequisites for every plugin, etc.
 
-All of your Cerb Cloud configuration and data can be exported to a standalone instance of Cerb at any time. Once you're confident that Cerb is a good fit for your team, we're happy to help you with that migration.
+All of your Cerb Cloud configuration and data can be exported to a self-hosted instance of Cerb at any time. Once you're confident that Cerb is a good fit for your team, we're happy to help you with that migration.
 
 If you still need to evaluate Cerb in your own environment, you can simply [grab a copy of the project from GitHub](https://github.com/cerb/cerb-release) and follow the [installation instructions](/docs/installation).
 
