@@ -6,14 +6,10 @@ jumbotron:
   tagline: Record summaries in a floating popup
 ---
 
-A **card** summarizes a particular record in a popup window. This allows information to be retrieved and displayed quickly from anywhere in Cerb without leaving the current page.
+A **card** summarizes a particular [record](/docs/records/) in a popup window.
+
+Cards allow information to be retrieved and displayed quickly from anywhere in Cerb without leaving the current page. They also provide shortcuts to common functionality for a given record type.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/using-cerb/records/card.png" class="screenshot">
 </div>
-
-Cards also provide shortcuts to common functionality for a given record.
-
-For example, when viewing the card of a contact you'll see their ticket history broken down by status: all, open, waiting, and closed.  When viewing the card of a ticket, you can also open the cards of any participant or message on that ticket.
-
-You can read the entire conversation on a ticket without leaving its card.

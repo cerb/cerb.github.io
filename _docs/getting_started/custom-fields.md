@@ -6,9 +6,9 @@ jumbotron:
   tagline: Add your own attributes to any record type
 ---
 
-**Custom fields** can be added to records based on the specific needs of your organization.
+**Custom fields** can be added to any [record type](/docs/records/) based on the specific needs of your team.
 
-You can choose from many custom field types:
+There are many different **types** of fields:
 
 |---
 | Type | Description | Example

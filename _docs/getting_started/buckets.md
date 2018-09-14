@@ -6,28 +6,33 @@ jumbotron:
   tagline: Collections of related tasks within a group
 ---
 
-[Group](/docs/groups/) managers organize common and highly related tasks into **buckets**.
 
-Every group has an **"Inbox"** bucket to collect new, unsorted assignments. From there, tasks are manually or automatically sorted into the most appropriate bucket.
+[Group](/docs/groups/) managers organize related tasks into **buckets**.
 
-For instance:
+Every group has an **inbox** bucket to collect new assignments. From there, tasks are sorted into the most appropriate bucket by [workers](/docs/workers/) and [bots](/docs/bots/).
+
+Here's what your first few buckets might look like:
 
 * Billing:
+  * **Inbox**
   * **Invoices**
   * **Purchase orders**
   * **Receipts**
 
 * Development:
+  * **Inbox**
   * **Feature requests**
   * **Bug reports**
   * **Troubleshooting**
 
 * Sales:
+  * **Inbox**
   * **Leads**
   * **Prospects**
   * **Opportunities**
 
 * Support:
+  * **Inbox**
   * **Inquiries**
   * **Documentation**
   * **Training**

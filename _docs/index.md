@@ -1,5 +1,6 @@
 ---
 title: Documentation
+excerpt: Learn how Cerb's time-tested building blocks can help your team solve countless challenges.
 permalink: /docs/home/
 redirect_from:
   - /docs/
@@ -9,7 +10,7 @@ toc:
   title: What is Cerb?
 jumbotron:
   title: Documentation
-  tagline: Take full advantage of what Cerb has to offer
+  tagline: Learn how Cerb's time-tested building blocks can help your team solve countless challenges
 ---
 
 # What is Cerb?

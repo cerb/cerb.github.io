@@ -6,13 +6,13 @@ jumbotron:
   tagline: The people who get things done
 ---
 
-The representatives who act on behalf of your organization are called **workers**.
+The people who officially represent your team to the outside world are called **workers**.
 
-These include full-time and part-time staff, interns, volunteers, managers, executives, investors, and partners.
+This includes full-time and part-time staff, interns, volunteers, managers, executives, investors, and partners.
 
-Workers log in to Cerb using a web browser on various networked devices: desktops, laptops, tablets, and smartphones. A single worker can be logged in from multiple devices at the same time.
+Workers log in to Cerb using their standard web browser (e.g. Chrome, Safari, Firefox, Opera, Edge) on desktop computers, laptops, tablets, or smartphones. A single worker can be logged in from multiple devices at the same time.
 
-This flexibility allows teams to collaborate from nearly anywhere; even when they're working remotely or otherwise distributed around the world.
+This flexibility allows your team to get work done from almost anywhere.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/using-cerb/workers/workers.png" class="screenshot">

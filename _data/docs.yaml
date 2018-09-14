@@ -7,25 +7,25 @@
   docs:
   - welcome
   - workers
-  - roles
   - groups
   - buckets
   - responsibilities
-  - contacts
-  - orgs
+  - roles
   - records
   - custom-fields
+  - activity-log
+  - watchers
+  - notifications
+  - comments
   - profiles
   - cards
-  - worklists
-  - activity-log
-  - notifications
-  - watchers
-  - comments
   - links
+  - reminders
+  - worklists
   - workspaces
   - dashboards
-  - reminders
+  - contacts
+  - orgs
   - tickets
   - snippets
   - bots

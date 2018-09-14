@@ -6,7 +6,7 @@ jumbotron:
   tagline: 
 ---
 
-A **worklist** is a filterable, pageable, sortable, and customizable set of records displayed using rows and columns.
+A **worklist** is a filterable, pageable, sortable, and customizable set of [records](/docs/records/) displayed using rows and columns.
 
 Each row of a worklist is a matching record, and each column is a particular field from that record. The displayed columns can be customized for each worklist based on your needs.
 
