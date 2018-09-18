@@ -3,20 +3,14 @@ layout: post
 title: "Tip: Enable the default reports"
 excerpt: Cerb ships with several built-in reports that you can access from a workspace page.
 author: The Cerb Team
-date: 2017-04-25 13:30:00 -0700
+date: 2018-09-18 00:00:00 -0700
 permalink: /tips/enable-reports/
 tags: cerb tips mailbag
 ---
 
-You can use [dashboards](/docs/dashboards/) to build your own reports.  Cerb also ships with several built-in reports that you can access from a workspace page.
+You can use [dashboards](/docs/dashboards/) to build your own reports.  Cerb also ships with many built-in reports that you can access from a workspace page.
 
-Navigate to **Setup >> Plugins >> Installed Plugins**.
-
-Search for: `reports`
-
-If the Reports plugin is disabled, click the **Configure** button to enable it.
-
-When the plugin is enabled, click on the last item in the [navigation bar](/docs/navigation/):
+Click on the last item in the [navigation bar](/docs/navigation/) below the top left logo:
 
 <div class="cerb-screenshot">
 <img src="/assets/images/tips/enable-reports/navbar-add.png" class="screenshot">
