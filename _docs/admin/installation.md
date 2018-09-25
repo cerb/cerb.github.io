@@ -331,13 +331,13 @@ We highly recommend using a password manager like 1Password[^1password] to maint
 
 Cerb will use your timezone setting to display and interpret dates using your local timezone.  The installer attempts to automatically detect this for you, but you can adjust it as necessary.
 
-## Step 9: Register
+## Step 9: Testing Mode
 
-In the final step of the installer you are given the opportunity to introduce yourself to us in exchange for a free 3-seat community license to help you get started. There are no strings attached. This community license provides full functionality, with no expiration, but it does not include priority support or future updates. We hope that you find the software useful, and we’re looking forward to growing along with you.
+Without a license, Cerb operates in **testing mode**. This allows full functionality with a single seat.
 
-If you choose not to register your copy of Cerb then the software will default to _Evaluation Mode_, which is limited to a single seat but has no other restrictions.
+You can install a [purchased license](/pricing/self-hosted/) in **Setup >> Configure >> License**.
 
-Complete the short survey in exchange for your free license and then click the **Register** button.
+Click the **Continue** button.
 
 ## Step 10: Finished
 

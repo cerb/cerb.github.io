@@ -160,16 +160,6 @@ For example, a team of 30 workers who are evenly split into three, non-overlappi
 
 You aren't paying per worker account, so there isn't a penalty for inviting everyone to participate: full-time staff, part-time contributors, busy executives, interns, temps, contractors, partners, and volunteers.
 
-<div id="starter-license"></div>
-
-## What is a starter license?
-
-A starter license provides 3 seats at no cost. The license is valid for the latest version of Cerb at the time it is created. The right to run that version of the software will never expire.
-
-Starter licenses don't provide access to priority support or ongoing software updates.  They are eligible for one free renewal per 12 month period.  Aside from that, they have no feature-related limitations.
-
-Registered charities and qualifying open source projects may be eligible for a higher seat limit and ongoing software updates at no cost.
-
 ## How do I install Cerb on my own hardware?
 
 Read the <a href="/docs/installation">installation instructions</a> to get started.
@@ -192,13 +182,13 @@ To qualify for an academic discount, institutions must be accredited by an agenc
 
 ## What qualifies a charity or non-profit organization for a free license?
 
-To receive a free Cerb license with ongoing software updates and more than 3 seats, a charity or non-profit must have a charter that seeks to improve the public good and be registered as a 501(c)(3) organization (or their own national equivalent).  The organization should be primarily funded through public donations or grants, and such contributions should be tax deductible by the donors.
+To receive a free Cerb license with ongoing software updates, a charity or non-profit must have a charter that seeks to improve the public good and be registered as a 501(c)(3) organization (or their own national equivalent).  The organization should be primarily funded through public donations or grants, and such contributions should be tax deductible by the donors.
 
 <div id="opensource"></div>
 
 ## What qualifies an open source project for a free license?
 
-To receive a free Cerb license with ongoing software updates and more than 3 seats, an open source project must have a website explaining the purpose of the project, 100% of source code available in a public repository like GitHub, and a self-hosted option with an open source license.
+To receive a free Cerb license with ongoing software updates, an open source project must have a website explaining the purpose of the project, 100% of source code available in a public repository like GitHub, and a self-hosted option with an open source license.
 
 An open source license should only be used for that purpose, and not mixed with other commercial activity.
 
