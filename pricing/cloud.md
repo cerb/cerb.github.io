@@ -56,7 +56,7 @@ vertical-align: bottom;
     background: -moz-linear-gradient(270deg, white, #c8c8c8);
     background: -o-linear-gradient(top, white, #c8c8c8);
     background: -ms-linear-gradient(top, white, #c8c8c8);
-    background: linear-gradient(top, white, #c8c8c8);"><a href="/pricing/site/" style="color:inherit;">Self-hosted</a></h1>
+    background: linear-gradient(top, white, #c8c8c8);"><a href="/pricing/self-hosted/" style="color:inherit;">Self-Hosted</a></h1>
     
 <div style="
 position: relative;
@@ -67,51 +67,60 @@ position: relative;
     vertical-align: top;
     border-top: 1px solid rgb(150, 150, 150);"></div>
 
-<b>Starting at $75/month for 5 seats</b>
+<div>
+	<span style="font-size:125%;">
+		<b>$30/seat-month</b> (billed yearly) or <b>$35/seat-month</b> (billed monthly):
+	</span>
 
-<ul>
-	<li>Everything you need to deploy Cerb.</li>
-	<li>Highly available and auto-scalable in the cloud as a fully managed service.</li>
-	<li>Implements all of our best practices for security, upgrades, backups, and performance.</li>
-	<li>Always on the latest stable version with same-day urgent bug fixes.</li>
-	<li>Automated, redundant, point-in-time backups.</li>
-	<li>24/7 monitoring with on-duty system administrators.</li>
-	<li>Cerb Cloud SMTP service for highly deliverable, high-volume outgoing mail (SPF, DKIM, DMARC).</li>
-	<li>Cerb Cloud MX service for instant delivery of inbound mail (no mailboxes required).</li>
-	<li>Deploy unlimited community portals (conversational bots, Support Centers).</li>
-	<li>We provide a default URL and SSL certificate, but you can bring your own domain names and certificates (support.example.com, etc).</li>
-</ul>
+	<ul>
+		<li>Everything you need to deploy Cerb.</li>
+		<li>Highly available and auto-scalable in the cloud as a fully managed service.</li>
+		<li>Implements all of our best practices for security, upgrades, backups, and performance.</li>
+		<li>Always on the latest stable version with same-day urgent bug fixes.</li>
+		<li>Automated, redundant, point-in-time backups.</li>
+		<li>24/7 monitoring with on-duty system administrators.</li>
+		<li>Cerb Cloud SMTP service for highly deliverable, high-volume outgoing mail (SPF, DKIM, DMARC).</li>
+		<li>Cerb Cloud MX service for instant delivery of inbound mail (no mailboxes required).</li>
+		<li>Deploy unlimited community portals (conversational bots, Support Centers).</li>
+		<li>We provide a default URL and SSL certificate, but you can bring your own domain names and certificates (support.example.com, etc).</li>
+	</ul>
+</div>
 
-<button type="button" class="cerb-button" data-cerb-bot-interaction="cloud.signup">Start a free 30 day trial</button>
+<button type="button" class="cerb-button" data-cerb-bot-interaction="cloud" data-cerb-bot-param-mode="signup">Try Cerb Cloud free for 30 days</button>
+
+{% comment %}
+<button type="button" class="cerb-button" data-cerb-bot-interaction="cloud">Manage your subscription</button>
+{% endcomment %}
+
+<div style="font-size:125%;">
+	<b>Add priority technical support from Cerb's highly experienced developers with no long-term commitments:</b>
+</div>
 
 <div class="grid" style="margin-left:15px;">
 	<div class="unit one-third">
-			<div style="display:inline-block;text-align:left;">
-				<h2 style="color:rgb(2,109,36);"><b>Startup</b></h2>
-				<b>$75/month</b> (billed annually)
+			<div style="text-align:left;">
+				<h2 style="color:rgb(100,100,100);"><b>Standard Support</b></h2>
+				<b>Included with Cerb Cloud:</b>
 				<ul>
-					<li><b>5</b> <abbr title="The maximum number of workers who can use Cerb at the same time.">seats</abbr></li>
-					<li><b>+$25/month</b> per extra seat</li>
-					<li>Everything Cerb has to offer</li>
+					<li>Technical support for unlimited cases by email.</li>
 					<li>
-						Infrastructure:
+						Scope:
 						<ul>
-							<li>Shared, multi-tenant</li>
+							<li>Concept-level guidance.</li>
 						</ul>
 					</li>
 					<li>
-						Priority support:
-							<ul>
-								<li>By email</li>
-								<li>Weekday office hours</li>
-								<li>Same-day response</li>
-								<li>24/7 coverage for infrastructure</li>
-							</ul>
+						Response times:
+						<ul>
+							<li>Workflow guidance:<br>&lt; 16 business hours</li>
+							<li>Workflow impaired:<br>&lt; 8 business hours</li>
+							<li>Workflow halted:<br>&lt; 4 business hours</li>
+						</ul>
 					</li>
 					<li>
 							Autonomy:
 							<ul>
-								<li>Mandatory upgrades (with 1 week of prior notice)</li>
+								<li>Mandatory scheduled upgrades to the latest stable version with one week of prior notice.</li>
 							</ul>
 					</li>
 				</ul>
@@ -119,69 +128,108 @@ position: relative;
 	</div>
 	
 	<div class="unit one-third">
-			<div style="display:inline-block;text-align:left;">
-				<h2 style="color:rgb(43,118,255);"><b>Corporate</b></h2>
-				<b>$600/month</b> (billed annually)
+			<div style="text-align:left;">
+				<h2 style="color:rgb(43,118,255);"><b>Corporate Support</b></h2>
+				<b>Greater of +$200/month or +$10/month per seat:</b>
 				<ul>
-					<li><b>20</b> <abbr title="The maximum number of workers who can use Cerb at the same time.">seats</abbr></li>
-					<li><b>+$35/month</b> per extra seat</li>
-					<li>Everything Cerb has to offer</li>
 					<li>
-						Infrastructure:
+						Priority technical support for unlimited cases by email.
+					</li>
+					<li>
+						Scope:
 						<ul>
-							<li>Dedicated database server</li>
-							<li>Staging environment to test new features prior to upgrading</li>
+							<li>Guidance based on your specific use cases.</li>
+							<li>Developer support for API usage, integration, plugin development.</li>
+							<li>Data recovery (e.g. accidental deletion).</li>
 						</ul>
 					</li>
 					<li>
-							Higher priority support:
-							<ul>
-								<li>By email, phone, or live screen sharing</li>
-								<li>24/7 coverage</li>
-								<li>Same-day response</li>
-								<li>Live assistance with configuring Cerb (e.g. workspaces, bots, custom fields)</li>
-							</ul>
+						Response times:
+						<ul>
+							<li>Workflow guidance:<br>&lt; 8 business hours</li>
+							<li>Workflow impaired:<br>&lt; 4 business hours</li>
+							<li>Workflow halted:<br>&lt; 2 hours</li>
+						</ul>
 					</li>
 					<li>
-							Autonomy:
-							<ul>
-								<li>Schedule major software updates at your convenience (within 1 month)</li>
-							</ul>
+						1 hour per month of live <abbr title="A live screen-sharing session for your team with voice chat.">webinar</abbr> assistance for:
+						<ul>
+							<li>
+								Creating and tuning workspaces, dashboards, and bots.
+							</li>
+							<li>
+								Team training.
+							</li>
+							<li>
+								Walkthroughs of new major version updates.
+							</li>
+							<li>
+								Additional hours at $125/hour.
+							</li>
+						</ul>
+					</li>
+					<li>
+						Autonomy:
+						<ul>
+							<li>Schedule major software updates at your convenience (within 1 month).</li>
+							<li>Access to early release versions.</li>
+							<li>Access to a staging environment to test new features prior to upgrading.</li>
+							<li>Install or upgrade custom plugins.</li>
+						</ul>
 					</li>
 				</ul>
 			</div>
 	</div>
-
+	
 	<div class="unit one-third">
-			<div style="display:inline-block;text-align:left;">
-				<h2 style="color:rgb(165,73,3);"><b>Enterprise</b></h2>
-				<b>Contact us</b>
+			<div style="text-align:left;">
+				<h2 style="color:rgb(165,73,3);"><b>Enterprise Support</b></h2>
+				<b>Greater of +$1,000/month or +$25/month per seat:</b>
 				<ul>
-					<li><b>50+</b> <abbr title="The maximum number of workers who can use Cerb at the same time.">seats</abbr></li>
-					<li>Everything Cerb has to offer</li>
 					<li>
-						Infrastructure:
+						Top-priority technical support and consultation for unlimited cases by email or phone.
+					</li>
+					<li>
+						Scope:
 						<ul>
-							<li>Dedicated database cluster, read replicas, instant failover</li>
-							<li>Staging environment to test new features prior to upgrading</li>
-							<li>Optional dedicated resources (e.g. web servers, mail servers)</li>
-							<li>Deploy in any supported region worldwide</li>
+							<li>Hands-on guidance and review of your specific implementation.</li>
+							<li>Developer support for API usage, integration, plugin development.</li>
+							<li>Data recovery (e.g. accidental deletion).</li>
 						</ul>
 					</li>
 					<li>
-						Top-priority enterprise support:
+						Response times:
 						<ul>
-							<li>By email, phone, or live screen sharing</li>
-							<li>24/7 coverage</li>
-							<li>1-2 hour response time</li>
-							<li>Live assistance with configuring Cerb (e.g. workspaces, bots, custom fields)</li>
+							<li>Workflow guidance:<br>&lt; 4 business hours</li>
+							<li>Workflow impaired:<br>&lt; 2 business hours</li>
+							<li>Workflow halted:<br>&lt; 30 minutes</li>
 						</ul>
 					</li>
 					<li>
-							Autonomy:
-							<ul>
-								<li>Schedule major software updates at your convenience (within 3 months)</li>
-							</ul>
+						4 hours per month of live <abbr title="A live screen-sharing session for your team with voice chat.">webinar</abbr> assistance for:
+						<ul>
+							<li>
+								Creating and tuning workspaces, dashboards, and bots.
+							</li>
+							<li>
+								Team training.
+							</li>
+							<li>
+								Walkthroughs of new major version updates.
+							</li>
+							<li>
+								Additional hours at $100/hour.
+							</li>
+						</ul>
+					</li>
+					<li>
+						Autonomy:
+						<ul>
+							<li>Schedule major software updates at your convenience (within 3 months).</li>
+							<li>Access to early release versions.</li>
+							<li>Access to a staging environment to test new features prior to upgrading.</li>
+							<li>Install or upgrade custom plugins.</li>
+						</ul>
 					</li>
 				</ul>
 			</div>
@@ -189,10 +237,6 @@ position: relative;
 </div>
 
 <br/>
-
-<p>
-	<sup>1</sup> <i>Prices for Cerb Cloud reflect a 20% discount for annual billing. Monthly billing is available.</i>
-</p>
 
 {% include testimonials.html %}
 

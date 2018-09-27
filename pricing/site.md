@@ -2,9 +2,10 @@
 layout: page
 title: Pricing for self-hosted Cerb licenses
 excerpt: Deploy Cerb in the cloud or host it yourself. Start a free trial.
-permalink: /pricing/site/
+permalink: /pricing/self-hosted/
 redirect_from:
   - /download/
+  - /pricing/site/
 jumbotron: 
   title: Pricing for self-hosted Cerb licenses
   tagline: Deploy a self-managed copy of Cerb installation on your own hardware
@@ -51,7 +52,7 @@ vertical-align: bottom;
     background: -moz-linear-gradient(270deg, #eff9ff, white);
     background: -o-linear-gradient(top, #eff9ff, white);
     background: -ms-linear-gradient(top, #eff9ff, white);
-    background: linear-gradient(top, #eff9ff, white);">Self-hosted</h1>
+    background: linear-gradient(top, #eff9ff, white);">Self-Hosted</h1>
     
 <div style="
 position: relative;
@@ -62,83 +63,147 @@ position: relative;
     vertical-align: top;
     border-top: 1px solid rgb(150, 150, 150);"></div>
 
-<b>Starting at $100/month for 5 seats</b> (billed annually)
-
 <div>
+	<div style="font-size:125%;">
+		<b>$37/seat-month</b> (billed yearly) or <b>$40/seat-month</b> (billed monthly):
+	</div>
+	
 	<ul>
 		<li>Self-hosted on your hardware and network.</li>
 		<li>You're responsible for installation, upgrades, scaling, monitoring, security, and backups</li>
 		<li>Ideal for regulatory compliance (HIPAA, Safe Harbor, Sarbanes-Oxley)</li>
-		<li>Requires PHP 7.0+ and MySQL 5.6+</li>
+		<li>Requires PHP 7.0+ and MySQL 5.6+.</li>
 		<li>Access to 100% of our source code on GitHub.</li>
-		<li>Annual subscription for software updates and priority support.</li>
-		<li>Your license never expires for versions released during your software updates term.</li>
-		<li>Renew your annual license within 30 days of expiration and receive an additional 20% "timely renewal" discount.</li>
+		<li>Annual subscription for software updates and technical support.</li>
+		<li>Your license never expires for versions released during your software updates coverage.</li>
+		<li>Discount for <abbr title="Renew your license within 30 days after expiration to receive the timely renewal discount." style="cursor:help;">timely</abbr> future annual renewals ($34/seat-month).</li>
 	</ul>
 </div>
 
-<button type="button" class="cerb-button" data-cerb-bot-interaction="license.free">Get a free 3-seat starter license</button>
+<button type="button" class="cerb-button" data-cerb-bot-interaction="license">Create and manage licenses</button>
+
+<a href="/docs/installation/" class="cerb-button">Read the installation guide</a>
+
+<div style="font-size:125%;">
+	<b>Add priority technical support from Cerb's highly experienced developers with no long-term commitments:</b>
+</div>
 
 <div class="grid" style="margin-left:15px;">
 	<div class="unit one-third">
-			<div style="display:inline-block;text-align:left;">
-				<h2 style="color:rgb(2,109,36);"><b>Startup</b></h2>
-				<b>$100/month</b> (billed annually)
+			<div style="text-align:left;">
+				<h2 style="color:rgb(100,100,100);"><b>Standard Support</b></h2>
+				<b>Included with license:</b>
 				<ul>
-					<li><b>5</b> <abbr title="The maximum number of workers who can use Cerb at the same time.">seats</abbr></li>
-					<li><b>$35/month</b> per additional seat</li>
-					<li>Everything Cerb has to offer</li>
-					<li>
-						Standard support:
+						<li>Technical support for unlimited cases by email.</li>
+						<li>
+							Scope:
 							<ul>
-								<li>By email</li>
-								<li>Weekdays, office hours</li>
-								<li>Same-day response</li>
+								<li>Concept-level guidance.</li>
+								<li>Covers the latest stable version.</li>
 							</ul>
-					</li>
+						</li>
+						<li>
+							Response times:
+							<ul>
+								<li>Workflow guidance:<br>&lt; 16 business hours</li>
+								<li>Workflow impaired:<br>&lt; 8 business hours</li>
+								<li>Workflow halted:<br>&lt; 4 business hours</li>
+							</ul>
+						</li>
 				</ul>
 			</div>
 	</div>
 	
 	<div class="unit one-third">
-			<div style="display:inline-block;text-align:left;">
-				<h2 style="color:rgb(43,118,255);"><b>Corporate</b></h2>
-				<b>$700/month</b> (billed annually)
+			<div style="text-align:left;">
+				<h2 style="color:rgb(43,118,255);"><b>Corporate Support</b></h2>
+				<b>Greater of +$200/month or +$10/month per seat:</b>
 				<ul>
-					<li><b>20</b> <abbr title="The maximum number of workers who can use Cerb at the same time.">seats</abbr></li>
-					<li><b>$45/month</b> per additional seat</li>
-					<li>Everything Cerb has to offer</li>
-					<li>
-							Priority support:
+						<li>
+							Priority technical support for unlimited cases by email.
+						</li>
+						<li>
+							Scope:
 							<ul>
-								<li>By email, phone, or live screen sharing</li>
-								<li>24/7 coverage</li>
-								<li>Same-day response</li>
-								<li>Live assistance with configuring Cerb (e.g. workspaces, bots, custom fields)</li>
-								<li>Live assistance with all software updates</li>
+								<li>Guidance based on your specific use cases.</li>
+								<li>Covers any current generation version (9.x), or the final version of the previous generation (8.3.10).</li>
+								<li>Developer support for API usage, integration, plugin development.</li>
+								<li><abbr title="PHP/FPM, MySQL, Nginx/Apache/IIS, Redis/Memcached, etc.">Server</abbr> configuration.</li>
+								<li><abbr title="e.g. Accidental deletion, corruption.">Data recovery</abbr>.</li>
 							</ul>
-					</li>
+						</li>
+						<li>
+							Response times:
+							<ul>
+								<li>Workflow guidance:<br>&lt; 8 business hours</li>
+								<li>Workflow impaired:<br>&lt; 4 business hours</li>
+								<li>Workflow halted:<br>&lt; 2 hours</li>
+							</ul>
+						</li>
+						<li>
+							1 hour of live <abbr title="A live screen-sharing session for your team with voice chat.">webinar</abbr> assistance for:
+							<ul>
+								<li>
+									Creating and tuning workspaces, dashboards, and bots.
+								</li>
+								<li>
+									Team training.
+								</li>
+								<li>
+									Walkthroughs of new major version updates.
+								</li>
+								<li>
+									Additional hours at $125/hour.
+								</li>
+							</ul>
+						</li>
 				</ul>
 			</div>
 	</div>
 	
 	<div class="unit one-third">
-			<div style="display:inline-block;text-align:left;">
-				<h2 style="color:rgb(165,73,3);"><b>Enterprise</b></h2>
-				<b>Contact us</b>
+			<div style="text-align:left;">
+				<h2 style="color:rgb(165,73,3);"><b>Enterprise Support</b></h2>
+				<b>Greater of +$1,000/month or +$25/month per seat:</b>
 				<ul>
-					<li>Everything Cerb has to offer</li>
-					<li>
-						Top-priority enterprise support:
-						<ul>
-							<li>By email, phone, or live screen sharing</li>
-							<li>24/7 coverage</li>
-							<li>1-2 hour response time</li>
-							<li>Live assistance with configuring Cerb (e.g. workspaces, bots, custom fields)</li>
-							<li>Live assistance with all software updates</li>
-							<li>Live assistance with infrastructure (scaling, monitoring, backups, etc)</li>
-						</ul>
-					</li>
+						<li>
+							Top-priority technical support and consultation for unlimited cases by email or phone.
+						</li>
+						<li>
+							Scope:
+							<ul>
+								<li>Hands-on guidance and review of your specific implementation.</li>
+								<li>Covers any current generation version (9.x), or the final version of the previous two generations (7.3.13, 8.3.10).</li>
+								<li>Developer support for API usage, integration, plugin development.</li>
+								<li><abbr title="PHP/FPM, MySQL, Nginx/Apache/IIS, Redis/Memcached, etc.">Server</abbr> configuration.</li>
+								<li><abbr title="e.g. Accidental deletion, corruption.">Data recovery</abbr>.</li>
+							</ul>
+						</li>
+						<li>
+							Response times:
+							<ul>
+								<li>Workflow guidance:<br>&lt; 4 business hours</li>
+								<li>Workflow impaired:<br>&lt; 2 business hours</li>
+								<li>Workflow halted:<br>&lt; 30 minutes</li>
+							</ul>
+						</li>
+						<li>
+							4 hours per month of live <abbr title="A live screen-sharing session for your team with voice chat.">webinar</abbr> assistance for:
+							<ul>
+								<li>
+									Creating and tuning workspaces, dashboards, and bots.
+								</li>
+								<li>
+									Team training.
+								</li>
+								<li>
+									Walkthroughs of new major version updates.
+								</li>
+								<li>
+									Additional hours at $100/hour.
+								</li>
+							</ul>
+						</li>
 				</ul>
 			</div>
 	</div>
@@ -168,7 +233,7 @@ Read the <a href="/docs/installation">installation instructions</a> to get start
 
 ## Do you provide a renewal discount for existing licenses?
 
-Yes! We automatically add a 20% _"timely renewal_" discount to your invoice for any license that has not been expired for more than 30 days.
+Yes! We automatically add a 7.5% _"timely renewal_" discount to your invoice for any license that has not been expired for more than 30 days.
 
 <div id="academic"></div>
 
@@ -180,13 +245,13 @@ To qualify for an academic discount, institutions must be accredited by an agenc
 
 <div id="non-profit"></div>
 
-## What qualifies a charity or non-profit organization for a free license?
+## What qualifies a charity or non-profit organization for a free license donation?
 
 To receive a free Cerb license with ongoing software updates, a charity or non-profit must have a charter that seeks to improve the public good and be registered as a 501(c)(3) organization (or their own national equivalent).  The organization should be primarily funded through public donations or grants, and such contributions should be tax deductible by the donors.
 
 <div id="opensource"></div>
 
-## What qualifies an open source project for a free license?
+## What qualifies an open source project for a free license donation?
 
 To receive a free Cerb license with ongoing software updates, an open source project must have a website explaining the purpose of the project, 100% of source code available in a public repository like GitHub, and a self-hosted option with an open source license.
 
