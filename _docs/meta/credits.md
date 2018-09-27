@@ -4,71 +4,8 @@ permalink: /docs/credits/
 layout: docs
 jumbotron:
   title: Credits
-  tagline: Cerb wouldn't exist without these building blocks and contributions.
+  tagline: Cerb wouldn't exist without these building blocks and contributions
 ---
-
-* TOC
-{:toc}
-
-# Platform
-
-- **Devblocks** is a software development framework created by Webgroup Media that has evolved in parallel with Cerb. It provides the application framework, development platform, plugin architecture, and software development philosophy for all Cerb functionality and third-party plugins.
-
-- [HTML5](https://en.wikipedia.org/wiki/HTML5) is a markup language used for structuring and presenting content on the World Wide Web. It is the fifth and current version of the HTML standard.
-	- Cerb's interface is rendered via HTML5 markup.
-
-- [PHP](http://www.php.net/) is a widely-used programming language for web development.
-	- We use PHP for the majority of the application logic in Cerb and Devblocks.
-
-- [MySQL](http://www.mysql.com/) is the world's most popular open source database.
-	- We use MySQL to store and query all relational data.
-
-# Infrastructure
-
-- Amazon Web Services
-- GitHub
-
-# Libraries
-
-- [jQuery](http://jquery.com/) is a fast and concise JavaScript library that simplifies HTML document traversal, event handling, animation, and asynchronous interactions (Ajax).
-	- We use jQuery for all of the client-side functionality in Cerb.
-
-- [jQuery UI](http://jqueryui.com/) is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library.
-	- We use jQuery UI for the majority of the interface components: tabs, dialogs, autocomplete, drag and drop sorting, effects, etc.
-
-- [Smarty](http://www.smarty.net/) is a template engine for PHP, facilitating the separation of presentation (HTML/CSS) from application logic.
-	- We use Smarty to render the majority of the interface HTML and Javascript.
-
-- [Swift Mailer](http://swiftmailer.org/) is a component-based library for sending email from PHP applications.
-	- We use Swift Mailer to compose MIME messages and send all outgoing mail.
-
-- [Twig](http://www.twig-project.org/) is an open source template engine for the PHP programming language by Fabien Potencier. It focuses on being fast, secure, and flexible.
-	- We use Twig for placeholder and scripting functionality in snippets and bot behaviors.
-
-- [Parsedown](http://michelf.com/projects/php-markdown/) is a PHP library for converting lightweight Markdown[^markdown] text into HTML.
-	-  We use Markdown for formatting in HTML messages and knowledgebase articles.
-
-- [Ace](https://ace.c9.io) is a high performance code editor for the web. It provides syntax highlighting in 110+ languages, themes, code autocompletion, indent/outdent, parentheses matching, code folding, and much more.
-
-- [Amazon S3 PHP Class](http://undesigned.org.za/2007/10/22/amazon-s3-php-class) is a PHP library by Donovan Schönknecht for working with Amazon's S3[^s3] web service.
-	- We use the Amazon S3 PHP Class to provide the option to use Amazon's S3 service as long-term storage for infrequently accessed but heavy content (e.g. message content and attachments).
-
-- [jqPlot](http://www.jqplot.com/) is a plotting and charting plugin for the jQuery Javascript framework. jqPlot produces beautiful line, bar and pie charts with many features.
-	- We use jqPlot to draw charts in the legacy reporting plugin.
-
-- [qTip](http://craigsworks.com/projects/qtip/) is a tooltip plugin for the jQuery framework.
-	- We use qTip to show tooltips on several legacy reports.
-
-- [php-encryption](https://github.com/defuse/php-encryption) is a secure library for encrypting data in PHP.
-	- We use php-encryption to secure connected account credentials, settings, etc.
-	
-- PHPUnit
-- Selenium
-
-# Licenses
-
-- [GLYPHICONS](http://glyphicons.com) is a library of precisely prepared monochromatic icons and symbols, created with an emphasis to simplicity and easy orientation.
-	-  We licensed most of the interface icons from GLYPHICONS.
 
 # Developers
 
@@ -81,6 +18,7 @@ jumbotron:
 - [Ben Halsted](http://www.linkedin.com/in/bhalsted)
 - [Brenan Cavish](http://www.linkedin.com/pub/brenan-cavish/21/a89/57b)
 - [Darren Sugita](http://www.linkedin.com/pub/darren-sugita/24/234/978)
+- Jacob Cavish
 - [Jeremy Johnstone](http://www.linkedin.com/in/jsjohnst)
 - [Jerry Kanoholani](http://www.linkedin.com/pub/jerry-kanoholani/19/74/977)
 - Joe Geck
@@ -89,6 +27,60 @@ jumbotron:
 - [Robert Middleswarth](http://www.linkedin.com/in/robertmiddleswarth) has provided an incredible amount of support to the Cerb community for more than a decade.
 - [Scott Luther](http://www.linkedin.com/pub/scott-luther/7/3b3/98)
 - [Trent Ramseyer](http://www.linkedin.com/in/trentramseyer)
+
+# Platform
+
+- **Devblocks** is a software development framework created by Webgroup Media that has evolved in parallel with Cerb. It provides the application framework, development platform, plugin architecture, and software development philosophy for all Cerb functionality and third-party plugins.
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5) is a markup language used for structuring and presenting content on the World Wide Web. It is the fifth and current version of the HTML standard.
+
+- [PHP](http://www.php.net/) is a popular programming language for web development.
+
+- [MySQL](http://www.mysql.com/) is the world's most popular open source database.
+
+# Infrastructure
+
+- [Amazon Web Services](https://aws.amazon.com/)
+
+- [GitHub](https://github.com/)
+
+# Libraries
+
+- [Ace](https://ace.c9.io) is a high performance code editor for the web. It provides syntax highlighting in 110+ languages, themes, code autocompletion, indent/outdent, parentheses matching, code folding, and much more.
+
+- [Amazon S3 PHP Class](http://undesigned.org.za/2007/10/22/amazon-s3-php-class) is a PHP library by Donovan Schönknecht for working with Amazon's S3[^s3] web service.
+
+- [C3.js](https://c3js.org) is a Javascript charting library built on top of D3.
+
+- [Composer](https://getcomposer.org/) is a package manager for PHP.
+
+- [D3.js](https://d3js.org) is a Javascript library for manipulating documents based on data.
+
+- [jQuery](http://jquery.com/) is a fast and concise JavaScript library that simplifies HTML document traversal, event handling, animation, and asynchronous interactions (Ajax).
+
+- [jQuery UI](http://jqueryui.com/) is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library.
+
+- [jQuery UI Touch Punch](http://touchpunch.furf.com) converts mouse-based events in jQuery UI to touch gestures for mobile devices (e.g. tap, slide, drag/drop).
+
+- [Parsedown](http://michelf.com/projects/php-markdown/) is a PHP library for converting lightweight Markdown[^markdown] text into HTML.
+
+- [php-encryption](https://github.com/defuse/php-encryption) is a secure library for encrypting data in PHP.
+
+- [PHPUnit](https://phpunit.de/) is a programmer-oriented unit testing framework for PHP.
+
+- [PHP WebDriver](https://github.com/facebook/php-webdriver) is a PHP language binding for Selenium WebDriver, which allows you to remote-control web browsers for automated testing from PHP.
+	
+- [Smarty](http://www.smarty.net/) is a template engine for PHP. It facilitates the separation of presentation (HTML/CSS) from application logic.
+
+- [Swift Mailer](http://swiftmailer.org/) is a component-based library for sending email from PHP applications.
+
+- [Twig](http://www.twig-project.org/) is an open source template engine for the PHP programming language by Fabien Potencier. It focuses on being fast, secure, and flexible.
+
+- [HumanizeDuration](https://github.com/EvanHahn/HumanizeDuration.js)
+
+# Licenses
+
+- [GLYPHICONS](http://glyphicons.com) is a library of precisely prepared monochromatic icons and symbols, created with an emphasis to simplicity and easy orientation.
 
 # References
 
