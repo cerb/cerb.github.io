@@ -80,7 +80,9 @@ position: relative;
 	</ul>
 </div>
 
-<button type="button" class="cerb-button" data-cerb-bot-interaction="license">Create and manage licenses</button>
+<button type="button" class="cerb-button" data-cerb-bot-interaction="cloud" data-cerb-bot-param-mode="signup">Start a free evaluation</button>
+
+<button type="button" class="cerb-button" data-cerb-bot-interaction="license">Buy and manage licenses</button>
 
 <a href="/docs/installation/" class="cerb-button">Read the installation guide</a>
 

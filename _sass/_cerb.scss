@@ -767,6 +767,12 @@ div.cerb-box {
 	}
 }
 
+a.cerb-button {
+	display: inline-block;
+	text-align: center;
+	line-height: 1.1em;
+}
+
 button.cerb-button, a.cerb-button {
 	text-decoration: none;
 	font-size: 32px;
