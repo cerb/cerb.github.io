@@ -155,7 +155,10 @@ position: relative;
 									Walkthroughs of new major version updates.
 								</li>
 								<li>
-									Additional hours at $125/hour.
+									Billed in 20 minute increments with a 1 hour minimum.
+								</li>
+								<li>
+									Additional hours at $150/hour.
 								</li>
 							</ul>
 						</li>
@@ -202,7 +205,10 @@ position: relative;
 									Walkthroughs of new major version updates.
 								</li>
 								<li>
-									Additional hours at $100/hour.
+									Billed in 20 minute increments with a 1 hour minimum.
+								</li>
+								<li>
+									Additional hours at $125/hour.
 								</li>
 							</ul>
 						</li>
