@@ -14,11 +14,13 @@ It is our policy to respect your privacy regarding any information we may collec
 * TOC
 {:toc}
 
+{% comment %}
 # Privacy Shield
 
 We are committed to complying with the [Privacy Shield Principles](https://www.privacyshield.gov/) designed to safeguard the privacy of personal data. This applies to all data we collect, including from entities within the EU and Switzerland.
 
 We applied and paid dues to the Privacy Shield program in May 2018, but have not yet been contacted or certified.
+{% endcomment %}
 
 {% comment %}
 Webgroup Media, LLC complies with the EU-U.S. and Swiss-U.S. Privacy Shield Frameworks as set forth by the U.S. Department of Commerce regarding the collection, use, and retention of personal information transferred from the European Union and/or Switzerland to the United States.
