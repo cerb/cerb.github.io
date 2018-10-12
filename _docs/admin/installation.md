@@ -62,6 +62,7 @@ jumbotron:
 		- session
 		- simplexml
 		- spl
+		- yaml
 		- xml
 		- tidy _(recommended)_
 		- gnupg _(recommended)_
