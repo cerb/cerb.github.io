@@ -148,11 +148,6 @@
   docs:
   - packages
 
-- title: Plugins
-  docs:
-  - plugins
-  - developers/plugins
-
 - title: Setup
   docs:
   - setup
@@ -174,6 +169,11 @@
   - backups
   - upgrading
   #- scaling
+
+- title: Plugins
+  docs:
+  - plugins
+  - plugins/manifests
 
 - title: API
   docs:
