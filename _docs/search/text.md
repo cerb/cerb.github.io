@@ -1,5 +1,7 @@
 ---
-title: Search Query Text Filters
+title: Filtering by text fields in search queries
+excerpt:
+social_image_url: /assets/images/search/search.png
 permalink: /docs/search/filters/text/
 toc:
   title: Text

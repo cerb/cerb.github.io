@@ -1,5 +1,7 @@
 ---
-title: Deep Search Queries
+title: Deep search in queries
+excerpt:
+social_image_url: /assets/images/search/search.png
 permalink: /docs/search/deep-search/
 toc:
   title: Deep Search

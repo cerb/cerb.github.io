@@ -1,5 +1,7 @@
 ---
-title: Search Query Date Filters
+title: Filtering by date fields in search queries
+excerpt:
+social_image_url: /assets/images/search/search.png
 permalink: /docs/search/filters/dates/
 toc:
   title: Dates

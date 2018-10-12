@@ -1,5 +1,7 @@
 ---
-title: Search Queries
+title: Search queries
+excerpt: 
+social_image_url: /assets/images/search/search.png
 permalink: /docs/search/
 toc:
   title: Queries
@@ -13,7 +15,7 @@ jumbotron:
 ---
 
 <div class="cerb-screenshot">
-<img src="/assets/images/search/search.png" class="screenshot">
+<img src="{{page.social_image_url}}" class="screenshot">
 </div>
 
 **Search queries** are a text-based language for filtering [records](/docs/records/). They are efficient, expressive, and automation-friendly.

@@ -1,5 +1,7 @@
 ---
-title: AND/OR filter groups in search queries
+title: Using AND/OR filter groups in search queries
+excerpt:
+social_image_url: /assets/images/search/search.png
 permalink: /docs/search/and-or/
 toc:
   title: AND / OR

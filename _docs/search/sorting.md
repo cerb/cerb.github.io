@@ -1,5 +1,7 @@
 ---
 title: Sorting results in search queries
+excerpt:
+social_image_url: /assets/images/search/search.png
 permalink: /docs/search/sorting/
 toc:
   title: Sorting

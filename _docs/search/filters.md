@@ -1,5 +1,7 @@
 ---
-title: Search Query Filters
+title: Search query filters
+excerpt:
+social_image_url: /assets/images/search/search.png
 permalink: /docs/search/filters/
 toc:
   title: Filters

@@ -1,5 +1,7 @@
 ---
-title: Search Query Number Filters
+title: Filtering by number fields in search queries
+excerpt:
+social_image_url: /assets/images/search/search.png
 permalink: /docs/search/filters/numbers/
 toc:
   title: Numbers
