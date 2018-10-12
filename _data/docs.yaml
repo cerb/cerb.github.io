@@ -1,66 +1,194 @@
-- title: Introduction
+- title: Getting Started
   docs:
-  - home
-  - philosophy
-
-- title: Concepts
-  docs:
-  - welcome
-  - workers
-  - groups
-  - buckets
-  - responsibilities
-  - roles
-  - records
-  - custom-fields
-  - activity-log
-  - watchers
-  - notifications
-  - comments
-  - profiles
-  - cards
-  - links
-  - reminders
-  - worklists
-  - workspaces
-  - dashboards
-  - contacts
-  - orgs
-  - tickets
-  - snippets
-  - bots
-  #- calendars
-  #- project-boards
-  - classifiers
-  - connected-accounts
-  - portals
-  - webhooks
-  - packages
-  - plugins
-
-- title: UI Reference
-  docs:
+  - intro
   - logging-in
   - navigation
 
-- title: Developers
+- title: Workers
   docs:
-  - api
+  - workers
+  - roles
+
+- title: Groups
+  docs:
+  - groups
+  - buckets
+  - responsibilities
+  - groups/signatures
+
+- title: Records
+  docs:
+  - records
+  - records/custom-records
+  - records/fields
+  - custom-fields
+  - custom-fieldsets
+  - profiles
+  - cards
+  - records/links
+  - comments
+  - activity-log
+  - watchers
+  - notifications
+  - reminders
+
+- title: Worklists
+  docs:
+  - worklists
+  - worklists/search
+  - worklists/sorting
+  - worklists/peek
+  - worklists/pagination
+  - worklists/subtotals
+  - worklists/bulk-update
+  - worklists/import-export
+  - worklists/explore-mode
+
+- title: Search
+  docs:
+  - search
+  - search/filters
+  - search/filters/text
+  - search/filters/numbers
+  - search/filters/dates
+  - search/filters/nullness
+  - search/deep-search
+  - search/and-or
+  - search/sorting
+
+- title: Workspaces
+  docs:
+  - workspaces
+  - dashboards
+
+- title: Clients
+  docs:
+  - contacts
+  - orgs
+  #- calendars
+  #- project-boards
+
+- title: Tickets
+  docs:
+  - tickets
+  - tickets/masks
+  - tickets/statuses
+  - tickets/importance
+  - tickets/response-times
+  - tickets/anti-spam
+  #- tickets/compose
+  #- tickets/replying
+  - tickets/drafts
+  - tickets/merge-split
+  - snippets
+
+- title: Bots
+  docs:
+  - bots
+  - bots/behaviors
+  - bots/behaviors/events
+  - bots/behaviors/dictionaries
+  - bots/behaviors/variables
+  - bots/behaviors/decisions
+  - bots/behaviors/actions
+  - bots/behaviors/loops
+  - bots/behaviors/subroutines
+  - bots/behaviors/simulator
+  - bots/delegation
+  - connected-accounts
+  - classifiers
+  - webhooks
+
+- title: Bot Scripting
+  docs:
+  - bots/scripting
+  - bots/scripting/variables
+  - bots/scripting/placeholders
+  - bots/scripting/strings
+  - bots/scripting/arrays-objects
+  - bots/scripting/dates
+  - bots/scripting/conditional-logic
+  - bots/scripting/operators
+  - bots/scripting/loops
+  - bots/scripting/regular-expressions
+  - bots/scripting/json
+  - bots/scripting/xml
+  - bots/scripting/commands
+  - bots/scripting/functions
+  - bots/scripting/filters
+
+#- title: Bot Interactions
+#  docs:
+#  - bots/interactions
+#  - bots/interactions/points
+#  - bots/interactions/sessions
+#  - bots/interactions/responses
+#  - bots/interactions/prompts
+#  - bots/interactions/proactive
+
+- title: Data Queries
+  docs:
   - data-queries
-  - building-bots
+  - data-queries/worklist/metrics
+  - data-queries/worklist/series
+  - data-queries/worklist/subtotals
+  - data-queries/worklist/xy
+  - data-queries/usage/bot-behaviors
+  - data-queries/usage/snippets
+  - data-queries/custom
+
+- title: Portals
+  docs:
+  - portals
+  - portals/support-center
+  - portals/chat-bot
+  - portals/webhook
+
+- title: Packages
+  docs:
+  - packages
+
+- title: Plugins
+  docs:
+  - plugins
+  - developers/plugins
+
+- title: Setup
+  docs:
+  - setup
+  - setup/configure
+  - setup/records
+  - setup/team
+  - setup/mail
+  - setup/services
+  - setup/storage
+  - setup/plugins
 
 - title: Administration
   docs:
   - installation
   - friendly-urls
+  #- scheduler
   - quick-start
-  - setup
   - security
   - backups
   - upgrading
   #- scaling
 
+- title: API
+  docs:
+  - api
+  - api/authentication
+  - api/requests
+  - api/responses
+  - api/data-types
+  - api/custom-fields
+  - api/records
+  - api/endpoints
+  - api/libraries
+
 - title: Meta
   docs:
   - history
+  - philosophy
   - credits

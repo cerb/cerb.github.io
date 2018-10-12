@@ -5,6 +5,10 @@ excerpt: Cerb supports rewriting to make the URLs shorter and more user-friendly
 jumbotron:
   title: Friendly URLs
   tagline: Enable professional looking URLs
+  breadcrumbs:
+  -
+    label: Docs &raquo;
+    url: /docs/home/
 ---
 
 # Enabling friendly URLs

@@ -224,7 +224,7 @@ div.page-content {
 		margin: 0px 0px 20px 0px;
 	
 		h1 {
-			margin: 20px 0px 5px 0px;
+			margin: 0px 0px 5px 0px;
 			padding: 0;
 			font-weight: bold;
 			font-size: 2.5em;
@@ -235,6 +235,10 @@ div.page-content {
 			padding: 0;
 			font-size: 18px;
 			font-weight: normal;
+		}
+		
+		p { 
+			margin-bottom: 15px;
 		}
 		
 		ul {
@@ -292,14 +296,23 @@ div.page-content {
 		//@include border-radius(5px);
 	
 		h4 {
-			font-size: 18px;
+			font-size: 16px;
 			font-weight: bold;
 			margin: 0px 0px 5px 0px;
 			padding: 0;
+			
+			a {
+				font-weight: bold;
+				color: #111;
+			}
+		}
+		
+		ul {
+			margin-bottom: 5px;
 		}
 	
 		li {
-			font-size: 14px;
+			font-size: 13px;
 			list-style: none;
 			margin: 0;
 			padding: 0;
@@ -324,7 +337,7 @@ div.page-content {
 		
 			a {
 				color: #888;
-				line-height: 2em;
+				line-height: 1.7em;
 			}
 		}
 	}

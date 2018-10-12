@@ -4,6 +4,10 @@ permalink: /docs/installation/
 jumbotron:
   title: Installation
   tagline: Deploy Cerb on your own server
+  breadcrumbs:
+  -
+    label: Docs &raquo;
+    url: /docs/home/
 ---
 
 * TOC

@@ -95,11 +95,11 @@ We also see two other keys:
 
 # Scripting
 
-A package itself must always be a valid JSON object, but any key or value string can use [Cerb's scripting syntax](/docs/building-bots/scripting/) for dynamic content.
+A package itself must always be a valid JSON object, but any key or value string can use [Cerb's scripting syntax](/docs/bots/scripting/) for dynamic content.
 
 Because packages can include bots that also use scripting, packages use a slightly modified syntax to avoid conflicting with them:
 
-* [Commands](/docs/building-bots/scripting/commands/) use `{%raw%}{{% ... %}}{%endraw%}` rather than `{%raw%}{% ... %}{%endraw%}`
+* [Commands](/docs/bots/scripting/commands/) use `{%raw%}{{% ... %}}{%endraw%}` rather than `{%raw%}{% ... %}{%endraw%}`
 * Placeholders use `{%raw%}{{{...}}}{%endraw%}` rather than `{%raw%}{{...}}{%endraw%}`
 * Comments use `{%raw%}{{#...#}}{%endraw%}` rather than `{%raw%}{#...#}{%endraw%}`
 

@@ -1,17 +1,18 @@
 {% assign docs = site.data.docs | map: 'docs' | join: ',' | split: ',' %}
 
 {% for document in docs %}
-	{% assign document_url = document | prepend:"/docs/" | append:"/" %}
-	{% if document_url == page.url %}
+  {% assign doc_id = document | prepend:"/docs/" %}
+  
+	{% if doc_id == page.id %}
 		<div class="section-nav">
 			<div class="left">
 					{% if forloop.first %}
 						<span class="prev disabled">Prev</span>
 					{% else %}
 						{% assign previous = forloop.index0 | minus: 1 %}
-						{% assign prev_url = docs[previous] | prepend:"/docs/" | append:"/" %}
-						{% assign prev_page = site.docs | where:"url",prev_url | first %}
-						<a href="{{ prev_url }}" class="prev">&lt; {{ prev_page.title }}</a>
+						{% assign prev_id = docs[previous] | prepend:"/docs/" %}
+						{% assign prev_page = site.docs | where:"id",prev_id | first %}
+						<a href="{{ prev_page.url }}" class="prev">&lt; {% if prev_page.toc.title %}{{ prev_page.toc.title }}{% else %}{{ prev_page.title }}{% endif %}</a>
 					{% endif %}
 			</div>
 			<div class="right align-right">
@@ -19,9 +20,9 @@
 						<span class="next disabled">Next</span>
 					{% else %}
 						{% assign next = forloop.index0 | plus: 1 %}
-						{% assign next_url = docs[next] | prepend:"/docs/" | append:"/" %}
-						{% assign next_page = site.docs | where:"url",next_url | first %}
-						<a href="{{ next_url }}" class="next">{{ next_page.title }} &gt;</a>
+						{% assign next_id = docs[next] | prepend:"/docs/" %}
+						{% assign next_page = site.docs | where:"id",next_id| first %}
+						<a href="{{ next_page.url }}" class="next">{% if next_page.toc.title %}{{ next_page.toc.title }}{% else %}{{ next_page.title }}{% endif %} &gt;</a>
 					{% endif %}
 			</div>
 		</div>

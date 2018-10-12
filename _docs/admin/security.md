@@ -5,6 +5,10 @@ excerpt: Best practices for securing your Cerb installation.
 jumbotron:
   title: Security
   tagline: Best practices for securing your Cerb installation.
+  breadcrumbs:
+  -
+    label: Docs &raquo;
+    url: /docs/home/
 ---
 
 {% comment %}

@@ -5,6 +5,10 @@ excerpt: To fully protect your Cerb data you need to backup both the MySQL datab
 jumbotron:
   title: Backups
   #tagline: ...
+  breadcrumbs:
+  -
+    label: Docs &raquo;
+    url: /docs/home/
 ---
 
 * TOC

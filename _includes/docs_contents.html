@@ -1,8 +1,29 @@
-<div class="unit one-fourth">
+<div class="unit one-fourth hide-on-mobiles">
   <aside>
     {% for section in site.data.docs %}
-    <h4>{{ section.title }}</h4>
-    {% include docs_ul.html items=section.docs %}
+    {% assign is_expanded = false %}
+    
+    {% for item in section.docs %}
+      {% assign item_id = item | prepend:"/docs/" %}
+      {% assign p = site.docs | where:"id",item_id | first %}
+      
+      {% if p.id == page.id %}
+        {% assign is_expanded = true %}
+        {% assign c = "current" %}
+        
+        <h4>{{ section.title }}</h4>
+        {% include docs_ul.html items=section.docs %}
+      {% else %}
+        {% assign c = "" %}
+      {% endif %}
+    {% endfor %}
+    
+    {% if is_expanded == false %}
+    {% assign section_key = section.docs|first|prepend:"/docs/" %}
+    {% assign section_index = site.docs | where:"id",section_key | first %}
+    <h4><a href="{{ section_index.url }}">{{ section.title }}</a></h4>
+    {% endif %}
+    
     {% endfor %}
   </aside>
 </div>

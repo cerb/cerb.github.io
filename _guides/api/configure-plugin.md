@@ -78,7 +78,7 @@ The API uses per-application credentials and per-worker permissions to authorize
 
 As an administrator, you can repeat this process to create a key-pair for other workers.
 
-By configure the **Allowed Endpoints** option you can restrict a key-pair to only certain modules [in the API](/docs/api/).
+By configure the **Allowed Endpoints** option you can restrict a key-pair to only certain endpoints [in the API](/docs/api/).
 
 # Resources
 

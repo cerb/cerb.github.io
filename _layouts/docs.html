@@ -6,24 +6,19 @@ permalink: /docs/
 
 <section class="docs">
 	<div class="grid">
-
+		{% include docs_contents.html %}
+		
 		<div class="unit three-fourths">
 			<article>
 				{{ content }}
 				{% include section_nav.html %}
 			</article>
 		</div>
-
-		{% include docs_contents.html %}
-
-		<div class="clear"></div>
-
 	</div>
 </section>
 
 <div id="disqus_thread"></div>
 <script>
-
 var disqus_config = function () {
 this.page.url = '{{site.url}}{{page.url}}';
 this.page.identifier = '{{page.id | replace:'index.html',''}}';

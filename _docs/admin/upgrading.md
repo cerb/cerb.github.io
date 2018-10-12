@@ -5,6 +5,10 @@ excerpt: You can use Git to quickly update your local Cerb files to the latest v
 jumbotron:
   title: Upgrading
   #tagline: ...
+  breadcrumbs:
+  -
+    label: Docs &raquo;
+    url: /docs/home/
 keywords: upgrade
 ---
 

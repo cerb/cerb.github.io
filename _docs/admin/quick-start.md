@@ -4,6 +4,10 @@ permalink: /docs/quick-start/
 jumbotron:
   title: Quick Start
   tagline: Run through this checklist and you're ready for business!
+  breadcrumbs:
+  -
+    label: Docs &raquo;
+    url: /docs/home/
 ---
 
 * TOC
@@ -11,7 +15,7 @@ jumbotron:
 
 <div class="cerb-box note">
 <p>
-	This guide assumes that you have a fresh instance of Cerb and you're an administrator who is performing the initial configuration.  If Cerb is already configured and you want to learn how to use it, you can <a href="/docs/welcome">jump to the worker guide</a>.
+	This guide assumes that you have a fresh instance of Cerb and you're an administrator who is performing the initial configuration.  If Cerb is already configured and you want to learn how to use it, you can <a href="/docs/home/">jump to the worker guide</a>.
 </p>
 </div>
 
@@ -21,7 +25,7 @@ Let's personalize your new Cerb environment with your own logo.
 
 Navigate to **Setup** &raquo; **Configure** &raquo; **Branding**
 
-Review the instructions for [adding your own logo](/docs/setup/branding/).
+Review the instructions for [adding your own logo](/docs/setup/configure/branding/).
 
 # Configure outgoing mail transports
 
@@ -29,7 +33,7 @@ Next, let's make sure you're ready to send outgoing mail.
 
 Navigate to **Setup >> Mail >> Outgoing Mail >> Email Transports**
 
-Review your [mail transports](/docs/setup/mail-transports/).
+Review your [mail transports](/docs/setup/mail/transports/).
 
 <div class="cerb-box note">
 <p>If you're using <b>Cerb Cloud</b>, you'll notice that we've already configured a default SMTP mail transport for you. If needed, you can still use your own SMTP server by creating a new transport.</p>
@@ -39,7 +43,7 @@ Review your [mail transports](/docs/setup/mail-transports/).
 
 Navigate to **Setup >> Mail >> Outgoing Mail >> Sender Addresses**
 
-Review your [sender addresses](/docs/setup/sender-addresses/). These determine the `From:` email address when you send messages.
+Review your [sender addresses](/docs/setup/mail/sender-addresses/). These determine the `From:` email address when you send messages.
 
 For optimal email deliverability, make sure you've configured SPF, DKIM, and DMARC records in DNS for all sender domains. We'll test this a little later.
 
@@ -135,7 +139,7 @@ Navigate to **Setup >> Mail >> Incoming Mail >> Mailboxes**
 
 This page lists the mailboxes that Cerb checks for new messages.
 
-Review your [mailboxes](/docs/setup/mailboxes/).
+Review your [mailboxes](/docs/setup/mail/mailboxes/).
 
 <div class="cerb-box note">
 <p>If you're using <b>Cerb Cloud</b>, you can alternatively redirect your incoming mail to <code>support@&lt;you&gt;.cerb.email</code> for instant delivery. Replace <code>&lt;you&gt;</code> with the name of your instance. With this delivery method you won't need to set up a mailbox here.</p>
@@ -149,13 +153,13 @@ Review your [mailboxes](/docs/setup/mailboxes/).
 
 Navigate to **Setup >> Mail >> Incoming Mail >> Mail Routing**
 
-Review your [mail routing rules](/docs/setup/mail-routing/).
+Review your [mail routing rules](/docs/setup/mail/routing/).
 
 # Scheduler
 
 Navigate to **Setup** >> **Configure** >> **Scheduler**
 
-Review the instructions for [configuring the scheduler](/docs/setup/scheduler/).
+Review the instructions for [configuring the scheduler](/docs/setup/configure/scheduler/).
 
 <div class="cerb-box note">
 <p>If you're using <b>Cerb Cloud</b>, we handle this for you.</p>

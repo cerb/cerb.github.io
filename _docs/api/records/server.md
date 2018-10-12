@@ -1,0 +1,27 @@
+---
+title: Server
+permalink: /docs/api/records/server/
+jumbotron:
+  title: Server
+  tagline: ""
+  breadcrumbs:
+  -
+    label: Docs &raquo;
+    url: /docs/home/
+  -
+    label: API &raquo;
+    url: /docs/api/
+  -
+    label: Records &raquo;
+    url: /docs/api/records/
+---
+
+* TOC
+{:toc}
+
+# Records API
+
+**URI:** `server`
+
+Refer to the [/records](/docs/api/endpoints/records/) API.
+

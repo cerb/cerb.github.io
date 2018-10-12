@@ -30,7 +30,7 @@ Relayed responses are received from a worker's personal email address and rewrit
 
 # Enabling the mail relay
 
-Administrators can enable mail relay functionality from [Setup >> Mail >> Incoming >> External Relay](/docs/setup/mail-relay/).
+Administrators can enable mail relay functionality from [Setup >> Mail >> Incoming >> External Relay](/docs/setup/mail/relay/).
 
 # Relaying messages to external email accounts
 

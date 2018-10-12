@@ -308,7 +308,7 @@ Let's look at one of the **Record create** actions:
 <img src="/assets/images/guides/bots/create-recurring-tasks/action-create-record-task.png" class="screenshot">
 </div>
 
-This action internally uses the [Records API](/docs/api/modules/records/) to be able to create any type of record and set any number fields (including your own custom fields).
+This action internally uses the [Records API](/docs/api/endpoints/records/) to be able to create any type of record and set any number fields (including your own custom fields).
 
 The field values are provided as a JSON[^json] object.
 

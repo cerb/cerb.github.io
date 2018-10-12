@@ -4,6 +4,10 @@ permalink: /docs/scaling/
 jumbotron:
   title: Scaling
   #tagline: ...
+  breadcrumbs:
+  -
+    label: Docs &raquo;
+    url: /docs/home/
 ---
 
 {% comment %}
