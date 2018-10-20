@@ -20,14 +20,7 @@ jumbotron:
 # worklist.subtotals
 {: .no_toc}
 
-`worklist.subtotals` data queries run aggregate functions against worklist data. Subtotals can be nested to any depth (e.g. _"tickets by top 10 owners by status"_).
-
-* TOC
-{:toc}
-
-# Inputs
-
-Histograms can be created for date-based fields by appending a unit of time (e.g. `@year`, `@month`, `@day`) to the field name.
+`worklist.subtotals` [data queries](/docs/data-queries/) run aggregate functions to categorize matching worklist records.
 
 <pre>
 <code class="language-text">
@@ -40,13 +33,239 @@ format:timeseries
 </code>
 </pre>
 
-The `by:` fields can specify a 'limit' and 'order'. These can be different for each set of nested subtotals. For instance, `by:[created@month~10,org~25]` returns records grouped by the top 10 created months, subgrouped by top 25 organizations for each month. Similarly, `by:[group~-3]` returns the "bottom" 3 groups (least frequently used).
+* TOC
+{:toc}
+
+# of:
+
+The `of:` key specifies the type of [records](/docs/records/) to subtotal.
+
+<pre>
+<code class="language-text">
+{% raw %}
+of:tickets
+{% endraw %}
+</code>
+</pre>
+
+# by:
+
+The `by:` key specifies which record [fields](/docs/records/fields/) to subtotal by.
+
+### Nested subtotals
+
+Multiple fields can be separated with commas to generated nested subtotals (e.g. _"tickets by owners by status"_).
+
+<pre>
+<code class="language-text">
+{% raw %}
+by:[owner,status] 
+{% endraw %}
+</code>
+</pre>
+
+### Aggregate functions
+
+The subtotal metric can be computed using different aggregate **functions**:
+
+* `count` (default)
+* `avg`, `average`
+* `sum`
+* `min`
+* `max`
+
+Functions target the last field specified in the `by:` list.
+
+The `count` function is the default when no preference is given, and it can be target any field type.
+
+The other functions may only be used against numeric fields. For example, you can't average _group names_, but you can average _response times_.
+
+As of [9.0.7](/releases/9.0.7/) the desired function is appended to the `by:` key following a period (`.`):
+
+<pre>
+<code class="language-text">
+{% raw %}
+by.avg:[worker,responseTime] 
+{% endraw %}
+</code>
+</pre>
+
+In earlier versions, a separate `function:` key was specified:
+
+<pre>
+<code class="language-text">
+{% raw %}
+function:average
+by:[worker,responseTime] 
+{% endraw %}
+</code>
+</pre>
+
+This still works, but is deprecated.
+
+### Date histograms
+
+Histograms can be generated for date-based fields by appending a unit of time following an at sign (`@`):
+
+* `@year`
+* `@month`
+* `@week`, `@week-mon`
+* `@week-sun`
+* `@day`
+
+When using `@week` you can optionally specify if weeks should start on Sunday or Monday. The default is Monday.
+
+<pre>
+<code class="language-text">
+{% raw %}
+by:[created@month,worker] 
+{% endraw %}
+</code>
+</pre>
+
+### Links
 
 The `by:` fields can specify `links` or `links.*` (e.g. `links.org`) fields. This could create a report like _"Sum of time tracking entries linked to organizations by month"_.
 
-A `function:` field may be provided with one of the following options: `count`, `avg`, `sum`, `min`, `max`. Count is the default. This affects the metric returned in the last subtotaled group (e.g. _"Average first response time by worker by month"_).
+<pre>
+<code class="language-text">
+{% raw %}
+by:[links.org] 
+{% endraw %}
+</code>
+</pre>
 
-# Response Formats
+### Limits
+
+When a field has only a few possible values we say it has _"low cardinality"_. A ticket's status can only one of four values: open, waiting, closed, or deleted. A checkbox is _binary_ -- it can only be `true` or `false`.
+
+Conversely, some _"high cardinality"_ fields have potentially infinite possible values. You may have millions of unique ticket subjects. There may be thousands of organizations in your address book. Your team may have hundreds of members.
+
+You can **limit** the cardinality of a field by appending a tilde (`~`) to any `by:` field and providing a number. This only returns that number of the most common (top) values.
+
+<pre>
+<code class="language-text">
+{% raw %}
+by:[created@month~10,org~25]
+{% endraw %}
+</code>
+</pre>
+
+### Limit ordering
+
+You can also return the least common (bottom) values by providing a negative number as the limit.
+
+<pre>
+<code class="language-text">
+{% raw %}
+by:[group~-5] 
+{% endraw %}
+</code>
+</pre>
+
+# metric:
+
+(Available in [9.0.7](/releases/9.0.7/) or later)
+
+The `metric:` key lets you specify an arbitrary **equation** to modify the calculated value for each row in the results.
+
+In this equation, the metric value is represented by the placeholder `x`.
+
+<pre>
+<code class="language-text">
+{% raw %}
+metric:"x*100"
+{% endraw %}
+</code>
+</pre>
+
+### Mathematical operations
+
+Basic mathematical operations are supported using `+` (addition), `-` (subtraction), `/` (division), `*` (multiplication), `**` (exponents).
+
+<pre>
+<code class="language-text">
+{% raw %}
+metric:"x**2"
+{% endraw %}
+</code>
+</pre>
+
+You can group operations with parentheses (`()`).
+
+<pre>
+<code class="language-text">
+{% raw %}
+metric:"(x+2)*100"
+{% endraw %}
+</code>
+</pre>
+
+### Filters
+
+Numeric [filters](/docs/bots/scripting/filters/) from [bot scripting](/docs/bots/scripting/) can be appended to a result following a pipe (`|`) character.
+
+* [abs](/docs/bots/scripting/filters/#abs)
+* [number_format](/docs/bots/scripting/filters/#number_format)
+* [round](/docs/bots/scripting/filters/#round)
+
+<pre>
+<code class="language-text">
+{% raw %}
+metric:"(x/4.33)|round"
+{% endraw %}
+</code>
+</pre>
+
+# group:
+
+(Available in [9.0.7](/releases/9.0.7/) or later)
+
+Occasionally you may need to treat nested subtotals as _"samples"_ and calculate statistics using them.
+
+Suppose you want the average _weekly_ number of email replies sent per worker _over the past month_.
+
+If you just use `created@week`:
+
+<pre>
+<code class="language-text">
+{% raw %}
+of:message
+by:[worker~20,created@week]
+query:(created:"-1 month")
+{% endraw %}
+</code>
+</pre>
+
+...then you'll get back a row for every worker for every week in the past month. If there are 20 workers with 4 weekly samples, that's 80 rows.
+
+You can use `group:` to flatten those results with a function:
+
+<pre>
+<code class="language-text">
+{% raw %}
+of:message
+by:[worker~20,created@week]
+query:(created:"-1 month")
+group.avg:[worker]
+{% endraw %}
+</code>
+</pre>
+
+This returns only a single row per worker, with the average count of their weekly samples over the past month.
+
+The available functions are:
+
+* `sum` (default)
+* `avg, ``average`
+* `min`
+* `max`
+
+Like the [by](#by) field, the function is appended to the `group` key following a period (`.`).
+
+# format:
+
+The subtotaled worklist results can be returned in various formats:
 
 * **tree** (default) returns hierarchal data (a `name` and `value` for each node, and a list of `children` for branches).
 
