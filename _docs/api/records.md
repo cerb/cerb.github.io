@@ -15,9 +15,9 @@ jumbotron:
     url: /docs/api/
 ---
 
-You can programmatically create, retrieve, update, upsert, search, and delete every [record](/docs/records/) type in Cerb using the [Records API Endpoints](/docs/api/endpoints/records/).
+You can programmatically create, retrieve, update, upsert, search, and delete every [record type](/docs/records/types/) in Cerb using the [Records API Endpoints](/docs/api/endpoints/records/).
 
-# Reference
+# Examples
 
 {% for doc in site.docs %}{% assign path = doc.url|slice:0,18 %}{% if path == '/docs/api/records/' and doc.id != page.id %}- [{{doc.title}}]({{doc.url}})
 {% endif %}{% endfor %}
