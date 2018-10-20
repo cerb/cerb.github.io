@@ -51,6 +51,7 @@
   - search/filters/text
   - search/filters/fulltext
   - search/filters/numbers
+  - search/filters/booleans
   - search/filters/dates
   - search/filters/nullness
   - search/filters/choosers
