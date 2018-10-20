@@ -55,6 +55,7 @@
   - search/filters/nullness
   - search/deep-search
   - search/filters/links
+  - search/filters/watchers
   - search/and-or
   - search/sorting
 
