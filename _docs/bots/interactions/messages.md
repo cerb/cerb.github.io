@@ -19,12 +19,6 @@ jumbotron:
     url: /docs/bots/interactions/
 ---
 
-{% comment %}
-- respond with
-- delay
-- format: plaintext, markdown, html
-{% endcomment %}
-
 In [interactions](/docs/bots/interactions/), bots convey information to users through chat **messages**. Each message can include a **delay** to emulate typing in a human-to-human conversation.
 
 The simplest messages are just text. However, messages can also be richly formatted with Markdown or HTML to include links, styles, colors, lists, images, tables, etc.
