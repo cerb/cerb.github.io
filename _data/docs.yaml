@@ -53,6 +53,7 @@
   - search/filters/numbers
   - search/filters/dates
   - search/filters/nullness
+  - search/filters/choosers
   - search/deep-search
   - search/filters/links
   - search/filters/watchers
