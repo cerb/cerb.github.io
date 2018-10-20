@@ -1,6 +1,8 @@
 ---
 title: Packages
 permalink: /docs/api/endpoints/packages/
+toc:
+  expand: API
 jumbotron:
   title: Packages
   tagline: ""

@@ -1,6 +1,8 @@
 ---
 title: Records
 permalink: /docs/api/endpoints/records/
+toc:
+  expand: API
 jumbotron:
   title: Records
   tagline: ""
@@ -16,11 +18,9 @@ jumbotron:
     url: /docs/api/endpoints/
 ---
 
-The **records** API can abstractly create, retrieve, update, upsert, search, and delete all [record](/docs/records/) types in Cerb from a single [endpoint](/docs/api/endpoints/).
+The **records** API can abstractly create, retrieve, update, upsert, search, and delete all [record](/docs/records//) types in Cerb from a single [endpoint](/docs/api/endpoints/).
 
-These endpoints specify a record type as `<uri>` in the path.
-
-You can retrieve a list of available record types using the [Contexts List API endpoint](/docs/api/endpoints/contexts/#list).
+These endpoints specify a [record type](/docs/records/types/) as `<uri>` in the path.
 
 * TOC
 {:toc}

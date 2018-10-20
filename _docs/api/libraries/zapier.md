@@ -1,6 +1,8 @@
 ---
 title: Cerb Web-API Library for Zapier
 permalink: /docs/api/libraries/zapier/
+toc:
+  expand: API
 jumbotron:
   title: Cerb Web-API Library for Zapier
   tagline: ""

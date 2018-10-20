@@ -1,6 +1,8 @@
 ---
 title: Groups
 permalink: /docs/api/endpoints/groups/
+toc:
+  expand: API
 jumbotron:
   title: Groups
   tagline: ""

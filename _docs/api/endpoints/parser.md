@@ -1,6 +1,8 @@
 ---
 title: Parser
 permalink: /docs/api/endpoints/parser/
+toc:
+  expand: API
 jumbotron:
   title: Parser
   tagline: ""

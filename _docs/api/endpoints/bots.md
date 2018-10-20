@@ -1,6 +1,8 @@
 ---
 title: Bots
 permalink: /docs/api/endpoints/bots/
+toc:
+  expand: API
 jumbotron:
   title: Bots
   tagline: ""

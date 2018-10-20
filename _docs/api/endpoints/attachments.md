@@ -1,6 +1,8 @@
 ---
 title: Attachments
 permalink: /docs/api/endpoints/attachments/
+toc:
+  expand: API
 jumbotron:
   title: Attachments
   tagline: ""

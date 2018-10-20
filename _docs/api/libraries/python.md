@@ -1,6 +1,8 @@
 ---
 title: Cerb Web-API Library for Python
 permalink: /docs/api/libraries/python/
+toc:
+  expand: API
 jumbotron:
   title: Cerb Web-API Library for Python
   tagline: ""

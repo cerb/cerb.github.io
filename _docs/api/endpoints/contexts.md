@@ -1,6 +1,8 @@
 ---
 title: Contexts
 permalink: /docs/api/endpoints/contexts/
+toc:
+  expand: API
 jumbotron:
   title: Contexts
   tagline: ""

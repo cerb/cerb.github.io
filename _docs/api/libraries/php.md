@@ -1,6 +1,8 @@
 ---
 title: Cerb Web-API Library for PHP
 permalink: /docs/api/libraries/php/
+toc:
+  expand: API
 jumbotron:
   title: Cerb Web-API Library for PHP
   tagline: ""

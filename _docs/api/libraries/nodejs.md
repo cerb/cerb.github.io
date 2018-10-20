@@ -1,6 +1,8 @@
 ---
 title: Cerb Web-API Library for Node.js
 permalink: /docs/api/libraries/nodejs/
+toc:
+  expand: API
 jumbotron:
   title: Cerb Web-API Library for Node.js
   tagline: ""

@@ -1,6 +1,8 @@
 ---
 title: Cerb Web-API Library for Perl
 permalink: /docs/api/libraries/perl/
+toc:
+  expand: API
 jumbotron:
   title: Cerb Web-API Library for Perl
   tagline: ""

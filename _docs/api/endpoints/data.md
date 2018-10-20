@@ -1,6 +1,8 @@
 ---
 title: Data
 permalink: /docs/api/endpoints/data/
+toc:
+  expand: API
 jumbotron:
   title: Data
   tagline: ""

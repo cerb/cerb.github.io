@@ -1,6 +1,8 @@
 ---
 title: Cerb Web-API Library for Apex
 permalink: /docs/api/libraries/apex/
+toc:
+  expand: API
 jumbotron:
   title: Cerb Web-API Library for Apex
   tagline: ""

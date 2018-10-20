@@ -1,6 +1,8 @@
 ---
 title: Activity Log
 permalink: /docs/api/records/activity-log/
+toc:
+  expand: API
 jumbotron:
   title: Activity Log
   tagline: ""
@@ -18,12 +20,6 @@ jumbotron:
 
 * TOC
 {:toc}
-
-# Records API
-
-**URI:** `activity_log`
-
-Refer to the [/records](/docs/api/endpoints/records/) API endpoint.
 
 # Examples
 

@@ -1,6 +1,8 @@
 ---
 title: Tickets
 permalink: /docs/api/endpoints/tickets/
+toc:
+  expand: API
 jumbotron:
   title: Tickets
   tagline: ""

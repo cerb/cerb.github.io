@@ -1,6 +1,8 @@
 ---
 title: Attachment
 permalink: /docs/api/records/attachment/
+toc:
+  expand: API
 jumbotron:
   title: Attachment
   tagline: ""
@@ -18,12 +20,6 @@ jumbotron:
 
 * TOC
 {:toc}
-
-# Records API
-
-**URI:** `attachment`
-
-Refer to the [/records](/docs/api/endpoints/records/) API.
 
 # Examples
 

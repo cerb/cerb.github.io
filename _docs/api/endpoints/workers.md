@@ -1,6 +1,8 @@
 ---
 title: Workers
 permalink: /docs/api/endpoints/workers/
+toc:
+  expand: API
 jumbotron:
   title: Workers
   tagline: ""
