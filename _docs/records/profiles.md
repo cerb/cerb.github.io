@@ -13,7 +13,7 @@ jumbotron:
     url: /docs/records/
 ---
 
-Every record has a dedicated page called its **profile**. The information on a profile is divided into any number of **tabs**.
+Every [record](/docs/records/) has a dedicated page called its **profile**. The information on a profile is divided into any number of **tabs**.
 
 Profiles are completely customizable. You can add your own tabs, and change or remove any of the default tabs that were created for you.
 
