@@ -54,6 +54,7 @@
   - search/filters/dates
   - search/filters/nullness
   - search/deep-search
+  - search/filters/links
   - search/and-or
   - search/sorting
 
