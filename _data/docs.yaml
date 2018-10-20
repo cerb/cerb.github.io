@@ -49,6 +49,7 @@
   - search
   - search/filters
   - search/filters/text
+  - search/filters/fulltext
   - search/filters/numbers
   - search/filters/dates
   - search/filters/nullness
