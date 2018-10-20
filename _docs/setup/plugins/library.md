@@ -3,6 +3,7 @@ title: "Setup: Plugin Library"
 permalink: /docs/setup/plugins/library/
 toc:
   title: Plugin Library
+  expand: Setup
 jumbotron:
   title: Plugin Library
   breadcrumbs:

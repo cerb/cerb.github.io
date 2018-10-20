@@ -1,6 +1,8 @@
 ---
 title: Search
 permalink: /docs/setup/configure/search/
+toc:
+  expand: Setup
 jumbotron:
   title: Search
   breadcrumbs:

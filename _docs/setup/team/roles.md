@@ -3,6 +3,7 @@ title: Roles
 permalink: /docs/setup/team/roles/
 toc:
   title: Roles
+  expand: Setup
 jumbotron:
   title: Roles
   breadcrumbs:

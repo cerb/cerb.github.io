@@ -3,6 +3,7 @@ title: "Setup: Storage Objects"
 permalink: /docs/setup/storage/objects/
 toc:
   title: Objects
+  expand: Setup
 jumbotron:
   title: Objects
   breadcrumbs:

@@ -1,6 +1,8 @@
 ---
 title: License
 permalink: /docs/setup/configure/license/
+toc:
+  expand: Setup
 jumbotron:
   title: License
   breadcrumbs:

@@ -1,6 +1,8 @@
 ---
 title: Custom Fields
 permalink: /docs/setup/records/custom-fields/
+toc:
+  expand: Setup
 jumbotron:
   title: Custom Fields
   breadcrumbs:

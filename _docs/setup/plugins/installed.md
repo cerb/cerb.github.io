@@ -1,6 +1,8 @@
 ---
 title: "Setup: Installed Plugins"
 permalink: /docs/setup/plugins/installed/
+toc:
+  expand: Setup
 jumbotron:
   title: Installed Plugins
   breadcrumbs:

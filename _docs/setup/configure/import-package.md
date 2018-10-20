@@ -2,6 +2,8 @@
 title: Import Package
 excerpt: ...
 permalink: /docs/setup/configure/import-package/
+toc:
+  expand: Setup
 jumbotron:
   title: Import Package
   breadcrumbs:

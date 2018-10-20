@@ -1,6 +1,8 @@
 ---
 title: Scheduler
 permalink: /docs/setup/configure/scheduler/
+toc:
+  expand: Setup
 jumbotron:
   title: Scheduler
   breadcrumbs:

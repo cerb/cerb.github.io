@@ -3,6 +3,7 @@ title: "Setup: Connected Accounts"
 permalink: /docs/setup/services/connected-accounts/
 toc:
   title: Connected Accounts
+  expand: Setup
 jumbotron:
   title: Connected Accounts
   breadcrumbs:

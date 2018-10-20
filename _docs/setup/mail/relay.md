@@ -4,6 +4,7 @@ excerpt: The email relay allows workers to respond to messages from external mai
 permalink: /docs/setup/mail/relay/
 toc:
   title: External Relay
+  expand: Setup
 jumbotron:
   title: External Relay
   breadcrumbs:

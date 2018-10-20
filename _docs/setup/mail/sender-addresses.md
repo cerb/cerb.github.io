@@ -1,6 +1,8 @@
 ---
 title: "Setup: Sender Addresses"
 permalink: /docs/setup/mail/sender-addresses/
+toc:
+  expand: Setup
 jumbotron:
   title: Sender Addresses
   breadcrumbs:

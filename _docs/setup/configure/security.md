@@ -2,6 +2,8 @@
 title: Security
 permalink: /docs/setup/configure/security/
 excerpt: Configure security settings like session expiration and the IP whitelist.
+toc:
+  expand: Setup
 jumbotron:
   title: Security
   breadcrumbs:

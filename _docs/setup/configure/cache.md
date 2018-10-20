@@ -2,6 +2,8 @@
 title: Cache
 permalink: /docs/setup/configure/cache/
 excerpt: To optimize performance, Cerb caches frequently accessed content.
+toc:
+  expand: Setup
 jumbotron:
   title: Cache
   breadcrumbs:

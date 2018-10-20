@@ -3,6 +3,7 @@ title: "Setup: Mail Filtering"
 permalink: /docs/setup/mail/filtering/
 toc:
   title: Filtering
+  expand: Setup
 jumbotron:
   title: Filtering
   breadcrumbs:

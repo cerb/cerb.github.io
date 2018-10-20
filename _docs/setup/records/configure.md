@@ -1,6 +1,8 @@
 ---
 title: Records
 permalink: /docs/setup/records-configure/
+toc:
+  expand: Setup
 jumbotron:
   title: Records
   breadcrumbs:

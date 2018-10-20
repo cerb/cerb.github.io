@@ -1,6 +1,8 @@
 ---
 title: Sessions
 permalink: /docs/setup/configure/sessions/
+toc:
+  expand: Setup
 jumbotron:
   title: Sessions
   breadcrumbs:

@@ -3,6 +3,7 @@ title: "Setup: Storage Overview"
 permalink: /docs/setup/storage/overview/
 toc:
   title: Overview
+  expand: Setup
 jumbotron:
   title: Overview
   breadcrumbs:

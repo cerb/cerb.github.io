@@ -3,6 +3,7 @@ title: "Setup: Mail Routing"
 permalink: /docs/setup/mail/routing/
 toc:
   title: Routing
+  expand: Setup
 jumbotron:
   title: Routing
   breadcrumbs:

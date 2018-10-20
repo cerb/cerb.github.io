@@ -1,6 +1,8 @@
 ---
 title: Skills
 permalink: /docs/setup/records/skills/
+toc:
+  expand: Setup
 jumbotron:
   title: Skills
   breadcrumbs:

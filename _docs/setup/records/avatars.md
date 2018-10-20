@@ -1,6 +1,8 @@
 ---
 title: Avatars
 permalink: /docs/setup/avatars/
+toc:
+  expand: Setup
 jumbotron:
   title: Avatars
   breadcrumbs:

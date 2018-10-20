@@ -1,6 +1,8 @@
 ---
 title: Snippets
 permalink: /docs/setup/records/snippets/
+toc:
+  expand: Setup
 jumbotron:
   title: Snippets
   breadcrumbs:

@@ -3,6 +3,7 @@ title: Groups
 permalink: /docs/setup/team/groups/
 toc:
   title: Groups
+  expand: Setup
 jumbotron:
   title: Groups
   breadcrumbs:
