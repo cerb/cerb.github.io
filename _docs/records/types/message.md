@@ -16,18 +16,81 @@ jumbotron:
     url: /docs/records/
   -
     label: Types &raquo;
-    url: /docs/records/types/
+    url: /docs/records/#record-types
 ---
 
 |---
 |-|-
 | **Name (singular):** | Message
 | **Name (plural):** | Messages
-| **Alias:** | message
+| **Alias (uri):** | message
+| **Identifier (ID):** | cerberusweb.contexts.message
 
 * TOC
 {:toc}
 
+### Records API
+
+These fields are available in the [Records API](/docs/api/endpoints/records/) and [packages](/docs/packages/):
+
+|---
+| Req'd | Field | Type | Notes
+|:-:|-|-|-
+|   | `content` | [text](/docs/records/fields/types/text/) | Message content 
+|   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
+|   | `hash_header_message_id` | [text](/docs/records/fields/types/text/) | A SHA-1 hash of the `Message-Id:` header; used for message threading 
+|   | `headers` | [text](/docs/records/fields/types/text/) | Message headers 
+|   | `html_attachment_id` | [number](/docs/records/fields/types/number/) | The [attachment](/docs/records/types/attachment/) ID containing the HTML message content 
+|   | `is_broadcast` | [boolean](/docs/records/fields/types/boolean/) | Was this message sent using the broadcast feature? 
+|   | `is_not_sent` | [boolean](/docs/records/fields/types/boolean/) | Was this message saved without sending? 
+|   | `is_outgoing` | [boolean](/docs/records/fields/types/boolean/) | Was this an outgoing reply from a worker? 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `response_time` | [number](/docs/records/fields/types/number/) | Response time in seconds 
+|   | `sender` | [text](/docs/records/fields/types/text/) | The [email address](/docs/records/types/address/) of the sender; alternative to `sender_id` 
+| **x** | **`sender_id`** | [number](/docs/records/fields/types/number/) | The ID of the sender's [email address](/docs/records/types/address/) record 
+|   | `storage_size` | [number](/docs/records/fields/types/number/) | Size of the message in bytes 
+| **x** | **`ticket_id`** | [number](/docs/records/fields/types/number/) | The ID of the message's [ticket](/docs/records/types/ticket/) record 
+|   | `was_encrypted` | [boolean](/docs/records/fields/types/boolean/) | Was the message sent encrypted? 
+|   | `was_signed` | [boolean](/docs/records/fields/types/boolean/) | Was the message cryptographically signed? 
+|   | `worker_id` | [number](/docs/records/fields/types/number/) | If outgoing, the ID of the [worker](/docs/records/types/worker/) who sent the message 
+
+### Dictionary Placeholders
+
+These [placeholders](/docs/bots/scripting/placeholders/) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
+
+|---
+| Field | Type | Description
+|-|-|-
+| `_label` | text | Label
+| `created` | date | Created
+| `html_attachment_id` | number | Html Attachment Id
+| `id` | number | Id
+| `is_broadcast` | boolean | Is Broadcast
+| `is_not_sent` | boolean | Is Not Sent
+| `is_outgoing` | boolean | Is Outgoing
+| `record_url` | text | Record Url
+| `response_time` | seconds | Response Time
+| `sender_` | record | [Sender](/docs/records/types/address/)
+| `storage_size` | number | Size (Bytes)
+| `ticket_` | record | [Ticket](/docs/records/types/ticket/)
+| `was_encrypted` | boolean | Is Encrypted
+| `was_signed` | boolean | Is Signed
+| `worker_` | record | [Sender Worker](/docs/records/types/worker/)
+
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+
+|---
+| Field | Type | Description
+|-|-|-
+| `attachments` | records | Attachments
+| `content` | text | Content
+| `content_html` | text | Content (Html)
+| `custom_<id>` | mixed | Custom Fields
+| `headers` | hashmap | Headers
+| `links` | links | Links
+| `reply_cc` | text | `cc:` Recipients (Comma-Separated)
+| `reply_to` | text | `to:` Recipients (Comma-Separated)
+	
 ### Search Query Fields
 
 These [filters](/docs/search/filters/) are available in message [search queries](/docs/search/):
@@ -35,51 +98,56 @@ These [filters](/docs/search/filters/) are available in message [search queries]
 |---
 | Field | Type | Description
 |-|-|-
-| `attachments:` | [Record](/docs/search/deep-search/) | [Attachments](/docs/records/types/attachment/)
-| `content:` | [Fulltext](/docs/search/filters/fulltext/) | Content
-| `created:` | [Date](/docs/search/filters/dates/) | Created
-| `fieldset:` | [Record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `header.messageId:` | [Text](/docs/search/filters/text/) | Message-Id Header
-| `id:` | [Number](/docs/search/filters/numbers/) | Id
-| `isBroadcast:` | [Boolean](/docs/search/filters/booleans/) | Is Broadcast
-| `isEncrypted:` | [Boolean](/docs/search/filters/booleans/) | Is Encrypted
-| `isNotSent:` | [Boolean](/docs/search/filters/booleans/) | Is Not Sent
-| `isOutgoing:` | [Boolean](/docs/search/filters/booleans/) | Is Outgoing
-| `isSigned:` | [Boolean](/docs/search/filters/booleans/) | Is Signed
-| `links:` | [Links](/docs/search/filters/links/) | Record Links
-| `notes:` | [Record](/docs/search/deep-search/) | [Notes](/docs/records/types/comment/)
-| `responseTime:` | [Number](/docs/search/filters/numbers/) | Response Time
-| `sender:` | [Record](/docs/search/deep-search/) | [Sender](/docs/records/types/address/)
-| `sender.id:` | [Chooser](/docs/search/filters/choosers/) | [Sender](/docs/records/types/address/)
-| `ticket:` | [Record](/docs/search/deep-search/) | [Ticket](/docs/records/types/ticket/)
-| `ticket.id:` | [Chooser](/docs/search/filters/choosers/) | [Ticket Id](/docs/records/types/ticket/)
-| `worker:` | [Record](/docs/search/deep-search/) | [Worker](/docs/records/types/worker/)
-| `worker.id:` | [Chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
+| `attachments:` | [record](/docs/search/deep-search/) | [Attachments](/docs/records/types/attachment/)
+| `content:` | [fulltext](/docs/search/filters/fulltext/) | Content
+| `created:` | [date](/docs/search/filters/dates/) | Created
+| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `header.messageId:` | [text](/docs/search/filters/text/) | Message-Id Header
+| `id:` | [number](/docs/search/filters/numbers/) | Id
+| `isBroadcast:` | [boolean](/docs/search/filters/booleans/) | Is Broadcast
+| `isEncrypted:` | [boolean](/docs/search/filters/booleans/) | Is Encrypted
+| `isNotSent:` | [boolean](/docs/search/filters/booleans/) | Is Not Sent
+| `isOutgoing:` | [boolean](/docs/search/filters/booleans/) | Is Outgoing
+| `isSigned:` | [boolean](/docs/search/filters/booleans/) | Is Signed
+| `links:` | [links](/docs/search/filters/links/) | Record Links
+| `notes:` | [record](/docs/search/deep-search/) | [Notes](/docs/records/types/comment/)
+| `responseTime:` | [number](/docs/search/filters/numbers/) | Response Time
+| `sender:` | [record](/docs/search/deep-search/) | [Sender](/docs/records/types/address/)
+| `sender.id:` | [chooser](/docs/search/filters/choosers/) | [Sender](/docs/records/types/address/)
+| `ticket:` | [record](/docs/search/deep-search/) | [Ticket](/docs/records/types/ticket/)
+| `ticket.id:` | [chooser](/docs/search/filters/choosers/) | [Ticket Id](/docs/records/types/ticket/)
+| `worker:` | [record](/docs/search/deep-search/) | [Worker](/docs/records/types/worker/)
+| `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
+	
+### Workist Columns
 
-### Dictionary Placeholders
-
-These [placeholders](/docs/bots/scripting/placeholders/) are available in message [dictionaries](/docs/bots/behaviors/dictionaries/):
+These columns are available on message [worklists](/docs/worklists/):
 
 |---
-| Field | Type | Description
-|-|-|-
-| `_label` | Text | Label
-| `content` | Text | Content
-| `content_html` | Text | Content Html
-| `created` | Date | Created
-| `headers` |  | Headers
-| `html_attachment_id` | Number | Html Attachment Id
-| `id` | Number | Id
-| `is_broadcast` | Boolean | Is Broadcast
-| `was_encrypted` | Boolean | Is Encrypted
-| `is_not_sent` | Boolean | Is Not Sent
-| `is_outgoing` | Boolean | Is Outgoing
-| `was_signed` | Boolean | Is Signed
-| `record_url` | Text | Record Url
-| `reply_cc` | Text | Reply Cc
-| `reply_to` | Text | Reply To
-| `response_time` | Seconds | Response Time
-| `sender_` | Record | [Sender](/docs/records/types/message/)
-| `worker_` | Record | [Sender Worker](/docs/records/types/message/)
-| `storage_size` | Size_Bytes | Size
-| `ticket_` | Record | [Ticket](/docs/records/types/message/)
+| Column | Description
+|-|-
+| `*_has_fieldset` | Fieldset
+| `a_email` | Email
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `m_address_id` | Sender
+| `m_created_date` | Created
+| `m_is_broadcast` | Is Broadcast
+| `m_is_not_sent` | Is Not Sent
+| `m_is_outgoing` | Is Outgoing
+| `m_response_time` | Response Time
+| `m_ticket_id` | Ticket Id
+| `m_was_encrypted` | Is Encrypted
+| `m_was_signed` | Is Signed
+| `m_worker_id` | Worker
+| `t_group_id` | Group
+| `t_mask` | Mask
+| `t_subject` | Subject
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/records/#record-types" class="prev">&lt; Record Types</a>
+	</div>
+	<div class="right align-right">
+	</div>
+</div>
+<div class="clear"></div>

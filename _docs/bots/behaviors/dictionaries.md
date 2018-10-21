@@ -127,7 +127,7 @@ ticket_owner_email: "worker@example.com"
 
 * Metadata can be attached to keys by including keys with the same base name and different suffixes.
 
-# Contexts and key expansion
+# Key expansion
 
 Now that we've demonstrated how dictionaries reduce complexity, let's look at how they improve performance.
 

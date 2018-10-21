@@ -24,7 +24,7 @@ These expressions can be used on link [filters](/docs/search/filters/).
 
 ### Link to record type
 
-To filter by records with a link to a specific other [record type](/docs/records/types/), use its alias as the expression:
+To filter by records with a link to a specific other [record type](/docs/records/#record-types), use its alias as the expression:
 
 <pre>
 <code class="language-text">

@@ -16,18 +16,63 @@ jumbotron:
     url: /docs/records/
   -
     label: Types &raquo;
-    url: /docs/records/types/
+    url: /docs/records/#record-types
 ---
 
 |---
 |-|-
 | **Name (singular):** | Bot
 | **Name (plural):** | Bots
-| **Alias:** | bot
+| **Alias (uri):** | bot
+| **Identifier (ID):** | cerberusweb.contexts.bot
 
 * TOC
 {:toc}
 
+### Records API
+
+These fields are available in the [Records API](/docs/api/endpoints/records/) and [packages](/docs/packages/):
+
+|---
+| Req'd | Field | Type | Notes
+|:-:|-|-|-
+|   | `created_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
+|   | `is_disabled` | [boolean](/docs/records/fields/types/boolean/) | Is this bot disabled? 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `mention_name` | [text](/docs/records/fields/types/text/) | (deprecated) 
+| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this bot 
+| **x** | **`owner__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/#record-types) of this bot's owner: `app`, `role`, `group`, or `worker` 
+| **x** | **`owner_id`** | [number](/docs/records/fields/types/number/) | The ID of this bot's owner 
+|   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
+
+### Dictionary Placeholders
+
+These [placeholders](/docs/bots/scripting/placeholders/) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
+
+|---
+| Field | Type | Description
+|-|-|-
+| `_label` | text | Label
+| `config` | object | Configuration
+| `created_at` | date | Created
+| `id` | number | Id
+| `is_disabled` | boolean | Disabled
+| `mention_name` | text | @mention
+| `name` | text | Name
+| `owner_` | record | Owner
+| `record_url` | text | Record Url
+| `updated_at` | date | Updated
+
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+
+|---
+| Field | Type | Description
+|-|-|-
+| `behaviors` | records | Behaviors
+| `custom_<id>` | mixed | Custom Fields
+| `links` | links | Links
+| `watchers` | watchers | Watchers
+	
 ### Search Query Fields
 
 These [filters](/docs/search/filters/) are available in bot [search queries](/docs/search/):
@@ -35,36 +80,39 @@ These [filters](/docs/search/filters/) are available in bot [search queries](/do
 |---
 | Field | Type | Description
 |-|-|-
-| `created:` | [Date](/docs/search/filters/dates/) | Created
-| `disabled:` | [Boolean](/docs/search/filters/booleans/) | Disabled
-| `fieldset:` | [Record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [Number](/docs/search/filters/numbers/) | Id
-| `links:` | [Links](/docs/search/filters/links/) | Record Links
-| `mentionName:` | [Text](/docs/search/filters/text/) | @mention
-| `name:` | [Text](/docs/search/filters/text/) | Name
-| `owner:` | Virtual | Owner
-| `owner.app:` | Virtual | Owner
-| `owner.bot:` | [Record](/docs/search/deep-search/) | [Owner](/docs/records/types/bot/)
-| `owner.group:` | [Record](/docs/search/deep-search/) | [Owner](/docs/records/types/group/)
-| `owner.role:` | [Record](/docs/search/deep-search/) | [Owner](/docs/records/types/role/)
-| `owner.worker:` | [Record](/docs/search/deep-search/) | [Owner](/docs/records/types/worker/)
-| `updated:` | [Date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [Watchers](/docs/search/filters/watchers/) | Watchers
+| `created:` | [date](/docs/search/filters/dates/) | Created
+| `disabled:` | [boolean](/docs/search/filters/booleans/) | Disabled
+| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `id:` | [number](/docs/search/filters/numbers/) | Id
+| `links:` | [links](/docs/search/filters/links/) | Record Links
+| `mentionName:` | [text](/docs/search/filters/text/) | @mention
+| `name:` | [text](/docs/search/filters/text/) | Name
+| `owner:` | [text](/docs/search/filters/text/) | Owner Type
+| `owner.<type>:` | [record](/docs/search/deep-search/) | Owner
+| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+	
+### Workist Columns
 
-### Dictionary Placeholders
-
-These [placeholders](/docs/bots/scripting/placeholders/) are available in bot [dictionaries](/docs/bots/behaviors/dictionaries/):
+These columns are available on bot [worklists](/docs/worklists/):
 
 |---
-| Field | Type | Description
-|-|-|-
-| `_label` | Text | Label
-| `mention_name` | Text | @mention
-| `config` |  | Configuration
-| `created_at` | Date | Created
-| `is_disabled` | Boolean | Disabled
-| `id` | Number | Id
-| `name` | Text | Name
-| `owner_` | Record | Owner
-| `record_url` | Text | Record Url
-| `updated_at` | Date | Updated
+| Column | Description
+|-|-
+| `*_owner` | Owner
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `v_at_mention_name` | @mention
+| `v_created_at` | Created
+| `v_id` | Id
+| `v_is_disabled` | Disabled
+| `v_name` | Name
+| `v_updated_at` | Updated
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/records/#record-types" class="prev">&lt; Record Types</a>
+	</div>
+	<div class="right align-right">
+	</div>
+</div>
+<div class="clear"></div>

@@ -16,18 +16,56 @@ jumbotron:
     url: /docs/records/
   -
     label: Types &raquo;
-    url: /docs/records/types/
+    url: /docs/records/#record-types
 ---
 
 |---
 |-|-
 | **Name (singular):** | Public Key
 | **Name (plural):** | Public Keys
-| **Alias:** | gpg_public_key
+| **Alias (uri):** | gpg_public_key
+| **Identifier (ID):** | cerberusweb.contexts.gpg_public_key
 
 * TOC
 {:toc}
 
+### Records API
+
+These fields are available in the [Records API](/docs/api/endpoints/records/) and [packages](/docs/packages/):
+
+|---
+| Req'd | Field | Type | Notes
+|:-:|-|-|-
+|   | `expires_at` | [timestamp](/docs/records/fields/types/timestamp/) | The expiration date of the public key 
+| **x** | **`fingerprint`** | [text](/docs/records/fields/types/text/) | The fingerprint of the public key 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this public key 
+|   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
+
+### Dictionary Placeholders
+
+These [placeholders](/docs/bots/scripting/placeholders/) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
+
+|---
+| Field | Type | Description
+|-|-|-
+| `_label` | text | Label
+| `expires_at` | date | Expires
+| `fingerprint` | text | Fingerprint
+| `id` | number | Id
+| `name` | text | Name
+| `record_url` | text | Record Url
+| `updated_at` | date | Updated
+
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+
+|---
+| Field | Type | Description
+|-|-|-
+| `custom_<id>` | mixed | Custom Fields
+| `links` | links | Links
+| `watchers` | watchers | Watchers
+	
 ### Search Query Fields
 
 These [filters](/docs/search/filters/) are available in public key [search queries](/docs/search/):
@@ -35,25 +73,33 @@ These [filters](/docs/search/filters/) are available in public key [search queri
 |---
 | Field | Type | Description
 |-|-|-
-| `expires:` | [Date](/docs/search/filters/dates/) | Expires
-| `fieldset:` | [Record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `fingerprint:` | [Text](/docs/search/filters/text/) | Fingerprint
-| `id:` | [Number](/docs/search/filters/numbers/) | Id
-| `links:` | [Links](/docs/search/filters/links/) | Record Links
-| `name:` | [Text](/docs/search/filters/text/) | Name
-| `updated:` | [Date](/docs/search/filters/dates/) | Updated
+| `expires:` | [date](/docs/search/filters/dates/) | Expires
+| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fingerprint:` | [text](/docs/search/filters/text/) | Fingerprint
+| `id:` | [number](/docs/search/filters/numbers/) | Id
+| `links:` | [links](/docs/search/filters/links/) | Record Links
+| `name:` | [text](/docs/search/filters/text/) | Name
+| `updated:` | [date](/docs/search/filters/dates/) | Updated
+	
+### Workist Columns
 
-### Dictionary Placeholders
-
-These [placeholders](/docs/bots/scripting/placeholders/) are available in public key [dictionaries](/docs/bots/behaviors/dictionaries/):
+These columns are available on public key [worklists](/docs/worklists/):
 
 |---
-| Field | Type | Description
-|-|-|-
-| `_label` | Text | Label
-| `expires_at` | Date | Expires
-| `fingerprint` | Text | Fingerprint
-| `id` | Number | Id
-| `name` | Text | Name
-| `record_url` | Text | Record Url
-| `updated_at` | Date | Updated
+| Column | Description
+|-|-
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `g_expires_at` | Expires
+| `g_fingerprint` | Fingerprint
+| `g_id` | Id
+| `g_name` | Name
+| `g_updated_at` | Updated
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/records/#record-types" class="prev">&lt; Record Types</a>
+	</div>
+	<div class="right align-right">
+	</div>
+</div>
+<div class="clear"></div>

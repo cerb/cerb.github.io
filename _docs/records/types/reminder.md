@@ -16,18 +16,59 @@ jumbotron:
     url: /docs/records/
   -
     label: Types &raquo;
-    url: /docs/records/types/
+    url: /docs/records/#record-types
 ---
 
 |---
 |-|-
 | **Name (singular):** | Reminder
 | **Name (plural):** | Reminders
-| **Alias:** | reminder
+| **Alias (uri):** | reminder
+| **Identifier (ID):** | cerberusweb.contexts.reminder
 
 * TOC
 {:toc}
 
+### Records API
+
+These fields are available in the [Records API](/docs/api/endpoints/records/) and [packages](/docs/packages/):
+
+|---
+| Req'd | Field | Type | Notes
+|:-:|-|-|-
+|   | `is_closed` | [boolean](/docs/records/fields/types/boolean/) | Has this reminder elapsed? 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this reminder 
+|   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
+| **x** | **`remind_at`** | [timestamp](/docs/records/fields/types/timestamp/) | The date/time of the reminder 
+|   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
+| **x** | **`worker_id`** | [number](/docs/records/fields/types/number/) | The ID of the [worker](/docs/records/types/worker/) receiving the reminder 
+
+### Dictionary Placeholders
+
+These [placeholders](/docs/bots/scripting/placeholders/) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
+
+|---
+| Field | Type | Description
+|-|-|-
+| `_label` | text | Label
+| `id` | number | Id
+| `is_closed` | boolean | Is Closed
+| `name` | text | Name
+| `record_url` | text | Record Url
+| `remind_at` | date | Remind At
+| `updated_at` | date | Updated
+| `worker_` | record | [Worker](/docs/records/types/worker/)
+
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+
+|---
+| Field | Type | Description
+|-|-|-
+| `custom_<id>` | mixed | Custom Fields
+| `links` | links | Links
+| `watchers` | watchers | Watchers
+	
 ### Search Query Fields
 
 These [filters](/docs/search/filters/) are available in reminder [search queries](/docs/search/):
@@ -35,28 +76,36 @@ These [filters](/docs/search/filters/) are available in reminder [search queries
 |---
 | Field | Type | Description
 |-|-|-
-| `closed:` | [Boolean](/docs/search/filters/booleans/) | Is Closed
-| `fieldset:` | [Record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [Number](/docs/search/filters/numbers/) | Id
-| `links:` | [Links](/docs/search/filters/links/) | Record Links
-| `name:` | [Text](/docs/search/filters/text/) | Name
-| `remindAt:` | [Date](/docs/search/filters/dates/) | Remind At
-| `updated:` | [Date](/docs/search/filters/dates/) | Updated
-| `worker:` | [Record](/docs/search/deep-search/) | [Worker](/docs/records/types/worker/)
-| `worker.id:` | [Chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
+| `closed:` | [boolean](/docs/search/filters/booleans/) | Is Closed
+| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `id:` | [number](/docs/search/filters/numbers/) | Id
+| `links:` | [links](/docs/search/filters/links/) | Record Links
+| `name:` | [text](/docs/search/filters/text/) | Name
+| `remindAt:` | [date](/docs/search/filters/dates/) | Remind At
+| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `worker:` | [record](/docs/search/deep-search/) | [Worker](/docs/records/types/worker/)
+| `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
+	
+### Workist Columns
 
-### Dictionary Placeholders
-
-These [placeholders](/docs/bots/scripting/placeholders/) are available in reminder [dictionaries](/docs/bots/behaviors/dictionaries/):
+These columns are available on reminder [worklists](/docs/worklists/):
 
 |---
-| Field | Type | Description
-|-|-|-
-| `_label` | Text | Label
-| `id` | Number | Id
-| `is_closed` | Boolean | Is Closed
-| `name` | Text | Name
-| `record_url` | Text | Record Url
-| `remind_at` | Date | Remind At
-| `updated_at` | Date | Updated
-| `worker_` | Record | [Worker](/docs/records/types/reminder/)
+| Column | Description
+|-|-
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `r_id` | Id
+| `r_is_closed` | Is Closed
+| `r_name` | Name
+| `r_remind_at` | Remind At
+| `r_updated_at` | Updated
+| `r_worker_id` | Worker
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/records/#record-types" class="prev">&lt; Record Types</a>
+	</div>
+	<div class="right align-right">
+	</div>
+</div>
+<div class="clear"></div>

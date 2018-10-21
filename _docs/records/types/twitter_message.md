@@ -16,18 +16,63 @@ jumbotron:
     url: /docs/records/
   -
     label: Types &raquo;
-    url: /docs/records/types/
+    url: /docs/records/#record-types
 ---
 
 |---
 |-|-
 | **Name (singular):** | Twitter Message
 | **Name (plural):** | Twitter Messages
-| **Alias:** | twitter_message
+| **Alias (uri):** | twitter_message
+| **Identifier (ID):** | cerberusweb.contexts.twitter.message
 
 * TOC
 {:toc}
 
+### Records API
+
+These fields are available in the [Records API](/docs/api/endpoints/records/) and [packages](/docs/packages/):
+
+|---
+| Req'd | Field | Type | Notes
+|:-:|-|-|-
+|   | `content` | [text](/docs/records/fields/types/text/) | The content of the tweet 
+|   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
+|   | `is_closed` | [boolean](/docs/records/fields/types/boolean/) | Is the tweet resolved? 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `twitter_id` | [text](/docs/records/fields/types/text/) | The ID of the Twitter [connected account](/docs/records/types/connected_account/) 
+|   | `user_followers_count` | [number](/docs/records/fields/types/number/) | The user's follower count 
+|   | `user_name` | [text](/docs/records/fields/types/text/) | The user's name 
+|   | `user_profile_image_url` | [text](/docs/records/fields/types/text/) | URL to the user's profile image 
+|   | `user_screen_name` | [text](/docs/records/fields/types/text/) | The user's screen name 
+
+### Dictionary Placeholders
+
+These [placeholders](/docs/bots/scripting/placeholders/) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
+
+|---
+| Field | Type | Description
+|-|-|-
+| `_label` | text | Label
+| `content` | text | Content
+| `created` | date | Created
+| `id` | number | Id
+| `is_closed` | boolean | Is Closed
+| `twitter_id` | number | Twitter Id
+| `twitter_url` | text | Twitter Url
+| `user_followers_count` | number | # Followers
+| `user_name` | text | Name
+| `user_profile_image_url` | text | Profile Image
+| `user_screen_name` | text | Username
+
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+
+|---
+| Field | Type | Description
+|-|-|-
+| `custom_<id>` | mixed | Custom Fields
+| `links` | links | Links
+	
 ### Search Query Fields
 
 These [filters](/docs/search/filters/) are available in twitter message [search queries](/docs/search/):
@@ -35,32 +80,39 @@ These [filters](/docs/search/filters/) are available in twitter message [search 
 |---
 | Field | Type | Description
 |-|-|-
-| `account:` | Virtual | Connected Account
-| `account.id:` | [Chooser](/docs/search/filters/choosers/) | [Connected Account](/docs/records/types/connected_account/)
-| `content:` | [Text](/docs/search/filters/text/) | Content
-| `created:` | [Date](/docs/search/filters/dates/) | Created
-| `fieldset:` | [Record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `followers:` | [Number](/docs/search/filters/numbers/) | # Followers
-| `id:` | [Number](/docs/search/filters/numbers/) | Id
-| `isClosed:` | [Boolean](/docs/search/filters/booleans/) | Is Closed
-| `screenName:` | [Text](/docs/search/filters/text/) | Username
-| `userName:` | [Text](/docs/search/filters/text/) | Name
+| `account:` | virtual | Connected Account
+| `account.id:` | [chooser](/docs/search/filters/choosers/) | [Connected Account](/docs/records/types/connected_account/)
+| `content:` | [text](/docs/search/filters/text/) | Content
+| `created:` | [date](/docs/search/filters/dates/) | Created
+| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `followers:` | [number](/docs/search/filters/numbers/) | # Followers
+| `id:` | [number](/docs/search/filters/numbers/) | Id
+| `isClosed:` | [boolean](/docs/search/filters/booleans/) | Is Closed
+| `screenName:` | [text](/docs/search/filters/text/) | Username
+| `userName:` | [text](/docs/search/filters/text/) | Name
+	
+### Workist Columns
 
-### Dictionary Placeholders
-
-These [placeholders](/docs/bots/scripting/placeholders/) are available in twitter message [dictionaries](/docs/bots/behaviors/dictionaries/):
+These columns are available on twitter message [worklists](/docs/worklists/):
 
 |---
-| Field | Type | Description
-|-|-|-
-| `_label` | Text | Label
-| `user_followers_count` | Number | # Followers
-| `content` | Text | Content
-| `created` | Date | Created
-| `id` | Number | Id
-| `is_closed` | Boolean | Is Closed
-| `user_name` | Text | Name
-| `user_profile_image_url` | Text | Profile Image
-| `twitter_id` | Number | Twitter Id
-| `twitter_url` | Text | Twitter Url
-| `user_screen_name` | Text | Username
+| Column | Description
+|-|-
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `t_connected_account_id` | Connected Account
+| `t_content` | Content
+| `t_created_date` | Created
+| `t_is_closed` | Is Closed
+| `t_user_followers_count` | # Followers
+| `t_user_name` | Name
+| `t_user_profile_image_url` | Profile Image
+| `t_user_screen_name` | Username
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/records/#record-types" class="prev">&lt; Record Types</a>
+	</div>
+	<div class="right align-right">
+	</div>
+</div>
+<div class="clear"></div>

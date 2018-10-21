@@ -16,18 +16,58 @@ jumbotron:
     url: /docs/records/
   -
     label: Types &raquo;
-    url: /docs/records/types/
+    url: /docs/records/#record-types
 ---
 
 |---
 |-|-
 | **Name (singular):** | Time Tracking Entry
 | **Name (plural):** | Time Tracking Entries
-| **Alias:** | time_entry
+| **Alias (uri):** | time_entry
+| **Identifier (ID):** | cerberusweb.contexts.timetracking
 
 * TOC
 {:toc}
 
+### Records API
+
+These fields are available in the [Records API](/docs/api/endpoints/records/) and [packages](/docs/packages/):
+
+|---
+| Req'd | Field | Type | Notes
+|:-:|-|-|-
+|   | `activity_id` | [number](/docs/records/fields/types/number/) | The ID of the [activity](/docs/records/types/timetracking_activity/) for the work 
+|   | `is_closed` | [boolean](/docs/records/fields/types/boolean/) | Is this time entry archived? 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `log_date` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time of the work 
+| **x** | **`mins`** | [number](/docs/records/fields/types/number/) | The number of minutes worked 
+| **x** | **`worker_id`** | [number](/docs/records/fields/types/number/) | The ID of the [worker](/docs/records/types/worker/) who completed the work 
+
+### Dictionary Placeholders
+
+These [placeholders](/docs/bots/scripting/placeholders/) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
+
+|---
+| Field | Type | Description
+|-|-|-
+| `_label` | text | Label
+| `id` | number | Id
+| `is_closed` | boolean | Is Closed
+| `log_date` | date | Log Date
+| `mins` | minutes | Time Spent
+| `record_url` | text | Record Url
+| `summary` | text | Summary
+| `worker_` | record | [Worker](/docs/records/types/worker/)
+
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+
+|---
+| Field | Type | Description
+|-|-|-
+| `custom_<id>` | mixed | Custom Fields
+| `links` | links | Links
+| `watchers` | watchers | Watchers
+	
 ### Search Query Fields
 
 These [filters](/docs/search/filters/) are available in time tracking [search queries](/docs/search/):
@@ -35,30 +75,37 @@ These [filters](/docs/search/filters/) are available in time tracking [search qu
 |---
 | Field | Type | Description
 |-|-|-
-| `activity.id:` | [Chooser](/docs/search/filters/choosers/) | [Activity](/docs/records/types/timetracking_activity/)
-| `comments:` | [Fulltext](/docs/search/filters/fulltext/) | Comment Content
-| `created:` | [Date](/docs/search/filters/dates/) | Log Date
-| `fieldset:` | [Record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [Number](/docs/search/filters/numbers/) | Id
-| `isClosed:` | [Boolean](/docs/search/filters/booleans/) | Is Closed
-| `links:` | [Links](/docs/search/filters/links/) | Record Links
-| `timeSpent:` | [Number](/docs/search/filters/numbers/) | Time Spent
-| `watchers:` | [Watchers](/docs/search/filters/watchers/) | Watchers
-| `worker:` | [Record](/docs/search/deep-search/) | [Worker](/docs/records/types/worker/)
-| `worker.id:` | [Chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
+| `activity.id:` | [chooser](/docs/search/filters/choosers/) | [Activity](/docs/records/types/timetracking_activity/)
+| `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
+| `created:` | [date](/docs/search/filters/dates/) | Log Date
+| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `id:` | [number](/docs/search/filters/numbers/) | Id
+| `isClosed:` | [boolean](/docs/search/filters/booleans/) | Is Closed
+| `links:` | [links](/docs/search/filters/links/) | Record Links
+| `timeSpent:` | [number](/docs/search/filters/numbers/) | Time Spent
+| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `worker:` | [record](/docs/search/deep-search/) | [Worker](/docs/records/types/worker/)
+| `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
+	
+### Workist Columns
 
-### Dictionary Placeholders
-
-These [placeholders](/docs/bots/scripting/placeholders/) are available in time tracking [dictionaries](/docs/bots/behaviors/dictionaries/):
+These columns are available on time tracking [worklists](/docs/worklists/):
 
 |---
-| Field | Type | Description
-|-|-|-
-| `_label` | Text | Label
-| `id` | Number | Id
-| `is_closed` | Boolean | Is Closed
-| `log_date` | Date | Log Date
-| `record_url` | Text | Record Url
-| `summary` | Text | Summary
-| `mins` | Minutes | Time Spent
-| `worker_` | Record | [Worker](/docs/records/types/time_entry/)
+| Column | Description
+|-|-
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `tt_activity_id` | Activity
+| `tt_is_closed` | Is Closed
+| `tt_log_date` | Log Date
+| `tt_time_actual_mins` | Time Spent
+| `tt_worker_id` | Worker
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/records/#record-types" class="prev">&lt; Record Types</a>
+	</div>
+	<div class="right align-right">
+	</div>
+</div>
+<div class="clear"></div>

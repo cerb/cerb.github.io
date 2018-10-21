@@ -16,18 +16,57 @@ jumbotron:
     url: /docs/records/
   -
     label: Types &raquo;
-    url: /docs/records/types/
+    url: /docs/records/#record-types
 ---
 
 |---
 |-|-
 | **Name (singular):** | File Bundle
 | **Name (plural):** | File Bundles
-| **Alias:** | file_bundle
+| **Alias (uri):** | file_bundle
+| **Identifier (ID):** | cerberusweb.contexts.file_bundle
 
 * TOC
 {:toc}
 
+### Records API
+
+These fields are available in the [Records API](/docs/api/endpoints/records/) and [packages](/docs/packages/):
+
+|---
+| Req'd | Field | Type | Notes
+|:-:|-|-|-
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this file bundle 
+| **x** | **`owner__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/#record-types) of this file bundle's owner: `app`, `role`, `group`, or `worker` 
+| **x** | **`owner_id`** | [number](/docs/records/fields/types/number/) | The ID of this file bundle's owner 
+|   | `tag` | [text](/docs/records/fields/types/text/) | A human-friendly nickname for the bundle; e.g. `tax_forms` 
+|   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
+
+### Dictionary Placeholders
+
+These [placeholders](/docs/bots/scripting/placeholders/) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
+
+|---
+| Field | Type | Description
+|-|-|-
+| `_label` | text | Label
+| `id` | number | Id
+| `name` | text | Name
+| `owner_` | record | Owner
+| `record_url` | text | Record Url
+| `tag` | text | Tag
+| `updated_at` | date | Updated
+
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+
+|---
+| Field | Type | Description
+|-|-|-
+| `custom_<id>` | mixed | Custom Fields
+| `links` | links | Links
+| `watchers` | watchers | Watchers
+	
 ### Search Query Fields
 
 These [filters](/docs/search/filters/) are available in file bundle [search queries](/docs/search/):
@@ -35,32 +74,40 @@ These [filters](/docs/search/filters/) are available in file bundle [search quer
 |---
 | Field | Type | Description
 |-|-|-
-| `comments:` | [Fulltext](/docs/search/filters/fulltext/) | Comment Content
-| `fieldset:` | [Record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [Number](/docs/search/filters/numbers/) | Id
-| `links:` | [Links](/docs/search/filters/links/) | Record Links
-| `name:` | [Text](/docs/search/filters/text/) | Name
-| `owner:` | Virtual | Owner
-| `owner.app:` | Virtual | Owner
-| `owner.bot:` | [Record](/docs/search/deep-search/) | [Owner](/docs/records/types/bot/)
-| `owner.group:` | [Record](/docs/search/deep-search/) | [Owner](/docs/records/types/group/)
-| `owner.role:` | [Record](/docs/search/deep-search/) | [Owner](/docs/records/types/role/)
-| `owner.worker:` | [Record](/docs/search/deep-search/) | [Owner](/docs/records/types/worker/)
-| `tag:` | [Text](/docs/search/filters/text/) | Tag
-| `updated:` | [Date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [Watchers](/docs/search/filters/watchers/) | Watchers
+| `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
+| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `id:` | [number](/docs/search/filters/numbers/) | Id
+| `links:` | [links](/docs/search/filters/links/) | Record Links
+| `name:` | [text](/docs/search/filters/text/) | Name
+| `owner:` | virtual | Owner
+| `owner.app:` | virtual | Owner
+| `owner.bot:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/bot/)
+| `owner.group:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/group/)
+| `owner.role:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/role/)
+| `owner.worker:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/worker/)
+| `tag:` | [text](/docs/search/filters/text/) | Tag
+| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+	
+### Workist Columns
 
-### Dictionary Placeholders
-
-These [placeholders](/docs/bots/scripting/placeholders/) are available in file bundle [dictionaries](/docs/bots/behaviors/dictionaries/):
+These columns are available on file bundle [worklists](/docs/worklists/):
 
 |---
-| Field | Type | Description
-|-|-|-
-| `_label` | Text | Label
-| `id` | Number | Id
-| `name` | Text | Name
-| `owner_` | Record | Owner
-| `record_url` | Text | Record Url
-| `tag` | Text | Tag
-| `updated_at` | Date | Updated
+| Column | Description
+|-|-
+| `*_owner` | Owner
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `f_id` | Id
+| `f_name` | Name
+| `f_tag` | Tag
+| `f_updated_at` | Updated
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/records/#record-types" class="prev">&lt; Record Types</a>
+	</div>
+	<div class="right align-right">
+	</div>
+</div>
+<div class="clear"></div>

@@ -16,18 +16,64 @@ jumbotron:
     url: /docs/records/
   -
     label: Types &raquo;
-    url: /docs/records/types/
+    url: /docs/records/#record-types
 ---
 
 |---
 |-|-
 | **Name (singular):** | Workspace Widget
 | **Name (plural):** | Workspace Widgets
-| **Alias:** | workspace_widget
+| **Alias (uri):** | workspace_widget
+| **Identifier (ID):** | cerberusweb.contexts.workspace.widget
 
 * TOC
 {:toc}
 
+### Records API
+
+These fields are available in the [Records API](/docs/api/endpoints/records/) and [packages](/docs/packages/):
+
+|---
+| Req'd | Field | Type | Notes
+|:-:|-|-|-
+| **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | The [plugin](/docs/plugins/) extension 
+| **x** | **`label`** | [text](/docs/records/fields/types/text/) | The human-friendly name of the widget 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
+|   | `pos` | [number](/docs/records/fields/types/number/) | The position of the widget on the dashboard; `0` is first (top-right); rows before columns 
+| **x** | **`tab_id`** | [number](/docs/records/fields/types/number/) | The ID of the [workspace tab](/docs/records/types/workspace_tab/) containing this widget 
+|   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
+|   | `width_units` | [number](/docs/records/fields/types/number/) | `1` (25%), `2` (50%), `3` (75%), `4` (100%) 
+|   | `zone` | [text](/docs/records/fields/types/text/) | The name of the dashboard zone containing the widget; this varies by layout; generally `sidebar` and `content` 
+
+### Dictionary Placeholders
+
+These [placeholders](/docs/bots/scripting/placeholders/) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
+
+|---
+| Field | Type | Description
+|-|-|-
+| `_label` | text | Label
+| `extension_id` | text | Type
+| `id` | number | Id
+| `label` | text | Label
+| `params` | object | Params
+| `pos` | text | Order
+| `tab_` | record | [Tab](/docs/records/types/workspace_tab/)
+| `tab_extension_` | record | Tab Type
+| `updated_at` | date | Updated
+| `width_units` | number | Width
+| `zone` | text | Zone
+
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+
+|---
+| Field | Type | Description
+|-|-|-
+| `custom_<id>` | mixed | Custom Fields
+| `data` | hashmap | Data
+| `links` | links | Links
+	
 ### Search Query Fields
 
 These [filters](/docs/search/filters/) are available in workspace widget [search queries](/docs/search/):
@@ -35,31 +81,39 @@ These [filters](/docs/search/filters/) are available in workspace widget [search
 |---
 | Field | Type | Description
 |-|-|-
-| `fieldset:` | [Record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [Number](/docs/search/filters/numbers/) | Id
-| `links:` | [Links](/docs/search/filters/links/) | Record Links
-| `name:` | [Text](/docs/search/filters/text/) | Label
-| `tab.id:` | [Chooser](/docs/search/filters/choosers/) | [Workspace Tab](/docs/records/types/workspace_tab/)
-| `tab.pos:` | [Number](/docs/search/filters/numbers/) | Order
-| `type:` | [Text](/docs/search/filters/text/) | Type
-| `updated:` | [Date](/docs/search/filters/dates/) | Updated
-| `width:` | [Text](/docs/search/filters/text/) | Width
-| `zone:` | [Text](/docs/search/filters/text/) | Zone
+| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `id:` | [number](/docs/search/filters/numbers/) | Id
+| `links:` | [links](/docs/search/filters/links/) | Record Links
+| `name:` | [text](/docs/search/filters/text/) | Label
+| `tab.id:` | [chooser](/docs/search/filters/choosers/) | [Workspace Tab](/docs/records/types/workspace_tab/)
+| `tab.pos:` | [number](/docs/search/filters/numbers/) | Order
+| `type:` | [text](/docs/search/filters/text/) | Type
+| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `width:` | [text](/docs/search/filters/text/) | Width
+| `zone:` | [text](/docs/search/filters/text/) | Zone
+	
+### Workist Columns
 
-### Dictionary Placeholders
-
-These [placeholders](/docs/bots/scripting/placeholders/) are available in workspace widget [dictionaries](/docs/bots/behaviors/dictionaries/):
+These columns are available on workspace widget [worklists](/docs/worklists/):
 
 |---
-| Field | Type | Description
-|-|-|-
-| `_label` | Text | Label
-| `id` | Number | Id
-| `label` | Text | Label
-| `pos` | Text | Order
-| `params` | Map | Params
-| `tab_` | Record | [Tab](/docs/records/types/workspace_widget/)
-| `extension_id` | Text | Type
-| `updated_at` | Date | Updated
-| `width_units` | Number | Width
-| `zone` | Text | Zone
+| Column | Description
+|-|-
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `w_extension_id` | Type
+| `w_id` | Id
+| `w_label` | Label
+| `w_pos` | Order
+| `w_updated_at` | Updated
+| `w_width_units` | Width
+| `w_workspace_tab_id` | Workspace Tab
+| `w_zone` | Zone
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/records/#record-types" class="prev">&lt; Record Types</a>
+	</div>
+	<div class="right align-right">
+	</div>
+</div>
+<div class="clear"></div>

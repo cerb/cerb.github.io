@@ -19,8 +19,6 @@
 - title: Records
   docs:
   - records
-  - records/fields
-  - records/types
   - records/custom-records
   - custom-fields
   - custom-fieldsets

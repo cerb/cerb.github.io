@@ -16,18 +16,52 @@ jumbotron:
     url: /docs/records/
   -
     label: Types &raquo;
-    url: /docs/records/types/
+    url: /docs/records/#record-types
 ---
 
 |---
 |-|-
 | **Name (singular):** | Skill
 | **Name (plural):** | Skills
-| **Alias:** | skill
+| **Alias (uri):** | skill
+| **Identifier (ID):** | cerberusweb.contexts.skill
 
 * TOC
 {:toc}
 
+### Records API
+
+These fields are available in the [Records API](/docs/api/endpoints/records/) and [packages](/docs/packages/):
+
+|---
+| Req'd | Field | Type | Notes
+|:-:|-|-|-
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this skill 
+| **x** | **`skillset_id`** | [number](/docs/records/fields/types/number/) | The ID of the [skillset](/docs/records/types/skillset/) containing this skill 
+|   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
+
+### Dictionary Placeholders
+
+These [placeholders](/docs/bots/scripting/placeholders/) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
+
+|---
+| Field | Type | Description
+|-|-|-
+| `_label` | text | Label
+| `id` | number | Id
+| `name` | text | Name
+| `record_url` | text | Record Url
+| `skillset_` | record | [Skillset](/docs/records/types/skillset/)
+| `updated_at` | date | Updated
+
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+
+|---
+| Field | Type | Description
+|-|-|-
+| `custom_<id>` | mixed | Custom Fields
+	
 ### Search Query Fields
 
 These [filters](/docs/search/filters/) are available in skill [search queries](/docs/search/):
@@ -35,25 +69,34 @@ These [filters](/docs/search/filters/) are available in skill [search queries](/
 |---
 | Field | Type | Description
 |-|-|-
-| `created:` | [Date](/docs/search/filters/dates/) | Created
-| `fieldset:` | [Record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [Number](/docs/search/filters/numbers/) | Id
-| `links:` | [Links](/docs/search/filters/links/) | Record Links
-| `name:` | [Text](/docs/search/filters/text/) | Name
-| `skillset:` | [Record](/docs/search/deep-search/) | [Skillset](/docs/records/types/skillset/)
-| `skillset.id:` | [Chooser](/docs/search/filters/choosers/) | [Skillset](/docs/records/types/skillset/)
-| `updated:` | [Date](/docs/search/filters/dates/) | Updated
+| `created:` | [date](/docs/search/filters/dates/) | Created
+| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `id:` | [number](/docs/search/filters/numbers/) | Id
+| `links:` | [links](/docs/search/filters/links/) | Record Links
+| `name:` | [text](/docs/search/filters/text/) | Name
+| `skillset:` | [record](/docs/search/deep-search/) | [Skillset](/docs/records/types/skillset/)
+| `skillset.id:` | [chooser](/docs/search/filters/choosers/) | [Skillset](/docs/records/types/skillset/)
+| `updated:` | [date](/docs/search/filters/dates/) | Updated
+	
+### Workist Columns
 
-### Dictionary Placeholders
-
-These [placeholders](/docs/bots/scripting/placeholders/) are available in skill [dictionaries](/docs/bots/behaviors/dictionaries/):
+These columns are available on skill [worklists](/docs/worklists/):
 
 |---
-| Field | Type | Description
-|-|-|-
-| `_label` | Text | Label
-| `id` | Number | Id
-| `name` | Text | Name
-| `record_url` | Text | Record Url
-| `skillset_` | Record | [Skillset](/docs/records/types/skill/)
-| `updated_at` | Date | Updated
+| Column | Description
+|-|-
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `s_created_at` | Created
+| `s_id` | Id
+| `s_name` | Name
+| `s_skillset_id` | Skillset
+| `s_updated_at` | Updated
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/records/#record-types" class="prev">&lt; Record Types</a>
+	</div>
+	<div class="right align-right">
+	</div>
+</div>
+<div class="clear"></div>

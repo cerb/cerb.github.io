@@ -16,18 +16,53 @@ jumbotron:
     url: /docs/records/
   -
     label: Types &raquo;
-    url: /docs/records/types/
+    url: /docs/records/#record-types
 ---
 
 |---
 |-|-
 | **Name (singular):** | Knowledgebase Category
 | **Name (plural):** | Knowledgebase Categories
-| **Alias:** | kb_category
+| **Alias (uri):** | kb_category
+| **Identifier (ID):** | cerberusweb.contexts.kb_category
 
 * TOC
 {:toc}
 
+### Records API
+
+These fields are available in the [Records API](/docs/api/endpoints/records/) and [packages](/docs/packages/):
+
+|---
+| Req'd | Field | Type | Notes
+|:-:|-|-|-
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this knowledgebase category 
+|   | `parent_id` | [number](/docs/records/fields/types/number/) | The ID of the parent [category](/docs/records/types/kb_category/); if `0` this is a top-level topic 
+|   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
+
+### Dictionary Placeholders
+
+These [placeholders](/docs/bots/scripting/placeholders/) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
+
+|---
+| Field | Type | Description
+|-|-|-
+| `_label` | text | Label
+| `id` | number | Id
+| `name` | text | Name
+| `parent_id` | number | Parent
+| `updated_at` | date | Updated
+
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+
+|---
+| Field | Type | Description
+|-|-|-
+| `custom_<id>` | mixed | Custom Fields
+| `links` | links | Links
+| `watchers` | watchers | Watchers
+	
 ### Search Query Fields
 
 These [filters](/docs/search/filters/) are available in knowledgebase category [search queries](/docs/search/):
@@ -35,24 +70,34 @@ These [filters](/docs/search/filters/) are available in knowledgebase category [
 |---
 | Field | Type | Description
 |-|-|-
-| `article.id:` | [Chooser](/docs/search/filters/choosers/) | [Knowledgebase Article](/docs/records/types/kb_article/)
-| `fieldset:` | [Record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [Number](/docs/search/filters/numbers/) | Id
-| `links:` | [Links](/docs/search/filters/links/) | Record Links
-| `name:` | [Text](/docs/search/filters/text/) | Name
-| `parent.id:` | [Chooser](/docs/search/filters/choosers/) | [Parent](/docs/records/types/kb_category/)
-| `updated:` | [Date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [Watchers](/docs/search/filters/watchers/) | Watchers
+| `article.id:` | [chooser](/docs/search/filters/choosers/) | [Knowledgebase Article](/docs/records/types/kb_article/)
+| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `id:` | [number](/docs/search/filters/numbers/) | Id
+| `links:` | [links](/docs/search/filters/links/) | Record Links
+| `name:` | [text](/docs/search/filters/text/) | Name
+| `parent.id:` | [chooser](/docs/search/filters/choosers/) | [Parent](/docs/records/types/kb_category/)
+| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+	
+### Workist Columns
 
-### Dictionary Placeholders
-
-These [placeholders](/docs/bots/scripting/placeholders/) are available in knowledgebase category [dictionaries](/docs/bots/behaviors/dictionaries/):
+These columns are available on knowledgebase category [worklists](/docs/worklists/):
 
 |---
-| Field | Type | Description
-|-|-|-
-| `_label` | Text | Label
-| `id` | Number | Id
-| `name` | Text | Name
-| `parent_id` | Number | Parent
-| `updated_at` | Date | Updated
+| Column | Description
+|-|-
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `katc_article_id` | Knowledgebase Article
+| `kbc_id` | Id
+| `kbc_name` | Name
+| `kbc_parent_id` | Parent
+| `kbc_updated_at` | Updated
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/records/#record-types" class="prev">&lt; Record Types</a>
+	</div>
+	<div class="right align-right">
+	</div>
+</div>
+<div class="clear"></div>

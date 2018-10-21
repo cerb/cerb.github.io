@@ -16,18 +16,60 @@ jumbotron:
     url: /docs/records/
   -
     label: Types &raquo;
-    url: /docs/records/types/
+    url: /docs/records/#record-types
 ---
 
 |---
 |-|-
 | **Name (singular):** | Knowledgebase Article
 | **Name (plural):** | Knowledgebase Articles
-| **Alias:** | kb_article
+| **Alias (uri):** | kb_article
+| **Identifier (ID):** | cerberusweb.contexts.kb_article
 
 * TOC
 {:toc}
 
+### Records API
+
+These fields are available in the [Records API](/docs/api/endpoints/records/) and [packages](/docs/packages/):
+
+|---
+| Req'd | Field | Type | Notes
+|:-:|-|-|-
+|   | `categories` | [text](/docs/records/fields/types/text/) | A comma-separated list of IDs of [categories](/docs/records/types/kb_category/) to assign this article to 
+|   | `content` | [text](/docs/records/fields/types/text/) | The content of the article 
+|   | `format` | [text](/docs/records/fields/types/text/) | `text`, `markdown`, or `html` 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+| **x** | **`title`** | [text](/docs/records/fields/types/text/) | The title of the article 
+|   | `updated` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
+|   | `views` | [number](/docs/records/fields/types/number/) | The number of times the article has been viewed in a [community portal](/docs/portals/) 
+
+### Dictionary Placeholders
+
+These [placeholders](/docs/bots/scripting/placeholders/) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
+
+|---
+| Field | Type | Description
+|-|-|-
+| `_label` | text | Label
+| `content` | text | Content
+| `format` | text | Format
+| `id` | number | Id
+| `record_url` | text | Record Url
+| `title` | text | Title
+| `updated` | date | Updated
+| `views` | number | Views
+
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+
+|---
+| Field | Type | Description
+|-|-|-
+| `categories` | hashmap | Categories
+| `custom_<id>` | mixed | Custom Fields
+| `links` | links | Links
+| `watchers` | watchers | Watchers
+	
 ### Search Query Fields
 
 These [filters](/docs/search/filters/) are available in knowledgebase article [search queries](/docs/search/):
@@ -35,29 +77,38 @@ These [filters](/docs/search/filters/) are available in knowledgebase article [s
 |---
 | Field | Type | Description
 |-|-|-
-| `category.id:` | [Chooser](/docs/search/filters/choosers/) | [Knowledgebase Category](/docs/records/types/kb_category/)
-| `content:` | [Fulltext](/docs/search/filters/fulltext/) | Content
-| `fieldset:` | [Record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `format:` | [Text](/docs/search/filters/text/) | Format
-| `id:` | [Number](/docs/search/filters/numbers/) | Id
-| `links:` | [Links](/docs/search/filters/links/) | Record Links
-| `title:` | [Text](/docs/search/filters/text/) | Title
-| `updated:` | [Date](/docs/search/filters/dates/) | Updated
-| `views:` | [Number](/docs/search/filters/numbers/) | Views
-| `watchers:` | [Watchers](/docs/search/filters/watchers/) | Watchers
+| `category.id:` | [chooser](/docs/search/filters/choosers/) | [Knowledgebase Category](/docs/records/types/kb_category/)
+| `content:` | [fulltext](/docs/search/filters/fulltext/) | Content
+| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `format:` | [text](/docs/search/filters/text/) | Format
+| `id:` | [number](/docs/search/filters/numbers/) | Id
+| `links:` | [links](/docs/search/filters/links/) | Record Links
+| `title:` | [text](/docs/search/filters/text/) | Title
+| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `views:` | [number](/docs/search/filters/numbers/) | Views
+| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+	
+### Workist Columns
 
-### Dictionary Placeholders
-
-These [placeholders](/docs/bots/scripting/placeholders/) are available in knowledgebase article [dictionaries](/docs/bots/behaviors/dictionaries/):
+These columns are available on knowledgebase article [worklists](/docs/worklists/):
 
 |---
-| Field | Type | Description
-|-|-|-
-| `_label` | Text | Label
-| `content` |  | Content
-| `format` | Text | Format
-| `id` | Number | Id
-| `record_url` | Text | Record Url
-| `title` | Text | Title
-| `updated` | Date | Updated
-| `views` | Number | Views
+| Column | Description
+|-|-
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `katc_category_id` | Knowledgebase Category
+| `katc_top_category_id` | Topic
+| `kb_format` | Format
+| `kb_id` | Id
+| `kb_title` | Title
+| `kb_updated` | Updated
+| `kb_views` | Views
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/records/#record-types" class="prev">&lt; Record Types</a>
+	</div>
+	<div class="right align-right">
+	</div>
+</div>
+<div class="clear"></div>

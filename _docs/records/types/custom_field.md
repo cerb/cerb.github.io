@@ -16,18 +16,50 @@ jumbotron:
     url: /docs/records/
   -
     label: Types &raquo;
-    url: /docs/records/types/
+    url: /docs/records/#record-types
 ---
 
 |---
 |-|-
 | **Name (singular):** | Custom Field
 | **Name (plural):** | Custom Fields
-| **Alias:** | custom_field
+| **Alias (uri):** | custom_field
+| **Identifier (ID):** | cerberusweb.contexts.custom_field
 
 * TOC
 {:toc}
 
+### Records API
+
+These fields are available in the [Records API](/docs/api/endpoints/records/) and [packages](/docs/packages/):
+
+|---
+| Req'd | Field | Type | Notes
+|:-:|-|-|-
+| **x** | **`context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/#record-type) to add the field to 
+|   | `custom_fieldset_id` | [number](/docs/records/fields/types/number/) | The ID of the parent [custom fieldset](/docs/records/types/custom_fieldset/); if any 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this custom field 
+|   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
+|   | `pos` | [number](/docs/records/fields/types/number/) | Display order; positive integer; `0` is first 
+| **x** | **`type`** | [text](/docs/records/fields/types/text/) | `C` (checkbox)<br>`D` (picklist)<br>`E` (date)<br>`F` (file)<br>`I` (files)<br>`L` (record link)<br>`M` (list)<br>`N` (number)<br>`O` (decimal)<br>`S` (single line of text)<br>`T` (multiple lines of text)<br>`U` (url)<br>`W` (worker)<br>`X` (multiple checkboxes)<br>`Y` (currency)<br> 
+|   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
+
+### Dictionary Placeholders
+
+These [placeholders](/docs/bots/scripting/placeholders/) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
+
+|---
+| Field | Type | Description
+|-|-|-
+| `_label` | text | Label
+| `context` | text | Context
+| `id` | number | Id
+| `name` | text | Name
+| `pos` | number | Order
+| `type` | text | Type
+| `updated_at` | date | Updated
+	
 ### Search Query Fields
 
 These [filters](/docs/search/filters/) are available in custom field [search queries](/docs/search/):
@@ -35,27 +67,36 @@ These [filters](/docs/search/filters/) are available in custom field [search que
 |---
 | Field | Type | Description
 |-|-|-
-| `context:` | [Text](/docs/search/filters/text/) | Context
-| `fieldset:` | [Record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `fieldset.id:` | [Chooser](/docs/search/filters/choosers/) | [Custom Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [Number](/docs/search/filters/numbers/) | Id
-| `links:` | [Links](/docs/search/filters/links/) | Record Links
-| `name:` | [Text](/docs/search/filters/text/) | Name
-| `pos:` | [Number](/docs/search/filters/numbers/) | Order
-| `type:` | [Text](/docs/search/filters/text/) | Type
-| `updated:` | [Date](/docs/search/filters/dates/) | Updated
+| `context:` | [text](/docs/search/filters/text/) | Context
+| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset.id:` | [chooser](/docs/search/filters/choosers/) | [Custom Fieldset](/docs/records/types/custom_fieldset/)
+| `id:` | [number](/docs/search/filters/numbers/) | Id
+| `links:` | [links](/docs/search/filters/links/) | Record Links
+| `name:` | [text](/docs/search/filters/text/) | Name
+| `pos:` | [number](/docs/search/filters/numbers/) | Order
+| `type:` | [text](/docs/search/filters/text/) | Type
+| `updated:` | [date](/docs/search/filters/dates/) | Updated
+	
+### Workist Columns
 
-### Dictionary Placeholders
-
-These [placeholders](/docs/bots/scripting/placeholders/) are available in custom field [dictionaries](/docs/bots/behaviors/dictionaries/):
+These columns are available on custom field [worklists](/docs/worklists/):
 
 |---
-| Field | Type | Description
-|-|-|-
-| `_label` | Text | Label
-| `context` | Text | Context
-| `id` | Number | Id
-| `name` | Text | Name
-| `pos` | Number | Order
-| `type` | Text | Type
-| `updated_at` | Date | Updated
+| Column | Description
+|-|-
+| `c_context` | Context
+| `c_custom_fieldset_id` | Custom Fieldset
+| `c_id` | Id
+| `c_name` | Name
+| `c_pos` | Order
+| `c_type` | Type
+| `c_updated_at` | Updated
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/records/#record-types" class="prev">&lt; Record Types</a>
+	</div>
+	<div class="right align-right">
+	</div>
+</div>
+<div class="clear"></div>
