@@ -2,6 +2,7 @@
 title: Records
 permalink: /docs/api/endpoints/records/
 toc:
+  title: Modifying Records
   expand: API
 jumbotron:
   title: Records
@@ -18,9 +19,9 @@ jumbotron:
     url: /docs/api/endpoints/
 ---
 
-The **records** API can abstractly create, retrieve, update, upsert, search, and delete all [record](/docs/records//) types in Cerb from a single [endpoint](/docs/api/endpoints/).
+The **records** API can abstractly create, retrieve, update, upsert, search, and delete all [record types](/docs/records/#record-types) in Cerb from a single [endpoint](/docs/api/endpoints/).
 
-These endpoints specify a [record type](/docs/records/types/) as `<uri>` in the path.
+This endpoint target a specific record type as `<uri>` in the path.
 
 * TOC
 {:toc}
@@ -29,7 +30,7 @@ These endpoints specify a [record type](/docs/records/types/) as `<uri>` in the 
 
 **GET /records/`<uri>`/`<id>`.json**
 
-Retrieve a record object.
+Retrieve a record [dictionary](/docs/bots/behaviors/dictionaries/).
 
 ### Example
 {: .no_toc}
@@ -44,7 +45,7 @@ $out = $cerb->get($base_url . 'records/asset/1.json');
 
 **POST /records/`<uri>`/create.json**
 
-Create a record object.
+Create a new record.
 
 ### Parameters
 {: .no_toc}
@@ -52,7 +53,7 @@ Create a record object.
 |---
 | Field | Type | 
 |-|-|-
-| `fields[]` | mixed | **required** This field can be provided multiple times for each field to set. The field names are found when [retrieving](#retrieve) a record.
+| `fields[]` | mixed | **required** This field can be provided multiple times for each field to set. The field names are found on each [record type](/docs/records/#record-types).
 
 ### Example
 {: .no_toc}
@@ -81,7 +82,7 @@ Update a record object.
 |---
 | Field | Type | 
 |-|-|-
-| `fields[]` | mixed | **required** This field can be provided multiple times for each field to set. The field names are found when [retrieving](#retrieve) a record.
+| `fields[]` | mixed | **required** This field can be provided multiple times for each field to set. The field names are found on each [record type](/docs/records/#record-types).
 
 ### Example
 {: .no_toc}
@@ -109,8 +110,8 @@ Update an existing record if matched, or create a new record otherwise.
 |---
 | Field | Type | 
 |-|-|-
-| `fields[]` | mixed | **required** This field can be provided multiple times for each field to set. The field names are found when [retrieving](#retrieve) a record.
-| `query` | string | The quick search query for detecting a match. This must return either `0` (create) or `1` (update) results. Anything else returns an error.
+| `fields[]` | mixed | **required** This field can be provided multiple times for each field to set. The field names are found on each [record type](/docs/records/#record-types).
+| `query` | string | The [search query](/docs/search/) for detecting a match. This must return either `0` (create) or `1` (update) results. Anything else returns an error.
 
 ### Example
 {: .no_toc}
@@ -131,7 +132,7 @@ $out = $cerb->patch($base_url . 'records/org/upsert.json', $postfields);
 
 **GET /records/`<uri>`/search.json**
 
-Search for record objects.
+Search for matching records.
 
 ### Parameters
 {: .no_toc}
@@ -142,12 +143,12 @@ Search for record objects.
 | `expand` | The keys to expand for each object as a comma-separated list | string
 | `limit` | The number of results to display per page | integer
 | `page` | The page of results to display given limit | integer
-| `q` | Filters to add using quick search syntax | string
+| `q` | Filters to add using a [search query](/docs/search/) | string
 | `subtotals[]` | Multiple subtotal sets can be returned | string 
 
 **expand**
 	
-Includes additional information in the response. These options vary depending on the record type.
+Includes additional information in the response. These options vary depending on the [record type](/docs/records/#record-types).
 
 |---
 | Field | Description
@@ -157,7 +158,7 @@ Includes additional information in the response. These options vary depending on
 
 **subtotals[]**
 
-Return subtotal results based on the given fields. These options vary depending on the record type.
+Return subtotal results based on the given fields. These options vary depending on the [record type](/docs/records/#record-types).
 
 ### Example
 {: .no_toc}
@@ -179,7 +180,7 @@ $out = $cerb->get($base_url .
 
 **DELETE /records/`<uri>`/`<id>`.json**
 
-Delete a record object.
+Delete a record.
 
 ### Example
 {: .no_toc}
@@ -192,7 +193,7 @@ $out = $cerb->delete($base_url . 'records/call/1.json');
 
 # Links
 
-You can create record [links](/docs/records/links/) with the `links` field key in a create, update, or upsert request.
+You can create record [links](/docs/records/fields/types/links/) with the `links` field key in a create, update, or upsert request.
 
 The value must be a `context:id` tuple identifying the record to link to.
 

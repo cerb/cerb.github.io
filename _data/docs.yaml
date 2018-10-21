@@ -196,7 +196,7 @@
   - api/responses
   - api/data-types
   - api/custom-fields
-  - api/records
+  - api/endpoints/records
   - api/endpoints
   - api/libraries
 
