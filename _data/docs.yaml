@@ -185,6 +185,14 @@
   docs:
   - plugins
   - plugins/manifests
+  - plugins/extensions
+  - plugins/events
+  - plugins/patches
+  - plugins/classloader
+  - plugins/permissions
+  - plugins/translations
+  - plugins/resources
+  - plugins/templates
 
 - title: API
   docs:

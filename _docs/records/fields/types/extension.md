@@ -19,7 +19,7 @@ jumbotron:
     url: /docs/records/#fields
 ---
 
-An **extension** field refers to a [plugin](/docs/plugins/) extension. The functionality of a [record](/docs/records/) may change based on the selected extension.
+An **extension** field refers to a plugin [extension](/docs/plugins/extensions/). The functionality of a [record](/docs/records/) may change based on the selected extension.
 
 ### Bots and Packages
 

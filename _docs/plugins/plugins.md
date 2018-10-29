@@ -12,10 +12,118 @@ jumbotron:
     url: /docs/home/
 ---
 
-A **plugin** is a special bundle of files used to seamlessly add new functionality to Cerb. Plugins can integrate Cerb with third-party services, add new [record](/docs/records/) types, augment bots with new conditions and actions, expand workspaces and dashboards, and much more.
+While Cerb's [source code](https://github.com/cerb/cerb-release/) is 100% public, any customizations you make to the platform itself will likely _"conflict"_ with ongoing improvements made by the official developers. This makes it more difficult for you to [upgrade](/docs/upgrading/).
 
-For instance, the [Twilio](/docs/plugins/wgm.twilio/) plugin gives bots the ability to send text messages and initiate voice calls.
+You can avoid these issues by using **plugins** -- optional bundles of files that seamlessly contribute new functionality to Cerb.
 
-In some other software projects, plugins are an afterthought and quite limited in what they can do. You may be surprised to learn that _everything_ in Cerb is contributed by plugins; even the most basic built-in functionality. This was an intentional decision from the very beginning.  It means that as we continue to officially improve Cerb, we're also automatically expanding the ability for other people to improve it as well. We're sharing _all_ of our tools with developers. When they add new functionality with a plugin, it's indistinguishable to Cerb from something that we added ourselves.
+Even the built-in functionality in Cerb is contributed by plugins. This way, as we continue to improve Cerb, we're also automatically expanding the ability for other people to build their own customizations too.
 
-Another benefit of plugins is that they allow functionality to be _completely removed_ when it is not being used by a particular organization. This keeps Cerb fast and lean.
+Common uses for plugins are:
+
+* Integration with third-party services
+* Adding new [record types](/docs/records/)
+* Augmenting [bots](/docs/bots/) with new actions
+* Expanding [workspaces](/docs/workspaces/) and dashboards with new widgets and data sources
+* ...and much more
+
+Plugins also allow unused functionality to be removed to keep everything simpler and more efficient.
+
+* TOC
+{:toc}
+
+### IDs
+
+Every plugin must have a unique ID comprised of lowercase letters (`a-z`), numbers (`0-9`), underscores (`_`), and dots (`.`).
+
+By convention, the first segment of a plugin's ID is a namespace unique to its author. One way to ensure uniqueness is to base your namespace on a domain name you own.
+
+For instance: `com.example.plugin_name`
+
+### Structure
+
+Every plugin is a directory with the same name as its ID, using the following filesystem structure:
+
+|---
+| Path | Description
+|-|-
+| **`api/`** 				| [Extensions](/docs/plugins/extensions/)
+| **`patches/`** 		| [Patches](/docs/plugins/patches/)
+| **`resources/`** 	| [Resources](/docs/plugins/resources/) (images, scripts, stylesheets)
+| **`templates/`** 	| [Templates](/docs/plugins/templates/)
+| `plugin.xml` 			| [Manifest](/docs/plugins/manifests/)
+| `strings.xml` 		| [Translations](/docs/plugins/translations/)
+
+The minimal set of plugins required for Cerb to work properly are called **features**. You'll find them in the `features/` directory.
+
+Third-party plugins are found in the `storage/plugins/` directory. These plugins are installed and automatically updated from the Plugin Library.
+
+# Plugins
+
+### Features
+
+| [Devblocks](/docs/plugins/devblocks.core/) | `devblocks.core`
+| [Cerb Core](/docs/plugins/cerberusweb.core/) | `cerberusweb.core`
+| [Chat Bots](/docs/plugins/cerb.bots.portal.widget/) | `cerb.bots.portal.widget`
+| [Knowledgebase](/docs/plugins/cerberusweb.kb/) | `cerberusweb.kb`
+| [Project Boards](/docs/plugins/cerb.project_boards/) | `cerb.project_boards`
+| [Support Center](/docs/plugins/cerberusweb.support_center/) | `cerberusweb.support_center`
+| [Web Services API (JSON/XML)](/docs/plugins/cerberusweb.restapi/) | `cerberusweb.restapi`
+| [Webhooks](/docs/plugins/cerb.webhooks/) | `cerb.webhooks`
+
+### Authentication
+
+| [LDAP Integration](/docs/plugins/wgm.ldap/) | `wgm.ldap`
+| [OpenID Integration](/docs/plugins/cerberusweb.openid/) | `cerberusweb.openid`
+| [Two-Factor Authentication](/docs/plugins/wgm.login.password.google_auth/) | `wgm.login.password.google_auth`
+
+### Integration
+
+| [Amazon Web Services (AWS) Integration](/docs/plugins/wgm.aws/) | `wgm.aws`
+| [Api.ai Integration](/docs/plugins/wgm.apiai/) | `wgm.apiai`
+| [Campfire Integration](/docs/plugins/wgm.campfire/) | `wgm.campfire`
+| [Clickatell Integration](/docs/plugins/wgm.clickatell/) | `wgm.clickatell`
+| [Dropbox Integration](/docs/plugins/wgm.dropbox/) | `wgm.dropbox`
+| [Facebook Integration](/docs/plugins/wgm.facebook/) | `wgm.facebook`
+| [Freshbooks Integration](/docs/plugins/wgm.freshbooks/) | `wgm.freshbooks`
+| [GitHub Integration](/docs/plugins/wgm.github/) | `wgm.github`
+| [GitLab Integration](/docs/plugins/wgm.gitlab/) | `wgm.gitlab`
+| [Google Integration](/docs/plugins/wgm.google/) | `wgm.google`
+| [HipChat Integration](/docs/plugins/wgm.hipchat/) | `wgm.hipchat`
+| [JIRA Integration](/docs/plugins/wgm.jira/) | `wgm.jira`
+| [LinkedIn Integration](/docs/plugins/wgm.linkedin/) | `wgm.linkedin`
+| [Nest Integration](/docs/plugins/wgm.nest/) | `wgm.nest`
+| [Salesforce integration](/docs/plugins/wgm.salesforce/) | `wgm.salesforce`
+| [ShiftPlanning.com Integration](/docs/plugins/wgm.shiftplanning/) | `wgm.shiftplanning`
+| [Slack Integration](/docs/plugins/wgm.slack/) | `wgm.slack`
+| [Spotify Integration](/docs/plugins/wgm.spotify/) | `wgm.spotify`
+| [Stripe.com Integration](/docs/plugins/wgm.stripe/) | `wgm.stripe`
+| [Twilio.com Integration](/docs/plugins/wgm.twilio/) | `wgm.twilio`
+| [Twitter Integration](/docs/plugins/wgm.twitter/) | `wgm.twitter`
+
+### Legacy
+
+| [Legacy Printing](/docs/plugins/cerb.legacy.print/) | `cerb.legacy.print`
+| [Legacy Profile Attachments Download](/docs/plugins/cerb.legacy.profile.attachments.zip/) | `cerb.legacy.profile.attachments.zip`
+| [Ticket Profile "Move To" Shortcut](/docs/plugins/cerb.profile.ticket.moveto/) | `cerb.profile.ticket.moveto`
+| [Notifications Emailer](/docs/plugins/wgm.notifications.emailer/) | `wgm.notifications.emailer`
+| [Record Simulator](/docs/plugins/cerberusweb.simulator/) | `cerberusweb.simulator`
+
+### Localization
+
+| [Translation Editor](/docs/plugins/cerberusweb.translators/) | `cerberusweb.translators`
+
+### Record Types
+
+| [Asset Tracking](/docs/plugins/cerberusweb.assets/) | `cerberusweb.assets`
+| [Call Logging](/docs/plugins/cerberusweb.calls/) | `cerberusweb.calls`
+| [Collaborative Feed Reader](/docs/plugins/cerberusweb.feed_reader/) | `cerberusweb.feed_reader`
+| [Domains](/docs/plugins/cerberusweb.datacenter.domains/) | `cerberusweb.datacenter.domains`
+| [Feedback Capture](/docs/plugins/cerberusweb.feedback/) | `cerberusweb.feedback`
+| [Opportunity Tracking](/docs/plugins/cerberusweb.crm/) | `cerberusweb.crm`
+| [Sensors](/docs/plugins/cerberusweb.datacenter.sensors/) | `cerberusweb.datacenter.sensors`
+| [Servers](/docs/plugins/cerberusweb.datacenter.servers/) | `cerberusweb.datacenter.servers`
+| [Time Tracking](/docs/plugins/cerberusweb.timetracking/) | `cerberusweb.timetracking`
+
+### Storage
+
+| [S3 Gatekeeper Storage Engine](/docs/plugins/wgm.storage.s3.gatekeeper/) | `wgm.storage.s3.gatekeeper`
