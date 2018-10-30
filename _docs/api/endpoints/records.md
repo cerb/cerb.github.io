@@ -19,9 +19,9 @@ jumbotron:
     url: /docs/api/endpoints/
 ---
 
-The **records** API can abstractly create, retrieve, update, upsert, search, and delete all [record types](/docs/records/#record-types) in Cerb from a single [endpoint](/docs/api/endpoints/).
+The **records** API can abstractly create, retrieve, update, upsert, search, and delete all records in Cerb from a single [endpoint](/docs/api/endpoints/).
 
-This endpoint target a specific record type as `<uri>` in the path.
+This endpoint target a specific [record type](/docs/records/#record-types) as `<uri>` in the path.
 
 * TOC
 {:toc}

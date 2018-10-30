@@ -27,12 +27,6 @@ jumbotron:
 
 # Introduction
 
-{% comment %}
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/bots/migrate-macros/cerb-bots-banner.png" class="screenshot">
-</div>
-{% endcomment %}
-
 Prior to Cerb [8.0](/releases/8.0/), workers could run "custom behaviors" (_macros_) to automate actions against a specific record from its profile.
 
 This was simple to use, but the implementation had several significant shortcomings:

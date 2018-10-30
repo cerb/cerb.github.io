@@ -15,7 +15,7 @@ jumbotron:
     url: /docs/api/
   -
     label: Records &raquo;
-    url: /docs/api/records/
+    url: /docs/api/endpoints/records/
 ---
 
 * TOC
