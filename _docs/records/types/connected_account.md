@@ -40,7 +40,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this connected account 
 | **x** | **`owner__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/#record-types) of this connected account's owner: `app`, `role`, `group`, or `worker` 
 | **x** | **`owner_id`** | [number](/docs/records/fields/types/number/) | The ID of this connected account's owner 
-| **x** | **`service`** | [extension](/docs/records/fields/types/extension/) | The service provider's [plugin](/docs/plugins/) extension 
+| **x** | **`service`** | [extension](/docs/records/fields/types/extension/) | [Service Provider](/docs/plugins/extensions/points/cerb.service.provider/) 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 
 ### Dictionary Placeholders

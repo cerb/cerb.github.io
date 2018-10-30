@@ -36,9 +36,9 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
-| **x** | **`extension_id`** | [extension](/docs/records/fields/types/extension/) | [Webhook Listener Type](/docs/plugins/extensions/points/cerb.webhooks.listener.engine/)
+| **x** | **`extension_id`** | [extension](/docs/records/fields/types/extension/) | [Webhook Listener Type](/docs/plugins/extensions/points/cerb.webhooks.listener.engine/) 
 |   | `extension_params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
-|   | `guid` | [text](/docs/records/fields/types/text/) | The random unique alias of the webhook used in its URL; automatically generated if blank 
+| **x** | **`guid`** | [text](/docs/records/fields/types/text/) | The random unique alias of the webhook used in its URL; automatically generated if blank 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this webhook 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 

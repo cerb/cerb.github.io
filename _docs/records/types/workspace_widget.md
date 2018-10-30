@@ -36,7 +36,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
-| **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | The [plugin](/docs/plugins/) extension 
+| **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | [Workspace Widget Type](/docs/plugins/extensions/points/cerberusweb.ui.workspace.widget/) 
 | **x** | **`label`** | [text](/docs/records/fields/types/text/) | The human-friendly name of the widget 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 

@@ -37,7 +37,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
 |   | `code` | [text](/docs/records/fields/types/text/) | Randomized internal ID for the portal 
-| **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | The [plugin](/docs/plugins/) extension 
+| **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | [Community Portal Type](/docs/plugins/extensions/points/cerb.portal/) 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this community portal 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 

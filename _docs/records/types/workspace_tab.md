@@ -36,7 +36,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
-| **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | The [plugin](/docs/plugins/) extension 
+| **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | [Workspace Tab Type](/docs/plugins/extensions/points/cerberusweb.ui.workspace.tab/) 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this workspace tab 
 | **x** | **`page_id`** | [number](/docs/records/fields/types/number/) | The ID of the [workspace page](/docs/records/types/workspace_page/) containing this tab 
