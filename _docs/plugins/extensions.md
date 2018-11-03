@@ -59,6 +59,7 @@ Each extension entry looks like:
 | [Community Portal](/docs/plugins/extensions/points/cerb.portal/) | `cerb.portal`
 | [Connected Account Service Provider](/docs/plugins/extensions/points/cerb.service.provider/) | `cerb.service.provider`
 | [Controller](/docs/plugins/extensions/points/devblocks.controller/) | `devblocks.controller`
+| [Custom Field Type](/docs/plugins/extensions/points/cerb.custom_field/) | `cerb.custom_field`
 | [Event Listener](/docs/plugins/extensions/points/devblocks.listener.event/) | `devblocks.listener.event`
 | [Http Request Listener](/docs/plugins/extensions/points/devblocks.listener.http/) | `devblocks.listener.http`
 | [Login Authenticator](/docs/plugins/extensions/points/cerberusweb.login/) | `cerberusweb.login`

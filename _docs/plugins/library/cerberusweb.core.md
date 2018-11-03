@@ -124,6 +124,11 @@ The core functionality of Cerb.
 | UI Controller | `core.controller.ui`
 
 
+### Custom Field Type
+
+| [**Latitude/Longitude**](/docs/plugins/extensions/cerb.custom_field.geo.point/) | `cerb.custom_field.geo.point`
+
+
 ### Event Listener
 
 | Cerb Event Listener | `cerberusweb.listeners.event`
