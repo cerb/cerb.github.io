@@ -140,6 +140,7 @@
 - title: Data Queries
   docs:
   - data-queries
+  - data-queries/worklist/geopoints
   - data-queries/worklist/metrics
   - data-queries/worklist/series
   - data-queries/worklist/subtotals
