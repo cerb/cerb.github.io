@@ -268,6 +268,7 @@ The core functionality of Cerb.
 | [**Custom**](/docs/plugins/extensions/cerb.profile.tab.widget.bot/) | `cerb.profile.tab.widget.bot`
 | [**Data Query Visualization**](/docs/plugins/extensions/cerb.profile.tab.widget.visualization/) | `cerb.profile.tab.widget.visualization`
 | [**HTML/Javascript**](/docs/plugins/extensions/cerb.profile.tab.widget.html/) | `cerb.profile.tab.widget.html`
+| [**Map: Geo Points**](/docs/plugins/extensions/cerb.profile.tab.widget.map.geopoints/) | `cerb.profile.tab.widget.map.geopoints`
 | [**Record Fields**](/docs/plugins/extensions/cerb.profile.tab.widget.fields/) | `cerb.profile.tab.widget.fields`
 | [**Responsibilities**](/docs/plugins/extensions/cerb.profile.tab.widget.responsibilities/) | `cerb.profile.tab.widget.responsibilities`
 | [**Ticket Conversation**](/docs/plugins/extensions/cerb.profile.tab.widget.ticket.convo/) | `cerb.profile.tab.widget.ticket.convo`
@@ -400,6 +401,7 @@ The core functionality of Cerb.
 | [**Countdown**](/docs/plugins/extensions/core.workspace.widget.countdown/) | `core.workspace.widget.countdown`
 | [**Counter**](/docs/plugins/extensions/core.workspace.widget.counter/) | `core.workspace.widget.counter`
 | [**Gauge**](/docs/plugins/extensions/core.workspace.widget.gauge/) | `core.workspace.widget.gauge`
+| [**Map: Geo Points**](/docs/plugins/extensions/cerb.workspace.widget.map.geopoints/) | `cerb.workspace.widget.map.geopoints`
 | [**Record Fields**](/docs/plugins/extensions/core.workspace.widget.record.fields/) | `core.workspace.widget.record.fields`
 | [**Worklist**](/docs/plugins/extensions/core.workspace.widget.worklist/) | `core.workspace.widget.worklist`
 

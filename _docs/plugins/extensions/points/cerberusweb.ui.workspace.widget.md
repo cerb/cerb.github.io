@@ -83,6 +83,7 @@ class ExampleExtension extends Extension_WorkspaceWidget {
 | [**Counter**](/docs/plugins/extensions/core.workspace.widget.counter/) | `core.workspace.widget.counter`
 | [**Gauge**](/docs/plugins/extensions/core.workspace.widget.gauge/) | `core.workspace.widget.gauge`
 | [**Knowledgebase Browser**](/docs/plugins/extensions/kb.workspace.widget.kb.browser/) | `kb.workspace.widget.kb.browser`
+| [**Map: Geo Points**](/docs/plugins/extensions/cerb.workspace.widget.map.geopoints/) | `cerb.workspace.widget.map.geopoints`
 | [**Project Board**](/docs/plugins/extensions/cerb.workspace.widget.project_board/) | `cerb.workspace.widget.project_board`
 | [**Record Fields**](/docs/plugins/extensions/core.workspace.widget.record.fields/) | `core.workspace.widget.record.fields`
 | [**Worklist**](/docs/plugins/extensions/core.workspace.widget.worklist/) | `core.workspace.widget.worklist`
