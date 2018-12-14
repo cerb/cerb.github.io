@@ -97,6 +97,16 @@ class CustomField_Example extends Extension_CustomField {
 		echo htmlentities($value);
 	}
 	
+	function getLabelsForValues($values) {
+		$map = $values;
+		
+		foreach($values as $v) {
+			$map[$v] = $this->getValue($v);
+		}
+		
+		return $map;
+	}
+	
 	function prepareCriteriaParam(Model_CustomField $field, $param, &$vals, &$implode_token) {
 		$implode_token = ', ';
 		return true;

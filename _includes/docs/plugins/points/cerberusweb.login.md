@@ -30,28 +30,35 @@ class ExampleExtension extends Extension_LoginAuthenticator {
 	 *
 	 * @return boolean whether login succeeded
 	 */
-	public function authenticate() {
+	function authenticate() {
 	}
 
 	/**
 	 * draws HTML form of controls needed for login information
 	 */
-	public function render() {
+	function render() {
+	}
+	
+	function renderWorkerConfig(Model_Worker $worker=null) {
+	}
+	
+	function saveWorkerConfig($worker_id, array $params, &$error=null) {
+		return true;
 	}
 
-	public function renderWorkerPrefs($worker) {
+	function renderWorkerPrefs($worker) {
 	}
 
-	public function saveWorkerPrefs($worker) {
+	function saveWorkerPrefs($worker) {
 	}
 
-	public function resetCredentials($worker) {
+	function resetCredentials($worker) {
 	}
 
 	/**
 	 * release any resources tied up by the authenticate process, if necessary
 	 */
-	public function signoff() {
+	function signoff() {
 	}
 }
 {% endraw %}

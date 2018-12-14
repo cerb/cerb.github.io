@@ -31,13 +31,22 @@
 <pre>
 <code class="language-php">
 {% raw %}
-class ExampleExtension extends Extension_ServiceProvider {
+class ServiceProvider_Example extends Extension_ServiceProvider {
 	public function renderConfigForm(Model_ConnectedAccount $account) {
+		$tpl = DevblocksPlatform::services()->template();
+		$active_worker = CerberusApplication::getActiveWorker();
+		
+		$params = $account->decryptParams($active_worker);
+		$tpl->assign('params', $params);
+		
+		$tpl->display('devblocks:example.plugin::service_providers/edit_params.tpl');
 	}
 
-	public function saveConfigForm(Model_ConnectedAccount $account, array $params) {
+	public function saveConfigForm(Model_ConnectedAccount $account, array &$params) {
 	}
 }
+
+// implements IServiceProvider_HttpRequestSigner
 {% endraw %}
 </code>
 </pre>
