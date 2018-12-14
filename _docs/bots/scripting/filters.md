@@ -71,6 +71,30 @@ Also allow specific characters:
 Ignore nonalphanumeric but allow spaces!
 ```
 
+## base_convert
+
+Convert between number system bases.
+
+(Introduced in 9.0.8)
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set int = 123456789 %}
+{{int|base_convert(10,16)}}
+
+{% set hex = '75bcd15' %}
+{{hex|base_convert(16,10)}}
+{% endraw %}
+</code>
+</pre>
+
+```
+75bcd15
+
+123456789
+```
+
 ## base64_decode
 
 Decode a base64-encoded string:
