@@ -39,6 +39,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `bucket_id` | [number](/docs/records/fields/types/number/) | The ID of the [bucket](/docs/records/types/bucket/) containing this ticket 
 |   | `closed` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time this ticket was first set to status `closed` 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
+|   | `fieldsets` | [text](/docs/records/fields/types/text/) |  
 | **x** | **`group_id`** | [number](/docs/records/fields/types/number/) | The ID of the [group](/docs/records/types/group/) containing this ticket 
 |   | `importance` | [number](/docs/records/fields/types/number/) | A number from `0` (least) to `100` (most) 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
@@ -141,6 +142,7 @@ These [filters](/docs/search/filters/) are available in ticket [search queries](
 | `subject:` | [text](/docs/search/filters/text/) | Subject
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `watchers.count:` | virtual | Watchers Count
 | `worker.commented:` | virtual | Worker Commented
 | `worker.replied:` | virtual | Worker Replied
 	

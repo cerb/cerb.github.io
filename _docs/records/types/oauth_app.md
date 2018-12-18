@@ -1,11 +1,11 @@
 ---
-title: Connected Account Records
-permalink: /docs/records/types/connected_account/
+title: OAuth App Records
+permalink: /docs/records/types/oauth_app/
 toc:
-  title: Connected Account
+  title: OAuth App
   expand: Records
 jumbotron:
-  title: Connected Account
+  title: OAuth App
   tagline: 
   breadcrumbs:
   -
@@ -21,10 +21,10 @@ jumbotron:
 
 |---
 |-|-
-| **Name (singular):** | Connected Account
-| **Name (plural):** | Connected Accounts
-| **Alias (uri):** | connected_account
-| **Identifier (ID):** | cerberusweb.contexts.connected_account
+| **Name (singular):** | Oauth App
+| **Name (plural):** | Oauth Apps
+| **Alias (uri):** | oauth_app
+| **Identifier (ID):** | cerberusweb.contexts.oauth.app
 
 * TOC
 {:toc}
@@ -36,12 +36,13 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
+| **x** | **`callback_url`** | [url](/docs/records/fields/types/url/) | The OAuth2 callback URL of the app 
+| **x** | **`client_id`** | [text](/docs/records/fields/types/text/) | The client identifier of the app 
+| **x** | **`client_secret`** | [text](/docs/records/fields/types/text/) | The client secret of the app 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
-| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this connected account 
-| **x** | **`owner__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/#record-types) of this connected account's owner: `app`, `role`, `group`, or `worker` 
-| **x** | **`owner_id`** | [number](/docs/records/fields/types/number/) | The ID of this connected account's owner 
-|   | `service_id` | [number](/docs/records/fields/types/number/) | [Service Provider](/docs/plugins/extensions/points/cerb.connected_service.provider/) 
+| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this oauth app 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
+|   | `url` | [url](/docs/records/fields/types/url/) | The app's URL 
 
 ### Dictionary Placeholders
 
@@ -51,13 +52,13 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | Field | Type | Description
 |-|-|-
 | `_label` | text | Label
+| `callback_url` | text | Callback Url
+| `client_id` | text | Client Id
 | `id` | number | Id
 | `name` | text | Name
-| `owner_` | record | Owner
 | `record_url` | text | Record Url
-| `service` | text | Service Provider
-| `service_` | record | [Service](/docs/records/types/connected_service/)
 | `updated_at` | date | Updated
+| `url` | text | Url
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
@@ -69,40 +70,34 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in connected account [search queries](/docs/search/):
+These [filters](/docs/search/filters/) are available in oauth app [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `created:` | [date](/docs/search/filters/dates/) | Created
+| `callbackUrl:` | [text](/docs/search/filters/text/) | Callback Url
+| `clientId:` | [text](/docs/search/filters/text/) | Client Id
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
-| `owner:` | virtual | Owner
-| `owner.app:` | virtual | Owner
-| `owner.bot:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/bot/)
-| `owner.group:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/group/)
-| `owner.role:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/role/)
-| `owner.worker:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/worker/)
-| `service:` | [text](/docs/search/filters/text/) | Service Provider
-| `service.id:` | [chooser](/docs/search/filters/choosers/) | [Service Provider](/docs/records/types/connected_service/)
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `url:` | [text](/docs/search/filters/text/) | Url
 	
 ### Workist Columns
 
-These columns are available on connected account [worklists](/docs/worklists/):
+These columns are available on oauth app [worklists](/docs/worklists/):
 
 |---
 | Column | Description
 |-|-
-| `*_owner` | Owner
-| `c_created_at` | Created
-| `c_id` | Id
-| `c_name` | Name
-| `c_service_id` | Service Provider
-| `c_updated_at` | Updated
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `o_callback_url` | Callback Url
+| `o_client_id` | Client Id
+| `o_id` | Id
+| `o_name` | Name
+| `o_updated_at` | Updated
+| `o_url` | Url
 
 <div class="section-nav">
 	<div class="left">

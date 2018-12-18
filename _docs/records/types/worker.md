@@ -37,7 +37,6 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
 |   | `at_mention_name` | [text](/docs/records/fields/types/text/) | The nickname used for `@mention` notifications in comments 
-| **x** | **`auth_extension_id`** | [text](/docs/records/fields/types/text/) | The [plugin](/docs/plugins/) extension used for login authentication; default is `login.password` 
 |   | `calendar_id` | [number](/docs/records/fields/types/number/) | The ID of the [calendar](/docs/records/types/calendar/) used to compute worker availability 
 |   | `dob` | [text](/docs/records/fields/types/text/) | Date of birth in `YYYY-MM-DD` format 
 |   | `email` | [text](/docs/records/fields/types/text/) | The primary email address of the worker; alternative to `email_id` 
@@ -47,6 +46,8 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `gender` | [text](/docs/records/fields/types/text/) | `F` (female), `M` (male), or blank or unknown 
 |   | `image` | [image](/docs/records/fields/types/image/) | The worker's profile picture in PNG format 
 |   | `is_disabled` | [boolean](/docs/records/fields/types/boolean/) | Is this worker deactivated and prevented from logging in? 
+|   | `is_mfa_required` | [boolean](/docs/records/fields/types/boolean/) | Is this worker required to use multi-factor authentication? 
+|   | `is_password_disabled` | [boolean](/docs/records/fields/types/boolean/) | Is this worker allowed to log in with a password? 
 |   | `is_superuser` | [boolean](/docs/records/fields/types/boolean/) | Is this worker an administrator with full privileges? 
 | **x** | **`language`** | [text](/docs/records/fields/types/text/) | ISO-639 language code and ISO-3166 country code; e.g. `en_US` 
 |   | `last_name` | [text](/docs/records/fields/types/text/) | Surname 
@@ -117,6 +118,8 @@ These [filters](/docs/search/filters/) are available in worker [search queries](
 | `isAvailable:` | virtual | Calendar Availability
 | `isBusy:` | virtual | Calendar Availability
 | `isDisabled:` | [boolean](/docs/search/filters/booleans/) | Disabled
+| `isMfaRequired:` | [boolean](/docs/search/filters/booleans/) | Mfa Required
+| `isPasswordDisabled:` | [boolean](/docs/search/filters/booleans/) | Password Disabled
 | `language:` | [text](/docs/search/filters/text/) | Language
 | `lastActivity:` | [date](/docs/search/filters/dates/) | Last Activity
 | `lastName:` | [text](/docs/search/filters/text/) | Last Name
@@ -141,13 +144,14 @@ These columns are available on worker [worklists](/docs/worklists/):
 | `a_address_email` | Email Address
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
 | `w_at_mention_name` | @mention
-| `w_auth_extension_id` | Authentication
 | `w_calendar_id` | Calendar
 | `w_dob` | D.o.b.
 | `w_first_name` | First Name
 | `w_gender` | Gender
 | `w_id` | Id
 | `w_is_disabled` | Disabled
+| `w_is_mfa_required` | Mfa Required
+| `w_is_password_disabled` | Password Disabled
 | `w_is_superuser` | Administrator
 | `w_language` | Language
 | `w_last_name` | Last Name
