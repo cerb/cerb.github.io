@@ -73,37 +73,16 @@ Third-party plugins are found in the `storage/plugins/` directory. These plugins
 ### Authentication
 
 | [LDAP Integration](/docs/plugins/wgm.ldap/) | `wgm.ldap`
-| [OpenID Integration](/docs/plugins/cerberusweb.openid/) | `cerberusweb.openid`
-| [Two-Factor Authentication](/docs/plugins/wgm.login.password.google_auth/) | `wgm.login.password.google_auth`
 
 ### Integration
 
-| [Amazon Web Services (AWS) Integration](/docs/plugins/wgm.aws/) | `wgm.aws`
-| [Api.ai Integration](/docs/plugins/wgm.apiai/) | `wgm.apiai`
-| [Campfire Integration](/docs/plugins/wgm.campfire/) | `wgm.campfire`
-| [Clickatell Integration](/docs/plugins/wgm.clickatell/) | `wgm.clickatell`
-| [Dropbox Integration](/docs/plugins/wgm.dropbox/) | `wgm.dropbox`
-| [Facebook Integration](/docs/plugins/wgm.facebook/) | `wgm.facebook`
-| [Freshbooks Integration](/docs/plugins/wgm.freshbooks/) | `wgm.freshbooks`
-| [GitHub Integration](/docs/plugins/wgm.github/) | `wgm.github`
-| [GitLab Integration](/docs/plugins/wgm.gitlab/) | `wgm.gitlab`
-| [Google Integration](/docs/plugins/wgm.google/) | `wgm.google`
-| [HipChat Integration](/docs/plugins/wgm.hipchat/) | `wgm.hipchat`
 | [JIRA Integration](/docs/plugins/wgm.jira/) | `wgm.jira`
-| [LinkedIn Integration](/docs/plugins/wgm.linkedin/) | `wgm.linkedin`
-| [Nest Integration](/docs/plugins/wgm.nest/) | `wgm.nest`
-| [Salesforce integration](/docs/plugins/wgm.salesforce/) | `wgm.salesforce`
-| [ShiftPlanning.com Integration](/docs/plugins/wgm.shiftplanning/) | `wgm.shiftplanning`
-| [Slack Integration](/docs/plugins/wgm.slack/) | `wgm.slack`
-| [Spotify Integration](/docs/plugins/wgm.spotify/) | `wgm.spotify`
-| [Stripe.com Integration](/docs/plugins/wgm.stripe/) | `wgm.stripe`
-| [Twilio.com Integration](/docs/plugins/wgm.twilio/) | `wgm.twilio`
 | [Twitter Integration](/docs/plugins/wgm.twitter/) | `wgm.twitter`
 
 ### Legacy
 
 | [Legacy Printing](/docs/plugins/cerb.legacy.print/) | `cerb.legacy.print`
-| [Legacy Profile Attachments Download](/docs/plugins/cerb.legacy.profile.attachments.zip/) | `cerb.legacy.profile.attachments.zip`
+| [Legacy Profile Attachments Download](/docs/plugins/cerb.legacy.profile.attachments/) | `cerb.legacy.profile.attachments`
 | [Ticket Profile "Move To" Shortcut](/docs/plugins/cerb.profile.ticket.moveto/) | `cerb.profile.ticket.moveto`
 | [Notifications Emailer](/docs/plugins/wgm.notifications.emailer/) | `wgm.notifications.emailer`
 | [Record Simulator](/docs/plugins/cerberusweb.simulator/) | `cerberusweb.simulator`
@@ -114,7 +93,6 @@ Third-party plugins are found in the `storage/plugins/` directory. These plugins
 
 ### Record Types
 
-| [Asset Tracking](/docs/plugins/cerberusweb.assets/) | `cerberusweb.assets`
 | [Call Logging](/docs/plugins/cerberusweb.calls/) | `cerberusweb.calls`
 | [Collaborative Feed Reader](/docs/plugins/cerberusweb.feed_reader/) | `cerberusweb.feed_reader`
 | [Domains](/docs/plugins/cerberusweb.datacenter.domains/) | `cerberusweb.datacenter.domains`

@@ -1,11 +1,11 @@
 ---
-title: "Extension: Facebook Pages"
-permalink: /docs/plugins/extensions/wgm.facebook.pages.service.provider/
+title: "Extension: SAML Identity Provider"
+permalink: /docs/plugins/extensions/cerb.service.provider.saml.idp/
 toc:
-  title: "Facebook Pages"
+  title: "SAML Identity Provider"
   expand: Plugins
 jumbotron:
-  title: "Facebook Pages"
+  title: "SAML Identity Provider"
   tagline: 
   breadcrumbs:
   -
@@ -24,9 +24,9 @@ jumbotron:
 
 |---
 |-|-
-| **Name:** | Facebook Pages
-| **Identifier (ID):** | wgm.facebook.pages.service.provider
+| **Name:** | SAML Identity Provider
+| **Identifier (ID):** | cerb.service.provider.saml.idp
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/service_providers/facebook.php
-| **Class:** | ServiceProvider_FacebookPages
+| **File:** | api/service_providers/saml.php
+| **Class:** | ServiceProvider_SAML
 

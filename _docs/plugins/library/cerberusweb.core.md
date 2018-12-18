@@ -48,6 +48,7 @@ The core functionality of Cerb.
 | Record Update | `core.bot.action.record.update`
 | Record Upsert | `core.bot.action.record.upsert`
 | Schedule Proactive Interaction | `core.bot.action.interaction_proactive.schedule`
+| Service AWS Get Pre-signed URL | `wgm.aws.bot.action.get_presigned_url`
 
 
 ### Bot Event
@@ -103,10 +104,18 @@ The core functionality of Cerb.
 | Worklist | `calendar.datasource.worklist`
 
 
-### Connected Account Service Provider
+### Connected Service Provider
 
-| [**Cerb**](/docs/plugins/extensions/core.service.provider.cerb/) | `core.service.provider.cerb`
-| [**OAuth2 (Generic)**](/docs/plugins/extensions/core.service.provider.oauth2.generic/) | `core.service.provider.oauth2.generic`
+| [**Amazon Web Services**](/docs/plugins/extensions/cerb.service.provider.aws/) | `cerb.service.provider.aws`
+| [**Cerb API (Legacy Signatures)**](/docs/plugins/extensions/cerb.service.provider.cerb.api.legacy/) | `cerb.service.provider.cerb.api.legacy`
+| [**Facebook Pages**](/docs/plugins/extensions/wgm.facebook.pages.service.provider/) | `wgm.facebook.pages.service.provider`
+| [**HTTP Basic Authentication**](/docs/plugins/extensions/cerb.service.provider.http.basic/) | `cerb.service.provider.http.basic`
+| [**LDAP**](/docs/plugins/extensions/cerb.service.provider.ldap/) | `cerb.service.provider.ldap`
+| [**OAuth1 Provider**](/docs/plugins/extensions/cerb.service.provider.oauth1/) | `cerb.service.provider.oauth1`
+| [**OAuth2 Provider**](/docs/plugins/extensions/cerb.service.provider.oauth2/) | `cerb.service.provider.oauth2`
+| [**OpenID Connect Identity Provider**](/docs/plugins/extensions/cerb.service.provider.oidc/) | `cerb.service.provider.oidc`
+| [**SAML Identity Provider**](/docs/plugins/extensions/cerb.service.provider.saml.idp/) | `cerb.service.provider.saml.idp`
+| [**Token Bearer**](/docs/plugins/extensions/cerb.service.provider.token.bearer/) | `cerb.service.provider.token.bearer`
 
 
 ### Controller
@@ -120,6 +129,7 @@ The core functionality of Cerb.
 | OAuth Controller | `core.controller.oauth`
 | Portal Controller | `core.controller.portal`
 | Resource Controller | `core.controller.resource`
+| SSO Controller | `controller.sso`
 | Scheduled Tasks (Cron) Controller | `core.controller.cron`
 | UI Controller | `core.controller.ui`
 
@@ -140,11 +150,6 @@ The core functionality of Cerb.
 | Core Helpdesk Tour | `core.listeners.tour`
 
 
-### Login Authenticator
-
-| Password | `login.password`
-
-
 ### Mail Transport Type
 
 | [**Null**](/docs/plugins/extensions/core.mail.transport.null/) | `core.mail.transport.null`
@@ -156,6 +161,7 @@ The core functionality of Cerb.
 | Abstract Custom Record Section | `core.page.profiles.abstract_custom_record`
 | Address Section | `core.page.profiles.address`
 | Attachment Section | `core.page.profiles.attachment`
+| Authentication Section | `core.page.setup.auth`
 | Avatars Section | `core.page.setup.avatars`
 | Behavior Section | `core.page.profiles.behavior`
 | Bot Section | `core.page.profiles.bot`
@@ -172,7 +178,7 @@ The core functionality of Cerb.
 | Comment Section | `core.page.profiles.comment`
 | Community Portal Section | `core.page.profiles.community_tool`
 | Connected Account Section | `core.page.profiles.connected_account`
-| Connected Accounts Section | `core.page.setup.connected_accounts`
+| Connected Service Section | `core.page.profiles.connected_service`
 | Contact Section | `core.page.profiles.contact`
 | Currency Section | `core.page.profiles.currency`
 | Custom Field Section | `core.page.profiles.custom_field`
@@ -199,6 +205,7 @@ The core functionality of Cerb.
 | Localization Section | `core.page.setup.localization`
 | Mail Transport Section | `core.page.profiles.mail_transport`
 | Mailbox Account Section | `core.page.profiles.mailbox`
+| OAuth App Section | `core.page.profiles.oauth_app`
 | Organization Section | `core.page.profiles.organization`
 | Outgoing Mail Section | `core.page.setup.mail_outgoing`
 | Plugin Library Section | `core.page.setup.plugin_library`
@@ -295,6 +302,7 @@ The core functionality of Cerb.
 | Comment | `cerberusweb.contexts.comment`
 | Community Portal | `cerberusweb.contexts.portal`
 | Connected Account | `cerberusweb.contexts.connected_account`
+| Connected Service | `cerberusweb.contexts.connected_service`
 | Contact | `cerberusweb.contexts.contact`
 | Currency | `cerberusweb.contexts.currency`
 | Custom Field | `cerberusweb.contexts.custom_field`
@@ -310,6 +318,7 @@ The core functionality of Cerb.
 | Mailbox Account | `cerberusweb.contexts.mailbox`
 | Message | `cerberusweb.contexts.message`
 | Notification | `cerberusweb.contexts.notification`
+| OAuth App | `cerberusweb.contexts.oauth.app`
 | Organization | `cerberusweb.contexts.org`
 | Profile Tab | `cerberusweb.contexts.profile.tab`
 | Profile Widget | `cerberusweb.contexts.profile.widget`

@@ -1,11 +1,11 @@
 ---
-title: "Plugin: JIRA Integration"
+title: "Plugin: JIRA Integration (Legacy)"
 permalink: /docs/plugins/wgm.jira/
 toc:
-  title: "JIRA Integration"
+  title: "JIRA Integration (Legacy)"
   expand: Plugins
 jumbotron:
-  title: "JIRA Integration"
+  title: "JIRA Integration (Legacy)"
   tagline: 
   breadcrumbs:
   -
@@ -18,7 +18,7 @@ jumbotron:
 
 |---
 |-|-
-| **Name:** | JIRA Integration
+| **Name:** | JIRA Integration (Legacy)
 | **Identifier (ID):** | wgm.jira
 | **Author:** | Webgroup Media, LLC.
 | **Path:** | storage/plugins/wgm.jira/
@@ -31,11 +31,6 @@ This plugin provides integration with Atlassian JIRA via their REST API.  It is 
 
 # Extensions
 
-### Bot Action
-
-| JIRA API | `wgmjira.event.action.api_call`
-
-
 ### Bot Event
 
 | Custom behavior on JIRA issue | `event.macro.jira_issue`
@@ -45,21 +40,10 @@ This plugin provides integration with Atlassian JIRA via their REST API.  It is 
 | New status on JIRA issue | `wgmjira.event.issue.status.changed`
 
 
-### Connected Account Service Provider
-
-| [**JIRA**](/docs/plugins/extensions/wgm.jira.service.provider/) | `wgm.jira.service.provider`
-
-
-### Page Menu Item
-
-| JIRA | `wgm.jira.setup.menu.plugins`
-
-
 ### Page Section
 
 | Jira Issue Section | `jira.page.profiles.jira_issue`
 | Jira Project Section | `jira.page.profiles.jira_project`
-| Setup Page JIRA Section | `wgm.jira.setup.section`
 
 
 ### Record Type

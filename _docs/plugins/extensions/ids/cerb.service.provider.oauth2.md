@@ -1,11 +1,11 @@
 ---
-title: "Extension: Facebook Pages"
-permalink: /docs/plugins/extensions/wgm.facebook.pages.service.provider/
+title: "Extension: OAuth2 Provider"
+permalink: /docs/plugins/extensions/cerb.service.provider.oauth2/
 toc:
-  title: "Facebook Pages"
+  title: "OAuth2 Provider"
   expand: Plugins
 jumbotron:
-  title: "Facebook Pages"
+  title: "OAuth2 Provider"
   tagline: 
   breadcrumbs:
   -
@@ -24,9 +24,9 @@ jumbotron:
 
 |---
 |-|-
-| **Name:** | Facebook Pages
-| **Identifier (ID):** | wgm.facebook.pages.service.provider
+| **Name:** | OAuth2 Provider
+| **Identifier (ID):** | cerb.service.provider.oauth2
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/service_providers/facebook.php
-| **Class:** | ServiceProvider_FacebookPages
+| **File:** | api/service_providers/oauth.php
+| **Class:** | ServiceProvider_OAuth2
 

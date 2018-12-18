@@ -28,7 +28,7 @@ jumbotron:
 
 # Extensions
 
-| Profile Attachments Download Script | `cerb.legacy.profile.attachments.zip.script`
+| Profile Attachments Download Script | `cerb.legacy.profile.attachments.script`
 | Ticket Profile Move To Script | `cerb.profile.ticket.moveto.script`
 | Ticket Profile Print Script | `cerb.legacy.print.profile.ticket.script`
 | Time Tracking Profile Script | `timetracking.profile_script.timer`

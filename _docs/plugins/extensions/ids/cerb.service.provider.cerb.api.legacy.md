@@ -1,11 +1,11 @@
 ---
-title: "Extension: Facebook Pages"
-permalink: /docs/plugins/extensions/wgm.facebook.pages.service.provider/
+title: "Extension: Cerb API (Legacy Signatures)"
+permalink: /docs/plugins/extensions/cerb.service.provider.cerb.api.legacy/
 toc:
-  title: "Facebook Pages"
+  title: "Cerb API (Legacy Signatures)"
   expand: Plugins
 jumbotron:
-  title: "Facebook Pages"
+  title: "Cerb API (Legacy Signatures)"
   tagline: 
   breadcrumbs:
   -
@@ -24,9 +24,9 @@ jumbotron:
 
 |---
 |-|-
-| **Name:** | Facebook Pages
-| **Identifier (ID):** | wgm.facebook.pages.service.provider
+| **Name:** | Cerb API (Legacy Signatures)
+| **Identifier (ID):** | cerb.service.provider.cerb.api.legacy
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/service_providers/facebook.php
-| **Class:** | ServiceProvider_FacebookPages
+| **File:** | api/service_providers/cerb.php
+| **Class:** | ServiceProvider_CerbApiLegacy
 

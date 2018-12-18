@@ -30,7 +30,6 @@ jumbotron:
 
 | Bot Scheduled Behavior | `cron.bot.scheduled_behavior`
 | Feeds Cron | `feeds.cron`
-| Freshbooks Synchronize Cron | `wgm.freshbooks.cron.sync`
 | Heartbeat | `cron.heartbeat`
 | Inbound Email Message Processor | `cron.parser`
 | JIRA Synchronization | `wgmjira.cron`

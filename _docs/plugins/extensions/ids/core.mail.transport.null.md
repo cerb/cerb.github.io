@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Null
 | **Identifier (ID):** | core.mail.transport.null
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/plugin.classes.php
+| **File:** | api/mail/transports/null.php
 | **Class:** | CerbMailTransport_Null
 

@@ -57,12 +57,11 @@ Each extension entry looks like:
 | [Cache Engine](/docs/plugins/extensions/points/devblocks.cache.engine/) | `devblocks.cache.engine`
 | [Calendar Datasource](/docs/plugins/extensions/points/cerberusweb.calendar.datasource/) | `cerberusweb.calendar.datasource`
 | [Community Portal](/docs/plugins/extensions/points/cerb.portal/) | `cerb.portal`
-| [Connected Account Service Provider](/docs/plugins/extensions/points/cerb.service.provider/) | `cerb.service.provider`
+| [Connected Service Provider](/docs/plugins/extensions/points/cerb.connected_service.provider/) | `cerb.connected_service.provider`
 | [Controller](/docs/plugins/extensions/points/devblocks.controller/) | `devblocks.controller`
 | [Custom Field Type](/docs/plugins/extensions/points/cerb.custom_field/) | `cerb.custom_field`
 | [Event Listener](/docs/plugins/extensions/points/devblocks.listener.event/) | `devblocks.listener.event`
 | [Http Request Listener](/docs/plugins/extensions/points/devblocks.listener.http/) | `devblocks.listener.http`
-| [Login Authenticator](/docs/plugins/extensions/points/cerberusweb.login/) | `cerberusweb.login`
 | [Mail Transport Type](/docs/plugins/extensions/points/cerberusweb.mail.transport/) | `cerberusweb.mail.transport`
 | [Message Toolbar Item](/docs/plugins/extensions/points/cerberusweb.message.toolbaritem/) | `cerberusweb.message.toolbaritem`
 | [Page Menu Item](/docs/plugins/extensions/points/cerberusweb.ui.page.menu.item/) | `cerberusweb.ui.page.menu.item`

@@ -45,7 +45,6 @@ jumbotron:
 | Custom API request | `event.api.custom_request`
 | Custom behavior on JIRA issue | `event.macro.jira_issue`
 | Custom behavior on JIRA project | `event.macro.jira_project`
-| Custom behavior on asset | `event.macro.asset`
 | Custom behavior on bot | `event.macro.bot`
 | Custom behavior on calendar event | `event.macro.calendar_event`
 | Custom behavior on calendar | `event.macro.calendar`

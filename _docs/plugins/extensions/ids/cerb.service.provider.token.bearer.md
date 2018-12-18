@@ -1,11 +1,11 @@
 ---
-title: "Extension: Facebook Pages"
-permalink: /docs/plugins/extensions/wgm.facebook.pages.service.provider/
+title: "Extension: Token Bearer"
+permalink: /docs/plugins/extensions/cerb.service.provider.token.bearer/
 toc:
-  title: "Facebook Pages"
+  title: "Token Bearer"
   expand: Plugins
 jumbotron:
-  title: "Facebook Pages"
+  title: "Token Bearer"
   tagline: 
   breadcrumbs:
   -
@@ -24,9 +24,9 @@ jumbotron:
 
 |---
 |-|-
-| **Name:** | Facebook Pages
-| **Identifier (ID):** | wgm.facebook.pages.service.provider
+| **Name:** | Token Bearer
+| **Identifier (ID):** | cerb.service.provider.token.bearer
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/service_providers/facebook.php
-| **Class:** | ServiceProvider_FacebookPages
+| **File:** | api/service_providers/token.php
+| **Class:** | ServiceProvider_TokenBearer
 

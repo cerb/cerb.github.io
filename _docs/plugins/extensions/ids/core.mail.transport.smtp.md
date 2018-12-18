@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | SMTP
 | **Identifier (ID):** | core.mail.transport.smtp
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/plugin.classes.php
+| **File:** | api/mail/transports/smtp.php
 | **Class:** | CerbMailTransport_Smtp
 

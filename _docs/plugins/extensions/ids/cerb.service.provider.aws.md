@@ -1,6 +1,6 @@
 ---
 title: "Extension: Amazon Web Services"
-permalink: /docs/plugins/extensions/wgm.aws.service.provider/
+permalink: /docs/plugins/extensions/cerb.service.provider.aws/
 toc:
   title: "Amazon Web Services"
   expand: Plugins
@@ -18,15 +18,15 @@ jumbotron:
     label: Extension Points &raquo;
     url: /docs/plugins/extensions/
   -
-    label: Connected Account Service Provider &raquo;
-    url: /docs/plugins/extensions/points/cerb.service.provider
+    label: Connected Service Provider &raquo;
+    url: /docs/plugins/extensions/points/cerb.connected_service.provider
 ---
 
 |---
 |-|-
 | **Name:** | Amazon Web Services
-| **Identifier (ID):** | wgm.aws.service.provider
-| **Plugin:** | [wgm.aws](/docs/plugins/wgm.aws/)
-| **File:** | api/App.php
+| **Identifier (ID):** | cerb.service.provider.aws
+| **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
+| **File:** | api/service_providers/aws.php
 | **Class:** | ServiceProvider_Aws
 

@@ -28,8 +28,7 @@ jumbotron:
 
 # Extensions
 
-| Setup | `wgmcampfire.setup`
-| Setup | `wgmhipchat.setup`
+(none)
 
 <div class="section-nav">
 	<div class="left">

@@ -30,8 +30,8 @@ jumbotron:
 
 | Abstract Custom Record Section | `core.page.profiles.abstract_custom_record`
 | Address Section | `core.page.profiles.address`
-| Asset Section | `assets.page.profiles.asset`
 | Attachment Section | `core.page.profiles.attachment`
+| Authentication Section | `core.page.setup.auth`
 | Avatars Section | `core.page.setup.avatars`
 | Behavior Section | `core.page.profiles.behavior`
 | Bot Section | `core.page.profiles.bot`
@@ -49,7 +49,7 @@ jumbotron:
 | Comment Section | `core.page.profiles.comment`
 | Community Portal Section | `core.page.profiles.community_tool`
 | Connected Account Section | `core.page.profiles.connected_account`
-| Connected Accounts Section | `core.page.setup.connected_accounts`
+| Connected Service Section | `core.page.profiles.connected_service`
 | Contact Section | `core.page.profiles.contact`
 | Currency Section | `core.page.profiles.currency`
 | Custom Field Section | `core.page.profiles.custom_field`
@@ -64,7 +64,6 @@ jumbotron:
 | Feed Item Page Section | `feeds.page.profiles.feed_item`
 | Feed Page Section | `feeds.page.profiles.feed`
 | File Bundle Section | `core.page.profiles.file_bundle`
-| Freshbooks Client Section | `wgm.freshbooks.profiles.freshbooks_client`
 | Gpg Public Key Section | `core.page.profiles.gpg_public_key`
 | Group Section | `core.page.profiles.group`
 | HTML Template Section | `core.page.profiles.mail_html_template`
@@ -84,6 +83,7 @@ jumbotron:
 | Localization Section | `core.page.setup.localization`
 | Mail Transport Section | `core.page.profiles.mail_transport`
 | Mailbox Account Section | `core.page.profiles.mailbox`
+| OAuth App Section | `core.page.profiles.oauth_app`
 | Opp Section | `crm.page.profiles.opportunity`
 | Organization Section | `core.page.profiles.organization`
 | Outgoing Mail Section | `core.page.setup.mail_outgoing`
@@ -105,25 +105,10 @@ jumbotron:
 | Sensor Page Section | `cerberusweb.profiles.sensor`
 | Server Page Section | `cerberusweb.profiles.server`
 | Sessions Section | `core.page.setup.sessions`
-| Setup Page Clickatell Section | `wgmclickatell.setup.clickatell`
-| Setup Page Dropbox Section | `wgmdropbox.setup.dropbox`
-| Setup Page Facebook Section | `wgmfacebook.setup.facebook`
-| Setup Page Freshbooks Section | `wgm.freshbooks.setup.section.freshbooks`
-| Setup Page GitHub Section | `wgmgithub.setup.github`
-| Setup Page GitLab Section | `wgmgitlab.setup.gitlab`
-| Setup Page Google Section | `wgm.google.setup.page`
 | Setup Page JIRA Section | `wgm.jira.setup.section`
-| Setup Page LDAP Section | `ldap.setup.section`
-| Setup Page LinkedIn Section | `wgm.linkedin.setup.page`
-| Setup Page Nest Section | `wgm.nest.setup.section`
-| Setup Page Salesforce Section | `wgmsalesforce.setup.salesforce`
-| Setup Page ShiftPlanning Section | `wgmshiftplanning.setup.shiftplanning`
 | Setup Page Simulator Section | `simulator.setup.section.simulator`
-| Setup Page Slack Section | `wgm.slack.setup.page`
-| Setup Page Spotify Section | `wgm.spotify.setup.page`
 | Setup Page Translations Section | `translators.setup.section.translations`
 | Setup Page Twitter Section | `wgmtwitter.setup.twitter`
-| Setup Page Webhooks Section | `webhooks.setup.section`
 | Skill Section | `core.page.profiles.skill`
 | Skills Section | `core.page.setup.skills`
 | Skillset Section | `core.page.profiles.skillset`

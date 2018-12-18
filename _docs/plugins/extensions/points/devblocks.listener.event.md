@@ -35,7 +35,6 @@ jumbotron:
 | Event Listener | `cerberusweb.datacenter.listener`
 | Event Listener | `cerberusweb.feed_reader.listener`
 | Event Listener | `kb.listener`
-| Freshbooks Event Listener | `wgm.freshbooks.listener`
 | Support Center Event Listener | `sc.listeners.core`
 | Time Tracking Listener | `timetracking.listener.core`
 | Triggers Manager | `cerberusweb.listeners.triggers`

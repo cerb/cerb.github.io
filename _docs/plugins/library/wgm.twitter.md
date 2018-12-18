@@ -1,11 +1,11 @@
 ---
-title: "Plugin: Twitter Integration"
+title: "Plugin: Twitter Integration (Legacy)"
 permalink: /docs/plugins/wgm.twitter/
 toc:
-  title: "Twitter Integration"
+  title: "Twitter Integration (Legacy)"
   expand: Plugins
 jumbotron:
-  title: "Twitter Integration"
+  title: "Twitter Integration (Legacy)"
   tagline: 
   breadcrumbs:
   -
@@ -18,7 +18,7 @@ jumbotron:
 
 |---
 |-|-
-| **Name:** | Twitter Integration
+| **Name:** | Twitter Integration (Legacy)
 | **Identifier (ID):** | wgm.twitter
 | **Author:** | Webgroup Media, LLC.
 | **Path:** | storage/plugins/wgm.twitter/
@@ -30,16 +30,6 @@ This plugin provides integration with Twitter via their API. This plugin is inte
 {:toc}
 
 # Extensions
-
-### Bot Action
-
-| Update Twitter Status | `wgmtwitter.event.action.post`
-
-
-### Connected Account Service Provider
-
-| [**Twitter**](/docs/plugins/extensions/wgm.twitter.service.provider/) | `wgm.twitter.service.provider`
-
 
 ### Page Menu Item
 

@@ -1,11 +1,11 @@
 ---
-title: "Extension: Facebook Pages"
-permalink: /docs/plugins/extensions/wgm.facebook.pages.service.provider/
+title: "Extension: HTTP Basic Authentication"
+permalink: /docs/plugins/extensions/cerb.service.provider.http.basic/
 toc:
-  title: "Facebook Pages"
+  title: "HTTP Basic Authentication"
   expand: Plugins
 jumbotron:
-  title: "Facebook Pages"
+  title: "HTTP Basic Authentication"
   tagline: 
   breadcrumbs:
   -
@@ -24,9 +24,9 @@ jumbotron:
 
 |---
 |-|-
-| **Name:** | Facebook Pages
-| **Identifier (ID):** | wgm.facebook.pages.service.provider
+| **Name:** | HTTP Basic Authentication
+| **Identifier (ID):** | cerb.service.provider.http.basic
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/service_providers/facebook.php
-| **Class:** | ServiceProvider_FacebookPages
+| **File:** | api/service_providers/http.php
+| **Class:** | ServiceProvider_HttpBasic
 

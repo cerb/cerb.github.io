@@ -31,26 +31,6 @@ Authenticate worker and customer logins via LDAP.
 
 # Extensions
 
-### Connected Account Service Provider
-
-| [**LDAP**](/docs/plugins/extensions/wgm.ldap.service.provider/) | `wgm.ldap.service.provider`
-
-
-### Login Authenticator
-
-| LDAP | `login.ldap`
-
-
-### Page Menu Item
-
-| LDAP | `ldap.setup.menu.plugins.ldap`
-
-
-### Page Section
-
-| Setup Page LDAP Section | `ldap.setup.section`
-
-
 ### Support Center Login Authenticator
 
 | LDAP | `sc.login.auth.ldap`

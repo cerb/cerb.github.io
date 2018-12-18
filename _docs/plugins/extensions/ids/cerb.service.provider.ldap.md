@@ -1,6 +1,6 @@
 ---
 title: "Extension: LDAP"
-permalink: /docs/plugins/extensions/wgm.ldap.service.provider/
+permalink: /docs/plugins/extensions/cerb.service.provider.ldap/
 toc:
   title: "LDAP"
   expand: Plugins
@@ -18,15 +18,15 @@ jumbotron:
     label: Extension Points &raquo;
     url: /docs/plugins/extensions/
   -
-    label: Connected Account Service Provider &raquo;
-    url: /docs/plugins/extensions/points/cerb.service.provider
+    label: Connected Service Provider &raquo;
+    url: /docs/plugins/extensions/points/cerb.connected_service.provider
 ---
 
 |---
 |-|-
 | **Name:** | LDAP
-| **Identifier (ID):** | wgm.ldap.service.provider
-| **Plugin:** | [wgm.ldap](/docs/plugins/wgm.ldap/)
-| **File:** | api/App.php
+| **Identifier (ID):** | cerb.service.provider.ldap
+| **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
+| **File:** | api/service_providers/ldap.php
 | **Class:** | ServiceProvider_Ldap
 

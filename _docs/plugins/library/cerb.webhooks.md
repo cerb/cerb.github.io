@@ -46,14 +46,8 @@ This plugin enables Cerb to catch webhooks and execute bot behaviors in response
 | Webhooks Controller | `webhooks.controller`
 
 
-### Page Menu Item
-
-| Webhooks | `webhooks.setup.menu.plugins`
-
-
 ### Page Section
 
-| Setup Page Webhooks Section | `webhooks.setup.section`
 | Webhook Listener Section | `webhooks.page.profiles.webhook_listener`
 
 

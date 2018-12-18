@@ -30,7 +30,6 @@ jumbotron:
 
 | Activity Log | `cerberusweb.contexts.activity_log`
 | Application | `cerberusweb.contexts.app`
-| Asset | `cerberusweb.contexts.asset`
 | Attachment | `cerberusweb.contexts.attachment`
 | Behavior Scheduled | `cerberusweb.contexts.behavior.scheduled`
 | Behavior | `cerberusweb.contexts.behavior`
@@ -47,6 +46,7 @@ jumbotron:
 | Comment | `cerberusweb.contexts.comment`
 | Community Portal | `cerberusweb.contexts.portal`
 | Connected Account | `cerberusweb.contexts.connected_account`
+| Connected Service | `cerberusweb.contexts.connected_service`
 | Contact | `cerberusweb.contexts.contact`
 | Currency | `cerberusweb.contexts.currency`
 | Custom Field | `cerberusweb.contexts.custom_field`
@@ -62,8 +62,6 @@ jumbotron:
 | Feed | `cerberusweb.contexts.feed`
 | Feedback | `cerberusweb.contexts.feedback`
 | File Bundle | `cerberusweb.contexts.file_bundle`
-| Freshbooks Client | `wgm.freshbooks.contexts.client`
-| Freshbooks Invoice | `wgm.freshbooks.contexts.invoice`
 | Group | `cerberusweb.contexts.group`
 | Jira Issue | `cerberusweb.contexts.jira.issue`
 | Jira Project | `cerberusweb.contexts.jira.project`
@@ -72,6 +70,7 @@ jumbotron:
 | Mailbox Account | `cerberusweb.contexts.mailbox`
 | Message | `cerberusweb.contexts.message`
 | Notification | `cerberusweb.contexts.notification`
+| OAuth App | `cerberusweb.contexts.oauth.app`
 | Opportunity | `cerberusweb.contexts.opportunity`
 | Organization | `cerberusweb.contexts.org`
 | Profile Tab | `cerberusweb.contexts.profile.tab`
