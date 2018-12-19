@@ -97,7 +97,7 @@ If you want workers to only authenticate using SSO, you can disappear their Cerb
 
 When a worker authenticates using LDAP, one of the email addresses on their Cerb account must match the email address from their LDAP record.
 
-If a worker has [two-factor authentication](/guides/security/configure-two-factor/) enabled, they'll be prompted for their security code after authenticating with their password.
+If a worker has [two-factor authentication](/guides/security/two-factor-auth/) enabled, they'll be prompted for their security code after authenticating with their password.
 
 You can use multiple LDAP services to authenticate workers from different corporate directories.
 

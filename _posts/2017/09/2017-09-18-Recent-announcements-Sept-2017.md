@@ -37,7 +37,7 @@ We expanded the library of pre-built workflow packages that you can import in a 
 
 We added these instructional how-to guides:
 
-* [Configure the Google Authenticator plugin](/guides/integrations/security/configure-two-factor/)
+* [Configure the Google Authenticator plugin](/guides/integrations/security/two-factor-auth/)
 * [Configure the LDAP plugin for worker authentication](/guides/integrations/ldap/)
 * [Configure the Stripe plugin](/guides/integrations/stripe/)
 * [Create a GPG encryption key-pair on macOS](/guides/mail/gpg-setup-on-mac/)
