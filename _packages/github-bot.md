@@ -27,9 +27,9 @@ This package creates **GitHub Bot** for demonstrating integration between Cerb a
 <img src="/assets/images/guides/github/plugin/cerb-and-github.png" class="screenshot">
 </div>
 
-# Configure the GitHub plugin
+# Configure the GitHub service
 
-If you haven't already, follow [these instructions](/guides/integrations/github/configure-plugin/) to install and configure the GitHub plugin, and add your first connected account.
+If you haven't already, follow [these instructions](/guides/integrations/github/) to configure the GitHub service and add your first connected account.
 
 # Import the package
 
@@ -43,23 +43,21 @@ Paste the following package into the large text box:
 {
   "package": {
     "name": "GitHub",
-    "cerb_version": "8.0.5",
+    "cerb_version": "9.1.0",
     "revision": 1,
     "requires": {
-      "cerb_version": "8.0.0",
-      "plugins": [
-        "wgm.github"
-      ]
+      "cerb_version": "9.1.0"
     },
     "configure": {
       "prompts": [
         {
           "type": "chooser",
-          "label": "github account:",
+          "label": "GitHub Account:",
           "key": "github_account_id",
           "params": {
             "context": "cerberusweb.contexts.connected_account",
-            "query": "service:github"
+            "single": true,
+            "query": "name:github"
           }
         }
       ]

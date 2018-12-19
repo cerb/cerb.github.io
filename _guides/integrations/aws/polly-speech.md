@@ -35,6 +35,14 @@ Finally, we'll demonstrate how to use Polly Bot as a delegate from a conversatio
 * TOC
 {:toc}
 
+# Configure the Amazon Web Services service in Cerb
+
+1. Log into Cerb as an administrator.
+
+1. Navigate to **Search >> Connected Accounts**.
+
+1. If you don't have a connected account for Amazon Web Services yet, you can [follow these instructions](/guides/integrations/aws/) to create one.
+
 # Log in to Amazon Web Services
 
 First, we need to create a new user in your Amazon Web Services (AWS) account and attach a _policy_ that describes the services that they are allowed to use.  This is accomplished with the Identity Access Management (IAM) service.  This user will receive credentials that you can use to interact with AWS from Cerb.
@@ -43,313 +51,455 @@ Log in to the [AWS Management Console](https://console.aws.amazon.com/iam/) and 
 
 If you don't have an AWS account, you can sign up for free at: <https://aws.amazon.com>
 
-## Add a new policy
+## Update your IAM policy
 
-We're going to create a new IAM policy that provides:
+Navigate to IAM from the **Services** menu at the top of the page.
+
+We need to update the _policy_ in your Amazon Web Services (AWS) account to describe the services that your Cerb bot is allowed to use.  This is accomplished with the Identity Access Management (IAM) service.
+
+We're going to update the IAM policy to provide:
 
 - Read-only access to Amazon Polly
-- Read-only access to the user's own account info
 
 Select **Policies** in the navigation on the left.
 
-Click the **Create Policy** button.
+Find your bot's policy in the list or create a new one. In the earlier [instructions](/guides/integrations/aws/) we created a policy named **CerbBot**.
 
-In the **Create Your Own Policy** section, click the **Select** button.
+Click the **Edit Policy** button.
 
-Enter the following:
+Select the **JSON** tab.
 
-- **Policy Name:** CerbPolly
-
-- **Description:** Programmatic access to AWS Polly from Cerb bots
-
-- **Policy Document:** _(copy and paste the policy below)_
+Add the following block to the `Statement` list:
 
 <pre>
 <code class="language-json">
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "201701250001",
-      "Effect": "Allow",
-      "Action": [
-        "iam:GetUser"
-      ],
-      "Resource": [
-        "arn:aws:iam::*:user/${aws:username}"
-      ]
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "polly:DescribeVoices",
-        "polly:GetLexicon",
-        "polly:ListLexicons",
-        "polly:SynthesizeSpeech"
-      ],
-      "Resource": [
-        "*"
-      ]
-    }
+  "Effect": "Allow",
+  "Action": [
+    "polly:DescribeVoices",
+    "polly:GetLexicon",
+    "polly:ListLexicons",
+    "polly:SynthesizeSpeech"
+  ],
+  "Resource": [
+    "*"
   ]
 }
 </code>
 </pre>
 
-Click the blue **Create Policy** button in the bottom right.
+Click the blue **Review policy** button in the bottom right.
 
-## Create a new user
-
-Now that we have a policy, we're ready to create the new user account for our Cerb bot to use.
-
-Select **Users** in the left navigation.
-
-Click the blue **Add user** button at the top of the page.
-
-Type `Cerb` in **User name**.
-
-In **Access type**, check _Programmatic access_.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/common/aws-iam-create-user.png" class="screenshot">
-</div>
-
-Click the blue **Next: Permissions** button in the bottom right.
-
-## Attach existing policies
-
-Let's add the policy we just created.
-
-Select **Attach existing policies directly**.
-
-Type `Cerb` in the search box and select **CerbPolly**.
-
-Click the blue **Next: Review** button in the bottom right.
-
-Verify the new user and click the blue **Create user** button in the bottom right.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/common/aws-iam-create-confirm.png" class="screenshot">
-</div>
-
-## Save your new credentials
-
-Click the **Download .csv** button to save a copy of your new credentials.  You'll need these in a moment when adding a new connected account in Cerb.
-
-That's everything we need to do in AWS. You can close the AWS Management Console.
-
-# Enable the AWS plugin in Cerb
-
-To add the AWS service provider for connected accounts in Cerb, we need to install a plugin.
-
-Click **setup** in the top right of Cerb (you must be an admin).
-
-Hover over the **Plugins** menu and click on **Plugin Library**.
-
-Type `aws` in the search box above the worklist and press `<ENTER>`.
-	
-Find the **Amazon Web Services (AWS) Integration** plugin in the worklist and click its **Download and install** button.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/common/cerb-plugin-aws-install.png" class="screenshot">
-</div>
-
-On the popup, click **Download and install** again to confirm.
-
-In the **Status:** field, select _Enabled_.
-
-Click the **Save Changes** button.
-
-# Add a connected account in Cerb
-
-Now we can create a connected account to securely store our AWS user credentials.
-
-Open the [search menu](/docs/navigation/#search) and select **Connected Accounts**.
-
-Click the **(+)** icon above the worklist to add a new account.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/common/worklist-add.png" class="screenshot">
-</div>
-
-Click on **Amazon Web Services**.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/common/cerb-connected-account-add.png" class="screenshot">
-</div>
-
-This will open a popup that asks you for your programmatic user credentials.
-
-Enter the following:
-
-- **Name:** `Cerb (Polly)`
-- **Access Key ID:** `<the access key you downloaded earlier>`
-- **Secret Access Key:** `<the secret key you downloaded earlier>`
-	
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/common/cerb-connected-account-creds.png" class="screenshot">
-</div>
-
-Click the **Save Changes** button.
-
-If everything was configured properly, you'll see the new connected account in your worklist.
-
-## Transfer ownership of the connected account to Cerb
-
-By default, new connected accounts are owned by you.  When something is owned by a worker it's private and only they can see it.  We want Polly Bot to be usable by everyone, so we need to transfer ownership of the new connected account to Cerb.
-
-Open the [card](/docs/cards/) for your new connected account.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/common/cerb-connected-account-card.png" class="screenshot">
-</div>
-
-Click the **Edit** button at the top of the card.
-
-In the **Owner:** field, remove yourself and select _Cerb_ as the new owner.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/common/cerb-connected-account-card-edit.png" class="screenshot">
-</div>
-
-Click the **Save Changes** button.
-
-That's all for connected accounts.  You can close the connected accounts search popup.
+Click the blue **Save changes** button in the bottom right.
 
 # Create Polly Bot in Cerb
 
 Now we're ready to create the bot that interacts with AWS using our connected account.
 
-Open the [search menu](/docs/navigation/#search) and select **Bots**.
-
-Click the **(+)** icon above the worklist to add a new bot.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/common/worklist-add.png" class="screenshot">
-</div>
-
-Enter the following details:
-
-- **Name:** Polly Bot
-- **Owner:** Cerb
-- **Status:** Enabled
-- **Image:** (click **Edit** and use an Emoji like 🐦 or 💬)
-- **Events:** _Allow only these:_ &raquo; _Custom bot behavior_
-- **Action Extensions:** _Allow only these:_ &raquo; _Get Pre-signed URL for AWS_
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/polly-speech/cerb-bot-create.png" class="screenshot">
-</div>
-
-Click the **Save Changes** button.
-
-## Import the behavior
-
-We've already built the behavior for you, and you can use Cerb's import feature to quickly create it.
-
-Open the [card](/docs/cards/) for your new bot.  You can just click its name in the yellow notification above the worklist.
-
-Click the **Behaviors** button on the card.
-
-Click the **(+)** icon above the worklist to add a new behavior.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/common/worklist-add.png" class="screenshot">
-</div>
-
-Switch to **Import** mode at the top of the editor popup.
+Navigate to **Setup >> Configure >> Import Package**.
 
 Copy and paste the following behavior into the large text box:
 
-<pre style="max-height: 29.25em;">
+<pre style="max-height:29.5em;">
 <code class="language-json">
 {% raw %}
 {
-  "behavior": {
-    "title": "Get presigned speech URL",
-    "is_disabled": false,
-    "is_private": false,
-    "priority": 1,
-    "event": {
-      "key": "event.macro.bot",
-      "label": "Custom bot behavior"
+  "package": {
+    "name": "Polly Bot",
+    "revision": 1,
+    "requires": {
+      "cerb_version": "9.1.0"
     },
-    "configure": [
-      {
-        "label": "AWS Account:",
-        "path": "behavior.nodes[0].params.actions[0].auth_connected_account_id",
-        "type": "chooser",
-        "params": {
-          "context": "cerberusweb.contexts.connected_account",
-          "query": "service:\"wgm.aws.service.provider\"",
-          "single": true
+    "configure": {
+      "placeholders": [
+
+      ],
+      "prompts": [
+        {
+          "type": "chooser",
+          "label": "AWS Account:",
+          "key": "prompt_aws_account_id",
+          "params": {
+            "context": "cerberusweb.contexts.connected_account",
+            "query": "aws OR amazon",
+            "single": true
+          }
+        },
+        {
+          "type": "text",
+          "label": "AWS Region:",
+          "key": "prompt_aws_region",
+          "params": {
+            "default": "us-west-2"
+          }
         }
-      }
-    ],
-    "variables": {
-      "var_text": {
-        "key": "var_text",
-        "label": "Text",
-        "type": "S",
-        "is_private": "0",
-        "params": {
-          "widget": "single"
-        }
+      ]
+    }
+  },
+  "bots": [
+    {
+      "uid": "bot_polly",
+      "name": "Polly Bot",
+      "owner": {
+        "context": "cerberusweb.contexts.app",
+        "id": 0
       },
-      "var_voice": {
-        "key": "var_voice",
-        "label": "Voice",
-        "type": "D",
-        "is_private": "0",
-        "params": {
-          "options": "Brian\r\nGeraint\r\nJoanna"
-        }
-      }
-    },
-    "nodes": [
-      {
-        "type": "action",
-        "title": "Get presigned URL",
-        "status": "live",
-        "params": {
-          "actions": [
+      "is_disabled": false,
+      "params": {
+        "events": {
+          "mode": "all",
+          "items": [
+
+          ]
+        },
+        "actions": {
+          "mode": "all",
+          "items": [
+
+          ]
+        },
+        "interactions": [
+
+        ]
+      },
+      "image": "data:image/png;base64,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",
+      "behaviors": [
+        {
+          "uid": "behavior_66",
+          "title": "Get interactions",
+          "is_disabled": false,
+          "is_private": false,
+          "priority": 50,
+          "event": {
+            "key": "event.interactions.get.worker",
+            "label": "Conversation get interactions for worker",
+            "params": {
+              "listen_points": "global"
+            }
+          },
+          "nodes": [
             {
-              "action": "wgm.aws.bot.action.get_presigned_url",
-              "http_verb": "post",
-              "http_url": "https://polly.us-west-2.amazonaws.com/v1/speech",
-              "http_headers": "Content-Type: application/json",
-              "http_body": "{% set json = {} %}\r\n{% set json = dict_set(json, 'OutputFormat', 'mp3') %}\r\n{% set json = dict_set(json, 'VoiceId', var_voice) %}\r\n{% set json = dict_set(json, 'TextType', 'text') %}\r\n{% set json = dict_set(json, 'Text', var_text) %}\r\n{{json|json_encode|json_pretty}}",
-              "expires_secs": "60",
-              "auth_connected_account_id": "0",
-              "response_placeholder": "polly_speech_url"
+              "type": "action",
+              "title": "Return",
+              "status": "live",
+              "params": {
+                "actions": [
+                  {
+                    "action": "return_interaction",
+                    "behavior_id": "{{{uid.behavior_68}}}",
+                    "name": "Say something",
+                    "interaction": "say",
+                    "interaction_params_json": "{}"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "uid": "behavior_67",
+          "title": "Get presigned speech URL",
+          "is_disabled": false,
+          "is_private": false,
+          "priority": 1,
+          "event": {
+            "key": "event.macro.bot",
+            "label": "Custom behavior on bot"
+          },
+          "variables": {
+            "var_text": {
+              "key": "var_text",
+              "label": "Text",
+              "type": "S",
+              "is_private": "0",
+              "params": {
+                "widget": "single"
+              }
+            },
+            "var_voice": {
+              "key": "var_voice",
+              "label": "Voice",
+              "type": "D",
+              "is_private": "0",
+              "params": {
+                "options": "Brian\r\nGeraint\r\nJoanna"
+              }
+            }
+          },
+          "nodes": [
+            {
+              "type": "action",
+              "title": "Get presigned URL",
+              "status": "live",
+              "params": {
+                "actions": [
+                  {
+                    "action": "wgm.aws.bot.action.get_presigned_url",
+                    "http_verb": "get",
+                    "http_url": "{% set query = {\t\"OutputFormat\": \"mp3\",\t\"VoiceId\": var_voice,\t\"TextType\": \"text\",\t\"Text\": var_text} %}https://polly.{{{prompt_aws_region}}}.amazonaws.com/v1/speech?{{query|url_encode}}",
+                    "http_headers": "",
+                    "http_body": "",
+                    "expires_secs": "60",
+                    "auth_connected_account_id": "{{{prompt_aws_account_id}}}",
+                    "response_placeholder": "polly_speech_url"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "uid": "behavior_68",
+          "title": "Handle interactions",
+          "is_disabled": false,
+          "is_private": false,
+          "priority": 50,
+          "event": {
+            "key": "event.interaction.chat.worker",
+            "label": "Conversation handle interaction with worker"
+          },
+          "nodes": [
+            {
+              "type": "action",
+              "title": "Set bot name",
+              "status": "live",
+              "params": {
+                "actions": [
+                  {
+                    "action": "set_bot_name",
+                    "name": "Polly"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "action",
+              "title": "Run behavior",
+              "status": "live",
+              "params": {
+                "actions": [
+                  {
+                    "action": "switch_behavior",
+                    "return": "0",
+                    "behavior_id": "{{{uid.behavior_69}}}",
+                    "var": "_behavior"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "uid": "behavior_69",
+          "title": "Repeat after me",
+          "is_disabled": false,
+          "is_private": true,
+          "priority": 50,
+          "event": {
+            "key": "event.message.chat.worker",
+            "label": "Conversation with worker"
+          },
+          "nodes": [
+            {
+              "type": "action",
+              "title": "What would you like me to say?",
+              "status": "live",
+              "params": {
+                "actions": [
+                  {
+                    "action": "send_message",
+                    "message": "What would you like me to say?",
+                    "format": "",
+                    "delay_ms": "1000"
+                  },
+                  {
+                    "action": "prompt_text",
+                    "placeholder": ""
+                  }
+                ]
+              }
+            },
+            {
+              "type": "action",
+              "title": "Get pre-signed URL",
+              "status": "live",
+              "params": {
+                "actions": [
+                  {
+                    "action": "_run_behavior",
+                    "on": "_trigger_va_id",
+                    "behavior_id": "{{{uid.behavior_67}}}",
+                    "var_text": "{{message}}",
+                    "var_voice": "Brian",
+                    "run_in_simulator": "0",
+                    "var": "_behavior"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "action",
+              "title": "Speak",
+              "status": "live",
+              "params": {
+                "actions": [
+                  {
+                    "action": "send_script",
+                    "script": "&lt;script&gt;\r\nDevblocks.playAudioUrl('{{_behavior.polly_speech_url}}');\r\n&lt;/script&gt;"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "action",
+              "title": "Again?",
+              "status": "live",
+              "params": {
+                "actions": [
+                  {
+                    "action": "send_message",
+                    "message": "Say something else?",
+                    "format": "",
+                    "delay_ms": "2000"
+                  },
+                  {
+                    "action": "prompt_buttons",
+                    "options": "yes\r\nno",
+                    "color_from": "#ffffff",
+                    "color_mid": "#ffffff",
+                    "color_to": "#ffffff",
+                    "style": ""
+                  }
+                ]
+              }
+            },
+            {
+              "type": "switch",
+              "title": "Yes/No",
+              "status": "live",
+              "nodes": [
+                {
+                  "type": "outcome",
+                  "title": "Yes",
+                  "status": "live",
+                  "params": {
+                    "groups": [
+                      {
+                        "any": 0,
+                        "conditions": [
+                          {
+                            "condition": "message",
+                            "oper": "is",
+                            "value": "yes"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "nodes": [
+                    {
+                      "type": "action",
+                      "title": "Repeat",
+                      "status": "live",
+                      "params": {
+                        "actions": [
+                          {
+                            "action": "switch_behavior",
+                            "return": "0",
+                            "behavior_id": "{{{uid.behavior_69}}}",
+                            "var": "_behavior"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "outcome",
+                  "title": "No",
+                  "status": "live",
+                  "params": {
+                    "groups": [
+                      {
+                        "any": 0,
+                        "conditions": [
+
+                        ]
+                      }
+                    ]
+                  },
+                  "nodes": [
+                    {
+                      "type": "action",
+                      "title": "Bye!",
+                      "status": "live",
+                      "params": {
+                        "actions": [
+                          {
+                            "action": "send_message",
+                            "message": "Bye!",
+                            "format": "",
+                            "delay_ms": "1000"
+                          },
+                          {
+                            "action": "window_close"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
-      }
-    ]
-  }
+      ]
+    }
+  ]
 }
 {% endraw %}
 </code>
 </pre>
 
-Click the **Save Changes** button.
+Click the **Import** button.
 
-Cerb will prompt you to link your **AWS Account:** before creating the behavior.  Click the chooser button and select **AWS: Cerb (Polly)**.
+Cerb will prompt you to link your **AWS Account:** before creating the behavior.  Click the chooser button and select **AWS (Cerb)**.
 
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/polly-speech/cerb-bot-behavior-create.png" class="screenshot">
-</div>
+You will also be prompted to enter the AWS region where you created the Lambda function.  You can find this at the beginning of the ARN for your function (e.g. <code>arn:aws:lambda:<b>us-west-2</b>:</code>).
 
-Click the **Save Changes** button.
+Click the **Import** button again.
 
-You'll see a new behavior named **Get presigned speech URL** was created for you in the _Behavior Search_ [worklist](/docs/worklists/) on the search popup.
+# Using Polly Bot from a conversational bot
+
+We've included an example of a speech-enabled conversational behavior.
+
+1. Start a chat by clicking on the bot icon in the lower right of your browser:
+
+	<div class="cerb-screenshot">
+	<img src="/assets/images/guides/aws/polly-speech/cerb-bot-convo-bubble.png" class="screenshot">
+	</div>
+
+2. Select **Polly Bot** in the menu.
+
+3. Click the **Say something** option in the menu.
+
+4. Type anything you would like the bot to say and press the `<ENTER>` key.
+
+The bot will speak what you typed.
+
+You can use this example behavior to add speech to your other conversations.
 
 ## Learn how the behavior works
 
 Even though the behavior was automatically created for you, it's useful to understand how everything works so you can make changes and create your own behaviors later.
 
-If you open the card for the new behavior you'll see its _decision tree_ at the bottom.
+1. Navigate to **Search >> Bots** and open the card for **Polly Bot**.
+
+2. Click on the **Behaviors** button.
+
+3. Open the card for the **Get presigned speech URL** behavior.
+
+On the behavior's card you'll see its _decision tree_ at the bottom.
 
 Click the **Custom bot behavior** _node_ and select **Edit Behavior** from the menu:
 
@@ -414,159 +564,17 @@ You can do anything with the audio stream URL at this point.  For instance:
 - A bot could download it as a new attachment record.
 - You could use it in an interactive voice response system during a phone call (e.g. Twilio, Asterisk).
 
-# Using the Polly Bot delegate from a conversational bot
-
-A common use case for audio streams is adding speech responses to conversational bots within Cerb.
-
-For a working example we're going to extend the bot from the [Chat Bot](/packages/chat-bot/) package.  If you haven't already, you should complete that guide before continuing here.
-
-Start a chat with your bot by clicking on the bot icon in the lower right of your browser:
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/polly-speech/cerb-bot-convo-bubble.png" class="screenshot">
-</div>
-
-In the chat window that opens, click on **Cerb**'s name above the first message to open its card:
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/polly-speech/cerb-bot-chat-card.png" class="screenshot">
-</div>
-
-Click on the **Behaviors** button.
-
-Find the **Respond to worker chat** behavior and open its card.
-
-We want to add a new action inside the **say()** subroutine.  Click on it and select **Import** from the menu:
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/polly-speech/cerb-bot-chat-subroutine-say.png" class="screenshot">
-</div>
-
-Copy and paste the following behavior fragment into the large textbox on the import popup:
-
-<pre style="max-height:29.25em;">
-<code class="language-json">{% raw %}
-{
-  "behavior_fragment": {
-    "title": "Respond to worker chat",
-    "is_disabled": false,
-    "is_private": false,
-    "priority": 1,
-    "event": {
-      "key": "event.interaction.chat.worker",
-      "label": "[UI] New chat message from worker"
-    },
-    "configure": [
-      {
-        "label": "Polly Bot behavior:",
-        "path": "behavior_fragment.nodes[0].params.actions[0].behavior_id",
-        "type": "chooser",
-        "params": {
-          "context": "cerberusweb.contexts.behavior",
-          "query": "bot:(Polly) presigned",
-          "single": true
-        }
-      }
-    ],
-    "nodes": [
-      {
-        "type": "action",
-        "title": "Speak the response",
-        "status": "live",
-        "params": {
-          "actions": [
-            {
-              "action": "_run_behavior",
-              "on": "_trigger_va_id",
-              "behavior_id": "0",
-              "var_text": "{{say|split('&lt;!--#stop-speaking--&gt;')|first}}",
-              "var_voice": "Brian",
-              "run_in_simulator": "0",
-              "var": "_behavior"
-            },
-            {
-              "action": "send_script",
-              "script": "{% if _behavior.polly_speech_url %}\r\n<script type=\"text\/javascript\">\r\n  Devblocks.playAudioUrl('{{_behavior.polly_speech_url}}');\r\n<\/script>\r\n{% endif %}"
-            }
-          ]
-        }
-      }
-    ]
-  }
-}
-{% endraw %}</code>
-</pre>
-
-Click the **Import** button.
-
-Cerb will ask you to link **Polly Bot:**. Click the chooser button and select **Polly Bot** from the worklist.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/polly-speech/cerb-bot-chat-action-import.png" class="screenshot">
-</div>
-
-Click the **Import** button again.
-
-You should now see two actions in the **say()** subroutine.
-
-Switch back to the chat window and type `hi`.
-
-If everything is configured properly you should hear a voice say hello to you by name.
-
-Try these:
-
-- `what time is it?`
-- `show open tickets`
-
-You'll notice that the bot speaks its entire message.  Sometimes this isn't desirable.  For instance, type `help` in the chat window.
-
-That's quite a lot of talking.  It would be better if the bot just said _"Try one of these"_ without reading the entire list.  Fortunately, we've made that very easy to do in the action you just imported.
-
-Switch back to the card for the **Respond to worker chat** behavior.  If you closed it, click on Cerb's name in the chat window again, then click the **Behaviors** button.
-
-In the **ask.help** outcome, click on the **Respond: Help** action and select **Edit** from the menu:
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/polly-speech/cerb-bot-chat-intent-help.png" class="screenshot">
-</div>
-
-The **Set custom placeholder** action has the following script:
+In a conversational bot behavior, you can use the **Respond with script** action to speak the URL:
 
 <pre>
-<code class="language-text">
-Try one of these: 
-- help
-- hi
-- What time is it?
-- find my open tickets
-- show waiting tickets from Jan 2015 to now
-- find Mara's messages from this year
-- search my open tasks
-- show my new notifications
+<code class="language-html">
+{% raw %}
+&lt;script&gt;
+Devblocks.playAudioUrl('{{_behavior.polly_speech_url}}');
+&lt;/script&gt;
+{% endraw %}
 </code>
 </pre>
-
-Change the first line to:
-
-<pre data-line="1">
-<code class="language-text">
-Try one of these: &lt;!--#stop-speaking--&gt;
-- help
-- hi
-- What time is it?
-- find my open tickets
-- show waiting tickets from Jan 2015 to now
-- find Mara's messages from this year
-- search my open tasks
-- show my new notifications
-</code>
-</pre>
-
-Click the **Save & Close** button.
-
-Switch back to the chat window and type `help` again.
-
-The bot will only speak _"Try one of these"_ and the list of help suggestions will remain in the message's text.
 
 # References
 

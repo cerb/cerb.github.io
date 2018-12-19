@@ -7,10 +7,10 @@ date: 2017-08-17 14:30:00 -0700
 tags: cerb guides
 ---
 
-We added a new [how-to guide](/resources/guides/) for [Configuring the Twitter plugin](/guides/integrations/twitter/configure-plugin/). This allows you use the [Twitter API](https://dev.twitter.com/rest/public) from bots in Cerb.
+We added a new [how-to guide](/resources/guides/) for [Configuring the Twitter plugin](/guides/integrations/twitter/). This allows you use the [Twitter API](https://dev.twitter.com/rest/public) from bots in Cerb.
 
 There's also a new [Twitter Bot](/packages/twitter-bot/) package with a working example.
 
 <div class="cerb-screenshot">
-	<a href="/guides/integrations/twitter/configure-plugin/"><img src="/assets/images/guides/twitter/plugin/cerb-and-twitter.png" class="screenshot"></a>
+	<a href="/guides/integrations/twitter/"><img src="/assets/images/guides/twitter/plugin/cerb-and-twitter.png" class="screenshot"></a>
 </div>

@@ -11,6 +11,6 @@ tags: cerb guides
 <img src="/assets/images/guides/facebook/plugin/cerb-and-facebook.png" class="screenshot">
 </div>
 
-We just added a new [how-to guide](/resources/guides/) for [Configuring the Facebook plugin](/guides/integrations/facebook/configure-plugin/). This allows you to automatically manage your Facebook pages from Cerb bots.
+We just added a new [how-to guide](/resources/guides/) for [Configuring the Facebook plugin](/guides/integrations/facebook/). This allows you to automatically manage your Facebook pages from Cerb bots.
 
 There's also a new [Facebook Page Bot](/packages/facebook-page-bot/) package with a working example.

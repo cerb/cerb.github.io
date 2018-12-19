@@ -25,7 +25,7 @@ There are 4 recent maintenance updates with a total of 46 minor features and fix
 
 We added these instructional how-to guides:
 
-* [Configure the Dropbox plugin](/guides/integrations/dropbox/configure-plugin/)
+* [Configure the Dropbox plugin](/guides/integrations/dropbox/)
 * [Respond to messages from an external email client](/guides/mail/relaying/)
 
 ## 1 package

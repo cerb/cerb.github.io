@@ -27,9 +27,9 @@ This package creates **LinkedIn Bot** for demonstrating integration between Cerb
 <img src="/assets/images/guides/linkedin/plugin/cerb-and-linkedin.png" class="screenshot">
 </div>
 
-# Configure the LinkedIn plugin
+# Configure the LinkedIn service
 
-If you haven't already, follow [these instructions](/guides/integrations/linkedin/configure-plugin/) to install and configure the LinkedIn plugin, and add your first connected account.
+If you haven't already, follow [these instructions](/guides/integrations/linkedin/) to configure the LinkedIn service and add your first connected account.
 
 # Import the package
 
@@ -43,13 +43,10 @@ Paste the following package into the large text box:
 {
   "package": {
     "name": "LinkedIn Bot",
-    "cerb_version": "8.0.5",
+    "cerb_version": "9.1.0",
     "revision": 1,
     "requires": {
-      "cerb_version": "8.0.0",
-      "plugins": [
-        "wgm.linkedin"
-      ]
+      "cerb_version": "9.1.0"
     },
     "configure": {
       "prompts": [
@@ -59,7 +56,8 @@ Paste the following package into the large text box:
           "key": "linkedin_account_id",
           "params": {
             "context": "cerberusweb.contexts.connected_account",
-            "query": "service:linkedin"
+            "single": true,
+            "query": "name:linkedin"
           }
         }
       ],

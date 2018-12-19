@@ -27,9 +27,9 @@ This package creates **Stripe Bot** for demonstrating integration between Cerb a
 <img src="/assets/images/guides/stripe/plugin/cerb-and-stripe.png" class="screenshot">
 </div>
 
-# Configure the Stripe plugin
+# Configure the Stripe service
 
-If you haven't already, follow [these instructions](/guides/integrations/stripe/configure-plugin/) to install and configure the Stripe plugin, and add your first connected account.
+If you haven't already, follow [these instructions](/guides/integrations/stripe/) to configure the Stripe service and add your first connected account.
 
 # Import the package
 
@@ -43,23 +43,21 @@ Paste the following package into the large text box:
 {
   "package": {
     "name": "Stripe",
-    "cerb_version": "8.0.5",
+    "cerb_version": "9.1.0",
     "revision": 1,
     "requires": {
-      "cerb_version": "8.0.0",
-      "plugins": [
-        "wgm.stripe"
-      ]
+      "cerb_version": "9.1.0"
     },
     "configure": {
       "prompts": [
         {
           "type": "chooser",
-          "label": "stripe account:",
+          "label": "Stripe Account:",
           "key": "stripe_account_id",
           "params": {
             "context": "cerberusweb.contexts.connected_account",
-            "query": "service:stripe"
+            "single": true,
+            "query": "name:stripe"
           }
         }
       ]

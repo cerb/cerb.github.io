@@ -1,11 +1,12 @@
 ---
-title: Configure the LinkedIn plugin
-excerpt: A step-by-step guide for configuring Cerb's LinkedIn plugin
+title: Integrate with LinkedIn
+excerpt: A step-by-step guide for integrating Cerb and LinkedIn.
+permalink: /guides/integrations/linkedin/
 layout: integration
 topic: Integrations
 subtopic: LinkedIn
 jumbotron:
-  title: Configure the LinkedIn plugin
+  title: Cerb + LinkedIn
   tagline: ""
   breadcrumbs:
   -
@@ -33,21 +34,7 @@ In this guide we'll walk through the process of linking Cerb to LinkedIn. You'll
 <img src="/assets/images/guides/linkedin/plugin/cerb-and-linkedin.png" class="screenshot">
 </div>
 
-# Install the LinkedIn plugin
-
-First, you need to install and enable the LinkedIn plugin in Cerb.
-
-1. Navigate to **Setup >> Plugins >> Installed Plugins**
-
-1. Search for: `linkedin`
-
-1. Find the **LinkedIn Integration** plugin in the worklist and click its **Configure** button.  If the plugin isn't installed, you can download it from the [plugin library](/docs/plugins#library).
-
-1. In the **Status:** field, select _Enabled_.
-
-1. Click the **Save Changes** button.
-
-# Create an app on LinkedIn
+# Create an app at LinkedIn
 
 Next, you need to create a new app on LinkedIn for Cerb to connect to.
 
@@ -84,13 +71,13 @@ Next, you need to create a new app on LinkedIn for Cerb to connect to.
 1. For **Default Application Permissions**, select everything.
 
 1. Under **OAuth 2.0**, add an **Authorized Redirect URL** with the following format and click the **Add** button:
-	`https://your.cerb.host`/oauth/callback/wgm.linkedin.service.provider
+	`https://YOUR-CERB-HOST/oauth/callback`
 
 1. Scroll down to **App Credentials** and make a note of your **Client ID** and **Client Secret** for the next step.
 
 1. Select **OAuth & Permissions** from the left sidebar.
 
-1. Click the **Add Redirect URL** button and enter the base URL to your Cerb install (e.g. `https://example.cerb.me/`).
+1. Click the **Add Redirect URL** button and enter the base URL to your Cerb install (e.g. `https://YOUR-CERB-HOST/`).
 
 	<div class="cerb-screenshot">
 	<img src="/assets/images/guides/linkedin/plugin/linkedin-app-auth.png" class="screenshot">
@@ -98,56 +85,100 @@ Next, you need to create a new app on LinkedIn for Cerb to connect to.
 
 1. Click the blue **Update** button.
 
-# Configure the LinkedIn plugin in Cerb
+# Create the LinkedIn service in Cerb
 
-Add the LinkedIn app details to Cerb so you can use it to link your accounts.
+1. Navigate to **Setup >> Configure >> Import Package**.
 
-1. Navigate to **Setup >> Services >> LinkedIn**
+1. Paste the following package:
 
-1. Paste your LinkedIn **Client ID**.
+	<pre style="max-height:29.5em;">
+	<code class="language-json">
+	{% raw %}
+	{
+	  "package": {
+	    "name": "LinkedIn Connected Service",
+	    "revision": 1,
+	    "requires": {
+	      "cerb_version": "9.1.0",
+	      "plugins": []
+	    },
+	    "configure": {
+	      "placeholders": [],
+	      "prompts": [
+	        {
+	          "type": "text",
+	          "label": "Client ID",
+	          "key": "prompt_client_id",
+	          "params": {
+	            "default": "",
+	            "placeholder": "(paste your Client ID)"
+	          }
+	        },
+	        {
+	          "type": "text",
+	          "label": "Client Secret",
+	          "key": "prompt_client_secret",
+	          "params": {
+	            "default": "",
+	            "placeholder": "(paste your Client Secret)"
+	          }
+	        }
+	      ]
+	    }
+	  },
+	  "records": [
+	    {
+	      "uid": "service_linkedin",
+	      "_context": "connected_service",
+	      "name": "LinkedIn",
+	      "extension_id": "cerb.service.provider.oauth2",
+	      "params": {
+	        "grant_type": "authorization_code",
+	        "client_id": "{{{prompt_client_id}}}",
+	        "client_secret": "{{{prompt_client_secret}}}",
+	        "authorization_url": "https://www.linkedin.com/oauth/v2/authorization",
+	        "access_token_url": "https://www.linkedin.com/oauth/v2/accessToken",
+	        "resource_owner_url": "",
+	        "scope": "r_basicprofile r_emailaddress rw_company_admin w_share",
+	        "approval_prompt": ""
+	      }
+	    },
+	    {
+	      "uid": "account_linkedin",
+	      "_context": "connected_account",
+	      "name": "LinkedIn",
+	      "service_id": "{{{uid.service_linkedin}}}",
+	      "owner__context": "cerberusweb.contexts.app",
+	      "owner_id": "0",
+	      "params": {}
+	    }
+	  ]
+	}
+	{% endraw %}
+	</code>
+	</pre>
 
-1. Paste your LinkedIn **Client Secret**.
+1. Click the **Import** button.
 
-1. Click the **Save Changes** button.
+1. Enter your client ID and secret from LinkedIn.
 
-	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/linkedin/plugin/cerb-app-auth.png" class="screenshot">
-	</div>
+1. Click the **Import** button again.
 
-# Add a connected account in Cerb
+# Link the connected account to LinkedIn in Cerb
 
-Now we can create connected accounts to securely store LinkedIn credentials in Cerb.
+1. Click on the **LinkedIn** bubble in the **Connected Accounts** section after importing the above package.
 
-1. Navigate to **Search >> Connected Accounts**.
+1. Click on the **Edit** button in the card popup.
 
-1. Click the **(+)** icon above the worklist to add a new account.
+1. Click the blue **Link to LinkedIn** button.
 
-    <div class="cerb-screenshot">
-    <img src="/assets/images/guides/common/new-connected-account.png" class="screenshot">
-    </div>
-
-1. Click on **LinkedIn**.
-
-1. Click on **Link to a LinkedIn account**.
-
-1. **Authorize** the OAuth request:
+1. Accept consent on LinkedIn.
 
     <div class="cerb-screenshot">
     <img src="/assets/images/guides/linkedin/plugin/oauth-approve.png" class="screenshot">
     </div>
-
-
-1. Enter the following details:
-- **Name:** LinkedIn
-- **Owner:** Cerb
-
-    <div class="cerb-screenshot">
-    <img src="/assets/images/guides/linkedin/plugin/connected-account.png" class="screenshot">
-    </div>
-
+    
 1. Click the **Save Changes** button.
-
-If everything was configured properly, you'll see the new connected account in your worklist.
 
 # Use the connected account in bot behaviors
 

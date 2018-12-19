@@ -46,6 +46,14 @@ We'll demonstrate Lambda integration in this guide by adding DNS[^dns] lookup fu
 * TOC
 {:toc}
 
+# Configure the Amazon Web Services service in Cerb
+
+1. Log into Cerb as an administrator.
+
+1. Navigate to **Search >> Connected Accounts**.
+
+1. If you don't have a connected account for Amazon Web Services yet, you can [follow these instructions](/guides/integrations/aws/) to create one.
+
 # Log in to Amazon Web Services
 
 We'll start by logging in to the [AWS Management Console](https://console.aws.amazon.com/iam/).
@@ -142,168 +150,43 @@ Click the blue **Create function** button in the bottom right.
 
 Now we can give Cerb bots access to this function.
 
-## Add a new policy
+## Update your IAM policy
 
 Navigate to IAM from the **Services** menu at the top of the page.
 
-We need to create a new _policy_ in your Amazon Web Services (AWS) account to describe the services that your Cerb bot is allowed to use.  This is accomplished with the Identity Access Management (IAM) service.
+We need to update the _policy_ in your Amazon Web Services (AWS) account to describe the services that your Cerb bot is allowed to use.  This is accomplished with the Identity Access Management (IAM) service.
 
-We're going to create a new IAM policy that provides:
-
-- Invoke access to AWS Lambda functions prefixed with **Cerb***
-- Read-only access to the user's own account info
+We're going to add access to invoke AWS Lambda functions prefixed with **Cerb***
 
 Select **Policies** in the navigation on the left.
 
-Click the **Create Policy** button.
+Find your bot's policy in the list or create a new one. In the earlier [instructions](/guides/integration/aws/) we created a policy named **CerbBot**.
 
-In the **Create Your Own Policy** section, click the **Select** button.
+Click the **Edit Policy** button.
 
-Enter the following:
+Select the **JSON** tab.
 
-- **Policy Name:** CerbLambda
-
-- **Description:** Programmatic access to AWS Lambda from Cerb bots
-
-- **Policy Document:** _(copy and paste the policy below)_
+Add the following block to the `Statement` list:
 
 <pre>
 <code class="language-json">
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "CerbLambdaGetUser",
-      "Effect": "Allow",
-      "Action": [
-        "iam:GetUser"
-      ],
-      "Resource": [
-        "arn:aws:iam::*:user/${aws:username}"
-      ]
-    },
-    {
-      "Sid": "CerbLambdaInvoke",
-      "Effect": "Allow",
-      "Action": [
+    "Sid": "CerbLambdaInvoke",
+    "Effect": "Allow",
+    "Action": [
         "lambda:InvokeAsync",
         "lambda:InvokeFunction"
-      ],
-      "Resource": [
+    ],
+    "Resource": [
         "arn:aws:lambda:*:*:function:Cerb*"
-      ]
-    }
-  ]
+    ]
 }
 </code>
 </pre>
 
-<div class="cerb-box note">
-	<p>
-		The default policy above allows access to any Lambda function that starts with <b>Cerb*</b> in any region for any authorized account. You can restrict access to specific Lambda functions (and regions/accounts) by listing their ARNs in the <b>Resource</b> section of <b>CerbLambdaInvoke</b>.
-	</p>
-</div>
+Click the blue **Review policy** button in the bottom right.
 
-Click the blue **Create Policy** button in the bottom right.
-
-## Create a new user
-
-<div class="cerb-box note">
-	<p>If you already have an IAM user for Cerb bots you can attach the new policy and <a href="#enable-the-aws-plugin-in-cerb">skip ahead</a>.</p>
-</div>
-
-Now that we have a policy, we're ready to create the new user account for our Cerb bot to use.
-
-Select **Users** in the left navigation.
-
-Click the blue **Add user** button at the top of the page.
-
-Type `Cerb` in **User name**.
-
-In **Access type**, check _Programmatic access_.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/common/aws-iam-create-user.png" class="screenshot">
-</div>
-
-Click the blue **Next: Permissions** button in the bottom right.
-
-## Attach existing policies
-
-Let's add the policy we just created.
-
-Select **Attach existing policies directly**.
-
-Type `Cerb` in the search box and select **CerbLambda**.
-
-Click the blue **Next: Review** button in the bottom right.
-
-Verify the new user and click the blue **Create user** button in the bottom right.
-
-## Save your new credentials
-
-Click the **Download .csv** button to save a copy of your new credentials.  You'll need these in a moment when adding a new connected account in Cerb.
-
-That's everything we need to do in AWS. You can close the AWS Management Console.
-
-# Enable the AWS plugin in Cerb
-
-To add the AWS service provider for connected accounts in Cerb, we need to install a plugin.
-
-Click **setup** in the top right of Cerb (you must be an admin).
-
-Hover over the **Plugins** menu and select **Plugin Library**.
-
-Type `aws` in the search box above the worklist and press `<ENTER>`.
-	
-Find the **Amazon Web Services (AWS) Integration** plugin in the worklist and click its **Download and install** button.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/common/cerb-plugin-aws-install.png" class="screenshot">
-</div>
-
-On the popup, click **Download and install** again to confirm.
-
-In the **Status:** field, select _Enabled_.
-
-Click the **Save Changes** button.
-
-# Add a connected account in Cerb
-
-Now we can create a connected account to securely store our AWS user credentials.
-
-Open the [search menu](/docs/navigation/#search) and select **Connected Accounts**.
-
-Click the **(+)** icon above the worklist to add a new account.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/common/worklist-add.png" class="screenshot">
-</div>
-
-Click on **Amazon Web Services**.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/common/cerb-connected-account-add.png" class="screenshot">
-</div>
-
-This will open a popup that asks you for your programmatic user credentials.
-
-Enter the following:
-
-- **Name:** `AWS (Cerb)`
-- **Owner:** Cerb
-- **Access Key ID:** `<the access key you downloaded earlier>`
-- **Secret Access Key:** `<the secret key you downloaded earlier>`
-	
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/common/cerb-connected-account-creds.png" class="screenshot">
-</div>
-
-Click the **Save Changes** button.
-
-If everything was configured properly, you'll see the new connected account in your worklist.
-
-That's all for connected accounts.  You can close the connected accounts search popup.
+Click the blue **Save changes** button in the bottom right.
 
 # Import AWS Lambda Bot in Cerb
 
@@ -319,13 +202,10 @@ Copy and paste the following behavior into the large text box:
 {
   "package": {
   "name": "AWS Lambda Bot",
-  "cerb_version": "8.0.5",
+  "cerb_version": "9.1.0",
   "revision": 1,
   "requires": {
-    "cerb_version": "8.0.0",
-    "plugins": [
-      "wgm.aws"
-    ]
+    "cerb_version": "9.1.0"
   },
   "configure": {
     "prompts": [
@@ -335,7 +215,8 @@ Copy and paste the following behavior into the large text box:
         "key": "aws_account_id",
         "params": {
           "context": "cerberusweb.contexts.connected_account",
-          "query": "service:aws"
+          "query": "aws OR amazon",
+          "single": true
         }
       },
       {

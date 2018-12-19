@@ -31,7 +31,7 @@ These previews give a peek at what we're working on:
 We added these instructional how-to guides:
 
 * [Add a conversational bot to any website](/guides/bots/deploy-bot-on-website/)
-* [Configure the Twilio plugin](/guides/integrations/twilio/configure-plugin/)
+* [Configure the Twilio plugin](/guides/integrations/twilio/)
 
 ## 3 packages
 

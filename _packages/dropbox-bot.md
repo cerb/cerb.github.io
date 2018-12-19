@@ -28,9 +28,9 @@ This package creates **Dropbox Bot** for demonstrating integration between Cerb 
 <img src="{{page.social_image_url}}" class="screenshot">
 </div>
 
-# Configure the Dropbox plugin
+# Configure the Dropbox service
 
-If you haven't already, follow [these instructions](/guides/integrations/dropbox/configure-plugin/) to install and configure the Dropbox plugin, and add your first connected account.
+If you haven't already, follow [these instructions](/guides/integrations/dropbox/) to configure the Dropbox service and add your first connected account.
 
 # Import the package
 
@@ -46,7 +46,7 @@ Paste the following package into the large text box:
     "name": "Dropbox Bot",
     "revision": 1,
     "requires": {
-      "cerb_version": "8.3.0",
+      "cerb_version": "9.1.0",
       "plugins": [
 
       ]
@@ -62,7 +62,8 @@ Paste the following package into the large text box:
           "key": "dropbox_account_id",
           "params": {
             "context": "cerberusweb.contexts.connected_account",
-            "query": "service:dropbox"
+            "single": true,
+            "query": "name:dropbox"
           }
         }
       ]

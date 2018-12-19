@@ -1,11 +1,12 @@
 ---
-title: Configure the Salesforce plugin
-excerpt: A step-by-step guide for configuring Cerb's Salesforce plugin
+title: Integrate with Salesforce
+excerpt: A step-by-step guide for integrating Cerb and Salesforce.
+permalink: /guides/integrations/salesforce/
 layout: integration
 topic: Integrations
 subtopic: Salesforce
 jumbotron:
-  title: Configure the Salesforce plugin
+  title: Cerb + Salesforce
   tagline: ""
   breadcrumbs:
   -
@@ -33,21 +34,7 @@ In this guide we'll walk through the process of linking Cerb to Salesforce. You'
 <img src="/assets/images/guides/salesforce/plugin/cerb-and-salesforce.png" class="screenshot">
 </div>
 
-# Install the Salesforce plugin
-
-First, you need to install and enable the Salesforce plugin in Cerb.
-
-1. Navigate to **Setup >> Plugins >> Installed Plugins**
-
-1. Search for: `salesforce`
-
-1. Find the **Salesforce Integration** plugin in the worklist and click its **Configure** button.  If the plugin isn't installed, you can download it from the [plugin library](/docs/plugins#library).
-
-1. In the **Status:** field, select _Enabled_.
-
-1. Click the **Save Changes** button.
-
-# Create an app on Salesforce
+# Create an app at Salesforce
 
 Next, you need to create a new app on Salesforce for Cerb to connect to.
 
@@ -77,7 +64,7 @@ Next, you need to create a new app on Salesforce for Cerb to connect to.
 In the **API (Enable OAuth Settings)** section:
 
 - **Enable OAuth Settings:** yes
-- **Callback URL:** `https://your.cerb.host`/oauth/callback/wgm.salesforce.service.provider
+- **Callback URL:** `https://YOUR-CERB-HOST/oauth/callback`
 - **Selected OAuth Scopes:**
 	- Perform requests on your behalf at any time (refresh_token, offline_access)
 	- Access and manage your data (api)
@@ -95,54 +82,100 @@ In the **API (Enable OAuth Settings)** section:
 
 1. Make a note of your **Consumer Key** and **Consumer secret**.  You'll need them in the next step.
 
-# Configure the Salesforce plugin in Cerb
+# Create the Salesforce service in Cerb
 
-Add the Salesforce app details to Cerb so you can use it to link your accounts.
+1. Navigate to **Setup >> Configure >> Import Package**.
 
-1. Navigate to **Setup >> Services >> Salesforce**
+1. Paste the following package:
 
-1. Paste your Salesforce **Consumer Key**.
+	<pre style="max-height:29.5em;">
+	<code class="language-json">
+	{% raw %}
+	{
+	  "package": {
+	    "name": "Salesforce Connected Service",
+	    "revision": 1,
+	    "requires": {
+	      "cerb_version": "9.1.0",
+	      "plugins": []
+	    },
+	    "configure": {
+	      "placeholders": [],
+	      "prompts": [
+	        {
+	          "type": "text",
+	          "label": "Client ID",
+	          "key": "prompt_client_id",
+	          "params": {
+	            "default": "",
+	            "placeholder": "(paste your Client ID)"
+	          }
+	        },
+	        {
+	          "type": "text",
+	          "label": "Client Secret",
+	          "key": "prompt_client_secret",
+	          "params": {
+	            "default": "",
+	            "placeholder": "(paste your Client Secret)"
+	          }
+	        }
+	      ]
+	    }
+	  },
+	  "records": [
+	    {
+	      "uid": "service_salesforce",
+	      "_context": "connected_service",
+	      "name": "Salesforce",
+	      "extension_id": "cerb.service.provider.oauth2",
+	      "params": {
+	        "grant_type": "authorization_code",
+	        "client_id": "{{{prompt_client_id}}}",
+	        "client_secret": "{{{prompt_client_secret}}}",
+	        "authorization_url": "https://login.salesforce.com/services/oauth2/authorize",
+	        "access_token_url": "https://login.salesforce.com/services/oauth2/token",
+	        "resource_owner_url": "",
+	        "scope": "api refresh_token",
+	        "approval_prompt": "auto"
+	      }
+	    },
+	    {
+	      "uid": "account_salesforce",
+	      "_context": "connected_account",
+	      "name": "Salesforce",
+	      "service_id": "{{{uid.service_salesforce}}}",
+	      "owner__context": "cerberusweb.contexts.app",
+	      "owner_id": "0",
+	      "params": {}
+	    }
+	  ]
+	}
+	{% endraw %}
+	</code>
+	</pre>
 
-1. Paste your Salesforce **Consumer Secret**.
+1. Click the **Import** button.
+
+1. Enter your client ID and secret from Salesforce.
+
+1. Click the **Import** button again.
+
+# Link the connected account to Salesforce in Cerb
+
+1. Click on the **Salesforce** bubble in the **Connected Accounts** section after importing the above package.
+
+1. Click on the **Edit** button in the card popup.
+
+1. Click the blue **Link to Salesforce** button.
+
+1. Accept consent on Salesforce.
 
 	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/salesforce/plugin/cerb-oauth-setup.png" class="screenshot">
+	<img src="/assets/images/guides/salesforce/plugin/oauth-approve.png" class="screenshot">
 	</div>
 
 1. Click the **Save Changes** button.
-
-# Add a connected account in Cerb
-
-Now we can create connected accounts to securely store Salesforce credentials in Cerb.
-
-1. Navigate to **Search >> Connected Accounts**.
-
-1. Click the **(+)** icon above the worklist to add a new account.
-    <div class="cerb-screenshot">
-    <img src="/assets/images/guides/common/new-connected-account.png" class="screenshot">
-    </div>
-
-1. Click on **Salesforce**.
-
-1. Click on **Link to a Salesforce account**.
-
-1. **Authorize** the OAuth request:
-
-    <div class="cerb-screenshot">
-    <img src="/assets/images/guides/salesforce/plugin/oauth-approve.png" class="screenshot">
-    </div>
-
-1. Enter the following details:
-- **Name:** Salesforce
-- **Owner:** Cerb
-
-    <div class="cerb-screenshot">
-    <img src="/assets/images/guides/salesforce/plugin/connected-account.png" class="screenshot">
-    </div>
-
-1. Click the **Save Changes** button.
-
-If everything was configured properly, you'll see the new connected account in your worklist.
 
 <div class="cerb-box note">
 	<p>It may take up to 10 minutes for your new app to be available in Salesforce.  If you have trouble with the OAuth authentication step, wait a few minutes and try again.</p>

@@ -27,9 +27,9 @@ This package creates **Facebook Page Bot** for demonstrating integration between
 <img src="/assets/images/guides/facebook/plugin/cerb-and-facebook.png" class="screenshot">
 </div>
 
-# Configure the Facebook plugin
+# Configure the Facebook service
 
-If you haven't already, follow [these instructions](/guides/integrations/facebook/configure-plugin/) to install and configure the Facebook plugin, and add your first connected account.
+If you haven't already, follow [these instructions](/guides/integrations/facebook/) to configure the Facebook service and add your first connected account.
 
 # Import the package
 
@@ -43,13 +43,10 @@ Paste the following package into the large text box:
 {
   "package": {
     "name": "Facebook Page Bot",
-    "cerb_version": "8.0.2",
+    "cerb_version": "9.1.0",
     "revision": 1,
     "requires": {
-      "cerb_version": "8.0.0",
-      "plugins": [
-        "wgm.facebook"
-      ]
+      "cerb_version": "9.1.0"
     },
     "configure": {
       "prompts": [
@@ -59,7 +56,8 @@ Paste the following package into the large text box:
           "key": "facebook_account_id",
           "params": {
             "context": "cerberusweb.contexts.connected_account",
-            "query": "service:facebook"
+            "single": true,
+            "query": "name:facebook"
           }
         }
       ],

@@ -49,19 +49,11 @@ By the end of this guide, you should be capable of synchronizing any record data
 * Add 'org', 'resolution time', 'first response time' to sync
 {% endcomment %}
 
-# Configure the Salesforce plugin in Cerb
+# Configure the Salesforce service
 
-To get started, you'll need to configure the Salesforce plugin in Cerb.
+Navigate to **Search >> Connected Services**.
 
-1. Log in to Cerb.
-
-1. Navigate to **Setup >> Plugins >> Installed**.
-
-1. Search for `salesforce`.
-
-1. If the **Salesforce integration** plugin isn't found, [install and configure it](/guides/integrations/salesforce/configure-plugin/) first.
-
-1. Verify you have a Salesforce [connected account](/docs/connected-accounts/) from **Search >> Connected Accounts**.
+If you don't have a Salesforce service set up yet, you can [configure one here](/guides/integrations/salesforce/).
 
 # Create a new object in Salesforce
 

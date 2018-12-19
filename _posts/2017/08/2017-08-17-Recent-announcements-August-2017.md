@@ -38,12 +38,12 @@ We expanded the library of pre-built workflow packages that you can import in a 
 
 We added these step-by-step how-to guides:
 
-* [Configure the Facebook plugin](/guides/integrations/facebook/configure-plugin/)
-* [Configure the GitHub plugin](/guides/integrations/github/configure-plugin/)
-* [Configure the LinkedIn plugin](/guides/integrations/linkedin/configure-plugin/)
-* [Configure the Salesforce plugin](/guides/integrations/salesforce/configure-plugin/)
-* [Configure the Slack plugin](/guides/integrations/slack/configure-plugin/)
-* [Configure the Twitter plugin](/guides/integrations/twitter/configure-plugin/)
+* [Configure the Facebook plugin](/guides/integrations/facebook/)
+* [Configure the GitHub plugin](/guides/integrations/github/)
+* [Configure the LinkedIn plugin](/guides/integrations/linkedin/)
+* [Configure the Salesforce plugin](/guides/integrations/salesforce/)
+* [Configure the Slack plugin](/guides/integrations/slack/)
+* [Configure the Twitter plugin](/guides/integrations/twitter/)
 * [Run AWS Lambda functions from a Cerb bot](/guides/integrations/aws/lambda/)
 
 ## 1 tip

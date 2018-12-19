@@ -27,9 +27,9 @@ This package creates **Twilio Bot** for demonstrating integration between Cerb a
 <img src="/assets/images/guides/twilio/plugin/cerb-and-twilio.png" class="screenshot">
 </div>
 
-# Configure the Twilio plugin
+# Configure the Twilio service
 
-If you haven't already, follow [these instructions](/guides/integrations/twilio/configure-plugin/) to install and configure the Twilio plugin, and add your first connected account.
+If you haven't already, follow [these instructions](/guides/integrations/twilio/) to configure the Twilio service and add your first connected account.
 
 # Import the package
 
@@ -45,10 +45,7 @@ Paste the following package into the large text box:
     "name": "Twilio Bot",
     "revision": 1,
     "requires": {
-      "cerb_version": "8.2.0",
-      "plugins": [
-        "wgm.twilio"
-      ]
+      "cerb_version": "9.1.0"
     },
     "configure": {
       "prompts": [
@@ -58,7 +55,8 @@ Paste the following package into the large text box:
           "key": "twilio_account_id",
           "params": {
             "context": "cerberusweb.contexts.connected_account",
-            "query": "service:twilio"
+            "single": true,
+            "query": "name:twilio"
           }
         },
         {
