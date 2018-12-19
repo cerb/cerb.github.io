@@ -99,6 +99,7 @@
   - bots/behaviors/subroutines
   - bots/behaviors/simulator
   - bots/delegation
+  - connected-services
   - connected-accounts
   - classifiers
   - webhooks

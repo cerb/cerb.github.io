@@ -6,37 +6,23 @@ jumbotron:
   tagline: Securely integrate and automate third-party apps and services
 ---
 
-**Connected accounts** provide authentication, secure storage, and reuse of user credentials at third-party **service providers**.  Various forms of authentication are supported: OAuth, API keys, tokens, HTTP Basic, user/password, etc.
+[Bots](/docs/bots) can use **connected accounts** to cryptographically sign (or otherwise authenticate) arbitrary HTTP requests for a specific [service provider](/docs/connected-services/).
 
-The _owner_ of a connected account determines how it's shared.  For instance, a corporate Twitter account could be shared by an entire team, while a worker's private Salesforce account could be accessed by only them and their bots.
+This opens up entire third-party APIs to bots, rather than only offering a few hand-picked actions.
 
-Plugins can implement new service providers. Cerb currently has plugins for:
+The _owner_ of a connected account determines how it's shared. For instance, a corporate Twitter account could be shared by an entire team, while a worker's private Salesforce account could be accessed by only them and their bots.
 
-- [Amazon Web Services](/guides/integrations/aws/lambda/)
-- Api.ai
-- Cerb
-- Clickatell
-- [Facebook](/guides/integrations/facebook/configure-plugin/)
-- Freshbooks
-- [GitHub](/guides/integrations/github/configure-plugin/)
-- GitLab
-- Google
-- HipChat
-- JIRA
-- [LDAP](/guides/integrations/ldap/configure-plugin/)
-- [LinkedIn](/guides/integrations/linkedin/configure-plugin/)
-- Nest
-- [Salesforce](/guides/integrations/salesforce/configure-plugin/)
-- [Slack](/guides/integrations/slack/configure-plugin/)
-- Spotify
-- [Stripe](/guides/integrations/stripe/configure-plugin/)
-- [Twilio](/guides/integrations/twilio/configure-plugin/)
-- [Twitter](/guides/integrations/twitter/configure-plugin/)
+We have [integration examples](/resources/guides/#integrations) for many popular services:
 
-[Bots](/docs/bots) can use connected accounts to cryptographically sign (or otherwise authenticate) arbitrary HTTP requests.  This opens up entire service provider APIs[^api] to bots, rather than only offering a few hand-picked actions.
+- [Amazon Web Services](/guides/integrations/aws/)
+- [Dropbox](/guides/integrations/dropbox/)
+- [Facebook](/guides/integrations/facebook/)
+- [GitHub](/guides/integrations/github/)
+- [LinkedIn](/guides/integrations/linkedin/)
+- [Salesforce](/guides/integrations/salesforce/)
+- [Slack](/guides/integrations/slack/)
+- [Stripe](/guides/integrations/stripe/)
+- [Twilio](/guides/integrations/twilio/)
+- [Twitter](/guides/integrations/twitter/)
 
 We recommend creating a bot for each service (e.g. _Facebook Bot_) to act as a [delegate](/docs/bots/#delegation). That way the credentials and API interaction for a particular service are handled in a single place, and any number of other bots can use _'Run behavior'_ or _'Schedule behavior'_ [actions](/docs/bots/#actions) against the bot delegate to interface with those services in a secure and reusable way.
-
-# References
-
-[^api]: API: <https://en.wikipedia.org/wiki/Application_programming_interface>
