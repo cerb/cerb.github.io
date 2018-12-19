@@ -8,7 +8,6 @@ url: "https://cerb.ai"
 baseurl: ""
 logo_url: /assets/cerb_logo.png
 social_image_url: /assets/images/cerb-social.png
-facebook_username: cerb.app
 twitter_username: cerb_ai
 github_username:  wgm
 timezone: America/Los_Angeles
