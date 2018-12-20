@@ -17,3 +17,7 @@ By configuring the **layout** of a dashboard, different **zones** become availab
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/using-cerb/dashboards/dashboard-tutorial.png" class="screenshot">
 </div>
+
+### Related resources
+
+* [Guide: Configure dashboard filters](/guides/dashboards/filters/)
