@@ -38,6 +38,10 @@ WGM has further committed to refer unresolved Privacy Shield complaints to JAMS,
 
 Under certain limited circumstances, European Union individuals may invoke binding Privacy Shield arbitration as a last resort if all other forms of dispute resolution have been unsuccessful. To learn more about this method of resolution and its availability to you, please read more about [Privacy Shield](https://www.privacyshield.gov/).
 
+### Liability For Onward Transfers
+
+Where WGM has transferred personal information of EU or Swiss residents to third parties, WGM shall be liable if those third parties do not process personal information in compliance with the Privacy Shield Principles. This shall not be the case where WGM establishes that it is not responsible for the damage caused by the third party.
+
 ### Data Protection Addendum
 
 If you require a signed Data Protection Addendum (DPA) for [GDPR](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) compliance, you may [download ours here](/assets/documents/WGM_GDPR_DPA.pdf). This document formalizes the contract between data exporter and data importer, as well as describing the rights of data subjects. Please review the terms and return a signed copy to [team@cerb.ai](mailto:team@cerb.ai).
@@ -124,6 +128,10 @@ This information will be transmitted electronically no later than one month from
 
 You have the right to the erasure of any personal data we have collected from you or about you.
 
+### California Privacy Rights
+
+California residents have the right to opt out of disclosing information to third parties for the purpose of allowing such third parties to directly market their products and services. We do not engage in this type of disclosure.
+
 # Why and To Whom We Disclose Personal Data
 
 We disclose personally identifying information only to those of our employees, contractors and affiliated organizations that:
@@ -181,6 +189,24 @@ They have access to information typically made available by web browsers: IP add
 
 They do not have access to any client data.
 
+# Your Privacy Choices
+
+We provide the following privacy choices for your data:
+
+* You may choose to not provide us with certain information. To subscribe to Cerb Cloud, or to purchase a self-hosted Cerb license, we only require a verified email address and a seat count. We do not require you to disclose your name, organization, location, phone number, revenue, employee count, or other personal details.
+
+* You may choose to host our software on your own servers and network without transmitting any data to us. We optionally provide Cerb Cloud as a fully-managed service where you retain control over the data you choose to send to us.
+
+* You may choose to arrange payment through an intermediary like PayPal to protect your financial information.
+
+* You may opt-out of receiving commercial emails from us.
+
+* You may receive a full backup of your content from Cerb Cloud at any time.
+
+* You may delete records and other data within Cerb.
+
+* You may close your Cerb Cloud account and request that your data and backups be permanently deleted.
+
 # Security and Safeguards
 
 We take reasonable precautions to protect your data and personally identifying information.
@@ -211,24 +237,6 @@ Upon cancellation, we remove all live client data from the Cerb Cloud network an
 
 We will comply with any written, and duly authenticated, client requests for the immediate destruction of all account data and backups.
 
-{% comment %}
-# Resolving Complaints
-
-We are subject to the jurisdiction of the Federal Trade Commission.
-
-If you have concerns about the way WGM is handling your personal data, please let us know immediately. You may email us directly at [team@cerb.ai](mailto:team@cerb.ai) with the subject line "Privacy Shield Concerns." We will respond within 45 days at the latest.
-
-### Dispute Resolution Process
-
-In the unlikely event that a dispute arises between you and WGM regarding our handling of your User Personal Information, we will do our best to resolve it. If we cannot, we have selected JAMS, an independent dispute resolution provider, to handle unresolved Privacy Shield complaints. If we are unable to resolve your concerns after a good faith effort to address them, you may [contact JAMS and submit a Privacy Shield claim](https://www.jamsadr.com/eu-us-privacy-shield).
-
-JAMS is a US-based private alternate dispute resolution provider, and we have contracted with JAMS to provide an independent recourse mechanism for any of our users for privacy concerns at **no cost to you**. You do not need to appear in court; you may conduct this dispute resolution process via telephone or video conference. If you are not based in the EU or EEA, but you would still like to use the JAMS arbitration process to resolve your dispute, please let us know and we will provide access to you.
-
-### Independent Arbitration
-
-Under certain limited circumstances, European Union individuals may invoke binding Privacy Shield arbitration as a last resort if all other forms of dispute resolution have been unsuccessful. To learn more about this method of resolution and its availability to you, please read more about [Privacy Shield](https://www.privacyshield.gov/).
-{% endcomment %}
-
 # Business Transfers
 
 If WGM or substantially all of its assets were acquired, or in the event that we go out of business or enter bankruptcy, user information would be one of the assets that is transferred or acquired by a third party. You acknowledge that such transfers may occur, and that any acquirer of WGM may continue to use your personal information as set forth in this policy.
@@ -239,7 +247,9 @@ Although most changes are likely to be minor, we may modify this Privacy Policy 
 
 ### Changelog
 
-* **05-October-2018**: Added sections for Policy Shield review and compliance.
+* **20-December-2018**: Updated Privacy Shield sections for review and compliance ("Your Privacy Choices" and "Liability For Onward Transfer").
+
+* **05-October-2018**: Added sections for Privacy Shield review and compliance.
 
 # License
 
