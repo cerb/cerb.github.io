@@ -27,8 +27,6 @@ jumbotron:
 
 # Introduction
 
-# Introduction
-
 This guide demonstrates how to enable one-click single sign-on (SSO) for Cerb workers by authenticating against existing Salesforce accounts using the OpenID Connect (OIDC) stanard.
 
 <div class="cerb-box note">
