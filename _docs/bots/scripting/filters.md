@@ -310,7 +310,7 @@ Convert a Unix timestamp into a human-readable, relative date:
 </pre>
 
 ```
-16 years ago
+17 years ago
 ```
 
 ## default
