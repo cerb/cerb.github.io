@@ -49,7 +49,7 @@ We recently added these new how-to guides:
 
 We'll be posting new guides and tips every week.  Let us know what other topics you'd like us to write about.
 
-Follow us on [Twitter](https://twitter.com/cerb_ai) or [Facebook](https://www.facebook.com/cerbapp/) for real-time updates about new articles.
+Follow us on [Twitter](https://twitter.com/cerb_ai) for real-time updates about new articles.
 
 ## 10 new tips
 

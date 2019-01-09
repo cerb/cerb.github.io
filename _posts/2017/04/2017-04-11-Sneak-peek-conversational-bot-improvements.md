@@ -16,7 +16,3 @@ We've made the following improvements to conversational bots in the 7.4 update:
 * **Prompts**: Bots can now prompt for different kinds of input.
 
 * **Suggested responses**: When a bot is asking a closed-ended question, it can now suggest responses. A worker can click a suggestion rather than having to type.
-
-Here's a sneak peek video demonstrating these new features:
-
-<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcerbapp%2Fvideos%2F1594747110565339%2F&show_text=0&width=880" width="880" height="495" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
