@@ -89,7 +89,7 @@ These [filters](/docs/search/filters/) are available in call [search queries](/d
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on call [worklists](/docs/worklists/):
 

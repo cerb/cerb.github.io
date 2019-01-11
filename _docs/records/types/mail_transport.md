@@ -81,7 +81,7 @@ These [filters](/docs/search/filters/) are available in email transport [search 
 | `type:` | [text](/docs/search/filters/text/) | Extension
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on email transport [worklists](/docs/worklists/):
 

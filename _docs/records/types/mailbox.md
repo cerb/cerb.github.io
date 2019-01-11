@@ -102,7 +102,7 @@ These [filters](/docs/search/filters/) are available in mailbox account [search 
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on mailbox account [worklists](/docs/worklists/):
 

@@ -85,7 +85,7 @@ These [filters](/docs/search/filters/) are available in saved search [search que
 | `tag:` | [text](/docs/search/filters/text/) | Tag
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on saved search [worklists](/docs/worklists/):
 

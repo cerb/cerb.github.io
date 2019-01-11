@@ -79,7 +79,7 @@ These [filters](/docs/search/filters/) are available in knowledgebase category [
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on knowledgebase category [worklists](/docs/worklists/):
 

@@ -82,7 +82,7 @@ These [filters](/docs/search/filters/) are available in project board [search qu
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on project board [worklists](/docs/worklists/):
 

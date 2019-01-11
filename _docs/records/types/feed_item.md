@@ -89,7 +89,7 @@ These [filters](/docs/search/filters/) are available in feed item [search querie
 | `url:` | [text](/docs/search/filters/text/) | Url
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on feed item [worklists](/docs/worklists/):
 

@@ -81,7 +81,7 @@ These [filters](/docs/search/filters/) are available in classifier example [sear
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on classifier example [worklists](/docs/worklists/):
 

@@ -92,7 +92,7 @@ These [filters](/docs/search/filters/) are available in opportunity [search quer
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on opportunity [worklists](/docs/worklists/):
 

@@ -106,7 +106,7 @@ These [filters](/docs/search/filters/) are available in organization [search que
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
 | `website:` | [text](/docs/search/filters/text/) | Website
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on organization [worklists](/docs/worklists/):
 

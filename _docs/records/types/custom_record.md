@@ -81,7 +81,7 @@ These [filters](/docs/search/filters/) are available in custom record [search qu
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `uri:` | [text](/docs/search/filters/text/) | Uri
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on custom record [worklists](/docs/worklists/):
 

@@ -107,7 +107,7 @@ These [filters](/docs/search/filters/) are available in email address [search qu
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
 | `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on email address [worklists](/docs/worklists/):
 

@@ -93,7 +93,7 @@ These [filters](/docs/search/filters/) are available in snippet [search queries]
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `usableBy.worker:` | [chooser](/docs/search/filters/choosers/) | [Usableby Worker](/docs/records/types/worker/)
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on snippet [worklists](/docs/worklists/):
 

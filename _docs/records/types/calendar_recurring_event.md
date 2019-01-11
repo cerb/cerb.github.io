@@ -94,7 +94,7 @@ These [filters](/docs/search/filters/) are available in calendar recurring event
 | `timezone:` | [text](/docs/search/filters/text/) | Timezone
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on calendar recurring event [worklists](/docs/worklists/):
 

@@ -87,7 +87,7 @@ These [filters](/docs/search/filters/) are available in time tracking [search qu
 | `worker:` | [record](/docs/search/deep-search/) | [Worker](/docs/records/types/worker/)
 | `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on time tracking [worklists](/docs/worklists/):
 

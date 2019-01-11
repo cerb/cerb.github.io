@@ -74,7 +74,7 @@ These [filters](/docs/search/filters/) are available in time tracking activity [
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on time tracking activity [worklists](/docs/worklists/):
 

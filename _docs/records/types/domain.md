@@ -86,7 +86,7 @@ These [filters](/docs/search/filters/) are available in domain [search queries](
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on domain [worklists](/docs/worklists/):
 

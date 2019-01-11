@@ -73,7 +73,7 @@ These [filters](/docs/search/filters/) are available in role [search queries](/d
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on role [worklists](/docs/worklists/):
 

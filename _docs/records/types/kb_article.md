@@ -88,7 +88,7 @@ These [filters](/docs/search/filters/) are available in knowledgebase article [s
 | `views:` | [number](/docs/search/filters/numbers/) | Views
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on knowledgebase article [worklists](/docs/worklists/):
 

@@ -87,7 +87,7 @@ These [filters](/docs/search/filters/) are available in attachment [search queri
 | `storage.extension:` | [text](/docs/search/filters/text/) | Storage Extension
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on attachment [worklists](/docs/worklists/):
 

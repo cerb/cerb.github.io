@@ -146,7 +146,7 @@ These [filters](/docs/search/filters/) are available in ticket [search queries](
 | `worker.commented:` | virtual | Worker Commented
 | `worker.replied:` | virtual | Worker Replied
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on ticket [worklists](/docs/worklists/):
 

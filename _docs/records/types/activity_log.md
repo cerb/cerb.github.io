@@ -75,7 +75,7 @@ These [filters](/docs/search/filters/) are available in activity log [search que
 | `target:` | [text](/docs/search/filters/text/) | Target Type
 | `target.<type>:` | [record](/docs/search/deep-search/) | Target
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on activity log [worklists](/docs/worklists/):
 

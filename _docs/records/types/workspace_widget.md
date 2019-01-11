@@ -92,7 +92,7 @@ These [filters](/docs/search/filters/) are available in workspace widget [search
 | `width:` | [text](/docs/search/filters/text/) | Width
 | `zone:` | [text](/docs/search/filters/text/) | Zone
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on workspace widget [worklists](/docs/worklists/):
 

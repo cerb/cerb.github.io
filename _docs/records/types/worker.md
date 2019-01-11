@@ -133,7 +133,7 @@ These [filters](/docs/search/filters/) are available in worker [search queries](
 | `title:` | [text](/docs/search/filters/text/) | Title
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on worker [worklists](/docs/worklists/):
 

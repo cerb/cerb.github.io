@@ -88,7 +88,7 @@ These [filters](/docs/search/filters/) are available in workspace page [search q
 | `type:` | [text](/docs/search/filters/text/) | Type
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on workspace page [worklists](/docs/worklists/):
 

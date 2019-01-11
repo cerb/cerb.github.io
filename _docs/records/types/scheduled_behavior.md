@@ -82,7 +82,7 @@ These [filters](/docs/search/filters/) are available in behavior scheduled [sear
 | `on.<type>:` | [record](/docs/search/deep-search/) | On
 | `runDate:` | [date](/docs/search/filters/dates/) | Run Date
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on behavior scheduled [worklists](/docs/worklists/):
 

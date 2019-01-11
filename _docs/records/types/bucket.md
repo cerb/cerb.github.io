@@ -93,7 +93,7 @@ These [filters](/docs/search/filters/) are available in bucket [search queries](
 | `template.id:` | [chooser](/docs/search/filters/choosers/) | [Email Template](/docs/records/types/html_template/)
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on bucket [worklists](/docs/worklists/):
 

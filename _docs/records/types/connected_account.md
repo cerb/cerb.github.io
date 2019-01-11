@@ -90,7 +90,7 @@ These [filters](/docs/search/filters/) are available in connected account [searc
 | `service.id:` | [chooser](/docs/search/filters/choosers/) | [Service Provider](/docs/records/types/connected_service/)
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on connected account [worklists](/docs/worklists/):
 

@@ -91,7 +91,7 @@ These [filters](/docs/search/filters/) are available in twitter message [search 
 | `screenName:` | [text](/docs/search/filters/text/) | Username
 | `userName:` | [text](/docs/search/filters/text/) | Name
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on twitter message [worklists](/docs/worklists/):
 

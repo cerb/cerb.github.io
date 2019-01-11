@@ -86,7 +86,7 @@ These [filters](/docs/search/filters/) are available in classifier [search queri
 | `owner.worker:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/worker/)
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on classifier [worklists](/docs/worklists/):
 

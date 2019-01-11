@@ -85,7 +85,7 @@ These [filters](/docs/search/filters/) are available in comment [search queries]
 | `on:` | [text](/docs/search/filters/text/) | On Type
 | `on.<type>:` | [record](/docs/search/deep-search/) | Target
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on comment [worklists](/docs/worklists/):
 

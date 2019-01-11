@@ -81,7 +81,7 @@ These [filters](/docs/search/filters/) are available in connected service [searc
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `uri:` | [text](/docs/search/filters/text/) | Uri
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on connected service [worklists](/docs/worklists/):
 

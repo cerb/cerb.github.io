@@ -83,7 +83,7 @@ These [filters](/docs/search/filters/) are available in community portal [search
 | `type:` | [text](/docs/search/filters/text/) | Extension
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on community portal [worklists](/docs/worklists/):
 

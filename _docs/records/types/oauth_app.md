@@ -84,7 +84,7 @@ These [filters](/docs/search/filters/) are available in oauth app [search querie
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `url:` | [text](/docs/search/filters/text/) | Url
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on oauth app [worklists](/docs/worklists/):
 

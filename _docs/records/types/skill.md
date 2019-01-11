@@ -78,7 +78,7 @@ These [filters](/docs/search/filters/) are available in skill [search queries](/
 | `skillset.id:` | [chooser](/docs/search/filters/choosers/) | [Skillset](/docs/records/types/skillset/)
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on skill [worklists](/docs/worklists/):
 

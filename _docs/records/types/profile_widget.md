@@ -91,7 +91,7 @@ These [filters](/docs/search/filters/) are available in profile widget [search q
 | `width:` | [number](/docs/search/filters/numbers/) | Width Units
 | `zone:` | [text](/docs/search/filters/text/) | Zone
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on profile widget [worklists](/docs/worklists/):
 

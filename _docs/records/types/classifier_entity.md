@@ -80,7 +80,7 @@ These [filters](/docs/search/filters/) are available in classifier entity [searc
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on classifier entity [worklists](/docs/worklists/):
 

@@ -83,7 +83,7 @@ These [filters](/docs/search/filters/) are available in custom fieldset [search 
 | `owner.worker:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/worker/)
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on custom fieldset [worklists](/docs/worklists/):
 

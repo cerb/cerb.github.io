@@ -101,7 +101,7 @@ These [filters](/docs/search/filters/) are available in task [search queries](/d
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on task [worklists](/docs/worklists/):
 

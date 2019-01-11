@@ -82,7 +82,7 @@ These [filters](/docs/search/filters/) are available in profile tab [search quer
 | `type:` | [text](/docs/search/filters/text/) | Type
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on profile tab [worklists](/docs/worklists/):
 

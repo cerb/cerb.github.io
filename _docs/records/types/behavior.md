@@ -93,7 +93,7 @@ These [filters](/docs/search/filters/) are available in behavior [search queries
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `usableBy.bot:` | [chooser](/docs/search/filters/choosers/) | [Usableby Bot](/docs/records/types/bot/)
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on behavior [worklists](/docs/worklists/):
 

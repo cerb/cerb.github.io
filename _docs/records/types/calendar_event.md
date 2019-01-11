@@ -86,7 +86,7 @@ These [filters](/docs/search/filters/) are available in calendar event [search q
 | `startDate:` | [date](/docs/search/filters/dates/) | Start Date
 | `status:` | [boolean](/docs/search/filters/booleans/) | Is Available
 	
-### Workist Columns
+### Worklist Columns
 
 These columns are available on calendar event [worklists](/docs/worklists/):
 
