@@ -26,10 +26,13 @@ jumbotron:
 <code class="language-text">
 {% raw %}
 type:worklist.geo.points
-of:org
-point:coordinates
-query:(coordinates:!null)
-format:geopoints
+series.points:(
+  of:org
+  point:coordinates
+  fields:[name,coordinates]
+  query:(coordinates:!null)
+)
+format:geojson
 {% endraw %}
 </code>
 </pre>
@@ -37,7 +40,11 @@ format:geopoints
 * TOC
 {:toc}
 
-# of:
+# series.*
+
+Each `series.*` should provide:
+
+## of:
 
 The `of:` key specifies the type of [records](/docs/records/) to search.
 
@@ -49,7 +56,7 @@ of:tickets
 </code>
 </pre>
 
-# point:
+## point:
 
 The `point:` key specifies the record [field](/docs/records/fields/) containing latitude/longitude data.
 
@@ -61,7 +68,19 @@ point:coordinates
 </code>
 </pre>
 
-# query:
+## fields:
+
+The `fields:` key specifies the record [fields](/docs/records/fields/) to include with each plotted point.
+
+<pre>
+<code class="language-text">
+{% raw %}
+point:coordinates
+{% endraw %}
+</code>
+</pre>
+
+## query:
 
 The `query:` key specifies a [search query](/docs/search/) for filtering records.
 
@@ -88,10 +107,13 @@ The results can be returned in various formats:
 <pre>
 <code class="language-text">
 type:worklist.geo.points
-of:org
-point:coordinates
-query:(coordinates:!null)
-format:geopoints
+series.points:(
+  of:org
+  point:coordinates
+  fields:[name,coordinates]
+  query:(coordinates:!null)
+)
+format:geojson
 </code>
 </pre>
 
