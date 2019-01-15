@@ -74,7 +74,10 @@ jumbotron:
 		- upload_max_filesize = 32M _(or higher)_
 		- post_max_size = 32M _(or higher)_
 
-- MySQL 5.6 or later
+- Any of these database servers:
+	- MySQL 5.6 or later
+	- MariaDB 10.2 or later
+	- Amazon Aurora
 
 <div class="cerb-box note">
 	<p>If you are unable to meet these requirements, consider <a href="/pricing/">Cerb Cloud</a>.</p>
