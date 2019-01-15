@@ -89,7 +89,8 @@ The following general instructions assume that you have console access to a Linu
 
 You can follow one of these guides to set up a new server:
 
-* [Installing Cerb on Ubuntu 16.04 with Nginx and PHP-FPM](/guides/installation/ubuntu/)
+* [Installing Cerb on Ubuntu 18.04 with Nginx and PHP-FPM](/guides/installation/ubuntu/)
+* [Installing Cerb on Ubuntu 16.04 with Nginx and PHP-FPM](/guides/installation/ubuntu/18.04/)
 * [Installing Cerb on Amazon Linux with Nginx and PHP-FPM](/guides/installation/amazon-linux/)
 
 # Download the source code from GitHub

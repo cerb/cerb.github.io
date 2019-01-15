@@ -1,11 +1,11 @@
 ---
-title: Install Cerb on Ubuntu Linux 18.04
+title: Install Cerb on Ubuntu Linux 16.04
 layout: integration
 topic: Installation
-excerpt: This guide will walk you through preparing an Ubuntu 18.04 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
-permalink: /guides/installation/ubuntu/
+excerpt: This guide will walk you through preparing an Ubuntu 16.04 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
+permalink: /guides/installation/ubuntu/16.04/
 jumbotron:
-  title: Install Cerb on Ubuntu Linux 18.04
+  title: Install Cerb on Ubuntu Linux 16.04
   tagline: ""
   breadcrumbs:
   -
@@ -19,10 +19,14 @@ jumbotron:
     url: /resources/guides/#installation
 ---
 
+{% comment %}
+* YAML 2.0.0+
+{% endcomment %}
+
 # Introduction
 {:.no_toc}
 
-This guide will walk you through preparing an Ubuntu 18.04 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
+This guide will walk you through preparing an Ubuntu 16.04 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
 
 * TOC
 {:toc}
@@ -33,7 +37,7 @@ If you don't already have a server, you can [create an EC2 instance in Amazon We
 
 This guide uses the following Amazon Machine Image (AMI):
 
-Canonical, Ubuntu, 18.04 LTS, amd64 bionic - ami-0bbe6b35405ecebdb
+`Ubuntu Server 16.04 LTS (HVM), SSD Volume Type - ami-a58d0dc5`
 
 # Connect to your server
 
@@ -57,11 +61,11 @@ sudo apt-get -y upgrade
 </code>
 </pre>
 
-Install PHP 7.2:
+Install PHP 7.0:
 
 <pre>
 <code class="language-bash">
-sudo apt-get install -y php7.2 php7.2-fpm php7.2-mysql php7.2-mbstring php7.2-gd php7.2-imap php7.2-curl php7.2-mailparse php7.2-yaml php7.2-dev php-pear
+sudo apt-get install -y php7.0 php7.0-fpm php7.0-mysql php7.0-mbstring php7.0-gd php7.0-imap php7.0-curl php7.0-dev php-pear
 </code>
 </pre>
 
@@ -80,6 +84,52 @@ Install the Nginx web server:
 sudo apt-get install -y nginx
 </code>
 </pre>
+
+# Install mailparse
+
+There isn't a package for the Mailparse PHP extension in Ubuntu 16.04.  The PECL package reports an error with mbstring.
+
+You can compile `mailparse.so` yourself with these instructions:
+
+<pre>
+<code class="language-bash">
+sudo -s
+
+cd /tmp
+
+pecl download mailparse
+
+tar xvzf mailparse-3.0.2.tgz
+
+cd mailparse-3.0.2
+
+phpize
+
+./configure
+
+sed -i \
+  's/^\(#error .* the mbstring extension!\)/\/\/\1/' \
+  mailparse.c
+
+make
+
+make install
+
+echo "extension=mailparse.so" > \
+  /etc/php/7.0/fpm/conf.d/30-mailparse.ini
+
+echo "extension=mailparse.so" > \
+  /etc/php/7.0/cli/conf.d/30-mailparse.ini
+
+service php7.0-fpm reload
+
+exit
+</code>
+</pre>
+
+<div class="cerb-box note">
+<p>If these instructions were helpful, you can <a href="http://stackoverflow.com/questions/35793216/installing-mailparse-php7-mbstring-error/36636332#36636332">vote up our answer on Stack Overflow</a>.</p>
+</div>
 
 # Install MySQL
 
@@ -250,7 +300,7 @@ server {
     #allow 10.0.0.0/16;
     deny all;
     include fastcgi_params;
-    fastcgi_pass   unix:/var/run/php/php7.2-fpm.sock;
+    fastcgi_pass   unix:/var/run/php/php7.0-fpm.sock;
   }
 
   location / {
@@ -295,7 +345,7 @@ server {
     proxy_read_timeout 120;
     
     fastcgi_split_path_info ^(.+\.php)(/.+)$;
-    fastcgi_pass   unix:/var/run/php/php7.2-fpm.sock;
+    fastcgi_pass   unix:/var/run/php/php7.0-fpm.sock;
     fastcgi_index  index.php;
     include    fastcgi_params;
     fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
@@ -348,7 +398,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 <code class="language-bash">
 sudo service nginx restart
 
-sudo service php7.2-fpm restart
+sudo service php7.0-fpm restart
 </code>
 </pre>
 
