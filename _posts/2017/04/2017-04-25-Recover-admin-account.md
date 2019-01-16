@@ -19,7 +19,7 @@ Find your administrator's worker ID:
 <pre>
 <code class="language-sql">
 {% raw %}
-SELECT id, CONCAT_WS_(' ',first_name,last_name) AS name, auth_extension_id FROM worker;
+SELECT id, CONCAT_WS(' ',first_name,last_name) AS name FROM worker;
 {% endraw %}
 </code>
 </pre>
@@ -31,7 +31,7 @@ Change back to password authentication for your account:
 <pre>
 <code class="language-sql">
 {% raw %}
-UPDATE worker SET auth_extension_id='login.password' WHERE id = 123;
+UPDATE worker SET is_password_disabled = 0 WHERE id = 123;
 {% endraw %}
 </code>
 </pre>
