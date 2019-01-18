@@ -187,12 +187,15 @@ label: "By:"
 type: picklist
 default: month
 params:
+  multiple: false
   options: [day, week, month, year]
 {% endraw %}
 </code>
 </pre>
 
 The available **params:** are:
+
+* **multiple:** `true` if multiple selection is enabled, `false` (default) otherwise.
 
 * **options:** a list of possible values for the picklist.
 
@@ -217,8 +220,23 @@ The available **params:** are:
 	{% endraw %}
 	</code>
 	</pre>
+	
+	As of [9.1.3](/releases/9.1.3) you can also provide a map of labels and values:
+	
+	<pre>
+	<code class="language-yaml">
+	{% raw %}
+	params:
+	  options:
+		  "Open": o
+		  "Waiting": w
+		  "Closed": c
+		  "Deleted": d
+	{% endraw %}
+	</code>
+	</pre>
 
-The value of the placeholder is the name of the selected option.
+In single selection mode (`multiple: false`), the value of the placeholder is the selected option:
 
 <pre>
 <code class="language-text">
@@ -228,6 +246,26 @@ of:tickets
 by:[created@{{input_date_subtotal_by}},group~10]
 query:(
 	created:"first day of this month -1 year to now"
+)
+format:timeseries
+{% endraw %}
+</code>
+</pre>
+
+In multiple selection mode (`multiple: true`), the value of the placeholder is an array of selected options:
+
+<pre>
+<code class="language-text">
+{% raw %}
+type:worklist.subtotals
+of:tickets
+by:[created@day,group~10]
+query:(
+	created:"first day of this month -1 year to now"
+	{% if input_statuses %}
+	status:[{{input_statuses|join(',')}}]
+	{% endif %}
+	status:[]
 )
 format:timeseries
 {% endraw %}
