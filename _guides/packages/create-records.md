@@ -155,7 +155,7 @@ This package creates a new ticket with one message. The message has both plainte
     "name": "New ticket",
     "revision": 1,
     "requires": {
-      "cerb_version": "8.3.2",
+      "cerb_version": "9.1.4",
       "plugins": []
     },
     "configure": {

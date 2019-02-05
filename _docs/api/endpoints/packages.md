@@ -42,7 +42,7 @@ $json_string = <<< EOF
     "name": "Create a task",
     "revision": 1,
     "requires": {
-      "cerb_version": "8.0.0",
+      "cerb_version": "9.1.4",
       "plugins": [
         "cerb.bots.portal.widget"
       ]

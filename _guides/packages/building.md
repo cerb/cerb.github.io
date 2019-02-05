@@ -66,7 +66,7 @@ Here's the basic structure of a package:
     "name": "Package Name",
     "revision": 1,
     "requires": {
-      "cerb_version": "8.3.3",
+      "cerb_version": "9.1.4",
       "plugins": []
     },
     "configure": {
@@ -239,7 +239,7 @@ This package prompts for a worker and assigns them a task:
   "package": {
     "name": "Example Package",
     "requires": {
-      "cerb_version": "8.3.4",
+      "cerb_version": "9.1.4",
       "plugins": []
     },
     "configure": {
