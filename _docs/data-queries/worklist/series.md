@@ -35,6 +35,8 @@ Each `series.*` should provide:
 * `function:` (count,min,max,average,sum on `y:` field)
 * `query:` (the query to filter the results for this series)
 
+By default you'll receive 10 data points per series. You can add a `limit:<number>` to the `query:` to change this.
+
 # Response Formats
 
 * **table** returns tabular output, suitable for display with the 'Chart: Table' visualization widget.
@@ -53,14 +55,14 @@ series.open_tickets:(
   x:created@month 
   y:id 
   function:count 
-  query:(status:o)
+  query:(status:o limit:24)
 ) 
 series.closed_tickets:(
   of:tickets 
   x:created@month 
   y:id 
   function:count 
-  query:(status:c)
+  query:(status:c limit:24)
 )
 format:timeseries
 </code>
