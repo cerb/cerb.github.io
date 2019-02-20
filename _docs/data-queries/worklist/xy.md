@@ -31,7 +31,9 @@ Each `series.*` should provide:
 * `label:` (human-friendly series name for visualizations)
 * `of:` (record type)
 * `x:` field(@year,month,day,hour,minute,second)
+* `x.metric:` (an equation to apply to each x-axis value; [9.1.6](/releases/9.1.6/) or later)
 * `y:` (field)
+* `y.metric:` (an equation to apply to each y-axis value; [9.1.6](/releases/9.1.6/) or later)
 * `query:` (the query to filter the results for this series)
 
 You can specify a `limit:` and `sort:` within each series `query:()`. Nested sorting is supported, and sorts can be in ascending or descending order by prefixing a minus (`-`) to the field name for descending.

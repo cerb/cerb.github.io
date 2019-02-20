@@ -32,6 +32,7 @@ Each `series.*` should provide:
 * `of:` (record type)
 * `x:` (record field for the x-axis using quick search keys)
 * `y:` (record field for the y-axis using quick search keys)
+* `y.metric:` (an equation to apply to each y-axis value; [9.1.6](/releases/9.1.6/) or later)
 * `function:` (count,min,max,average,sum on `y:` field)
 * `query:` (the query to filter the results for this series)
 

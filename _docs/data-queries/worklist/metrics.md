@@ -32,6 +32,7 @@ Each `values.*` series should provide:
 * `of:` (record type)
 * `field:` (record field using quick search keys)
 * `function:` (count,min,max,average,sum)
+* `metric:` (an equation to apply to each value; [9.1.6](/releases/9.1.6/) or later)
 * `query:` (the query to filter the results for this series)
 
 Optionally, multiple functions can be specified for a series, like `functions:[sum,average]`, and multiple series will be generated automatically using the same record type, field, and query.
