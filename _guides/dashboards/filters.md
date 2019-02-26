@@ -56,7 +56,15 @@ type: picklist
 default: month
 params:
   options: [day, week, month, year]
---- 
+---
+placeholder: input_statuses
+label: "Statuses:"
+type: picklist
+default: []
+params:
+  multiple: true
+  options: [open, waiting, closed, deleted]
+---
 placeholder: input_groups
 label: "Groups:"
 type: chooser
