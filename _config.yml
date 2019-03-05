@@ -9,7 +9,7 @@ baseurl: ""
 logo_url: /assets/cerb_logo.png
 social_image_url: /assets/images/cerb-social.png
 twitter_username: cerb_ai
-github_username:  wgm
+github_username:  cerb
 timezone: America/Los_Angeles
 encoding: utf-8
 
