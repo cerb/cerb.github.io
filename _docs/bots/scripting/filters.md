@@ -391,7 +391,7 @@ Kina closed 120 tickets today!
 
 ## hash_hmac
 
-Generate an keyed-hash message authentication code (HMAC[^hmac]) using a secret key.
+Generate a hash-based message authentication code (HMAC[^hmac]) using a secret key.
 
 For instance, you can use this to sign parameters in a survey URL to verify that the recipient didn't modify them.
 
@@ -1011,7 +1011,7 @@ Decode HTML entities:
 <pre>
 <code class="language-twig">
 {% raw %}
-{{"&quot;iPhone&quot; is &copy; Apple, Inc."|unescape}}
+{{"&amp;quot;iPhone&amp;quot; is &amp;copy; Apple, Inc."|unescape}}
 {% endraw %}
 </code>
 </pre>
