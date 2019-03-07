@@ -16,7 +16,7 @@ jumbotron:
     url: /docs/records/
   -
     label: Types &raquo;
-    url: /docs/records/#record-types
+    url: /docs/records/types/
 ---
 
 |---
@@ -42,7 +42,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `is_read` | [boolean](/docs/records/fields/types/boolean/) | Has this been read by the worker? 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
-| **x** | **`target__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/#record-types) of the target record 
+| **x** | **`target__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) of the target record 
 |   | `target_id` | [number](/docs/records/fields/types/number/) | The ID of the target record 
 | **x** | **`worker_id`** | [number](/docs/records/fields/types/number/) | The ID of the [worker](/docs/records/types/worker/) who received the notification 
 
@@ -100,7 +100,7 @@ These columns are available on notification [worklists](/docs/worklists/):
 
 <div class="section-nav">
 	<div class="left">
-		<a href="/docs/records/#record-types" class="prev">&lt; Record Types</a>
+		<a href="/docs/records/types/" class="prev">&lt; Record Types</a>
 	</div>
 	<div class="right align-right">
 	</div>

@@ -16,7 +16,7 @@ jumbotron:
     url: /docs/records/
   -
     label: Types &raquo;
-    url: /docs/records/#record-types
+    url: /docs/records/types/
 ---
 
 |---
@@ -39,7 +39,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `is_default` | [boolean](/docs/records/fields/types/boolean/) | Is this the default signature? 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this email signature 
-| **x** | **`owner__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/#record-types) of this email signature's owner: `app`, `role`, `group`, or `worker` 
+| **x** | **`owner__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) of this email signature's owner: `app`, `role`, `group`, or `worker` 
 |   | `owner_id` | [number](/docs/records/fields/types/number/) | The ID of this email signature's owner 
 | **x** | **`signature`** | [text](/docs/records/fields/types/text/) | The [template](/docs/bots/scripting/) of the signature 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
@@ -101,7 +101,7 @@ These columns are available on email signature [worklists](/docs/worklists/):
 
 <div class="section-nav">
 	<div class="left">
-		<a href="/docs/records/#record-types" class="prev">&lt; Record Types</a>
+		<a href="/docs/records/types/" class="prev">&lt; Record Types</a>
 	</div>
 	<div class="right align-right">
 	</div>

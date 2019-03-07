@@ -13,7 +13,7 @@ jumbotron:
     url: /docs/records/
 ---
 
-You can group related [custom fields](/docs/custom-fields/) together into a **fieldset**. When a fieldset is optionally added to a record, it includes all of its fields at the same time. 
+You can group related [custom fields](/docs/custom-fields/) together into a **fieldset**. When a fieldset is optionally added to a [record](/docs/records/), it includes all of its fields at the same time. 
 
 For instance, you could add this _"SLA"_ (Service Level Agreement) fieldset to [organization](/docs/orgs/) records:
 

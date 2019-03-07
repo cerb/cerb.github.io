@@ -19,7 +19,7 @@ jumbotron:
     url: /docs/records/#fields
 ---
 
-A **context** field contains a [record type](/docs/records/#record-types).
+A **context** field contains a [record type](/docs/records/types/).
 
 The value is the `identifier` (ID) or `uri` (alias) of a record type.
 

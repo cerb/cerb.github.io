@@ -16,7 +16,7 @@ jumbotron:
     url: /docs/records/
   -
     label: Types &raquo;
-    url: /docs/records/#record-types
+    url: /docs/records/types/
 ---
 
 |---
@@ -38,7 +38,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |:-:|-|-|-
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this connected account 
-| **x** | **`owner__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/#record-types) of this connected account's owner: `app`, `role`, `group`, or `worker` 
+| **x** | **`owner__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) of this connected account's owner: `app`, `role`, `group`, or `worker` 
 | **x** | **`owner_id`** | [number](/docs/records/fields/types/number/) | The ID of this connected account's owner 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `service_id` | [number](/docs/records/fields/types/number/) | [Service Provider](/docs/plugins/extensions/points/cerb.connected_service.provider/) 
@@ -107,7 +107,7 @@ These columns are available on connected account [worklists](/docs/worklists/):
 
 <div class="section-nav">
 	<div class="left">
-		<a href="/docs/records/#record-types" class="prev">&lt; Record Types</a>
+		<a href="/docs/records/types/" class="prev">&lt; Record Types</a>
 	</div>
 	<div class="right align-right">
 	</div>

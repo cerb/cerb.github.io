@@ -13,7 +13,7 @@ jumbotron:
     url: /docs/records/
 ---
 
-**Custom fields** can be added to any [record type](/docs/records/) based on the specific needs of your team.
+**Custom fields** can be added to any [record](/docs/records/) [type](/docs/records/types/) based on the specific needs of your team.
 
 There are many different **types** of fields:
 

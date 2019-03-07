@@ -19,6 +19,7 @@
 - title: Records
   docs:
   - records
+  - records/types
   - records/custom-records
   - custom-fields
   - custom-fieldsets

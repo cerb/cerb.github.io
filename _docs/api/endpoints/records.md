@@ -21,7 +21,7 @@ jumbotron:
 
 The **records** API can abstractly create, retrieve, update, upsert, search, and delete all records in Cerb from a single [endpoint](/docs/api/endpoints/).
 
-This endpoint target a specific [record type](/docs/records/#record-types) as `<uri>` in the path.
+This endpoint target a specific [record type](/docs/records/types/) as `<uri>` in the path.
 
 * TOC
 {:toc}
@@ -53,7 +53,7 @@ Create a new record.
 |---
 | Field | Type | 
 |-|-|-
-| `fields[]` | mixed | **required** This field can be provided multiple times for each field to set. The field names are found on each [record type](/docs/records/#record-types).
+| `fields[]` | mixed | **required** This field can be provided multiple times for each field to set. The field names are found on each [record type](/docs/records/types/).
 
 ### Example
 {: .no_toc}
@@ -82,7 +82,7 @@ Update a record object.
 |---
 | Field | Type | 
 |-|-|-
-| `fields[]` | mixed | **required** This field can be provided multiple times for each field to set. The field names are found on each [record type](/docs/records/#record-types).
+| `fields[]` | mixed | **required** This field can be provided multiple times for each field to set. The field names are found on each [record type](/docs/records/types/).
 
 ### Example
 {: .no_toc}
@@ -110,7 +110,7 @@ Update an existing record if matched, or create a new record otherwise.
 |---
 | Field | Type | 
 |-|-|-
-| `fields[]` | mixed | **required** This field can be provided multiple times for each field to set. The field names are found on each [record type](/docs/records/#record-types).
+| `fields[]` | mixed | **required** This field can be provided multiple times for each field to set. The field names are found on each [record type](/docs/records/types/).
 | `query` | string | The [search query](/docs/search/) for detecting a match. This must return either `0` (create) or `1` (update) results. Anything else returns an error.
 
 ### Example
@@ -148,7 +148,7 @@ Search for matching records.
 
 **expand**
 	
-Includes additional information in the response. These options vary depending on the [record type](/docs/records/#record-types).
+Includes additional information in the response. These options vary depending on the [record type](/docs/records/types/).
 
 |---
 | Field | Description
@@ -158,7 +158,7 @@ Includes additional information in the response. These options vary depending on
 
 **subtotals[]**
 
-Return subtotal results based on the given fields. These options vary depending on the [record type](/docs/records/#record-types).
+Return subtotal results based on the given fields. These options vary depending on the [record type](/docs/records/types/).
 
 ### Example
 {: .no_toc}

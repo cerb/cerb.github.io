@@ -16,7 +16,7 @@ jumbotron:
     url: /docs/records/
   -
     label: Types &raquo;
-    url: /docs/records/#record-types
+    url: /docs/records/types/
 ---
 
 |---
@@ -36,7 +36,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
-| **x** | **`context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/#record-types) to add the profile tab to 
+| **x** | **`context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) to add the profile tab to 
 | **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | [Profile Tab Type](/docs/plugins/extensions/points/cerb.profile.tab/) 
 |   | `extension_params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
@@ -98,7 +98,7 @@ These columns are available on profile tab [worklists](/docs/worklists/):
 
 <div class="section-nav">
 	<div class="left">
-		<a href="/docs/records/#record-types" class="prev">&lt; Record Types</a>
+		<a href="/docs/records/types/" class="prev">&lt; Record Types</a>
 	</div>
 	<div class="right align-right">
 	</div>

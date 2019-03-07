@@ -117,7 +117,7 @@ params:
 
 The available **params:** are:
 
-* **context:** a [record type](/docs/records/#record-types) alias.
+* **context:** a [record type](/docs/records/types/) alias.
 
 * **single:** `true` for single record selection, `false` (default) for multiple.
 

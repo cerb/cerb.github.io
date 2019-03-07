@@ -16,7 +16,7 @@ jumbotron:
     url: /docs/records/
   -
     label: Types &raquo;
-    url: /docs/records/#record-types
+    url: /docs/records/types/
 ---
 
 |---
@@ -165,7 +165,7 @@ These columns are available on worker [worklists](/docs/worklists/):
 
 <div class="section-nav">
 	<div class="left">
-		<a href="/docs/records/#record-types" class="prev">&lt; Record Types</a>
+		<a href="/docs/records/types/" class="prev">&lt; Record Types</a>
 	</div>
 	<div class="right align-right">
 	</div>
