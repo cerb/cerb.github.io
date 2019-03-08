@@ -9,7 +9,7 @@ jumbotron:
 
 # Developers
 
-- [Jeff Standen](http://www.linkedin.com/in/jeffstanden) is the founding partner at Webgroup Media LLC. He has been Cerb's software architect and lead programmer from the first line of code in January 2002[^bdfl]. He brings more than 24 years of software development experience to the project.
+- [Jeff Standen](http://www.linkedin.com/in/jeffstanden) is the founding partner at Webgroup Media LLC. He has been Cerb's software architect and lead programmer from the first line of code in January 2002[^bdfl]. He brings more than 25 years of software development experience to the project.
 
 - [Dan Hildebrandt](http://www.linkedin.com/in/danielhildebrandt) is a partner at Webgroup Media LLC and an active Cerb developer since 2005.
 
@@ -56,15 +56,25 @@ jumbotron:
 
 - [D3.js](https://d3js.org) is a Javascript library for manipulating documents based on data.
 
+- [Guzzle](https://github.com/guzzle/guzzle/) is an extension PHP HTTP client library.
+
+- [HumanizeDuration](https://github.com/EvanHahn/HumanizeDuration.js) is a Javascript library for generating human-friendly relative times from a measure of time (e.g. days, hours, seconds, milliseconds).
+
 - [jQuery](http://jquery.com/) is a fast and concise JavaScript library that simplifies HTML document traversal, event handling, animation, and asynchronous interactions (Ajax).
 
 - [jQuery UI](http://jqueryui.com/) is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library.
 
 - [jQuery UI Touch Punch](http://touchpunch.furf.com) converts mouse-based events in jQuery UI to touch gestures for mobile devices (e.g. tap, slide, drag/drop).
 
+- [mtdownling/cron-expression](https://github.com/mtdowling/cron-expression) is a PHP library for generating time intervals using Unix crontab syntax.
+
 - [Parsedown](http://michelf.com/projects/php-markdown/) is a PHP library for converting lightweight Markdown[^markdown] text into HTML.
 
 - [php-encryption](https://github.com/defuse/php-encryption) is a secure library for encrypting data in PHP.
+
+- [php-saml](https://github.com/onelogin/php-saml) is a PHP library for single-sign on (SSO) authentication using SAML.
+
+- [phpseclib](https://github.com/phpseclib/phpseclib) is a PHP library for secure communications.
 
 - [PHPUnit](https://phpunit.de/) is a programmer-oriented unit testing framework for PHP.
 
@@ -74,9 +84,11 @@ jumbotron:
 
 - [Swift Mailer](http://swiftmailer.org/) is a component-based library for sending email from PHP applications.
 
-- [Twig](http://www.twig-project.org/) is an open source template engine for the PHP programming language by Fabien Potencier. It focuses on being fast, secure, and flexible.
+- [thephpleague/oauth2-client](https://github.com/thephpleague/oauth2-client/) is a PHP library for simplified integration with OAuth 2.0 service providers.
 
-- [HumanizeDuration](https://github.com/EvanHahn/HumanizeDuration.js)
+- [thephpleague/oauth2-server](https://oauth2.thephpleague.com/) is a PHP library for implementing standards compliant OAuth 2.0 servers.
+
+- [Twig](http://www.twig-project.org/) is an open source template engine for the PHP programming language by Fabien Potencier. It focuses on being fast, secure, and flexible.
 
 # Licenses
 
