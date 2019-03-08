@@ -17,5 +17,5 @@ jumbotron:
 
 ## Packages
 
-- [Import Package](/docs/setup/packages/import-package/)
-- [Package Library](/docs/setup/packages/library/)
+- [Library](/docs/setup/packages/library/)
+- [Import](/docs/setup/packages/import/)
