@@ -92,6 +92,7 @@ These [filters](/docs/search/filters/) are available in group [search queries](/
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
+| `manager:` | [record](/docs/search/deep-search/) | [Manager](/docs/records/types/worker/)
 | `member:` | [record](/docs/search/deep-search/) | [Member](/docs/records/types/worker/)
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `private:` | [boolean](/docs/search/filters/booleans/) | Private

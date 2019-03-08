@@ -36,7 +36,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
-| **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | [Profile Widget Type](/docs/plugins/extensions/points/cerb.profile.tab.widget/) 
+| **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | [Profile Widget Type](/docs/plugins/extensions/points/cerb.profile.widget/) 
 |   | `extension_params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this profile widget 

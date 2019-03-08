@@ -44,6 +44,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The behavior's name 
 |   | `priority` | [number](/docs/records/fields/types/number/) | Any positive number; `0` is highest priority 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
+|   | `uri` | [text](/docs/records/fields/types/text/) |  
 
 ### Dictionary Placeholders
 
@@ -64,6 +65,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `priority` | number | Priority
 | `record_url` | text | Record Url
 | `updated_at` | date | Updated
+| `uri` | text | Uri
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
@@ -91,6 +93,7 @@ These [filters](/docs/search/filters/) are available in behavior [search queries
 | `priority:` | [number](/docs/search/filters/numbers/) | Priority
 | `private:` | [boolean](/docs/search/filters/booleans/) | Is Private
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `uri:` | [text](/docs/search/filters/text/) | Uri
 | `usableBy.bot:` | [chooser](/docs/search/filters/choosers/) | [Usableby Bot](/docs/records/types/bot/)
 	
 ### Worklist Columns
@@ -111,6 +114,7 @@ These columns are available on behavior [worklists](/docs/worklists/):
 | `t_priority` | Priority
 | `t_title` | Title
 | `t_updated_at` | Updated
+| `t_uri` | Uri
 
 <div class="section-nav">
 	<div class="left">

@@ -39,7 +39,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `content` | [text](/docs/records/fields/types/text/) | Message content 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
 |   | `hash_header_message_id` | [text](/docs/records/fields/types/text/) | A SHA-1 hash of the `Message-Id:` header; used for message threading 
-|   | `headers` | [text](/docs/records/fields/types/text/) | Message headers 
+| **x** | **`headers`** | [text](/docs/records/fields/types/text/) | Message headers 
 |   | `html_attachment_id` | [number](/docs/records/fields/types/number/) | The [attachment](/docs/records/types/attachment/) ID containing the HTML message content 
 |   | `is_broadcast` | [boolean](/docs/records/fields/types/boolean/) | Was this message sent using the broadcast feature? 
 |   | `is_not_sent` | [boolean](/docs/records/fields/types/boolean/) | Was this message saved without sending? 
@@ -50,8 +50,10 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | **x** | **`sender_id`** | [number](/docs/records/fields/types/number/) | The ID of the sender's [email address](/docs/records/types/address/) record 
 |   | `storage_size` | [number](/docs/records/fields/types/number/) | Size of the message in bytes 
 | **x** | **`ticket_id`** | [number](/docs/records/fields/types/number/) | The ID of the message's [ticket](/docs/records/types/ticket/) record 
+|   | `ticket_mask` | [text](/docs/records/fields/types/text/) | The parent [ticket](/docs/records/types/ticket/) mask; alternative to `ticket_id` 
 |   | `was_encrypted` | [boolean](/docs/records/fields/types/boolean/) | Was the message sent encrypted? 
 |   | `was_signed` | [boolean](/docs/records/fields/types/boolean/) | Was the message cryptographically signed? 
+|   | `worker` | [text](/docs/records/fields/types/text/) | The [worker](/docs/records/types/worker/) who sent the message (if any); alternative to `worker_id` 
 |   | `worker_id` | [number](/docs/records/fields/types/number/) | If outgoing, the ID of the [worker](/docs/records/types/worker/) who sent the message 
 
 ### Dictionary Placeholders

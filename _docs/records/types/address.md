@@ -37,6 +37,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
 |   | `contact_id` | [number](/docs/records/fields/types/number/) | The [contact](/docs/records/types/contact/) linked to this email 
+|   | `created_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
 | **x** | **`email`** | [text](/docs/records/fields/types/text/) | An email address 
 |   | `host` | [text](/docs/records/fields/types/text/) | The hostname of the email address 
 |   | `is_banned` | [boolean](/docs/records/fields/types/boolean/) | Is incoming email blocked? 
@@ -57,6 +58,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `_label` | text | Label
 | `address` | text | Address
 | `contact_` | record | [Contact](/docs/records/types/contact/)
+| `created_at` | date | Created
 | `full_name` | text | Full Name
 | `id` | number | Id
 | `is_banned` | boolean | Is Banned
@@ -89,6 +91,7 @@ These [filters](/docs/search/filters/) are available in email address [search qu
 | `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
 | `contact:` | [record](/docs/search/deep-search/) | [Contact](/docs/records/types/contact/)
 | `contact.id:` | [chooser](/docs/search/filters/choosers/) | [Contact](/docs/records/types/contact/)
+| `created:` | [date](/docs/search/filters/dates/) | Created
 | `email:` | [text](/docs/search/filters/text/) | Email
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `host:` | [text](/docs/search/filters/text/) | Host
@@ -115,6 +118,7 @@ These columns are available on email address [worklists](/docs/worklists/):
 | Column | Description
 |-|-
 | `a_contact_id` | Contact
+| `a_created_at` | Created
 | `a_email` | Email
 | `a_host` | Host
 | `a_id` | Id

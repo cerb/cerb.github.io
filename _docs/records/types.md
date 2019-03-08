@@ -58,6 +58,7 @@ This reference can be used when building [bot behaviors](/docs/bots/), [search q
 | `notification` | [Notifications](/docs/records/types/notification/)
 | `org` | [Organizations](/docs/records/types/org/)
 | `oauth_app` | [OAuth Apps](/docs/records/types/oauth_app/)
+| `package` | [Packages](/docs/records/types/package/)
 | `profile_tab` | [Profile Tabs](/docs/records/types/profile_tab/)
 | `profile_widget` | [Profile Widgets](/docs/records/types/profile_widget/)
 | `reminder` | [Reminders](/docs/records/types/reminder/)

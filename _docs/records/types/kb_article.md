@@ -77,7 +77,7 @@ These [filters](/docs/search/filters/) are available in knowledgebase article [s
 |---
 | Field | Type | Description
 |-|-|-
-| `category.id:` | [chooser](/docs/search/filters/choosers/) | [Knowledgebase Category](/docs/records/types/kb_category/)
+| `category.id:` | [chooser](/docs/search/filters/choosers/) | [Category](/docs/records/types/kb_category/)
 | `content:` | [fulltext](/docs/search/filters/fulltext/) | Content
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `format:` | [text](/docs/search/filters/text/) | Format
@@ -96,8 +96,6 @@ These columns are available on knowledgebase article [worklists](/docs/worklists
 | Column | Description
 |-|-
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
-| `katc_category_id` | Knowledgebase Category
-| `katc_top_category_id` | Topic
 | `kb_format` | Format
 | `kb_id` | Id
 | `kb_title` | Title

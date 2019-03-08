@@ -38,6 +38,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |:-:|-|-|-
 |   | `amount` | [float](/docs/records/fields/types/float/) | The amount of the opportunity in the given currency 
 |   | `amount_currency_id` | [number](/docs/records/fields/types/number/) | The ID of the [currency](/docs/records/types/currency/) 
+|   | `closed_at` | [timestamp](/docs/records/fields/types/timestamp/) |  
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
 |   | `status` | [text](/docs/records/fields/types/text/) | `open`, `closed_won`, `closed_lost`; alternative to `status_id` 
@@ -56,6 +57,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `amount` | currency | Amount
 | `amount_` | record | Amount Label
 | `amount_currency_` | record | [Currency](/docs/records/types/currency/)
+| `closed_at` | date | Closed At
 | `created` | date | Created
 | `id` | number | Id
 | `record_url` | text | Record Url

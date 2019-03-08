@@ -38,6 +38,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |:-:|-|-|-
 |   | `content` | [text](/docs/records/fields/types/text/) | The body content of the draft message 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `subject` | [text](/docs/records/fields/types/text/) | The subject line of the draft message 
 |   | `to` | [text](/docs/records/fields/types/text/) | The `To:` line of the draft message 
 | **x** | **`type`** | [text](/docs/records/fields/types/text/) | The type of draft: `mail.compose` or `ticket.reply` 

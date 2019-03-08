@@ -113,6 +113,7 @@ These [filters](/docs/search/filters/) are available in worker [search queries](
 | `firstName:` | [text](/docs/search/filters/text/) | First Name
 | `gender:` | [text](/docs/search/filters/text/) | Gender
 | `group:` | [record](/docs/search/deep-search/) | [Groups](/docs/records/types/group/)
+| `group.manager:` | [record](/docs/search/deep-search/) | [Group Manager](/docs/records/types/group/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `isAdmin:` | [boolean](/docs/search/filters/booleans/) | Administrator
 | `isAvailable:` | virtual | Calendar Availability
@@ -125,10 +126,12 @@ These [filters](/docs/search/filters/) are available in worker [search queries](
 | `lastName:` | [text](/docs/search/filters/text/) | Last Name
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `location:` | [text](/docs/search/filters/text/) | Location
-| `mentionName:` | [text](/docs/search/filters/text/) | @mention
+| `mention:` | [text](/docs/search/filters/text/) | @mention
 | `mobile:` | [text](/docs/search/filters/text/) | Mobile
 | `phone:` | [text](/docs/search/filters/text/) | Phone
 | `role:` | [record](/docs/search/deep-search/) | [Role](/docs/records/types/role/)
+| `role.editor:` | [record](/docs/search/deep-search/) | [Role Editor](/docs/records/types/role/)
+| `role.reader:` | [record](/docs/search/deep-search/) | [Role Reader](/docs/records/types/role/)
 | `timezone:` | [text](/docs/search/filters/text/) | Timezone
 | `title:` | [text](/docs/search/filters/text/) | Title
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
