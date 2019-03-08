@@ -15,138 +15,126 @@ jumbotron:
     url: /docs/api/
 ---
 
-API requests are authenticated using credentials comprised of an access key and a secret key.
+Cerb uses the **OAuth 2.0**[^oauth2] industry standard for authenticating API requests.
 
-You can think of the access key as a username.  A single worker may have multiple access keys with varying permissions for each application or service that uses the API, and each of them would have their own secret key.
+{% comment %}
+token
+3-legged
+user consent / grants
+scopes
+{% endcomment %}
 
-Similarly, the secret key is like a password.  However, unlike a traditional password, the secret key isn't directly transmitted back to the server for verification.  Instead, the secret key is combined with public details about the HTTP request (verb, path, date, query string, payload) to cryptographically _sign_ it.  Since the server also knows the secret key for each access key, it can create its own signature using the same combination of secret key and HTTP request details.  If the signatures match then the request is authenticated.
+Older versions (prior to [9.1](/releases/9.1/)) used <a href="/docs/api/authentication/request-signatures/">API authentication with request signatures</a> instead. This authentication method is deprecated, but will continue to be supported until the "client credentials" grant is implemented for machine-to-machine authentication.
 
-# Creating an API key-pair
+# Creating an OAuth App
 
-First, [enable the Web API plugin](/guides/api/configure-plugin/) and create a key-pair.
+To generate API credentials, you first need to create an OAuth app in Cerb. You must be an administrator to create an app, but the credentials may then be used by third-parties they are shared with.
 
-# Authenticating with the provided libraries
+To create an app:
 
-The process of signing a request is automatically handled by the official [libraries](/docs/api/libraries/) for PHP, Perl, Python, and Node.js.
+* Navigate to **Search >> OAuth Apps**.
 
-# Authenticating from custom scripts
+* Click the **(+)** icon above the worklist to create a new app.
 
-To sign an API request manually, create an MD5[^md5] signature of the following string:
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/api/oauth2-app-create.png" class="screenshot">
+</div>
+
+Enter the following details:
+
+* **Name:** (the name of your application or integration)
+* **Callback URL:** (aka **Redirect URL**; the endpoint URL in your application that receives OAuth2 responses)
+* **Website:** (the optional URL of your application's website)
+
+### Scopes
+
+When an application connects to an OAuth2 server it requests a set of **scopes**. These are the privileges that are associated with the access token that is returned. Scopes allow an application to request the minimal set of privileges necessary to fulfill its duties.
+
+When creating an OAuth App you can define the scopes that are available.
+
+The available scopes are defined in YAML:
+
+<pre>
+<code class="language-yaml">
+"profile":
+ label: Access your profile information
+ endpoints:
+  - workers/me: GET
+
+"search":
+ label: Search records on your behalf
+ endpoints:
+  - records/*/search: [GET]
+
+"api:read-only":
+ label: Make any read-only API request on your behalf
+ endpoints:
+  - "*": [GET]
+
+"api":
+ label: Make any API request on your behalf
+ endpoints:
+  - "*" #[GET, PATCH, POST, PUT, DELETE]
+</code>
+</pre>
+
+Each scope is identified by a name.
+
+The `label:` field describes the scope when a worker is granting your application access to their account.
+
+The `endpoints:` field is a list of API endpoints and HTTP methods that the scope provides. Wildcards are specified using an asterisk (`*`).
+
+The default scopes document specifies four scopes:
+
+|---
+| Scope | Description
+|-|-
+| `profile` | Access your profile information
+| `search` | Search records on your behalf
+| `api:read-only` | Make any read-only API request on your behalf
+| `api` | Make any API request on your behalf
+
+For instance, an application that uses the API for reporting could use the default `api:read-only` scope which prohibits the creation and modification of data.
+
+### Client ID and Secret
+
+When you create an OAuth app, a pair of secure credentials is automatically generated for you.
+
+* The **Client ID** identifies a particular client that connects to the API using your new application. You can think of this like a username.
+
+* As the name suggests, the **Client Secret** must be kept private within your application. You should not commit it to a public code repository. It is used to verify that an application has permission to generate access tokens.
+
+Click the **Save Changes** button to create your app.
+
+# Authenticating API requests with OAuth2
+
+Cerb currently only supports the **Authorization Code** grant type in the OAuth2 authentication flow.
+
+You will need the following information to generate an access token:
+
+* The **Client ID** and **Client Secret** for the app you created above.
+
+* The **Authorization URL**: `https://YOUR-CERB-HOST/oauth/authorize`
+
+* The **Access Token URL**: `https://YOUR-CERB-HOST/oauth/access_token`
+
+* A **Callback URL** (also called a **Redirect URL**) which must match the one specified in your OAuth app above.
+
+* One or more **Scopes** separated by a space.
+
+Once you receive an access token, you need to include it in the HTTP headers of API requests:
 
 <pre>
 <code class="language-text">
-verb\n
-http_date\n
-url_path\n
-url_query_string\n
-payload\n
-secret\n
+Authorization: Bearer &lt;YOUR-ACCESS-TOKEN&gt;
 </code>
 </pre>
 
-* **verb**
-
-	The verb of the HTTP request: `GET`, `PUT`, `POST`, or `DELETE`.  This prevents the signature of a previous request from being reused with a different verb.
-
-* **http_date**
-
-	The RFC-2822 formatted `Date:` header being sent with the request.  The current date should be used, but the server will tolerate a difference of no more than 10 minutes.  This prevents the signature of a previous request from being reused at a later date (a "replay attack"[^replay-attack]).
-
-* **url_path**
-
-	The relative path of the request, without the scheme, host, or query string.  For example, in the URL `https://cerb.example/rest/tickets/123.json?expand=latest_message_content`, the path is `/rest/tickets/123.json`
-    
-* **url_query_string**
-
-	The query string parameters sorted in alphabetical order.  For example, the parameters `name=Cerb`, `age=15`, and `status=active` would be sorted as `?age=15&name=Cerb&status=active`
-    
-* **payload**
-	
-	The body of a `PUT` or `POST` request, or blank otherwise.
-
-* **secret**
-
-	The secret key as a lowercase MD5 hash.
-    
-The generated signature should be sent with the request as a header in the following format:
-
-<pre>
-<code class="language-text">
-Cerb-Auth: &lt;access_key&gt;:&lt;signature&gt;
-</code>
-</pre>
-
-<div class="cerb-box note"><p>
-	If you're having trouble authenticating and you're sure that the signature is correct, verify that the current time is accurate on both the client and server.
-</p></div>
-
-<div class="cerb-box warning"><p>
-	All of these security considerations are moot if your secret key isn't stored securely.  Make sure that custom scripts aren't world-readable on the server.  You should always give API credentials the least amount of privileges required to perform the desired actions.
-</p></div>
-
-## Example
-
-Let's look at an example signature for testing your own authentication implementation.
-
-For this request:
-
-<pre>
-<code class="language-http">
-POST /rest/tickets/search.json?show_meta=0 HTTP/1.1
-Date: Wed, 08 Feb 2017 19:53:35 GMT
-Content-Type: application/x-www-form-urlencoded; charset=utf-8
-Host: cerb.example
-Connection: close
-Content-Length: 27
-
-expand=custom_&q=status%3Ao
-</code>
-</pre>
-
-Using these credentials:
-
-* Access key: `pjlfmn339fgh`
-* Secret key: `fw4y9fjjd5tqjlsk3u9zkjjr154xbftc`
-
-The authentication header is comprised of `<access-key>:<signature>`:
-
-<pre>
-<code class="language-http">
-Cerb-Auth: pjlfmn339fgh:0cfe2f3b06552c060c8e77f7a0c875ee
-</code>
-</pre>
-
-In PHP, the signature is generated as follows:
-
-<pre>
-<code class="language-php">
-$secret_hash = md5('fw4y9fjjd5tqjlsk3u9zkjjr154xbftc');
-
-$string_to_sign = <<< EOF
-POST
-Wed, 08 Feb 2017 19:53:35 GMT
-/rest/tickets/search.json
-show_meta=0
-expand=custom_&q=status%3Ao
-$secret_hash
-
-EOF;
-
-echo md5($string_to_sign);
-</code>
-</pre>
-
-This outputs:
-
-<pre>
-<code class="language-text">
-0cfe2f3b06552c060c8e77f7a0c875ee
-</code>
-</pre>
-
+{% comment %}
+* example HTTP requests (auth + request w/ bearer token)
+* refresh tokens (and TTLs)
+{% endcomment %}
 
 # References
 
-[^md5]: Wikipedia: MD5 - <http://en.wikipedia.org/wiki/MD5>
-
-[^replay-attack]: Wikipedia: Replay Attack - <http://en.wikipedia.org/wiki/Replay_attack>
+[^oauth2]: OAuth 2.0 - <https://oauth.net/2/>

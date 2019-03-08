@@ -207,7 +207,6 @@
   - api/custom-fields
   - api/endpoints/records
   - api/endpoints
-  - api/libraries
 
 - title: Meta
   docs:
