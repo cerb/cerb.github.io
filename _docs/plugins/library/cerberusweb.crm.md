@@ -38,7 +38,7 @@ Create opportunities (sales leads) linked to e-mail addresses. Opportunity recor
 
 ### Bot Event
 
-| Custom behavior on opportunity | `event.macro.crm.opportunity`
+| Record custom behavior on opportunity | `event.macro.crm.opportunity`
 
 
 ### Event Listener

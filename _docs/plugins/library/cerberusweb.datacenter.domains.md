@@ -38,7 +38,7 @@ This plugin adds Domain objects for managing webhosting/SaaS/On-Demand infrastru
 
 ### Bot Event
 
-| Custom behavior on domain | `event.macro.domain`
+| Record custom behavior on domain | `event.macro.domain`
 
 
 ### Event Listener

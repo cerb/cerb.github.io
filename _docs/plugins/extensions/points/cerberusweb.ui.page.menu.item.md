@@ -28,10 +28,8 @@ jumbotron:
 
 # Extensions
 
-| JIRA | `wgm.jira.setup.menu.plugins`
 | Simulator | `simulator.setup.menu.mail.simulator`
 | Translation Editor | `translators.setup.menu.mail.translations`
-| Twitter | `wgmtwitter.setup.menu.plugins.twitter`
 
 <div class="section-nav">
 	<div class="left">

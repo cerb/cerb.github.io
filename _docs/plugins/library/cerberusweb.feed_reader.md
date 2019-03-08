@@ -33,7 +33,7 @@ This plugin adds new records for Feeds and Feed Items.  These can be used to sha
 
 ### Bot Event
 
-| Custom behavior on feed item | `event.macro.feeditem`
+| Record custom behavior on feed item | `event.macro.feeditem`
 
 
 ### Event Listener

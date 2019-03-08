@@ -33,7 +33,7 @@ This plugin adds flexible Sensor objects that can be used for network and server
 
 ### Bot Event
 
-| Custom behavior on sensor | `event.macro.sensor`
+| Record custom behavior on sensor | `event.macro.sensor`
 
 
 ### Page Section

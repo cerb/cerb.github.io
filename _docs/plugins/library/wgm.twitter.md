@@ -31,14 +31,8 @@ This plugin provides integration with Twitter via their API. This plugin is inte
 
 # Extensions
 
-### Page Menu Item
-
-| Twitter | `wgmtwitter.setup.menu.plugins.twitter`
-
-
 ### Page Section
 
-| Setup Page Twitter Section | `wgmtwitter.setup.twitter`
 | Twitter Message Profile Section | `cerberusweb.profiles.twitter.message`
 
 

@@ -33,7 +33,7 @@ Create and categorize articles to share knowledge between workers or your commun
 
 ### Bot Event
 
-| Custom behavior on knowledgebase article | `event.macro.kb_article`
+| Record custom behavior on knowledgebase article | `event.macro.kb_article`
 
 
 ### Controller

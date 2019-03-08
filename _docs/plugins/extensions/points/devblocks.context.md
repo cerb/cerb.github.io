@@ -73,6 +73,7 @@ jumbotron:
 | OAuth App | `cerberusweb.contexts.oauth.app`
 | Opportunity | `cerberusweb.contexts.opportunity`
 | Organization | `cerberusweb.contexts.org`
+| Package | `cerberusweb.contexts.package.library`
 | Profile Tab | `cerberusweb.contexts.profile.tab`
 | Profile Widget | `cerberusweb.contexts.profile.widget`
 | Project Board Column | `cerberusweb.contexts.project.board.column`

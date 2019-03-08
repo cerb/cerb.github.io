@@ -38,7 +38,7 @@ This plugin adds Server objects that can be used to manage datacenter assets.
 
 ### Bot Event
 
-| Custom behavior on server | `event.macro.server`
+| Record custom behavior on server | `event.macro.server`
 
 
 ### Event Listener

@@ -38,6 +38,7 @@ jumbotron:
 | Maintenance | `cron.maint`
 | Network and service monitoring | `cerberusweb.datacenter.sensors.cron`
 | Notifications Emailer | `wgm.notifications.emailer.cron`
+| Packages Importer | `cron.packages`
 | Reminders | `cron.reminders`
 | Search Indexer | `cron.search`
 | Storage Manager | `cron.storage`

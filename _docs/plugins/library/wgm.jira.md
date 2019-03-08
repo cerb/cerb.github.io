@@ -33,11 +33,11 @@ This plugin provides integration with Atlassian JIRA via their REST API.  It is 
 
 ### Bot Event
 
-| Custom behavior on JIRA issue | `event.macro.jira_issue`
-| Custom behavior on JIRA project | `event.macro.jira_project`
 | New JIRA issue | `wgmjira.event.issue.created`
 | New comment on JIRA issue | `wgmjira.event.issue.commented`
 | New status on JIRA issue | `wgmjira.event.issue.status.changed`
+| Record custom behavior on JIRA issue | `event.macro.jira_issue`
+| Record custom behavior on JIRA project | `event.macro.jira_project`
 
 
 ### Page Section

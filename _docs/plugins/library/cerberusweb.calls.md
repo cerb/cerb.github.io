@@ -38,7 +38,7 @@ This plugin adds a new Call record type for logging incoming and outgoing phone 
 
 ### Bot Event
 
-| Custom behavior on call | `event.macro.call`
+| Record custom behavior on call | `event.macro.call`
 
 
 ### Event Listener

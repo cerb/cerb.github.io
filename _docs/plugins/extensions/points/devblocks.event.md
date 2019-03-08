@@ -43,29 +43,6 @@ jumbotron:
 | Conversation with portal visitor | `event.message.chat.portal`
 | Conversation with worker | `event.message.chat.worker`
 | Custom API request | `event.api.custom_request`
-| Custom behavior on JIRA issue | `event.macro.jira_issue`
-| Custom behavior on JIRA project | `event.macro.jira_project`
-| Custom behavior on bot | `event.macro.bot`
-| Custom behavior on calendar event | `event.macro.calendar_event`
-| Custom behavior on calendar | `event.macro.calendar`
-| Custom behavior on call | `event.macro.call`
-| Custom behavior on contact | `event.macro.contact`
-| Custom behavior on domain | `event.macro.domain`
-| Custom behavior on email address | `event.macro.address`
-| Custom behavior on feed item | `event.macro.feeditem`
-| Custom behavior on group | `event.macro.group`
-| Custom behavior on knowledgebase article | `event.macro.kb_article`
-| Custom behavior on message | `event.macro.message`
-| Custom behavior on notification | `event.macro.notification`
-| Custom behavior on opportunity | `event.macro.crm.opportunity`
-| Custom behavior on organization | `event.macro.org`
-| Custom behavior on reminder | `event.macro.reminder`
-| Custom behavior on sensor | `event.macro.sensor`
-| Custom behavior on server | `event.macro.server`
-| Custom behavior on task | `event.macro.task`
-| Custom behavior on ticket | `event.macro.ticket`
-| Custom behavior on time tracking entry | `event.macro.timetracking`
-| Custom behavior on worker | `event.macro.worker`
 | Dashboard get metric for widget | `event.dashboard.widget.get_metric`
 | Dashboard render widget | `event.dashboard.widget.render`
 | Data Query Datasource | `event.data.query.datasource`
@@ -81,11 +58,35 @@ jumbotron:
 | New task created | `event.task.created.worker`
 | Record changed | `event.record.changed`
 | Record commented on | `event.comment.created.worker`
+| Record custom behavior on JIRA issue | `event.macro.jira_issue`
+| Record custom behavior on JIRA project | `event.macro.jira_project`
+| Record custom behavior on bot | `event.macro.bot`
+| Record custom behavior on calendar event | `event.macro.calendar_event`
+| Record custom behavior on calendar | `event.macro.calendar`
+| Record custom behavior on call | `event.macro.call`
+| Record custom behavior on contact | `event.macro.contact`
+| Record custom behavior on domain | `event.macro.domain`
+| Record custom behavior on email address | `event.macro.address`
+| Record custom behavior on feed item | `event.macro.feeditem`
+| Record custom behavior on group | `event.macro.group`
+| Record custom behavior on knowledgebase article | `event.macro.kb_article`
+| Record custom behavior on message | `event.macro.message`
+| Record custom behavior on notification | `event.macro.notification`
+| Record custom behavior on opportunity | `event.macro.crm.opportunity`
+| Record custom behavior on organization | `event.macro.org`
+| Record custom behavior on reminder | `event.macro.reminder`
+| Record custom behavior on sensor | `event.macro.sensor`
+| Record custom behavior on server | `event.macro.server`
+| Record custom behavior on task | `event.macro.task`
+| Record custom behavior on ticket | `event.macro.ticket`
+| Record custom behavior on time tracking entry | `event.macro.timetracking`
+| Record custom behavior on worker | `event.macro.worker`
 | Recurrent behavior | `event.behavior.recurrent`
 | Webhook received | `event.webhook.received`
 | [DEPRECATED] [UI] During a message reply | `event.mail.reply.during.ui.worker`
 | [UI] Before composing a message reply | `event.mail.reply.pre.ui.worker`
 | [UI] Before composing a new message | `event.mail.compose.pre.ui.worker`
+| [UI] Record editor opened | `event.ui.card.editor.opened.worker`
 | [UI] Render record worklist | `event.ui.worklist.render.worker`
 | [UI] Respond to Ajax HTTP request | `event.ajax.request`
 

@@ -33,7 +33,7 @@ Track time spent on various helpdesk activities (replying to tickets, etc).  Thi
 
 ### Bot Event
 
-| Custom behavior on time tracking entry | `event.macro.timetracking`
+| Record custom behavior on time tracking entry | `event.macro.timetracking`
 
 
 ### Event Listener

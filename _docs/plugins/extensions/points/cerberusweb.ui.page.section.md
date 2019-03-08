@@ -67,7 +67,6 @@ jumbotron:
 | Gpg Public Key Section | `core.page.profiles.gpg_public_key`
 | Group Section | `core.page.profiles.group`
 | HTML Template Section | `core.page.profiles.mail_html_template`
-| Import Package Section | `core.page.setup.import_package`
 | Incoming Mail Section | `core.page.setup.mail_incoming`
 | Internal Section Calendars | `core.internal.section.calendars`
 | Internal Section Custom Fieldsets | `core.internal.section.custom_fieldsets`
@@ -87,6 +86,9 @@ jumbotron:
 | Opp Section | `crm.page.profiles.opportunity`
 | Organization Section | `core.page.profiles.organization`
 | Outgoing Mail Section | `core.page.setup.mail_outgoing`
+| Package Import Section | `core.page.setup.package.import`
+| Package Library Section | `core.page.setup.package.library`
+| Package Section | `core.page.profiles.package_library`
 | Plugin Library Section | `core.page.setup.plugin_library`
 | Plugins Section | `core.page.setup.plugins`
 | Profile Tab Section | `core.page.profiles.profile_tab`
@@ -105,10 +107,8 @@ jumbotron:
 | Sensor Page Section | `cerberusweb.profiles.sensor`
 | Server Page Section | `cerberusweb.profiles.server`
 | Sessions Section | `core.page.setup.sessions`
-| Setup Page JIRA Section | `wgm.jira.setup.section`
 | Setup Page Simulator Section | `simulator.setup.section.simulator`
 | Setup Page Translations Section | `translators.setup.section.translations`
-| Setup Page Twitter Section | `wgmtwitter.setup.twitter`
 | Skill Section | `core.page.profiles.skill`
 | Skills Section | `core.page.setup.skills`
 | Skillset Section | `core.page.profiles.skillset`

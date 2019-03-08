@@ -66,19 +66,6 @@ The core functionality of Cerb.
 | Conversation moved in group | `event.mail.moved.group`
 | Conversation with worker | `event.message.chat.worker`
 | Custom API request | `event.api.custom_request`
-| Custom behavior on bot | `event.macro.bot`
-| Custom behavior on calendar event | `event.macro.calendar_event`
-| Custom behavior on calendar | `event.macro.calendar`
-| Custom behavior on contact | `event.macro.contact`
-| Custom behavior on email address | `event.macro.address`
-| Custom behavior on group | `event.macro.group`
-| Custom behavior on message | `event.macro.message`
-| Custom behavior on notification | `event.macro.notification`
-| Custom behavior on organization | `event.macro.org`
-| Custom behavior on reminder | `event.macro.reminder`
-| Custom behavior on task | `event.macro.task`
-| Custom behavior on ticket | `event.macro.ticket`
-| Custom behavior on worker | `event.macro.worker`
 | Dashboard get metric for widget | `event.dashboard.widget.get_metric`
 | Dashboard render widget | `event.dashboard.widget.render`
 | Data Query Datasource | `event.data.query.datasource`
@@ -90,10 +77,24 @@ The core functionality of Cerb.
 | New task created | `event.task.created.worker`
 | Record changed | `event.record.changed`
 | Record commented on | `event.comment.created.worker`
+| Record custom behavior on bot | `event.macro.bot`
+| Record custom behavior on calendar event | `event.macro.calendar_event`
+| Record custom behavior on calendar | `event.macro.calendar`
+| Record custom behavior on contact | `event.macro.contact`
+| Record custom behavior on email address | `event.macro.address`
+| Record custom behavior on group | `event.macro.group`
+| Record custom behavior on message | `event.macro.message`
+| Record custom behavior on notification | `event.macro.notification`
+| Record custom behavior on organization | `event.macro.org`
+| Record custom behavior on reminder | `event.macro.reminder`
+| Record custom behavior on task | `event.macro.task`
+| Record custom behavior on ticket | `event.macro.ticket`
+| Record custom behavior on worker | `event.macro.worker`
 | Recurrent behavior | `event.behavior.recurrent`
 | [DEPRECATED] [UI] During a message reply | `event.mail.reply.during.ui.worker`
 | [UI] Before composing a message reply | `event.mail.reply.pre.ui.worker`
 | [UI] Before composing a new message | `event.mail.compose.pre.ui.worker`
+| [UI] Record editor opened | `event.ui.card.editor.opened.worker`
 | [UI] Render record worklist | `event.ui.worklist.render.worker`
 | [UI] Respond to Ajax HTTP request | `event.ajax.request`
 
@@ -193,7 +194,6 @@ The core functionality of Cerb.
 | Gpg Public Key Section | `core.page.profiles.gpg_public_key`
 | Group Section | `core.page.profiles.group`
 | HTML Template Section | `core.page.profiles.mail_html_template`
-| Import Package Section | `core.page.setup.import_package`
 | Incoming Mail Section | `core.page.setup.mail_incoming`
 | Internal Section Calendars | `core.internal.section.calendars`
 | Internal Section Custom Fieldsets | `core.internal.section.custom_fieldsets`
@@ -208,6 +208,9 @@ The core functionality of Cerb.
 | OAuth App Section | `core.page.profiles.oauth_app`
 | Organization Section | `core.page.profiles.organization`
 | Outgoing Mail Section | `core.page.setup.mail_outgoing`
+| Package Import Section | `core.page.setup.package.import`
+| Package Library Section | `core.page.setup.package.library`
+| Package Section | `core.page.profiles.package_library`
 | Plugin Library Section | `core.page.setup.plugin_library`
 | Plugins Section | `core.page.setup.plugins`
 | Profile Tab Section | `core.page.profiles.profile_tab`
@@ -320,6 +323,7 @@ The core functionality of Cerb.
 | Notification | `cerberusweb.contexts.notification`
 | OAuth App | `cerberusweb.contexts.oauth.app`
 | Organization | `cerberusweb.contexts.org`
+| Package | `cerberusweb.contexts.package.library`
 | Profile Tab | `cerberusweb.contexts.profile.tab`
 | Profile Widget | `cerberusweb.contexts.profile.widget`
 | Public Key | `cerberusweb.contexts.gpg_public_key`
@@ -346,6 +350,7 @@ The core functionality of Cerb.
 | Mail Queue Processor | `cron.mail_queue`
 | Mailbox Checker and Email Downloader | `cron.mailbox`
 | Maintenance | `cron.maint`
+| Packages Importer | `cron.packages`
 | Reminders | `cron.reminders`
 | Search Indexer | `cron.search`
 | Storage Manager | `cron.storage`
