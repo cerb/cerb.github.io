@@ -20,3 +20,8 @@ Profiles are completely customizable. You can add your own tabs, and change or r
 Each profile tab has a _type_ that determines what it displays. New profile tab types can be implemented with [plugins](/docs/plugins/).
 
 By default, new profile tabs are [dashboards](/docs/dashboards/).
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/using-cerb/records/profiles.png" class="screenshot">
+</div>
+

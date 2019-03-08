@@ -19,5 +19,6 @@ When you need to view the [profile](/docs/profiles/) page of each matching [reco
 
 You can use the `[` and `]` keyboard shortcuts to navigate backward and forward through the list, respectively.
 
-{% comment %}
-{% endcomment %}
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/using-cerb/workspaces/explore.png" class="screenshot">
+</div>
