@@ -47,7 +47,7 @@ The second parameter to the [date](/docs/bots/scripting/filters/#date) filter ca
 {% raw %}
 {% set ts_now = date() -%}
 
-Bangalore: {{ts_now|date(time_format, 'Asia/Calcutta')}}
+Bangalore: {{ts_now|date(time_format, 'Asia/Kolkata')}}
 Berlin: {{ts_now|date(time_format, 'Europe/Berlin')}}
 New York: {{ts_now|date(time_format, 'America/New_York')}}
 {% endraw %}

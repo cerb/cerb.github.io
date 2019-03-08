@@ -22,6 +22,7 @@ Various methods of authentication are supported:
 
 Plugins can [implement new service provider types](/docs/plugins/extensions/points/cerb.connected_service.provider/).
 
-Services may provide single sign-on (SSO) functionality for authenticating worker logins from a corporate directory.
+Services may provide [single sign-on](/guides/) (SSO) functionality for authenticating worker logins from a corporate directory.
 
-Services may also support the creation of multiple [connected accounts](/docs/connected-accounts/) for use in bot automation.
+Services may also support the creation of multiple [connected accounts](/docs/connected-accounts/) for use in [bot](/docs/bots/) automation.
+

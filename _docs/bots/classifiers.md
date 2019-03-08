@@ -13,7 +13,7 @@ jumbotron:
     url: /docs/bots/
 ---
 
-**Classifiers** drastically simplify the implementation of machine learning[^machine-learning] behaviors in [bots](/docs/bots). A classifier takes textual input and statistically predicts a most likely **classification** based on its accumulated learning from human-supervised **training examples**.
+**Classifiers** provide a simple implementation of machine learning[^machine-learning] behaviors in [bots](/docs/bots). A classifier takes textual input and statistically predicts a most likely **classification** based on its accumulated learning from human-supervised **training examples**.
 
 Here are some common examples:
 

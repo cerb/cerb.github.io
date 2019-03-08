@@ -18,7 +18,7 @@ jumbotron:
     url: /docs/bots/behaviors/
 ---
 
-A **decision** represents a point where a behavior needs to choose the best **outcome** from any number of possible outcomes.
+A **decision** represents a point where a [bot](/docs/bots/) [behavior](/docs/bots/behaviors/) needs to choose the best **outcome** from any number of possible outcomes.
 
 The first outcome to satisfy all of its **conditions** is chosen. For this reason, the order of outcomes within a decision is very important.
 

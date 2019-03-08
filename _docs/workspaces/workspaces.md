@@ -6,7 +6,7 @@ jumbotron:
   tagline: Stay on the same page while collaborating from anywhere
 ---
 
-A **workspace** is a page designed to optimize a particular workflow.  Workspaces can be shared by everyone, shared within a [group](/docs/groups/) or role, or private to a specific [worker](/docs/workers/).
+A **workspace** is a page designed to optimize a particular workflow.  Workspaces can be shared by everyone, shared within a [group](/docs/groups/) or [role](/docs/roles/), or private to a specific [worker](/docs/workers/).
 
 You can add any number of workspace pages to your [navigation bar](/docs/navigation/#pages) and personalize Cerb into your own mission control.
 

@@ -20,11 +20,11 @@ jumbotron:
 * @bins on dates (month, year, etc)
 {% endcomment %}
 
-Data queries retrieve data with simple textual queries and prepares the results for visualizations.
+Data queries retrieve data with simple textual queries and prepare the results for visualizations.
 
-These textual queries are much easier to automate in bot behaviors, dashboard widgets, or the API.
+These textual queries are very simple to automate in bot behaviors, dashboard widgets, or the API.
 
-Every data query begins by specifying a type, like `type:worklist.subtotals`. Other fields are available depending on the type of data being requested.
+Every data query begins by specifying a type, like `type:worklist.subtotals`. Additional fields are available depending on the type of data being requested.
 
 Data is returned in JSON format. A `format:` parameter prepares the response for different visualizations.
 

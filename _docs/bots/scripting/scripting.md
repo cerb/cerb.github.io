@@ -61,7 +61,7 @@ Hello, {{first_name}}!
 </code>
 </pre>
 
-This is just scratching the surface. Templates can use placeholder [dictionaries](/docs/bots/behaviors/dictionaries/), filters, functions, conditional logic, and much more.
+This is just scratching the surface. Templates can use placeholder [dictionaries](/docs/bots/behaviors/dictionaries/), [filters](/docs/bots/scripting/filters/), [functions](/docs/bots/scripting/functions/), [conditional logic](/docs/bots/scripting/conditional-logic/), and much more.
 
 We'll cover those topics in the next sections.
 

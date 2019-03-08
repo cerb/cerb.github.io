@@ -34,11 +34,11 @@ links:ticket
 </code>
 </pre>
 
-### Deep search by links:
+### Deep search by links
 
 You can also use [deep search](/docs/search/deep-search/) to filter records based on any property of linked records.
 
-Append the record alias to `links` following a period (`.`), then the expression can be any [search query](/docs/search/) for that record type:
+Append the [record type alias](/docs/records/types/) to `links` following a period (`.`), then the expression can be any [search query](/docs/search/) for that record type:
 
 <pre>
 <code class="language-text">

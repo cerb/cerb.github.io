@@ -31,7 +31,7 @@ The possible **expressions** depend on the type of filter: text, number, date, r
 
 ### Listing filters by record type
 
-You can use the search menu to list the available filters for any record type:
+You can use the search menu to list the available filters for any [record type](/docs/records/types/):
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/search/search-menu.png" class="screenshot">

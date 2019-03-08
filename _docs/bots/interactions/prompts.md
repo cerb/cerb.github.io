@@ -49,7 +49,15 @@ Let's look at each of these options in detail.
 
 Rather than always requiring the user to type an answer, prompts make it easier for them to respond in the right format.
 
-There are different types of prompts available depending on the information your bot needs to collect.
+There are different types of prompts available depending on the information your bot needs to collect:
+
+* [Buttons](/docs/bots/interactions/prompts/buttons/)
+* [Chooser](/docs/bots/interactions/prompts/chooser/)
+* [Date Input](/docs/bots/interactions/prompts/date-input/)
+* [File Upload](/docs/bots/interactions/prompts/file-upload/)
+* [Images](/docs/bots/interactions/prompts/images/)
+* [Text](/docs/bots/interactions/prompts/text-input/)
+* [Wait](/docs/bots/interactions/prompts/wait/)
 
 The response to a prompt can determine the next step in a bot's behavior.
 

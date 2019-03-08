@@ -95,7 +95,7 @@ The conversational behavior then starts, with its initial state provided by the 
 
 For instance, imagine a troubleshooter that has a user try multiple solutions to uncover a root cause.  In some situations it may find a common issue right away, and in others it may need to ask many follow-up questions to identify an uncommon issue.
 
-Conversational behaviors aren't inherently associated with a specific record type. That means you can reuse the same conversational behavior for multiple interactions and adapt it to different record types.
+Conversational behaviors aren't inherently associated with a specific [record type](/docs/records/types/). That means you can reuse the same conversational behavior for multiple interactions and adapt it to different record types.
 
 Consider a "Remind me" interaction. With interactions, you can register a single "Remind me about this" interaction on every record at the same time (with interaction point `record:*`), which uses the same handler, and the same conversational behavior.
 

@@ -21,7 +21,7 @@ jumbotron:
 
 In the last section we learned about [variables](/docs/bots/scripting/variables/). You have to [set](/docs/bots/scripting/commands/#set) a variable before using it, and it can only be referenced by the same [template](/docs/bots/scripting/) that set it. In other words, they are temporary.
 
-**Placeholders** are a special kind of variable that retain their value for the entire duration of a bot [behavior](/docs/bots/behaviors/). Once set, a placeholder is available for use by all templates within the same behavior.
+**Placeholders** are a special kind of variable that retain their value for the entire duration of a [bot](/docs/bots/) [behavior](/docs/bots/behaviors/). Once set, a placeholder is available for use by all templates within the same behavior.
 
 Every key from a bot behavior's [dictionary](/docs/bots/behaviors/dictionaries/) is automatically available as a placeholder.
 
