@@ -6,7 +6,7 @@ redirect_from:
   - /releases/
 jumbotron:
   title: Release History
-  tagline: Cerb has been constantly improved for the past 16+ years
+  tagline: Cerb has been constantly improved for the past 17+ years
 ---
 
 {% assign last_section = '' %}
