@@ -1,6 +1,6 @@
 ---
 title: Avatars
-permalink: /docs/setup/avatars/
+permalink: /docs/setup/records/avatars/
 toc:
   expand: Setup
 jumbotron:

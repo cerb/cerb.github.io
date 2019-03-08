@@ -21,6 +21,6 @@ jumbotron:
 The automated email messages sent by Cerb for various events are now configurable (i.e. send from, send as, subject, and body). These include new worker invitations, worker new email confirmations, and worker account recovery.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/setup/mail/templates.png" class="screenshot">
+<img src="/assets/images/docs/setup/mail-templates.png" class="screenshot">
 </div>
 

@@ -1,6 +1,6 @@
 ---
 title: Records
-permalink: /docs/setup/records-configure/
+permalink: /docs/setup/records/configure/
 toc:
   expand: Setup
 jumbotron:

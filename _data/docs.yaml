@@ -169,7 +169,7 @@
   - setup/records
   - setup/team
   - setup/mail
-  - setup/services
+  - setup/packages
   - setup/storage
   - setup/plugins
 

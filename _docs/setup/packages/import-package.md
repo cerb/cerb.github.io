@@ -1,7 +1,7 @@
 ---
 title: Import Package
-excerpt: ...
-permalink: /docs/setup/configure/import-package/
+excerpt: ~
+permalink: /docs/setup/packages/import-package/
 toc:
   expand: Setup
 jumbotron:

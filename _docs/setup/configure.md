@@ -17,9 +17,9 @@ jumbotron:
 
 ## Configure
 
+- [Authentication](/docs/setup/configure/authentication/)
 - [Branding](/docs/setup/configure/branding/)
 - [Cache](/docs/setup/configure/cache/)
-- [Import Package](/docs/setup/configure/import-package/)
 - [License](/docs/setup/configure/license/)
 - [Localization](/docs/setup/configure/localization/)
 - [Scheduler](/docs/setup/configure/scheduler/)

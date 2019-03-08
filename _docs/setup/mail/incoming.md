@@ -19,7 +19,7 @@ jumbotron:
 ---
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/setup/mail/settings.png" class="screenshot">
+<img src="/assets/images/docs/setup/mail-settings.png" class="screenshot">
 </div>
 
 ## Settings
