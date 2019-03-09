@@ -66,9 +66,10 @@ Here's the basic structure of a package:
     "name": "Package Name",
     "revision": 1,
     "requires": {
-      "cerb_version": "9.1.4",
+      "cerb_version": "9.2.0",
       "plugins": []
     },
+    "library": {},
     "configure": {
       "placeholders": [],
       "prompts": []
@@ -86,6 +87,7 @@ First, let's look at the `package` section:
 * **name** is the human-friendly name of the package.
 * **revision** is incremented each time the package changes.
 * **requires** specifies the requirements of the package (Cerb version, installed plugins).
+* **library** is optional metadata for the package library. This is covered in more detail below.
 * **configure** defines the `prompts` and `placeholders` used to configure this package. We'll cover those more in a minute.
 
 We also see two other keys:
@@ -119,6 +121,65 @@ There are several sources of placeholders:
 * **Built-in placeholders** provide common functionality like generating random numbers or passwords.
 * **Prompts** ask for input to configure the package before it's imported. These can be different every time the package is used, and they're the key to designing reusable packages.
 * **UIDs** are unique identifiers for referencing specific [records](/guides/packages/create-records/) included within the package. These are automatically replaced with record IDs once imported. e.g. `{% raw %}{{{uid.example_uid}}}{% endraw %}`
+
+# Package Library
+
+Pre-approved packages can be added to the package library as templates for use by workers when creating new records.
+
+The **library** key uses the following structure:
+
+<pre style="max-height:29.5em;">
+<code class="language-json">
+{% raw %}
+{
+  "package": {
+    "library": {
+      "name": "Package Name",
+      "uri": "a_unique_package_identifier",
+      "description": "A description of your package",
+      "instructions": "Instructions with **Markdown** formatting.",
+      "point": "an_extension_point",
+      "image": "data:image/png;base64,..."
+    }
+  }
+}
+{% endraw %}
+</code>
+</pre>
+
+* **name** is the human-friendly name of the package shown in the library.
+* **uri** is a globally unique identifier for the package (lowercase letters, numbers, and underscores).
+* **description** is a brief summary of the package's contents.
+* **instructions** includes any additional information a worker may need to know before using the package. This can include Markdown formatting. Multiple lines are delimited with `\r\n` characters.
+* **point** is one of the library sections described below.
+* **image** is a Base64-encoded PNG image (480 x 270) in data URI format. This key may be omitted or blank to use the default artwork for the given `point`.
+
+### Library sections
+
+* `behavior` 
+* `behavior_action` 
+* `behavior_action:`[&lt;event.point.id&gt;](/docs/plugins/extensions/points/devblocks.event/#extensions) 
+* `behavior_loop` 
+* `behavior_switch` 
+* `calendar` 
+* `connected_service` 
+* `profile_tab` 
+* `profile_tab:`[&lt;record_alias&gt;](/docs/records/types/)
+* `profile_widget` 
+* `profile_widget:`[&lt;record_alias&gt;](/docs/records/types/) 
+* `project_board` 
+* `task` 
+* `workspace_page` 
+* `workspace_tab` 
+* `workspace_widget`
+
+### Adding packages to the library
+
+Once your package is complete, you can add it to the library from **Setup >> Packages >> Library**.
+
+Click **(+)** in the top right of the packages worklist.
+
+Paste your package into the **Package: (JSON)** section and click the **Save Changes** button.
 
 # Making packages configurable
 

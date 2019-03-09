@@ -26,12 +26,6 @@ jumbotron:
 * TOC
 {:toc}
 
-{% comment %}
-* Import from API
-* Import from bots
-* Import from UI
-{% endcomment %}
-
 # What are packages?
 
 {% comment %}
