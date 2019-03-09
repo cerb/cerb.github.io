@@ -62,88 +62,31 @@ Next, you need to create a new oauth app on GitHub for Cerb to connect to. Revie
 
 # Create the GitHub service in Cerb
 
-1. Navigate to **Setup >> Configure >> Import Package**.
+1. Navigate to **Search >> Connected Services**.
 
-1. Paste the following package:
+1. Click the **(+)** icon in the top right of the list.
 
-	<pre style="max-height:29.5em;">
-	<code class="language-json">
-	{% raw %}
-	{
-	  "package": {
-	    "name": "GitHub Connected Service",
-	    "revision": 1,
-	    "requires": {
-	      "cerb_version": "9.1.0",
-	      "plugins": []
-	    },
-	    "configure": {
-	      "placeholders": [],
-	      "prompts": [
-	        {
-	          "type": "text",
-	          "label": "Client ID",
-	          "key": "prompt_client_id",
-	          "params": {
-	            "default": "",
-	            "placeholder": "(paste your Client ID)"
-	          }
-	        },
-	        {
-	          "type": "text",
-	          "label": "Client Secret",
-	          "key": "prompt_client_secret",
-	          "params": {
-	            "default": "",
-	            "placeholder": "(paste your Client Secret)"
-	          }
-	        }
-	      ]
-	    }
-	  },
-	  "records": [
-	    {
-	      "uid": "service_github",
-	      "_context": "connected_service",
-	      "name": "GitHub",
-	      "extension_id": "cerb.service.provider.oauth2",
-	      "params": {
-	        "grant_type": "authorization_code",
-	        "client_id": "{{{prompt_client_id}}}",
-	        "client_secret": "{{{prompt_client_secret}}}",
-	        "authorization_url": "https://github.com/login/oauth/authorize",
-	        "access_token_url": "https://github.com/login/oauth/access_token",
-	        "resource_owner_url": "",
-	        "scope": "user public_repo notifications",
-	        "approval_prompt": "auto"
-	      }
-	    },
-	    {
-	      "uid": "account_github",
-	      "_context": "connected_account",
-	      "name": "GitHub",
-	      "service_id": "{{{uid.service_github}}}",
-	      "owner__context": "cerberusweb.contexts.app",
-	      "owner_id": "0",
-	      "params": {}
-	    }
-	  ]
-	}
-	{% endraw %}
-	</code>
-	</pre>
+1. Select **GitHub**.
 
-1. Click the **Import** button.
+	<div class="cerb-screenshot">
+	<img src="/assets/images/guides/common/package-library-connected-services.png" class="screenshot">
+	</div>
 
-1. Enter your client ID and secret from GitHub.
+1. Enter your Client ID and Client Secret.
 
-1. Click the **Import** button again.
+	<div class="cerb-screenshot">
+	<img src="/assets/images/guides/github/package-library-service-github.png" class="screenshot">
+	</div>
+
+1. Click the **Create** button.
 
 # Link the connected account to GitHub in Cerb
 
-1. Click on the **GitHub** bubble in the **Connected Accounts** section after importing the above package.
+1. Navigate to **Search >> Connected Accounts**.
 
-1. Click on the **Edit** button in the card popup.
+1. Click the **(+)** icon in the top right of the list.
+
+1. Select **GitHub**.
 
 1. Click the blue **Link to GitHub** button.
 

@@ -60,88 +60,31 @@ Next, you need to create a new app on Slack for Cerb to connect to.
 
 # Create the Slack service in Cerb
 
-1. Navigate to **Setup >> Configure >> Import Package**.
+1. Navigate to **Search >> Connected Services**.
 
-1. Paste the following package:
+1. Click the **(+)** icon in the top right of the list.
 
-	<pre style="max-height:29.5em;">
-	<code class="language-json">
-	{% raw %}
-	{
-	  "package": {
-	    "name": "Slack Connected Service",
-	    "revision": 1,
-	    "requires": {
-	      "cerb_version": "9.1.0",
-	      "plugins": []
-	    },
-	    "configure": {
-	      "placeholders": [],
-	      "prompts": [
-	        {
-	          "type": "text",
-	          "label": "Client ID",
-	          "key": "prompt_client_id",
-	          "params": {
-	            "default": "",
-	            "placeholder": "(paste your Client ID)"
-	          }
-	        },
-	        {
-	          "type": "text",
-	          "label": "Client Secret",
-	          "key": "prompt_client_secret",
-	          "params": {
-	            "default": "",
-	            "placeholder": "(paste your Client Secret)"
-	          }
-	        }
-	      ]
-	    }
-	  },
-	  "records": [
-	    {
-	      "uid": "service_slack",
-	      "_context": "connected_service",
-	      "name": "Slack",
-	      "extension_id": "cerb.service.provider.oauth2",
-	      "params": {
-	        "grant_type": "authorization_code",
-	        "client_id": "{{{prompt_client_id}}}",
-	        "client_secret": "{{{prompt_client_secret}}}",
-	        "authorization_url": "https://slack.com/oauth/authorize",
-	        "access_token_url": "https://slack.com/api/oauth.access",
-	        "resource_owner_url": "",
-	        "scope": "channels:read chat:write:bot chat:write:user im:read im:write users:read users.profile:read",
-	        "approval_prompt": "auto"
-	      }
-	    },
-	    {
-	      "uid": "account_slack",
-	      "_context": "connected_account",
-	      "name": "Slack",
-	      "service_id": "{{{uid.service_slack}}}",
-	      "owner__context": "cerberusweb.contexts.app",
-	      "owner_id": "0",
-	      "params": {}
-	    }
-	  ]
-	}
-	{% endraw %}
-	</code>
-	</pre>
+1. Select **Slack**.
 
-1. Click the **Import** button.
+	<div class="cerb-screenshot">
+	<img src="/assets/images/guides/common/package-library-connected-services.png" class="screenshot">
+	</div>
 
-1. Enter your client ID and secret from Slack.
+1. Enter your Client ID and Client Secret.
 
-1. Click the **Import** button again.
+	<div class="cerb-screenshot">
+	<img src="/assets/images/guides/slack/package-library-service-slack.png" class="screenshot">
+	</div>
+
+1. Click the **Create** button.
 
 # Link the connected account to Slack in Cerb
 
-1. Click on the **Slack** bubble in the **Connected Accounts** section after importing the above package.
+1. Navigate to **Search >> Connected Accounts**.
 
-1. Click on the **Edit** button in the card popup.
+1. Click the **(+)** icon in the top right of the list.
+
+1. Select **Slack**.
 
 1. Click the blue **Link to Slack** button.
 
