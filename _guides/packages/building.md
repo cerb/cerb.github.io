@@ -285,6 +285,87 @@ Whatever you type will be used as the new task name:
 <img src="/assets/images/guides/packages/building/prompts-text-imported.png" class="screenshot">
 </div>
 
+### Picklists
+
+Your package can prompt with a picklist of pre-defined options.
+
+This package will prompt you for the importance before creating a task:
+
+<pre style="max-height:29.5em;">
+<code class="language-json">
+{% raw %}
+{
+  "package": {
+    "name": "Example Package",
+    "requires": {
+      "cerb_version": "9.1.4",
+      "plugins": []
+    },
+    "configure": {
+      "prompts": [
+        {
+          "type": "picklist",
+          "label": "Importance",
+          "key": "prompt_importance",
+          "params": {
+            "options": {"Low":25,"Normal":50,"High":75,"Urgent":100},
+            "default": 50
+          }
+        }
+      ]
+    }
+  },
+  "records": [
+    {
+      "uid": "task_001",
+      "_context": "task",
+      "title": "New task",
+      "importance": "{{{prompt_importance}}}"
+    }
+  ]
+}
+{% endraw %}
+</code>
+</pre>
+
+When you import the package, you'll be prompted for the importance with a dropdown:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/packages/building/prompts-picklist-input.png" class="screenshot">
+</div>
+
+After importing the package, the new task has the importance you assigned:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/packages/building/prompts-picklist-imported.png" class="screenshot">
+</div>
+
+The options can be specified as a simple array:
+
+<pre style="max-height:29.5em;">
+<code class="language-json">
+{% raw %}
+"options": ["Option 1", "Option 2", "Option 3"]
+{% endraw %}
+</code>
+</pre>
+
+Or as an object with label/value pairs:
+
+<pre style="max-height:29.5em;">
+<code class="language-json">
+{% raw %}
+"options": {
+  "First": "Value 1",
+  "Second": "Value 2",
+  "Third": "Value 3",
+  "Fourth": "Value 4",
+  "Fifth": "Value 5"
+}
+{% endraw %}
+</code>
+</pre>
+
 ### Choosers
 
 Your package may also need to reference records that already exist in Cerb. For instance, your new **Onboarding Bot** may need to target a specific worker to set up their environment.
