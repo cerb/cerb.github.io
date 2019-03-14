@@ -88,7 +88,11 @@ position: relative;
 	</ul>
 </div>
 
+<a href="/signup/" class="cerb-button">Start a free evaluation</a>
+
+{% comment %}
 <button type="button" class="cerb-button" data-cerb-bot-interaction="cloud" data-cerb-bot-param-mode="signup">Start a free evaluation</button>
+{% endcomment %}
 
 {% comment %}
 <button type="button" class="cerb-button" data-cerb-bot-interaction="cloud">Manage your subscription</button>

@@ -14,7 +14,7 @@ jumbotron:
 
 Using your web browser, navigate to the URL for your copy of Cerb.
 
-If you don't have a copy of Cerb yet, you can <a href="javascript:;" data-cerb-bot-interaction="cloud" data-cerb-bot-param-mode="signup">start a free evaluation</a>. We'll set up everything for you and send over the login information.
+If you don't have a copy of Cerb yet, you can <a href="/signup/">start a free evaluation</a>. We'll set up everything for you and send over the login information.
 
 ### Enter your email address
 

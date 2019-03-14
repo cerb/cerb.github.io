@@ -83,6 +83,8 @@ position: relative;
 	</ul>
 </div>
 
+<a href="/signup/" class="cerb-button">Start a free evaluation</a>
+
 <a href="/docs/installation/" class="cerb-button">Read the installation guide</a>
 
 <button type="button" class="cerb-button" data-cerb-bot-interaction="license">Buy and manage licenses</button>
