@@ -10,23 +10,17 @@ tags: cerb tips mailbag
 
 You can use [dashboards](/docs/dashboards/) to build your own reports.  Cerb also ships with many built-in reports that you can access from a workspace page.
 
-Click on the last item in the [navigation bar](/docs/navigation/) below the top left logo:
+1. Click on the last item in the [navigation bar](/docs/navigation/) below the top left logo:
 
-<div class="cerb-screenshot">
-<img src="/assets/images/tips/enable-reports/navbar-add.png" class="screenshot">
-</div>
+	<div class="cerb-screenshot">
+	<img src="/assets/images/tips/enable-reports/navbar-add.png" class="screenshot">
+	</div>
 
-Click on the **Help me create a page!** link:
+1. Click on the **(+)** icon above the pages worklist.
 
-<div class="cerb-screenshot">
-<img src="/assets/images/tips/enable-reports/help-me.png" class="screenshot">
-</div>
+1. Select **Reports** from the package library.
 
-Select **Reports** and click the **Save Changes** button:
-
-<div class="cerb-screenshot">
-<img src="/assets/images/tips/enable-reports/wizard.png" class="screenshot">
-</div>
+1. Click the **Create** button.
 
 You should now have a **Reports** page in your top navigation bar, that looks like:
 
