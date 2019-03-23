@@ -189,6 +189,24 @@ Capitalize the first character of a string (and lowercase the rest):
 Kina
 ```
 
+## cerb_translate
+
+(Added in [9.0](/releases/9.0/))
+
+Converts string IDs (like `status.open`) into text in the current worker’s language.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+The ticket is {{'status.open'|cerb_translate}}
+{% endraw %}
+</code>
+</pre>
+
+```
+The ticket is open.
+```
+
 ## context_name
 
 Convert a Cerb `context` ID into a human readable label:

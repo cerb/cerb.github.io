@@ -24,9 +24,30 @@ These functions are available in bot scripts and snippets:
 * TOC
 {:toc}
 
+## array_combine
+
+(Added in [9.0](/releases/9.0/))
+
+The **array_combine** function creates a new array with the given `keys` and `values`:
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set keys = ['name', 'age', 'email'] %}
+{% set values = ['Janey Youve', '30-ish', 'janey@cerb.example'] %}
+{% set person = array_combine(keys, values) %}
+{{person.name}} can be reached at {{person.email}}
+{% endraw %}
+</code>
+</pre>
+
+```
+Janey Youve can be reached at janey@cerb.example
+```
+
 ## array_diff
 
-The **array_diff** filter returns the items in the second array that are not present in the first array:
+The **array_diff** function returns the items in the second array that are not present in the first array:
 
 <pre>
 <code class="language-twig">
@@ -41,6 +62,85 @@ These are new: {{diff|join(', ')}}
 
 ```
 These are new: Cerb
+```
+
+## array_intersect
+
+(Added in [9.0](/releases/9.0/))
+
+Returns a new array for all the elements in array1 that are also present in array2. This is the opposite of [array_diff](#array_diff).
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set arr1 = ['Apple', 'Google', 'Microsoft'] %}
+{% set arr2 = ['Apple', 'Microsoft', 'Cerb'] %}
+{% set intersect = array_intersect(arr2, arr1) %}
+These are in both: {{intersect|join(', ')}}
+{% endraw %}
+</code>
+</pre>
+
+```
+These are in both: Apple, Microsoft
+```
+
+## array_sort_keys
+
+(Added in [9.0](/releases/9.0/))
+
+Sort an associative array by its keys rather than its values.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set arr = {"z":"A", "a":"B", "m":"C"} %}
+{% set arr = array_sort_keys(arr) %}
+{{arr|keys|join(',')}}
+{% endraw %}
+</code>
+</pre>
+
+```
+a,m,z
+```
+
+## array_unique
+
+(Added in [9.0](/releases/9.0/))
+
+Return a new array with only the distinct values from the `array` argument.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set arr = [1,1,2,2,3,3,4,4,5,5,6] %}
+Unique values {{array_unique(arr)|join(',')}}
+{% endraw %}
+</code>
+</pre>
+
+```
+Unique values 1,2,3,4,5,6
+```
+
+## array_values
+
+(Added in [9.0](/releases/9.0/))
+
+Return the values from an associative array as a new indexed array. For instance, this can affect the output in JSON encoding by using `[]` rather than `{key:value}`.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set arr = {"z":"A", "a":"B", "m":"C"} %}
+{{array_values(arr)|json_encode}}
+{% endraw %}
+</code>
+</pre>
+
+```
+["A","B","C"]
 ```
 
 ## attribute
@@ -115,6 +215,66 @@ This automatically adapts to use within Cerb and community portals (e.g. SSL, pr
 
 ```
 https://cerb.example/files/1/original_message.html
+```
+
+## cerb_has_priv
+
+(Added in [9.0](/releases/9.0/))
+
+Returns a boolean depending on whether the given actor has the given privilege among their roles. If no actor is given, the current worker is assumed. This allows bot functionality, snippets, and widgets, to adapt based on worker permissions. This is particularly useful in HTML-based profile widgets.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% if cerb_has_priv('contexts.cerberusweb.context.ticket.create', 'worker', 1) %}
+Worker #1 has permission to create tickets.
+{% endif %}
+{% endraw %}
+</code>
+</pre>
+
+```
+Worker #1 has permission to create tickets.
+```
+
+## cerb_record_readable
+
+(Added in [9.0](/releases/9.0/))
+
+Returns a boolean if the given actor has read access to the given record. If no actor is provided then the current worker is assumed. This allows bots and widgets to adapt based on record permissions. For instance, an HTML widget on a profile dashboard could only show a button to workers who can modify the record.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% if cerb_record_readable('ticket', 123, 'worker', 1) %}
+Worker #1 can read ticket #123.
+{% endif %}
+{% endraw %}
+</code>
+</pre>
+
+```
+Worker #1 can read ticket #123.
+```
+
+## cerb_record_writeable
+
+(Added in [9.0](/releases/9.0/))
+
+Returns a boolean if the given actor has write access to the given record. If no actor is provided then the current worker is assumed. This allows bots and widgets to adapt based on record permissions. For instance, an HTML widget on a profile dashboard could only show a button to workers who can modify the record.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% if cerb_record_writeable('ticket', 123, 'worker', 1) %}
+Worker #1 can modify ticket #123.
+{% endif %}
+{% endraw %}
+</code>
+</pre>
+
+```
+Worker #1 can modify ticket #123.
 ```
 
 ## cerb_url
