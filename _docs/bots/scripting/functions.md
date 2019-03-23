@@ -24,6 +24,29 @@ These functions are available in bot scripts and snippets:
 * TOC
 {:toc}
 
+## array_column
+
+(Added in [9.2.1](/releases/9.2.1/))
+
+The **array_column** function extracts a column from the elements of an array:
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set people = [
+	{"id": 1, "name": "Kina Halpue", "email": "kina@cerb.example"},
+	{"id": 2, "name": "Milo Dade", "email": "milo@cerb.example"},
+	{"id": 3, "name": "Janey Youve", "email": "janey@cerb.example"},
+] %}
+The email addresses are: {{array_column(people,'email')|join(', ')}}
+{% endraw %}
+</code>
+</pre>
+
+```
+The email addresses are: kina@cerb.example, milo@cerb.example, janey@cerb.example
+```
+
 ## array_combine
 
 (Added in [9.0](/releases/9.0/))
