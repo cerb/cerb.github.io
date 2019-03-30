@@ -96,7 +96,7 @@ Click the blue **Save changes** button in the bottom right.
 
 Now we're ready to create the bot that interacts with AWS using our connected account.
 
-Navigate to **Setup >> Configure >> Import Package**.
+Navigate to **Setup >> Packages >> Import**.
 
 Copy and paste the following behavior into the large text box:
 

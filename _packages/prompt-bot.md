@@ -30,7 +30,7 @@ This package creates a preconfigured conversational bot to demonstrate formattin
 
 # Installing the package
 
-Navigate to **Setup >> Configure >> Import Package**.
+Navigate to **Setup >> Packages >> Import**.
 
 Paste the following package into the large text box:
 

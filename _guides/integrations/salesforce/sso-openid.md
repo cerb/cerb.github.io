@@ -87,7 +87,7 @@ Log in to Cerb as an administrator.
 
 ## Create an OpenID service for Salesforce
 
-1. Navigate to **Setup >> Configure >> Import Package**.
+1. Navigate to **Setup >> Packages >> Import**.
 
 1. Paste the following package:
 

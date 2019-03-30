@@ -25,7 +25,7 @@ This package imports a collection of preconfigured saved searches.
 
 # Importing the package
 
-Navigate to **Setup >> Configure >> Import Package**.
+Navigate to **Setup >> Packages >> Import**.
 
 Paste the following package into the large text box:
 

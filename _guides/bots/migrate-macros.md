@@ -724,7 +724,7 @@ You should see a textarea for each bot that contains a package file:
 
 Once you've upgraded to Cerb 8.3.1 or later, you can import the generated packages to wrap your legacy macro behaviors in bot interactions.
 
-1. Navigate to **Setup >> Configure >> Import Package**.
+1. Navigate to **Setup >> Packages >> Import**.
 
 1. Paste a package into the text box.
 

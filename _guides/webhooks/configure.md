@@ -50,7 +50,7 @@ If you haven't already, you need to [install the webhooks plugin](/plugins/cerb.
 
 # Import a bot behavior to handle the webhook
 
-Navigate to **Setup >> Configure >> Import Package**.
+Navigate to **Setup >> Packages >> Import**.
 
 Paste the following into the textbox:
 
