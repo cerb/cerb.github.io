@@ -1,23 +1,26 @@
+{% assign page_path = page.url|downcase|remove_first:'/'|split:'/' %}
 <ul>
 	<li class="{% if page_path[0] == 'tour' %}current{% endif %}">
 		<a href="/tour/">Tour</a>
 	</li>
-	<li class="{% if page.url == '/pricing/' %}current{% endif %}">
-		<a href="/pricing/">Pricing</a>
-	</li>
-	<li class="{% if page.url contains '/docs/' or page.url contains '/resources/' or page.url contains '/guides/' or page.url contains '/packages/' %}current{% endif %}">
+	<li class="{% if page_path[0] == 'docs' or page_path[0] == 'resources' or page_path[0] == 'guides' or page_path[0] == 'packages' %}current{% endif %}">
 		<a href="/resources/">Learn</a>
 	</li>
-	<li class="{% if page.url == '/clients/' %}current{% endif %}">
+	<li class="{% if page_path[0] == 'pricing' %}current{% endif %}">
+		<a href="/pricing/">Pricing</a>
+	</li>
+	<li class="{% if page_path[0] == 'clients' %}current{% endif %}">
 		<a href="/clients/">Testimonials</a>
 	</li>
-	<li class="{% if page.url contains '/blog/' or page.url contains '/releases/' %}current{% endif %}">
+	<li class="{% if page_path[0] == 'blog' or page_path[0] == 'releases' %}current{% endif %}">
 		<a href="/blog/">News</a>
 	</li>
-	<li class="{% if page.url contains '/help/' %}current{% endif %}">
+	{% comment %}
+	<li class="{% if page_path[0] == 'help' %}current{% endif %}">
 		<a href="/help/">Help</a>
 	</li>
-	<li class="{% if page.url contains '/search/' %}current{% endif %}">
+	{% endcomment %}
+	<li class="{% if page_path[0] == 'search' %}current{% endif %}">
 		<form action="/search/" method="GET">
 		<input type="search" name="q" size="18" placeholder="search">
 		</form>
