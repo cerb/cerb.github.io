@@ -227,7 +227,7 @@ task
 
 ## convert_encoding
 
-Convert character encodings to the first argument from the second:
+Convert character encodings to the first argument from the second. If the second argument is blank then Cerb will attempt to auto-detect the current encoding.
 
 <pre>
 <code class="language-twig">
