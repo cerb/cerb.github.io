@@ -27,140 +27,17 @@ You can add or change recurring holiday events to meet your needs.
 
 # Importing the package
 
-Navigate to **Setup >> Configure >> Import Package**.
+As of [9.2](/releases/9.2/):
 
-Paste the following package into the large text box:
+1. Navigate to **Search >> Calendars**.
 
-<pre style="max-height: 29.25em;">
-<code class="language-json">
-{% raw %}
-{
-  "package": {
-    "name": "U.S. Holidays Calendars Import",
-    "cerb_version": "8.0.0",
-    "revision": 1,
-    "requires": {
-      "cerb_version": "8.0.0",
-      "plugins": [
-      ]
-    },
-    "configure": {
-      "prompts": [
-      ],
-      "placeholders": [
-      ]
-    }
-  },
-  "calendars": [
-    {
-      "uid": "calendar_001",
-      "name": "U.S. Holidays",
-      "owner": {
-        "context": "cerberusweb.contexts.app",
-        "id": "0"
-      },
-      "params": {
-        "manual_disabled": "0",
-        "sync_enabled": "0",
-        "start_on_mon": "1",
-        "hide_start_time": "1",
-        "color_available": "#C5DCFA",
-        "color_busy": "#C5DCFA"
-      },
-      "events": [
-        {
-          "uid": "event_001",
-          "name": "New Year's Day",
-          "is_available": false,
-          "tz": "America/Los_Angeles",
-          "event_start": "00:00:00",
-          "event_end": "23:59:59",
-          "recur_start": "0",
-          "recur_end": "0",
-          "patterns": [
-            "Jan 1"
-          ]
-        },
-        {
-          "uid": "event_002",
-          "name": "Independence Day",
-          "is_available": false,
-          "tz": "America/Los_Angeles",
-          "event_start": "00:00:00",
-          "event_end": "23:59:59",
-          "recur_start": "0",
-          "recur_end": "0",
-          "patterns": [
-            "July 4"
-          ]
-        },
-        {
-          "uid": "event_003",
-          "name": "Labor Day",
-          "is_available": false,
-          "tz": "America/Los_Angeles",
-          "event_start": "00:00:00",
-          "event_end": "23:59:59",
-          "recur_start": "0",
-          "recur_end": "0",
-          "patterns": [
-            "first Monday of September"
-          ]
-        },
-        {
-          "uid": "event_004",
-          "name": "Thanksgiving",
-          "is_available": false,
-          "tz": "America/Los_Angeles",
-          "event_start": "00:00:00",
-          "event_end": "23:59:59",
-          "recur_start": "0",
-          "recur_end": "0",
-          "patterns": [
-            "fourth Thursday of November"
-          ]
-        },
-        {
-          "uid": "event_005",
-          "name": "Christmas",
-          "is_available": false,
-          "tz": "America/Los_Angeles",
-          "event_start": "00:00:00",
-          "event_end": "23:59:59",
-          "recur_start": "0",
-          "recur_end": "0",
-          "patterns": [
-            "Dec 25"
-          ]
-        },
-        {
-          "uid": "event_006",
-          "name": "New Year's Eve",
-          "is_available": false,
-          "tz": "America/Los_Angeles",
-          "event_start": "00:00:00",
-          "event_end": "23:59:59",
-          "recur_start": "0",
-          "recur_end": "0",
-          "patterns": [
-            "Dec 31"
-          ]
-        }
-      ]
-    }
-  ]
-}
-{% endraw %}
-</code>
-</pre>
+1. Click **(+)** above the worklist.
 
-Click the **Import** button.
+1. Select a target **Owner**.
 
-You'll see the following:
+1. On the **Library** tab, select **U.S. Holidays**.
 
-<div class="cerb-screenshot">
-<img src="/assets/images/packages/us-holidays/imported.png" class="screenshot">
-</div>
+1. Click the **Create** button.
 
 # Viewing the calendar
 
