@@ -1,6 +1,6 @@
 <ul>
-	<li class="{% if page.url == '/' %}current{% endif %}">
-		<a href="/">About</a>
+	<li class="{% if page_path[0] == 'tour' %}current{% endif %}">
+		<a href="/tour/">Tour</a>
 	</li>
 	<li class="{% if page.url == '/pricing/' %}current{% endif %}">
 		<a href="/pricing/">Pricing</a>

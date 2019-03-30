@@ -1,0 +1,90 @@
+---
+layout: default
+jumbotron:
+  title: Tour
+  #tagline: Learn about web-based teamwork and workflow automation
+---
+
+{% assign tour_pages = site.pages|where:'layout','tour'|keys %}
+
+<article class="post">
+	<div class="post-content">
+		{% if page.tour %}
+		<div id="cerb-slides" class="features grid no-gutters">
+			{% assign section = site.data.tour[page.tour.section] %}
+			{% assign section_page = tour_pages|where_exp:"item","item.tour.id == page.tour.section"|first %}
+			
+			<div id="cerb-slides" class="features grid no-gutters">
+				<div class="cerb-slides-nav">
+					<div class="unit one-third align-left">
+						{% if section.prev %}
+						{% assign section_prev_page = tour_pages|where_exp:"item","item.tour.id == section.prev"|first %}
+						<a href="{{section_prev_page.url}}" class="prev">&laquo; {{section_prev_page.tour.title}}</a>
+						{% else %}
+						<a href="/" class="prev">&laquo; Home</a>
+						{% endif %}
+					</div>
+					
+					<div class="unit one-third align-center">
+						<a href="{{section_page.url}}" class="slide section">{{section_page.tour.title}}</a>
+					</div>
+					
+					<div class="unit one-third align-right">
+						{% if section.next %}
+						{% assign section_next_page = tour_pages|where_exp:"item","item.tour.id == section.next"|first %}
+						<a href="{{section_next_page.url}}" class="next">{{section_next_page.tour.title}} &raquo;</a>
+						{% else %}
+						<a href="/signup/" class="next">Signup &raquo;</a>
+						{% endif %}
+					</div>
+					
+					<div class="unit whole align-center">
+						<a href="{{section_page.url}}" class="{% if page.tour.section == page.tour.id %}selected{% endif %}"></a>
+						
+						{% for slide in section.slides %}
+						{% assign slide_page = tour_pages|where_exp:"item","item.tour.id == slide"|first %}
+						<a href="{{slide_page.url}}" class="slide {% if forloop.last %}last{% endif %} {% if slide == page.tour.id %}selected{% endif %}">{{slide_page.tour.title}}</a>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			
+			{{content}}
+		</div>
+		{% else %}
+			{{content}}
+		{% endif %}
+	</div>
+</article>
+
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function() {
+	var $slides = document.querySelector('#cerb-slides');
+	
+	$slides.addEventListener('click', function(event) {
+		event.stopPropagation();
+		
+		if(undefined == event.target)
+			return;
+		
+		// If clicking on a slide, advance to the next slide
+		if(event.target.tagName == 'IMG') {
+			// [TODO] Add next/prev floating overlay to the slide image?
+			var next = $slides.querySelector('.cerb-slides-nav .selected').nextSibling;
+			
+			while(next != null && next.nodeName == '#text')
+				next = next.nextSibling;
+			
+			// Do we have another section?
+			if(null == next) {
+				$slides.querySelector('.next').click();
+				return;
+			}
+			
+			if(next.tagName == 'A')
+				next.click();
+			return;
+		}
+	});
+});
+</script>
