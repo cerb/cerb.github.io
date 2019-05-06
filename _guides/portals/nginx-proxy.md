@@ -74,7 +74,7 @@ server {
     rewrite ^/(.*) /portal/$portal_code/$1 break;
     proxy_pass https://$cerb_host;
     proxy_set_header DevblocksProxySSL 1;
-    proxy_set_header DevblocksProxyHost $cerb_host;
+    proxy_set_header DevblocksProxyHost $portal_host;
     proxy_set_header DevblocksProxyBase "";
   }
 
