@@ -149,6 +149,7 @@
   - data-queries/worklist/xy
   - data-queries/usage/bot-behaviors
   - data-queries/usage/snippets
+  - data-queries/sample
   - data-queries/custom
 
 - title: Portals
