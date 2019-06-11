@@ -4,6 +4,13 @@ permalink: /docs/dashboards/
 jumbotron:
   title: Dashboards
   tagline: Visual insight from highly customizable widgets
+  breadcrumbs:
+  -
+    label: Docs &raquo;
+    url: /docs/home/
+  -
+    label: Workspaces &raquo;
+    url: /docs/workspaces/
 ---
 
 **Dashboards** provide visual insight with collections of highly customizable **widgets**.

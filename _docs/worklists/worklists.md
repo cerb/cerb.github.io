@@ -8,6 +8,9 @@ jumbotron:
   -
     label: Docs &raquo;
     url: /docs/home/
+  -
+    label: Workspaces &raquo;
+    url: /docs/workspaces/
 ---
 
 A **worklist** is a [searchable](#search), [pageable](#pagination), [sortable](#sorting), and customizable set of [records](/docs/records/) displayed using rows and columns.

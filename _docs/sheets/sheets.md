@@ -10,6 +10,9 @@ jumbotron:
   -
     label: Docs &raquo;
     url: /docs/home/
+  -
+    label: Workspaces &raquo;
+    url: /docs/workspaces/
 ---
 
 <div class="cerb-screenshot">
