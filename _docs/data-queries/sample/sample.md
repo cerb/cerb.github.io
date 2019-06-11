@@ -40,7 +40,7 @@ Each `series.*` should provide:
 {: .no_toc}
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 type:sample.geo.points
 series.cities:(
@@ -77,7 +77,7 @@ Each `series.*` should provide:
 {: .no_toc}
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 type:sample.timeseries
 x.count:10
@@ -130,7 +130,7 @@ Each `series.*` should provide:
 {: .no_toc}
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 type:sample.xy
 series.standard:(

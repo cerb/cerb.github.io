@@ -27,7 +27,7 @@ These expressions can be used on link [filters](/docs/search/filters/).
 To filter by records with a link to a specific other [record type](/docs/records/types/), use its alias as the expression:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 links:ticket
 {% endraw %}
@@ -41,7 +41,7 @@ You can also use [deep search](/docs/search/deep-search/) to filter records base
 Append the [record type alias](/docs/records/types/) to `links` following a period (`.`), then the expression can be any [search query](/docs/search/) for that record type:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 links.ticket:(mask:a*)
 {% endraw %}

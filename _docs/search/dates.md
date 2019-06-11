@@ -27,7 +27,7 @@ These expressions can be used on date-based [filters](/docs/search/filters/).
 To filter by records with a date after a given point in time:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 created:today
 {% endraw %}
@@ -35,7 +35,7 @@ created:today
 </pre>
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 created:"-1 month"
 {% endraw %}
@@ -43,7 +43,7 @@ created:"-1 month"
 </pre>
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 created:"2018-01-01"
 {% endraw %}
@@ -51,7 +51,7 @@ created:"2018-01-01"
 </pre>
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 created:"January 1 2018"
 {% endraw %}
@@ -59,7 +59,7 @@ created:"January 1 2018"
 </pre>
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 created:"first day of this month"
 {% endraw %}
@@ -71,7 +71,7 @@ created:"first day of this month"
 To filter by records with a date within a given range, provide two dates separated by the word `to`:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 created:"today to now"
 {% endraw %}
@@ -79,7 +79,7 @@ created:"today to now"
 </pre>
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 created:"January 1 to June 30"
 {% endraw %}
@@ -87,7 +87,7 @@ created:"January 1 to June 30"
 </pre>
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 created:"-1 year to -6 months"
 {% endraw %}
@@ -95,7 +95,7 @@ created:"-1 year to -6 months"
 </pre>
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 created:"big bang to first day of this month"
 {% endraw %}

@@ -38,7 +38,7 @@ jumbotron:
 # Examples
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 type:usage.behaviors
 format:timeseries

@@ -49,7 +49,7 @@ By default you'll receive 10 data points per series. You can add a `limit:<numbe
 ## Return series data from a worklist
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 type:worklist.series 
 series.open_tickets:(
   of:tickets 

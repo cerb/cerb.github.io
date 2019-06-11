@@ -27,7 +27,7 @@ These expressions can be used on watcher [filters](/docs/search/filters/).
 To filter for records watched by specific workers, enter partial names:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 watchers:kina,karl
 {% endraw %}
@@ -39,7 +39,7 @@ watchers:kina,karl
 To filter for records you're watching, use the `me` expression:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 watchers:me
 {% endraw %}
@@ -51,7 +51,7 @@ watchers:me
 To filter for records watched by any workers, use the `any` expression:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 watchers:any
 {% endraw %}
@@ -63,7 +63,7 @@ watchers:any
 To filter for records **not** watched by any workers, use the `none` expression:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 watchers:none
 {% endraw %}
@@ -75,7 +75,7 @@ watchers:none
 To filter for records watched by specific worker IDs, enter a comma-separated list of IDs:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 watchers:1,2,3
 {% endraw %}

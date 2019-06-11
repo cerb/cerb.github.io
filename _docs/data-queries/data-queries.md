@@ -24,11 +24,27 @@ Data queries retrieve data with simple textual queries and prepare the results f
 
 These textual queries are very simple to automate in bot behaviors, dashboard widgets, or the API.
 
-Every data query begins by specifying a type, like `type:worklist.subtotals`. Additional fields are available depending on the type of data being requested.
+Every data query begins by specifying a type, like:
+
+<pre>
+<code class="language-cerb">
+type:worklist.subtotals
+</code>
+</pre>
+
+Additional fields are available depending on the type of data being requested.
 
 Data is returned in JSON format. A `format:` parameter prepares the response for different visualizations.
 
 # Running data queries
+
+## Setup
+
+As an administrator, you can test data queries from **Setup >> Developers >> Data Query Tester**.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/data-queries/data-queries-setup-tester.png" class="screenshot">
+</div>
 
 ## Dashboard widgets
 
@@ -46,14 +62,6 @@ This is a much simpler way to exchange information between bots and APIs.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/data-queries/data-queries-bot-execute.png" class="screenshot">
-</div>
-
-## Setup
-
-As an administrator, you can test data queries from **Setup >> Developers >> Data Query Tester**.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/docs/data-queries/data-queries-setup-tester.png" class="screenshot">
 </div>
 
 ## API

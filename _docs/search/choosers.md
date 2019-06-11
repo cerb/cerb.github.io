@@ -31,7 +31,7 @@ Chooser filters support all [numeric](/docs/search/filters/numbers/) expressions
 To find records with a single matching record ID:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 group.id:1
 {% endraw %}
@@ -43,7 +43,7 @@ group.id:1
 To find records matching any of a list of record IDs:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 group.id:[1,2,3]
 {% endraw %}

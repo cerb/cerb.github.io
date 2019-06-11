@@ -27,7 +27,7 @@ As text, queries can be built dynamically using [bot scripting](/docs/bots/scrip
 To give you an idea of what you can do with queries, here's a fairly advanced example query that returns open tickets in the Sales or Support group that are less than a month old:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 status:o created:"-1 month" group:(sales OR support)
 {% endraw %}

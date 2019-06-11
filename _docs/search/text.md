@@ -27,7 +27,7 @@ These expressions can be used on text-based [filters](/docs/search/filters/).
 Simple text (without spaces) can be used as the entire expression:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 firstName:Kina
 {% endraw %}
@@ -39,7 +39,7 @@ firstName:Kina
 Enclose phrases in double quotes (`"`):
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 subject:"This phrase contains spaces"
 {% endraw %}
@@ -51,7 +51,7 @@ subject:"This phrase contains spaces"
 Use asterisks (`*`) to denote wildcards:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 mask:abc*
 {% endraw %}
@@ -63,7 +63,7 @@ mask:abc*
 Find records that match _any_ of the given values:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 color:[red,green,blue]
 {% endraw %}
@@ -75,7 +75,7 @@ color:[red,green,blue]
 Prefix an expression with an exclamation point (`!`) to negate it. This returns any records that don't match.
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 status:!open
 {% endraw %}

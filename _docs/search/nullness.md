@@ -29,7 +29,7 @@ This is particularly useful for [custom fields](/docs/custom-fields/).
 Use the expression `null` to find records _without_ any value set:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 sla.level:null
 {% endraw %}
@@ -41,7 +41,7 @@ sla.level:null
 Use the expression `!null` to find records _with_ any value set:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 checkbox:!null
 {% endraw %}

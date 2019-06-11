@@ -24,7 +24,7 @@ A special `sort:` [filter](/docs/search/filters/) is available on every record t
 To sort matching records in ascending order (e.g. A-Z, oldest-newest), specify a filter name:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 sort:subject
 {% endraw %}
@@ -36,7 +36,7 @@ sort:subject
 To sort matching records in descending order (e.g. Z-A, newest-oldest), prefix the filter name with a dash (`-`):
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 sort:-updated
 {% endraw %}
@@ -50,7 +50,7 @@ You can also sort by multiple fields by separating filter names with a comma (`,
 For example, to return the most important and oldest issues first:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 sort:-importance,created
 {% endraw %}

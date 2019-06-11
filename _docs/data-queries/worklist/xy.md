@@ -53,7 +53,7 @@ You can specify a `limit:` and `sort:` within each series `query:()`. Nested sor
 ## Generate a table of the top 10 quickest message response times
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 type:worklist.xy
 series.replies:(
   of:messages 

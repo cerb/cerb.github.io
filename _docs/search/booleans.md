@@ -31,7 +31,7 @@ To filter for records with a `true` boolean value, you can use the expressions:
 * `true`
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 checkbox:y
 {% endraw %}
@@ -47,7 +47,7 @@ To filter for records with a `false` boolean value, you can use the expressions:
 * `false`
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 isAdmin:n
 {% endraw %}

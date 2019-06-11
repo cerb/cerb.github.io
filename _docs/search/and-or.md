@@ -24,7 +24,7 @@ You can group [filters](/docs/search/filters/) into `AND` and `OR` (boolean) set
 Return records that match **all** of the given filters:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 status:open AND created:today AND group:support
 {% endraw %}
@@ -32,7 +32,7 @@ status:open AND created:today AND group:support
 </pre>
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 status:open created:today group:support
 {% endraw %}
@@ -48,7 +48,7 @@ status:open created:today group:support
 Return records that match **any** of the given filters:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 owner.id:me OR owner.id:none
 {% endraw %}
@@ -62,7 +62,7 @@ The above example will return records that are "owned by the current worker" or 
 You can prefix a boolean filter group with an exclamation mark (`!`) to negate it:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 !(mimetype:image/png size:<100KB)
 {% endraw %}
@@ -76,7 +76,7 @@ The above example will return everything **except** "PNGs smaller than 100KB".
 You can mix boolean filter groups by using parentheses (`()`):
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 (mimetype:image/png size:&gt;100KB) OR (mimetype:image/jpeg size:&lt;100KB)
 {% endraw %}

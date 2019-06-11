@@ -48,7 +48,7 @@ Bots can create behaviors on the 'Data Query Datasource' event. This allows data
 The data query would look like:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 type:behavior.get_stock_price
 symbol:AAPL
 </code>

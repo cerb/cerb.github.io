@@ -27,7 +27,7 @@ These expressions can be used on numeric [filters](/docs/search/filters/).
 To filter by records with an exact numeric value, use a number as the expression:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 age:35
 {% endraw %}
@@ -39,7 +39,7 @@ age:35
 Find all records that don't match a value by prefixing the expression with an exclamation point (`!`):
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 priority:!1
 {% endraw %}
@@ -51,7 +51,7 @@ priority:!1
 To filter by records with a value greater than the expression, use `>` or `>=`:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 age:&gt;21
 {% endraw %}
@@ -63,7 +63,7 @@ age:&gt;21
 To filter by records with a value less than the expression, use `<` or `<=`:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 order:&lte;100
 {% endraw %}
@@ -75,7 +75,7 @@ order:&lte;100
 Find records with a value within a range by using `...`:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 importance:25...75
 {% endraw %}
@@ -87,7 +87,7 @@ importance:25...75
 Find records that match _any_ of the given values:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 importance:[0,50,75]
 {% endraw %}

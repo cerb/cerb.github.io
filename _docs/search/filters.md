@@ -20,7 +20,7 @@ jumbotron:
 A query is a list of **filters** separated by a space. Each filter uses the format:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 filter:expression
 {% endraw %}

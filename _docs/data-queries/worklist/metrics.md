@@ -46,7 +46,7 @@ Optionally, multiple functions can be specified for a series, like `functions:[s
 ## Calculating the average first response time from a worklist of tickets
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 type:worklist.metrics 
 values.total:(
   of:ticket
@@ -68,7 +68,7 @@ format:table
 ## Calculating multiple functions in a single query
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 type:worklist.metrics
 values.response_time:(

@@ -34,7 +34,7 @@ This is a more efficient way to search [records](/docs/records/) with a large am
 By default, records will be returned if they match all of the given terms.
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 bug bluetooth report
 {% endraw %}
@@ -46,7 +46,7 @@ bug bluetooth report
 Enter text within quotes to search for exact phrases:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 "bug report"
 {% endraw %}
