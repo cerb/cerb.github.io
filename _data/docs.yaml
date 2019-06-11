@@ -4,17 +4,20 @@
   - logging-in
   - navigation
 
-- title: Workers
+- title: Concepts
   docs:
   - workers
   - roles
-
-- title: Groups
-  docs:
   - groups
   - buckets
-  - responsibilities
-  - groups/signatures
+  #- responsibilities
+  #- groups/signatures
+  - contacts
+  - orgs
+  #- calendars
+  #- project-boards
+  - tickets
+  - snippets
 
 - title: Records
   docs:
@@ -67,14 +70,7 @@
   docs:
   - workspaces
   - dashboards
-
-- title: Clients
-- title: Sheets
-  docs:
-  - contacts
-  - orgs
-  #- calendars
-  #- project-boards
+  - worklists
   - sheets
 
 - title: Bots
