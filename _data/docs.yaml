@@ -81,11 +81,13 @@
   - dashboards
 
 - title: Clients
+- title: Sheets
   docs:
   - contacts
   - orgs
   #- calendars
   #- project-boards
+  - sheets
 
 - title: Tickets
   docs:
