@@ -16,27 +16,11 @@ Using your web browser, navigate to the URL for your copy of Cerb.
 
 If you don't have a copy of Cerb yet, you can <a href="/signup/">start a free evaluation</a>. We'll set up everything for you and send over the login information.
 
-### Enter your email address
-
-Each account can be authenticated in a different way. For this reason, signing in to your account is a two-step process.
-
-In the first step, enter the email address linked to your account:
-
-<div class="cerb-screenshot">
-<img src="/assets/images/docs/logging-in/login_email.png" class="screenshot">
-</div>
-
-<div class="cerb-box note">
-<p>If you check the <i>"Remember me"</i> box then you won't need to enter your email address again on subsequent visits (even after you log out).</p>
-</div>
-
 ### Authenticate yourself
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/logging-in/authenticate.png" class="screenshot">
 </div>
-
-After clicking the **Continue** button you'll be shown your personalized authentication form.  By default you'll be asked for a password, but you may see something different if two-factor authentication is enabled (requiring a temporary code from your mobile device).
 
 After entering your credentials, click the **Log In** button.
 

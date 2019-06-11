@@ -16,7 +16,7 @@ You can add any number of workspace pages to your [navigation bar](/docs/navigat
 
 Workspaces use **tabs** to organize their content into sections; much like dividers are used to partition pages in a large binder.
 
-The default workspace type is a [dashboard](/docs/dashboards/).
+The default workspace type is a [dashboard](/docs/dashboards/) -- a customizable and responsive collection of visualization widgets.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/using-cerb/workspaces/workspace-home.png" class="screenshot">

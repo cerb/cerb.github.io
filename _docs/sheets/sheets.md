@@ -103,7 +103,7 @@ You'll also notice that we're displaying the country of the initial sender's org
 
 # Layout
 
-## Tables
+### Tables
 
 By default, sheets display as a **table** of rows and columns.
 
@@ -114,7 +114,7 @@ layout:
 </code>
 </pre>
 
-## Fieldsets
+### Fieldsets
 
 <div class="cerb-screenshot">
 <img src="/assets/images/releases/9.3/sheet-fieldsets.png" class="screenshot">

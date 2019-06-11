@@ -34,6 +34,7 @@
   - watchers
   - notifications
   - reminders
+  - packages
 
 - title: Search
   docs:
@@ -47,6 +48,7 @@
 - title: Data Queries
   docs:
   - data-queries
+  - data-queries/using
   - data-queries/worklist/records
   - data-queries/worklist/subtotals
   - data-queries/worklist/series
@@ -113,10 +115,6 @@
   - portals/support-center
   - portals/chat-bot
   - portals/webhook
-
-- title: Packages
-  docs:
-  - packages
 
 - title: Setup
   docs:

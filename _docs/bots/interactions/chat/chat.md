@@ -260,20 +260,24 @@ In a conversational bot behavior, add the **Prompt With >> Buttons** action.
 </div>
 
 ### Options
+{:.no_toc}
 
 A list of pre-defined responses that will be displayed as buttons. One response per line. You can use [scripting](/docs/bots/scripting/) to build the list.
 
 ### Colors
+{:.no_toc}
 
 You can configure a color gradient to automatically style the buttons.
 
 For instance, a satisfaction survey asking about sentiment could start green (positive) and end red (negative).
 
 ### Custom CSS style
+{:.no_toc}
 
 You can include custom CSS rules to further style the buttons. In the example above, we're configuring a fixed width and allowing the buttons to display _inline_ (i.e. adjacent rather than stacked).
 
 ### Save to a placeholder
+{:.no_toc}
 
 Name a [placeholder](/docs/bots/scripting/placeholders/) where a copy of the user's response will be saved. You can then later refer to this answer when making decisions or giving responses.
 
@@ -300,22 +304,27 @@ In a conversational bot behavior, add the **Prompt With >> Chooser** action.
 </div>
 
 ### Type
+{:.no_toc}
 
 The [record](/docs/records/) type to be selected.
 
 ### Query
+{:.no_toc}
 
 The default [query](/docs/search/) to pre-filter records in the chooser popup.
 
 ### Selection
+{:.no_toc}
 
 If selecting a single record, the popup will automatically close after the first selection. Otherwise the user is able to select multiple records.
 
 ### Autocomplete
+{:.no_toc}
 
 If enabled, an autocomplete textbox will be added to the chooser button. This is useful if the user may already know what they want to select, as they can bypass the chooser popup.
 
 ### Save to a placeholder
+{:.no_toc}
 
 Name a [placeholder](/docs/bots/scripting/placeholders/) where a copy of the user's response will be saved. You can then later refer to this answer when making decisions or giving responses.
 
@@ -340,14 +349,17 @@ In a conversational bot behavior, add the **Prompt With >> Date Input** action.
 </div>
 
 ### Placeholder
+{:.no_toc}
 
 The instructive text shown in the date prompt before any text is entered.
 
 ### Default
+{:.no_toc}
 
 The default text in the date prompt.
 
 ### Save to a placeholder
+{:.no_toc}
 
 Name a [placeholder](/docs/bots/scripting/placeholders/) where a copy of the user's response will be saved. You can then later refer to this answer when making decisions or giving responses.
 
@@ -368,6 +380,7 @@ In a conversational bot behavior, add the **Prompt With >> File Upload** action.
 </div>
 
 ### Save to a placeholder
+{:.no_toc}
 
 Name a [placeholder](/docs/bots/scripting/placeholders/) where a copy of the user's response will be saved. You can then later refer to this answer when making decisions or giving responses.
 
@@ -390,12 +403,14 @@ In a conversational bot behavior, add the **Prompt With >> Images** action.
 </div>
 
 ### Images
+{:.no_toc}
 
 Click the **(+)** icon to add a new image-based response. Each response includes an image and a label.
   * **Image:** Upload or generate an image.
   * **Label:** Add a label for this image. This is the text response that will be sent when this image is selected.
 
 ### Save to a placeholder
+{:.no_toc}
 
 Name a [placeholder](/docs/bots/scripting/placeholders/) where a copy of the user's response will be saved. You can then later refer to this answer when making decisions or giving responses.
 
@@ -414,18 +429,22 @@ In a conversational bot behavior, add the **Prompt With >> Text Input** action.
 </div>
 
 ### Placeholders
+{:.no_toc}
 
 The instructive text shown in the prompt before any text is entered.
 
 ### Default
+{:.no_toc}
 
 The default text in the prompt.
 
 ### Options
+{:.no_toc}
 
 Whether the text prompt accepts a single line of input, or multiple lines.
 
 ### Save to a placeholder
+{:.no_toc}
 
 Name a [placeholder](/docs/bots/scripting/placeholders/) where a copy of the user's response will be saved. You can then later refer to this answer when making decisions or giving responses.
 
@@ -470,5 +489,6 @@ You can create proactive interactions with the **Schedule proactive interaction*
 </div>
 
 # Resources
+{:.no_toc}
 
 You can import the [Prompt Bot](/packages/prompt-bot/) package with working examples.

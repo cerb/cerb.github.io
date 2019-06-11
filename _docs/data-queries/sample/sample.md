@@ -24,19 +24,19 @@ jumbotron:
 
 `sample.geo.points` data queries return simulated GeoJSON data.
 
-## Inputs
+### Inputs
 {: .no_toc}
 
 Each `series.*` should provide:
 * `name:` (human-friendly series name for visualizations)
 * `coordinates:` (a longitude/latitude coordinate in POINT format)
 
-## Response Formats
+### Response Formats
 {: .no_toc}
 
 * **geojson** (default) returns data in GeoJSON format for map-based visualizations.
 
-## Examples
+### Examples
 {: .no_toc}
 
 <pre>
@@ -59,7 +59,7 @@ format:geojson
 
 `sample.timeseries` data queries return simulated time-series data.
 
-## Inputs
+### Inputs
 {: .no_toc}
 
 Each `series.*` should provide:
@@ -68,12 +68,12 @@ Each `series.*` should provide:
 * `y.max` (the maximum bound for random y-axis data)
 * `trend` (general trend: `down`, `up`, `random`)
 
-## Response Formats
+### Response Formats
 {: .no_toc}
 
 * **timeseries** (default) returns data in time-series format for visualizations.
 
-## Examples
+### Examples
 {: .no_toc}
 
 <pre>
@@ -109,7 +109,7 @@ format:timeseries
 
 `sample.xy` data queries return simulated X/Y data for scatterplots, etc.
 
-## Inputs
+### Inputs
 {: .no_toc}
 
 Each `series.*` should provide:
@@ -121,12 +121,12 @@ Each `series.*` should provide:
 * `y.max` (the maximum bound for random y-axis data)
 * `trend` (general trend: `down`, `up`, `random`)
 
-## Response Formats
+### Response Formats
 {: .no_toc}
 
 * **scatterplot** (default) returns data in scatterplot format for visualizations.
 
-## Examples
+### Examples
 {: .no_toc}
 
 <pre>

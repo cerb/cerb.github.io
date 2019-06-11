@@ -14,9 +14,7 @@ jumbotron:
 <img src="/assets/images/guides/records/custom-records/custom-records.png" class="screenshot">
 </div>
 
-A **record** is a distinctly identifiable entity.
-
-At the core of Cerb is a record management system for organizing your team's data.
+At the core of Cerb is a **record** management system for organizing your team's data. A record is a distinctly identifiable entity.
 
 Two pieces of information are needed to refer to any record:
 
@@ -42,7 +40,7 @@ Each record type has a set of **fields** to describe its attributes. Your `first
 | [Number](/docs/records/fields/types/number/) | An integer (whole number)
 | [Object](/docs/records/fields/types/object/) | A collection of _keys_ and their associated _values_
 | [Text](/docs/records/fields/types/text/) | Free-form text
-| [Timestamp](/docs/records/fields/types/timestamp/) | A 32-bit Unix timestamp integer, representing the number of elapsed seconds since January 1, 1970 00:00:00 GMT
+| [Timestamp](/docs/records/fields/types/timestamp/) | A 64-bit Unix timestamp integer, representing the number of elapsed seconds since January 1, 1970 00:00:00 GMT
 | [URL](/docs/records/fields/types/URL/) | A web page URL
 
 Here's what the fields for a basic [worker record](/docs/records/types/worker/) might look like for someone on your team:

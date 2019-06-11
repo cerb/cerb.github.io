@@ -1089,6 +1089,7 @@ name=Kina&action=light_on
 ```
 
 # References
+{:.no_toc}
 
 [^hmac]: Wikipedia: Hash-based message authentication code (HMAC) - <https://en.wikipedia.org/wiki/Hash-based_message_authentication_code>
 

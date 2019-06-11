@@ -5,7 +5,7 @@ permalink: /docs/bots/scripting/
 redirect_from:
   - /docs/building-bots/scripting/
 toc:
-  title: Templates
+  title: Scripting
 jumbotron:
   title: Scripting
   tagline: 
@@ -22,7 +22,7 @@ jumbotron:
 <img src="/assets/images/docs/bots/scripting/banner.png" class="screenshot">
 </div>
 
-The purpose of bot behaviors is to automatically perform actions in response to events.
+The purpose of bot [behaviors](/docs/bots/behaviors/) is to automatically perform actions in response to [events](/docs/bots/behaviors/events/).
 
 Many of these actions need to generate text:
 * Setting record fields

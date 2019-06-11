@@ -26,6 +26,7 @@ There are many different **types** of fields:
 | Decimal | A floating point number | `3.1415`
 | File | A link to a single file record | `logo.png`
 | Files | Links to multiple file records | `invoice.pdf, contract.pdf`
+| Latitude/Longitude | Geospatial coordinates for a point on Earth | `52.504043, 13.393236`
 | List | A freeform list of text-based options | `trim-leather, color-silver`
 | Multiple Checkboxes | Multiple selections from a pre-defined list of options (e.g. phone, email, sms) | `sms`
 | Number | A whole number | `8080`

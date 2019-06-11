@@ -17,7 +17,7 @@ jumbotron:
     url: /docs/search/
 ---
 
-A special `sort:` [filter](/docs/search/filters/) is available on every record type. In the worklist search menu, you'll find the available sort filters in the **(sort)** submenu.
+A special `sort:` [filter](/docs/search/filters/) is available on every record type.
 
 ### Sort ascending
 

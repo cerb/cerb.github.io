@@ -5,7 +5,7 @@ permalink: /docs/bots/interactions/
 toc:
   title: Interactions
 jumbotron:
-  title: Interactions
+  title: Bot Interactions
   tagline: 
   breadcrumbs:
   -
@@ -20,7 +20,7 @@ jumbotron:
 <img src="/assets/images/guides/bots/conversational-bots/cerb-bots-banner.png" class="screenshot">
 </div>
 
-# Interactions
+# Bot Interactions
 
 **Interactions** are short conversations between a chat bot and a human user with a specific intent. They help avoid the challenges introduced by _open-ended_ conversations.
 
