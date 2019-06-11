@@ -89,20 +89,6 @@
   #- project-boards
   - sheets
 
-- title: Tickets
-  docs:
-  - tickets
-  - tickets/masks
-  - tickets/statuses
-  - tickets/importance
-  - tickets/response-times
-  - tickets/anti-spam
-  #- tickets/compose
-  #- tickets/replying
-  - tickets/drafts
-  - tickets/merge-split
-  - snippets
-
 - title: Bots
   docs:
   - bots
