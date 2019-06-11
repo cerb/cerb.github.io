@@ -98,9 +98,9 @@ You'll also notice that we're displaying the country of the initial sender's org
 * TOC
 {:toc}
 
-## Layout
+# Layout
 
-### Tables
+## Tables
 
 By default, sheets display as a **table** of rows and columns.
 
@@ -111,7 +111,7 @@ layout:
 </code>
 </pre>
 
-### Fieldsets
+## Fieldsets
 
 <div class="cerb-screenshot">
 <img src="/assets/images/releases/9.3/sheet-fieldsets.png" class="screenshot">
@@ -126,9 +126,9 @@ layout:
 </code>
 </pre>
 
-## Columns
+# Columns
 
-### Card
+## Card
 
 The `card`  column type displays a link that opens the card popup for a particular record.
 
@@ -158,7 +158,7 @@ columns:
 </code>
 </pre>
 
-### Date
+## Date
 
 The `date` column type displays a datetime in various formats. The default is a relative timestamp (e.g. "2 hours ago"). An arbitrary `format:` may be specified using options from <http://php.net/date>.
 
@@ -177,7 +177,7 @@ columns:
 </code>
 </pre>
 
-### Link
+## Link
 
 The `link` column type displays a relative or external link with some text.
 
@@ -203,7 +203,7 @@ columns:
 </code>
 </pre>
 
-### Search
+## Search
 
 The `search` column type displays arbitrary text as a link with `label:` or (`label_key:`, `label_template:`).
 
@@ -226,7 +226,7 @@ columns:
 </code>
 </pre>
 
-### Search Button
+## Search Button
 
 The `search_button` column type displays a search button that opens a worklist popup with the results of a query for a given record type.
 
@@ -251,7 +251,7 @@ columns:
 </code>
 </pre>
 
-### Slider
+## Slider
 
 The `slider` column type visually displays a `value:` (or `value_key:`, `value_template:`) on a continuum with configurable `min:` and `max:` bounds. The output is similar to the "Importance" column on ticket/task worklists.
 
@@ -272,7 +272,7 @@ columns:
 </code>
 </pre>
 
-### Text
+## Text
 
 The `text` column type displays arbitrary text as `value:` (or `value_key:`, `value_template:`) using bot scripting and placeholders. The default value is the column's `key:` in the placeholder dictionary.
 
@@ -298,7 +298,7 @@ columns:
 </code>
 </pre>
 
-### Time Elapsed
+## Time Elapsed
 
 The `time_elapsed` column type convert units of time (like seconds) into human-friendly dates (e.g. "2 hours, 5 mins").
 
