@@ -92,6 +92,18 @@ query:(region:Europe)
 </code>
 </pre>
 
+## query.required:
+
+The `query.required:` key specifies a mandatory [search query](/docs/search/) for filtering records. This should be protected from user-entered filters.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+query.required:(ids:[1,2,3])
+{% endraw %}
+</code>
+</pre>
+
 # format:
 
 The results can be returned in various formats:

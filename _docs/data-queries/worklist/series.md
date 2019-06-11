@@ -35,6 +35,7 @@ Each `series.*` should provide:
 * `y.metric:` (an equation to apply to each y-axis value; [9.1.6](/releases/9.1.6/) or later)
 * `function:` (count,min,max,average,sum on `y:` field)
 * `query:` (the query to filter the results for this series)
+* `query.required:` (the required query to filter the results for this series)
 
 By default you'll receive 10 data points per series. You can add a `limit:<number>` to the `query:` to change this.
 
