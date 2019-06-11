@@ -61,6 +61,20 @@
   - search/and-or
   - search/sorting
 
+- title: Data Queries
+  docs:
+  - data-queries
+  - data-queries/worklist/records
+  - data-queries/worklist/subtotals
+  - data-queries/worklist/series
+  - data-queries/worklist/metrics
+  - data-queries/worklist/xy
+  - data-queries/worklist/geopoints
+  - data-queries/usage/bot-behaviors
+  - data-queries/usage/snippets
+  - data-queries/sample
+  - data-queries/custom
+
 - title: Workspaces
   docs:
   - workspaces
@@ -126,31 +140,7 @@
 - title: Bot Interactions
   docs:
   - bots/interactions
-  - bots/interactions/messages
-  - bots/interactions/prompts
-  - bots/interactions/prompts/formatting
-  - bots/interactions/prompts/validation
-  - bots/interactions/prompts/buttons
-  - bots/interactions/prompts/chooser
-  - bots/interactions/prompts/date-input
-  - bots/interactions/prompts/file-upload
-  - bots/interactions/prompts/images
-  - bots/interactions/prompts/text-input
-  - bots/interactions/prompts/wait
-  - bots/interactions/proactive
-
-- title: Data Queries
-  docs:
-  - data-queries
-  - data-queries/worklist/geopoints
-  - data-queries/worklist/metrics
-  - data-queries/worklist/series
-  - data-queries/worklist/subtotals
-  - data-queries/worklist/xy
-  - data-queries/usage/bot-behaviors
-  - data-queries/usage/snippets
-  - data-queries/sample
-  - data-queries/custom
+  - bots/interactions/chat
 
 - title: Portals
   docs:
