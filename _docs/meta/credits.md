@@ -82,6 +82,8 @@ jumbotron:
 	
 - [Smarty](http://www.smarty.net/) is a template engine for PHP. It facilitates the separation of presentation (HTML/CSS) from application logic.
 
+- [steverhoades/oauth2-openid-connect-server](https://github.com/steverhoades/oauth2-openid-connect-server/) is a PHP library for implementing OpenID Connect server functionality.
+
 - [Swift Mailer](http://swiftmailer.org/) is a component-based library for sending email from PHP applications.
 
 - [thephpleague/oauth2-client](https://github.com/thephpleague/oauth2-client/) is a PHP library for simplified integration with OAuth 2.0 service providers.
