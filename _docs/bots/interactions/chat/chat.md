@@ -73,7 +73,7 @@ There are three events in the lifecycle of an interaction: get interactions, han
 
 When a user is near an interaction point, the **Get interactions** event runs on every bot to fetch the list of available interactions for that point. This allows the user to choose an interaction directly, rather than having to precisely answer the open-ended question, _"How can I help?"_.
 
-Because this process is implemented using bot [behaviors](/docs/bots/behaviors/), [decisions](/docs/behaviors/decisions/) can filter the possible interactions situationally based on the current worker, the target record, the time of day, etc.
+Because this process is implemented using bot [behaviors](/docs/bots/behaviors/), [decisions](/docs/behaviors/#decisions-and-outcomes) can filter the possible interactions situationally based on the current worker, the target record, the time of day, etc.
 
 For instance, certain interactions may only be available for open ticket records in the Sales group.
 
@@ -450,7 +450,7 @@ Name a [placeholder](/docs/bots/scripting/placeholders/) where a copy of the use
 
 ## Wait
 
-The **wait** [prompt](#prompts) is useful when your bot needs to run a potentially long-running [action](/docs/bots/behaviors/actions/) (e.g. remote API call) and you'd like to warn the user first.
+The **wait** [prompt](#prompts) is useful when your bot needs to run a potentially long-running [action](/docs/bots/behaviors/#actions/) (e.g. remote API call) and you'd like to warn the user first.
 
 Rather than leaving the working watching a loading spinner without an explanation, the bot can say _"Let me check on that for you. This may take a moment..."_, wait, and then run the action.
 
@@ -482,7 +482,7 @@ When a worker has at least one new proactive notification, an animated red messa
 
 Proactive interactions can be given an expiration date, and if a worker doesn’t start the interaction before that date then it will be dismissed automatically.
 
-You can create proactive interactions with the **Schedule proactive interaction** [action](/docs/bots/behaviors/actions/) in any bot behavior.
+You can create proactive interactions with the **Schedule proactive interaction** [action](/docs/bots/behaviors/#actions/) in any bot behavior.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/releases/8.1/proactive-interaction.png" class="screenshot">

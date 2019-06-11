@@ -13,9 +13,6 @@ jumbotron:
   -
     label: Bots &raquo;
     url: /docs/bots/
-  -
-    label: Behaviors &raquo;
-    url: /docs/bots/behaviors/
 ---
 
 Each bot [behavior](/docs/bots/behaviors/) is triggered in response to a specific **event**. There are dozens of built-in events, and plugins or [webhooks](/docs/webhooks) can introduce new events for nearly anything.

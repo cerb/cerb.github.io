@@ -70,14 +70,10 @@
 - title: Bots
   docs:
   - bots
-  - bots/behaviors
   - bots/behaviors/events
+  - bots/behaviors
   - bots/behaviors/dictionaries
   - bots/behaviors/variables
-  - bots/behaviors/decisions
-  - bots/behaviors/actions
-  - bots/behaviors/loops
-  - bots/behaviors/subroutines
   - bots/behaviors/simulator
   - bots/delegation
   - connected-services

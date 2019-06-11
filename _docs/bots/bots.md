@@ -18,7 +18,7 @@ They have fully customizable [behaviors](/docs/bots/behaviors/) which can make d
 
 For instance, a bot may [send an automatic reply](/guides/bots/send-automatic-replies/) back to a [contact](/docs/contacts/) when they start a new email conversation.
 
-You can [build and extend bots](/docs/bots/) in Cerb using only your browser -- even if you lack computer programming experience.
+You can build and extend bots in Cerb using only your browser -- even if you lack computer programming experience.
 
 <div class="cerb-screenshot" style="margin-bottom:20px;">
 <img src="/assets/images/home/bots.png" class="screenshot">
