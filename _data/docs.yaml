@@ -142,6 +142,7 @@
 - title: Bot Interactions
   docs:
   - bots/interactions
+  - bots/interactions/forms
   - bots/interactions/chat
 
 - title: Portals
