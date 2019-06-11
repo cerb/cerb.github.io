@@ -269,6 +269,8 @@ The subtotaled worklist results can be returned in various formats:
 
 * **tree** (default) returns hierarchal data (a `name` and `value` for each node, and a list of `children` for branches).
 
+* **dictionaries** returns a table-based format suitable for sheets and API results.
+
 * **categories** returns a series-based format suitable for bar charts.
 
 * **pie** returns data for use in pie and donut charts. 
