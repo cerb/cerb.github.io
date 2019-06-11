@@ -32,18 +32,6 @@
   - notifications
   - reminders
 
-- title: Worklists
-  docs:
-  - worklists
-  - worklists/search
-  - worklists/sorting
-  - worklists/peek
-  - worklists/pagination
-  - worklists/subtotals
-  - worklists/bulk-update
-  - worklists/import-export
-  - worklists/explore-mode
-
 - title: Search
   docs:
   - search
