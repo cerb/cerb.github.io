@@ -112,23 +112,13 @@
   - portals/chat-bot
   - portals/webhook
 
-- title: Setup
-  docs:
-  - setup
-  - setup/configure
-  - setup/records
-  - setup/team
-  - setup/mail
-  - setup/packages
-  - setup/storage
-  - setup/plugins
-
 - title: Administration
   docs:
   - installation
   - friendly-urls
   #- scheduler
   - quick-start
+  - setup
   - security
   - backups
   - upgrading
