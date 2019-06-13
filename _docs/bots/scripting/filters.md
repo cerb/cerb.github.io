@@ -75,7 +75,7 @@ Ignore nonalphanumeric but allow spaces!
 
 Convert between number system bases.
 
-(Introduced in 9.0.8)
+(Introduced in [9.0.8](/releases/9.0.8/))
 
 <pre>
 <code class="language-twig">
@@ -126,6 +126,43 @@ Encode a string in base64:
 
 ```
 VGhpcyB3YXMgYmFzZTY0LWVuY29kZWQ=
+```
+
+## base64url_decode
+
+(Added in [9.1.8](/releases/9.1.8/))
+
+Decode a base64url-encoded string:
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set b64 = "VGhpcyB3YXMgYmFzZTY0dXJsLWVuY29kZWQ" %}
+{{b64|base64url_decode}}
+{% endraw %}
+</code>
+</pre>
+
+```
+This was base64url-encoded
+```
+
+## base64url_encode
+
+(Added in [9.1.8](/releases/9.1.8/))
+
+Encode a string in base64url:
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{{"This was base64url-encoded"|base64url_encode}}
+{% endraw %}
+</code>
+</pre>
+
+```
+VGhpcyB3YXMgYmFzZTY0dXJsLWVuY29kZWQ
 ```
 
 ## batch
@@ -679,6 +716,23 @@ Parse a delimited string of email addresses into an object. This also assists wi
         "personal": null
     }
 }
+```
+
+## permalink
+
+(Added in [9.2.3](/releases/9.2.3/))
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set text = "This is the title of a record!" %}
+{{text|permalink|lower}}
+{% endraw %}
+</code>
+</pre>
+
+```
+this-is-the-title-of-a-record
 ```
 
 ## quote

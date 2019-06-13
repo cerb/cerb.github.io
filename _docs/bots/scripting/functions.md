@@ -260,6 +260,47 @@ Worker #1 has permission to create tickets.
 Worker #1 has permission to create tickets.
 ```
 
+## cerb_placeholders_list
+
+Return an [object](/docs/bots/scripting/(/docs/bots/scripting/arrays-objects/)) with every placeholder in the current behavior.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{{cerb_placeholders_list()|json_encode|json_pretty}}
+{% endraw %}
+</code>
+</pre>
+
+```
+{
+  "worker__context": "cerberusweb.contexts.worker",
+  "worker__loaded": true,
+  "worker__label": "Kina Halpue",
+  "worker__image_url": "https://cerb.example/avatars/worker/1?v=1512582324",
+  "worker_at_mention_name": "Kina",
+  "worker_calendar_id": 7,
+  "worker_dob": null,
+  "worker_id": 1,
+  "worker_first_name": "Kina",
+  "worker_full_name": "Kina Halpue",
+  "worker_gender": "F",
+  "worker_is_disabled": 0,
+  "worker_is_superuser": 1,
+  "worker_language": "en_US",
+  "worker_last_name": "Halpue",
+  "worker_location": "",
+  "worker_mobile": "15555555555",
+  "worker_phone": "",
+  "worker_time_format": "D, d M Y h:i a",
+  "worker_timezone": "America/Los_Angeles",
+  "worker_title": "Customer Support",
+  "worker_updated": 1512582324,
+  "worker_record_url": "https://cerb.example/profiles/worker/1-Kina-Halpue",
+  ...
+}
+```
+
 ## cerb_record_readable
 
 (Added in [9.0](/releases/9.0/))
@@ -320,7 +361,7 @@ https://cerb.example/profiles/ticket/5
 
 ## cycle
 
-Round-robin through an sequence.
+Round-robin through a sequence.
 
 <pre>
 <code class="language-twig">
@@ -555,47 +596,6 @@ Return the smallest value in an array or object.
 
 ```
 1
-```
-
-## placeholders_list
-
-Return an [object](/docs/bots/scripting/(/docs/bots/scripting/arrays-objects/)) with every placeholder in the current behavior.
-
-<pre>
-<code class="language-twig">
-{% raw %}
-{{placeholders_list()|json_encode|json_pretty}}
-{% endraw %}
-</code>
-</pre>
-
-```
-{
-  "worker__context": "cerberusweb.contexts.worker",
-  "worker__loaded": true,
-  "worker__label": "Kina Halpue",
-  "worker__image_url": "https://cerb.example/avatars/worker/1?v=1512582324",
-  "worker_at_mention_name": "Kina",
-  "worker_calendar_id": 7,
-  "worker_dob": null,
-  "worker_id": 1,
-  "worker_first_name": "Kina",
-  "worker_full_name": "Kina Halpue",
-  "worker_gender": "F",
-  "worker_is_disabled": 0,
-  "worker_is_superuser": 1,
-  "worker_language": "en_US",
-  "worker_last_name": "Halpue",
-  "worker_location": "",
-  "worker_mobile": "15555555555",
-  "worker_phone": "",
-  "worker_time_format": "D, d M Y h:i a",
-  "worker_timezone": "America/Los_Angeles",
-  "worker_title": "Customer Support",
-  "worker_updated": 1512582324,
-  "worker_record_url": "https://cerb.example/profiles/worker/1-Kina-Halpue",
-  ...
-}
 ```
 
 ## random
