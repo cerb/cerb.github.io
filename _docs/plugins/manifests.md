@@ -33,12 +33,12 @@ Here's a minimal manifest:
 	&lt;image&gt;plugin.png&lt;/image&gt;
 
 	&lt;requires&gt;
-		&lt;app_version min="9.0" max="9.0.99" /&gt;
+		&lt;app_version min="9.3" max="9.3.99" /&gt;
 		&lt;!--&lt;php_extension name="curl" /&gt;--&gt;
 	&lt;/requires&gt;
 
 	&lt;dependencies&gt;
-		&lt;require plugin_id="cerberusweb.core" version="9.0.0" /&gt;
+		&lt;require plugin_id="cerberusweb.core" version="9.3.0" /&gt;
 	&lt;/dependencies&gt;
 
 	&lt;patches/&gt;

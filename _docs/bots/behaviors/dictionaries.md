@@ -20,7 +20,7 @@ jumbotron:
 
 Every [event](/docs/bots/behaviors/events/) and [record](/docs/records/) in Cerb can be represented as a **dictionary**.
 
-Dictionaries are used to power many features, including [bots](/docs/bots/), [snippets](/docs/snippets/), [dashboards](/docs/dashboards/), [worklists](/docs/worklists/), and the [API](/docs/api/).
+Dictionaries are used to power many features, including [bots](/docs/bots/), [data queries](/docs/data-queries/), [sheets](/docs/sheets/), [snippets](/docs/snippets/), [dashboards](/docs/dashboards/), [worklists](/docs/worklists/), and the [API](/docs/api/).
 
 A dictionary is a flat list of **keys** and their associated **values**.
 
@@ -231,6 +231,8 @@ Cerb will:
 * Return the `latest_message_sender_org_name` key from the organization record.
 
 Once a record has been expanded, its keys are included in the dictionary and subsequent lookups are very fast.
+
+When working with multiple dictionaries, it's also possible to expand the same keys on all of them as a single operation. For instance, when expanding the `group_` keys on a set of ticket dictionaries, many of them may refer to the same group, and its record is only loaded once.
 
 # References
 
