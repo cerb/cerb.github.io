@@ -98,7 +98,7 @@ These columns are available on twitter message [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `t_connected_account_id` | Connected Account
 | `t_content` | Content
 | `t_created_date` | Created

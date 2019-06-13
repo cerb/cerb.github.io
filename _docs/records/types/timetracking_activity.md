@@ -81,7 +81,7 @@ These columns are available on time tracking activity [worklists](/docs/worklist
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `t_id` | Id
 | `t_name` | Name
 | `t_updated_at` | Updated

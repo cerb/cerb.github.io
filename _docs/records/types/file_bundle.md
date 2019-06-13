@@ -97,7 +97,7 @@ These columns are available on file bundle [worklists](/docs/worklists/):
 | Column | Description
 |-|-
 | `*_owner` | Owner
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `f_id` | Id
 | `f_name` | Name
 | `f_tag` | Tag

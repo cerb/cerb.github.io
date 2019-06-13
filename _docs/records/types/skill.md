@@ -85,7 +85,7 @@ These columns are available on skill [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `s_created_at` | Created
 | `s_id` | Id
 | `s_name` | Name

@@ -65,7 +65,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `name` | text | Name
 | `phone` | phone | Phone
 | `postal` | text | Postal
-| `province` | text | State/prov
+| `province` | text | State/Prov
 | `record_url` | text | Record Url
 | `street` | text | Street
 | `updated` | date | Updated
@@ -100,7 +100,7 @@ These [filters](/docs/search/filters/) are available in organization [search que
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `phone:` | [text](/docs/search/filters/text/) | Phone
 | `postal:` | [text](/docs/search/filters/text/) | Postal
-| `state:` | [text](/docs/search/filters/text/) | State/prov
+| `state:` | [text](/docs/search/filters/text/) | State/Prov
 | `street:` | [text](/docs/search/filters/text/) | Street
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
@@ -121,11 +121,11 @@ These columns are available on organization [worklists](/docs/worklists/):
 | `c_name` | Name
 | `c_phone` | Phone
 | `c_postal` | Postal
-| `c_province` | State/prov
+| `c_province` | State/Prov
 | `c_street` | Street
 | `c_updated` | Updated
 | `c_website` | Website
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 
 <div class="section-nav">
 	<div class="left">

@@ -99,7 +99,7 @@ These columns are available on calendar event [worklists](/docs/worklists/):
 | `c_date_start` | Start Date
 | `c_is_available` | Is Available
 | `c_name` | Name
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 
 <div class="section-nav">
 	<div class="left">

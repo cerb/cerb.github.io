@@ -88,7 +88,7 @@ These columns are available on public key [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `g_expires_at` | Expires
 | `g_fingerprint` | Fingerprint
 | `g_id` | Id

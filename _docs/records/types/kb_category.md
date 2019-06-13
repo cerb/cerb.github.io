@@ -86,7 +86,7 @@ These columns are available on knowledgebase category [worklists](/docs/worklist
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `katc_article_id` | Knowledgebase Article
 | `kbc_id` | Id
 | `kbc_name` | Name

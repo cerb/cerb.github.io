@@ -140,7 +140,7 @@ These columns are available on contact [worklists](/docs/worklists/):
 | `c_title` | Title
 | `c_updated_at` | Updated
 | `c_username` | Username
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 
 <div class="section-nav">
 	<div class="left">

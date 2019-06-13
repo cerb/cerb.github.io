@@ -95,7 +95,7 @@ These columns are available on knowledgebase article [worklists](/docs/worklists
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `kb_format` | Format
 | `kb_id` | Id
 | `kb_title` | Title

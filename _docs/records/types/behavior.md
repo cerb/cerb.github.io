@@ -105,7 +105,7 @@ These columns are available on behavior [worklists](/docs/worklists/):
 |-|-
 | `*_has_fieldset` | Fieldset
 | `*_workers` | Watchers
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `t_bot_id` | Bot
 | `t_event_point` | Event
 | `t_id` | Id

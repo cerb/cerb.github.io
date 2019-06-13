@@ -108,7 +108,7 @@ These columns are available on task [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `t_completed_date` | Completed Date
 | `t_created_at` | Created
 | `t_due_date` | Due Date

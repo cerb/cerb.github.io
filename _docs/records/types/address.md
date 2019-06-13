@@ -129,7 +129,7 @@ These columns are available on email address [worklists](/docs/worklists/):
 | `a_num_spam` | # Spam
 | `a_updated` | Updated
 | `a_worker_id` | Worker
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `o_name` | Organization
 
 <div class="section-nav">

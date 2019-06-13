@@ -89,7 +89,7 @@ These columns are available on project board column [worklists](/docs/worklists/
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `p_board_id` | Project Board
 | `p_id` | Id
 | `p_name` | Name

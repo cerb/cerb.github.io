@@ -103,7 +103,7 @@ These columns are available on attachment [worklists](/docs/worklists/):
 | `a_storage_sha1hash` | Sha-1 Hash
 | `a_storage_size` | Size
 | `a_updated` | Updated
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 
 <div class="section-nav">
 	<div class="left">

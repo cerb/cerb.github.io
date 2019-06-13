@@ -95,7 +95,7 @@ These columns are available on behavior scheduled [worklists](/docs/worklists/):
 | `c_id` | Id
 | `c_repeat_json` | Repeat
 | `c_run_date` | Run Date
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 
 <div class="section-nav">
 	<div class="left">

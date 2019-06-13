@@ -96,7 +96,7 @@ These columns are available on workspace tab [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `w_extension_id` | Type
 | `w_id` | Id
 | `w_name` | Name

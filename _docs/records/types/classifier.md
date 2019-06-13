@@ -99,7 +99,7 @@ These columns are available on classifier [worklists](/docs/worklists/):
 | `c_id` | Id
 | `c_name` | Name
 | `c_updated_at` | Updated
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 
 <div class="section-nav">
 	<div class="left">

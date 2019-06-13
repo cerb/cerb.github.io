@@ -111,7 +111,7 @@ These columns are available on calendar recurring event [worklists](/docs/workli
 | `c_recur_end` | Recur End
 | `c_recur_start` | Recur Start
 | `c_tz` | Timezone
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 
 <div class="section-nav">
 	<div class="left">

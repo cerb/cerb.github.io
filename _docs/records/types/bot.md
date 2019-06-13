@@ -57,7 +57,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `created_at` | date | Created
 | `id` | number | Id
 | `is_disabled` | boolean | Disabled
-| `mention_name` | text | @mention
+| `mention_name` | text | @Mention
 | `name` | text | Name
 | `owner_` | record | Owner
 | `record_url` | text | Record Url
@@ -85,7 +85,7 @@ These [filters](/docs/search/filters/) are available in bot [search queries](/do
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
-| `mentionName:` | [text](/docs/search/filters/text/) | @mention
+| `mentionName:` | [text](/docs/search/filters/text/) | @Mention
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `owner:` | [text](/docs/search/filters/text/) | Owner Type
 | `owner.<type>:` | [record](/docs/search/deep-search/) | Owner
@@ -100,8 +100,8 @@ These columns are available on bot [worklists](/docs/worklists/):
 | Column | Description
 |-|-
 | `*_owner` | Owner
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
-| `v_at_mention_name` | @mention
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
+| `v_at_mention_name` | @Mention
 | `v_created_at` | Created
 | `v_id` | Id
 | `v_is_disabled` | Disabled

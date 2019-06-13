@@ -94,7 +94,7 @@ These columns are available on feedback [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `f_log_date` | Log Date
 | `f_quote_mood` | Mood
 | `f_quote_text` | Quote

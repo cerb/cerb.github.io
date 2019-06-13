@@ -109,7 +109,7 @@ These columns are available on group [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `g_created` | Created
 | `g_id` | Id
 | `g_is_default` | Default

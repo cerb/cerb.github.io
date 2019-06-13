@@ -95,7 +95,7 @@ These columns are available on comment [worklists](/docs/worklists/):
 | `*_target` | Target
 | `c_created` | Created
 | `c_id` | Id
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 
 <div class="section-nav">
 	<div class="left">

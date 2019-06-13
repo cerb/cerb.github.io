@@ -87,6 +87,7 @@ These [filters](/docs/search/filters/) are available in profile widget [search q
 | `pos:` | [number](/docs/search/filters/numbers/) | Order
 | `tab:` | [record](/docs/search/deep-search/) | [Tab](/docs/records/types/profile_tab/)
 | `tab.id:` | [chooser](/docs/search/filters/choosers/) | [Tab](/docs/records/types/profile_tab/)
+| `type:` | [text](/docs/search/filters/text/) | Type
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `width:` | [number](/docs/search/filters/numbers/) | Width Units
 | `zone:` | [text](/docs/search/filters/text/) | Zone
@@ -98,7 +99,7 @@ These columns are available on profile widget [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `p_extension_id` | Type
 | `p_id` | Id
 | `p_name` | Name

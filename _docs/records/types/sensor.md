@@ -104,7 +104,7 @@ These columns are available on sensor [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `ftcc_content` | Comment Content
 | `p_extension_id` | Type
 | `p_fail_count` | Fail Count

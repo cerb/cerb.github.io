@@ -89,7 +89,7 @@ These columns are available on profile tab [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `p_context` | Record
 | `p_extension_id` | Type
 | `p_id` | Id

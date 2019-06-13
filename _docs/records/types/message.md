@@ -90,8 +90,8 @@ These optional placeholders are also available with **key expansion** in [dictio
 | `custom_<id>` | mixed | Custom Fields
 | `headers` | hashmap | Headers
 | `links` | links | Links
-| `reply_cc` | text | `cc:` Recipients (Comma-Separated)
-| `reply_to` | text | `to:` Recipients (Comma-Separated)
+| `reply_cc` | text | `Cc:` Recipients (Comma-Separated)
+| `reply_to` | text | `To:` Recipients (Comma-Separated)
 	
 ### Search Query Fields
 
@@ -105,7 +105,7 @@ These [filters](/docs/search/filters/) are available in message [search queries]
 | `created:` | [date](/docs/search/filters/dates/) | Created
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `header.messageId:` | [text](/docs/search/filters/text/) | Message-Id Header
-| `id:` | [number](/docs/search/filters/numbers/) | Id
+| `id:` | context | Id
 | `isBroadcast:` | [boolean](/docs/search/filters/booleans/) | Is Broadcast
 | `isEncrypted:` | [boolean](/docs/search/filters/booleans/) | Is Encrypted
 | `isNotSent:` | [boolean](/docs/search/filters/booleans/) | Is Not Sent
@@ -130,7 +130,7 @@ These columns are available on message [worklists](/docs/worklists/):
 |-|-
 | `*_has_fieldset` | Fieldset
 | `a_email` | Email
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `m_address_id` | Sender
 | `m_created_date` | Created
 | `m_is_broadcast` | Is Broadcast

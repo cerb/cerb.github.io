@@ -90,7 +90,7 @@ These columns are available on email template [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `m_content` | Content
 | `m_id` | Id
 | `m_name` | Name

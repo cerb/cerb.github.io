@@ -86,7 +86,7 @@ These columns are available on web api credentials [worklists](/docs/worklists/)
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `w_access_key` | Access Key
 | `w_name` | Name
 | `w_updated_at` | Updated

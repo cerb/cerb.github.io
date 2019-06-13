@@ -82,7 +82,7 @@ These columns are available on feed [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `t_id` | Id
 | `t_name` | Name
 | `t_url` | Url

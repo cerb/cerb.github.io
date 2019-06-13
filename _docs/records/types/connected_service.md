@@ -93,7 +93,7 @@ These columns are available on connected service [worklists](/docs/worklists/):
 | `c_name` | Name
 | `c_updated_at` | Updated
 | `c_uri` | Uri
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 
 <div class="section-nav">
 	<div class="left">

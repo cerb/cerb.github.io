@@ -96,7 +96,7 @@ These columns are available on feed item [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `fi_created_date` | Created
 | `fi_feed_id` | Feed
 | `fi_is_closed` | Is Closed

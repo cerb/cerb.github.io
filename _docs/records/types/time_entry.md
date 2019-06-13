@@ -94,7 +94,7 @@ These columns are available on time tracking [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `tt_activity_id` | Activity
 | `tt_is_closed` | Is Closed
 | `tt_log_date` | Log Date

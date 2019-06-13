@@ -101,7 +101,7 @@ These columns are available on snippet [worklists](/docs/worklists/):
 | Column | Description
 |-|-
 | `*_owner` | Owner
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `s_context` | Type
 | `s_title` | Title
 | `s_total_uses` | All Uses

@@ -1,11 +1,11 @@
 ---
-title: Community Portal Records
+title: Portal Records
 permalink: /docs/records/types/community_portal/
 toc:
-  title: Community Portal
+  title: Portal
   expand: Records
 jumbotron:
-  title: Community Portal
+  title: Portal
   tagline: 
   breadcrumbs:
   -
@@ -21,8 +21,8 @@ jumbotron:
 
 |---
 |-|-
-| **Name (singular):** | Community Portal
-| **Name (plural):** | Community Portals
+| **Name (singular):** | Portal
+| **Name (plural):** | Portals
 | **Alias (uri):** | community_portal
 | **Identifier (ID):** | cerberusweb.contexts.portal
 
@@ -39,7 +39,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `code` | [text](/docs/records/fields/types/text/) | Randomized internal ID for the portal 
 | **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | [Community Portal Type](/docs/plugins/extensions/points/cerb.portal/) 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
-| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this community portal 
+| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this portal 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 | **x** | **`uri`** | [text](/docs/records/fields/types/text/) | Human-friendly nickname for the portal. Must be unique. 
@@ -70,7 +70,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in community portal [search queries](/docs/search/):
+These [filters](/docs/search/filters/) are available in portal [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
@@ -85,12 +85,12 @@ These [filters](/docs/search/filters/) are available in community portal [search
 	
 ### Worklist Columns
 
-These columns are available on community portal [worklists](/docs/worklists/):
+These columns are available on portal [worklists](/docs/worklists/):
 
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `ct_code` | Code
 | `ct_extension_id` | Extension
 | `ct_id` | Id

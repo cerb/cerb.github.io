@@ -101,7 +101,7 @@ These columns are available on opportunity [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `o_closed_date` | Closed Date
 | `o_created_date` | Created
 | `o_currency_amount` | Amount

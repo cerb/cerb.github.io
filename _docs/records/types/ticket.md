@@ -125,6 +125,7 @@ These [filters](/docs/search/filters/) are available in ticket [search queries](
 | `messages:` | [record](/docs/search/deep-search/) | [Messages](/docs/records/types/message/)
 | `messages.count:` | [number](/docs/search/filters/numbers/) | # Messages
 | `messages.first:` | [record](/docs/search/deep-search/) | [Messages First](/docs/records/types/message/)
+| `messages.firstOutgoing:` | [record](/docs/search/deep-search/) | [Messages First Outgoing](/docs/records/types/message/)
 | `messages.last:` | [record](/docs/search/deep-search/) | [Messages Last](/docs/records/types/message/)
 | `org:` | [record](/docs/search/deep-search/) | [Org](/docs/records/types/org/)
 | `org.id:` | [chooser](/docs/search/filters/choosers/) | [Organization](/docs/records/types/org/)
@@ -154,7 +155,7 @@ These columns are available on ticket [worklists](/docs/worklists/):
 | Column | Description
 |-|-
 | `*_status` | Status
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `t_bucket_id` | Bucket
 | `t_closed_at` | Closed
 | `t_created_date` | Created

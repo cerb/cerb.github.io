@@ -92,7 +92,7 @@ These columns are available on role [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `w_editor_query_worker` | Editor Query
 | `w_id` | Id
 | `w_member_query_worker` | Member Query

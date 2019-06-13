@@ -91,7 +91,7 @@ These columns are available on webhook listener [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `w_extension_id` | Extension
 | `w_guid` | Url
 | `w_id` | Id

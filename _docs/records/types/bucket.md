@@ -109,7 +109,7 @@ These columns are available on bucket [worklists](/docs/worklists/):
 | `b_reply_personal` | Send As
 | `b_reply_signature_id` | Signature
 | `b_updated_at` | Updated
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 
 <div class="section-nav">
 	<div class="left">

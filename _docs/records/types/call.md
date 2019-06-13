@@ -102,7 +102,7 @@ These columns are available on call [worklists](/docs/worklists/):
 | `c_phone` | Phone
 | `c_subject` | Subject
 | `c_updated_date` | Updated
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 
 <div class="section-nav">
 	<div class="left">

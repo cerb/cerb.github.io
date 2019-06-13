@@ -53,10 +53,10 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | Field | Type | Description
 |-|-|-
 | `_label` | text | Label
+| `activity_point` | text | Event Id
 | `actor_` | record | Actor
 | `created` | date | Created
 | `event` | text | Event
-| `activity_point` | text | Event Id
 | `id` | number | Id
 | `target_` | record | Target
 	

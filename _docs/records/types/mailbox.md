@@ -109,7 +109,7 @@ These columns are available on mailbox account [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `p_auth_disable_plain` | Disable Plain Auth
 | `p_checked_at` | Checked At
 | `p_delay_until` | Delay Until

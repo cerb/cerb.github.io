@@ -93,7 +93,7 @@ These columns are available on oauth app [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `o_callback_url` | Callback Url
 | `o_client_id` | Client Id
 | `o_id` | Id

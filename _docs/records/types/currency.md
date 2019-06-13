@@ -105,7 +105,7 @@ These columns are available on currency [worklists](/docs/worklists/):
 | `c_name_plural` | Plural
 | `c_symbol` | Symbol
 | `c_updated_at` | Updated
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 
 <div class="section-nav">
 	<div class="left">

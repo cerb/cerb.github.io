@@ -92,7 +92,7 @@ These columns are available on email signature [worklists](/docs/worklists/):
 | Column | Description
 |-|-
 | `*_owner` | Owner
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `e_id` | Id
 | `e_is_default` | Default
 | `e_name` | Name
