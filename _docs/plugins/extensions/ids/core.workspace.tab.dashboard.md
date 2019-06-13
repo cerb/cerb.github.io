@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Dashboard
 | **Identifier (ID):** | core.workspace.tab.dashboard
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/dashboards.php
+| **File:** | api/workspaces/tabs/dashboard.php
 | **Class:** | WorkspaceTab_Dashboards
 

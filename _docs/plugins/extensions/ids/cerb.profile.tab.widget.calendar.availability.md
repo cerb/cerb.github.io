@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Calendar Availability
 | **Identifier (ID):** | cerb.profile.tab.widget.calendar.availability
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/profiles.php
+| **File:** | api/profiles/widgets/calendar_availability.php
 | **Class:** | ProfileWidget_CalendarAvailability
 

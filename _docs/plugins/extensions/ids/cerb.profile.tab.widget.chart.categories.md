@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Chart: Categories
 | **Identifier (ID):** | cerb.profile.tab.widget.chart.categories
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/profiles.php
+| **File:** | api/profiles/widgets/chart_categories.php
 | **Class:** | ProfileWidget_ChartCategories
 

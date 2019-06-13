@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Chart: Categories
 | **Identifier (ID):** | cerb.workspace.widget.chart.categories
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/dashboards.php
+| **File:** | api/workspaces/widgets/chart_categories.php
 | **Class:** | WorkspaceWidget_ChartCategories
 

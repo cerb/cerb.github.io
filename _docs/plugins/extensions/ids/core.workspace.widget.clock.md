@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Clock
 | **Identifier (ID):** | core.workspace.widget.clock
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/dashboards.php
+| **File:** | api/workspaces/widgets/clock.php
 | **Class:** | WorkspaceWidget_Clock
 

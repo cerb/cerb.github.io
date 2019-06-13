@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Chart: Time Series
 | **Identifier (ID):** | cerb.workspace.widget.chart.timeseries
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/dashboards.php
+| **File:** | api/workspaces/widgets/chart_time_series.php
 | **Class:** | WorkspaceWidget_ChartTimeSeries
 

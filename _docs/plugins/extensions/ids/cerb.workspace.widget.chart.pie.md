@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Chart: Pie
 | **Identifier (ID):** | cerb.workspace.widget.chart.pie
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/dashboards.php
+| **File:** | api/workspaces/widgets/chart_pie.php
 | **Class:** | WorkspaceWidget_ChartPie
 

@@ -69,6 +69,7 @@ The core functionality of Cerb.
 | Dashboard get metric for widget | `event.dashboard.widget.get_metric`
 | Dashboard render widget | `event.dashboard.widget.render`
 | Data Query Datasource | `event.data.query.datasource`
+| Form interaction | `event.form.interaction.worker`
 | New comment on conversation in group | `event.comment.ticket.group`
 | New message added to ticket in this group | `event.mail.received.group`
 | New message added to ticket | `event.mail.received`
@@ -165,6 +166,7 @@ The core functionality of Cerb.
 | Authentication Section | `core.page.setup.auth`
 | Avatars Section | `core.page.setup.avatars`
 | Behavior Section | `core.page.profiles.behavior`
+| Bot Scripting Tester | `core.page.setup.developers.bot_scripting_tester`
 | Bot Section | `core.page.profiles.bot`
 | Branding Section | `core.page.setup.branding`
 | Bucket Section | `core.page.profiles.bucket`
@@ -197,7 +199,6 @@ The core functionality of Cerb.
 | Incoming Mail Section | `core.page.setup.mail_incoming`
 | Internal Section Calendars | `core.internal.section.calendars`
 | Internal Section Custom Fieldsets | `core.internal.section.custom_fieldsets`
-| Internal Section Dashboards | `core.internal.section.dashboards`
 | Internal Section Skills | `core.internal.section.skills`
 | Internal Section Watchers | `core.internal.section.watchers`
 | Internal Section Workspaces | `core.internal.section.workspaces`
@@ -206,6 +207,7 @@ The core functionality of Cerb.
 | Mail Transport Section | `core.page.profiles.mail_transport`
 | Mailbox Account Section | `core.page.profiles.mailbox`
 | OAuth App Section | `core.page.profiles.oauth_app`
+| OAuth2 Token Generator | `core.page.setup.developers.oauth2_token_generator`
 | Organization Section | `core.page.profiles.organization`
 | Outgoing Mail Section | `core.page.setup.mail_outgoing`
 | Package Import Section | `core.page.setup.package.import`
@@ -277,10 +279,12 @@ The core functionality of Cerb.
 | [**Comments**](/docs/plugins/extensions/cerb.profile.tab.widget.comments/) | `cerb.profile.tab.widget.comments`
 | [**Custom**](/docs/plugins/extensions/cerb.profile.tab.widget.bot/) | `cerb.profile.tab.widget.bot`
 | [**Data Query Visualization**](/docs/plugins/extensions/cerb.profile.tab.widget.visualization/) | `cerb.profile.tab.widget.visualization`
+| [**Form Interaction**](/docs/plugins/extensions/cerb.profile.tab.widget.form_interaction/) | `cerb.profile.tab.widget.form_interaction`
 | [**HTML/Javascript**](/docs/plugins/extensions/cerb.profile.tab.widget.html/) | `cerb.profile.tab.widget.html`
 | [**Map: Geo Points**](/docs/plugins/extensions/cerb.profile.tab.widget.map.geopoints/) | `cerb.profile.tab.widget.map.geopoints`
 | [**Record Fields**](/docs/plugins/extensions/cerb.profile.tab.widget.fields/) | `cerb.profile.tab.widget.fields`
 | [**Responsibilities**](/docs/plugins/extensions/cerb.profile.tab.widget.responsibilities/) | `cerb.profile.tab.widget.responsibilities`
+| [**Sheet**](/docs/plugins/extensions/cerb.profile.tab.widget.sheet/) | `cerb.profile.tab.widget.sheet`
 | [**Ticket Conversation**](/docs/plugins/extensions/cerb.profile.tab.widget.ticket.convo/) | `cerb.profile.tab.widget.ticket.convo`
 | [**Ticket Spam Analysis**](/docs/plugins/extensions/cerb.profile.tab.widget.ticket.spam_analysis/) | `cerb.profile.tab.widget.ticket.spam_analysis`
 | [**Worklist**](/docs/plugins/extensions/cerb.profile.tab.widget.worklist/) | `cerb.profile.tab.widget.worklist`
@@ -303,7 +307,6 @@ The core functionality of Cerb.
 | Classifier Example | `cerberusweb.contexts.classifier.example`
 | Classifier | `cerberusweb.contexts.classifier`
 | Comment | `cerberusweb.contexts.comment`
-| Community Portal | `cerberusweb.contexts.portal`
 | Connected Account | `cerberusweb.contexts.connected_account`
 | Connected Service | `cerberusweb.contexts.connected_service`
 | Contact | `cerberusweb.contexts.contact`
@@ -324,6 +327,7 @@ The core functionality of Cerb.
 | OAuth App | `cerberusweb.contexts.oauth.app`
 | Organization | `cerberusweb.contexts.org`
 | Package | `cerberusweb.contexts.package.library`
+| Portal | `cerberusweb.contexts.portal`
 | Profile Tab | `cerberusweb.contexts.profile.tab`
 | Profile Widget | `cerberusweb.contexts.profile.widget`
 | Public Key | `cerberusweb.contexts.gpg_public_key`
@@ -414,9 +418,11 @@ The core functionality of Cerb.
 | [**Clock**](/docs/plugins/extensions/core.workspace.widget.clock/) | `core.workspace.widget.clock`
 | [**Countdown**](/docs/plugins/extensions/core.workspace.widget.countdown/) | `core.workspace.widget.countdown`
 | [**Counter**](/docs/plugins/extensions/core.workspace.widget.counter/) | `core.workspace.widget.counter`
+| [**Form Interaction**](/docs/plugins/extensions/core.workspace.widget.form_interaction/) | `core.workspace.widget.form_interaction`
 | [**Gauge**](/docs/plugins/extensions/core.workspace.widget.gauge/) | `core.workspace.widget.gauge`
 | [**Map: Geo Points**](/docs/plugins/extensions/cerb.workspace.widget.map.geopoints/) | `cerb.workspace.widget.map.geopoints`
 | [**Record Fields**](/docs/plugins/extensions/core.workspace.widget.record.fields/) | `core.workspace.widget.record.fields`
+| [**Sheet**](/docs/plugins/extensions/core.workspace.widget.sheet/) | `core.workspace.widget.sheet`
 | [**Worklist**](/docs/plugins/extensions/core.workspace.widget.worklist/) | `core.workspace.widget.worklist`
 
 

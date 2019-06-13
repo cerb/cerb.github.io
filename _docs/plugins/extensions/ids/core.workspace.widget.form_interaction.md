@@ -1,11 +1,11 @@
 ---
-title: "Extension: Bot Custom Widget"
-permalink: /docs/plugins/extensions/core.workspace.widget.bot/
+title: "Extension: Form Interaction"
+permalink: /docs/plugins/extensions/core.workspace.widget.form_interaction/
 toc:
-  title: "Bot Custom Widget"
+  title: "Form Interaction"
   expand: Plugins
 jumbotron:
-  title: "Bot Custom Widget"
+  title: "Form Interaction"
   tagline: 
   breadcrumbs:
   -
@@ -24,9 +24,9 @@ jumbotron:
 
 |---
 |-|-
-| **Name:** | Bot Custom Widget
-| **Identifier (ID):** | core.workspace.widget.bot
+| **Name:** | Form Interaction
+| **Identifier (ID):** | core.workspace.widget.form_interaction
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/workspaces/widgets/bot_behavior.php
-| **Class:** | WorkspaceWidget_BotBehavior
+| **File:** | api/workspaces/widgets/form_interaction.php
+| **Class:** | WorkspaceWidget_FormInteraction
 

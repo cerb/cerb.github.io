@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Comments
 | **Identifier (ID):** | cerb.profile.tab.widget.comments
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/profiles.php
+| **File:** | api/profiles/widgets/comments.php
 | **Class:** | ProfileWidget_Comments
 

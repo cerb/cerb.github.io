@@ -1,11 +1,11 @@
 ---
-title: "Extension: Bot Custom Widget"
-permalink: /docs/plugins/extensions/core.workspace.widget.bot/
+title: "Extension: Sheet"
+permalink: /docs/plugins/extensions/core.workspace.widget.sheet/
 toc:
-  title: "Bot Custom Widget"
+  title: "Sheet"
   expand: Plugins
 jumbotron:
-  title: "Bot Custom Widget"
+  title: "Sheet"
   tagline: 
   breadcrumbs:
   -
@@ -24,9 +24,9 @@ jumbotron:
 
 |---
 |-|-
-| **Name:** | Bot Custom Widget
-| **Identifier (ID):** | core.workspace.widget.bot
+| **Name:** | Sheet
+| **Identifier (ID):** | core.workspace.widget.sheet
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/workspaces/widgets/bot_behavior.php
-| **Class:** | WorkspaceWidget_BotBehavior
+| **File:** | api/workspaces/widgets/sheet.php
+| **Class:** | WorkspaceWidget_Sheet
 

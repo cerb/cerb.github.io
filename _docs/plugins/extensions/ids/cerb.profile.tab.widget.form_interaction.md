@@ -1,11 +1,11 @@
 ---
-title: "Extension: Record Fields"
-permalink: /docs/plugins/extensions/cerb.profile.tab.widget.fields/
+title: "Extension: Form Interaction"
+permalink: /docs/plugins/extensions/cerb.profile.tab.widget.form_interaction/
 toc:
-  title: "Record Fields"
+  title: "Form Interaction"
   expand: Plugins
 jumbotron:
-  title: "Record Fields"
+  title: "Form Interaction"
   tagline: 
   breadcrumbs:
   -
@@ -24,9 +24,9 @@ jumbotron:
 
 |---
 |-|-
-| **Name:** | Record Fields
-| **Identifier (ID):** | cerb.profile.tab.widget.fields
+| **Name:** | Form Interaction
+| **Identifier (ID):** | cerb.profile.tab.widget.form_interaction
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/profiles/widgets/record_fields.php
-| **Class:** | ProfileWidget_Fields
+| **File:** | api/profiles/widgets/form_interaction.php
+| **Class:** | ProfileWidget_FormInteraction
 

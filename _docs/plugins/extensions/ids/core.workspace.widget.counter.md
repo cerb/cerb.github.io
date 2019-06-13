@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Counter
 | **Identifier (ID):** | core.workspace.widget.counter
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/dashboards.php
+| **File:** | api/workspaces/widgets/counter.php
 | **Class:** | WorkspaceWidget_Counter
 

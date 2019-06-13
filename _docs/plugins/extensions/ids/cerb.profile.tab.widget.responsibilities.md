@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Responsibilities
 | **Identifier (ID):** | cerb.profile.tab.widget.responsibilities
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/profiles.php
+| **File:** | api/profiles/widgets/responsibilities.php
 | **Class:** | ProfileWidget_Responsibilities
 

@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Map: Geo Points
 | **Identifier (ID):** | cerb.profile.tab.widget.map.geopoints
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/profiles.php
+| **File:** | api/profiles/widgets/map_geo_points.php
 | **Class:** | ProfileWidget_MapGeoPoints
 

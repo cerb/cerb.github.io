@@ -1,11 +1,11 @@
 ---
-title: "Extension: Record Fields"
-permalink: /docs/plugins/extensions/cerb.profile.tab.widget.fields/
+title: "Extension: Sheet"
+permalink: /docs/plugins/extensions/cerb.profile.tab.widget.sheet/
 toc:
-  title: "Record Fields"
+  title: "Sheet"
   expand: Plugins
 jumbotron:
-  title: "Record Fields"
+  title: "Sheet"
   tagline: 
   breadcrumbs:
   -
@@ -24,9 +24,9 @@ jumbotron:
 
 |---
 |-|-
-| **Name:** | Record Fields
-| **Identifier (ID):** | cerb.profile.tab.widget.fields
+| **Name:** | Sheet
+| **Identifier (ID):** | cerb.profile.tab.widget.sheet
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/profiles/widgets/record_fields.php
-| **Class:** | ProfileWidget_Fields
+| **File:** | api/profiles/widgets/sheet.php
+| **Class:** | ProfileWidget_Sheet
 

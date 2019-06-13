@@ -18,7 +18,7 @@ jumbotron:
     label: Extension Points &raquo;
     url: /docs/plugins/extensions/
   -
-    label: Community Portal Type &raquo;
+    label: Portal &raquo;
     url: /docs/plugins/extensions/points/cerb.portal
 ---
 

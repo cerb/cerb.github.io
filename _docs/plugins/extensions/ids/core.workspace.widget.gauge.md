@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Gauge
 | **Identifier (ID):** | core.workspace.widget.gauge
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/dashboards.php
+| **File:** | api/workspaces/widgets/gauge.php
 | **Class:** | WorkspaceWidget_Gauge
 

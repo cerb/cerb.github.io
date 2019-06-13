@@ -36,11 +36,6 @@ This plugin enables Cerb to catch webhooks and execute bot behaviors in response
 | Webhook received | `event.webhook.received`
 
 
-### Community Portal Type
-
-| [**Webhook Portal**](/docs/plugins/extensions/webhooks.portal/) | `webhooks.portal`
-
-
 ### Controller
 
 | Webhooks Controller | `webhooks.controller`
@@ -49,6 +44,11 @@ This plugin enables Cerb to catch webhooks and execute bot behaviors in response
 ### Page Section
 
 | Webhook Listener Section | `webhooks.page.profiles.webhook_listener`
+
+
+### Portal
+
+| [**Webhook Portal**](/docs/plugins/extensions/webhooks.portal/) | `webhooks.portal`
 
 
 ### Record Type

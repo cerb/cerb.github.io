@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | (Deprecated) Subtotals
 | **Identifier (ID):** | core.workspace.widget.subtotals
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/dashboards.php
+| **File:** | api/workspaces/widgets/deprecated/subtotals.php
 | **Class:** | WorkspaceWidget_Subtotals
 

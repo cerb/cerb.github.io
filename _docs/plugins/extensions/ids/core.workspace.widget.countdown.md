@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Countdown
 | **Identifier (ID):** | core.workspace.widget.countdown
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/dashboards.php
+| **File:** | api/workspaces/widgets/countdown.php
 | **Class:** | WorkspaceWidget_Countdown
 

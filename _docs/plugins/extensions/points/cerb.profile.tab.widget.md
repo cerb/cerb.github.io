@@ -39,12 +39,14 @@ jumbotron:
 | [**Comments**](/docs/plugins/extensions/cerb.profile.tab.widget.comments/) | `cerb.profile.tab.widget.comments`
 | [**Custom**](/docs/plugins/extensions/cerb.profile.tab.widget.bot/) | `cerb.profile.tab.widget.bot`
 | [**Data Query Visualization**](/docs/plugins/extensions/cerb.profile.tab.widget.visualization/) | `cerb.profile.tab.widget.visualization`
+| [**Form Interaction**](/docs/plugins/extensions/cerb.profile.tab.widget.form_interaction/) | `cerb.profile.tab.widget.form_interaction`
 | [**HTML/Javascript**](/docs/plugins/extensions/cerb.profile.tab.widget.html/) | `cerb.profile.tab.widget.html`
 | [**Knowledgebase Article**](/docs/plugins/extensions/cerb.profile.tab.widget.kb_article/) | `cerb.profile.tab.widget.kb_article`
 | [**Map: Geo Points**](/docs/plugins/extensions/cerb.profile.tab.widget.map.geopoints/) | `cerb.profile.tab.widget.map.geopoints`
 | [**Project Board**](/docs/plugins/extensions/cerb.profile.tab.widget.project_board/) | `cerb.profile.tab.widget.project_board`
 | [**Record Fields**](/docs/plugins/extensions/cerb.profile.tab.widget.fields/) | `cerb.profile.tab.widget.fields`
 | [**Responsibilities**](/docs/plugins/extensions/cerb.profile.tab.widget.responsibilities/) | `cerb.profile.tab.widget.responsibilities`
+| [**Sheet**](/docs/plugins/extensions/cerb.profile.tab.widget.sheet/) | `cerb.profile.tab.widget.sheet`
 | [**Ticket Conversation**](/docs/plugins/extensions/cerb.profile.tab.widget.ticket.convo/) | `cerb.profile.tab.widget.ticket.convo`
 | [**Ticket Spam Analysis**](/docs/plugins/extensions/cerb.profile.tab.widget.ticket.spam_analysis/) | `cerb.profile.tab.widget.ticket.spam_analysis`
 | [**Worklist**](/docs/plugins/extensions/cerb.profile.tab.widget.worklist/) | `cerb.profile.tab.widget.worklist`

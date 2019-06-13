@@ -36,14 +36,14 @@ Adds a Support Center community portal for public-facing support.
 | New contact registered in Support Center | `event.contact.registered.sc`
 
 
-### Community Portal Type
-
-| [**Support Center**](/docs/plugins/extensions/sc.tool/) | `sc.tool`
-
-
 ### Event Listener
 
 | Support Center Event Listener | `sc.listeners.core`
+
+
+### Portal
+
+| [**Support Center**](/docs/plugins/extensions/sc.tool/) | `sc.tool`
 
 
 ### Support Center Controller

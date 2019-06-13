@@ -37,7 +37,7 @@ Embed conversational bots on any website.
 | Conversation with portal visitor | `event.message.chat.portal`
 
 
-### Community Portal Type
+### Portal
 
 | [**Conversational Bot**](/docs/plugins/extensions/cerb.bots.portal/) | `cerb.bots.portal`
 

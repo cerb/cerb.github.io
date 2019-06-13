@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | (Deprecated) Scatterplot
 | **Identifier (ID):** | core.workspace.widget.scatterplot
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/dashboards.php
+| **File:** | api/workspaces/widgets/deprecated/scatterplot.php
 | **Class:** | WorkspaceWidget_Scatterplot
 
