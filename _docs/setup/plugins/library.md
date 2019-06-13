@@ -15,7 +15,7 @@ jumbotron:
     url: /docs/setup/
   - 
     label: Plugins &raquo;
-    url: /docs/setup/plugins/
+    url: /docs/setup/#plugins
 ---
 
 [Administrators](/docs/workers/) can discover and install plugins from the **plugin library**.  All of the plugins found in the official plugin library have been audited and approved by Cerb's developers. They are safe to use.

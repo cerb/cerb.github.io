@@ -14,7 +14,7 @@ jumbotron:
     url: /docs/setup/
   - 
     label: Mail &raquo;
-    url: /docs/setup/mail/
+    url: /docs/setup/#incoming-mail
 ---
 
 This page configures the mailboxes that will be checked for new mail.

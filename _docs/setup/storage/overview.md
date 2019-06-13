@@ -15,7 +15,7 @@ jumbotron:
     url: /docs/setup/
   - 
     label: Storage &raquo;
-    url: /docs/setup/storage/
+    url: /docs/setup/#storage
 ---
 
 This page displays the active _storage schemas_, with the total number of objects and total size for each schema.

@@ -15,7 +15,7 @@ jumbotron:
     url: /docs/setup/
   - 
     label: Mail &raquo;
-    url: /docs/setup/mail/
+    url: /docs/setup/#incoming-mail
 ---
 
 In most cases, Cerb processes new inbound email messages in a fraction of a second without any issues.

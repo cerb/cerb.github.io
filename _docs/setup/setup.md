@@ -4,6 +4,10 @@ permalink: /docs/setup/
 jumbotron:
   title: Setup
   tagline: A guide for Administrators
+  breadcrumbs:
+  -
+    label: Docs &raquo;
+    url: /docs/home/
 ---
 
 <div class="cerb-screenshot">
@@ -13,9 +17,6 @@ jumbotron:
 The **setup** page in the top right of the navigation bar provides a central location for administrators to configure Cerb and any plugins that have been installed.
 
 The page is divided into sections, each with a blue menu designated by a downward-pointing arrow. You can hover over each menu to display the configuration options for that section.
-
-* TOC
-{:toc}
 
 # Configure
 

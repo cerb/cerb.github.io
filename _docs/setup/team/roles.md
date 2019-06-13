@@ -15,7 +15,7 @@ jumbotron:
     url: /docs/setup/
   -
     label: Team &raquo;
-    url: /docs/setup/team/
+    url: /docs/setup/#team
 ---
 
 You can configure [roles](/docs/roles/) here.

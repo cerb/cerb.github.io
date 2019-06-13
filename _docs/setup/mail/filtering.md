@@ -15,7 +15,7 @@ jumbotron:
     url: /docs/setup/
   - 
     label: Mail &raquo;
-    url: /docs/setup/mail/
+    url: /docs/setup/#incoming-mail
 ---
 
 These [bot](/docs/bots/) behaviors can screen incoming messages before they are accepted by the system.  Bots can modify, redirect, or reject messages based on any conditions you establish.

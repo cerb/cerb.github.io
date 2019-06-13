@@ -15,7 +15,7 @@ jumbotron:
     url: /docs/setup/
   - 
     label: Storage &raquo;
-    url: /docs/setup/storage/
+    url: /docs/setup/#storage
 ---
 
 By default, Cerb stores objects in the database and the local filesystem (in the `storage/` directory).  Message content is stored in the database and attachments are stored in the filesystem.

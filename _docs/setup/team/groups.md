@@ -15,7 +15,7 @@ jumbotron:
     url: /docs/setup/
   - 
     label: Team &raquo;
-    url: /docs/setup/team/
+    url: /docs/setup/#team
 ---
 
 You can configure [groups](/docs/groups/) here.
