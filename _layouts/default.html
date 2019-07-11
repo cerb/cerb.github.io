@@ -15,7 +15,7 @@
 						{% if crumb.url %}
 						<a href="{{ crumb.url }}">{{ crumb.label }}</a>
 						{% else %}
-						{{ crumb.label }}
+						<span style="font-weight:400;">{{ crumb.label }}</span>
 						{% endif %}
 					</p>
 				{% endfor %}

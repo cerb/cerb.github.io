@@ -20,7 +20,7 @@ jumbotron:
 # worklist.records
 {: .no_toc}
 
-`worklist.records` [data queries](/docs/data-queries/) data queries retrieve record dictionaries with a [search query](/docs/search/).
+`worklist.records` [data queries](/docs/data-queries/) retrieve record dictionaries with a [search query](/docs/search/).
 
 <pre>
 <code class="language-cerb">

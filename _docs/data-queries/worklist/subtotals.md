@@ -137,7 +137,7 @@ by:[links.org]
 
 ### Limits
 
-When a field has only a few possible values we say it has _"low cardinality"_. A ticket's status can only one of four values: open, waiting, closed, or deleted. A checkbox is _binary_ -- it can only be `true` or `false`.
+When a field has only a few possible values we say it has _"low cardinality"_. A ticket's status is one of four values: open, waiting, closed, or deleted. A checkbox is _binary_ -- it can only be `true` or `false`.
 
 Conversely, some _"high cardinality"_ fields have potentially infinite possible values. You may have millions of unique ticket subjects. There may be thousands of organizations in your address book. Your team may have hundreds of members.
 

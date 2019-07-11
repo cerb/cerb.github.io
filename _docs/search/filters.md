@@ -189,7 +189,7 @@ To filter by records with a value less than the expression, use `<` or `<=`:
 <pre>
 <code class="language-cerb">
 {% raw %}
-order:&lte;100
+order:&lt;=100
 {% endraw %}
 </code>
 </pre>
