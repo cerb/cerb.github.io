@@ -41,11 +41,12 @@ Create a ticket object.
 | `subject` | string | **required**
 | `content` | string | **required**
 | `content_format` | string | `markdown` for HTML or blank for plaintext
+| `dont_send` | integer | `0`=create/send normally, `1`=create ticket without sending
 | `org_id` | id | [organization](/docs/api/endpoints/organizations/)
 | `owner_id` | id | [worker](/docs/api/endpoints/workers/)
 | `html_template_id` | id | [html template](/docs/api/endpoints/mail-html-template/)
 | `file_id[]` | ids | Upload with [attachments](/docs/api/endpoints/attachments/)
-| `status` | integer | 0=open, 1=waiting, 2=closed, 3=deleted
+| `status` | integer | `0`=open, `1`=waiting, `2`=closed, `3`=deleted
 | `reopen_at` | mixed | unix timestamp or string (e.g. "Friday 2pm", "+2 hours")
 | `custom_*` | mixed | 
 
@@ -54,7 +55,7 @@ Create a ticket object.
 
 <pre>
 <code class="language-php">
-$postfields = array(
+$postfields = [
     array('expand','bucket_,group_,custom_'),
     array('group_id','6'),
     array('bucket_id','6'),
@@ -71,7 +72,7 @@ $postfields = array(
     array('custom_5','+1 hour'), // date custom field
     array('custom_6',"Line 1\nLine 2\nLine 3"), // multi-line
     array('custom_4','Option 3'), // picklist
-);
+];
 $out = $cerb->post($base_url . 'tickets/compose.json', $postfields);
 </code>
 </pre>
@@ -128,7 +129,7 @@ Reply to a ticket message as a worker.
 
 <pre>
 <code class="language-php">
-$postfields = array(
+$postfields = [
     array('expand','bucket_,group_,custom_'),
     array('message_id','1024'),
     array('content','This is the raw message with an attachment'),
@@ -144,7 +145,7 @@ $postfields = array(
     array('subject','Testing compose from API'), // optional
     array('to','customer@example.com'), // optional
     array('html_template_id', '1'), // optional
-);
+];
 $out = $cerb->post($base_url . 'tickets/reply.json', $postfields);</code>
 </pre>
 
