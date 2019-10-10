@@ -38,7 +38,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |:-:|-|-|-
 |   | `expires_at` | [timestamp](/docs/records/fields/types/timestamp/) | The expiration date of the public key 
 | **x** | **`fingerprint`** | [text](/docs/records/fields/types/text/) | The fingerprint of the public key 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this public key 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 

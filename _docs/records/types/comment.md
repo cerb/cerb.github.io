@@ -40,7 +40,8 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | **x** | **`author_id`** | [number](/docs/records/fields/types/number/) | The ID of the comment's author 
 | **x** | **`comment`** | [text](/docs/records/fields/types/text/) | The text of the comment 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `is_markdown` | [boolean](/docs/records/fields/types/boolean/) | `0`=plaintext, `1`=Markdown 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`target__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/#record-type) of the target record 
 | **x** | **`target_id`** | [number](/docs/records/fields/types/number/) | The ID of the target record 
 

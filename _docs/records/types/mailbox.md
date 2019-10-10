@@ -40,7 +40,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `checked_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time this mailbox was last checked for new messages 
 | **x** | **`host`** | [text](/docs/records/fields/types/text/) | The mail server hostname 
 |   | `is_enabled` | [boolean](/docs/records/fields/types/boolean/) | Is this mailbox enabled? `1` for true and `0` for false 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `max_msg_size_kb` | [number](/docs/records/fields/types/number/) | The maximum message size to download (in kilobytes); `0` to disable limits 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this email mailbox 
 |   | `num_fails` | [number](/docs/records/fields/types/number/) | The number of consecutive failures 

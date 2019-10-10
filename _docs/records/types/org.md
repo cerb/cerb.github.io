@@ -40,7 +40,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `country` | [text](/docs/records/fields/types/text/) | Country 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
 |   | `email_id` | [number](/docs/records/fields/types/number/) | Primary [email address](/docs/records/types/address/) 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this organization 
 |   | `phone` | [text](/docs/records/fields/types/text/) | Phone 
 |   | `postal` | [text](/docs/records/fields/types/text/) | Postal code / ZIP 

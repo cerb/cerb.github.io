@@ -37,7 +37,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
 |   | `content` | [text](/docs/records/fields/types/text/) | The body content of the draft message 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `subject` | [text](/docs/records/fields/types/text/) | The subject line of the draft message 
 |   | `to` | [text](/docs/records/fields/types/text/) | The `To:` line of the draft message 

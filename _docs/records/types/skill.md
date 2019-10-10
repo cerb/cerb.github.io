@@ -36,7 +36,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this skill 
 | **x** | **`skillset_id`** | [number](/docs/records/fields/types/number/) | The ID of the [skillset](/docs/records/types/skillset/) containing this skill 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 

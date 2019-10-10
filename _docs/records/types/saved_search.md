@@ -37,7 +37,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
 | **x** | **`context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) of this search query; e.g. `ticket` 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this saved search 
 | **x** | **`owner__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) of this saved search's owner: `app`, `role`, `group`, or `worker` 
 |   | `owner_id` | [number](/docs/records/fields/types/number/) | The ID of this saved search's owner 
@@ -77,7 +77,7 @@ These [filters](/docs/search/filters/) are available in saved search [search que
 |---
 | Field | Type | Description
 |-|-|-
-| `context:` | [text](/docs/search/filters/text/) | Context
+| `context:` | [text](/docs/search/filters/text/) | Record Type
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `name:` | [text](/docs/search/filters/text/) | Name
@@ -92,7 +92,7 @@ These columns are available on saved search [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `c_context` | Context
+| `c_context` | Record Type
 | `c_id` | Id
 | `c_name` | Name
 | `c_query` | Query

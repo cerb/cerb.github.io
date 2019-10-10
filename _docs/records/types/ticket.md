@@ -39,14 +39,15 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `bucket_id` | [number](/docs/records/fields/types/number/) | The ID of the [bucket](/docs/records/types/bucket/) containing this ticket 
 |   | `closed` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time this ticket was first set to status `closed` 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
-|   | `fieldsets` | [text](/docs/records/fields/types/text/) |  
+|   | `fieldsets` | fieldsets | An array or comma-separated list of [custom fieldset](/docs/records/types/custom_fieldset/) IDs 
 | **x** | **`group_id`** | [number](/docs/records/fields/types/number/) | The ID of the [group](/docs/records/types/group/) containing this ticket 
 |   | `importance` | [number](/docs/records/fields/types/number/) | A number from `0` (least) to `100` (most) 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `mask` | [text](/docs/records/fields/types/text/) | The randomized reference number for this ticket; auto-generated if blank 
 |   | `org` | [text](/docs/records/fields/types/text/) | The exact name of the [organization](/docs/records/types/org/) linked to this ticket; alternative to `org_id` 
 |   | `org_id` | [number](/docs/records/fields/types/number/) | The ID of the [organization](/docs/records/types/org/) linked to this ticket; alternative to `org` 
 |   | `owner_id` | [number](/docs/records/fields/types/number/) | The ID of the [worker](/docs/records/types/worker/) responsible for this ticket 
+|   | `participant_ids` | [text](/docs/records/fields/types/text/) | A comma-separated list of email addresses IDs to add or remove as participants. Prefix an ID with `-` to remove 
 |   | `participants` | [text](/docs/records/fields/types/text/) | A comma-separated list of email addresses to add as participants 
 |   | `reopen_date` | [timestamp](/docs/records/fields/types/timestamp/) | If status `waiting`, the date/time to automatically change the status back to `open` 
 |   | `spam_score` | [float](/docs/records/fields/types/float/) | `0.0001` (not spam) to `0.9999` (spam); automatically generated 

@@ -39,7 +39,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
 |   | `is_closed` | [boolean](/docs/records/fields/types/boolean/) | Is this call resolved? 
 |   | `is_outgoing` | [boolean](/docs/records/fields/types/boolean/) | `0` (incoming), `1` (outgoing) 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `phone` | [text](/docs/records/fields/types/text/) | The phone number of the caller or target 
 | **x** | **`subject`** | [text](/docs/records/fields/types/text/) | A brief summary of the call 
 |   | `updated` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 

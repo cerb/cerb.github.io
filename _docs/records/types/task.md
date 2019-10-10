@@ -39,9 +39,9 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `completed` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time this task was completed 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
 |   | `due` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time of this task's deadline 
-|   | `fieldsets` | [text](/docs/records/fields/types/text/) |  
+|   | `fieldsets` | fieldsets | An array or comma-separated list of [custom fieldset](/docs/records/types/custom_fieldset/) IDs 
 |   | `importance` | [number](/docs/records/fields/types/number/) | A number from `0` (least) to `100` (most) 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `owner_id` | [number](/docs/records/fields/types/number/) | The ID of the [worker](/docs/records/types/worker/) responsible for this task 
 |   | `reopen` | [timestamp](/docs/records/fields/types/timestamp/) | If the status is `waiting`, the date/time to automatically change the status back to `open` 
 |   | `status` | [text](/docs/records/fields/types/text/) | `o` (open), `w` (waiting), `c` (closed); alternative to `status_id` 

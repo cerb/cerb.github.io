@@ -51,7 +51,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `is_superuser` | [boolean](/docs/records/fields/types/boolean/) | Is this worker an administrator with full privileges? 
 | **x** | **`language`** | [text](/docs/records/fields/types/text/) | ISO-639 language code and ISO-3166 country code; e.g. `en_US` 
 |   | `last_name` | [text](/docs/records/fields/types/text/) | Surname 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `location` | [text](/docs/records/fields/types/text/) | Location description; `Los Angeles, CA, USA` 
 |   | `mobile` | [text](/docs/records/fields/types/text/) | Mobile number 
 |   | `password` | [text](/docs/records/fields/types/text/) | The worker's password, if applicable; stored security; will be automatically generated if blank 

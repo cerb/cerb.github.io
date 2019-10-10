@@ -36,7 +36,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this feed 
 | **x** | **`url`** | [url](/docs/records/fields/types/url/) | The URL of the RSS feed 
 

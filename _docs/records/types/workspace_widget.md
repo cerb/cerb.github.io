@@ -38,7 +38,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |:-:|-|-|-
 | **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | [Workspace Widget Type](/docs/plugins/extensions/points/cerberusweb.ui.workspace.widget/) 
 | **x** | **`label`** | [text](/docs/records/fields/types/text/) | The human-friendly name of the widget 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `pos` | [number](/docs/records/fields/types/number/) | The position of the widget on the dashboard; `0` is first (top-right); rows before columns 
 | **x** | **`tab_id`** | [number](/docs/records/fields/types/number/) | The ID of the [workspace tab](/docs/records/types/workspace_tab/) containing this widget 

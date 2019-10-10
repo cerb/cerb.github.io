@@ -40,7 +40,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `image` | [image](/docs/records/fields/types/image/) | Base64-encoded PNG image 
 |   | `is_default` | [boolean](/docs/records/fields/types/boolean/) | [Tickets](/docs/tickets/) are assigned to the default group when no other routing rules match 
 |   | `is_private` | [boolean](/docs/records/fields/types/boolean/) | The content in public (`0`) groups is visible to everyone; in private (`1`) groups content is only visible to members 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `members` | [text](/docs/records/fields/types/text/) | JSON-encoded array of [worker](/docs/records/types/worker/) IDs; `[1,2,3]` 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this group 
 |   | `reply_address_id` | [number](/docs/records/fields/types/number/) | The ID of the [email address](/docs/records/types/address/) used when sending replies from this group 

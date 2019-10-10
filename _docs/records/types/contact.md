@@ -44,7 +44,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `language` | [text](/docs/records/fields/types/text/) | Language: `en_US` 
 |   | `last_login_at` | [timestamp](/docs/records/fields/types/timestamp/) | Date of their last [community portal](/docs/portals/) login 
 |   | `last_name` | [text](/docs/records/fields/types/text/) | Surname 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `location` | [text](/docs/records/fields/types/text/) | Location (e.g. `Los Angeles, California, USA`) 
 |   | `mobile` | [text](/docs/records/fields/types/text/) | Mobile number 
 |   | `org_id` | [number](/docs/records/fields/types/number/) | ID of this contact's [organization](/docs/records/types/org/) 

@@ -44,7 +44,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `is_broadcast` | [boolean](/docs/records/fields/types/boolean/) | Was this message sent using the broadcast feature? 
 |   | `is_not_sent` | [boolean](/docs/records/fields/types/boolean/) | Was this message saved without sending? 
 |   | `is_outgoing` | [boolean](/docs/records/fields/types/boolean/) | Was this an outgoing reply from a worker? 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `response_time` | [number](/docs/records/fields/types/number/) | Response time in seconds 
 |   | `sender` | [text](/docs/records/fields/types/text/) | The [email address](/docs/records/types/address/) of the sender; alternative to `sender_id` 
 | **x** | **`sender_id`** | [number](/docs/records/fields/types/number/) | The ID of the sender's [email address](/docs/records/types/address/) record 
@@ -141,6 +141,7 @@ These columns are available on message [worklists](/docs/worklists/):
 | `m_was_encrypted` | Is Encrypted
 | `m_was_signed` | Is Signed
 | `m_worker_id` | Worker
+| `t_bucket_id` | Bucket
 | `t_group_id` | Group
 | `t_mask` | Mask
 | `t_subject` | Subject

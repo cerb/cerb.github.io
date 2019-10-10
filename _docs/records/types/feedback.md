@@ -38,7 +38,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |:-:|-|-|-
 |   | `author_id` | [number](/docs/records/fields/types/number/) | The ID of the [email address](/docs/records/types/address/) of the feedback author 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`quote_mood_id`** | [number](/docs/records/fields/types/number/) | `0` (neutral), `1` (praise), `2` (criticism) 
 | **x** | **`quote_text`** | [text](/docs/records/fields/types/text/) | The feedback content 
 |   | `url` | [url](/docs/records/fields/types/url/) | (optional) The URL where the feedback was received 

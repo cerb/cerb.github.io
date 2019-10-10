@@ -40,7 +40,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | **x** | **`feed_id`** | [number](/docs/records/fields/types/number/) | The ID of the [feed](/docs/records/types/feed/) containing this item 
 |   | `guid` | [text](/docs/records/fields/types/text/) | The globally unique ID of this item in the feed 
 |   | `is_closed` | [boolean](/docs/records/fields/types/boolean/) | Is this item viewed/resolved? 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`title`** | [text](/docs/records/fields/types/text/) | The title of this feed item 
 | **x** | **`url`** | [text](/docs/records/fields/types/text/) | The URL of this feed item 
 

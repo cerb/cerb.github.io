@@ -40,7 +40,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `amount_currency_id` | [number](/docs/records/fields/types/number/) | The ID of the [currency](/docs/records/types/currency/) 
 |   | `closed_at` | [timestamp](/docs/records/fields/types/timestamp/) |  
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `status` | [text](/docs/records/fields/types/text/) | `open`, `closed_won`, `closed_lost`; alternative to `status_id` 
 |   | `status_id` | [number](/docs/records/fields/types/number/) | `0` (open), `1` (closed/won), `2` (closed/lost); alternaitve to `status` 
 | **x** | **`title`** | [text](/docs/records/fields/types/text/) | The name of the opportunity 

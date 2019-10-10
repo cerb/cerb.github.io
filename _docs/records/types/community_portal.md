@@ -38,7 +38,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |:-:|-|-|-
 |   | `code` | [text](/docs/records/fields/types/text/) | Randomized internal ID for the portal 
 | **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | [Community Portal Type](/docs/plugins/extensions/points/cerb.portal/) 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this portal 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 

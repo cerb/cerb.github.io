@@ -38,7 +38,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |:-:|-|-|-
 | **x** | **`group_id`** | [number](/docs/records/fields/types/number/) | The ID of the parent [group](/docs/records/types/group/) containing this bucket 
 |   | `is_default` | [boolean](/docs/records/fields/types/boolean/) | Is this the default (inbox) bucket of the group? 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this bucket 
 |   | `reply_address_id` | [number](/docs/records/fields/types/number/) | The ID of the [email address](/docs/records/types/address/) used when sending replies from this bucket 
 |   | `reply_html_template_id` | [number](/docs/records/fields/types/number/) | The ID of the default [mail template](/docs/records/types/html_template/) used when sending HTML mail from this bucket 

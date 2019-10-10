@@ -38,7 +38,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |:-:|-|-|-
 |   | `created_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
 |   | `is_disabled` | [boolean](/docs/records/fields/types/boolean/) | Is this bot disabled? 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `mention_name` | [text](/docs/records/fields/types/text/) | (deprecated) 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this bot 
 | **x** | **`owner__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) of this bot's owner: `app`, `role`, `group`, or `worker` 

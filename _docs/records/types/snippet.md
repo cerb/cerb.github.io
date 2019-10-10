@@ -38,7 +38,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |:-:|-|-|-
 | **x** | **`content`** | [text](/docs/records/fields/types/text/) | The [template](/docs/bots/scripting/) of the snippet 
 |   | `context` | [text](/docs/records/fields/types/text/) | The [record type](/docs/records/types/) to add the profile tab to 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`owner__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) of this snippet's owner: `app`, `role`, `group`, or `worker` 
 | **x** | **`owner_id`** | [number](/docs/records/fields/types/number/) | The ID of this snippet's owner 
 |   | `placeholders` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 

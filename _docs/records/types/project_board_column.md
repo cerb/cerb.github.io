@@ -38,7 +38,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |:-:|-|-|-
 | **x** | **`board_id`** | [number](/docs/records/fields/types/number/) | The [project board](/docs/records/types/project_board/) containing this column 
 |   | `cards` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to add to this column 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this project board column 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 

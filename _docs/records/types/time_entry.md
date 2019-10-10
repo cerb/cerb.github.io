@@ -38,7 +38,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |:-:|-|-|-
 |   | `activity_id` | [number](/docs/records/fields/types/number/) | The ID of the [activity](/docs/records/types/timetracking_activity/) for the work 
 |   | `is_closed` | [boolean](/docs/records/fields/types/boolean/) | Is this time entry archived? 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `log_date` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time of the work 
 | **x** | **`mins`** | [number](/docs/records/fields/types/number/) | The number of minutes worked 
 | **x** | **`worker_id`** | [number](/docs/records/fields/types/number/) | The ID of the [worker](/docs/records/types/worker/) who completed the work 

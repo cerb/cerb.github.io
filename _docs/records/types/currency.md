@@ -39,7 +39,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `code` | [text](/docs/records/fields/types/text/) | Currency code; e.g. `USD` 
 |   | `decimal_at` | [number](/docs/records/fields/types/number/) | The number of significant decimal places (0-16); e.g. `2` for `0.00` 
 |   | `is_default` | [boolean](/docs/records/fields/types/boolean/) | Is this the default currency? 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `name` | [text](/docs/records/fields/types/text/) | The singular name of this currency; `Dollar` 
 |   | `name_plural` | [text](/docs/records/fields/types/text/) | The plural name of this currency; `Dollars` 
 |   | `symbol` | [text](/docs/records/fields/types/text/) | Symbol; `$`, `£`, `€` 

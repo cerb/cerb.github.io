@@ -21,8 +21,8 @@ jumbotron:
 
 |---
 |-|-
-| **Name (singular):** | Behavior Scheduled
-| **Name (plural):** | Behaviors Scheduled
+| **Name (singular):** | Behavior Schedule
+| **Name (plural):** | Behavior Schedules
 | **Alias (uri):** | scheduled_behavior
 | **Identifier (ID):** | cerberusweb.contexts.behavior.scheduled
 

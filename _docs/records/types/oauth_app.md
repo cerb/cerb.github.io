@@ -39,7 +39,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | **x** | **`callback_url`** | [url](/docs/records/fields/types/url/) | The OAuth2 callback URL of the app 
 | **x** | **`client_id`** | [text](/docs/records/fields/types/text/) | The client identifier of the app 
 | **x** | **`client_secret`** | [text](/docs/records/fields/types/text/) | The client secret of the app 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this oauth app 
 |   | `scopes` | [text](/docs/records/fields/types/text/) | The app's available scopes in YAML format 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 

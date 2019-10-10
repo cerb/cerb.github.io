@@ -40,7 +40,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `event_end` | [text](/docs/records/fields/types/text/) | The end date/time of the event 
 |   | `event_start` | [text](/docs/records/fields/types/text/) | The start date/time of the event 
 |   | `is_available` | [boolean](/docs/records/fields/types/boolean/) | `true` for available; `false` for busy 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of the event 
 | **x** | **`patterns`** | [text](/docs/records/fields/types/text/) | One pattern per line 
 |   | `recur_end` | [timestamp](/docs/records/fields/types/timestamp/) | The end date/time of the recurring range 

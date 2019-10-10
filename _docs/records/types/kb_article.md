@@ -39,7 +39,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `categories` | [text](/docs/records/fields/types/text/) | A comma-separated list of IDs of [categories](/docs/records/types/kb_category/) to assign this article to 
 |   | `content` | [text](/docs/records/fields/types/text/) | The content of the article 
 |   | `format` | [text](/docs/records/fields/types/text/) | `text`, `markdown`, or `html` 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`title`** | [text](/docs/records/fields/types/text/) | The title of the article 
 |   | `updated` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 |   | `views` | [number](/docs/records/fields/types/number/) | The number of times the article has been viewed in a [community portal](/docs/portals/) 

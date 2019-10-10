@@ -42,7 +42,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `host` | [text](/docs/records/fields/types/text/) | The hostname of the email address 
 |   | `is_banned` | [boolean](/docs/records/fields/types/boolean/) | Is incoming email blocked? 
 |   | `is_defunct` | [boolean](/docs/records/fields/types/boolean/) | Is this address non-deliverable? 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `mail_transport_id` | [number](/docs/records/fields/types/number/) | If this address is used for outgoing mail, the [mail transport](/docs/records/types/mail_transport/) to use; otherwise empty 
 |   | `org_id` | [number](/docs/records/fields/types/number/) | The [organization](/docs/records/types/org/) linked to this email 
 |   | `updated` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 

@@ -39,7 +39,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `content` | [text](/docs/records/fields/types/text/) | The content of the tweet 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
 |   | `is_closed` | [boolean](/docs/records/fields/types/boolean/) | Is the tweet resolved? 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `twitter_id` | [text](/docs/records/fields/types/text/) | The ID of the Twitter [connected account](/docs/records/types/connected_account/) 
 |   | `user_followers_count` | [number](/docs/records/fields/types/number/) | The user's follower count 
 |   | `user_name` | [text](/docs/records/fields/types/text/) | The user's name 
