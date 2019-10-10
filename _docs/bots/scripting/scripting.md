@@ -22,7 +22,7 @@ jumbotron:
 <img src="/assets/images/docs/bots/scripting/banner.png" class="screenshot">
 </div>
 
-The purpose of bot [behaviors](/docs/bots/behaviors/) is to automatically perform actions in response to [events](/docs/bots/behaviors/events/).
+The purpose of bot [behaviors](/docs/bots/behaviors/) is to automatically perform actions in response to [events](/docs/bots/events/).
 
 Many of these actions need to generate text:
 * Setting record fields

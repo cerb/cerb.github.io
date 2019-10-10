@@ -70,7 +70,7 @@
 - title: Bots
   docs:
   - bots
-  - bots/behaviors/events
+  - bots/events
   - bots/behaviors
   - bots/behaviors/dictionaries
   - bots/behaviors/variables

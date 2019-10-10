@@ -15,7 +15,7 @@ jumbotron:
     url: /docs/bots/
 ---
 
-A bot **behavior** automatically makes decisions and performs actions in response to [events](/docs/events/).
+A bot **behavior** automatically makes decisions and performs actions in response to [events](/docs/bots/events/).
 
 A behavior is described by a **decision tree** made up of **nodes** -- a collection of relatively simple building blocks that can be chained together to do complex things.
 

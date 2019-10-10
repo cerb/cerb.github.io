@@ -18,7 +18,7 @@ jumbotron:
     url: /docs/bots/behaviors/
 ---
 
-Every [event](/docs/bots/behaviors/events/) and [record](/docs/records/) in Cerb can be represented as a **dictionary**.
+Every [event](/docs/bots/events/) and [record](/docs/records/) in Cerb can be represented as a **dictionary**.
 
 Dictionaries are used to power many features, including [bots](/docs/bots/), [data queries](/docs/data-queries/), [sheets](/docs/sheets/), [snippets](/docs/snippets/), [dashboards](/docs/dashboards/), [worklists](/docs/worklists/), and the [API](/docs/api/).
 
