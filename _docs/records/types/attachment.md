@@ -37,7 +37,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
 |   | `attach` | [links](/docs/records/fields/types/links/) | An array of `type:id` tuples to attach this file to 
-|   | `content` | [text](/docs/records/fields/types/text/) | The content of this file 
+|   | `content` | [text](/docs/records/fields/types/text/) | The content of this file. For binary, base64-encode in [data URI format](https://en.wikipedia.org/wiki/Data_URI_scheme)
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
 |   | `mime_type` | [text](/docs/records/fields/types/text/) | The MIME type of this file (e.g. `image/png`); defaults to `application/octet-stream` 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The filename 
