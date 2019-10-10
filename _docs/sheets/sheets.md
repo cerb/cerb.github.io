@@ -270,7 +270,7 @@ columns:
       max: 100
       #value: 50
       #value_key: importance
-      #value_template: "{{importance}}+10}}"
+      #value_template: "{{importance+10}}"
 {% endraw %}
 </code>
 </pre>
