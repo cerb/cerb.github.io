@@ -2,6 +2,7 @@
 title: Integrate with Freshbooks Classic
 excerpt: A step-by-step guide for integrating Cerb and Freshbooks Classic.
 permalink: /guides/integrations/freshbooks-classic/
+social_image_url: /assets/images/guides/freshbooks/cerb-and-freshbooks.png
 layout: integration
 topic: Integrations
 subtopic: Freshbooks Classic
