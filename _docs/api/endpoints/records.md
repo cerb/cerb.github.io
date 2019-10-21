@@ -211,3 +211,22 @@ $postfields = [
 $out = $cerb->put($base_url . 'records/task/1.json', $postfields);
 </code>
 </pre>
+
+## Unlink
+
+You can remove record links by prefixing the tuple with a `-` (dash).
+
+You may mix link additions and removals in the same request.
+
+### Example
+{: .no_toc}
+
+<pre>
+<code class="language-php">
+$postfields = [
+    ['fields[links][]', '-org:123'],
+    ['fields[links][]', 'ticket:456'],
+];
+$out = $cerb->put($base_url . 'records/task/1.json', $postfields);
+</code>
+</pre>
