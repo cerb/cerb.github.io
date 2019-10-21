@@ -59,6 +59,13 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `to` | text | To
 | `updated` | date | Updated
 | `worker_` | record | [Worker](/docs/records/types/worker/)
+
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+
+|---
+| Field | Type | Description
+|-|-|-
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
 	
 ### Search Query Fields
 

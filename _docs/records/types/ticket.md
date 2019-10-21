@@ -88,20 +88,22 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `updated` | date | Updated
 | `url` | text | Url
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `_messages` | records | Messages
-| `custom_<id>` | mixed | Custom Fields
+| `attachments` | attachments | [Attachments](/docs/bots/behaviors/dictionaries/key-expansion/#attachments)
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
 | `latest_incoming_activity` | date | Latest Incoming Activity
 | `latest_outgoing_activity` | date | Latest Outgoing Activity
-| `links` | links | Links
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 | `requester_emails` | text | Requester Emails (Comma-Separated)
 | `requesters` | hashmap | Requesters
 | `signature` | text | Signature
-| `watchers` | watchers | Watchers
+| `watchers` | watchers | [Watchers](/docs/bots/behaviors/dictionaries/key-expansion/#watchers)
 	
 ### Search Query Fields
 

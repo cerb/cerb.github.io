@@ -79,19 +79,20 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `was_signed` | boolean | Is Signed
 | `worker_` | record | [Sender Worker](/docs/records/types/worker/)
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `attachments` | records | Attachments
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
 | `content` | text | Content
 | `content_html` | text | Content (Html)
-| `custom_<id>` | mixed | Custom Fields
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
 | `headers` | hashmap | Headers
-| `links` | links | Links
-| `reply_cc` | text | `Cc:` Recipients (Comma-Separated)
-| `reply_to` | text | `To:` Recipients (Comma-Separated)
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
+| `reply_cc` | text | `Cc:` recipients (comma-separated)
+| `reply_to` | text | `To:` recipients (comma-separated)
 	
 ### Search Query Fields
 

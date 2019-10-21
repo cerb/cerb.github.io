@@ -57,17 +57,18 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `record_url` | text | Record Url
 | `updated_at` | date | Updated
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `custom_<id>` | mixed | Custom Fields
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
 | `events` |  | Events
 | `events_occluded` |  | Events (Occluded)
-| `links` | links | Links
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 | `scope` |  | Scope
-| `watchers` | watchers | Watchers
+| `watchers` | watchers | [Watchers](/docs/bots/behaviors/dictionaries/key-expansion/#watchers)
 | `weeks` |  | Weeks
 | `weeks_events` |  | Weeks Events
 | `weeks_events_occluded` |  | Weeks Events (Occluded)

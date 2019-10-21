@@ -73,6 +73,7 @@
   - bots/events
   - bots/behaviors
   - bots/behaviors/dictionaries
+  - bots/behaviors/dictionaries/key-expansion
   - bots/behaviors/variables
   - bots/behaviors/simulator
   - bots/delegation

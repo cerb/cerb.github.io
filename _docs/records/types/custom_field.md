@@ -59,6 +59,13 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `pos` | number | Order
 | `type` | text | Type
 | `updated_at` | date | Updated
+
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+
+|---
+| Field | Type | Description
+|-|-|-
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
 	
 ### Search Query Fields
 
