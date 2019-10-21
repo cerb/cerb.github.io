@@ -5,7 +5,7 @@ permalink: /docs/data-queries/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 jumbotron:
   title: Data Queries
-  tagline: Retrieve complex data using simple text queries and drive visualizations
+  tagline: A text-based grammar for querying and transforming data to drive visualizations
   breadcrumbs:
   -
     label: Docs &raquo;

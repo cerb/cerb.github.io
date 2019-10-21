@@ -55,6 +55,10 @@ format:geojson
 </code>
 </pre>
 
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/data-queries/data-queries-sample-geopoints.png" class="screenshot">
+</div>
+
 # sample.timeseries
 
 `sample.timeseries` data queries return simulated time-series data.
@@ -104,6 +108,10 @@ format:timeseries
 {% endraw %}
 </code>
 </pre>
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/data-queries/data-queries-sample-timeseries.png" class="screenshot">
+</div>
 
 # sample.xy
 
@@ -156,3 +164,6 @@ format:scatterplot
 </code>
 </pre>
 
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/data-queries/data-queries-sample-xy.png" class="screenshot">
+</div>

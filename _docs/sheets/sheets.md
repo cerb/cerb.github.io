@@ -5,7 +5,7 @@ permalink: /docs/sheets/
 social_image_url: /assets/images/docs/sheets/sheets.png
 jumbotron:
   title: Sheets
-  tagline: Tabular data visualization with a fully customizable text-based schema
+  tagline: A text-based grammar for building rich data grids
   breadcrumbs:
   -
     label: Docs &raquo;
