@@ -44,7 +44,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `is_broadcast` | [boolean](/docs/records/fields/types/boolean/) | Was this message sent using the broadcast feature? 
 |   | `is_not_sent` | [boolean](/docs/records/fields/types/boolean/) | Was this message saved without sending? 
 |   | `is_outgoing` | [boolean](/docs/records/fields/types/boolean/) | Was this an outgoing reply from a worker? 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `response_time` | [number](/docs/records/fields/types/number/) | Response time in seconds 
 |   | `sender` | [text](/docs/records/fields/types/text/) | The [email address](/docs/records/types/address/) of the sender; alternative to `sender_id` 
 | **x** | **`sender_id`** | [number](/docs/records/fields/types/number/) | The ID of the sender's [email address](/docs/records/types/address/) record 
@@ -79,19 +79,20 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `was_signed` | boolean | Is Signed
 | `worker_` | record | [Sender Worker](/docs/records/types/worker/)
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `attachments` | records | Attachments
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
 | `content` | text | Content
 | `content_html` | text | Content (Html)
-| `custom_<id>` | mixed | Custom Fields
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
 | `headers` | hashmap | Headers
-| `links` | links | Links
-| `reply_cc` | text | `cc:` Recipients (Comma-Separated)
-| `reply_to` | text | `to:` Recipients (Comma-Separated)
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
+| `reply_cc` | text | `Cc:` recipients (comma-separated)
+| `reply_to` | text | `To:` recipients (comma-separated)
 	
 ### Search Query Fields
 
@@ -105,7 +106,7 @@ These [filters](/docs/search/filters/) are available in message [search queries]
 | `created:` | [date](/docs/search/filters/dates/) | Created
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `header.messageId:` | [text](/docs/search/filters/text/) | Message-Id Header
-| `id:` | [number](/docs/search/filters/numbers/) | Id
+| `id:` | context | Id
 | `isBroadcast:` | [boolean](/docs/search/filters/booleans/) | Is Broadcast
 | `isEncrypted:` | [boolean](/docs/search/filters/booleans/) | Is Encrypted
 | `isNotSent:` | [boolean](/docs/search/filters/booleans/) | Is Not Sent
@@ -130,7 +131,7 @@ These columns are available on message [worklists](/docs/worklists/):
 |-|-
 | `*_has_fieldset` | Fieldset
 | `a_email` | Email
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `m_address_id` | Sender
 | `m_created_date` | Created
 | `m_is_broadcast` | Is Broadcast
@@ -141,6 +142,7 @@ These columns are available on message [worklists](/docs/worklists/):
 | `m_was_encrypted` | Is Encrypted
 | `m_was_signed` | Is Signed
 | `m_worker_id` | Worker
+| `t_bucket_id` | Bucket
 | `t_group_id` | Group
 | `t_mask` | Mask
 | `t_subject` | Subject

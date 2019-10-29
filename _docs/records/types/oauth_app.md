@@ -39,7 +39,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | **x** | **`callback_url`** | [url](/docs/records/fields/types/url/) | The OAuth2 callback URL of the app 
 | **x** | **`client_id`** | [text](/docs/records/fields/types/text/) | The client identifier of the app 
 | **x** | **`client_secret`** | [text](/docs/records/fields/types/text/) | The client secret of the app 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this oauth app 
 |   | `scopes` | [text](/docs/records/fields/types/text/) | The app's available scopes in YAML format 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
@@ -62,13 +62,14 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `updated_at` | date | Updated
 | `url` | text | Url
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `custom_<id>` | mixed | Custom Fields
-| `links` | links | Links
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 	
 ### Search Query Fields
 
@@ -93,7 +94,7 @@ These columns are available on oauth app [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `o_callback_url` | Callback Url
 | `o_client_id` | Client Id
 | `o_id` | Id

@@ -27,7 +27,7 @@ jumbotron:
 
 # Introduction
 
-This guide demonstrates how to enable one-click single sign-on (SSO) for Cerb workers by authenticating against existing Salesforce accounts using the OpenID Connect (OIDC) stanard.
+This guide demonstrates how to enable one-click single sign-on (SSO) for Cerb workers by authenticating against existing Salesforce accounts using the OpenID Connect (OIDC) standard.
 
 <div class="cerb-box note">
 <p>The email address for each account in Salesforce will need to be associated with a worker record in Cerb. You can also disable password-based logins for those accounts.</p>
@@ -87,7 +87,7 @@ Log in to Cerb as an administrator.
 
 ## Create an OpenID service for Salesforce
 
-1. Navigate to **Setup >> Configure >> Import Package**.
+1. Navigate to **Setup >> Packages >> Import**.
 
 1. Paste the following package:
 

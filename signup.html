@@ -1,0 +1,128 @@
+---
+layout: page
+title: Try Cerb for free
+excerpt: Deploy Cerb in the cloud or on your own servers
+permalink: /signup/
+jumbotron: 
+  title: Try Cerb for free
+  tagline: Deploy Cerb in the cloud or on your own servers
+---
+
+<form method="POST" action="" onsubmit="return false;" id="cerb-signup-form">
+	<div>
+		<b>Work email:</b>
+	</div>
+	<div style="margin-bottom:10px;">
+		<input type="text" name="email" style="width:97%;padding:5px;font-size:24px;" placeholder="e.g. you@example.com" autofocus="autofocus">
+	</div>
+
+	<div>
+		<b>Organization:</b>
+	</div>
+	<div style="margin-bottom:10px;">
+		<input type="text" name="org" style="width:97%;padding:5px;font-size:24px;" placeholder="e.g. Example, Inc.">
+	</div>
+
+	<div>
+		<b>Which best describes your organization?</b>
+	</div>
+	<div style="margin:0px 0px 10px 15px;">
+		<div>
+			<label><input type="radio" name="org_type" value="business" checked="checked"> Business</label>
+		</div>
+		<div>
+			<label><input type="radio" name="org_type" value="gov"> Government agency</label>
+		</div>
+		<div>
+			<label><input type="radio" name="org_type" value="academic"> Academic institution</label>
+		</div>
+		<div>
+			<label><input type="radio" name="org_type" value="non-profit"> Non-profit organization</label>
+		</div>
+		<div>
+			<label><input type="radio" name="org_type" value="opensource"> Open source project</label>
+		</div>
+	</div>
+
+	<div>
+		<b>Which deployment options are you interested in?</b>
+	</div>
+	<div style="margin:0px 0px 10px 15px;">
+		<div>
+			<label><input type="checkbox" name="deploy_types[]" value="cerb-cloud" checked="checked"> <b>Cerb Cloud</b>: Deployed as a fully managed subscription service</label>
+		</div>
+		<div>
+			<label><input type="checkbox" name="deploy_types[]" value="self-hosted"> <b>Self-Hosted</b>: Deployed on my own hardware and network</label>
+		</div>
+	</div>
+
+	<div>
+		<b>Would you like to receive an email newsletter with tips on using Cerb?</b>
+	</div>
+	<div style="margin:0px 0px 10px 15px;">
+		<div>
+			<label><input type="checkbox" name="subscribe" value="yes"> Yes! You may occasionally email me about Cerb.</label>
+		</div>
+	</div>
+	
+	<div style="margin-top:20px;">
+		<button type="button" class="cerb-button cerb-submit">Submit</button>
+		<div id="cerb-signup-status" style="margin-top:10px;"></div>
+	</div>
+</form>
+
+<div style="color:rgb(150,150,150);font-size:90%;margin-top:20px;">
+	<p>
+		You'll use your email address to log in to your new Cerb account. Unless you consent otherwise, we will only contact you at this address regarding your evaluation. You may unsubscribe at any time.
+	</p>
+	
+	<p>
+		It is our <a href="/privacy" style="color:inherit;text-decoration:underline;">policy</a> to respect your privacy. We do not share your information with third-parties without explicit permission except to comply with the law or to provide necessary infrastructure in connection with the services you request.
+	</p>
+</div>
+
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function(event) {
+		var $form = document.querySelector('#cerb-signup-form');
+		var $status = document.querySelector('#cerb-signup-status');
+		var $submit = $form.querySelector('button.cerb-submit');
+		
+		$submit.addEventListener("click", function(event) {
+			$status.innerText = '';
+			$submit.style.display = 'none';
+			
+			var xhr = new XMLHttpRequest();
+			var url = "https://form.cerb.ai/signup/";
+
+			xhr.open('POST', url, true);
+		
+			xhr.onreadystatechange = function() {
+				if(xhr.readyState == 4) {
+					if(xhr.status == 200 && xhr.responseText) {
+						var json = JSON.parse(xhr.responseText);
+					
+						if(json.error) {
+							var $error = document.createElement('div');
+							$error.style.padding = '5px';
+							$error.style['border-radius'] = '5px';
+							$error.style.border = '1px solid red';
+							$error.style.color = 'red';
+							$error.style['font-weight'] = 'bold';
+							$error.innerText = json.error;
+							
+							$status.appendChild($error);
+							
+							$submit.style.display = 'block';
+							return;
+						}
+						
+						// Redirect/thanks
+						document.location.href = '/signup/thanks/';
+					}
+				}
+			};
+		
+			xhr.send(new FormData($form));
+		});
+	});
+</script>

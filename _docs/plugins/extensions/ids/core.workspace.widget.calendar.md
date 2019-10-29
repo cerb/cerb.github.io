@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Calendar
 | **Identifier (ID):** | core.workspace.widget.calendar
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/dashboards.php
+| **File:** | api/workspaces/widgets/calendar.php
 | **Class:** | WorkspaceWidget_Calendar
 

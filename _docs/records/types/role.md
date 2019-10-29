@@ -37,7 +37,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
 |   | `editor_query_worker` | [text](/docs/records/fields/types/text/) |  
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `member_query_worker` | [text](/docs/records/fields/types/text/) |  
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this role 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
@@ -61,13 +61,14 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `reader_query_worker` | text | Reader Query
 | `updated_at` | date | Updated
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `custom_<id>` | mixed | Custom Fields
-| `links` | links | Links
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 	
 ### Search Query Fields
 
@@ -92,7 +93,7 @@ These columns are available on role [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `w_editor_query_worker` | Editor Query
 | `w_id` | Id
 | `w_member_query_worker` | Member Query

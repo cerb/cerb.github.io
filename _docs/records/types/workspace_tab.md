@@ -37,7 +37,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
 | **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | [Workspace Tab Type](/docs/plugins/extensions/points/cerberusweb.ui.workspace.tab/) 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this workspace tab 
 | **x** | **`page_id`** | [number](/docs/records/fields/types/number/) | The ID of the [workspace page](/docs/records/types/workspace_page/) containing this tab 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
@@ -62,13 +62,14 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `page_owner_` | record | Page Owner
 | `updated_at` | date | Updated
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `custom_<id>` | mixed | Custom Fields
-| `links` | links | Links
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 | `widgets` | records | Widgets
 | `widgets_data` | hashmap | Widgets Data
 | `worklists` | records | Worklists
@@ -96,7 +97,7 @@ These columns are available on workspace tab [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `w_extension_id` | Type
 | `w_id` | Id
 | `w_name` | Name

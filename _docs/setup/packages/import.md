@@ -15,7 +15,7 @@ jumbotron:
     url: /docs/setup/
   - 
     label: Packages &raquo;
-    url: /docs/setup/packages/
+    url: /docs/setup/#packages
 ---
 
 <div class="cerb-screenshot">

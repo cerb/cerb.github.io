@@ -1,11 +1,11 @@
 ---
-title: "Extension Point: Community Portal Type"
+title: "Extension Point: Portal"
 permalink: /docs/plugins/extensions/points/cerb.portal/
 toc:
-  title: "Community Portal Type"
+  title: "Portal"
   expand: Plugins
 jumbotron:
-  title: "Community Portal Type"
+  title: "Portal"
   tagline: 
   breadcrumbs:
   -
@@ -21,14 +21,13 @@ jumbotron:
 
 |---
 |-|-
-| **Name:** | Community Portal Type
+| **Name:** | Portal
 | **Identifier (ID):** | cerb.portal
 
 {% include docs/plugins/points/cerb.portal.md %}
 
 # Extensions
 
-| [**Community Portal**](/docs/plugins/extensions/cerb.community.portal/) | `cerb.community.portal`
 | [**Conversational Bot**](/docs/plugins/extensions/cerb.bots.portal/) | `cerb.bots.portal`
 | [**Support Center**](/docs/plugins/extensions/sc.tool/) | `sc.tool`
 | [**Webhook Portal**](/docs/plugins/extensions/webhooks.portal/) | `webhooks.portal`

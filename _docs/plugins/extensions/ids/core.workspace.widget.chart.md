@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | (Deprecated) Line/Bar Chart
 | **Identifier (ID):** | core.workspace.widget.chart
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/dashboards.php
+| **File:** | api/workspaces/widgets/deprecated/chart.php
 | **Class:** | WorkspaceWidget_ChartLegacy
 

@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Ticket Spam Analysis
 | **Identifier (ID):** | cerb.profile.tab.widget.ticket.spam_analysis
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/profiles.php
+| **File:** | api/profiles/widgets/ticket/spam_analysis.php
 | **Class:** | ProfileWidget_TicketSpamAnalysis
 

@@ -38,7 +38,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |:-:|-|-|-
 | **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | [Workspace Widget Type](/docs/plugins/extensions/points/cerberusweb.ui.workspace.widget/) 
 | **x** | **`label`** | [text](/docs/records/fields/types/text/) | The human-friendly name of the widget 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `pos` | [number](/docs/records/fields/types/number/) | The position of the widget on the dashboard; `0` is first (top-right); rows before columns 
 | **x** | **`tab_id`** | [number](/docs/records/fields/types/number/) | The ID of the [workspace tab](/docs/records/types/workspace_tab/) containing this widget 
@@ -65,14 +65,15 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `width_units` | number | Width
 | `zone` | text | Zone
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `custom_<id>` | mixed | Custom Fields
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
 | `data` | hashmap | Data
-| `links` | links | Links
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 	
 ### Search Query Fields
 
@@ -99,7 +100,7 @@ These columns are available on workspace widget [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `w_extension_id` | Type
 | `w_id` | Id
 | `w_label` | Label

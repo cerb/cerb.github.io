@@ -46,6 +46,7 @@ jumbotron:
 | Dashboard get metric for widget | `event.dashboard.widget.get_metric`
 | Dashboard render widget | `event.dashboard.widget.render`
 | Data Query Datasource | `event.data.query.datasource`
+| Form interaction | `event.form.interaction.worker`
 | New JIRA issue | `wgmjira.event.issue.created`
 | New comment on JIRA issue | `wgmjira.event.issue.commented`
 | New comment on conversation in group | `event.comment.ticket.group`

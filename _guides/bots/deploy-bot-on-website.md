@@ -65,7 +65,7 @@ You can verify it's installed and enabled from **Setup >> Plugins >> Installed**
 
 We've created a **Help Bot** package to demonstrate conversational bots.
 
-Navigate to **Setup >> Configure >> Import Package**.
+Navigate to **Setup >> Packages >> Import**.
 
 Copy and paste the following JSON:
 

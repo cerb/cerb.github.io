@@ -15,7 +15,7 @@ jumbotron:
     url: /docs/setup/
   - 
     label: Mail &raquo;
-    url: /docs/setup/mail/
+    url: /docs/setup/#outgoing-mail
 ---
 
 The **When not specified by a group, send mail from:** setting determines your default [sender address](/docs/setup/mail/sender-addresses/).

@@ -15,7 +15,7 @@ jumbotron:
     url: /docs/setup/
   - 
     label: Mail &raquo;
-    url: /docs/setup/mail/
+    url: /docs/setup/#incoming-mail
 ---
 
 You can use this page to import email messages in Internet Message Format[^imf].

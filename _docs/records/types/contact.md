@@ -44,7 +44,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `language` | [text](/docs/records/fields/types/text/) | Language: `en_US` 
 |   | `last_login_at` | [timestamp](/docs/records/fields/types/timestamp/) | Date of their last [community portal](/docs/portals/) login 
 |   | `last_name` | [text](/docs/records/fields/types/text/) | Surname 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `location` | [text](/docs/records/fields/types/text/) | Location (e.g. `Los Angeles, California, USA`) 
 |   | `mobile` | [text](/docs/records/fields/types/text/) | Mobile number 
 |   | `org_id` | [number](/docs/records/fields/types/number/) | ID of this contact's [organization](/docs/records/types/org/) 
@@ -80,15 +80,16 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `updated_at` | date | Updated
 | `username` | text | Username
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `custom_<id>` | mixed | Custom Fields
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
 | `emails` | records | Email Addresses
-| `links` | links | Links
-| `watchers` | watchers | Watchers
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
+| `watchers` | watchers | [Watchers](/docs/bots/behaviors/dictionaries/key-expansion/#watchers)
 	
 ### Search Query Fields
 
@@ -140,7 +141,7 @@ These columns are available on contact [worklists](/docs/worklists/):
 | `c_title` | Title
 | `c_updated_at` | Updated
 | `c_username` | Username
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 
 <div class="section-nav">
 	<div class="left">

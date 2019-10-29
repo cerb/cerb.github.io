@@ -37,8 +37,8 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
 |   | `attach` | [links](/docs/records/fields/types/links/) | An array of `type:id` tuples to attach this file to 
-|   | `content` | [text](/docs/records/fields/types/text/) | The content of this file 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `content` | [text](/docs/records/fields/types/text/) | The content of this file. For binary, base64-encode in [data URI format](https://en.wikipedia.org/wiki/Data_URI_scheme) 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `mime_type` | [text](/docs/records/fields/types/text/) | The MIME type of this file (e.g. `image/png`); defaults to `application/octet-stream` 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The filename 
 |   | `updated` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
@@ -60,13 +60,14 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `storage_sha1hash` | text | Sha-1 Hash
 | `updated` | date | Updated
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `custom_<id>` | mixed | Custom Fields
-| `links` | links | Links
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 	
 ### Search Query Fields
 
@@ -103,7 +104,7 @@ These columns are available on attachment [worklists](/docs/worklists/):
 | `a_storage_sha1hash` | Sha-1 Hash
 | `a_storage_size` | Size
 | `a_updated` | Updated
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 
 <div class="section-nav">
 	<div class="left">

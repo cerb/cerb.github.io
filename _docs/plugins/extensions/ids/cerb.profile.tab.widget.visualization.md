@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Data Query Visualization
 | **Identifier (ID):** | cerb.profile.tab.widget.visualization
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/profiles.php
+| **File:** | api/profiles/widgets/data_query_visualization.php
 | **Class:** | ProfileWidget_Visualization
 

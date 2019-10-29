@@ -40,7 +40,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
 | **x** | **`event_json`** | [object](/docs/records/fields/types/object/) | A key/value object of notification properties 
 |   | `is_read` | [boolean](/docs/records/fields/types/boolean/) | Has this been read by the worker? 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 | **x** | **`target__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) of the target record 
 |   | `target_id` | [number](/docs/records/fields/types/number/) | The ID of the target record 
@@ -65,12 +65,12 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `target_` | record | Target
 | `url` | text | Url
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `links` | links | Links
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 	
 ### Search Query Fields
 

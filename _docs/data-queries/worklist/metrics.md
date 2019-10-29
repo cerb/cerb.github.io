@@ -34,6 +34,7 @@ Each `values.*` series should provide:
 * `function:` (count,min,max,average,sum)
 * `metric:` (an equation to apply to each value; [9.1.6](/releases/9.1.6/) or later)
 * `query:` (the query to filter the results for this series)
+* `query.required:` (the required query to filter the results for this series)
 
 Optionally, multiple functions can be specified for a series, like `functions:[sum,average]`, and multiple series will be generated automatically using the same record type, field, and query.
 
@@ -46,7 +47,7 @@ Optionally, multiple functions can be specified for a series, like `functions:[s
 ## Calculating the average first response time from a worklist of tickets
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 type:worklist.metrics 
 values.total:(
   of:ticket
@@ -68,7 +69,7 @@ format:table
 ## Calculating multiple functions in a single query
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 type:worklist.metrics
 values.response_time:(

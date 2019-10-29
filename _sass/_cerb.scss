@@ -218,8 +218,10 @@ div.page-content {
 			font-size: 18px;
 		}
 	}
-	
-	div.feature {
+}
+
+.features {
+	.feature {
 		text-align: left;
 		margin: 0px 0px 20px 0px;
 	
@@ -258,6 +260,72 @@ div.page-content {
 				border: 1px solid rgb(235,235,235);
 			}
 		}
+	}
+}
+
+#cerb-slides {
+	.cerb-slides-nav {
+		margin-bottom: 10px;
+		background-color: rgb(230,230,230);
+		padding: 5px!important;
+		overflow: hidden;
+		
+		.slide {
+			color: rgb(120,120,120);
+			padding: 0;
+			font: inherit;
+			cursor: pointer;
+			margin: 0 5px;
+			white-space: nowrap;
+			
+			&:hover {
+				color: black;
+			}
+			
+			&.selected {
+				color: rgb(255,128,0);
+				font-weight: bold;
+			}
+
+			&.section {
+				color: black;
+				font-size: 1.2em;
+				font-weight: bold;
+				
+				&.selected {
+					color: black;
+					font-weight: bold;
+				}
+			}
+		}
+		
+		.prev {
+			color: rgb(100,100,100);
+			font-weight: bold;
+			white-space: nowrap;
+		}
+		
+		.next {
+			color: rgb(100,100,100);
+			font-weight: bold;
+			white-space: nowrap;
+		}
+	}
+	
+	.feature {
+		.screenshot { 
+			img { 
+				border: 2px solid rgb(225,225,225);
+			}
+		}
+		
+		img {
+			cursor: pointer;
+		}
+	}
+	
+	.feature.selected {
+		display: block;
 	}
 }
 

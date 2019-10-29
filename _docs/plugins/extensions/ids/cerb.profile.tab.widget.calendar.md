@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Calendar
 | **Identifier (ID):** | cerb.profile.tab.widget.calendar
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/profiles.php
+| **File:** | api/profiles/widgets/calendar.php
 | **Class:** | ProfileWidget_Calendar
 

@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Chart: Scatterplot
 | **Identifier (ID):** | cerb.workspace.widget.chart.scatterplot
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/dashboards.php
+| **File:** | api/workspaces/widgets/chart_scatterplot.php
 | **Class:** | WorkspaceWidget_ChartScatterplot
 

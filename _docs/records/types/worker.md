@@ -51,7 +51,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `is_superuser` | [boolean](/docs/records/fields/types/boolean/) | Is this worker an administrator with full privileges? 
 | **x** | **`language`** | [text](/docs/records/fields/types/text/) | ISO-639 language code and ISO-3166 country code; e.g. `en_US` 
 |   | `last_name` | [text](/docs/records/fields/types/text/) | Surname 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `location` | [text](/docs/records/fields/types/text/) | Location description; `Los Angeles, CA, USA` 
 |   | `mobile` | [text](/docs/records/fields/types/text/) | Mobile number 
 |   | `password` | [text](/docs/records/fields/types/text/) | The worker's password, if applicable; stored security; will be automatically generated if blank 
@@ -70,7 +70,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 |-|-|-
 | `_label` | text | Label
 | `address_` | record | [Email](/docs/records/types/address/)
-| `at_mention_name` | text | @mention
+| `at_mention_name` | text | @Mention
 | `calendar_` | record | [Calendar](/docs/records/types/calendar/)
 | `calendar_owner_` | record | Calendar Owner
 | `dob` | text | Date Of Birth
@@ -91,13 +91,14 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `title` | text | Title
 | `updated` | date | Updated
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `custom_<id>` | mixed | Custom Fields
-| `links` | links | Links
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 	
 ### Search Query Fields
 
@@ -107,7 +108,7 @@ These [filters](/docs/search/filters/) are available in worker [search queries](
 | Field | Type | Description
 |-|-|-
 | `alias:` | virtual | Aliases
-| `email:` | [chooser](/docs/search/filters/choosers/) | [Email](/docs/records/types/address/)
+| `email:` | [record](/docs/search/deep-search/) | [Email](/docs/records/types/address/)
 | `email.id:` | [chooser](/docs/search/filters/choosers/) | [Email](/docs/records/types/address/)
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `firstName:` | [text](/docs/search/filters/text/) | First Name
@@ -126,7 +127,7 @@ These [filters](/docs/search/filters/) are available in worker [search queries](
 | `lastName:` | [text](/docs/search/filters/text/) | Last Name
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `location:` | [text](/docs/search/filters/text/) | Location
-| `mention:` | [text](/docs/search/filters/text/) | @mention
+| `mention:` | [text](/docs/search/filters/text/) | @Mention
 | `mobile:` | [text](/docs/search/filters/text/) | Mobile
 | `phone:` | [text](/docs/search/filters/text/) | Phone
 | `role:` | [record](/docs/search/deep-search/) | [Role](/docs/records/types/role/)
@@ -145,8 +146,8 @@ These columns are available on worker [worklists](/docs/worklists/):
 |-|-
 | `*_calendar_availability` | Calendar Availability
 | `a_address_email` | Email Address
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
-| `w_at_mention_name` | @mention
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
+| `w_at_mention_name` | @Mention
 | `w_calendar_id` | Calendar
 | `w_dob` | D.o.b.
 | `w_first_name` | First Name

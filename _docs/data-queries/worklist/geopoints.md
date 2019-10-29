@@ -23,7 +23,7 @@ jumbotron:
 `worklist.geo.points` [data queries](/docs/data-queries/) returns geolocation data from worklist records.
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 type:worklist.geo.points
 series.points:(
@@ -49,7 +49,7 @@ Each `series.*` should provide:
 The `of:` key specifies the type of [records](/docs/records/) to search.
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 of:tickets
 {% endraw %}
@@ -61,7 +61,7 @@ of:tickets
 The `point:` key specifies the record [field](/docs/records/fields/) containing latitude/longitude data.
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 point:coordinates
 {% endraw %}
@@ -73,7 +73,7 @@ point:coordinates
 The `fields:` key specifies the record [fields](/docs/records/fields/) to include with each plotted point.
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 point:coordinates
 {% endraw %}
@@ -85,9 +85,21 @@ point:coordinates
 The `query:` key specifies a [search query](/docs/search/) for filtering records.
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 query:(region:Europe)
+{% endraw %}
+</code>
+</pre>
+
+## query.required:
+
+The `query.required:` key specifies a mandatory [search query](/docs/search/) for filtering records. This should be protected from user-entered filters.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+query.required:(ids:[1,2,3])
 {% endraw %}
 </code>
 </pre>
@@ -105,7 +117,7 @@ The results can be returned in various formats:
 ## Plot organizations based on a geolocation custom field.
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 type:worklist.geo.points
 series.points:(
   of:org

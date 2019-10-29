@@ -23,7 +23,7 @@ jumbotron:
 `worklist.subtotals` [data queries](/docs/data-queries/) run aggregate functions to categorize matching worklist records.
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 type:worklist.subtotals 
 of:tickets 
@@ -41,7 +41,7 @@ format:timeseries
 The `of:` key specifies the type of [records](/docs/records/) to subtotal.
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 of:tickets
 {% endraw %}
@@ -57,7 +57,7 @@ The `by:` key specifies which record [fields](/docs/records/fields/) to subtotal
 Multiple fields can be separated with commas to generated nested subtotals (e.g. _"tickets by owners by status"_).
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 by:[owner,status] 
 {% endraw %}
@@ -83,7 +83,7 @@ The other functions may only be used against numeric fields. For example, you ca
 As of [9.0.7](/releases/9.0.7/) the desired function is appended to the `by:` key following a period (`.`):
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 by.avg:[worker,responseTime] 
 {% endraw %}
@@ -93,7 +93,7 @@ by.avg:[worker,responseTime]
 In earlier versions, a separate `function:` key was specified:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 function:average
 by:[worker,responseTime] 
@@ -116,7 +116,7 @@ Histograms can be generated for date-based fields by appending a unit of time fo
 When using `@week` you can optionally specify if weeks should start on Sunday or Monday. The default is Monday.
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 by:[created@month,worker] 
 {% endraw %}
@@ -128,7 +128,7 @@ by:[created@month,worker]
 The `by:` fields can specify `links` or `links.*` (e.g. `links.org`) fields. This could create a report like _"Sum of time tracking entries linked to organizations by month"_.
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 by:[links.org] 
 {% endraw %}
@@ -137,14 +137,14 @@ by:[links.org]
 
 ### Limits
 
-When a field has only a few possible values we say it has _"low cardinality"_. A ticket's status can only one of four values: open, waiting, closed, or deleted. A checkbox is _binary_ -- it can only be `true` or `false`.
+When a field has only a few possible values we say it has _"low cardinality"_. A ticket's status is one of four values: open, waiting, closed, or deleted. A checkbox is _binary_ -- it can only be `true` or `false`.
 
 Conversely, some _"high cardinality"_ fields have potentially infinite possible values. You may have millions of unique ticket subjects. There may be thousands of organizations in your address book. Your team may have hundreds of members.
 
 You can **limit** the cardinality of a field by appending a tilde (`~`) to any `by:` field and providing a number. This only returns that number of the most common (top) values.
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 by:[created@month~10,org~25]
 {% endraw %}
@@ -156,7 +156,7 @@ by:[created@month~10,org~25]
 You can also return the least common (bottom) values by providing a negative number as the limit.
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 by:[group~-5] 
 {% endraw %}
@@ -172,7 +172,7 @@ The `metric:` key lets you specify an arbitrary **equation** to modify the calcu
 In this equation, the metric value is represented by the placeholder `x`.
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 metric:"x*100"
 {% endraw %}
@@ -184,7 +184,7 @@ metric:"x*100"
 Basic mathematical operations are supported using `+` (addition), `-` (subtraction), `/` (division), `*` (multiplication), `**` (exponents).
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 metric:"x**2"
 {% endraw %}
@@ -194,7 +194,7 @@ metric:"x**2"
 You can group operations with parentheses (`()`).
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 metric:"(x+2)*100"
 {% endraw %}
@@ -210,7 +210,7 @@ Numeric [filters](/docs/bots/scripting/filters/) from [bot scripting](/docs/bots
 * [round](/docs/bots/scripting/filters/#round)
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 metric:"(x/4.33)|round"
 {% endraw %}
@@ -228,7 +228,7 @@ Suppose you want the average _weekly_ number of email replies sent per worker _o
 If you just use `created@week`:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 of:message
 by:[worker~20,created@week]
@@ -242,7 +242,7 @@ query:(created:"-1 month")
 You can use `group:` to flatten those results with a function:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 of:message
 by:[worker~20,created@week]
@@ -269,6 +269,8 @@ The subtotaled worklist results can be returned in various formats:
 
 * **tree** (default) returns hierarchal data (a `name` and `value` for each node, and a list of `children` for branches).
 
+* **dictionaries** returns a table-based format suitable for sheets and API results.
+
 * **categories** returns a series-based format suitable for bar charts.
 
 * **pie** returns data for use in pie and donut charts. 
@@ -283,7 +285,7 @@ subtotals are used, a row is returned for each distinct result (e.g. Support -> 
 ## Return a stacked bar chart of tickets by owner by status
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 type:worklist.subtotals
 of:tickets 
 by:[owner~10,status] 

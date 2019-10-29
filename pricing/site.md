@@ -69,149 +69,67 @@ position: relative;
 	</div>
 	
 	<ul>
+		<li><b>Seats</b> determine the maximum number of workers who can use Cerb at the same time.</li>
+		<li><b>Cerb permits the use of a single seat for free.</b> Simply <a href="/docs/installation/">install Cerb</a> -- no registration is required.</li>
 		<li>Self-hosted on your hardware and network.</li>
-		<li>You're responsible for installation, upgrades, scaling, monitoring, security, and backups</li>
-		<li>Ideal for regulatory compliance (HIPAA, Safe Harbor, Sarbanes-Oxley)</li>
+		<li>You're responsible for installation, upgrades, scaling, monitoring, security, and backups.</li>
+		<li>Same business day support directly from Cerb's developers.</li>
+		<li>Discount for <abbr title="Renew your license within 30 days after expiration to receive the timely renewal discount." style="cursor:help;">timely</abbr> future annual renewals (<b>$34/seat-month</b>).</li>
+		<li>Ideal for regulatory compliance (GDPR, HIPAA, Sarbanes-Oxley).</li>
 		<li>Requires PHP 7.0+ and MySQL 5.6+.</li>
-		<li>Access to 100% of our source code on GitHub.</li>
-		<li>Annual subscription for software updates and technical support.</li>
+		<li>Access to 100% of our source code on <a href="https://github.com/cerb/cerb-release/" target="_blank">GitHub</a>.</li>
 		<li>Your license never expires for versions released during your software updates coverage.</li>
-		<li>Discount for <abbr title="Renew your license within 30 days after expiration to receive the timely renewal discount." style="cursor:help;">timely</abbr> future annual renewals ($34/seat-month).</li>
+		<li><a href="/docs/upgrading/">Upgrade</a> from any version to the latest update within minutes.</li>
 	</ul>
 </div>
 
-<button type="button" class="cerb-button" data-cerb-bot-interaction="cloud" data-cerb-bot-param-mode="signup">Start a free evaluation</button>
-
-<button type="button" class="cerb-button" data-cerb-bot-interaction="license">Buy and manage licenses</button>
+<a href="/signup/" class="cerb-button">Start a free evaluation</a>
 
 <a href="/docs/installation/" class="cerb-button">Read the installation guide</a>
 
+<button type="button" class="cerb-button" data-cerb-bot-interaction="license">Buy and manage licenses</button>
+
 <div style="font-size:125%;">
-	<b>Add priority technical support from Cerb's highly experienced developers with no long-term commitments:</b>
+	<b>Add enterprise technical support from Cerb's highly experienced developers with no long-term commitments:</b>
 </div>
 
 <div class="grid" style="margin-left:15px;">
-	<div class="unit one-third">
+	<div class="unit half">
 			<div style="text-align:left;">
 				<h2 style="color:rgb(100,100,100);"><b>Standard Support</b></h2>
-				<b>Included with license:</b>
+				<b>Included with a self-hosted Cerb license:</b>
 				<ul>
-						<li>Technical support for unlimited cases by email.</li>
-						<li>
-							Scope:
-							<ul>
-								<li>Concept-level guidance.</li>
-								<li>Covers the latest stable version.</li>
-							</ul>
-						</li>
-						<li>
-							Response times:
-							<ul>
-								<li>Workflow guidance:<br>&lt; 16 business hours</li>
-								<li>Workflow impaired:<br>&lt; 8 business hours</li>
-								<li>Workflow halted:<br>&lt; 4 business hours</li>
-							</ul>
-						</li>
+					<li>
+						Support:
+						<ul>
+							<li>By email</li>
+							<li>Same business day responses</li>
+							<li>Concept-level guidance</li>
+							<li>Covers the latest stable version</li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 	</div>
 	
-	<div class="unit one-third">
-			<div style="text-align:left;">
-				<h2 style="color:rgb(43,118,255);"><b>Corporate Support</b></h2>
-				<b>Greater of +$200/month or +$10/month per seat:</b>
-				<ul>
-						<li>
-							Priority technical support for unlimited cases by email.
-						</li>
-						<li>
-							Scope:
-							<ul>
-								<li>Guidance based on your specific use cases.</li>
-								<li>Covers any current generation version (9.x), or the final version of the previous generation (8.3.10).</li>
-								<li>Developer support for API usage, integration, plugin development.</li>
-								<li><abbr title="PHP/FPM, MySQL, Nginx/Apache/IIS, Redis/Memcached, etc.">Server</abbr> configuration.</li>
-								<li><abbr title="e.g. Accidental deletion, corruption.">Data recovery</abbr>.</li>
-							</ul>
-						</li>
-						<li>
-							Response times:
-							<ul>
-								<li>Workflow guidance:<br>&lt; 8 business hours</li>
-								<li>Workflow impaired:<br>&lt; 4 business hours</li>
-								<li>Workflow halted:<br>&lt; 2 hours</li>
-							</ul>
-						</li>
-						<li>
-							1 hour of live <abbr title="A live screen-sharing session for your team with voice chat.">webinar</abbr> assistance for:
-							<ul>
-								<li>
-									Creating and tuning workspaces, dashboards, and bots.
-								</li>
-								<li>
-									Team training.
-								</li>
-								<li>
-									Walkthroughs of new major version updates.
-								</li>
-								<li>
-									Billed in 20 minute increments with a 1 hour minimum.
-								</li>
-								<li>
-									Additional hours at $150/hour.
-								</li>
-							</ul>
-						</li>
-				</ul>
-			</div>
-	</div>
-	
-	<div class="unit one-third">
+	<div class="unit half">
 			<div style="text-align:left;">
 				<h2 style="color:rgb(165,73,3);"><b>Enterprise Support</b></h2>
-				<b>Greater of +$1,000/month or +$25/month per seat:</b>
+				<b>Greater of +$500/month or +$30/month per seat:</b>
 				<ul>
-						<li>
-							Top-priority technical support and consultation for unlimited cases by email or phone.
-						</li>
-						<li>
-							Scope:
-							<ul>
-								<li>Hands-on guidance and review of your specific implementation.</li>
-								<li>Covers any current generation version (9.x), or the final version of the previous two generations (7.3.13, 8.3.10).</li>
-								<li>Developer support for API usage, integration, plugin development.</li>
-								<li><abbr title="PHP/FPM, MySQL, Nginx/Apache/IIS, Redis/Memcached, etc.">Server</abbr> configuration.</li>
-								<li><abbr title="e.g. Accidental deletion, corruption.">Data recovery</abbr>.</li>
-							</ul>
-						</li>
-						<li>
-							Response times:
-							<ul>
-								<li>Workflow guidance:<br>&lt; 4 business hours</li>
-								<li>Workflow impaired:<br>&lt; 2 business hours</li>
-								<li>Workflow halted:<br>&lt; 30 minutes</li>
-							</ul>
-						</li>
-						<li>
-							4 hours per month of live <abbr title="A live screen-sharing session for your team with voice chat.">webinar</abbr> assistance for:
-							<ul>
-								<li>
-									Creating and tuning workspaces, dashboards, and bots.
-								</li>
-								<li>
-									Team training.
-								</li>
-								<li>
-									Walkthroughs of new major version updates.
-								</li>
-								<li>
-									Billed in 20 minute increments with a 1 hour minimum.
-								</li>
-								<li>
-									Additional hours at $125/hour.
-								</li>
-							</ul>
-						</li>
+					<li>
+						Top-priority support, training, and consultation:
+						<ul>
+							<li>By email, phone, screen sharing, or Slack</li>
+							<li>Same business day responses</li>
+							<li>Emergency support within 1 hour (including nights, weekends, and holidays)</li>
+							<li>Covers any <a href="/docs/history/">version</a> released within the past 12 months</li>
+							<li>Hands-on guidance and review of your specific implementation</li>
+							<li>Developer support for API usage, integration, plugin development</li>
+							<li><abbr title="PHP/FPM, MySQL, Nginx/Apache/IIS, Redis/Memcached, etc.">Server</abbr> configuration</li>
+							<li><abbr title="e.g. Accidental deletion, corruption.">Data recovery</abbr></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 	</div>

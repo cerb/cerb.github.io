@@ -70,7 +70,7 @@ Administrators can quickly import packages from their web browser:
 
 1. Copy a package to your clipboard.
 
-1. Navigate to **Setup >> Configure >> Import Package**.
+1. Navigate to **Setup >> Packages >> Import**.
 
 1. Paste the package into the text box.
 

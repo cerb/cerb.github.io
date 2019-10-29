@@ -20,7 +20,7 @@ Even the built-in functionality in Cerb is contributed by plugins. This way, as 
 
 Common uses for plugins are:
 
-* Integration with third-party services
+* Integration with [third-party services](/docs/connected-services/)
 * Adding new [record types](/docs/records/)
 * Augmenting [bots](/docs/bots/) with new actions
 * Expanding [workspaces](/docs/workspaces/) and dashboards with new widgets and data sources

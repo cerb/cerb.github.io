@@ -44,7 +44,6 @@ jumbotron:
 | Classifier Example | `cerberusweb.contexts.classifier.example`
 | Classifier | `cerberusweb.contexts.classifier`
 | Comment | `cerberusweb.contexts.comment`
-| Community Portal | `cerberusweb.contexts.portal`
 | Connected Account | `cerberusweb.contexts.connected_account`
 | Connected Service | `cerberusweb.contexts.connected_service`
 | Contact | `cerberusweb.contexts.contact`
@@ -74,6 +73,7 @@ jumbotron:
 | Opportunity | `cerberusweb.contexts.opportunity`
 | Organization | `cerberusweb.contexts.org`
 | Package | `cerberusweb.contexts.package.library`
+| Portal | `cerberusweb.contexts.portal`
 | Profile Tab | `cerberusweb.contexts.profile.tab`
 | Profile Widget | `cerberusweb.contexts.profile.widget`
 | Project Board Column | `cerberusweb.contexts.project.board.column`

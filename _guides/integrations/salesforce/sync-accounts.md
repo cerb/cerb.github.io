@@ -48,7 +48,7 @@ Click the **Save** button.
 
 # Import the example package in Cerb
 
-Navigate to **Setup >> Configure >> Import Package**.
+Navigate to **Setup >> Packages >> Import**.
 
 Paste the following package:
 

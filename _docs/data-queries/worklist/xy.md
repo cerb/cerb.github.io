@@ -35,6 +35,7 @@ Each `series.*` should provide:
 * `y:` (field)
 * `y.metric:` (an equation to apply to each y-axis value; [9.1.6](/releases/9.1.6/) or later)
 * `query:` (the query to filter the results for this series)
+* `query.required:` (the required query to filter the results for this series)
 
 You can specify a `limit:` and `sort:` within each series `query:()`. Nested sorting is supported, and sorts can be in ascending or descending order by prefixing a minus (`-`) to the field name for descending.
 
@@ -53,7 +54,7 @@ You can specify a `limit:` and `sort:` within each series `query:()`. Nested sor
 ## Generate a table of the top 10 quickest message response times
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 type:worklist.xy
 series.replies:(
   of:messages 

@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Record Fields
 | **Identifier (ID):** | core.workspace.widget.record.fields
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/dashboards.php
+| **File:** | api/workspaces/widgets/record_fields.php
 | **Class:** | WorkspaceWidget_RecordFields
 

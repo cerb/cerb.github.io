@@ -14,7 +14,7 @@ jumbotron:
     url: /docs/setup/
   - 
     label: Mail &raquo;
-    url: /docs/setup/mail/
+    url: /docs/setup/#outgoing-mail
 ---
 
 These are the email addresses that will appear in `From:` when you send messages.

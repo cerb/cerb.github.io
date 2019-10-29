@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | (Deprecated) HTML/Javascript
 | **Identifier (ID):** | core.workspace.widget.custom_html
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/dashboards.php
+| **File:** | api/workspaces/widgets/deprecated/html_javascript.php
 | **Class:** | WorkspaceWidget_CustomHtml
 

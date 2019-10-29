@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Bot Custom Widget
 | **Identifier (ID):** | core.workspace.widget.bot
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/dashboards.php
+| **File:** | api/workspaces/widgets/bot_behavior.php
 | **Class:** | WorkspaceWidget_BotBehavior
 

@@ -15,7 +15,7 @@ jumbotron:
     url: /docs/records/
 ---
 
-Cerb includes many built-in [record](/docs/records/) types. You can create your own [custom record types](/docs/records/custom-records/), and the may also be introduced by [plugins](/docs/plugins/).
+Cerb includes many built-in [record](/docs/records/) types. You can create your own [custom record types](/docs/records/custom-records/), and new types may also be introduced by [plugins](/docs/plugins/).
 
 This reference can be used when building [bot behaviors](/docs/bots/), [search queries](/docs/search/), [data queries](/docs/data-queries/), or working with the [API](/docs/api/).
 

@@ -14,7 +14,7 @@ jumbotron:
     url: /docs/setup/
   - 
     label: Plugins &raquo;
-    url: /docs/setup/plugins/
+    url: /docs/setup/#plugins
 ---
 
 See: [Plugins](/docs/plugins/)

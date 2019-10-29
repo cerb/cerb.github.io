@@ -43,7 +43,7 @@ Select **Enabled** and click the **Save Changes** button.
 
 # Importing the customer satisfaction package
 
-Navigate to **Setup >> Configure >> Import Package**.
+Navigate to **Setup >> Packages >> Import**.
 
 Paste the following package into the large text box:
 

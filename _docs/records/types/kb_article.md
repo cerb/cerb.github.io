@@ -39,7 +39,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `categories` | [text](/docs/records/fields/types/text/) | A comma-separated list of IDs of [categories](/docs/records/types/kb_category/) to assign this article to 
 |   | `content` | [text](/docs/records/fields/types/text/) | The content of the article 
 |   | `format` | [text](/docs/records/fields/types/text/) | `text`, `markdown`, or `html` 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`title`** | [text](/docs/records/fields/types/text/) | The title of the article 
 |   | `updated` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 |   | `views` | [number](/docs/records/fields/types/number/) | The number of times the article has been viewed in a [community portal](/docs/portals/) 
@@ -60,15 +60,17 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `updated` | date | Updated
 | `views` | number | Views
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
+| `attachments` | attachments | [Attachments](/docs/bots/behaviors/dictionaries/key-expansion/#attachments)
 | `categories` | hashmap | Categories
-| `custom_<id>` | mixed | Custom Fields
-| `links` | links | Links
-| `watchers` | watchers | Watchers
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
+| `watchers` | watchers | [Watchers](/docs/bots/behaviors/dictionaries/key-expansion/#watchers)
 	
 ### Search Query Fields
 
@@ -95,7 +97,7 @@ These columns are available on knowledgebase article [worklists](/docs/worklists
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `kb_format` | Format
 | `kb_id` | Id
 | `kb_title` | Title

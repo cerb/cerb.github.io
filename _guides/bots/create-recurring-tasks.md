@@ -36,7 +36,7 @@ In this guide, we'll import the **Recurring Task Bot** package and examine how i
 
 # Import the Recurring Task Bot package
 
-Navigate to **Setup >> Configure >> Import Package**.
+Navigate to **Setup >> Packages >> Import**.
 
 Copy and paste the following package into the **JSON:** section:
 

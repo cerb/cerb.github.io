@@ -40,7 +40,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `event_end` | [text](/docs/records/fields/types/text/) | The end date/time of the event 
 |   | `event_start` | [text](/docs/records/fields/types/text/) | The start date/time of the event 
 |   | `is_available` | [boolean](/docs/records/fields/types/boolean/) | `true` for available; `false` for busy 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of the event 
 | **x** | **`patterns`** | [text](/docs/records/fields/types/text/) | One pattern per line 
 |   | `recur_end` | [timestamp](/docs/records/fields/types/timestamp/) | The end date/time of the recurring range 
@@ -68,14 +68,15 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `recur_start` | text | Recur Start
 | `tz` | text | Timezone
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `custom_<id>` | mixed | Custom Fields
-| `links` | links | Links
-| `watchers` | watchers | Watchers
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
+| `watchers` | watchers | [Watchers](/docs/bots/behaviors/dictionaries/key-expansion/#watchers)
 	
 ### Search Query Fields
 
@@ -111,7 +112,7 @@ These columns are available on calendar recurring event [worklists](/docs/workli
 | `c_recur_end` | Recur End
 | `c_recur_start` | Recur Start
 | `c_tz` | Timezone
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 
 <div class="section-nav">
 	<div class="left">

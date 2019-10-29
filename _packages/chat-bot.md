@@ -58,7 +58,7 @@ You may have already automated many of your business processes using Cerb bot be
 
 # Installing the package
 
-Navigate to **Setup >> Configure >> Import Package**.
+Navigate to **Setup >> Packages >> Import**.
 
 Paste the following package into the large text box:
 

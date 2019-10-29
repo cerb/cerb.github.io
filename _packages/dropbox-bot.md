@@ -34,7 +34,7 @@ If you haven't already, follow [these instructions](/guides/integrations/dropbox
 
 # Import the package
 
-Navigate to **Setup >> Configure >> Import Package**.
+Navigate to **Setup >> Packages >> Import**.
 
 Paste the following package into the large text box:
 

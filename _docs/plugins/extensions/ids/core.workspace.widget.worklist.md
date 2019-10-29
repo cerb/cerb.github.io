@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Worklist
 | **Identifier (ID):** | core.workspace.widget.worklist
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/dashboards.php
+| **File:** | api/workspaces/widgets/worklist.php
 | **Class:** | WorkspaceWidget_Worklist
 

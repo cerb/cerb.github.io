@@ -40,7 +40,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | **x** | **`actor__context`** | [context](/docs/records/fields/types/context/) | The actor's record type 
 | **x** | **`actor_id`** | [number](/docs/records/fields/types/number/) | The actor's record ID 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 | **x** | **`target__context`** | [context](/docs/records/fields/types/context/) | The target's record type 
 | **x** | **`target_id`** | [number](/docs/records/fields/types/number/) | The target's record ID 
@@ -53,10 +53,10 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | Field | Type | Description
 |-|-|-
 | `_label` | text | Label
+| `activity_point` | text | Event Id
 | `actor_` | record | Actor
 | `created` | date | Created
 | `event` | text | Event
-| `activity_point` | text | Event Id
 | `id` | number | Id
 | `target_` | record | Target
 	

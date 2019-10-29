@@ -40,7 +40,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `image` | [image](/docs/records/fields/types/image/) | Base64-encoded PNG image 
 |   | `is_default` | [boolean](/docs/records/fields/types/boolean/) | [Tickets](/docs/tickets/) are assigned to the default group when no other routing rules match 
 |   | `is_private` | [boolean](/docs/records/fields/types/boolean/) | The content in public (`0`) groups is visible to everyone; in private (`1`) groups content is only visible to members 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `members` | [text](/docs/records/fields/types/text/) | JSON-encoded array of [worker](/docs/records/types/worker/) IDs; `[1,2,3]` 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this group 
 |   | `reply_address_id` | [number](/docs/records/fields/types/number/) | The ID of the [email address](/docs/records/types/address/) used when sending replies from this group 
@@ -70,14 +70,15 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `replyto_` | record | [Send From](/docs/records/types/address/)
 | `updated` | date | Updated
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `buckets` | records | Buckets
-| `custom_<id>` | mixed | Custom Fields
-| `links` | links | Links
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 | `members` | records | Members
 	
 ### Search Query Fields
@@ -109,7 +110,7 @@ These columns are available on group [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `g_created` | Created
 | `g_id` | Id
 | `g_is_default` | Default

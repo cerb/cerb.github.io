@@ -73,8 +73,10 @@ position: relative;
 	</span>
 
 	<ul>
-		<li>Everything you need to deploy Cerb.</li>
-		<li>Highly available and auto-scalable in the cloud as a fully managed service.</li>
+		<li><b>Seats</b> determine the maximum number of workers who can use Cerb at the same time.</li>
+		<li><b>Cerb Cloud</b> includes everything you need to deploy Cerb.</li>
+		<li>Highly available and automatically scalable as a fully managed service.</li>
+		<li>Same business day support directly from Cerb's developers.</li>
 		<li>Implements all of our best practices for security, upgrades, backups, and performance.</li>
 		<li>Always on the latest stable version with same-day urgent bug fixes.</li>
 		<li>Automated, redundant, point-in-time backups.</li>
@@ -86,35 +88,32 @@ position: relative;
 	</ul>
 </div>
 
+<a href="/signup/" class="cerb-button">Start a free evaluation</a>
+
+{% comment %}
 <button type="button" class="cerb-button" data-cerb-bot-interaction="cloud" data-cerb-bot-param-mode="signup">Start a free evaluation</button>
+{% endcomment %}
 
 {% comment %}
 <button type="button" class="cerb-button" data-cerb-bot-interaction="cloud">Manage your subscription</button>
 {% endcomment %}
 
 <div style="font-size:125%;">
-	<b>Add priority technical support from Cerb's highly experienced developers with no long-term commitments:</b>
+	<b>Add enterprise technical support from Cerb's highly experienced developers with no long-term commitments:</b>
 </div>
 
 <div class="grid" style="margin-left:15px;">
-	<div class="unit one-third">
+	<div class="unit half">
 			<div style="text-align:left;">
 				<h2 style="color:rgb(100,100,100);"><b>Standard Support</b></h2>
 				<b>Included with Cerb Cloud:</b>
 				<ul>
-					<li>Technical support for unlimited cases by email.</li>
 					<li>
-						Scope:
+						Support:
 						<ul>
-							<li>Concept-level guidance.</li>
-						</ul>
-					</li>
-					<li>
-						Response times:
-						<ul>
-							<li>Workflow guidance:<br>&lt; 16 business hours</li>
-							<li>Workflow impaired:<br>&lt; 8 business hours</li>
-							<li>Workflow halted:<br>&lt; 4 business hours</li>
+							<li>By email</li>
+							<li>Same business day responses</li>
+							<li>Concept-level guidance</li>
 						</ul>
 					</li>
 					<li>
@@ -127,114 +126,29 @@ position: relative;
 			</div>
 	</div>
 	
-	<div class="unit one-third">
-			<div style="text-align:left;">
-				<h2 style="color:rgb(43,118,255);"><b>Corporate Support</b></h2>
-				<b>Greater of +$200/month or +$10/month per seat:</b>
-				<ul>
-					<li>
-						Priority technical support for unlimited cases by email.
-					</li>
-					<li>
-						Scope:
-						<ul>
-							<li>Guidance based on your specific use cases.</li>
-							<li>Developer support for API usage, integration, plugin development.</li>
-							<li>Data recovery (e.g. accidental deletion).</li>
-						</ul>
-					</li>
-					<li>
-						Response times:
-						<ul>
-							<li>Workflow guidance:<br>&lt; 8 business hours</li>
-							<li>Workflow impaired:<br>&lt; 4 business hours</li>
-							<li>Workflow halted:<br>&lt; 2 hours</li>
-						</ul>
-					</li>
-					<li>
-						1 hour per month of live <abbr title="A live screen-sharing session for your team with voice chat.">webinar</abbr> assistance for:
-						<ul>
-							<li>
-								Creating and tuning workspaces, dashboards, and bots.
-							</li>
-							<li>
-								Team training.
-							</li>
-							<li>
-								Walkthroughs of new major version updates.
-							</li>
-							<li>
-								Billed in 20 minute increments with a 1 hour minimum.
-							</li>
-							<li>
-								Additional hours at $150/hour.
-							</li>
-						</ul>
-					</li>
-					<li>
-						Autonomy:
-						<ul>
-							<li>Schedule major software updates at your convenience (within 1 month).</li>
-							<li>Access to early release versions.</li>
-							<li>Access to a staging environment to test new features prior to upgrading.</li>
-							<li>Install or upgrade custom plugins.</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-	</div>
-	
-	<div class="unit one-third">
+	<div class="unit half">
 			<div style="text-align:left;">
 				<h2 style="color:rgb(165,73,3);"><b>Enterprise Support</b></h2>
-				<b>Greater of +$1,000/month or +$25/month per seat:</b>
+				<b>Greater of +$500/month or +$20/month per seat:</b>
 				<ul>
 					<li>
-						Top-priority technical support and consultation for unlimited cases by email or phone.
-					</li>
-					<li>
-						Scope:
+						Top-priority support, training, and consultation:
 						<ul>
+							<li>By email, phone, screen sharing, or Slack</li>
+							<li>Same business day responses</li>
+							<li>Emergency support within 1 hour (including nights, weekends, and holidays)</li>
 							<li>Hands-on guidance and review of your specific implementation.</li>
 							<li>Developer support for API usage, integration, plugin development.</li>
-							<li>Data recovery (e.g. accidental deletion).</li>
-						</ul>
-					</li>
-					<li>
-						Response times:
-						<ul>
-							<li>Workflow guidance:<br>&lt; 4 business hours</li>
-							<li>Workflow impaired:<br>&lt; 2 business hours</li>
-							<li>Workflow halted:<br>&lt; 30 minutes</li>
-						</ul>
-					</li>
-					<li>
-						4 hours per month of live <abbr title="A live screen-sharing session for your team with voice chat.">webinar</abbr> assistance for:
-						<ul>
-							<li>
-								Creating and tuning workspaces, dashboards, and bots.
-							</li>
-							<li>
-								Team training.
-							</li>
-							<li>
-								Walkthroughs of new major version updates.
-							</li>
-							<li>
-								Billed in 20 minute increments with a 1 hour minimum.
-							</li>
-							<li>
-								Additional hours at $125/hour.
-							</li>
+							<li>Point-in-time data recovery (e.g. accidental deletion).</li>
 						</ul>
 					</li>
 					<li>
 						Autonomy:
 						<ul>
-							<li>Schedule major software updates at your convenience (within 3 months).</li>
+							<li>Schedule major software updates at your convenience.</li>
 							<li>Access to early release versions.</li>
 							<li>Access to a staging environment to test new features prior to upgrading.</li>
-							<li>Install or upgrade custom plugins.</li>
+							<li>Install custom plugins.</li>
 						</ul>
 					</li>
 				</ul>

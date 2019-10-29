@@ -15,7 +15,7 @@ jumbotron:
     url: /docs/records/
 ---
 
-While the built-in [record types](/docs/records/types/) cover things that every team has in common, you most likely needs to keep track of data that's specific to your team and industry.
+While the built-in [record types](/docs/records/types/) cover things that every team has in common, you most likely need to keep track of data that is specific to your team and industry.
 
 In these situations, you can easily [create your own record types](/guides/records/custom-records/).
 

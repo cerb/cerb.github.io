@@ -6,13 +6,22 @@ social_image_url: /assets/images/guides/packages/packages.png
 jumbotron:
   title: Packages
   tagline: Importable blueprints for records and workflows
+  breadcrumbs:
+  -
+    label: Docs &raquo;
+    url: /docs/home/
+  -
+    label: Records &raquo;
+    url: /docs/records/
 ---
 
 <div class="cerb-screenshot">
 <img src="{{page.social_image_url}}" class="screenshot">
 </div>
 
-**Packages** are a blueprint for importing a related set of pre-configured records into Cerb. A single package can contain workspaces, dashboards, bots, project boards, custom records, custom fieldsets, tasks, tickets, contacts, etc.
+**Packages** are a blueprint for importing a related set of pre-configured [records](/docs/records/) into Cerb.
+
+A single package can contain any number of workspaces, dashboards, bots, project boards, custom records, custom fieldsets, tasks, tickets, contacts, etc.
 
 ### Resources
 

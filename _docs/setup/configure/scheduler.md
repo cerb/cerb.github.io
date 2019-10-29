@@ -14,7 +14,7 @@ jumbotron:
     url: /docs/setup/
   - 
     label: Configure &raquo;
-    url: /docs/setup/configure/
+    url: /docs/setup/#configure
 ---
 
 <div class="cerb-screenshot">

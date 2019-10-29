@@ -34,6 +34,7 @@ jumbotron:
 | Authentication Section | `core.page.setup.auth`
 | Avatars Section | `core.page.setup.avatars`
 | Behavior Section | `core.page.profiles.behavior`
+| Bot Scripting Tester | `core.page.setup.developers.bot_scripting_tester`
 | Bot Section | `core.page.profiles.bot`
 | Branding Section | `core.page.setup.branding`
 | Bucket Section | `core.page.profiles.bucket`
@@ -70,7 +71,6 @@ jumbotron:
 | Incoming Mail Section | `core.page.setup.mail_incoming`
 | Internal Section Calendars | `core.internal.section.calendars`
 | Internal Section Custom Fieldsets | `core.internal.section.custom_fieldsets`
-| Internal Section Dashboards | `core.internal.section.dashboards`
 | Internal Section Skills | `core.internal.section.skills`
 | Internal Section Watchers | `core.internal.section.watchers`
 | Internal Section Workspaces | `core.internal.section.workspaces`
@@ -83,6 +83,7 @@ jumbotron:
 | Mail Transport Section | `core.page.profiles.mail_transport`
 | Mailbox Account Section | `core.page.profiles.mailbox`
 | OAuth App Section | `core.page.profiles.oauth_app`
+| OAuth2 Token Generator | `core.page.setup.developers.oauth2_token_generator`
 | Opp Section | `crm.page.profiles.opportunity`
 | Organization Section | `core.page.profiles.organization`
 | Outgoing Mail Section | `core.page.setup.mail_outgoing`

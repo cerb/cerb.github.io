@@ -40,7 +40,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | **x** | **`event_point`** | [text](/docs/records/fields/types/text/) | The event of the behavior 
 |   | `is_disabled` | [boolean](/docs/records/fields/types/boolean/) | Is this behavior disabled? 
 |   | `is_private` | [boolean](/docs/records/fields/types/boolean/) | Is this behavior only visible to the parent bot? 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The behavior's name 
 |   | `priority` | [number](/docs/records/fields/types/number/) | Any positive number; `0` is highest priority 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
@@ -67,14 +67,15 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `updated_at` | date | Updated
 | `uri` | text | Uri
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `custom_<id>` | mixed | Custom Fields
-| `links` | links | Links
-| `watchers` | watchers | Watchers
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
+| `watchers` | watchers | [Watchers](/docs/bots/behaviors/dictionaries/key-expansion/#watchers)
 	
 ### Search Query Fields
 
@@ -105,7 +106,7 @@ These columns are available on behavior [worklists](/docs/worklists/):
 |-|-
 | `*_has_fieldset` | Fieldset
 | `*_workers` | Watchers
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `t_bot_id` | Bot
 | `t_event_point` | Event
 | `t_id` | Id

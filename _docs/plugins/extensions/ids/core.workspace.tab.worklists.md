@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Worklists
 | **Identifier (ID):** | core.workspace.tab.worklists
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/workspaces.php
+| **File:** | api/workspaces/tabs/worklists.php
 | **Class:** | WorkspaceTab_Worklists
 

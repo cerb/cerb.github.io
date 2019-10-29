@@ -29,7 +29,7 @@ This package adds a new bot (**Mention Bot**) that automatically sends an email 
 
 # Importing the package
 
-Navigate to **Setup >>  Configure >> Import Package**.
+Navigate to **Setup >> Packages >> Import**.
 
 Paste the following package into the large text box:
 

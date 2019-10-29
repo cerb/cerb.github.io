@@ -14,7 +14,7 @@ jumbotron:
     url: /docs/setup/
   -
     label: Records &raquo;
-    url: /docs/setup/records/
+    url: /docs/setup/#records
 ---
 
 <div class="cerb-screenshot">

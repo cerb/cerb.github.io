@@ -27,17 +27,17 @@ The alias configured there (e.g. `get_stock_price`) can be specified as a data q
 * TOC
 {:toc}
 
-# Inputs
+### Inputs
 
 Any arguments provided in the query are provided to the behavior as input variables. 
 
-# Response Formats
+### Response Formats
 
 Responses are returned in JSON format. This makes it much simpler to request data from bot behaviors from dashboard widgets, other bot behaviors, or the API.
 
 # Examples
 
-## Fetch stock price data
+### Fetch stock price data
 
 Bots can create behaviors on the 'Data Query Datasource' event. This allows data from any source (e.g. external API) to be returned from a data query. Data query parameters are sent to the bot behavior as input variables, and data is returned from the 'Return data' action as JSON.
 
@@ -48,7 +48,7 @@ Bots can create behaviors on the 'Data Query Datasource' event. This allows data
 The data query would look like:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 type:behavior.get_stock_price
 symbol:AAPL
 </code>

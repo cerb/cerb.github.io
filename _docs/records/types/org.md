@@ -40,7 +40,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `country` | [text](/docs/records/fields/types/text/) | Country 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
 |   | `email_id` | [number](/docs/records/fields/types/number/) | Primary [email address](/docs/records/types/address/) 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this organization 
 |   | `phone` | [text](/docs/records/fields/types/text/) | Phone 
 |   | `postal` | [text](/docs/records/fields/types/text/) | Postal code / ZIP 
@@ -65,20 +65,21 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `name` | text | Name
 | `phone` | phone | Phone
 | `postal` | text | Postal
-| `province` | text | State/prov
+| `province` | text | State/Prov
 | `record_url` | text | Record Url
 | `street` | text | Street
 | `updated` | date | Updated
 | `website` | text | Website
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `custom_<id>` | mixed | Custom Fields
-| `links` | links | Links
-| `watchers` | watchers | Watchers
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
+| `watchers` | watchers | [Watchers](/docs/bots/behaviors/dictionaries/key-expansion/#watchers)
 	
 ### Search Query Fields
 
@@ -100,7 +101,7 @@ These [filters](/docs/search/filters/) are available in organization [search que
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `phone:` | [text](/docs/search/filters/text/) | Phone
 | `postal:` | [text](/docs/search/filters/text/) | Postal
-| `state:` | [text](/docs/search/filters/text/) | State/prov
+| `state:` | [text](/docs/search/filters/text/) | State/Prov
 | `street:` | [text](/docs/search/filters/text/) | Street
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
@@ -121,11 +122,11 @@ These columns are available on organization [worklists](/docs/worklists/):
 | `c_name` | Name
 | `c_phone` | Phone
 | `c_postal` | Postal
-| `c_province` | State/prov
+| `c_province` | State/Prov
 | `c_street` | Street
 | `c_updated` | Updated
 | `c_website` | Website
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 
 <div class="section-nav">
 	<div class="left">

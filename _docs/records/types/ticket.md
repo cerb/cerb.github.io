@@ -39,14 +39,15 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `bucket_id` | [number](/docs/records/fields/types/number/) | The ID of the [bucket](/docs/records/types/bucket/) containing this ticket 
 |   | `closed` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time this ticket was first set to status `closed` 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
-|   | `fieldsets` | [text](/docs/records/fields/types/text/) |  
+|   | `fieldsets` | fieldsets | An array or comma-separated list of [custom fieldset](/docs/records/types/custom_fieldset/) IDs 
 | **x** | **`group_id`** | [number](/docs/records/fields/types/number/) | The ID of the [group](/docs/records/types/group/) containing this ticket 
 |   | `importance` | [number](/docs/records/fields/types/number/) | A number from `0` (least) to `100` (most) 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `mask` | [text](/docs/records/fields/types/text/) | The randomized reference number for this ticket; auto-generated if blank 
 |   | `org` | [text](/docs/records/fields/types/text/) | The exact name of the [organization](/docs/records/types/org/) linked to this ticket; alternative to `org_id` 
 |   | `org_id` | [number](/docs/records/fields/types/number/) | The ID of the [organization](/docs/records/types/org/) linked to this ticket; alternative to `org` 
 |   | `owner_id` | [number](/docs/records/fields/types/number/) | The ID of the [worker](/docs/records/types/worker/) responsible for this ticket 
+|   | `participant_ids` | [text](/docs/records/fields/types/text/) | A comma-separated list of email addresses IDs to add or remove as participants. Prefix an ID with `-` to remove 
 |   | `participants` | [text](/docs/records/fields/types/text/) | A comma-separated list of email addresses to add as participants 
 |   | `reopen_date` | [timestamp](/docs/records/fields/types/timestamp/) | If status `waiting`, the date/time to automatically change the status back to `open` 
 |   | `spam_score` | [float](/docs/records/fields/types/float/) | `0.0001` (not spam) to `0.9999` (spam); automatically generated 
@@ -87,20 +88,22 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `updated` | date | Updated
 | `url` | text | Url
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `_messages` | records | Messages
-| `custom_<id>` | mixed | Custom Fields
+| `attachments` | attachments | [Attachments](/docs/bots/behaviors/dictionaries/key-expansion/#attachments)
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
 | `latest_incoming_activity` | date | Latest Incoming Activity
 | `latest_outgoing_activity` | date | Latest Outgoing Activity
-| `links` | links | Links
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 | `requester_emails` | text | Requester Emails (Comma-Separated)
 | `requesters` | hashmap | Requesters
 | `signature` | text | Signature
-| `watchers` | watchers | Watchers
+| `watchers` | watchers | [Watchers](/docs/bots/behaviors/dictionaries/key-expansion/#watchers)
 	
 ### Search Query Fields
 
@@ -125,6 +128,7 @@ These [filters](/docs/search/filters/) are available in ticket [search queries](
 | `messages:` | [record](/docs/search/deep-search/) | [Messages](/docs/records/types/message/)
 | `messages.count:` | [number](/docs/search/filters/numbers/) | # Messages
 | `messages.first:` | [record](/docs/search/deep-search/) | [Messages First](/docs/records/types/message/)
+| `messages.firstOutgoing:` | [record](/docs/search/deep-search/) | [Messages First Outgoing](/docs/records/types/message/)
 | `messages.last:` | [record](/docs/search/deep-search/) | [Messages Last](/docs/records/types/message/)
 | `org:` | [record](/docs/search/deep-search/) | [Org](/docs/records/types/org/)
 | `org.id:` | [chooser](/docs/search/filters/choosers/) | [Organization](/docs/records/types/org/)
@@ -154,7 +158,7 @@ These columns are available on ticket [worklists](/docs/worklists/):
 | Column | Description
 |-|-
 | `*_status` | Status
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `t_bucket_id` | Bucket
 | `t_closed_at` | Closed
 | `t_created_date` | Created

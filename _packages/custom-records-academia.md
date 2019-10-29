@@ -40,7 +40,7 @@ You can use this for evaluation and testing, or as the basis for your own workfl
 
 # Importing the package
 
-Navigate to **Setup >> Configure >> Import Package**.
+Navigate to **Setup >> Packages >> Import**.
 
 Paste the following package into the large text box:
 

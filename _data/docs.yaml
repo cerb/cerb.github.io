@@ -4,17 +4,20 @@
   - logging-in
   - navigation
 
-- title: Workers
+- title: Concepts
   docs:
   - workers
   - roles
-
-- title: Groups
-  docs:
   - groups
   - buckets
-  - responsibilities
-  - groups/signatures
+  #- responsibilities
+  #- groups/signatures
+  - contacts
+  - orgs
+  #- calendars
+  #- project-boards
+  - tickets
+  - snippets
 
 - title: Records
   docs:
@@ -31,73 +34,47 @@
   - watchers
   - notifications
   - reminders
-
-- title: Worklists
-  docs:
-  - worklists
-  - worklists/search
-  - worklists/sorting
-  - worklists/peek
-  - worklists/pagination
-  - worklists/subtotals
-  - worklists/bulk-update
-  - worklists/import-export
-  - worklists/explore-mode
+  - packages
 
 - title: Search
   docs:
   - search
+  - search/autocompletion
   - search/filters
-  - search/filters/text
-  - search/filters/fulltext
-  - search/filters/numbers
-  - search/filters/booleans
-  - search/filters/dates
-  - search/filters/nullness
-  - search/filters/choosers
   - search/deep-search
-  - search/filters/links
-  - search/filters/watchers
   - search/and-or
   - search/sorting
+
+- title: Data Queries
+  docs:
+  - data-queries
+  - data-queries/using
+  - data-queries/worklist/records
+  - data-queries/worklist/subtotals
+  - data-queries/worklist/series
+  - data-queries/worklist/metrics
+  - data-queries/worklist/xy
+  - data-queries/worklist/geopoints
+  - data-queries/usage/bot-behaviors
+  - data-queries/usage/snippets
+  - data-queries/sample
+  - data-queries/custom
 
 - title: Workspaces
   docs:
   - workspaces
   - dashboards
-
-- title: Clients
-  docs:
-  - contacts
-  - orgs
-  #- calendars
-  #- project-boards
-
-- title: Tickets
-  docs:
-  - tickets
-  - tickets/masks
-  - tickets/statuses
-  - tickets/importance
-  - tickets/response-times
-  - tickets/anti-spam
-  #- tickets/compose
-  #- tickets/replying
-  - tickets/drafts
-  - tickets/merge-split
-  - snippets
+  - worklists
+  - sheets
 
 - title: Bots
   docs:
   - bots
+  - bots/events
   - bots/behaviors
-  - bots/behaviors/events
   - bots/behaviors/dictionaries
+  - bots/behaviors/dictionaries/key-expansion
   - bots/behaviors/variables
-  - bots/behaviors/decisions
-  - bots/behaviors/actions
-  - bots/behaviors/loops
-  - bots/behaviors/subroutines
   - bots/behaviors/simulator
   - bots/delegation
   - connected-services
@@ -126,30 +103,8 @@
 - title: Bot Interactions
   docs:
   - bots/interactions
-  - bots/interactions/messages
-  - bots/interactions/prompts
-  - bots/interactions/prompts/formatting
-  - bots/interactions/prompts/validation
-  - bots/interactions/prompts/buttons
-  - bots/interactions/prompts/chooser
-  - bots/interactions/prompts/date-input
-  - bots/interactions/prompts/file-upload
-  - bots/interactions/prompts/images
-  - bots/interactions/prompts/text-input
-  - bots/interactions/prompts/wait
-  - bots/interactions/proactive
-
-- title: Data Queries
-  docs:
-  - data-queries
-  - data-queries/worklist/geopoints
-  - data-queries/worklist/metrics
-  - data-queries/worklist/series
-  - data-queries/worklist/subtotals
-  - data-queries/worklist/xy
-  - data-queries/usage/bot-behaviors
-  - data-queries/usage/snippets
-  - data-queries/custom
+  - bots/interactions/forms
+  - bots/interactions/chat
 
 - title: Portals
   docs:
@@ -158,27 +113,13 @@
   - portals/chat-bot
   - portals/webhook
 
-- title: Packages
-  docs:
-  - packages
-
-- title: Setup
-  docs:
-  - setup
-  - setup/configure
-  - setup/records
-  - setup/team
-  - setup/mail
-  - setup/packages
-  - setup/storage
-  - setup/plugins
-
 - title: Administration
   docs:
   - installation
   - friendly-urls
   #- scheduler
   - quick-start
+  - setup
   - security
   - backups
   - upgrading

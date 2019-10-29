@@ -32,7 +32,7 @@ This is one of the most powerful features in Cerb.
 When performing a deep search, your expression is another search query:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 status:open group:(name:S*)
 {% endraw %}
@@ -46,7 +46,7 @@ The above example returns records that are open and in a group that begin with t
 You can perform multiple deep searches at once:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 owner:(gender:f) 
 group:(name:[support,sales]) 
@@ -62,7 +62,7 @@ The above example returns records owned by a female worker, in the _Support_ or 
 You can perform a deep search, within a deep search, within a deep search (ad nauseam):
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 messages.first:(
   sender:(
@@ -84,7 +84,7 @@ The above example returns records where the sender of the first message is a mem
 You can also negate a deep search by prefixing an exclamation mark (`!`). This returns all records that **don't match**:
 
 <pre>
-<code class="language-text">
+<code class="language-cerb">
 {% raw %}
 group:!(name:S*)
 {% endraw %}

@@ -1,0 +1,61 @@
+welcome:
+  next: records
+  slides: []
+records:
+  prev: welcome
+  next: workspaces
+  slides:
+  - records/custom-fields
+  - records/profiles
+  - records/cards
+  - records/comments
+  - records/links
+workspaces:
+  prev: records
+  next: dashboards
+  slides:
+  - workspaces/pages
+  - workspaces/tabs
+dashboards:
+  prev: workspaces
+  next: worklists
+  slides:
+  - dashboards/widgets
+  - dashboards/layouts
+  - dashboards/filters
+worklists:
+  prev: dashboards
+  next: mail
+  slides:
+  - worklists/rows
+  - worklists/columns
+  - worklists/peek
+  - worklists/paging
+  - worklists/sorting
+  - worklists/filters
+  - worklists/watchers
+  - worklists/controls
+  - worklists/subtotals
+  - worklists/actions
+mail:
+  prev: worklists
+  next: bots
+  slides: []
+bots:
+  prev: mail
+  next: packages
+  slides: []
+packages:
+  prev: mail
+  next: data-queries
+  slides: []
+data-queries:
+  prev: packages
+  next: project-boards
+  slides: []
+project-boards:
+  prev: packages
+  slides: []
+#portals:
+#  prev: project-boards
+#  slides: []

@@ -39,7 +39,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `content` | [text](/docs/records/fields/types/text/) | The content of the tweet 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
 |   | `is_closed` | [boolean](/docs/records/fields/types/boolean/) | Is the tweet resolved? 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `twitter_id` | [text](/docs/records/fields/types/text/) | The ID of the Twitter [connected account](/docs/records/types/connected_account/) 
 |   | `user_followers_count` | [number](/docs/records/fields/types/number/) | The user's follower count 
 |   | `user_name` | [text](/docs/records/fields/types/text/) | The user's name 
@@ -65,13 +65,14 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `user_profile_image_url` | text | Profile Image
 | `user_screen_name` | text | Username
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `custom_<id>` | mixed | Custom Fields
-| `links` | links | Links
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 	
 ### Search Query Fields
 
@@ -98,7 +99,7 @@ These columns are available on twitter message [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `t_connected_account_id` | Connected Account
 | `t_content` | Content
 | `t_created_date` | Created

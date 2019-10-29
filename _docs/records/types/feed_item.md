@@ -40,7 +40,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | **x** | **`feed_id`** | [number](/docs/records/fields/types/number/) | The ID of the [feed](/docs/records/types/feed/) containing this item 
 |   | `guid` | [text](/docs/records/fields/types/text/) | The globally unique ID of this item in the feed 
 |   | `is_closed` | [boolean](/docs/records/fields/types/boolean/) | Is this item viewed/resolved? 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`title`** | [text](/docs/records/fields/types/text/) | The title of this feed item 
 | **x** | **`url`** | [text](/docs/records/fields/types/text/) | The URL of this feed item 
 
@@ -61,14 +61,15 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `title` | text | Title
 | `url` | text | Url
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `custom_<id>` | mixed | Custom Fields
-| `links` | links | Links
-| `watchers` | watchers | Watchers
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
+| `watchers` | watchers | [Watchers](/docs/bots/behaviors/dictionaries/key-expansion/#watchers)
 	
 ### Search Query Fields
 
@@ -96,7 +97,7 @@ These columns are available on feed item [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `fi_created_date` | Created
 | `fi_feed_id` | Feed
 | `fi_is_closed` | Is Closed

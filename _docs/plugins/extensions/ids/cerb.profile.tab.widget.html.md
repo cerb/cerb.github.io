@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | HTML/Javascript
 | **Identifier (ID):** | cerb.profile.tab.widget.html
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/profiles.php
+| **File:** | api/profiles/widgets/html_javascript.php
 | **Class:** | ProfileWidget_CustomHtml
 

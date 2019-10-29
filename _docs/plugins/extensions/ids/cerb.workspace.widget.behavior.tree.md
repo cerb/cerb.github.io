@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Bot Behavior Tree
 | **Identifier (ID):** | cerb.workspace.widget.behavior.tree
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/internal/dashboards.php
+| **File:** | api/workspaces/widgets/behavior_tree.php
 | **Class:** | WorkspaceWidget_BehaviorTree
 

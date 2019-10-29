@@ -38,7 +38,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |:-:|-|-|-
 | **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | [Profile Widget Type](/docs/plugins/extensions/points/cerb.profile.widget/) 
 |   | `extension_params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this profile widget 
 |   | `pos` | [number](/docs/records/fields/types/number/) | The order of the widget on the profile; `0` is first (top-left) proceeding in rows then columns 
 | **x** | **`profile_tab_id`** | [number](/docs/records/fields/types/number/) | The ID of the [profile tab](/docs/records/types/profile_tab/) dashboard containing this widget 
@@ -64,14 +64,15 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `width_units` | number | Width
 | `zone` | text | Zone
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `custom_<id>` | mixed | Custom Fields
-| `links` | links | Links
-| `watchers` | watchers | Watchers
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
+| `watchers` | watchers | [Watchers](/docs/bots/behaviors/dictionaries/key-expansion/#watchers)
 	
 ### Search Query Fields
 
@@ -87,6 +88,7 @@ These [filters](/docs/search/filters/) are available in profile widget [search q
 | `pos:` | [number](/docs/search/filters/numbers/) | Order
 | `tab:` | [record](/docs/search/deep-search/) | [Tab](/docs/records/types/profile_tab/)
 | `tab.id:` | [chooser](/docs/search/filters/choosers/) | [Tab](/docs/records/types/profile_tab/)
+| `type:` | [text](/docs/search/filters/text/) | Type
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `width:` | [number](/docs/search/filters/numbers/) | Width Units
 | `zone:` | [text](/docs/search/filters/text/) | Zone
@@ -98,7 +100,7 @@ These columns are available on profile widget [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `p_extension_id` | Type
 | `p_id` | Id
 | `p_name` | Name

@@ -14,7 +14,7 @@ jumbotron:
     url: /docs/setup/
   - 
     label: Records &raquo;
-    url: /docs/setup/records/
+    url: /docs/setup/#records
 ---
 
 The [worklists](/docs/worklists/) for [snippets](/docs/snippets/) are typically limited to the records visible by the current worker based on their roles, group membership, etc.  Workers cannot view each other's private snippets.

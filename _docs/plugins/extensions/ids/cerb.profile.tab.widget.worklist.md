@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Worklist
 | **Identifier (ID):** | cerb.profile.tab.widget.worklist
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/profiles.php
+| **File:** | api/profiles/widgets/worklist.php
 | **Class:** | ProfileWidget_Worklist
 

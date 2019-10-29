@@ -42,7 +42,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `host` | [text](/docs/records/fields/types/text/) | The hostname of the email address 
 |   | `is_banned` | [boolean](/docs/records/fields/types/boolean/) | Is incoming email blocked? 
 |   | `is_defunct` | [boolean](/docs/records/fields/types/boolean/) | Is this address non-deliverable? 
-|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to 
+|   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `mail_transport_id` | [number](/docs/records/fields/types/number/) | If this address is used for outgoing mail, the [mail transport](/docs/records/types/mail_transport/) to use; otherwise empty 
 |   | `org_id` | [number](/docs/records/fields/types/number/) | The [organization](/docs/records/types/org/) linked to this email 
 |   | `updated` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
@@ -72,14 +72,15 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `updated` | date | Updated
 | `worker_` | record | [Worker](/docs/records/types/worker/)
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `custom_<id>` | mixed | Custom Fields
-| `links` | links | Links
-| `watchers` | watchers | Watchers
+| `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
+| `watchers` | watchers | [Watchers](/docs/bots/behaviors/dictionaries/key-expansion/#watchers)
 	
 ### Search Query Fields
 
@@ -129,7 +130,7 @@ These columns are available on email address [worklists](/docs/worklists/):
 | `a_num_spam` | # Spam
 | `a_updated` | Updated
 | `a_worker_id` | Worker
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `o_name` | Organization
 
 <div class="section-nav">

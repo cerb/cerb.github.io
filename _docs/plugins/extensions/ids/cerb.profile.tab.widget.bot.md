@@ -27,6 +27,6 @@ jumbotron:
 | **Name:** | Custom
 | **Identifier (ID):** | cerb.profile.tab.widget.bot
 | **Plugin:** | [cerberusweb.core](/docs/plugins/cerberusweb.core/)
-| **File:** | api/uri/profiles.php
+| **File:** | api/profiles/widgets/bot_behavior.php
 | **Class:** | ProfileWidget_BotBehavior
 

@@ -64,7 +64,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `tag` | text | Tag
 | `updated` | date | Updated
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
@@ -104,7 +104,7 @@ These columns are available on sensor [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
-| `cf_<id>` | [Custom Field](/docs/records/types/custom_Field/)
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `ftcc_content` | Comment Content
 | `p_extension_id` | Type
 | `p_fail_count` | Fail Count
