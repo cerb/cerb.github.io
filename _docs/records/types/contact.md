@@ -41,6 +41,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `email_id` | [number](/docs/records/fields/types/number/) | ID of this contact's primary [email address](/docs/records/types/address/) 
 | **x** | **`first_name`** | [text](/docs/records/fields/types/text/) | Given name 
 |   | `gender` | [text](/docs/records/fields/types/text/) | Gender: `F` (female), `M` (male), or blank 
+|   | `image` | [image](/docs/records/fields/types/image/) | The contact's profile picture in PNG format, base64-encoded in [data URI format](https://en.wikipedia.org/wiki/Data_URI_scheme)
 |   | `language` | [text](/docs/records/fields/types/text/) | Language: `en_US` 
 |   | `last_login_at` | [timestamp](/docs/records/fields/types/timestamp/) | Date of their last [community portal](/docs/portals/) login 
 |   | `last_name` | [text](/docs/records/fields/types/text/) | Surname 
