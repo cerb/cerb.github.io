@@ -79,6 +79,7 @@ These [filters](/docs/search/filters/) are available in workspace page [search q
 |---
 | Field | Type | Description
 |-|-|-
+| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `owner:` | virtual | Owner

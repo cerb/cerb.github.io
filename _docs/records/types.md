@@ -33,6 +33,7 @@ This reference can be used when building [bot behaviors](/docs/bots/), [search q
 | `calendar_event` | [Calendar Events](/docs/records/types/calendar_event/)
 | `calendar_recurring_event` | [Calendar Recurring Events](/docs/records/types/calendar_recurring_event/)
 | `calendar` | [Calendars](/docs/records/types/calendar/)
+| `card_widget` | [Card Widget](/docs/records/types/card_widget/)
 | `classifier_class` | [Classifications](/docs/records/types/classifier_class/)
 | `classifier_entity` | [Classifier Entities](/docs/records/types/classifier_entity/)
 | `classifier_example` | [Classifier Examples](/docs/records/types/classifier_example/)

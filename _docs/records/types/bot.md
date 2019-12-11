@@ -37,7 +37,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
 |   | `created_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
-|   | `image` | [image](/docs/records/fields/types/image/) | The bot's profile picture in PNG format, base64-encoded in [data URI format](https://en.wikipedia.org/wiki/Data_URI_scheme)
+|   | `image` | [image](/docs/records/fields/types/image/) | The profile image, base64-encoded in [data URI format](https://en.wikipedia.org/wiki/Data_URI_scheme) 
 |   | `is_disabled` | [boolean](/docs/records/fields/types/boolean/) | Is this bot disabled? 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `mention_name` | [text](/docs/records/fields/types/text/) | (deprecated) 

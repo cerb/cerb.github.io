@@ -64,7 +64,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 |---
 | Field | Type | Description
 |-|-|-
-| `attachments` | hashmap | Attachments
+| `attachments` | attachments | [Attachments](/docs/bots/behaviors/dictionaries/key-expansion/#attachments)
 | `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
 | `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 	
@@ -82,7 +82,7 @@ These [filters](/docs/search/filters/) are available in comment [search queries]
 | `created:` | [date](/docs/search/filters/dates/) | Created
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
-| `isMarkdown:` | [boolean](/docs/search/filters/booleans/) | Is Markdown
+| `isMarkdown:` | [boolean](/docs/search/filters/booleans/) | Markdown
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `on:` | [text](/docs/search/filters/text/) | On Type
 | `on.<type>:` | [record](/docs/search/deep-search/) | Target

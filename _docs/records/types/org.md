@@ -40,9 +40,9 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `country` | [text](/docs/records/fields/types/text/) | Country 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
 |   | `email_id` | [number](/docs/records/fields/types/number/) | Primary [email address](/docs/records/types/address/) 
+|   | `image` | [image](/docs/records/fields/types/image/) | The profile image, base64-encoded in [data URI format](https://en.wikipedia.org/wiki/Data_URI_scheme) 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this organization 
-|   | `image` | [image](/docs/records/fields/types/image/) | The org's profile picture in PNG format, base64-encoded in [data URI format](https://en.wikipedia.org/wiki/Data_URI_scheme)
 |   | `phone` | [text](/docs/records/fields/types/text/) | Phone 
 |   | `postal` | [text](/docs/records/fields/types/text/) | Postal code / ZIP 
 |   | `province` | [text](/docs/records/fields/types/text/) | State / Province 

@@ -36,11 +36,15 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
+|   | `is_queued` | [boolean](/docs/records/fields/types/boolean/) |  
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `name` | [text](/docs/records/fields/types/text/) | The subject line of the draft message 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
+|   | `queue_delivery_date` | [number](/docs/records/fields/types/number/) | (0-4294967296) 
+|   | `queue_fails` | [number](/docs/records/fields/types/number/) | (0-4294967296) 
+|   | `ticket_id` | [number](/docs/records/fields/types/number/) |  
 |   | `to` | [text](/docs/records/fields/types/text/) | The `To:` line of the draft message 
-| **x** | **`type`** | [text](/docs/records/fields/types/text/) | The type of draft: `mail.compose` or `ticket.reply` 
+| **x** | **`type`** | [text](/docs/records/fields/types/text/) | The type of draft: `mail.compose`, `ticket.reply`, or `ticket.forward` 
 |   | `updated` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 | **x** | **`worker_id`** | [number](/docs/records/fields/types/number/) | The ID of the [worker](/docs/records/types/worker/) who owns the draft 
 
@@ -52,6 +56,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | Field | Type | Description
 |-|-|-
 | `_label` | text | Label
+| `content` | text | Content
 | `id` | number | Id
 | `name` | text | Name
 | `to` | text | To
@@ -64,6 +69,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 | Field | Type | Description
 |-|-|-
 | `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
+| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
 	
 ### Search Query Fields
 
@@ -73,7 +79,10 @@ These [filters](/docs/search/filters/) are available in draft [search queries](/
 | Field | Type | Description
 |-|-|-
 | `id:` | [number](/docs/search/filters/numbers/) | Id
-| `subject:` | [text](/docs/search/filters/text/) | Subject
+| `is.queued:` | [boolean](/docs/search/filters/booleans/) | Is Queued
+| `name:` | [text](/docs/search/filters/text/) | Name
+| `queue.deliverAt:` | [date](/docs/search/filters/dates/) | Delivery Date
+| `queue.fails:` | [number](/docs/search/filters/numbers/) | # Fails
 | `to:` | [text](/docs/search/filters/text/) | To
 | `type:` | [text](/docs/search/filters/text/) | Message Type
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
@@ -87,12 +96,13 @@ These columns are available on draft [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
+| `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `m_hint_to` | To
 | `m_id` | Id
 | `m_is_queued` | Is Queued
+| `m_name` | Name
 | `m_queue_delivery_date` | Delivery Date
 | `m_queue_fails` | # Fails
-| `m_subject` | Subject
 | `m_type` | Message Type
 | `m_updated` | Updated
 | `m_worker_id` | Worker

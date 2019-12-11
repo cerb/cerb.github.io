@@ -39,6 +39,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The singular name of the record; `Issue` 
 | **x** | **`name_plural`** | [text](/docs/records/fields/types/text/) | The plural name of the record; `Issues` 
+|   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 | **x** | **`uri`** | [text](/docs/records/fields/types/text/) | The alias of the record (e.g. `issue`); used in URLs, API, etc. 
 

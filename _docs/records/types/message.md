@@ -84,7 +84,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 |---
 | Field | Type | Description
 |-|-|-
-| `attachments` | records | Attachments
+| `attachments` | attachments | [Attachments](/docs/bots/behaviors/dictionaries/key-expansion/#attachments)
 | `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
 | `content` | text | Content
 | `content_html` | text | Content (Html)
