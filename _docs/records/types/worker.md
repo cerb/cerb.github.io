@@ -44,7 +44,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `email_ids` | [text](/docs/records/fields/types/text/) | A comma-separated list of IDs for alternative [email addresses](/docs/records/types/address/) 
 | **x** | **`first_name`** | [text](/docs/records/fields/types/text/) | Given name 
 |   | `gender` | [text](/docs/records/fields/types/text/) | `F` (female), `M` (male), or blank or unknown 
-|   | `image` | [image](/docs/records/fields/types/image/) | The worker's profile picture in PNG format 
+|   | `image` | [image](/docs/records/fields/types/image/) | The worker's profile picture in PNG format, base64-encoded in [data URI format](https://en.wikipedia.org/wiki/Data_URI_scheme)
 |   | `is_disabled` | [boolean](/docs/records/fields/types/boolean/) | Is this worker deactivated and prevented from logging in? 
 |   | `is_mfa_required` | [boolean](/docs/records/fields/types/boolean/) | Is this worker required to use multi-factor authentication? 
 |   | `is_password_disabled` | [boolean](/docs/records/fields/types/boolean/) | Is this worker allowed to log in with a password? 

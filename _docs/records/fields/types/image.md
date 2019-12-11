@@ -47,6 +47,10 @@ In [PUT](/docs/api/endpoints/records/#update) or [POST](/docs/api/endpoints/reco
 </code>
 </pre>
 
+### Remove
+
+You can remove an image by setting it to `data:null`
+
 <div class="section-nav">
 	<div class="left">
 		<a href="/docs/records/fields/types/float/" class="prev">&lt; Float</a>

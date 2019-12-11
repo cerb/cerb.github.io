@@ -37,7 +37,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
-|   | `image` | [image](/docs/records/fields/types/image/) | Base64-encoded PNG image 
+|   | `image` | [image](/docs/records/fields/types/image/) | The group's profile picture in PNG format, base64-encoded in [data URI format](https://en.wikipedia.org/wiki/Data_URI_scheme)
 |   | `is_default` | [boolean](/docs/records/fields/types/boolean/) | [Tickets](/docs/tickets/) are assigned to the default group when no other routing rules match 
 |   | `is_private` | [boolean](/docs/records/fields/types/boolean/) | The content in public (`0`) groups is visible to everyone; in private (`1`) groups content is only visible to members 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 

@@ -31,24 +31,25 @@ Create a ticket object.
 {: .no_toc}
 
 |---
-| Field | Type | 
-|-|-|-
-| `group_id` | integer | **required**
-| `bucket_id` | integer
-| `to` | string | **required**
-| `cc` | string
-| `bcc` | string
-| `subject` | string | **required**
-| `content` | string | **required**
-| `content_format` | string | `markdown` for HTML or blank for plaintext
-| `dont_send` | integer | `0`=create/send normally, `1`=create ticket without sending
-| `org_id` | id | [organization](/docs/api/endpoints/organizations/)
-| `owner_id` | id | [worker](/docs/api/endpoints/workers/)
-| `html_template_id` | id | [html template](/docs/api/endpoints/mail-html-template/)
-| `file_id[]` | ids | Upload with [attachments](/docs/api/endpoints/attachments/)
-| `status` | integer | `0`=open, `1`=waiting, `2`=closed, `3`=deleted
-| `reopen_at` | mixed | unix timestamp or string (e.g. "Friday 2pm", "+2 hours")
-| `custom_*` | mixed | 
+| Req'd | Field | Type | Notes
+|:-:|-|-|-
+| | `bcc` | string
+| | `bucket_id` | integer
+| | `cc` | string
+| **x** | `content` | string |
+| | `content_format` | string | `markdown` for HTML or blank for plaintext
+| | `custom_*` | mixed | 
+| | `dont_send` | integer | `0`=create/send normally, `1`=create ticket without sending
+| | `file_id[]` | ids | Upload with [attachments](/docs/api/endpoints/attachments/)
+| **x** | `group_id` | integer
+| | `html_template_id` | id | [html template](/docs/api/endpoints/mail-html-template/)
+| | `org_id` | id | [organization](/docs/api/endpoints/organizations/)
+| | `owner_id` | id | [worker](/docs/api/endpoints/workers/)
+| | `reopen_at` | mixed | unix timestamp or string (e.g. "Friday 2pm", "+2 hours")
+| | `send_at` | mixed | When the message should be delivered. Defaults to `now`. Unix timestamp or string (e.g. "Friday 2pm", "+2 hours")
+| | `status` | integer | `0`=open, `1`=waiting, `2`=closed, `3`=deleted
+| **x** | `subject` | string |
+| **x** | `to` | string
 
 ### Example
 {: .no_toc}
@@ -83,40 +84,34 @@ $out = $cerb->post($base_url . 'tickets/compose.json', $postfields);
 
 Reply to a ticket message as a worker.
 
-### Parameters (Required)
-{: .no_toc}
-
-|---
-| Field | Type | 
-|-|-|-
-| `content` | string | The content of the reply message
-| `message_id` | id | The [ticket](/docs/api/tickets/) [message](/docs/api/messages/) being replied to
-
 ### Parameters
 {: .no_toc}
 
 |---
-| Field | Type | 
-|-|-|-
-| `bcc` | string | A comma-separated list of email addresses that will privately receive a copy of this message.
-| `bucket_id` | id | Move the ticket to a new [bucket](/docs/api/endpoints/groups/)
-| `cc` | string | A comma-separated list of email addresses that will publicly receive a copy of this message.
-| `content_format` | string | `markdown` for HTML or blank for plaintext
-| `custom_*` | mixed | 
-| `dont_keep_copy` | boolean | Send the reply by email without saving a copy in Cerb: 0=no, 1=yes
-| `dont_send` | boolean | Save the reply in Cerb without sending email: 0=no, 1=yes
-| `file_id[]` | ids | Upload with [attachments](/docs/api/endpoints/attachments/)
-| `group_id` | id | Move the ticket to a new [group](/docs/api/endpoints/groups/)
-| `html_template_id` | id | [mail template](/docs/api/endpoints/mail-html-template/)
-| `is_autoreply` | boolean | Automatically include auto-reply mail headers: 0=no, 1=yes
-| `is_broadcast` | boolean | Set the broadcast flag: 0=no, 1=yes
-| `is_forward` | boolean | Send the message without updating the ticket with the new subject or requesters: 0=no, 1=yes
-| `owner_id` | id | Assign the ticket to a [worker](/docs/api/endpoints/workers/), or `0` to unassign from the current owner
-| `reopen_at` | mixed | unix timestamp or string (e.g. "Friday 2pm", "+2 hours")
-| `status` | integer | 0=open, 1=waiting, 2=closed, 3=deleted
-| `subject` | string | Update the ticket's subject
-| `to` | string | A comma-separated list of email addresses to include as recipients. If blank, it uses the ticket's current requesters
-| `worker_id` | id | The specific [worker](/docs/api/endpoints/workers/) to send the message as. This defaults to the current API user, and can only be changed by administrators
+| Req'd | Field | Type | Notes
+|:-:|-|-|-
+| | `bcc` | string | A comma-separated list of email addresses that will privately receive a copy of this message.
+| | `bucket_id` | id | Move the ticket to a new [bucket](/docs/api/endpoints/groups/)
+| | `cc` | string | A comma-separated list of email addresses that will publicly receive a copy of this message.
+| **x** | `content` | string | The content of the reply message
+| | `content_format` | string | `markdown` for HTML or blank for plaintext
+| | `custom_*` | mixed | 
+| | `dont_keep_copy` | boolean | Send the reply by email without saving a copy in Cerb: 0=no, 1=yes
+| | `dont_send` | boolean | Save the reply in Cerb without sending email: 0=no, 1=yes
+| | `file_id[]` | ids | Upload with [attachments](/docs/api/endpoints/attachments/)
+| | `group_id` | id | Move the ticket to a new [group](/docs/api/endpoints/groups/)
+| | `html_template_id` | id | [mail template](/docs/api/endpoints/mail-html-template/)
+| | `is_autoreply` | boolean | Automatically include auto-reply mail headers: 0=no, 1=yes
+| | `is_broadcast` | boolean | Set the broadcast flag: 0=no, 1=yes
+| | `is_forward` | boolean | Send the message without updating the ticket with the new subject or requesters: 0=no, 1=yes
+| **x** | `message_id` | id | The [ticket](/docs/api/tickets/) [message](/docs/api/messages/) being replied to
+| | `owner_id` | id | Assign the ticket to a [worker](/docs/api/endpoints/workers/), or `0` to unassign from the current owner
+| | `reopen_at` | mixed | unix timestamp or string (e.g. "Friday 2pm", "+2 hours")
+| | `send_at` | mixed | When the message should be delivered. Defaults to `now`. Unix timestamp or string (e.g. "Friday 2pm", "+2 hours")
+| | `status` | integer | 0=open, 1=waiting, 2=closed, 3=deleted
+| | `subject` | string | Update the ticket's subject
+| | `to` | string | A comma-separated list of email addresses to include as recipients. If blank, it uses the ticket's current requesters
+| | `worker_id` | id | The specific [worker](/docs/api/endpoints/workers/) to send the message as. This defaults to the current API user, and can only be changed by administrators
 
 {% comment %}
 	'html_template_id'
@@ -148,7 +143,3 @@ $postfields = [
 ];
 $out = $cerb->post($base_url . 'tickets/reply.json', $postfields);</code>
 </pre>
-
-# Split
-
-# Merge
