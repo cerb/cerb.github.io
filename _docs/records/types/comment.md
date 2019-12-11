@@ -82,6 +82,7 @@ These [filters](/docs/search/filters/) are available in comment [search queries]
 | `created:` | [date](/docs/search/filters/dates/) | Created
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
+| `isMarkdown:` | [boolean](/docs/search/filters/booleans/) | Is Markdown
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `on:` | [text](/docs/search/filters/text/) | On Type
 | `on.<type>:` | [record](/docs/search/deep-search/) | Target
@@ -96,6 +97,7 @@ These columns are available on comment [worklists](/docs/worklists/):
 | `*_target` | Target
 | `c_created` | Created
 | `c_id` | Id
+| `c_is_markdown` | Markdown
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 
 <div class="section-nav">
