@@ -48,6 +48,47 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `updated` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 | **x** | **`worker_id`** | [number](/docs/records/fields/types/number/) | The ID of the [worker](/docs/records/types/worker/) who owns the draft 
 
+#### params (mail.compose)
+
+|---
+| Key | Value
+|-|-
+| `bcc` | The `Bcc:` recipients
+| `bucket_id` | The [bucket](/docs/records/types/bucket/) ID to move the ticket to
+| `cc` | The `Cc:` recipients
+| `content` | The message content
+| `custom_fields` | An object with custom field IDs as keys and their values
+| `format` | `parsedown` (Markdown), or blank for plaintext
+| `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
+| `group_id` | The [group](/docs/records/types/group/) ID to move the ticket to
+| `owner_id` | The [worker](/docs/records/types/worker/) ID to assign
+| `send_at` | The optional timestamp to deliver the message at
+| `status_id` | `0` (open), `1` (waiting), `2` (closed)
+| `subject` | The message `Subject:`
+| `ticket_reopen` | When the status is waiting or closed, the timestamp to reopen at
+| `to` | The `To:` recipients
+
+#### params (ticket.reply / ticket.forward)
+
+|---
+| Key | Value
+|-|-
+| `bcc` | The `Bcc:` recipients
+| `bucket_id` | The [bucket](/docs/records/types/bucket/) ID to move the ticket to
+| `cc` | The `Cc:` recipients
+| `content` | The message content
+| `custom_fields` | An object with custom field IDs as keys and their values
+| `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
+| `format` | `parsedown` (Markdown), or blank for plaintext
+| `group_id` | The [group](/docs/records/types/group/) ID to move the ticket to
+| `in_reply_message_id` | The [message](/docs/records/types/message/) ID being responded to
+| `owner_id` | The [worker](/docs/records/types/worker/) ID to assign
+| `send_at` | The optional timestamp to deliver the message at
+| `status_id` | `0` (open), `1` (waiting), `2` (closed)
+| `subject` | The message `Subject:`
+| `ticket_reopen` | When the status is waiting or closed, the timestamp to reopen at
+| `to` | The `To:` recipients
+
 ### Dictionary Placeholders
 
 These [placeholders](/docs/bots/scripting/placeholders/) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
