@@ -245,6 +245,8 @@ Although most changes are likely to be minor, we may modify this Privacy Policy 
 
 ### Changelog
 
+* **11-December-2019**: Added instructions to the 'Your Privacy Choices' section.
+
 * **03-January-2019**: Published the Privacy Shield sections.
 
 * **20-December-2018**: Updated Privacy Shield sections for review and compliance ("Your Privacy Choices" and "Liability For Onward Transfer").
