@@ -195,13 +195,15 @@ We provide the following privacy choices for your data:
 
 * You may choose to arrange payment through an intermediary like PayPal to protect your financial information.
 
-* You may opt-out of receiving commercial emails from us.
+* You must opt-in to receive newsletters and other marketing email from us. At any time, you may opt-out of marketing communications by clicking the "unsubscribe" link found at the bottom of such messages. Note that after you opt-out, you may still receive email from us related to your active licenses and services, or in response to information you have requested.
 
-* You may receive a full backup of your content from Cerb Cloud at any time.
+* You may receive a full backup of your content from Cerb Cloud at any time by contacting [team@cerb.ai](mailto:team@cerb.ai).
 
-* You may delete records and other data within Cerb.
+* You may delete records and other data within your Cerb instance. Use the **search** menu in the top right of the application, edit a record, and click the **Delete** button.
 
-* You may close your Cerb Cloud account and request that your data and backups be permanently deleted.
+* You may request that we delete your personal profiles, organizational profiles, and/or testimonials, from our client database by contacting [team@cerb.ai](mailto:team@cerb.ai).
+
+* You may close your Cerb Cloud account and request that your data and backups be permanently deleted by contacting [team@cerb.ai](mailto:team@cerb.ai).
 
 # Security and Safeguards
 
@@ -242,6 +244,8 @@ If WGM or substantially all of its assets were acquired, or in the event that we
 Although most changes are likely to be minor, we may modify this Privacy Policy from time to time at our sole discretion. You are encouraged to frequently check this page for any changes to the Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.
 
 ### Changelog
+
+* **11-December-2019**: Added instructions to the 'Your Privacy Choices' section.
 
 * **03-January-2019**: Published the Privacy Shield sections.
 

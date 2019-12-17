@@ -1,11 +1,11 @@
 ---
-title: Email Signature Records
-permalink: /docs/records/types/email_signature/
+title: Card Widget Records
+permalink: /docs/records/types/card_widget/
 toc:
-  title: Email Signature
+  title: Card Widget
   expand: Records
 jumbotron:
-  title: Email Signature
+  title: Card Widget
   tagline: 
   breadcrumbs:
   -
@@ -21,10 +21,10 @@ jumbotron:
 
 |---
 |-|-
-| **Name (singular):** | Email Signature
-| **Name (plural):** | Email Signatures
-| **Alias (uri):** | email_signature
-| **Identifier (ID):** | cerberusweb.contexts.email.signature
+| **Name (singular):** | Card Widget
+| **Name (plural):** | Card Widgets
+| **Alias (uri):** | card_widget
+| **Identifier (ID):** | cerb.contexts.card.widget
 
 * TOC
 {:toc}
@@ -36,14 +36,15 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
-|   | `is_default` | [boolean](/docs/records/fields/types/boolean/) | Is this the default signature? 
+| **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | [Card Widget Type](/docs/plugins/extensions/points/cerb.card.widget/) 
+|   | `extension_params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
-| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this email signature 
-| **x** | **`owner__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) of this email signature's owner: `app`, `role`, `group`, or `worker` 
-|   | `owner_id` | [number](/docs/records/fields/types/number/) | The ID of this email signature's owner 
-| **x** | **`signature`** | [text](/docs/records/fields/types/text/) | The [template](/docs/bots/scripting/) of the signature 
-|   | `signature_html` | [text](/docs/records/fields/types/text/) | The HTML [template](/docs/bots/scripting/) of the signature 
+| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this card widget 
+|   | `pos` | [number](/docs/records/fields/types/number/) | The order of the widget on the card; `0` is first (top-left) proceeding in rows then columns 
+| **x** | **`record_type`** | [context](/docs/records/fields/types/context/) | The record type of the card containing this widget 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
+|   | `width_units` | [number](/docs/records/fields/types/number/) | `1` (25%), `2` (50%), `3` (75%), `4` (100%) 
+|   | `zone` | [text](/docs/records/fields/types/text/) | The name of the dashboard zone containing the widget; this varies by layout; generally `sidebar` and `content` 
 
 ### Dictionary Placeholders
 
@@ -54,12 +55,8 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 |-|-|-
 | `_label` | text | Label
 | `id` | number | Id
-| `is_default` | boolean | Is Default
 | `name` | text | Name
-| `owner_` | record | Owner
 | `record_url` | text | Record Url
-| `signature` | text | Signature
-| `signature_html` | text | Signature (Html)
 | `updated_at` | date | Updated
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
@@ -67,41 +64,45 @@ These optional placeholders are also available with **key expansion** in [dictio
 |---
 | Field | Type | Description
 |-|-|-
-| `attachments` | attachments | [Attachments](/docs/bots/behaviors/dictionaries/key-expansion/#attachments)
 | `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
 | `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
 | `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in email signature [search queries](/docs/search/):
+These [filters](/docs/search/filters/) are available in card widget [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
+| `created:` | [date](/docs/search/filters/dates/) | Created
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
-| `isDefault:` | [boolean](/docs/search/filters/booleans/) | Default
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
-| `owner:` | virtual | Owner
-| `signature:` | [text](/docs/search/filters/text/) | Signature
+| `pos:` | [number](/docs/search/filters/numbers/) | Order
+| `type:` | [text](/docs/search/filters/text/) | Name
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `width:` | [number](/docs/search/filters/numbers/) | Width
+| `zone:` | [text](/docs/search/filters/text/) | Zone
 	
 ### Worklist Columns
 
-These columns are available on email signature [worklists](/docs/worklists/):
+These columns are available on card widget [worklists](/docs/worklists/):
 
 |---
 | Column | Description
 |-|-
-| `*_owner` | Owner
+| `c_created_at` | Created
+| `c_extension_id` | Type
+| `c_id` | Id
+| `c_name` | Name
+| `c_pos` | Order
+| `c_record_type` | Record Type
+| `c_updated_at` | Updated
+| `c_width_units` | Width
+| `c_zone` | Zone
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
-| `e_id` | Id
-| `e_is_default` | Default
-| `e_name` | Name
-| `e_signature` | Signature
-| `e_updated_at` | Updated
 
 <div class="section-nav">
 	<div class="left">
