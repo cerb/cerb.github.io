@@ -71,6 +71,18 @@ Log in to the [Azure Portal](https://portal.azure.com/).
 	
 1. Click the blue **Add** button.
 
+### Configure optional claims
+
+1. In the new app registration, navigate to **Token configuration**.
+
+1. Click the **Add optional claim** button.
+
+1. Select **ID** for **Token type**.
+
+1. Check the box to the left of the `email` claim.
+
+1. Click the blue **Add** button at the bottom of the claim list.
+
 # Configure Cerb
 
 Log in to Cerb as an administrator.
