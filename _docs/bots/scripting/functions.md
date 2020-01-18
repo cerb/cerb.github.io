@@ -406,7 +406,7 @@ January 01, 2018 12:00pm
 
 ## dict_set
 
-You can use the **dict_set** function to quickly modify, append, or remove items from an array or object.
+You can use the **dict_set** function to quickly add, modify, or append items in an array or object.
 
 You can set deeply nested keys in a single line using dot-notation:
 
@@ -494,6 +494,32 @@ Append to nested arrays:
     9
   ]
 ]
+```
+
+## dict_unset
+
+You can use the **dict_unset** function to remove items by key from an array or object.
+
+You can unset deeply nested keys in a single line using dot-notation:
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set person = {"person":{"name":{"first":"Jane","last":"Tester"},"age":28,"location":"Secret"}} %}
+{% set person = dict_unset(person, ['person.name.last','person.age','person.location']) %}
+{{person|json_encode|json_pretty}}
+{% endraw %}
+</code>
+</pre>
+
+```
+{
+    "person": {
+        "name": {
+            "first": "Jane"
+        }
+    }
+}
 ```
 
 ## json_decode
