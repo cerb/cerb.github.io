@@ -9,7 +9,7 @@ redirect_from:
   - /integrations/
 jumbotron:
   title: How-to Guides
-  tagline: Master Cerb with step-by-step how-to guides. 
+  tagline: Master Cerb with step-by-step how-to guides.
   breadcrumbs:
   - 
     label: Resources
@@ -24,7 +24,7 @@ jumbotron:
 	{% for topic in topics %}
 		<h1 id="{{ topic.name | slugify }}">{{ topic.name }}</h1>
 		
-		{% if topic.name == 'Bots' or topic.name == 'Dashboards' or topic.name == 'Integrations' or topic.name == 'Developers' %}
+		{% if topic.name == 'Bots' or topic.name == 'Dashboards' or topic.name == 'Integrations' or topic.name == 'Developers' or topic.name == 'Mail' %}
 			{% assign subtopics = topic.items | sort: 'id' | group_by: 'subtopic' %}
 		
 			<div style="margin-left:15px;">
