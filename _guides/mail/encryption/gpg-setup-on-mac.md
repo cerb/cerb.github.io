@@ -1,5 +1,6 @@
 ---
 title: Create a GPG encryption key-pair on macOS
+published: false
 excerpt: In this example we will show you how to create your GPG keys and setup Cerb to receive encrypted emails.
 layout: integration
 topic: Mail

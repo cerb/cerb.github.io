@@ -1,8 +1,10 @@
 ---
 title: Decrypt messages in your browser with Mailvelope
 excerpt: This guide describes how to use Mailvelope and Cerb together to communicate more securely through email by delegating decryption to only authorized workers.
+permalink: /guides/mail/encryption/mailvelope/
 layout: integration
 topic: Mail
+subtopic: Encryption
 jumbotron:
   title: Decrypt messages in your browser with Mailvelope
   tagline: ""
@@ -16,6 +18,9 @@ jumbotron:
   -
     label: Mail &raquo;
     url: /resources/guides/#mail
+  -
+    label: Encryption &raquo;
+    url: /resources/guides/#mail-encryption
 ---
 
 * TOC

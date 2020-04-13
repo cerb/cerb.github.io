@@ -1,8 +1,10 @@
 ---
 title: "Send email on company letterhead"
 excerpt: In this example we'll create a letterhead mail template and demonstrate how to use it when sending mail from the browser or using bots.
+permalink: /guides/mail/html-templates/
 layout: integration
 topic: Mail
+subtopic: Layout
 jumbotron:
   title: Send email on company letterhead
   tagline: ""
@@ -16,6 +18,9 @@ jumbotron:
   -
     label: Mail &raquo;
     url: /resources/guides/#mail
+  -
+    label: Layout &raquo;
+    url: /resources/guides/#mail-layout
 ---
 
 * TOC
