@@ -606,6 +606,27 @@ Convert a string to lowercase:
 why are you yelling?
 ```
 
+## markdown_to_html
+
+(Added in [9.5.4](/releases/9.5.4/))
+
+Convert Markdown[^markdown] formatting to HTML:
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set markdown %}
+This is **bold** text with a [link](https://cerb.ai/)
+{% endset %}
+{{markdown|markdown_to_html}}
+{% endraw %}
+</code>
+</pre>
+
+```
+<p>This is <strong>bold</strong> text with a <a href="https://cerb.ai/">link</a></p>
+```
+
 ## md5
 
 Generate an MD5[^md5] hash for a string:
@@ -1148,6 +1169,8 @@ name=Kina&action=light_on
 [^hmac]: Wikipedia: Hash-based message authentication code (HMAC) - <https://en.wikipedia.org/wiki/Hash-based_message_authentication_code>
 
 [^json]: Wikipedia: JSON - <https://en.wikipedia.org/wiki/JSON>
+
+[^markdown]: Wikipedia: Markdown - <https://en.wikipedia.org/wiki/Markdown>
 
 [^md5]: Wikipedia: MD5 - <https://en.wikipedia.org/wiki/MD5>
 
