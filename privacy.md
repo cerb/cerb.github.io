@@ -177,14 +177,6 @@ They have access to data from email messages (e.g. sender, subject, body, and at
 
 They do not have access to any client data outside of email communication.
 
-### Disqus
-
-We use Disqus to enable comment functionality on the blog and documentation of our project website.
-
-They have access to information typically made available by web browsers: IP addresses, visited pages, browser, and platform.
-
-They do not have access to any client data.
-
 # Your Privacy Choices
 
 We provide the following privacy choices for your data:
