@@ -1,6 +1,6 @@
 Prism.languages.cerb = {
   'key': {
-    pattern: /(\s*)[a-zA-Z0-9\_\-\.]*(:)/,
+    pattern: /(\s*)[a-zA-Z0-9\_\-\.\,\/\@\&]*(:)/,
     lookbehind: true,
     lookahead: true,
     alias: 'atrule'
