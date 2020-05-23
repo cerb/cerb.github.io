@@ -40,6 +40,8 @@ Optionally, multiple functions can be specified for a series, like `functions:[s
 
 # Response Formats
 
+* **pie** returns data for use in pie and donut charts (as of [9.5.6](/releases/9.5.6/)).
+
 * **table** (default) returns tabular output, suitable for display with the 'Chart: Table' visualization widget. Multiple metrics are returned as rows.
 
 # Examples
