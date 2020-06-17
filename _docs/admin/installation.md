@@ -27,6 +27,7 @@ jumbotron:
 - The latest version of any of these modern HTML5 web browsers, with Javascript enabled:
 	- Mozilla Firefox
 	- Apple Safari
+	- Brave
 	- Opera
 	- Google Chrome
 	- Microsoft Edge
@@ -47,7 +48,7 @@ jumbotron:
 	- Microsoft Internet Information Server (IIS)
 	- Built-in PHP webserver (for development and evaluation)
 
-- PHP 7.0 (64-bit) or later
+- PHP 7.2 (64-bit) or later
 	- With the following extensions enabled:
 		- curl
 		- dom
@@ -65,7 +66,7 @@ jumbotron:
 		- yaml
 		- xml
 		- tidy _(recommended)_
-		- gnupg _(recommended)_
+		- gmp _(recommended)_
 		- memcached _(optional)_
 		- redis _(optional)_
 	- With these _php.ini_ settings:
