@@ -65,7 +65,7 @@ Install PHP 7.0:
 
 <pre>
 <code class="language-bash">
-sudo apt-get install -y php7.0 php7.0-fpm php7.0-mysql php7.0-mbstring php7.0-gd php7.0-imap php7.0-curl php7.0-dev php-pear
+sudo apt-get install -y php7.0 php7.0-fpm php7.0-mysql php7.0-mbstring php7.0-gd php7.0-imap php7.0-curl php7.0-dev php7.0-gmp php-pear
 </code>
 </pre>
 

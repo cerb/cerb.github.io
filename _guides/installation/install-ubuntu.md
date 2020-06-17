@@ -61,7 +61,7 @@ Install PHP 7.2:
 
 <pre>
 <code class="language-bash">
-sudo apt-get install -y php7.2 php7.2-fpm php7.2-mysql php7.2-mbstring php7.2-gd php7.2-imap php7.2-curl php7.2-mailparse php7.2-yaml php7.2-dev php-pear
+sudo apt-get install -y php7.2 php7.2-fpm php7.2-mysql php7.2-mbstring php7.2-gd php7.2-imap php7.2-curl php7.2-mailparse php7.2-yaml php7.2-gmp php7.2-dev php-pear
 </code>
 </pre>
 

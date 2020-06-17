@@ -59,7 +59,7 @@ Install PHP 7.0:
 
 <pre>
 <code class="language-bash">
-sudo yum install -y php70 php70-fpm php70-mysqli php70-mbstring php70-gd php70-imap php70-opcache php70-devel php7-pear gcc
+sudo yum install -y php70 php70-fpm php70-mysqli php70-mbstring php70-gd php70-imap php70-opcache php70-devel php70-gmp php7-pear gcc
 </code>
 </pre>
 
