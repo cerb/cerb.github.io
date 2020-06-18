@@ -116,6 +116,7 @@ You will see output as your data exports. A large dataset will be broken up into
 
 <pre>
 <code class="language-json">
+{% raw %}
 {
     "package": {
         "name": "Ticket #1",
@@ -175,5 +176,6 @@ You will see output as your data exports. A large dataset will be broken up into
         }
     ]
 }
+{% endraw %}
 </code>
 </pre>
