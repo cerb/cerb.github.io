@@ -1,24 +1,18 @@
 ---
 layout: default
-title: Web-based teamwork and workflow automation
-excerpt: "Cerb is a fully customizable remote collaboration platform: team-based email, event-based automation, customizable workspaces, and more."
+title: Extensible contact center and automated workflow builder
+excerpt: "Cerb is an extensible platform for remote collaboration: contact center, automated workflow builder, data warehouse, and graph database."
 jumbotron:
-  #title: Collaboration and workflow automation for busy teams
-  #title: Web-based teamwork and workflow automation
-  title: Collaboration and automation for remote teams
+  title: "Cerb is an extensible platform for remote collaboration: contact center, automated workflow builder, data warehouse, and graph database."
   style: jumbotron-center
   #tagline: For 18 years Cerb has helped thousands of teams be more productive.
-  tagline: Team-based email, event-based automation, customizable workspaces, and more
 testimonials:
   featured: [ 0,1,2,3,4,21,22 ]
 ---
 
-<div class="grid feature no-gutters" style="margin-bottom:20px;">
+<div class="grid feature no-gutters" style="margin-bottom:50px;">
 	<div class="unit one-third align-left" style="margin-top:10px;">
-		<div style="display:inline-block;vertical-align:top;margin-right:10px;">
-			<img src="/assets/images/home/cerby.png" data-cerb-bot-interaction="" style="cursor:pointer;height:80px;">
-		</div>
-		<div style="display:inline-block;text-align:left;">
+		<div class="align-center">
 			<b>Latest update:</b>
 			<br>
 			<a href="/releases/9.5.7/" style="font-weight:bold;font-size:150%;">9.5.7</a>
@@ -27,10 +21,10 @@ testimonials:
 			June 17, 2020
 		</div>
 		<div class="align-center" style="margin-top:10px;">
-			<a href="/signup/" class="cerb-button" style="font-size:16px;">Try Cerb for free</a>
+			<a href="/signup/" class="cerb-button" style="font-size:18px;">Start a free trial</a>
 		</div>
 	</div>
-	
+
 	<div id="cerb-testimonials" class="unit two-thirds" style="margin-top:10px;">
 		{% for testimonial_index in page.testimonials.featured %}
 		{% assign testimonial = site.data.testimonials[testimonial_index] %}
@@ -68,59 +62,115 @@ testimonials:
 	</div>
 </div>
 
-<div class="home features grid no-gutters">
-	<div class="feature unit whole">
-		<h1>Cerb is your fully customizable team inbox.</h1>
-		<p>
-			Turn any email account into a supercharged team inbox. 
-			Bring your whole to-do list: email, calls, orders, projects, tasks, reminders, calendar events, and more.
-			Triage and distribute work by taking into account its importance and the responsibilities of each team member.
-			Build collaborative workspaces to easily keep track of everyone's assignments, contributions, and progress. 
-			Automate your repetitive tasks with bots.
-			Integrate with third-party APIs.
-		</p>	
-		<div class="screenshot">
-			<a href="/tour/">
-				<img src="/assets/images/home/dashboards.png" style="cursor:pointer;">
-			</a>
+<div class="home features">
+	<div class="feature">
+		<div class="align-center">
+			<h1>Supercharged remote collaboration</h1>
+			<p style="text-align:center;margin-top:10px;">Email, issues, calls, tweets, contacts, files, tasks, notes, calendars, notifications, reminders, time slips, and everything else.</p>
 		</div>
 	</div>
-	
-	{% comment %}
-	<div class="feature unit whole">
-		<h1>Cerb is ready to measure your success.</h1>
-		<p>
-			Track and improve customer satisfaction.
-			Automatically send interactive surveys to your clients.
-		</p>
-		<div class="screenshot">
-			<img src="/assets/images/home/satisfaction.png">
+
+	<div class="feature">
+		<div class="align-center">
+			<img src="/assets/images/home/dashboards.png" style="border:1px solid rgb(200,200,200);padding:5px;width:75%;height:75%;">
 		</div>
 	</div>
-	{% endcomment %}
-	
-	<div class="feature unit whole" style="text-align:center;">
+
+	<div class="feature half">
+		<div class="align-center">
+			<h2>Flexible data warehouse</h2>
+			<p>
+				Cerb is a repository for all of your team's contact center data.
+				Create <a href="/docs/custom-records/">records</a> to keep track of anything else you care about: survey responses, form submissions, customer satisfaction scores, orders, vendors, assets, products, deals, feedback, courses, students, licenses, and so on.
+				Add <a href="/docs/custom-fields/">fields</a> like numbers/decimals, dates, checkboxes, currency, files, coordinates, lists, multiple choice, picklists, record links, URLs, or free text.
+				Still not enough? You can <a href="/docs/plugins/">create your own</a> custom fields types.
+			</p>
+		</div>
+	</div>
+
+	<div class="feature half">
+		<div class="align-center">
+			<h2>Workflow builder</h2>
+			<p>
+				{% comment %}
+				Workspaces with owners
+				{% endcomment %}
+				Rather than having to repeatedly search for the same set of records, you can create a fully customizable <a href="/docs/worklists/">worklist</a> and add it to one of your <a href="/docs/workspaces/">workspaces</a>.
+				Customize the layout of <a href="/docs/profiles/">record pages</a> and <a href="/docs/cards/">card popups</a>.
+				Add <a href="/docs/dashboards/">dashboards</a> of widgets for visualizing charts, tables, time-series data, calendars, clocks, counters, gauges, worklists, and more.
+				Use <a href="/docs/data-queries/">data queries</a> to transform data from your records.
+				Import and display useful information from external data sources.
+				Create your own shortcuts to automate repetitive actions.
+			</p>
+		</div>
+	</div>
+
+	<div class="feature half">
+		<div class="align-center">
+			<h2>Graph-based searching</h2>
+			<p>
+				Explore deeply interconnected data with expressive <a href="/docs/search/">search queries</a>.
+				Need a list of resolved email conversations, to customer support, in the past year, started on a weekday but outside of business hours, by healthcare clients in Europe, who have more than 100 employees, without an active service-level agreement; where the conversation included at least one female executive, had a response that took longer than a week, but didn't have an attached PDF larger than 1MB?
+				Cerb has you covered. Anyone on your team can find answers without bringing in a database expert.
+			</p>
+		</div>
+	</div>
+
+	<div class="feature half">
+		<div class="align-center">
+			<h2>Automation engine</h2>
+			<p>
+				{% comment %}
+				convos/interactions
+				{% endcomment %}
+				Automate common workflows by creating <a href="/docs/bots/">bots</a> -- virtual team members who can respond to email, create and modify records, answer common questions, gather information <a href="/docs/bots/interactions/chat/">conversationally</a>, exchange data with third-party services, send <a href="/docs/reminders/">reminders</a>, <a href="/docs/notifications">notify</a> people, monitor metrics, and do practically anything else that a human team member can.
+				Your team can build complex bot behaviors using only a web browser – even with no computer programming experience.
+			</p>
+		</div>
+	</div>
+
+	<div class="feature half">
+		<div class="align-center">
+			<h2>Endless extensibility and integration</h2>
+			<p>
+				Enable single sign-on functionality with any <a href="https://cerb.ai/guides/integrations/azure/sso-openid/">OpenID Connect</a> or <a href="https://cerb.ai/guides/integrations/google/sso-saml/">SAML</a> identity provider.
+				Import and export collections of related records with <a href="/docs/packages/">packages</a>.
+				Trigger and catch <a href="/docs/webhooks/">webhooks</a> to handle real-time events with other services.
+				Access and manage your data from any service with our OAuth-based <a href="/docs/api/">REST API</a>.
+				Automate any OAuth-enabled API with <a href="/docs/connected-services/">connected services</a> (Slack, Twilio, Twitter, GitHub, Dropbox, LinkedIn, Salesforce, and more).
+				Build customer-facing tools and services with <a href="/docs/portals/">community portals</a>.
+				Extend the platform with <a href="/docs/plugins/">plugins</a>.
+			</p>
+		</div>
+	</div>
+
+	<div class="feature" style="text-align:center">
 		<p style="padding:20px 0 10px 0;">
-			<a href="/tour/" class="cerb-button">Continue tour &raquo;</a>
+			<h2>Ready to put Cerb to work on your team?</h2>
+			<a href="/signup/" class="cerb-button">Start a free self-hosted or cloud trial &raquo;</a>
 		</p>
-		{% comment %}
-		<h1>Cerb has helped thousands of teams. Ready to put Cerb to work on yours?</h1>
-		<p style="padding:10px 0 20px 0;">
-			<a href="/signup/" class="cerb-button">Try Cerb for free</a>
-		</p>
-		{% endcomment %}
 	</div>
 </div>
 
 <script type="text/javascript">
-	document.addEventListener("DOMContentLoaded", function(event) {
-		try {
-			var $testimonials_container = document.querySelector('#cerb-testimonials');
-			var $testimonials = $testimonials_container.querySelectorAll('.cerb-testimonial');
-			var len = $testimonials.length;
-			var r = Math.floor(Math.random()*len);
-			
-			$testimonials[r].style['display'] = 'block';
-		} catch(e) {}
-	});
+document.addEventListener("DOMContentLoaded", function(event) {
+	try {
+		var $testimonials_container = document.querySelector('#cerb-testimonials');
+		var $testimonials = $testimonials_container.querySelectorAll('.cerb-testimonial');
+		var $testimonial = $testimonials[0];
+		var testimonial_count = $testimonials.length;
+
+		var testimonial_carosel = function() {
+			var r = Math.floor(Math.random()*testimonial_count);
+			$testimonial.style['display'] = 'none';
+			$testimonial = $testimonials[r];
+			$testimonial.style['display'] = 'block';
+		}
+
+		testimonial_carosel();
+
+		//setInterval(testimonial_carosel, 30000);
+
+	} catch(e) {}
+});
 </script>
