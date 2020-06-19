@@ -10,11 +10,11 @@ jumbotron:
 <article class="post">
 	<div class="post-content">
 		{% if page.tour %}
-		<div id="cerb-slides" class="features grid no-gutters">
+		<div id="cerb-slides" class="grid no-gutters">
 			{% assign section = site.data.tour[page.tour.section] %}
 			{% assign section_page = tour_pages|where_exp:"item","item.tour.id == page.tour.section"|first %}
 			
-			<div id="cerb-slides" class="features grid no-gutters">
+			<div class="grid no-gutters">
 				<div class="cerb-slides-nav">
 					<div class="unit one-third align-left">
 						{% if section.prev %}
