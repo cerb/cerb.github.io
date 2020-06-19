@@ -165,11 +165,13 @@ Create a new database and user for Cerb:
 
 <pre>
 <code class="language-sql">
-create database cerb character set utf8;
+CREATE DATABASE cerb CHARACTER SET utf8;
 
-grant all privileges on cerb.* to cerb@localhost identified by 's3cr3t';
+CREATE USER cerb@localhost IDENTIFIED BY 's3cr3t';
 
-quit;
+GRANT ALL PRIVILEGES ON cerb.* TO cerb@localhost; 
+
+QUIT;
 </code>
 </pre>
 

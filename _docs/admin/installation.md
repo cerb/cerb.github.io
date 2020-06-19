@@ -174,9 +174,9 @@ From the MySQL console, you can issue the following SQL statements:
 <code class="language-sql">
 CREATE DATABASE cerb CHARACTER SET utf8;
 
-GRANT ALL PRIVILEGES ON cerb.*  
- TO cerb@localhost 
- IDENTIFIED BY 'secret_password';
+CREATE USER cerb@localhost IDENTIFIED BY 'secret_password';
+
+GRANT ALL PRIVILEGES ON cerb.* TO cerb@localhost;
 </code>
 </pre>
 
