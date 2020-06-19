@@ -55,6 +55,8 @@
   - data-queries/worklist/metrics
   - data-queries/worklist/xy
   - data-queries/worklist/geopoints
+  - data-queries/calendar/events
+  - data-queries/classifier/prediction
   - data-queries/usage/bot-behaviors
   - data-queries/usage/snippets
   - data-queries/sample
