@@ -73,7 +73,7 @@ The LDAP integration only needs a [connected service](/docs/connected-services/)
 
 # Enable single sign-on with LDAP
 
-1. Navigate to **Setup >> Configure >> Authentication**.
+1. Navigate to **Setup >> Security >> Authentication**.
 
 1. Check the box next to your new LDAP service:
 

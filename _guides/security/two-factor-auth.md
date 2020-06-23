@@ -82,7 +82,7 @@ By default, two-factor authentication is optional and workers can enable it in f
 
 Alternatively, administrators may require that all workers (or any subset of them) use two-factor authentication. We highly recommend this, and it can be quickly enabled with bulk update on a [worklist](/docs/worklists/) of worker records.
 
-Administrators may also determine if workers are able use the "remember this trusted device" feature, and for how long. This is configured in **Setup >> Configure >> Authentication**.
+Administrators may also determine if workers are able use the "remember this trusted device" feature, and for how long. This is configured in **Setup >> Security >> Authentication**.
 
 # Setting up two-factor authentication
 

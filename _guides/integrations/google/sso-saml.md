@@ -111,7 +111,7 @@ Click the blue **OK** link in the bottom right of the popup.
 
 ## Configure SSO for worker logins
 
-1. Navigate to **Setup >> Configure >> Authentication**.
+1. Navigate to **Setup >> Security >> Authentication**.
 
 1. In the **Single Sign-on (SSO)** section, check the box for **G Suite**.
 

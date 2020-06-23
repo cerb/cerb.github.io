@@ -110,7 +110,7 @@ Log in to Cerb as an administrator.
 
 ### Configure SSO
 
-1. Navigate to **Setup >> Configure >> Authentication**.
+1. Navigate to **Setup >> Security >> Authentication**.
 
 1. Check **Azure AD**.
 
