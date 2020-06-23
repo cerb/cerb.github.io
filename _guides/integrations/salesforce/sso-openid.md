@@ -65,7 +65,7 @@ This guide demonstrates how to enable one-click single sign-on (SSO) for Cerb wo
 
 1. Enter the following details:
 	* Enable OAuth Settings: [**x**]
-	* Callback URL: `https://YOUR-CERB-HOST/oauth/callback`
+	* Callback URL: `https://YOUR-CERB-HOST/sso/salesforce-oidc`
 	* Select OAuth Scopes:
 		* Access your basic information (id, profile, email, address, phone)
 		* Allow access to your unique identifier (openid)
@@ -129,7 +129,7 @@ Log in to Cerb as an administrator.
 	          "key": "prompt_issuer_url",
 	          "params": {
 	            "default": "",
-	            "placeholder": "(paste your Isser URL from Salesforce)"
+	            "placeholder": "(paste your Issuer URL from Salesforce)"
 	          }
 	        }
 	      ]
@@ -140,7 +140,7 @@ Log in to Cerb as an administrator.
 	      "uid": "service_salesforce",
 	      "_context": "connected_service",
 	      "name": "Salesforce",
-	      "uid": "salesforce-oidc",
+	      "uri": "salesforce-oidc",
 	      "extension_id": "cerb.service.provider.oidc",
 	      "params": {
 	        "client_id": "{{{prompt_client_id}}}",
@@ -164,3 +164,24 @@ Log in to Cerb as an administrator.
 1. Enter your client ID, client secret, and issuer URL from Salesforce.
 
 1. Click the **Import** button again.
+
+### Configure SSO
+
+1. Navigate to **Setup >> Security >> Authentication**.
+
+1. Check **Salesforce**.
+
+1. Click the **Save Changes** button.
+
+### Log in
+
+1. Visit the login form in Cerb.
+
+1. Click the **Salesforce** button.
+
+1. Log in using your Salesforce ID.
+
+1. Accept consent.
+
+1. You should be logged into Cerb as the worker associated with your Salesforce email address.
+
