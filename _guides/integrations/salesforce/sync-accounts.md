@@ -194,7 +194,7 @@ Paste the following package:
                   {
                     "action": "core.bot.action.record.upsert",
                     "context": "org",
-                    "query": "{% set org_name = http_params.name|replace('\"', '') %}\r\nname:\"{{org_name}}\"",
+                    "query": "{% set org_name = http_params.name|replace({'\"':''}) %}\r\nname:\"{{org_name}}\"",
                     "changeset_json": "{# Map Salesforce sobject fields to Cerb record fields #}\r\n{% set json = {\r\n\tname: http_params.name,\r\n\tstreet: http_params.billingstreet,\r\n\tcity: http_params.billingcity,\r\n\tprovince: http_params.billingstate,\r\n\tpostal: http_params.billingpostalcode,\r\n\tcountry: http_params.billingcountry,\r\n\twebsite: http_params.website,\r\n\tphone: http_params.phone,\r\n} %}\r\n{# Remove blank fields #}\r\n{% set json = array_diff(json,[null,'']) %}\r\n{# Output #}\r\n{{json|json_encode|json_pretty}}",
                     "run_in_simulator": "0",
                     "object_placeholder": "_record"

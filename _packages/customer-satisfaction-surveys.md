@@ -730,7 +730,7 @@ Paste the following package into the large text box:
                       {
                         "action": "var_ticket",
                         "search_mode": "quick_search",
-                        "quick_search": "mask:\"{{var_mask|alphanum('-')|replace('\"', '')}}\"",
+                        "quick_search": "mask:\"{{var_mask|alphanum('-')|replace({'\"':''})}}\"",
                         "limit": "first",
                         "limit_count": "1",
                         "mode": "replace",
@@ -1284,7 +1284,7 @@ Paste the following package into the large text box:
                     "actions": [
                       {
                         "action": "_set_custom_var",
-                        "value": "{% set query = {\r\n\"mask\": var_ticket_mask|alphanum('-'),\r\n\"message_id\": var_message_id|replace('\"','')\r\n}\r\n%}\r\nticket:(mask:\"{{query.mask}}\") header.messageId:\"{{query.message_id}}*\"",
+                        "value": "{% set query = {\r\n\"mask\": var_ticket_mask|alphanum('-'),\r\n\"message_id\": var_message_id|replace({'\"':''})\r\n}\r\n%}\r\nticket:(mask:\"{{query.mask}}\") header.messageId:\"{{query.message_id}}*\"",
                         "format": "",
                         "is_simulator_only": "0",
                         "var": "q"
@@ -1929,7 +1929,7 @@ Paste the following package into the large text box:
                       {
                         "action": "var_contact",
                         "search_mode": "quick_search",
-                        "quick_search": "email:(email:\"{{var_email|replace('\"', '')}}\")",
+                        "quick_search": "email:(email:\"{{var_email|replace({'\"':''})}}\")",
                         "limit": "first",
                         "limit_count": "10",
                         "mode": "replace",

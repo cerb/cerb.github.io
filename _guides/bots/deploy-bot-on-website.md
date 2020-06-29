@@ -511,7 +511,7 @@ Copy and paste the following JSON:
                   {
                     "action": "core.bot.action.record.upsert",
                     "context": "address",
-                    "query": "email:\"{{prompt_email|replace('\"','')}}\"",
+                    "query": "email:\"{{prompt_email|replace({'\"':''})}}\"",
                     "changeset_json": "{\r\n\t\"email\": \"{{prompt_email}}\"\r\n}",
                     "run_in_simulator": "0",
                     "object_placeholder": "_record"
@@ -847,7 +847,7 @@ Copy and paste the following JSON:
                   {
                     "action": "core.bot.action.record.search",
                     "context": "address",
-                    "query": "email:\"{{prompt_email|replace('\"','')}}\" mailingList.optIn:y",
+                    "query": "email:\"{{prompt_email|replace({'\"':''})}}\" mailingList.optIn:y",
                     "expand": "",
                     "object_placeholder": "_records"
                   }
