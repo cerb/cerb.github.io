@@ -344,6 +344,29 @@ created:"big bang to first day of this month"
 </code>
 </pre>
 
+### Advanced
+
+Added [9.6](/releases/9.6/).
+
+Date-based filters may use an optional advanced parameterized expression, with the format:
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+created:(since:"-1 week" until:now days:[Weekdays] times:9a-5p)
+{% endraw %}
+</code>
+</pre>
+
+The `since:` option sets the beginning of the date range (default `big bang`).
+
+The `until:` option sets the end of the date range (default `now`).
+
+The `days:` option accepts a comma-delimited list of days to include within in the range (default everything). You can use aliases for `weekdays` and `weekends`, and any unique prefix on English days of the week (e.g. `Mon,Wed,Fri`, `m,w,f`, `thu,f`).
+
+The `times:` option accepts a comma-delimited list of time ranges to include for the given days (e.g. `8a-noon,1-6p`). For instance, this makes it much easier to query only working hours within a date range.
+
+
 # Nullness
 
 You can match records by having, or not having, any value for a particular [filter](/docs/search/filters/).
