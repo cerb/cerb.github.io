@@ -231,6 +231,45 @@ Every time you import this package it will generate a new task record with a ran
 <img src="/assets/images/guides/packages/building/placeholder-random-imported.png" class="screenshot">
 </div>
 
+### Data Query
+
+Added in [9.6](/releases/9.6/).
+
+<pre style="max-height:29.5em;">
+<code class="language-json">
+{% raw %}
+{
+  "package": {
+    "name": "Example Package",
+    "configure": {
+      "placeholders": [
+        {
+          "type": "data_query",
+          "key": "ticket_profile_tab_id",
+          "params": {
+            "query": "type:worklist.records of:profile_tab query:(name:\"Overview\" record:\"cerberusweb.contexts.ticket\" format:dictionaries limit:1)",
+            "selector": "{{results.data|first.id}}",
+            "format": "json",
+            "validate": "{% if results.data|first.id is empty %}Ticket profile tab record not found.{% endif %}"
+          }
+        }
+      ]
+    }
+  },
+  "records": [
+    {
+      "uid": "widget_001",
+      "_context": "profile_widget",
+      "name": "Example Widget",
+      "profile_tab_id": "{{{ticket_profile_tab_id}}}",
+      "extension_id": "cerb.profile.tab.widget.sheet"
+    }
+  ]
+}
+{% endraw %}
+</code>
+</pre>
+
 ## Prompts
 
 Prompted placeholders ask the importer for extra information which is then incorporated into the package.
