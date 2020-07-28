@@ -62,6 +62,10 @@
   - data-queries/sample
   - data-queries/custom
 
+- title: Kata
+  docs:
+  - kata
+
 - title: Workspaces
   docs:
   - workspaces
