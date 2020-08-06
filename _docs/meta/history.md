@@ -24,8 +24,8 @@ jumbotron:
 <ul class="blog-post-group">
 {% endif %}
 
-<li>
-	<a href="{{ post.url }}">{{ post.title }}</a>{% if post.release.type %} - a {{ post.release.type }} {% if post.release.count %} with {{ post.release.count }} improvements{% endif %}.{% endif %}
+<li {% if post.release.type contains 'maintenance' %}{% else %}style="font-size:120%;font-weight:bold;"{% endif %}>
+    <a href="{{ post.url }}" style="font-weight:inherit;">{{ post.title }}</a>{% if post.release.type %} - {{ post.release.type }} {% if post.release.count %} with {{ post.release.count }} improvements{% endif %}{% endif %}
 </li>
 
 {% if forloop.last %}
