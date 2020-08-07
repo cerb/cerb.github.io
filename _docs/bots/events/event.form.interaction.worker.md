@@ -32,8 +32,14 @@ jumbotron:
 |---
 | Action | ID
 |-|-
+| [**Interaction end**](/docs/bots/events/event.form.interaction.worker/actions/interaction_end/) | `interaction_end`
 | [**Prompt with CAPTCHA challenge**](/docs/bots/events/event.form.interaction.worker/actions/prompt_captcha/) | `prompt_captcha`
+| [**Prompt with email compose**](/docs/bots/events/event.form.interaction.worker/actions/prompt_compose/) | `prompt_compose`
+| [**Prompt with email reply**](/docs/bots/events/event.form.interaction.worker/actions/prompt_reply/) | `prompt_reply`
+| [**Prompt with file upload**](/docs/bots/events/event.form.interaction.worker/actions/prompt_files/) | `prompt_files`
 | [**Prompt with multiple choices**](/docs/bots/events/event.form.interaction.worker/actions/prompt_checkboxes/) | `prompt_checkboxes`
+| [**Prompt with record chooser**](/docs/bots/events/event.form.interaction.worker/actions/prompt_chooser/) | `prompt_chooser`
+| [**Prompt with sheet**](/docs/bots/events/event.form.interaction.worker/actions/prompt_sheet/) | `prompt_sheet`
 | [**Prompt with single choice**](/docs/bots/events/event.form.interaction.worker/actions/prompt_radios/) | `prompt_radios`
 | [**Prompt with submit**](/docs/bots/events/event.form.interaction.worker/actions/prompt_submit/) | `prompt_submit`
 | [**Prompt with text**](/docs/bots/events/event.form.interaction.worker/actions/prompt_text/) | `prompt_text`
@@ -55,6 +61,7 @@ jumbotron:
 | [**Execute data query**](/docs/bots/events/actions/core.bot.action.data_query/) | `core.bot.action.data_query`
 | [**Execute email parser**](/docs/bots/events/actions/core.bot.action.email_parser/) | `core.bot.action.email_parser`
 | [**Execute HTTP request**](/docs/bots/events/actions/core.va.action.http_request/) | `core.va.action.http_request`
+| [**Execute PGP encrypt**](/docs/bots/events/actions/core.bot.action.pgp.encrypt/) | `core.bot.action.pgp.encrypt`
 | [**Get links**](/docs/bots/events/actions/_get_links/) | `_get_links`
 | [**Get persistent key**](/docs/bots/events/actions/_get_key/) | `_get_key`
 | [**Get time elapsed using calendar availability**](/docs/bots/events/actions/core.bot.action.calculate_time_elapsed/) | `core.bot.action.calculate_time_elapsed`
@@ -69,6 +76,6 @@ jumbotron:
 | [**Send email**](/docs/bots/events/actions/send_email/) | `send_email`
 | [**Service AWS Get Pre-signed URL**](/docs/bots/events/actions/wgm.aws.bot.action.get_presigned_url/) | `wgm.aws.bot.action.get_presigned_url`
 | [**Set custom placeholder**](/docs/bots/events/actions/_set_custom_var/) | `_set_custom_var`
-| [**Set custom placeholder using a snippet**](/docs/bots/events/actions/_set_custom_var_snippet/) | `_set_custom_var_snippet`
 | [**Set links**](/docs/bots/events/actions/set_links/) | `set_links`
 | [**Set persistent key**](/docs/bots/events/actions/_set_key/) | `_set_key`
+| [**Set snippet placeholder**](/docs/bots/events/actions/_set_custom_var_snippet/) | `_set_custom_var_snippet`

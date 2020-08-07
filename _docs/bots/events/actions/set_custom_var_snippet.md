@@ -1,12 +1,12 @@
 ---
 title: >-
-  Bot Action: Set custom placeholder using a snippet
+  Bot Action: Set snippet placeholder
 permalink: /docs/bots/events/actions/_set_custom_var_snippet/
 toc:
   expand: Bots
 jumbotron:
   title: >-
-    Set custom placeholder using a snippet
+    Set snippet placeholder
   tagline: 
   breadcrumbs:
   -

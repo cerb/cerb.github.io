@@ -25,7 +25,7 @@ jumbotron:
 | **Name:** | Record custom behavior on domain
 | **Identifier (ID):** | event.macro.domain
 | **Class:** | Event_DomainMacro
-| **File:** | storage/plugins/cerberusweb.datacenter.domains/api/events/domain_macro.php
+| **File:** | plugins/cerberusweb.datacenter.domains/api/events/domain_macro.php
 
 ### Global Actions
 
@@ -42,6 +42,7 @@ jumbotron:
 | [**Execute data query**](/docs/bots/events/actions/core.bot.action.data_query/) | `core.bot.action.data_query`
 | [**Execute email parser**](/docs/bots/events/actions/core.bot.action.email_parser/) | `core.bot.action.email_parser`
 | [**Execute HTTP request**](/docs/bots/events/actions/core.va.action.http_request/) | `core.va.action.http_request`
+| [**Execute PGP encrypt**](/docs/bots/events/actions/core.bot.action.pgp.encrypt/) | `core.bot.action.pgp.encrypt`
 | [**Get links**](/docs/bots/events/actions/_get_links/) | `_get_links`
 | [**Get persistent key**](/docs/bots/events/actions/_get_key/) | `_get_key`
 | [**Get time elapsed using calendar availability**](/docs/bots/events/actions/core.bot.action.calculate_time_elapsed/) | `core.bot.action.calculate_time_elapsed`
@@ -56,6 +57,6 @@ jumbotron:
 | [**Send email**](/docs/bots/events/actions/send_email/) | `send_email`
 | [**Service AWS Get Pre-signed URL**](/docs/bots/events/actions/wgm.aws.bot.action.get_presigned_url/) | `wgm.aws.bot.action.get_presigned_url`
 | [**Set custom placeholder**](/docs/bots/events/actions/_set_custom_var/) | `_set_custom_var`
-| [**Set custom placeholder using a snippet**](/docs/bots/events/actions/_set_custom_var_snippet/) | `_set_custom_var_snippet`
 | [**Set links**](/docs/bots/events/actions/set_links/) | `set_links`
 | [**Set persistent key**](/docs/bots/events/actions/_set_key/) | `_set_key`
+| [**Set snippet placeholder**](/docs/bots/events/actions/_set_custom_var_snippet/) | `_set_custom_var_snippet`
