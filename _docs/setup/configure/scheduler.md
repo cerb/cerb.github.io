@@ -39,7 +39,7 @@ For Cerb's scheduled jobs to automatically run in the background, you need to co
 
 We recommend using **curl** or **wget** to request your scheduler URL every minute.
 
-The `/cron` page doesn't require a login to use. Instead, it is protected with an IP address[^ip] whitelist. You can authorize additional IPs from the [Security](/docs/setup/security/) section, or from the `AUTHORIZED_IPS_DEFAULTS` setting in the `framework.config.php` file.
+The `/cron` page doesn't require a login to use. Instead, it is protected with an IP address[^ip] allowlist. You can authorize additional IPs from the [Security](/docs/setup/security/) section, or from the `AUTHORIZED_IPS_DEFAULTS` setting in the `framework.config.php` file.
 
 
 # References

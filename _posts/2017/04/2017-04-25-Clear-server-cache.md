@@ -25,5 +25,5 @@ However, if you modify the database directly then you'll need to clear the cache
 1. This runs the updater and flushes the cache.  After a few seconds you should be returned to your default page.
 
 <div class="cerb-box note"><p>
-If you receive an error about your IP not being authorized, you can add it to the whitelist in <b>Setup &raquo; Configure &raquo; Security</b>.
+If you receive an error about your IP not being authorized, you can add it to the allowlist in <b>Setup &raquo; Configure &raquo; Security</b>.
 </p></div>

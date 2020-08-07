@@ -48,7 +48,7 @@ Review your [sender addresses](/docs/setup/mail/sender-addresses/). These determ
 For optimal email deliverability, make sure you've configured SPF, DKIM, and DMARC records in DNS for all sender domains. We'll test this a little later.
 
 <div class="cerb-box note">
-<p>If you're using <b>Cerb Cloud</b>, we set up the SPF, DKIM, and DMARC records for you on the default <code>@&lt;instance&gt;.cerb.email</code> sender domain. You can add <code>include:cerb.email</code> to the SPF records on your own domains. We can whitelist these domains and generate DKIM keys for you by request.</p>
+<p>If you're using <b>Cerb Cloud</b>, we set up the SPF, DKIM, and DMARC records for you on the default <code>@&lt;instance&gt;.cerb.email</code> sender domain. You can add <code>include:cerb.email</code> to the SPF records on your own domains. We can permit these domains and generate DKIM keys for you by request.</p>
 </div>
 
 # Create groups

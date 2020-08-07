@@ -1,7 +1,7 @@
 ---
 title: Security
 permalink: /docs/setup/configure/security/
-excerpt: Configure security settings like session expiration and the IP whitelist.
+excerpt: Configure security settings like session expiration and the IP allowlist.
 toc:
   expand: Setup
 jumbotron:
@@ -24,7 +24,7 @@ jumbotron:
 
 ### Remote Administration
 
-This section configures the _whitelist_ of IPs that are able to access the `/debug` and `/cron` pages without a session.
+This section configures the _allowlist_ of IPs that are able to access the `/debug` and `/cron` pages without a session.
 
 ### Session Expiration
 

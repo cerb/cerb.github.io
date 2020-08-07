@@ -114,7 +114,7 @@ The database stores the majority of Cerb's data. The only exceptions are the lar
 -  SQL dumps are widely compatible with different versions of MySQL on different architectures.
 -  You can use the `--tab` flag to dump a large database to a `.sql` schema and `.txt` data file per table, which is often much faster.
 -  You can use the `--master-data=2` flag to record the binary log file and position in the dump file for each database.  This enables incremental backups and point-in-time recovery when MySQL's binary logs are enabled.
--  You can use `mysqldump` on a replication slave to avoid locking the live database.
+-  You can use `mysqldump` on a read-only replica to avoid locking the live database.
 
 **Cons:**
 
