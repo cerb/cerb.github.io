@@ -48,6 +48,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `location` | [text](/docs/records/fields/types/text/) | Location (e.g. `Los Angeles, California, USA`) 
 |   | `mobile` | [text](/docs/records/fields/types/text/) | Mobile number 
+|   | `org` | [text](/docs/records/fields/types/text/) | Organization (e.g. `Fiaflux Software`); alternative to `org_id` 
 |   | `org_id` | [number](/docs/records/fields/types/number/) | ID of this contact's [organization](/docs/records/types/org/) 
 |   | `phone` | [text](/docs/records/fields/types/text/) | Phone number 
 |   | `timezone` | [text](/docs/records/fields/types/text/) | Timezone (e.g. `America/Los_Angeles`) 
@@ -89,6 +90,8 @@ These optional placeholders are also available with **key expansion** in [dictio
 | `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
 | `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
 | `emails` | records | Email Addresses
+| `last_recipient_message` | record | Latest [Message](/docs/records/types/message/) Received
+| `last_sender_message` | record | Latest [Message](/docs/records/types/message/) Sent
 | `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 | `watchers` | watchers | [Watchers](/docs/bots/behaviors/dictionaries/key-expansion/#watchers)
 	

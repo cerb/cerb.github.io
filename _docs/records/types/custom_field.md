@@ -58,6 +58,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `name` | text | Name
 | `pos` | number | Order
 | `type` | text | Type
+| `type_label` | text | Type Label
 | `updated_at` | date | Updated
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):

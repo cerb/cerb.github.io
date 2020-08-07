@@ -57,6 +57,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `password` | [text](/docs/records/fields/types/text/) | The worker's password, if applicable; stored security; will be automatically generated if blank 
 |   | `phone` | [text](/docs/records/fields/types/text/) |  
 |   | `time_format` | [text](/docs/records/fields/types/text/) | Preference for displaying timestamps, `strftime()` syntax 
+|   | `timeout_idle_secs` | [number](/docs/records/fields/types/number/) | Consider a session idle after this many seconds of inactivity 
 | **x** | **`timezone`** | [text](/docs/records/fields/types/text/) | IANA tz/zoneinfo timezone; `America/Los_Angeles` 
 |   | `title` | [text](/docs/records/fields/types/text/) | Job title / Position 
 |   | `updated` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
@@ -87,6 +88,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `phone` | phone | Phone
 | `record_url` | text | Record Url
 | `time_format` | text | Time Format
+| `timeout_idle_secs` | number | Idle Timeout (Secs)
 | `timezone` | text | Timezone
 | `title` | text | Title
 | `updated` | date | Updated
@@ -164,6 +166,7 @@ These columns are available on worker [worklists](/docs/worklists/):
 | `w_mobile` | Mobile
 | `w_phone` | Phone
 | `w_time_format` | Time Format
+| `w_timeout_idle_secs` | Idle Timeout (Secs)
 | `w_timezone` | Timezone
 | `w_title` | Title
 | `w_updated` | Updated

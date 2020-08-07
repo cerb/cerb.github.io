@@ -40,6 +40,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `closed` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time this ticket was first set to status `closed` 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
 |   | `fieldsets` | fieldsets | An array or comma-separated list of [custom fieldset](/docs/records/types/custom_fieldset/) IDs 
+|   | `group` | [text](/docs/records/fields/types/text/) | The [group](/docs/records/types/group/) of the ticket; alternative to `group_id` 
 | **x** | **`group_id`** | [number](/docs/records/fields/types/number/) | The ID of the [group](/docs/records/types/group/) containing this ticket 
 |   | `importance` | [number](/docs/records/fields/types/number/) | A number from `0` (least) to `100` (most) 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
@@ -100,6 +101,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 | `latest_incoming_activity` | date | Latest Incoming Activity
 | `latest_outgoing_activity` | date | Latest Outgoing Activity
 | `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
+| `participants` | records | Participants
 | `requester_emails` | text | Requester Emails (Comma-Separated)
 | `requesters` | hashmap | Requesters
 | `signature` | text | Signature
@@ -143,6 +145,7 @@ These [filters](/docs/search/filters/) are available in ticket [search queries](
 | `spam.score:` | [number](/docs/search/filters/numbers/) | Spam Score
 | `spam.training:` | virtual | Spam Training
 | `status:` | virtual | Status
+| `status.id:` | [number](/docs/search/filters/numbers/) | Status
 | `subject:` | [text](/docs/search/filters/text/) | Subject
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
@@ -157,6 +160,7 @@ These columns are available on ticket [worklists](/docs/worklists/):
 |---
 | Column | Description
 |-|-
+| `*_participant_search` | Participants
 | `*_status` | Status
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `t_bucket_id` | Bucket

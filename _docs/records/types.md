@@ -51,6 +51,7 @@ This reference can be used when building [bot behaviors](/docs/bots/), [search q
 | `email_signature` | [Email Signatures](/docs/records/types/email_signature/)
 | `file_bundle` | [File Bundles](/docs/records/types/file_bundle/)
 | `gpg_public_key` | [Public Keys](/docs/records/types/gpg_public_key/)
+| `gpg_private_key` | [Private Keys](/docs/records/types/gpg_private_key/)
 | `group` | [Groups](/docs/records/types/group/)
 | `html_template` | [Email Templates](/docs/records/types/html_template/)
 | `mail_transport` | [Email Transports](/docs/records/types/mail_transport/)

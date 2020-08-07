@@ -87,7 +87,7 @@ These [filters](/docs/search/filters/) are available in connected account [searc
 | `owner.group:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/group/)
 | `owner.role:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/role/)
 | `owner.worker:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/worker/)
-| `service:` | [text](/docs/search/filters/text/) | Service Provider
+| `service:` | [record](/docs/search/deep-search/) | [Service](/docs/records/types/connected_service/)
 | `service.id:` | [chooser](/docs/search/filters/choosers/) | [Service Provider](/docs/records/types/connected_service/)
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	

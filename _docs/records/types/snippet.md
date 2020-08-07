@@ -41,7 +41,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`owner__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) of this snippet's owner: `app`, `role`, `group`, or `worker` 
 | **x** | **`owner_id`** | [number](/docs/records/fields/types/number/) | The ID of this snippet's owner 
-|   | `placeholders` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
+|   | `prompts_kata` | [text](/docs/records/fields/types/text/) | Prompted placeholders in [KATA](/docs/snippets/#prompts) format 
 | **x** | **`title`** | [text](/docs/records/fields/types/text/) | The name of the snippet 
 |   | `total_uses` | [number](/docs/records/fields/types/number/) | The total number of times this snippet has been used by all workers 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
@@ -82,6 +82,7 @@ These [filters](/docs/search/filters/) are available in snippet [search queries]
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
+| `myUses:` | [number](/docs/search/filters/numbers/) | My Uses
 | `owner:` | virtual | Owner
 | `owner.app:` | virtual | Owner
 | `owner.bot:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/bot/)
@@ -92,7 +93,7 @@ These [filters](/docs/search/filters/) are available in snippet [search queries]
 | `totalUses:` | [number](/docs/search/filters/numbers/) | All Uses
 | `type:` | virtual | Type
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `usableBy.worker:` | [chooser](/docs/search/filters/choosers/) | [Usableby Worker](/docs/records/types/worker/)
+| `usableBy.worker:` | virtual | Usable by [Worker](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

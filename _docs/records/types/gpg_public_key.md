@@ -1,11 +1,11 @@
 ---
-title: Public Key Records
+title: PGP Public Key Records
 permalink: /docs/records/types/gpg_public_key/
 toc:
-  title: Public Key
+  title: PGP Public Key
   expand: Records
 jumbotron:
-  title: Public Key
+  title: PGP Public Key
   tagline: 
   breadcrumbs:
   -
@@ -21,8 +21,8 @@ jumbotron:
 
 |---
 |-|-
-| **Name (singular):** | Public Key
-| **Name (plural):** | Public Keys
+| **Name (singular):** | Pgp Public Key
+| **Name (plural):** | Pgp Public Keys
 | **Alias (uri):** | gpg_public_key
 | **Identifier (ID):** | cerberusweb.contexts.gpg_public_key
 
@@ -38,8 +38,9 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |:-:|-|-|-
 |   | `expires_at` | [timestamp](/docs/records/fields/types/timestamp/) | The expiration date of the public key 
 | **x** | **`fingerprint`** | [text](/docs/records/fields/types/text/) | The fingerprint of the public key 
+| **x** | **`key_text`** | [text](/docs/records/fields/types/text/) |  
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
-| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this public key 
+| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this pgp public key 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 
 ### Dictionary Placeholders
@@ -53,6 +54,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `expires_at` | date | Expires
 | `fingerprint` | text | Fingerprint
 | `id` | number | Id
+| `key_text` |  | Key
 | `name` | text | Name
 | `record_url` | text | Record Url
 | `updated_at` | date | Updated
@@ -69,26 +71,32 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in public key [search queries](/docs/search/):
+These [filters](/docs/search/filters/) are available in pgp public key [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `expires:` | [date](/docs/search/filters/dates/) | Expires
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `fingerprint:` | [text](/docs/search/filters/text/) | Fingerprint
+| `fingerprint:` | virtual | Fingerprint
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
+| `uid:` | virtual | Uid
+| `uid.email:` | virtual | Uid.email
+| `uid.name:` | virtual | Uid.name
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
 ### Worklist Columns
 
-These columns are available on public key [worklists](/docs/worklists/):
+These columns are available on pgp public key [worklists](/docs/worklists/):
 
 |---
 | Column | Description
 |-|-
+| `*_uid` | Uid
+| `*_uid_email` | Uid.email
+| `*_uid_name` | Uid.name
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `g_expires_at` | Expires
 | `g_fingerprint` | Fingerprint

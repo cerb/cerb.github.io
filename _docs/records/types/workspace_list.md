@@ -43,7 +43,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `options` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `params_required_query` | [text](/docs/records/fields/types/text/) | The [search query](/docs/search/) for required filters 
 |   | `pos` | [number](/docs/records/fields/types/number/) | The order of the worklist on the workspace tab; `0` is first 
-| **x** | **`render_limit`** | [number](/docs/records/fields/types/number/) | The number of records per page 
+|   | `render_limit` | [number](/docs/records/fields/types/number/) | The number of records per page 
 | **x** | **`tab_id`** | [number](/docs/records/fields/types/number/) | The ID of the [workspace tab](/docs/records/types/workspace_tab/) containing this worklist 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 

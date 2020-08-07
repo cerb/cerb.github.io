@@ -1,11 +1,11 @@
 ---
-title: Profile Widget Records
-permalink: /docs/records/types/profile_widget/
+title: PGP Private Key Records
+permalink: /docs/records/types/gpg_private_key/
 toc:
-  title: Profile Widget
+  title: PGP Private Key
   expand: Records
 jumbotron:
-  title: Profile Widget
+  title: PGP Private Key
   tagline: 
   breadcrumbs:
   -
@@ -21,10 +21,10 @@ jumbotron:
 
 |---
 |-|-
-| **Name (singular):** | Profile Widget
-| **Name (plural):** | Profile Widgets
-| **Alias (uri):** | profile_widget
-| **Identifier (ID):** | cerberusweb.contexts.profile.widget
+| **Name (singular):** | Pgp Private Key
+| **Name (plural):** | Pgp Private Keys
+| **Alias (uri):** | gpg_private_key
+| **Identifier (ID):** | cerb.contexts.gpg.private.key
 
 * TOC
 {:toc}
@@ -36,15 +36,11 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
-| **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | [Profile Widget Type](/docs/plugins/extensions/points/cerb.profile.tab.widget/) 
-|   | `extension_params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
+|   | `expires_at` | [timestamp](/docs/records/fields/types/timestamp/) |  
+| **x** | **`fingerprint`** | [text](/docs/records/fields/types/text/) |  
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
-| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this profile widget 
-|   | `pos` | [number](/docs/records/fields/types/number/) | The order of the widget on the profile; `0` is first (top-left) proceeding in rows then columns 
-| **x** | **`profile_tab_id`** | [number](/docs/records/fields/types/number/) | The ID of the [profile tab](/docs/records/types/profile_tab/) dashboard containing this widget 
+| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this pgp private key 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
-|   | `width_units` | [number](/docs/records/fields/types/number/) | `1` (25%), `2` (50%), `3` (75%), `4` (100%) 
-|   | `zone` | [text](/docs/records/fields/types/text/) | The name of the dashboard zone containing the widget; this varies by layout; generally `sidebar` and `content` 
 
 ### Dictionary Placeholders
 
@@ -54,15 +50,10 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | Field | Type | Description
 |-|-|-
 | `_label` | text | Label
-| `extension_id` | extension | Extension
 | `id` | number | Id
 | `name` | text | Name
-| `pos` | number | Order
-| `profile_tab_` | record | [Tab](/docs/records/types/profile_tab/)
 | `record_url` | text | Record Url
 | `updated_at` | date | Updated
-| `width_units` | number | Width
-| `zone` | text | Zone
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
@@ -76,39 +67,33 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in profile widget [search queries](/docs/search/):
+These [filters](/docs/search/filters/) are available in pgp private key [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
+| `expires:` | [date](/docs/search/filters/dates/) | Expires
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fingerprint:` | virtual | Fingerprint
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
-| `pos:` | [number](/docs/search/filters/numbers/) | Order
-| `tab:` | [record](/docs/search/deep-search/) | [Tab](/docs/records/types/profile_tab/)
-| `tab.id:` | [chooser](/docs/search/filters/choosers/) | [Tab](/docs/records/types/profile_tab/)
-| `type:` | [text](/docs/search/filters/text/) | Type
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `width:` | [number](/docs/search/filters/numbers/) | Width Units
-| `zone:` | [text](/docs/search/filters/text/) | Zone
+| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
 	
 ### Worklist Columns
 
-These columns are available on profile widget [worklists](/docs/worklists/):
+These columns are available on pgp private key [worklists](/docs/worklists/):
 
 |---
 | Column | Description
 |-|-
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
-| `p_extension_id` | Type
-| `p_id` | Id
-| `p_name` | Name
-| `p_pos` | Order
-| `p_profile_tab_id` | Tab
-| `p_updated_at` | Updated
-| `p_width_units` | Width Units
-| `p_zone` | Zone
+| `g_expires_at` | Expires
+| `g_fingerprint` | Fingerprint
+| `g_id` | Id
+| `g_name` | Name
+| `g_updated_at` | Updated
 
 <div class="section-nav">
 	<div class="left">

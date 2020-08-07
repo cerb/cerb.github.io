@@ -61,6 +61,8 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | `format` | `parsedown` (Markdown), or blank for plaintext
 | `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
 | `group_id` | The [group](/docs/records/types/group/) ID to move the ticket to
+| `org_id` | The [org](/docs/records/types/org/) ID to assign
+| `org_name` | The [org](/docs/records/types/org/) name to assign
 | `owner_id` | The [worker](/docs/records/types/worker/) ID to assign
 | `send_at` | The optional timestamp to deliver the message at
 | `status_id` | `0` (open), `1` (waiting), `2` (closed)

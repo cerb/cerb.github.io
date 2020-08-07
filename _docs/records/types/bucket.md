@@ -44,6 +44,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `reply_html_template_id` | [number](/docs/records/fields/types/number/) | The ID of the default [mail template](/docs/records/types/html_template/) used when sending HTML mail from this bucket 
 |   | `reply_personal` | [text](/docs/records/fields/types/text/) | The default personal name in the `From:` of replies 
 |   | `reply_signature_id` | [number](/docs/records/fields/types/number/) | The ID of the default [signature](/docs/records/types/email_signature/) used when sending replies from this bucket 
+|   | `reply_signing_key_id` | [number](/docs/records/fields/types/number/) | The [private key](/docs/records/types/gpg_private_key/) used when signing outgoing mail from this bucket 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 
 ### Dictionary Placeholders
@@ -63,6 +64,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `reply_personal` | text | Send As
 | `reply_signature_` | record | [Signature](/docs/records/types/email_signature/)
 | `reply_signature_owner_` | record | Signature Owner
+| `reply_signing_key_` | record | [Signing Key](/docs/records/types/gpg_private_key/)
 | `replyto_` | record | [Send From](/docs/records/types/address/)
 | `updated_at` | date | Updated
 
@@ -91,6 +93,7 @@ These [filters](/docs/search/filters/) are available in bucket [search queries](
 | `send.as:` | [text](/docs/search/filters/text/) | Send As
 | `send.from.id:` | [chooser](/docs/search/filters/choosers/) | [Send From](/docs/records/types/address/)
 | `signature.id:` | [chooser](/docs/search/filters/choosers/) | [Signature](/docs/records/types/email_signature/)
+| `signing.key.id:` | [chooser](/docs/search/filters/choosers/) | [Signing Key](/docs/records/types/gpg_private_key/)
 | `template.id:` | [chooser](/docs/search/filters/choosers/) | [Email Template](/docs/records/types/html_template/)
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
@@ -109,6 +112,7 @@ These columns are available on bucket [worklists](/docs/worklists/):
 | `b_reply_html_template_id` | Email Template
 | `b_reply_personal` | Send As
 | `b_reply_signature_id` | Signature
+| `b_reply_signing_key_id` | Signing Key
 | `b_updated_at` | Updated
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 

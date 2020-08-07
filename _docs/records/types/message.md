@@ -52,7 +52,6 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | **x** | **`ticket_id`** | [number](/docs/records/fields/types/number/) | The ID of the message's [ticket](/docs/records/types/ticket/) record 
 |   | `ticket_mask` | [text](/docs/records/fields/types/text/) | The parent [ticket](/docs/records/types/ticket/) mask; alternative to `ticket_id` 
 |   | `was_encrypted` | [boolean](/docs/records/fields/types/boolean/) | Was the message sent encrypted? 
-|   | `was_signed` | [boolean](/docs/records/fields/types/boolean/) | Was the message cryptographically signed? 
 |   | `worker` | [text](/docs/records/fields/types/text/) | The [worker](/docs/records/types/worker/) who sent the message (if any); alternative to `worker_id` 
 |   | `worker_id` | [number](/docs/records/fields/types/number/) | If outgoing, the ID of the [worker](/docs/records/types/worker/) who sent the message 
 
@@ -73,10 +72,11 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `record_url` | text | Record Url
 | `response_time` | seconds | Response Time
 | `sender_` | record | [Sender](/docs/records/types/address/)
+| `signed_at` | date | Signed At
+| `signed_key_fingerprint` | text | Signed By
 | `storage_size` | number | Size (Bytes)
 | `ticket_` | record | [Ticket](/docs/records/types/ticket/)
 | `was_encrypted` | boolean | Is Encrypted
-| `was_signed` | boolean | Is Signed
 | `worker_` | record | [Sender Worker](/docs/records/types/worker/)
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
@@ -111,12 +111,13 @@ These [filters](/docs/search/filters/) are available in message [search queries]
 | `isEncrypted:` | [boolean](/docs/search/filters/booleans/) | Is Encrypted
 | `isNotSent:` | [boolean](/docs/search/filters/booleans/) | Is Not Sent
 | `isOutgoing:` | [boolean](/docs/search/filters/booleans/) | Is Outgoing
-| `isSigned:` | [boolean](/docs/search/filters/booleans/) | Is Signed
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `notes:` | [record](/docs/search/deep-search/) | [Notes](/docs/records/types/comment/)
 | `responseTime:` | [number](/docs/search/filters/numbers/) | Response Time
 | `sender:` | [record](/docs/search/deep-search/) | [Sender](/docs/records/types/address/)
 | `sender.id:` | [chooser](/docs/search/filters/choosers/) | [Sender](/docs/records/types/address/)
+| `signed.at:` | [date](/docs/search/filters/dates/) | Signed At
+| `signed.fingerprint:` | [text](/docs/search/filters/text/) | Signed By
 | `ticket:` | [record](/docs/search/deep-search/) | [Ticket](/docs/records/types/ticket/)
 | `ticket.id:` | [chooser](/docs/search/filters/choosers/) | [Ticket Id](/docs/records/types/ticket/)
 | `worker:` | [record](/docs/search/deep-search/) | [Worker](/docs/records/types/worker/)
@@ -138,9 +139,10 @@ These columns are available on message [worklists](/docs/worklists/):
 | `m_is_not_sent` | Is Not Sent
 | `m_is_outgoing` | Is Outgoing
 | `m_response_time` | Response Time
+| `m_signed_at` | Signed At
+| `m_signed_key_fingerprint` | Signed By
 | `m_ticket_id` | Ticket Id
 | `m_was_encrypted` | Is Encrypted
-| `m_was_signed` | Is Signed
 | `m_worker_id` | Worker
 | `t_bucket_id` | Bucket
 | `t_group_id` | Group

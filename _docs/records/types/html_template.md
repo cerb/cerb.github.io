@@ -41,7 +41,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this email template 
 | **x** | **`owner__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) of this email template's owner: `app`, `role`, `group`, or `worker` 
 | **x** | **`owner_id`** | [number](/docs/records/fields/types/number/) | The ID of this email template's owner 
-|   | `signature` | [text](/docs/records/fields/types/text/) | A template-specific email signature [template](/docs/bots/scripting/) 
+|   | `signature_id` | [number](/docs/records/fields/types/number/) | The optional [email signature](/docs/records/types/email_signature/) of this template 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 
 ### Dictionary Placeholders
@@ -56,7 +56,8 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `id` | number | Id
 | `name` | text | Name
 | `record_url` | text | Record Url
-| `signature` | text | Signature
+| `signature_` | record | [Signature](/docs/records/types/email_signature/)
+| `signature_owner_` | record | Signature Owner
 | `updated_at` | date | Updated
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
@@ -82,7 +83,7 @@ These [filters](/docs/search/filters/) are available in email template [search q
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
-| `signature:` | [text](/docs/search/filters/text/) | Signature
+| `signature.id:` | [number](/docs/search/filters/numbers/) | Signature
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
 ### Worklist Columns
@@ -96,7 +97,7 @@ These columns are available on email template [worklists](/docs/worklists/):
 | `m_content` | Content
 | `m_id` | Id
 | `m_name` | Name
-| `m_signature` | Signature
+| `m_signature_id` | Signature
 | `m_updated_at` | Updated
 
 <div class="section-nav">

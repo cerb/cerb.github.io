@@ -42,6 +42,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `host` | [text](/docs/records/fields/types/text/) | The hostname of the email address 
 |   | `is_banned` | [boolean](/docs/records/fields/types/boolean/) | Is incoming email blocked? 
 |   | `is_defunct` | [boolean](/docs/records/fields/types/boolean/) | Is this address non-deliverable? 
+|   | `is_trusted` | [boolean](/docs/records/fields/types/boolean/) | Is this sender trusted to display external images and links? 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `mail_transport_id` | [number](/docs/records/fields/types/number/) | If this address is used for outgoing mail, the [mail transport](/docs/records/types/mail_transport/) to use; otherwise empty 
 |   | `org_id` | [number](/docs/records/fields/types/number/) | The [organization](/docs/records/types/org/) linked to this email 
@@ -60,10 +61,12 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `contact_` | record | [Contact](/docs/records/types/contact/)
 | `created_at` | date | Created
 | `full_name` | text | Full Name
+| `host` | text | Host
 | `id` | number | Id
 | `is_banned` | boolean | Is Banned
 | `is_contact` | boolean | Is Contact
 | `is_defunct` | boolean | Is Defunct
+| `is_trusted` | boolean | Is Trusted
 | `mail_transport_` | record | [Mail Transport](/docs/records/types/mail_transport/)
 | `num_nonspam` | number | # Nonspam
 | `num_spam` | number | # Spam
@@ -79,6 +82,8 @@ These optional placeholders are also available with **key expansion** in [dictio
 |-|-|-
 | `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
 | `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `last_recipient_message` | record | Latest [Message](/docs/records/types/message/) Received
+| `last_sender_message` | record | Latest [Message](/docs/records/types/message/) Sent
 | `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 | `watchers` | watchers | [Watchers](/docs/bots/behaviors/dictionaries/key-expansion/#watchers)
 	
@@ -99,6 +104,7 @@ These [filters](/docs/search/filters/) are available in email address [search qu
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `isBanned:` | [boolean](/docs/search/filters/booleans/) | Is Banned
 | `isDefunct:` | [boolean](/docs/search/filters/booleans/) | Is Defunct
+| `isTrusted:` | [boolean](/docs/search/filters/booleans/) | Is Trusted
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `mailTransport.id:` | [chooser](/docs/search/filters/choosers/) | [Email Transport](/docs/records/types/mail_transport/)
 | `nonspam:` | [number](/docs/search/filters/numbers/) | # Nonspam
@@ -125,6 +131,7 @@ These columns are available on email address [worklists](/docs/worklists/):
 | `a_id` | Id
 | `a_is_banned` | Is Banned
 | `a_is_defunct` | Is Defunct
+| `a_is_trusted` | Is Trusted
 | `a_mail_transport_id` | Email Transport
 | `a_num_nonspam` | # Nonspam
 | `a_num_spam` | # Spam

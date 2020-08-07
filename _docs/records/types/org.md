@@ -79,6 +79,8 @@ These optional placeholders are also available with **key expansion** in [dictio
 |-|-|-
 | `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
 | `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `last_recipient_message` | record | Latest [Message](/docs/records/types/message/) Received
+| `last_sender_message` | record | Latest [Message](/docs/records/types/message/) Sent
 | `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 | `watchers` | watchers | [Watchers](/docs/bots/behaviors/dictionaries/key-expansion/#watchers)
 	
@@ -92,6 +94,7 @@ These [filters](/docs/search/filters/) are available in organization [search que
 | `alias:` | virtual | Aliases
 | `city:` | [text](/docs/search/filters/text/) | City
 | `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
+| `contacts:` | [record](/docs/search/deep-search/) | [Contacts](/docs/records/types/contact/)
 | `country:` | [text](/docs/search/filters/text/) | Country
 | `created:` | [date](/docs/search/filters/dates/) | Created
 | `email:` | [record](/docs/search/deep-search/) | [Email](/docs/records/types/address/)

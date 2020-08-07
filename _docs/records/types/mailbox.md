@@ -36,18 +36,17 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
-|   | `auth_disable_plain` | [boolean](/docs/records/fields/types/boolean/) | Used to bypass Microsoft Exchange authentication issues 
 |   | `checked_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time this mailbox was last checked for new messages 
+|   | `connected_account_id` | [number](/docs/records/fields/types/number/) | The optional connected account to use for XOAUTH2 
 | **x** | **`host`** | [text](/docs/records/fields/types/text/) | The mail server hostname 
 |   | `is_enabled` | [boolean](/docs/records/fields/types/boolean/) | Is this mailbox enabled? `1` for true and `0` for false 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `max_msg_size_kb` | [number](/docs/records/fields/types/number/) | The maximum message size to download (in kilobytes); `0` to disable limits 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this email mailbox 
 |   | `num_fails` | [number](/docs/records/fields/types/number/) | The number of consecutive failures 
-| **x** | **`password`** | [text](/docs/records/fields/types/text/) | The mailbox password 
+|   | `password` | [text](/docs/records/fields/types/text/) | The mailbox password 
 |   | `port` | [number](/docs/records/fields/types/number/) | The port to connect to; e.g. `587` 
 |   | `protocol` | [text](/docs/records/fields/types/text/) | The protocol to use: `pop3`, `pop3-ssl`, `imap`, `imap-ssl` 
-|   | `ssl_ignore_validation` | [boolean](/docs/records/fields/types/boolean/) | Disabled (`0`) by default; enable (`1`) to allow self-signed certificates 
 |   | `timeout_secs` | [number](/docs/records/fields/types/number/) | The socket timeout in seconds when downloading mail 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 | **x** | **`username`** | [text](/docs/records/fields/types/text/) | The mailbox username 
@@ -60,8 +59,8 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | Field | Type | Description
 |-|-|-
 | `_label` | text | Label
-| `auth_disable_plain` | boolean | Disable Plain Auth
 | `checked_at` | date | Checked At
+| `connected_account_id` | number | Connected Account
 | `host` | text | Host
 | `id` | number | Id
 | `is_enabled` | boolean | Enabled
@@ -71,7 +70,6 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `port` | number | Port
 | `protocol` | text | Protocol
 | `record_url` | text | Record Url
-| `ssl_ignore_validation` | boolean | Ssl Ignore Validation
 | `timeout_secs` | number | Timeout Secs
 | `updated_at` | date | Updated
 | `username` | text | Username
@@ -94,6 +92,8 @@ These [filters](/docs/search/filters/) are available in mailbox account [search 
 | Field | Type | Description
 |-|-|-
 | `checkedAt:` | [date](/docs/search/filters/dates/) | Checked At
+| `enabled:` | [boolean](/docs/search/filters/booleans/) | Enabled
+| `fail.count:` | [number](/docs/search/filters/numbers/) | Num Fails
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `host:` | [text](/docs/search/filters/text/) | Host
 | `id:` | [number](/docs/search/filters/numbers/) | Id
@@ -111,8 +111,8 @@ These columns are available on mailbox account [worklists](/docs/worklists/):
 | Column | Description
 |-|-
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
-| `p_auth_disable_plain` | Disable Plain Auth
 | `p_checked_at` | Checked At
+| `p_connected_account_id` | Connected Account
 | `p_delay_until` | Delay Until
 | `p_enabled` | Enabled
 | `p_host` | Host
@@ -122,7 +122,6 @@ These columns are available on mailbox account [worklists](/docs/worklists/):
 | `p_num_fails` | Num Fails
 | `p_port` | Port
 | `p_protocol` | Protocol
-| `p_ssl_ignore_validation` | Ssl Ignore Validation
 | `p_timeout_secs` | Timeout Secs
 | `p_updated_at` | Updated
 | `p_username` | User
