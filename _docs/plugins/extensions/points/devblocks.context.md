@@ -39,6 +39,7 @@ jumbotron:
 | Calendar Recurring Event | `cerberusweb.contexts.calendar_event.recurring`
 | Calendar | `cerberusweb.contexts.calendar`
 | Call | `cerberusweb.contexts.call`
+| Card Widget | `cerb.contexts.card.widget`
 | Classifier Classification | `cerberusweb.contexts.classifier.class`
 | Classifier Entity | `cerberusweb.contexts.classifier.entity`
 | Classifier Example | `cerberusweb.contexts.classifier.example`
@@ -59,7 +60,6 @@ jumbotron:
 | Email Transport | `cerberusweb.contexts.mail.transport`
 | Feed Item | `cerberusweb.contexts.feed.item`
 | Feed | `cerberusweb.contexts.feed`
-| Feedback | `cerberusweb.contexts.feedback`
 | File Bundle | `cerberusweb.contexts.file_bundle`
 | Group | `cerberusweb.contexts.group`
 | Jira Issue | `cerberusweb.contexts.jira.issue`
@@ -72,20 +72,19 @@ jumbotron:
 | OAuth App | `cerberusweb.contexts.oauth.app`
 | Opportunity | `cerberusweb.contexts.opportunity`
 | Organization | `cerberusweb.contexts.org`
+| PGP Private Key | `cerb.contexts.gpg.private.key`
+| PGP Public Key | `cerberusweb.contexts.gpg_public_key`
 | Package | `cerberusweb.contexts.package.library`
 | Portal | `cerberusweb.contexts.portal`
 | Profile Tab | `cerberusweb.contexts.profile.tab`
 | Profile Widget | `cerberusweb.contexts.profile.widget`
 | Project Board Column | `cerberusweb.contexts.project.board.column`
 | Project Board | `cerberusweb.contexts.project.board`
-| Public Key | `cerberusweb.contexts.gpg_public_key`
 | Reminder | `cerberusweb.contexts.reminder`
 | Role | `cerberusweb.contexts.role`
 | Saved Search | `cerberusweb.contexts.context.saved.search`
 | Sensor | `cerberusweb.contexts.datacenter.sensor`
 | Server | `cerberusweb.contexts.datacenter.server`
-| Skill | `cerberusweb.contexts.skill`
-| Skillset | `cerberusweb.contexts.skillset`
 | Snippet | `cerberusweb.contexts.snippet`
 | Task | `cerberusweb.contexts.task`
 | Ticket | `cerberusweb.contexts.ticket`

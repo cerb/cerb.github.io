@@ -33,10 +33,8 @@ jumbotron:
 | Debug Controller | `core.controller.debug`
 | Download ZIP Controller | `cerb.legacy.profile.attachments.controller`
 | Explorer Controller | `core.controller.explorer`
-| Feedback Controller | `feedback.controller`
 | Files Controller | `core.controller.files`
 | Internal Controller | `core.controller.internal`
-| KB Ajax Controller | `cerberusweb.kb.controller.ajax`
 | OAuth Controller | `core.controller.oauth`
 | Portal Controller | `core.controller.portal`
 | Print Controller | `cerb.legacy.print.controller`
@@ -44,6 +42,7 @@ jumbotron:
 | Resource Controller | `core.controller.resource`
 | SSO Controller | `controller.sso`
 | Scheduled Tasks (Cron) Controller | `core.controller.cron`
+| Security Controller | `core.controller.security`
 | UI Controller | `core.controller.ui`
 | Webhooks Controller | `webhooks.controller`
 

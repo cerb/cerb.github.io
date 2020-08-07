@@ -29,6 +29,7 @@ jumbotron:
 # Extensions
 
 | Amazon S3 | `devblocks.storage.engine.s3`
+| Cerb Cloud | `cerb.cloud.storage.engine.s3`
 | Database | `devblocks.storage.engine.database`
 | Disk | `devblocks.storage.engine.disk`
 | S3 Gatekeeper | `devblocks.storage.engine.gatekeeper`

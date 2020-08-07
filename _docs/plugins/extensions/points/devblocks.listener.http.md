@@ -29,7 +29,6 @@ jumbotron:
 # Extensions
 
 | Core Helpdesk Tour | `core.listeners.tour`
-| Simulator Tour | `simulator.listeners.tour`
 
 <div class="section-nav">
 	<div class="left">

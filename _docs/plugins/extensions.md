@@ -56,6 +56,7 @@ Each extension entry looks like:
 | [Bot Event](/docs/plugins/extensions/points/devblocks.event/) | `devblocks.event`
 | [Cache Engine](/docs/plugins/extensions/points/devblocks.cache.engine/) | `devblocks.cache.engine`
 | [Calendar Datasource](/docs/plugins/extensions/points/cerberusweb.calendar.datasource/) | `cerberusweb.calendar.datasource`
+| [Card Widget Type](/docs/plugins/extensions/points/cerb.card.widget/) | `cerb.card.widget`
 | [Community Portal](/docs/plugins/extensions/points/cerb.portal/) | `cerb.portal`
 | [Connected Service Provider](/docs/plugins/extensions/points/cerb.connected_service.provider/) | `cerb.connected_service.provider`
 | [Controller](/docs/plugins/extensions/points/devblocks.controller/) | `devblocks.controller`

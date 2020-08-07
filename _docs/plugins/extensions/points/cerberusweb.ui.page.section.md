@@ -43,6 +43,7 @@ jumbotron:
 | Calendar Recurring Profile Section | `core.page.profiles.calendar_recurring_profile`
 | Calendar Section | `core.calendars.page.profiles.calendar`
 | Call Section | `calls.page.profiles.call`
+| Card Widget Section | `cerb.page.profiles.card_widget`
 | Classifier Class Section | `core.page.profiles.classifier_class`
 | Classifier Entity Section | `core.page.profiles.classifier_entity`
 | Classifier Example Section | `core.page.profiles.classifier.example`
@@ -62,18 +63,21 @@ jumbotron:
 | Domain Section | `cerberusweb.datacenter.page.profiles.domain`
 | Draft Section | `core.page.profiles.draft`
 | Email Signature Section | `core.page.profiles.email_signature`
+| Export Bots | `core.page.setup.developers.export.bots`
 | Feed Item Page Section | `feeds.page.profiles.feed_item`
 | Feed Page Section | `feeds.page.profiles.feed`
 | File Bundle Section | `core.page.profiles.file_bundle`
 | Gpg Public Key Section | `core.page.profiles.gpg_public_key`
 | Group Section | `core.page.profiles.group`
 | HTML Template Section | `core.page.profiles.mail_html_template`
+| Icon Reference | `core.page.setup.developers.reference.icons`
 | Incoming Mail Section | `core.page.setup.mail_incoming`
 | Internal Section Calendars | `core.internal.section.calendars`
-| Internal Section Custom Fieldsets | `core.internal.section.custom_fieldsets`
-| Internal Section Skills | `core.internal.section.skills`
+| Internal Section Notifications | `core.internal.section.notifications`
+| Internal Section Portals | `core.internal.section.portals`
+| Internal Section Records | `core.internal.section.records`
 | Internal Section Watchers | `core.internal.section.watchers`
-| Internal Section Workspaces | `core.internal.section.workspaces`
+| Internal Section Worklists | `core.internal.section.worklists`
 | Jira Issue Section | `jira.page.profiles.jira_issue`
 | Jira Project Section | `jira.page.profiles.jira_project`
 | KB Article Section | `cerberusweb.page.profiles.kb_article`
@@ -82,21 +86,21 @@ jumbotron:
 | Localization Section | `core.page.setup.localization`
 | Mail Transport Section | `core.page.profiles.mail_transport`
 | Mailbox Account Section | `core.page.profiles.mailbox`
+| Message Section | `core.page.profiles.message`
 | OAuth App Section | `core.page.profiles.oauth_app`
 | OAuth2 Token Generator | `core.page.setup.developers.oauth2_token_generator`
 | Opp Section | `crm.page.profiles.opportunity`
 | Organization Section | `core.page.profiles.organization`
 | Outgoing Mail Section | `core.page.setup.mail_outgoing`
+| PGP Private Key Section | `core.page.profiles.gpg_private_key`
 | Package Import Section | `core.page.setup.package.import`
 | Package Library Section | `core.page.setup.package.library`
 | Package Section | `core.page.profiles.package_library`
-| Plugin Library Section | `core.page.setup.plugin_library`
 | Plugins Section | `core.page.setup.plugins`
 | Profile Tab Section | `core.page.profiles.profile_tab`
 | Profile Widget Section | `core.page.profiles.profile_widget`
 | Project Board Column Section | `projects.page.profiles.project_board_column`
 | Project Board Section | `core.page.profiles.project_board`
-| Records Section | `core.page.setup.records`
 | Reminder Section | `core.page.profiles.reminder`
 | Role Section | `core.page.profiles.role`
 | Saved Search Section | `core.page.profiles.context_saved_search`
@@ -108,11 +112,7 @@ jumbotron:
 | Sensor Page Section | `cerberusweb.profiles.sensor`
 | Server Page Section | `cerberusweb.profiles.server`
 | Sessions Section | `core.page.setup.sessions`
-| Setup Page Simulator Section | `simulator.setup.section.simulator`
 | Setup Page Translations Section | `translators.setup.section.translations`
-| Skill Section | `core.page.profiles.skill`
-| Skills Section | `core.page.setup.skills`
-| Skillset Section | `core.page.profiles.skillset`
 | Snippet Section | `core.page.profiles.snippet`
 | Snippets Section | `core.page.setup.snippets`
 | Storage Attachments Section | `core.page.setup.storage_attachments`

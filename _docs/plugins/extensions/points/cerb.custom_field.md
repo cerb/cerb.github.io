@@ -29,6 +29,8 @@ jumbotron:
 # Extensions
 
 | [**Latitude/Longitude**](/docs/plugins/extensions/cerb.custom_field.geo.point/) | `cerb.custom_field.geo.point`
+| [**Record Links**](/docs/plugins/extensions/cerb.custom_field.record.links/) | `cerb.custom_field.record.links`
+| [**Slider**](/docs/plugins/extensions/cerb.custom_field.slider/) | `cerb.custom_field.slider`
 
 <div class="section-nav">
 	<div class="left">

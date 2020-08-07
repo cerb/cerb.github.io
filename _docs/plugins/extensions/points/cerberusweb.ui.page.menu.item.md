@@ -28,7 +28,6 @@ jumbotron:
 
 # Extensions
 
-| Simulator | `simulator.setup.menu.mail.simulator`
 | Translation Editor | `translators.setup.menu.mail.translations`
 
 <div class="section-nav">

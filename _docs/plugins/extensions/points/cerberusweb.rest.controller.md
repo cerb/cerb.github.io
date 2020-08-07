@@ -39,7 +39,6 @@ jumbotron:
 | Custom Fields | `cerberusweb.rest.controller.custom_fields`
 | Data | `cerberusweb.rest.controller.data`
 | Domains | `cerberusweb.datacenter.domains.rest`
-| Feedback | `feedback.rest.controller.feedback`
 | Groups | `cerberusweb.rest.controller.groups`
 | KB Articles | `cerberusweb.rest.controller.kbarticles`
 | KB Categories | `cerberusweb.rest.controller.kbcategories`

@@ -28,7 +28,6 @@ jumbotron:
 
 # Extensions
 
-| Ticket Message Toolbar Feedback Item | `feedback.message.toolbaritem.feedback`
 | Ticket Message Toolbar Print Item | `cerb.legacy.print.toolbaritem.print`
 
 <div class="section-nav">

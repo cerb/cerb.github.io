@@ -39,6 +39,7 @@ jumbotron:
 | Get time elapsed using calendar availability | `core.bot.action.calculate_time_elapsed`
 | HTTP Request | `core.va.action.http_request`
 | Log Call Global Event Action | `calls.event.action.post`
+| PGP Encrypt | `core.bot.action.pgp.encrypt`
 | Package Import | `core.bot.action.package.import`
 | Record Create | `core.bot.action.record.create`
 | Record Delete | `core.bot.action.record.delete`

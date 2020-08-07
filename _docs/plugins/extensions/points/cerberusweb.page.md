@@ -28,19 +28,11 @@ jumbotron:
 
 # Extensions
 
-| Contacts Page | `core.page.contacts`
 | Custom Pages | `core.page.pages`
-| Datacenter Page | `cerberusweb.datacenter.page`
-| Display Ticket Page | `core.page.display`
-| Domains Page | `cerberusweb.datacenter.domains.page`
-| Knowledgebase | `core.page.kb`
 | Profiles Pages | `core.page.profiles`
 | Search Page | `core.page.search`
-| Sensors Page | `cerberusweb.datacenter.sensors.page`
 | Setup Page | `core.page.configuration`
 | Signin Page | `core.page.signin`
-| Tickets Page | `core.page.tickets`
-| Time Tracking Page | `timetracking.page`
 | Welcome Page | `core.page.welcome`
 
 <div class="section-nav">

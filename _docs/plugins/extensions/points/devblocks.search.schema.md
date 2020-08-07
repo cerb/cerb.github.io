@@ -35,7 +35,6 @@ jumbotron:
 | Knowledgebase Articles | `cerberusweb.search.schema.kb_article`
 | Message Content | `cerberusweb.search.schema.message_content`
 | Organizations | `cerb.search.schema.org`
-| Plugin Library | `cerb.search.schema.plugin_library`
 | Snippets | `cerb.search.schema.snippet`
 | Workers | `cerb.search.schema.worker`
 

@@ -30,28 +30,26 @@ jumbotron:
 
 | After message sent from group member | `event.mail.after.sent.group`
 | After message sent from worker | `event.mail.after.sent`
-| After ticket profile viewed by a worker | `event.ticket.viewed.worker`
-| Before message sent from group member | `event.mail.sent.group`
-| Before message sent from worker | `event.mail.before.sent`
-| Before new incoming message is accepted | `event.mail.received.app`
-| Conversation assigned in group | `event.mail.assigned.group`
-| Conversation closed in group | `event.mail.closed.group`
-| Conversation get interactions for worker | `event.interactions.get.worker`
-| Conversation handle interaction with portal visitor | `event.interaction.chat.portal`
-| Conversation handle interaction with worker | `event.interaction.chat.worker`
-| Conversation moved in group | `event.mail.moved.group`
-| Conversation with portal visitor | `event.message.chat.portal`
-| Conversation with worker | `event.message.chat.worker`
+| Before composing a message reply | `event.mail.reply.pre.ui.worker`
+| Before composing a new message | `event.mail.compose.pre.ui.worker`
+| Before message sent by group member | `event.mail.sent.group`
+| Before message sent by worker | `event.mail.before.sent`
+| Chat with portal visitor | `event.message.chat.portal`
+| Chat with worker | `event.message.chat.worker`
 | Custom API request | `event.api.custom_request`
 | Dashboard get metric for widget | `event.dashboard.widget.get_metric`
 | Dashboard render widget | `event.dashboard.widget.render`
-| Data Query Datasource | `event.data.query.datasource`
+| Data query datasource | `event.data.query.datasource`
+| Filter new incoming message | `event.mail.received.app`
 | Form interaction | `event.form.interaction.worker`
+| Get chat interactions for worker | `event.interactions.get.worker`
+| Handle chat interaction with portal visitor | `event.interaction.chat.portal`
+| Handle chat interaction with worker | `event.interaction.chat.worker`
 | New JIRA issue | `wgmjira.event.issue.created`
 | New comment on JIRA issue | `wgmjira.event.issue.commented`
-| New comment on conversation in group | `event.comment.ticket.group`
+| New comment on ticket in group | `event.comment.ticket.group`
 | New contact registered in Support Center | `event.contact.registered.sc`
-| New message added to ticket in this group | `event.mail.received.group`
+| New message added to ticket in group | `event.mail.received.group`
 | New message added to ticket | `event.mail.received`
 | New message on a watched ticket | `event.mail.received.watcher`
 | New notification for me | `event.notification.received.worker`
@@ -82,14 +80,16 @@ jumbotron:
 | Record custom behavior on ticket | `event.macro.ticket`
 | Record custom behavior on time tracking entry | `event.macro.timetracking`
 | Record custom behavior on worker | `event.macro.worker`
+| Record editor opened | `event.ui.card.editor.opened.worker`
+| Record worklist rendered | `event.ui.worklist.render.worker`
 | Recurrent behavior | `event.behavior.recurrent`
+| Respond to Ajax HTTP request | `event.ajax.request`
+| Ticket assigned in group | `event.mail.assigned.group`
+| Ticket closed in group | `event.mail.closed.group`
+| Ticket moved in group | `event.mail.moved.group`
+| Ticket profile viewed by a worker | `event.ticket.viewed.worker`
 | Webhook received | `event.webhook.received`
-| [DEPRECATED] [UI] During a message reply | `event.mail.reply.during.ui.worker`
-| [UI] Before composing a message reply | `event.mail.reply.pre.ui.worker`
-| [UI] Before composing a new message | `event.mail.compose.pre.ui.worker`
-| [UI] Record editor opened | `event.ui.card.editor.opened.worker`
-| [UI] Render record worklist | `event.ui.worklist.render.worker`
-| [UI] Respond to Ajax HTTP request | `event.ajax.request`
+| [DEPRECATED] During a message reply | `event.mail.reply.during.ui.worker`
 
 <div class="section-nav">
 	<div class="left">
