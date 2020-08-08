@@ -19,7 +19,7 @@ jumbotron:
 <img src="{{page.social_image_url}}" class="screenshot">
 </div>
 
-**Sheets** are a modern, automation-friendly data visualization that avoids the schematic rigidity of [**worklists**](/docs/worklists/). A sheet is still a collection of rows and columns, but its column are defined in a fully customizable YAML-based text schema. This text-based schema can live within a bot behavior or widget without having to be previously defined or saved.
+**Sheets** are a modern, automation-friendly data visualization that avoids the schematic rigidity of [**worklists**](/docs/worklists/). A sheet is still a collection of rows and columns, but its column are defined in a fully customizable [KATA](/docs/kata/)-based text schema. This text-based schema can live within a bot behavior or widget without having to be previously defined or saved.
 
 Each column in a sheet has a type (e.g. card, date, text) with configurable options.
 
@@ -44,43 +44,42 @@ format:dictionaries
 And this **sheet schema**:
 
 <pre>
-<code class="language-yaml">
+<code class="language-cerb">
 {% raw %}
 layout:
   style: table
-  headings: true
-  paging: true
+  headings: yes
+  paging: yes
   title_column: _label
+
 columns:
-- card:
-    key: _label
+  card/_label:
     label: Ticket
     params:
-      bold: true
-- card:
-    key: initial_message_sender__label
+      bold: no
+  
+  card/initial_message_sender__label:
     label: Requester
     params:
-      underline: false
-- text:
-    key: initial_message_sender_org_country
+      underline: no
+
+  text/initial_message_sender_org_country:
     label: Country
-- text:
-    key: group__label
+  
+  text/group__label:
     label: Group / Bucket
     params:
-      value_template: >-
-        {{group__label}} / {{bucket__label}}
-- card:
-    key: owner__label
+      value_template@raw: {{group__label}} / {{bucket__label}}
+  
+  card/owner__label:
     label: Owner
     params:
-      image: true
-      underline: false
-- slider:
-    key: importance
-- date:
-    key: updated
+      image: yes
+      underline: no
+  
+  slider/importance:
+  
+  date/updated:
     label: Updated
     params:
       format: Y-m-d
@@ -108,7 +107,7 @@ You'll also notice that we're displaying the country of the initial sender's org
 By default, sheets display as a **table** of rows and columns.
 
 <pre>
-<code class="language-yaml">
+<code class="language-cerb">
 layout:
   style: table
 </code>
@@ -123,7 +122,7 @@ layout:
 The `fieldsets` layout style displays rows as **fieldsets** (vertically) rather than a table (horizontal). This is useful on profiles to summarize a single record, and in mobile environments.
 
 <pre>
-<code class="language-yaml">
+<code class="language-cerb">
 layout:
   style: fieldsets
 </code>
@@ -145,19 +144,22 @@ If an `image: true` param is provided, a profile image will be displayed to the 
 
 The `bold:` and `underline:` params control how the link is displayed.
 
+The `icon:` parameter has the same options as an [icon](#icon) column.
+
 <pre>
-<code class="language-yaml">
+<code class="language-cerb">
 columns:
-- card:
-    key: name
+  card/name:
     label: Name
     params:
       context_key: _context
       id_key: id
       label_key: _label
-      image: true
-      bold: true
-      underline: true
+      image: yes
+      bold: yes
+      underline: yes
+      #icon:
+      #  image: circle-ok
 </code>
 </pre>
 
@@ -168,15 +170,36 @@ The `date` column type displays a datetime in various formats. The default is a 
 The timestamp can be provided as `value:` (a Unix timestamp in seconds) or `value_key:` (a dictionary key containing a Unix timestamp). When both of these are omitted, the `key:` is used.
 
 <pre>
-<code class="language-yaml">
+<code class="language-cerb">
 columns:
-- date:
-    key: updated
+  date/updated:
     label: Updated
     params:
-      format: d-M-Y H:i:s T # See: https://php.net/date
+      # See: https://php.net/date
+      format: d-M-Y H:i:s T
       #value: 1577836800
       #value_key: updated
+</code>
+</pre>
+
+## Icon
+
+The `icon` column type displays an icon image.
+
+You'll find a list of icon names in **Setup >> Developers >> Icon Reference**.
+
+<pre>
+<code class="language-cerb">
+columns:
+  icon/can_sign:
+    label: Sign
+    params:
+      #image: circle-ok
+      #image_key: icon_key
+      image_template@raw:
+        {% if can_sign %}
+        circle-ok
+        {% endif %}
 </code>
 </pre>
 
@@ -189,19 +212,18 @@ The link is provided in the `href:` (or `href_key:`, `href_template:`) param. Fo
 The `text:` (or `text_key:`, `text_template:`) param provides the label of the link.
 
 <pre>
-<code class="language-yaml">
+<code class="language-cerb">
 {% raw %}
 columns:
-- link:
-    key: link
+  link/link:
     label: Link
     params:
       #href: https://example.com/
       href_key: record_url
-      #href_template: /profiles/task/{{id}}-{{title|permalink}}
+      #href_template@raw: /profiles/task/{{id}}-{{title|permalink}}
       #text: Link title
       text_key: _label
-      #text_template: "{{title}}"
+      #text_template@raw: {{title}}
 {% endraw %}
 </code>
 </pre>
@@ -215,16 +237,15 @@ Clicking the links runs search `query:` (or `query_key:`, `query_template:`) aga
 For instance, a table of calculated results could open a search popup to the source data.
 
 <pre>
-<code class="language-yaml">
+<code class="language-cerb">
 {% raw %}
 columns:
-- search:
-    key: count
+  search/count:
     label: Count
     params:
       context: ticket
       #query_key: query
-      query_template: owner.id:{{id}}
+      query_template@raw: owner.id:{{id}}
 {% endraw %}
 </code>
 </pre>
@@ -240,16 +261,15 @@ The `query:` (or `query_key:`, `query_template:`) param contains the search quer
 The `label:` (or `label_key:`, `label_template:`) param provides the text of the search link.
 
 <pre>
-<code class="language-yaml">
+<code class="language-cerb">
 {% raw %}
 columns:
-- search_button:
-    key: assignments_search
+  search_button/assignments_search:
     label: Assignments
     params:
       context: ticket
       #query_key: query
-      query_template: owner.id:{{id}}
+      query_template@raw: owner.id:{{id}}
 {% endraw %}
 </code>
 </pre>
@@ -259,18 +279,17 @@ columns:
 The `slider` column type visually displays a `value:` (or `value_key:`, `value_template:`) on a continuum with configurable `min:` and `max:` bounds. The output is similar to the "Importance" column on ticket/task worklists.
 
 <pre>
-<code class="language-yaml">
+<code class="language-cerb">
 {% raw %}
 columns:
-- slider:
-    key: importance
+  slider/importance:
     label: Importance
     params:
       min: 0
       max: 100
       #value: 50
       #value_key: importance
-      #value_template: "{{importance+10}}"
+      #value_template@raw: {{importance+10}}
 {% endraw %}
 </code>
 </pre>
@@ -281,22 +300,25 @@ The `text` column type displays arbitrary text as `value:` (or `value_key:`, `va
 
 Text columns may include a `value_map:` parameter for associating new labels to values. For instance, "F => Female" or "1 => Yes". This reduces the need for custom columns.
 
+The `icon:` parameter has the same options as an [icon](#icon) column.
+
 This type is usually the default when no column `type:` is specified.
 
 <pre>
-<code class="language-yaml">
+<code class="language-cerb">
 {% raw %}
 columns:
-- text:
-    key: gender
+  text/gender:
     label: Gender
     params:
       #value: Female
       #value_key: gender
-      #value_template: "{{gender}}"
+      #value_template@raw: {{gender}}
       value_map:
         F: Female
         M: Male
+      #icon:
+      #  image: circle-ok
 {% endraw %}
 </code>
 </pre>
@@ -310,12 +332,12 @@ The `value:` (or `value_key:`, `value_template:`) parameter specifies the value.
 The `precision` parameter controls how granular the date is. For instance, `precision: 3` is _"2 hours, 5 minutes, 29 seconds"_. The default is `2`.
 
 <pre>
-<code class="language-yaml">
+<code class="language-cerb">
 columns:
-- time_elapsed:
-    key: elapsed_response_first
+  time_elapsed/elapsed_response_first:
     label: First Response
     params:
       precision: 2
 </code>
 </pre>
+
