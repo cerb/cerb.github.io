@@ -1,4 +1,9 @@
 Prism.languages.cerb = {
+  'comment': {
+    pattern: /(^|\r|\n)(\s*)#.*(\r|\n|$)/,
+    lookbehind: true,
+    lookahead: true
+  },
   'key': {
     pattern: /(\s*)[a-zA-Z0-9\_\-\.\,\/\@\&]*(:)/,
     lookbehind: true,
@@ -7,9 +12,5 @@ Prism.languages.cerb = {
   },
   'property': {
     pattern: /\{\{[a-zA-Z0-9\_\-\.]*\}\}/
-  },
-  'comment': {
-    pattern: /\{\#.*\#\}/,
-    greedy: false
   }
 };
