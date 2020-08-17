@@ -14,7 +14,7 @@ jumbotron:
 
 You can think of a **ticket** as a brief project based on a specific question or issue.
 
-The ticket's [profile](/docs/records/profiles/) page is a workspace that groups together email correspondence, comments, attachments, etc.
+The ticket's [profile](/docs/profiles/) page is a workspace that groups together email correspondence, comments, attachments, etc.
 
 Each ticket functions like a private mailing list. Any number of [contacts](/docs/contacts/) may be subscribed to a ticket conversation as **participants**, and they will receive a copy of all outgoing email messages from your team.
 
