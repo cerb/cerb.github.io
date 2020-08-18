@@ -1,6 +1,7 @@
 ---
 title: Authenticate a Gmail mailbox using IMAP and XOAUTH2 
 excerpt: A step-by-step guide for using XOAUTH2 to authenticate against Gmail IMAP accounts
+social_image_url: /assets/images/guides/google/cerb-and-google.png
 layout: integration
 topic: Integrations
 subtopic: Google

@@ -31,7 +31,7 @@ jumbotron:
 
 # Introduction
 
-In this guide we'll walk through the process of linking Cerb to Gmail. You can the same process with any [Google API](https://developers.google.com/apis-explorer/#p/) from Cerb bots to automate whatever you need.
+In this guide we'll walk through the process of linking Cerb to Gmail. You can use the same process with any [Google API](https://developers.google.com/apis-explorer/#p/) from Cerb bots to automate whatever you need.
 
 <div class="cerb-screenshot">
 <img src="{{page.social_image_url}}" class="screenshot">
