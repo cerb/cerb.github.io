@@ -143,6 +143,27 @@ These are in both: {{intersect|join(', ')}}
 These are in both: Apple, Microsoft
 ```
 
+## array_matches
+
+(Added in [9.6.4](/releases/9.6.4/))
+
+Compares an array of values to an array of patterns.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set recipients = ['support@cerb.example','sales@cerb.example'] %}
+{% set patterns = ['sales@*'] %}
+{% set results = array_matches(recipients, patterns) %}
+Matches: {{results|join(', ')}}
+{% endraw %}
+</code>
+</pre>
+
+```
+Matches: sales@cerb.example
+```
+
 ## array_sort_keys
 
 (Added in [9.0](/releases/9.0/))
