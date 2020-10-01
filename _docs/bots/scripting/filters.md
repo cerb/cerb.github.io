@@ -278,6 +278,37 @@ Convert character encodings to the first argument from the second. If the second
 This has ? emoji
 ```
 
+## csv
+
+(Added in [9.6.4](/releases/9.6.4/))
+
+Format an array as a comma-separated values list. This is useful for exporting reports for Excel from bots.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set records = [
+	{
+		id: 1,
+		subject: "Help with the API",
+	},
+	{
+		id: 2,
+		subject: "Automating email replies", 
+	}
+] %}
+ID,Subject
+{{records|csv}}
+{% endraw %}
+</code>
+</pre>
+
+```
+ID,Subject
+1,"Help with the API"
+2,"Automating email replies"
+```
+
 ## date
 
 Use the **date** filter to format a [string](/docs/bots/scripting/#strings) or [variable](/docs/bots/scripting/#variables) as a date:
