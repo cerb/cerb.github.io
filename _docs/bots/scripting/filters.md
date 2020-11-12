@@ -71,6 +71,22 @@ Also allow specific characters:
 Ignore nonalphanumeric but allow spaces!
 ```
 
+## array_sum
+
+Sum the numeric elements of an array.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{{array_sum([1,2,3,4,5])}}
+{% endraw %}
+</code>
+</pre>
+
+```
+15
+```
+
 ## base_convert
 
 Convert between number system bases.
@@ -497,6 +513,35 @@ For instance, you can use this to sign parameters in a survey URL to verify that
 <div class="cerb-box note">
 <p>Provide your own value for <tt>THIS IS SECRET</tt>. You an store it in the bot configuration.</p>
 </div>
+
+## image_info
+
+(Added in [9.6.7](/releases/9.6.7/))
+
+Returns information about an image. The image may be provided as bytes or in [data URI format](https://en.wikipedia.org/wiki/Data_URI_scheme). 
+
+`|image_info()`
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set image_string %}
+data:image/png;base64,iVBORw0KGgoAAAA....
+{% endset %}
+{{image_string|image_info|json_encode|json_pretty}}
+{% endraw %}
+</code>
+</pre>
+
+```
+{
+    "width": 100,
+    "height": 100,
+    "channels": 3,
+    "bits": 8,
+    "type": "image/png"
+}
+```
 
 ## indent
 
