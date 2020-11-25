@@ -58,6 +58,7 @@
   - data-queries/calendar/events
   - data-queries/classifier/prediction
   - data-queries/gpg/keyinfo
+  - data-queries/record/fields
   - data-queries/usage/bot-behaviors
   - data-queries/usage/snippets
   - data-queries/sample
