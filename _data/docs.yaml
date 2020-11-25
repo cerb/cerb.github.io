@@ -59,6 +59,7 @@
   - data-queries/classifier/prediction
   - data-queries/gpg/keyinfo
   - data-queries/record/fields
+  - data-queries/ui/icons
   - data-queries/usage/bot-behaviors
   - data-queries/usage/snippets
   - data-queries/sample
