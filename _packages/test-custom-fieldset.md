@@ -72,6 +72,7 @@ Paste the following package into the large text box:
       "uid": "field_checkbox",
       "_context": "custom_field",
       "name": "Checkbox",
+      "uri": "testFieldset_checkbox",
       "type": "C",
       "context": "{{{record_type}}}",
       "params": {
@@ -82,6 +83,7 @@ Paste the following package into the large text box:
       "uid": "field_currency",
       "_context": "custom_field",
       "name": "Currency",
+      "uri": "testFieldset_currency",
       "type": "Y",
       "context": "{{{record_type}}}",
       "params": {
@@ -93,6 +95,7 @@ Paste the following package into the large text box:
       "uid": "field_date",
       "_context": "custom_field",
       "name": "Date",
+      "uri": "testFieldset_date",
       "type": "E",
       "context": "{{{record_type}}}",
       "params": {
@@ -103,6 +106,7 @@ Paste the following package into the large text box:
       "uid": "field_decimal",
       "_context": "custom_field",
       "name": "Decimal",
+      "uri": "testFieldset_decimal",
       "type": "O",
       "context": "{{{record_type}}}",
       "params": {
@@ -114,6 +118,7 @@ Paste the following package into the large text box:
       "uid": "field_file",
       "_context": "custom_field",
       "name": "File",
+      "uri": "testFieldset_file",
       "type": "F",
       "context": "{{{record_type}}}",
       "params": {
@@ -124,6 +129,7 @@ Paste the following package into the large text box:
       "uid": "field_files",
       "_context": "custom_field",
       "name": "Files",
+      "uri": "testFieldset_files",
       "type": "I",
       "context": "{{{record_type}}}",
       "params": {
@@ -134,6 +140,7 @@ Paste the following package into the large text box:
       "uid": "field_list",
       "_context": "custom_field",
       "name": "List",
+      "uri": "testFieldset_list",
       "type": "M",
       "context": "{{{record_type}}}",
       "params": {
@@ -144,6 +151,7 @@ Paste the following package into the large text box:
       "uid": "field_multi_checkboxes",
       "_context": "custom_field",
       "name": "Multiple Checkboxes",
+      "uri": "testFieldset_multipleCheckboxes",
       "type": "X",
       "context": "{{{record_type}}}",
       "params": {
@@ -161,6 +169,7 @@ Paste the following package into the large text box:
       "uid": "field_number",
       "_context": "custom_field",
       "name": "Number",
+      "uri": "testFieldset_number",
       "type": "N",
       "context": "{{{record_type}}}",
       "params": {
@@ -171,6 +180,7 @@ Paste the following package into the large text box:
       "uid": "field_picklist",
       "_context": "custom_field",
       "name": "Picklist",
+      "uri": "testFieldset_picklist",
       "type": "D",
       "context": "{{{record_type}}}",
       "params": {
@@ -188,6 +198,7 @@ Paste the following package into the large text box:
       "uid": "field_link",
       "_context": "custom_field",
       "name": "Record Link",
+      "uri": "testFieldset_recordLink",
       "type": "L",
       "context": "{{{record_type}}}",
       "params": {
@@ -199,6 +210,7 @@ Paste the following package into the large text box:
       "uid": "field_text_multi",
       "_context": "custom_field",
       "name": "Text: Multiple Lines",
+      "uri": "testFieldset_textMulti",
       "type": "T",
       "context": "{{{record_type}}}",
       "params": {
@@ -209,6 +221,7 @@ Paste the following package into the large text box:
       "uid": "field_text",
       "_context": "custom_field",
       "name": "Text",
+      "uri": "testFieldset_text",
       "type": "S",
       "context": "{{{record_type}}}",
       "params": {
@@ -219,6 +232,7 @@ Paste the following package into the large text box:
       "uid": "field_url",
       "_context": "custom_field",
       "name": "URL",
+      "uri": "testFieldset_url",
       "type": "U",
       "context": "{{{record_type}}}",
       "params": {
@@ -229,6 +243,7 @@ Paste the following package into the large text box:
       "uid": "field_worker",
       "_context": "custom_field",
       "name": "Worker",
+      "uri": "testFieldset_worker",
       "type": "W",
       "context": "{{{record_type}}}",
       "params": {

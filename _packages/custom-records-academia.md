@@ -52,7 +52,7 @@ Paste the following package into the large text box:
     "name": "Custom Records (Academia)",
     "revision": 1,
     "requires": {
-      "cerb_version": "8.2.8",
+      "cerb_version": "10.0.0",
       "plugins": [
 
       ]
@@ -100,6 +100,7 @@ Paste the following package into the large text box:
       "_context": "custom_field",
       "context": "course",
       "name": "Instructor",
+      "uri": "instructor",
       "type": "L",
       "params": {
         "context": "contexts.custom_record.{{{uid.custom_record_instructor}}}"
@@ -110,6 +111,7 @@ Paste the following package into the large text box:
       "_context": "custom_field",
       "context": "course",
       "name": "Room",
+      "uri": "room",
       "type": "L",
       "params": {
         "context": "contexts.custom_record.{{{uid.custom_record_room}}}"
@@ -120,6 +122,7 @@ Paste the following package into the large text box:
       "_context": "custom_field",
       "context": "course",
       "name": "Code",
+      "uri": "code",
       "type": "S"
     },
     {
@@ -127,6 +130,7 @@ Paste the following package into the large text box:
       "_context": "custom_field",
       "context": "course",
       "name": "Schedule",
+      "uri": "schedule",
       "type": "S"
     },
     {
