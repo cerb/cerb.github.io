@@ -58,6 +58,7 @@
   - data-queries/calendar/events
   - data-queries/classifier/prediction
   - data-queries/gpg/keyinfo
+  - data-queries/record/types
   - data-queries/record/fields
   - data-queries/platform/extensions
   - data-queries/ui/icons
