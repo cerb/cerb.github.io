@@ -74,6 +74,10 @@
   docs:
     - resources
 
+- title: Automations
+  docs:
+    - automations
+
 - title: Workspaces
   docs:
   - workspaces
