@@ -15,7 +15,6 @@
   - contacts
   - orgs
   #- calendars
-  #- project-boards
   - tickets
   - snippets
 
@@ -82,6 +81,7 @@
   - worklists
   - sheets
   - maps
+  - project-boards
 
 - title: Bots
   docs:

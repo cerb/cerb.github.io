@@ -3,6 +3,7 @@ title: "Configure project boards"
 excerpt: Project boards visually organize and automate a multi-step process. In this guide, we'll build a project board to explore how bot behaviors and scriptable templates can improve productivity.
 layout: integration
 topic: Project Boards
+social_image_url: /assets/images/guides/project-boards/configure/cerb-and-project-boards.png
 jumbotron:
   title: Configure project boards
   tagline: ""
@@ -22,7 +23,7 @@ jumbotron:
 {:toc}
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/project-boards/configure/cerb-and-project-boards.png" class="screenshot">
+<img src="{{page.social_image_url}}" class="screenshot">
 </div>
 
 # Introduction
