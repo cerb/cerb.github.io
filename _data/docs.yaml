@@ -71,6 +71,10 @@
   docs:
   - kata
 
+- title: Resources
+  docs:
+    - resources
+
 - title: Workspaces
   docs:
   - workspaces
