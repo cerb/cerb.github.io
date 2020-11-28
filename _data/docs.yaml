@@ -78,6 +78,11 @@
   docs:
     - automations
 
+- title: Interactions
+  docs:
+    - interactions
+    - interactions/toolbars
+
 - title: Workspaces
   docs:
   - workspaces
