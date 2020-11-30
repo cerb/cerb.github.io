@@ -20,6 +20,8 @@ jumbotron:
     url: /docs/automations/#nodes
 ---
 
+{% include docs/note_preview.html %}
+
 # await:
 
 Pauses the [automation](/docs/automations/) in the `await` state and returns a dictionary. This creates an [execution](/docs/automations/#executions) for resuming the automation at the current point.

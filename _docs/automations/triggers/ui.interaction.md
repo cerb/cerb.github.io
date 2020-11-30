@@ -20,6 +20,8 @@ jumbotron:
     url: /docs/automations/#triggers
 ---
 
+{% include docs/note_preview.html %}
+
 **ui.interaction** [automations](/docs/automations/) open an [interaction](/docs/interactions/) popup in a worker's web browser.
 
 This trigger uses [event handler](/docs/automations/#event-handlers) KATA, and the first enabled automation is executed.

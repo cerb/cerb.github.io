@@ -23,6 +23,8 @@ jumbotron:
     url: /docs/automations/triggers/ui.interaction/#elements
 ---
 
+{% include docs/note_preview.html %}
+
 # File Upload
 
 Prompts for a file upload and stores the new attachment ID.

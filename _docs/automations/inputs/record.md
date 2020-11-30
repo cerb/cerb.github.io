@@ -20,6 +20,8 @@ jumbotron:
     url: /docs/automations/#inputs
 ---
 
+{% include docs/note_preview.html %}
+
 <pre>
 <code class="language-cerb">
 inputs:

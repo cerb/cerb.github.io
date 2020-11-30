@@ -23,6 +23,8 @@ jumbotron:
     url: /docs/automations/triggers/ui.interaction/#elements
 ---
 
+{% include docs/note_preview.html %}
+
 # Submit
 
 Displays the 'Continue' and 'Reset' buttons.

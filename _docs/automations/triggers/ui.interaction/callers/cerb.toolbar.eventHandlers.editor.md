@@ -23,6 +23,8 @@ jumbotron:
     url: /docs/automations/triggers/ui.interaction/#callers
 ---
 
+{% include docs/note_preview.html %}
+
 [event handler](/docs/automations/#event-handlers)
 
 # Parameters

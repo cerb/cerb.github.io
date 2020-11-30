@@ -20,6 +20,8 @@ jumbotron:
     url: /docs/automations/#triggers
 ---
 
+{% include docs/note_preview.html %}
+
 **reminder.remind** [automations](/docs/automations/) are triggered by a [reminder](/docs/reminders/) alarm.
 
 This trigger uses [event handler](/docs/automations/#event-handlers) KATA, and all enabled automations are executed.

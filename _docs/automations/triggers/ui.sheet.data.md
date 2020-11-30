@@ -20,6 +20,8 @@ jumbotron:
     url: /docs/automations/#triggers
 ---
 
+{% include docs/note_preview.html %}
+
 **ui.sheet.data** [automations](/docs/automations/) are triggered when a sheet requests dynamic data.
 
 This trigger uses [event handler](/docs/automations/#event-handlers) KATA, and the first enabled automation is executed.

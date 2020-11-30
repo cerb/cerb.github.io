@@ -17,6 +17,8 @@ jumbotron:
     url: /docs/data-queries/
 ---
 
+{% include docs/note_preview.html %}
+
 # ui.icons
 
 `ui.icons` data queries return a filterable and pageable list of icons.

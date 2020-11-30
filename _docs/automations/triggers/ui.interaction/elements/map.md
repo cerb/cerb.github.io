@@ -23,6 +23,8 @@ jumbotron:
     url: /docs/automations/triggers/ui.interaction/#elements
 ---
 
+{% include docs/note_preview.html %}
+
 # Map
 
 Displays an interactive map using map KATA and returns the selection region(s) or point(s).

@@ -23,6 +23,8 @@ jumbotron:
     url: /docs/automations/triggers/ui.interaction/#elements
 ---
 
+{% include docs/note_preview.html %}
+
 # Editor
 
 Prompts for multi-line text input using a code editor with syntax highlighting.

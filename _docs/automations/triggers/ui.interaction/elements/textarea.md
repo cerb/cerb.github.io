@@ -23,6 +23,8 @@ jumbotron:
     url: /docs/automations/triggers/ui.interaction/#elements
 ---
 
+{% include docs/note_preview.html %}
+
 # Textarea
 
 Displays a multi-line text input without the extra functionality of an [editor](/docs/automations/triggers/ui.interaction/elements/editor/).

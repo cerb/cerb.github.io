@@ -23,6 +23,8 @@ jumbotron:
     url: /docs/automations/triggers/ui.interaction/#callers
 ---
 
+{% include docs/note_preview.html %}
+
 # Parameters
 
 The following `caller_params` are passed to the [interaction](/docs/automations/triggers/ui.interaction/):

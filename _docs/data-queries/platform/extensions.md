@@ -17,6 +17,8 @@ jumbotron:
     url: /docs/data-queries/
 ---
 
+{% include docs/note_preview.html %}
+
 # platform.extensions
 
 `platform.extensions` data queries return a filterable and pageable list of plugin [extensions](/docs/record/types/) for a given `point:`.

@@ -17,13 +17,15 @@ jumbotron:
     url: /docs/workspaces/
 ---
 
+{% include docs/note_preview.html %}
+
 {% comment %}
 <div class="cerb-screenshot">
 <img src="{{page.social_image_url}}" class="screenshot">
 </div>
 {% endcomment %}
 
-Cerb ([10.0+](/releases/10.0/#maps)) can create interactive **map** visualizations with geospatial data from any source using the standard GeoJSON format.
+Cerb can create interactive **map** visualizations with geospatial data from any source using the standard GeoJSON format.
 
 A **map schema** is defined using [KATA](/docs/kata), which may include map resources, additional properties to fetch and merge, region colorization, point datasets, point sizing and colorization, labels, click interactions, and more.
 
