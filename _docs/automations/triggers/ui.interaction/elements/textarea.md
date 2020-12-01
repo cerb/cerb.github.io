@@ -5,6 +5,7 @@ title: "Interaction Element: Textarea"
 permalink: /docs/automations/triggers/ui.interaction/elements/textarea/
 toc:
   title: Textarea
+  expand: Automations
 jumbotron:
   title: Textarea
   tagline: 

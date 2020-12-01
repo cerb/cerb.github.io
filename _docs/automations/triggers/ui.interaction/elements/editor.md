@@ -5,6 +5,7 @@ title: "Interaction Element: Editor"
 permalink: /docs/automations/triggers/ui.interaction/elements/editor/
 toc:
   title: Editor
+  expand: Automations
 jumbotron:
   title: Editor
   tagline: 

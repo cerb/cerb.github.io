@@ -5,6 +5,7 @@ title: "Interaction Caller: cerb.toolbar.editor.map"
 permalink: /docs/automations/triggers/ui.interaction/callers/cerb.toolbar.editor.map/
 toc:
   title: cerb.toolbar.editor.map
+  expand: Automations
 jumbotron:
   title: cerb.toolbar.editor.map
   tagline: 

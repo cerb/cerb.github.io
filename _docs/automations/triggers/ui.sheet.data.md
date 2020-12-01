@@ -5,6 +5,7 @@ title: "ui.sheet.data"
 permalink: /docs/automations/triggers/ui.sheet.data/
 toc:
   title: ui.sheet.data
+  expand: Automations
 jumbotron:
   title: ui.sheet.data
   tagline: 

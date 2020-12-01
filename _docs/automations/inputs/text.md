@@ -5,6 +5,7 @@ title: "Automation Inputs: Text"
 permalink: /docs/automations/inputs/text/
 toc:
   title: Text
+  expand: Automations
 jumbotron:
   title: Text
   tagline: 

@@ -5,6 +5,7 @@ title: "Interaction Element: File Upload"
 permalink: /docs/automations/triggers/ui.interaction/elements/fileUpload/
 toc:
   title: File Upload
+  expand: Automations
 jumbotron:
   title: File Upload
   tagline: 

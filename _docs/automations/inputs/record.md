@@ -5,6 +5,7 @@ title: "Automation Inputs: Record"
 permalink: /docs/automations/inputs/record/
 toc:
   title: Record
+  expand: Automations
 jumbotron:
   title: Record
   tagline: 

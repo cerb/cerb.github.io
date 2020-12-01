@@ -5,6 +5,7 @@ title: "Interaction Caller: cerb.toolbar.workspaceWidget.sheet"
 permalink: /docs/automations/triggers/ui.interaction/callers/cerb.toolbar.workspaceWidget.sheet/
 toc:
   title: cerb.toolbar.workspaceWidget.sheet
+  expand: Automations
 jumbotron:
   title: cerb.toolbar.workspaceWidget.sheet
   tagline: 

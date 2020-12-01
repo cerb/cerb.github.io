@@ -5,6 +5,7 @@ title: "Automation Inputs: Array"
 permalink: /docs/automations/inputs/array/
 toc:
   title: Array
+  expand: Automations
 jumbotron:
   title: Array
   tagline: 

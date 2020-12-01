@@ -5,6 +5,7 @@ title: "Interaction Caller: cerb.toolbar.cardWidget.interactions"
 permalink: /docs/automations/triggers/ui.interaction/callers/cerb.toolbar.cardWidget.interactions/
 toc:
   title: cerb.toolbar.cardWidget.interactions
+  expand: Automations
 jumbotron:
   title: cerb.toolbar.cardWidget.interactions
   tagline: 

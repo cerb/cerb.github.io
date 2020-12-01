@@ -5,6 +5,7 @@ title: "Interaction Caller: cerb.toolbar.profileWidget.sheet"
 permalink: /docs/automations/triggers/ui.interaction/callers/cerb.toolbar.profileWidget.sheet/
 toc:
   title: cerb.toolbar.profileWidget.sheet
+  expand: Automations
 jumbotron:
   title: cerb.toolbar.profileWidget.sheet
   tagline: 

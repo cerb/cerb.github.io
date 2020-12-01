@@ -5,6 +5,7 @@ title: "Interaction Caller: cerb.toolbar.automation.uiInteraction.await.sheet"
 permalink: /docs/automations/triggers/ui.interaction/callers/cerb.toolbar.automation.uiInteraction.await.sheet/
 toc:
   title: cerb.toolbar.automation.uiInteraction.await.sheet
+  expand: Automations
 jumbotron:
   title: cerb.toolbar.automation.uiInteraction.await.sheet
   tagline: 

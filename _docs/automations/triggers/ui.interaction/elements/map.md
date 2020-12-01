@@ -5,6 +5,7 @@ title: "Interaction Element: Map"
 permalink: /docs/automations/triggers/ui.interaction/elements/map/
 toc:
   title: Map
+  expand: Automations
 jumbotron:
   title: Map
   tagline: 

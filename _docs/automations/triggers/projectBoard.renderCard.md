@@ -5,6 +5,7 @@ title: "projectBoard.renderCard"
 permalink: /docs/automations/triggers/projectBoard.renderCard/
 toc:
   title: projectBoard.renderCard
+  expand: Automations
 jumbotron:
   title: projectBoard.renderCard
   tagline: 

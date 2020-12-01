@@ -74,15 +74,15 @@ There is a unique **key path** to any key. In the example above, `start:return:a
 
 The purpose of an automation is to transform an input dictionary into an output dictionary. Depending on where an automation is used, there are different expected inputs and outputs.
 
-When an automation [executes](#execution), it creates a new **working memory** dictionary that starts as a copy of its input. Within this dictionary an automation can store, retrieve, and manipulate data using keys.
+When an automation executes, it creates a new **working memory** dictionary that starts as a copy of its input. Within this dictionary an automation can store, retrieve, and manipulate data using keys.
 
-### Commands
+### Dialects
 
-There are various **dialects** of KATA: automations, [maps](/docs/maps/), [toolbars](/docs/interactions/toolbars/), [events](/docs/automations/#event-handlers), etc. The dialects share the same overall [syntax](/docs/kata/), but each has a different **vocabulary** of keys.
+There are various **dialects** of KATA: automations, [maps](/docs/maps/), [toolbars](/docs/interactions/#toolbars), [events](/docs/automations/#event-handlers), etc. The dialects share the same overall [syntax](/docs/kata/), but each has a different **vocabulary** of keys.
 
 In automations, keys describe a _declarative_ set of **commands**. In other words, an automation serves as a natural language outline of logic and actions to be undertaken, rather than a set of detailed computer programming instructions for carrying out each step.
 
-For instance, the command [http.request:](/docs/automations/nodes/http.request/) fetches a web page by URL and save its status code, headers, and body to a given key in the dictionary.
+For instance, the command [http.request:](/docs/automations/commands/http.request/) fetches a web page by URL and save its status code, headers, and body to a given key in the dictionary.
 
 ### Names
 
@@ -292,6 +292,76 @@ start:
 </code>
 </pre>
 
+### Policies
+
+The permissions of automations are governed by **policies**. A policy is a collection of rules for each action which describe the conditions where the action would be permitted.
+
+Any action not explicitly permitted is denied by default.
+
+Here's an example policy that allows specific HTTP requests and the creation of tasks:
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+http.request:
+  rule:
+    allow@bool:
+      {{inputs.url starts with 'https://api.example/' 
+         and inputs.method == 'GET' ? 'yes'}}
+
+record.create:
+  rule:
+    allow@bool:
+      {{inputs.record_type|context_alias == 'task' ? 'yes'}}
+{% endraw %}
+</code>
+</pre>
+
+Policies can use placeholders based on the command:
+
+|Key||Example
+|-|-|-
+| `node.id` | The key path of the command | `start:record.create:` 
+| `node.type` | The name of the command | `record.create`
+| `inputs.*` | The dictionary of inputs | `inputs.record_type`
+| `output` | The output placeholder name | `result`
+
+#### Testing policies
+
+You can test policies from the automation simulator, or from **Setup >> Developers >> Bot Scripting Tester**.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+{% set inputs = {
+  url: 'https://api.example/some/path',
+  method: 'GET'
+} %}
+{{inputs.url starts with 'https://api.example/' 
+    and inputs.method == 'GET' ? 'yes'}}
+{% endraw %}
+</code>
+</pre>
+
+The test object above returns `yes`.
+
+While exceeding permissions:
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+{% set inputs = {
+  url: 'https://danger.example/',
+  method: 'POST'
+} %}
+{{inputs.url starts with 'https://api.example/' 
+    and inputs.method == 'GET' ? 'yes'}}
+{% endraw %}
+</code>
+</pre>
+
+The test object above returns blank, and is interpreted as `no`.
+
 ### Exit states
 
 After execution, an automation concludes in one of the following `__exit` states:
@@ -398,7 +468,7 @@ Automations are automatically **triggered** in response to events within Cerb.
 | [**projectBoard.renderCard**](/docs/automations/triggers/projectBoard.renderCard/) | √ | | Dynamic card layouts on project boards
 | [**reminder.remind**](/docs/automations/triggers/reminder.remind/) | √ | | Actions that run for [reminder](/docs/reminders/) alerts 
 | [**resource.get**](/docs/automations/triggers/resource.get/) | √ | | Dynamic [resource](/docs/resources/) content 
-| [**ui.interaction**](/docs/automations/triggers/ui.interaction/) | √ | √ | Worker [interactions](/docs/interactions/) on [toolbars](/docs/interactions/toolbars/) and widgets
+| [**ui.interaction**](/docs/automations/triggers/ui.interaction/) | √ | √ | Worker [interactions](/docs/interactions/) on [toolbars](/docs/interactions/#toolbars) and widgets
 | [**ui.sheet.data**](/docs/automations/triggers/ui.sheet.data/) | √ | | Data sources for [sheets](/docs/sheets/)
 | [**webhook.respond**](/docs/automations/triggers/webhook.respond/) | | | Handlers for [webhook listeners](/docs/webhooks/)
 
@@ -429,42 +499,44 @@ automation/everythingElse:
 ### State transitions
 
 |-|-
-| [**await:**](/docs/automations/nodes/await/) | Pauses the automation in the `await` state with output. Creates an [execution](#executions) for resuming.
-| [**error:**](/docs/automations/nodes/error/) | Unsuccessfully terminates the automation in the `error` state with output.
-| [**return:**](/docs/automations/nodes/return/) | Successfully terminates the automation in the `return` state with output.
+| [**await:**](/docs/automations/commands/await/) | Pauses the automation in the `await` state with output. Creates a [continuation](#continuations) for resuming.
+| [**error:**](/docs/automations/commands/error/) | Unsuccessfully terminates the automation in the `error` state with output.
+| [**return:**](/docs/automations/commands/return/) | Successfully terminates the automation in the `return` state with output.
+
+### Flow control
+
+|-|-
+| [**decision:**](/docs/automations/commands/decision/) | Conditionally select one of multiple potential outcomes.
+| [**repeat:**](/docs/automations/commands/repeat/) | Iterate an array and repeat a sequence of commands for each value.
 
 ### Actions
 
 |-|-
-| [**data.query:**](/docs/automations/nodes/data.query/) | Execute a [data query](/docs/data-queries/) and return the response.
-| [**email.parse:**](/docs/automations/nodes/email.parse/) | 
-| [**function:**](/docs/automations/nodes/function/) | 
-| [**http.request:**](/docs/automations/nodes/http.request/) | 
-| [**record.create:**](/docs/automations/nodes/record.create/) | 
-| [**record.delete:**](/docs/automations/nodes/record.delete/) | 
-| [**record.get:**](/docs/automations/nodes/record.get/) | 
-| [**record.update:**](/docs/automations/nodes/record.update/) | 
-| [**record.upsert:**](/docs/automations/nodes/record.upsert/) | 
-| [**set:**](/docs/automations/nodes/set/) | 
-| [**var.push:**](/docs/automations/nodes/var.push/) | 
-| [**var.set:**](/docs/automations/nodes/var.set/) | 
-| [**var.unset:**](/docs/automations/nodes/var.unset/) | 
-| [**storage.get:**](/docs/automations/nodes/storage.get/) | 
-| [**storage.set:**](/docs/automations/nodes/storage.set/) | 
-| [**storage.delete:**](/docs/automations/nodes/storage.delete/) | 
-
-# Policies
-
-The permissions of automations are governed by "policies". A policy is a collection of rules for each action which describe the conditions where the action would be permitted. Any action not explicitly permitted is denied by default.
-
-# Executions
-
-On automations that suspend in the `await` state, an "automation execution" record is created to preserve the current state. A unique randomized key is returned to resume the state.
+| [**data.query:**](/docs/automations/commands/data.query/) | Execute a [data query](/docs/data-queries/) and return the response.
+| [**email.parse:**](/docs/automations/commands/email.parse/) | Parse a MIME-encoded email message into a [ticket](/docs/records/types/ticket/).
+| [**function:**](/docs/automations/commands/function/) | Execute an [automation.function](/docs/automations/triggers/automation.function/) automation and return output.
+| [**http.request:**](/docs/automations/commands/http.request/) | Send data to an HTTP endpoint and return the response.
+| [**record.create:**](/docs/automations/commands/record.create/) | Create a [record](/docs/records/).
+| [**record.delete:**](/docs/automations/commands/record.delete/) | Delete a [record](/docs/records/).
+| [**record.get:**](/docs/automations/commands/record.get/) | Retrieve a [record](/docs/records/).
+| [**record.update:**](/docs/automations/commands/record.update/) | Update a [record](/docs/records/).
+| [**record.upsert:**](/docs/automations/commands/record.upsert/) | Create or update a [record](/docs/records/).
+| [**set:**](/docs/automations/commands/set/) | Set one or more placeholders.
+| [**var.push:**](/docs/automations/commands/var.push/) | Add an element to a list placeholder.
+| [**var.set:**](/docs/automations/commands/var.set/) | Set a placeholder using a complex key path.
+| [**var.unset:**](/docs/automations/commands/var.unset/) | Unset a placeholder.
+| [**storage.get:**](/docs/automations/commands/storage.get/) | Retrieve arbitrary data from long-term storage.
+| [**storage.set:**](/docs/automations/commands/storage.set/) | Save arbitrary data to long-term storage.
+| [**storage.delete:**](/docs/automations/commands/storage.delete/) | Delete data from long-term storage.
 
 # Editor
 
-Implemented an editor for automations. This includes syntax highlighting and autocompletion for the KATA syntax, a step-based debugger with full access to the current state, a simulator, and a reference for each trigger event. A contextual toolbar provides interactions for adding inputs, controls, actions, and return values.
+The automation editor includes syntax highlighting, autocompletion for the [KATA](/docs/kata/) syntax, a step-based debugger with full access to the current state, a simulator, and a reference for each trigger event.
+
+A contextual toolbar provides interactions for adding [inputs](#inputs), [commands](#commands), and [exit states](#exit-states).
 
 ### Visualizations
 
-The automation editor now has a 'Visualization' tab with a flowchart for the current script. Clicking on a node highlights the relevant line of code in the editor. Exit states are colorized.
+The automation editor has a 'Visualization' tab with a flowchart for the current script.
+
+Clicking on a node highlights the relevant line of code in the editor.

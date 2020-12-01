@@ -5,6 +5,7 @@ title: "map.clicked"
 permalink: /docs/automations/triggers/map.clicked/
 toc:
   title: map.clicked
+  expand: Automations
 jumbotron:
   title: map.clicked
   tagline: 

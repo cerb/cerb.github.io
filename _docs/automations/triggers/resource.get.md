@@ -5,6 +5,7 @@ title: "resource.get"
 permalink: /docs/automations/triggers/resource.get/
 toc:
   title: resource.get
+  expand: Automations
 jumbotron:
   title: resource.get
   tagline: 

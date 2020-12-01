@@ -5,6 +5,7 @@ title: "reminder.remind"
 permalink: /docs/automations/triggers/reminder.remind/
 toc:
   title: reminder.remind
+  expand: Automations
 jumbotron:
   title: reminder.remind
   tagline: 

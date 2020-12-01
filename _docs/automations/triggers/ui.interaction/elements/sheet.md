@@ -5,6 +5,7 @@ title: "Interaction Element: Sheet"
 permalink: /docs/automations/triggers/ui.interaction/elements/sheet/
 toc:
   title: Sheet
+  expand: Automations
 jumbotron:
   title: Sheet
   tagline: 

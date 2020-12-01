@@ -5,6 +5,7 @@ title: "Interaction Caller: cerb.toolbar.projectBoardColumn"
 permalink: /docs/automations/triggers/ui.interaction/callers/cerb.toolbar.projectBoardColumn/
 toc:
   title: cerb.toolbar.projectBoardColumn
+  expand: Automations
 jumbotron:
   title: cerb.toolbar.projectBoardColumn
   tagline: 

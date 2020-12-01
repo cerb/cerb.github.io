@@ -5,6 +5,7 @@ title: "Interaction Caller: cerb.toolbar.mail.reply"
 permalink: /docs/automations/triggers/ui.interaction/callers/cerb.toolbar.mail.reply/
 toc:
   title: cerb.toolbar.mail.reply
+  expand: Automations
 jumbotron:
   title: cerb.toolbar.mail.reply
   tagline: 

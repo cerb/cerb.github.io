@@ -5,6 +5,7 @@ title: "Interaction Element: Text"
 permalink: /docs/automations/triggers/ui.interaction/elements/text/
 toc:
   title: Text
+  expand: Automations
 jumbotron:
   title: Text
   tagline: 

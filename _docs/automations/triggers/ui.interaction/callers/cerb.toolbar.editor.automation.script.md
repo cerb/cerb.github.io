@@ -5,6 +5,7 @@ title: "Interaction Caller: cerb.toolbar.editor.automation.script"
 permalink: /docs/automations/triggers/ui.interaction/callers/cerb.toolbar.editor.automation.script/
 toc:
   title: cerb.toolbar.editor.automation.script
+  expand: Automations
 jumbotron:
   title: cerb.toolbar.editor.automation.script
   tagline: 

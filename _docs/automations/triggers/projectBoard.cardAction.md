@@ -5,6 +5,7 @@ title: "projectBoard.cardAction"
 permalink: /docs/automations/triggers/projectBoard.cardAction/
 toc:
   title: projectBoard.cardAction
+  expand: Automations
 jumbotron:
   title: projectBoard.cardAction
   tagline: 

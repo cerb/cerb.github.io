@@ -5,6 +5,7 @@ title: "ui.interaction"
 permalink: /docs/automations/triggers/ui.interaction/
 toc:
   title: ui.interaction
+  expand: Automations
 jumbotron:
   title: ui.interaction
   tagline: 

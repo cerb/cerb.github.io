@@ -5,6 +5,7 @@ title: "Interaction Element: Submit"
 permalink: /docs/automations/triggers/ui.interaction/elements/submit/
 toc:
   title: Submit
+  expand: Automations
 jumbotron:
   title: Submit
   tagline: 

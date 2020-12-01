@@ -5,6 +5,7 @@ title: "Interaction Caller: cerb.toolbar.profiles.ticket.message"
 permalink: /docs/automations/triggers/ui.interaction/callers/cerb.toolbar.profiles.ticket.message/
 toc:
   title: cerb.toolbar.profiles.ticket.message
+  expand: Automations
 jumbotron:
   title: cerb.toolbar.profiles.ticket.message
   tagline: 

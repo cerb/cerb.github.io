@@ -5,6 +5,7 @@ title: "automation.function"
 permalink: /docs/automations/triggers/automation.function/
 toc:
   title: automation.function
+  expand: Automations
 jumbotron:
   title: automation.function
   tagline: 
