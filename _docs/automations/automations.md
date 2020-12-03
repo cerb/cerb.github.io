@@ -294,28 +294,75 @@ start:
 
 ### Policies
 
-The permissions of automations are governed by **policies**. A policy is a collection of rules for each action which describe the conditions where the action would be permitted.
+The permissions of automations are governed by **policies**. A policy is a collection of **rules** which describe the conditions where each action would be permitted or denied.
 
-Any action not explicitly permitted is denied by default.
-
-Here's an example policy that allows specific HTTP requests and the creation of tasks:
+This policy allows all commands:
 
 <pre>
 <code class="language-cerb">
 {% raw %}
-http.request:
-  rule:
-    allow@bool:
-      {{inputs.url starts with 'https://api.example/' 
-         and inputs.method == 'GET' ? 'yes'}}
-
-record.create:
-  rule:
-    allow@bool:
-      {{inputs.record_type|context_alias == 'task' ? 'yes'}}
+commands:
+  all:
+    allow: yes
 {% endraw %}
 </code>
 </pre>
+
+#### Rules
+
+The above policy is simple but not secure. Instead, we recommend adhering to the _"principle of least privilege"_[^polp]. This means only allowing the minimal set of commands required to accomplish an automation's purpose.
+
+The following policy only allows:
+
+* HTTP GET requests only to the `https://api.example/` endpoint.
+* The creation of new task records.
+* The reading of all records.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+commands:
+  http.request:
+    allow/ourApi@bool:
+      {{inputs.url starts with 'https://api.example/' 
+         and inputs.method == 'GET' ? 'yes'}}
+
+  record.create:
+    allow/newTasks@bool:
+      {{inputs.record_type|context_alias == 'task' ? 'yes'}}
+  
+  record.get:
+    allow: yes
+   
+  all:
+    deny: yes
+{% endraw %}
+</code>
+</pre>
+
+Each command can have multiple `allow:` and `deny:` rules, but they must have a unique `/name` suffix.
+
+A rule with a `no` value is ignored (i.e. a failed "allow" does not mean "deny"). Rules are tested in sequence until an explicit `allow: yes` or `deny: yes` outcome is reached.
+
+If a command matches no rules, the default outcome is `deny: yes`.
+
+The `all:` key matches all commands. This can be used as a final "catch-all" to allow or deny any command that matches no other rules.
+
+It is also possible to be permissive by default with exceptions. This following policy permits all HTTP requests _except_ connections to unencrypted `http://` endpoints: 
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+commands:
+  http.request:
+    deny/http@bool:
+      {{inputs.url starts with 'http://' ? 'yes'}} 
+    allow: yes
+{% endraw %}
+</code>
+</pre>
+
+#### Placeholders
 
 Policies can use placeholders based on the command:
 
@@ -326,9 +373,11 @@ Policies can use placeholders based on the command:
 | `inputs.*` | The dictionary of inputs | `inputs.record_type`
 | `output` | The output placeholder name | `result`
 
-#### Testing policies
+#### Testing policy rules
 
-You can test policies from the automation simulator, or from **Setup >> Developers >> Bot Scripting Tester**.
+You can test policies from the automation simulator.
+
+You can also test rule logic from **Setup >> Developers >> Bot Scripting Tester**:
 
 <pre>
 <code class="language-cerb">
@@ -345,7 +394,7 @@ You can test policies from the automation simulator, or from **Setup >> Develope
 
 The test object above returns `yes`.
 
-While exceeding permissions:
+We can change the inputs to exceed the granted permissions:
 
 <pre>
 <code class="language-cerb">
@@ -360,7 +409,7 @@ While exceeding permissions:
 </code>
 </pre>
 
-The test object above returns blank, and is interpreted as `no`.
+The above test object now returns blank, which is interpreted as `no` and ignored. The policy returns the default `deny: yes`.
 
 ### Exit states
 
@@ -540,3 +589,7 @@ A contextual toolbar provides interactions for adding [inputs](#inputs), [comman
 The automation editor has a 'Visualization' tab with a flowchart for the current script.
 
 Clicking on a node highlights the relevant line of code in the editor.
+
+# References
+
+[^polp]: Wikipedia: Principle of Least Privilege - <https://en.wikipedia.org/wiki/Principle_of_least_privilege>
