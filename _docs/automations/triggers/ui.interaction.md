@@ -39,6 +39,10 @@ This separation of duties makes interactions simpler to build and reuse. An inte
 
 For instance, an interaction may be started from a toolbar in the email reply editor to fetch information based on the recipients (e.g. order history). The interaction generates and returns a text snippet, which the caller pastes into the editor at the cursor. The interaction only needs to generate some text, without any consideration for how it will be pasted into the editor.
 
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/automations/triggers/ui.interaction/interactions-participants.gif" class="screenshot">
+</div>
+
 * TOC
 {:toc}
 
