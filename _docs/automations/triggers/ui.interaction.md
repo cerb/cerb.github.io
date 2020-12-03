@@ -25,6 +25,10 @@ jumbotron:
 
 **ui.interaction** [automations](/docs/automations/) are worker-based [interactions](/docs/interactions/) that use [continuations](/docs/automations/#continuations) to pause and resume a multi-step workflow.
 
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/automations/triggers/ui.interaction/interaction-map.gif" class="screenshot">
+</div>
+
 These interactions are started by a [caller](#callers) in response to a worker action within Cerb. The caller is usually a customizable [toolbar](#toolbars), but it could be any interface component or feature (e.g. buttons, links, images).
 
 At its conclusion, an interaction returns a [dictionary](/docs/automations/#dictionaries) and [exit state](/docs/automations/#exit-states) to the caller, which is then responsible for acting on the results.

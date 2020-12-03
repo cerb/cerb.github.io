@@ -28,6 +28,10 @@ jumbotron:
 
 **Interactions** are interactive [automations](/docs/automations/) that use [continuations](/docs/automations/#continuations) to pause and resume a multi-step workflow.
 
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/automations/triggers/ui.interaction/interaction-map.gif" class="screenshot">
+</div>
+
 For instance, a troubleshooter interaction can ask a series of increasingly specific questions to help narrow down the potential cause of a problem. A verification interaction can send a code to a new email address and ask the user to verify it.
 
 The following [triggers](/docs/automations/#triggers) are used to build interactions:
