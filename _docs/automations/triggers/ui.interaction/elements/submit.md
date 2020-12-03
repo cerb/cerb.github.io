@@ -1,5 +1,5 @@
 ---
-title: "Interaction Element: Submit"
+title: "Submit - Interaction Form Element"
 #excerpt: 
 #social_image_url: /assets/images/search/kata.png
 permalink: /docs/automations/triggers/ui.interaction/elements/submit/
@@ -26,8 +26,21 @@ jumbotron:
 
 {% include docs/note_preview.html %}
 
-# Submit
+In [interaction](/docs/automations/triggers/ui.interaction/) web forms, a **submit** element displays the 'Continue' and 'Reset' buttons.
 
-Displays the 'Continue' and 'Reset' buttons.
+This is automatically added when an interaction exits in the [await state](/docs/automations/#exit-states). You do not need to do it yourself.
 
-This is automatically added when an interaction exits in the `await` state.
+<pre>
+<code class="language-cerb">
+{% raw %}
+start:
+  await:
+    form:
+      elements:
+{% endraw %}
+</code>
+</pre>
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/automations/triggers/ui.interaction/elements/submit.png" class="screenshot">
+</div>
