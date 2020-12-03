@@ -173,7 +173,7 @@ interaction/locationByIp:
 |√|`uri:`| The URI of the `ui.interaction` [automation](/docs/automations/) to start when clicked.
 ||`inputs:`| The optional [inputs](/docs/automations/#inputs) dictionary for the interaction.
 |√|`label:`| The label to describe the interaction in buttons and menu links. This may be omitted if an icon is provided.
-||`icon:`| The optional icon to display in buttons and menu links. This can be in addition to, or instead of, the label.
+||`icon:`| The optional [icon](/docs/developers/icons/) to display in buttons and menu links. This can be in addition to, or instead of, the label.
 ||`tooltip:`| If a button only has an icon and not a label, the tooltip can show a label when hovering over it.
 ||`badge:`| The optional counter to display on buttons.
 ||`hidden@bool:`| Conditionally determine whether to display this toolbar item or not. For instance, check worker permissions or record fields.
@@ -208,7 +208,7 @@ menu/moreMenu:
 |Req'd|Key|
 |:-:|-
 |√|`label:`| The label to describe the menu in buttons and menu links. This may be omitted if an icon is provided.
-||`icon:`| The optional icon to display in buttons and menu links. This can be in addition to, or instead of, the label.
+||`icon:`| The optional [icon](/docs/developers/icons/) to display in buttons and menu links. This can be in addition to, or instead of, the label.
 |√|`items:`| A list of [menu](#menu) and [interaction](#interaction) items.
 ||`default:`| Display a "split" menu button. Clicking on the left-side immediately runs this default [interaction](#interaction) by name. Clicking on the right-side opens a menu of alternative options.
 

@@ -170,6 +170,10 @@
   - api/endpoints/records
   - api/endpoints
 
+- title: Developers
+  docs:
+    - developers/icons
+
 - title: Meta
   docs:
   - history
