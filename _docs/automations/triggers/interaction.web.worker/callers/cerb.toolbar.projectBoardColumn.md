@@ -2,7 +2,7 @@
 title: "Interaction Caller: cerb.toolbar.projectBoardColumn"
 #excerpt: 
 #social_image_url: /assets/images/search/kata.png
-permalink: /docs/automations/triggers/ui.interaction/callers/cerb.toolbar.projectBoardColumn/
+permalink: /docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.projectBoardColumn/
 toc:
   title: cerb.toolbar.projectBoardColumn
   expand: Automations
@@ -17,18 +17,18 @@ jumbotron:
     label: Automations &raquo;
     url: /docs/automations/
   -
-    label: ui.interaction &raquo;
-    url: /docs/automations/triggers/ui.interaction/
+    label: interaction.web.worker &raquo;
+    url: /docs/automations/triggers/interaction.web.worker/
   -
     label: Callers &raquo;
-    url: /docs/automations/triggers/ui.interaction/#callers
+    url: /docs/automations/triggers/interaction.web.worker/#callers
 ---
 
 {% include docs/note_preview.html %}
 
 # Parameters
 
-The following `caller_params` are passed to the [interaction](/docs/automations/triggers/ui.interaction/):
+The following `caller_params` are passed to the [interaction](/docs/automations/triggers/interaction.web.worker/):
 
 | Key | Type | 
 |-|-|-

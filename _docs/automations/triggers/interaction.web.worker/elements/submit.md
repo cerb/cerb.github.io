@@ -2,7 +2,7 @@
 title: "Submit - Interaction Form Element"
 #excerpt: 
 #social_image_url: /assets/images/search/kata.png
-permalink: /docs/automations/triggers/ui.interaction/elements/submit/
+permalink: /docs/automations/triggers/interaction.web.worker/elements/submit/
 toc:
   title: Submit
   expand: Automations
@@ -17,16 +17,16 @@ jumbotron:
     label: Automations &raquo;
     url: /docs/automations/
   -
-    label: ui.interaction &raquo;
-    url: /docs/automations/triggers/ui.interaction/
+    label: interaction.web.worker &raquo;
+    url: /docs/automations/triggers/interaction.web.worker/
   -
     label: Elements &raquo;
-    url: /docs/automations/triggers/ui.interaction/#elements
+    url: /docs/automations/triggers/interaction.web.worker/#elements
 ---
 
 {% include docs/note_preview.html %}
 
-In [interaction](/docs/automations/triggers/ui.interaction/) web forms, a **submit** element displays the 'Continue' and 'Reset' buttons.
+In [interaction](/docs/automations/triggers/interaction.web.worker/) web forms, a **submit** element displays the 'Continue' and 'Reset' buttons.
 
 This is automatically added when an interaction exits in the [await state](/docs/automations/#exit-states). You do not need to do it yourself.
 
@@ -42,5 +42,5 @@ start:
 </pre>
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/automations/triggers/ui.interaction/elements/submit.png" class="screenshot">
+<img src="/assets/images/docs/automations/triggers/interaction.web.worker/elements/submit.png" class="screenshot">
 </div>

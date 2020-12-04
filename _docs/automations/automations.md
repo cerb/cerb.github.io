@@ -428,7 +428,7 @@ When an automation exits in the `await:` state, a snapshot of its current dictio
 
 The continuation identifier is used to resume the automation from the same point at a future time with additional input.
 
-For instance, here's a basic [interaction](/docs/automations/triggers/ui.interaction/) automation that pauses for user input:
+For instance, here's a basic [interaction](/docs/automations/triggers/interaction.web.worker/) automation that pauses for user input:
 
 <pre>
 <code class="language-cerb">
@@ -512,12 +512,12 @@ Automations are automatically **triggered** in response to events within Cerb.
 | Trigger | [**Inputs**](#inputs) | [**Await**](#continuations) | 
 |-|:-:|:-:|-
 | [**automation.function**](/docs/automations/triggers/automation.function/) | √ | | A reusable function with shared functionality called by other automations
+| [**interaction.web.worker**](/docs/automations/triggers/interaction.web.worker/) | √ | √ | Worker [interactions](/docs/interactions/) on [toolbars](/docs/interactions/#toolbars) and widgets
 | [**map.clicked**](/docs/automations/triggers/map.clicked/) | √ | | Handlers for clicks on [map](/docs/maps/) regions and points
 | [**projectBoard.cardAction**](/docs/automations/triggers/projectBoard.cardAction/) | √ | | Actions that take place for new cards in a project board column
 | [**projectBoard.renderCard**](/docs/automations/triggers/projectBoard.renderCard/) | √ | | Dynamic card layouts on project boards
 | [**reminder.remind**](/docs/automations/triggers/reminder.remind/) | √ | | Actions that run for [reminder](/docs/reminders/) alerts 
 | [**resource.get**](/docs/automations/triggers/resource.get/) | √ | | Dynamic [resource](/docs/resources/) content 
-| [**ui.interaction**](/docs/automations/triggers/ui.interaction/) | √ | √ | Worker [interactions](/docs/interactions/) on [toolbars](/docs/interactions/#toolbars) and widgets
 | [**ui.sheet.data**](/docs/automations/triggers/ui.sheet.data/) | √ | | Data sources for [sheets](/docs/sheets/)
 | [**webhook.respond**](/docs/automations/triggers/webhook.respond/) | | | Handlers for [webhook listeners](/docs/webhooks/)
 
@@ -525,7 +525,7 @@ Automations are automatically **triggered** in response to events within Cerb.
 
 In functionality that triggers automations (e.g. widgets), event handlers are defined in a [KATA](/docs/kata/) dialect.
 
-For events that expect a single handler (e.g. `ui.interaction`), the first matching (non-disabled) automation is executed and its end state is returned. This can be used to conditionally respond based on the event/caller.
+For events that expect a single handler (e.g. `interaction.web.worker`), the first matching (non-disabled) automation is executed and its end state is returned. This can be used to conditionally respond based on the event/caller.
 
 For events that run all handlers (e.g. `projectBoard.cardAction`), all non-disabled automations are executed in order, and their end states are returned.
 

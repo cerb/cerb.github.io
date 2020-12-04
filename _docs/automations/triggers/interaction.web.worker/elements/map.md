@@ -2,7 +2,7 @@
 title: "Map - Interaction Form Element"
 #excerpt: 
 #social_image_url: /assets/images/search/kata.png
-permalink: /docs/automations/triggers/ui.interaction/elements/map/
+permalink: /docs/automations/triggers/interaction.web.worker/elements/map/
 toc:
   title: Map
   expand: Automations
@@ -17,16 +17,16 @@ jumbotron:
     label: Automations &raquo;
     url: /docs/automations/
   -
-    label: ui.interaction &raquo;
-    url: /docs/automations/triggers/ui.interaction/
+    label: interaction.web.worker &raquo;
+    url: /docs/automations/triggers/interaction.web.worker/
   -
     label: Elements &raquo;
-    url: /docs/automations/triggers/ui.interaction/#elements
+    url: /docs/automations/triggers/interaction.web.worker/#elements
 ---
 
 {% include docs/note_preview.html %}
 
-In [interaction](/docs/automations/triggers/ui.interaction/) web forms, a **map** element displays an interactive [map](/docs/maps/) using map [KATA](/docs/kata/) and returns the selection region(s) or point(s).
+In [interaction](/docs/automations/triggers/interaction.web.worker/) web forms, a **map** element displays an interactive [map](/docs/maps/) using map [KATA](/docs/kata/) and returns the selection region(s) or point(s).
 
 For instance, an interaction that displays the geographical location of an IP address can drop a pin on a map prompt.
 
@@ -59,7 +59,7 @@ start:
 </pre>
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/automations/triggers/ui.interaction/elements/map.png" class="screenshot">
+<img src="/assets/images/docs/automations/triggers/interaction.web.worker/elements/map.png" class="screenshot">
 </div>
 
 # Syntax

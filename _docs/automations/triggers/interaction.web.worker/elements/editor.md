@@ -2,7 +2,7 @@
 title: "Editor - Interaction Form Element"
 #excerpt: 
 #social_image_url: /assets/images/search/kata.png
-permalink: /docs/automations/triggers/ui.interaction/elements/editor/
+permalink: /docs/automations/triggers/interaction.web.worker/elements/editor/
 toc:
   title: Editor
   expand: Automations
@@ -17,16 +17,16 @@ jumbotron:
     label: Automations &raquo;
     url: /docs/automations/
   -
-    label: ui.interaction &raquo;
-    url: /docs/automations/triggers/ui.interaction/
+    label: interaction.web.worker &raquo;
+    url: /docs/automations/triggers/interaction.web.worker/
   -
     label: Elements &raquo;
-    url: /docs/automations/triggers/ui.interaction/#elements
+    url: /docs/automations/triggers/interaction.web.worker/#elements
 ---
 
 {% include docs/note_preview.html %}
 
-In [interaction](/docs/automations/triggers/ui.interaction/) web forms, an **editor** element displays a code editor with syntax highlighting, autocompletion, and a custom toolbar.
+In [interaction](/docs/automations/triggers/interaction.web.worker/) web forms, an **editor** element displays a code editor with syntax highlighting, autocompletion, and a custom toolbar.
 
 <pre>
 <code class="language-cerb">
@@ -52,7 +52,7 @@ start:
 </pre>
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/automations/triggers/ui.interaction/elements/editor.png" class="screenshot">
+<img src="/assets/images/docs/automations/triggers/interaction.web.worker/elements/editor.png" class="screenshot">
 </div>
 
 # Syntax

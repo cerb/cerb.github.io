@@ -53,5 +53,5 @@ These [triggers](/docs/automations/#triggers) support the `await` state:
 
 | Trigger 
 |-
-| [ui.interaction](/docs/automations/triggers/ui.interaction/#await) | The dictionary describes a form for gathering user input.
+| [interaction.web.worker](/docs/automations/triggers/interaction.web.worker/#await) | The dictionary describes a form for gathering user input.
 

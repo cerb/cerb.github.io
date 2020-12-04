@@ -2,7 +2,7 @@
 title: "Textarea - Interaction Form Element"
 #excerpt: 
 #social_image_url: /assets/images/search/kata.png
-permalink: /docs/automations/triggers/ui.interaction/elements/textarea/
+permalink: /docs/automations/triggers/interaction.web.worker/elements/textarea/
 toc:
   title: Textarea
   expand: Automations
@@ -17,16 +17,16 @@ jumbotron:
     label: Automations &raquo;
     url: /docs/automations/
   -
-    label: ui.interaction &raquo;
-    url: /docs/automations/triggers/ui.interaction/
+    label: interaction.web.worker &raquo;
+    url: /docs/automations/triggers/interaction.web.worker/
   -
     label: Elements &raquo;
-    url: /docs/automations/triggers/ui.interaction/#elements
+    url: /docs/automations/triggers/interaction.web.worker/#elements
 ---
 
 {% include docs/note_preview.html %}
 
-In [interaction](/docs/automations/triggers/ui.interaction/) web forms, a **textarea** element displays a multi-line text input without the extra functionality of an [editor](/docs/automations/triggers/ui.interaction/elements/editor/).
+In [interaction](/docs/automations/triggers/interaction.web.worker/) web forms, a **textarea** element displays a multi-line text input without the extra functionality of an [editor](/docs/automations/triggers/interaction.web.worker/elements/editor/).
 
 <pre>
 <code class="language-cerb">
@@ -42,7 +42,7 @@ start:
 </pre>
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/automations/triggers/ui.interaction/elements/textarea.png" class="screenshot">
+<img src="/assets/images/docs/automations/triggers/interaction.web.worker/elements/textarea.png" class="screenshot">
 </div>
 
 # Syntax

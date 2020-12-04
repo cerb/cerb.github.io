@@ -1,13 +1,13 @@
 ---
-title: "Interaction Caller: cerb.toolbar.eventHandlers.editor"
+title: "Interaction Caller: cerb.toolbar.editor.automation.script"
 #excerpt: 
 #social_image_url: /assets/images/search/kata.png
-permalink: /docs/automations/triggers/ui.interaction/callers/cerb.toolbar.eventHandlers.editor/
+permalink: /docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.editor.automation.script/
 toc:
-  title: cerb.toolbar.eventHandlers.editor
+  title: cerb.toolbar.editor.automation.script
   expand: Automations
 jumbotron:
-  title: cerb.toolbar.eventHandlers.editor
+  title: cerb.toolbar.editor.automation.script
   tagline: 
   breadcrumbs:
   -
@@ -17,25 +17,27 @@ jumbotron:
     label: Automations &raquo;
     url: /docs/automations/
   -
-    label: ui.interaction &raquo;
-    url: /docs/automations/triggers/ui.interaction/
+    label: interaction.web.worker &raquo;
+    url: /docs/automations/triggers/interaction.web.worker/
   -
     label: Callers &raquo;
-    url: /docs/automations/triggers/ui.interaction/#callers
+    url: /docs/automations/triggers/interaction.web.worker/#callers
 ---
 
 {% include docs/note_preview.html %}
 
-[event handler](/docs/automations/#event-handlers)
-
 # Parameters
 
-The following `caller_params` are passed to the [interaction](/docs/automations/triggers/ui.interaction/):
+The following `caller_params` are passed to the [interaction](/docs/automations/triggers/interaction.web.worker/):
 
 | Key | Type | 
 |-|-|-
 | **`trigger`** | string | The automation [trigger](/docs/automations/#triggers) of the [event handlers](/docs/automations/#event-handlers)
 | **`selected_text`** | string | The currently selected editor text
+| **`token_path`** | string | 
+| **`cursor_row`** | int | 
+| **`cursor_column`** | int | 
+| **`value`** | string | 
 
 # return:
 

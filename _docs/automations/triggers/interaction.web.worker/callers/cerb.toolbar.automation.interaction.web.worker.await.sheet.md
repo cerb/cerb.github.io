@@ -1,13 +1,13 @@
 ---
-title: "Interaction Caller: cerb.toolbar.automation.uiInteraction.await.sheet"
+title: "Interaction Caller: cerb.toolbar.automation.interaction.web.worker.await.sheet"
 #excerpt: 
 #social_image_url: /assets/images/search/kata.png
-permalink: /docs/automations/triggers/ui.interaction/callers/cerb.toolbar.automation.uiInteraction.await.sheet/
+permalink: /docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.automation.interaction.web.worker.await.sheet/
 toc:
-  title: cerb.toolbar.automation.uiInteraction.await.sheet
+  title: cerb.toolbar.automation.interaction.web.worker.await.sheet
   expand: Automations
 jumbotron:
-  title: cerb.toolbar.automation.uiInteraction.await.sheet
+  title: cerb.toolbar.automation.interaction.web.worker.await.sheet
   tagline: 
   breadcrumbs:
   -
@@ -17,11 +17,11 @@ jumbotron:
     label: Automations &raquo;
     url: /docs/automations/
   -
-    label: ui.interaction &raquo;
-    url: /docs/automations/triggers/ui.interaction/
+    label: interaction.web.worker &raquo;
+    url: /docs/automations/triggers/interaction.web.worker/
   -
     label: Callers &raquo;
-    url: /docs/automations/triggers/ui.interaction/#callers
+    url: /docs/automations/triggers/interaction.web.worker/#callers
 ---
 
 {% include docs/note_preview.html %}

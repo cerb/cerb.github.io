@@ -2,7 +2,7 @@
 title: "Say - Interaction Form Element"
 #excerpt: 
 #social_image_url: /assets/images/search/kata.png
-permalink: /docs/automations/triggers/ui.interaction/elements/say/
+permalink: /docs/automations/triggers/interaction.web.worker/elements/say/
 toc:
   title: Say
   expand: Automations
@@ -17,16 +17,16 @@ jumbotron:
     label: Automations &raquo;
     url: /docs/automations/
   -
-    label: ui.interaction &raquo;
-    url: /docs/automations/triggers/ui.interaction/
+    label: interaction.web.worker &raquo;
+    url: /docs/automations/triggers/interaction.web.worker/
   -
     label: Elements &raquo;
-    url: /docs/automations/triggers/ui.interaction/#elements
+    url: /docs/automations/triggers/interaction.web.worker/#elements
 ---
 
 {% include docs/note_preview.html %}
 
-In [interaction](/docs/automations/triggers/ui.interaction/) web forms, a **say** element displays a block of text or Markdown.
+In [interaction](/docs/automations/triggers/interaction.web.worker/) web forms, a **say** element displays a block of text or Markdown.
 
 <pre>
 <code class="language-cerb">
@@ -44,7 +44,7 @@ start:
 </pre>
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/automations/triggers/ui.interaction/elements/say.png" class="screenshot">
+<img src="/assets/images/docs/automations/triggers/interaction.web.worker/elements/say.png" class="screenshot">
 </div>
 
 # Syntax

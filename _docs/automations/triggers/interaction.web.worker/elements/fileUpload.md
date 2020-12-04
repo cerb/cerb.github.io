@@ -2,7 +2,7 @@
 title: "File Upload - Interaction Form Element"
 #excerpt: 
 #social_image_url: /assets/images/search/kata.png
-permalink: /docs/automations/triggers/ui.interaction/elements/fileUpload/
+permalink: /docs/automations/triggers/interaction.web.worker/elements/fileUpload/
 toc:
   title: File Upload
   expand: Automations
@@ -17,16 +17,16 @@ jumbotron:
     label: Automations &raquo;
     url: /docs/automations/
   -
-    label: ui.interaction &raquo;
-    url: /docs/automations/triggers/ui.interaction/
+    label: interaction.web.worker &raquo;
+    url: /docs/automations/triggers/interaction.web.worker/
   -
     label: Elements &raquo;
-    url: /docs/automations/triggers/ui.interaction/#elements
+    url: /docs/automations/triggers/interaction.web.worker/#elements
 ---
 
 {% include docs/note_preview.html %}
 
-In [interaction](/docs/automations/triggers/ui.interaction/) web forms, a **fileUpload** element displays a file upload prompt. This creates an [attachment](/docs/records/types/attachment/) record and returns its record ID.
+In [interaction](/docs/automations/triggers/interaction.web.worker/) web forms, a **fileUpload** element displays a file upload prompt. This creates an [attachment](/docs/records/types/attachment/) record and returns its record ID.
 
 <pre>
 <code class="language-cerb">
@@ -42,7 +42,7 @@ start:
 </pre>
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/automations/triggers/ui.interaction/elements/fileUpload.png" class="screenshot">
+<img src="/assets/images/docs/automations/triggers/interaction.web.worker/elements/fileUpload.png" class="screenshot">
 </div>
 
 # Syntax
