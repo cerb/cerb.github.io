@@ -13,7 +13,7 @@ github_username:  cerb
 timezone: America/Los_Angeles
 encoding: utf-8
 
-exclude: [.idea, node_modules, README.md]
+exclude: [.idea, node_modules, README.md, Gemfile, Gemfile.lock]
 keep_files: [assets]
 
 # Blog
