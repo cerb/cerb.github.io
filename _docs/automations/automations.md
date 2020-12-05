@@ -292,6 +292,113 @@ start:
 </code>
 </pre>
 
+### Exit states
+
+After execution, an automation concludes in one of the following `__exit` states:
+
+| State | 
+|-|-
+| `return` | The automation completed successfully and provided output in the `__return:` key
+| `await` | The automation paused awaiting additional input described by `__return:`
+| `error` | The automation failed with an error in `__return:error:`
+| `exit` | The automation exited without success or failure (default)
+
+### Error handling
+
+Each [command](#commands) in the automation can result in success or failure.
+
+Commands may provide `on_success:` and `on_error:` events to run any number of commands in response to success or failure.
+
+The `on_error:` event can recover from an error to continue execution.
+
+If the `on_error:` event is omitted, a command error immediately exits the automation in the `error` [state](#exit-states).
+
+This [http.request](/docs/automations/commands/http.request/) command requests an invalid URL:
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+start:
+  http.request:
+    output: http_response
+    inputs:
+      method: GET
+      url: https://invalid.url.example/
+  return:
+{% endraw %}
+</code>
+</pre>
+
+There is no `on_error:` event, so the automation immediately exits in the `error` state. The `return:` command is never reached.
+
+We can add events to handle errors:
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+start:
+  http.request:
+    output: http_response
+    inputs:
+      method: GET
+      url: https://invalid.url.example/
+    on_success:
+      # Commands to perform on success
+      return:
+    on_error:
+      # Handle the error or provide a default
+      return:
+{% endraw %}
+</code>
+</pre>
+
+The automation now always exits in the `return` state.
+
+### Simulation
+
+During testing and development, it may not be desirable to execute certain actions. An automation's execution can be **simulated** instead.
+
+Each [command](#commands) can provide an `on_simulate:` event that is used during simulation instead of executing. This can run any number of alternative commands. 
+
+These two special commands are available during simulation:
+
+|-|-
+| **`simulate.success:`** | Simulate command output and execute the `on_success:` event.
+| **`simulate.error:`** | Simulate command output and execute the `on_error:` event.
+
+The following example simulates an `http.request:` command and provides mock output:
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+start:
+  http.request:
+    output: http_response
+    inputs:
+      method: GET
+      url: https://invalid.url.example/
+    on_simulate:
+      simulate.success:
+        status_code: 200
+        content_type: application/json
+        body: { "output": "Good job!" }
+    on_success:
+      return:
+        body@key: http_response:body
+{% endraw %}
+</code>
+</pre>
+
+Even though the URL is invalid, the simulated output is:
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+body: { "output": "Good job!" }
+{% endraw %}
+</code>
+</pre>
+
 ### Policies
 
 The permissions of automations are governed by **policies**. A policy is a collection of **rules** which describe the conditions where each action would be permitted or denied.
@@ -497,12 +604,9 @@ start:
 * They are the successor to Cerb's "bot behaviors" functionality after incorporating more than 10 years
 * successor to bot behaviors
 * interactive step debugger
-* unique name/identifier
 * not grouped into bots
 * don't need to exist in database as records before use (ad-hoc/reusable)
 * abstract syntax tree (AST) / cached performance
-* inputs w/ validation
-* result is a dictionary with a state
 {% endcomment %}
 
 # Triggers
@@ -577,6 +681,12 @@ automation/everythingElse:
 | [**storage.get:**](/docs/automations/commands/storage.get/) | Retrieve arbitrary data from long-term storage.
 | [**storage.set:**](/docs/automations/commands/storage.set/) | Save arbitrary data to long-term storage.
 | [**storage.delete:**](/docs/automations/commands/storage.delete/) | Delete data from long-term storage.
+
+### Simulation
+
+|-|-
+| `simulate.success:` | Simulate command output and execute the `on_success:` event.
+| `simulate.error:` | Simulate command output and execute the `on_error:` event.
 
 # Editor
 
