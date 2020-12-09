@@ -26,6 +26,10 @@ For instance, [map widgets](/docs/maps/) require resources that can be several m
 
 Similarly, resources can provide logo images and stylesheets for [portals](/docs/portals/), and datasets for charts and [sheets](/docs/sheets/) on [dashboards](/docs/dashboards/).
 
+<div class="cerb-screenshot">
+    <img src="/assets/images/docs/resources/resource-editor.png" class="screenshot">
+</div>
+
 {% comment %}
 * TOC
 {:toc}
