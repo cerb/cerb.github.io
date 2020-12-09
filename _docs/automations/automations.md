@@ -24,6 +24,10 @@ jumbotron:
 
 **Automations** are self-contained state machines written in [KATA](/docs/kata/) that transform an input dictionary into an output dictionary. The results are used to automate and customize workflows throughout Cerb.
 
+<div class="cerb-screenshot">
+    <img src="/assets/images/docs/automations/editor.png" class="screenshot">
+</div>
+
 * TOC
 {:toc}
 
@@ -724,6 +728,10 @@ A contextual toolbar provides interactions for adding [inputs](#inputs), [comman
 The automation editor has a 'Visualization' tab with a flowchart for the current script.
 
 Clicking on a node highlights the relevant line of code in the editor.
+
+<div class="cerb-screenshot">
+    <img src="/assets/images/docs/automations/editor-visualization.png" class="screenshot">
+</div>
 
 # References
 
