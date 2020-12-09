@@ -139,7 +139,7 @@ body@text:
 </code>
 </pre> 
 
-### connected_account:
+### authentication:
 
 The optional URI of a [connected account](/docs/records/types/connected_account/) to use for authenticating this HTTP request.
 
@@ -147,7 +147,7 @@ For instance, an OAuth2 connected account will include a bearer token in the `Au
 
 <pre>
 <code class="language-cerb">
-connected_account: cerb:connected_account:my-oauth2-account
+authentication: cerb:connected_account:my-oauth2-account
 </code>
 </pre>
 
