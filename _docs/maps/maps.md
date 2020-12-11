@@ -236,7 +236,36 @@ This makes it easy to explore the available properties while creating your map.
 
 ### properties:
 
-To improve reusability, you can use the `map:regions:properties:` key to fetch additional 'Map Properties' resources and merge them into the existing map.
+To improve reusability, you can use `map:regions:properties:` to merge additional properties into the existing regions on a map.
+
+#### data:
+
+Use the `map:regions:properties:data:` key to specify additional properties to merge into the existing map regions.
+
+<pre>
+<code class="language-cerb">
+map:
+  resource:
+    uri: cerb:resource:map.country.usa.states
+  projection:
+    type: albersUsa
+    scale: 650
+  regions:
+    properties:
+      data:
+        CA:
+          party: D
+        TX:
+          party: R
+      join:
+        property: postal
+        case: upper
+</code>
+</pre>
+
+#### resource:
+
+Use the `map:regions:properties:resource:` key to fetch a 'Map Properties' [resource](/docs/resources/) and merge it into the existing map regions.
 
 <pre>
 <code class="language-cerb">
@@ -284,6 +313,8 @@ For instance:
 }
 </code>
 </pre>
+
+#### join:
 
 The top-level keys should uniquely identify a property of the base map (e.g. country/state). This is referenced in the `map:regions:properties:join:property:` key.
 
