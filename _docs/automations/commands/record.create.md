@@ -53,6 +53,7 @@ start:
 |-|-
 | `record_type:` | The [record type](/docs/records/types/) to create.
 | `fields:` | The [fields](/docs/records/#fields) to set based on the record type.
+| `expand:` | The keys to expand on the `output:` dictionary.
 
 ## output:
 
