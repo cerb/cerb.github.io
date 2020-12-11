@@ -483,6 +483,26 @@ start:
 * abstract syntax tree (AST) / cached performance
 {% endcomment %}
 
+### Timers
+
+Automations may be scheduled to run at a future time using **timers**.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/automations/automation-timer.png" class="screenshot">
+</div>
+
+Timers can be created procedurally by automations and interactions, or manually by workers.
+
+A timer specifies a name, a future datetime, and a block of [events KATA](#event-handlers) to conditionally determine an [automation.timer](/docs/automations/triggers/automation.timer/) to run.
+
+On the first invocation of the timer, an automation is selected. This may optionally provide [inputs](#inputs). 
+
+If the automation ends in the `exit`, `error`, or `return` state, the timer is removed.
+
+If the automation ends in the `await` state, a [continuation](#continuations) is created, and the timer is rescheduled for the given datetime.
+
+The timer stores the continuation ID and the automation pauses at the current point. On the next timer invocation, the automation resumes where it left off rather than starting over.
+
 # Policies
 
 The permissions of automations are governed by **policies**. A policy is a collection of **rules** which describe the conditions where each action would be permitted or denied.
@@ -649,6 +669,7 @@ Automations are automatically **triggered** in response to events within Cerb.
 | Trigger | [**Inputs**](#inputs) | [**Await**](#continuations) | 
 |-|:-:|:-:|-
 | [**automation.function**](/docs/automations/triggers/automation.function/) | √ | | A reusable function with shared functionality called by other automations
+| [**automation.timer**](/docs/automations/triggers/automation.timer/) | √ | √ | A scheduled automation with [continuations](#continuations)
 | [**interaction.web.worker**](/docs/automations/triggers/interaction.web.worker/) | √ | √ | Worker [interactions](/docs/interactions/) on [toolbars](/docs/interactions/#toolbars) and widgets
 | [**map.clicked**](/docs/automations/triggers/map.clicked/) | √ | | Handlers for clicks on [map](/docs/maps/) regions and points
 | [**projectBoard.cardAction**](/docs/automations/triggers/projectBoard.cardAction/) | √ | | Actions that take place for new cards in a project board column
