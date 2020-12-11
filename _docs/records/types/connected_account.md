@@ -43,6 +43,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `service_id` | [number](/docs/records/fields/types/number/) | [Service Provider](/docs/plugins/extensions/points/cerb.connected_service.provider/) 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
+|   | `uri` | [text](/docs/records/fields/types/text/) |  
 
 ### Dictionary Placeholders
 
@@ -59,6 +60,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `service` | text | Service Provider
 | `service_` | record | [Service](/docs/records/types/connected_service/)
 | `updated_at` | date | Updated
+| `uri` | text | Uri
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
@@ -90,6 +92,7 @@ These [filters](/docs/search/filters/) are available in connected account [searc
 | `service:` | [record](/docs/search/deep-search/) | [Service](/docs/records/types/connected_service/)
 | `service.id:` | [chooser](/docs/search/filters/choosers/) | [Service Provider](/docs/records/types/connected_service/)
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `uri:` | [text](/docs/search/filters/text/) | Uri
 	
 ### Worklist Columns
 
@@ -104,6 +107,7 @@ These columns are available on connected account [worklists](/docs/worklists/):
 | `c_name` | Name
 | `c_service_id` | Service Provider
 | `c_updated_at` | Updated
+| `c_uri` | Uri
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 
 <div class="section-nav">

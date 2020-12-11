@@ -38,9 +38,12 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |:-:|-|-|-
 | **x** | **`board_id`** | [number](/docs/records/fields/types/number/) | The [project board](/docs/records/types/project_board/) containing this column 
 |   | `cards` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to add to this column 
+|   | `cards_kata` | [text](/docs/records/fields/types/text/) |  
+|   | `functions_kata` | [text](/docs/records/fields/types/text/) |  
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this project board column 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
+|   | `toolbar_kata` | [text](/docs/records/fields/types/text/) |  
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 
 ### Dictionary Placeholders
@@ -52,9 +55,12 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 |-|-|-
 | `_label` | text | Label
 | `board_` | record | [Project Board](/docs/records/types/project_board/)
+| `cards_kata` | text | Common.cards_Kata
+| `functions_kata` | text | Common.functions_Kata
 | `id` | number | Id
 | `name` | text | Name
 | `record_url` | text | Record Url
+| `toolbar_kata` | text | Common.toolbar_Kata
 | `updated_at` | date | Updated
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):

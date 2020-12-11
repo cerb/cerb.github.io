@@ -19,6 +19,8 @@ jumbotron:
     url: /docs/records/types/
 ---
 
+{% include docs/note_preview.html %}
+
 |---
 |-|-
 | **Name (singular):** | Webhook
@@ -36,8 +38,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
-| **x** | **`extension_id`** | [extension](/docs/records/fields/types/extension/) | [Webhook Listener Type](/docs/plugins/extensions/points/cerb.webhooks.listener.engine/) 
-|   | `extension_params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
+|   | `automations_kata` | [object](/docs/records/fields/types/object/) | KATA object 
 | **x** | **`guid`** | [text](/docs/records/fields/types/text/) | The random unique alias of the webhook used in its URL; automatically generated if blank 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this webhook 
@@ -51,8 +52,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | Field | Type | Description
 |-|-|-
 | `_label` | text | Label
-| `extension_id` | text | Extension
-| `extension_params` | object | Params
+| `automations_kata` | text | Automations
 | `guid` | text | Guid
 | `id` | number | Id
 | `name` | text | Name
@@ -76,7 +76,6 @@ These [filters](/docs/search/filters/) are available in webhook listener [search
 |---
 | Field | Type | Description
 |-|-|-
-| `extension:` | [text](/docs/search/filters/text/) | Extension
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `guid:` | [text](/docs/search/filters/text/) | Url
 | `id:` | [number](/docs/search/filters/numbers/) | Id
@@ -93,7 +92,6 @@ These columns are available on webhook listener [worklists](/docs/worklists/):
 | Column | Description
 |-|-
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
-| `w_extension_id` | Extension
 | `w_guid` | Url
 | `w_id` | Id
 | `w_name` | Name

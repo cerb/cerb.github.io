@@ -84,8 +84,8 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `language` | text | Language
 | `last_name` | text | Last Name
 | `location` | text | Location
-| `mobile` | phone | Mobile
-| `phone` | phone | Phone
+| `mobile` | text | Mobile
+| `phone` | text | Phone
 | `record_url` | text | Record Url
 | `time_format` | text | Time Format
 | `timeout_idle_secs` | number | Idle Timeout (Secs)

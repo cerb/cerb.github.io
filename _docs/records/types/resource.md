@@ -1,11 +1,11 @@
 ---
-title: Reminder Records
-permalink: /docs/records/types/reminder/
+title: Resource Records
+permalink: /docs/records/types/resource/
 toc:
-  title: Reminder
+  title: Resource
   expand: Records
 jumbotron:
-  title: Reminder
+  title: Resource
   tagline: 
   breadcrumbs:
   -
@@ -23,10 +23,10 @@ jumbotron:
 
 |---
 |-|-
-| **Name (singular):** | Reminder
-| **Name (plural):** | Reminders
-| **Alias (uri):** | reminder
-| **Identifier (ID):** | cerberusweb.contexts.reminder
+| **Name (singular):** | Resource
+| **Name (plural):** | Resources
+| **Alias (uri):** | resource
+| **Identifier (ID):** | cerb.contexts.resource
 
 * TOC
 {:toc}
@@ -38,13 +38,13 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
-|   | `automations_kata` | [text](/docs/records/fields/types/text/) |  
-|   | `is_closed` | [boolean](/docs/records/fields/types/boolean/) | Has this reminder elapsed? 
+|   | `automation_kata` | [text](/docs/records/fields/types/text/) |  
+|   | `description` | [text](/docs/records/fields/types/text/) |  
+| **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) |  
+|   | `is_dynamic` | [boolean](/docs/records/fields/types/boolean/) |  
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
-| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this reminder 
-| **x** | **`remind_at`** | [timestamp](/docs/records/fields/types/timestamp/) | The date/time of the reminder 
+| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this resource 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
-| **x** | **`worker_id`** | [number](/docs/records/fields/types/number/) | The ID of the [worker](/docs/records/types/worker/) receiving the reminder 
 
 ### Dictionary Placeholders
 
@@ -54,14 +54,14 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | Field | Type | Description
 |-|-|-
 | `_label` | text | Label
-| `automations_kata` | text | Automations
+| `automation_kata` | text | Automation
+| `description` | text | Description
+| `extension_id` | text | Type
 | `id` | number | Id
-| `is_closed` | boolean | Is Closed
+| `is_dynamic` | boolean | Is Dynamic
 | `name` | text | Name
 | `record_url` | text | Record Url
-| `remind_at` | date | Remind At
 | `updated_at` | date | Updated
-| `worker_` | record | [Worker](/docs/records/types/worker/)
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
@@ -71,39 +71,42 @@ These optional placeholders are also available with **key expansion** in [dictio
 | `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
 | `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
 | `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
-| `watchers` | watchers | [Watchers](/docs/bots/behaviors/dictionaries/key-expansion/#watchers)
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in reminder [search queries](/docs/search/):
+These [filters](/docs/search/filters/) are available in resource [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `closed:` | [boolean](/docs/search/filters/booleans/) | Is Closed
+| `description:` | [text](/docs/search/filters/text/) | Description
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
+| `isDynamic:` | [boolean](/docs/search/filters/booleans/) | Is Dynamic
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
-| `remindAt:` | [date](/docs/search/filters/dates/) | Remind At
+| `size:` | [number](/docs/search/filters/numbers/) | Size
+| `type:` | [text](/docs/search/filters/text/) | Type
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `worker:` | [record](/docs/search/deep-search/) | [Worker](/docs/records/types/worker/)
-| `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
 	
 ### Worklist Columns
 
-These columns are available on reminder [worklists](/docs/worklists/):
+These columns are available on resource [worklists](/docs/worklists/):
 
 |---
 | Column | Description
 |-|-
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
+| `r_description` | Description
+| `r_extension_id` | Type
 | `r_id` | Id
-| `r_is_closed` | Is Closed
+| `r_is_dynamic` | Is Dynamic
 | `r_name` | Name
-| `r_remind_at` | Remind At
+| `r_storage_extension` | Common.storage_Extension
+| `r_storage_key` | Common.storage_Key
+| `r_storage_profile_id` | Common.storage_Profile_Id
+| `r_storage_size` | Size
 | `r_updated_at` | Updated
-| `r_worker_id` | Worker
 
 <div class="section-nav">
 	<div class="left">

@@ -51,7 +51,8 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | Field | Type | Description
 |-|-|-
 | `_label` | text | Label
-| `extension_id` | text | Type
+| `extension_id` | text | Type Common.id
+| `extension_name` | text | Type
 | `id` | number | Id
 | `name` | text | Name
 | `record_url` | text | Record Url

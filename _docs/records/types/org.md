@@ -64,7 +64,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `email_` | record | [Email](/docs/records/types/address/)
 | `id` | number | Id
 | `name` | text | Name
-| `phone` | phone | Phone
+| `phone` | text | Phone
 | `postal` | text | Postal
 | `province` | text | State/Prov
 | `record_url` | text | Record Url
@@ -107,6 +107,8 @@ These [filters](/docs/search/filters/) are available in organization [search que
 | `postal:` | [text](/docs/search/filters/text/) | Postal
 | `state:` | [text](/docs/search/filters/text/) | State/Prov
 | `street:` | [text](/docs/search/filters/text/) | Street
+| `ticket:` | [record](/docs/search/deep-search/) | [Ticket](/docs/records/types/ticket/)
+| `ticket.id:` | [chooser](/docs/search/filters/choosers/) | [Ticket](/docs/records/types/ticket/)
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
 | `website:` | [text](/docs/search/filters/text/) | Website

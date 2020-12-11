@@ -19,6 +19,8 @@ jumbotron:
     url: /docs/records/types/
 ---
 
+{% include docs/note_preview.html %}
+
 |---
 |-|-
 | **Name (singular):** | Project Board
@@ -36,6 +38,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
+|   | `cards_kata` | [text](/docs/records/fields/types/text/) |  
 |   | `columns` | [text](/docs/records/fields/types/text/) | JSON-encoded array of [project board column](/docs/records/types/project_board_column/) IDs; e.g. `[1,2,3]` 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this project board 
@@ -52,6 +55,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | Field | Type | Description
 |-|-|-
 | `_label` | text | Label
+| `cards_kata` | text | Common.cards_Kata
 | `columns` | text | Columns
 | `id` | number | Id
 | `name` | text | Name

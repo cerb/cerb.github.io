@@ -36,7 +36,6 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
-|   | `is_default` | [boolean](/docs/records/fields/types/boolean/) | Is this the default signature? 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this email signature 
 | **x** | **`owner__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) of this email signature's owner: `app`, `role`, `group`, or `worker` 
@@ -54,7 +53,6 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 |-|-|-
 | `_label` | text | Label
 | `id` | number | Id
-| `is_default` | boolean | Is Default
 | `name` | text | Name
 | `owner_` | record | Owner
 | `record_url` | text | Record Url
@@ -81,10 +79,14 @@ These [filters](/docs/search/filters/) are available in email signature [search 
 |-|-|-
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
-| `isDefault:` | [boolean](/docs/search/filters/booleans/) | Default
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `owner:` | virtual | Owner
+| `owner.app:` | virtual | Owner
+| `owner.bot:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/bot/)
+| `owner.group:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/group/)
+| `owner.role:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/role/)
+| `owner.worker:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/worker/)
 | `signature:` | [text](/docs/search/filters/text/) | Signature
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
@@ -98,7 +100,6 @@ These columns are available on email signature [worklists](/docs/worklists/):
 | `*_owner` | Owner
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `e_id` | Id
-| `e_is_default` | Default
 | `e_name` | Name
 | `e_signature` | Signature
 | `e_updated_at` | Updated

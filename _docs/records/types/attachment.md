@@ -51,6 +51,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | Field | Type | Description
 |-|-|-
 | `_label` | text | Label
+| `download_url` | text | Url
 | `id` | number | Id
 | `mime_type` | text | Mime Type
 | `name` | text | Name

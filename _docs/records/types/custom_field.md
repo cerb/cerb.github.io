@@ -44,6 +44,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `pos` | [number](/docs/records/fields/types/number/) | Display order; positive integer; `0` is first 
 | **x** | **`type`** | [text](/docs/records/fields/types/text/) | `C` (checkbox)<br>`D` (picklist)<br>`E` (date)<br>`F` (file)<br>`I` (files)<br>`L` (record link)<br>`M` (list)<br>`N` (number)<br>`O` (decimal)<br>`S` (single line of text)<br>`T` (multiple lines of text)<br>`U` (url)<br>`W` (worker)<br>`X` (multiple checkboxes)<br>`Y` (currency)<br> 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
+| **x** | **`uri`** | [text](/docs/records/fields/types/text/) | The unique alias for this custom field 
 
 ### Dictionary Placeholders
 
@@ -60,6 +61,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `type` | text | Type
 | `type_label` | text | Type Label
 | `updated_at` | date | Updated
+| `uri` | text | Uri
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
@@ -84,6 +86,7 @@ These [filters](/docs/search/filters/) are available in custom field [search que
 | `pos:` | [number](/docs/search/filters/numbers/) | Order
 | `type:` | [text](/docs/search/filters/text/) | Type
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `uri:` | [text](/docs/search/filters/text/) | Uri
 	
 ### Worklist Columns
 
@@ -99,6 +102,7 @@ These columns are available on custom field [worklists](/docs/worklists/):
 | `c_pos` | Order
 | `c_type` | Type
 | `c_updated_at` | Updated
+| `c_uri` | Uri
 
 <div class="section-nav">
 	<div class="left">
