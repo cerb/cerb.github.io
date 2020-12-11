@@ -487,6 +487,10 @@ start:
 
 The permissions of automations are governed by **policies**. A policy is a collection of **rules** which describe the conditions where each action would be permitted or denied.
 
+<div class="cerb-screenshot">
+    <img src="/assets/images/docs/automations/editor-policy.png" class="screenshot">
+</div>
+
 ### Scopes
 
 | Scope | 
