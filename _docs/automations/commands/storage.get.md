@@ -38,6 +38,7 @@ start:
     output: result
     inputs:
       key: some.arbitrary.identifier
+      default: This is a default value.
   return:
     output@key: result
 {% endraw %}
@@ -62,6 +63,7 @@ output: This is the saved value.
 | Key | Req'd | 
 |-|:-:|-
 | `key:` | √ | The storage key to load. This is an arbitrary identifier.
+| `default:` | | A default value to return when the storage key doesn't exist.
 
 ## output:
 
