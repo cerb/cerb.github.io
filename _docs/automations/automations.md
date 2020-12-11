@@ -694,6 +694,7 @@ automation/everythingElse:
 |-|-
 | [**decision:**](/docs/automations/commands/decision/) | Conditionally select one of multiple potential outcomes.
 | [**repeat:**](/docs/automations/commands/repeat/) | Iterate an array and repeat a sequence of commands for each value.
+| [**while:**](/docs/automations/commands/while/) | Conditionally loop a sequence of commands.
 
 ### Actions
 
