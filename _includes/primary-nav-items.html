@@ -17,14 +17,12 @@
 	<li class="{% if page_path[0] == 'blog' or page_path[0] == 'releases' %}current{% endif %}">
 		<a href="/blog/">News</a>
 	</li>
-	<li class="{% if page_path[0] == 'signup' %}current{% endif %}">
-		<a href="/signup/"><b>Free Trial</b></a>
-	</li>
-	{% comment %}
 	<li class="{% if page_path[0] == 'help' %}current{% endif %}">
 		<a href="/help/">Help</a>
 	</li>
-	{% endcomment %}
+	<li class="{% if page_path[0] == 'signup' %}current{% endif %}">
+		<a href="/signup/"><b>Free Trial</b></a>
+	</li>
 	<li class="{% if page_path[0] == 'search' %}current{% endif %}">
 		<form action="/search/" method="GET">
 		<input type="search" name="q" size="18" placeholder="search">

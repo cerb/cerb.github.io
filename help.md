@@ -7,23 +7,29 @@ jumbotron:
   tagline: 
 ---
 
-## Bot
-
-<a href="javascript:;" data-cerb-bot-interaction="" class="cerb-button">Hello?</a>
-
 ## Email
 
 [team@cerb.ai](mailto:team@cerb.ai)
 
-## Phone
+## Links
 
-[+1.714.671.9090](tel:+1.714.671.9090)
+* [Documentation](/docs/home/)
+* [Discussion Forums](https://github.com/cerb/cerb-release/discussions/)
+* [Issue Tracker](https://github.com/jstanden/cerb/issues/)
+
+## Licenses
+
+<a href="javascript:;" data-cerb-bot-interaction="">Automated demos, license updates, and renewals</a>
+
+## Sales
+
+Phone: [+1.714.671.9090](tel:+1.714.671.9090)
 
 ## Mail
 
 **Webgroup Media, LLC.**  
-PO Box 1206  
-Brea, California 92822  
+340 S Lemon Ave #2048  
+Walnut, California 91789  
 United States
 
 {% include testimonials.html %}
