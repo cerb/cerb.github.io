@@ -42,7 +42,7 @@ We added these instructional how-to guides:
 
 We expanded the library of pre-built workflow packages that you can import in a single step:
 
-* [Reminder Bot](/packages/reminder-bot/)
+* Reminder Bot
 
 ## Thanks for using Cerb!
 

@@ -23,10 +23,3 @@ When a reminder is triggered, it may run any number of [bot](/docs/bots/) behavi
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/using-cerb/reminders/reminder.png" class="screenshot">
 </div>
-
-## Related resources
-
-{% comment %}
-* [Guide: Creating a reminder](/guides/reminders/creating/)
-{% endcomment %}
-* [Package: Reminder Bot](/packages/reminder-bot/)
