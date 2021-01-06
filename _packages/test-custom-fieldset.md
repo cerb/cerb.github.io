@@ -35,10 +35,10 @@ Paste the following package into the large text box:
 {
   "package": {
     "name": "Test Custom Fieldset",
-    "cerb_version": "8.3.0",
+    "cerb_version": "10.0.0",
     "revision": 1,
     "requires": {
-      "cerb_version": "8.3.0",
+      "cerb_version": "10.0.0",
       "plugins": [
 
       ]
