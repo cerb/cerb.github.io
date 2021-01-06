@@ -236,8 +236,9 @@ An interaction receives different inputs and expects different outputs depending
 
 | Caller | 
 |-|-
+| [**cerb.toolbar.mail.compose**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.mail.compose/) | Email compose editor toolbar
 | [**cerb.toolbar.mail.reply**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.mail.reply/) | Email reply editor toolbar
-| [**cerb.toolbar.profiles.ticket.message**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.profiles.ticket.message/) | Message toolbars on ticket profiles 
+| [**cerb.toolbar.mail.read**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.mail.read/) | Message toolbars on ticket profiles 
 
 ### Project boards
 

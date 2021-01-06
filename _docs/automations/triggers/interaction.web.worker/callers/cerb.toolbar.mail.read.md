@@ -1,13 +1,13 @@
 ---
-title: "Interaction Caller: cerb.toolbar.editor"
+title: "Interaction Caller: cerb.toolbar.mail.read"
 #excerpt: 
 #social_image_url: /assets/images/search/kata.png
-permalink: /docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.editor/
+permalink: /docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.mail.read/
 toc:
-  title: cerb.toolbar.editor
+  title: cerb.toolbar.mail.read
   expand: Automations
 jumbotron:
-  title: cerb.toolbar.editor
+  title: cerb.toolbar.mail.read
   tagline: 
   breadcrumbs:
   -
@@ -32,18 +32,8 @@ The following `caller_params` are passed to the [interaction](/docs/automations/
 
 | Key | Type | 
 |-|-|-
-| **`toolbar`** | string | The interaction [toolbar](/docs/interactions/#toolbars)
+| **`message_id`** | record | The [message](/docs/records/types/message/)
 | **`selected_text`** | string | The currently selected editor text
-
-### Toolbars
-
-* `cerb.toolbar.cardWidget.interactions`
-* `cerb.toolbar.cardWidget.sheet`
-* `cerb.toolbar.profileWidget.interactions`
-* `cerb.toolbar.profileWidget.sheet`
-* `cerb.toolbar.mail.compose`
-* `cerb.toolbar.mail.read`
-* `cerb.toolbar.mail.reply`
 
 # return:
 
@@ -51,4 +41,5 @@ The caller expects the following `return:` dictionary:
 
 | Req'd | Key | Type | 
 |:-:|-|-|-
-| | **`snippet`** | string | A snippet of text to insert in the editor at the cursor
+| | **`reply:draft_id:`** | record | The [draft](/docs/records/types/draft/) ID to resume
+| | **`refresh_widgets@list:`** | records | One or more [profile_widget](/docs/records/types/profile_widget/) names to refresh
