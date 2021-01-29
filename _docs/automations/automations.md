@@ -296,6 +296,25 @@ start:
 </code>
 </pre>
 
+#### Snippet examples
+
+Automations that support custom `inputs:` can provide a `snippet:` key for each input.
+
+This is used when inserting the automation into an editor from an interaction.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+inputs:
+  text/subject:
+    type: freeform
+    required@bool: yes
+    snippet:
+      subject: This is an example subject
+{% endraw %}
+</code>
+</pre>
+
 ### Exit states
 
 After execution, an automation concludes in one of the following `__exit` states:
