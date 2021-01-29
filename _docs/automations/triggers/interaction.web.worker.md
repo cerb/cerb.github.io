@@ -25,11 +25,14 @@ jumbotron:
 
 **interaction.web.worker** [automations](/docs/automations/) are worker-based [interactions](/docs/interactions/) that use [continuations](/docs/automations/#continuations) to pause and resume a multi-step workflow.
 
+* TOC
+{:toc}
+  
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/automations/triggers/interaction.web.worker/interaction-map.gif" class="screenshot">
 </div>
 
-These interactions are started by a [caller](#callers) in response to a worker action within Cerb. The caller is usually a customizable [toolbar](#toolbars), but it could be any interface component or feature (e.g. buttons, links, images).
+These interactions are started by a [caller](#callers) in response to a worker action within Cerb. The caller is usually a customizable [toolbar](/docs/toolbars/), but it could be any interface component or feature (e.g. buttons, links, images).
 
 At its conclusion, an interaction returns a [dictionary](/docs/automations/#dictionaries) and [exit state](/docs/automations/#exit-states) to the caller, which is then responsible for acting on the results.
 
@@ -42,9 +45,6 @@ For instance, an interaction may be started from a toolbar in the email reply ed
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/automations/triggers/interaction.web.worker/interactions-participants.gif" class="screenshot">
 </div>
-
-* TOC
-{:toc}
 
 # Inputs
 
@@ -139,112 +139,36 @@ return:
 </code>
 </pre>
 
-# Toolbars
-
-A **toolbar** is a collection of **interactions** and **menus**. Toolbars are configured using a [KATA](/docs/kata/) dialect, which can pass custom [input](/docs/automations/#inputs) to the interaction using placeholders (current worker, record, etc).
-
-Top-level toolbar items are displayed as **buttons**. Items within a menu are displayed as **links**.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/docs/automations/triggers/interaction.web.worker/toolbar.png" class="screenshot">
-</div>
-
-### interaction:
-
-An interaction begins when it is clicked in the toolbar.
-
-<pre>
-<code class="language-cerb">
-{% raw %}
-interaction/participants:
-  label: Participants
-  badge: {{record_participants|length|default(0)}}
-  uri: cerb:automation:cerb.ticket.participants.manage
-  inputs:
-    ticket@key: record_id
-  #hidden@bool: no
-  after:
-    refresh_widgets@csv: Actions
-
-interaction/locationByIp:
-  uri: cerb:automation:example.interaction.locationByIP
-  label: Location by IP
-  icon: globe
-  after:
-    refresh_widgets@list: Actions
-{% endraw %}
-</code>
-</pre>
-
-|Req'd|Key|
-|:-:|-
-|√|`uri:`| The URI of the `interaction.web.worker` [automation](/docs/automations/) to start when clicked.
-||`inputs:`| The optional [inputs](/docs/automations/#inputs) dictionary for the interaction.
-|√|`label:`| The label to describe the interaction in buttons and menu links. This may be omitted if an icon is provided.
-||`icon:`| The optional [icon](/docs/developers/icons/) to display in buttons and menu links. This can be in addition to, or instead of, the label.
-||`tooltip:`| If a button only has an icon and not a label, the tooltip can show a label when hovering over it.
-||`badge:`| The optional counter to display on buttons.
-||`hidden@bool:`| Conditionally determine whether to display this toolbar item or not. For instance, check worker permissions or record fields.
-||`after:`| Actions to take when the interaction completes successfully. For instance, a completed interaction on a dashboard can refresh any number of widgets by name to show updated data. Options here depend on the [caller](#callers).
-
-### menu:
-
-Menus may contain any combination of interactions and submenus.
-
-<pre>
-<code class="language-cerb">
-{% raw %}
-menu/moreMenu:
-  icon: more
-  tooltip: More
-  items:
-    menu/tools:
-      label: Tools
-      items:
-        interaction/debug:
-          uri: cerb:automation:example.interaction.echo
-          label: Debug
-          icon: bug
-{% endraw %}
-</code>
-</pre>
-
-<div class="cerb-screenshot">
-<img src="/assets/images/docs/automations/triggers/interaction.web.worker/toolbar-menu.png" class="screenshot">
-</div>
-
-|Req'd|Key|
-|:-:|-
-|√|`label:`| The label to describe the menu in buttons and menu links. This may be omitted if an icon is provided.
-||`icon:`| The optional [icon](/docs/developers/icons/) to display in buttons and menu links. This can be in addition to, or instead of, the label.
-|√|`items:`| A list of [menu](#menu) and [interaction](#interaction) items.
-||`default:`| Display a "split" menu button. Clicking on the left-side immediately runs this default [interaction](#interaction) by name. Clicking on the right-side opens a menu of alternative options.
-
 # Callers
 
 An interaction receives different inputs and expects different outputs depending on its caller.
+
+## Toolbars
+
+| Toolbar |
+|-|-
+| [**global.menu**](/docs/toolbars/interactions/global.menu/) | Global interactions from the floating icon in the lower right
+| [**mail.compose**](/docs/toolbars/interactions/mail.compose/) | Composing new email messages
+| [**mail.read**](/docs/toolbars/interactions/mail.read/) | Reading email messages
+| [**mail.reply**](/docs/toolbars/interactions/mail.reply/) | Replying to email messages
+| [**record.card**](/docs/toolbars/interactions/record.card/) | Viewing a record card popup
+| [**record.profile**](/docs/toolbars/interactions/record.profile/) | Viewing a record profile page
+
+## Built-in
 
 ### Interactions
 
 | Caller | 
 |-|-
-| [**cerb.toolbar.cardWidget.interactions**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.cardWidget.interactions/) | Interactions [toolbar](#toolbars) in [card widgets](/docs/records/types/card_widget/)
-| [**cerb.toolbar.profileWidget.interactions**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.profileWidget.interactions/) | Interactions [toolbar](#toolbars) in [profile widgets](/docs/records/types/profile_widget/)
-| [**cerb.toolbar.workspaceWidget.interactions**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.workspaceWidget.interactions/) | Interactions [toolbar](#toolbars) in [workspace widgets](/docs/records/types/workspace_widget/)
-
-### Mail
-
-| Caller | 
-|-|-
-| [**cerb.toolbar.mail.compose**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.mail.compose/) | Email compose editor toolbar
-| [**cerb.toolbar.mail.reply**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.mail.reply/) | Email reply editor toolbar
-| [**cerb.toolbar.mail.read**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.mail.read/) | Message toolbars on ticket profiles 
+| [**cerb.toolbar.cardWidget.interactions**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.cardWidget.interactions/) | Interactions [toolbar](/docs/toolbars/) in [card widgets](/docs/records/types/card_widget/)
+| [**cerb.toolbar.profileWidget.interactions**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.profileWidget.interactions/) | Interactions [toolbar](/docs/toolbars/) in [profile widgets](/docs/records/types/profile_widget/)
+| [**cerb.toolbar.workspaceWidget.interactions**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.workspaceWidget.interactions/) | Interactions [toolbar](/docs/toolbars/) in [workspace widgets](/docs/records/types/workspace_widget/)
 
 ### Project boards
 
 | Caller | 
 |-|-
-| [**cerb.toolbar.projectBoardColumn**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.projectBoardColumn/) | [Project board](/docs/project-boards/) column [toolbar](#toolbars)
+| [**cerb.toolbar.projectBoardColumn**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.projectBoardColumn/) | [Project board](/docs/project-boards/) column [toolbar](/docs/toolbars/)
 
 ### Sheets
 
@@ -261,5 +185,5 @@ An interaction receives different inputs and expects different outputs depending
 | [**cerb.toolbar.editor.automation.script**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.editor.automation.script/) | [Automation](/docs/automations/) script editor toolbar
 | [**cerb.toolbar.editor.automation.trigger**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.editor.automation.trigger/) | [Automation](/docs/automations/) editor trigger chooser
 | [**cerb.toolbar.eventHandlers.editor**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.eventHandlers.editor/) | [Automation](/docs/automations/) event handlers editor toolbar
-| [**cerb.toolbar.editor**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.editor/) | [Toolbar](#toolbars) editor
+| [**cerb.toolbar.editor**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.editor/) | [Toolbar](/docs/toolbars/) editor
 | [**cerb.toolbar.editor.map**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.editor.map/) | Map editor toolbar

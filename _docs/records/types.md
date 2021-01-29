@@ -76,6 +76,7 @@ This reference can be used when building [bot behaviors](/docs/bots/), [search q
 | `snippet` | [Snippets](/docs/records/types/snippet/)
 | `task` | [Tasks](/docs/records/types/task/)
 | `ticket` | [Tickets](/docs/records/types/ticket/)
+| `toolbar` | [Toolbars](/docs/records/types/toolbar/)
 | `webhook_listener` | [Webhooks](/docs/records/types/webhook_listener/)
 | `worker` | [Workers](/docs/records/types/worker/)
 | `workspace_list` | [Workspace Worklists](/docs/records/types/workspace_list/)

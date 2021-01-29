@@ -689,7 +689,7 @@ Automations are automatically **triggered** in response to events within Cerb.
 |-|:-:|:-:|-
 | [**automation.function**](/docs/automations/triggers/automation.function/) | √ | | A reusable function with shared functionality called by other automations
 | [**automation.timer**](/docs/automations/triggers/automation.timer/) | √ | √ | A scheduled automation with [continuations](#continuations)
-| [**interaction.web.worker**](/docs/automations/triggers/interaction.web.worker/) | √ | √ | Worker [interactions](/docs/interactions/) on [toolbars](/docs/interactions/#toolbars) and widgets
+| [**interaction.web.worker**](/docs/automations/triggers/interaction.web.worker/) | √ | √ | Worker [interactions](/docs/interactions/) on [toolbars](/docs/toolbars/) and widgets
 | [**map.clicked**](/docs/automations/triggers/map.clicked/) | √ | | Handlers for clicks on [map](/docs/maps/) regions and points
 | [**projectBoard.cardAction**](/docs/automations/triggers/projectBoard.cardAction/) | √ | | Actions that take place for new cards in a project board column
 | [**projectBoard.renderCard**](/docs/automations/triggers/projectBoard.renderCard/) | √ | | Dynamic card layouts on project boards

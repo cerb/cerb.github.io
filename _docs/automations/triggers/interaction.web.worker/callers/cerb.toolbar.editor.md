@@ -32,7 +32,7 @@ The following `caller_params` are passed to the [interaction](/docs/automations/
 
 | Key | Type | 
 |-|-|-
-| **`toolbar`** | string | The interaction [toolbar](/docs/interactions/#toolbars)
+| **`toolbar`** | string | The interaction [toolbar](/docs/toolbars/)
 | **`selected_text`** | string | The currently selected editor text
 
 ### Toolbars

@@ -78,6 +78,7 @@
   docs:
     - automations
     - interactions
+    - toolbars
 
 - title: Workspaces
   docs:
