@@ -29,7 +29,7 @@ jumbotron:
 <img src="/assets/images/docs/automations/automation-timer.png" class="screenshot">
 </div>
 
-On the first invocation of the timer, an automation is selected using [events KATA](/docs/automations/#event-handlers). This may optionally provide [inputs](/docs/automations/#inputs).
+On the first invocation of the timer, an automation is selected using [events KATA](/docs/automations/#events). This may optionally provide [inputs](/docs/automations/#inputs).
 
 * TOC
 {:toc}

@@ -32,7 +32,7 @@ The following `caller_params` are passed to the [interaction](/docs/automations/
 
 | Key | Type | 
 |-|-|-
-| **`trigger`** | string | The automation [trigger](/docs/automations/#triggers) of the [event handlers](/docs/automations/#event-handlers)
+| **`trigger`** | string | The automation [trigger](/docs/automations/#triggers) of the [event handlers](/docs/automations/#events)
 | **`selected_text`** | string | The currently selected editor text
 | **`token_path`** | string | 
 | **`cursor_row`** | int | 

@@ -25,7 +25,7 @@ jumbotron:
 
 **ui.sheet.data** [automations](/docs/automations/) are triggered when a sheet requests dynamic data.
 
-This trigger uses [event handler](/docs/automations/#event-handlers) KATA, and the first enabled automation is executed.
+This trigger uses [event handler](/docs/automations/#events) KATA, and the first enabled automation is executed.
 
 * TOC
 {:toc}

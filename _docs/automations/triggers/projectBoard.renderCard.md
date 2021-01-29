@@ -25,7 +25,7 @@ jumbotron:
 
 **projectBoard.renderCard** [automations](/docs/automations/) are triggered when a card is displayed on a [project board](/docs/project-boards/).
 
-This trigger uses [event handler](/docs/automations/#event-handlers) KATA, and the first enabled automation is executed.
+This trigger uses [event handler](/docs/automations/#events) KATA, and the first enabled automation is executed.
 
 For instance, the match can be based on the record type of the card. The output is sheet KATA describing the card's layout.
 

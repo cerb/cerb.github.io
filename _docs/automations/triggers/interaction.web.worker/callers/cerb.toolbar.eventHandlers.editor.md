@@ -26,7 +26,7 @@ jumbotron:
 
 {% include docs/note_preview.html %}
 
-[event handler](/docs/automations/#event-handlers)
+An [event handler](/docs/automations/#events) editor.
 
 # Parameters
 
@@ -34,7 +34,7 @@ The following `caller_params` are passed to the [interaction](/docs/automations/
 
 | Key | Type | 
 |-|-|-
-| **`trigger`** | string | The automation [trigger](/docs/automations/#triggers) of the [event handlers](/docs/automations/#event-handlers)
+| **`trigger`** | string | The automation [trigger](/docs/automations/#triggers) of the [event handlers](/docs/automations/#events)
 | **`selected_text`** | string | The currently selected editor text
 
 # return:

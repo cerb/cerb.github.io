@@ -811,7 +811,7 @@ You can pan a map by clicking on any region or point. Maps can't be panned from 
 
 # Handling clicks with automations
 
-On map widgets, a 'Map clicked' (map.clicked) [automation](/docs/automations/) can be added using [event handler](/docs/automations/#event-handlers) KATA.
+On map widgets, a 'Map clicked' (map.clicked) [automation](/docs/automations/) can be added using [event handler](/docs/automations/#events) KATA.
 
 The first enabled automation receives the event with inputs for the `feature_type` (`region` or `point`), `feature_properties` (from the GeoJSON), an optional `widget_*` dictionary, and the current `worker_*`.
 

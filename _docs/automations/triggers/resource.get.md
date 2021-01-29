@@ -25,7 +25,7 @@ jumbotron:
 
 **resource.get** [automations](/docs/automations/) are triggered by dynamic [resource](/docs/resources/).
 
-This trigger uses [event handler](/docs/automations/#event-handlers) KATA, and the first enabled automation is executed.
+This trigger uses [event handler](/docs/automations/#events) KATA, and the first enabled automation is executed.
 
 * TOC
 {:toc}

@@ -28,6 +28,7 @@ This reference can be used when building [bot behaviors](/docs/bots/), [search q
 | `address` | [Email Addresses](/docs/records/types/address/)
 | `attachment` | [Attachments](/docs/records/types/attachment/)
 | `automation` | [Automations](/docs/records/types/automation/)
+| `automation_event` | [Automation Events](/docs/records/types/automation_event/)
 | `automation_timer` | [Automation Timers](/docs/records/types/automation_timer/)
 | `behavior` | [Behaviors](/docs/records/types/behavior/)
 | `bot` | [Bots](/docs/records/types/bot/)

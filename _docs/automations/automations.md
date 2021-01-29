@@ -82,7 +82,7 @@ When an automation executes, it creates a new **working memory** dictionary that
 
 ### Dialects
 
-There are various **dialects** of KATA: automations, [maps](/docs/maps/), [toolbars](/docs/interactions/#toolbars), [events](/docs/automations/#event-handlers), etc. The dialects share the same overall [syntax](/docs/kata/), but each has a different **vocabulary** of keys.
+There are various **dialects** of KATA: automations, [maps](/docs/maps/), [toolbars](/docs/toolbars/), [events](/docs/automations/#events), etc. The dialects share the same overall [syntax](/docs/kata/), but each has a different **vocabulary** of keys.
 
 In automations, keys describe a _declarative_ set of **commands**. In other words, an automation serves as a natural language outline of logic and actions to be undertaken, rather than a set of detailed computer programming instructions for carrying out each step.
 
@@ -512,7 +512,7 @@ Automations may be scheduled to run at a future time using **timers**.
 
 Timers can be created procedurally by automations and interactions, or manually by workers.
 
-A timer specifies a name, a future datetime, and a block of [events KATA](#event-handlers) to conditionally determine an [automation.timer](/docs/automations/triggers/automation.timer/) to run.
+A timer specifies a name, a future datetime, and a block of [events KATA](#events) to conditionally determine an [automation.timer](/docs/automations/triggers/automation.timer/) to run.
 
 On the first invocation of the timer, an automation is selected. This may optionally provide [inputs](#inputs). 
 
@@ -698,13 +698,15 @@ Automations are automatically **triggered** in response to events within Cerb.
 | [**ui.sheet.data**](/docs/automations/triggers/ui.sheet.data/) | √ | | Data sources for [sheets](/docs/sheets/)
 | [**webhook.respond**](/docs/automations/triggers/webhook.respond/) | | | Handlers for [webhook listeners](/docs/webhooks/)
 
-### Event handlers
+# Events
 
 In functionality that triggers automations (e.g. widgets), event handlers are defined in a [KATA](/docs/kata/) dialect.
 
 For events that expect a single handler (e.g. `interaction.web.worker`), the first matching (non-disabled) automation is executed and its end state is returned. This can be used to conditionally respond based on the event/caller.
 
 For events that run all handlers (e.g. `projectBoard.cardAction`), all non-disabled automations are executed in order, and their end states are returned.
+
+Global automation events can be edited from **Search >> Automation Events**. This allows event handler KATA to be configured for global events that don't otherwise have a parent record (e.g. mail filtering).
 
 <pre>
 <code class="language-cerb">
@@ -719,6 +721,14 @@ automation/everythingElse:
 </code>
 </pre>
 {% endraw %}
+
+There can now be multiple `enabled:` or `disabled:` rules. The first rule to return `true` is used. This allows `deny-allow` and `allow-deny` strategies. By default, all handlers are enabled.
+
+| Event |
+|-|-
+| [**mail.filter**](/docs/automations/events/mail.filter/) | Modify or reject an inbound message based on its properties
+| [**mail.route**](/docs/automations/events/mail.route/) | Determine a destination group inbox given properties of an incoming message
+| [**record.changed**](/docs/automations/events/record.changed/) | React to changes in record field values
 
 # Commands
 

@@ -25,7 +25,7 @@ jumbotron:
 
 **webhook.respond** [automations](/docs/automations/) are triggered by a [webhook listener](/docs/webhooks/) that receives an HTTP request.
 
-This trigger uses [event handler](/docs/automations/#event-handlers) KATA, and the first enabled automation is executed.
+This trigger uses [event handler](/docs/automations/#events) KATA, and the first enabled automation is executed.
 
 * TOC
 {:toc}
