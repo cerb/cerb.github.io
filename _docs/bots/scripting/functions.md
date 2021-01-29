@@ -678,6 +678,32 @@ You can specify an array by appending `[]` without a leading dot (`.`):
 }
 ```
 
+## kata_parse
+
+Parses a KATA text block into an object.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set kata %}
+colors@list:
+  red
+  green
+  blue
+size@int: 100
+{% endset %}
+{{kata_parse(kata)|json_encode|json_pretty}}
+{% endraw %}
+</code>
+</pre>
+
+```
+{
+    "colors@list": "red\ngreen\nblue",
+    "size@int": "100"
+}
+```
+
 ## max
 
 Return the largest value in an array or object.
