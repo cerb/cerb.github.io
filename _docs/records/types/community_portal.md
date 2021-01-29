@@ -51,7 +51,9 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 |---
 | Field | Type | Description
 |-|-|-
+| `_context` | text | [Record type](/docs/records/types/) extension ID
 | `_label` | text | Label
+| `_type` | text | [Record type](/docs/records/types/) alias
 | `code` | text | Code
 | `extension_id` | text | Extension
 | `id` | number | Id

@@ -48,7 +48,9 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 |---
 | Field | Type | Description
 |-|-|-
+| `_context` | text | [Record type](/docs/records/types/) extension ID
 | `_label` | text | Label
+| `_type` | text | [Record type](/docs/records/types/) alias
 | `classifier_` | record | [Classifier](/docs/records/types/classifier/)
 | `classifier_owner_` | record | Classifier Owner
 | `id` | number | Id

@@ -54,7 +54,9 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 |---
 | Field | Type | Description
 |-|-|-
+| `_context` | text | [Record type](/docs/records/types/) extension ID
 | `_label` | text | Label
+| `_type` | text | [Record type](/docs/records/types/) alias
 | `calendar_` | record | [Calendar](/docs/records/types/calendar/)
 | `calendar_owner_` | record | Calendar Owner
 | `event_end` | text | End

@@ -58,7 +58,9 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 |---
 | Field | Type | Description
 |-|-|-
+| `_context` | text | [Record type](/docs/records/types/) extension ID
 | `_label` | text | Label
+| `_type` | text | [Record type](/docs/records/types/) alias
 | `checked_at` | date | Checked At
 | `connected_account_id` | number | Connected Account
 | `host` | text | Host

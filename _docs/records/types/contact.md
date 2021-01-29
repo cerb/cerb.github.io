@@ -62,7 +62,9 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 |---
 | Field | Type | Description
 |-|-|-
+| `_context` | text | [Record type](/docs/records/types/) extension ID
 | `_label` | text | Label
+| `_type` | text | [Record type](/docs/records/types/) alias
 | `dob` | text | Date Of Birth
 | `email_` | record | [Email](/docs/records/types/address/)
 | `first_name` | text | First Name

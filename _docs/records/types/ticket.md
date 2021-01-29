@@ -65,7 +65,9 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 |---
 | Field | Type | Description
 |-|-|-
+| `_context` | text | [Record type](/docs/records/types/) extension ID
 | `_label` | text | Label
+| `_type` | text | [Record type](/docs/records/types/) alias
 | `bucket_` | record | [Bucket](/docs/records/types/bucket/)
 | `closed` | date | Closed
 | `created` | date | Created
@@ -79,6 +81,8 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `latest_message_` | record | [Latest Message](/docs/records/types/message/)
 | `mask` | text | Mask
 | `num_messages` | number | # Messages
+| `num_messages_in` | number | # Messages In
+| `num_messages_out` | number | # Messages Out
 | `org_` | record | [Org](/docs/records/types/org/)
 | `owner_` | record | [Owner](/docs/records/types/worker/)
 | `reopen_date` | date | Reopen At
@@ -129,6 +133,8 @@ These [filters](/docs/search/filters/) are available in ticket [search queries](
 | `mask:` | [text](/docs/search/filters/text/) | Mask
 | `messages:` | [record](/docs/search/deep-search/) | [Messages](/docs/records/types/message/)
 | `messages.count:` | [number](/docs/search/filters/numbers/) | # Messages
+| `messages.count.in:` | [number](/docs/search/filters/numbers/) | # Messages In
+| `messages.count.out:` | [number](/docs/search/filters/numbers/) | # Messages Out
 | `messages.first:` | [record](/docs/search/deep-search/) | [Messages First](/docs/records/types/message/)
 | `messages.firstOutgoing:` | [record](/docs/search/deep-search/) | [Messages First Outgoing](/docs/records/types/message/)
 | `messages.last:` | [record](/docs/search/deep-search/) | [Messages Last](/docs/records/types/message/)
@@ -175,6 +181,8 @@ These columns are available on ticket [worklists](/docs/worklists/):
 | `t_last_wrote_address_id` | Last Wrote
 | `t_mask` | Mask
 | `t_num_messages` | # Messages
+| `t_num_messages_in` | # Messages In
+| `t_num_messages_out` | # Messages Out
 | `t_org_id` | Organization
 | `t_owner_id` | Owner
 | `t_reopen_at` | Reopen At
