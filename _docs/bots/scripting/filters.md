@@ -647,6 +647,30 @@ You can _"prettify"_ a JSON string with the **json_pretty** filter:
 }
 ```
 
+## kata_encode
+
+Emit an object/array as a KATA text block:
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set object = {
+	colors: ["red","green","blue"],
+	size: 100,
+} %}
+{{object|kata_encode}}
+{% endraw %}
+</code>
+</pre>
+
+```
+colors@list:
+  red
+  green
+  blue
+size: 100
+```
+
 ## keys
 
 Return the keys of an array or object:
