@@ -121,6 +121,7 @@
   - bots/scripting/commands
   - bots/scripting/functions
   - bots/scripting/filters
+  - bots/scripting/tests
 
 - title: Bot Interactions
   docs:
