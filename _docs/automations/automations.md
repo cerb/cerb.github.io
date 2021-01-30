@@ -746,6 +746,14 @@ There can now be multiple `enabled:` or `disabled:` rules. The first rule to ret
 | [**repeat:**](/docs/automations/commands/repeat/) | Iterate an array and repeat a sequence of commands for each value.
 | [**while:**](/docs/automations/commands/while/) | Conditionally loop a sequence of commands.
 
+### Logging
+
+|-|-
+| [**log:**](/docs/automations/commands/log/) | Log a debug message.
+| [**log.warn:**](/docs/automations/commands/log/) | Log a warning message.
+| [**log.error:**](/docs/automations/commands/log/) | Log an error message.
+| [**log.alert:**](/docs/automations/commands/log/) | Log an alert message.
+
 ### Actions
 
 |-|-
