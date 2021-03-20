@@ -495,6 +495,13 @@ Kina closed 120 tickets today!
 
 Generate a hash-based message authentication code (HMAC[^hmac]) using a secret key.
 
+`|hash_hmac(secret_key, algorithm, binary)`
+
+|-|-|-
+| **secret_key** | The secret key used to generate the HMAC digest
+| **algorithm** | The algorithm of the returned hash (e.g. `sha256`, `sha512`). See: [hash_hmac_algos](https://www.php.net/manual/en/function.hash-hmac-algos.php)
+| **binary** | Return raw binary data when `true`, otherwise lowercase hex (default) 
+
 For instance, you can use this to sign parameters in a survey URL to verify that the recipient didn't modify them.
 
 <pre>
