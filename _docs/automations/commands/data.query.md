@@ -53,6 +53,7 @@ start:
 | Key | 
 |-|-
 | `query@text:` | A [data query](/docs/data-queries/) to run.
+| `query_params` | Query parameters with untrusted user input as keys/values. Reference these as `${param}` in queries.
 
 ## output:
 
