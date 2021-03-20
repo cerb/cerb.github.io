@@ -132,6 +132,36 @@ start:
 <img src="/assets/images/docs/automations/triggers/interaction.web.worker/elements/sheet-dynamic.png" class="screenshot">
 </div>
 
+#### Synthesized data
+
+You can also specify a list of keys in `data:` without properties. These will be available as the `key` property.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+start:
+  await:
+    form:
+      elements:
+        sheet/prompt_rating:
+          label: Rating:
+          required@bool: yes
+          data:
+            1:
+            2:
+            3:
+            4:
+            5:
+          schema:
+            layout:
+              headings@bool: no
+              paging@bool: no
+            columns:
+              text/key:
+{% endraw %}
+</code>
+</pre>
+
 ### limit:
 
 The number of dataset items to display per page. Default: `10`
