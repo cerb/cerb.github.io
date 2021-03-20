@@ -745,6 +745,7 @@ There can now be multiple `enabled:` or `disabled:` rules. The first rule to ret
 
 |-|-
 | [**decision:**](/docs/automations/commands/decision/) | Conditionally select one of multiple potential outcomes.
+| [**outcome:**](/docs/automations/commands/outcome/) | A conditional sequence of commands.
 | [**repeat:**](/docs/automations/commands/repeat/) | Iterate an array and repeat a sequence of commands for each value.
 | [**while:**](/docs/automations/commands/while/) | Conditionally loop a sequence of commands.
 
