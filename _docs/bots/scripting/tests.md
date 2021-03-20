@@ -187,6 +187,23 @@ The test accepts one or more patterns.
 1
 ```
 
+## record type
+
+The **record type** test checks if an expression matches any of a list of record types. Record types can be specified as extension IDs (e.g. `cerberusweb.contexts.ticket`) or URIs (e.g. `ticket`).
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set record__context = 'cerberusweb.contexts.task' %}
+{{record__context is record type ('task','ticket')}}
+{% endraw %}
+</code>
+</pre>
+
+```
+1
+```
+
 ## same as
 
 The **same as** test checks if two variables are of the same exact type and value. This avoids type coercion (e.g. converting strings to numbers).
