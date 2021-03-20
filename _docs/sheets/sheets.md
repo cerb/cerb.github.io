@@ -128,6 +128,17 @@ layout:
 </code>
 </pre>
 
+### Buttons
+
+The `buttons` layout displays rows as buttons. This also supports one-click continue in [interactions](/docs/interactions/).
+
+<pre>
+<code class="language-cerb">
+layout:
+  style: buttons
+</code>
+</pre>
+
 # Columns
 
 ## Card
