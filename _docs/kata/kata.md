@@ -375,6 +375,18 @@ colors@csv: red,green,blue
 </code>
 </pre>
 
+### date
+
+`@date` converts a human-readable absolute (`Jan 1 2025 08:00`) or relative (`+2 hours`) date text value into a Unix timestamp.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+when@date: +2 hours
+{% endraw %}
+</code>
+</pre>
+
 ### int
 
 `@int` parses the key's value as a whole number.

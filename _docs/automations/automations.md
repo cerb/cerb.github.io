@@ -191,6 +191,7 @@ Here are some common annotations:
 | **`@bit:`** | `0` (`off`, `false`, `no`, `n`) or `1` (any non-false value)
 | **`@bool:`** | `false` (`no`, `n`, `off`, `0`) or `true` (any non-false value) 
 | **`@csv:`** | An array encoded as comma-separated text
+| **`@date:`** | A human-readable absolute (`Jan 1 2025 08:00`) or relative (`+2 hours`) date
 | **`@int:`** | A non-fractional number
 | **`@json:`** | A dictionary encoded as JSON text 
 | **`@kata:`** | A dictionary encoded as KATA text
