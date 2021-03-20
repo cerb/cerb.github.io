@@ -171,6 +171,14 @@ by:[group~-5]
 </code>
 </pre>
 
+# timezone:
+
+(Available in [10.0.0](/releases/10.0.0/) or later)
+
+The `timezone:` key generates date labels in the given timezone offset for bins like `by:[created@day]`.
+
+An option like `timezone:"-07:00"` uses the offset UTC-7.
+
 # metric:
 
 (Available in [9.0.7](/releases/9.0.7/) or later)
