@@ -51,7 +51,8 @@ start:
 | Key | 
 |-|-
 | `record_type:` | The [record type](/docs/records/types/) to create.
-| `record_query:` | The [search query](/docs/search/) to match. With `0` matches the record is created. With `1` match the existing record is updated. The [on_error:](#on_error) event is triggered otherwise.
+| `record_query:` | The [search query](/docs/search/) to match. With `0` matches the record is created. With `1` match the existing record is updated. The [on_error:](#on_error) event is triggered otherwise. Use `limit:1` and `sort:` in the `record_query:` to reduce multiple matches into one.
+| `record_query_params:` | Query parameters with untrusted user input as keys/values. Reference these as `${param}` in queries.
 | `fields:` | The [fields](/docs/records/#fields) to set based on the record type.
 
 ## output:
