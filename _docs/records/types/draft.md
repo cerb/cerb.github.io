@@ -44,9 +44,10 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `queue_fails` | [number](/docs/records/fields/types/number/) | (0-4294967296) 
 |   | `ticket_id` | [number](/docs/records/fields/types/number/) |  
 |   | `to` | [text](/docs/records/fields/types/text/) | The `To:` line of the draft message 
-| **x** | **`type`** | [text](/docs/records/fields/types/text/) | The type of draft: `mail.compose`, `ticket.reply`, or `ticket.forward` 
+|   | `token` | [text](/docs/records/fields/types/text/) | A random unique token for this draft, copied to the eventual message for tracing 
+| **x** | **`type`** | [text](/docs/records/fields/types/text/) | The type of draft: `mail.compose`, `mail.transactional`, `ticket.reply`, or `ticket.forward` 
 |   | `updated` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
-| **x** | **`worker_id`** | [number](/docs/records/fields/types/number/) | The ID of the [worker](/docs/records/types/worker/) who owns the draft 
+|   | `worker_id` | [number](/docs/records/fields/types/number/) | The ID of the [worker](/docs/records/types/worker/) who owns the draft 
 
 #### params (mail.compose)
 
@@ -68,6 +69,20 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | `status_id` | `0` (open), `1` (waiting), `2` (closed)
 | `subject` | The message `Subject:`
 | `ticket_reopen` | When the status is waiting or closed, the timestamp to reopen at
+| `to` | The `To:` recipients
+
+#### params (mail.transactional)
+
+|---
+| Key | Value
+|-|-
+| `bcc` | The `Bcc:` recipients
+| `cc` | The `Cc:` recipients
+| `content` | The message content
+| `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
+| `format` | `parsedown` (Markdown), or blank for plaintext
+| `from` | The `From:` sender (uses system default if omitted)
+| `subject` | The message `Subject:`
 | `to` | The `To:` recipients
 
 #### params (ticket.reply / ticket.forward)
@@ -105,6 +120,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `id` | number | Id
 | `name` | text | Name
 | `to` | text | To
+| `token` | text | Token
 | `updated` | date | Updated
 | `worker_` | record | [Worker](/docs/records/types/worker/)
 
@@ -129,6 +145,7 @@ These [filters](/docs/search/filters/) are available in draft [search queries](/
 | `queue.deliverAt:` | [date](/docs/search/filters/dates/) | Delivery Date
 | `queue.fails:` | [number](/docs/search/filters/numbers/) | # Fails
 | `to:` | [text](/docs/search/filters/text/) | To
+| `token:` | [text](/docs/search/filters/text/) | Token
 | `type:` | [text](/docs/search/filters/text/) | Message Type
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `worker:` | [record](/docs/search/deep-search/) | [Worker](/docs/records/types/worker/)
@@ -148,6 +165,7 @@ These columns are available on draft [worklists](/docs/worklists/):
 | `m_name` | Name
 | `m_queue_delivery_date` | Delivery Date
 | `m_queue_fails` | # Fails
+| `m_token` | Token
 | `m_type` | Message Type
 | `m_updated` | Updated
 | `m_worker_id` | Worker

@@ -51,6 +51,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `storage_size` | [number](/docs/records/fields/types/number/) | Size of the message in bytes 
 | **x** | **`ticket_id`** | [number](/docs/records/fields/types/number/) | The ID of the message's [ticket](/docs/records/types/ticket/) record 
 |   | `ticket_mask` | [text](/docs/records/fields/types/text/) | The parent [ticket](/docs/records/types/ticket/) mask; alternative to `ticket_id` 
+|   | `token` | [text](/docs/records/fields/types/text/) | A random unique identifier for the message (synchronized with draft) 
 |   | `was_encrypted` | [boolean](/docs/records/fields/types/boolean/) | Was the message sent encrypted? 
 |   | `worker` | [text](/docs/records/fields/types/text/) | The [worker](/docs/records/types/worker/) who sent the message (if any); alternative to `worker_id` 
 |   | `worker_id` | [number](/docs/records/fields/types/number/) | If outgoing, the ID of the [worker](/docs/records/types/worker/) who sent the message 
@@ -78,6 +79,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `signed_key_fingerprint` | text | Signed By
 | `storage_size` | number | Size (Bytes)
 | `ticket_` | record | [Ticket](/docs/records/types/ticket/)
+| `token` | text | Token
 | `was_encrypted` | boolean | Is Encrypted
 | `worker_` | record | [Sender Worker](/docs/records/types/worker/)
 
@@ -122,6 +124,7 @@ These [filters](/docs/search/filters/) are available in message [search queries]
 | `signed.fingerprint:` | [text](/docs/search/filters/text/) | Signed By
 | `ticket:` | [record](/docs/search/deep-search/) | [Ticket](/docs/records/types/ticket/)
 | `ticket.id:` | [chooser](/docs/search/filters/choosers/) | [Ticket Id](/docs/records/types/ticket/)
+| `token:` | [text](/docs/search/filters/text/) | Token
 | `worker:` | [record](/docs/search/deep-search/) | [Worker](/docs/records/types/worker/)
 | `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
 	
@@ -144,6 +147,7 @@ These columns are available on message [worklists](/docs/worklists/):
 | `m_signed_at` | Signed At
 | `m_signed_key_fingerprint` | Signed By
 | `m_ticket_id` | Ticket Id
+| `m_token` | Token
 | `m_was_encrypted` | Is Encrypted
 | `m_worker_id` | Worker
 | `t_bucket_id` | Bucket

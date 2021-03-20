@@ -33,7 +33,7 @@ start:
     output: record
     inputs:
       record_type: task
-      query: name:"This is a new task" status:open
+      record_query: name:"This is a new task" status:open
       # See: https://cerb.ai/docs/records/types/task/#records-api
       fields:
         importance: 75
