@@ -769,6 +769,7 @@ There can now be multiple `enabled:` or `disabled:` rules. The first rule to ret
 | [**record.create:**](/docs/automations/commands/record.create/) | Create a [record](/docs/records/).
 | [**record.delete:**](/docs/automations/commands/record.delete/) | Delete a [record](/docs/records/).
 | [**record.get:**](/docs/automations/commands/record.get/) | Retrieve a [record](/docs/records/).
+| [**record.search:**](/docs/automations/commands/record.search/) | Search [records](/docs/records/).
 | [**record.update:**](/docs/automations/commands/record.update/) | Update a [record](/docs/records/).
 | [**record.upsert:**](/docs/automations/commands/record.upsert/) | Create or update a [record](/docs/records/).
 | [**set:**](/docs/automations/commands/set/) | Set one or more placeholders.
