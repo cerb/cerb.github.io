@@ -59,9 +59,9 @@ An interaction automation [dictionary](/docs/automations/#dictionaries) starts w
 
 # Outputs
 
-## await:
+## await:form:
 
-When suspending in the `await` state, the interaction displays a web form with the desired elements. The form may prompt for user input, validate it, and set dictionary keys (placeholders) with the responses.
+When suspending in the `await:form:` state, the interaction displays a web form with the desired elements. The form may prompt for user input, validate it, and set dictionary keys (placeholders) with the responses.
 
 <pre>
 <code class="language-cerb">
@@ -73,11 +73,13 @@ await:
 </code>
 </pre>
 
-### form:title:
+### title:
+{: .no_toc}
 
 The title of this form to be displayed in the interaction popup. This is usually a summary of the current step.
 
-### form:elements:
+### elements:
+{: .no_toc}
 
 Form elements are defined with a key in the format `type/name:`.
 
@@ -120,6 +122,179 @@ start:
   return:
     user:
       name@key: prompt_name
+{% endraw %}
+</code>
+</pre>
+
+## await:draft:
+
+When suspending in the `await:draft:` state, the interaction opens the email editor popup and waits for completion.
+
+### uri:
+{: .no_toc}
+
+The `uri:` parameter specifies a compose or reply [draft](/docs/records/types/draft/) to resume (by ID or token). An automation can create a draft record prior to this step.
+
+### output:
+{: .no_toc}
+
+An optional `output:` parameter has the following keys:
+
+| `status` | One of: `compose.sent`, `compose.draft`, `compose.discard`, `reply.sent`, `reply.draft`, `reply.discard`
+| `record` | The dictionary of the record. For `.sent` this will be a [message](/docs/records/types/message/). For `.draft` it will be a [draft](/docs/records/types/draft/).
+
+This allows the interaction to make decisions based on those outcomes.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+start:
+  record.create:
+    output: draft_record
+    inputs:
+      record_type: draft
+      # See: https://cerb.ai/docs/records/types/draft/
+      fields:
+        name: Draft for customer@cerb.example
+        type: mail.compose
+        worker_id@key,int: worker_id
+        params:
+          to: customer@cerb.example
+          content@text:
+            Hi,
+            
+            #signature
+
+  await/resume:
+    draft:
+      uri: cerb:draft:{{draft_record.id}}
+      output: results_draft
+
+  outcome/sent:
+    if@bool: {{results_draft.status ends with '.sent'}}
+    then:
+      await:
+        form:
+          say: Message sent!
+{% endraw %}
+</code>
+</pre>
+
+## await:interaction:
+
+When suspending in the `await:interaction:` state, the interaction temporarily hands control to another delegate interaction. The interaction resumes at the current point when the delegate exits.
+
+Delegates can be nested to any depth. For instance, a reusable delegate could handle email or SMS validation, and be shared by many other interactions.
+
+This makes interactions much more modular and reusable.
+
+### uri:
+{: .no_toc}
+
+The `uri:` parameter specifies the delegate [automation](/docs/records/types/automation/). This must use the [interaction.web.worker](/docs/automations/triggers/interaction.web.worker/) trigger.
+
+### output:
+{: .no_toc}
+
+An `output:` key specifies the placeholder that should receive the results from the delegate.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+start:
+  while:
+    if@bool: yes
+    do:
+      await/menu:
+        form:
+          title: Menu
+          elements:
+            say:
+              message: How can we help?
+            sheet/prompt_menu:
+              required@bool: yes
+              data:
+                0:
+                  key: map
+                  label: Map
+                1:
+                  key: echo
+                  label: Echo
+              schema:
+                layout:
+                  style: buttons
+                  headings@bool: no
+                  paging@bool: no
+                  title_column: label
+                columns:
+                  selection/key:
+                    params:
+                      mode: single
+                  text/label:
+            submit:
+              continue@bool: no
+              reset@bool: no
+      await/do:
+        interaction:
+          output: results
+          uri@text:
+            cerb:automation:{{{
+                'map': 'wgm.interaction.locationByIP',
+                'echo': 'wgm.interaction.echo',
+              }[prompt_menu]}}
+{% endraw %}
+</code>
+</pre>
+
+## await:record:
+
+When suspending in the `await:record:` state, the interaction opens a record editor popup and waits for completion.
+
+### uri:
+{: .no_toc}
+
+This takes a `uri:` parameter which specifies a record type (and optionally record ID) to open in an editor popup.
+
+If the ID is omitted then the editor is opened in 'create' mode.
+
+### output:
+{: .no_toc}
+
+An optional `output:` parameter specifies a placeholder to store the status of the record after creation/modification (e.g. saved, deleted, aborted).
+
+| `event` | `record.created`, `record.updated`, `record.deleted`, `record.aborted` 
+| `record` | The dictionary of the created or modified record.
+
+This allows the interaction to make decisions based on those outcomes.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+inputs:
+  text/record_type:
+    type: record_type
+    required@bool: yes
+  record/column:
+    record_type: project_board_column
+    required@bool: yes
+
+start:
+  await:
+    record:
+      uri: cerb:{{inputs.record_type}}
+      output: result
+  outcome:
+    if@bool: {{result.record._context and result.record.id}}
+    then:
+      record.update:
+        output: new_record
+        inputs:
+          record_type: {{result.record._context}}
+          record_id: {{result.record.id}}
+          fields:
+            links@list:
+              project_board_column:{{inputs.column.id}}
+
 {% endraw %}
 </code>
 </pre>
