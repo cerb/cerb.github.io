@@ -103,6 +103,7 @@ The HTTP method to use for the request.
 method: POST
 </code>
 </pre>
+
 ### url:
 
 The URL of the HTTP endpoint to use for the request.
@@ -138,6 +139,18 @@ body@text:
 {% endraw %}
 </code>
 </pre> 
+
+### timeout:
+
+The optional timeout in seconds. Decimal values are allowed (e.g. `0.5` for 500ms).
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+timeout: 0.5
+{% endraw %}
+</code>
+</pre>
 
 ### authentication:
 
