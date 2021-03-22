@@ -39,4 +39,5 @@ The following [triggers](/docs/automations/#triggers) are used to build interact
 | Trigger | 
 |-|-
 | [interaction.web.worker](/docs/automations/triggers/interaction.web.worker/) | Interactions with a [worker](/docs/workers/) using web forms.
+| [interaction.website](/docs/automations/triggers/interaction.website/) | Interactions with visitors on third-party websites using web forms.
 
