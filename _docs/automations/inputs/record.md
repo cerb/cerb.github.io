@@ -29,9 +29,12 @@ inputs:
   record/ticket:
     required@bool: yes
     record_type: ticket
+    expand: owner_,customfields
     #default: 1
 </code>
 </pre>
+
+The value should be a record ID (`123`) or URI (`cerb:record_type:record_alias`).
 
 ### required:
 
@@ -40,3 +43,9 @@ inputs:
 [record types](/docs/records/types/)
 
 ### default:
+
+The default for the input if a value is omitted.
+
+### expand:
+
+A comma-separated string or array of keys to expand in the record dictionary.

@@ -57,12 +57,12 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `_label` | text | Label
 | `_type` | text | [Record type](/docs/records/types/) alias
 | `board_` | record | [Project Board](/docs/records/types/project_board/)
-| `cards_kata` | text | Common.cards_Kata
-| `functions_kata` | text | Common.functions_Kata
+| `cards_kata` | text | Cards Kata
+| `functions_kata` | text | Functions Kata
 | `id` | number | Id
 | `name` | text | Name
 | `record_url` | text | Record Url
-| `toolbar_kata` | text | Common.toolbar_Kata
+| `toolbar_kata` | text | Toolbar Kata
 | `updated_at` | date | Updated
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):

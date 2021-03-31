@@ -171,6 +171,10 @@ by:[group~-5]
 </code>
 </pre>
 
+# timeout:
+
+The time limit of the query in milliseconds (0-60000). Default: `20000`.
+
 # timezone:
 
 (Available in [10.0.0](/releases/10.0.0/) or later)

@@ -122,6 +122,26 @@ customer@cerb.example,"Help with the API",open
 customer@cerb.example,"Automating email replies",open
 ```
 
+## array_fill_keys
+
+(Added in [10.0](/releases/10.0/))
+
+Create an array with the given keys, each set to the default value.
+
+`array_fill_keys(keys,value)`
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{{array_fill_keys(range(1,10),true)|json_encode}}
+{% endraw %}
+</code>
+</pre>
+
+```
+{"1":true,"2":true,"3":true,"4":true,"5":true,"6":true,"7":true,"8":true,"9":true,"10":true}
+```
+
 ## array_intersect
 
 (Added in [9.0](/releases/9.0/))

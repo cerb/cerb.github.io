@@ -29,9 +29,12 @@ inputs:
   records/participants:
     required@bool: yes
     record_type: address
+    expand: owner_,customfields
     #default@csv: 1,2,3
 </code>
 </pre>
+
+The value should be an array of record IDs (`123`) or URIs (`cerb:record_type:record_alias`).
 
 ### required:
 
@@ -41,3 +44,8 @@ inputs:
 
 ### default:
 
+The default for the input if a value is omitted.
+
+### expand:
+
+A comma-separated string or array of keys to expand in the record dictionaries.

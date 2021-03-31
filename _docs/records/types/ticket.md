@@ -122,6 +122,8 @@ These [filters](/docs/search/filters/) are available in ticket [search queries](
 | `bucket.id:` | [chooser](/docs/search/filters/choosers/) | [Bucket](/docs/records/types/bucket/)
 | `closed:` | [date](/docs/search/filters/dates/) | Closed
 | `comments:` | [record](/docs/search/deep-search/) | [Comments](/docs/records/types/comment/)
+| `comments.first:` | [record](/docs/search/deep-search/) | [Comments First](/docs/records/types/comment/)
+| `comments.last:` | [record](/docs/search/deep-search/) | [Comments Last](/docs/records/types/comment/)
 | `created:` | [date](/docs/search/filters/dates/) | Created
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `group:` | [record](/docs/search/deep-search/) | [Group](/docs/records/types/group/)

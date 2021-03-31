@@ -201,6 +201,7 @@ You'll find a list of icon names in **Setup >> Developers >> Icon Reference**.
 
 <pre>
 <code class="language-cerb">
+{% raw %}
 columns:
   icon/can_sign:
     label: Sign
@@ -211,6 +212,7 @@ columns:
         {% if can_sign %}
         circle-ok
         {% endif %}
+{% endraw %}
 </code>
 </pre>
 

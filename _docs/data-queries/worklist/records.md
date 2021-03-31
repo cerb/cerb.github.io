@@ -77,6 +77,10 @@ expand:[custom_,group_,owner_]
 
 The `page:` key specifies the page to return. Pages numbering is zero-based. This is used by functionality like [sheets](/docs/sheets/).
 
+# timeout:
+
+The time limit of the query in milliseconds (0-60000). Default: `20000`.
+
 # format:
 
 The worklist results can be returned in these formats:
