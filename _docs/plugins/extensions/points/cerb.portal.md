@@ -28,9 +28,13 @@ jumbotron:
 
 # Extensions
 
+| [**Webhook Portal**](/docs/plugins/extensions/webhooks.portal/) | `webhooks.portal`
+| [**Website Interactions**](/docs/plugins/extensions/cerb.website.interactions/) | `cerb.website.interactions`
+
+### Deprecated
+
 | [**Conversational Bot**](/docs/plugins/extensions/cerb.bots.portal/) | `cerb.bots.portal`
 | [**Support Center**](/docs/plugins/extensions/sc.tool/) | `sc.tool`
-| [**Webhook Portal**](/docs/plugins/extensions/webhooks.portal/) | `webhooks.portal`
 
 <div class="section-nav">
 	<div class="left">
