@@ -29,7 +29,7 @@ jumbotron:
 **Interactions** are interactive [automations](/docs/automations/) that use [continuations](/docs/automations/#continuations) to pause and resume a multi-step workflow.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/automations/triggers/interaction.web.worker/interactions-participants.gif" class="screenshot">
+<img src="/assets/images/docs/automations/triggers/interaction.worker/interactions-participants.gif" class="screenshot">
 </div>
 
 For instance, a troubleshooter interaction can ask a series of increasingly specific questions to help narrow down the potential cause of a problem. A verification interaction can send a code to a new email address and ask the user to verify it.
@@ -38,6 +38,6 @@ The following [triggers](/docs/automations/#triggers) are used to build interact
 
 | Trigger | 
 |-|-
-| [interaction.web.worker](/docs/automations/triggers/interaction.web.worker/) | Interactions with a [worker](/docs/workers/) using web forms.
+| [interaction.worker](/docs/automations/triggers/interaction.worker/) | Interactions with a [worker](/docs/workers/) using web forms.
 | [interaction.website](/docs/automations/triggers/interaction.website/) | Interactions with visitors on third-party websites using web forms.
 

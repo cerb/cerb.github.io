@@ -2,7 +2,7 @@
 title: "Interaction Caller: cerb.toolbar.editor.automation.trigger"
 #excerpt: 
 #social_image_url: /assets/images/search/kata.png
-permalink: /docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.editor.automation.trigger/
+permalink: /docs/automations/triggers/interaction.worker/callers/cerb.toolbar.editor.automation.trigger/
 toc:
   title: cerb.toolbar.editor.automation.trigger
   expand: Automations
@@ -17,11 +17,11 @@ jumbotron:
     label: Automations &raquo;
     url: /docs/automations/
   -
-    label: interaction.web.worker &raquo;
-    url: /docs/automations/triggers/interaction.web.worker/
+    label: interaction.worker &raquo;
+    url: /docs/automations/triggers/interaction.worker/
   -
     label: Callers &raquo;
-    url: /docs/automations/triggers/interaction.web.worker/#callers
+    url: /docs/automations/triggers/interaction.worker/#callers
 ---
 
 {% include docs/note_preview.html %}

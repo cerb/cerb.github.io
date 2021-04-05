@@ -33,7 +33,7 @@ Top-level toolbar items are displayed as **buttons**. Items within a menu are di
 {:toc}
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/automations/triggers/interaction.web.worker/toolbar.png" class="screenshot">
+<img src="/assets/images/docs/automations/triggers/interaction.worker/toolbar.png" class="screenshot">
 </div>
 
 # KATA
@@ -69,7 +69,7 @@ interaction/locationByIp:
 
 |Req'd|Key|
 |:-:|-
-|√|`uri:`| The URI of the [interaction.web.worker](/docs/automations/triggers/interaction.web.worker/) [automation](/docs/automations/) to start when clicked.
+|√|`uri:`| The URI of the [interaction.worker](/docs/automations/triggers/interaction.worker/) [automation](/docs/automations/) to start when clicked.
 ||`inputs:`| The optional [inputs](/docs/automations/#inputs) dictionary for the interaction.
 ||`label:`| The label to describe the interaction in buttons and menu links. This may be omitted if an icon is provided.
 ||`icon:`| The optional [icon](/docs/developers/icons/) to display in buttons and menu links. This can be in addition to, or instead of, the label.
@@ -101,7 +101,7 @@ menu/moreMenu:
 </pre>
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/automations/triggers/interaction.web.worker/toolbar-menu.png" class="screenshot">
+<img src="/assets/images/docs/automations/triggers/interaction.worker/toolbar-menu.png" class="screenshot">
 </div>
 
 |Req'd|Key|

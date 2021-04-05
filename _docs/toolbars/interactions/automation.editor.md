@@ -39,7 +39,7 @@ Navigate to **Search >> Toolbars**.
 
 Edit the record for `automation.editor`.
 
-Add [interactions](/docs/automations/triggers/interaction.web.worker/) using [toolbar KATA](/docs/toolbars/#kata).
+Add [interactions](/docs/automations/triggers/interaction.worker/) using [toolbar KATA](/docs/toolbars/#kata).
 
 <pre>
 <code class="language-cerb">
@@ -51,7 +51,7 @@ interaction/magic:
   hidden@bool:
     {{trigger_name not in [
       'interaction.website',
-      'interaction.web.worker',
+      'interaction.worker',
     ]}}
 {% endraw %}
 </code>
@@ -72,7 +72,7 @@ Caller: `cerb.toolbar.automation.editor`
 
 ### Inputs
 
-The following `caller_params` are passed to the [interaction](/docs/automations/triggers/interaction.web.worker/):
+The following `caller_params` are passed to the [interaction](/docs/automations/triggers/interaction.worker/):
 
 | Key | Type |
 |-|-|-

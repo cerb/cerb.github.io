@@ -35,7 +35,7 @@ Navigate to **Search >> Toolbars**.
 
 Edit the record for `mail.compose`.
 
-Add [interactions](/docs/automations/triggers/interaction.web.worker/) using [toolbar KATA](/docs/toolbars/#kata).
+Add [interactions](/docs/automations/triggers/interaction.worker/) using [toolbar KATA](/docs/toolbars/#kata).
 
 <pre>
 <code class="language-cerb">
@@ -60,7 +60,7 @@ Caller: `cerb.toolbar.mail.compose`
 
 ### Inputs
 
-The following `caller_params` are passed [interactions](/docs/automations/triggers/interaction.web.worker/):
+The following `caller_params` are passed [interactions](/docs/automations/triggers/interaction.worker/):
 
 | Key | Type |
 |-|-|-
@@ -68,7 +68,7 @@ The following `caller_params` are passed [interactions](/docs/automations/trigge
 
 ### Output
 
-[Interactions](/docs/automations/triggers/interaction.web.worker/) can `return:` the following keys:
+[Interactions](/docs/automations/triggers/interaction.worker/) can `return:` the following keys:
 
 | Key | Type |
 |-|-|-

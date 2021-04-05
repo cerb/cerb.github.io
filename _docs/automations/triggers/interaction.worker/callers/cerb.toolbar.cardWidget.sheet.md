@@ -1,13 +1,13 @@
 ---
-title: "Interaction Caller: cerb.toolbar.cardWidget.interactions"
+title: "Interaction Caller: cerb.toolbar.cardWidget.sheet"
 #excerpt: 
 #social_image_url: /assets/images/search/kata.png
-permalink: /docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.cardWidget.interactions/
+permalink: /docs/automations/triggers/interaction.worker/callers/cerb.toolbar.cardWidget.sheet/
 toc:
-  title: cerb.toolbar.cardWidget.interactions
+  title: cerb.toolbar.cardWidget.sheet
   expand: Automations
 jumbotron:
-  title: cerb.toolbar.cardWidget.interactions
+  title: cerb.toolbar.cardWidget.sheet
   tagline: 
   breadcrumbs:
   -
@@ -17,18 +17,18 @@ jumbotron:
     label: Automations &raquo;
     url: /docs/automations/
   -
-    label: interaction.web.worker &raquo;
-    url: /docs/automations/triggers/interaction.web.worker/
+    label: interaction.worker &raquo;
+    url: /docs/automations/triggers/interaction.worker/
   -
     label: Callers &raquo;
-    url: /docs/automations/triggers/interaction.web.worker/#callers
+    url: /docs/automations/triggers/interaction.worker/#callers
 ---
 
 {% include docs/note_preview.html %}
 
 # Parameters
 
-The following `caller_params` are passed to the [interaction](/docs/automations/triggers/interaction.web.worker/):
+The following `caller_params` are passed to the [interaction](/docs/automations/triggers/interaction.worker/):
 
 | Key | Type | 
 |-|-|-

@@ -2,7 +2,7 @@
 title: "Sheet - Interaction Form Element"
 #excerpt: 
 #social_image_url: /assets/images/search/kata.png
-permalink: /docs/automations/triggers/interaction.web.worker/elements/sheet/
+permalink: /docs/automations/triggers/interaction.worker/elements/sheet/
 toc:
   title: Sheet
   expand: Automations
@@ -17,16 +17,16 @@ jumbotron:
     label: Automations &raquo;
     url: /docs/automations/
   -
-    label: interaction.web.worker &raquo;
-    url: /docs/automations/triggers/interaction.web.worker/
+    label: interaction.worker &raquo;
+    url: /docs/automations/triggers/interaction.worker/
   -
     label: Elements &raquo;
-    url: /docs/automations/triggers/interaction.web.worker/#elements
+    url: /docs/automations/triggers/interaction.worker/#elements
 ---
 
 {% include docs/note_preview.html %}
 
-In [interaction](/docs/automations/triggers/interaction.web.worker/) web forms, a **sheet** element displays a [sheet](/docs/sheets/) schema using static or dynamic data.
+In [interaction](/docs/automations/triggers/interaction.worker/) web forms, a **sheet** element displays a [sheet](/docs/sheets/) schema using static or dynamic data.
 
 Selection prompt can be set to 'single' or 'multiple'.
 
@@ -74,7 +74,7 @@ start:
 </pre>
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/automations/triggers/interaction.web.worker/elements/sheet.png" class="screenshot">
+<img src="/assets/images/docs/automations/triggers/interaction.worker/elements/sheet.png" class="screenshot">
 </div>
 
 # Syntax
@@ -129,7 +129,7 @@ start:
 </pre>
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/automations/triggers/interaction.web.worker/elements/sheet-dynamic.png" class="screenshot">
+<img src="/assets/images/docs/automations/triggers/interaction.worker/elements/sheet-dynamic.png" class="screenshot">
 </div>
 
 #### Synthesized data
@@ -190,4 +190,4 @@ The `selection:params:mode:` may be `single` or `multiple`.
 
 ### toolbar:
 
-An optional [interaction toolbar](/docs/automations/triggers/interaction.web.worker/#toolbars) for this sheet.
+An optional [interaction toolbar](/docs/automations/triggers/interaction.worker/#toolbars) for this sheet.

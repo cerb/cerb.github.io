@@ -2,7 +2,7 @@
 title: "Text - Interaction Form Element"
 #excerpt: 
 #social_image_url: /assets/images/search/kata.png
-permalink: /docs/automations/triggers/interaction.web.worker/elements/text/
+permalink: /docs/automations/triggers/interaction.worker/elements/text/
 toc:
   title: Text
   expand: Automations
@@ -17,16 +17,16 @@ jumbotron:
     label: Automations &raquo;
     url: /docs/automations/
   -
-    label: interaction.web.worker &raquo;
-    url: /docs/automations/triggers/interaction.web.worker/
+    label: interaction.worker &raquo;
+    url: /docs/automations/triggers/interaction.worker/
   -
     label: Elements &raquo;
-    url: /docs/automations/triggers/interaction.web.worker/#elements
+    url: /docs/automations/triggers/interaction.worker/#elements
 ---
 
 {% include docs/note_preview.html %}
 
-In [interaction](/docs/automations/triggers/interaction.web.worker/) web forms, a **text** element displays a text input field with various validation options.
+In [interaction](/docs/automations/triggers/interaction.worker/) web forms, a **text** element displays a text input field with various validation options.
 
 Formats: date, decimal, bool, email, ip, geopoint, number, record type, timestamp, uri, url
 
@@ -56,7 +56,7 @@ start:
 </pre>
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/automations/triggers/interaction.web.worker/elements/text.png" class="screenshot">
+<img src="/assets/images/docs/automations/triggers/interaction.worker/elements/text.png" class="screenshot">
 </div>
 
 # Syntax

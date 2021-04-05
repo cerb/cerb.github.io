@@ -429,7 +429,7 @@ When an automation exits in the `await:` state, a snapshot of its current dictio
 
 The continuation identifier is used to resume the automation from the same point at a future time with additional input.
 
-For instance, here's a basic [interaction](/docs/automations/triggers/interaction.web.worker/) automation that pauses for user input:
+For instance, here's a basic [interaction](/docs/automations/triggers/interaction.worker/) automation that pauses for user input:
 
 <pre>
 <code class="language-cerb">
@@ -557,7 +557,7 @@ Some automation [triggers](/docs/automations/#triggers) support **callers**. A c
 
 | Trigger | 
 |-|-
-| [interaction.web.worker](/docs/automations/triggers/interaction.web.worker/#callers)
+| [interaction.worker](/docs/automations/triggers/interaction.worker/#callers)
 
 The following policy allows an [interaction](/docs/interactions/) on [project board](/docs/project-boards/) columns when a worker has write-access on the board, and otherwise denies it:
 
@@ -576,7 +576,7 @@ callers:
 </code>
 </pre>
 
-When a caller policy denies an interaction it is automatically hidden from [toolbars](/docs/automations/triggers/interaction.web.worker/#toolbars).
+When a caller policy denies an interaction it is automatically hidden from [toolbars](/docs/automations/triggers/interaction.worker/#toolbars).
 
 #### Commands
 
@@ -690,7 +690,7 @@ Automations are automatically **triggered** in response to events within Cerb.
 |-|:-:|:-:|-
 | [**automation.function**](/docs/automations/triggers/automation.function/) | √ | | A reusable function with shared functionality called by other automations
 | [**automation.timer**](/docs/automations/triggers/automation.timer/) | √ | √ | A scheduled automation with [continuations](#continuations)
-| [**interaction.web.worker**](/docs/automations/triggers/interaction.web.worker/) | √ | √ | Worker [interactions](/docs/interactions/) on [toolbars](/docs/toolbars/) and widgets
+| [**interaction.worker**](/docs/automations/triggers/interaction.worker/) | √ | √ | Worker [interactions](/docs/interactions/) on [toolbars](/docs/toolbars/) and widgets
 | [**interaction.website**](/docs/automations/triggers/interaction.website/) | √ | √ | Website visitor [interactions](/docs/interactions/)
 | [**map.clicked**](/docs/automations/triggers/map.clicked/) | √ | | Handlers for clicks on [map](/docs/maps/) regions and points
 | [**projectBoard.cardAction**](/docs/automations/triggers/projectBoard.cardAction/) | √ | | Actions that take place for new cards in a project board column
@@ -705,7 +705,7 @@ Automations are automatically **triggered** in response to events within Cerb.
 
 In functionality that triggers automations (e.g. widgets), event handlers are defined in a [KATA](/docs/kata/) dialect.
 
-For events that expect a single handler (e.g. `interaction.web.worker`), the first matching (non-disabled) automation is executed and its end state is returned. This can be used to conditionally respond based on the event/caller.
+For events that expect a single handler (e.g. `interaction.worker`), the first matching (non-disabled) automation is executed and its end state is returned. This can be used to conditionally respond based on the event/caller.
 
 For events that run all handlers (e.g. `projectBoard.cardAction`), all non-disabled automations are executed in order, and their end states are returned.
 

@@ -1,13 +1,15 @@
 ---
-title: "interaction.web.worker"
-excerpt: interaction.web.worker automations are worker-based interactions that use continuations to pause and resume a multi-step workflow. 
+title: "interaction.worker"
+excerpt: interaction.worker automations are worker-based interactions that use continuations to pause and resume a multi-step workflow. 
 #social_image_url: /assets/images/search/kata.png
-permalink: /docs/automations/triggers/interaction.web.worker/
+permalink: /docs/automations/triggers/interaction.worker/
+redirect_from:
+- /docs/automations/triggers/interaction.web.worker/
 toc:
-  title: interaction.web.worker
+  title: interaction.worker
   expand: Automations
 jumbotron:
-  title: interaction.web.worker
+  title: interaction.worker
   tagline: 
   breadcrumbs:
   -
@@ -23,13 +25,13 @@ jumbotron:
 
 {% include docs/note_preview.html %}
 
-**interaction.web.worker** [automations](/docs/automations/) are worker-based [interactions](/docs/interactions/) that use [continuations](/docs/automations/#continuations) to pause and resume a multi-step workflow.
+**interaction.worker** [automations](/docs/automations/) are worker-based [interactions](/docs/interactions/) that use [continuations](/docs/automations/#continuations) to pause and resume a multi-step workflow.
 
 * TOC
 {:toc}
   
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/automations/triggers/interaction.web.worker/interaction-map.gif" class="screenshot">
+<img src="/assets/images/docs/automations/triggers/interaction.worker/interaction-map.gif" class="screenshot">
 </div>
 
 These interactions are started by a [caller](#callers) in response to a worker action within Cerb. The caller is usually a customizable [toolbar](/docs/toolbars/), but it could be any interface component or feature (e.g. buttons, links, images).
@@ -43,7 +45,7 @@ This separation of duties makes interactions simpler to build and reuse. An inte
 For instance, an interaction may be started from a toolbar in the email reply editor to fetch information based on the recipients (e.g. order history). The interaction generates and returns a text snippet, which the caller pastes into the editor at the cursor. The interaction only needs to generate some text, without any consideration for how it will be pasted into the editor.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/automations/triggers/interaction.web.worker/interactions-participants.gif" class="screenshot">
+<img src="/assets/images/docs/automations/triggers/interaction.worker/interactions-participants.gif" class="screenshot">
 </div>
 
 # Inputs
@@ -89,14 +91,14 @@ A form can be created with any combination of the following element types:
 
 | Element |
 |-|-
-| [**editor:**](/docs/automations/triggers/interaction.web.worker/elements/editor/) | A code editor with syntax highlighting, autocompletion, and a custom toolbar.
-| [**fileUpload:**](/docs/automations/triggers/interaction.web.worker/elements/fileUpload/) | File upload prompt
-| [**map:**](/docs/automations/triggers/interaction.web.worker/elements/map/) | Interactive [map](/docs/maps/) 
-| [**say:**](/docs/automations/triggers/interaction.web.worker/elements/say/) | Block of text or Markdown
-| [**sheet:**](/docs/automations/triggers/interaction.web.worker/elements/sheet/) | [Sheet](/docs/sheets) with row selection
-| [**submit:**](/docs/automations/triggers/interaction.web.worker/elements/submit/) | Continue to next step
-| [**text:**](/docs/automations/triggers/interaction.web.worker/elements/text/) | Text input with data types
-| [**textarea:**](/docs/automations/triggers/interaction.web.worker/elements/textarea/) | Multiple lines of text
+| [**editor:**](/docs/automations/triggers/interaction.worker/elements/editor/) | A code editor with syntax highlighting, autocompletion, and a custom toolbar.
+| [**fileUpload:**](/docs/automations/triggers/interaction.worker/elements/fileUpload/) | File upload prompt
+| [**map:**](/docs/automations/triggers/interaction.worker/elements/map/) | Interactive [map](/docs/maps/) 
+| [**say:**](/docs/automations/triggers/interaction.worker/elements/say/) | Block of text or Markdown
+| [**sheet:**](/docs/automations/triggers/interaction.worker/elements/sheet/) | [Sheet](/docs/sheets) with row selection
+| [**submit:**](/docs/automations/triggers/interaction.worker/elements/submit/) | Continue to next step
+| [**text:**](/docs/automations/triggers/interaction.worker/elements/text/) | Text input with data types
+| [**textarea:**](/docs/automations/triggers/interaction.worker/elements/textarea/) | Multiple lines of text
 
 When the interaction suspends in the `await` state, a `submit:` element is automatically appended to the form if one doesn't already exist.
 
@@ -191,7 +193,7 @@ This makes interactions much more modular and reusable.
 ### uri:
 {: .no_toc}
 
-The `uri:` parameter specifies the delegate [automation](/docs/records/types/automation/). This must use the [interaction.web.worker](/docs/automations/triggers/interaction.web.worker/) trigger.
+The `uri:` parameter specifies the delegate [automation](/docs/records/types/automation/). This must use the [interaction.worker](/docs/automations/triggers/interaction.worker/) trigger.
 
 ### output:
 {: .no_toc}
@@ -335,30 +337,30 @@ An interaction receives different inputs and expects different outputs depending
 
 | Caller | 
 |-|-
-| [**cerb.toolbar.cardWidget.interactions**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.cardWidget.interactions/) | Interactions [toolbar](/docs/toolbars/) in [card widgets](/docs/records/types/card_widget/)
-| [**cerb.toolbar.profileWidget.interactions**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.profileWidget.interactions/) | Interactions [toolbar](/docs/toolbars/) in [profile widgets](/docs/records/types/profile_widget/)
-| [**cerb.toolbar.workspaceWidget.interactions**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.workspaceWidget.interactions/) | Interactions [toolbar](/docs/toolbars/) in [workspace widgets](/docs/records/types/workspace_widget/)
+| [**cerb.toolbar.cardWidget.interactions**](/docs/automations/triggers/interaction.worker/callers/cerb.toolbar.cardWidget.interactions/) | Interactions [toolbar](/docs/toolbars/) in [card widgets](/docs/records/types/card_widget/)
+| [**cerb.toolbar.profileWidget.interactions**](/docs/automations/triggers/interaction.worker/callers/cerb.toolbar.profileWidget.interactions/) | Interactions [toolbar](/docs/toolbars/) in [profile widgets](/docs/records/types/profile_widget/)
+| [**cerb.toolbar.workspaceWidget.interactions**](/docs/automations/triggers/interaction.worker/callers/cerb.toolbar.workspaceWidget.interactions/) | Interactions [toolbar](/docs/toolbars/) in [workspace widgets](/docs/records/types/workspace_widget/)
 
 ### Project boards
 
 | Caller | 
 |-|-
-| [**cerb.toolbar.projectBoardColumn**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.projectBoardColumn/) | [Project board](/docs/project-boards/) column [toolbar](/docs/toolbars/)
+| [**cerb.toolbar.projectBoardColumn**](/docs/automations/triggers/interaction.worker/callers/cerb.toolbar.projectBoardColumn/) | [Project board](/docs/project-boards/) column [toolbar](/docs/toolbars/)
 
 ### Sheets
 
 | Caller | 
 |-|-
-| [**cerb.toolbar.automation.interaction.web.worker.await.sheet**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.automation.interaction.web.worker.await.sheet/) | [Sheet prompt](/docs/automations/triggers/interaction.web.worker/elements/sheet/) toolbar in an [interaction](/docs/interactions/)
-| [**cerb.toolbar.cardWidget.sheet**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.cardWidget.sheet/) | [Sheet](/docs/sheets/) toolbar in [card widgets](/docs/records/types/card_widget/) 
-| [**cerb.toolbar.profileWidget.sheet**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.profileWidget.sheet/) | [Sheet](/docs/sheets/) toolbar in [profile widgets](/docs/records/types/profile_widget/)
+| [**cerb.toolbar.automation.interaction.worker.await.sheet**](/docs/automations/triggers/interaction.worker/callers/cerb.toolbar.automation.interaction.worker.await.sheet/) | [Sheet prompt](/docs/automations/triggers/interaction.worker/elements/sheet/) toolbar in an [interaction](/docs/interactions/)
+| [**cerb.toolbar.cardWidget.sheet**](/docs/automations/triggers/interaction.worker/callers/cerb.toolbar.cardWidget.sheet/) | [Sheet](/docs/sheets/) toolbar in [card widgets](/docs/records/types/card_widget/) 
+| [**cerb.toolbar.profileWidget.sheet**](/docs/automations/triggers/interaction.worker/callers/cerb.toolbar.profileWidget.sheet/) | [Sheet](/docs/sheets/) toolbar in [profile widgets](/docs/records/types/profile_widget/)
 
 ### Internal
 
 | Caller | 
 |-|-
-| [**cerb.toolbar.editor.automation.script**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.editor.automation.script/) | [Automation](/docs/automations/) script editor toolbar
-| [**cerb.toolbar.editor.automation.trigger**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.editor.automation.trigger/) | [Automation](/docs/automations/) editor trigger chooser
-| [**cerb.toolbar.eventHandlers.editor**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.eventHandlers.editor/) | [Automation](/docs/automations/) event handlers editor toolbar
-| [**cerb.toolbar.editor**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.editor/) | [Toolbar](/docs/toolbars/) editor
-| [**cerb.toolbar.editor.map**](/docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.editor.map/) | Map editor toolbar
+| [**cerb.toolbar.editor.automation.script**](/docs/automations/triggers/interaction.worker/callers/cerb.toolbar.editor.automation.script/) | [Automation](/docs/automations/) script editor toolbar
+| [**cerb.toolbar.editor.automation.trigger**](/docs/automations/triggers/interaction.worker/callers/cerb.toolbar.editor.automation.trigger/) | [Automation](/docs/automations/) editor trigger chooser
+| [**cerb.toolbar.eventHandlers.editor**](/docs/automations/triggers/interaction.worker/callers/cerb.toolbar.eventHandlers.editor/) | [Automation](/docs/automations/) event handlers editor toolbar
+| [**cerb.toolbar.editor**](/docs/automations/triggers/interaction.worker/callers/cerb.toolbar.editor/) | [Toolbar](/docs/toolbars/) editor
+| [**cerb.toolbar.editor.map**](/docs/automations/triggers/interaction.worker/callers/cerb.toolbar.editor.map/) | Map editor toolbar

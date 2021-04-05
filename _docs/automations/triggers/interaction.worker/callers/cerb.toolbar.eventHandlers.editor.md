@@ -2,7 +2,7 @@
 title: "Interaction Caller: cerb.toolbar.eventHandlers.editor"
 #excerpt: 
 #social_image_url: /assets/images/search/kata.png
-permalink: /docs/automations/triggers/interaction.web.worker/callers/cerb.toolbar.eventHandlers.editor/
+permalink: /docs/automations/triggers/interaction.worker/callers/cerb.toolbar.eventHandlers.editor/
 toc:
   title: cerb.toolbar.eventHandlers.editor
   expand: Automations
@@ -17,11 +17,11 @@ jumbotron:
     label: Automations &raquo;
     url: /docs/automations/
   -
-    label: interaction.web.worker &raquo;
-    url: /docs/automations/triggers/interaction.web.worker/
+    label: interaction.worker &raquo;
+    url: /docs/automations/triggers/interaction.worker/
   -
     label: Callers &raquo;
-    url: /docs/automations/triggers/interaction.web.worker/#callers
+    url: /docs/automations/triggers/interaction.worker/#callers
 ---
 
 {% include docs/note_preview.html %}
@@ -30,7 +30,7 @@ An [event handler](/docs/automations/#events) editor.
 
 # Parameters
 
-The following `caller_params` are passed to the [interaction](/docs/automations/triggers/interaction.web.worker/):
+The following `caller_params` are passed to the [interaction](/docs/automations/triggers/interaction.worker/):
 
 | Key | Type | 
 |-|-|-

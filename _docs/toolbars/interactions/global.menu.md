@@ -35,7 +35,7 @@ Navigate to **Search >> Toolbars**.
 
 Edit the record for `global.menu`.
 
-Add [interactions](/docs/automations/triggers/interaction.web.worker/) using [toolbar KATA](/docs/toolbars/#kata).
+Add [interactions](/docs/automations/triggers/interaction.worker/) using [toolbar KATA](/docs/toolbars/#kata).
 
 <pre>
 <code class="language-cerb">

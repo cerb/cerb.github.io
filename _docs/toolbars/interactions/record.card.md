@@ -35,7 +35,7 @@ Navigate to **Search >> Toolbars**.
 
 Edit the record for `record.card`.
 
-Add [interactions](/docs/automations/triggers/interaction.web.worker/) using [toolbar KATA](/docs/toolbars/#kata).
+Add [interactions](/docs/automations/triggers/interaction.worker/) using [toolbar KATA](/docs/toolbars/#kata).
 
 <pre>
 <code class="language-cerb">
@@ -63,7 +63,7 @@ Caller: `cerb.toolbar.record.card`
 
 ### Inputs
 
-The following `caller_params` are passed to the [interaction](/docs/automations/triggers/interaction.web.worker/):
+The following `caller_params` are passed to the [interaction](/docs/automations/triggers/interaction.worker/):
 
 | Key | Type |
 |-|-|-
