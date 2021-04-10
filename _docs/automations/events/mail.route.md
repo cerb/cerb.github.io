@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#events
 ---
 
-{% include docs/note_preview.html %}
-
 **mail.route** [automation](/docs/automations/) [events](/docs/automations/#events) determine a destination group inbox given properties of an incoming message (e.g. sender, subject, recipients, headers, body). 
 
 # Placeholders

@@ -24,8 +24,6 @@ jumbotron:
     url: /docs/automations/triggers/interaction.worker/#callers
 ---
 
-{% include docs/note_preview.html %}
-
 An [event handler](/docs/automations/#events) editor.
 
 # Parameters

@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/toolbars/
 ---
 
-{% include docs/note_preview.html %}
-
 The reply [toolbar](/docs/toolbars/) is displayed when sending a reply to an email.
 
 <div class="cerb-screenshot">

@@ -19,8 +19,6 @@ jumbotron:
     url: /docs/records/types/
 ---
 
-{% include docs/note_preview.html %}
-
 |---
 |-|-
 | **Name (singular):** | Automation

@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/toolbars/
 ---
 
-{% include docs/note_preview.html %}
-
 The global interactions [toolbar](/docs/toolbars/) is accessed from the floating Cerb icon in the lower right of every page.
 
 <div class="cerb-screenshot">

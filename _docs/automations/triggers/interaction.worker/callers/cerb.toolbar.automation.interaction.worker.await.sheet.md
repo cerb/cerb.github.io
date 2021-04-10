@@ -24,8 +24,6 @@ jumbotron:
     url: /docs/automations/triggers/interaction.worker/#callers
 ---
 
-{% include docs/note_preview.html %}
-
 # Parameters
 
 The caller doesn't provide any `caller_params` values.

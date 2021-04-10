@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **decrypt.pgp:** command decrypts a PGP-encrypted text block.
 
 <pre>

@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **email.parse:** command parses a MIME-encoded email message into a [ticket](/docs/records/types/ticket/).
 
 <pre>

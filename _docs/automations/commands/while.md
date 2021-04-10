@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **while:** command conditionally repeats a sequence of actions. This can implement controlled infinite loops for interactions and timers.
 
 <pre>

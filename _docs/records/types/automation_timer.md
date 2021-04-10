@@ -19,8 +19,6 @@ jumbotron:
     url: /docs/records/types/
 ---
 
-{% include docs/note_preview.html %}
-
 |---
 |-|-
 | **Name (singular):** | Automation Timer
@@ -40,9 +38,14 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |:-:|-|-|-
 |   | `automations_kata` | [text](/docs/records/fields/types/text/) |  
 |   | `created_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
+|   | `is_disabled` | [boolean](/docs/records/fields/types/boolean/) |  
+|   | `is_recurring` | [boolean](/docs/records/fields/types/boolean/) |  
+|   | `last_ran_at` | [timestamp](/docs/records/fields/types/timestamp/) |  
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this automation timer 
-|   | `resume_at` | [timestamp](/docs/records/fields/types/timestamp/) |  
+|   | `next_run_at` | [timestamp](/docs/records/fields/types/timestamp/) |  
+|   | `recurring_patterns` | [text](/docs/records/fields/types/text/) |  
+|   | `recurring_timezone` | [text](/docs/records/fields/types/text/) |  
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 
 ### Dictionary Placeholders
@@ -57,9 +60,14 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `_type` | text | [Record type](/docs/records/types/) alias
 | `created_at` | date | Created
 | `id` | number | Id
+| `is_disabled` | boolean | Disabled
+| `is_recurring` | boolean | Is Recurring
+| `last_ran_at` | date | Last Ran At
 | `name` | text | Name
+| `next_run_at` | date | Next Run At
 | `record_url` | text | Record Url
-| `resume_at` | date | Common.resume_At
+| `recurring_patterns` | text | Recurring Patterns
+| `recurring_timezone` | text | Timezone
 | `updated_at` | date | Updated
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
@@ -82,9 +90,11 @@ These [filters](/docs/search/filters/) are available in automation timer [search
 | `created:` | [date](/docs/search/filters/dates/) | Created
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
+| `isRecurring:` | [boolean](/docs/search/filters/booleans/) | Is Recurring
+| `lastRanAt:` | [date](/docs/search/filters/dates/) | Last Ran At
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
-| `resumeAt:` | [date](/docs/search/filters/dates/) | Resume At
+| `nextRunAt:` | [date](/docs/search/filters/dates/) | Next Run At
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
 	
@@ -97,8 +107,13 @@ These columns are available on automation timer [worklists](/docs/worklists/):
 |-|-
 | `a_created_at` | Created
 | `a_id` | Id
+| `a_is_disabled` | Disabled
+| `a_is_recurring` | Is Recurring
+| `a_last_ran_at` | Last Ran At
 | `a_name` | Name
-| `a_resume_at` | Resume At
+| `a_next_run_at` | Next Run At
+| `a_recurring_patterns` | Recurring Patterns
+| `a_recurring_timezone` | Timezone
 | `a_updated_at` | Updated
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 

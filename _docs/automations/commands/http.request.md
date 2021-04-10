@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **http.request:** command sends data to an HTTP endpoint and returns the response.
 
 A simple `GET` request:

@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **var.push:** command appends a value to an array.
 
 <pre>

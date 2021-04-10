@@ -14,8 +14,6 @@ jumbotron:
     url: /docs/home/
 ---
 
-{% include docs/note_preview.html %}
-
 {% comment %}
 <div class="cerb-screenshot">
 <img src="{{page.social_image_url}}" class="screenshot">
@@ -699,6 +697,7 @@ Automations are automatically **triggered** in response to events within Cerb.
 | [**reminder.remind**](/docs/automations/triggers/reminder.remind/) | √ | | Actions that run for [reminder](/docs/reminders/) alerts 
 | [**resource.get**](/docs/automations/triggers/resource.get/) | √ | | Dynamic [resource](/docs/resources/) content 
 | [**ui.sheet.data**](/docs/automations/triggers/ui.sheet.data/) | √ | | Data sources for [sheets](/docs/sheets/)
+| [**ui.widget**](/docs/automations/triggers/ui.widget/) | √ | | Custom output for [card](/docs/records/types/card_widget/), [profile](/docs/records/types/profile_widget/), or [workspace](/docs/records/types/workspace_widget/) widgets
 | [**webhook.respond**](/docs/automations/triggers/webhook.respond/) | | | Handlers for [webhook listeners](/docs/webhooks/)
 
 # Events

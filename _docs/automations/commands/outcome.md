@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **outcome:** command makes a sequence of commands conditional. Each outcome must have a unique name.
 
 | Key |

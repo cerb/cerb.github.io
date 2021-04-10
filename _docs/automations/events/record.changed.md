@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#events
 ---
 
-{% include docs/note_preview.html %}
-
 **record.changed** [automation](/docs/automations/) [events](/docs/automations/#events) are triggered whenever one or more fields are changed on a [record](/docs/records/types/).
 
 In the events KATA, all enabled automations are executed in order.

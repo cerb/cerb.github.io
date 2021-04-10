@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **await:** command pauses an [automation](/docs/automations/) in the `await` [state](/docs/automations/#exit-states) and returns a [dictionary](/docs/automations/#dictionaries).
 
 This creates a [continuation](/docs/automations/#continuations) for resuming the automation at the current point.

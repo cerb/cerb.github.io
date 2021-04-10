@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#triggers
 ---
 
-{% include docs/note_preview.html %}
-
 **automation.timer** [automations](/docs/automations/) are executed by [timers](/docs/automations/#timers) at a future time, or at various intervals. They support [continuations](/docs/automations/#continuations) to pause and resume between executions.
 
 <div class="cerb-screenshot">

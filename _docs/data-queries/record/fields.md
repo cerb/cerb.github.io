@@ -17,8 +17,6 @@ jumbotron:
     url: /docs/data-queries/
 ---
 
-{% include docs/note_preview.html %}
-
 # record.fields
 
 `record.fields` data queries return a filterable and pageable list of fields from a [record type](/docs/record/types/).

@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **record.upsert:** command creates or updates a record with the given fields.
 
 <pre>

@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **decision:** command conditionally selects one of multiple potential outcomes.
 
 # Syntax

@@ -1,13 +1,13 @@
 ---
-title: "ui.sheet.data"
+title: "ui.widget"
 #excerpt: 
 #social_image_url: /assets/images/search/kata.png
-permalink: /docs/automations/triggers/ui.sheet.data/
+permalink: /docs/automations/triggers/ui.widget/
 toc:
-  title: ui.sheet.data
+  title: ui.widget
   expand: Automations
 jumbotron:
-  title: ui.sheet.data
+  title: ui.widget
   tagline: 
   breadcrumbs:
   -
@@ -21,7 +21,7 @@ jumbotron:
     url: /docs/automations/#triggers
 ---
 
-**ui.sheet.data** [automations](/docs/automations/) are triggered when a sheet requests dynamic data.
+**ui.widget** [automations](/docs/automations/) allow custom output to be implemented for card, profile, or workspace widgets. This replaces bot behavior-based widgets, which are now deprecated.
 
 This trigger uses [event handler](/docs/automations/#events) KATA, and the first enabled automation is executed.
 
@@ -35,9 +35,8 @@ The automation [dictionary](/docs/automations/#dictionaries) starts with the fol
 | Key | Type | Notes
 |-|-|-
 | `inputs` | dictionary | [Custom input](/docs/automations/#inputs) values from the caller
-| `sheet_filter` | text | The optional text to filter results by (if `schema:layout:filtering:` is enabled)
-| `sheet_limit` | number | The number of results per page
-| `sheet_page` | number | The zero-based current page of the sheet (if `schema:layout:paging:` is enabled)
+| `widget_*` | record | The [card](/docs/records/types/card_widget/), [profile](/docs/records/types/profile_widget/), or [workspace](/docs/records/types/workspace_widget/) widget record (supports key expansion)
+| `worker_*` | record | The current [worker](/docs/records/types/worker/) record (supports key expansion)
 
 # Outputs
 
@@ -45,5 +44,4 @@ The automation [dictionary](/docs/automations/#dictionaries) starts with the fol
 
 | Key | Type | Notes
 |-|-|-
-| `data` | dictionaries | An array of dictionaries
-| `total` | number | The total number of records (without paging)
+| `html` | text | The HTML to render for the widget

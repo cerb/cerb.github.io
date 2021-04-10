@@ -24,8 +24,6 @@ jumbotron:
     url: /docs/automations/triggers/interaction.worker/#elements
 ---
 
-{% include docs/note_preview.html %}
-
 In [interaction](/docs/automations/triggers/interaction.worker/) web forms, an **editor** element displays a code editor with syntax highlighting, autocompletion, and a custom toolbar.
 
 <pre>

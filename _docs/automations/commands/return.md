@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **return:** command successfully terminates an [automation](/docs/automations/) in the `return` [state](/docs/automations/#exit-states) and returns a [dictionary](/docs/automations/#dictionaries).
 
 # Syntax

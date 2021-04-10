@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#events
 ---
 
-{% include docs/note_preview.html %}
-
 **mail.filter** [automation](/docs/automations/) [events](/docs/automations/#events) can modify or reject an inbound message based on its properties (e.g. sender, subject, recipients, headers, body) before it is accepted.
 
 # Placeholders

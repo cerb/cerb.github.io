@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **data.query:** command executes a [data query](/docs/data-queries/) and returns the response.
 
 <pre>

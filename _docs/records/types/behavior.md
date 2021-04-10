@@ -92,6 +92,7 @@ These [filters](/docs/search/filters/) are available in behavior [search queries
 | `event:` | [text](/docs/search/filters/text/) | Event
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
+| `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Title
 | `priority:` | [number](/docs/search/filters/numbers/) | Priority
 | `private:` | [boolean](/docs/search/filters/booleans/) | Is Private

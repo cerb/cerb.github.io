@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **record.get:** command loads a record from a [type](/docs/records/types/) and ID. 
 
 <pre>

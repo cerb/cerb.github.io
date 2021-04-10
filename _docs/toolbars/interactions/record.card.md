@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/toolbars/
 ---
 
-{% include docs/note_preview.html %}
-
 The card [toolbar](/docs/toolbars/) is displayed when viewing a record's card popup.
 
 <div class="cerb-screenshot">

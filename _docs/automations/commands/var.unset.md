@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **var.unset:** command removes a placeholder using a key path.
 
 <pre>

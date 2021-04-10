@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **function:** command executes an [automation.function](/docs/automations/triggers/automation.function/) and returns an output dictionary.
 
 With this automation function named `example.math.sum`:

@@ -24,8 +24,6 @@ jumbotron:
     url: /docs/automations/triggers/interaction.worker/#elements
 ---
 
-{% include docs/note_preview.html %}
-
 In [interaction](/docs/automations/triggers/interaction.worker/) web forms, a **submit** element displays the 'Continue' and 'Reset' buttons.
 
 This is automatically added when an interaction exits in the [await state](/docs/automations/#exit-states). You do not need to do it yourself.

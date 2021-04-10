@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#triggers
 ---
 
-{% include docs/note_preview.html %}
-
 **projectBoard.renderCard** [automations](/docs/automations/) are triggered when a card is displayed on a [project board](/docs/project-boards/).
 
 This trigger uses [event handler](/docs/automations/#events) KATA, and the first enabled automation is executed.

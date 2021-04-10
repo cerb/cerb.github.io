@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#triggers
 ---
 
-{% include docs/note_preview.html %}
-
 **map.clicked** [automations](/docs/automations/) are triggered by clicks on [map](/docs/maps/) widget regions and points. 
 
 * TOC

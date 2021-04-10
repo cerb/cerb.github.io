@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#triggers
 ---
 
-{% include docs/note_preview.html %}
-
 **automation.function** [automations](/docs/automations/) are reusable shared functions triggered by other automations. 
 
 * TOC

@@ -18,8 +18,6 @@ jumbotron:
     url: /docs/automations/
 ---
 
-{% include docs/note_preview.html %}
-
 {% comment %}
 <div class="cerb-screenshot">
 <img src="{{page.social_image_url}}" class="screenshot">

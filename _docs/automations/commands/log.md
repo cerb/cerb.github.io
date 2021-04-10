@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **log:** command writes data to the automation log with a given severity. Automations that exit in the `error` state also create entries to assist with error reporting and debugging.
 
 * TOC

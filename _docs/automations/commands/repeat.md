@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **repeat:** command iterates an array and repeats a sequence of commands for each value.
 
 <pre>

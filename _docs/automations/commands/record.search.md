@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **record.search:** command returns record dictionaries from a search query.
 
 <pre>

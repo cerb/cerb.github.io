@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/toolbars/
 ---
 
-{% include docs/note_preview.html %}
-
 The message [toolbar](/docs/toolbars/) is displayed when viewing email messages on a ticket profile page.
 
 <div class="cerb-screenshot">

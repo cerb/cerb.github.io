@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#triggers
 ---
 
-{% include docs/note_preview.html %}
-
 **resource.get** [automations](/docs/automations/) are triggered by dynamic [resource](/docs/resources/).
 
 This trigger uses [event handler](/docs/automations/#events) KATA, and the first enabled automation is executed.

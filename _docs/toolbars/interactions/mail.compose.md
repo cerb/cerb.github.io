@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/toolbars/
 ---
 
-{% include docs/note_preview.html %}
-
 The compose [toolbar](/docs/toolbars/) is displayed when sending a new email.
 
 <div class="cerb-screenshot">

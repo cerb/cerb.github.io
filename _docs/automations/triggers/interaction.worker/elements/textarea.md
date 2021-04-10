@@ -24,8 +24,6 @@ jumbotron:
     url: /docs/automations/triggers/interaction.worker/#elements
 ---
 
-{% include docs/note_preview.html %}
-
 In [interaction](/docs/automations/triggers/interaction.worker/) web forms, a **textarea** element displays a multi-line text input without the extra functionality of an [editor](/docs/automations/triggers/interaction.worker/elements/editor/).
 
 <pre>

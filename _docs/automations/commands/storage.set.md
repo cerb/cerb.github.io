@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **storage.set:** command saves a value to long-term storage. This key/value can be shared between automations and invocations.
 
 <pre>

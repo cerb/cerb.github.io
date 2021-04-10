@@ -24,8 +24,6 @@ jumbotron:
     url: /docs/automations/triggers/interaction.worker/#elements
 ---
 
-{% include docs/note_preview.html %}
-
 In [interaction](/docs/automations/triggers/interaction.worker/) web forms, a **text** element displays a text input field with various validation options.
 
 Formats: date, decimal, bool, email, ip, geopoint, number, record type, timestamp, uri, url

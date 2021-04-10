@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **storage.get:** command retrieves a previously saved value from long-term storage. This key/value can be shared between automations and invocations.
 
 <pre>

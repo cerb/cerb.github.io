@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#triggers
 ---
 
-{% include docs/note_preview.html %}
-
 **projectBoard.cardAction** [automations](/docs/automations/) are triggered when a [project board](/docs/project-boards/) card enters a new board column, either through the UI or procedurally. 
 
 This trigger uses [event handler](/docs/automations/#events) KATA, and all enabled automations are executed.

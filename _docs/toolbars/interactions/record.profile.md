@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/toolbars/
 ---
 
-{% include docs/note_preview.html %}
-
 The profile [toolbar](/docs/toolbars/) is displayed when viewing a record's profile page.
 
 <div class="cerb-screenshot">

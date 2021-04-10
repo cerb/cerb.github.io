@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **storage.delete:** command removes a value from long-term storage.
 
 <pre>

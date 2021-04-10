@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **encrypt.pgp:** command encrypts a block of text using one or more PGP public keys.
 
 <pre>

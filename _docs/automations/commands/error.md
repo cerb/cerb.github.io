@@ -21,8 +21,6 @@ jumbotron:
     url: /docs/automations/#commands
 ---
 
-{% include docs/note_preview.html %}
-
 The **error:** command unsuccessfully terminates an [automation](/docs/automations/) in the `error` [state](/docs/automations/#exit-states) and returns a message.
 
 # Syntax

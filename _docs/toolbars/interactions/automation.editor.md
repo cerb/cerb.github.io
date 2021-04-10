@@ -23,9 +23,7 @@ jumbotron:
 
 {% comment %}
 Properly document these options
-{% endcomment}
-
-{% include docs/note_preview.html %}
+{% endcomment %}
 
 The [toolbar](/docs/toolbars/) displayed in the automation editor.
 

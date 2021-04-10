@@ -24,8 +24,6 @@ jumbotron:
     url: /docs/automations/triggers/interaction.website/#elements
 ---
 
-{% include docs/note_preview.html %}
-
 In [website interactions](/docs/automations/triggers/interaction.website/) forms, a **sheet** element displays a [sheet](/docs/sheets/) schema using static or dynamic data.
 
 Selection prompt can be set to 'single' or 'multiple'.
@@ -105,7 +103,7 @@ start:
           label: Workers:
           required@bool: yes
           data:
-            function:
+            automation:
               uri: cerb:automation:cerb.data.records
               inputs:
                 record_type: worker

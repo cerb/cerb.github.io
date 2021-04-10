@@ -24,8 +24,6 @@ jumbotron:
     url: /docs/automations/triggers/interaction.website/#elements
 ---
 
-{% include docs/note_preview.html %}
-
 In [website interactions](/docs/automations/triggers/interaction.website/) forms, a **say** element displays a block of text or Markdown.
 
 <pre>

@@ -24,8 +24,6 @@ jumbotron:
     url: /docs/automations/triggers/interaction.worker/#elements
 ---
 
-{% include docs/note_preview.html %}
-
 In [interaction](/docs/automations/triggers/interaction.worker/) web forms, a **map** element displays an interactive [map](/docs/maps/) using map [KATA](/docs/kata/) and returns the selection region(s) or point(s).
 
 For instance, an interaction that displays the geographical location of an IP address can drop a pin on a map prompt.
