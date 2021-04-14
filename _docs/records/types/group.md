@@ -82,6 +82,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 | `buckets` | records | Buckets
 | `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
 | `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `default_bucket_` | record | The group's default [bucket](/docs/records/types/bucket/)
 | `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 | `members` | records | Members
 	
