@@ -43,7 +43,7 @@ Copy the `cerb-package-exporter.php` script to a directory on your server:
 
 <pre class="command-line" data-user="user" data-host="host">
 <code class="language-bash">
-curl -O "https://raw.githubusercontent.com/cerb/cerb-release/master/install/extras/impex/cerb-package-exporter.php"
+curl -O "https://raw.githubusercontent.com/cerb/cerb-release/v10.0/install/extras/impex/cerb-package-exporter.php"
 </code>
 </pre>
 

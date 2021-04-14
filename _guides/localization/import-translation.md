@@ -62,13 +62,13 @@ Cerb is distributed with the most popular language packs.
 
 Right-click one of these translation links and select **Download**:
 
-* [German (Germany)](https://raw.githubusercontent.com/cerb/cerb-release/master/install/extras/translations/cerb_lang_de_DE.xml)
-* [English (British)](https://raw.githubusercontent.com/cerb/cerb-release/master/install/extras/translations/cerb_lang_en_GB.xml)
-* [Spanish (Spain)](https://raw.githubusercontent.com/cerb/cerb-release/master/install/extras/translations/cerb_lang_es_ES.xml)
-* [Italian (Italy)](https://raw.githubusercontent.com/cerb/cerb-release/master/install/extras/translations/cerb_lang_it_IT.xml)
-* [Dutch (Netherlands)](https://raw.githubusercontent.com/cerb/cerb-release/master/install/extras/translations/cerb_lang_nl_NL.xml)
-* [Portuguese (Portugal)](https://raw.githubusercontent.com/cerb/cerb-release/master/install/extras/translations/cerb_lang_pt_PT.xml)
-* [Russian (Russia)](https://raw.githubusercontent.com/cerb/cerb-release/master/install/extras/translations/cerb_lang_ru_RU.xml)
+* [German (Germany)](https://raw.githubusercontent.com/cerb/cerb-release/v10.0/install/extras/translations/cerb_lang_de_DE.xml)
+* [English (British)](https://raw.githubusercontent.com/cerb/cerb-release/v10.0/install/extras/translations/cerb_lang_en_GB.xml)
+* [Spanish (Spain)](https://raw.githubusercontent.com/cerb/cerb-release/v10.0/install/extras/translations/cerb_lang_es_ES.xml)
+* [Italian (Italy)](https://raw.githubusercontent.com/cerb/cerb-release/v10.0/install/extras/translations/cerb_lang_it_IT.xml)
+* [Dutch (Netherlands)](https://raw.githubusercontent.com/cerb/cerb-release/v10.0/install/extras/translations/cerb_lang_nl_NL.xml)
+* [Portuguese (Portugal)](https://raw.githubusercontent.com/cerb/cerb-release/v10.0/install/extras/translations/cerb_lang_pt_PT.xml)
+* [Russian (Russia)](https://raw.githubusercontent.com/cerb/cerb-release/v10.0/install/extras/translations/cerb_lang_ru_RU.xml)
 
 <div class="cerb-box note">
 <p><b>Can't find the language you're looking for?</b> We offer billing credits for <a href="/guides/localization/create-translation/">creating, maintaining, and sharing translations</a>.</p>

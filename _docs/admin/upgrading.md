@@ -95,19 +95,35 @@ git stash
 </code>
 </pre>
 
-Switch to the `master` branch if it's not your current branch:
+Pull the latest changes from the remote repository:
 
 <pre class="command-line" data-user="user" data-host="host">
 <code class="language-bash">
-git checkout master
+git fetch origin
 </code>
 </pre>
 
-Update to the latest stable version:
+You can list [available versions](https://github.com/cerb/cerb-release/branches) with:
 
 <pre class="command-line" data-user="user" data-host="host">
 <code class="language-bash">
-git pull origin master
+git branch --remote 
+</code>
+</pre>
+
+Switch to the desired major version branch:
+
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
+git checkout v10.0
+</code>
+</pre>
+
+Pull the latest updates:
+
+<pre class="command-line" data-user="user" data-host="host">
+<code class="language-bash">
+git pull origin
 </code>
 </pre>
 
