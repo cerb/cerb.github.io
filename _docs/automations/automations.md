@@ -731,6 +731,7 @@ There can now be multiple `enabled:` or `disabled:` rules. The first rule to ret
 | [**mail.filter**](/docs/automations/events/mail.filter/) | Modify or reject an inbound message based on its properties
 | [**mail.route**](/docs/automations/events/mail.route/) | Determine a destination group inbox given properties of an incoming message
 | [**record.changed**](/docs/automations/events/record.changed/) | React to changes in record field values
+| [**record.merge**](/docs/automations/events/record.merge/) | Allow or deny record merge requests
 
 # Commands
 
