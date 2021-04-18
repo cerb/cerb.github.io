@@ -102,7 +102,10 @@ These optional placeholders are also available with **key expansion** in [dictio
 |-|-|-
 | `comments` | comments | [Comments](/docs/bots/behaviors/dictionaries/key-expansion/#comments)
 | `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `emails` | records | Emails
+| `groups` | records | Groups
 | `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
+| `roles` | records | Roles
 	
 ### Search Query Fields
 

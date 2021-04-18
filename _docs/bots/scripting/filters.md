@@ -884,6 +884,29 @@ Parse a delimited string of email addresses into an object. This also assists wi
 }
 ```
 
+## parse_url
+
+Parse a URL string into an object for validation.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set url = "https://cerb.ai/search?q=oauth2#fragment" %}
+{{url|parse_url|json_encode|json_pretty}}
+{% endraw %}
+</code>
+</pre>
+
+```
+{
+    "scheme": "https",
+    "host": "cerb.ai",
+    "path": "/search",
+    "query": "q=oauth2",
+    "fragment": "fragment"
+}
+```
+
 ## permalink
 
 (Added in [9.2.3](/releases/9.2.3/))
