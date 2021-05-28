@@ -42,6 +42,7 @@ interaction/feedback:
   label: Capture Feedback
   icon: conversation
   uri: cerb:automation:example.captureFeedback
+  #after:
 {% endraw %}
 </code>
 </pre>
@@ -74,4 +75,9 @@ The caller expects the following `return:` dictionary:
 | Key | Type |
 |-|-|-
 | **`reply:draft_id:`** | record | The [draft](/docs/records/types/draft/) ID to resume
-| **`refresh_widgets@list:`** | records | One or more [profile_widget](/docs/records/types/profile_widget/) names to refresh
+
+### after:
+
+| Key | Type |
+|-|-|-
+| **`refresh_widgets@list:`** | records | One or more [profile widget](/docs/records/types/profile_widget/) names to refresh
