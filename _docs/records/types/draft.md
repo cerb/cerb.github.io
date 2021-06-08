@@ -123,6 +123,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `content` | text | Content
 | `id` | number | Id
 | `name` | text | Name
+| `ticket_` | record | [Ticket](/docs/records/types/ticket/) (if type is `ticket.reply`)
 | `to` | text | To
 | `token` | text | Token
 | `updated` | date | Updated

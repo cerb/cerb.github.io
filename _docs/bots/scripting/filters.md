@@ -71,6 +71,45 @@ Also allow specific characters:
 Ignore nonalphanumeric but allow spaces!
 ```
 
+## append
+
+Append a suffix to the current text.
+
+(Introduced in [10.0.3](/releases/10.0.3/))
+
+`|append(suffix, delimiter, trim)`
+
+|-|-|-
+| **suffix** | The text to append.
+| **delimiter** | An optional delimiter to add between the current text and the suffix, only if the current text is non-empty.
+| **trim** | Optional characters to remove from the end of the current value (e.g. dangling commas). When omitted the trim is set to the same value as the delimiter.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set emails = "customer@cerb.example" %}
+{{emails|append('vendor@cerb.example', delimiter=', ')}}
+{% endraw %}
+</code>
+</pre>
+
+```
+customer@cerb.example, vendor@cerb.example
+```
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set emails = null %}
+{{emails|append('vendor@cerb.example', delimiter=', ')}}
+{% endraw %}
+</code>
+</pre>
+
+```
+vendor@cerb.example
+```
+
 ## array_sum
 
 Sum the numeric elements of an array.

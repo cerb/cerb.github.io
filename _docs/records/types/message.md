@@ -109,7 +109,11 @@ These [filters](/docs/search/filters/) are available in message [search queries]
 | `content:` | [fulltext](/docs/search/filters/fulltext/) | Content
 | `created:` | [date](/docs/search/filters/dates/) | Created
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `header.cc:` | [text](/docs/search/filters/text/) | Message.search.header_Cc
+| `header.deliveredTo:` | [text](/docs/search/filters/text/) | Message.search.header_Delivered_To
+| `header.from:` | [text](/docs/search/filters/text/) | Message.search.header_From
 | `header.messageId:` | [text](/docs/search/filters/text/) | Message-Id Header
+| `header.to:` | [text](/docs/search/filters/text/) | Message.search.header_To
 | `id:` | context | Id
 | `isBroadcast:` | [boolean](/docs/search/filters/booleans/) | Is Broadcast
 | `isEncrypted:` | [boolean](/docs/search/filters/booleans/) | Is Encrypted
