@@ -68,6 +68,29 @@ The **array_combine** function creates a new array with the given `keys` and `va
 Janey Youve can be reached at janey@cerb.example
 ```
 
+## array_count_values
+
+(Added in [10.0.4](/releases/10.0.4/))
+
+The **array_count_values** function takes an array of values as input, and returns an array with distinct values as keys and their count of occurrences. This function only works on arrays of strings or numbers.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set values = [1,2,3,1,3,2,3,1,2,1,3,1,3] %}
+{{array_count_values(values)|json_encode|json_pretty}}
+{% endraw %}
+</code>
+</pre>
+
+```
+{
+    "1": 5,
+    "2": 3,
+    "3": 5
+}
+```
+
 ## array_diff
 
 The **array_diff** function returns the items in the second array that are not present in the first array:

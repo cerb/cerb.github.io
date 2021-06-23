@@ -73,4 +73,5 @@ The caller expects the following `return:` dictionary:
 
 | Key | Type |
 |-|-|-
+| **`close@bool:`** | boolean | `yes` to close the card popup
 | **`refresh_widgets@list:`** | records | One or more [card widgets](/docs/records/types/card_widget/) names to refresh
