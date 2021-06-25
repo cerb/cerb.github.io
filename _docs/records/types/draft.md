@@ -62,6 +62,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | `format` | `parsedown` (Markdown), or blank for plaintext
 | `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
 | `group_id` | The [group](/docs/records/types/group/) ID to move the ticket to
+| `headers` | An array of header name/value pairs
 | `options_gpg_encrypt` | `1` (encryption enabled), `0` (disabled)
 | `options_gpg_sign` | `1` (cryptographic signature enabled), `0` (disabled)
 | `org_id` | The [org](/docs/records/types/org/) ID to assign
@@ -84,6 +85,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
 | `format` | `parsedown` (Markdown), or blank for plaintext
 | `from` | The `From:` sender (uses system default if omitted)
+| `headers` | An array of header name/value pairs
 | `subject` | The message `Subject:`
 | `to` | The `To:` recipients
 
@@ -100,6 +102,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
 | `format` | `parsedown` (Markdown), or blank for plaintext
 | `group_id` | The [group](/docs/records/types/group/) ID to move the ticket to
+| `headers` | An array of header name/value pairs
 | `in_reply_message_id` | The [message](/docs/records/types/message/) ID being responded to
 | `options_gpg_encrypt` | `1` (encryption enabled), `0` (disabled) 
 | `options_gpg_sign` | `1` (cryptographic signature enabled), `0` (disabled)
