@@ -38,6 +38,9 @@ December 12, 2017 11:50am PST
 Wed, 13 December 2017 17:00 PST
 2017-12-26 08:00am PST
 ```
+
+You can use any of the formatting options from [PHP DateTime::format](https://www.php.net/manual/en/datetime.format.php).
+
 # Timezones
 
 The second parameter to the [date](/docs/bots/scripting/filters/#date) filter can specify a timezone to use:
