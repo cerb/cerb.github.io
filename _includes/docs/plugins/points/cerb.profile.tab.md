@@ -32,6 +32,9 @@ class ExampleExtension extends Extension_ProfileTab {
 
 	public function showTab(Model_ProfileTab $model, $context, $context_id) {
 	}
+
+	public function invoke(string $action, Model_ProfileTab $model) {
+	}
 }
 {% endraw %}
 </code>

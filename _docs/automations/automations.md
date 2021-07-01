@@ -774,6 +774,7 @@ There can now be multiple `enabled:` or `disabled:` rules. The first rule to ret
 | [**record.update:**](/docs/automations/commands/record.update/) | Update a [record](/docs/records/).
 | [**record.upsert:**](/docs/automations/commands/record.upsert/) | Create or update a [record](/docs/records/).
 | [**set:**](/docs/automations/commands/set/) | Set one or more placeholders.
+| [**var.expand:**](/docs/automations/commands/var.expand/) | Expand paths on keys.
 | [**var.push:**](/docs/automations/commands/var.push/) | Add an element to a list placeholder.
 | [**var.set:**](/docs/automations/commands/var.set/) | Set a placeholder using a complex key path.
 | [**var.unset:**](/docs/automations/commands/var.unset/) | Unset a placeholder.
