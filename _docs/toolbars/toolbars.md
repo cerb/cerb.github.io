@@ -116,6 +116,7 @@ Toolbars can be configured from **Search >> Toolbars**.
 | Toolbar | 
 |-|-
 | [automation.editor](/docs/toolbars/interactions/automation.editor/) | Automation editor
+| [draft.read](/docs/toolbars/interactions/draft.read/) | Reading a draft message
 | [global.menu](/docs/toolbars/interactions/global.menu/) | Global interactions from the floating icon in the lower right
 | [mail.compose](/docs/toolbars/interactions/mail.compose/) | Composing new email messages
 | [mail.read](/docs/toolbars/interactions/mail.read/) | Reading email messages
