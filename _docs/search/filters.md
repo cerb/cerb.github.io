@@ -138,6 +138,32 @@ Enter text within quotes to search for exact phrases:
 </code>
 </pre>
 
+### Mixing terms and phrases
+{:.no_toc}
+
+(Added in [10.1](/releases/10.1/))
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+content:("an exact phrase" other terms)
+{% endraw %}
+</code>
+</pre>
+
+### Negation
+{:.no_toc}
+
+(Added in [10.1](/releases/10.1/))
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+text:!(not these words)
+{% endraw %}
+</code>
+</pre>
+
 # Numbers
 
 These expressions can be used on numeric [filters](/docs/search/filters/).

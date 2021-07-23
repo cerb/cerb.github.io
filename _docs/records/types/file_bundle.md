@@ -92,7 +92,7 @@ These [filters](/docs/search/filters/) are available in file bundle [search quer
 | `tag:` | [text](/docs/search/filters/text/) | Tag
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `usableBy.worker:` | virtual | Usable by [Worker](/docs/records/types/worker/)
-| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

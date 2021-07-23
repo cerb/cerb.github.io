@@ -121,7 +121,7 @@ These [filters](/docs/search/filters/) are available in contact [search queries]
 | `org.id:` | [chooser](/docs/search/filters/choosers/) | [Organization](/docs/records/types/org/)
 | `timezone:` | [text](/docs/search/filters/text/) | Timezone
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

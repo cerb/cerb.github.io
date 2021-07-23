@@ -102,7 +102,7 @@ These [filters](/docs/search/filters/) are available in task [search queries](/d
 | `status:` | virtual | Status
 | `title:` | [text](/docs/search/filters/text/) | Title
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

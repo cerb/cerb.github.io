@@ -95,7 +95,7 @@ These [filters](/docs/search/filters/) are available in opportunity [search quer
 | `name:` | [text](/docs/search/filters/text/) | Title
 | `status:` | [number](/docs/search/filters/numbers/) | Status
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

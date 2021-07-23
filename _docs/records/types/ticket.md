@@ -156,7 +156,7 @@ These [filters](/docs/search/filters/) are available in ticket [search queries](
 | `status.id:` | [number](/docs/search/filters/numbers/) | Status
 | `subject:` | [text](/docs/search/filters/text/) | Subject
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
 | `watchers.count:` | virtual | Watchers Count
 | `worker.commented:` | virtual | Worker Commented
 | `worker.replied:` | virtual | Worker Replied

@@ -95,7 +95,7 @@ These [filters](/docs/search/filters/) are available in calendar recurring event
 | `name:` | [text](/docs/search/filters/text/) | Event Name
 | `status:` | [boolean](/docs/search/filters/booleans/) | Is Available
 | `timezone:` | [text](/docs/search/filters/text/) | Timezone
-| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

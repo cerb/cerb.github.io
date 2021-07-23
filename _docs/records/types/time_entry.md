@@ -40,7 +40,8 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `is_closed` | [boolean](/docs/records/fields/types/boolean/) | Is this time entry archived? 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `log_date` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time of the work 
-| **x** | **`mins`** | [number](/docs/records/fields/types/number/) | The number of minutes worked 
+| **x** | **`mins`** | [number](/docs/records/fields/types/number/) | The number of minutes worked (alternative to `secs`) 
+| **x** | **`secs`** | [number](/docs/records/fields/types/number/) | The number of seconds worked (alternative to `mins`) 
 | **x** | **`worker_id`** | [number](/docs/records/fields/types/number/) | The ID of the [worker](/docs/records/types/worker/) who completed the work 
 
 ### Dictionary Placeholders
@@ -86,7 +87,7 @@ These [filters](/docs/search/filters/) are available in time tracking [search qu
 | `isClosed:` | [boolean](/docs/search/filters/booleans/) | Is Closed
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `timeSpent:` | [number](/docs/search/filters/numbers/) | Time Spent
-| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
 | `worker:` | [record](/docs/search/deep-search/) | [Worker](/docs/records/types/worker/)
 | `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
 	
@@ -102,6 +103,7 @@ These columns are available on time tracking [worklists](/docs/worklists/):
 | `tt_is_closed` | Is Closed
 | `tt_log_date` | Log Date
 | `tt_time_actual_mins` | Time Spent
+| `tt_time_actual_secs` | Time Spent
 | `tt_worker_id` | Worker
 
 <div class="section-nav">

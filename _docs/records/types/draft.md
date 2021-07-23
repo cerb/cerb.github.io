@@ -36,7 +36,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
-|   | `is_queued` | [boolean](/docs/records/fields/types/boolean/) |  
+|   | `is_queued` | [boolean](/docs/records/fields/types/boolean/) | `1` for true, `0` for false 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `name` | [text](/docs/records/fields/types/text/) | The subject line of the draft message 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
@@ -62,9 +62,10 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | `format` | `parsedown` (Markdown), or blank for plaintext
 | `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
 | `group_id` | The [group](/docs/records/types/group/) ID to move the ticket to
-| `headers` | An array of header name/value pairs
-| `options_gpg_encrypt` | `1` (encryption enabled), `0` (disabled)
-| `options_gpg_sign` | `1` (cryptographic signature enabled), `0` (disabled)
+| `headers` | An array of email headers to set, with header names as keys
+| `html_template_id` | An optional [HTML template](/docs/records/types/html_template/) ID if `format` is `parsedown`
+| `options_gpg_encrypt` | `1` to enable PGP encryption, `0` (or omit) to disable
+| `options_gpg_sign` | `1` to enable PGP signatures, `0` (or omit) to disable
 | `org_id` | The [org](/docs/records/types/org/) ID to assign
 | `org_name` | The [org](/docs/records/types/org/) name to assign
 | `owner_id` | The [worker](/docs/records/types/worker/) ID to assign
@@ -85,7 +86,10 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
 | `format` | `parsedown` (Markdown), or blank for plaintext
 | `from` | The `From:` sender (uses system default if omitted)
-| `headers` | An array of header name/value pairs
+| `headers` | An array of email headers to set, with header names as keys
+| `html_template_id` | An optional [HTML template](/docs/records/types/html_template/) ID if `format` is `parsedown`
+| `options_gpg_encrypt` | `1` to enable PGP encryption, `0` (or omit) to disable
+| `options_gpg_sign` | `1` to enable PGP signatures, `0` (or omit) to disable
 | `subject` | The message `Subject:`
 | `to` | The `To:` recipients
 
@@ -102,10 +106,11 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
 | `format` | `parsedown` (Markdown), or blank for plaintext
 | `group_id` | The [group](/docs/records/types/group/) ID to move the ticket to
-| `headers` | An array of header name/value pairs
+| `headers` | An array of email headers to set, with header names as keys
+| `html_template_id` | An optional [HTML template](/docs/records/types/html_template/) ID if `format` is `parsedown`
 | `in_reply_message_id` | The [message](/docs/records/types/message/) ID being responded to
-| `options_gpg_encrypt` | `1` (encryption enabled), `0` (disabled) 
-| `options_gpg_sign` | `1` (cryptographic signature enabled), `0` (disabled)
+| `options_gpg_encrypt` | `1` to enable PGP encryption, `0` (or omit) to disable
+| `options_gpg_sign` | `1` to enable PGP signatures, `0` (or omit) to disable
 | `owner_id` | The [worker](/docs/records/types/worker/) ID to assign
 | `send_at` | The optional timestamp to deliver the message at
 | `status_id` | `0` (open), `1` (waiting), `2` (closed)
@@ -126,9 +131,10 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `content` | text | Content
 | `id` | number | Id
 | `name` | text | Name
-| `ticket_` | record | [Ticket](/docs/records/types/ticket/) (if type is `ticket.reply`)
+| `params` | dictionary | Params
 | `to` | text | To
 | `token` | text | Token
+| `type` | text | Type
 | `updated` | date | Updated
 | `worker_` | record | [Worker](/docs/records/types/worker/)
 

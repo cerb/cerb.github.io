@@ -39,7 +39,6 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `created_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
 |   | `description` | [text](/docs/records/fields/types/text/) |  
 | **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) |  
-|   | `is_unlisted` | [boolean](/docs/records/fields/types/boolean/) |  
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `name` | [text](/docs/records/fields/types/text/) | The name of this automation 
 |   | `policy_kata` | [text](/docs/records/fields/types/text/) |  
@@ -61,7 +60,6 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `extension_id` | text | Trigger
 | `extension_params` |  | Trigger Params
 | `id` | number | Id
-| `is_unlisted` | boolean | Unlisted
 | `name` | text | Name
 | `policy_kata` | text | Policy
 | `record_url` | text | Record Url
@@ -87,12 +85,11 @@ These [filters](/docs/search/filters/) are available in automation [search queri
 | `created:` | [date](/docs/search/filters/dates/) | Created
 | `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
-| `isUnlisted:` | [boolean](/docs/search/filters/booleans/) | Unlisted
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `trigger:` | [text](/docs/search/filters/text/) | Extension
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
 
@@ -105,7 +102,6 @@ These columns are available on automation [worklists](/docs/worklists/):
 | `a_description` | Description
 | `a_extension_id` | Extension
 | `a_id` | Id
-| `a_is_unlisted` | Unlisted
 | `a_name` | Name
 | `a_updated_at` | Updated
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)

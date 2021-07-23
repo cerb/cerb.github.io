@@ -80,7 +80,7 @@ These [filters](/docs/search/filters/) are available in knowledgebase category [
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `parent.id:` | [chooser](/docs/search/filters/choosers/) | [Parent](/docs/records/types/kb_category/)
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

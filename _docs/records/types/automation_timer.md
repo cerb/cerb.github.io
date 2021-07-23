@@ -96,7 +96,7 @@ These [filters](/docs/search/filters/) are available in automation timer [search
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `nextRunAt:` | [date](/docs/search/filters/dates/) | Next Run At
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

@@ -53,7 +53,6 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `_context` | text | [Record type](/docs/records/types/) extension ID
 | `_label` | text | Label
 | `_type` | text | [Record type](/docs/records/types/) alias
-| `download_url` | text | Url
 | `id` | number | Id
 | `mime_type` | text | Mime Type
 | `name` | text | Name
@@ -62,6 +61,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `storage_key` | text | Storage Key
 | `storage_sha1hash` | text | Sha-1 Hash
 | `updated` | date | Updated
+| `url_download` | text | Url
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 

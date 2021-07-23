@@ -89,7 +89,7 @@ These [filters](/docs/search/filters/) are available in project board column [se
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

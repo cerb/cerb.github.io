@@ -103,7 +103,7 @@ These [filters](/docs/search/filters/) are available in mailbox account [search 
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `protocol:` | [text](/docs/search/filters/text/) | Protocol
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
 
