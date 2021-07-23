@@ -180,6 +180,77 @@ start:
 </code>
 </pre>
 
+## await:duration:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/automations/triggers/interaction.worker/await-duration.gif" class="screenshot">
+</div>
+
+When suspending in the `await:duration:` state, the interaction displays a `message:` and waits `until:` a given date/time or interval (e.g. `5 seconds`).
+
+This can be used to display a status update while waiting for a long-running asynchronous task to finish. For instance, an AWS Step Function for new account provisioning.
+
+### message:
+{: .no_toc}
+
+The `message:` to be displayed in the interaction while waiting.
+
+### until:
+{: .no_toc}
+
+The `until:` parameter is an absolute (`2021-12-31 08:00 America/New_York`) or relative (`10 seconds`) duration to wait for before resuming.
+
+### output:
+{: .no_toc}
+
+(none)
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+start:
+  set:
+    isPlaying@bool: yes
+  
+  while:
+    if@bool: {{isPlaying}}
+    do:
+      # A suspenseful wait
+      await/rolling:
+        duration:
+          message: Rolling...
+          until: 3 seconds
+      
+      await/rolled:
+        form:
+          title: Results
+          elements:
+            say:
+              content@text:
+                You rolled a {{random(1,6)}}
+                ====
+            submit/prompt_continue:
+              buttons:
+                continue/yes:
+                  label: Roll again
+                  icon: playing-dices
+                  icon_at: start
+                  value: roll
+                continue/no:
+                  label: Quit
+                  style: secondary
+                  value: quit
+      
+      # If quitting, break the loop
+      outcome/quit:
+        if@bool: {{prompt_continue == 'quit'}}
+        then:
+          set:
+            isPlaying@bool: no
+{% endraw %}
+</code>
+</pre>
+
 ## await:interaction:
 
 When suspending in the `await:interaction:` state, the interaction temporarily hands control to another delegate interaction. The interaction resumes at the current point when the delegate exits.
