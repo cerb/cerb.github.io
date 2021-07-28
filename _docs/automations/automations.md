@@ -503,7 +503,7 @@ start:
 
 ### Timers
 
-Automations may be scheduled to run at a future time using **timers**.
+Automations can use **timers** to run at a future time either once or on a recurring schedule.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/automations/automation-timer.png" class="screenshot">
@@ -511,15 +511,21 @@ Automations may be scheduled to run at a future time using **timers**.
 
 Timers can be created procedurally by automations and interactions, or manually by workers.
 
-A timer specifies a name, a future datetime, and a block of [events KATA](#events) to conditionally determine an [automation.timer](/docs/automations/triggers/automation.timer/) to run.
+A timer specifies a name, a future datetime, an optional schedule, and a block of [events KATA](#events) to conditionally determine an [automation.timer](/docs/automations/triggers/automation.timer/) to run.
 
 On the first invocation of the timer, an automation is selected. This may optionally provide [inputs](#inputs). 
 
-If the automation ends in the `exit`, `error`, or `return` state, the timer is removed.
+When the automation concludes:
+
+* If the timer has a recurring schedule, it is rescheduled for the next occurrence.
+
+* Otherwise, a one-shot timer is disabled (or optionally deleted) at conclusion.
 
 If the automation ends in the `await` state, a [continuation](#continuations) is created, and the timer is rescheduled for the given datetime.
 
 The timer stores the continuation ID and the automation pauses at the current point. On the next timer invocation, the automation resumes where it left off rather than starting over.
+
+Schedules are defined in [Unix CRON expression format](https://en.wikipedia.org/wiki/Cron). When multiple expressions are specified, the timer is scheduled for the next most recent occurrence among them. 
 
 # Policies
 

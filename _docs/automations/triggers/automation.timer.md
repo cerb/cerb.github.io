@@ -49,7 +49,7 @@ When the automation pauses in the `await` state, the timer is rescheduled to con
 
 | Key | Type | Notes
 |-|-|-
-| `datetime` | timestamp | The future UNIX timestamp to resume the automation at the current point
+| `until` | timestamp | The future UNIX timestamp to resume the automation at the current point
 
 <pre>
 <code class="language-cerb">
@@ -57,11 +57,19 @@ When the automation pauses in the `await` state, the timer is rescheduled to con
 start:
   # Run some commands
   await:
-    datetime: {{"+5 mins"|date('U')}}
+    until@date: +5 mins
 {% endraw %}
 </code>
 </pre>
 
 ## return:
 
-When the automation concludes in the `return` state, the timer is removed.
+When the automation concludes:
+
+* If the timer has a recurring schedule, it is rescheduled for the next occurrence.
+
+* Otherwise, a one-shot timer is disabled (or optionally deleted) at conclusion.
+
+    | Key | Type | Notes
+    |-|-|-
+    | `delete` | bool | `true` to delete the timer when complete
