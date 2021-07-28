@@ -1226,6 +1226,29 @@ Split a string on comma delimiters. This automatically handles whitespace paddin
 ["BTC","ETH","LTC"]
 ```
 
+## strip_lines
+
+Remove lines in a text block that begin with one of the given `prefixes`.
+
+`|strip_lines(prefixes)`
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set email_message %}
+> This is some quoted text
+> on multiple lines
+
+This is the original message
+{% endset %}
+{{email_message|strip_lines(prefixes='>')}}{% endraw %}
+</code>
+</pre>
+
+```
+This is the original message
+```
+
 ## striptags
 
 Remove HTML tags from a string.
