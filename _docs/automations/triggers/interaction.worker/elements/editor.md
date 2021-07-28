@@ -79,3 +79,23 @@ The default editor text.
 ### required@bool:
 
 If user input is required on this element use a value of `yes`. Otherwise, omit.
+
+### validation:
+
+An optional custom validation script. Any output is considered to be an error.
+
+You can use `if...elseif` to check multiple conditions.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+editor/prompt_script:
+  label: Script:
+  validation@raw:
+    {% if prompt_script is empty %}
+    A script is required.
+    {% elseif prompt_script|length < 25 %}
+    A script must be at least 25 characters. 
+    {% endif %}{% endraw %}
+</code>
+</pre>

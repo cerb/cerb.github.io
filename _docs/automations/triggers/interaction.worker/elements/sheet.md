@@ -189,3 +189,27 @@ The `selection:params:mode:` may be `single` or `multiple`.
 ### toolbar:
 
 An optional [interaction toolbar](/docs/automations/triggers/interaction.worker/#toolbars) for this sheet.
+
+### validation:
+
+An optional custom validation script. Any output is considered to be an error.
+
+You can use `if...elseif` to check multiple conditions.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+text/prompt_name:
+  label: Name:
+  required@bool: yes
+  type: freeform
+  validation@raw:
+    {% if prompt_name is empty %}
+    A name is required.
+    {% elseif prompt_name|length < 8 %}
+    A name must be 8 or more characters. 
+    {% elseif prompt_name|length > 32 %}
+    A name must be less than 32 characters. 
+    {% endif %}{% endraw %}
+</code>
+</pre>

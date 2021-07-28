@@ -52,3 +52,30 @@ The optional label to display above the form element.
 ### required@bool:
 
 If user input is required on this element use a value of `yes`. Otherwise, omit.
+
+### validation:
+
+An optional custom validation script. Any output is considered to be an error.
+
+You can use `if...elseif` to check multiple conditions.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+start:
+  await:
+    form:
+      elements:
+        fileUpload/prompt_image:
+          label: File
+          required@bool: yes
+          validation@raw:
+            {% if prompt_image__context is empty or prompt_image_id is empty %}
+            The file must be a valid image.
+            {% elseif prompt_image_mime_type is not prefixed ('image/') %}
+            The file must be an image ({{prompt_image_mime_type}}).
+            {% elseif prompt_image_size > 50000 %}
+            The image must be smaller than 50KB ({{prompt_image_size|bytes_pretty}}).
+            {% endif %}{% endraw %}
+</code>
+</pre>
