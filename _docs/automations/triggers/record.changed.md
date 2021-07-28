@@ -42,6 +42,4 @@ The automation [dictionary](/docs/automations/#dictionaries) starts with the fol
 
 # Outputs
 
-## return:
-
-(No output is expected)
+(none)

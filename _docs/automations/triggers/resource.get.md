@@ -44,5 +44,11 @@ The automation [dictionary](/docs/automations/#dictionaries) starts with the fol
 
 | Key | Type | Notes
 |-|-|-
-| `file:content:` | string | The file contents in text (Base64 encode if binary)
-| `file:expires_at:` | timestamp | Cache this response until this UNIX timestamp 
+| `file:` | object | The file metadata
+
+### file:
+
+| Key | Type | Notes
+|-|-|-
+| `content:` | string | The file contents in text (Base64 encode if binary)
+| `expires_at:` | timestamp | Cache this response until this UNIX timestamp 

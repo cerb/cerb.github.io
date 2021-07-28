@@ -36,3 +36,10 @@ The automation event [dictionary](/docs/automations/#dictionaries) starts with t
 |`email_body_html` | text | The email body as HTML (if provided).
 |`email_recipients` | array | An array of recipient email addresses in the To:/Cc:/Envelope-To:/Delivered-To: headers.
 |`parent_ticket_*` | record | The parent [ticket](/docs/records/types/ticket/) record (if a reply). Supports key expansion.
+
+# Outputs
+
+| Key | Type | Notes
+|-|-|-
+| `group_id:` | number | The group ID to deliver the message to. Alternative to `group_name`.
+| `group_name:` | string | The group name to deliver the message to. Alternative to `group_id`.

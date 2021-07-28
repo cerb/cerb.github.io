@@ -38,3 +38,7 @@ The automation event [dictionary](/docs/automations/#dictionaries) starts with t
 | `is_new` | boolean | `true` if the record was created during the current request.
 | `record_*` | record | The new [record](/docs/records/types/) dictionary. Supports key expansion.
 | `was_record_*` | record | The former [record](/docs/records/types/) dictionary. Supports key expansion.
+
+# Outputs
+
+(none)

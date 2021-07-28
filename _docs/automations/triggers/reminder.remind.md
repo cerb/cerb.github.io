@@ -39,6 +39,4 @@ The automation [dictionary](/docs/automations/#dictionaries) starts with the fol
 
 # Outputs
 
-## return:
-
-This trigger doesn't expect any `return:` keys.
+(none)

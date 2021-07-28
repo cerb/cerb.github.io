@@ -36,3 +36,20 @@ The automation event [dictionary](/docs/automations/#dictionaries) starts with t
 |`email_body_html` | text | The email body as HTML (if provided).
 |`email_recipients` | array | An array of recipient email addresses in the To:/Cc:/Envelope-To:/Delivered-To: headers.
 |`parent_ticket_*` | record | The parent [ticket](/docs/records/types/ticket/) record (if a reply). Supports key expansion.
+
+# Outputs
+
+| Key | Type | Notes
+|-|-|-
+|`reject:` | bool | `true` to reject delivery
+|`set:` | object | Modify properties of the inbound message
+
+## set:
+
+| Key | Type | Notes
+|-|-|-
+|`custom_fields:` | object | An object of ticket custom field keys (ID/URIs) and values
+|`email_subject:` | string | Rewrite the email subject
+|`email_body:` | string | Rewrite the email plaintext body
+|`email_body_html:` | string | Rewrite the email HTML body
+|`headers:` | object | An object of header keys (names) and values
