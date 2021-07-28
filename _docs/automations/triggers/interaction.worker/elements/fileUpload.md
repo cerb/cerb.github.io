@@ -26,6 +26,10 @@ jumbotron:
 
 In [interaction](/docs/automations/triggers/interaction.worker/) web forms, a **fileUpload** element displays a file upload prompt. This creates an [attachment](/docs/records/types/attachment/) record and returns its record ID.
 
+The element name (e.g. `fileUpload/photo` in the example below) is used to set a placeholder. If the name ends with `_id` then a corresponding `__context` key will be added with the same prefix. Otherwise, keys for `_id` and `__context` will be added with the element name as the prefix.
+
+This allows key expansion of the file's fields (e.g. `name`, `size`) directly on the placeholder, as well as from within a `validation@raw:` script.
+
 <pre>
 <code class="language-cerb">
 {% raw %}
@@ -33,7 +37,7 @@ start:
   await:
     form:
       elements:
-        fileUpload:
+        fileUpload/photo:
           label: Upload a photo:
 {% endraw %}
 </code>
