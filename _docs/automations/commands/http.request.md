@@ -114,7 +114,19 @@ url: https://api.example/employee/123
 
 ### headers:
 
-A text block of HTTP headers to include with the request.
+A set of HTTP headers to include with the request.
+
+Headers should be described as a set of `name: value` pairs.
+
+<pre>
+<code class="language-cerb">
+headers:
+  Content-Type: application/json
+  X-Requester: Cerb
+</code>
+</pre> 
+
+The headers can optionally also be defined as a `@text` block.
 
 <pre>
 <code class="language-cerb">
@@ -136,7 +148,28 @@ body@text:
   on multiple indented lines.
 {% endraw %}
 </code>
-</pre> 
+</pre>
+
+If the body is defined as a dictionary of `key: value` pairs, then it will automatically be encoded based on the `Content-Type:` header:
+
+* JSON (`application/json`)
+* YAML (`application/x-yaml`/`text/yaml`)
+* URL-encoded (`application/x-www-form-urlencoded`); or if the `Content-Type:` is omitted
+  
+This removes the need for extraneous `set:` commands to prepare the HTTP request.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+headers:
+  Content-Type: application/json
+body:
+  person:
+    name: Kina Halpue
+    title: Customer Service Manager
+{% endraw %}
+</code>
+</pre>
 
 ### timeout:
 
