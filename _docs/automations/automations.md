@@ -194,6 +194,7 @@ Here are some common annotations:
 | **`@kata:`** | A dictionary encoded as KATA text
 | **`@key:`** | A copy of the value from the given key path
 | **`@list:`** | An array encoded as a line-delimited text block
+| **`@optional:`** | Remove the key if the value is empty
 | **`@text:`** | A multiple line text block
 | **`@trim:`** | Remove the value's leading and trailing whitespace
 
