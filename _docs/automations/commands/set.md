@@ -49,6 +49,33 @@ output: Kina is a Customer Support Manager
 
 One or more key/value pairs may be children of the `set:` command.
 
+### Sequential keys
+
+You can refer to any keys set above the current one.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+start:
+  set:
+    a@int: 2
+    b@int: {{a*2}}
+    c@int: {{b*2}}
+  return:
+    answer@int: {{a + b + c}}{% endraw %}
+</code>
+</pre>
+
+Result:
+
+<pre>
+<code class="language-cerb">
+answer: 14
+</code>
+</pre>
+
+### Dictionaries
+
 A [dictionary](/docs/automations/#dictionaries) may be provided as the value:
 
 <pre>
@@ -73,5 +100,7 @@ Result:
 output: Kina is a Customer Support Manager
 </code>
 </pre>
+
+### Paths
 
 You can set a value using a key path with the [var.set](/docs/automations/commands/var.set/) command.

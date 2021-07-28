@@ -167,9 +167,8 @@ For example, we can explicitly specify that a key's value is an integer (a non-f
 <code class="language-cerb">
 {% raw %}
 start:
-  set/a:
+  set:
     a@int: 5
-  set/b:
     b@int: 4
   return:
     answer@int: {{a * b}}
@@ -206,9 +205,8 @@ For instance:
 <code class="language-cerb">
 {% raw %}
 start:
-  set/a:
+  set:
     a: 5
-  set/b:
     b@key,int: a
   return:
     answer@int: {{a * b}}
