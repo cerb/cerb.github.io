@@ -69,6 +69,7 @@ by:[owner,status]
 The subtotal metric can be computed using different aggregate **functions**:
 
 * `count` (default)
+* `distinct`
 * `avg`, `average`
 * `sum`
 * `min`
