@@ -139,6 +139,46 @@ You can create links between records by including a `links` key in your record o
 </code>
 </pre>
 
+## Automation events
+
+Automation event records are modified but not created. You can use the `events` key to append to an event by name.
+
+<pre style="max-height:29.5em;">
+<code class="language-json">
+{% raw %}
+{
+  "package": {
+  },
+  "events": [
+    {
+      "event": "mail.draft.validate",
+      "kata": "automation/profanityCheck:\n  uri: cerb:automation:wgm.reply.validation.profanity\n  inputs:\n    draft@key: draft_id\n\n"
+    }
+  ]
+}{% endraw %}
+</code>
+</pre>
+
+## Toolbars
+
+Toolbar records are modified but not created. You can use the `toolbars` key to append to a toolbar by name.
+
+<pre style="max-height:29.5em;">
+<code class="language-json">
+{% raw %}
+{
+  "package": {
+  },
+  "toolbars": [
+    {
+      "toolbar": "mail.read",
+      "kata": "interaction/sentiment:\n  label: Sentiment\n  uri: cerb:automation:wgm.example.comprehend.sentiment\n  icon: scale-classic\n  inputs:\n    message@key: message_id\n\n"
+    }
+  ]
+}{% endraw %}
+</code>
+</pre>
+
 # Examples
 
 Let's look at some working examples for different record types.
