@@ -1,11 +1,11 @@
 ---
-title: Install Cerb on Ubuntu Linux 20.04
+title: Install Cerb on Ubuntu Linux 18.04
 layout: integration
 topic: Installation
-excerpt: This guide will walk you through preparing an Ubuntu 20.04 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
-permalink: /guides/installation/ubuntu/
+excerpt: This guide will walk you through preparing an Ubuntu 18.04 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
+permalink: /guides/installation/ubuntu/18.04/
 jumbotron:
-  title: Install Cerb on Ubuntu Linux 20.04
+  title: Install Cerb on Ubuntu Linux 18.04
   tagline: ""
   breadcrumbs:
   -
@@ -19,10 +19,14 @@ jumbotron:
     url: /resources/guides/#installation
 ---
 
+{% comment %}
+* Include permissions instructions from mail install guide
+{% endcomment %}
+
 # Introduction
 {:.no_toc}
 
-This guide will walk you through preparing an Ubuntu 20.04 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
+This guide will walk you through preparing an Ubuntu 18.04 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
 
 * TOC
 {:toc}
@@ -33,7 +37,7 @@ If you don't already have a server, you can [create an EC2 instance in Amazon We
 
 This guide uses the following Amazon Machine Image (AMI):
 
-Canonical, Ubuntu, 20.04 LTS, amd64 focal - ami-03d5c68bab01f3496 (us-west-2)
+Canonical, Ubuntu, 18.04 LTS, amd64 bionic - ami-0bbe6b35405ecebdb
 
 # Connect to your server
 
@@ -61,7 +65,7 @@ Install PHP 7.2:
 
 <pre>
 <code class="language-bash">
-sudo apt-get install -y php7.4 php7.4-fpm php7.4-mysql php7.4-mbstring php7.4-gd php7.4-curl php7.4-mailparse php7.4-yaml php7.4-gmp php7.4-zip php7.4-dev php-pear
+sudo apt-get install -y php7.2 php7.2-fpm php7.2-mysql php7.2-mbstring php7.2-gd php7.2-imap php7.2-curl php7.2-mailparse php7.2-yaml php7.2-gmp php7.2-dev php-pear
 </code>
 </pre>
 
@@ -89,7 +93,7 @@ If you need to install MySQL on your EC2 instance instead, you can use these ins
 
 <pre>
 <code class="language-bash">
-sudo apt-get install -y mysql-server-8.0
+sudo apt-get install -y mysql-server-5.7
 
 sudo mysql_secure_installation
 
@@ -252,7 +256,7 @@ server {
     #allow 10.0.0.0/16;
     deny all;
     include fastcgi_params;
-    fastcgi_pass   unix:/var/run/php/php7.4-fpm.sock;
+    fastcgi_pass   unix:/var/run/php/php7.2-fpm.sock;
   }
 
   location / {
@@ -297,7 +301,7 @@ server {
     proxy_read_timeout 120;
     
     fastcgi_split_path_info ^(.+\.php)(/.+)$;
-    fastcgi_pass   unix:/var/run/php/php7.4-fpm.sock;
+    fastcgi_pass   unix:/var/run/php/php7.2-fpm.sock;
     fastcgi_index  index.php;
     include    fastcgi_params;
     fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
@@ -350,7 +354,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 <code class="language-bash">
 sudo service nginx restart
 
-sudo service php7.4-fpm restart
+sudo service php7.2-fpm restart
 </code>
 </pre>
 
