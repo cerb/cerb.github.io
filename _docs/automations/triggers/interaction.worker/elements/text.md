@@ -100,6 +100,12 @@ An optional default value.
 
 An optional maximum length for the text input.
 
+|Type|Default Max Length
+|-|-
+|`freeform`| 1,024
+|`url`| 2,048
+| (everything else) | 255
+
 ### validation:
 
 An optional custom validation script. Any output is considered to be an error.

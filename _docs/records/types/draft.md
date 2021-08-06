@@ -59,11 +59,14 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | `cc` | The `Cc:` recipients
 | `content` | The message content
 | `custom_fields` | An object with custom field IDs as keys and their values
+| `custom_fields_uri` | A read-only object with custom field URIs as keys and their values
 | `format` | `parsedown` (Markdown), or blank for plaintext
 | `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
 | `group_id` | The [group](/docs/records/types/group/) ID to move the ticket to
 | `headers` | An array of email headers to set, with header names as keys
 | `html_template_id` | An optional [HTML template](/docs/records/types/html_template/) ID if `format` is `parsedown`
+| `message_custom_fields` | An object with message custom field IDs as keys and their values
+| `message_custom_fields_uri` | A read-only object with message custom field URIs as keys and their values
 | `options_gpg_encrypt` | `1` to enable PGP encryption, `0` (or omit) to disable
 | `options_gpg_sign` | `1` to enable PGP signatures, `0` (or omit) to disable
 | `org_id` | The [org](/docs/records/types/org/) ID to assign
@@ -103,12 +106,15 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | `cc` | The `Cc:` recipients
 | `content` | The message content
 | `custom_fields` | An object with custom field IDs as keys and their values
+| `custom_fields_uri` | A read-only object with custom field URIs as keys and their values
 | `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
 | `format` | `parsedown` (Markdown), or blank for plaintext
 | `group_id` | The [group](/docs/records/types/group/) ID to move the ticket to
 | `headers` | An array of email headers to set, with header names as keys
 | `html_template_id` | An optional [HTML template](/docs/records/types/html_template/) ID if `format` is `parsedown`
 | `in_reply_message_id` | The [message](/docs/records/types/message/) ID being responded to
+| `message_custom_fields` | An object with message custom field IDs as keys and their values
+| `message_custom_fields_uri` | A read-only object with message custom field URIs as keys and their values
 | `options_gpg_encrypt` | `1` to enable PGP encryption, `0` (or omit) to disable
 | `options_gpg_sign` | `1` to enable PGP signatures, `0` (or omit) to disable
 | `owner_id` | The [worker](/docs/records/types/worker/) ID to assign
