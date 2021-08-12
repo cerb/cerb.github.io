@@ -287,6 +287,33 @@ columns:
 </code>
 </pre>
 
+## Selection
+
+The `selection` column type allows single and multiple selection of sheet rows. This is useful when a sheet has a [toolbar](/docs/toolbars/) or is displayed in an [interaction](/docs/interactions/).
+
+The selected rows will add their `value:` (or `value_key:`, `value_template:`) to a placeholder. When omitted, the default value is the placeholder matching the column's name.
+
+The `mode:` parameter controls whether `single` or `multiple` selection is used.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+columns:
+  selection/id:
+    params:
+      mode: single
+      #mode: multiple
+      #value: 123
+      #value_key: id
+      #value_template@raw: {{id}}
+{% endraw %}
+</code>
+</pre>
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/automations/triggers/interaction.worker/elements/sheet.png" class="screenshot" alt="Example of a sheet selection column">
+</div>
+
 ## Slider
 
 The `slider` column type visually displays a `value:` (or `value_key:`, `value_template:`) on a continuum with configurable `min:` and `max:` bounds. The output is similar to the "Importance" column on ticket/task worklists.
