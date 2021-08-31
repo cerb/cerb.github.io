@@ -63,7 +63,15 @@ An optional default value.
 
 ### max_length:
 
-An optional maximum length for the text input.
+An optional maximum length for the text input (default `1024`). This displays a character count when set.
+
+### min_length:
+
+An optional minimum length for the text input.
+
+### truncate:
+
+If input longer than `max_length:` is truncated (default `yes`) or unmodified.
 
 ### validation:
 

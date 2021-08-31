@@ -519,6 +519,18 @@ format: markdown
 </code>
 </pre>
 
+### trim
+
+`@trim` removes leading and trailing whitespace from a key's value.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+content@trim:    this has no whitespace    
+{% endraw %}
+</code>
+</pre>
+
 {% comment %}
 Kata is the word for "form" in Japanese, which refers to the refinement of perfected movements through repeated practice.
 

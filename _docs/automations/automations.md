@@ -90,6 +90,8 @@ For instance, the command [http.request:](/docs/automations/commands/http.reques
 
 When the same command appears multiple times within the same parent, each instance must have a unique name. Commands are named by appending a forward slash (`/`) and an identifier.
 
+The identifier may contain letters, numbers, and underscores.
+
 For instance, we could "hardcode" the inputs from the first example above as keys:
 
 <pre>
