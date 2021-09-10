@@ -57,7 +57,7 @@ sudo apt-get -y upgrade
 </code>
 </pre>
 
-Install PHP 7.2:
+Install PHP 7.4:
 
 <pre>
 <code class="language-bash">
