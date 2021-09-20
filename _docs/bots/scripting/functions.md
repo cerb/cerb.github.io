@@ -319,6 +319,107 @@ Retrieve the avatar image URL for a given record type and ID.
 https://cerb.example/avatars/worker/1?v=1513212702
 ```
 
+## cerb_calendar_time_elapsed
+
+(Added in [10.1.1](/releases/10.1.1/))
+
+Calculate the time elapsed (in seconds) between two dates using calendar availability.
+
+`cerb_calendar_time_elapsed(calendar,date_from,date_to)`
+
+|-|-|-
+| **calendar** | The ID of the [calendar](/docs/records/types/calendar/) to use for determining availability.
+| **date_from** | The starting date/time.
+| **date_to** | The ending date/time.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{{cerb_calendar_time_elapsed(123,'last Friday 5pm','now')|secs_pretty}}
+{% endraw %}
+</code>
+</pre>
+
+```
+18 hours, 13 mins
+```
+
+## cerb_extract_uris
+
+(Added in [9.5.3](/releases/9.5.3/))
+
+Return an array of URLs found in HTML content, along with metadata (e.g. tag, attributes, URI parts).
+
+In the response, URLs are replaced with `tokens` in the `template` which can be modified with the [\|replace](/docs/bots/scripting/filters/#replace) filter.
+
+For instance, this function can be used to rewrite all links in an email template for click tracking.
+
+`cerb_extract_uris(html)`
+
+|-|-|-
+| **html** | The HTML content to extract links from.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set html %}
+This is some &lt;b&gt;HTML&lt;/b&gt; with &lt;a href="https://cerb.ai/"&gt;links&lt;/a&gt;.
+{% endset %}
+{% set results = cerb_extract_uris(html) %}
+{{results|json_encode|json_pretty}}
+{% endraw %}
+</code>
+</pre>
+
+```
+{
+    "tokens": {
+        "#uri-61411f091662a": "https://cerb.ai/"
+    },
+    "context": {
+        "#uri-61411f091662a": {
+            "is_tag": true,
+            "name": "a",
+            "attr": "href",
+            "attrs": {
+                "href": "https://cerb.ai/"
+            },
+            "uri_parts": {
+                "scheme": "https",
+                "userinfo": null,
+                "host": "cerb.ai",
+                "port": null,
+                "path": "/",
+                "query": null,
+                "fragment": null
+            }
+        }
+    },
+    "template": "This is some <b>HTML</b> with <a href=\"#uri-61411f091662a\">links</a>.\n"
+}
+```
+
+To rewrite links:
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set html %}
+This is some &lt;b&gt;HTML&lt;/b&gt; with &lt;a href="https://cerb.ai/"&gt;links&lt;/a&gt;.
+{% endset %}
+{% set results = cerb_extract_uris(html) %}
+{% set new_urls = results.tokens|map(
+  (url,token) => "https://proxy.example/click?url=" ~ url|url_encode
+)%}
+{{results.template|replace(new_urls)}}
+{% endraw %}
+</code>
+</pre>
+
+```
+This is some <b>HTML</b> with <a href="https://proxy.example/click?url=https%3A%2F%2Fcerb.ai%2F">links</a>.
+```
+
 ## cerb_file_url
 
 Retrieve the download link for a given attachment ID.

@@ -299,6 +299,28 @@ The ticket is {{'status.open'|cerb_translate}}
 The ticket is open.
 ```
 
+## column
+
+(Added in [10.1.1](/releases/10.1.1/))
+
+Extract a key from each item in an array as a new array. This has the same effect as the [array_column()](/docs/bots/scripting/functions/#array_column) function.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set people = [
+  {'name':'Kina Halpue', 'email':'kina@cerb.example'},
+  {'name':'Milo Dade', 'email': 'milo@cerb.example'}
+] %}
+{{people|column('email')|join(', ')}}
+{% endraw %}
+</code>
+</pre>
+
+```
+kina@cerb.example, milo@cerb.example
+```
+
 ## context_name
 
 Convert a Cerb `context` ID into a human readable label:
@@ -496,6 +518,30 @@ Escape strings and variables with the following modes:
 ```
 This\x20is\x20\x22escaped\x22\x20for\x20Javascript
 This is &quot;escaped&quot; for &lt;b&gt;HTML&lt;/b&gt;
+```
+
+## filter
+
+(Added in [10.1.1](/releases/10.1.1/))
+
+Exclude items from an array using an arrow function.
+
+`|filter(func)`
+
+|-|-|-
+| **func(v,k)** | An arrow function that returns `true` (include) or `false` (exclude) for each item. It receives `v` (value) and `k` (key) as arguments.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set arr = [1,2,3,4,5,6,7,8] %}
+{{arr|filter((v,k) => v is even)|values|join(',')}}
+{% endraw %}
+</code>
+</pre>
+
+```
+2,4,6,8
 ```
 
 ## first
@@ -793,6 +839,37 @@ Convert a string to lowercase:
 why are you yelling?
 ```
 
+## map
+
+(Added in [10.1.1](/releases/10.1.1/))
+
+Apply a function to each item in an array to create a new array.
+
+`|map(func)`
+
+|-|-|-
+| **func(v,k)** | An arrow function that returns the new value for each item. It receives `v` (value) and `k` (key) as arguments.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set samples = [
+	[1,2,3,4,5],
+	[6,7,8,9,10],
+	[1,3,5,7,9],
+	[2,4,6,8,10],
+] %}
+Averages:
+{{samples|map((v,k) => array_sum(v)/(samples[k]|length))|join(', ')}}
+{% endraw %}
+</code>
+</pre>
+
+```
+Averages:
+3, 8, 5, 6
+```
+
 ## markdown_to_html
 
 (Added in [9.5.4](/releases/9.5.4/))
@@ -984,6 +1061,38 @@ You should quote it.
 > This is a message you are replying to.
 >
 > You should quote it.
+```
+
+## reduce
+
+(Added in [10.1.1](/releases/10.1.1/))
+
+Reduce an array of items into a single output value.
+
+`|reduce(func,initial)`
+
+|-|-|-
+| **func(carry,v)** | An arrow function that returns the new carry value after each item. It receives the old `carry` value and the current item `v` (value).
+| **initial** | An optional starting value for `carry`.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set samples = [
+	[1,2,3,4,5],
+	[6,7,8,9,10],
+	[1,3,5,7,9],
+	[2,4,6,8,10],
+] %}
+Sum:
+{{samples|reduce((carry,v) => carry + array_sum(v))}}
+{% endraw %}
+</code>
+</pre>
+
+```
+Sum:
+110
 ```
 
 ## regexp
@@ -1452,6 +1561,32 @@ Build a URL query string from an array:
 
 ```
 name=Kina&action=light_on
+```
+
+## values
+
+(Added in [10.1.1](/releases/10.1.1/))
+
+Return the values of an array with sequential keys. This is the filter equivalent of the [array_values()](/docs/bots/scripting/functions/#array_values) function.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set countries = {
+  'CA': 'Canada',
+  'CN': 'China',
+  'DE': 'Germany',
+  'IN': 'India',
+  'MX': 'Mexico',
+  'US': 'United States',
+} %}
+{{countries|values|json_encode}}
+{% endraw %}
+</code>
+</pre>
+
+```
+["Canada","China","Germany","India","Mexico","United States"]
 ```
 
 # References
