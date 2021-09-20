@@ -62,14 +62,16 @@ Log in to the [Azure Portal](https://portal.azure.com/).
 
 1. In the new app registration, navigate to **Certificates & secrets**.
 
-1. Click the **New client secret** button in the **Client secrets** section near the middle of the page.
+2. Click the **New client secret** button in the **Client secrets** section near the middle of the page.
 
-	|---
-	|-|-
-	| **Description** | Cerb SSO
-	| **Expires** | Never
+    |---
+    |-|-
+    | **Description** | Cerb SSO
+    | **Expires** | Never
 	
-1. Click the blue **Add** button.
+3. Click the blue **Add** button.
+
+4. Copy the **Value** (not the **Secret ID**).
 
 ### Configure optional claims
 
