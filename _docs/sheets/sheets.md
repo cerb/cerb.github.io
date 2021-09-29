@@ -212,6 +212,7 @@ columns:
         {% if can_sign %}
         circle-ok
         {% endif %}
+      #record_uri: cerb:group:123
 {% endraw %}
 </code>
 </pre>

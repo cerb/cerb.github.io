@@ -1335,6 +1335,59 @@ Split a string on comma delimiters. This automatically handles whitespace paddin
 ["BTC","ETH","LTC"]
 ```
 
+## str_pos
+
+(Added in [10.1.2](/releases/10.1.2/))
+
+Return the position of a substring (needle) within a larger text (haystack). This returns `-1` if the substring is not found.
+
+`|str_pos(needle, offset, ignoreCase)`
+
+|-|-|-
+| **needle** | The substring to search for.
+| **offset** | The position to start searching from.
+| **ignoreCase** | `true` for case-insensitive matching, `false` for case-sensitive
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set alphabet %}
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+{% endset %}
+{{alphabet|str_pos(needle='hi', offset=0, ignoreCase=true)}}{% endraw %}
+</code>
+</pre>
+
+```
+7
+```
+
+## str_sub
+
+(Added in [10.1.2](/releases/10.1.2/))
+
+Extract a substring from a larger string using starting and ending positions. This is an alternative to [\|slice(from,length)](/docs/bots/scripting/filters/#slice).
+
+`|str_sub(from, to)`
+
+|-|-|-
+| **from** | The position to start extracting a substring from (inclusive).
+| **to** | The position to end extraction at (exclusive).
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set alphabet %}
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+{% endset %}
+{{alphabet|str_sub(7,9)}}{% endraw %}
+</code>
+</pre>
+
+```
+HI
+```
+
 ## strip_lines
 
 Remove lines in a text block that begin with one of the given `prefixes`.
