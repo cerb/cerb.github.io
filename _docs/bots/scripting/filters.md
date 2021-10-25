@@ -323,13 +323,19 @@ kina@cerb.example, milo@cerb.example
 
 ## context_name
 
-Convert a Cerb `context` ID into a human readable label:
+Convert a Cerb `context` ID into a human readable label.
+
+`|context_name(type)`
+
+|-|-|-
+| **type** | `singular`, `plural`, `id`, `uri`
 
 <pre>
 <code class="language-twig">
 {% raw %}
 {{'cerberusweb.contexts.ticket'|context_name('singular')}}
 {{'cerberusweb.contexts.task'|context_name('plural')}}
+{{'worker'|context_name('id')}}
 {% endraw %}
 </code>
 </pre>
