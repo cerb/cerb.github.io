@@ -20,6 +20,10 @@ keep_files: [assets]
 permalink: /blog/:year/:month/:day/:title/
 excerpt_separator: ""
 
+# CDN
+cdn:
+  baseurl: https://cdn.cerb.ai/site/10.2
+
 # Collections
 collections:
   docs:
