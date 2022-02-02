@@ -6,7 +6,7 @@ email: team@cerb.ai
 description: Cerb is a fully customizable platform for teamwork and automation. Boost team productivity with bots, dashboards, and workspaces.
 url: "https://cerb.ai"
 baseurl: ""
-logo_url: /assets/cerb_logo.png
+logo_url: /assets/cerb_logo.svg
 social_image_url: /assets/images/cerb-social.png
 twitter_username: cerb_ai
 github_username:  cerb
