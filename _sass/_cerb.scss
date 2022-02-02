@@ -31,6 +31,9 @@ div.cerb-screenshot {
 		border:1px solid rgb(220,220,220);
 		@include border-radius(5px);
 		
+		max-width: 100%;
+		height: auto;
+
 		&.cerb-overlay {
 			position: absolute;
 			top: 0;
@@ -81,6 +84,8 @@ header {
 	}
 	
 	&.jumbotron {
+		text-shadow: 0 0 2px rgb(50,50,50);
+		
 		p.jumbotron-breadcrumbs {
 			display: inline-block;
 			
@@ -92,7 +97,7 @@ header {
 		&.jumbotron-medium {
 			h1 {
 				font-size: 24px;
-				margin: 0px 0px 0px 0px;
+				margin: 0;
 				padding: 0;
 			}
 		}
@@ -104,25 +109,34 @@ header {
 		h1 {
 			display: block;
 			font-size: 36px;
-			margin: 0px 0px 0px 0px;
+			margin: 0;
 			padding: 0;
 		}
 	
 		p {
 			font-size: 24px;
 			font-weight: 200;
-			margin: 0px 0px 0px 0px;
+			margin: 0;
 			padding: 0;
 		}
 	
 		text-align: left;
-		padding: 20px 0px 20px 0px;
+		padding: 10px 0 10px 0;
+
+		background-color: #32429a;
+		background-image: linear-gradient(67deg, rgb(63,94,171) 55%, rgb(57, 98, 201) 100%);
+
+		//background-color: #32429a;
+		//background-image: linear-gradient(67deg, #32429a 0%, #C850C0 55%, #b9771c 100%);
+
+		/*
 		background-color: rgb(106,136,195);
 		background: linear-gradient(top, rgb(63,94,171), rgb(106,136,195));
 		background: -webkit-gradient(linear, left top, left bottom, from(rgb(63,94,171)), to(rgb(106,136,195)));
 		background: -moz-linear-gradient(top, rgb(63,94,171), rgb(106,136,195));
 		background: -o-linear-gradient(top, rgb(63,94,171), rgb(106,136,195));
 		background: -ms-linear-gradient(top, rgb(63,94,171), rgb(106,136,195));
+		*/
 		color: white;
 	}
 }
@@ -577,7 +591,8 @@ footer {
 	width: 100%;
 	
 	b {
-		color: rgb(160,180,210);
+		//color: rgb(160,180,210);
+		color: rgb(109, 166, 252);
 	}
 	
 	a, a:link, a:visited {

@@ -27,7 +27,8 @@ nav {
 
 		a {
 			@include border-radius(5px);
-			color: #666;
+			border: 1px solid transparent;
+			color: #222;
 			font-weight: 900;
 			font-size: 14px;
 			padding: 0.5em 0.5em;
@@ -37,11 +38,17 @@ nav {
 				background-color: #eee;
 			}
 		}
+		
+		&.cta {
+			a {
+				color: #6ea032;
+			}
+		}
 
 		&.current {
 			a {
 				background-color: #666;
-				color: #fff;
+				color: white;
 			}
 		}
 	}
