@@ -82,20 +82,20 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in calendar recurring event [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in calendar recurring event [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `calendar:` | [record](/docs/search/deep-search/) | [Calendar](/docs/records/types/calendar/)
+| `calendar:` | [record](/docs/search/#deep-search) | [Calendar](/docs/records/types/calendar/)
 | `calendar.id:` | [chooser](/docs/search/filters/choosers/) | [Calendar](/docs/records/types/calendar/)
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Event Name
 | `status:` | [boolean](/docs/search/filters/booleans/) | Is Available
 | `timezone:` | [text](/docs/search/filters/text/) | Timezone
-| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
+| `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

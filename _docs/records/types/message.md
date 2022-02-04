@@ -100,15 +100,15 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in message [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in message [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `attachments:` | [record](/docs/search/deep-search/) | [Attachments](/docs/records/types/attachment/)
+| `attachments:` | [record](/docs/search/#deep-search) | [Attachments](/docs/records/types/attachment/)
 | `content:` | [fulltext](/docs/search/filters/fulltext/) | Content
 | `created:` | [date](/docs/search/filters/dates/) | Created
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `header.cc:` | [text](/docs/search/filters/text/) | Cc
 | `header.deliveredTo:` | [text](/docs/search/filters/text/) | Delivered-To
 | `header.from:` | [text](/docs/search/filters/text/) | From
@@ -120,16 +120,16 @@ These [filters](/docs/search/filters/) are available in message [search queries]
 | `isNotSent:` | [boolean](/docs/search/filters/booleans/) | Is Not Sent
 | `isOutgoing:` | [boolean](/docs/search/filters/booleans/) | Is Outgoing
 | `links:` | [links](/docs/search/filters/links/) | Record Links
-| `notes:` | [record](/docs/search/deep-search/) | [Notes](/docs/records/types/comment/)
+| `notes:` | [record](/docs/search/#deep-search) | [Notes](/docs/records/types/comment/)
 | `responseTime:` | [number](/docs/search/filters/numbers/) | Response Time
-| `sender:` | [record](/docs/search/deep-search/) | [Sender](/docs/records/types/address/)
+| `sender:` | [record](/docs/search/#deep-search) | [Sender](/docs/records/types/address/)
 | `sender.id:` | [chooser](/docs/search/filters/choosers/) | [Sender](/docs/records/types/address/)
 | `signed.at:` | [date](/docs/search/filters/dates/) | Signed At
 | `signed.fingerprint:` | [text](/docs/search/filters/text/) | Signed By
-| `ticket:` | [record](/docs/search/deep-search/) | [Ticket](/docs/records/types/ticket/)
+| `ticket:` | [record](/docs/search/#deep-search) | [Ticket](/docs/records/types/ticket/)
 | `ticket.id:` | [chooser](/docs/search/filters/choosers/) | [Ticket Id](/docs/records/types/ticket/)
 | `token:` | [text](/docs/search/filters/text/) | Token
-| `worker:` | [record](/docs/search/deep-search/) | [Worker](/docs/records/types/worker/)
+| `worker:` | [record](/docs/search/#deep-search) | [Worker](/docs/records/types/worker/)
 | `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
 	
 ### Worklist Columns

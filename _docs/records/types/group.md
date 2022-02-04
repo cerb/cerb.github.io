@@ -88,18 +88,18 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in group [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in group [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `created:` | [date](/docs/search/filters/dates/) | Created
 | `default:` | [boolean](/docs/search/filters/booleans/) | Default
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
-| `manager:` | [record](/docs/search/deep-search/) | [Manager](/docs/records/types/worker/)
-| `member:` | [record](/docs/search/deep-search/) | [Member](/docs/records/types/worker/)
+| `manager:` | [record](/docs/search/#deep-search) | [Manager](/docs/records/types/worker/)
+| `member:` | [record](/docs/search/#deep-search) | [Member](/docs/records/types/worker/)
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `private:` | [boolean](/docs/search/filters/booleans/) | Private
 | `send.as:` | [text](/docs/search/filters/text/) | Send As

@@ -65,17 +65,17 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in skill [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in skill [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `created:` | [date](/docs/search/filters/dates/) | Created
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
-| `skillset:` | [record](/docs/search/deep-search/) | [Skillset](/docs/records/types/skillset/)
+| `skillset:` | [record](/docs/search/#deep-search) | [Skillset](/docs/records/types/skillset/)
 | `skillset.id:` | [chooser](/docs/search/filters/choosers/) | [Skillset](/docs/records/types/skillset/)
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	

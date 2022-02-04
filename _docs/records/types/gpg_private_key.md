@@ -69,19 +69,19 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in pgp private key [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in pgp private key [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `expires:` | [date](/docs/search/filters/dates/) | Expires
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `fingerprint:` | virtual | Fingerprint
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
+| `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

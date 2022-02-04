@@ -21,7 +21,7 @@ jumbotron:
 <img src="/assets/images/docs/setup/sessions.png" class="screenshot">
 </div>
 
-A **session** is created each time a [worker](/docs/workers/) [signs in](/docs/logging-in) from a particular device.
+A **session** is created each time a [worker](/docs/workers/) logs in from a particular device.
 
 In this section you'll see a [worklist](/docs/worklists/) of active and idle sessions, along with IP address and browser information.
 

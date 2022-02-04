@@ -83,7 +83,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in task [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in task [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
@@ -92,17 +92,17 @@ These [filters](/docs/search/filters/) are available in task [search queries](/d
 | `completed:` | [date](/docs/search/filters/dates/) | Completed Date
 | `created:` | [date](/docs/search/filters/dates/) | Created
 | `due:` | [date](/docs/search/filters/dates/) | Due Date
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `importance:` | [number](/docs/search/filters/numbers/) | Importance
 | `links:` | [links](/docs/search/filters/links/) | Record Links
-| `owner:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/worker/)
+| `owner:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/worker/)
 | `owner.id:` | [chooser](/docs/search/filters/choosers/) | [Owner](/docs/records/types/worker/)
 | `reopen:` | [date](/docs/search/filters/dates/) | Reopen At
 | `status:` | virtual | Status
 | `title:` | [text](/docs/search/filters/text/) | Title
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
+| `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

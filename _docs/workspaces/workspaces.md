@@ -12,7 +12,7 @@ jumbotron:
 
 A **workspace** is a page designed to optimize a particular workflow.  Workspaces can be shared by everyone, shared within a [group](/docs/groups/) or [role](/docs/roles/), or private to a specific [worker](/docs/workers/).
 
-You can add any number of workspace pages to your [navigation bar](/docs/navigation/#pages) and personalize Cerb into your own mission control.
+You can add any number of workspace pages to your [navigation bar](/docs/getting-started/interface/#pages) and personalize Cerb into your own mission control.
 
 Workspaces use **tabs** to organize their content into sections; much like dividers are used to partition pages in a large binder.
 

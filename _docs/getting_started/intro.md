@@ -12,10 +12,14 @@ jumbotron:
     url: /docs/home/
 ---
 
-<div class="cerb-screenshot" style="margin-bottom:20px;">
-<img src="/assets/images/cerb-social.png" class="screenshot">
+<div class="cerb-screenshot">
+<img src="{{ "/assets/images/docs/getting-started/cerb_browser_dark.png" | prepend: site.cdn.baseurl }}" class="screenshot" width="2763" height="1662">
 </div>
 
-[**Cerb**](/) is a web-based platform for teamwork and workflow automation. For 19 years it has helped thousands of teams be more productive.
+# What is Cerb?
+
+[**Cerb**](/) is a web-based work management and automation platform for remote teams.
+
+You can collaborate from anywhere, on any device, with only Internet access and a modern web browser.
 
 With Cerb's building blocks, your team can craft solutions to business challenges in real-time, directly in the browser and without software development experience.

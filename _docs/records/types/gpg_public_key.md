@@ -73,13 +73,13 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in pgp public key [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in pgp public key [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `expires:` | [date](/docs/search/filters/dates/) | Expires
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `fingerprint:` | virtual | Fingerprint
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links

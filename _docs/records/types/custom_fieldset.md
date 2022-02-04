@@ -69,7 +69,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in custom fieldset [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in custom fieldset [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
@@ -80,10 +80,10 @@ These [filters](/docs/search/filters/) are available in custom fieldset [search 
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `owner:` | virtual | Owner
 | `owner.app:` | virtual | Owner
-| `owner.bot:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/bot/)
-| `owner.group:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/group/)
-| `owner.role:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/role/)
-| `owner.worker:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/worker/)
+| `owner.bot:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/bot/)
+| `owner.group:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/group/)
+| `owner.role:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/role/)
+| `owner.worker:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/worker/)
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	
 ### Worklist Columns

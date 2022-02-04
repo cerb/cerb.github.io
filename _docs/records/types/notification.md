@@ -75,7 +75,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in notification [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in notification [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
@@ -84,7 +84,7 @@ These [filters](/docs/search/filters/) are available in notification [search que
 | `created:` | [date](/docs/search/filters/dates/) | Created
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `isRead:` | [boolean](/docs/search/filters/booleans/) | Is Read
-| `worker:` | [record](/docs/search/deep-search/) | [Worker](/docs/records/types/worker/)
+| `worker:` | [record](/docs/search/#deep-search) | [Worker](/docs/records/types/worker/)
 | `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
 	
 ### Worklist Columns

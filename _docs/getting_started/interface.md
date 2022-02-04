@@ -1,6 +1,8 @@
 ---
-title: Navigation
-permalink: /docs/navigation/
+title: Interface
+permalink: /docs/getting-started/interface/
+redirect_from:
+  - /docs/navigation/
 jumbotron:
   title: Navigation
   tagline: 

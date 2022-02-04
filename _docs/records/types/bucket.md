@@ -81,13 +81,13 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in bucket [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in bucket [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `group:` | [record](/docs/search/deep-search/) | [Group](/docs/records/types/group/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `group:` | [record](/docs/search/#deep-search) | [Group](/docs/records/types/group/)
 | `group.id:` | [chooser](/docs/search/filters/choosers/) | [Group](/docs/records/types/group/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links

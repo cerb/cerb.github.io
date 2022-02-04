@@ -74,19 +74,19 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in role [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in role [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `editor:` | [record](/docs/search/deep-search/) | [Editor](/docs/records/types/worker/)
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `editor:` | [record](/docs/search/#deep-search) | [Editor](/docs/records/types/worker/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
-| `member:` | [record](/docs/search/deep-search/) | [Member](/docs/records/types/worker/)
+| `member:` | [record](/docs/search/#deep-search) | [Member](/docs/records/types/worker/)
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `privsMode:` | [text](/docs/search/filters/text/) | Privileges Mode
-| `reader:` | [record](/docs/search/deep-search/) | [Reader](/docs/records/types/worker/)
+| `reader:` | [record](/docs/search/#deep-search) | [Reader](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

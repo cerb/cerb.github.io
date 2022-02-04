@@ -74,15 +74,15 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in calendar event [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in calendar event [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `calendar:` | [record](/docs/search/deep-search/) | [Calendar](/docs/records/types/calendar/)
+| `calendar:` | [record](/docs/search/#deep-search) | [Calendar](/docs/records/types/calendar/)
 | `calendar.id:` | [chooser](/docs/search/filters/choosers/) | [Calendar](/docs/records/types/calendar/)
 | `endDate:` | [date](/docs/search/filters/dates/) | End Date
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name

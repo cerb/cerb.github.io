@@ -1,9 +1,9 @@
 ---
-title: Community Portals
-excerpt: Community portals provide a way to publicly and securely share Cerb data with your customers and partners.
+title: Portals
+excerpt: Portals provide a way to publicly and securely share Cerb data with your customers and partners.
 permalink: /docs/portals/
 jumbotron:
-  title: Community Portals
+  title: Portals
   tagline: Deploy community-building tools and resources
   breadcrumbs:
   -
@@ -11,7 +11,7 @@ jumbotron:
     url: /docs/home/
 ---
 
-**Community portals** provide a way to publicly and securely share Cerb data with your customers and partners.  Each portal is a standalone website built on top of Cerb.
+**Portals** provide a way to publicly and securely share Cerb data with your customers and partners.  Each portal is a standalone website built on top of Cerb.
 
 There are various types of community portal:
 

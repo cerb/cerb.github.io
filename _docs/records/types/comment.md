@@ -72,22 +72,22 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in comment [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in comment [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `attachments:` | [record](/docs/search/deep-search/) | [Attachments](/docs/records/types/attachment/)
+| `attachments:` | [record](/docs/search/#deep-search) | [Attachments](/docs/records/types/attachment/)
 | `author:` | [text](/docs/search/filters/text/) | Actor
-| `author.<type>:` | [record](/docs/search/deep-search/) | Actor
+| `author.<type>:` | [record](/docs/search/#deep-search) | Actor
 | `comment:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
 | `created:` | [date](/docs/search/filters/dates/) | Created
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `isMarkdown:` | [boolean](/docs/search/filters/booleans/) | Markdown
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `on:` | [text](/docs/search/filters/text/) | On Type
-| `on.<type>:` | [record](/docs/search/deep-search/) | Target
+| `on.<type>:` | [record](/docs/search/#deep-search) | Target
 	
 ### Worklist Columns
 

@@ -15,7 +15,7 @@ jumbotron:
     url: /docs/records/
 ---
 
-Cerb includes many built-in [record](/docs/records/) types. You can create your own [custom record types](/docs/records/custom-records/), and new types may also be introduced by [plugins](/docs/plugins/).
+Cerb includes many built-in [record](/docs/records/) types. You can create your own [custom record types](/docs/records/#custom-records), and new types may also be introduced by [plugins](/docs/plugins/).
 
 This reference can be used when building [bot behaviors](/docs/bots/), [search queries](/docs/search/), [data queries](/docs/data-queries/), or working with the [API](/docs/api/).
 
@@ -29,6 +29,7 @@ This reference can be used when building [bot behaviors](/docs/bots/), [search q
 | `attachment` | [Attachments](/docs/records/types/attachment/)
 | `automation` | [Automations](/docs/records/types/automation/)
 | `automation_event` | [Automation Events](/docs/records/types/automation_event/)
+| `automation_resource` | [Automation Resources](/docs/records/types/automation_resource/)
 | `automation_timer` | [Automation Timers](/docs/records/types/automation_timer/)
 | `behavior` | [Behaviors](/docs/records/types/behavior/)
 | `bot` | [Bots](/docs/records/types/bot/)
@@ -60,6 +61,7 @@ This reference can be used when building [bot behaviors](/docs/bots/), [search q
 | `mail_transport` | [Email Transports](/docs/records/types/mail_transport/)
 | `mailbox` | [Email Mailboxes](/docs/records/types/mailbox/)
 | `message` | [Email Messages](/docs/records/types/message/)
+| `metric` | [Metrics](/docs/records/types/metric/)
 | `notification` | [Notifications](/docs/records/types/notification/)
 | `oauth_app` | [OAuth Apps](/docs/records/types/oauth_app/)
 | `org` | [Organizations](/docs/records/types/org/)
@@ -68,6 +70,7 @@ This reference can be used when building [bot behaviors](/docs/bots/), [search q
 | `profile_widget` | [Profile Widgets](/docs/records/types/profile_widget/)
 | `project_board_column` | [Project Board Columns](/docs/records/types/project_board_column/)
 | `project_board` | [Project Boards](/docs/records/types/project_board/)
+| `queue` | [Queues](/docs/records/types/queue/)
 | `reminder` | [Reminders](/docs/records/types/reminder/)
 | `resource` | [Resources](/docs/records/types/resource/)
 | `role` | [Roles](/docs/records/types/role/)

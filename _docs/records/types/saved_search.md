@@ -75,13 +75,13 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in saved search [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in saved search [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `context:` | [text](/docs/search/filters/text/) | Record Type
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `query:` | [text](/docs/search/filters/text/) | Query

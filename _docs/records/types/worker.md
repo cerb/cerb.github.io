@@ -109,19 +109,19 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in worker [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in worker [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `alias:` | virtual | Aliases
-| `email:` | [record](/docs/search/deep-search/) | [Email](/docs/records/types/address/)
+| `email:` | [record](/docs/search/#deep-search) | [Email](/docs/records/types/address/)
 | `email.id:` | [chooser](/docs/search/filters/choosers/) | [Email](/docs/records/types/address/)
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `firstName:` | [text](/docs/search/filters/text/) | First Name
 | `gender:` | [text](/docs/search/filters/text/) | Gender
-| `group:` | [record](/docs/search/deep-search/) | [Groups](/docs/records/types/group/)
-| `group.manager:` | [record](/docs/search/deep-search/) | [Group Manager](/docs/records/types/group/)
+| `group:` | [record](/docs/search/#deep-search) | [Groups](/docs/records/types/group/)
+| `group.manager:` | [record](/docs/search/#deep-search) | [Group Manager](/docs/records/types/group/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `isAdmin:` | [boolean](/docs/search/filters/booleans/) | Administrator
 | `isAvailable:` | virtual | Calendar Availability
@@ -137,13 +137,13 @@ These [filters](/docs/search/filters/) are available in worker [search queries](
 | `mention:` | [text](/docs/search/filters/text/) | @Mention
 | `mobile:` | [text](/docs/search/filters/text/) | Mobile
 | `phone:` | [text](/docs/search/filters/text/) | Phone
-| `role:` | [record](/docs/search/deep-search/) | [Role](/docs/records/types/role/)
-| `role.editor:` | [record](/docs/search/deep-search/) | [Role Editor](/docs/records/types/role/)
-| `role.reader:` | [record](/docs/search/deep-search/) | [Role Reader](/docs/records/types/role/)
+| `role:` | [record](/docs/search/#deep-search) | [Role](/docs/records/types/role/)
+| `role.editor:` | [record](/docs/search/#deep-search) | [Role Editor](/docs/records/types/role/)
+| `role.reader:` | [record](/docs/search/#deep-search) | [Role Reader](/docs/records/types/role/)
 | `timezone:` | [text](/docs/search/filters/text/) | Timezone
 | `title:` | [text](/docs/search/filters/text/) | Title
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `using.workspace:` | [record](/docs/search/deep-search/) | [Using Workspace](/docs/records/types/workspace_page/)
+| `using.workspace:` | [record](/docs/search/#deep-search) | [Using Workspace](/docs/records/types/workspace_page/)
 	
 ### Worklist Columns
 

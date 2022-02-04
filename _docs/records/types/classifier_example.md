@@ -70,17 +70,17 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in classifier example [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in classifier example [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `class:` | [record](/docs/search/deep-search/) | [Class](/docs/records/types/classifier_class/)
+| `class:` | [record](/docs/search/#deep-search) | [Class](/docs/records/types/classifier_class/)
 | `class.id:` | [chooser](/docs/search/filters/choosers/) | [Classification](/docs/records/types/classifier_class/)
-| `classifier:` | [record](/docs/search/deep-search/) | [Classifier](/docs/records/types/classifier/)
+| `classifier:` | [record](/docs/search/#deep-search) | [Classifier](/docs/records/types/classifier/)
 | `classifier.id:` | [chooser](/docs/search/filters/choosers/) | [Classifier](/docs/records/types/classifier/)
 | `expression:` | [text](/docs/search/filters/text/) | Expression
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 	

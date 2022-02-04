@@ -64,18 +64,18 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in activity log [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in activity log [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `activity:` | [text](/docs/search/filters/text/) | Activity
 | `actor:` | [text](/docs/search/filters/text/) | Actor Type
-| `actor.<type>:` | [record](/docs/search/deep-search/) | Actor
+| `actor.<type>:` | [record](/docs/search/#deep-search) | Actor
 | `created:` | [date](/docs/search/filters/dates/) | Created
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `target:` | [text](/docs/search/filters/text/) | Target Type
-| `target.<type>:` | [record](/docs/search/deep-search/) | Target
+| `target.<type>:` | [record](/docs/search/#deep-search) | Target
 	
 ### Worklist Columns
 

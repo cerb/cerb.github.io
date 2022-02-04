@@ -3,7 +3,7 @@ title: Record Links
 excerpt: 
 permalink: /docs/records/links/
 toc:
-  title: Links
+  title: Record Links
 jumbotron:
   title: Links
   tagline: Relationships between records

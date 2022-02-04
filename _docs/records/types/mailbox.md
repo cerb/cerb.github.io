@@ -88,7 +88,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in mailbox account [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in mailbox account [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
@@ -96,14 +96,14 @@ These [filters](/docs/search/filters/) are available in mailbox account [search 
 | `checkedAt:` | [date](/docs/search/filters/dates/) | Checked At
 | `enabled:` | [boolean](/docs/search/filters/booleans/) | Enabled
 | `fail.count:` | [number](/docs/search/filters/numbers/) | Num Fails
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `host:` | [text](/docs/search/filters/text/) | Host
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `protocol:` | [text](/docs/search/filters/text/) | Protocol
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
+| `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

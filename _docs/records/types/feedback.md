@@ -72,21 +72,21 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in feedback [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in feedback [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `created:` | [date](/docs/search/filters/dates/) | Log Date
-| `email:` | [record](/docs/search/deep-search/) | [Email](/docs/records/types/address/)
+| `email:` | [record](/docs/search/#deep-search) | [Email](/docs/records/types/address/)
 | `email.id:` | [chooser](/docs/search/filters/choosers/) | [Author Email](/docs/records/types/address/)
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `mood:` | [text](/docs/search/filters/text/) | Mood
 | `quote:` | [text](/docs/search/filters/text/) | Quote
 | `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
-| `worker:` | [record](/docs/search/deep-search/) | [Worker](/docs/records/types/worker/)
+| `worker:` | [record](/docs/search/#deep-search) | [Worker](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

@@ -74,14 +74,14 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in email template [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in email template [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
 | `content:` | [text](/docs/search/filters/text/) | Content
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name

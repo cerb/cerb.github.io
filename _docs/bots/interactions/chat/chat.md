@@ -63,7 +63,7 @@ For instance:
 
 * On a website, an interaction could trigger when a visitor clicks a "Sign up" link. The bot would guide the visitor through the steps of creating and verifying a new account.
 
-* In an email, a personalized link could start an interaction with survey. The conversation would adapt based on a respondent's answers, and results could be saved to [custom fields](/docs/custom-fields/) or [custom records](/docs/records/custom-records/).
+* In an email, a personalized link could start an interaction with survey. The conversation would adapt based on a respondent's answers, and results could be saved to [custom fields](/docs/custom-fields/) or [custom records](/docs/records/#custom-records).
 
 # Chat interaction lifecycle
 

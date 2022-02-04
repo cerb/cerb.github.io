@@ -113,38 +113,38 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in ticket [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in ticket [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `bucket:` | [record](/docs/search/deep-search/) | [Bucket](/docs/records/types/bucket/)
+| `bucket:` | [record](/docs/search/#deep-search) | [Bucket](/docs/records/types/bucket/)
 | `bucket.id:` | [chooser](/docs/search/filters/choosers/) | [Bucket](/docs/records/types/bucket/)
 | `closed:` | [date](/docs/search/filters/dates/) | Closed
-| `comments:` | [record](/docs/search/deep-search/) | [Comments](/docs/records/types/comment/)
-| `comments.first:` | [record](/docs/search/deep-search/) | [Comments First](/docs/records/types/comment/)
-| `comments.last:` | [record](/docs/search/deep-search/) | [Comments Last](/docs/records/types/comment/)
+| `comments:` | [record](/docs/search/#deep-search) | [Comments](/docs/records/types/comment/)
+| `comments.first:` | [record](/docs/search/#deep-search) | [Comments First](/docs/records/types/comment/)
+| `comments.last:` | [record](/docs/search/#deep-search) | [Comments Last](/docs/records/types/comment/)
 | `created:` | [date](/docs/search/filters/dates/) | Created
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `group:` | [record](/docs/search/deep-search/) | [Group](/docs/records/types/group/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `group:` | [record](/docs/search/#deep-search) | [Group](/docs/records/types/group/)
 | `group.id:` | [chooser](/docs/search/filters/choosers/) | [Group](/docs/records/types/group/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `importance:` | [number](/docs/search/filters/numbers/) | Importance
 | `inGroupsOf:` | virtual | In Groups Of Worker
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `mask:` | [text](/docs/search/filters/text/) | Mask
-| `messages:` | [record](/docs/search/deep-search/) | [Messages](/docs/records/types/message/)
+| `messages:` | [record](/docs/search/#deep-search) | [Messages](/docs/records/types/message/)
 | `messages.count:` | [number](/docs/search/filters/numbers/) | # Messages
 | `messages.count.in:` | [number](/docs/search/filters/numbers/) | # Messages In
 | `messages.count.out:` | [number](/docs/search/filters/numbers/) | # Messages Out
-| `messages.first:` | [record](/docs/search/deep-search/) | [Messages First](/docs/records/types/message/)
-| `messages.firstOutgoing:` | [record](/docs/search/deep-search/) | [Messages First Outgoing](/docs/records/types/message/)
-| `messages.last:` | [record](/docs/search/deep-search/) | [Messages Last](/docs/records/types/message/)
-| `org:` | [record](/docs/search/deep-search/) | [Org](/docs/records/types/org/)
+| `messages.first:` | [record](/docs/search/#deep-search) | [Messages First](/docs/records/types/message/)
+| `messages.firstOutgoing:` | [record](/docs/search/#deep-search) | [Messages First Outgoing](/docs/records/types/message/)
+| `messages.last:` | [record](/docs/search/#deep-search) | [Messages Last](/docs/records/types/message/)
+| `org:` | [record](/docs/search/#deep-search) | [Org](/docs/records/types/org/)
 | `org.id:` | [chooser](/docs/search/filters/choosers/) | [Organization](/docs/records/types/org/)
-| `owner:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/worker/)
+| `owner:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/worker/)
 | `owner.id:` | [chooser](/docs/search/filters/choosers/) | [Owner](/docs/records/types/worker/)
-| `participant:` | [record](/docs/search/deep-search/) | [Participant](/docs/records/types/address/)
+| `participant:` | [record](/docs/search/#deep-search) | [Participant](/docs/records/types/address/)
 | `participant.id:` | [chooser](/docs/search/filters/choosers/) | [Participant Id](/docs/records/types/address/)
 | `reopen:` | [date](/docs/search/filters/dates/) | Reopen At
 | `resolution.first:` | [number](/docs/search/filters/numbers/) | First Resolution
@@ -156,7 +156,7 @@ These [filters](/docs/search/filters/) are available in ticket [search queries](
 | `status.id:` | [number](/docs/search/filters/numbers/) | Status
 | `subject:` | [text](/docs/search/filters/text/) | Subject
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
+| `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 | `watchers.count:` | virtual | Watchers Count
 | `worker.commented:` | virtual | Worker Commented
 | `worker.replied:` | virtual | Worker Replied

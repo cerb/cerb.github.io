@@ -75,14 +75,14 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in call [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in call [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
 | `created:` | [date](/docs/search/filters/dates/) | Created
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `isClosed:` | [boolean](/docs/search/filters/booleans/) | Is Closed
 | `isOutgoing:` | [boolean](/docs/search/filters/booleans/) | Is Outgoing

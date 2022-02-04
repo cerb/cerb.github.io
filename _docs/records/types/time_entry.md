@@ -74,7 +74,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in time tracking [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in time tracking [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
@@ -82,13 +82,13 @@ These [filters](/docs/search/filters/) are available in time tracking [search qu
 | `activity.id:` | [chooser](/docs/search/filters/choosers/) | [Activity](/docs/records/types/timetracking_activity/)
 | `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
 | `created:` | [date](/docs/search/filters/dates/) | Log Date
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `isClosed:` | [boolean](/docs/search/filters/booleans/) | Is Closed
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `timeSpent:` | [number](/docs/search/filters/numbers/) | Time Spent
-| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
-| `worker:` | [record](/docs/search/deep-search/) | [Worker](/docs/records/types/worker/)
+| `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
+| `worker:` | [record](/docs/search/#deep-search) | [Worker](/docs/records/types/worker/)
 | `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
 	
 ### Worklist Columns

@@ -59,8 +59,5 @@ In [PUT](/docs/api/endpoints/records/#update) or [POST](/docs/api/endpoints/reco
 	<div class="left">
 		<a href="/docs/records/fields/types/timestamp/" class="prev">&lt; Timestamp</a>
 	</div>
-	<div class="right align-right">
-		<a href="/docs/records/custom-records/" class="next">Custom Records &gt;</a>
-	</div>
 </div>
 <div class="clear"></div>

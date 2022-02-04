@@ -16,7 +16,7 @@ jumbotron:
     url: /docs/plugins/
   -
     label: Extension Points &raquo;
-    url: /docs/plugins/extensions/
+    url: /docs/plugins/#extensions
   -
     label: Cache Engine &raquo;
     url: /docs/plugins/extensions/points/devblocks.cache.engine

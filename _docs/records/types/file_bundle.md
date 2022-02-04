@@ -73,26 +73,26 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in file bundle [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in file bundle [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `owner:` | virtual | Owner
 | `owner.app:` | virtual | Owner
-| `owner.bot:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/bot/)
-| `owner.group:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/group/)
-| `owner.role:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/role/)
-| `owner.worker:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/worker/)
+| `owner.bot:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/bot/)
+| `owner.group:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/group/)
+| `owner.role:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/role/)
+| `owner.worker:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/worker/)
 | `tag:` | [text](/docs/search/filters/text/) | Tag
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `usableBy.worker:` | virtual | Usable by [Worker](/docs/records/types/worker/)
-| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
+| `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

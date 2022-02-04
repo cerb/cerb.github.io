@@ -8,7 +8,7 @@ permalink: /tips/unassign-deactivated-workers/
 tags: cerb tips mailbag
 ---
 
-As an administrator, you can deactivate worker accounts by clicking on **Workers** in the [Search](/docs/navigation/#search-menu) menu.  A deactivated worker is no longer able to log in, and they aren't included in active worker lists when making assignments; but their entire history of email replies and comments is preserved.
+As an administrator, you can deactivate worker accounts by clicking on **Workers** in the [Search](/docs/getting-started/interface/#search-menu) menu.  A deactivated worker is no longer able to log in, and they aren't included in active worker lists when making assignments; but their entire history of email replies and comments is preserved.
 
 A deactivated worker may still be assigned to historical records.  You can use the new [deep quick search](/docs/workspaces#deep-searching) feature in Cerb 7.3 to find records owned by worker accounts that are deactivated.
 

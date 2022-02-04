@@ -81,16 +81,16 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in behavior [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in behavior [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `bot:` | [record](/docs/search/deep-search/) | [Bot](/docs/records/types/bot/)
+| `bot:` | [record](/docs/search/#deep-search) | [Bot](/docs/records/types/bot/)
 | `bot.id:` | [chooser](/docs/search/filters/choosers/) | [Bot](/docs/records/types/bot/)
 | `disabled:` | [boolean](/docs/search/filters/booleans/) | Is Disabled
 | `event:` | [text](/docs/search/filters/text/) | Event
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Title

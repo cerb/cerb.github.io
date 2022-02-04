@@ -5,7 +5,7 @@ excerpt: Interactions are interactive automations that use continuations to paus
 permalink: /docs/interactions/
 toc:
   title: Interactions
-  expand: Automations
+  expand: Reference
 jumbotron:
   title: Interactions
   tagline: 

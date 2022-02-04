@@ -91,17 +91,17 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in email address [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in email address [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
-| `contact:` | [record](/docs/search/deep-search/) | [Contact](/docs/records/types/contact/)
+| `contact:` | [record](/docs/search/#deep-search) | [Contact](/docs/records/types/contact/)
 | `contact.id:` | [chooser](/docs/search/filters/choosers/) | [Contact](/docs/records/types/contact/)
 | `created:` | [date](/docs/search/filters/dates/) | Created
 | `email:` | [text](/docs/search/filters/text/) | Email
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `host:` | [text](/docs/search/filters/text/) | Host
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `isBanned:` | [boolean](/docs/search/filters/booleans/) | Is Banned
@@ -110,13 +110,13 @@ These [filters](/docs/search/filters/) are available in email address [search qu
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `mailTransport.id:` | [chooser](/docs/search/filters/choosers/) | [Email Transport](/docs/records/types/mail_transport/)
 | `nonspam:` | [number](/docs/search/filters/numbers/) | # Nonspam
-| `org:` | [record](/docs/search/deep-search/) | [Org](/docs/records/types/org/)
+| `org:` | [record](/docs/search/#deep-search) | [Org](/docs/records/types/org/)
 | `org.id:` | [chooser](/docs/search/filters/choosers/) | [Organization Id](/docs/records/types/org/)
 | `spam:` | [number](/docs/search/filters/numbers/) | # Spam
-| `ticket:` | [record](/docs/search/deep-search/) | [Ticket](/docs/records/types/ticket/)
+| `ticket:` | [record](/docs/search/#deep-search) | [Ticket](/docs/records/types/ticket/)
 | `ticket.id:` | [chooser](/docs/search/filters/choosers/) | [Ticket](/docs/records/types/ticket/)
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
+| `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 | `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
 	
 ### Worklist Columns

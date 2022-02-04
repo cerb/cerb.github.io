@@ -16,7 +16,7 @@ jumbotron:
 
 <div style="column-width:300px;">
 {% for section in site.data.docs %}
-<div style="break-inside: avoid-column;">
+<div>
 <h4>{{ section.title }}</h4>
 
 <ul>

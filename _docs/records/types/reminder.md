@@ -73,19 +73,19 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in reminder [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in reminder [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `closed:` | [boolean](/docs/search/filters/booleans/) | Is Closed
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `remindAt:` | [date](/docs/search/filters/dates/) | Remind At
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `worker:` | [record](/docs/search/deep-search/) | [Worker](/docs/records/types/worker/)
+| `worker:` | [record](/docs/search/#deep-search) | [Worker](/docs/records/types/worker/)
 | `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
 	
 ### Worklist Columns

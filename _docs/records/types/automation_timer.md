@@ -82,13 +82,13 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in automation timer [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in automation timer [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `created:` | [date](/docs/search/filters/dates/) | Created
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `isRecurring:` | [boolean](/docs/search/filters/booleans/) | Is Recurring
 | `lastRanAt:` | [date](/docs/search/filters/dates/) | Last Ran At
@@ -96,7 +96,7 @@ These [filters](/docs/search/filters/) are available in automation timer [search
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `nextRunAt:` | [date](/docs/search/filters/dates/) | Next Run At
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
+| `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

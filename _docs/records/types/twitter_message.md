@@ -78,7 +78,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in twitter message [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in twitter message [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
@@ -87,7 +87,7 @@ These [filters](/docs/search/filters/) are available in twitter message [search 
 | `account.id:` | [chooser](/docs/search/filters/choosers/) | [Connected Account](/docs/records/types/connected_account/)
 | `content:` | [text](/docs/search/filters/text/) | Content
 | `created:` | [date](/docs/search/filters/dates/) | Created
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `followers:` | [number](/docs/search/filters/numbers/) | # Followers
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `isClosed:` | [boolean](/docs/search/filters/booleans/) | Is Closed

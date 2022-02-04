@@ -75,23 +75,23 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in connected account [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in connected account [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `created:` | [date](/docs/search/filters/dates/) | Created
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `owner:` | virtual | Owner
 | `owner.app:` | virtual | Owner
-| `owner.bot:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/bot/)
-| `owner.group:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/group/)
-| `owner.role:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/role/)
-| `owner.worker:` | [record](/docs/search/deep-search/) | [Owner](/docs/records/types/worker/)
-| `service:` | [record](/docs/search/deep-search/) | [Service](/docs/records/types/connected_service/)
+| `owner.bot:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/bot/)
+| `owner.group:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/group/)
+| `owner.role:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/role/)
+| `owner.worker:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/worker/)
+| `service:` | [record](/docs/search/#deep-search) | [Service](/docs/records/types/connected_service/)
 | `service.id:` | [chooser](/docs/search/filters/choosers/) | [Service Provider](/docs/records/types/connected_service/)
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `uri:` | [text](/docs/search/filters/text/) | Uri

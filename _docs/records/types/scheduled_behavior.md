@@ -71,18 +71,18 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in behavior scheduled [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in behavior scheduled [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `behavior:` | [record](/docs/search/deep-search/) | [Behavior](/docs/records/types/behavior/)
+| `behavior:` | [record](/docs/search/#deep-search) | [Behavior](/docs/records/types/behavior/)
 | `behavior.id:` | [chooser](/docs/search/filters/choosers/) | [Behavior](/docs/records/types/behavior/)
-| `bot:` | [record](/docs/search/deep-search/) | [Bot](/docs/records/types/bot/)
+| `bot:` | [record](/docs/search/#deep-search) | [Bot](/docs/records/types/bot/)
 | `bot.id:` | [chooser](/docs/search/filters/choosers/) | [Bot](/docs/records/types/bot/)
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `on:` | [text](/docs/search/filters/text/) | On
-| `on.<type>:` | [record](/docs/search/deep-search/) | On
+| `on.<type>:` | [record](/docs/search/#deep-search) | On
 | `runDate:` | [date](/docs/search/filters/dates/) | Run Date
 	
 ### Worklist Columns

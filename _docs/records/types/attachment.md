@@ -74,19 +74,19 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in attachment [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in attachment [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `bundle:` | [record](/docs/search/deep-search/) | [Bundle](/docs/records/types/file_bundle/)
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `bundle:` | [record](/docs/search/#deep-search) | [Bundle](/docs/records/types/file_bundle/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/filters/numbers/) | Attachment Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `mimetype:` | [text](/docs/search/filters/text/) | Mime Type
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `on:` | [text](/docs/search/filters/text/) | On Type
-| `on.<type>:` | [record](/docs/search/deep-search/) | On
+| `on.<type>:` | [record](/docs/search/#deep-search) | On
 | `size:` | [number](/docs/search/filters/numbers/) | Size
 | `storage.extension:` | [text](/docs/search/filters/text/) | Storage Extension
 | `updated:` | [date](/docs/search/filters/dates/) | Updated

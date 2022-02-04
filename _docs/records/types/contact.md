@@ -99,7 +99,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 	
 ### Search Query Fields
 
-These [filters](/docs/search/filters/) are available in contact [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in contact [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
@@ -107,9 +107,9 @@ These [filters](/docs/search/filters/) are available in contact [search queries]
 | `alias:` | virtual | Aliases
 | `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
 | `created:` | [date](/docs/search/filters/dates/) | Created
-| `email:` | [record](/docs/search/deep-search/) | [Email](/docs/records/types/address/)
+| `email:` | [record](/docs/search/#deep-search) | [Email](/docs/records/types/address/)
 | `email.id:` | [chooser](/docs/search/filters/choosers/) | [Email](/docs/records/types/address/)
-| `fieldset:` | [record](/docs/search/deep-search/) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `firstName:` | [text](/docs/search/filters/text/) | First Name
 | `gender:` | [text](/docs/search/filters/text/) | Gender
 | `id:` | [number](/docs/search/filters/numbers/) | Id
@@ -117,11 +117,11 @@ These [filters](/docs/search/filters/) are available in contact [search queries]
 | `lastLogin:` | [date](/docs/search/filters/dates/) | Last Login
 | `lastName:` | [text](/docs/search/filters/text/) | Last Name
 | `links:` | [links](/docs/search/filters/links/) | Record Links
-| `org:` | [record](/docs/search/deep-search/) | [Org](/docs/records/types/org/)
+| `org:` | [record](/docs/search/#deep-search) | [Org](/docs/records/types/org/)
 | `org.id:` | [chooser](/docs/search/filters/choosers/) | [Organization](/docs/records/types/org/)
 | `timezone:` | [text](/docs/search/filters/text/) | Timezone
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [record](/docs/search/deep-search/) | [Watchers](/docs/records/types/worker/)
+| `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

@@ -16,7 +16,7 @@ jumbotron:
     url: /docs/plugins/
   -
     label: Extension Points &raquo;
-    url: /docs/plugins/extensions/
+    url: /docs/plugins/#extensions
   -
     label: Profile Widget Type &raquo;
     url: /docs/plugins/extensions/points/cerb.profile.tab.widget

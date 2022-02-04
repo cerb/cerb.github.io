@@ -1,110 +1,56 @@
 - title: Getting Started
   docs:
   - intro
-  - logging-in
-  - navigation
+  - getting-started/installation
+  - getting-started/interface
+  - getting-started/quick-start
 
-- title: Concepts
+- title: Reference
   docs:
-  - workers
-  - roles
-  - groups
-  - buckets
-  #- responsibilities
-  #- groups/signatures
-  - contacts
-  - orgs
-  #- calendars
-  - tickets
-  - snippets
-
-- title: Records
-  docs:
-  - records
-  - records/types
-  - records/custom-records
-  - custom-fields
-  - custom-fieldsets
-  - profiles
-  - cards
-  - records/links
-  - comments
-  - activity-log
-  - watchers
-  - notifications
-  - reminders
-  - packages
-
-- title: Search
-  docs:
-  - search
-  - search/autocompletion
-  - search/filters
-  - search/deep-search
-  - search/and-or
-  - search/sorting
-
-- title: Data Queries
-  docs:
-  - data-queries
-  - data-queries/using
-  - data-queries/worklist/records
-  - data-queries/worklist/subtotals
-  - data-queries/worklist/series
-  - data-queries/worklist/metrics
-  - data-queries/worklist/xy
-  - data-queries/worklist/geopoints
-  - data-queries/calendar/events
-  - data-queries/classifier/prediction
-  - data-queries/gpg/keyinfo
-  - data-queries/record/types
-  - data-queries/record/fields
-  - data-queries/platform/extensions
-  - data-queries/ui/icons
-  - data-queries/usage/bot-behaviors
-  - data-queries/usage/snippets
-  - data-queries/sample
-  - data-queries/custom
-
-- title: KATA
-  docs:
-  - kata
-
-- title: Resources
-  docs:
-    - resources
-
-- title: Automations
-  docs:
+    - activity-log
     - automations
+    - buckets
+    - calendars
+    - cards
+    - classifiers
+    - comments
+    - connected-accounts
+    - connected-services
+    - contacts
+    - custom-fields
+    - custom-fieldsets
+    - dashboards
+    - data-queries
+    - groups
     - interactions
+    - kata
+    - maps
+    - metrics
+    - notifications
+    - orgs
+    - packages
+    - portals
+    - profiles
+    - project-boards
+    - queues
+    - records
+    - records/links
+    - records/types
+    - reminders
+    - resources
+    - roles
+    - search
+    - sheets
+    - snippets
+    - tickets
     - toolbars
+    - watchers
+    - webhooks
+    - workers
+    - worklists
+    - workspaces
 
-- title: Workspaces
-  docs:
-  - workspaces
-  - dashboards
-  - worklists
-  - sheets
-  - maps
-  - project-boards
-
-- title: Bots
-  docs:
-  - bots
-  - bots/events
-  - bots/behaviors
-  - bots/behaviors/dictionaries
-  - bots/behaviors/dictionaries/key-expansion
-  - bots/behaviors/variables
-  - bots/behaviors/simulator
-  - bots/delegation
-  - connected-services
-  - connected-accounts
-  - classifiers
-  - webhooks
-
-- title: Bot Scripting
+- title: Automation Scripting
   docs:
   - bots/scripting
   - bots/scripting/variables
@@ -123,18 +69,16 @@
   - bots/scripting/filters
   - bots/scripting/tests
 
-- title: Bot Interactions
+- title: Bots
   docs:
-  - bots/interactions
-  - bots/interactions/forms
-  - bots/interactions/chat
-
-- title: Portals
-  docs:
-  - portals
-  - portals/support-center
-  - portals/chat-bot
-  - portals/webhook
+    - bots
+    - bots/events
+    - bots/behaviors
+    - bots/behaviors/dictionaries
+    - bots/behaviors/dictionaries/key-expansion
+    - bots/behaviors/variables
+    - bots/behaviors/simulator
+    - bots/delegation
 
 - title: Administration
   docs:
@@ -147,19 +91,7 @@
   - backups
   - upgrading
   #- scaling
-
-- title: Plugins
-  docs:
   - plugins
-  - plugins/manifests
-  - plugins/extensions
-  - plugins/events
-  - plugins/patches
-  - plugins/classloader
-  - plugins/permissions
-  - plugins/translations
-  - plugins/resources
-  - plugins/templates
 
 - title: API
   docs:
