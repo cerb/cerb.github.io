@@ -304,6 +304,9 @@ columns:
     params:
       mode: single
       #mode: multiple
+      #label: Label
+      #label_key: label
+      #label_template@raw: {{label}}
       #value: 123
       #value_key: id
       #value_template@raw: {{id}}

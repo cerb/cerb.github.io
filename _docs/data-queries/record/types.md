@@ -28,6 +28,7 @@ jumbotron:
 |:-:|-|-
 | | `filter:` | An optional keyword used to filter the results
 | | `limit:` | The desired number of results per page
+| | `options:` | `autocomplete`, `avatars`, `cards`, `comments`, `custom_fields`, `links`, `owner`, `records`, `search`, `snippets`, `va_variable`, `watchers`, `workspace`
 | | `page:` | The desired starting page (zero-based)
 
 ### Response Formats
@@ -45,6 +46,7 @@ jumbotron:
 {% raw %}
 type:record.types
 filter:widget
+options:[search]
 format:dictionaries
 {% endraw %}
 </code>

@@ -43,3 +43,5 @@ The automation event [dictionary](/docs/automations/#dictionaries) starts with t
 |-|-|-
 | `group_id:` | number | The group ID to deliver the message to. Alternative to `group_name`.
 | `group_name:` | string | The group name to deliver the message to. Alternative to `group_id`.
+| `bucket_id:` | number | The optional bucket ID to deliver the message to. This can be provided instead of `group_id`.
+| `bucket_name:` | string | The optional bucket name to deliver the message to. A `group_id` or `group_name` must also be provided to disambiguate names like 'Inbox'.

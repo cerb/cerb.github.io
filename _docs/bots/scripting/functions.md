@@ -873,7 +873,7 @@ Return the smallest value in an array or object.
 <code class="language-twig">
 {% raw %}
 {% set numbers = [1,9,8,4,2] %}
-{{max(numbers)}}
+{{min(numbers)}}
 {% endraw %}
 </code>
 </pre>

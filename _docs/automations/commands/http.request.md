@@ -23,6 +23,8 @@ jumbotron:
 
 The **http.request:** command sends data to an HTTP endpoint and returns the response.
 
+The command also supports streaming large file uploads directly from attachment records, and downloads directly into attachment records.
+
 A simple `GET` request:
 
 <pre>
@@ -53,13 +55,10 @@ start:
       url: https://api.example/employee/add
       headers@text:
         Content-Type: application/json
-      body@text:
-        {
-          "person": {
-            "name": "Kina",
-            "title": "Customer support manager"
-          }
-        }
+      body:
+        person:
+          name: Kina
+          title: Customer Support Manager
     on_simulate:
       set:
         http_response:
@@ -199,6 +198,28 @@ authentication: cerb:connected_account:my-oauth2-account
 
 Save the results in this placeholder.
 
+### Binary responses
+
+A binary HTTP response body is automatically converted to a base64-encoded `data:` URI.
+
+This resolves issues with serializing automation states containing unprintable characters (e.g. simulation).
+
+You should always use the `http.request:on_success:` handler to verify an HTTP response. When this occurs, the `output:is_data_uri:` is `true`.
+
+### Large responses
+
+A large HTTP response body (>1MB) will now be returned as an [automation resource](/docs/records/types/automation_resource/) record for further processing.
+
+These bytes are streamed directly to a file to avoid memory limitations in the automation (e.g. video processing).
+
+When this occurs:
+* `output:is_cerb_uri:` is `true`
+* `output:content_type:` is replaced with `application/vnd.cerb.uri`
+* `output:content_type_original:` contains the original content type
+* The HTTP body is a Cerb record URI (e.g. `cerb:automation_resource:c10028f0-1cad-11ec-81e5-59d4c4af2d7`)
+
+The new [file.read:](/docs/automations/commands/file.read/) command can be used to process the file in chunks.
+
 ## on_simulate:
 
 The [commands](/docs/automations/#commands) to run during simulation instead of the HTTP request.
@@ -230,3 +251,30 @@ The `output:` placeholder receives a dictionary with these keys:
 | `status_code` | The HTTP status code (e.g. `500`)
 | `url` | The URL of the HTTP endpoint.
 | `error` | The error message.
+
+# Examples
+
+## Stream a large upload from an attachment
+
+The `http.request:` action can directly stream large attachment/resource uploads for PUT and POST HTTP requests.
+
+Set the `Content-Type:` header to `application/vnd.cerb.uri` and set the HTTP body to a record URI like `cerb:attachment:123`.
+
+The automation will take care of streaming the bytes to the HTTP endpoint, which avoids memory issues with loading large attachment content into an automation variable.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+start:
+  http.request/post:
+    output: http_response
+    inputs:
+      method: POST
+      url: https://api.example/file/upload
+      headers@text:
+        Content-Type: application/vnd.cerb.uri
+      body@text:
+        cerb:attachment:123
+{% endraw %}
+</code>
+</pre>

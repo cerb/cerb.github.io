@@ -36,7 +36,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
-| **x** | **`activity_point`** | [text](/docs/records/fields/types/text/) | The event that triggered the notification 
+| **x** | **`activity_point`** | [text](/docs/records/fields/types/text/) | The event that triggered the notification (or `custom.other`) 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
 |   | `is_read` | [boolean](/docs/records/fields/types/boolean/) | Has this been read by the worker? 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
@@ -44,6 +44,15 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `target__context` | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) of the target record 
 |   | `target_id` | [number](/docs/records/fields/types/number/) | The ID of the target record 
 | **x** | **`worker_id`** | [number](/docs/records/fields/types/number/) | The ID of the [worker](/docs/records/types/worker/) who received the notification 
+
+#### params
+
+|---
+| Key | Value
+|-|-
+| `message` | The notification message with your own `{% raw %}{{variables}}{% endraw %}`
+| `variables` | A key/value object of placeholder values
+| `urls` | A key/value object of optional variable urls in the format `ctx://record_type:123`
 
 ### Dictionary Placeholders
 

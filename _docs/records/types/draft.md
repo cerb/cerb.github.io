@@ -164,6 +164,7 @@ These [filters](/docs/search/#filters) are available in draft [search queries](/
 | `name:` | [text](/docs/search/filters/text/) | Name
 | `queue.deliverAt:` | [date](/docs/search/filters/dates/) | Delivery Date
 | `queue.fails:` | [number](/docs/search/filters/numbers/) | # Fails
+| `ticket.id:` | [chooser](/docs/search/filters/choosers/) | [Ticket Id](/docs/records/types/ticket/)
 | `to:` | [text](/docs/search/filters/text/) | To
 | `token:` | [text](/docs/search/filters/text/) | Token
 | `type:` | [text](/docs/search/filters/text/) | Message Type

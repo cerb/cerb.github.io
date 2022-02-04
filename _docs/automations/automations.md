@@ -649,6 +649,23 @@ commands:
 </code>
 </pre>
 
+#### Time limit
+
+By default, automations are restricted to a maximum run duration of 25,000 milliseconds (25 seconds).
+
+This can be changed in the policy:
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+settings: 
+ time_limit_ms: 30000
+{% endraw %}
+</code>
+</pre>
+
+In most cases, a better approach is to break up long tasks into smaller pieces and use automation timers and queues.
+
 ### Testing policy rules
 
 You can test policies from the automation simulator.
@@ -778,8 +795,11 @@ There can now be multiple `enabled:` or `disabled:` rules. The first rule to ret
 | [**decrypt.pgp:**](/docs/automations/commands/decrypt.pgp/) | Decrypt a PGP encrypted message.
 | [**email.parse:**](/docs/automations/commands/email.parse/) | Parse a MIME-encoded email message into a [ticket](/docs/records/types/ticket/).
 | [**encrypt.pgp:**](/docs/automations/commands/encrypt.pgp/) | Encrypt a message for one or more PGP public keys.
+| [**file.read:**](/docs/automations/commands/file.read/) | Read chunks of bytes from an [attachment](/docs/records/types/attachment/) or [automation resource](/docs/records/types/automation_resource/).
 | [**function:**](/docs/automations/commands/function/) | Execute an [automation.function](/docs/automations/triggers/automation.function/) automation and return output.
 | [**http.request:**](/docs/automations/commands/http.request/) | Send data to an HTTP endpoint and return the response.
+| [**queue.pop:**](/docs/automations/commands/queue.pop/) | Pop an item from a [queue](/docs/queues/).
+| [**queue.push:**](/docs/automations/commands/queue.push/) | Push an item into a [queue](/docs/queues/).
 | [**record.create:**](/docs/automations/commands/record.create/) | Create a [record](/docs/records/).
 | [**record.delete:**](/docs/automations/commands/record.delete/) | Delete a [record](/docs/records/).
 | [**record.get:**](/docs/automations/commands/record.get/) | Retrieve a [record](/docs/records/).

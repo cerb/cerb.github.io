@@ -42,7 +42,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this custom field 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `pos` | [number](/docs/records/fields/types/number/) | Display order; positive integer; `0` is first 
-| **x** | **`type`** | [text](/docs/records/fields/types/text/) | `C` (checkbox)<br>`D` (picklist)<br>`E` (date)<br>`F` (file)<br>`I` (files)<br>`L` (record link)<br>`M` (list)<br>`N` (number)<br>`O` (decimal)<br>`S` (single line of text)<br>`T` (multiple lines of text)<br>`U` (url)<br>`W` (worker)<br>`X` (multiple checkboxes)<br>`Y` (currency)<br> 
+| **x** | **`type`** | [text](/docs/records/fields/types/text/) | `C` (checkbox), `D` (picklist), `E` (date), `F` (file), `I` (files), `L` (record link), `M` (list), `N` (number), `O` (decimal), `S` (single line of text), `T` (multiple lines of text), `U` (url), `W` (worker), `X` (multiple checkboxes), `Y` (currency) 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 | **x** | **`uri`** | [text](/docs/records/fields/types/text/) | The unique alias for this custom field 
 
