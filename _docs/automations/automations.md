@@ -798,6 +798,7 @@ There can now be multiple `enabled:` or `disabled:` rules. The first rule to ret
 | [**file.read:**](/docs/automations/commands/file.read/) | Read chunks of bytes from an [attachment](/docs/records/types/attachment/) or [automation resource](/docs/records/types/automation_resource/).
 | [**function:**](/docs/automations/commands/function/) | Execute an [automation.function](/docs/automations/triggers/automation.function/) automation and return output.
 | [**http.request:**](/docs/automations/commands/http.request/) | Send data to an HTTP endpoint and return the response.
+| [**metrics.increment:**](/docs/automations/commands/metrics.increment/) | Add new samples to a [metric](/docs/metrics/).
 | [**queue.pop:**](/docs/automations/commands/queue.pop/) | Pop an item from a [queue](/docs/queues/).
 | [**queue.push:**](/docs/automations/commands/queue.push/) | Push an item into a [queue](/docs/queues/).
 | [**record.create:**](/docs/automations/commands/record.create/) | Create a [record](/docs/records/).
@@ -807,13 +808,13 @@ There can now be multiple `enabled:` or `disabled:` rules. The first rule to ret
 | [**record.update:**](/docs/automations/commands/record.update/) | Update a [record](/docs/records/).
 | [**record.upsert:**](/docs/automations/commands/record.upsert/) | Create or update a [record](/docs/records/).
 | [**set:**](/docs/automations/commands/set/) | Set one or more placeholders.
+| [**storage.get:**](/docs/automations/commands/storage.get/) | Retrieve arbitrary data from long-term storage.
+| [**storage.set:**](/docs/automations/commands/storage.set/) | Save arbitrary data to long-term storage.
+| [**storage.delete:**](/docs/automations/commands/storage.delete/) | Delete data from long-term storage.
 | [**var.expand:**](/docs/automations/commands/var.expand/) | Expand paths on keys.
 | [**var.push:**](/docs/automations/commands/var.push/) | Add an element to a list placeholder.
 | [**var.set:**](/docs/automations/commands/var.set/) | Set a placeholder using a complex key path.
 | [**var.unset:**](/docs/automations/commands/var.unset/) | Unset a placeholder.
-| [**storage.get:**](/docs/automations/commands/storage.get/) | Retrieve arbitrary data from long-term storage.
-| [**storage.set:**](/docs/automations/commands/storage.set/) | Save arbitrary data to long-term storage.
-| [**storage.delete:**](/docs/automations/commands/storage.delete/) | Delete data from long-term storage.
 
 ### Simulation
 

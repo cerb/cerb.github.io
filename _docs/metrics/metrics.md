@@ -227,4 +227,4 @@ Metrics statistics can be retrieved with [metrics.timeseries](/docs/data-queries
 
 # Using metrics in automations
 
-You can record samples on a metric from automations with the [metrics.increment](/docs/automations/commands/metrics.increment/) command.
+You can record samples on a metric from automations with the [metric.increment](/docs/automations/commands/metric.increment/) command.
