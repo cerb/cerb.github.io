@@ -73,6 +73,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `created` | date | Created
 | `elapsed_resolution_first` | seconds | First Resolution
 | `elapsed_response_first` | seconds | First Response
+| `elapsed_status_open` | seconds | Time Spent Open
 | `group_` | record | [Group](/docs/records/types/group/)
 | `id` | number | Id
 | `importance` | number | Importance
@@ -131,6 +132,7 @@ These [filters](/docs/search/#filters) are available in ticket [search queries](
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `importance:` | [number](/docs/search/filters/numbers/) | Importance
 | `inGroupsOf:` | virtual | In Groups Of Worker
+| `lastOpenedAt:` | [date](/docs/search/filters/dates/) | Last Opened At
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `mask:` | [text](/docs/search/filters/text/) | Mask
 | `messages:` | [record](/docs/search/#deep-search) | [Messages](/docs/records/types/message/)
@@ -155,6 +157,7 @@ These [filters](/docs/search/#filters) are available in ticket [search queries](
 | `status:` | virtual | Status
 | `status.id:` | [number](/docs/search/filters/numbers/) | Status
 | `subject:` | [text](/docs/search/filters/text/) | Subject
+| `timeSpentOpen:` | [number](/docs/search/filters/numbers/) | Time Spent Open
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 | `watchers.count:` | virtual | Watchers Count
@@ -176,10 +179,12 @@ These columns are available on ticket [worklists](/docs/worklists/):
 | `t_created_date` | Created
 | `t_elapsed_resolution_first` | First Resolution
 | `t_elapsed_response_first` | First Response
+| `t_elapsed_status_open` | Time Spent Open
 | `t_first_wrote_address_id` | First Wrote
 | `t_group_id` | Group
 | `t_id` | Id
 | `t_importance` | Importance
+| `t_last_opened_at` | Last Opened At
 | `t_last_wrote_address_id` | Last Wrote
 | `t_mask` | Mask
 | `t_num_messages` | # Messages

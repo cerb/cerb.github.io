@@ -41,6 +41,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `dimensions_kata` | [text](/docs/records/fields/types/text/) |  
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this metric 
+|   | `type` | [text](/docs/records/fields/types/text/) | `counter` or `gauge` 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 
 ### Dictionary Placeholders
@@ -59,6 +60,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `id` | number | Id
 | `name` | text | Name
 | `record_url` | text | Record Url
+| `type` | text | Type
 | `updated_at` | date | Updated
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
@@ -67,6 +69,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 | Field | Type | Description
 |-|-|-
 | `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `dimensions` | hashmap | Dimensions
 | `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
 | `watchers` | watchers | [Watchers](/docs/bots/behaviors/dictionaries/key-expansion/#watchers)
 	
@@ -83,6 +86,7 @@ These [filters](/docs/search/#filters) are available in metric [search queries](
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
+| `type:` | [text](/docs/search/filters/text/) | Type
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
@@ -98,6 +102,7 @@ These columns are available on metric [worklists](/docs/worklists/):
 | `m_description` | Description
 | `m_id` | Id
 | `m_name` | Name
+| `m_type` | Type
 | `m_updated_at` | Updated
 
 <div class="section-nav">
