@@ -39,6 +39,16 @@ Each `series.*` should provide:
 
 By default you'll receive 10 data points per series. You can add a `limit:<number>` to the `query:` to change this.
 
+# timezone:
+
+(Available in [10.2.0](/releases/10.2.0/) or later)
+
+The `timezone:` key generates date labels in the given timezone location for bins like `by:[created@day]`.
+
+An option like `timezone:America/Los_Angeles` uses the offset UTC-7 or UTC-8 depending on Daylight Saving Time.
+
+If omitted, this defaults to the timezone of the current worker or the server.
+
 # Response Formats
 
 * **table** returns tabular output, suitable for display with the 'Chart: Table' visualization widget.

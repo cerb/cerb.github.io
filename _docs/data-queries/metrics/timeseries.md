@@ -47,7 +47,7 @@ series.avg:(
   metric:cerb.tickets.open
   function:max
 )
-timezone:"-08:00"
+timezone:Europe/Berlin
 format:timeseries
 {% endraw %}
 </code>
@@ -109,11 +109,16 @@ The default is **20000** milliseconds (20 seconds).
 
 # timezone:
 
-Statistics are stored in GMT/UTC. The `timezone:` offset shifts timestamps when grouping metrics by `period`.
+Statistics are stored in GMT/UTC. The `timezone:` location shifts timestamps when grouping metrics by `period`.
+
+For example:
 
 |---
-| `+02:00`
-| `-08:00`
+| `America/Los_Angeles`
+| `Europe/Berlin`
+| `Asia/Tokyo`
+
+If omitted, this defaults to the timezone of the current worker or the server.
 
 # format:
 

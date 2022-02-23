@@ -237,7 +237,7 @@ The `output:` placeholder receives a dictionary with these keys:
 | `status_code` | The HTTP status code (e.g. `200`)
 | `url` | The URL of the HTTP endpoint.
 | `content_type` | The content type of the HTTP response (e.g. `application/json`).
-| `headers` | A dictionary of headers from the HTTP response. Keys are lowercase, with dashes as underscores (e.g. `content_type`).
+| `headers` | A dictionary of headers from the HTTP response. Keys are lowercase, dashes are preserved (e.g. `content-type`).
 | `body` | The body of the HTTP response. 
 
 ## on_error:
@@ -248,9 +248,12 @@ The `output:` placeholder receives a dictionary with these keys:
 
 | Key |
 |-|-
+| `error` | The error message.
 | `status_code` | The HTTP status code (e.g. `500`)
 | `url` | The URL of the HTTP endpoint.
-| `error` | The error message.
+| `content_type` | The content type of the HTTP response (e.g. `application/json`).
+| `headers` | A dictionary of headers from the HTTP response. Keys are lowercase, dashes are preserved (e.g. `content-type`).
+| `body` | The body of the HTTP response.
 
 # Examples
 

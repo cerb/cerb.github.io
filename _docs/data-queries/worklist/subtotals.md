@@ -178,11 +178,13 @@ The time limit of the query in milliseconds (0-60000). Default: `20000`.
 
 # timezone:
 
-(Available in [10.0.0](/releases/10.0.0/) or later)
+(Available in [10.2.0](/releases/10.2.0/) or later)
 
-The `timezone:` key generates date labels in the given timezone offset for bins like `by:[created@day]`.
+The `timezone:` key generates date labels in the given timezone location for bins like `by:[created@day]`.
 
-An option like `timezone:"-07:00"` uses the offset UTC-7.
+An option like `timezone:America/Los_Angeles` uses the offset UTC-7 or UTC-8 depending on Daylight Saving Time.
+
+If omitted, this defaults to the timezone of the current worker or the server.
 
 # metric:
 

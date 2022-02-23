@@ -798,7 +798,7 @@ There can now be multiple `enabled:` or `disabled:` rules. The first rule to ret
 | [**file.read:**](/docs/automations/commands/file.read/) | Read chunks of bytes from an [attachment](/docs/records/types/attachment/) or [automation resource](/docs/records/types/automation_resource/).
 | [**function:**](/docs/automations/commands/function/) | Execute an [automation.function](/docs/automations/triggers/automation.function/) automation and return output.
 | [**http.request:**](/docs/automations/commands/http.request/) | Send data to an HTTP endpoint and return the response.
-| [**metrics.increment:**](/docs/automations/commands/metrics.increment/) | Add new samples to a [metric](/docs/metrics/).
+| [**metric.increment:**](/docs/automations/commands/metric.increment/) | Add new samples to a [metric](/docs/metrics/).
 | [**queue.pop:**](/docs/automations/commands/queue.pop/) | Pop an item from a [queue](/docs/queues/).
 | [**queue.push:**](/docs/automations/commands/queue.push/) | Push an item into a [queue](/docs/queues/).
 | [**record.create:**](/docs/automations/commands/record.create/) | Create a [record](/docs/records/).
