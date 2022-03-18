@@ -37,9 +37,9 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
 |   | `attach` | [links](/docs/records/fields/types/links/) | An array of `type:id` tuples to attach this file to 
-|   | `content` | [text](/docs/records/fields/types/text/) | The content of this file. For binary, base64-encode in [data URI format](https://en.wikipedia.org/wiki/Data_URI_scheme) 
+|   | `content` | [text](/docs/records/fields/types/text/) | The optional content of this file. For binary, base64-encode in [data URI format](https://en.wikipedia.org/wiki/Data_URI_scheme). For `application/vnd.cerb.uri` this should be a URI like `cerb:automation_resource:3ed620aa-a4b5-11ec-89ea-6b1bb00ef554`
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
-|   | `mime_type` | [text](/docs/records/fields/types/text/) | The MIME type of this file (e.g. `image/png`); defaults to `application/octet-stream` 
+|   | `mime_type` | [text](/docs/records/fields/types/text/) | The MIME type of this file (e.g. `image/png`); defaults to `application/octet-stream`. Can be `application/vnd.cerb.uri` for an [automation resource](/docs/records/types/automation_resource/) URI in `content`.
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The filename 
 |   | `updated` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 
