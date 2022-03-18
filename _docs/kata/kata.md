@@ -338,7 +338,7 @@ result@bit: off
 </code>
 </pre>
 
-Anything other value returns a `1`.
+Any other value returns a `1`.
 
 ### bool
 
@@ -353,7 +353,7 @@ The following values result in `false`:
 * `no`
 * `n`
 
-Anything other value returns `true`.
+Any other value returns `true`.
 
 <pre>
 <code class="language-cerb">
