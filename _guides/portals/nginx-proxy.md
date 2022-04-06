@@ -58,7 +58,7 @@ server {
   # [TODO] Replace this with your own SSL certificate!
   ssl_certificate /etc/ssl/certs/nginx-selfsigned.pem;
   ssl_certificate_key /etc/ssl/private/nginx-selfsigned.key;
-  ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+  ssl_protocols TLSv1.2;
   ssl_prefer_server_ciphers on;
   ssl_ciphers HIGH:!CAMELLIA:!RC4:!PSK:!aNULL:@STRENGTH;
   ssl_dhparam /etc/ssl/certs/dhparam.pem;
