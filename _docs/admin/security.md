@@ -65,6 +65,7 @@ Browser access to the following locations should be forbidden:
 -  `features/`
 -  `libs/`
 -  `storage/`
+-  `vendor/`
 
 ### Nginx
 
@@ -91,6 +92,7 @@ RewriteRule ^(.*/)?api(/|$) - [F,L]
 RewriteRule ^(.*/)?features(/|$) - [F,L]
 RewriteRule ^(.*/)?libs(/|$) - [F,L]
 RewriteRule ^(.*/)?storage(/|$) - [F,L]
+RewriteRule ^(.*/)?vendor(/|$) - [F,L]
 </code>
 </pre>
 
