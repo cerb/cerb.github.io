@@ -1146,6 +1146,29 @@ If you need to escape characters in your regexp pattern, you should use a [set](
 Order Processing - 7 Days
 ```
 
+## repeat
+
+(Added in [10.2.3](/releases/10.2.3/))
+
+Repeat a string a given number of times.
+
+`|repeat(times)`
+
+|-|-|-
+| **times** | The number of times to repeat the string.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{{"*"|repeat(5)}}
+{% endraw %}
+</code>
+</pre>
+
+```
+*****
+```
+
 ## replace
 
 <pre>
