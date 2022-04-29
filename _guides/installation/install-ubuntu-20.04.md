@@ -1,11 +1,11 @@
 ---
-title: Install Cerb on Ubuntu Linux 22.04
+title: Install Cerb on Ubuntu Linux 20.04
 layout: integration
 topic: Installation
-excerpt: This guide will walk you through preparing an Ubuntu 22.04 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
-permalink: /guides/installation/ubuntu/
+excerpt: This guide will walk you through preparing an Ubuntu 20.04 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
+permalink: /guides/installation/ubuntu-20.04/
 jumbotron:
-  title: Install Cerb on Ubuntu Linux 22.04
+  title: Install Cerb on Ubuntu Linux 20.04
   tagline: ""
   breadcrumbs:
   -
@@ -19,10 +19,14 @@ jumbotron:
     url: /resources/guides/#installation
 ---
 
+{% comment %}
+* Include permissions instructions from mail install guide
+{% endcomment %}
+
 # Introduction
 {:.no_toc}
 
-This guide will walk you through preparing an Ubuntu 22.04 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
+This guide will walk you through preparing an Ubuntu 20.04 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
 
 * TOC
 {:toc}
@@ -33,7 +37,7 @@ If you don't already have a server, you can [create an EC2 instance in Amazon We
 
 This guide uses the following Amazon Machine Image (AMI):
 
-Ubuntu Pro 22.04 LTS - ami-0414e8df8003ade58 (us-west-2)
+Canonical, Ubuntu, 20.04 LTS, amd64 focal - ami-03d5c68bab01f3496 (us-west-2)
 
 # Connect to your server
 
@@ -57,11 +61,11 @@ sudo apt-get -y upgrade
 </code>
 </pre>
 
-Install PHP 8.1:
+Install PHP 7.4:
 
 <pre>
 <code class="language-bash">
-sudo apt-get install -y php8.1 php8.1-fpm php8.1-mysql php8.1-mbstring php8.1-gd php8.1-curl php8.1-mailparse php8.1-yaml php8.1-gmp php8.1-zip php8.1-dev php-pear
+sudo apt-get install -y php7.4 php7.4-fpm php7.4-mysql php7.4-mbstring php7.4-gd php7.4-curl php7.4-mailparse php7.4-yaml php7.4-gmp php7.4-zip php7.4-dev php-pear
 </code>
 </pre>
 
@@ -77,13 +81,13 @@ Install the Nginx web server:
 
 <pre>
 <code class="language-bash">
-sudo apt-get install -y nginx nginx-extras
+sudo apt-get install -y nginx
 </code>
 </pre>
 
 # Install MySQL
 
-We recommend using a dedicated database server that replicates to a standby server. In Amazon Web Servers you should use RDS.
+We recommend using a dedicated database server that replicates to a standby server.
 
 If you need to install MySQL on your EC2 instance instead, you can use these instructions:
 
@@ -119,7 +123,7 @@ CREATE DATABASE cerb CHARACTER SET utf8;
 
 CREATE USER cerb@localhost IDENTIFIED BY 's3cr3t';
 
-GRANT ALL PRIVILEGES ON cerb.* TO cerb@localhost;
+GRANT ALL PRIVILEGES ON cerb.* TO cerb@localhost; 
 
 QUIT;
 </code>
@@ -252,7 +256,7 @@ server {
     #allow 10.0.0.0/16;
     deny all;
     include fastcgi_params;
-    fastcgi_pass   unix:/run/php/php8.1-fpm.sock;
+    fastcgi_pass   unix:/var/run/php/php7.4-fpm.sock;
   }
 
   location / {
@@ -260,14 +264,14 @@ server {
   }
 }
 
-limit_req_zone $binary_remote_addr zone=cerb:10m rate=15r/s;
+limit_req_zone $limit_key zone=cerb:10m rate=15r/s;
 
 server {
   listen 443 ssl;
   server_name cerb.example;
   #access_log off;
   
-  root /usr/share/nginx/html/cerb/;
+  root /usr/share/nginx/html/cerb;
   index index.php;
 
   # Increase upload max size from default of 1MB
@@ -291,60 +295,29 @@ server {
   location = /favicon.ico {
     allow all;
   }
-
-  # Always let people see the robots file
-  location = /robots.txt {
-    allow all;
-  }
-
+  
   # Send PHP scripts to FPM
   location ~ ^/(index|ajax)\.php$ {
     limit_req zone=cerb burst=40 delay=15;
     
-    proxy_connect_timeout 30;
-    proxy_send_timeout 30;
-    proxy_read_timeout 30;
+    proxy_connect_timeout 120;
+    proxy_send_timeout 120;
+    proxy_read_timeout 120;
     
     fastcgi_split_path_info ^(.+\.php)(/.+)$;
-    fastcgi_pass   unix:/run/php/php8.1-fpm.sock;
+    fastcgi_pass   unix:/var/run/php/php7.4-fpm.sock;
     fastcgi_index  index.php;
     include    fastcgi_params;
     fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
   }
 
-  # ============================
-  # ENABLE ONLY FOR INSTALLATION
-  # ============================
-  location /install/ {
-    location = /install/ {
-      rewrite ^(.*)$ /install/index.php?$1 last;
-    }
-    
-    location ~ ^/install/(index|servercheck|phpinfo)\.php$ {
-      fastcgi_split_path_info ^(.+\.php)(/.+)$;
-      fastcgi_pass unix:/run/php/php8.1-fpm.sock;
-      fastcgi_index  /install/index.php;
-      include    fastcgi_params;
-      fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
-    }
-    
-    location ~ ^/install/(.*)\.(css|js|svg)$ {
-      allow all;
-    }
-    
-    #location ~ ^/install/ {
-    #  deny all;
-    #}
-  }
-  
-  # Deny direct access to all other PHP files
   location ~ \.php$ {
     deny all;
   }
   
   # Send all other paths to the Devblocks front controller index.php
   location / {
-    rewrite ^(.*)$ /index.php?$1 last;
+    try_files $uri /index.php?$query_string;
   }
 }
 {% endraw %}
@@ -385,7 +358,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 <code class="language-bash">
 sudo service nginx restart
 
-sudo service php8.1-fpm restart
+sudo service php7.4-fpm restart
 </code>
 </pre>
 

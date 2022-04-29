@@ -53,10 +53,9 @@ Click on the blue **Launch Instance** button.
 
 The Amazon Machine Image (AMI) determines which operating system your server will run.
 
-We recommend one of the following:
+We recommend:
 
-* Ubuntu Server 16.04 LTS (HVM), SSD Volume Type - ami-a58d0dc5
-* Amazon Linux AMI 2016.09.1 (HVM), SSD Volume Type - ami-f173cc91
+* Ubuntu Pro 22.04 LTS - ami-0414e8df8003ade58
 
 Click the blue **Select** button to the right of your desired AMI.
 
@@ -70,9 +69,9 @@ For Cerb, the proper instance type depends on many factors:
 * How large your database is
 * If you'll utilize other services, like RDS for the database and EFS for storage
 
-In [Cerb Cloud](/pricing/) we currently use **t2.medium** instances for our web servers, since we also use auto-scaling, elastic load balancing, Relational Database Service (RDS), and Elastic Filesystem (EFS). We scale by adding more instances rather than increasing the resources on a single instance.
+In [Cerb Cloud](/pricing/) we currently use **t3.medium** instances for our web servers, since we also use auto-scaling, elastic load balancing, Relational Database Service (RDS), and Elastic Filesystem (EFS). We scale by adding more instances rather than increasing the resources on a single instance.
 
-Generally, **m4.large** or **t2.medium** will suit most purposes.  You can always scale up your instance type later, so this isn't a decision you're stuck with.
+Generally, **m4.large** or **t3.medium** will suit most purposes.  You can always scale up your instance type later, so this isn't a decision you're stuck with.
 
 Click the gray **Next: Configure Instance Details** button in the bottom right.
 
@@ -150,7 +149,7 @@ Copy the **IPv4 Public IP** from the properties in the bottom half of the screen
 
 When connecting with an SSH client, each AMI may have a different default user.
 
-For the two AMIs we mentioned earlier, the default users are:
+For common AMIs, the default users are:
 
 * Amazon Linux: `ec2-user`
 * Ubuntu: `ubuntu`
