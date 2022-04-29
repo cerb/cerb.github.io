@@ -71,6 +71,8 @@ If these commands don't work, you'll need to enable the module manually.
 
 ## Enabling friendly URLs with IIS
 
+Install **URL Rewrite 2.1** from the Web Platform Installer (WPI).
+
 Open **Internet Information Services (IIS) Manager**.
 
 Click on the **Cerb** web site.
