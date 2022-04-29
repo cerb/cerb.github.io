@@ -344,7 +344,7 @@ server {
   
   # Send all other paths to the Devblocks front controller index.php
   location / {
-    rewrite ^(.*)$ /index.php?$1 last;
+    rewrite ^ /index.php?$query_string last;
   }
 }
 {% endraw %}

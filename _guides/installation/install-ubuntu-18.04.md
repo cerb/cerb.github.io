@@ -290,12 +290,12 @@ server {
   resolver_timeout 5s;
 
   # Always let people see the favicon file
-  location = /favicon\.ico {
+  location = /favicon.ico {
     allow all;
   }
   
   # Send PHP scripts to FPM
-  location ~ /(index|ajax)\.php$ {
+  location ~ ^/(index|ajax)\.php$ {
     proxy_connect_timeout 120;
     proxy_send_timeout 120;
     proxy_read_timeout 120;
@@ -307,13 +307,38 @@ server {
     fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
   }
 
+  # ============================
+  # ENABLE ONLY FOR INSTALLATION
+  # ============================
+  location /install/ {
+    location = /install/ {
+      rewrite ^(.*)$ /install/index.php?$1 last;
+    }
+    
+    location ~ ^/install/(index|servercheck|phpinfo)\.php$ {
+      fastcgi_split_path_info ^(.+\.php)(/.+)$;
+      fastcgi_pass   unix:/var/run/php/php7.2-fpm.sock;
+      fastcgi_index  /install/index.php;
+      include    fastcgi_params;
+      fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+    }
+    
+    location ~ ^/install/(.*)\.(css|js|svg)$ {
+      allow all;
+    }
+    
+    #location ~ ^/install/ {
+    #  deny all;
+    #}
+  }
+
   location ~ \.php$ {
     deny all;
   }
   
   # Send all other paths to the Devblocks front controller index.php
   location / {
-    try_files $uri /index.php?$query_string;
+    rewrite ^ /index.php?$query_string last;
   }
 }
 {% endraw %}
