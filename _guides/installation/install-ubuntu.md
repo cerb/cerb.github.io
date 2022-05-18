@@ -33,7 +33,7 @@ If you don't already have a server, you can [create an EC2 instance in Amazon We
 
 This guide uses the following Amazon Machine Image (AMI):
 
-Ubuntu Pro 22.04 LTS - ami-0414e8df8003ade58 (us-west-2)
+Ubuntu 22.04 LTS - ami-0ee8244746ec5d6d4 (us-west-2)
 
 # Connect to your server
 
