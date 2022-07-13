@@ -63,7 +63,8 @@ The following `caller_params` are passed to the [interaction](/docs/automations/
 
 | Key | Type |
 |-|-|-
-| **`selected_text`** | string | The currently selected editor text
+| **`selected_text`** | string | The currently selected editor text, if any
+| **`text`** | string | The full editor text
 
 ### Output
 

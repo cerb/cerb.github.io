@@ -127,6 +127,7 @@ chooser/input_groups:
   default@json: null
   params:
     context: group
+    query@text: id:>0
     single: no
 </code>
 </pre>
@@ -134,6 +135,8 @@ chooser/input_groups:
 The available **params:** are:
 
 * **context:** a [record type](/docs/records/types/) alias.
+
+* **query:** a [search query](/docs/search/) to filter the worklist popup.
 
 * **single:** `yes` for single record selection, `no` (default) for multiple.
 
@@ -155,6 +158,8 @@ format:timeseries
 {% endraw %}
 </code>
 </pre>
+
+If a chooser prompt's name ends in `_id` then its placeholder will support key expansion. For instance, a prompt named `prompt_worker_id` can also access `prompt_worker_first_name`.
 
 ### date_range
 

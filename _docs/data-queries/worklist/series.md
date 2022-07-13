@@ -51,6 +51,8 @@ If omitted, this defaults to the timezone of the current worker or the server.
 
 # Response Formats
 
+* **pie** returns data for use in pie and donut charts (as of [10.2.5](/releases/10.2.5/)).
+
 * **table** returns tabular output, suitable for display with the 'Chart: Table' visualization widget.
 
 * **timeseries** (default) returns time-based series data, suitable for display with the 'Chart: Time Series' visualization widget.
