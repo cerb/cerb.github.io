@@ -1374,6 +1374,12 @@ Convert a string to an array with the given delimiter.
 
 Split a string on any combination of carriage return (`\r`) and linefeed (`\n`) delimiters.
 
+`|split_crlf(keep_blanks=false,trim_lines=true)`
+
+|-|-
+| **keep_blanks** | Remove lines that are comprised of only whitespace.
+| **trim_lines** | Remove whitespace before and after each line.
+
 <pre>
 <code class="language-twig">
 {% raw %}

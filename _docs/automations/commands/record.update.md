@@ -51,6 +51,7 @@ start:
 | `record_type:` | The [record type](/docs/records/types/) to update.
 | `record_id:` | The ID of the given record type to update.
 | `fields:` | The [fields](/docs/records/#fields) to set based on the record type.
+| `disable_events@bool:` | Avoid triggering events for modified records.
 
 ## output:
 

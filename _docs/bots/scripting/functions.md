@@ -754,6 +754,66 @@ You can unset deeply nested keys in a single line using dot-notation:
 }
 ```
 
+## dns_get_record
+
+(Added in [10.2.6](/releases/10.2.6/))
+
+Resolve DNS records by hostname and type. This enables workflows like verifying domain ownership via TXT records, validating SPF/DKIM, verifying MX servers, etc.
+
+`dns_get_record(hostname,type)`
+
+* **hostname**: The lookup hostname.
+* **type**: The record type (`a`, `aaaa`, `caa`, `cname`, `mx`, `ns`, `ptr`, `soa`, `srv`, `txt`)
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{{dns_get_record('cerb.ai','a')|json_encode|json_pretty}}
+{% endraw %}
+</code>
+</pre>
+
+```
+[
+    {
+        "host": "cerb.ai",
+        "class": "IN",
+        "ttl": 77,
+        "type": "A",
+        "ip": "54.192.81.51"
+    },
+    {
+        "host": "cerb.ai",
+        "class": "IN",
+        "ttl": 77,
+        "type": "A",
+        "ip": "54.192.81.69"
+    }
+]
+```
+
+## dns_host_by_ip
+
+(Added in [10.2.6](/releases/10.2.6/))
+
+Resolve a hostname from an IP. If a name can’t be resolved for a valid IP, the IP is returned. If an invalid IP is provided, the result is an empty string.
+
+`dns_host_by_ip(ip)`
+
+* **ip**: The IP address to reverse lookup a hostname.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{{dns_host_by_ip('54.148.127.4')}}
+{% endraw %}
+</code>
+</pre>
+
+```
+cerb.email
+```
+
 ## json_decode
 
 You can decode a JSON-encoded string with the **json_decode** function:

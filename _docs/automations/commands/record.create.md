@@ -52,6 +52,7 @@ start:
 | `record_type:` | The [record type](/docs/records/types/) to create.
 | `fields:` | The [fields](/docs/records/#fields) to set based on the record type.
 | `expand:` | The keys to expand on the `output:` dictionary.
+| `disable_events@bool:` | Avoid triggering events for newly created records. This is particularly useful for import workflows where events like auto-responders and auto-assignment shouldn’t be triggered.
 
 ## output:
 
