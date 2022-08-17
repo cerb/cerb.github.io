@@ -41,3 +41,9 @@ The caller expects the following `return:` dictionary:
 | Req'd | Key | Type | 
 |:-:|-|-|-
 | | **`refresh_widgets@list:`** | array | A list of [card widget](/docs/records/types/card_widget/) names to refresh 
+
+# after:
+
+| Key | Type | 
+|-|-|-
+| **`refresh_widgets@list:`** | array | A list of [card widget](/docs/records/types/card_widget/) names to refresh 

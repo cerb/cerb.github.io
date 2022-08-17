@@ -559,6 +559,38 @@ This automatically adapts to use within Cerb and community portals (e.g. SSL, pr
 https://cerb.example/profiles/ticket/5
 ```
 
+## clamp_float
+
+Set the range boundaries for a decimal value.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{{clamp_float(-105.19,0,100)}}
+{% endraw %}
+</code>
+</pre>
+
+```
+0
+```
+
+## clamp_int
+
+Set the range boundaries for an integer value.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{{clamp_int(110,-90,90)}}
+{% endraw %}
+</code>
+</pre>
+
+```
+90
+```
+
 ## cycle
 
 Round-robin through a sequence.
@@ -602,38 +634,6 @@ Create a date object for use with the [date_modify](/docs/bots/scripting/filters
 
 ```
 January 01, 2018 12:00pm
-```
-
-## clamp_float
-
-Set the range boundaries for a decimal value.
-
-<pre>
-<code class="language-twig">
-{% raw %}
-{{clamp_float(-105.19,0,100)}}
-{% endraw %}
-</code>
-</pre>
-
-```
-0
-```
-
-## clamp_int
-
-Set the range boundaries for an integer value.
-
-<pre>
-<code class="language-twig">
-{% raw %}
-{{clamp_int(110,-90,90)}}
-{% endraw %}
-</code>
-</pre>
-
-```
-90
 ```
 
 ## dict_set

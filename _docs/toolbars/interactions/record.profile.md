@@ -69,7 +69,9 @@ The following `caller_params` are passed to the [interaction](/docs/automations/
 
 ### Output
 
-The caller expects the following `return:` dictionary:
+The caller expects no outputs.
+
+### after:
 
 | Key | Type |
 |-|-|-
