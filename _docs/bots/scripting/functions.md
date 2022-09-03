@@ -640,6 +640,21 @@ January 01, 2018 12:00pm
 
 You can use the **dict_set** function to quickly add, modify, or append items in an array or object.
 
+`dict_set(object,path,value,delimiter) : object`
+
+**Arguments:**
+
+|---
+|Name|Notes
+|-|-
+| **object** | The object to modify
+| **path** | The key or key path (with delimiters) to set
+| **value** | The new value for the given key or key path
+| **delimiter** | Defaults to dot (`.`), but may be any character sequence (e.g. `||`)
+
+**Returns:**
+The function returns a modified version of `object`.
+
 You can set deeply nested keys in a single line using dot-notation:
 
 <pre>

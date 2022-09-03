@@ -37,6 +37,7 @@ start:
         editor/prompt_query:
           label: Data query:
           syntax: cerb_query
+          readonly@bool: no
           default@text:
             type:worklist.records
             of:ticket
@@ -75,6 +76,14 @@ The language for syntax highlighting and autocompletion.
 ### default:
 
 The default editor text.
+
+### line_numbers@bool:
+
+If `no`, the editor line numbers in the left gutter are hidden. They are enabled by default.
+
+### readonly@bool:
+
+If `yes`, the editor contents may not be modified. Editors are readable by default.
 
 ### required@bool:
 
