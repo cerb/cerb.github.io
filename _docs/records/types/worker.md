@@ -115,6 +115,8 @@ These [filters](/docs/search/#filters) are available in worker [search queries](
 | Field | Type | Description
 |-|-|-
 | `alias:` | virtual | Aliases
+| `calendar:` | [record](/docs/search/#deep-search) | [Calendar](/docs/records/types/calendar/)
+| `calendar.id:` | [chooser](/docs/search/filters/choosers/) | [Calendar](/docs/records/types/calendar/)
 | `email:` | [record](/docs/search/#deep-search) | [Email](/docs/records/types/address/)
 | `email.id:` | [chooser](/docs/search/filters/choosers/) | [Email](/docs/records/types/address/)
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)

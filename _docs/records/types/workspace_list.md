@@ -92,6 +92,7 @@ These [filters](/docs/search/#filters) are available in workspace worklist [sear
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `name:` | [text](/docs/search/filters/text/) | Name
+| `tab:` | [record](/docs/search/#deep-search) | [Tab](/docs/records/types/workspace_tab/)
 | `tab.id:` | [chooser](/docs/search/filters/choosers/) | [Workspace Tab](/docs/records/types/workspace_tab/)
 | `tab.pos:` | [number](/docs/search/filters/numbers/) | Order
 | `type:` | [text](/docs/search/filters/text/) | Type

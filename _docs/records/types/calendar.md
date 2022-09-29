@@ -41,6 +41,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | **x** | **`owner__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) of this calendar's owner: `app`, `role`, `group`, or `worker` 
 | **x** | **`owner_id`** | [number](/docs/records/fields/types/number/) | The ID of this calendar's owner 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
+|   | `timezone` | [text](/docs/records/fields/types/text/) |  
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 
 #### params
@@ -84,6 +85,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `name` | text | Name
 | `owner_` | record | Owner
 | `record_url` | text | Record Url
+| `timezone` | text | Timezone
 | `updated_at` | date | Updated
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
@@ -119,6 +121,7 @@ These [filters](/docs/search/#filters) are available in calendar [search queries
 | `owner.group:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/group/)
 | `owner.role:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/role/)
 | `owner.worker:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/worker/)
+| `timezone:` | [text](/docs/search/filters/text/) | Timezone
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 | `workerAvailability:` | [record](/docs/search/#deep-search) | [Workers](/docs/records/types/worker/)
@@ -133,6 +136,7 @@ These columns are available on calendar [worklists](/docs/worklists/):
 | `*_owner` | Owner
 | `c_id` | Id
 | `c_name` | Name
+| `c_timezone` | Timezone
 | `c_updated_at` | Updated
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 

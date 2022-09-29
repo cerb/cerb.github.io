@@ -60,6 +60,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `id` | number | Id
 | `name` | text | Name
 | `pos` | number | Order
+| `search_filter` | text | Search Filter Name
 | `type` | text | Type
 | `type_label` | text | Type Label
 | `updated_at` | date | Updated

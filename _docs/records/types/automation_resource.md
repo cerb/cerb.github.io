@@ -38,6 +38,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |:-:|-|-|-
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `mime_type` | [text](/docs/records/fields/types/text/) |  
+|   | `name` | [text](/docs/records/fields/types/text/) | The name of this automation resource 
 | **x** | **`token`** | [text](/docs/records/fields/types/text/) |  
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 
@@ -53,6 +54,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `_type` | text | [Record type](/docs/records/types/) alias
 | `id` | number | Id
 | `mime_type` | text | Mime Type
+| `name` | text | Name
 | `record_url` | text | Record Url
 | `size` | number | Size
 | `token` | text | Token
@@ -76,6 +78,7 @@ These [filters](/docs/search/#filters) are available in automation resource [sea
 | `id:` | [number](/docs/search/filters/numbers/) | Id
 | `links:` | [links](/docs/search/filters/links/) | Record Links
 | `mimetype:` | [text](/docs/search/filters/text/) | Mime Type
+| `name:` | [text](/docs/search/filters/text/) | Name
 | `size:` | [number](/docs/search/filters/numbers/) | Size
 | `token:` | [text](/docs/search/filters/text/) | Token
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
@@ -90,6 +93,7 @@ These columns are available on automation resource [worklists](/docs/worklists/)
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
 | `r_id` | Id
 | `r_mime_type` | Mime Type
+| `r_name` | Name
 | `r_storage_extension` | Common.storage_Extension
 | `r_storage_key` | Common.storage_Key
 | `r_storage_profile_id` | Common.storage_Profile_Id

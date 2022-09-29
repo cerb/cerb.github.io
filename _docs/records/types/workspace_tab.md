@@ -91,6 +91,8 @@ These [filters](/docs/search/#filters) are available in workspace tab [search qu
 | `pos:` | [number](/docs/search/filters/numbers/) | Order
 | `type:` | [text](/docs/search/filters/text/) | Type
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `workspace:` | [record](/docs/search/#deep-search) | [Workspace](/docs/records/types/workspace_page/)
+| `workspace.id:` | [chooser](/docs/search/filters/choosers/) | [Workspace Page](/docs/records/types/workspace_page/)
 	
 ### Worklist Columns
 

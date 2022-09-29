@@ -41,7 +41,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `dimensions_kata` | [text](/docs/records/fields/types/text/) |  
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this metric 
-|   | `type` | [text](/docs/records/fields/types/text/) | `counter` or `gauge` 
+|   | `type` | [text](/docs/records/fields/types/text/) | [counter, gauge] 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 
 ### Dictionary Placeholders

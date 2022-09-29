@@ -43,6 +43,14 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 | **x** | **`uri`** | [text](/docs/records/fields/types/text/) | The alias of the record (e.g. `issue`); used in URLs, API, etc. 
 
+#### params
+
+|---
+| Key | Value
+|-|-
+| `owners[contexts]` | An optional array with one or more of: `cerberusweb.contexts.app`, `cerberusweb.contexts.group`, `cerberusweb.contexts.role`, `cerberusweb.contexts.worker`
+| `options` | An optional array with one or more of: `hide_search`, `avatars`, `attachments`, `comments`
+
 ### Dictionary Placeholders
 
 These [placeholders](/docs/bots/scripting/placeholders/) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:

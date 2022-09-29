@@ -39,7 +39,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `bucket_id` | [number](/docs/records/fields/types/number/) | The ID of the [bucket](/docs/records/types/bucket/) containing this ticket 
 |   | `closed` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time this ticket was first set to status `closed` 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
-|   | `fieldsets` | fieldsets | An array or comma-separated list of [custom fieldset](/docs/records/types/custom_fieldset/) IDs 
+|   | `fieldsets` | fieldsets | An array or comma-separated list of [custom fieldset](/docs/records/types/custom_fieldset/) IDs. Prefix an ID with `-` to remove. 
 |   | `group` | [text](/docs/records/fields/types/text/) | The [group](/docs/records/types/group/) of the ticket; alternative to `group_id` 
 | **x** | **`group_id`** | [number](/docs/records/fields/types/number/) | The ID of the [group](/docs/records/types/group/) containing this ticket 
 |   | `importance` | [number](/docs/records/fields/types/number/) | A number from `0` (least) to `100` (most) 
