@@ -194,6 +194,15 @@ authentication: cerb:connected_account:my-oauth2-account
 </code>
 </pre>
 
+### response:
+
+If set, the response will always be returned as an [automation resource](/docs/records/types/automation_resource/) regardless of its size.
+
+|---
+| Key | Description
+|-|-
+| `expires` | The expiration of the automation resource record.
+
 ## output:
 
 Save the results in this placeholder.

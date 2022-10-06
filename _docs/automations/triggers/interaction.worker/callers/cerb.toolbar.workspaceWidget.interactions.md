@@ -35,7 +35,13 @@ The following `caller_params` are passed to the [interaction](/docs/automations/
 
 # return:
 
-The caller doesn't expect a `return:` dictionary.
+The caller implements the following `return:` dictionary:
+
+| Req'd | Key | Type |
+|:-:|-|-|-
+| | **`alert:`** | string | A time-limited message to display at the top of a worker's browser
+| | **`clipboard:`** | string | Text to copy in the worker's browser
+| | **`open_link:`** | string | A URL to open in a new tab in the worker's browser
 
 # after:
 

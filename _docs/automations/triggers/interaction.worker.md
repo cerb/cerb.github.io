@@ -90,8 +90,10 @@ A form can be created with any combination of the following element types:
 | Element |
 |-|-
 | [**editor:**](/docs/automations/triggers/interaction.worker/elements/editor/) | A code editor with syntax highlighting, autocompletion, and a custom toolbar.
+| [**fileDownload:**](/docs/automations/triggers/interaction.worker/elements/fileDownload/) | File download prompt
 | [**fileUpload:**](/docs/automations/triggers/interaction.worker/elements/fileUpload/) | File upload prompt
 | [**map:**](/docs/automations/triggers/interaction.worker/elements/map/) | Interactive [map](/docs/maps/) 
+| [**query:**](/docs/automations/triggers/interaction.worker/elements/query/) | [Search query](/docs/search/) prompt with autocompletion
 | [**say:**](/docs/automations/triggers/interaction.worker/elements/say/) | Block of text or Markdown
 | [**sheet:**](/docs/automations/triggers/interaction.worker/elements/sheet/) | [Sheet](/docs/sheets) with row selection
 | [**submit:**](/docs/automations/triggers/interaction.worker/elements/submit/) | Continue to next step
@@ -384,6 +386,16 @@ return:
   ...
 </code>
 </pre>
+
+The following keys are available on all worker interactions:
+
+|---
+| Key | Description
+|-|-
+| `alert:` | Display a time-limited message at the top of a worker's browser. This is particularly useful to confirm non-interactive actions (e.g. "Copied!").
+| `clipboard:` | Copy the given text to the worker's keyboard. This is only available in response to a worker gesture (e.g. clicking an interaction toolbar).
+| `open_link:` | Open a new tab in the worker's browser to the given URL. 
+| `snippet:` | If the interaction was started from an editor, paste the given text at the cursor.
 
 # Callers
 

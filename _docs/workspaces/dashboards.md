@@ -17,6 +17,9 @@ jumbotron:
 
 **Dashboards** provide visual insight with collections of highly customizable **widgets**. Most widgets take a [data query](/docs/data-queries/) as input.
 
+* TOC
+{:toc}
+
 Dashboards are **responsive** -- they automatically adapt to various screen sizes on different devices. If you have a narrow screen like a smartphone held vertically, you may only be able to display a single column of widgets. On a much larger desktop display, the same dashboard could display multiple horizontal columns of widgets.
 
 Widgets can have different sizes relative to each other. For example, a large chart may be configured to display 2X-4X as wide as the widgets adjacent to it when that much space is available.
@@ -340,3 +343,25 @@ format:dictionaries
 {% endraw %}
 </code>
 </pre>
+
+# Widgets
+
+|---
+| Type | Description
+|-|-
+| Automation | 
+| Calendar |
+| [Chart KATA](/docs/dashboards/widgets/chart-kata/) | A highly customizable chart combining multiple datasources from data queries and automations.
+| Chart: Pie |
+| Chart: Time Blocks |
+| Chart: Time Series |
+| Clock |
+| Countdown |
+| Counter |
+| Interactions Toolbar |
+| Knowledgebase Browser |
+| Map |
+| Project Board |
+| Record Fields |
+| Sheet |
+| Worklist |

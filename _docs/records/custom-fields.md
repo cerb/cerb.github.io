@@ -31,13 +31,14 @@ There are many different **types** of fields:
 | Multiple Checkboxes | Multiple selections from a pre-defined list of options (e.g. phone, email, sms) | `sms`
 | Number | A whole number | `8080`
 | Picklist | A selection from a pre-defined list of options (e.g. red, green, blue) | `red`
-| Record Link | A link to record ID of a specific type | `task:123`
+| Record Link | A link to record ID of a specific type. This creates a reciprocal [search filter](/docs/search/) on the target record. | `task:123`
+| Record Links | Multiple links to record IDs of a specific type. This creates a reciprocal [search filters](/docs/search/) on the target records. | `task:123,task:456`
 | Text: Multiple Lines | Multiple lines of freeform text entry | `Client agrees to the project changes discussed on 11/Aug conference call`
 | Text: Single Line | A single line of freeform text entry | `bank transfer`
 | URL | A hyperlink URL to a web-based resource | `https://cerb.ai/`
-| Worker | A single worker record | `Kina Halpue`
+| Worker | A single worker record. This creates a reciprocal [search filter](/docs/search/) on worker records.  | `Kina Halpue`
 
-Custom fields can be added directly an existing record type and they will be visible on every record of that type.
+Custom fields can be added directly an existing record type. They will be visible on every record of that type.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/using-cerb/records/custom-fields.png" class="screenshot">

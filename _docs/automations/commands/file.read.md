@@ -23,35 +23,6 @@ jumbotron:
 
 The **file.read:** command can read chunks of bytes from an [attachment](/docs/records/types/attachment/) or [automation resource](/docs/records/types/automation_resource/) record.
 
-This automation reads the attachment with ID `1`:
-
-<pre>
-<code class="language-cerb">
-{% raw %}
-start:
-  file.read:
-    inputs:
-      uri: cerb:attachment:1
-    output: results
-{% endraw %}
-</code>
-</pre>
-
-It returns this dictionary:
-
-<pre>
-<code class="language-cerb">
-results:
-  bytes: data:image/png;base64,iVBORw0KGgoAAAA[...]
-  uri: cerb:attachment:1
-  name: 10.2.png
-  offset_from: 0
-  offset_to: 23886
-  mime_type: image/png
-  size: 23886
-</code>
-</pre>
-
 * TOC
 {:toc}
 
@@ -68,6 +39,15 @@ The URI of the record to read content from.
 |attachment|`cerb:attachment:<id>`
 |automation_resource|`cerb:automation_resource:<guid>`
 
+### filters:
+
+Optional filters to apply to the read stream.
+
+|---
+| Key | Description
+|-|-
+| `gzip.decompress:` | Decompress a gzip (`.gz`) stream while reading bytes 
+
 ### offset:
 
 The optional offset to begin reading bytes from. This defaults to `0` (the first byte).
@@ -75,6 +55,10 @@ The optional offset to begin reading bytes from. This defaults to `0` (the first
 ### length:
 
 The optional length to read bytes from starting at `offset:`. This defaults to `1024000` (1MB).
+
+### password:
+
+The optional password for an encrypted ZIP archive.
 
 ## output:
 
@@ -111,3 +95,74 @@ The `output:` placeholder receives a dictionary with these keys:
 | Key |
 |-|-
 | `error` | The error message.
+
+# Examples
+
+## Read the contents of a binary attachment
+
+This automation reads the attachment with ID `1`:
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+start:
+  file.read:
+    inputs:
+      # image.png
+      uri: cerb:attachment:1
+    output: results
+{% endraw %}
+</code>
+</pre>
+
+Output:
+
+<pre>
+<code class="language-cerb">
+results:
+  bytes: data:image/png;base64,iVBORw0KGgoAAAA[...]
+  uri: cerb:attachment:1
+  name: image.png
+  offset_from: 0
+  offset_to: 23886
+  mime_type: image/png
+  size: 23886
+</code>
+</pre>
+
+## Decompress and read a gzip file
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+start:
+  file.read:
+    inputs:
+      # smtp.example.com!cerb.ai!1661234567!1667654321.xml.gz
+      uri: cerb:attachment:1234
+      filters:
+        gzip.decompress:
+    output: results</code>
+{% endraw %}
+</pre>
+
+Output:
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+results:
+  bytes@text:
+    &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+    &lt;feedback&gt;
+      ...
+    &lt;/feedback&gt;
+  uri: cerb:attachment:1234
+  name: smtp.example.com!cerb.ai!1661234567!1667654321.xml.gz
+  offset_from: 0
+  offset_to: 1284
+  mime_type: application/x-gzip
+  size: 599
+{% endraw %}
+</code>
+</pre>

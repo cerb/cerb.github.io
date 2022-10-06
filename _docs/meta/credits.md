@@ -9,7 +9,7 @@ jumbotron:
 
 # Developers
 
-- [Jeff Standen](http://www.linkedin.com/in/jeffstanden) is the founding partner at Webgroup Media LLC. He has been Cerb's software architect and lead programmer from the first line of code in January 2002[^bdfl]. He brings more than 25 years of software development experience to the project.
+- [Jeff Standen](http://www.linkedin.com/in/jeffstanden) is the founding partner at Webgroup Media LLC. He has been Cerb's software architect and lead programmer from the first line of code in January 2002[^bdfl]. He brings more than 28 years of software development experience to the project.
 
 - [Dan Hildebrandt](http://www.linkedin.com/in/danielhildebrandt) is a partner at Webgroup Media LLC and an active Cerb developer since 2005.
 
@@ -48,6 +48,8 @@ jumbotron:
 
 - [Ace](https://ace.c9.io) is a high performance code editor for the web. It provides syntax highlighting in 110+ languages, themes, code autocompletion, indent/outdent, parentheses matching, code folding, and much more.
 
+- [Ace-Diff](https://ace-diff.github.io/ace-diff/) extends Ace Editor with diff/merging functionality.
+
 - [Amazon S3 PHP Class](http://undesigned.org.za/2007/10/22/amazon-s3-php-class) is a PHP library by Donovan Schönknecht for working with Amazon's S3[^s3] web service.
 
 - [C3.js](https://c3js.org) is a Javascript charting library built on top of D3.
@@ -78,8 +80,6 @@ jumbotron:
 
 - [PHPUnit](https://phpunit.de/) is a programmer-oriented unit testing framework for PHP.
 
-- [PHP WebDriver](https://github.com/facebook/php-webdriver) is a PHP language binding for Selenium WebDriver, which allows you to remote-control web browsers for automated testing from PHP.
-	
 - [Smarty](http://www.smarty.net/) is a template engine for PHP. It facilitates the separation of presentation (HTML/CSS) from application logic.
 
 - [steverhoades/oauth2-openid-connect-server](https://github.com/steverhoades/oauth2-openid-connect-server/) is a PHP library for implementing OpenID Connect server functionality.

@@ -89,6 +89,10 @@ If `yes`, the editor contents may not be modified. Editors are readable by defau
 
 If user input is required on this element use a value of `yes`. Otherwise, omit.
 
+### toolbar:
+
+An optional [toolbar](/docs/toolbars/) to display above the editor. This triggers [worker interactions](/docs/automations/triggers/interaction.worker/).
+
 ### validation:
 
 An optional custom validation script. Any output is considered to be an error.

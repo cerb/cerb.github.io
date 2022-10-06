@@ -283,6 +283,37 @@ Access the values of an object with a variable key:
 Customer Support Supervisor
 ```
 
+## cerb_automation
+
+Invoke a [scripting.function](/docs/automations/triggers/scripting.function/) automation from any feature that supports [scripting](/docs/bots/scripting/).
+
+The function returns keys for `exit_state:` (`exit`, `return`, `error`) and `return:` (an arbitrary dictionary).
+
+This brings the full functionality of automations to email signatures, snippets, legacy bot behaviors, automation event bindings, toolbars bindings, etc.
+
+For instance, a snippet could use an automation to dynamically generate content based on the target record or current worker. This solves many feature requests.
+
+`cerb_automation(uri, inputs)`
+
+|-|-|-
+| **uri** | The URI of an [automation](/docs/automations/) record to invoke. It must be of type `scripting.function`.
+| **inputs** | A key/value dictionary of inputs. The possible keys depend on the function being invoked.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set ip_data = cerb_automation('wgm.scripting.getLocationByIP', { ip:"1.2.3.4" } ) %}
+{% if ip_data.return.data %}
+I see you are contacting us from {{ip_data.return.data.country_name}}.
+{% endif %}
+{% endraw %}
+</code>
+</pre>
+
+```
+I see you are contacting us from Australia.
+```
+
 ## cerb_avatar_image
 
 Retrieve the avatar image for a given record type and ID.
@@ -634,6 +665,44 @@ Create a date object for use with the [date_modify](/docs/bots/scripting/filters
 
 ```
 January 01, 2018 12:00pm
+```
+
+## date_lerp
+
+Interpolate the timestamps between two dates with the given `unit` and `step`.
+
+`date_lerp(date_range,unit,step,limit)`
+
+**Arguments:**
+
+|---
+| Name | Notes
+|-|-
+| **date_range** | An absolute range like `2023-01-01 to 2023-12-31`, a relative range like `-7 days to now`, or a shortcut like `this month`. 
+| **unit** | `minute`, `hour`, `day`, `week`, `month`, `year`
+| **step** | The number of `unit` to increment (e.g. `5`). Default `1`.
+| **limit** | The maximum number of results. Default `10000`.
+
+**Returns:** An array of Unix timestamps.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{{date_lerp('this month',unit='day',step=5)|map((v) => v|date('r'))|json_encode|json_pretty}}
+{% endraw %}
+</code>
+</pre>
+
+```
+[
+    "Sat, 01 Oct 2022 00:00:00 -0700",
+    "Thu, 06 Oct 2022 00:00:00 -0700",
+    "Tue, 11 Oct 2022 00:00:00 -0700",
+    "Sun, 16 Oct 2022 00:00:00 -0700",
+    "Fri, 21 Oct 2022 00:00:00 -0700",
+    "Wed, 26 Oct 2022 00:00:00 -0700",
+    "Mon, 31 Oct 2022 00:00:00 -0700"
+]
 ```
 
 ## dict_set
@@ -1108,6 +1177,246 @@ false
 false
 true
 true
+```
+
+## vobject_parse
+
+Parse a block of text in VObject format (e.g. vCard, iCal).
+
+`vobject_parse(text)`
+
+**Arguments:**
+
+|---
+| Name | Notes
+|-|-
+| `text` | The VOBJECT text to parse
+
+**Returns:** An object with properties and parameters.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set vcard %}
+begin:vcard
+source:ldap://cn=Meister%20Berger,o=Universitaet%20Goerlitz,c=DE
+name:Meister Berger
+fn:Meister Berger
+n:Berger;Meister
+bday;value=date:1963-09-21
+o:Universit=E6t G=F6rlitz
+title:Mayor
+title;language=de;value=text:Burgermeister
+note:The Mayor of the great city of
+  Goerlitz in the great country of Germany.
+email;internet:mb@goerlitz.de
+home.tel;type=fax,voice,msg:+49 3581 123456
+home.label:Hufenshlagel 1234\n
+ 02828 Goerlitz\n
+ Deutschland
+end:vcard
+{% endset %}
+{{vobject_parse(vcard)|json_encode|json_pretty}}
+{% endraw %}
+</code>
+</pre>
+
+```
+{
+    "VCARD": [
+        {
+            "props": {
+                "SOURCE": [
+                    {
+                        "params": [],
+                        "value": "ldap://cn=Meister%20Berger,o=Universitaet%20Goerlitz,c=DE"
+                    }
+                ],
+                "NAME": [
+                    {
+                        "params": [],
+                        "value": "Meister Berger"
+                    }
+                ],
+                "FN": [
+                    {
+                        "params": [],
+                        "value": "Meister Berger"
+                    }
+                ],
+                "N": [
+                    {
+                        "params": [],
+                        "value": "Berger;Meister"
+                    }
+                ],
+                "BDAY": [
+                    {
+                        "params": {
+                            "value": "date"
+                        },
+                        "value": "1963-09-21"
+                    }
+                ],
+                "O": [
+                    {
+                        "params": [],
+                        "value": "Universit=E6t G=F6rlitz"
+                    }
+                ],
+                "TITLE": [
+                    {
+                        "params": [],
+                        "value": "Mayor"
+                    },
+                    {
+                        "params": {
+                            "language": "de",
+                            "value": "text"
+                        },
+                        "value": "Burgermeister"
+                    }
+                ],
+                "NOTE": [
+                    {
+                        "params": [],
+                        "value": "The Mayor of the great city of Goerlitz in the great country of Germany."
+                    }
+                ],
+                "EMAIL": [
+                    {
+                        "params": {
+                            "internet": ""
+                        },
+                        "value": "mb@goerlitz.de"
+                    }
+                ],
+                "HOME.TEL": [
+                    {
+                        "params": {
+                            "type": "fax,voice,msg"
+                        },
+                        "value": "+49 3581 123456"
+                    }
+                ],
+                "HOME.LABEL": [
+                    {
+                        "params": [],
+                        "value": "Hufenshlagel 1234\n02828 Goerlitz\nDeutschland"
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
+
+## xml_attr
+
+Return a single attribute from an XML node.
+
+`xml_attr(xml_node, attr)`
+
+**Arguments:**
+
+|---
+| Name | Notes
+|-|-
+| `xml_node` | An single XML node, usually from [xml_xpath](#xml_xpath)
+| `attr` | The name of an attribute
+
+**Returns:** A string from the given XML attribute, or `false`.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set xml_string %}
+&lt;?xml version = "1.0" encoding = "UTF-8"?&gt;
+&lt;Movies&gt;
+    &lt;Movie rating="R"&gt;
+        &lt;Title runtime="142"&gt;The Shawshank Redemption&lt;/Title&gt;
+        &lt;Genre&gt;Drama&lt;/Genre&gt;
+        &lt;Director&gt;
+            &lt;Name highratedmovie="The Mist"&gt;
+                &lt;First&gt;Frank&lt;/First&gt;
+                &lt;Last&gt;Darabont&lt;/Last&gt;
+            &lt;/Name&gt;
+        &lt;/Director&gt;
+        &lt;Studio&gt;Columbia Pictures&lt;/Studio&gt;
+        &lt;Year&gt;1994&lt;/Year&gt;
+    &lt;/Movie&gt;
+&lt;/Movies&gt;
+{% endset %}
+{% set xml = xml_decode(xml_string) %}
+{% set movie = xml_xpath(xml, '//Movie')|first %}
+{% set runtime = xml_attr(movie.Title,'runtime') %}
+The runtime of {{movie.Title}} is {{runtime ? (60*runtime)|secs_pretty : 'unknown'}}.
+{% endraw %}
+</code>
+</pre>
+
+```
+The runtime of The Shawshank Redemption is 2 hours, 22 mins.
+```
+
+## xml_attrs
+
+Return all attributes from an XML node.
+
+`xml_attrs(xml_node)`
+
+**Arguments:**
+
+|---
+| Name | Notes
+|-|-
+| `xml_node` | An single XML node, usually from [xml_xpath](#xml_xpath)
+
+**Returns:** An array of attribute keys and values.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set xml_string %}
+&lt;?xml version = "1.0" encoding = "UTF-8"?&gt;
+&lt;Movies&gt;
+    &lt;Movie rating="R"&gt;
+        &lt;Title runtime="177"&gt;The Godfather&lt;/Title&gt;
+        &lt;Genre&gt; Crime Drama &lt;/Genre&gt;
+        &lt;Director&gt;
+            &lt;Name&gt;
+                &lt;First&gt;Francis Ford&lt;/First&gt;
+                &lt;Last&gt;Coppola&lt;/Last&gt;
+            &lt;/Name&gt;
+        &lt;/Director&gt;
+        &lt;Studio&gt;Paramount Pictures&lt;/Studio&gt;
+        &lt;Year&gt;1972&lt;/Year&gt;
+    &lt;/Movie&gt;
+    &lt;Movie rating= "R"&gt;
+        &lt;Title runtime="142"&gt;The Shawshank Redemption&lt;/Title&gt;
+        &lt;Genre&gt;Drama&lt;/Genre&gt;
+        &lt;Director&gt;
+            &lt;Name highratedmovie="The Mist"&gt;
+                &lt;First&gt;Frank&lt;/First&gt;
+                &lt;Last&gt;Darabont&lt;/Last&gt;
+            &lt;/Name&gt;
+        &lt;/Director&gt;
+        &lt;Studio&gt;Columbia Pictures&lt;/Studio&gt;
+        &lt;Year&gt;1994&lt;/Year&gt;
+    &lt;/Movie&gt;
+&lt;/Movies&gt;
+{% endset %}
+{% set xml = xml_decode(xml_string) %}
+{% set movies = xml_xpath(xml, '//Movie') %}
+{{xml_attrs(movies[1])|json_encode|json_pretty}}
+{% endraw %}
+</code>
+</pre>
+
+```
+{
+    "rating": "R"
+}
 ```
 
 ## xml_decode

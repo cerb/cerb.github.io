@@ -209,7 +209,7 @@ These metrics are managed automatically by Cerb:
 | Metric | Description
 |-|-
 |`cerb.automation.duration`| How long automations are executed. Dimensions: `automation_id` and `trigger`.
-|`cerb.automation.invocations`| How often automations are executed. Dimensions: `automation_id` and `trigger`.
+|`cerb.automation.invocations`| How often automations are executed. Dimensions: `automation_id`, `trigger`, `exit_state`.
 |`cerb.behavior.duration`| How long behaviors are executed. Dimensions: `behavior_id` and `event`.
 |`cerb.behavior.invocations`| How often behaviors are executed. Dimensions: `behavior_id` and `event`.
 |`cerb.mail.transport.deliveries`| How many successful messages are sent through a mail transport. Dimensions: `transport_id` and `sender_id` (email address).

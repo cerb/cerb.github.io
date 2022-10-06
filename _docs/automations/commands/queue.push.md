@@ -52,6 +52,7 @@ start:
 |---
 | Key | 
 |-|-
+| `available_at@date:` | The optional future date to process the message
 | `queue_name:` | The [queue](/docs/queues/) name to add messages to
 | `messages:` | An array of messages to add. These can be strings or objects
 

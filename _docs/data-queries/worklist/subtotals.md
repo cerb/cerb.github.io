@@ -111,16 +111,23 @@ Histograms can be generated for date-based fields by appending a unit of time fo
 |-|-
 | Unit | Example
 |-|-
-| `@year` | 2025
-| `@month` | 2025-12
-| `@monthofyear` | December
-| `@week`, `@week-mon` | 2025-12-29
-| `@week-sun` | 2025-12-28
 | `@day` | 2025-12-31
 | `@dayofmonth` | 31
 | `@dayofweek` | Wednesday
 | `@hour` | 2025-12-31 23:00
 | `@hourofday` | 23:00
+| `@hourofdayofweek` | Wednesday 16:00
+| `@minute` | 2025-12-25 20:00
+| `@minutes/5` | 2025-01-09 04:25:00
+| `@minutes/15` | 2025-01-09 17:45:00
+| `@minutes/30` | 2025-01-09 23:30:00
+| `@month` | 2025-12
+| `@monthofyear` | December
+| `@quarter` | 2025-Q4
+| `@quarterofyear` | Q2
+| `@week-sun` | 2025-12-28
+| `@week`, `@week-mon` | 2025-12-29
+| `@year` | 2025
 
 When using `@week` you can optionally specify if weeks should start on Sunday or Monday. The default is Monday.
 

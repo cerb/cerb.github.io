@@ -720,10 +720,12 @@ Automations are automatically **triggered** in response to events within Cerb.
 | [**projectBoard.renderCard**](/docs/automations/triggers/projectBoard.renderCard/) | √ | | Dynamic card layouts on project boards
 | [**record.changed**](/docs/automations/triggers/record.changed/) | √ | | Actions that run when [record](/docs/records/types/) fields change
 | [**reminder.remind**](/docs/automations/triggers/reminder.remind/) | √ | | Actions that run for [reminder](/docs/reminders/) alerts 
-| [**resource.get**](/docs/automations/triggers/resource.get/) | √ | | Dynamic [resource](/docs/resources/) content 
+| [**resource.get**](/docs/automations/triggers/resource.get/) | √ | | Dynamic [resource](/docs/resources/) content
+| [**scripting.function**](/docs/automations/triggers/scripting.function/) | √ | | Run an [automation](/docs/automations/) from the [cerb_automation()](/docs/bots/scripting/functions/#cerb_automation) function in scripting.
+| [**ui.chart.data**](/docs/automations/triggers/ui.chart.data/) | √ | | Data sources for [Chart KATA widgets](/docs/dashboards/)
 | [**ui.sheet.data**](/docs/automations/triggers/ui.sheet.data/) | √ | | Data sources for [sheets](/docs/sheets/)
 | [**ui.widget**](/docs/automations/triggers/ui.widget/) | √ | | Custom output for [card](/docs/records/types/card_widget/), [profile](/docs/records/types/profile_widget/), or [workspace](/docs/records/types/workspace_widget/) widgets
-| [**webhook.respond**](/docs/automations/triggers/webhook.respond/) | | | Handlers for [webhook listeners](/docs/webhooks/)
+| [**webhook.respond**](/docs/automations/triggers/webhook.respond/) | √ | | Handlers for [webhook listeners](/docs/webhooks/)
 
 # Events
 
@@ -797,6 +799,7 @@ There can now be multiple `enabled:` or `disabled:` rules. The first rule to ret
 | [**email.parse:**](/docs/automations/commands/email.parse/) | Parse a MIME-encoded email message into a [ticket](/docs/records/types/ticket/).
 | [**encrypt.pgp:**](/docs/automations/commands/encrypt.pgp/) | Encrypt a message for one or more PGP public keys.
 | [**file.read:**](/docs/automations/commands/file.read/) | Read chunks of bytes from an [attachment](/docs/records/types/attachment/) or [automation resource](/docs/records/types/automation_resource/).
+| [**file.write:**](/docs/automations/commands/file.write/) | Write bytes to an [automation resource](/docs/records/types/automation_resource/).
 | [**function:**](/docs/automations/commands/function/) | Execute an [automation.function](/docs/automations/triggers/automation.function/) automation and return output.
 | [**http.request:**](/docs/automations/commands/http.request/) | Send data to an HTTP endpoint and return the response.
 | [**metric.increment:**](/docs/automations/commands/metric.increment/) | Add new samples to a [metric](/docs/metrics/).
@@ -828,6 +831,32 @@ There can now be multiple `enabled:` or `disabled:` rules. The first rule to ret
 The automation editor includes syntax highlighting, autocompletion for the [KATA](/docs/kata/) syntax, a step-based debugger with full access to the current state, a simulator, and a reference for each trigger event.
 
 A contextual toolbar provides interactions for adding [inputs](#inputs), [commands](#commands), and [exit states](#exit-states).
+
+### Change History
+
+When editing an automation you can review past versions by clicking on the **Change History** button in the editor toolbar.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/automations/editor-diff-button.png" class="screenshot">
+</div>
+
+This opens a popup that displays the differences between a past version and the current version.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/automations/editor-diff.png" class="screenshot">
+</div>
+
+The left editor is read-only, but the right editor may be modified. Any changes will update the differences in real-time.
+
+### Export
+
+An automation may be exported by clicking on the **Export** button in the editor toolbar.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/automations/editor-export-button.png" class="screenshot">
+</div>
+
+This creates a [package](/docs/packages/) that can be imported into another Cerb environment.
 
 ### Visualizations
 

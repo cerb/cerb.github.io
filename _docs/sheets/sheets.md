@@ -217,6 +217,28 @@ columns:
 </code>
 </pre>
 
+## Interaction
+
+The `interaction` column type triggers an interaction when clicked.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+columns:
+  interaction/ip:
+    label: IP
+    params:
+      #image: circle-ok
+      #image_key: icon_key
+      image_template@raw:
+        {% if can_sign %}
+        circle-ok
+        {% endif %}
+      #record_uri: cerb:group:123
+{% endraw %}
+</code>
+</pre>
+
 ## Link
 
 The `link` column type displays a relative or external link with some text.
