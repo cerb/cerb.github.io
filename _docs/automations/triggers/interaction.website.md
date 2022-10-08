@@ -87,6 +87,7 @@ A form can be created with any combination of the following element types:
 
 | Element |
 |-|-
+| [**fileUpload:**](/docs/automations/triggers/interaction.website/elements/fileUpload/) | File upload prompt
 | [**say:**](/docs/automations/triggers/interaction.website/elements/say/) | Block of text or Markdown
 | [**sheet:**](/docs/automations/triggers/interaction.website/elements/sheet/) | [Sheet](/docs/sheets) with row selection
 | [**submit:**](/docs/automations/triggers/interaction.website/elements/submit/) | Continue to next step
