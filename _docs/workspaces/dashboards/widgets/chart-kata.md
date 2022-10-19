@@ -30,7 +30,12 @@ The **Chart KATA** widget can build complex, dynamic charts with mixed visualiza
 <img src="/assets/images/docs/dashboards/widgets/chart-kata/chart-kata-combined.png" class="screenshot">
 </div>
 
-# Datasets
+* TOC
+{:toc}
+
+# Configuration
+
+## Datasets
 
 A **dataset** is a collection of **series** data. An `/identifier` names the dataset.
 
@@ -45,7 +50,7 @@ For instance, a time-series dataset could include a series named `ts` with times
 | [dataQuery:](#dataquery) | Load data from a [data query](/docs/data-queries/).
 | [manual:](#manual) | Static data. This is primarily useful in [interactions](/docs/interactions/) where some chart data has already been loaded.
 
-## automation:
+### automation:
 
 Load series data from a [ui.chart.data](/docs/automations/triggers/ui.chart.data/) automation.
 
@@ -63,7 +68,7 @@ automation/avgInflow:
 </code>
 </pre>
 
-## dataQuery:
+### dataQuery:
 
 Load data from a [data query](/docs/data-queries/).
 
@@ -83,7 +88,7 @@ dataQuery/tickets:
 </code>
 </pre>
 
-## manual:
+### manual:
 
 Load static data.
 
@@ -98,7 +103,7 @@ manual/series0:
 </code>
 </pre>
 
-# Chart
+## Chart
 
 A {% raw %}`{{datasets.name}}`{% endraw %} placeholder is available for each defined dataset. For instance, a grid line can be rendered from a dynamically computed value.
 
@@ -141,6 +146,222 @@ grid:
         value: {{datasets.baseline.value}}
         text: Target ({{datasets.baseline.value}})
         position: start
+{% endraw %}
+</code>
+</pre>
+
+# Examples
+
+### Timeseries: Stacked bar of tickets created this year by group
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/dashboards/widgets/chart-kata/example-timeseries-stacked-bar-tickets.png" class="screenshot">
+</div>
+
+**Datasets:**
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+dataQuery/tickets:
+  query@text:
+    type:worklist.subtotals
+    of:ticket
+    by.count:[created@month,group]
+    query:(created:"first day of this month -1 year")
+    format:timeseries
+{% endraw %}
+</code>
+</pre>
+
+**Chart:**
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+data:
+  type: bar
+  series:
+    tickets:
+      x_key: ts
+  stacks:
+    0@csv: tickets
+
+axis:
+  x:
+    type: timeseries
+    tick:
+      format: %B '%y
+
+tooltip:
+  grouped@bool: no
+{% endraw %}
+</code>
+</pre>
+
+### Timeseries: Line comparison of contact methods
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/dashboards/widgets/chart-kata/example-line-yearly-contact-methods.png" class="screenshot">
+</div>
+
+**Datasets:**
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+dataQuery/calls:
+  query@text:
+    type:worklist.subtotals
+    of:call
+    by:[created@year]
+    format: timeseries
+
+dataQuery/tasks:
+  query@text:
+    type:worklist.subtotals
+    of:task
+    by:[created@year]
+    format: timeseries
+
+dataQuery/tickets:
+  query@text:
+    type:worklist.subtotals
+    of:ticket
+    by:[created@year]
+    query:(status:!d)
+    format: timeseries
+{% endraw %}
+</code>
+</pre>
+
+**Chart:**
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+data:
+  type: line
+  series:
+    tickets:
+      x_key: ts
+      name: Tickets
+    tasks:
+      x_key: ts
+      name: Tasks
+    calls:
+      x_key: ts
+      name: Calls
+
+axis:
+  x:
+    type: timeseries
+    tick:
+      format: %Y
+
+tooltip:
+  grouped@bool: no
+{% endraw %}
+</code>
+</pre>
+
+
+### Pie: Tickets created this year by bucket
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/dashboards/widgets/chart-kata/example-pie-tickets-by-bucket.png" class="screenshot">
+</div>
+
+**Datasets:**
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+dataQuery/tickets:
+  query@text:
+    type:worklist.subtotals
+    of:ticket
+    by.count:[group_bucket]
+    query:(created:"this year")
+    format:pie
+{% endraw %}
+</code>
+</pre>
+
+**Chart:**
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+data:
+  type: pie
+  series:
+    tickets:
+{% endraw %}
+</code>
+</pre>
+
+### Donut: Contact methods
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/dashboards/widgets/chart-kata/example-donut-contact-methods.png" class="screenshot">
+</div>
+
+**Datasets:**
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+dataQuery/calls:
+  query@text:
+    type:worklist.metrics
+    values.calls:(
+      of:call
+      function:count
+      field:id
+      query:()
+    )
+    format: pie
+
+dataQuery/tasks:
+  query@text:
+    type:worklist.metrics
+    values.tasks:(
+      of:task
+      function:count
+      field:id
+      query:()
+    )
+    format: pie
+
+dataQuery/tickets:
+  query@text:
+    type:worklist.metrics
+    values.tickets:(
+      of:ticket
+      function:count
+      field:id
+      query:(status:!d)
+    )
+    format: pie
+{% endraw %}
+</code>
+</pre>
+
+**Chart:**
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+data:
+  type: donut
+  series:
+    calls:
+      name: # Calls
+    tasks:
+      name: # Tasks
+    tickets:
+      name: # Tickets
 {% endraw %}
 </code>
 </pre>
