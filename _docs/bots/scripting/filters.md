@@ -585,6 +585,8 @@ Insert variables into a [string](/docs/bots/scripting/#strings):
 Kina closed 120 tickets today!
 ```
 
+For formatting specifiers, see: <https://www.php.net/sprintf> 
+
 ## hash_hmac
 
 Generate a hash-based message authentication code (HMAC[^hmac]) using a secret key.
