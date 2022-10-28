@@ -88,6 +88,14 @@ dataQuery/tickets:
 </code>
 </pre>
 
+|---
+| Key | 
+|-|
+| `cache_secs@int:` | The number of seconds to cache the data query results. Use `0` to disable.
+| `key_map:` | Assign new names to any series in the dataset (e.g. `yes` -> `# Outgoing Messages`). This can be an object of keys (old labels) and values (new labels), or `key_map@csv: Old Label 1, New Label 1`.
+| `query:` | The [data query](/docs/data-queries/) to execute.
+| `query_params:` | An optional dictionary of untrusted parameters used in the data query. Reference like `${placeholderKey}`.
+
 ### manual:
 
 Load static data.
@@ -105,7 +113,18 @@ manual/series0:
 
 ## Chart
 
-A {% raw %}`{{datasets.name}}`{% endraw %} placeholder is available for each defined dataset. For instance, a grid line can be rendered from a dynamically computed value.
+A {% raw %}`{{datasets.name}}`{% endraw %} placeholder is available for each defined dataset.
+For instance, a [grid:](#grid) line can be rendered from a dynamically computed value (e.g. average, threshold, goal).
+
+|---
+| Key |
+|-|-
+| [axis:](#axis)
+| [color:](#color)
+| [data:](#data)
+| [grid:](#grid)
+| [legend:](#legend)
+| [tooltip:](#tooltip)
 
 <pre>
 <code class="language-cerb">
@@ -149,6 +168,130 @@ grid:
 {% endraw %}
 </code>
 </pre>
+
+### axis:
+
+|---
+| Key |
+|-|-
+| `x:` | By default, the horizontal axis on the bottom.
+| `y:` | By default, the vertical axis on the left.
+| `y2:` | An optional second vertical axis on the right.
+
+#### x:, y:, y2:
+
+|---
+| Key |
+|-|-
+| `categories@list:` | If the axis is `type: category`, this is the optional preferred sort order. Otherwise, categories occur in the order they were defined.
+| `label:` | An optional label to display along the axis.
+| `tick:` | Options regarding measurement ticks.
+| `type:` | `category`, `linear` (default), or `timeseries`
+
+**tick:**
+
+|---
+| Key |
+|-|-
+| `format:` | A date format string using [d3-time-format](https://github.com/d3/d3-time-format#locale_format) specifiers. For example: `%Y-%m-%d %H:%M:%S`
+
+### color:
+
+|---
+| Key |
+|-|-
+| `patterns:` | A dictionary of named hex color patterns. For example: `rainbow12@csv: #6e40aa, #b83cb0, #f6478d, #ff6956, #f59f30, #c4d93e, #83f557, #38f17a, #19d3b5, #29a0dd, #5069d9, #6e40aa`.
+
+Each dataset can specify a color pattern using `data:series:*:color_pattern:`. 
+Several pre-defined color patterns are available through code autocompletion.
+
+If a pattern key ends in the `_dark` suffix it will be preferred in dark mode.
+
+If a color pattern is named default it will apply to any series without an explicit color assigned. 
+
+If multiple datasets share the same non-default color pattern, colors will be synchronized for values that are identical. 
+For instance, if two series compare groups over current/prior year, then 'Support' will have the same color in both datasets.
+
+### data:
+
+|---
+| Key |
+|-|-
+| `series:` | A dictionary of datasets to display on the chart.
+| `stacks:` | A dictionary of datasets to stack (e.g. stacked bar). The keys can be anything as long as they're unique. e.g. `0@csv: dataset1, dataset2`.
+| `type:` | The default visualization for all series on the chart.
+
+#### series:
+
+Each `series:` key is a dataset name that may contain multiple series.
+
+|---
+| Key |
+|-|-
+| `color_pattern:` | The `color:patterns:` scheme to use for this dataset. A pattern will repeat if there are more series than colors. When two datasets use the same pattern, the same series names will be assigned the same colors.
+| `name:` | A name to prepend to each series in the dataset.
+| `x_key:` | The series key used for the x-axis. For instance, timestamps on a `timeseries` axis, or labels on a `category` axis.
+| `y_axis:` | `y` (default) or `y2`.
+| `y_type:` | An optional [type:](#type) for this dataset. For instance, you can overlay on `line` trend on a `bar` chart.
+
+#### type:
+
+|---
+| Type |
+|-|-
+| `area`
+| `area-spline`
+| `area-step`
+| `bar`
+| `donut`
+| `gauge`
+| `line`
+| `pie`
+| `scatter`
+| `spline`
+| `step`
+
+### grid:
+
+|---
+| Key |
+|-|-
+| `x:` |
+| `y:` |
+
+#### x:, y:
+
+|---
+| Key |
+|-|-
+| `lines:` | 
+
+**lines:**
+
+Each line must have a unique key name containing:
+
+|---
+| Key |
+|-|-
+| `position:` | `start`, `end`
+| `text:` | The label to display on the line.
+| `value:` | The location on the given axis to draw the line.
+
+### legend:
+
+|---
+| Key |
+|-|-
+| `show@bool:` | `no` to hide the legend, otherwise visible (by default).
+| `sorted@bool:` | `yes` to sort series by name in the legend, otherwise they are displayed in the order they were loaded.
+
+### tooltip:
+
+|---
+| Key |
+|-|-
+| `grouped@bool:` | `no` to show only the data point under the mouse cursor, otherwise everything with the same x-axis value is shown together.
+| `show@bool:` | `no` to hide mouse hover tooltips over data points, otherwise visible (by default)
 
 # Examples
 
