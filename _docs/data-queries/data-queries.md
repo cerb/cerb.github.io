@@ -55,6 +55,7 @@ format:dictionaries
 | Type | Description
 |-|-
 | [attachment.manifest](/docs/data-queries/attachment/manifest/) | Iterates and filters the manifest of attachment archives (e.g. ZIP).
+| [automation.invoke](/docs/data-queries/automation/invoke/) | Invoke a custom [data.query](/docs/automations/triggers/data.query/) automation.
 | [calendar.availability](/docs/data-queries/calendar/availability/) | Aggregate any number of matching calenders to display availability over a date range by hour or day
 | [calendar.events](/docs/data-queries/calendar/events/) | Return events and synthesized recurring events for the given calendars grouped into days
 | [classifier.prediction](/docs/data-queries/classifier/prediction/) | Return a predicted classification for the given text using the given classifier

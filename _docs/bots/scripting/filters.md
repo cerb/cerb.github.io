@@ -1080,6 +1080,31 @@ Parse a URL string into an object for validation.
 }
 ```
 
+## parse_user_agent
+
+(Added in [10.3.2](/releases/10.3.2/))
+
+Parse a user-agent string into an object for validation.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set user_agent %}
+Mozilla/5.0 (Macintosh; Intel Mac OS X 13_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15
+{% endset %}
+{{user_agent|parse_user_agent|json_encode}}
+{% endraw %}
+</code>
+</pre>
+
+```
+{
+    "platform": "Macintosh",
+    "browser": "Safari",
+    "version": "16.1"
+}
+```
+
 ## permalink
 
 (Added in [9.2.3](/releases/9.2.3/))

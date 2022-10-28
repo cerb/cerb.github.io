@@ -37,6 +37,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
 |   | `automation_kata` | [text](/docs/records/fields/types/text/) |  
+|   | `content` | [text](/docs/records/fields/types/text/) |  
 |   | `description` | [text](/docs/records/fields/types/text/) |  
 | **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) |  
 |   | `is_dynamic` | [boolean](/docs/records/fields/types/boolean/) |  

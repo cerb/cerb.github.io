@@ -43,6 +43,7 @@ Resources have a **type** that determines where they are available.
 
 | Type | Description
 |-|-
+| **Dataset (.csv)** | A precomputed dataset in the comma-separated values (CSV) format.
 | **Font** | TrueType fonts (TTF) for use in image generation.
 | **Image** | An image file (e.g. PNG, JPEG, GIF, SVG).
 | **Map** | Features that describe regions in GeoJSON (e.g. countries, states, counties). These are base maps that other features are drawn on top of.

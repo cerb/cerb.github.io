@@ -38,6 +38,7 @@ The URI of the record to read content from.
 |-|-
 |attachment|`cerb:attachment:<id>`
 |automation_resource|`cerb:automation_resource:<guid>`
+|resource|`cerb:resource:<name>`
 
 ### filters:
 
@@ -79,7 +80,7 @@ The key specified in `output:` is set to a dictionary with the following structu
 |Key|Description
 |-|-
 |`bytes`| The bytes returned from the file, starting from `offset` for `length`. If this contains binary data it is Base64-encoded and returned as a `data:` string.
-|`uri`| The record URI of the file (an `attachment` or `automation_resource`).
+|`uri`| The record URI of the file (an `attachment`, `automation_resource`, or `resource`).
 |`name`| The filename of the record.
 |`offset_from`| The first byte of the read range.
 |`offset_to`| The last byte of the read range.
