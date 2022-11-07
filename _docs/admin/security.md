@@ -73,7 +73,7 @@ With **nginx**, you can use the following directive in your server configuration
 
 <pre>
 <code class="language-nginx">
-location ~ ^/cerb/(\.git|api|features|libs|storage)/ {
+location ~ ^/cerb/(\.git|api|features|libs|storage|vendor)/ {
     return 403;
 }
 </code>
