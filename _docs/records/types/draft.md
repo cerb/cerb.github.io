@@ -138,6 +138,7 @@ These [placeholders](/docs/bots/scripting/placeholders/) are available in [dicti
 | `id` | number | Id
 | `name` | text | Name
 | `params` | dictionary | Params
+| `ticket_` | record | [Ticket](/docs/records/types/ticket/)
 | `to` | text | To
 | `token` | text | Token
 | `type` | text | Type
