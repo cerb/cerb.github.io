@@ -2,14 +2,14 @@
 title: "Cerb"
 company: "Webgroup Media, LLC."
 copyright: 2002-2022
-version: 2022102801
+version: 2022111501
 email: team@cerb.ai
 description: Cerb is a web-based platform for enterprise communication and workflow automation. Boost team productivity with bots, dashboards, and shared inboxes.
 url: "https://cerb.ai"
 baseurl: ""
 logo_url: /assets/cerb_logo.svg
 social_image_url: /assets/images/cerb-social.png
-twitter_username: cerb_ai
+mastodon_username: "@cerb.social"
 github_username:  cerb
 timezone: America/Los_Angeles
 encoding: UTF-8
