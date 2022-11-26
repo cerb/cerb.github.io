@@ -83,6 +83,7 @@ Default: `freeform`
 |`ipv4`| `1.2.3.4`
 |`ipv6`| `1234:5678:90ab:cdef:1234:5678:90ab:cdef`
 |`number`| `12345`
+|`password`| `********`
 |`record_type`| `task`, `ticket`, `worker`
 |`timestamp`| `1606955026`
 |`uri`| `some-unique-identifier` (letters, numbers, dots, dashes)

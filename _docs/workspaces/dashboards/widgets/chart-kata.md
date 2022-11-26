@@ -152,7 +152,8 @@ axis:
     label: Time
     type: timeseries
     tick:
-      format: %Y-%m
+      date:
+        format: %Y-%m
   y:
     label: Tickets/Tasks
   y2:
@@ -193,7 +194,24 @@ grid:
 |---
 | Key |
 |-|-
-| `format:` | A date format string using [d3-time-format](https://github.com/d3/d3-time-format#locale_format) specifiers. For example: `%Y-%m-%d %H:%M:%S`
+| `format:` | `date:`, `duration:`, or `number:` (default)
+
+**tick:format:**
+
+|---
+| Key |
+|-|-
+| `date:` | A date format string using [d3-time-format](https://github.com/d3/d3-time-format#locale_format) specifiers. For example: `%Y-%m-%d %H:%M:%S`
+| `duration:` | An elapsed time.
+| `number:` | A number string using [d3-format](https://github.com/d3/d3-format#locale_format) specifiers. For example: `$,.2`
+
+**tick:format:duration:**
+
+|---
+| Key |
+|-|-
+| `unit:` | `milliseconds`, `seconds`, `minutes`, `hours`
+| `precision@int:` | The number of significant measures (e.g. `3` for `2d,5h,4m`)
 
 ### color:
 
@@ -283,7 +301,15 @@ Each line must have a unique key name containing:
 | Key |
 |-|-
 | `show@bool:` | `no` to hide the legend, otherwise visible (by default).
-| `sorted@bool:` | `yes` to sort series by name in the legend, otherwise they are displayed in the order they were loaded.
+| `style:` | `compact` (default) or `table`
+
+#### style:table:
+
+|---
+| Key |
+|-|-
+| `data@bool:` | `yes` to show full data for the visualization, otherwise omitted (by default)
+| `stats@csv:` | Any combination of: `sum`, `avg`, `min`, `max`. Omitted by default.
 
 ### tooltip:
 
@@ -291,6 +317,7 @@ Each line must have a unique key name containing:
 | Key |
 |-|-
 | `grouped@bool:` | `no` to show only the data point under the mouse cursor, otherwise everything with the same x-axis value is shown together.
+| `ratios@bool:` | `yes` to calculate ratios for series at each x-tick, otherwise hidden (by default) 
 | `show@bool:` | `no` to hide mouse hover tooltips over data points, otherwise visible (by default)
 
 # Examples
