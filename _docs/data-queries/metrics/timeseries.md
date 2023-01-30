@@ -64,6 +64,9 @@ The [period](/docs/metrics/#periods) is the metric's level of detail:
 | `minute` | 5-minute statistics (up to the past 24 hours)
 | `hour` | hourly statistics (up to the past 2 weeks) 
 | `day` | daily statistics (no limit)
+| `week` | weekly statistics (no limit)
+| `month` | monthly statistics (no limit)
+| `year` | yearly statistics (no limit)
 
 # range:
 

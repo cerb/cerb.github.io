@@ -24,7 +24,7 @@ user consent / grants
 scopes
 {% endcomment %}
 
-Older versions (prior to [9.1](/releases/9.1/)) used <a href="/docs/api/authentication/request-signatures/">API authentication with request signatures</a> instead. This authentication method is deprecated, but will continue to be supported until the "client credentials" grant is implemented for machine-to-machine authentication.
+Older versions (prior to [9.1](/releases/9.1/)) used <a href="/docs/api/authentication/request-signatures/">API authentication with request signatures</a> instead. XOAuth tokens should be used when possible, but request signature authentication will continue to be supported for the foreseeable future.
 
 # Creating an OAuth App
 

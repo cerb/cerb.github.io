@@ -67,6 +67,8 @@ This is most often accomplished with one of the following annotations:
 
 The `as:` key names the placeholder that holds the value of the current iteration of `each:`.
 
+This may optionally take the format of `key, value` to set a placeholder for both the key and value of `each:` item.
+
 ### do:
 
 The `do:` key contains any number of [commands](/docs/automations/#commands) to repeat.
