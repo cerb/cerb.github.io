@@ -93,6 +93,16 @@ If user input is required on this element use a value of `yes`. Otherwise, omit.
 
 An optional [toolbar](/docs/toolbars/) to display above the editor. This triggers [worker interactions](/docs/automations/triggers/interaction.worker/).
 
+Interactions started from this toolbar will have a caller of `cerb.toolbar.interaction.worker.await.editor` with these `caller_params`:
+
+|---
+| Key | Description
+|-|-
+| `value` | The full content of the editor
+| `selected_text` | The selected text within the editor (if any)
+| `cursor_column` | The text cursor column (zero-based, left to right)
+| `cursor_row` | The text cursor row (zero-based, top to bottom)
+
 ### validation:
 
 An optional custom validation script. Any output is considered to be an error.
