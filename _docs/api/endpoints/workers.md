@@ -20,7 +20,7 @@ jumbotron:
 
 # Current Worker
 
-**GET /workers/me.json**
+**GET /rest/workers/me.json**
 
 Retrieve the object for the current worker based on the given API credentials.
 

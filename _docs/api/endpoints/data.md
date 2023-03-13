@@ -20,7 +20,7 @@ jumbotron:
 
 # Run a data query
 
-**GET /data/query.json**
+**GET /rest/data/query.json**
 
 Run a [data query](/docs/data-queries/).
 

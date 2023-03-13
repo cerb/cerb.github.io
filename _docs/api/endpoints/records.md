@@ -28,7 +28,7 @@ This endpoint target a specific [record type](/docs/records/types/) as `<uri>` i
 
 # Retrieve
 
-**GET /records/`<uri>`/`<id>`.json**
+**GET /rest/records/`<uri>`/`<id>`.json**
 
 Retrieve a record [dictionary](/docs/bots/behaviors/dictionaries/).
 
@@ -43,7 +43,7 @@ $out = $cerb->get($base_url . 'records/asset/1.json');
 
 # Create
 
-**POST /records/`<uri>`/create.json**
+**POST /rest/records/`<uri>`/create.json**
 
 Create a new record.
 
@@ -72,7 +72,7 @@ $out = $cerb->post($base_url . 'records/address/create.json', $postfields);
 
 # Update
 
-**PUT /records/`<uri>`/`<id>`.json**
+**PUT /rest/records/`<uri>`/`<id>`.json**
 
 Update a record object.
 
@@ -100,7 +100,7 @@ $out = $cerb->put($base_url . 'records/group/1.json', $postfields);
 
 # Upsert
 
-**PATCH /records/`<uri>`/upsert.json**
+**PATCH /rest/records/`<uri>`/upsert.json**
 
 Update an existing record if matched, or create a new record otherwise.
 
@@ -130,7 +130,7 @@ $out = $cerb->patch($base_url . 'records/org/upsert.json', $postfields);
 
 # Search
 
-**GET /records/`<uri>`/search.json**
+**GET /rest/records/`<uri>`/search.json**
 
 Search for matching records.
 
@@ -178,7 +178,7 @@ $out = $cerb->get($base_url .
 
 # Delete
 
-**DELETE /records/`<uri>`/`<id>`.json**
+**DELETE /rest/records/`<uri>`/`<id>`.json**
 
 Delete a record.
 

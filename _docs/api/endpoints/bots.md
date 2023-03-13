@@ -20,7 +20,7 @@ jumbotron:
 
 # Run Bot Behavior
 
-**POST /bots/behavior/`<id>`/run.json**
+**POST /rest/bots/behavior/`<id>`/run.json**
 
 Execute the specified bot _Custom API Request_ behavior.  The response will provide the values from the behavior's dictionary at conclusion.  A common strategy is to use the _Set custom placeholder_ action in the bot behavior in order to send information back to the API caller.
 

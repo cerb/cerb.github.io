@@ -20,7 +20,7 @@ jumbotron:
 
 # Parse a new message
 
-**POST /parser/parse.json**
+**POST /rest/parser/parse.json**
 
 Import a raw message source.
 
@@ -48,7 +48,7 @@ $out = $cerb->post($base_url . 'parser/parse.json', $postfields);
 
 # Parse a reply
 
-**POST /parser/parse.json**
+**POST /rest/parser/parse.json**
 
 Parsing a reply to an existing message is fairly simple. You should use the quoted `Message-Id:` header as an `In-Reply-To:` when possible, but you can also use a ticket mask in the subject as a fallback option.
 

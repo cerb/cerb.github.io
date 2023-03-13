@@ -23,7 +23,7 @@ jumbotron:
 
 # Compose
 
-**POST /tickets/compose.json**
+**POST /rest/tickets/compose.json**
 
 Create a ticket object.
 
@@ -80,7 +80,7 @@ $out = $cerb->post($base_url . 'tickets/compose.json', $postfields);
 
 # Reply
 
-**POST /tickets/reply.json**
+**POST /rest/tickets/reply.json**
 
 Reply to a ticket message as a worker.
 

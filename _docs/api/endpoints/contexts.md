@@ -25,7 +25,7 @@ jumbotron:
 
 ## List
 
-**GET /contexts/list.json**
+**GET /rest/contexts/list.json**
 
 Retrieve a list of object contexts with IDs, names, custom fields and fieldsets.  This includes object contexts contributed by [plugins](/docs/plugins/).
 
@@ -41,7 +41,7 @@ $out = $cerb->get($base_url . 'contexts/list.json');
 
 ## List Events
 
-**GET /contexts/activity/events.json**
+**GET /rest/contexts/activity/events.json**
 
 Retrieve a list of activity log event IDs and names, including those contributed by [plugins](/docs/plugins/).
 
@@ -55,7 +55,7 @@ $out = $cerb->get($base_url . 'contexts/activity/events.json');
 
 ## Create
 
-**POST /contexts/activity/create.json**
+**POST /rest/contexts/activity/create.json**
 
 Create an activity log entry.
 
@@ -103,7 +103,7 @@ $out = $cerb->post($base_url . 'contexts/activity/create.json', $postfields);
 
 ## Link
 
-**POST /contexts/link.json**
+**POST /rest/contexts/link.json**
 
 Add any number of links to one context record.
 
@@ -130,7 +130,7 @@ $out = $cerb->post($base_url . 'contexts/link.json', $postfields);
 
 ## Unlink
 
-**POST /contexts/unlink.json**
+**POST /rest/contexts/unlink.json**
 
 Remove any number of links from one context record.
 

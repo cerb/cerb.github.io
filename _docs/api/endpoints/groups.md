@@ -20,7 +20,7 @@ jumbotron:
 
 # Members
 
-**PUT /groups/members.json**
+**PUT /rest/groups/members.json**
 
 Modify group rosters.
 

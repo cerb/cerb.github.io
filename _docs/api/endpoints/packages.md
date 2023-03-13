@@ -20,7 +20,7 @@ jumbotron:
 
 # Import a package
 
-**POST /packages/import.json**
+**POST /rest/packages/import.json**
 
 Import a pre-built workflow package. You must have **administrator** privileges to make this request.
 
