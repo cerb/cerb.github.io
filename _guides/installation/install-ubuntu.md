@@ -61,15 +61,15 @@ Install PHP 8.1:
 
 <pre>
 <code class="language-bash">
-sudo apt-get install -y php8.1 php8.1-fpm php8.1-mysql php8.1-mbstring php8.1-gd php8.1-curl php8.1-mailparse php8.1-yaml php8.1-gmp php8.1-zip php8.1-dev php-pear
+sudo apt-get install -y php8.1 php8.1-fpm php8.1-mysql php8.1-mbstring php8.1-gd php8.1-curl php8.1-yaml php8.1-gmp php8.1-zip php8.1-dev php-pear
 </code>
 </pre>
 
-Install Git:
+Install common tools:
 
 <pre>
 <code class="language-bash">
-sudo apt-get install -y git
+sudo apt-get install -y git vim
 </code>
 </pre>
 
@@ -81,6 +81,45 @@ sudo apt-get install -y nginx nginx-extras
 </code>
 </pre>
 
+# Compile the mailparse extension
+
+Ubuntu 22.04 ships with a defective version (3.1.2) of the `php-mailparse` package. This can lead to segmentation faults when processing email in PHP 8.1 or later. The issue will be resolved by the Ubuntu 23.04 release in April 2023.
+
+Cerb requires version 3.1.3 or later of the extension. At the time of writing, the latest version was 3.1.4.
+
+To ensure the proper version of mailparse is installed you should compile it yourself with the following instructions.
+
+<pre>
+<code class="language-bash">
+MAILPARSE_VERSION=3.1.4 \
+  && cd /tmp \
+  && apt-get -y install php8.1-dev \
+  && pecl channel-update pecl.php.net \
+  && pecl download mailparse-${MAILPARSE_VERSION} \
+  && tar xvzf mailparse-${MAILPARSE_VERSION}.tgz \
+  && cd mailparse-${MAILPARSE_VERSION} \
+  && phpize \
+  && ./configure \
+  && sed -i 's/^\(#error .* the mbstring extension!\)/\/\/\1/' mailparse.c \
+  && make \
+  && echo "extension=mailparse.so" > /etc/php/8.1/cli/conf.d/30-mailparse.ini \
+  && echo "extension=mailparse.so" > /etc/php/8.1/fpm/conf.d/30-mailparse.ini \
+  && cp /tmp/mailparse-${MAILPARSE_VERSION}/modules/mailparse.so /usr/lib/php/20210902/mailparse.so
+</code>
+</pre>
+
+You can verify that the mailparse extension is installed:
+
+<pre>
+<code class="language-bash">
+service php8.1-fpm restart
+
+php-fpm8.1 -m
+</code>
+</pre>
+
+You should see `mailparse` in the list.
+
 # Install MySQL
 
 We recommend using a dedicated database server that replicates to a standby server. In Amazon Web Servers you should use RDS.
@@ -90,10 +129,6 @@ If you need to install MySQL on your EC2 instance instead, you can use these ins
 <pre>
 <code class="language-bash">
 sudo apt-get install -y mysql-server-8.0
-
-sudo mysql_secure_installation
-
-sudo service mysql restart
 </code>
 </pre>
 
@@ -109,7 +144,15 @@ mysql -h localhost -u root -p
 
 <div class="cerb-box note"><p>If you're using a remote MySQL server, use its internal IP in place of <tt>localhost</tt> above.</p></div>
 
-Enter your root password.
+Set a root password.
+
+<pre>
+<code class="language-bash">
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 's3cr3t';
+</code>
+</pre>
+
+<div class="cerb-box note"><p>Replace <tt>s3cr3t</tt> above with your own new password.</p></div>
 
 Create a new database and user for Cerb:
 
@@ -394,3 +437,5 @@ For more information about Nginx + PHP-FPM, see: <https://www.nginx.com/resource
 # Run the Cerb installer
 
 Type the hostname of your server into a browser and follow the [guided installer](/docs/installation/#run-the-guided-installer).
+
+If you're installing with Docker, use `127.0.0.1` rather than `localhost` for the database server.
