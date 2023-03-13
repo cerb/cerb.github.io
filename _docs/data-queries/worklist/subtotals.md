@@ -50,7 +50,7 @@ of:tickets
 
 # by:
 
-The `by:` key specifies which record [fields](/docs/records/fields/) to subtotal by.
+The `by:` key specifies which record [fields](/docs/records/#fields) to subtotal by.
 
 ### Nested subtotals
 
