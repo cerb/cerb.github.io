@@ -186,6 +186,7 @@ Each extension entry looks like:
 |---
 | Name | Extension Point
 |-|-
+| [Automation Trigger](/docs/plugins/extensions/points/cerb.automation.trigger/) | `devblocks.event.action`
 | [Bot Action](/docs/plugins/extensions/points/devblocks.event.action/) | `devblocks.event.action`
 | [Bot Event](/docs/plugins/extensions/points/devblocks.event/) | `devblocks.event`
 | [Cache Engine](/docs/plugins/extensions/points/devblocks.cache.engine/) | `devblocks.cache.engine`
