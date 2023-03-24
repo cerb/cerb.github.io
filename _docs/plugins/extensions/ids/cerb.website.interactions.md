@@ -35,3 +35,4 @@ jumbotron:
 |-|-
 | `automations_kata` | The events KATA for selecting an interaction automation
 | `cors_origins_allowed` | One origin URL per line (e.g. `https://example.com`) 
+| `portal_kata` | The portal KATA for configuring the website 

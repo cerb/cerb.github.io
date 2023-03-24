@@ -41,6 +41,7 @@ The `file.write:` command can also optionally generate a ZIP file from multiple 
 | `expires:` | | timestamp 
 | `mime_type:` | | string 
 | `name:` | | string
+| `uri:` | | string
 
 ### content:
 
@@ -88,6 +89,10 @@ An optional [MIME type](https://en.wikipedia.org/wiki/Media_type) for the file. 
 ### name:
 
 An optional name for the file.
+
+### uri:
+
+Append to an existing automation resource record when providing a Cerb URI. For instance, this makes it possible to do an incremental export in a loop where each page of results is exported separately.
 
 ## output:
 

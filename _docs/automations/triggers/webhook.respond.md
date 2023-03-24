@@ -47,6 +47,6 @@ The automation [dictionary](/docs/automations/#dictionaries) starts with the fol
 
 | Key | Type | Notes
 |-|-|-
-| `body:` | string | The body content to return. Use `body@base64:` for binary.
+| `body:` | string | The body content to return. Use `body@base64:` for binary. Stream large content from automation resources (`cerb:automation_resource:TOKEN`) and resources (`cerb:resource:NAME`) by URI.
 | `headers:` | dictionary | A set of `key: value` paris (e.g. `Content-Type: application/json`).
 | `status_code:` | integer | HTTP status code (e.g. `200`=OK, `403`=Forbidden, `404`=Not Found, `500`=Error). 

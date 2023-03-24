@@ -120,6 +120,7 @@ These [filters](/docs/search/#filters) are available in contact [search queries]
 | `org:` | [record](/docs/search/#deep-search) | [Org](/docs/records/types/org/)
 | `org.id:` | [chooser](/docs/search/filters/choosers/) | [Organization](/docs/records/types/org/)
 | `timezone:` | [text](/docs/search/filters/text/) | Timezone
+| `title:` | [text](/docs/search/filters/text/) | Title
 | `updated:` | [date](/docs/search/filters/dates/) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	

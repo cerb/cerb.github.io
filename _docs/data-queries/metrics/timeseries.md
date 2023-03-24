@@ -64,7 +64,8 @@ The [period](/docs/metrics/#periods) is the metric's level of detail:
 | `minute` | 5-minute statistics (up to the past 24 hours)
 | `hour` | hourly statistics (up to the past 2 weeks) 
 | `day` | daily statistics (no limit)
-| `week` | weekly statistics (no limit)
+| `week` | weekly statistics starting on Monday (no limit)
+| `week-sun` | weekly statistics starting on Sunday (no limit)
 | `month` | monthly statistics (no limit)
 | `year` | yearly statistics (no limit)
 
@@ -87,22 +88,16 @@ Each `series.*` series should provide:
 |-|-
 | `metric:` | The [metric](/docs/metrics/) name
 | `by:` | A comma-separated list of [dimension](/docs/metrics/#dimensions) keys to group by
-| `function:` | `sum`, `min`, `max`, `average`, `samples`
+| `function:` | `sum`, `min`, `max`, `average`, `samples`, `distinct`
 | `label:` | A human-readable label for this series
 | `missing:` | How to handle missing sample periods: `null` (default), `zero` (set to 0), or `carry` (carry the last sample)
-| `query:` | An optional query using [dimension](/docs/metrics/#dimensions) keys to filter samples
+| `query:` | An optional query using [dimension](/docs/metrics/#dimensions) keys to filter samples.
 
-{% comment %}
-* `label:` (human-friendly series name for visualizations)
-* `of:` (record type)
-* `field:` (record field using quick search keys)
-* `function:` (count,min,max,average,sum)
-* `metric:` (an equation to apply to each value; [9.1.6](/releases/9.1.6/) or later)
-* `query:` (the query to filter the results for this series)
-* `query.required:` (the required query to filter the results for this series)
+### series.*.query: 
 
-Optionally, multiple functions can be specified for a series, like `functions:[sum,average]`, and multiple series will be generated automatically using the same record type, field, and query.
-{% endcomment %}
+Dimension filters can use negation. For instance, `query:(worker_id:![1,2,3])`
+
+Record-based dimension can use [deep search filers](/docs/search/).
 
 # timeout:
 

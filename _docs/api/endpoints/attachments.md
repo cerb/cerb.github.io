@@ -20,7 +20,7 @@ jumbotron:
 
 # Download
 
-**GET /attachments/`<id>`/download.json**
+**GET /rest/attachments/`<id>`/download.json**
 
 Download an attachment.
 
