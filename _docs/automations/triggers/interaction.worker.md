@@ -395,6 +395,7 @@ The following keys are available on all worker interactions:
 | `alert:` | Display a time-limited message at the top of a worker's browser. This is particularly useful to confirm non-interactive actions (e.g. "Copied!").
 | `clipboard:` | Copy the given text to the worker's keyboard. This is only available in response to a worker gesture (e.g. clicking an interaction toolbar).
 | `open_link:` | Open a new tab in the worker's browser to the given URL. 
+| `timer:` | Start a time tracking timer with the given time entry record ID.
 | `snippet:` | If the interaction was started from an editor, paste the given text at the cursor.
 
 # Callers

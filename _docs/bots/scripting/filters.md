@@ -1443,6 +1443,31 @@ Split a string on comma delimiters. This automatically handles whitespace paddin
 ["BTC","ETH","LTC"]
 ```
 
+## stat
+
+(Added in [10.3.8](/releases/10.3.8/))
+
+Calculate a statistical measure for a given array of numbers.
+
+`|stat(measure, decimals)`
+
+|-|-|-
+| **measure** | `count`, `max`, `mean`, `median`, `min`, `mode`, `stdevp`, `stdevs`, `sum`, `varp`, `vars`
+| **decimals** | The number of decimal places for rounding
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set samples = [1,2,3,4,5,6,7,8,9,10] %}
+{{samples|stat(measure='median')}}
+{% endraw %}
+</code>
+</pre>
+
+```
+5.5
+```
+
 ## str_pos
 
 (Added in [10.1.2](/releases/10.1.2/))
