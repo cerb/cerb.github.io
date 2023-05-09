@@ -495,6 +495,12 @@ Worker #1 has permission to create tickets.
 
 Return an [object](/docs/bots/scripting/(/docs/bots/scripting/arrays-objects/)) with every placeholder in the current behavior.
 
+`cerb_placeholders_list(extract, prefix)`
+
+|-|-|-
+| **extract** | The key prefix to extract (e.g. `ticket_group_`)
+| **prefix** | The optional new prefix to add (e.g. `group_`)
+
 <pre>
 <code class="language-twig">
 {% raw %}
