@@ -30,7 +30,7 @@ In this guide, we'll create a Survey Bot that can add survey links to the bottom
 
 <div class="cerb-box note">
 	<p>
-		In Cerb 8.0+ you can <a href="/packages/customer-satisfaction">import the Customer Satisfaction Surveys package</a> instead.
+		In Cerb 8.0+ you can <a href="/packages/customer-satisfaction/">import the Customer Satisfaction Surveys package</a> instead.
 	</p>
 </div>
 

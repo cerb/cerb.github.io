@@ -160,18 +160,18 @@ These [filters](/docs/search/#filters) are available in draft [search queries](/
 |---
 | Field | Type | Description
 |-|-|-
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `is.queued:` | [boolean](/docs/search/filters/booleans/) | Is Queued
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `queue.deliverAt:` | [date](/docs/search/filters/dates/) | Delivery Date
-| `queue.fails:` | [number](/docs/search/filters/numbers/) | # Fails
-| `ticket.id:` | [chooser](/docs/search/filters/choosers/) | [Ticket Id](/docs/records/types/ticket/)
-| `to:` | [text](/docs/search/filters/text/) | To
-| `token:` | [text](/docs/search/filters/text/) | Token
-| `type:` | [text](/docs/search/filters/text/) | Message Type
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `id:` | [number](/docs/search/#numbers) | Id
+| `is.queued:` | [boolean](/docs/search/#booleans) | Is Queued
+| `name:` | [text](/docs/search/#text) | Name
+| `queue.deliverAt:` | [date](/docs/search/#dates) | Delivery Date
+| `queue.fails:` | [number](/docs/search/#numbers) | # Fails
+| `ticket.id:` | [chooser](/docs/search/#choosers) | [Ticket Id](/docs/records/types/ticket/)
+| `to:` | [text](/docs/search/#text) | To
+| `token:` | [text](/docs/search/#text) | Token
+| `type:` | [text](/docs/search/#text) | Message Type
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `worker:` | [record](/docs/search/#deep-search) | [Worker](/docs/records/types/worker/)
-| `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
+| `worker.id:` | [chooser](/docs/search/#choosers) | [Worker](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

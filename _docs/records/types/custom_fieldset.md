@@ -74,17 +74,17 @@ These [filters](/docs/search/#filters) are available in custom fieldset [search 
 |---
 | Field | Type | Description
 |-|-|-
-| `context:` | [text](/docs/search/filters/text/) | Context
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
+| `context:` | [text](/docs/search/#text) | Context
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
 | `owner:` | virtual | Owner
 | `owner.app:` | virtual | Owner
 | `owner.bot:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/bot/)
 | `owner.group:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/group/)
 | `owner.role:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/role/)
 | `owner.worker:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/worker/)
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `updated:` | [date](/docs/search/#dates) | Updated
 	
 ### Worklist Columns
 

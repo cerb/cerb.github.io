@@ -83,7 +83,7 @@ Make sure that Nginx only sends requests for `/index.php` and `/ajax.php` to PHP
 
 ### Apache
 
-If you're using the provided `.htaccess` file for [friendly URLs](/docs/friendly-urls) in Apache[^apache], then we've already given you some defaults for blocking access to these directories:
+If you're using the provided `.htaccess` file for [friendly URLs](/docs/friendly-urls/) in Apache[^apache], then we've already given you some defaults for blocking access to these directories:
 
 <pre>
 <code class="language-apache">
@@ -170,7 +170,7 @@ All scheduled tasks are triggered by automated requests to the `/cerb/cron` URL.
 
 ### Web-API
 
-If you have applications that use the [Web-based API](/docs/api) to integrate with Cerb then you'll need to make sure they can make requests to the `/cerb/rest/*` path. You'll need to provide some extra code to handle HTTP Authentication.
+If you have applications that use the [Web-based API](/docs/api/) to integrate with Cerb then you'll need to make sure they can make requests to the `/cerb/rest/*` path. You'll need to provide some extra code to handle HTTP Authentication.
 
 ### Community portals
 

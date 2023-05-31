@@ -84,15 +84,15 @@ These [filters](/docs/search/#filters) are available in workspace tab [search qu
 | Field | Type | Description
 |-|-|-
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `page.id:` | [chooser](/docs/search/filters/choosers/) | [Workspace Page](/docs/records/types/workspace_page/)
-| `pos:` | [number](/docs/search/filters/numbers/) | Order
-| `type:` | [text](/docs/search/filters/text/) | Type
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `page.id:` | [chooser](/docs/search/#choosers) | [Workspace Page](/docs/records/types/workspace_page/)
+| `pos:` | [number](/docs/search/#numbers) | Order
+| `type:` | [text](/docs/search/#text) | Type
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `workspace:` | [record](/docs/search/#deep-search) | [Workspace](/docs/records/types/workspace_page/)
-| `workspace.id:` | [chooser](/docs/search/filters/choosers/) | [Workspace Page](/docs/records/types/workspace_page/)
+| `workspace.id:` | [chooser](/docs/search/#choosers) | [Workspace Page](/docs/records/types/workspace_page/)
 	
 ### Worklist Columns
 

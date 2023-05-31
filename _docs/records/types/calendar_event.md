@@ -80,14 +80,14 @@ These [filters](/docs/search/#filters) are available in calendar event [search q
 | Field | Type | Description
 |-|-|-
 | `calendar:` | [record](/docs/search/#deep-search) | [Calendar](/docs/records/types/calendar/)
-| `calendar.id:` | [chooser](/docs/search/filters/choosers/) | [Calendar](/docs/records/types/calendar/)
-| `endDate:` | [date](/docs/search/filters/dates/) | End Date
+| `calendar.id:` | [chooser](/docs/search/#choosers) | [Calendar](/docs/records/types/calendar/)
+| `endDate:` | [date](/docs/search/#dates) | End Date
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `startDate:` | [date](/docs/search/filters/dates/) | Start Date
-| `status:` | [boolean](/docs/search/filters/booleans/) | Is Available
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `startDate:` | [date](/docs/search/#dates) | Start Date
+| `status:` | [boolean](/docs/search/#booleans) | Is Available
 	
 ### Worklist Columns
 

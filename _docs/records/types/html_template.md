@@ -79,14 +79,14 @@ These [filters](/docs/search/#filters) are available in email template [search q
 |---
 | Field | Type | Description
 |-|-|-
-| `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
-| `content:` | [text](/docs/search/filters/text/) | Content
+| `comments:` | [fulltext](/docs/search/#fulltext) | Comment Content
+| `content:` | [text](/docs/search/#text) | Content
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `signature.id:` | [number](/docs/search/filters/numbers/) | Signature
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `signature.id:` | [number](/docs/search/#numbers) | Signature
+| `updated:` | [date](/docs/search/#dates) | Updated
 	
 ### Worklist Columns
 

@@ -686,7 +686,7 @@ Suspendisse maximus fringilla tellus, a pellentesque sem tincidunt sit amet." -%
 
 ## join
 
-Convert an [array](/docs/bots/scripting/(/docs/bots/scripting/arrays-objects/)) to a string with delimiters:
+Convert an [array](/docs/bots/scripting/arrays-objects/) to a string with delimiters:
 
 <pre>
 <code class="language-twig">

@@ -13,7 +13,7 @@ jumbotron:
     url: /docs/bots/
 ---
 
-**Classifiers** provide a simple implementation of machine learning[^machine-learning] behaviors in [bots](/docs/bots). A classifier takes textual input and statistically predicts a most likely **classification** based on its accumulated learning from human-supervised **training examples**.
+**Classifiers** provide a simple implementation of machine learning[^machine-learning] behaviors in [bots](/docs/bots/). A classifier takes textual input and statistically predicts a most likely **classification** based on its accumulated learning from human-supervised **training examples**.
 
 Here are some common examples:
 
@@ -33,7 +33,7 @@ With third-party classification services (e.g. API.ai, Wit.ai, Amazon Lex) the n
 
 In Cerb we've handled all of that for you.
 
-We've also made training easy.  From a classifier's [card](/docs/records#cards), a worker can type some text and see the current prediction and extracted entities. The same text can be quickly tagged and converted into a new training example to improve future predictions.
+We've also made training easy.  From a classifier's [card](/docs/records/#cards), a worker can type some text and see the current prediction and extracted entities. The same text can be quickly tagged and converted into a new training example to improve future predictions.
 
 <div class="cerb-box geek-out">
 	<p>

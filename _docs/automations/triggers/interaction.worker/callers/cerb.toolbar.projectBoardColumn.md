@@ -30,7 +30,7 @@ The following `caller_params` are passed to the [interaction](/docs/automations/
 
 | Key | Type | 
 |-|-|-
-| **`board_id`** | record | The ID of the [project board](/docs/records/types/project-board/)
+| **`board_id`** | record | The ID of the [project board](/docs/records/types/project_board/)
 | **`column_id`** | record | The ID of the project board column
 
 # return:

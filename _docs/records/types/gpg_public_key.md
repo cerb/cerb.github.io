@@ -78,16 +78,16 @@ These [filters](/docs/search/#filters) are available in pgp public key [search q
 |---
 | Field | Type | Description
 |-|-|-
-| `expires:` | [date](/docs/search/filters/dates/) | Expires
+| `expires:` | [date](/docs/search/#dates) | Expires
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `fingerprint:` | virtual | Fingerprint
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
 | `uid:` | virtual | Uid
 | `uid.email:` | virtual | Uid.email
 | `uid.name:` | virtual | Uid.name
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `updated:` | [date](/docs/search/#dates) | Updated
 	
 ### Worklist Columns
 

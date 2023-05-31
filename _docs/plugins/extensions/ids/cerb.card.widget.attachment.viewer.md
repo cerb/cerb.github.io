@@ -19,7 +19,7 @@ jumbotron:
     url: /docs/plugins/#extensions
   -
     label: Card Widget &raquo;
-    url: /docs/plugins/extensions/points/cerb.card.widget
+    url: /docs/plugins/extensions/points/cerb.card.widget/
 ---
 
 |---

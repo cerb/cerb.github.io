@@ -20,7 +20,7 @@ The global navigation controls are at the top of every page in Cerb.
 
 ## Pages
 
-The _navigation bar_ displays shortcuts to your favorite [workspace pages](/docs/workspaces).
+The _navigation bar_ displays shortcuts to your favorite [workspace pages](/docs/workspaces/).
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/ui/pages.png">
@@ -52,7 +52,7 @@ When you have unread [notifications](/docs/notifications/), a red alert box will
 
 ## Search
 
-You can quickly view and filter records of any type from the [search](/docs/search/) menu in the top right. Each search popup is a temporary [workspace](/docs/workspaces).
+You can quickly view and filter records of any type from the [search](/docs/search/) menu in the top right. Each search popup is a temporary [workspace](/docs/workspaces/).
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/ui/search.png">

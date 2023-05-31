@@ -83,12 +83,12 @@ These [filters](/docs/search/#filters) are available in project board column [se
 | Field | Type | Description
 |-|-|-
 | `board:` | [record](/docs/search/#deep-search) | [Board](/docs/records/types/project_board/)
-| `board.id:` | [chooser](/docs/search/filters/choosers/) | [Project Board](/docs/records/types/project_board/)
+| `board.id:` | [chooser](/docs/search/#choosers) | [Project Board](/docs/records/types/project_board/)
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns

@@ -81,22 +81,22 @@ These [filters](/docs/search/#filters) are available in sensor [search queries](
 |---
 | Field | Type | Description
 |-|-|-
-| `change:` | [number](/docs/search/filters/numbers/) | Change
-| `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
-| `fail.count:` | [number](/docs/search/filters/numbers/) | Fail Count
+| `change:` | [number](/docs/search/#numbers) | Change
+| `comments:` | [fulltext](/docs/search/#fulltext) | Comment Content
+| `fail.count:` | [number](/docs/search/#numbers) | Fail Count
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `isDisabled:` | [boolean](/docs/search/filters/booleans/) | Is Disabled
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `metric:` | [number](/docs/search/filters/numbers/) | Metric
-| `metricType:` | [text](/docs/search/filters/text/) | Metric Type
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `output:` | [text](/docs/search/filters/text/) | Output
+| `id:` | [number](/docs/search/#numbers) | Id
+| `isDisabled:` | [boolean](/docs/search/#booleans) | Is Disabled
+| `links:` | [links](/docs/search/#links) | Record Links
+| `metric:` | [number](/docs/search/#numbers) | Metric
+| `metricType:` | [text](/docs/search/#text) | Metric Type
+| `name:` | [text](/docs/search/#text) | Name
+| `output:` | [text](/docs/search/#text) | Output
 | `status:` | virtual | Status
-| `tag:` | [text](/docs/search/filters/text/) | Tag
-| `type:` | [text](/docs/search/filters/text/) | Type
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `tag:` | [text](/docs/search/#text) | Tag
+| `type:` | [text](/docs/search/#text) | Type
+| `updated:` | [date](/docs/search/#dates) | Updated
+| `watchers:` | [watchers](/docs/search/#watchers) | Watchers
 	
 ### Worklist Columns
 

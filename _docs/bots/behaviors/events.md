@@ -15,7 +15,7 @@ jumbotron:
     url: /docs/bots/
 ---
 
-Each bot [behavior](/docs/bots/behaviors/) is triggered in response to a specific **event**. There are dozens of built-in events, and plugins or [webhooks](/docs/webhooks) can introduce new events for nearly anything.
+Each bot [behavior](/docs/bots/behaviors/) is triggered in response to a specific **event**. There are dozens of built-in events, and plugins or [webhooks](/docs/webhooks/) can introduce new events for nearly anything.
 
 Events can be grouped into two categories:
 

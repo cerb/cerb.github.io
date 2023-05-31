@@ -72,11 +72,11 @@ These [filters](/docs/search/#filters) are available in feed [search queries](/d
 | Field | Type | Description
 |-|-|-
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `url:` | [text](/docs/search/filters/text/) | Url
-| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `url:` | [text](/docs/search/#text) | Url
+| `watchers:` | [watchers](/docs/search/#watchers) | Watchers
 	
 ### Worklist Columns
 

@@ -19,7 +19,7 @@ jumbotron:
     url: /docs/plugins/#extensions
   -
     label: Custom Field Type &raquo;
-    url: /docs/plugins/extensions/points/cerb.custom_field
+    url: /docs/plugins/extensions/points/cerb.custom_field/
 ---
 
 |---

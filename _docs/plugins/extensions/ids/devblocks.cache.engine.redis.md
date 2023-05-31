@@ -19,7 +19,7 @@ jumbotron:
     url: /docs/plugins/#extensions
   -
     label: Cache Engine &raquo;
-    url: /docs/plugins/extensions/points/devblocks.cache.engine
+    url: /docs/plugins/extensions/points/devblocks.cache.engine/
 ---
 
 |---

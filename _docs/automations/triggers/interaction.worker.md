@@ -95,7 +95,7 @@ A form can be created with any combination of the following element types:
 | [**map:**](/docs/automations/triggers/interaction.worker/elements/map/) | Interactive [map](/docs/maps/) 
 | [**query:**](/docs/automations/triggers/interaction.worker/elements/query/) | [Search query](/docs/search/) prompt with autocompletion
 | [**say:**](/docs/automations/triggers/interaction.worker/elements/say/) | Block of text or Markdown
-| [**sheet:**](/docs/automations/triggers/interaction.worker/elements/sheet/) | [Sheet](/docs/sheets) with row selection
+| [**sheet:**](/docs/automations/triggers/interaction.worker/elements/sheet/) | [Sheet](/docs/sheets/) with row selection
 | [**submit:**](/docs/automations/triggers/interaction.worker/elements/submit/) | Continue to next step
 | [**text:**](/docs/automations/triggers/interaction.worker/elements/text/) | Text input with data types
 | [**textarea:**](/docs/automations/triggers/interaction.worker/elements/textarea/) | Multiple lines of text

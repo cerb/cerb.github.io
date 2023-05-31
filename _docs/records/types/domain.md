@@ -78,16 +78,16 @@ These [filters](/docs/search/#filters) are available in domain [search queries](
 |---
 | Field | Type | Description
 |-|-|-
-| `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
-| `created:` | [date](/docs/search/filters/dates/) | Created
+| `comments:` | [fulltext](/docs/search/#fulltext) | Comment Content
+| `created:` | [date](/docs/search/#dates) | Created
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
 | `server:` | [record](/docs/search/#deep-search) | [Server](/docs/records/types/server/)
-| `server.id:` | [chooser](/docs/search/filters/choosers/) | [Server](/docs/records/types/server/)
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `server.id:` | [chooser](/docs/search/#choosers) | [Server](/docs/records/types/server/)
+| `updated:` | [date](/docs/search/#dates) | Updated
+| `watchers:` | [watchers](/docs/search/#watchers) | Watchers
 	
 ### Worklist Columns
 

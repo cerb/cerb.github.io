@@ -87,18 +87,18 @@ These [filters](/docs/search/#filters) are available in behavior [search queries
 | Field | Type | Description
 |-|-|-
 | `bot:` | [record](/docs/search/#deep-search) | [Bot](/docs/records/types/bot/)
-| `bot.id:` | [chooser](/docs/search/filters/choosers/) | [Bot](/docs/records/types/bot/)
-| `disabled:` | [boolean](/docs/search/filters/booleans/) | Is Disabled
-| `event:` | [text](/docs/search/filters/text/) | Event
+| `bot.id:` | [chooser](/docs/search/#choosers) | [Bot](/docs/records/types/bot/)
+| `disabled:` | [boolean](/docs/search/#booleans) | Is Disabled
+| `event:` | [text](/docs/search/#text) | Event
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Title
-| `priority:` | [number](/docs/search/filters/numbers/) | Priority
-| `private:` | [boolean](/docs/search/filters/booleans/) | Is Private
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `uri:` | [text](/docs/search/filters/text/) | Uri
-| `usableBy.bot:` | [chooser](/docs/search/filters/choosers/) | [Usableby Bot](/docs/records/types/bot/)
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Title
+| `priority:` | [number](/docs/search/#numbers) | Priority
+| `private:` | [boolean](/docs/search/#booleans) | Is Private
+| `updated:` | [date](/docs/search/#dates) | Updated
+| `uri:` | [text](/docs/search/#text) | Uri
+| `usableBy.bot:` | [chooser](/docs/search/#choosers) | [Usableby Bot](/docs/records/types/bot/)
 	
 ### Worklist Columns
 

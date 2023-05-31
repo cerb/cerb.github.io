@@ -74,12 +74,12 @@ These [filters](/docs/search/#filters) are available in queue [search queries](/
 |---
 | Field | Type | Description
 |-|-|-
-| `created:` | [date](/docs/search/filters/dates/) | Created
+| `created:` | [date](/docs/search/#dates) | Created
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns

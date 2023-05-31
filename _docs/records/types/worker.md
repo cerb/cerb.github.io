@@ -116,35 +116,35 @@ These [filters](/docs/search/#filters) are available in worker [search queries](
 |-|-|-
 | `alias:` | virtual | Aliases
 | `calendar:` | [record](/docs/search/#deep-search) | [Calendar](/docs/records/types/calendar/)
-| `calendar.id:` | [chooser](/docs/search/filters/choosers/) | [Calendar](/docs/records/types/calendar/)
+| `calendar.id:` | [chooser](/docs/search/#choosers) | [Calendar](/docs/records/types/calendar/)
 | `email:` | [record](/docs/search/#deep-search) | [Email](/docs/records/types/address/)
-| `email.id:` | [chooser](/docs/search/filters/choosers/) | [Email](/docs/records/types/address/)
+| `email.id:` | [chooser](/docs/search/#choosers) | [Email](/docs/records/types/address/)
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `firstName:` | [text](/docs/search/filters/text/) | First Name
-| `gender:` | [text](/docs/search/filters/text/) | Gender
+| `firstName:` | [text](/docs/search/#text) | First Name
+| `gender:` | [text](/docs/search/#text) | Gender
 | `group:` | [record](/docs/search/#deep-search) | [Groups](/docs/records/types/group/)
 | `group.manager:` | [record](/docs/search/#deep-search) | [Group Manager](/docs/records/types/group/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `isAdmin:` | [boolean](/docs/search/filters/booleans/) | Administrator
+| `id:` | [number](/docs/search/#numbers) | Id
+| `isAdmin:` | [boolean](/docs/search/#booleans) | Administrator
 | `isAvailable:` | virtual | Calendar Availability
 | `isBusy:` | virtual | Calendar Availability
-| `isDisabled:` | [boolean](/docs/search/filters/booleans/) | Disabled
-| `isMfaRequired:` | [boolean](/docs/search/filters/booleans/) | Mfa Required
-| `isPasswordDisabled:` | [boolean](/docs/search/filters/booleans/) | Password Disabled
-| `language:` | [text](/docs/search/filters/text/) | Language
-| `lastActivity:` | [date](/docs/search/filters/dates/) | Last Activity
-| `lastName:` | [text](/docs/search/filters/text/) | Last Name
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `location:` | [text](/docs/search/filters/text/) | Location
-| `mention:` | [text](/docs/search/filters/text/) | @Mention
-| `mobile:` | [text](/docs/search/filters/text/) | Mobile
-| `phone:` | [text](/docs/search/filters/text/) | Phone
+| `isDisabled:` | [boolean](/docs/search/#booleans) | Disabled
+| `isMfaRequired:` | [boolean](/docs/search/#booleans) | Mfa Required
+| `isPasswordDisabled:` | [boolean](/docs/search/#booleans) | Password Disabled
+| `language:` | [text](/docs/search/#text) | Language
+| `lastActivity:` | [date](/docs/search/#dates) | Last Activity
+| `lastName:` | [text](/docs/search/#text) | Last Name
+| `links:` | [links](/docs/search/#links) | Record Links
+| `location:` | [text](/docs/search/#text) | Location
+| `mention:` | [text](/docs/search/#text) | @Mention
+| `mobile:` | [text](/docs/search/#text) | Mobile
+| `phone:` | [text](/docs/search/#text) | Phone
 | `role:` | [record](/docs/search/#deep-search) | [Role](/docs/records/types/role/)
 | `role.editor:` | [record](/docs/search/#deep-search) | [Role Editor](/docs/records/types/role/)
 | `role.reader:` | [record](/docs/search/#deep-search) | [Role Reader](/docs/records/types/role/)
-| `timezone:` | [text](/docs/search/filters/text/) | Timezone
-| `title:` | [text](/docs/search/filters/text/) | Title
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `timezone:` | [text](/docs/search/#text) | Timezone
+| `title:` | [text](/docs/search/#text) | Title
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `using.workspace:` | [record](/docs/search/#deep-search) | [Using Workspace](/docs/records/types/workspace_page/)
 	
 ### Worklist Columns

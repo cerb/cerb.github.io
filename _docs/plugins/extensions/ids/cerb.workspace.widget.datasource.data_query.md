@@ -19,7 +19,7 @@ jumbotron:
     url: /docs/plugins/#extensions
   -
     label: Workspace Widget Datasource &raquo;
-    url: /docs/plugins/extensions/points/cerberusweb.ui.workspace.widget.datasource
+    url: /docs/plugins/extensions/points/cerberusweb.ui.workspace.widget.datasource/
 ---
 
 |---

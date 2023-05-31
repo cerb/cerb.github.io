@@ -120,45 +120,45 @@ These [filters](/docs/search/#filters) are available in ticket [search queries](
 | Field | Type | Description
 |-|-|-
 | `bucket:` | [record](/docs/search/#deep-search) | [Bucket](/docs/records/types/bucket/)
-| `bucket.id:` | [chooser](/docs/search/filters/choosers/) | [Bucket](/docs/records/types/bucket/)
-| `closed:` | [date](/docs/search/filters/dates/) | Closed
+| `bucket.id:` | [chooser](/docs/search/#choosers) | [Bucket](/docs/records/types/bucket/)
+| `closed:` | [date](/docs/search/#dates) | Closed
 | `comments:` | [record](/docs/search/#deep-search) | [Comments](/docs/records/types/comment/)
 | `comments.first:` | [record](/docs/search/#deep-search) | [Comments First](/docs/records/types/comment/)
 | `comments.last:` | [record](/docs/search/#deep-search) | [Comments Last](/docs/records/types/comment/)
-| `created:` | [date](/docs/search/filters/dates/) | Created
+| `created:` | [date](/docs/search/#dates) | Created
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `group:` | [record](/docs/search/#deep-search) | [Group](/docs/records/types/group/)
-| `group.id:` | [chooser](/docs/search/filters/choosers/) | [Group](/docs/records/types/group/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `importance:` | [number](/docs/search/filters/numbers/) | Importance
+| `group.id:` | [chooser](/docs/search/#choosers) | [Group](/docs/records/types/group/)
+| `id:` | [number](/docs/search/#numbers) | Id
+| `importance:` | [number](/docs/search/#numbers) | Importance
 | `inGroupsOf:` | virtual | In Groups Of Worker
-| `lastOpenedAt:` | [date](/docs/search/filters/dates/) | Last Opened At
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `mask:` | [text](/docs/search/filters/text/) | Mask
+| `lastOpenedAt:` | [date](/docs/search/#dates) | Last Opened At
+| `links:` | [links](/docs/search/#links) | Record Links
+| `mask:` | [text](/docs/search/#text) | Mask
 | `messages:` | [record](/docs/search/#deep-search) | [Messages](/docs/records/types/message/)
-| `messages.count:` | [number](/docs/search/filters/numbers/) | # Messages
-| `messages.count.in:` | [number](/docs/search/filters/numbers/) | # Messages In
-| `messages.count.out:` | [number](/docs/search/filters/numbers/) | # Messages Out
+| `messages.count:` | [number](/docs/search/#numbers) | # Messages
+| `messages.count.in:` | [number](/docs/search/#numbers) | # Messages In
+| `messages.count.out:` | [number](/docs/search/#numbers) | # Messages Out
 | `messages.first:` | [record](/docs/search/#deep-search) | [Messages First](/docs/records/types/message/)
 | `messages.firstOutgoing:` | [record](/docs/search/#deep-search) | [Messages First Outgoing](/docs/records/types/message/)
 | `messages.last:` | [record](/docs/search/#deep-search) | [Messages Last](/docs/records/types/message/)
 | `org:` | [record](/docs/search/#deep-search) | [Org](/docs/records/types/org/)
-| `org.id:` | [chooser](/docs/search/filters/choosers/) | [Organization](/docs/records/types/org/)
+| `org.id:` | [chooser](/docs/search/#choosers) | [Organization](/docs/records/types/org/)
 | `owner:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/worker/)
-| `owner.id:` | [chooser](/docs/search/filters/choosers/) | [Owner](/docs/records/types/worker/)
+| `owner.id:` | [chooser](/docs/search/#choosers) | [Owner](/docs/records/types/worker/)
 | `participant:` | [record](/docs/search/#deep-search) | [Participant](/docs/records/types/address/)
-| `participant.id:` | [chooser](/docs/search/filters/choosers/) | [Participant Id](/docs/records/types/address/)
-| `reopen:` | [date](/docs/search/filters/dates/) | Reopen At
-| `resolution.first:` | [number](/docs/search/filters/numbers/) | First Resolution
-| `response.first:` | [number](/docs/search/filters/numbers/) | First Response
-| `responsibility:` | [number](/docs/search/filters/numbers/) | Responsibility
-| `spam.score:` | [number](/docs/search/filters/numbers/) | Spam Score
+| `participant.id:` | [chooser](/docs/search/#choosers) | [Participant Id](/docs/records/types/address/)
+| `reopen:` | [date](/docs/search/#dates) | Reopen At
+| `resolution.first:` | [number](/docs/search/#numbers) | First Resolution
+| `response.first:` | [number](/docs/search/#numbers) | First Response
+| `responsibility:` | [number](/docs/search/#numbers) | Responsibility
+| `spam.score:` | [number](/docs/search/#numbers) | Spam Score
 | `spam.training:` | virtual | Spam Training
 | `status:` | virtual | Status
-| `status.id:` | [number](/docs/search/filters/numbers/) | Status
-| `subject:` | [text](/docs/search/filters/text/) | Subject
-| `timeSpentOpen:` | [number](/docs/search/filters/numbers/) | Time Spent Open
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `status.id:` | [number](/docs/search/#numbers) | Status
+| `subject:` | [text](/docs/search/#text) | Subject
+| `timeSpentOpen:` | [number](/docs/search/#numbers) | Time Spent Open
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 | `watchers.count:` | virtual | Watchers Count
 | `worker.commented:` | virtual | Worker Commented

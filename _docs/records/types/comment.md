@@ -79,16 +79,16 @@ These [filters](/docs/search/#filters) are available in comment [search queries]
 | Field | Type | Description
 |-|-|-
 | `attachments:` | [record](/docs/search/#deep-search) | [Attachments](/docs/records/types/attachment/)
-| `author:` | [text](/docs/search/filters/text/) | Actor
+| `author:` | [text](/docs/search/#text) | Actor
 | `author.<type>:` | [record](/docs/search/#deep-search) | Actor
-| `comment:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
-| `created:` | [date](/docs/search/filters/dates/) | Created
+| `comment:` | [fulltext](/docs/search/#fulltext) | Comment Content
+| `created:` | [date](/docs/search/#dates) | Created
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `isMarkdown:` | [boolean](/docs/search/filters/booleans/) | Markdown
-| `isPinned:` | [boolean](/docs/search/filters/booleans/) | Is Pinned
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `on:` | [text](/docs/search/filters/text/) | On Type
+| `id:` | [number](/docs/search/#numbers) | Id
+| `isMarkdown:` | [boolean](/docs/search/#booleans) | Markdown
+| `isPinned:` | [boolean](/docs/search/#booleans) | Is Pinned
+| `links:` | [links](/docs/search/#links) | Record Links
+| `on:` | [text](/docs/search/#text) | On Type
 | `on.<type>:` | [record](/docs/search/#deep-search) | Target
 	
 ### Worklist Columns

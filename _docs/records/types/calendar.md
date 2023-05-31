@@ -112,17 +112,17 @@ These [filters](/docs/search/#filters) are available in calendar [search queries
 | Field | Type | Description
 |-|-|-
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
 | `owner:` | virtual | Owner
 | `owner.app:` | virtual | Owner
 | `owner.bot:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/bot/)
 | `owner.group:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/group/)
 | `owner.role:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/role/)
 | `owner.worker:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/worker/)
-| `timezone:` | [text](/docs/search/filters/text/) | Timezone
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `timezone:` | [text](/docs/search/#text) | Timezone
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 | `workerAvailability:` | [record](/docs/search/#deep-search) | [Workers](/docs/records/types/worker/)
 	

@@ -80,14 +80,14 @@ These [filters](/docs/search/#filters) are available in metric [search queries](
 |---
 | Field | Type | Description
 |-|-|-
-| `created:` | [date](/docs/search/filters/dates/) | Created
-| `description:` | [text](/docs/search/filters/text/) | Description
+| `created:` | [date](/docs/search/#dates) | Created
+| `description:` | [text](/docs/search/#text) | Description
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `type:` | [text](/docs/search/filters/text/) | Type
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `type:` | [text](/docs/search/#text) | Type
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns

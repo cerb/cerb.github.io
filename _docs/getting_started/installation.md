@@ -14,7 +14,7 @@ Before continuing you should have a copy of Cerb installed.
 
 ## Cerb Cloud
 
-You can [sign up](/signup) for a free trial of [Cerb Cloud](/cloud/).
+You can [sign up](/signup/) for a free trial of [Cerb Cloud](/cloud/).
 
 We'll set up and manage everything for you. All you need is a web browser.
 

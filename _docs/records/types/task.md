@@ -88,20 +88,20 @@ These [filters](/docs/search/#filters) are available in task [search queries](/d
 |---
 | Field | Type | Description
 |-|-|-
-| `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
-| `completed:` | [date](/docs/search/filters/dates/) | Completed Date
-| `created:` | [date](/docs/search/filters/dates/) | Created
-| `due:` | [date](/docs/search/filters/dates/) | Due Date
+| `comments:` | [fulltext](/docs/search/#fulltext) | Comment Content
+| `completed:` | [date](/docs/search/#dates) | Completed Date
+| `created:` | [date](/docs/search/#dates) | Created
+| `due:` | [date](/docs/search/#dates) | Due Date
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `importance:` | [number](/docs/search/filters/numbers/) | Importance
-| `links:` | [links](/docs/search/filters/links/) | Record Links
+| `id:` | [number](/docs/search/#numbers) | Id
+| `importance:` | [number](/docs/search/#numbers) | Importance
+| `links:` | [links](/docs/search/#links) | Record Links
 | `owner:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/worker/)
-| `owner.id:` | [chooser](/docs/search/filters/choosers/) | [Owner](/docs/records/types/worker/)
-| `reopen:` | [date](/docs/search/filters/dates/) | Reopen At
+| `owner.id:` | [chooser](/docs/search/#choosers) | [Owner](/docs/records/types/worker/)
+| `reopen:` | [date](/docs/search/#dates) | Reopen At
 | `status:` | virtual | Status
-| `title:` | [text](/docs/search/filters/text/) | Title
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `title:` | [text](/docs/search/#text) | Title
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns

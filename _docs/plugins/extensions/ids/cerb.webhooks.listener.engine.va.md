@@ -19,7 +19,7 @@ jumbotron:
     url: /docs/plugins/#extensions
   -
     label: Webhook Listener Type &raquo;
-    url: /docs/plugins/extensions/points/cerb.webhooks.listener.engine
+    url: /docs/plugins/extensions/points/cerb.webhooks.listener.engine/
 ---
 
 |---

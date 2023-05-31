@@ -80,21 +80,21 @@ These [filters](/docs/search/#filters) are available in snippet [search queries]
 |---
 | Field | Type | Description
 |-|-|-
-| `content:` | [text](/docs/search/filters/text/) | Content
+| `content:` | [text](/docs/search/#text) | Content
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `myUses:` | [number](/docs/search/filters/numbers/) | My Uses
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `myUses:` | [number](/docs/search/#numbers) | My Uses
 | `owner:` | virtual | Owner
 | `owner.app:` | virtual | Owner
 | `owner.bot:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/bot/)
 | `owner.group:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/group/)
 | `owner.role:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/role/)
 | `owner.worker:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/worker/)
-| `title:` | [text](/docs/search/filters/text/) | Title
-| `totalUses:` | [number](/docs/search/filters/numbers/) | All Uses
+| `title:` | [text](/docs/search/#text) | Title
+| `totalUses:` | [number](/docs/search/#numbers) | All Uses
 | `type:` | virtual | Type
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `usableBy.worker:` | virtual | Usable by [Worker](/docs/records/types/worker/)
 	
 ### Worklist Columns

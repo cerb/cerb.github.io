@@ -78,12 +78,12 @@ These [filters](/docs/search/#filters) are available in activity log [search que
 |---
 | Field | Type | Description
 |-|-|-
-| `activity:` | [text](/docs/search/filters/text/) | Activity
-| `actor:` | [text](/docs/search/filters/text/) | Actor Type
+| `activity:` | [text](/docs/search/#text) | Activity
+| `actor:` | [text](/docs/search/#text) | Actor Type
 | `actor.<type>:` | [record](/docs/search/#deep-search) | Actor
-| `created:` | [date](/docs/search/filters/dates/) | Created
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `target:` | [text](/docs/search/filters/text/) | Target Type
+| `created:` | [date](/docs/search/#dates) | Created
+| `id:` | [number](/docs/search/#numbers) | Id
+| `target:` | [text](/docs/search/#text) | Target Type
 | `target.<type>:` | [record](/docs/search/#deep-search) | Target
 	
 ### Worklist Columns

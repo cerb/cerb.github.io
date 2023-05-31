@@ -81,15 +81,15 @@ These [filters](/docs/search/#filters) are available in knowledgebase article [s
 |---
 | Field | Type | Description
 |-|-|-
-| `category.id:` | [chooser](/docs/search/filters/choosers/) | [Category](/docs/records/types/kb_category/)
-| `content:` | [fulltext](/docs/search/filters/fulltext/) | Content
+| `category.id:` | [chooser](/docs/search/#choosers) | [Category](/docs/records/types/kb_category/)
+| `content:` | [fulltext](/docs/search/#fulltext) | Content
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `format:` | [text](/docs/search/filters/text/) | Format
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `title:` | [text](/docs/search/filters/text/) | Title
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `views:` | [number](/docs/search/filters/numbers/) | Views
+| `format:` | [text](/docs/search/#text) | Format
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `title:` | [text](/docs/search/#text) | Title
+| `updated:` | [date](/docs/search/#dates) | Updated
+| `views:` | [number](/docs/search/#numbers) | Views
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns

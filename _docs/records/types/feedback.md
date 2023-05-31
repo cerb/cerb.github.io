@@ -77,15 +77,15 @@ These [filters](/docs/search/#filters) are available in feedback [search queries
 |---
 | Field | Type | Description
 |-|-|-
-| `created:` | [date](/docs/search/filters/dates/) | Log Date
+| `created:` | [date](/docs/search/#dates) | Log Date
 | `email:` | [record](/docs/search/#deep-search) | [Email](/docs/records/types/address/)
-| `email.id:` | [chooser](/docs/search/filters/choosers/) | [Author Email](/docs/records/types/address/)
+| `email.id:` | [chooser](/docs/search/#choosers) | [Author Email](/docs/records/types/address/)
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `mood:` | [text](/docs/search/filters/text/) | Mood
-| `quote:` | [text](/docs/search/filters/text/) | Quote
-| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `mood:` | [text](/docs/search/#text) | Mood
+| `quote:` | [text](/docs/search/#text) | Quote
+| `watchers:` | [watchers](/docs/search/#watchers) | Watchers
 | `worker:` | [record](/docs/search/#deep-search) | [Worker](/docs/records/types/worker/)
 	
 ### Worklist Columns

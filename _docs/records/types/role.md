@@ -81,11 +81,11 @@ These [filters](/docs/search/#filters) are available in role [search queries](/d
 |-|-|-
 | `editor:` | [record](/docs/search/#deep-search) | [Editor](/docs/records/types/worker/)
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
 | `member:` | [record](/docs/search/#deep-search) | [Member](/docs/records/types/worker/)
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `privsMode:` | [text](/docs/search/filters/text/) | Privileges Mode
+| `name:` | [text](/docs/search/#text) | Name
+| `privsMode:` | [text](/docs/search/#text) | Privileges Mode
 | `reader:` | [record](/docs/search/#deep-search) | [Reader](/docs/records/types/worker/)
 	
 ### Worklist Columns

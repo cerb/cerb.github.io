@@ -10,7 +10,7 @@ jumbotron:
     url: /docs/home/
 ---
 
-[Workers](/docs/workers) with similar skills and duties are organized into **groups**. The workers assigned to a group are its **members**.
+[Workers](/docs/workers/) with similar skills and duties are organized into **groups**. The workers assigned to a group are its **members**.
 
 One or more members of a group may be designated as its **managers**. Managers control the group's roster and assets, and determine how its tasks are organized and assigned.
 

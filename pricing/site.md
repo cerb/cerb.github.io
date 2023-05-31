@@ -153,7 +153,7 @@ You aren't paying per worker account, so there isn't a penalty for inviting ever
 
 ## How do I install Cerb on my own hardware?
 
-Read the <a href="/docs/installation">installation instructions</a> to get started.
+Read the <a href="/docs/installation/">installation instructions</a> to get started.
 
 <div id="renewal"></div>
 

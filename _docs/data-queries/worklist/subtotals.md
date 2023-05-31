@@ -185,7 +185,7 @@ The time limit of the query in milliseconds (0-60000). Default: `20000`.
 
 # timezone:
 
-(Available in [10.2.0](/releases/10.2.0/) or later)
+(Available in [10.2.0](/releases/10.2/) or later)
 
 The `timezone:` key generates date labels in the given timezone location for bins like `by:[created@day]`.
 

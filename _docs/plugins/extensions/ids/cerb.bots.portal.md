@@ -19,7 +19,7 @@ jumbotron:
     url: /docs/plugins/#extensions
   -
     label: Portal &raquo;
-    url: /docs/plugins/extensions/points/cerb.portal
+    url: /docs/plugins/extensions/points/cerb.portal/
 ---
 
 |---

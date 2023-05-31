@@ -77,14 +77,14 @@ These [filters](/docs/search/#filters) are available in package [search queries]
 |---
 | Field | Type | Description
 |-|-|-
-| `description:` | [text](/docs/search/filters/text/) | Description
+| `description:` | [text](/docs/search/#text) | Description
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `point:` | [text](/docs/search/filters/text/) | Extension Point
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `uri:` | [text](/docs/search/filters/text/) | Uri
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `point:` | [text](/docs/search/#text) | Extension Point
+| `updated:` | [date](/docs/search/#dates) | Updated
+| `uri:` | [text](/docs/search/#text) | Uri
 	
 ### Worklist Columns
 

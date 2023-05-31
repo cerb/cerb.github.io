@@ -106,31 +106,36 @@ These [filters](/docs/search/#filters) are available in message [search queries]
 | Field | Type | Description
 |-|-|-
 | `attachments:` | [record](/docs/search/#deep-search) | [Attachments](/docs/records/types/attachment/)
-| `content:` | [fulltext](/docs/search/filters/fulltext/) | Content
-| `created:` | [date](/docs/search/filters/dates/) | Created
+| `content:` | [fulltext](/docs/search/#fulltext) | Content
+| `created:` | [date](/docs/search/#dates) | Created
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `header.cc:` | [text](/docs/search/filters/text/) | Cc
-| `header.deliveredTo:` | [text](/docs/search/filters/text/) | Delivered-To
-| `header.from:` | [text](/docs/search/filters/text/) | From
-| `header.messageId:` | [text](/docs/search/filters/text/) | Message-Id Header
-| `header.to:` | [text](/docs/search/filters/text/) | To
+| `header.cc:` | [text](/docs/search/#text) | Cc
+| `header.deliveredTo:` | [text](/docs/search/#text) | Delivered-To
+| `header.from:` | [text](/docs/search/#text) | From
+| `header.messageId:` | [text](/docs/search/#text) | Message-Id Header
+| `header.to:` | [text](/docs/search/#text) | To
 | `id:` | context | Id
-| `isBroadcast:` | [boolean](/docs/search/filters/booleans/) | Is Broadcast
-| `isEncrypted:` | [boolean](/docs/search/filters/booleans/) | Is Encrypted
-| `isNotSent:` | [boolean](/docs/search/filters/booleans/) | Is Not Sent
-| `isOutgoing:` | [boolean](/docs/search/filters/booleans/) | Is Outgoing
-| `links:` | [links](/docs/search/filters/links/) | Record Links
+| `isBroadcast:` | [boolean](/docs/search/#booleans) | Is Broadcast
+| `isEncrypted:` | [boolean](/docs/search/#booleans) | Is Encrypted
+| `isNotSent:` | [boolean](/docs/search/#booleans) | Is Not Sent
+| `isOutgoing:` | [boolean](/docs/search/#booleans) | Is Outgoing
+| `links:` | [links](/docs/search/#links) | Record Links
 | `notes:` | [record](/docs/search/#deep-search) | [Notes](/docs/records/types/comment/)
-| `responseTime:` | [number](/docs/search/filters/numbers/) | Response Time
+| `responseTime:` | [number](/docs/search/#numbers) | Response Time
 | `sender:` | [record](/docs/search/#deep-search) | [Sender](/docs/records/types/address/)
-| `sender.id:` | [chooser](/docs/search/filters/choosers/) | [Sender](/docs/records/types/address/)
-| `signed.at:` | [date](/docs/search/filters/dates/) | Signed At
-| `signed.fingerprint:` | [text](/docs/search/filters/text/) | Signed By
+| `sender.id:` | [chooser](/docs/search/#choosers) | [Sender](/docs/records/types/address/)
+| `signed.at:` | [date](/docs/search/#dates) | Signed At
+| `signed.fingerprint:` | [text](/docs/search/#text) | Signed By
+| `size:` | [number](/docs/search/#numbers) | Size
 | `ticket:` | [record](/docs/search/#deep-search) | [Ticket](/docs/records/types/ticket/)
-| `ticket.id:` | [chooser](/docs/search/filters/choosers/) | [Ticket Id](/docs/records/types/ticket/)
-| `token:` | [text](/docs/search/filters/text/) | Token
+| `ticket.bucket.id:` | [chooser](/docs/search/#choosers) | [Bucket](/docs/records/types/bucket/)
+| `ticket.bucket.name:` | [chooser](/docs/search/#choosers) | [Bucket](/docs/records/types/bucket/)
+| `ticket.group.id:` | [chooser](/docs/search/#choosers) | [Group](/docs/records/types/group/)
+| `ticket.group.name:` | [chooser](/docs/search/#choosers) | [Bucket](/docs/records/types/group/)
+| `ticket.id:` | [chooser](/docs/search/#choosers) | [Ticket Id](/docs/records/types/ticket/)
+| `token:` | [text](/docs/search/#text) | Token
 | `worker:` | [record](/docs/search/#deep-search) | [Worker](/docs/records/types/worker/)
-| `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
+| `worker.id:` | [chooser](/docs/search/#choosers) | [Worker](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

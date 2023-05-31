@@ -19,7 +19,7 @@ jumbotron:
     url: /docs/plugins/#extensions
   -
     label: Workspace Tab Type &raquo;
-    url: /docs/plugins/extensions/points/cerberusweb.ui.workspace.tab
+    url: /docs/plugins/extensions/points/cerberusweb.ui.workspace.tab/
 ---
 
 |---

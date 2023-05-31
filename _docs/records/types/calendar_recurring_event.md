@@ -88,13 +88,13 @@ These [filters](/docs/search/#filters) are available in calendar recurring event
 | Field | Type | Description
 |-|-|-
 | `calendar:` | [record](/docs/search/#deep-search) | [Calendar](/docs/records/types/calendar/)
-| `calendar.id:` | [chooser](/docs/search/filters/choosers/) | [Calendar](/docs/records/types/calendar/)
+| `calendar.id:` | [chooser](/docs/search/#choosers) | [Calendar](/docs/records/types/calendar/)
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Event Name
-| `status:` | [boolean](/docs/search/filters/booleans/) | Is Available
-| `timezone:` | [text](/docs/search/filters/text/) | Timezone
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Event Name
+| `status:` | [boolean](/docs/search/#booleans) | Is Available
+| `timezone:` | [text](/docs/search/#text) | Timezone
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns

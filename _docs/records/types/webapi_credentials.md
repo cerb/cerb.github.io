@@ -75,12 +75,12 @@ These [filters](/docs/search/#filters) are available in web api credentials [sea
 |---
 | Field | Type | Description
 |-|-|-
-| `accessKey:` | [text](/docs/search/filters/text/) | Access Key
+| `accessKey:` | [text](/docs/search/#text) | Access Key
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `name:` | [text](/docs/search/#text) | Name
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `worker:` | [record](/docs/search/#deep-search) | [Worker](/docs/records/types/worker/)
-| `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
+| `worker.id:` | [chooser](/docs/search/#choosers) | [Worker](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

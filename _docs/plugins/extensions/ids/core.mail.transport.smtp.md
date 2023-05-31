@@ -19,7 +19,7 @@ jumbotron:
     url: /docs/plugins/#extensions
   -
     label: Mail Transport Type &raquo;
-    url: /docs/plugins/extensions/points/cerberusweb.mail.transport
+    url: /docs/plugins/extensions/points/cerberusweb.mail.transport/
 ---
 
 |---

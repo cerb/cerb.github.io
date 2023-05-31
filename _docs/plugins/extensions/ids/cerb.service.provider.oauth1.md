@@ -19,7 +19,7 @@ jumbotron:
     url: /docs/plugins/#extensions
   -
     label: Connected Service Provider &raquo;
-    url: /docs/plugins/extensions/points/cerb.connected_service.provider
+    url: /docs/plugins/extensions/points/cerb.connected_service.provider/
 ---
 
 |---

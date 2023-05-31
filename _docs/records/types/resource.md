@@ -80,15 +80,15 @@ These [filters](/docs/search/#filters) are available in resource [search queries
 |---
 | Field | Type | Description
 |-|-|-
-| `description:` | [text](/docs/search/filters/text/) | Description
+| `description:` | [text](/docs/search/#text) | Description
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `isDynamic:` | [boolean](/docs/search/filters/booleans/) | Is Dynamic
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `size:` | [number](/docs/search/filters/numbers/) | Size
-| `type:` | [text](/docs/search/filters/text/) | Type
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `id:` | [number](/docs/search/#numbers) | Id
+| `isDynamic:` | [boolean](/docs/search/#booleans) | Is Dynamic
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `size:` | [number](/docs/search/#numbers) | Size
+| `type:` | [text](/docs/search/#text) | Type
+| `updated:` | [date](/docs/search/#dates) | Updated
 	
 ### Worklist Columns
 

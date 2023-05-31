@@ -80,16 +80,16 @@ These [filters](/docs/search/#filters) are available in custom field [search que
 |---
 | Field | Type | Description
 |-|-|-
-| `context:` | [text](/docs/search/filters/text/) | Context
+| `context:` | [text](/docs/search/#text) | Context
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `fieldset.id:` | [chooser](/docs/search/filters/choosers/) | [Custom Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `pos:` | [number](/docs/search/filters/numbers/) | Order
-| `type:` | [text](/docs/search/filters/text/) | Type
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `uri:` | [text](/docs/search/filters/text/) | Uri
+| `fieldset.id:` | [chooser](/docs/search/#choosers) | [Custom Fieldset](/docs/records/types/custom_fieldset/)
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `pos:` | [number](/docs/search/#numbers) | Order
+| `type:` | [text](/docs/search/#text) | Type
+| `updated:` | [date](/docs/search/#dates) | Updated
+| `uri:` | [text](/docs/search/#text) | Uri
 	
 ### Worklist Columns
 

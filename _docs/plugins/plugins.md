@@ -408,7 +408,7 @@ Here's an example template:
 
 # Activity Points
 
-We previously mentioned **events** when discussing [bots](/docs/bots) and the [activity log](/docs/records#activity-log). Plugins can add new events to Cerb based on the contributed functionality. The activity log will record the new events on records, bots behaviors can listen for them, etc.
+We previously mentioned **events** when discussing [bots](/docs/bots/) and the [activity log](/docs/records/#activity-log). Plugins can add new events to Cerb based on the contributed functionality. The activity log will record the new events on records, bots behaviors can listen for them, etc.
 
 <pre style="max-height:29.5em;">
 <code class="language-xml">

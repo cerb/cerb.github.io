@@ -36,7 +36,7 @@ The automation [dictionary](/docs/automations/#dictionaries) starts with the fol
 
 | Key | Type | Notes
 |-|-|-
-| `board_*` | record | The [project board](/docs/records/types/project board/). Supports key expansion.
+| `board_*` | record | The [project board](/docs/records/types/project_board/). Supports key expansion.
 | `card_*` | record | The card record. Supports key expansion.
 | `inputs` | dictionary | [Custom input](/docs/automations/#inputs) values from the caller
 | `worker_*` | record | The active [worker](/docs/records/types/worker/)

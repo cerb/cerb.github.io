@@ -75,12 +75,12 @@ These [filters](/docs/search/#filters) are available in classifier classificatio
 | Field | Type | Description
 |-|-|-
 | `classifier:` | [record](/docs/search/#deep-search) | [Classifier](/docs/records/types/classifier/)
-| `classifier.id:` | [chooser](/docs/search/filters/choosers/) | [Classifier](/docs/records/types/classifier/)
+| `classifier.id:` | [chooser](/docs/search/#choosers) | [Classifier](/docs/records/types/classifier/)
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `updated:` | [date](/docs/search/#dates) | Updated
 	
 ### Worklist Columns
 

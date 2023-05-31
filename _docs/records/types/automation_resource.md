@@ -75,13 +75,13 @@ These [filters](/docs/search/#filters) are available in automation resource [sea
 | Field | Type | Description
 |-|-|-
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `mimetype:` | [text](/docs/search/filters/text/) | Mime Type
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `size:` | [number](/docs/search/filters/numbers/) | Size
-| `token:` | [text](/docs/search/filters/text/) | Token
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `mimetype:` | [text](/docs/search/#text) | Mime Type
+| `name:` | [text](/docs/search/#text) | Name
+| `size:` | [number](/docs/search/#numbers) | Size
+| `token:` | [text](/docs/search/#text) | Token
+| `updated:` | [date](/docs/search/#dates) | Updated
 	
 ### Worklist Columns
 

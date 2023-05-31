@@ -76,13 +76,13 @@ These [filters](/docs/search/#filters) are available in email transport [search 
 |---
 | Field | Type | Description
 |-|-|-
-| `created:` | [date](/docs/search/filters/dates/) | Created
+| `created:` | [date](/docs/search/#dates) | Created
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `type:` | [text](/docs/search/filters/text/) | Extension
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `type:` | [text](/docs/search/#text) | Extension
+| `updated:` | [date](/docs/search/#dates) | Updated
 	
 ### Worklist Columns
 

@@ -73,7 +73,7 @@ There are three events in the lifecycle of an interaction: get interactions, han
 
 When a user is near an interaction point, the **Get interactions** event runs on every bot to fetch the list of available interactions for that point. This allows the user to choose an interaction directly, rather than having to precisely answer the open-ended question, _"How can I help?"_.
 
-Because this process is implemented using bot [behaviors](/docs/bots/behaviors/), [decisions](/docs/behaviors/#decisions-and-outcomes) can filter the possible interactions situationally based on the current worker, the target record, the time of day, etc.
+Because this process is implemented using bot [behaviors](/docs/bots/behaviors/), [decisions](/docs/bots/behaviors/#decisions-and-outcomes) can filter the possible interactions situationally based on the current worker, the target record, the time of day, etc.
 
 For instance, certain interactions may only be available for open ticket records in the Sales group.
 

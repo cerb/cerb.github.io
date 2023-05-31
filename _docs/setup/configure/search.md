@@ -27,7 +27,7 @@ For instance, you may need to search your email history for the phrase: `"facebo
 
 By default, these searches are implemented as `FULLTEXT` indexes in MySQL[^mysql-fulltext].  We've done a lot of optimization to keep these searches efficient, and it _"just works"_.  However, MySQL isn't an optimal search engine for larger environments.
 
-As you [scale](/docs/scaling), you may decide to switch to Elasticsearch or Sphinx. We support both.  These options require you to manage an additional service, but they're much faster and provide you with more control over how your content is indexed.
+As you [scale](/docs/scaling/), you may decide to switch to Elasticsearch or Sphinx. We support both.  These options require you to manage an additional service, but they're much faster and provide you with more control over how your content is indexed.
 
 
 # References

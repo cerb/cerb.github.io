@@ -19,7 +19,7 @@ jumbotron:
     url: /docs/plugins/extensions/
   -
     label: Automation Trigger &raquo;
-    url: /docs/plugins/extensions/points/cerb.automation.trigger
+    url: /docs/plugins/extensions/points/cerb.automation.trigger/
 ---
 
 |---

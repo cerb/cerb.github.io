@@ -41,7 +41,7 @@ By default you'll receive 10 data points per series. You can add a `limit:<numbe
 
 # timezone:
 
-(Available in [10.2.0](/releases/10.2.0/) or later)
+(Available in [10.2.0](/releases/10.2/) or later)
 
 The `timezone:` key generates date labels in the given timezone location for bins like `by:[created@day]`.
 

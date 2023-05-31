@@ -85,16 +85,16 @@ These [filters](/docs/search/#filters) are available in workspace widget [search
 | Field | Type | Description
 |-|-|-
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Label
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Label
 | `tab:` | [record](/docs/search/#deep-search) | [Tab](/docs/records/types/workspace_tab/)
-| `tab.id:` | [chooser](/docs/search/filters/choosers/) | [Workspace Tab](/docs/records/types/workspace_tab/)
-| `tab.pos:` | [number](/docs/search/filters/numbers/) | Order
-| `type:` | [text](/docs/search/filters/text/) | Type
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `width:` | [text](/docs/search/filters/text/) | Width
-| `zone:` | [text](/docs/search/filters/text/) | Zone
+| `tab.id:` | [chooser](/docs/search/#choosers) | [Workspace Tab](/docs/records/types/workspace_tab/)
+| `tab.pos:` | [number](/docs/search/#numbers) | Order
+| `type:` | [text](/docs/search/#text) | Type
+| `updated:` | [date](/docs/search/#dates) | Updated
+| `width:` | [text](/docs/search/#text) | Width
+| `zone:` | [text](/docs/search/#text) | Zone
 	
 ### Worklist Columns
 

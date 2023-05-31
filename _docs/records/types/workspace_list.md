@@ -89,14 +89,14 @@ These [filters](/docs/search/#filters) are available in workspace worklist [sear
 | Field | Type | Description
 |-|-|-
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
 | `tab:` | [record](/docs/search/#deep-search) | [Tab](/docs/records/types/workspace_tab/)
-| `tab.id:` | [chooser](/docs/search/filters/choosers/) | [Workspace Tab](/docs/records/types/workspace_tab/)
-| `tab.pos:` | [number](/docs/search/filters/numbers/) | Order
-| `type:` | [text](/docs/search/filters/text/) | Type
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `tab.id:` | [chooser](/docs/search/#choosers) | [Workspace Tab](/docs/records/types/workspace_tab/)
+| `tab.pos:` | [number](/docs/search/#numbers) | Order
+| `type:` | [text](/docs/search/#text) | Type
+| `updated:` | [date](/docs/search/#dates) | Updated
 	
 ### Worklist Columns
 

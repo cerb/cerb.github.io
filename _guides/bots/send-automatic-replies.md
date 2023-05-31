@@ -32,7 +32,7 @@ In this example, we'll create a behavior that sends an automatic response for ev
 
 <div class="cerb-box note">
 	<p>
-		In Cerb 8.0+ you can <a href="/packages/auto-reply-bot">import the Auto-Reply Bot package</a> instead.
+		In Cerb 8.0+ you can <a href="/packages/auto-reply-bot/">import the Auto-Reply Bot package</a> instead.
 	</p>
 </div>
 

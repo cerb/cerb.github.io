@@ -80,17 +80,17 @@ These [filters](/docs/search/#filters) are available in feed item [search querie
 |---
 | Field | Type | Description
 |-|-|-
-| `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
-| `created:` | [date](/docs/search/filters/dates/) | Created
+| `comments:` | [fulltext](/docs/search/#fulltext) | Comment Content
+| `created:` | [date](/docs/search/#dates) | Created
 | `feed:` | [record](/docs/search/#deep-search) | [Feed](/docs/records/types/feed/)
-| `feed.id:` | [chooser](/docs/search/filters/choosers/) | [Feed](/docs/records/types/feed/)
+| `feed.id:` | [chooser](/docs/search/#choosers) | [Feed](/docs/records/types/feed/)
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `isClosed:` | [boolean](/docs/search/filters/booleans/) | Is Closed
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `title:` | [text](/docs/search/filters/text/) | Title
-| `url:` | [text](/docs/search/filters/text/) | Url
-| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `id:` | [number](/docs/search/#numbers) | Id
+| `isClosed:` | [boolean](/docs/search/#booleans) | Is Closed
+| `links:` | [links](/docs/search/#links) | Record Links
+| `title:` | [text](/docs/search/#text) | Title
+| `url:` | [text](/docs/search/#text) | Url
+| `watchers:` | [watchers](/docs/search/#watchers) | Watchers
 	
 ### Worklist Columns
 

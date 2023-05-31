@@ -80,14 +80,14 @@ These [filters](/docs/search/#filters) are available in oauth app [search querie
 |---
 | Field | Type | Description
 |-|-|-
-| `callbackUrl:` | [text](/docs/search/filters/text/) | Callback Url
-| `clientId:` | [text](/docs/search/filters/text/) | Client Id
+| `callbackUrl:` | [text](/docs/search/#text) | Callback Url
+| `clientId:` | [text](/docs/search/#text) | Client Id
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `url:` | [text](/docs/search/filters/text/) | Url
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `updated:` | [date](/docs/search/#dates) | Updated
+| `url:` | [text](/docs/search/#text) | Url
 	
 ### Worklist Columns
 

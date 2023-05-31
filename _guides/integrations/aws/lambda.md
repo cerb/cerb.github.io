@@ -1028,7 +1028,7 @@ You'll see four behaviors:
 
 Conversational bot functionality is covered in detail [here](/packages/chat-bot/), so we won't dig into the first two behaviors in this guide.
 
-Open the [card](/docs/records#cards) for **DNS conversational behavior**:
+Open the [card](/docs/records/#cards) for **DNS conversational behavior**:
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/aws/lambda/bot-behavior-convo.png" class="screenshot">

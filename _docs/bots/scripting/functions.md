@@ -493,7 +493,7 @@ Worker #1 has permission to create tickets.
 
 ## cerb_placeholders_list
 
-Return an [object](/docs/bots/scripting/(/docs/bots/scripting/arrays-objects/)) with every placeholder in the current behavior.
+Return an [object](/docs/bots/scripting/arrays-objects/) with every placeholder in the current behavior.
 
 `cerb_placeholders_list(extract, prefix)`
 
@@ -924,7 +924,7 @@ Customer: Joe Customer
 Order #: 12345
 ```
 
-This returns an [object](/docs/bots/scripting/(/docs/bots/scripting/arrays-objects/)).
+This returns an [object](/docs/bots/scripting/arrays-objects/).
 
 ## jsonpath_set
 

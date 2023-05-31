@@ -80,13 +80,13 @@ These [filters](/docs/search/#filters) are available in saved search [search que
 |---
 | Field | Type | Description
 |-|-|-
-| `context:` | [text](/docs/search/filters/text/) | Record Type
+| `context:` | [text](/docs/search/#text) | Record Type
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `query:` | [text](/docs/search/filters/text/) | Query
-| `tag:` | [text](/docs/search/filters/text/) | Tag
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `id:` | [number](/docs/search/#numbers) | Id
+| `name:` | [text](/docs/search/#text) | Name
+| `query:` | [text](/docs/search/#text) | Query
+| `tag:` | [text](/docs/search/#text) | Tag
+| `updated:` | [date](/docs/search/#dates) | Updated
 	
 ### Worklist Columns
 

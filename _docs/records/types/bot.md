@@ -84,16 +84,16 @@ These [filters](/docs/search/#filters) are available in bot [search queries](/do
 |---
 | Field | Type | Description
 |-|-|-
-| `created:` | [date](/docs/search/filters/dates/) | Created
-| `disabled:` | [boolean](/docs/search/filters/booleans/) | Disabled
+| `created:` | [date](/docs/search/#dates) | Created
+| `disabled:` | [boolean](/docs/search/#booleans) | Disabled
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `mentionName:` | [text](/docs/search/filters/text/) | @Mention
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `owner:` | [text](/docs/search/filters/text/) | Owner Type
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `mentionName:` | [text](/docs/search/#text) | @Mention
+| `name:` | [text](/docs/search/#text) | Name
+| `owner:` | [text](/docs/search/#text) | Owner Type
 | `owner.<type>:` | [record](/docs/search/#deep-search) | Owner
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns

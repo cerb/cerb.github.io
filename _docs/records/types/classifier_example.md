@@ -76,13 +76,13 @@ These [filters](/docs/search/#filters) are available in classifier example [sear
 | Field | Type | Description
 |-|-|-
 | `class:` | [record](/docs/search/#deep-search) | [Class](/docs/records/types/classifier_class/)
-| `class.id:` | [chooser](/docs/search/filters/choosers/) | [Classification](/docs/records/types/classifier_class/)
+| `class.id:` | [chooser](/docs/search/#choosers) | [Classification](/docs/records/types/classifier_class/)
 | `classifier:` | [record](/docs/search/#deep-search) | [Classifier](/docs/records/types/classifier/)
-| `classifier.id:` | [chooser](/docs/search/filters/choosers/) | [Classifier](/docs/records/types/classifier/)
-| `expression:` | [text](/docs/search/filters/text/) | Expression
+| `classifier.id:` | [chooser](/docs/search/#choosers) | [Classifier](/docs/records/types/classifier/)
+| `expression:` | [text](/docs/search/#text) | Expression
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `id:` | [number](/docs/search/#numbers) | Id
+| `updated:` | [date](/docs/search/#dates) | Updated
 	
 ### Worklist Columns
 

@@ -86,12 +86,12 @@ These [filters](/docs/search/#filters) are available in custom record [search qu
 | Field | Type | Description
 |-|-|-
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `name.plural:` | [text](/docs/search/filters/text/) | Plural
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `uri:` | [text](/docs/search/filters/text/) | Uri
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `name.plural:` | [text](/docs/search/#text) | Plural
+| `updated:` | [date](/docs/search/#dates) | Updated
+| `uri:` | [text](/docs/search/#text) | Uri
 	
 ### Worklist Columns
 

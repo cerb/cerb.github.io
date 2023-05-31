@@ -80,11 +80,11 @@ These [filters](/docs/search/#filters) are available in connected account [searc
 |---
 | Field | Type | Description
 |-|-|-
-| `created:` | [date](/docs/search/filters/dates/) | Created
+| `created:` | [date](/docs/search/#dates) | Created
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
 | `owner:` | virtual | Owner
 | `owner.app:` | virtual | Owner
 | `owner.bot:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/bot/)
@@ -92,9 +92,9 @@ These [filters](/docs/search/#filters) are available in connected account [searc
 | `owner.role:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/role/)
 | `owner.worker:` | [record](/docs/search/#deep-search) | [Owner](/docs/records/types/worker/)
 | `service:` | [record](/docs/search/#deep-search) | [Service](/docs/records/types/connected_service/)
-| `service.id:` | [chooser](/docs/search/filters/choosers/) | [Service Provider](/docs/records/types/connected_service/)
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `uri:` | [text](/docs/search/filters/text/) | Uri
+| `service.id:` | [chooser](/docs/search/#choosers) | [Service Provider](/docs/records/types/connected_service/)
+| `updated:` | [date](/docs/search/#dates) | Updated
+| `uri:` | [text](/docs/search/#text) | Uri
 	
 ### Worklist Columns
 

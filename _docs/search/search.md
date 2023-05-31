@@ -485,7 +485,7 @@ checkbox:!null
 
 By convention, these filter names usually have an `.id` suffix (e.g. `bucket.id:`).
 
-Chooser filters support all [numeric](/docs/search/filters/numbers/) expressions.
+Chooser filters support all [numeric](/docs/search/#numbers) expressions.
 
 #### ID
 {:.no_toc}

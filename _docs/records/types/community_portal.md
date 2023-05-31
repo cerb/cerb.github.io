@@ -78,13 +78,13 @@ These [filters](/docs/search/#filters) are available in portal [search queries](
 |---
 | Field | Type | Description
 |-|-|-
-| `code:` | [text](/docs/search/filters/text/) | Code
+| `code:` | [text](/docs/search/#text) | Code
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `path:` | [text](/docs/search/filters/text/) | Path
-| `type:` | [text](/docs/search/filters/text/) | Extension
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `id:` | [number](/docs/search/#numbers) | Id
+| `name:` | [text](/docs/search/#text) | Name
+| `path:` | [text](/docs/search/#text) | Path
+| `type:` | [text](/docs/search/#text) | Extension
+| `updated:` | [date](/docs/search/#dates) | Updated
 	
 ### Worklist Columns
 

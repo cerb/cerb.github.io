@@ -81,15 +81,15 @@ These [filters](/docs/search/#filters) are available in attachment [search queri
 |-|-|-
 | `bundle:` | [record](/docs/search/#deep-search) | [Bundle](/docs/records/types/file_bundle/)
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Attachment Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `mimetype:` | [text](/docs/search/filters/text/) | Mime Type
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `on:` | [text](/docs/search/filters/text/) | On Type
+| `id:` | [number](/docs/search/#numbers) | Attachment Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `mimetype:` | [text](/docs/search/#text) | Mime Type
+| `name:` | [text](/docs/search/#text) | Name
+| `on:` | [text](/docs/search/#text) | On Type
 | `on.<type>:` | [record](/docs/search/#deep-search) | On
-| `size:` | [number](/docs/search/filters/numbers/) | Size
-| `storage.extension:` | [text](/docs/search/filters/text/) | Storage Extension
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `size:` | [number](/docs/search/#numbers) | Size
+| `storage.extension:` | [text](/docs/search/#text) | Storage Extension
+| `updated:` | [date](/docs/search/#dates) | Updated
 	
 ### Worklist Columns
 

@@ -88,16 +88,16 @@ These [filters](/docs/search/#filters) are available in bucket [search queries](
 |-|-|-
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `group:` | [record](/docs/search/#deep-search) | [Group](/docs/records/types/group/)
-| `group.id:` | [chooser](/docs/search/filters/choosers/) | [Group](/docs/records/types/group/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `send.as:` | [text](/docs/search/filters/text/) | Send As
-| `send.from.id:` | [chooser](/docs/search/filters/choosers/) | [Send From](/docs/records/types/address/)
-| `signature.id:` | [chooser](/docs/search/filters/choosers/) | [Signature](/docs/records/types/email_signature/)
-| `signing.key.id:` | [chooser](/docs/search/filters/choosers/) | [Signing Key](/docs/records/types/gpg_private_key/)
-| `template.id:` | [chooser](/docs/search/filters/choosers/) | [Email Template](/docs/records/types/html_template/)
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `group.id:` | [chooser](/docs/search/#choosers) | [Group](/docs/records/types/group/)
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `send.as:` | [text](/docs/search/#text) | Send As
+| `send.from.id:` | [chooser](/docs/search/#choosers) | [Send From](/docs/records/types/address/)
+| `signature.id:` | [chooser](/docs/search/#choosers) | [Signature](/docs/records/types/email_signature/)
+| `signing.key.id:` | [chooser](/docs/search/#choosers) | [Signing Key](/docs/records/types/gpg_private_key/)
+| `template.id:` | [chooser](/docs/search/#choosers) | [Email Template](/docs/records/types/html_template/)
+| `updated:` | [date](/docs/search/#dates) | Updated
 	
 ### Worklist Columns
 

@@ -77,13 +77,13 @@ These [filters](/docs/search/#filters) are available in behavior scheduled [sear
 | Field | Type | Description
 |-|-|-
 | `behavior:` | [record](/docs/search/#deep-search) | [Behavior](/docs/records/types/behavior/)
-| `behavior.id:` | [chooser](/docs/search/filters/choosers/) | [Behavior](/docs/records/types/behavior/)
+| `behavior.id:` | [chooser](/docs/search/#choosers) | [Behavior](/docs/records/types/behavior/)
 | `bot:` | [record](/docs/search/#deep-search) | [Bot](/docs/records/types/bot/)
-| `bot.id:` | [chooser](/docs/search/filters/choosers/) | [Bot](/docs/records/types/bot/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `on:` | [text](/docs/search/filters/text/) | On
+| `bot.id:` | [chooser](/docs/search/#choosers) | [Bot](/docs/records/types/bot/)
+| `id:` | [number](/docs/search/#numbers) | Id
+| `on:` | [text](/docs/search/#text) | On
 | `on.<type>:` | [record](/docs/search/#deep-search) | On
-| `runDate:` | [date](/docs/search/filters/dates/) | Run Date
+| `runDate:` | [date](/docs/search/#dates) | Run Date
 	
 ### Worklist Columns
 

@@ -93,16 +93,16 @@ These [filters](/docs/search/#filters) are available in mailbox account [search 
 |---
 | Field | Type | Description
 |-|-|-
-| `checkedAt:` | [date](/docs/search/filters/dates/) | Checked At
-| `enabled:` | [boolean](/docs/search/filters/booleans/) | Enabled
-| `fail.count:` | [number](/docs/search/filters/numbers/) | Num Fails
+| `checkedAt:` | [date](/docs/search/#dates) | Checked At
+| `enabled:` | [boolean](/docs/search/#booleans) | Enabled
+| `fail.count:` | [number](/docs/search/#numbers) | Num Fails
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `host:` | [text](/docs/search/filters/text/) | Host
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `protocol:` | [text](/docs/search/filters/text/) | Protocol
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `host:` | [text](/docs/search/#text) | Host
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `protocol:` | [text](/docs/search/#text) | Protocol
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns

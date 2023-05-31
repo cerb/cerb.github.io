@@ -19,7 +19,7 @@ jumbotron:
     url: /docs/plugins/#extensions
   -
     label: Community Portal Type &raquo;
-    url: /docs/plugins/extensions/points/cerb.portal
+    url: /docs/plugins/extensions/points/cerb.portal/
 ---
 
 |---

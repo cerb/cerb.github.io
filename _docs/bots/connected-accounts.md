@@ -6,7 +6,7 @@ jumbotron:
   tagline: Securely integrate and automate third-party apps and services
 ---
 
-[Bots](/docs/bots) can use **connected accounts** to cryptographically sign (or otherwise authenticate) arbitrary HTTP requests for a specific [service provider](/docs/connected-services/).
+[Bots](/docs/bots/) can use **connected accounts** to cryptographically sign (or otherwise authenticate) arbitrary HTTP requests for a specific [service provider](/docs/connected-services/).
 
 This opens up entire third-party APIs to bots, rather than only offering a few hand-picked actions.
 

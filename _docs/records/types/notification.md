@@ -89,12 +89,12 @@ These [filters](/docs/search/#filters) are available in notification [search que
 |---
 | Field | Type | Description
 |-|-|-
-| `activity:` | [text](/docs/search/filters/text/) | Activity
-| `created:` | [date](/docs/search/filters/dates/) | Created
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `isRead:` | [boolean](/docs/search/filters/booleans/) | Is Read
+| `activity:` | [text](/docs/search/#text) | Activity
+| `created:` | [date](/docs/search/#dates) | Created
+| `id:` | [number](/docs/search/#numbers) | Id
+| `isRead:` | [boolean](/docs/search/#booleans) | Is Read
 | `worker:` | [record](/docs/search/#deep-search) | [Worker](/docs/records/types/worker/)
-| `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
+| `worker.id:` | [chooser](/docs/search/#choosers) | [Worker](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

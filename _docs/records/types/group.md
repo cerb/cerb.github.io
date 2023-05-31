@@ -93,21 +93,21 @@ These [filters](/docs/search/#filters) are available in group [search queries](/
 |---
 | Field | Type | Description
 |-|-|-
-| `created:` | [date](/docs/search/filters/dates/) | Created
-| `default:` | [boolean](/docs/search/filters/booleans/) | Default
+| `created:` | [date](/docs/search/#dates) | Created
+| `default:` | [boolean](/docs/search/#booleans) | Default
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
 | `manager:` | [record](/docs/search/#deep-search) | [Manager](/docs/records/types/worker/)
 | `member:` | [record](/docs/search/#deep-search) | [Member](/docs/records/types/worker/)
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `private:` | [boolean](/docs/search/filters/booleans/) | Private
-| `send.as:` | [text](/docs/search/filters/text/) | Send As
-| `send.from.id:` | [chooser](/docs/search/filters/choosers/) | [Send From](/docs/records/types/address/)
-| `signature.id:` | [chooser](/docs/search/filters/choosers/) | [Signature](/docs/records/types/email_signature/)
-| `signing.key.id:` | [chooser](/docs/search/filters/choosers/) | [Signing Key](/docs/records/types/gpg_private_key/)
-| `template.id:` | [chooser](/docs/search/filters/choosers/) | [Email Template](/docs/records/types/html_template/)
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `name:` | [text](/docs/search/#text) | Name
+| `private:` | [boolean](/docs/search/#booleans) | Private
+| `send.as:` | [text](/docs/search/#text) | Send As
+| `send.from.id:` | [chooser](/docs/search/#choosers) | [Send From](/docs/records/types/address/)
+| `signature.id:` | [chooser](/docs/search/#choosers) | [Signature](/docs/records/types/email_signature/)
+| `signing.key.id:` | [chooser](/docs/search/#choosers) | [Signing Key](/docs/records/types/gpg_private_key/)
+| `template.id:` | [chooser](/docs/search/#choosers) | [Email Template](/docs/records/types/html_template/)
+| `updated:` | [date](/docs/search/#dates) | Updated
 	
 ### Worklist Columns
 

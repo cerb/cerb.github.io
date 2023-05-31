@@ -105,23 +105,23 @@ These [filters](/docs/search/#filters) are available in contact [search queries]
 | Field | Type | Description
 |-|-|-
 | `alias:` | virtual | Aliases
-| `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
-| `created:` | [date](/docs/search/filters/dates/) | Created
+| `comments:` | [fulltext](/docs/search/#fulltext) | Comment Content
+| `created:` | [date](/docs/search/#dates) | Created
 | `email:` | [record](/docs/search/#deep-search) | [Email](/docs/records/types/address/)
-| `email.id:` | [chooser](/docs/search/filters/choosers/) | [Email](/docs/records/types/address/)
+| `email.id:` | [chooser](/docs/search/#choosers) | [Email](/docs/records/types/address/)
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `firstName:` | [text](/docs/search/filters/text/) | First Name
-| `gender:` | [text](/docs/search/filters/text/) | Gender
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `lang:` | [text](/docs/search/filters/text/) | Language
-| `lastLogin:` | [date](/docs/search/filters/dates/) | Last Login
-| `lastName:` | [text](/docs/search/filters/text/) | Last Name
-| `links:` | [links](/docs/search/filters/links/) | Record Links
+| `firstName:` | [text](/docs/search/#text) | First Name
+| `gender:` | [text](/docs/search/#text) | Gender
+| `id:` | [number](/docs/search/#numbers) | Id
+| `lang:` | [text](/docs/search/#text) | Language
+| `lastLogin:` | [date](/docs/search/#dates) | Last Login
+| `lastName:` | [text](/docs/search/#text) | Last Name
+| `links:` | [links](/docs/search/#links) | Record Links
 | `org:` | [record](/docs/search/#deep-search) | [Org](/docs/records/types/org/)
-| `org.id:` | [chooser](/docs/search/filters/choosers/) | [Organization](/docs/records/types/org/)
-| `timezone:` | [text](/docs/search/filters/text/) | Timezone
-| `title:` | [text](/docs/search/filters/text/) | Title
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `org.id:` | [chooser](/docs/search/#choosers) | [Organization](/docs/records/types/org/)
+| `timezone:` | [text](/docs/search/#text) | Timezone
+| `title:` | [text](/docs/search/#text) | Title
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns

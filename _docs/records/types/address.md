@@ -96,28 +96,28 @@ These [filters](/docs/search/#filters) are available in email address [search qu
 |---
 | Field | Type | Description
 |-|-|-
-| `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
+| `comments:` | [fulltext](/docs/search/#fulltext) | Comment Content
 | `contact:` | [record](/docs/search/#deep-search) | [Contact](/docs/records/types/contact/)
-| `contact.id:` | [chooser](/docs/search/filters/choosers/) | [Contact](/docs/records/types/contact/)
-| `created:` | [date](/docs/search/filters/dates/) | Created
-| `email:` | [text](/docs/search/filters/text/) | Email
+| `contact.id:` | [chooser](/docs/search/#choosers) | [Contact](/docs/records/types/contact/)
+| `created:` | [date](/docs/search/#dates) | Created
+| `email:` | [text](/docs/search/#text) | Email
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `host:` | [text](/docs/search/filters/text/) | Host
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `isBanned:` | [boolean](/docs/search/filters/booleans/) | Is Banned
-| `isDefunct:` | [boolean](/docs/search/filters/booleans/) | Is Defunct
-| `isTrusted:` | [boolean](/docs/search/filters/booleans/) | Is Trusted
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `mailTransport.id:` | [chooser](/docs/search/filters/choosers/) | [Email Transport](/docs/records/types/mail_transport/)
-| `nonspam:` | [number](/docs/search/filters/numbers/) | # Nonspam
+| `host:` | [text](/docs/search/#text) | Host
+| `id:` | [number](/docs/search/#numbers) | Id
+| `isBanned:` | [boolean](/docs/search/#booleans) | Is Banned
+| `isDefunct:` | [boolean](/docs/search/#booleans) | Is Defunct
+| `isTrusted:` | [boolean](/docs/search/#booleans) | Is Trusted
+| `links:` | [links](/docs/search/#links) | Record Links
+| `mailTransport.id:` | [chooser](/docs/search/#choosers) | [Email Transport](/docs/records/types/mail_transport/)
+| `nonspam:` | [number](/docs/search/#numbers) | # Nonspam
 | `org:` | [record](/docs/search/#deep-search) | [Org](/docs/records/types/org/)
-| `org.id:` | [chooser](/docs/search/filters/choosers/) | [Organization Id](/docs/records/types/org/)
-| `spam:` | [number](/docs/search/filters/numbers/) | # Spam
+| `org.id:` | [chooser](/docs/search/#choosers) | [Organization Id](/docs/records/types/org/)
+| `spam:` | [number](/docs/search/#numbers) | # Spam
 | `ticket:` | [record](/docs/search/#deep-search) | [Ticket](/docs/records/types/ticket/)
-| `ticket.id:` | [chooser](/docs/search/filters/choosers/) | [Ticket](/docs/records/types/ticket/)
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `ticket.id:` | [chooser](/docs/search/#choosers) | [Ticket](/docs/records/types/ticket/)
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
-| `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
+| `worker.id:` | [chooser](/docs/search/#choosers) | [Worker](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

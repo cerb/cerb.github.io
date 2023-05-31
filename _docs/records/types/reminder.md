@@ -78,15 +78,15 @@ These [filters](/docs/search/#filters) are available in reminder [search queries
 |---
 | Field | Type | Description
 |-|-|-
-| `closed:` | [boolean](/docs/search/filters/booleans/) | Is Closed
+| `closed:` | [boolean](/docs/search/#booleans) | Is Closed
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `remindAt:` | [date](/docs/search/filters/dates/) | Remind At
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `remindAt:` | [date](/docs/search/#dates) | Remind At
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `worker:` | [record](/docs/search/#deep-search) | [Worker](/docs/records/types/worker/)
-| `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
+| `worker.id:` | [chooser](/docs/search/#choosers) | [Worker](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

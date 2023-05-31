@@ -33,7 +33,7 @@ A **decision** represents a point where a [bot](/docs/bots/) behavior needs to c
 
 The first outcome to satisfy all of its **conditions** is chosen. For this reason, the order of outcomes within a decision is very important.
 
-Conditions are criteria like the time of day, day of week, or the comparison of any [record](/docs/records) [field](/docs/records/fields/) against some **value** using an **operator** (e.g. is, is not, greater/less than, between, contains, matches, starts with).
+Conditions are criteria like the time of day, day of week, or the comparison of any [record](/docs/records/) [field](/docs/records/fields/) against some **value** using an **operator** (e.g. is, is not, greater/less than, between, contains, matches, starts with).
 
 Here's a simple _binary_ (two outcome) decision:
 

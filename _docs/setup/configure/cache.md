@@ -30,7 +30,7 @@ We use this approach in many other places as well: groups, buckets, sender addre
 
 By default, Cerb saves cache files to the filesystem in the `./storage/tmp/` directory. The underlying operating system usually caches the contents of these files in memory anyway.
 
-If you experience filesystem I/O bottlenecks, or you want to [scale](/docs/scaling) beyond a single web server, you may choose to set up a distributed cache using Redis[^redis] or Memcached[^memcached].  We support both.
+If you experience filesystem I/O bottlenecks, or you want to [scale](/docs/scaling/) beyond a single web server, you may choose to set up a distributed cache using Redis[^redis] or Memcached[^memcached].  We support both.
 
 
 # References

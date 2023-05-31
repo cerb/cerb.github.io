@@ -26,7 +26,7 @@ jumbotron:
 
 Slack makes it very easy to interact with third-party apps and services using their _slash commands_ feature.
 
-To demonstrate this functionality, we'll add a new chat command named **/cerb** and instruct Slack to send those messages to a webhook[^webhook] that triggers a [bot](/docs/bots) behavior in Cerb.
+To demonstrate this functionality, we'll add a new chat command named **/cerb** and instruct Slack to send those messages to a webhook[^webhook] that triggers a [bot](/docs/bots/) behavior in Cerb.
 
 * TOC
 {:toc}
@@ -37,7 +37,7 @@ When a channel member uses our new **/cerb** command, Slack will deliver their m
 
 You can use any web-based technology to process these POST requests and send a response back to Slack.
 
-Cerb makes this process really simple with its [webhooks](/docs/webhooks) [plugin](/docs/plugins/).  You can install it from the [Plugin Library](/docs/plugins/#library).  The plugin enables Cerb to listen for arbitrary webhook requests and route them to bots.  Bot behaviors can process a request, perform actions in Cerb or interact with third-party services, and then send an appropriate response back to the caller.
+Cerb makes this process really simple with its [webhooks](/docs/webhooks/) [plugin](/docs/plugins/).  You can install it from the [Plugin Library](/docs/plugins/#library).  The plugin enables Cerb to listen for arbitrary webhook requests and route them to bots.  Bot behaviors can process a request, perform actions in Cerb or interact with third-party services, and then send an appropriate response back to the caller.
 
 ## Create the bot behavior in Cerb
 
@@ -284,7 +284,7 @@ You could modify the behavior we created to do anything that bots are capable of
 
 You could create a custom fieldset on workers to store their Slack user name, and the bot can use that field to look up a message sender's worker record.  The bot can then personalize its actions to use their calendar, their tasks, and so on.
 
-You could use our [classifiers](/docs/classifiers) feature to support natural language in your Slack bot.  A classifier can convert freeform text into _"intents"_.  For instance, instead of only supporting the _"hi"_ command, your bot could learn the various ways people _intend_ to **say\_hello**: _hi, hello, what's up?, how are you?, hola, allo, yo, hey, etc_.
+You could use our [classifiers](/docs/classifiers/) feature to support natural language in your Slack bot.  A classifier can convert freeform text into _"intents"_.  For instance, instead of only supporting the _"hi"_ command, your bot could learn the various ways people _intend_ to **say\_hello**: _hi, hello, what's up?, how are you?, hola, allo, yo, hey, etc_.
 
 ## References
 

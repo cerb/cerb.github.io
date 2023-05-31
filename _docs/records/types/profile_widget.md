@@ -84,16 +84,16 @@ These [filters](/docs/search/#filters) are available in profile widget [search q
 | Field | Type | Description
 |-|-|-
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `pos:` | [number](/docs/search/filters/numbers/) | Order
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `pos:` | [number](/docs/search/#numbers) | Order
 | `tab:` | [record](/docs/search/#deep-search) | [Tab](/docs/records/types/profile_tab/)
-| `tab.id:` | [chooser](/docs/search/filters/choosers/) | [Tab](/docs/records/types/profile_tab/)
-| `type:` | [text](/docs/search/filters/text/) | Type
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `width:` | [number](/docs/search/filters/numbers/) | Width Units
-| `zone:` | [text](/docs/search/filters/text/) | Zone
+| `tab.id:` | [chooser](/docs/search/#choosers) | [Tab](/docs/records/types/profile_tab/)
+| `type:` | [text](/docs/search/#text) | Type
+| `updated:` | [date](/docs/search/#dates) | Updated
+| `width:` | [number](/docs/search/#numbers) | Width Units
+| `zone:` | [text](/docs/search/#text) | Zone
 	
 ### Worklist Columns
 

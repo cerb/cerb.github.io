@@ -25,7 +25,7 @@ jumbotron:
 
 Cerb can create interactive **map** visualizations with geospatial data from any source using the standard GeoJSON format.
 
-A **map schema** is defined using [KATA](/docs/kata), which may include map resources, additional properties to fetch and merge, region colorization, point datasets, point sizing and colorization, labels, click interactions, and more.
+A **map schema** is defined using [KATA](/docs/kata/), which may include map resources, additional properties to fetch and merge, region colorization, point datasets, point sizing and colorization, labels, click interactions, and more.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/maps/map-kata-example-choropleth.png" class="screenshot">

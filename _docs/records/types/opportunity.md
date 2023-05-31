@@ -84,17 +84,17 @@ These [filters](/docs/search/#filters) are available in opportunity [search quer
 |---
 | Field | Type | Description
 |-|-|-
-| `amount:` | [number](/docs/search/filters/numbers/) | Amount
-| `closedDate:` | [date](/docs/search/filters/dates/) | Closed Date
-| `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
-| `created:` | [date](/docs/search/filters/dates/) | Created
-| `currency.id:` | [chooser](/docs/search/filters/choosers/) | [Currency](/docs/records/types/currency/)
+| `amount:` | [number](/docs/search/#numbers) | Amount
+| `closedDate:` | [date](/docs/search/#dates) | Closed Date
+| `comments:` | [fulltext](/docs/search/#fulltext) | Comment Content
+| `created:` | [date](/docs/search/#dates) | Created
+| `currency.id:` | [chooser](/docs/search/#choosers) | [Currency](/docs/records/types/currency/)
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Title
-| `status:` | [number](/docs/search/filters/numbers/) | Status
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Title
+| `status:` | [number](/docs/search/#numbers) | Status
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns

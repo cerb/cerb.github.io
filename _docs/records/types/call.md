@@ -80,17 +80,17 @@ These [filters](/docs/search/#filters) are available in call [search queries](/d
 |---
 | Field | Type | Description
 |-|-|-
-| `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
-| `created:` | [date](/docs/search/filters/dates/) | Created
+| `comments:` | [fulltext](/docs/search/#fulltext) | Comment Content
+| `created:` | [date](/docs/search/#dates) | Created
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `isClosed:` | [boolean](/docs/search/filters/booleans/) | Is Closed
-| `isOutgoing:` | [boolean](/docs/search/filters/booleans/) | Is Outgoing
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `phone:` | [text](/docs/search/filters/text/) | Phone
-| `subject:` | [text](/docs/search/filters/text/) | Subject
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
-| `watchers:` | [watchers](/docs/search/filters/watchers/) | Watchers
+| `id:` | [number](/docs/search/#numbers) | Id
+| `isClosed:` | [boolean](/docs/search/#booleans) | Is Closed
+| `isOutgoing:` | [boolean](/docs/search/#booleans) | Is Outgoing
+| `links:` | [links](/docs/search/#links) | Record Links
+| `phone:` | [text](/docs/search/#text) | Phone
+| `subject:` | [text](/docs/search/#text) | Subject
+| `updated:` | [date](/docs/search/#dates) | Updated
+| `watchers:` | [watchers](/docs/search/#watchers) | Watchers
 	
 ### Worklist Columns
 

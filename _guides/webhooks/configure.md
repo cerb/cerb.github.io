@@ -25,7 +25,7 @@ jumbotron:
 
 # Introduction
 
-With Cerb, you can create [bot](/docs/bots) behaviors to automatically react to events taking place within the system -- a new assignment, a new incoming message, a task being completed, any record changing, etc.
+With Cerb, you can create [bot](/docs/bots/) behaviors to automatically react to events taking place within the system -- a new assignment, a new incoming message, a task being completed, any record changing, etc.
 
 **Webhooks**[^webhook] provide a way to trigger bot behaviors when _external events_ occur in other applications and services.
 
@@ -42,7 +42,7 @@ You can create webhook URLs in Cerb and associate them with specific bot behavio
 
 # Enable the webhooks plugin
 
-If you haven't already, you need to [install the webhooks plugin](/plugins/cerb.webhooks/).
+If you haven't already, you need to [install the webhooks plugin](/docs/plugins/cerb.webhooks/).
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/webhooks/configure/enable-plugin.png" class="screenshot">

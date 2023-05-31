@@ -79,17 +79,17 @@ These [filters](/docs/search/#filters) are available in time tracking [search qu
 |---
 | Field | Type | Description
 |-|-|-
-| `activity.id:` | [chooser](/docs/search/filters/choosers/) | [Activity](/docs/records/types/timetracking_activity/)
-| `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
-| `created:` | [date](/docs/search/filters/dates/) | Log Date
+| `activity.id:` | [chooser](/docs/search/#choosers) | [Activity](/docs/records/types/timetracking_activity/)
+| `comments:` | [fulltext](/docs/search/#fulltext) | Comment Content
+| `created:` | [date](/docs/search/#dates) | Log Date
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `isClosed:` | [boolean](/docs/search/filters/booleans/) | Is Closed
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `timeSpent:` | [number](/docs/search/filters/numbers/) | Time Spent
+| `id:` | [number](/docs/search/#numbers) | Id
+| `isClosed:` | [boolean](/docs/search/#booleans) | Is Closed
+| `links:` | [links](/docs/search/#links) | Record Links
+| `timeSpent:` | [number](/docs/search/#numbers) | Time Spent
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 | `worker:` | [record](/docs/search/#deep-search) | [Worker](/docs/records/types/worker/)
-| `worker.id:` | [chooser](/docs/search/filters/choosers/) | [Worker](/docs/records/types/worker/)
+| `worker.id:` | [chooser](/docs/search/#choosers) | [Worker](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

@@ -84,15 +84,15 @@ These [filters](/docs/search/#filters) are available in twitter message [search 
 | Field | Type | Description
 |-|-|-
 | `account:` | virtual | Connected Account
-| `account.id:` | [chooser](/docs/search/filters/choosers/) | [Connected Account](/docs/records/types/connected_account/)
-| `content:` | [text](/docs/search/filters/text/) | Content
-| `created:` | [date](/docs/search/filters/dates/) | Created
+| `account.id:` | [chooser](/docs/search/#choosers) | [Connected Account](/docs/records/types/connected_account/)
+| `content:` | [text](/docs/search/#text) | Content
+| `created:` | [date](/docs/search/#dates) | Created
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `followers:` | [number](/docs/search/filters/numbers/) | # Followers
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `isClosed:` | [boolean](/docs/search/filters/booleans/) | Is Closed
-| `screenName:` | [text](/docs/search/filters/text/) | Username
-| `userName:` | [text](/docs/search/filters/text/) | Name
+| `followers:` | [number](/docs/search/#numbers) | # Followers
+| `id:` | [number](/docs/search/#numbers) | Id
+| `isClosed:` | [boolean](/docs/search/#booleans) | Is Closed
+| `screenName:` | [text](/docs/search/#text) | Username
+| `userName:` | [text](/docs/search/#text) | Name
 	
 ### Worklist Columns
 

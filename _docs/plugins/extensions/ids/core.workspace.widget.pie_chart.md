@@ -19,7 +19,7 @@ jumbotron:
     url: /docs/plugins/#extensions
   -
     label: Workspace Widget Type &raquo;
-    url: /docs/plugins/extensions/points/cerberusweb.ui.workspace.widget
+    url: /docs/plugins/extensions/points/cerberusweb.ui.workspace.widget/
 ---
 
 |---

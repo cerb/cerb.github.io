@@ -258,7 +258,7 @@ The available **params:** are:
 	</code>
 	</pre>
 	
-	As of [9.1.3](/releases/9.1.3) you can also provide a map of labels and values:
+	As of [9.1.3](/releases/9.1.3/) you can also provide a map of labels and values:
 	
 	<pre>
 	<code class="language-cerb">

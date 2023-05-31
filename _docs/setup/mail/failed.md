@@ -30,7 +30,7 @@ In some rare situations, Cerb may run into trouble when processing a specific me
 
 Cerb is carefully designed to not lose email in any of these situations.
 
-A message is first downloaded from a [mailbox](/docs/setup/mailboxes) into the `storage/mail/new/` directory.  When Cerb first starts processing a message it is moved to the `storage/mail/fail/` directory.  If the message is successfully processed then the file is removed.  Otherwise, the file remains in a failed state.
+A message is first downloaded from a [mailbox](/docs/setup/mailboxes/) into the `storage/mail/new/` directory.  When Cerb first starts processing a message it is moved to the `storage/mail/fail/` directory.  If the message is successfully processed then the file is removed.  Otherwise, the file remains in a failed state.
 
 This is important, because some failures don't give Cerb an opportunity to react to them after the fact.  This also prevents a message that repeatedly fails from blocking all subsequent incoming mail.
 

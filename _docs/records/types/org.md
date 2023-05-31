@@ -94,26 +94,26 @@ These [filters](/docs/search/#filters) are available in organization [search que
 | Field | Type | Description
 |-|-|-
 | `alias:` | virtual | Aliases
-| `city:` | [text](/docs/search/filters/text/) | City
-| `comments:` | [fulltext](/docs/search/filters/fulltext/) | Comment Content
+| `city:` | [text](/docs/search/#text) | City
+| `comments:` | [fulltext](/docs/search/#fulltext) | Comment Content
 | `contacts:` | [record](/docs/search/#deep-search) | [Contacts](/docs/records/types/contact/)
-| `country:` | [text](/docs/search/filters/text/) | Country
-| `created:` | [date](/docs/search/filters/dates/) | Created
+| `country:` | [text](/docs/search/#text) | Country
+| `created:` | [date](/docs/search/#dates) | Created
 | `email:` | [record](/docs/search/#deep-search) | [Email](/docs/records/types/address/)
-| `email.id:` | [chooser](/docs/search/filters/choosers/) | [Email](/docs/records/types/address/)
+| `email.id:` | [chooser](/docs/search/#choosers) | [Email](/docs/records/types/address/)
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `phone:` | [text](/docs/search/filters/text/) | Phone
-| `postal:` | [text](/docs/search/filters/text/) | Postal
-| `state:` | [text](/docs/search/filters/text/) | State/Prov
-| `street:` | [text](/docs/search/filters/text/) | Street
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `phone:` | [text](/docs/search/#text) | Phone
+| `postal:` | [text](/docs/search/#text) | Postal
+| `state:` | [text](/docs/search/#text) | State/Prov
+| `street:` | [text](/docs/search/#text) | Street
 | `ticket:` | [record](/docs/search/#deep-search) | [Ticket](/docs/records/types/ticket/)
-| `ticket.id:` | [chooser](/docs/search/filters/choosers/) | [Ticket](/docs/records/types/ticket/)
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `ticket.id:` | [chooser](/docs/search/#choosers) | [Ticket](/docs/records/types/ticket/)
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
-| `website:` | [text](/docs/search/filters/text/) | Website
+| `website:` | [text](/docs/search/#text) | Website
 	
 ### Worklist Columns
 

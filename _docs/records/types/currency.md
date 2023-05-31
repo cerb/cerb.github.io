@@ -82,15 +82,15 @@ These [filters](/docs/search/#filters) are available in currency [search queries
 |---
 | Field | Type | Description
 |-|-|-
-| `code:` | [text](/docs/search/filters/text/) | Code
-| `decimalPlaces:` | [number](/docs/search/filters/numbers/) | Decimal Places
-| `default:` | [boolean](/docs/search/filters/booleans/) | Default
+| `code:` | [text](/docs/search/#text) | Code
+| `decimalPlaces:` | [number](/docs/search/#numbers) | Decimal Places
+| `default:` | [boolean](/docs/search/#booleans) | Default
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
-| `id:` | [number](/docs/search/filters/numbers/) | Id
-| `links:` | [links](/docs/search/filters/links/) | Record Links
-| `name:` | [text](/docs/search/filters/text/) | Name
-| `symbol:` | [text](/docs/search/filters/text/) | Symbol
-| `updated:` | [date](/docs/search/filters/dates/) | Updated
+| `id:` | [number](/docs/search/#numbers) | Id
+| `links:` | [links](/docs/search/#links) | Record Links
+| `name:` | [text](/docs/search/#text) | Name
+| `symbol:` | [text](/docs/search/#text) | Symbol
+| `updated:` | [date](/docs/search/#dates) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
