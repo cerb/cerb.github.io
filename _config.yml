@@ -14,7 +14,7 @@ github_username:  cerb
 timezone: America/Los_Angeles
 encoding: UTF-8
 
-exclude: [.idea, node_modules, README.md, Gemfile, Gemfile.lock]
+exclude: [.idea, node_modules, README.md, Dockerfile, docker-compose.yml, Gemfile, Gemfile.lock]
 keep_files: [assets]
 
 # Blog

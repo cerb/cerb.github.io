@@ -1,0 +1,16 @@
+name: cerb-docs
+
+services:
+  jekyll:
+    build:
+      context: .
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/var/cerb-docs:ro
+      - ./_site:/var/cerb-docs/_site
+      - ./Gemfile.lock:/var/cerb-docs/Gemfile.lock
+      - ./.sass-cache:/var/cerb-docs/.sass-cache
+      - ./.jekyll-metadata:/var/cerb-docs/.jekyll-metadata
+    environment:
+      JEKYLL_ENV: development
