@@ -56,7 +56,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `mobile` | [text](/docs/records/fields/types/text/) | Mobile number 
 |   | `password` | [text](/docs/records/fields/types/text/) | The worker's password, if applicable; stored security; will be automatically generated if blank 
 |   | `phone` | [text](/docs/records/fields/types/text/) |  
-|   | `time_format` | [text](/docs/records/fields/types/text/) | Preference for displaying timestamps, `strftime()` syntax 
+|   | `time_format` | [text](/docs/records/fields/types/text/) | Preference for displaying timestamps, `DateTime()` syntax 
 |   | `timeout_idle_secs` | [number](/docs/records/fields/types/number/) | Consider a session idle after this many seconds of inactivity 
 | **x** | **`timezone`** | [text](/docs/records/fields/types/text/) | IANA tz/zoneinfo timezone; `America/Los_Angeles` 
 |   | `title` | [text](/docs/records/fields/types/text/) | Job title / Position 

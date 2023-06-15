@@ -36,6 +36,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
+|   | `bucket` | [text](/docs/records/fields/types/text/) | The [bucket](/docs/records/types/bucket/) name of the ticket; alternative to `bucket_id`. If used, a `group` or `group_id` must also be provided at the same time. 
 |   | `bucket_id` | [number](/docs/records/fields/types/number/) | The ID of the [bucket](/docs/records/types/bucket/) containing this ticket 
 |   | `closed` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time this ticket was first set to status `closed` 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 

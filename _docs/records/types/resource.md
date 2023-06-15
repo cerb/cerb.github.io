@@ -37,7 +37,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
 |   | `automation_kata` | [text](/docs/records/fields/types/text/) |  
-|   | `content` | [text](/docs/records/fields/types/text/) | A string, `data:` URI, or automation resource URI (e.g. `cerb:automation_resource:TOKEN`)
+|   | `content` | [text](/docs/records/fields/types/text/) | The optional content of this resource. For text, use a string. For binary, base64-encode in [data URI format](https://en.wikipedia.org/wiki/Data_URI_scheme). This may also be an automation resource URI (e.g. `cerb:automation_resource:TOKEN`) 
 |   | `description` | [text](/docs/records/fields/types/text/) |  
 | **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) |  
 |   | `is_dynamic` | [boolean](/docs/records/fields/types/boolean/) |  
