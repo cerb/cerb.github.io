@@ -25,6 +25,10 @@ excerpt_separator: ""
 cdn:
   baseurl: https://cdn.cerb.ai/site/10.2
 
+# Atom feed
+feed:
+  disable_in_development: true
+
 # Collections
 collections:
   docs:
