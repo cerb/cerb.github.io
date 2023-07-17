@@ -41,7 +41,7 @@ In this guide we'll walk through the process of linking Cerb to Gmail. You can u
 
 ### Create a new project
 
-1. Log in to: <https://console.developers.google.com/cloud-resource-manager/>
+1. Log in to: <https://console.cloud.google.com/apis/> as a workspace user.
 
 1. Click **Create Project** in the top right.
 
@@ -49,7 +49,8 @@ In this guide we'll walk through the process of linking Cerb to Gmail. You can u
 
     |-|-
     | Project Name: | `Cerb`
-    | Organization: | _(none, or your preference)_
+    | Organization: | (your organization)
+    | Location: | (your organization)
 
 1. Click the blue **Create** button.
 
@@ -62,7 +63,7 @@ In this guide we'll walk through the process of linking Cerb to Gmail. You can u
 1. Enter:
 
     |-|-
-    | User Type: | Internal (if GSuite), or External
+    | User Type: | Internal (only available in workspaces)
 
 1. Click the blue **Create** button.
 
@@ -71,7 +72,7 @@ In this guide we'll walk through the process of linking Cerb to Gmail. You can u
     |-|-
     | Application name: | Cerb
     | Scopes for Google APIs: | email, profile, openid
-    | Authorized domains: | _(your Cerb base URL; e.g. `cerb.example.com`)_
+    | Authorized domains: | _(your Cerb base URL; e.g. `cerb.me`)_
 
 1. Click the blue **Save** button.
 
@@ -90,11 +91,22 @@ In this guide we'll walk through the process of linking Cerb to Gmail. You can u
 1. Enter:
 
     |-|-
-    | Which API: | Gmail API
-    | Calling from: | Web server
+    | Select an API: | Gmail API
     | What data will you be accessing: | User data
 
-1. Click the blue **What credentials do I need?** button.
+1. Click the **Next** button.
+
+1. Click the **Add or Remove Scopes** button.
+
+1. Select `https://mail.google.com/` (Gmail API) from the list.
+
+1. Select `https://www.googleapis.com/auth/userinfo.profile` from the list.
+
+1. Click the **Update** button.
+
+1. Click the **Save and Continue** button.
+
+1. In **Application type** select **Web application**.
 
 1. Enter:
 
@@ -102,25 +114,11 @@ In this guide we'll walk through the process of linking Cerb to Gmail. You can u
     | Name: | Cerb
     | Authorized redirect URIs: | `https://YOUR-CERB-HOST/oauth/callback`
 
-1. Click the blue **Create OAuth client ID** button.
+1. Click the blue **Create** button.
 
 1. Click the **Download** button.
 
 1. Click the **Done** button.
-
-### Add Gmail scope
-
-1. Select **OAuth consent screen** in the left sidebar.
-
-1. Click **Edit App** at the top.
-
-1. Click the **Add scope** button.
-
-1. Select: `https://mail.google.com/`
-
-1. Click the blue **ADD** button in the bottom right of the popup.
-
-1. Click the **Save** button at the bottom.
 
 # Configure Cerb
 
@@ -161,13 +159,7 @@ In this guide we'll walk through the process of linking Cerb to Gmail. You can u
 
 1. Log in with your Google account.
 
-1. Until your app is verified, click **Advanced** link at the bottom, then click the **Go to (your Cerb URL)** link.
-
 1. Click **Allow**.
- 
-1. Make sure both permissions are selected.
-
-1. Click the **Allow** button again.
 
 1. Click the **Save Changes** button.
 

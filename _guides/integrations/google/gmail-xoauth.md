@@ -28,9 +28,9 @@ jumbotron:
 
 # Introduction
 
-Google is in the process of retiring legacy passwords when connecting to Gmail using SMTP, POP3, and IMAP.
+Google has retired passwords when connecting to Gmail using POP3 and IMAP (but not SMTP).
 
-To authenticate in the near future you will need to use [OAuth2 access tokens](https://developers.google.com/gmail/imap/imap-smtp) instead.
+To authenticate you need to use [OAuth2 access tokens](https://developers.google.com/gmail/imap/imap-smtp) instead.
 
 Cerb supports XOAUTH2 authentication for IMAP mailboxes since version [9.6](/releases/9.6/).
 
