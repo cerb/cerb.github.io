@@ -10,20 +10,24 @@ jumbotron:
     url: /docs/home/
 ---
 
-Before continuing you should have a copy of Cerb installed.
+## Docker
+
+For self-hosted evaluation, testing, and development, we _strongly_ recommend using our pre-configured [Docker container](https://github.com/cerb/cerb-release/#evaluation-and-local-development-with-docker).
+
+This allows you to start using Cerb in a few minutes without any server configuration. We also provide sample data to simulate real-world use.
 
 ## Cerb Cloud
 
-You can [sign up](/signup/) for a free trial of [Cerb Cloud](/cloud/).
+[Cerb Cloud](/cloud/) is a subscription-based service that provides a ready-to-use, highly available, durable, and secure instance of Cerb in an ideal environment. We'll handle the technical details so you can focus on your mission.
 
-We'll set up and manage everything for you. All you need is a web browser.
+All you need is a web browser. You can optionally bring your own domain name (e.g. `support.example.com`). We provide inbound and outbound email services, or you can connect to your existing email provider (e.g. O365, Gmail, Fastmail).
 
-## Self-hosted
+[Sign up](/signup/) for a free trial of Cerb Cloud with no time limit (as long as you're actively using it).
 
-Alternately, you can [install Cerb on your own servers](/docs/installation/).
+## On-Premises
 
-For testing and development, you can also [install Cerb in a local development environment](https://github.com/cerb/cerb-release/discussions/12).
+If you wish to self-host Cerb in production, or you have a requirement to do so (e.g. HIPAA, GDPR, government), you can [install](/docs/installation/) the software on servers you control.
 
-{% comment %}
-Development
-{% endcomment %}
+Your servers must meet the minimum requirements. You should have team members with experience managing servers and deploying web services using PHP and MySQL.
+
+We also provide enterprise support contracts for technical assistance outside the scope of Cerb functionality.

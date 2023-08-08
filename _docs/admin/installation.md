@@ -36,7 +36,7 @@ jumbotron:
 ## Server requirements
 
 - Any of these 64-bit operating systems:
-	- Linux _(recommended, using Ubuntu LTS)_
+	- Linux _(recommended, using Ubuntu 23.04)_
 	- BSD
 	- macOS
 	- Windows
@@ -48,7 +48,7 @@ jumbotron:
 	- Microsoft Internet Information Server (IIS)
 	- Built-in PHP webserver (for development and evaluation)
 
-- PHP 7.2 (64-bit) or later
+- PHP 8.1 (64-bit) or later
 	- With the following extensions enabled:
 		- curl
 		- dom
@@ -76,7 +76,7 @@ jumbotron:
 		- post_max_size = 32M _(or higher)_
 
 - Any of these database servers:
-	- MySQL 5.6 or later
+	- MySQL 5.7 or later
 	- MariaDB 10.2 or later
 	- Amazon Aurora
 
