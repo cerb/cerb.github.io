@@ -9,7 +9,7 @@ jumbotron:
 
 # Developers
 
-- [Jeff Standen](http://www.linkedin.com/in/jeffstanden) is the founding partner at Webgroup Media LLC. He has been Cerb's software architect and lead programmer from the first line of code in January 2002[^bdfl]. He brings more than 28 years of software development experience to the project.
+- [Jeff Standen](http://www.linkedin.com/in/jeffstanden) has nearly 30 years of software development experience, and is the founding partner at Webgroup Media LLC. He has been Cerb's software architect and lead programmer from the first line of code in January 2002[^bdfl].
 
 - [Dan Hildebrandt](http://www.linkedin.com/in/danielhildebrandt) is a partner at Webgroup Media LLC and an active Cerb developer since 2005.
 
@@ -17,14 +17,16 @@ jumbotron:
 
 - [Ben Halsted](http://www.linkedin.com/in/bhalsted)
 - [Brenan Cavish](http://www.linkedin.com/pub/brenan-cavish/21/a89/57b)
+- Corey Cohen
 - [Darren Sugita](http://www.linkedin.com/pub/darren-sugita/24/234/978)
 - [Jacob Cavish](https://www.linkedin.com/in/jacob-cavish-coding/)
 - [Jeremy Johnstone](http://www.linkedin.com/in/jsjohnst)
 - [Jerry Kanoholani](http://www.linkedin.com/pub/jerry-kanoholani/19/74/977)
 - Joe Geck
 - [Mike Fogg](http://www.linkedin.com/in/mikefogg)
-- [Niek Beernink](http://nl.linkedin.com/in/nbeernink) provided the Dutch translation and continues to provide an immeasurable amount of constructive feedback.
-- [Robert Middleswarth](http://www.linkedin.com/in/robertmiddleswarth) has provided an incredible amount of support to the Cerb community for more than a decade.
+- [Niek Beernink](http://nl.linkedin.com/in/nbeernink)
+- [Robert Middleswarth](http://www.linkedin.com/in/robertmiddleswarth)
+- [Ryan Bantz](https://www.linkedin.com/in/ryanbantz)
 - [Scott Luther](http://www.linkedin.com/pub/scott-luther/7/3b3/98)
 - [Trent Ramseyer](http://www.linkedin.com/in/trentramseyer)
 
@@ -41,6 +43,8 @@ jumbotron:
 # Infrastructure
 
 - [Amazon Web Services](https://aws.amazon.com/)
+
+- [Docker](https://www.docker.com)
 
 - [GitHub](https://github.com/)
 
