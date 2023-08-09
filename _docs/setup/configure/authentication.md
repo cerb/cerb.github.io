@@ -3,7 +3,7 @@ title: Authentication
 permalink: /docs/setup/configure/authentication/
 excerpt: ~
 toc:
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Authentication
   breadcrumbs:

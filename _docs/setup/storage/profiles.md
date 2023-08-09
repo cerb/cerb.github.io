@@ -3,7 +3,7 @@ title: "Setup: Storage Profiles"
 permalink: /docs/setup/storage/profiles/
 toc:
   title: Profiles
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Profiles
   breadcrumbs:

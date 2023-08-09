@@ -9,6 +9,11 @@ jumbotron:
   -
     label: Docs &raquo;
     url: /docs/home/
+  -
+    label: Admin Guide &raquo;
+  -
+    label: Installation &raquo;
+    url: /docs/installation/self-hosted/
 ---
 
 * TOC

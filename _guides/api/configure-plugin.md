@@ -23,7 +23,7 @@ jumbotron:
 
 # Introduction
 
-The REST-based[^rest] [Web API](/docs/api/) provides the ability to remote control Cerb for automation, synchronization, and integration. For example, you can use the API from other applications and services to create tickets, search records, monitor notifications, manage tasks, and interact with [bots](/docs/bots/).
+The REST-based[^rest] [Web API](/docs/api/) provides the ability to remote control Cerb for automation, synchronization, and integration. For example, you can use the API from other applications and services to create tickets, search records, monitor notifications, manage tasks, and run [automations](/docs/automations/).
 
 # Enable the API plugin
 

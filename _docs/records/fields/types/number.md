@@ -23,9 +23,9 @@ A **number** field contains an _integer_ (whole number) value.
 
 The value is an integer.
 
-### Bots and Packages
+### Packages
 
-As JSON from [bots](/docs/bots/) and [packages](/docs/packages/):
+As JSON from [packages](/docs/packages/):
 
 <pre>
 <code class="language-json">

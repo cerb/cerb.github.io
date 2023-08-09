@@ -31,7 +31,7 @@ It's not uncommon for larger companies to use both Cerb and Salesforce for diffe
 
 In the past, a custom plugin was required to perform this synchronization.  This was expensive, time-consuming, and complicated.  The plugin had to be kept current with recent Cerb changes.  If you needed to add new fields to the synchronization, the plugin needed to be modified by a developer and redeployed.
 
-With the introduction of _recurrent behaviors_ in Cerb [8.1](/releases/8.1/), this process has been drastically simplified.  You can now build a synchronization behavior entirely in your browser using [bots](/docs/bots/). The behavior can be modified in real-time by anyone with the proper permission within Cerb.  The behavior will also automatically be kept current with new versions of Cerb.
+With the introduction of _recurrent behaviors_ in Cerb [8.1](/releases/8.1/), this process has been drastically simplified.  You can now build a synchronization behavior entirely in your browser using bots. The behavior can be modified in real-time by anyone with the proper permission within Cerb.  The behavior will also automatically be kept current with new versions of Cerb.
 
 This guide will walk you through the process of creating a new custom object in Salesforce, and building a bot in Cerb to manage the ongoing synchronization of recently changed records.  We'll send the first batch of ticket records to Salesforce and verify everything is working properly.
 

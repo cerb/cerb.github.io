@@ -24,7 +24,7 @@ jumbotron:
 
 # Introduction
 
-One of the most common [bot](/docs/bots/) behaviors in Cerb is [sending an automatic reply](/guides/bots/send-automatic-replies/) back to the sender of a new message.  This is a good practice, because it confirms your receipt of a client's message, and it lets them know what to expect in terms of your support hours, SLA obligations, etc.
+One of the most common bot behaviors in Cerb is [sending an automatic reply](/guides/bots/send-automatic-replies/) back to the sender of a new message.  This is a good practice, because it confirms your receipt of a client's message, and it lets them know what to expect in terms of your support hours, SLA obligations, etc.
 
 However, on occasion, a new message that you just received is itself an automatic reply from somewhere else.  You should avoid sending an automatic reply back to it.  At best, it's pointless and won't be read by a human. At worst, two misbehaving bots can endlessly send auto-replies back and forth to each other, creating a _mail loop_.
 

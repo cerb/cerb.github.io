@@ -27,7 +27,7 @@ jumbotron:
 * TOC 
 {:toc}
 
-These textual queries are very simple to automate in [bot](/docs/bots/) behaviors, [dashboard](/docs/dashboards/) widgets, or the [API](/docs/api/).
+These textual queries are very simple to automate in [automations](/docs/automations/), [dashboard](/docs/dashboards/) widgets, or the [API](/docs/api/).
 
 A data query is a collection of `key:value` pairs.
 

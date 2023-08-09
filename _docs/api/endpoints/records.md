@@ -30,7 +30,7 @@ This endpoint target a specific [record type](/docs/records/types/) as `<uri>` i
 
 **GET /rest/records/`<uri>`/`<id>`.json**
 
-Retrieve a record [dictionary](/docs/bots/behaviors/dictionaries/).
+Retrieve a record [dictionary](/docs/guide/developers/dictionaries/).
 
 ### Example
 {: .no_toc}

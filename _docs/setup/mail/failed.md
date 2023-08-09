@@ -3,7 +3,7 @@ title: Failed Messages
 permalink: /docs/setup/mail/failed/
 toc:
   title: Failed Messages
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Failed Messages
   breadcrumbs:

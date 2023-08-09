@@ -52,8 +52,8 @@ The following **placeholders** are available in KATA:
 
 |Key|
 |-|-
-| `record_*` | The [record](/docs/records/types/) being viewed. Supports [key expansion](/docs/bots/behaviors/dictionaries/key-expansion/). The `record__type` placeholder is the type (e.g. `ticket`).
-| `worker_*` | The active [worker](/docs/records/types/worker/) record. Supports [key expansion](/docs/bots/behaviors/dictionaries/key-expansion/).
+| `record_*` | The [record](/docs/records/types/) being viewed. Supports [key expansion](/docs/guide/developers/dictionaries/#key-expansion). The `record__type` placeholder is the type (e.g. `ticket`).
+| `worker_*` | The active [worker](/docs/records/types/worker/) record. Supports [key expansion](/docs/guide/developers/dictionaries/#key-expansion).
 
 # Interactions
 

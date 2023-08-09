@@ -20,7 +20,7 @@ jumbotron:
 # Introduction
 {:.no_toc}
 
-[Classifiers](/docs/classifiers/) take text written in natural language and learn to _classify_ it for you.  [Bots](/docs/bots/) can use classifiers to make smarter decisions.
+[Classifiers](/docs/classifiers/) take text written in natural language and learn to _classify_ it for you.  [Automations](/docs/automations/) can use classifiers to make smarter decisions.
 
 For instance, let's assume that we have a conversational bot who asks a question like _"Are you sure?"_ to confirm the user's intent before performing some action.
 
@@ -36,7 +36,7 @@ That's exactly what a classifier does for us -- it weighs the evidence it's give
 
 If a user responds to the bot with _"sure, make it happen!"_, the classifier may predict with 99.82% confidence that the user meant _"yes"_.  If instead the user says _"stop, I don't want this"_, the classifier may predict with 82.97% confidence that they meant _"no"_.
 
-With that information, a bot can pick the appropriate [outcome](/docs/bots/#decisions-and-outcomes) for a _"Did they say yes?"_ decision.
+With that information, an automation can pick the appropriate [outcome](/docs/automations/commands/decision/) for a _"Did they say yes?"_ decision.
 
 In this guide, we'll quickly build the above classifier so that you can use it in your own bot behaviors.
 

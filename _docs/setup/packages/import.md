@@ -3,7 +3,7 @@ title: Import Package
 excerpt: ~
 permalink: /docs/setup/packages/import/
 toc:
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Import
   breadcrumbs:

@@ -3,7 +3,7 @@ title: "Setup: Import Message"
 permalink: /docs/setup/mail/import/
 toc:
   title: Import Message
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Import Message
   breadcrumbs:

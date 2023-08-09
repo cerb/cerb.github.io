@@ -3,7 +3,7 @@ title: Workers
 permalink: /docs/setup/team/workers/
 toc:
   title: Workers
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Workers
   breadcrumbs:

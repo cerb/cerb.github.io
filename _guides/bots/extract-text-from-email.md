@@ -35,7 +35,7 @@ Color: Robotic Gray
 </code>
 </pre>
 
-A simple [bot](/docs/bots/) behavior can parse that message and copy each value into a new [placeholder](/docs/bots/#dictionaries). From there you can do almost anything.
+A simple bot behavior can parse that message and copy each value into a new [placeholder](/docs/guide/developers/dictionaries/). From there you can do almost anything.
 
 # Building the behavior
 

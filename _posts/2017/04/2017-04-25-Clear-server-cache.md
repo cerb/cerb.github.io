@@ -18,7 +18,7 @@ However, if you modify the database directly then you'll need to clear the cache
 
 ### Flushing the cache
 
-1. Click on the [logo](/docs/getting-started/interface/#logo) in the top left while logged into Cerb.
+1. Click on the [logo](/docs/guide/workers/user-interface/#logo) in the top left while logged into Cerb.
 
 1. Append `update` to the URL in your browser and press `<ENTER>`.
 

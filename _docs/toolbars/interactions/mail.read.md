@@ -51,9 +51,9 @@ The following **placeholders** are available in KATA:
 
 |Key|
 |-|-
-| `message_*` | The [message](/docs/records/types/message/) record. Supports [key expansion](/docs/bots/behaviors/dictionaries/key-expansion/).
-| `widget_*` | The widget record. Supports [key expansion](/docs/bots/behaviors/dictionaries/key-expansion/). `widget__type` will be one of: [card_widget](/docs/records/types/card_widget/), [profile_widget](/docs/records/types/profile_widget/), or [workspace_widget](/docs/records/types/workspace_widget/).
-| `worker_*` | The active [worker](/docs/records/types/worker/) record. Supports [key expansion](/docs/bots/behaviors/dictionaries/key-expansion/).
+| `message_*` | The [message](/docs/records/types/message/) record. Supports [key expansion](/docs/guide/developers/dictionaries/#key-expansion).
+| `widget_*` | The widget record. Supports [key expansion](/docs/guide/developers/dictionaries/#key-expansion). `widget__type` will be one of: [card_widget](/docs/records/types/card_widget/), [profile_widget](/docs/records/types/profile_widget/), or [workspace_widget](/docs/records/types/workspace_widget/).
+| `worker_*` | The active [worker](/docs/records/types/worker/) record. Supports [key expansion](/docs/guide/developers/dictionaries/#key-expansion).
 
 # Interactions
 

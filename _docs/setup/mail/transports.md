@@ -2,7 +2,7 @@
 title: "Setup: Mail Transports"
 permalink: /docs/setup/mail/transports/
 toc:
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Mail Transports
   breadcrumbs:

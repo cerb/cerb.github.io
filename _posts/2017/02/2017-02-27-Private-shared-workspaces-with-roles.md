@@ -19,7 +19,7 @@ Sometimes you need to share a workspace with a few workers from different groups
 
 You'll need to be an admin to create a new role.
 
-From the global [Search menu](/docs/getting-started/interface/#search-menu), select **Roles**.
+From the global [Search menu](/docs/guide/workers/user-interface/#search-menu), select **Roles**.
 
 Click the **(+)** icon above the worklist to add a new role.
 

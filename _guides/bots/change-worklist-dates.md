@@ -32,7 +32,7 @@ By default, dates in [worklists](/docs/worklists/) throughout Cerb are shown in 
 
 You can hover over relative dates to see the absolute date in your local timezone.  In some environments it's desirable to always see absolute dates in the worklist instead.
 
-In this example we'll build a simple [bot](/docs/bots/) behavior to change how [ticket](/docs/tickets/) worklists display the created and updated dates. This approach allows worklists to change depending on what is being displayed or who is viewing it.
+In this example we'll build a simple bot behavior to change how [ticket](/docs/tickets/) worklists display the created and updated dates. This approach allows worklists to change depending on what is being displayed or who is viewing it.
 
 # Importing the behavior
 

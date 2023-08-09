@@ -3,7 +3,7 @@ title: "Setup: Incoming Mail Settings"
 permalink: /docs/setup/mail/incoming/
 toc:
   title: Incoming Mail
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Incoming Mail
   breadcrumbs:

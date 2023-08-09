@@ -3,7 +3,7 @@ title: "Setup: Mail Queue"
 permalink: /docs/setup/mail/queue/
 toc:
   title: Mail Queue
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Mail Queue
   breadcrumbs:

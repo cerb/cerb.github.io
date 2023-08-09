@@ -31,3 +31,9 @@ An emerging use case is integrating with large language models (LLMs) to automat
 You can run Cerb on your own hardware, in Docker, or in [Cerb Cloud](/pricing/) as a fully managed service.
 
 We share 100% of our source code on [GitHub](https://github.com/cerb/cerb-release/). Cerb is free to use for a single seat (no license required). This allows you to maintain an archive of your historical data on the latest version in perpetuity at no ongoing cost. It's your data.
+
+# Next steps
+
+* [Admin Guide](/docs/installation/)
+* [Worker Guide](/docs/guide/workers/user-interface/)
+* [Developer Guide](/docs/scripting/)

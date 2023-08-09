@@ -46,7 +46,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 
 ### Dictionary Placeholders
 
-These [placeholders](/docs/scripting/variables/#placeholders) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
+These [placeholders](/docs/scripting/variables/#placeholders) are available in [dictionaries](/docs/guide/developers/dictionaries/) for [automations](/docs/automations/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
 
 |---
 | Field | Type | Description
@@ -63,15 +63,15 @@ These [placeholders](/docs/scripting/variables/#placeholders) are available in [
 | `type` | text | Type
 | `updated_at` | date | Updated
 
-These optional placeholders are also available with **key expansion** in [dictionaries](/docs/bots/behaviors/dictionaries/key-expansion/) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
+These optional placeholders are also available with **key expansion** in [dictionaries](/docs/guide/developers/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
 |---
 | Field | Type | Description
 |-|-|-
-| `custom_<id>` | mixed | [Custom Fields](/docs/bots/behaviors/dictionaries/key-expansion/#custom-fields)
+| `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
 | `dimensions` | hashmap | Dimensions
-| `links` | links | [Links](/docs/bots/behaviors/dictionaries/key-expansion/#links)
-| `watchers` | watchers | [Watchers](/docs/bots/behaviors/dictionaries/key-expansion/#watchers)
+| `links` | links | [Links](/docs/guide/developers/dictionaries/#key-expansion)
+| `watchers` | watchers | [Watchers](/docs/guide/developers/dictionaries/#key-expansion)
 	
 ### Search Query Fields
 

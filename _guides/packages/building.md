@@ -46,7 +46,7 @@ It would probably take you several hours to follow detailed instructions for cre
 
 As well, rather than us locking you into a specific approach, you can now modify every aspect of the records created by the package to meet your exact needs. We can also offer alternative packages for different needs.
 
-You can create your own packages and use them in [setup](/docs/setup/), [bots](/docs/bots/), or the [API](/docs/api/).
+You can create your own packages and use them in [setup](/docs/setup/), [automations](/docs/automations/), or the [API](/docs/api/).
 
 Perhaps you want to build **Onboarding Bot** to configure a default workspace for new workers and give them a project board checklist to get them up to speed.  You can create these records as a package, and use **prompts** to personalize them every time they are imported.
 

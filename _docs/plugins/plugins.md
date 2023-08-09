@@ -33,7 +33,7 @@ Common uses for plugins are:
 
 * Integration with [third-party services](/docs/connected-services/)
 * Adding new [record types](/docs/records/)
-* Augmenting [bots](/docs/bots/) with new actions
+* Augmenting [automations](/docs/automations/) with new events and commands
 * Expanding [workspaces](/docs/workspaces/) and dashboards with new widgets and data sources
 * ...and much more
 
@@ -227,7 +227,7 @@ Each extension entry looks like:
 
 # Events
 
-Plugins can add new **events** to Cerb based on the contributed functionality. The [activity log](/docs/activity-log/) will record the new events on [records](/docs/records/), [bot behaviors](/docs/bots/) can listen for them, etc.
+Plugins can add new **events** to Cerb based on the contributed functionality. The [activity log](/docs/activity-log/) will record the new events on [records](/docs/records/), [automations](/docs/automations/) can listen for them, etc.
 
 <pre style="max-height:29.5em;">
 <code class="language-xml">
@@ -408,7 +408,7 @@ Here's an example template:
 
 # Activity Points
 
-We previously mentioned **events** when discussing [bots](/docs/bots/) and the [activity log](/docs/records/#activity-log). Plugins can add new events to Cerb based on the contributed functionality. The activity log will record the new events on records, bots behaviors can listen for them, etc.
+We previously mentioned **events** when discussing [automations](/docs/automations/) and the [activity log](/docs/records/#activity-log). Plugins can add new events to Cerb based on the contributed functionality. The activity log will record the new events on records, automations can listen for them, etc.
 
 <pre style="max-height:29.5em;">
 <code class="language-xml">

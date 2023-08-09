@@ -30,7 +30,7 @@ You don't need to figure out which specific person is both responsible for a tas
 
 Instead, you can quickly route a task to the most appropriate group and move on to your next item. That group can organize their own work so each task gets in front of the right person.
 
-Over time, most of this routing can also be done for you with [bots](/docs/bots/).
+Over time, most of this routing can also be done for you with [automations](/docs/automations/).
 
 We recommend configuring a few large groups at first while you become familiar with Cerb. You can then spin off new groups when the largest groups become too busy.
 

@@ -26,7 +26,7 @@ jumbotron:
 
 One popular way to distribute assignments in Cerb is for [workers](/docs/workers/) to take turns playing the role of **dispatcher**.  The dispatcher quickly reviews new tickets in a [group's](/docs/groups/) inbox and assigns the most appropriate group member as the **owner**. This works best when the dispatcher is aware of each member's skills, current workload, and availability.
 
-The dispatcher role can also be handled by a [bot](/docs/bots/).
+The dispatcher role can also be handled by an [automation](/docs/automations/).
 
 In this guide we'll build a simple dispatcher bot that assigns new tickets to available group members using a round-robin rotation.  Availability is determined by worker calendars.  You can use this as the starting point for your own automated dispatcher.
 
@@ -265,7 +265,7 @@ The behavior only continues on a **Yes** outcome:
 <img src="/assets/images/guides/bots/dispatch-assignments/behavior-outcome-yes.png" class="screenshot">
 </div>
 
-The **Find available members in this group** action builds a list of possible assignees in a private [behavior variable](/docs/bots/#variables) using a worklist quick search.  This finds all the workers in the current group who have active accounts and will be available for the next 15 minutes:
+The **Find available members in this group** action builds a list of possible assignees in a private behavior variable using a worklist quick search.  This finds all the workers in the current group who have active accounts and will be available for the next 15 minutes:
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/bots/dispatch-assignments/behavior-action-find-workers.png" class="screenshot">

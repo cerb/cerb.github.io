@@ -24,7 +24,7 @@ jumbotron:
 
 # Introduction
 
-[Loops](/docs/bots/#loops) are an incredibly useful feature in [bot behaviors](/docs/bots/).
+Loops are an incredibly useful feature in bot behaviors.
 
 For instance, you can retrieve a list of tweets from the Twitter API using a [connected account](/docs/connected-accounts/) and loop through each tweet for additional processing.  You can do the same thing with any collection of objects.
 

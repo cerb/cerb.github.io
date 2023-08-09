@@ -43,7 +43,7 @@ We've provided a complete example below.
 
 # Import the bot package
 
-The following [package](/docs/packages/) includes a "Who's Online" [bot](/docs/bots/) with a "Dashboard render widget" [behavior](/docs/bots/behaviors/).
+The following [package](/docs/packages/) includes a "Who's Online" bot with a "Dashboard render widget" behavior.
 
 Follow [these instructions](/guides/packages/importing/#setup) to import it.
 

@@ -24,7 +24,7 @@ jumbotron:
 
 # Introduction
 
-We recommend building [bot](/docs/bots/) behaviors and [webhooks](/guides/webhooks/configure/) in a [local development environment](/guides/developers/run-webdriver-tests/) before deploying them to production.  This allows you to test without risking unexpected changes to your live data.
+We recommend building [automations](/docs/automations/) and [webhooks](/guides/webhooks/configure/) in a [local development environment](/guides/developers/run-webdriver-tests/) before deploying them to production.  This allows you to test without risking unexpected changes to your live data.
 
 Your development machine may be behind a firewall or assigned a dynamic IP address. This makes it difficult to test functionality like webhooks where a remote server needs to directly access a URL on your machine. It also makes it difficult to use other testing tools like BrowserStack[^browserstack] that run against a publicly accessible URL.
 

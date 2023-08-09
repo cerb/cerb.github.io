@@ -3,7 +3,7 @@ title: "Setup: Automated Email Templates"
 permalink: /docs/setup/mail/templates/
 toc:
   title: Automated Email Templates
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Automated Email Templates
   breadcrumbs:

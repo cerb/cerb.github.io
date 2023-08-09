@@ -10,7 +10,7 @@ tags: cerb tips mailbag
 
 You can use [dashboards](/docs/dashboards/) to build your own reports.  Cerb also ships with many built-in reports that you can access from a workspace page.
 
-1. Click on the last item in the [navigation bar](/docs/getting-started/interface/) below the top left logo:
+1. Click on the last item in the [navigation bar](/docs/guide/workers/user-interface/) below the top left logo:
 
 	<div class="cerb-screenshot">
 	<img src="/assets/images/tips/enable-reports/navbar-add.png" class="screenshot">

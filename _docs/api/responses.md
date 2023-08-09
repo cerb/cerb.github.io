@@ -87,7 +87,7 @@ The response looks like:
 }</code>
 </pre>
 
-You can read more about how [dictionaries](/docs/bots/behaviors/dictionaries/) work in the documentation for bots.
+You can read more about how [dictionaries](/docs/guide/developers/dictionaries/) work in the documentation for bots.
 
 ## Expanding keys in API requests
 
@@ -100,7 +100,7 @@ In the above example, you'll notice that some related records weren't loaded by 
 </code>
 </pre>
 
-When you're using a dictionary in a bot [behavior](/docs/bots/behaviors/) you can continue to expand keys as needed.
+When you're using a dictionary in [automations](/docs/automations/) you can continue to expand keys as needed.
 
 However, with the API, the `GET` request would have already returned the above JSON from the server, so accessing undefined keys from the dictionary would just return `null` values.
 

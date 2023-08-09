@@ -29,7 +29,7 @@ jumbotron:
 * TOC
 {:toc}
 
-Using queries, search functionality is consistent between [bots](/docs/bots/), [worklists](/docs/worklists/), [data queries](/docs/data-queries/), and [API requests](/docs/api/endpoints/records/#search).
+Using queries, search functionality is consistent between [automations](/docs/automations/), [worklists](/docs/worklists/), [data queries](/docs/data-queries/), and [API requests](/docs/api/endpoints/records/#search).
 
 As text, queries can be built dynamically using [bot scripting](/docs/scripting/) syntax. They also simplify many complex operations that would otherwise be tedious (or impossible) to automate or represent with web-based forms.
 

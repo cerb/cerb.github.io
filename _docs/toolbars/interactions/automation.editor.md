@@ -61,7 +61,7 @@ The following **placeholders** are available in KATA:
 |-|-
 | `trigger_id` | The extension ID of the current automation trigger.
 | `trigger_name` | The name of the current automation trigger.
-| `worker_*` | The active [worker](/docs/records/types/worker/) record. Supports [key expansion](/docs/bots/behaviors/dictionaries/key-expansion/).
+| `worker_*` | The active [worker](/docs/records/types/worker/) record. Supports [key expansion](/docs/guide/developers/dictionaries/#key-expansion).
 
 # Interactions
 

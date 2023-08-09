@@ -16,7 +16,7 @@ jumbotron:
     url: /docs/portals/
 ---
 
-With the **Webhook Portal** you can respond to arbitrary HTTP requests with a [bot](/docs/bots/) behavior.
+With the **Webhook Portal** you can respond to arbitrary HTTP requests with an [automation](/docs/automations/).
 
 You can use this to:
 

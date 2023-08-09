@@ -24,7 +24,7 @@ jumbotron:
 
 # Introduction
 
-Sometimes your [bot](/docs/bots/) behavior needs to act on [records](/docs/records/) that aren't available as placeholders in the current event.
+Sometimes your bot behavior needs to act on [records](/docs/records/) that aren't available as placeholders in the current event.
 
 In these situations, you can use behavior variables to load matching records of any kind from any event.
 

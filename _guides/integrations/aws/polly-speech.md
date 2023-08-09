@@ -24,11 +24,11 @@ jumbotron:
 # Introduction
 {:.no_toc}
 
-In this guide you'll learn how to generate audio streams of speech from arbitrary text using [bots](/docs/bots/) in Cerb.
+In this guide you'll learn how to generate audio streams of speech from arbitrary text using bots in Cerb.
 
 First, we'll create a new [connected account](/docs/connected-accounts/) to securely integrate with Amazon Polly -- a fast, inexpensive, and lifelike text-to-speech service from Amazon Web Services.
 
-Next, we'll create a [delegate](/docs/bots/#delegation) named _Polly Bot_ to secure your credentials and provide text-to-speech as a simple service for any other bot in Cerb.  Your team's bots will be able to give Polly Bot some text and a preferred voice (gender/accent), and receive back a secure time-limited URL that you can share and play anywhere.
+Next, we'll create a delegate named _Polly Bot_ to secure your credentials and provide text-to-speech as a simple service for any other bot in Cerb.  Your team's bots will be able to give Polly Bot some text and a preferred voice (gender/accent), and receive back a secure time-limited URL that you can share and play anywhere.
 
 Finally, we'll demonstrate how to use Polly Bot as a delegate from a conversational bot to respond to [workers](/docs/workers/) with speech directly in their web browser.
 
@@ -517,7 +517,7 @@ Here we've defined two _public behavior variables_ named **Text** and **Voice**.
 
 You can close the edit popup without saving it (click the **(x)** icon in the top right of the popup).
 
-So that's the behavior itself.  Let's look at the [action](/docs/bots/#actions) node, where the magic actually happens.
+So that's the behavior itself.  Let's look at the action node, where the magic actually happens.
 
 Click on the **Get presigned URL** node in the decision tree.  You should see:
 

@@ -50,8 +50,8 @@ The following **placeholders** are available in KATA:
 
 |Key|
 |-|-
-| `draft_*` | The [draft](/docs/records/types/draft/) record being viewed. Supports [key expansion](/docs/bots/behaviors/dictionaries/key-expansion/).
-| `worker_*` | The active [worker](/docs/records/types/worker/) record. Supports [key expansion](/docs/bots/behaviors/dictionaries/key-expansion/).
+| `draft_*` | The [draft](/docs/records/types/draft/) record being viewed. Supports [key expansion](/docs/guide/developers/dictionaries/#key-expansion).
+| `worker_*` | The active [worker](/docs/records/types/worker/) record. Supports [key expansion](/docs/guide/developers/dictionaries/#key-expansion).
 
 # Interactions
 

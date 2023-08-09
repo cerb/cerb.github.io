@@ -2,7 +2,7 @@
 title: "Setup: Installed Plugins"
 permalink: /docs/setup/plugins/installed/
 toc:
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Installed Plugins
   breadcrumbs:

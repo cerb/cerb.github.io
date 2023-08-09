@@ -2,7 +2,7 @@
 title: License
 permalink: /docs/setup/configure/license/
 toc:
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: License
   breadcrumbs:

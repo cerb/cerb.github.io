@@ -23,9 +23,9 @@ A **float** field contains a number with decimal precision.
 
 The value is a floating point number.
 
-### Bots and Packages
+### Packages
 
-As JSON from [bots](/docs/bots/) and [packages](/docs/packages/):
+As JSON from [packages](/docs/packages/):
 
 <pre>
 <code class="language-json">

@@ -15,7 +15,7 @@ jumbotron:
     url: /docs/tickets/
 ---
 
-[Workers](/docs/workers/) and [bots](/docs/bots/) can use **snippets** to quickly insert predefined text into messages. You can think of snippets as _copying and pasting_ from a giant shared clipboard.
+[Workers](/docs/workers/) and [automations](/docs/automations/) can use **snippets** to quickly insert predefined text into messages. You can think of snippets as _copying and pasting_ from a giant shared clipboard.
 
 However, unlike the traditional _paste_ action, snippets also support [sophisticated scripting functionality](/docs/scripting/) with **placeholders** and **conditional logic**.  This means that the content of a snippet can change based on when and where you use it.
 
@@ -36,7 +36,7 @@ We'll be in contact shortly.</code>
 </pre>
 {% endraw %}
 
-The above snippet results in the following text when used by a [bot](/docs/bots/) on a new ticket:
+The above snippet results in the following text when used by an [automation](/docs/automations/) on a new ticket:
 
 <pre>
 <code class="language-text">Hi <b>Charlotte</b>,

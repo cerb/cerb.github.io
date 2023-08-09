@@ -3,6 +3,7 @@ title: "Scripting Reference"
 excerpt: Bot actions can generate text using a full-featured templating language. Here's everything you need to know.
 permalink: /docs/scripting/
 redirect_from:
+  - /docs/bots/scripting/
   - /docs/building-bots/scripting/
 toc:
   title: Scripting

@@ -2,7 +2,7 @@
 title: Search
 permalink: /docs/setup/configure/search/
 toc:
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Search
   breadcrumbs:

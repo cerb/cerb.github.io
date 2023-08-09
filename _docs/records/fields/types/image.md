@@ -21,9 +21,9 @@ jumbotron:
 
 An **image** field contains a Base64-encoded image.
 
-### Bots and Packages
+### Packages
 
-As JSON from [bots](/docs/bots/) and [packages](/docs/packages/):
+As JSON from [packages](/docs/packages/):
 
 <pre>
 <code class="language-json">

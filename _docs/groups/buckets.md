@@ -20,7 +20,7 @@ jumbotron:
 
 [Group](/docs/groups/) managers organize related tasks into **buckets**.
 
-Every group has an **inbox** bucket to collect new assignments. From there, tasks are sorted into the most appropriate bucket by [workers](/docs/workers/) and [bots](/docs/bots/).
+Every group has an **inbox** bucket to collect new assignments. From there, tasks are sorted into the most appropriate bucket by [workers](/docs/workers/) and [automations](/docs/automations/).
 
 Here's what your first few buckets might look like:
 

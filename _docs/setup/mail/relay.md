@@ -4,7 +4,7 @@ excerpt: The email relay allows workers to respond to messages from external mai
 permalink: /docs/setup/mail/relay/
 toc:
   title: External Relay
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: External Relay
   breadcrumbs:
@@ -29,7 +29,7 @@ By default, relayed messages are authenticated by checking the mail headers. Cop
 
 Unfortunately, some email applications _"break the Internet"_ by ignoring these many decade old conventions. Common culprits include Microsoft Exchange and some Android or Blackberry mobile devices.
 
-In the event that the worker relay doesn't function properly in your environment, you may disable the built-in authentication. Be careful when doing this! When authentication is disabled, anyone can forge a message From: one of your workers and have it relayed to arbitrary conversations. It is very important that you set up alternative authentication using [mail filtering](/docs/setup/mail/filtering/) behaviors with [bots](/docs/bots/) to approve or deny inbound worker replies through the relay.
+In the event that the worker relay doesn't function properly in your environment, you may disable the built-in authentication. Be careful when doing this! When authentication is disabled, anyone can forge a message From: one of your workers and have it relayed to arbitrary conversations. It is very important that you set up alternative authentication using [mail.filter:](/docs/automations/events/mail.filter/) [automations](/docs/automations/) to approve or deny inbound worker replies through the relay.
 
 <div class="cerb-box note">
 	<p>Many mail servers will reject messages sent from "spoofed" senders. You should leave the <tt>From:</tt> setting at the default unless you have verified that your mail server allows for spoofed messages.</p>

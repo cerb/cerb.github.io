@@ -3,7 +3,7 @@ title: Branding
 permalink: /docs/setup/configure/branding/
 excerpt: Personalize Cerb with your organization's name and logo.
 toc:
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Branding
   breadcrumbs:

@@ -25,7 +25,7 @@ jumbotron:
 
 <iframe src="https://player.vimeo.com/video/223537123" width="880" height="495" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-This package adds a preconfigured [bot](/docs/bots/) with some helpful text-based conversational interactions.
+This package adds a preconfigured bot with some helpful text-based conversational interactions.
 
 Conversational computing[^chatbot] is a shift toward talking with software using natural language in order to retrieve information and accomplish tasks, rather than pointing and clicking through complex graphical user interfaces.
 
@@ -1163,7 +1163,7 @@ At the top of level of the behavior there are three nodes with bold black labels
 - **worklistSearch()**
 - **worklistSearchConfirmation()**
 
-These are reusable sub-behaviors called [subroutines](/docs/bots/#subroutines).  Subroutines have access to the same dictionary of placeholders as the overall behavior.  You can _call_ a subroutine any number of times throughout a behavior by using actions, but a subroutine will never run on its own.
+These are reusable sub-behaviors called **subroutines**.  Subroutines have access to the same dictionary of placeholders as the overall behavior.  You can _call_ a subroutine any number of times throughout a behavior by using actions, but a subroutine will never run on its own.
 
 Let's take a closer look at the **say()** subroutine.  It has one action:
 
@@ -1179,9 +1179,9 @@ You may be wondering why we bother to _wrap_ this simple action in a subroutine 
 
 Now we know how to some some text back to a worker using the `say()` subroutine.  It would be a good idea for our bot to figure out what the worker needs to accomplish.
 
-As a listener on the **[UI] New chat message from worker** [event](/docs/bots/#events), the bot's behavior receives a [dictionary](/docs/bots/#dictionaries) with placeholders for the current worker and the message that they sent.
+As a listener on the **[UI] New chat message from worker** event, the bot's behavior receives a [dictionary](/docs/guide/developers/dictionaries/) with placeholders for the current worker and the message that they sent.
 
-The first thing that the behavior does is run an [action](/docs/bots/#actions) called **Detect intent from chat message with a classifier**:
+The first thing that the behavior does is run an action called **Detect intent from chat message with a classifier**:
 
 <div class="cerb-screenshot">
 <img src="/assets/images/packages/chat-bot/cerb-behavior-tree-action-classifier.png" class="screenshot">

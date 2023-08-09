@@ -23,9 +23,9 @@ A **timestamp** field contains a _Unix timestamp_ as a 32-bit integer, represent
 
 The value is text describing an absolute or relative date.
 
-### Bots and Packages
+### Packages
 
-As JSON from [bots](/docs/bots/) and [packages](/docs/packages/):
+As JSON from [packages](/docs/packages/):
 
 #### Relative dates
 

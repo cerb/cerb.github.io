@@ -3,7 +3,7 @@ title: Security
 permalink: /docs/setup/configure/security/
 excerpt: Configure security settings like session expiration and the IP allowlist.
 toc:
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Security
   breadcrumbs:

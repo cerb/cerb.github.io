@@ -25,7 +25,7 @@ jumbotron:
 
 # Introduction
 
-With Cerb, you can create [bot](/docs/bots/) behaviors to automatically react to events taking place within the system -- a new assignment, a new incoming message, a task being completed, any record changing, etc.
+With Cerb, you can create [automations](/docs/automations/) to automatically react to events taking place within the system -- a new assignment, a new incoming message, a task being completed, any record changing, etc.
 
 **Webhooks**[^webhook] provide a way to trigger bot behaviors when _external events_ occur in other applications and services.
 

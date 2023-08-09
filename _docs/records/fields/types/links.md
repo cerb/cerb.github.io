@@ -23,9 +23,9 @@ A **links** field contains a list of `context:id` pairs pointing to other record
 
 The value is an array of `type:id` pairs.
 
-### Bots and Packages
+### Packages
 
-As JSON from [bots](/docs/bots/) and [packages](/docs/packages/):
+As JSON from [packages](/docs/packages/):
 
 <pre>
 <code class="language-json">

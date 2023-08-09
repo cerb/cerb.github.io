@@ -49,7 +49,7 @@ The following **placeholders** are available in KATA:
 
 |Key|
 |-|-
-| `worker_*` | The active [worker](/docs/records/types/worker/) record. Supports [key expansion](/docs/bots/behaviors/dictionaries/key-expansion/).
+| `worker_*` | The active [worker](/docs/records/types/worker/) record. Supports [key expansion](/docs/guide/developers/dictionaries/#key-expansion).
 
 # Interactions
 

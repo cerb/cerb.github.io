@@ -9,6 +9,11 @@ jumbotron:
   -
     label: Docs &raquo;
     url: /docs/home/
+  -
+    label: Admin Guide &raquo;
+  -
+    label: Installation &raquo;
+    url: /docs/installation/self-hosted/
 keywords: upgrade
 ---
 
@@ -115,7 +120,7 @@ Switch to the desired major version branch:
 
 <pre class="command-line" data-user="user" data-host="host">
 <code class="language-bash">
-git checkout v10.0
+git checkout v10.4
 </code>
 </pre>
 

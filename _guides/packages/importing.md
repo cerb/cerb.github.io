@@ -40,7 +40,7 @@ You can [build your own packages](/guides/packages/building/) or import them fro
 
 # Importing packages
 
-Packages can be imported from [setup](/docs/setup/), [bots](/docs/bots/), and the [API](/docs/api/).
+Packages can be imported from [setup](/docs/setup/), bots, and the [API](/docs/api/).
 
 Here's an example package for testing imports:
 

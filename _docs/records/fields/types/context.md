@@ -23,9 +23,9 @@ A **context** field contains a [record type](/docs/records/types/).
 
 The value is the `identifier` (ID) or `uri` (alias) of a record type.
 
-### Bots and Packages
+### Packages
 
-As JSON from [bots](/docs/bots/) and [packages](/docs/packages/):
+As JSON from [packages](/docs/packages/):
 
 <pre>
 <code class="language-json">

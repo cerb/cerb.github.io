@@ -286,7 +286,7 @@ picklist:
 
 # Dictionaries
 
-Features that use KATA may enable [scripting](/docs/scripting/) and provide a [dictionary](/docs/bots/behaviors/dictionaries/) of placeholders for dynamic content.
+Features that use KATA may enable [scripting](/docs/scripting/) and provide a [dictionary](/docs/guide/developers/dictionaries/) of placeholders for dynamic content.
 
 Placeholders and scripting may be used in any value and do not require escaping.
 

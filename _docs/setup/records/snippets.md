@@ -2,7 +2,7 @@
 title: Snippets
 permalink: /docs/setup/records/snippets/
 toc:
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Snippets
   breadcrumbs:

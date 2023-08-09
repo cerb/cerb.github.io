@@ -2,7 +2,7 @@
 title: Avatars
 permalink: /docs/setup/records/avatars/
 toc:
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Avatars
   breadcrumbs:

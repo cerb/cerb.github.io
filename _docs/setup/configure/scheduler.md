@@ -2,7 +2,7 @@
 title: Scheduler
 permalink: /docs/setup/configure/scheduler/
 toc:
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Scheduler
   breadcrumbs:
@@ -23,7 +23,7 @@ jumbotron:
 
 The **scheduler** is responsible for planning and running _jobs_.
 
-A **job** is an automated background task: checking your mailboxes for new messages, search indexing new records, performing nightly maintenance, triggering [bot](/docs/bots/) scheduled behaviors, etc.  There are several built-in jobs, and [plugins](/docs/plugins/) can add new jobs.
+A **job** is an automated background task: checking your mailboxes for new messages, search indexing new records, performing nightly maintenance, triggering [automation](/docs/automations/) timers, etc.  There are several built-in jobs, and [plugins](/docs/plugins/) can add new jobs.
 
 Each job is repeated at a specific _interval_ -- a number of minutes, hours, or days. A job can be _disabled_ to prevent it from running.
 

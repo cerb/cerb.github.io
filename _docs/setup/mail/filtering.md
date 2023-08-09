@@ -3,7 +3,7 @@ title: "Setup: Mail Filtering"
 permalink: /docs/setup/mail/filtering/
 toc:
   title: Filtering
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Filtering
   breadcrumbs:
@@ -18,4 +18,4 @@ jumbotron:
     url: /docs/setup/#incoming-mail
 ---
 
-These [bot](/docs/bots/) behaviors can screen incoming messages before they are accepted by the system.  Bots can modify, redirect, or reject messages based on any conditions you establish.
+These [automations](/docs/automations/) can screen incoming messages before they are accepted by the system.  Bots can modify, redirect, or reject messages based on any conditions you establish.

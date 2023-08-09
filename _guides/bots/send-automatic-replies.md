@@ -210,7 +210,7 @@ You can edit the various nodes to see how they work.  The most important one is 
 <img src="/assets/images/guides/bots/auto-replies/autoreply-action.png" class="screenshot">
 </div>
 
-You'll notice that [placeholders](/docs/bots/#dictionaries) are being used to personalize the response.
+You'll notice that [placeholders](/docs/guide/developers/dictionaries/) are being used to personalize the response.
 
 In the **To:** field we use {% raw %}`{{sender_address}}`{% endraw %} to fill in the client's email address.
 

@@ -1,78 +1,74 @@
 - title: Getting Started
   docs:
   - intro
-  - getting-started/installation
-  - getting-started/interface
-  - getting-started/quick-start
 
-- title: Reference
-  docs:
-    - activity-log
-    - automations
-    - buckets
-    - calendars
-    - cards
-    - classifiers
-    - comments
-    - connected-accounts
-    - connected-services
-    - contacts
-    - custom-fields
-    - custom-fieldsets
-    - dashboards
-    - data-queries
-    - groups
-    - interactions
-    - kata
-    - maps
-    - metrics
-    - notifications
-    - orgs
-    - packages
-    - portals
-    - profiles
-    - project-boards
-    - queues
-    - records
-    - records/links
-    - records/types
-    - reminders
-    - resources
-    - roles
-    - search
-    - sheets
-    - snippets
-    - tickets
-    - toolbars
-    - watchers
-    - webhooks
-    - workers
-    - worklists
-    - workspaces
-
-- title: Bots
-  docs:
-  - bots
-  - bots/events
-  - bots/behaviors
-  - bots/behaviors/dictionaries
-  - bots/behaviors/dictionaries/key-expansion
-  - bots/behaviors/variables
-  - bots/behaviors/simulator
-  - bots/delegation
-
-- title: Administration
+- title: Admin Guide
   docs:
   - installation
   - friendly-urls
-  #- scheduler
-  - quick-start
-  - setup
   - security
-  - backups
+  #- scheduler
   - upgrading
-  #- scaling
+  - backups
+ # - scaling
+  - setup
+
+- title: Worker Guide
+  docs:
+  - guide/workers/user-interface
+
+- title: Developer Guide
+  docs:
+  - guide/developers/dictionaries
+  - scripting
+  #- automations
   - plugins
+  - developers/icons
+
+- title: Reference
+  docs:
+  - activity-log
+  - automations
+  - buckets
+  - calendars
+  - cards
+  - classifiers
+  - comments
+  - connected-accounts
+  - connected-services
+  - contacts
+  - custom-fields
+  - custom-fieldsets
+  - dashboards
+  - data-queries
+  - groups
+  - interactions
+  - kata
+  - maps
+  - metrics
+  - notifications
+  - orgs
+  - packages
+  - portals
+  - profiles
+  - project-boards
+  - queues
+  - records
+  - records/links
+  - records/types
+  - reminders
+  - resources
+  - roles
+  - search
+  - sheets
+  - snippets
+  - tickets
+  - toolbars
+  - watchers
+  - webhooks
+  - workers
+  - worklists
+  - workspaces
 
 - title: API
   docs:
@@ -84,10 +80,6 @@
   - api/custom-fields
   - api/endpoints/records
   - api/endpoints
-
-- title: Developers
-  docs:
-    - developers/icons
 
 - title: Meta
   docs:

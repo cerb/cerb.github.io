@@ -3,7 +3,7 @@ title: Localization
 permalink: /docs/setup/configure/localization/
 excerpt: Each worker can configure their own timezone and language settings.
 toc:
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Localization
   breadcrumbs:

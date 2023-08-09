@@ -58,7 +58,7 @@ By default, when a ticket is deleted you will have 7 days from its last activity
 
 Ticket priority is determined by the **importance** field. You'll encounter importance as a simple slider where you can nudge it up or down as needed.
 
-The importance field can also be automatically adjusted by [bots](/docs/bots/) in response to service level committments, escalations, etc.
+The importance field can also be automatically adjusted by [automations](/docs/automations/) in response to service level committments, escalations, etc.
 
 # Response Times
 
@@ -76,7 +76,7 @@ Cerb performs a simple statistical analysis of the contents of the first message
 
 The predicted probability of being spam is stored as a **spam score** on the ticket.
 
-By itself, this prediction has no effect on tickets. However, the computed score can be used by [bots](/docs/bots/) and [workers](/docs/workers/) to filter mail when desirable.
+By itself, this prediction has no effect on tickets. However, the computed score can be used by [automations](/docs/automations/) and [workers](/docs/workers/) to filter mail when desirable.
 
 The spam predictions improve and adapt over time through training.  When a worker replies to a client message, Cerb learns to be more approving of similar messages in the future.
 

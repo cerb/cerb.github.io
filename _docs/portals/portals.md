@@ -31,7 +31,7 @@ These legacy portal types are being retired:
 | Type |
 |-|-
 | [Chat Bot](/docs/portals/chat-bot/) | Migrate to [Website Interactions](/docs/portals/website-interactions/)
-| [Support Center](/docs/portals/support-center/) | This will migrate to the Portal Builder in 10.3+
+| [Support Center](/docs/portals/support-center/) | This will migrate to the Portal Builder in 10.6+
 
 # Resources
 

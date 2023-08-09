@@ -21,9 +21,9 @@ jumbotron:
 
 An **extension** field refers to a plugin [extension](/docs/plugins/extensions/). The functionality of a [record](/docs/records/) may change based on the selected extension.
 
-### Bots and Packages
+### Packages
 
-As JSON from [bots](/docs/bots/) and [packages](/docs/packages/):
+As JSON from [packages](/docs/packages/):
 
 <pre>
 <code class="language-json">

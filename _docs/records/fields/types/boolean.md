@@ -23,9 +23,9 @@ A **boolean** field contains a _true_ or _false_ value.
 
 The value is `1` (true) or `0` (false).
 
-### Bots and Packages
+### Packages
 
-As JSON from [bots](/docs/bots/) and [packages](/docs/packages/):
+As JSON from [packages](/docs/packages/):
 
 <pre>
 <code class="language-json">

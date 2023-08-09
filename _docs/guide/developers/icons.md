@@ -3,6 +3,8 @@ title: Icon Reference
 #excerpt: ...
 permalink: /docs/developers/icons/
 #social_image_url: /assets/images/docs/data-queries/data-queries.png
+toc:
+  expand: Developer Guide
 jumbotron:
   title: Icon Reference
   #tagline: 

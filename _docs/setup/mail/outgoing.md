@@ -3,7 +3,7 @@ title: "Setup: Outgoing Mail Settings"
 permalink: /docs/setup/mail/outgoing/
 toc:
   title: Outgoing Mail
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Outgoing Mail
   breadcrumbs:

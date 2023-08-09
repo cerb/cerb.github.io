@@ -2,7 +2,7 @@
 title: "Setup: Mailboxes"
 permalink: /docs/setup/mail/mailboxes/
 toc:
-  expand: Setup
+  expand: Admin Guide
 jumbotron:
   title: Mailboxes
   breadcrumbs:
