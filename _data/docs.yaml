@@ -50,35 +50,16 @@
     - worklists
     - workspaces
 
-- title: Automation Scripting
-  docs:
-  - bots/scripting
-  - bots/scripting/variables
-  - bots/scripting/placeholders
-  - bots/scripting/strings
-  - bots/scripting/arrays-objects
-  - bots/scripting/dates
-  - bots/scripting/conditional-logic
-  - bots/scripting/operators
-  - bots/scripting/loops
-  - bots/scripting/regular-expressions
-  - bots/scripting/json
-  - bots/scripting/xml
-  - bots/scripting/commands
-  - bots/scripting/functions
-  - bots/scripting/filters
-  - bots/scripting/tests
-
 - title: Bots
   docs:
-    - bots
-    - bots/events
-    - bots/behaviors
-    - bots/behaviors/dictionaries
-    - bots/behaviors/dictionaries/key-expansion
-    - bots/behaviors/variables
-    - bots/behaviors/simulator
-    - bots/delegation
+  - bots
+  - bots/events
+  - bots/behaviors
+  - bots/behaviors/dictionaries
+  - bots/behaviors/dictionaries/key-expansion
+  - bots/behaviors/variables
+  - bots/behaviors/simulator
+  - bots/delegation
 
 - title: Administration
   docs:

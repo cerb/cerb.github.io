@@ -1,9 +1,10 @@
 ---
-title: Bot Scripting Dates
+title: "Scripting Reference: Dates"
 excerpt: 
-permalink: /docs/bots/scripting/dates/
+permalink: /docs/scripting/dates/
 toc:
   title: Dates
+  expand: Developer Guide
 jumbotron:
   title: Dates
   tagline: 
@@ -12,16 +13,15 @@ jumbotron:
     label: Docs &raquo;
     url: /docs/home/
   -
-    label: Bots &raquo;
-    url: /docs/bots/
+    label: Developer Guide &raquo;
   -
     label: Scripting &raquo;
-    url: /docs/bots/scripting/
+    url: /docs/scripting/
 ---
 
 # Formatting dates
 
-Use the [date](/docs/bots/scripting/filters/#date) filter to format a [string](/docs/bots/scripting/strings/) or [variable](/docs/bots/scripting/variables/) as a date:
+Use the [date](/docs/scripting/filters/#date) filter to format a [string](/docs/scripting/strings/) or [variable](/docs/scripting/variables/) as a date:
 
 <pre>
 <code class="language-twig">
@@ -43,7 +43,7 @@ You can use any of the formatting options from [PHP DateTime::format](https://ww
 
 # Timezones
 
-The second parameter to the [date](/docs/bots/scripting/filters/#date) filter can specify a timezone to use:
+The second parameter to the [date](/docs/scripting/filters/#date) filter can specify a timezone to use:
 
 <pre>
 <code class="language-twig">
@@ -81,7 +81,7 @@ It has been 1513108417 seconds since January 1, 1970 00:00
 
 # Timestamp Manipulation
 
-If you need to manipulate a date, create a date object with the [date()](/docs/bots/scripting/functions/#date) function and use the [date_modify](/docs/bots/scripting/filters/#date_modify) filter:
+If you need to manipulate a date, create a date object with the [date()](/docs/scripting/functions/#date) function and use the [date_modify](/docs/scripting/filters/#date_modify) filter:
 
 <pre>
 <code class="language-twig">
@@ -98,3 +98,13 @@ Now: {{timestamp|date(format)}}
 Now: Tue, 12 Dec 2017 PST
 +2 days: Thu, 14 Dec 2017 PST
 ```
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/scripting/arrays-objects/" class="prev">&lt; Arrays and Objects</a>
+	</div>
+	<div class="right align-right">
+		<a href="/docs/scripting/conditional-logic/" class="prev">Conditional Logic &gt;</a>
+	</div>
+</div>
+<div class="clear"></div>

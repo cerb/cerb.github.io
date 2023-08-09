@@ -74,7 +74,7 @@ In a conversational bot behavior, add the **Prompt With >> Buttons** action.
 <img src="/assets/images/guides/bots/prompts/prompt-type-buttons.png" class="screenshot">
 </div>
 
-* **Options:** A list of pre-defined responses that will be displayed as buttons. One response per line. You can use [scripting](/docs/bots/scripting/) to build the list.
+* **Options:** A list of pre-defined responses that will be displayed as buttons. One response per line. You can use [scripting](/docs/scripting/) to build the list.
 * **Colors:** You can configure a color gradient to automatically style the buttons. For instance, a satisfaction survey asking about sentiment could start green (positive) and end red (negative).
 * **Custom CSS style:** You can include custom CSS rules to further style the buttons. In the example above, we're configuring a fixed width and allowing the buttons to display _inline_ (i.e. adjacent rather than stacked).
 * **Save the response to a placeholder named:** See [Saving placeholders](#saving-placeholders)
@@ -229,7 +229,7 @@ In a conversational bot behavior, add the **Prompt With >> Wait** action.
 <img src="/assets/images/guides/bots/prompts/prompt-type-wait.png" class="screenshot">
 </div>
 
-You don't need to configure anything for a wait prompt.  However, you can get creative with the responses that precede it. Using the [random()](/docs/bots/scripting/functions/#random) function will add some variety to your bot.
+You don't need to configure anything for a wait prompt.  However, you can get creative with the responses that precede it. Using the [random()](/docs/scripting/functions/#random) function will add some variety to your bot.
 
 # Saving placeholders
 
@@ -241,7 +241,7 @@ You can then later refer to this answer when making decisions or giving response
 
 With **Format the placeholder with this template:**, you can format the user's response before validating or saving it.
 
-The formatting template has access to all of Cerb's [scripting](/docs/bots/scripting/) functionality.
+The formatting template has access to all of Cerb's [scripting](/docs/scripting/) functionality.
 
 ## Examples
 
@@ -275,7 +275,7 @@ Any output from this template is considered to be an error that will be displaye
 
 When the template returns no output, the response is considered to be valid and Cerb will save it to your placeholder.
 
-The validate template also has access to all of Cerb's [scripting](/docs/bots/scripting/) functionality.
+The validate template also has access to all of Cerb's [scripting](/docs/scripting/) functionality.
 
 ## Examples
 

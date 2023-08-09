@@ -1,9 +1,10 @@
 ---
-title: "Bot Scripting Reference: Tests"
+title: "Scripting Reference: Tests"
 excerpt: A reference of the template tests in bot scripting.
-permalink: /docs/bots/scripting/tests/
+permalink: /docs/scripting/tests/
 toc:
   title: Tests
+  expand: Developer Guide
 jumbotron:
   title: "Reference: Tests"
   tagline: 
@@ -12,11 +13,10 @@ jumbotron:
     label: Docs &raquo;
     url: /docs/home/
   -
-    label: Bots &raquo;
-    url: /docs/bots/
+    label: Developer Guide &raquo;
   -
     label: Scripting &raquo;
-    url: /docs/bots/scripting/
+    url: /docs/scripting/
 ---
 
 A **test** is an expression that returns a boolean value (`true` or `false`).
@@ -240,3 +240,13 @@ The test accepts one or more patterns.
 ```
 1
 ```
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/scripting/filters/" class="prev">&lt; Filters</a>
+	</div>
+	<div class="right align-right">
+		<a href="/docs/plugins/" class="prev">Plugins &gt;</a>
+	</div>
+</div>
+<div class="clear"></div>

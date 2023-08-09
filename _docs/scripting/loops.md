@@ -1,9 +1,10 @@
 ---
-title: Bot Scripting Loops
+title: "Scripting Reference: Loops"
 excerpt: 
-permalink: /docs/bots/scripting/loops/
+permalink: /docs/scripting/loops/
 toc:
   title: Loops
+  expand: Developer Guide
 jumbotron:
   title: Loops
   tagline: 
@@ -12,16 +13,15 @@ jumbotron:
     label: Docs &raquo;
     url: /docs/home/
   -
-    label: Bots &raquo;
-    url: /docs/bots/
+    label: Developer Guide &raquo;
   -
     label: Scripting &raquo;
-    url: /docs/bots/scripting/
+    url: /docs/scripting/
 ---
 
 # For
 
-Arrays can be iterated with [for](/docs/bots/scripting/commands/#for) loops:
+Arrays can be iterated with [for](/docs/scripting/commands/#for) loops:
 
 <pre>
 <code class="language-twig">
@@ -65,3 +65,13 @@ Loop through a range of values with `..`:
 4...
 5...
 ```
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/scripting/operators/" class="prev">&lt; Operators</a>
+	</div>
+	<div class="right align-right">
+		<a href="/docs/scripting/regex/" class="prev">Regular Expressions &gt;</a>
+	</div>
+</div>
+<div class="clear"></div>

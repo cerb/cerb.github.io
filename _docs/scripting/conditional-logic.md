@@ -1,9 +1,10 @@
 ---
-title: Bot Scripting Conditional Logic
+title: "Scripting Reference: Conditional Logic"
 excerpt: 
-permalink: /docs/bots/scripting/conditional-logic/
+permalink: /docs/scripting/conditional-logic/
 toc:
   title: Conditional Logic
+  expand: Developer Guide
 jumbotron:
   title: Conditional Logic
   tagline: 
@@ -12,11 +13,10 @@ jumbotron:
     label: Docs &raquo;
     url: /docs/home/
   -
-    label: Bots &raquo;
-    url: /docs/bots/
+    label: Developer Guide &raquo;
   -
     label: Scripting &raquo;
-    url: /docs/bots/scripting/
+    url: /docs/scripting/
 ---
 
 Conditional logic can display different content based on the result of any number of **expressions**:
@@ -41,3 +41,13 @@ Your SLA coverage is active.
 {% comment %}
 AND/OR
 {% endcomment %}
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/scripting/dates/" class="prev">&lt; Dates</a>
+	</div>
+	<div class="right align-right">
+		<a href="/docs/scripting/operators/" class="prev">Operators &gt;</a>
+	</div>
+</div>
+<div class="clear"></div>

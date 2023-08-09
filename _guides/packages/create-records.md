@@ -258,7 +258,7 @@ This package creates a new ticket with one message. The message has both plainte
 
 The `group_id` and `bucket_id` keys use special placeholders from the `default` object. You could also set these to specific ID values, or use a prompt to ask for them at import time.
 
-The `created` and `updated` keys use [scripting syntax](/docs/bots/scripting/) to create a Unix timestamp for the current time.
+The `created` and `updated` keys use [scripting syntax](/docs/scripting/) to create a Unix timestamp for the current time.
 
 You'll notice on keys like `org` and `participants` on the ticket that we're just providing values and not IDs.  Cerb will figure out for you if these are new or existing records.
 

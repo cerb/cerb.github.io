@@ -31,7 +31,7 @@ jumbotron:
 
 Using queries, search functionality is consistent between [bots](/docs/bots/), [worklists](/docs/worklists/), [data queries](/docs/data-queries/), and [API requests](/docs/api/endpoints/records/#search).
 
-As text, queries can be built dynamically using [bot scripting](/docs/bots/scripting/) syntax. They also simplify many complex operations that would otherwise be tedious (or impossible) to automate or represent with web-based forms.
+As text, queries can be built dynamically using [bot scripting](/docs/scripting/) syntax. They also simplify many complex operations that would otherwise be tedious (or impossible) to automate or represent with web-based forms.
 
 To give you an idea of what you can do with queries, here's an example query that returns open tickets in the Sales or Support group that are less than a month old:
 

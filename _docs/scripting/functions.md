@@ -1,9 +1,10 @@
 ---
-title: "Bot Scripting Reference: Functions"
+title: "Scripting Reference: Functions"
 excerpt: A reference of the template functions in bot scripting.
-permalink: /docs/bots/scripting/functions/
+permalink: /docs/scripting/functions/
 toc:
   title: Functions
+  expand: Developer Guide
 jumbotron:
   title: "Reference: Functions"
   tagline: 
@@ -12,11 +13,10 @@ jumbotron:
     label: Docs &raquo;
     url: /docs/home/
   -
-    label: Bots &raquo;
-    url: /docs/bots/
+    label: Developer Guide &raquo;
   -
     label: Scripting &raquo;
-    url: /docs/bots/scripting/
+    url: /docs/scripting/
 ---
 
 These functions are available in bot scripts and snippets:
@@ -285,7 +285,7 @@ Customer Support Supervisor
 
 ## cerb_automation
 
-Invoke a [scripting.function](/docs/automations/triggers/scripting.function/) automation from any feature that supports [scripting](/docs/bots/scripting/).
+Invoke a [scripting.function](/docs/automations/triggers/scripting.function/) automation from any feature that supports [scripting](/docs/scripting/).
 
 The function returns keys for `exit_state:` (`exit`, `return`, `error`) and `return:` (an arbitrary dictionary).
 
@@ -381,7 +381,7 @@ Calculate the time elapsed (in seconds) between two dates using calendar availab
 
 Return an array of URLs found in HTML content, along with metadata (e.g. tag, attributes, URI parts).
 
-In the response, URLs are replaced with `tokens` in the `template` which can be modified with the [\|replace](/docs/bots/scripting/filters/#replace) filter.
+In the response, URLs are replaced with `tokens` in the `template` which can be modified with the [\|replace](/docs/scripting/filters/#replace) filter.
 
 For instance, this function can be used to rewrite all links in an email template for click tracking.
 
@@ -493,7 +493,7 @@ Worker #1 has permission to create tickets.
 
 ## cerb_placeholders_list
 
-Return an [object](/docs/bots/scripting/arrays-objects/) with every placeholder in the current behavior.
+Return an [object](/docs/scripting/arrays-objects/) with every placeholder in the current behavior.
 
 `cerb_placeholders_list(extract, prefix)`
 
@@ -658,7 +658,7 @@ Round-robin through a sequence.
 
 ## date
 
-Create a date object for use with the [date_modify](/docs/bots/scripting/filters/#date_modify) filter.
+Create a date object for use with the [date_modify](/docs/scripting/filters/#date_modify) filter.
 
 <pre>
 <code class="language-twig">
@@ -924,7 +924,7 @@ Customer: Joe Customer
 Order #: 12345
 ```
 
-This returns an [object](/docs/bots/scripting/arrays-objects/).
+This returns an [object](/docs/scripting/arrays-objects/).
 
 ## jsonpath_set
 
@@ -1537,6 +1537,16 @@ Invoice ID: {{invoice_id}}
 Client ID: 1
 Invoice ID: 123
 ```
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/scripting/commands/" class="prev">&lt; Commands</a>
+	</div>
+	<div class="right align-right">
+		<a href="/docs/scripting/filters/" class="prev">Filters &gt;</a>
+	</div>
+</div>
+<div class="clear"></div>
 
 # References
 

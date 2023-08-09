@@ -1,9 +1,10 @@
 ---
-title: Bot Scripting Strings
+title: "Scripting Reference: Strings"
 excerpt: 
-permalink: /docs/bots/scripting/strings/
+permalink: /docs/scripting/strings/
 toc:
   title: Strings
+  expand: Developer Guide
 jumbotron:
   title: Strings
   tagline: 
@@ -12,11 +13,10 @@ jumbotron:
     label: Docs &raquo;
     url: /docs/home/
   -
-    label: Bots &raquo;
-    url: /docs/bots/
+    label: Developer Guide &raquo;
   -
     label: Scripting &raquo;
-    url: /docs/bots/scripting/
+    url: /docs/scripting/
 ---
 
 A **string** is some text within a variable.
@@ -79,3 +79,13 @@ in it.
 ```
 This text has no leading or trailing whitespace in it.
 ```
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/scripting/variables/" class="prev">&lt; Variables</a>
+	</div>
+	<div class="right align-right">
+		<a href="/docs/scripting/arrays-objects/" class="prev">Arrays and Objects &gt;</a>
+	</div>
+</div>
+<div class="clear"></div>

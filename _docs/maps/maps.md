@@ -859,7 +859,7 @@ This is a comma-separated value file (`.csv`). We need to convert it to our 'Map
 
 For demonstration, we'll do the conversion manually, so you're better prepared to create your own resources.
 
-You could write a simple script for this in any programming language; but you can also use the **Setup >> Developers >> Bot Scripting Tester** and write a quick and disposable script in Cerb's [bot scripting](/docs/bots/scripting/) language.
+You could write a simple script for this in any programming language; but you can also use the **Setup >> Developers >> Bot Scripting Tester** and write a quick and disposable script in Cerb's [bot scripting](/docs/scripting/) language.
 
 <pre>
 <code class="language-twig">

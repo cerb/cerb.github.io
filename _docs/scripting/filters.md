@@ -1,9 +1,10 @@
 ---
-title: "Bot Scripting Reference: Filters"
+title: "Scripting Reference: Filters"
 excerpt: A reference of the template filters in bot scripting.
-permalink: /docs/bots/scripting/filters/
+permalink: /docs/scripting/filters/
 toc:
   title: Filters
+  expand: Developer Guide
 jumbotron:
   title: "Reference: Filters"
   tagline: 
@@ -12,11 +13,10 @@ jumbotron:
     label: Docs &raquo;
     url: /docs/home/
   -
-    label: Bots &raquo;
-    url: /docs/bots/
+    label: Developer Guide &raquo;
   -
     label: Scripting &raquo;
-    url: /docs/bots/scripting/
+    url: /docs/scripting/
 ---
 
 These filters are available in bot scripts and snippets:
@@ -303,7 +303,7 @@ The ticket is open.
 
 (Added in [10.1.1](/releases/10.1.1/))
 
-Extract a key from each item in an array as a new array. This has the same effect as the [array_column()](/docs/bots/scripting/functions/#array_column) function.
+Extract a key from each item in an array as a new array. This has the same effect as the [array_column()](/docs/scripting/functions/#array_column) function.
 
 <pre>
 <code class="language-twig">
@@ -394,7 +394,7 @@ ID,Subject
 
 ## date
 
-Use the **date** filter to format a [string](/docs/bots/scripting/#strings) or [variable](/docs/bots/scripting/#variables) as a date:
+Use the **date** filter to format a [string](/docs/scripting/#strings) or [variable](/docs/scripting/#variables) as a date:
 
 <pre>
 <code class="language-twig">
@@ -450,7 +450,7 @@ It has been 1513108417 seconds since January 1, 1970 00:00
 
 ## date_modify
 
-If you need to manipulate a date, create a date object with the [date](/docs/bots/scripting/functions/#date) function and use the **date_modify** filter:
+If you need to manipulate a date, create a date object with the [date](/docs/scripting/functions/#date) function and use the **date_modify** filter:
 
 <pre>
 <code class="language-twig">
@@ -569,7 +569,7 @@ Return the first item of an array, object, or string:
 
 ## format
 
-Insert variables into a [string](/docs/bots/scripting/#strings):
+Insert variables into a [string](/docs/scripting/#strings):
 
 <pre>
 <code class="language-twig">
@@ -686,7 +686,7 @@ Suspendisse maximus fringilla tellus, a pellentesque sem tincidunt sit amet." -%
 
 ## join
 
-Convert an [array](/docs/bots/scripting/arrays-objects/) to a string with delimiters:
+Convert an [array](/docs/scripting/arrays-objects/) to a string with delimiters:
 
 <pre>
 <code class="language-twig">
@@ -1201,7 +1201,7 @@ Amazon Order #: {{order_id}}
 Amazon Order #: Z-1234-5678-9
 ```
 
-If you need to escape characters in your regexp pattern, you should use a [set](/docs/bots/scripting/commands/#set) block rather than a string:
+If you need to escape characters in your regexp pattern, you should use a [set](/docs/scripting/commands/#set) block rather than a string:
 
 <pre>
 <code class="language-twig">
@@ -1499,7 +1499,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 (Added in [10.1.2](/releases/10.1.2/))
 
-Extract a substring from a larger string using starting and ending positions. This is an alternative to [\|slice(from,length)](/docs/bots/scripting/filters/#slice).
+Extract a substring from a larger string using starting and ending positions. This is an alternative to [\|slice(from,length)](/docs/scripting/filters/#slice).
 
 `|str_sub(from, to)`
 
@@ -1753,7 +1753,7 @@ name=Kina&action=light_on
 
 (Added in [10.1.1](/releases/10.1.1/))
 
-Return the values of an array with sequential keys. This is the filter equivalent of the [array_values()](/docs/bots/scripting/functions/#array_values) function.
+Return the values of an array with sequential keys. This is the filter equivalent of the [array_values()](/docs/scripting/functions/#array_values) function.
 
 <pre>
 <code class="language-twig">
@@ -1774,6 +1774,16 @@ Return the values of an array with sequential keys. This is the filter equivalen
 ```
 ["Canada","China","Germany","India","Mexico","United States"]
 ```
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/scripting/functions/" class="prev">&lt; Functions</a>
+	</div>
+	<div class="right align-right">
+		<a href="/docs/scripting/tests/" class="prev">Tests &gt;</a>
+	</div>
+</div>
+<div class="clear"></div>
 
 # References
 {:.no_toc}

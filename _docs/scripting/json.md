@@ -1,9 +1,10 @@
 ---
-title: Bot Scripting JSON
+title: "Scripting Reference: JSON"
 excerpt: 
-permalink: /docs/bots/scripting/json/
+permalink: /docs/scripting/json/
 toc:
   title: JSON
+  expand: Developer Guide
 jumbotron:
   title: JSON
   tagline: 
@@ -12,18 +13,17 @@ jumbotron:
     label: Docs &raquo;
     url: /docs/home/
   -
-    label: Bots &raquo;
-    url: /docs/bots/
+    label: Developer Guide &raquo;
   -
     label: Scripting &raquo;
-    url: /docs/bots/scripting/
+    url: /docs/scripting/
 ---
 
 JSON[^json] is a popular format for serializing or exchanging human-readable data using key/value pairs.
 
 # JSON Decoding
 
-You can decode a JSON-encoded string with the [json_decode()](/docs/bots/scripting/functions/#json_decode) function:
+You can decode a JSON-encoded string with the [json_decode()](/docs/scripting/functions/#json_decode) function:
 
 <pre>
 <code class="language-twig">
@@ -41,11 +41,11 @@ Customer: Joe Customer
 Order #: 12345
 ```
 
-This returns an [object](/docs/bots/scripting/arrays-objects/#objects).
+This returns an [object](/docs/scripting/arrays-objects/#objects).
 
 # JSON Modification
 
-You can construct or modify a JSON object using the [dict_set()](/docs/bots/scripting/functions/#dict_set) function:
+You can construct or modify a JSON object using the [dict_set()](/docs/scripting/functions/#dict_set) function:
 
 <pre>
 <code class="language-twig">
@@ -71,7 +71,7 @@ Tracking #: Z1F238
 
 # JSON Encoding
 
-You can encode any variable as a JSON string with the [json_encode](/docs/bots/scripting/filters/#json_encode) filter:
+You can encode any variable as a JSON string with the [json_encode](/docs/scripting/filters/#json_encode) filter:
 
 <pre>
 <code class="language-twig">
@@ -91,7 +91,7 @@ You can encode any variable as a JSON string with the [json_encode](/docs/bots/s
 
 # JSON Prettification
 
-You can _"prettify"_ a JSON string with the [json_pretty](/docs/bots/scripting/filters/#json_pretty) filter:
+You can _"prettify"_ a JSON string with the [json_pretty](/docs/scripting/filters/#json_pretty) filter:
 
 <pre>
 <code class="language-twig">
@@ -116,6 +116,15 @@ You can _"prettify"_ a JSON string with the [json_pretty](/docs/bots/scripting/f
 }
 ```
 
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/scripting/regex/" class="prev">&lt; Regular Expressions</a>
+	</div>
+	<div class="right align-right">
+		<a href="/docs/scripting/xml/" class="prev">XML &gt;</a>
+	</div>
+</div>
+<div class="clear"></div>
 
 # References
 

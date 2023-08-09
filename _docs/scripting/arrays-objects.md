@@ -1,22 +1,22 @@
 ---
-title: Bot Scripting Arrays and Objects
+title: "Scripting Reference: Arrays and Objects"
 excerpt: 
-permalink: /docs/bots/scripting/arrays-objects/
+permalink: /docs/scripting/arrays-objects/
 toc:
-  title: Arrays/Objects
+  title: Arrays and Objects
+  expand: Developer Guide
 jumbotron:
-  title: Arrays/Objects
+  title: Arrays and Objects
   tagline: 
   breadcrumbs:
   -
     label: Docs &raquo;
     url: /docs/home/
   -
-    label: Bots &raquo;
-    url: /docs/bots/
+    label: Developer Guide &raquo;
   -
     label: Scripting &raquo;
-    url: /docs/bots/scripting/
+    url: /docs/scripting/
 ---
 
 # Arrays
@@ -87,7 +87,7 @@ His name is William.
 
 # Modifying arrays and objects
 
-You can use the [dict_set()](/docs/bots/scripting/functions/#dict_set) function to quickly modify, append, or remove items from an array or object.
+You can use the [dict_set()](/docs/scripting/functions/#dict_set) function to quickly modify, append, or remove items from an array or object.
 
 You can set deeply nested keys in a single line using dot-notation:
 
@@ -179,7 +179,7 @@ Append to nested arrays:
 
 # Compute the difference of two arrays
 
-The [array_diff()](/docs/bots/scripting/functions/#array_diff) function returns the items in the second array that are not present in the first array:
+The [array_diff()](/docs/scripting/functions/#array_diff) function returns the items in the second array that are not present in the first array:
 
 <pre>
 <code class="language-twig">
@@ -195,3 +195,13 @@ These are new: {{diff|join(', ')}}
 ```
 These are new: Cerb
 ```
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/scripting/strings/" class="prev">&lt; Strings</a>
+	</div>
+	<div class="right align-right">
+		<a href="/docs/scripting/dates/" class="prev">Dates &gt;</a>
+	</div>
+</div>
+<div class="clear"></div>

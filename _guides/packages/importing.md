@@ -98,7 +98,7 @@ Paste the package into the **Package:** field.
 
 In **Params:** you can provide the preferred values for any prompted placeholders required by the package. This is a simple JSON object with keys matching the `configure > prompts` section of the package.
 
-In the example above, we're building the JSON object with the [dict_set()](/docs/bots/scripting/functions/#dict_set) function, which automatically handles escaping for us.
+In the example above, we're building the JSON object with the [dict_set()](/docs/scripting/functions/#dict_set) function, which automatically handles escaping for us.
 
 The action returns a placeholder named `_results` with details about the created records in the format:
 

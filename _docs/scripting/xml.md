@@ -1,9 +1,10 @@
 ---
-title: Bot Scripting XML
+title: "Scripting Reference: XML"
 excerpt: 
-permalink: /docs/bots/scripting/xml/
+permalink: /docs/scripting/xml/
 toc:
   title: XML
+  expand: Developer Guide
 jumbotron:
   title: XML
   tagline: 
@@ -12,20 +13,19 @@ jumbotron:
     label: Docs &raquo;
     url: /docs/home/
   -
-    label: Bots &raquo;
-    url: /docs/bots/
+    label: Developer Guide &raquo;
   -
     label: Scripting &raquo;
-    url: /docs/bots/scripting/
+    url: /docs/scripting/
 ---
 
 XML[^xml] is another popular format for serializing or exchanging structured data.
 
 # XML Decoding
 
-You can decode an XML string into an XML object with the [xml_decode()](/docs/bots/scripting/functions/#xml_decode) function.
+You can decode an XML string into an XML object with the [xml_decode()](/docs/scripting/functions/#xml_decode) function.
 
-Use the [xml_xpath()](/docs/bots/scripting/functions/#xml_xpath) function to extract values with XPath[^xpath] queries.
+Use the [xml_xpath()](/docs/scripting/functions/#xml_xpath) function to extract values with XPath[^xpath] queries.
 
 <pre>
 <code class="language-twig">
@@ -52,7 +52,7 @@ Invoice ID: 123
 
 # XML Namespaces
 
-You can define an XML namespace with the [xml_xpath_ns()](/docs/bots/scripting/functions/#xml_xpath_ns) function:
+You can define an XML namespace with the [xml_xpath_ns()](/docs/scripting/functions/#xml_xpath_ns) function:
 
 <pre>
 <code class="language-twig">
@@ -80,7 +80,7 @@ Invoice ID: 123
 
 # XML Encoding
 
-You can encode an object as XML with the [xml_encode()](/docs/bots/scripting/functions/#xml_encode) function:
+You can encode an object as XML with the [xml_encode()](/docs/scripting/functions/#xml_encode) function:
 
 <pre>
 <code class="language-twig">
@@ -100,6 +100,16 @@ You can encode an object as XML with the [xml_encode()](/docs/bots/scripting/fun
 ```
 <client_id>1</client_id>
 ```
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/scripting/json/" class="prev">&lt; JSON</a>
+	</div>
+	<div class="right align-right">
+		<a href="/docs/scripting/commands/" class="prev">Commands &gt;</a>
+	</div>
+</div>
+<div class="clear"></div>
 
 # References
 

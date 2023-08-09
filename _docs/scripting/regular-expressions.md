@@ -1,9 +1,10 @@
 ---
-title: Bot Scripting Regular Expressions
+title: "Scripting Reference: Regular Expressions"
 excerpt: 
-permalink: /docs/bots/scripting/regex/
+permalink: /docs/scripting/regex/
 toc:
   title: Regular Expressions
+  expand: Developer Guide
 jumbotron:
   title: Regular Expressions
   tagline: 
@@ -12,14 +13,13 @@ jumbotron:
     label: Docs &raquo;
     url: /docs/home/
   -
-    label: Bots &raquo;
-    url: /docs/bots/
+    label: Developer Guide &raquo;
   -
     label: Scripting &raquo;
-    url: /docs/bots/scripting/
+    url: /docs/scripting/
 ---
 
-You can use regular expressions[^regexp] with the [regexp](/docs/bots/scripting/filters/#regexp) filter to match or extract patterns in text:
+You can use regular expressions[^regexp] with the [regexp](/docs/scripting/filters/#regexp) filter to match or extract patterns in text:
 
 <pre>
 <code class="language-twig">
@@ -35,6 +35,16 @@ Amazon Order #: {{order_id}}
 Amazon Order #: Z-1234-5678-9
 ```
 
-### References
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/scripting/loops/" class="prev">&lt; Loops</a>
+	</div>
+	<div class="right align-right">
+		<a href="/docs/scripting/json/" class="prev">JSON &gt;</a>
+	</div>
+</div>
+<div class="clear"></div>
+
+# References
 
 [^regexp]: Wikipedia: Regular Expression - <https://en.wikipedia.org/wiki/Regular_expression>

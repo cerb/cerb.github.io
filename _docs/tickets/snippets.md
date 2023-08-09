@@ -17,7 +17,7 @@ jumbotron:
 
 [Workers](/docs/workers/) and [bots](/docs/bots/) can use **snippets** to quickly insert predefined text into messages. You can think of snippets as _copying and pasting_ from a giant shared clipboard.
 
-However, unlike the traditional _paste_ action, snippets also support [sophisticated scripting functionality](/docs/bots/scripting/) with **placeholders** and **conditional logic**.  This means that the content of a snippet can change based on when and where you use it.
+However, unlike the traditional _paste_ action, snippets also support [sophisticated scripting functionality](/docs/scripting/) with **placeholders** and **conditional logic**.  This means that the content of a snippet can change based on when and where you use it.
 
 In a common use case, an auto-responder message will use placeholders in a snippet like:
 

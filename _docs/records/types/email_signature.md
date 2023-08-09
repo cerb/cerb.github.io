@@ -40,13 +40,13 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this email signature 
 | **x** | **`owner__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) of this email signature's owner: `app`, `role`, `group`, or `worker` 
 |   | `owner_id` | [number](/docs/records/fields/types/number/) | The ID of this email signature's owner 
-| **x** | **`signature`** | [text](/docs/records/fields/types/text/) | The [template](/docs/bots/scripting/) of the signature 
-|   | `signature_html` | [text](/docs/records/fields/types/text/) | The HTML [template](/docs/bots/scripting/) of the signature 
+| **x** | **`signature`** | [text](/docs/records/fields/types/text/) | The [template](/docs/scripting/) of the signature 
+|   | `signature_html` | [text](/docs/records/fields/types/text/) | The HTML [template](/docs/scripting/) of the signature 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 
 ### Dictionary Placeholders
 
-These [placeholders](/docs/bots/scripting/placeholders/) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
+These [placeholders](/docs/scripting/variables/#placeholders) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
 
 |---
 | Field | Type | Description

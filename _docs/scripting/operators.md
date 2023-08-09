@@ -1,9 +1,10 @@
 ---
-title: Bot Scripting Operators
+title: "Scripting Reference: Operators"
 excerpt: 
-permalink: /docs/bots/scripting/operators/
+permalink: /docs/scripting/operators/
 toc:
   title: Operators
+  expand: Developer Guide
 jumbotron:
   title: Operators
   tagline: 
@@ -12,18 +13,17 @@ jumbotron:
     label: Docs &raquo;
     url: /docs/home/
   -
-    label: Bots &raquo;
-    url: /docs/bots/
+    label: Developer Guide &raquo;
   -
     label: Scripting &raquo;
-    url: /docs/bots/scripting/
+    url: /docs/scripting/
 ---
 
 An **operator** makes comparisons between two values in an expression.
 
 # Assignment
 
-As you've seen with the [set](/docs/bots/scripting/commands/#set) command, a single `=` (equals) character _assigns_ a value to a variable:
+As you've seen with the [set](/docs/scripting/commands/#set) command, a single `=` (equals) character _assigns_ a value to a variable:
 
 <pre>
 <code class="language-twig">
@@ -154,3 +154,13 @@ Orange is not one of the colors.
 ```
 Orange is not one of the colors.
 ```
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/scripting/conditional-logic/" class="prev">&lt; Conditional Logic</a>
+	</div>
+	<div class="right align-right">
+		<a href="/docs/scripting/loops/" class="prev">Loops &gt;</a>
+	</div>
+</div>
+<div class="clear"></div>

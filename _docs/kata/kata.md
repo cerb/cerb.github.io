@@ -286,7 +286,7 @@ picklist:
 
 # Dictionaries
 
-Features that use KATA may enable [scripting](/docs/bots/scripting/) and provide a [dictionary](/docs/bots/behaviors/dictionaries/) of placeholders for dynamic content.
+Features that use KATA may enable [scripting](/docs/scripting/) and provide a [dictionary](/docs/bots/behaviors/dictionaries/) of placeholders for dynamic content.
 
 Placeholders and scripting may be used in any value and do not require escaping.
 
@@ -448,7 +448,7 @@ colors@list:
 
 ### raw
 
-`@raw` returns a key's text without substituting `{% raw %}{{placeholders}}{% endraw %}` or executing [bot scripts](/docs/bots/scripting/) using the [dictionary](#dictionaries).
+`@raw` returns a key's text without substituting `{% raw %}{{placeholders}}{% endraw %}` or executing [bot scripts](/docs/scripting/) using the [dictionary](#dictionaries).
 
 This is useful for returning templates to other functionality (e.g. [sheets](/docs/sheets/)).
 

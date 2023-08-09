@@ -21,10 +21,10 @@ There have been four recent maintenance updates with a total of 90 minor feature
 We added these instructional how-to guides:
 
 * [Create recurring tasks with bots](/guides/bots/create-recurring-tasks/)
-* [Bot Scripting](/docs/bots/scripting/)
-* [Bot Scripting Commands](/docs/bots/scripting/commands/)
-* [Bot Scripting Functions](/docs/bots/scripting/functions/)
-* [Bot Scripting Filters](/docs/bots/scripting/filters/)
+* [Bot Scripting](/docs/scripting/)
+* [Bot Scripting Commands](/docs/scripting/commands/)
+* [Bot Scripting Functions](/docs/scripting/functions/)
+* [Bot Scripting Filters](/docs/scripting/filters/)
 
 ## Thanks for using Cerb!
 

@@ -140,9 +140,9 @@ Scripting occurs within specific tags:
 
 In scripts, you can refer to any key from the working memory dictionary, which are often referred to as **placeholders** to avoid ambiguity with keys in KATA documents.
 
-Scripting provides several [functions](/docs/bots/scripting/functions/) and [filters](/docs/bots/scripting/filters/) for quickly formatting and manipulating data.
+Scripting provides several [functions](/docs/scripting/functions/) and [filters](/docs/scripting/filters/) for quickly formatting and manipulating data.
 
-Refer to the [**scripting**](/docs/bots/scripting/) documentation for a full list of capabilities.
+Refer to the [**scripting**](/docs/scripting/) documentation for a full list of capabilities.
 
 ### Annotations
 
@@ -722,7 +722,7 @@ Automations are automatically **triggered** in response to events within Cerb.
 | [**record.changed**](/docs/automations/triggers/record.changed/) | √ | | Actions that run when [record](/docs/records/types/) fields change
 | [**reminder.remind**](/docs/automations/triggers/reminder.remind/) | √ | | Actions that run for [reminder](/docs/reminders/) alerts 
 | [**resource.get**](/docs/automations/triggers/resource.get/) | √ | | Dynamic [resource](/docs/resources/) content
-| [**scripting.function**](/docs/automations/triggers/scripting.function/) | √ | | Run an [automation](/docs/automations/) from the [cerb_automation()](/docs/bots/scripting/functions/#cerb_automation) function in scripting.
+| [**scripting.function**](/docs/automations/triggers/scripting.function/) | √ | | Run an [automation](/docs/automations/) from the [cerb_automation()](/docs/scripting/functions/#cerb_automation) function in scripting.
 | [**ui.chart.data**](/docs/automations/triggers/ui.chart.data/) | √ | | Data sources for [Chart KATA widgets](/docs/dashboards/)
 | [**ui.sheet.data**](/docs/automations/triggers/ui.sheet.data/) | √ | | Data sources for [sheets](/docs/sheets/)
 | [**ui.widget**](/docs/automations/triggers/ui.widget/) | √ | | Custom output for [card](/docs/records/types/card_widget/), [profile](/docs/records/types/profile_widget/), or [workspace](/docs/records/types/workspace_widget/) widgets

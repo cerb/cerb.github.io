@@ -167,7 +167,7 @@ The response to a prompt can determine the next step in a bot's behavior.
 
 You can **format** a user's response to a [prompt](#prompts) before [validating](#validation) or saving it.
 
-The formatting template has access to all of Cerb's [scripting](/docs/bots/scripting/) functionality.
+The formatting template has access to all of Cerb's [scripting](/docs/scripting/) functionality.
 
 ### Format a number
 
@@ -193,7 +193,7 @@ This formats a number, removing thousands separators and decimal places:
 
 ## Validation
 
-You can **validate** a user's response to a [prompt](#prompts) by running multiple tests using [bot scripting](/docs/bots/scripting/).
+You can **validate** a user's response to a [prompt](#prompts) by running multiple tests using [bot scripting](/docs/scripting/).
 
 Any output from this template is considered to be an error that will be displayed to the user.
 
@@ -262,7 +262,7 @@ In a conversational bot behavior, add the **Prompt With >> Buttons** action.
 ### Options
 {:.no_toc}
 
-A list of pre-defined responses that will be displayed as buttons. One response per line. You can use [scripting](/docs/bots/scripting/) to build the list.
+A list of pre-defined responses that will be displayed as buttons. One response per line. You can use [scripting](/docs/scripting/) to build the list.
 
 ### Colors
 {:.no_toc}
@@ -279,7 +279,7 @@ You can include custom CSS rules to further style the buttons. In the example ab
 ### Save to a placeholder
 {:.no_toc}
 
-Name a [placeholder](/docs/bots/scripting/placeholders/) where a copy of the user's response will be saved. You can then later refer to this answer when making decisions or giving responses.
+Name a [placeholder](/docs/scripting/variables/#placeholders) where a copy of the user's response will be saved. You can then later refer to this answer when making decisions or giving responses.
 
 {% comment %}
 ## Tips for button prompts
@@ -326,7 +326,7 @@ If enabled, an autocomplete textbox will be added to the chooser button. This is
 ### Save to a placeholder
 {:.no_toc}
 
-Name a [placeholder](/docs/bots/scripting/placeholders/) where a copy of the user's response will be saved. You can then later refer to this answer when making decisions or giving responses.
+Name a [placeholder](/docs/scripting/variables/#placeholders) where a copy of the user's response will be saved. You can then later refer to this answer when making decisions or giving responses.
 
 If the name your placeholder ends with `_id` then all of the placeholders for the selected record will be available.
 
@@ -361,7 +361,7 @@ The default text in the date prompt.
 ### Save to a placeholder
 {:.no_toc}
 
-Name a [placeholder](/docs/bots/scripting/placeholders/) where a copy of the user's response will be saved. You can then later refer to this answer when making decisions or giving responses.
+Name a [placeholder](/docs/scripting/variables/#placeholders) where a copy of the user's response will be saved. You can then later refer to this answer when making decisions or giving responses.
 
 ## File Upload
 
@@ -382,7 +382,7 @@ In a conversational bot behavior, add the **Prompt With >> File Upload** action.
 ### Save to a placeholder
 {:.no_toc}
 
-Name a [placeholder](/docs/bots/scripting/placeholders/) where a copy of the user's response will be saved. You can then later refer to this answer when making decisions or giving responses.
+Name a [placeholder](/docs/scripting/variables/#placeholders) where a copy of the user's response will be saved. You can then later refer to this answer when making decisions or giving responses.
 
 If the name your placeholder ends with `_id` then all of the placeholders for the uploaded file will be available.
 
@@ -412,7 +412,7 @@ Click the **(+)** icon to add a new image-based response. Each response includes
 ### Save to a placeholder
 {:.no_toc}
 
-Name a [placeholder](/docs/bots/scripting/placeholders/) where a copy of the user's response will be saved. You can then later refer to this answer when making decisions or giving responses.
+Name a [placeholder](/docs/scripting/variables/#placeholders) where a copy of the user's response will be saved. You can then later refer to this answer when making decisions or giving responses.
 
 ## Text Input
 
@@ -446,7 +446,7 @@ Whether the text prompt accepts a single line of input, or multiple lines.
 ### Save to a placeholder
 {:.no_toc}
 
-Name a [placeholder](/docs/bots/scripting/placeholders/) where a copy of the user's response will be saved. You can then later refer to this answer when making decisions or giving responses.
+Name a [placeholder](/docs/scripting/variables/#placeholders) where a copy of the user's response will be saved. You can then later refer to this answer when making decisions or giving responses.
 
 ## Wait
 
@@ -466,7 +466,7 @@ In a conversational bot behavior, add the **Prompt With >> Wait** action.
 
 You don't need to configure anything for a wait prompt.
 
-However, you can get creative with the responses that precede it. Using the [random()](/docs/bots/scripting/functions/#random) function will add some variety to your bot.
+However, you can get creative with the responses that precede it. Using the [random()](/docs/scripting/functions/#random) function will add some variety to your bot.
 
 # Proactive chat interactions
 

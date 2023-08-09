@@ -1,9 +1,10 @@
 ---
-title: "Bot Scripting Reference: Commands"
+title: "Scripting Reference: Commands"
 excerpt: A reference of the template commands in bot scripting.
-permalink: /docs/bots/scripting/commands/
+permalink: /docs/scripting/commands/
 toc:
   title: Commands
+  expand: Developer Guide
 jumbotron:
   title: "Reference: Commands"
   tagline: 
@@ -12,11 +13,10 @@ jumbotron:
     label: Docs &raquo;
     url: /docs/home/
   -
-    label: Bots &raquo;
-    url: /docs/bots/
+    label: Developer Guide &raquo;
   -
     label: Scripting &raquo;
-    url: /docs/bots/scripting/
+    url: /docs/scripting/
 ---
 
 These commands are available in bot scripts and snippets:
@@ -36,7 +36,7 @@ Evaluate a variable or expression without outputting anything:
 </code>
 </pre>
 
-This is primarily useful for expanding placeholders in dictionaries before serializing the object to [JSON](/docs/bots/scripting/#json) or [XML](/docs/bots/scripting/#xml):
+This is primarily useful for expanding placeholders in dictionaries before serializing the object to [JSON](/docs/scripting/#json) or [XML](/docs/scripting/#xml):
 
 <pre>
 <code class="language-twig">
@@ -191,3 +191,13 @@ Where did you go?
 Hi, Kina!
 Where did you go?
 ```
+
+<div class="section-nav">
+	<div class="left">
+		<a href="/docs/scripting/xml/" class="prev">&lt; XML</a>
+	</div>
+	<div class="right align-right">
+		<a href="/docs/scripting/functions/" class="prev">Functions &gt;</a>
+	</div>
+</div>
+<div class="clear"></div>

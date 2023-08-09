@@ -21,7 +21,7 @@ jumbotron:
     url: /docs/automations/#triggers
 ---
 
-**scripting.function** [automations](/docs/automations/) are invoked with the [cerb_automation()](/docs/bots/scripting/functions/#cerb_automation) function from [scripting](/docs/bots/scripting/) anywhere in Cerb (e.g. automations, behaviors, snippets, events, toolbars).
+**scripting.function** [automations](/docs/automations/) are invoked with the [cerb_automation()](/docs/scripting/functions/#cerb_automation) function from [scripting](/docs/scripting/) anywhere in Cerb (e.g. automations, behaviors, snippets, events, toolbars).
 
 # Inputs
 

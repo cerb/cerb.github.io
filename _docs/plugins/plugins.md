@@ -360,7 +360,7 @@ In [templates](/docs/plugins/#templates):
 </code>
 </pre>
 
-From [bot scripting](/docs/bots/scripting/):
+From [bot scripting](/docs/scripting/):
 
 <pre>
 <code class="language-twig">

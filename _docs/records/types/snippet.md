@@ -36,7 +36,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
-| **x** | **`content`** | [text](/docs/records/fields/types/text/) | The [template](/docs/bots/scripting/) of the snippet 
+| **x** | **`content`** | [text](/docs/records/fields/types/text/) | The [template](/docs/scripting/) of the snippet 
 |   | `context` | [text](/docs/records/fields/types/text/) | The [record type](/docs/records/types/) to add the profile tab to 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`owner__context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) of this snippet's owner: `app`, `role`, `group`, or `worker` 
@@ -48,7 +48,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 
 ### Dictionary Placeholders
 
-These [placeholders](/docs/bots/scripting/placeholders/) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
+These [placeholders](/docs/scripting/variables/#placeholders) are available in [dictionaries](/docs/bots/behaviors/dictionaries/) for [bot behaviors](/docs/bots/behaviors/), [snippets](/docs/snippets/), and [API](/docs/api/) responses:
 
 |---
 | Field | Type | Description

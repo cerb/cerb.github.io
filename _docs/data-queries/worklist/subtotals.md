@@ -233,11 +233,11 @@ metric:"(x+2)*100"
 
 ### Filters
 
-Numeric [filters](/docs/bots/scripting/filters/) from [bot scripting](/docs/bots/scripting/) can be appended to a result following a pipe (`|`) character.
+Numeric [filters](/docs/scripting/filters/) from [bot scripting](/docs/scripting/) can be appended to a result following a pipe (`|`) character.
 
-* [abs](/docs/bots/scripting/filters/#abs)
-* [number_format](/docs/bots/scripting/filters/#number_format)
-* [round](/docs/bots/scripting/filters/#round)
+* [abs](/docs/scripting/filters/#abs)
+* [number_format](/docs/scripting/filters/#number_format)
+* [round](/docs/scripting/filters/#round)
 
 <pre>
 <code class="language-cerb">
