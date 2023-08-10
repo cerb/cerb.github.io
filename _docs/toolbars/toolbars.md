@@ -115,12 +115,15 @@ Toolbars can be configured from **Search >> Toolbars**.
 
 | Toolbar | 
 |-|-
-| [automation.editor](/docs/toolbars/interactions/automation.editor/) | Automation editor
+| [automation.editor](/docs/toolbars/interactions/automation.editor/) | Editing an automation
+| [comment.editor](/docs/toolbars/interactions/comment.editor/) | Editing a comment
 | [draft.read](/docs/toolbars/interactions/draft.read/) | Reading a draft message
 | [global.menu](/docs/toolbars/interactions/global.menu/) | Global interactions from the floating icon in the lower right
+| [global.search](/docs/toolbars/interactions/global.search/) | Searching from the top right of any page
 | [mail.compose](/docs/toolbars/interactions/mail.compose/) | Composing new email messages
 | [mail.read](/docs/toolbars/interactions/mail.read/) | Reading email messages
 | [mail.reply](/docs/toolbars/interactions/mail.reply/) | Replying to email messages
 | [record.card](/docs/toolbars/interactions/record.card/) | Viewing a record card popup
 | [record.profile](/docs/toolbars/interactions/record.profile/) | Viewing a record profile page
+| [records.worklist](/docs/toolbars/interactions/records.worklist/) | Viewing a worklist of records
 
