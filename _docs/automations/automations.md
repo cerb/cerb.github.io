@@ -715,6 +715,7 @@ Automations are automatically **triggered** in response to events within Cerb.
 | [**automation.timer**](/docs/automations/triggers/automation.timer/) | √ | √ | A scheduled automation with [continuations](#continuations)
 | [**data.query**](/docs/automations/triggers/data.query/) | √ | | Return results for custom [data queries](/docs/data-queries/)
 | [**interaction.worker**](/docs/automations/triggers/interaction.worker/) | √ | √ | Worker [interactions](/docs/interactions/) on [toolbars](/docs/toolbars/) and widgets
+| [**interaction.worker.explore**](/docs/automations/triggers/interaction.worker.explore/) | √ | √ | Worker [interactions](/docs/interactions/) that use custom logic to return the next record in explore mode
 | [**interaction.website**](/docs/automations/triggers/interaction.website/) | √ | √ | Website visitor [interactions](/docs/interactions/)
 | [**map.clicked**](/docs/automations/triggers/map.clicked/) | √ | | Handlers for clicks on [map](/docs/maps/) regions and points
 | [**projectBoard.cardAction**](/docs/automations/triggers/projectBoard.cardAction/) | √ | | Actions that take place for new cards in a project board column

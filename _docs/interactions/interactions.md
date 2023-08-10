@@ -37,5 +37,6 @@ The following [triggers](/docs/automations/#triggers) are used to build interact
 | Trigger | 
 |-|-
 | [interaction.worker](/docs/automations/triggers/interaction.worker/) | Interactions with a [worker](/docs/workers/) using web forms.
+| [interaction.worker.explore](/docs/automations/triggers/interaction.worker.explore/) | Interactions use custom logic to return the next record in explore mode.
 | [interaction.website](/docs/automations/triggers/interaction.website/) | Interactions with visitors on third-party websites using web forms.
 
