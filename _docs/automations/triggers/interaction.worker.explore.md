@@ -21,7 +21,21 @@ jumbotron:
     url: /docs/automations/#triggers
 ---
 
-**interaction.worker.explore** [automations](/docs/automations/) are worker-based [interactions](/docs/interactions/) that use custom logic to return the next record in explore mode.
+**interaction.worker.explore** [interactions](/docs/interactions/) use custom logic to return the next record in a dynamic explore set.
+
+Currently, explore mode uses a static point-in-time snapshot of a worklist for the first 1,000 records. This ignores new higher priority records that entered a worklist after explore started, and it includes records that may have been handled recently by other workers.
+
+With dynamic explore mode, a 'next' button can determine the next most important task in real-time (including new records and excluding records that no longer match filters).
+
+The interaction is expected to return `await:explore:` with a title, url, and optional label for the next URL to visit. The interaction receives inputs for `explore_hash:`, `explore_page:` and the current worker.
+
+A custom conditional toolbar can be displayed with each URL. The toolbar interactions can be interactive or headless, and they can return an `explore_page:` for navigating the explore set  (e.g. back/next).
+
+For convenience, named toolbar buttons (e.g. `interaction/next:`) can also be defined without an automation `uri:`, where the name will be treated as the `explore_page:` action.
+
+Custom keyboard shortcuts can be assigned to each toolbar button. This will significantly optimize workflows that involve visiting a set of records/URLs (e.g. dispatch, finding a next assignment, etc).
+
+Explore sets are created with [api.command:](/docs/automations/commands/api.command/) in automations.
 
 For example:
 

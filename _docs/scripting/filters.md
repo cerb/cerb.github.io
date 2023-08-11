@@ -617,6 +617,46 @@ For instance, you can use this to sign parameters in a survey URL to verify that
 <p>Provide your own value for <tt>THIS IS SECRET</tt>. You an store it in the bot configuration.</p>
 </div>
 
+## html_to_text
+
+Convert HTML content to plain text.
+
+`|html_to_text(truncate=50000)`
+
+|-|-|-
+| **truncate** | The maximum length to parse (bytes)
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set html %}
+&lt;p&gt;
+	This has &lt;b&gt;bold&lt;/b&gt; and &lt;u&gt;underlined&lt;/u&gt; text with &lt;a href="https://cerb.ai/"&gt;links&lt;/a&gt;.
+&lt;/p&gt;&lt;p&gt;
+	List:
+	&lt;ul&gt;
+		&lt;li&gt;This&lt;/li&gt;
+		&lt;li&gt;is&lt;/li&gt;
+		&lt;li&gt;a&lt;/li&gt;
+		&lt;li&gt;list&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/p&gt;
+{% endset %}
+{{html|html_to_text}}
+{% endraw %}
+</code>
+</pre>
+
+```
+This has bold and underlined text with links <https://cerb.ai/>.
+ 
+List:
+* This
+* is
+* a
+* list
+```
+
 ## image_info
 
 (Added in [9.6.7](/releases/9.6.7/))

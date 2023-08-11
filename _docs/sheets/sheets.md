@@ -264,6 +264,20 @@ columns:
 </code>
 </pre>
 
+## Markdown
+
+The `markdown` column type displays Markdown formatted text as HTML.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+columns:
+  markdown/content:
+    label: Answer
+{% endraw %}
+</code>
+</pre>
+
 ## Search
 
 The `search` column type displays arbitrary text as a link with `label:` or (`label_key:`, `label_template:`).
