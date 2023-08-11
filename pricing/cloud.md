@@ -218,7 +218,7 @@ You can easily configure Cerb to use remote mail services if desired.
 
 With Cerb Cloud, we provide you with a subdomain worth of temporary email addresses, like __*@example.cerb.email__. You can send and receive email from any of these addresses (e.g. billing@, support@, sales@), which makes it much easier to practice routing work to the appropriate groups/buckets in Cerb.
 
-We also configure SPF, DKIM, and DMARC records for these temporary email addresses so you can [test our mail deliverability](http://cerb.io/docs/quick-start/#send-a-message-to-test-mail-deliverability).
+We also configure SPF, DKIM, and DMARC records for these temporary email addresses so you can [test our mail deliverability](/docs/guide/admins/quick-start/#send-a-message-to-test-mail-deliverability).
 
 If you switch to a Cerb Cloud subscription, you can even use these email addresses in production, but you'll probably want to use your own domains.  We'll help you configure the SPF, DKIM, and DMARC records on your domains to optimize your mail deliverability from Cerb as well.
 

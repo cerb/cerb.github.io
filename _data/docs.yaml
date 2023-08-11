@@ -8,6 +8,7 @@
   - friendly-urls
   - security
   #- scheduler
+  - guide/admins/quick-start
   - upgrading
   - backups
  # - scaling
@@ -16,6 +17,10 @@
 - title: Worker Guide
   docs:
   - guide/workers/user-interface
+  # - guide/workers/search
+  # - guide/workers/worklists (peek, subtotals, filters, customize)
+  # - guide/workers/workspaces (add page, add to menu, tabs, widgets, dashboard filters)
+  # - guide/workers/email
 
 - title: Developer Guide
   docs:
