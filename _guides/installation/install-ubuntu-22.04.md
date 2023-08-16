@@ -19,6 +19,10 @@ jumbotron:
     url: /resources/guides/#installation
 ---
 
+{% comment %}
+* Include permissions instructions from mail install guide
+{% endcomment %}
+
 # Introduction
 {:.no_toc}
 
@@ -29,31 +33,21 @@ This guide will walk you through preparing an Ubuntu 22.04 server for installing
 
 # Provision an Ubuntu server
 
-If you don't already have a server, you can use Docker or Amazon EC2.
+If you don't already have a server, you can [create an EC2 instance in Amazon Web Services](/guides/installation/ec2/).
 
-## Docker
+This guide uses the following Amazon Machine Image (AMI):
+
+Ubuntu 22.04 LTS - ami-0ee8244746ec5d6d4 (us-west-2)
+
+# Connect to your server
+
+Connect to your server using SSH:
 
 <pre>
 <code class="language-bash">
-docker run -it --rm -p 80:80 ubuntu:23.04 /bin/bash
+ssh ubuntu@1.2.3.4
 </code>
 </pre>
-
-For local evaluation, development, and testing, you can use the built-in [Docker](/docs/installation/docker/) configuration instead.
-
-## EC2
-
-1. Launch an [Amazon EC2](/guides/installation/ec2/) instance.
-
-1. Connect to your server using SSH:
-
-    <pre>
-    <code class="language-bash">
-    ssh ubuntu@1.2.3.4
-    </code>
-    </pre>
-
-1. `sudo` into the `root` user.
 
 # Install packages
 
@@ -61,7 +55,9 @@ It's a good idea to update your installed packages first:
 
 <pre>
 <code class="language-bash">
-apt-get update && apt-get -y upgrade
+sudo apt-get -y update
+
+sudo apt-get -y upgrade
 </code>
 </pre>
 
@@ -69,8 +65,7 @@ Install PHP 8.1:
 
 <pre>
 <code class="language-bash">
-apt-get install -y php8.1 php8.1-fpm php8.1-mysql php8.1-mbstring php8.1-gd php8.1-curl \
-   php8.1-yaml php8.1-gmp php8.1-zip php8.1-mailparse php8.1-dom php8.1-xml
+sudo apt-get install -y php8.1 php8.1-fpm php8.1-mysql php8.1-mbstring php8.1-gd php8.1-curl php8.1-yaml php8.1-gmp php8.1-zip php8.1-dev php-pear
 </code>
 </pre>
 
@@ -78,7 +73,7 @@ Install common tools:
 
 <pre>
 <code class="language-bash">
-apt-get install -y git vim
+sudo apt-get install -y git vim
 </code>
 </pre>
 
@@ -86,7 +81,7 @@ Install the Nginx web server:
 
 <pre>
 <code class="language-bash">
-apt-get install -y nginx nginx-extras
+sudo apt-get install -y nginx nginx-extras
 </code>
 </pre>
 
@@ -133,19 +128,11 @@ You should see `mailparse` in the list.
 
 We recommend using a dedicated database server that replicates to a standby server. In Amazon Web Servers you should use RDS.
 
-If you need to install MySQL on your Docker or EC2 instance instead, you can use these instructions:
+If you need to install MySQL on your EC2 instance instead, you can use these instructions:
 
 <pre>
 <code class="language-bash">
-apt-get install -y mysql-server-8.0
-</code>
-</pre>
-
-In Docker you need to start the MySQL service. You really should use the `mysql:8.0` container instead.
-
-<pre>
-<code class="language-bash">
-service mysql start
+sudo apt-get install -y mysql-server-8.0
 </code>
 </pre>
 
@@ -158,8 +145,6 @@ Connect to MySQL:
 mysql -h localhost -u root -p
 </code>
 </pre>
-
-The default password is empty, just press `<ENTER>`.
 
 <div class="cerb-box note"><p>If you're using a remote MySQL server, use its internal IP in place of <tt>localhost</tt> above.</p></div>
 
@@ -198,23 +183,11 @@ You should now be ready to install Cerb.
 <pre>
 <code class="language-bash">
 cd /usr/share/nginx/html/
-</code>
-</pre>
 
-<pre>
-<code class="language-bash">
-git clone https://github.com/cerb/cerb-release.git cerb
-</code>
-</pre>
+sudo git clone https://github.com/cerb/cerb-release.git cerb
 
-<pre>
-<code class="language-bash">
-chown -R www-data:www-data cerb
-</code>
-</pre>
+sudo chown -R www-data:www-data cerb
 
-<pre>
-<code class="language-bash">
 cd cerb
 </code>
 </pre>
@@ -223,13 +196,9 @@ You can test Cerb using PHP's built in webserver:
 
 <pre>
 <code class="language-bash">
-service nginx stop
-</code>
-</pre>
+sudo service nginx stop
 
-<pre>
-<code class="language-bash">
-php -S 0.0.0.0:80
+sudo php -S 0.0.0.0:80
 </code>
 </pre>
 
@@ -243,13 +212,13 @@ You should see the requirements checker with all tests passed:
 
 If you're just testing Cerb, you can use PHP's built-in web server and skip the Nginx step below.
 
-Type `CTRL+C` to kill the PHP web server process.
+Type `CTRL + C` to kill the PHP web server process.
 
 Since you just ran the web server as root, you should make sure any newly created files are owned by the `www-data` user and group:
 
 <pre>
 <code class="language-">
-chown -R www-data:www-data /usr/share/nginx/html/cerb/
+sudo chown -R www-data:www-data /usr/share/nginx/html/cerb/
 </code>
 </pre>
 
@@ -269,7 +238,7 @@ Enable Perfect Forward Secrecy (this may take a few minutes):
 
 <pre>
 <code class="language-bash">
-openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 </code>
 </pre>
 
@@ -279,7 +248,7 @@ For testing, you can also create a self-signed SSL certificate.  You **should no
 
 <pre>
 <code class="language-bash">
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 -keyout /etc/ssl/private/nginx-selfsigned.key \
 -out /etc/ssl/certs/nginx-selfsigned.pem
 </code>
@@ -303,7 +272,7 @@ Add a new virtual host to Nginx:
 
 <pre>
 <code class="language-bash">
-vi /etc/nginx/sites-available/cerb
+sudo vi /etc/nginx/sites-available/cerb
 </code>
 </pre>
 
@@ -441,7 +410,7 @@ To enable the site we need to add a symlink:
 
 <pre>
 <code class="language-bash">
-ln -s /etc/nginx/sites-available/cerb /etc/nginx/sites-enabled/cerb
+sudo ln -s /etc/nginx/sites-available/cerb /etc/nginx/sites-enabled/cerb
 </code>
 </pre>
 
@@ -451,7 +420,7 @@ You can test the Nginx configuration file with:
 
 <pre class="command-line" data-output="2-3">
 <code class="language-bash">
-nginx -t
+sudo nginx -t
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful
 </code>
@@ -461,9 +430,9 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 
 <pre>
 <code class="language-bash">
-service nginx restart
+sudo service nginx restart
 
-service php8.1-fpm restart
+sudo service php8.1-fpm restart
 </code>
 </pre>
 
