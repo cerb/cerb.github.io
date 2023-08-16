@@ -462,12 +462,24 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 <pre>
 <code class="language-bash">
 service nginx restart
+</code>
+</pre>
 
+<pre>
+<code class="language-bash">
 service php8.1-fpm restart
 </code>
 </pre>
 
 For more information about Nginx + PHP-FPM, see: <https://www.nginx.com/resources/wiki/start/topics/examples/phpfcgi/>
+
+# Enable friendly URLs
+
+<pre>
+<code class="language-bash">
+touch .htaccess
+</code>
+</pre>
 
 # Run the Cerb installer
 
