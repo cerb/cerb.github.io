@@ -65,16 +65,17 @@ interaction/locationByIp:
 </code>
 </pre>
 
-|Req'd|Key|
-|:-:|-
-|√|`uri:`| The URI of the [interaction.worker](/docs/automations/triggers/interaction.worker/) [automation](/docs/automations/) to start when clicked.
-||`inputs:`| The optional [inputs](/docs/automations/#inputs) dictionary for the interaction.
-||`label:`| The label to describe the interaction in buttons and menu links. This may be omitted if an icon is provided.
-||`icon:`| The optional [icon](/docs/developers/icons/) to display in buttons and menu links. This can be in addition to, or instead of, the label.
-||`tooltip:`| If a button only has an icon and not a label, the tooltip can show a label when hovering over it.
-||`badge:`| The optional counter to display on buttons.
-||`hidden@bool:`| Conditionally determine whether to display this toolbar item or not. For instance, check worker permissions or record fields.
-||`after:`| Actions to take when the interaction completes successfully. For instance, a completed interaction on a dashboard can refresh any number of widgets by name to show updated data. Options here depend on the toolbar.
+| Req'd | Key            |
+|:-----:|----------------|
+|   √   | `uri:`         | The URI of the [interaction.worker](/docs/automations/triggers/interaction.worker/) [automation](/docs/automations/) to start when clicked.
+|       | `inputs:`      | The optional [inputs](/docs/automations/#inputs) dictionary for the interaction.
+|       | `label:`       | The label to describe the interaction in buttons and menu links. This may be omitted if an icon is provided.
+|       | `icon:`        | The optional [icon](/docs/developers/icons/) to display in buttons and menu links. This can be in addition to, or instead of, the label.
+|       | `tooltip:`     | If a button only has an icon and not a label, the tooltip can show a label when hovering over it.
+|       | `keyboard:`    | An alternative keyboard shortcut to start the interaction (e.g. `Ctrl+Shift+K`)
+|       | `badge:`       | The optional counter to display on buttons.
+|       | `hidden@bool:` | Conditionally determine whether to display this toolbar item or not. For instance, check worker permissions or record fields.
+|       | `after:`       | Actions to take when the interaction completes successfully. For instance, a completed interaction on a dashboard can refresh any number of widgets by name to show updated data. Options here depend on the toolbar.
 
 ### menu:
 

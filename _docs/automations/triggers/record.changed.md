@@ -32,13 +32,13 @@ This trigger uses [event handler](/docs/automations/#events) KATA, and the first
 
 The automation [dictionary](/docs/automations/#dictionaries) starts with the following values:
 
-| Key | Type | Notes
-|-|-|-
-| `actor_*` | record | The current actor dictionary. Supports key expansion.
-| `inputs` | dictionary | [Custom input](/docs/automations/#inputs) values from the caller.
-| `is_new` | boolean | `true` if the record was created during the current request.
-| `record_*` | record | The new [record](/docs/records/types/) dictionary. Supports key expansion.
-| `was_record_*` | record | The former [record](/docs/records/types/) dictionary. Supports key expansion.
+| Key            | Type       | Notes                                                                         |
+|----------------|------------|-------------------------------------------------------------------------------|
+| `actor_*`      | record     | The current actor dictionary. Supports key expansion.                         |
+| `change_type`  | string     | `created`, `updated`, or `deleted`                                            |
+| `inputs`       | dictionary | [Custom input](/docs/automations/#inputs) values from the caller.             |
+| `record_*`     | record     | The new [record](/docs/records/types/) dictionary. Supports key expansion.    |
+| `was_record_*` | record     | The former [record](/docs/records/types/) dictionary. Supports key expansion. |
 
 # Outputs
 

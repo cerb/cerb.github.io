@@ -39,13 +39,12 @@ Similarly, resources can provide logo images and stylesheets for [portals](/docs
 
 Resources have a **type** that determines where they are available.
 
-### Maps
-
-| Type | Description
-|-|-
-| **Dataset (.csv)** | A precomputed dataset in the comma-separated values (CSV) format.
-| **Font** | TrueType fonts (TTF) for use in image generation.
-| **Image** | An image file (e.g. PNG, JPEG, GIF, SVG).
-| **Map** | Features that describe regions in GeoJSON (e.g. countries, states, counties). These are base maps that other features are drawn on top of.
-| **Map Points** | Points of interest to display on a base map (e.g. cities, business locations).
-| **Map Properties** | Additional datasets that can be merged into a base map (e.g. election results by state/county, COVID-19 cases per country).
+| Type                 | Description                                                                                                                                |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| **Dataset (.csv)**   | A precomputed dataset in the comma-separated values (CSV) format.                                                                          |
+| **Dataset (.jsonl)** | A precomputed dataset in the JSON Lines format.                                                                                            |
+| **Font**             | TrueType fonts (TTF) for use in image generation.                                                                                          |
+| **Image**            | An image file (e.g. PNG, JPEG, GIF, SVG).                                                                                                  |
+| **Map**              | Features that describe regions in GeoJSON (e.g. countries, states, counties). These are base maps that other features are drawn on top of. |
+| **Map Points**       | Points of interest to display on a base map (e.g. cities, business locations).                                                             |
+| **Map Properties**   | Additional datasets that can be merged into a base map (e.g. election results by state/county, COVID-19 cases per country).                |
