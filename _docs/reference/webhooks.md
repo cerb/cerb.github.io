@@ -29,9 +29,6 @@ Here are some common webhook integrations:
 - **Github**
   - Send issue and commit notifications to a Slack room.
 
-- **HipChat**
-  - Send @mentions to a Cerb bot.
-
 - **JIRA**
   - Send notifications about new/resolved issues to a Slack room.
 
