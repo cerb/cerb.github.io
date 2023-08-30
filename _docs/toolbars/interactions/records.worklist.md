@@ -61,6 +61,12 @@ The following **placeholders** are available in KATA:
 | `worklist_limit` | The number of records per worklist page (e.g. 25).
 | `worker_*` | The active [worker](/docs/records/types/worker/) record. Supports [key expansion](/docs/guide/developers/dictionaries/#key-expansion).
 
+**Override** built-in functionality by naming an interaction one of these:
+
+|Key|
+|-|-
+| `interaction/explore:` | Replace the default 'explore' button below worklists with a custom interaction.
+
 # Interactions
 
 Caller: `cerb.toolbar.records.worklist`

@@ -57,6 +57,16 @@ The optional offset to begin reading bytes from. This defaults to `0` (the first
 
 The optional length to read bytes from starting at `offset:`. This defaults to `1024000` (1MB).
 
+### length_split:
+
+(Added in [10.4.1](/releases/10.4.1/))
+
+The optional sequence to split the read bytes on. This will always be less than or equal to the requested length.
+
+For instance, a `length: 2048` read with `length_split@json: "\n"` would return bytes up to the last linefeed character occurring before to the length position.
+
+This simplifies processing line-based formats like CSV and JSONL as streams.
+
 ### password:
 
 The optional password for an encrypted ZIP archive.
