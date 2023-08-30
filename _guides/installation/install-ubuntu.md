@@ -1,11 +1,11 @@
 ---
-title: Install Cerb on Ubuntu Linux 22.04
+title: Install Cerb on Ubuntu Linux 23.04
 layout: integration
 topic: Installation
-excerpt: This guide will walk you through preparing an Ubuntu 22.04 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
+excerpt: This guide will walk you through preparing an Ubuntu 23.04 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
 permalink: /guides/installation/ubuntu/
 jumbotron:
-  title: Install Cerb on Ubuntu Linux 22.04
+  title: Install Cerb on Ubuntu Linux 23.04
   tagline: ""
   breadcrumbs:
   -
@@ -22,7 +22,7 @@ jumbotron:
 # Introduction
 {:.no_toc}
 
-This guide will walk you through preparing an Ubuntu 22.04 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
+This guide will walk you through preparing an Ubuntu 23.04 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
 
 * TOC
 {:toc}
@@ -89,45 +89,6 @@ Install the Nginx web server:
 apt-get install -y nginx nginx-extras
 </code>
 </pre>
-
-# Compile the mailparse extension
-
-Ubuntu 22.04 ships with a defective version (3.1.2) of the `php-mailparse` package. This can lead to segmentation faults when processing email in PHP 8.1 or later. The issue will be resolved by the Ubuntu 23.04 release in April 2023.
-
-Cerb requires version 3.1.3 or later of the extension. At the time of writing, the latest version was 3.1.4.
-
-To ensure the proper version of mailparse is installed you should compile it yourself with the following instructions.
-
-<pre>
-<code class="language-bash">
-MAILPARSE_VERSION=3.1.4 \
-  && cd /tmp \
-  && apt-get -y install php8.1-dev \
-  && pecl channel-update pecl.php.net \
-  && pecl download mailparse-${MAILPARSE_VERSION} \
-  && tar xvzf mailparse-${MAILPARSE_VERSION}.tgz \
-  && cd mailparse-${MAILPARSE_VERSION} \
-  && phpize \
-  && ./configure \
-  && sed -i 's/^\(#error .* the mbstring extension!\)/\/\/\1/' mailparse.c \
-  && make \
-  && echo "extension=mailparse.so" > /etc/php/8.1/cli/conf.d/30-mailparse.ini \
-  && echo "extension=mailparse.so" > /etc/php/8.1/fpm/conf.d/30-mailparse.ini \
-  && cp /tmp/mailparse-${MAILPARSE_VERSION}/modules/mailparse.so /usr/lib/php/20210902/mailparse.so
-</code>
-</pre>
-
-You can verify that the mailparse extension is installed:
-
-<pre>
-<code class="language-bash">
-service php8.1-fpm restart
-
-php-fpm8.1 -m
-</code>
-</pre>
-
-You should see `mailparse` in the list.
 
 # Install MySQL
 
