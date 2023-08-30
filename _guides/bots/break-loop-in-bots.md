@@ -26,7 +26,7 @@ jumbotron:
 
 Loops are an incredibly useful feature in bot behaviors.
 
-For instance, you can retrieve a list of tweets from the Twitter API using a [connected account](/docs/connected-accounts/) and loop through each tweet for additional processing.  You can do the same thing with any collection of objects.
+For instance, you can retrieve a list of social media posts from an ActivityPub API using a [connected account](/docs/connected-accounts/) and loop through each post for additional processing.  You can do the same thing with any collection of objects.
 
 There are certain situations where you'll want to stop looping through a collection early when certain conditions are met.  Maybe you're only looking for the first match.  Maybe you need to stop a process as soon as the first error occurs.
 

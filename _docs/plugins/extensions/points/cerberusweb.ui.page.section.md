@@ -123,7 +123,6 @@ jumbotron:
 | Ticket Section | `core.page.profiles.ticket`
 | Time Tracking Activity Section | `cerb.page.profiles.timetracking_activity`
 | Time Tracking Page Section | `cerberusweb.profiles.time_tracking`
-| Twitter Message Profile Section | `cerberusweb.profiles.twitter.message`
 | WebApi Credentials Section | `api.page.profiles.webapi_credentials`
 | Webhook Listener Section | `webhooks.page.profiles.webhook_listener`
 | Worker Section | `core.page.profiles.worker`

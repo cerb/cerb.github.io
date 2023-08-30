@@ -104,5 +104,4 @@ This reference can be used when building [automations](/docs/automations/), [sea
 | `server` | [Servers](/docs/records/types/server/)
 | `time_entry` | [Time Tracking Entries](/docs/records/types/time_entry/)
 | `timetracking_activity` | [Time Tracking Activities](/docs/records/types/timetracking_activity/)
-| `twitter_message` | [Twitter Messages](/docs/records/types/twitter_message/)
 | `webapi_credentials` | [Web API Keys](/docs/records/types/webapi_credentials/)

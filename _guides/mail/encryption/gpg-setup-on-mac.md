@@ -373,7 +373,7 @@ gpg --export --armor YOUR@EMAIL.com > YOUR@EMAIL.com.public.gpg-key
 ### Using Keybase
 
 We highly recommend using a service like [Keybase](https://keybase.io/), which not only verifies the email address of a public key, but also allows the key owner
-to prove their identity by verifying ownership of domain names, profiles on various services (e.g. Twitter, GitHub), Bitcoin wallets, etc.
+to prove their identity by verifying ownership of domain names, profiles on various services (e.g. GitHub), Bitcoin wallets, etc.
 
 As the setup is a bit more involved than the below three options and subject to change, we recommend visiting
 [https://keybase.io/](https://keybase.io/download) and following their guide.

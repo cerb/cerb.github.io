@@ -42,7 +42,6 @@ jumbotron:
 | Reminders | `cron.reminders`
 | Search Indexer | `cron.search`
 | Storage Manager | `cron.storage`
-| Twitter Checker | `wgmtwitter.cron`
 
 <div class="section-nav">
 	<div class="left">

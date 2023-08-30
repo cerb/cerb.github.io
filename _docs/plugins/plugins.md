@@ -444,7 +444,6 @@ We previously mentioned **events** when discussing [automations](/docs/automatio
 ### Integration
 
 | [JIRA Integration](/docs/plugins/wgm.jira/) | `wgm.jira`
-| [Twitter Integration](/docs/plugins/wgm.twitter/) | `wgm.twitter`
 
 ### Legacy
 

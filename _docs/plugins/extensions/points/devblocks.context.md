@@ -90,7 +90,6 @@ jumbotron:
 | Ticket | `cerberusweb.contexts.ticket`
 | Time Tracking Activity | `cerberusweb.contexts.timetracking.activity`
 | Time Tracking | `cerberusweb.contexts.timetracking`
-| Twitter Message | `cerberusweb.contexts.twitter.message`
 | Web Api Credentials | `cerberusweb.contexts.webapi.credential`
 | Webhook Listener | `cerberusweb.contexts.webhook_listener`
 | Worker | `cerberusweb.contexts.worker`

@@ -214,7 +214,7 @@ You'll notice that [placeholders](/docs/guide/developers/dictionaries/) are bein
 
 In the **To:** field we use {% raw %}`{{sender_address}}`{% endraw %} to fill in the client's email address.
 
-In the **Subject:** field, we include the {% raw %}`{{ticket_subject}}`{% endraw %} and {% raw %}`{{ticket_mask}}`{% endraw %} to repeat their subject back to them along with the reference number.  The reference number is useful when the client contacts you again from a different channel about the same issue (phone, Twitter, etc).  You can simply ask them for the first few characters to quickly locate the issue.
+In the **Subject:** field, we include the {% raw %}`{{ticket_subject}}`{% endraw %} and {% raw %}`{{ticket_mask}}`{% endraw %} to repeat their subject back to them along with the reference number.  The reference number is useful when the client contacts you again from a different channel about the same issue (phone, Slack, etc).  You can simply ask them for the first few characters to quickly locate the issue.
 
 The **Content:** field is the body of the email message.  We use several placeholders here.  {% raw %}`{{sender_contact_first_name}}`{% endraw %} addresses a known contact by name.  If we don't know their name then that text isn't included.  We also include the email subject and reference number again.
 
