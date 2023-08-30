@@ -14,11 +14,15 @@ It is our policy to respect your privacy regarding any information we may collec
 * TOC
 {:toc}
 
-# Privacy Shield
+# Data Privacy Framework (DPF)
 
-Webgroup Media, LLC (WGM) complies with the EU-U.S. Privacy Shield Framework and Swiss-U.S. Privacy Shield Framework as set forth by the U.S. Department of Commerce regarding the collection, use, and retention of personal information transferred from the European Union to the United States.
+Webgroup Media, LLC (WGM) complies with the EU-U.S. Data Privacy Framework (EU-U.S. DPF), the UK Extension to the EU-U.S. DPF, and the Swiss-U.S. Data Privacy Framework (Swiss-U.S. DPF) as set forth by the U.S. Department of Commerce.
 
-WGM has certified to the Department of Commerce that it adheres to the Privacy Shield Principles. If there is any conflict between the terms in this privacy policy and the Privacy Shield Principles, the Privacy Shield Principles shall govern. To learn more about the Privacy Shield program, and to view our certification, please visit: <https://www.privacyshield.gov/>
+WGM has certified to the U.S. Department of Commerce that it adheres to the EU-U.S. Data Privacy Framework Principles (EU-U.S. DPF Principles) with regard to the processing of personal data received from the European Union in reliance on the EU-U.S. DPF and from the United Kingdom (and Gibraltar) in reliance on the UK Extension to the EU-U.S. DPF.
+
+WGM has certified to the U.S. Department of Commerce that it adheres to the Swiss-U.S. Data Privacy Framework Principles (Swiss-U.S. DPF Principles) with regard to the processing of personal data received from Switzerland in reliance on the Swiss-U.S. DPF.
+
+If there is any conflict between the terms in this privacy policy and the EU-U.S. DPF Principles and/or the Swiss-U.S. DPF Principles, the Principles shall govern.  To learn more about the Data Privacy Framework (DPF) program, and to view our certification, please visit <https://www.dataprivacyframework.gov/>.
 
 ### Jurisdiction
 
@@ -26,17 +30,17 @@ We are subject to the investigatory and enforcement powers of the United States 
 
 ### Resolving Privacy Complaints
 
-In compliance with the Privacy Shield Principles, WGM commits to resolve complaints about our collection or use of your personal information. EU and Swiss individuals with inquiries or complaints regarding our Privacy Shield policy should first contact us at: [team@cerb.ai](mailto:team@cerb.ai)
+In compliance with the Data Privacy Framework, WGM commits to resolve complaints about our collection or use of your personal information. EU, UK, and Swiss individuals with inquiries or complaints regarding our Data Privacy Framework policy should first contact us at: [team@cerb.ai](mailto:team@cerb.ai)
 
-WGM has further committed to refer unresolved Privacy Shield complaints to JAMS, an alternative dispute resolution provider located in the United States. If you do not receive timely acknowledgment of your complaint from us, or if we have not addressed your complaint to your satisfaction, please contact or visit <https://www.jamsadr.com/eu-us-privacy-shield> for more information or to file a complaint. The services of JAMS are provided at no cost to you.
+WGM has further committed to refer unresolved Data Privacy Framework complaints to JAMS, an alternative dispute resolution provider located in the United States. If you do not receive timely acknowledgment of your complaint from us, or if we have not addressed your complaint to your satisfaction, please contact or visit <https://www.jamsadr.com/eu-us-data-privacy-framework> for more information or to file a complaint. The services of JAMS are provided at no cost to you.
 
 ### Independent Arbitration
 
-Under certain limited circumstances, European Union individuals may invoke binding Privacy Shield arbitration as a last resort if all other forms of dispute resolution have been unsuccessful. To learn more about this method of resolution and its availability to you, please read more about [Privacy Shield](https://www.privacyshield.gov/).
+Under certain limited circumstances, European Union individuals may invoke binding Data Privacy Framework arbitration as a last resort if all other forms of dispute resolution have been unsuccessful. To learn more about this method of resolution and its availability to you, please read more about [Data Privacy Framework](https://www.dataprivacyframework.gov/).
 
 ### Liability For Onward Transfers
 
-Where WGM has transferred personal information of EU or Swiss residents to third parties, WGM shall be liable if those third parties do not process personal information in compliance with the Privacy Shield Principles. This shall not be the case where WGM establishes that it is not responsible for the damage caused by the third party.
+Where WGM has transferred personal information of EU, UK, or Swiss residents to third parties, WGM shall be liable if those third parties do not process personal information in compliance with the Data Privacy Framework Principles. This shall not be the case where WGM establishes that it is not responsible for the damage caused by the third party.
 
 ### Data Protection Addendum
 
@@ -153,19 +157,17 @@ Due to the remote nature of cloud computing, authorized technicians from our ven
 
 In such events we defer to their privacy policy: <https://aws.amazon.com/privacy>
 
-### Banking through Freshbooks, WePay, Authorize.net, Wells Fargo, and PayPal
+### Banking through Freshbooks, WePay, Stripe, Wells Fargo, and PayPal
 
 We do not store credit card information on our servers.
 
 For one-time transactions we do not save credit card or bank account numbers anywhere, although we do store email-based receipts that include contact information, redacted account information, payment type, transaction IDs, and authorization codes.
 
-For recurring transactions, payment information is stored with vendors who adhere to the Payment Card Industry Data Security Standards (PCI DSS).  We contract with [FreshBooks](http://www.freshbooks.com>) for sending invoices and collecting payments, and they protect and encrypt financial information in accordance with regulations.
+For recurring transactions, payment information is stored with vendors who adhere to the Payment Card Industry Data Security Standards (PCI DSS).  We contract with [FreshBooks](http://www.freshbooks.com>) and [Stripe](https://www.stripe.com/) for sending invoices and collecting payments, and they protect and encrypt financial information in accordance with regulations.
 
-Most of our payments are collected by WePay in association with Freshbooks.
+The electronic payments we receive through Freshbooks are collected by WePay.
 
-We also occasionally process credit card transactions directly through our merchant account at Authorize.net.
-
-Depending on a client's preferred payment method, these transactions may alternatively take place through other vendors like PayPal, or wire transfers to Wells Fargo Bank.
+Depending on a client's preferred payment method, these transactions may alternatively take place through other vendors like PayPal, Stripe, or wire transfers to Wells Fargo Bank.
 
 We do not have direct access to client credit card numbers or bank account information through any of these vendors.
 
@@ -236,6 +238,8 @@ If WGM or substantially all of its assets were acquired, or in the event that we
 Although most changes are likely to be minor, we may modify this Privacy Policy from time to time at our sole discretion. You are encouraged to frequently check this page for any changes to the Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.
 
 ### Changelog
+
+* **28-August-2028**: Updated Privacy Shield to the Data Privacy Framework.
 
 * **11-December-2019**: Added instructions to the 'Your Privacy Choices' section.
 
