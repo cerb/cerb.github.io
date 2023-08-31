@@ -39,7 +39,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `automation_kata` | [text](/docs/records/fields/types/text/) |  
 |   | `content` | [text](/docs/records/fields/types/text/) | The optional content of this resource. For text, use a string. For binary, base64-encode in [data URI format](https://en.wikipedia.org/wiki/Data_URI_scheme). This may also be an automation resource URI (e.g. `cerb:automation_resource:TOKEN`) 
 |   | `description` | [text](/docs/records/fields/types/text/) |  
-| **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) |  
+| **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | A [cerb.resource.type](/docs/plugins/extensions/points/cerb.resource.type/#extensions) extension ID.
 |   | `is_dynamic` | [boolean](/docs/records/fields/types/boolean/) |  
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this resource 

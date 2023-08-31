@@ -208,7 +208,7 @@ Each extension entry looks like:
 | [Profile Tab Type](/docs/plugins/extensions/points/cerb.profile.tab/) | `cerb.profile.tab`
 | [Profile Widget Type](/docs/plugins/extensions/points/cerb.profile.tab.widget/) | `cerb.profile.tab.widget`
 | [Record Type](/docs/plugins/extensions/points/devblocks.context/) | `devblocks.context`
-| [Reply Toolbar Item](/docs/plugins/extensions/points/cerberusweb.reply.toolbaritem/) | `cerberusweb.reply.toolbaritem`
+| [Resource Type](/docs/plugins/extensions/points/cerb.resource.type/) | `cerb.resource.type`
 | [Rest API Controller](/docs/plugins/extensions/points/cerberusweb.rest.controller/) | `cerberusweb.rest.controller`
 | [Scheduled Job](/docs/plugins/extensions/points/cerberusweb.cron/) | `cerberusweb.cron`
 | [Search Engine](/docs/plugins/extensions/points/devblocks.search.engine/) | `devblocks.search.engine`
