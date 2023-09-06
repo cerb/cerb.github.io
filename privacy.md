@@ -7,9 +7,11 @@ jumbotron:
   tagline: Our commitment to protecting your privacy and data
 ---
 
-**Webgroup Media, LLC (henceforth "WGM", "our", "us", and "we")** is a commercial open source software company founded in April 2001. We develop, license, and provide support for **Cerb** -- a web-based platform for teamwork and workflow automation.
+**Webgroup Media, LLC (henceforth "WGM", "our", "us", and "we")** is a commercial open source software company founded in April 2001. We develop, license, and provide support for **Cerb** -- a web-based platform for enterprise collaboration and workflow automation.
 
-It is our policy to respect your privacy regarding any information we may collect while operating our websites and services. We do not sell any personally identifiable information or data stored in Cerb Cloud to third-parties. We do not directly share your information with third-parties without explicit permission except to comply with the law or to provide necessary infrastructure in connection with the services you request; however, there is some passive risk of exposure to third-party access inherent in web-based services that is outlined in detail below. We do our best to mitigate and minimize these risks on your behalf.
+It is our policy to respect your privacy regarding any information we may collect while operating our websites and services.
+
+We do not sell any personally identifiable information or data stored in Cerb Cloud to third-parties. We do not directly share your information with third-parties without explicit permission except to comply with the law or to provide necessary infrastructure in connection with the services you request; however, there is some passive risk of exposure to third-party access inherent in web-based services that is outlined in detail below. We do our best to mitigate and minimize these risks on your behalf.
 
 * TOC
 {:toc}
@@ -25,6 +27,8 @@ WGM has certified to the U.S. Department of Commerce that it adheres to the Swis
 If there is any conflict between the terms in this privacy policy and the EU-U.S. DPF Principles and/or the Swiss-U.S. DPF Principles, the Principles shall govern.  To learn more about the Data Privacy Framework (DPF) program, and to view our certification, please visit <https://www.dataprivacyframework.gov/>.
 
 ### Jurisdiction
+
+As a corporate entity, WGM operates exclusively from the United States. The entirety of our business operations adhere to the Data Privacy Framework Principles. This includes Cerb and Cerb Cloud.
 
 We are subject to the investigatory and enforcement powers of the United States Federal Trade Commission (FTC).
 
@@ -42,9 +46,47 @@ Under certain limited circumstances, European Union individuals may invoke bindi
 
 Where WGM has transferred personal information of EU, UK, or Swiss residents to third parties, WGM shall be liable if those third parties do not process personal information in compliance with the Data Privacy Framework Principles. This shall not be the case where WGM establishes that it is not responsible for the damage caused by the third party.
 
-### Data Protection Addendum
+# Your Personal Data Rights
 
-If you require a signed Data Protection Addendum (DPA) for [GDPR](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) compliance, you may [download ours here](/assets/documents/WGM_GDPR_DPA.pdf). This document formalizes the contract between data exporter and data importer, as well as describing the rights of data subjects. Please review the terms and return a signed copy to [team@cerb.ai](mailto:team@cerb.ai).
+We are committed to your personal data rights.
+
+### Right to be Informed
+
+You have the right to be informed regarding the collection of personal data from you or about you, and the relevant business purposes for such collection.
+
+This document provides such information.
+
+### Right of Access
+
+You have the right to a copy of any personal information we have collected from you or about you, if such data exists.
+
+This information will be transmitted electronically no later than one month from the date we receive your request.
+
+Please submit Data Subject Access Requests (DSAR) by email to: [team@cerb.ai](mailto:team@cerb.ai)
+
+### Right of Choice
+
+You have the right to express affirmative consent (opt-in) before the transfer of your sensitive personal information to third-parties for any use other than those necessary for us to provide your requested services.
+
+Sensitive personal information includes, but is not limited to: medical or health conditions, racial or ethnic origin, political opinions, religious or philosophical beliefs, trade union membership, or information specifying the sex life of the individual.
+
+Absent your consent, we will not transfer your sensitive personal information to third parties for any purpose other than those explicitly outlined in this document.
+
+You may formally opt out of all non-essential third-party information disclosure through email to: [team@cerb.ai](mailto:team@cerb.ai). Please include the associated email addresses you wish to opt-out with.
+
+### Right to be Forgotten
+
+You have the right to the erasure of any personal data we have collected from you or about you.
+
+Please submit data removal requests by email to: [team@cerb.ai](mailto:team@cerb.ai)
+
+### California Privacy Rights
+
+Residents of the State of California have the right to opt-out of our disclosure of personal information to third parties for the purpose of allowing such third parties to directly market their products and services.
+
+We do not disclose your personal information to advertisers.
+
+You may formally opt out by emailing: [team@cerb.ai](mailto:team@cerb.ai)
 
 # What Personal Data We Collect
 
@@ -94,7 +136,7 @@ Visitors can always refuse to supply personally identifying information, with th
 
 ### Ads
 
-We do not display third-party advertising on our websites or in our applications. We do not willfully disclose any personal information to advertisers.
+We do not display third-party advertising on our websites or in our applications. **We do not willfully disclose any personal information to advertisers.**
 
 ### Testimonials
 
@@ -110,40 +152,18 @@ This information is used to improve the usability and performance of products an
 
 We may display this aggregate, anonymous information publicly or provide it to others. However, we do not disclose personally identifying information other than as described below.
 
-# Your Personal Data Rights
-
-We are committed to your personal data rights.
-
-### Right to be Informed
-
-You have the right to be informed regarding the collection of personal data from you or about you, and the relevant business purposes for such collection.
-
-### Right of Access
-
-You have the right to a copy of any personal information we have collected from you or about you, if such data exists.
-
-This information will be transmitted electronically no later than one month from the date we receive your request.
-
-### Right to be Forgotten
-
-You have the right to the erasure of any personal data we have collected from you or about you.
-
-### California Privacy Rights
-
-California residents have the right to opt out of disclosing information to third parties for the purpose of allowing such third parties to directly market their products and services. We do not engage in this type of disclosure.
-
 # Why and To Whom We Disclose Personal Data
 
-We disclose personally identifying information only to those of our employees, contractors and affiliated organizations that:
+We disclose personally identifying information only to those of our employees, contractors, and affiliated organizations who both:
 
-* Need to know that information in order to process it on our behalf or to provide products and services available through our websites.
+* Require that information to process your requested products and services on our behalf,
 * Have agreed not to disclose it to others.
 
-Some of those employees, contractors, and affiliated organizations may be located outside of your home country; and by using our websites and services you consent to the transfer of such information to them.
+Some of those employees, contractors, and affiliated organizations may be located outside your home country; and by using our websites and services you consent to the transfer of such information to them.
 
-We have not, and will not, rent or sell personally identifying information to anyone.
+**We have not, and will not, rent or sell personally identifying information to anyone.**
 
-Other than to our employees, contractors and affiliated organizations, as described in this section, we disclose personally identifying information only in response to a subpoena, court order, or other governmental request, or when we believe in good faith that disclosure is reasonably necessary to protect our property or rights, or those of third parties, or of the public at large.
+Other than to our employees, contractors, and affiliated organizations, as described in this section, we disclose personally identifying information only in response to a subpoena, court order, or other governmental request, or when we believe in good faith that disclosure is reasonably necessary to protect our property or rights, or those of third parties, or of the public at large.
 
 ### Amazon Web Services (AWS)
 
@@ -155,7 +175,9 @@ In cloud environments, many users from various organizations share a pool of res
 
 Due to the remote nature of cloud computing, authorized technicians from our vendors and service providers may have temporary access to our servers in order to perform physical maintenance and upgrades, or to provide hands-on assistance with troubleshooting issues like hardware failures.
 
-In such events we defer to their privacy policy: <https://aws.amazon.com/privacy>
+In such events we defer to the AWS privacy policy: <https://aws.amazon.com/privacy>
+
+**Limit your disclosure to AWS:** Use a Cerb self-hosted license rather than the Cerb Cloud managed service.
 
 ### Banking through Freshbooks, WePay, Stripe, Wells Fargo, and PayPal
 
@@ -167,9 +189,11 @@ For recurring transactions, payment information is stored with vendors who adher
 
 The electronic payments we receive through Freshbooks are collected by WePay.
 
-Depending on a client's preferred payment method, these transactions may alternatively take place through other vendors like PayPal, Stripe, or wire transfers to Wells Fargo Bank.
+Depending on a client's preferred payment method, these transactions may alternatively take place through other vendors like PayPal, Stripe, or wire transfers to Wells Fargo Bank NA.
 
-We do not have direct access to client credit card numbers or bank account information through any of these vendors.
+We do not have direct access to client credit card numbers or bank account information through any of these vendors. Bank account information may be disclosed through the use of paper checks, but we do not retain it.
+
+**Limit your disclosure to our payment processors:** Use a payment method with minimal exposure of personal or financial information (e.g. PayPal).
 
 ### Google (G Suite)
 
@@ -178,6 +202,8 @@ We contract with Google for hosting and archiving our corporate email accounts.
 They have access to data from email messages (e.g. sender, subject, body, and attachments).
 
 They do not have access to any client data outside of email communication.
+
+**Limit your disclosure to Google:** Do not include personal information in email correspondence with us, or encrypt this information with our public key found on our website.
 
 # Your Privacy Choices
 
@@ -219,7 +245,7 @@ We will notify you as soon as possible if a security breach results in the poten
 
 ### Backups
 
-Cerb has two main components for storing customer data: (i) the database, and (ii) the /storage/ filesystem (which contains immutable objects like email attachments). Data is distributed among many servers in our Cerb Cloud network within Amazon Web Services.
+Cerb has two main components for storing customer data: (i) the database, and (ii) the `/storage/` filesystem (which contains immutable objects like email attachments). Data is distributed among many servers in our Cerb Cloud network within Amazon Web Services.
 
 If you communicate with us, or use Cerb Cloud services provided by us, your information will be routinely copied for the express purpose of maintaining backups for continuity and disaster recovery.
 
@@ -233,13 +259,19 @@ We will comply with any written, and duly authenticated, client requests for the
 
 If WGM or substantially all of its assets were acquired, or in the event that we go out of business or enter bankruptcy, user information would be one of the assets that is transferred or acquired by a third party. You acknowledge that such transfers may occur, and that any acquirer of WGM may continue to use your personal information as set forth in this policy.
 
+# Data Protection Addendum
+
+If you require a signed Data Protection Addendum (DPA) for [GDPR](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) compliance, you may [download ours here](/assets/documents/WGM_GDPR_DPA.pdf). This document formalizes the contract between data exporter and data importer, as well as describing the rights of data subjects. Please review the terms and return a signed copy to [team@cerb.ai](mailto:team@cerb.ai).
+
 # Privacy Policy Changes
 
 Although most changes are likely to be minor, we may modify this Privacy Policy from time to time at our sole discretion. You are encouraged to frequently check this page for any changes to the Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.
 
 ### Changelog
 
-* **28-August-2028**: Updated Privacy Shield to the Data Privacy Framework.
+* **06-September-2023**: Updated the 'Data Privacy Framework', 'Your Personal Data Rights', and 'Why and To Whom We Disclose Personal Data' sections for DPF certification.
+
+* **28-August-2023**: Updated Privacy Shield to the Data Privacy Framework.
 
 * **11-December-2019**: Added instructions to the 'Your Privacy Choices' section.
 
