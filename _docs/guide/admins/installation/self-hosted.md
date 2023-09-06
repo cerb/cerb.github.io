@@ -93,7 +93,7 @@ The following general instructions assume that you have console access to a Linu
 
 You can follow one of these guides to set up a new server:
 
-* [Installing Cerb on Ubuntu 22.04 LTS with Nginx and PHP-FPM](/guides/installation/ubuntu/)
+* [Installing Cerb on Ubuntu 23.04 LTS with Nginx and PHP-FPM](/guides/installation/ubuntu/)
 {% comment %}
 * [Installing Cerb on Amazon Linux with Nginx and PHP-FPM](/guides/installation/amazon-linux/)
 * [Installing Cerb on Debian 9 with Nginx and PHP-FPM](/guides/installation/debian/)
