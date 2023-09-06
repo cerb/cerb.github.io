@@ -199,12 +199,10 @@ Each extension entry looks like:
 | [Event Listener](/docs/plugins/extensions/points/devblocks.listener.event/) | `devblocks.listener.event`
 | [Http Request Listener](/docs/plugins/extensions/points/devblocks.listener.http/) | `devblocks.listener.http`
 | [Mail Transport Type](/docs/plugins/extensions/points/cerberusweb.mail.transport/) | `cerberusweb.mail.transport`
-| [Message Toolbar Item](/docs/plugins/extensions/points/cerberusweb.message.toolbaritem/) | `cerberusweb.message.toolbaritem`
 | [Page Menu Item](/docs/plugins/extensions/points/cerberusweb.ui.page.menu.item/) | `cerberusweb.ui.page.menu.item`
 | [Page Section](/docs/plugins/extensions/points/cerberusweb.ui.page.section/) | `cerberusweb.ui.page.section`
 | [Page Type](/docs/plugins/extensions/points/cerberusweb.page/) | `cerberusweb.page`
 | [Prebody Renderer](/docs/plugins/extensions/points/cerberusweb.renderer.prebody/) | `cerberusweb.renderer.prebody`
-| [Profile Script](/docs/plugins/extensions/points/cerberusweb.ui.context.profile.script/) | `cerberusweb.ui.context.profile.script`
 | [Profile Tab Type](/docs/plugins/extensions/points/cerb.profile.tab/) | `cerb.profile.tab`
 | [Profile Widget Type](/docs/plugins/extensions/points/cerb.profile.tab.widget/) | `cerb.profile.tab.widget`
 | [Record Type](/docs/plugins/extensions/points/devblocks.context/) | `devblocks.context`
@@ -219,7 +217,6 @@ Each extension entry looks like:
 | [Support Center Controller](/docs/plugins/extensions/points/usermeet.sc.controller/) | `usermeet.sc.controller`
 | [Support Center Login Authenticator](/docs/plugins/extensions/points/usermeet.login.authenticator/) | `usermeet.login.authenticator`
 | [Support Center RSS Feed](/docs/plugins/extensions/points/usermeet.sc.rss.controller/) | `usermeet.sc.rss.controller`
-| [Webhook Listener Type](/docs/plugins/extensions/points/cerb.webhooks.listener.engine/) | `cerb.webhooks.listener.engine`
 | [Workspace Page Type](/docs/plugins/extensions/points/cerberusweb.ui.workspace.page/) | `cerberusweb.ui.workspace.page`
 | [Workspace Tab Type](/docs/plugins/extensions/points/cerberusweb.ui.workspace.tab/) | `cerberusweb.ui.workspace.tab`
 | [Workspace Widget Datasource](/docs/plugins/extensions/points/cerberusweb.ui.workspace.widget.datasource/) | `cerberusweb.ui.workspace.widget.datasource`

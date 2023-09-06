@@ -56,11 +56,6 @@ This plugin enables Cerb to catch webhooks and execute bot behaviors in response
 | Webhook Listener | `cerberusweb.contexts.webhook_listener`
 
 
-### Webhook Listener Type
-
-| [**Bot Behavior**](/docs/plugins/extensions/cerb.webhooks.listener.engine.va/) | `cerb.webhooks.listener.engine.va`
-
-
 <div class="section-nav">
 	<div class="left">
 		<a href="/docs/plugins/#plugins" class="prev">&lt; Plugins</a>

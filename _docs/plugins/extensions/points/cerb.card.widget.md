@@ -29,7 +29,10 @@ jumbotron:
 # Extensions
 
 | [**Attachment Viewer**](/docs/plugins/extensions/cerb.card.widget.attachment.viewer/) | `cerb.card.widget.attachment.viewer`
+| [**Automation**](/docs/plugins/extensions/cerb.card.widget.automation/) | `cerb.card.widget.automation`
 | [**Behavior Tree**](/docs/plugins/extensions/cerb.card.widget.behavior.tree/) | `cerb.card.widget.behavior.tree`
+| [**Chart: Timeblocks**](/docs/plugins/extensions/cerb.card.widget.chart.timeblocks/) | `cerb.card.widget.chart.timeblocks`
+| [**Chart: Time Series**](/docs/plugins/extensions/cerb.card.widget.chart.timeseries/) | `cerb.card.widget.chart.timeseries`
 | [**Classifier Trainer**](/docs/plugins/extensions/cerb.card.widget.classifier.trainer/) | `cerb.card.widget.classifier.trainer`
 | [**Conversation**](/docs/plugins/extensions/cerb.card.widget.conversation/) | `cerb.card.widget.conversation`
 | [**Form Interaction**](/docs/plugins/extensions/cerb.card.widget.form_interaction/) | `cerb.card.widget.form_interaction`
