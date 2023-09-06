@@ -110,14 +110,15 @@ The [commands](/docs/automations/#commands) to run on success.
 
 The key specified in `output:` is set to a dictionary with the following structure:
 
-|Key|Description
-|-|-
-|`expires_at`| The timestamp after which the resource is expired.
-|`id`| The ID of the resource record.
-|`mime_type`| The MIME type of the file or resource. For instance, `image/png`.
-|`name`| The filename of the record.
-|`size`| The total size in bytes of the file or resource.
-|`uri`| The record URI of the [automation_resource](/docs/records/types/automation_resource/). The `uri` uses a random UUID identifier rather than an ID, which is suitable for sharing publicly. 
+| Key          | Description                                                                                                                                                                               |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `expires_at` | The timestamp after which the resource is expired.                                                                                                                                        |
+| `id`         | The ID of the resource record.                                                                                                                                                            |
+| `mime_type`  | The MIME type of the file or resource. For instance, `image/png`.                                                                                                                         |
+| `name`       | The filename of the record.                                                                                                                                                               |
+| `size`       | The total size in bytes of the file or resource.                                                                                                                                          |
+| `token`      | The `uri` token of the automation resource.                                                                                                                                               |
+| `uri`        | The record URI of the [automation_resource](/docs/records/types/automation_resource/). The `uri` uses a random UUID identifier rather than an ID, which is suitable for sharing publicly. |
 
 ## on_error:
 

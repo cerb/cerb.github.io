@@ -195,7 +195,7 @@ columns:
 
 ## Icon
 
-The `icon` column type displays an icon image.
+The `icon` column type displays an icon image, record profile image, or automation resource.
 
 You'll find a list of icon names in **Setup >> Developers >> Icon Reference**.
 
@@ -216,6 +216,10 @@ columns:
 {% endraw %}
 </code>
 </pre>
+
+Optionally, a `record_uri:` key can contain a record URI value (`cerb:<record_type>:<id>`). This will display its profile image as the icon.
+
+The `record_uri:` may also be an image-based `automation_resource` token.
 
 ## Interaction
 

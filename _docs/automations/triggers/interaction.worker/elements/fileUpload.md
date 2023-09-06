@@ -24,11 +24,11 @@ jumbotron:
     url: /docs/automations/triggers/interaction.worker/#elements
 ---
 
-In [interaction](/docs/automations/triggers/interaction.worker/) web forms, a **fileUpload** element displays a file upload prompt. This creates an [attachment](/docs/records/types/attachment/) record and returns its record ID.
+In [interaction](/docs/automations/triggers/interaction.worker/) web forms, a **fileUpload** element displays a file upload prompt. This creates an [attachment](/docs/records/types/attachment/) or [automation resource](/docs/records/types/automation_resource/) record and returns its ID or token.
 
-The element name (e.g. `fileUpload/photo` in the example below) is used to set a placeholder. If the name ends with `_id` then a corresponding `__context` key will be added with the same prefix. Otherwise, keys for `_id` and `__context` will be added with the element name as the prefix.
+The element name (e.g. `fileUpload/photo` in the example below) is used to set a placeholder.
 
-This allows key expansion of the file's fields (e.g. `name`, `size`) directly on the placeholder, as well as from within a `validation@raw:` script.
+If uploading an attachment and the name ends with `_id`, then a corresponding `__context` key will be added with the same prefix. Otherwise, keys for `_id` and `__context` will be added with the element name as the prefix. This allows key expansion of the file's fields (e.g. `name`, `size`) directly on the placeholder, as well as from within a `validation@raw:` script.
 
 <pre>
 <code class="language-cerb">
@@ -39,6 +39,7 @@ start:
       elements:
         fileUpload/photo:
           label: Upload a photo:
+          as: automation_resource
 {% endraw %}
 </code>
 </pre>
@@ -48,6 +49,16 @@ start:
 </div>
 
 # Syntax
+
+### as:
+
+The record type to create with the uploaded file.
+
+|---
+|Record|
+|-|-|
+| `attachment` | (default) A long-term file [attachment](/docs/records/types/attachment/). This returns a record dictionary.
+| `automation_resource` | A temporary [automation resource](/docs/records/types/automation_resource/). This returns the resource token.
 
 ### label:
 
@@ -73,6 +84,7 @@ start:
         fileUpload/prompt_image:
           label: File
           required@bool: yes
+          as: attachment
           validation@raw:
             {% if prompt_image__context is empty or prompt_image_id is empty %}
             The file must be a valid image.

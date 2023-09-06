@@ -105,6 +105,7 @@ These columns are available on notification [worklists](/docs/worklists/):
 |-|-
 | `we_activity_point` | Activity
 | `we_created_date` | Created
+| `we_id` | Id
 | `we_is_read` | Is Read
 | `we_worker_id` | Worker
 

@@ -94,9 +94,9 @@ These columns are available on automation resource [worklists](/docs/worklists/)
 | `r_id` | Id
 | `r_mime_type` | Mime Type
 | `r_name` | Name
-| `r_storage_extension` | Common.storage_Extension
-| `r_storage_key` | Common.storage_Key
-| `r_storage_profile_id` | Common.storage_Profile_Id
+| `r_storage_extension` | Storage Extension
+| `r_storage_key` | Storage Key
+| `r_storage_profile_id` | Storage Profile
 | `r_storage_size` | Size
 | `r_token` | Token
 | `r_updated_at` | Updated

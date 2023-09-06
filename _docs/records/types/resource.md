@@ -69,6 +69,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 |---
 | Field | Type | Description
 |-|-|-
+| `comment_count` | number | [Comment](/docs/records/types/comments/) count on the record
 | `comments` | comments | [Comments](/docs/guide/developers/dictionaries/#key-expansion)
 | `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
 | `links` | links | [Links](/docs/guide/developers/dictionaries/#key-expansion)
@@ -103,9 +104,9 @@ These columns are available on resource [worklists](/docs/worklists/):
 | `r_id` | Id
 | `r_is_dynamic` | Is Dynamic
 | `r_name` | Name
-| `r_storage_extension` | Common.storage_Extension
-| `r_storage_key` | Common.storage_Key
-| `r_storage_profile_id` | Common.storage_Profile_Id
+| `r_storage_extension` | Storage Extension
+| `r_storage_key` | Storage Key
+| `r_storage_profile_id` | Storage Profile
 | `r_storage_size` | Size
 | `r_updated_at` | Updated
 

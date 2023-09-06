@@ -99,6 +99,7 @@ These columns are available on activity log [worklists](/docs/worklists/):
 | `c_actor_context` | Actor Context
 | `c_created` | Created
 | `c_entry_json` | Entry
+| `c_id` | Id
 | `c_target_context` | Target Context
 
 <div class="section-nav">

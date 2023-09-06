@@ -102,6 +102,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 |-|-|-
 | `_messages` | records | Messages
 | `attachments` | attachments | [Attachments](/docs/guide/developers/dictionaries/#key-expansion)
+| `comment_count` | number | [Comment](/docs/records/types/comments/) count on the record
 | `comments` | comments | [Comments](/docs/guide/developers/dictionaries/#key-expansion)
 | `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
 | `latest_incoming_activity` | date | Latest Incoming Activity
