@@ -24,7 +24,7 @@ jumbotron:
 	{% for topic in topics %}
 		<h1 id="{{ topic.name | slugify }}">{{ topic.name }}</h1>
 		
-		{% if topic.name == 'Bots' or topic.name == 'Dashboards' or topic.name == 'Integrations' or topic.name == 'Developers' or topic.name == 'Mail' %}
+		{% if topic.name == 'Bots' or topic.name == 'Dashboards' or topic.name == 'Integrations' or topic.name == 'Developers' or topic.name == 'Mail' or topic.name == 'Machine Learning' %}
 			{% assign subtopics = topic.items | sort: 'id' | group_by: 'subtopic' %}
 		
 			<div style="margin-left:15px;">

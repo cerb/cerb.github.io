@@ -2,8 +2,10 @@
 title: "Create profile images with Stable Diffusion"
 excerpt: In this guide we'll use the Stable Diffusion API to generate profile images for workers, groups, roles, etc.
 layout: integration
-topic: Automations
-subtopic: Bots
+topic: Machine Learning
+subtopic: Image Generation
+redirect_from:
+  - /guides/automations/stable-diffusion-profile-images/
 jumbotron:
   title: Create profile images with Stable Diffusion
   tagline: ""
@@ -15,8 +17,11 @@ jumbotron:
     label: Guides &raquo;
     url: /resources/guides/
   -
-    label: Automations &raquo;
-    url: /resources/guides/#automations
+    label: Machine Learning &raquo;
+    url: /resources/guides/#machine-learning
+  -
+    label: Image Generation &raquo;
+    url: /resources/guides/#machine-learning-image-generation
 ---
 
 * TOC
