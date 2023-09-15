@@ -221,6 +221,8 @@ Optionally, a `record_uri:` key can contain a record URI value (`cerb:<record_ty
 
 The `record_uri:` may also be an image-based `automation_resource` token.
 
+If both `record_uri:` and `image:` are defined, the former will be checked first and if empty fall back to the latter.
+
 ## Interaction
 
 The `interaction` column type triggers an interaction when clicked.

@@ -322,10 +322,14 @@ When prompting with text input, the user enters freeform text.
 text/input_subject:
   label: Search:
   default: some example text
+  params:
+    hidden@bool: no
 </code>
 </pre>
 
-This prompt currently has no parameters.
+The optional **params:** are:
+
+* **hidden@bool:** `yes` if the text field should be hidden, `no` (default) otherwise. A hidden text field can be used as a shared configuration value on multiple widgets.
 
 The value of the placeholder is a text string. This is suitable for passing directly to any filters. Be sure you wrap it in quotes.
 

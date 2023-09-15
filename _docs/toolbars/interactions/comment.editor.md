@@ -66,6 +66,7 @@ The following `caller_params` are passed to the [interaction](/docs/automations/
 | **`record_id`** | number | The record ID being commented upon
 | **`record_type`** | string | The record type being commented upon
 | **`selected_text`** | string | The currently selected editor text
+| **`text`** | string | The full editor text
 
 ### Output
 
