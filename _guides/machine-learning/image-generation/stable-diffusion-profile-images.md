@@ -4,6 +4,7 @@ excerpt: In this guide we'll use the Stable Diffusion API to generate profile im
 layout: integration
 topic: Machine Learning
 subtopic: Image Generation
+social_image_url: /assets/images/guides/automations/stable-diffusion-images/ai-profile-editor.png
 redirect_from:
   - /guides/automations/stable-diffusion-profile-images/
 jumbotron:
