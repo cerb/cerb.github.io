@@ -42,7 +42,7 @@ To follow this guide you will need to be an administrator in Cerb [10.4.3](/rele
 
 You're probably familiar with **keyword** search, where you find a list of matching documents using a few words or phrases.
 
-Keyword search often uses an **index**, where the text from documents has been pre-processed for fast retrieval. A statistic (e.g. Term Frequency Inverse Document Frequency / TF-IDF) then determines the best results by estimating the importance of terms within the collection of documents (the **corpus**).
+Keyword search often uses an **index**, where the text from documents has been pre-processed for fast retrieval. A statistic (e.g. Term Frequency Inverse Document Frequency) then determines the best results by estimating the importance of terms within the collection of documents (the **corpus**).
 
 This is relatively simple to implement, but it requires a query to use the same terms that appear in documents in order to find them.
 
@@ -65,11 +65,13 @@ A neural network is a series of nodes (neurons) in layers, which are often visua
 </figure>
 </div>
 
-The training can be **supervised** (the training data contains input/output pairs, such as classification), or **unsupervised** (only inputs are provided and patterns are discovered).
+Modern large language models often use a more complex neural network architecture called **transformers**. This is beyond the scope of this guide, but it's helpful to understand that transformers allow the neural network to discover relationships between all words in the input text and not just adjacent or prior words.
+
+The training can be **supervised** (including both example inputs and desired outputs), or **unsupervised** (only inputs are provided and patterns are discovered).
 
 In an LLM, the inputs are usually a sequence of **tokens** -- numeric representations of words or word fragments from the training **vocabulary**. This enables mathematical operations to be efficiently performed on natural language.
 
-Tokens may smaller than a word, which allows for handling unknown terms as a combination of letters, prefixes, suffixes, etc. The exact vocabulary depends on the training data.
+Tokens may be smaller than a complete word, which allows for handling unknown terms as a combination of letters, prefixes, suffixes, etc. The exact vocabulary depends on the training data.
 
 <div class="cerb-screenshot">
 <figure>
@@ -80,13 +82,13 @@ Tokens may smaller than a word, which allows for handling unknown terms as a com
 
 ### Text embeddings
 
-Once an LLM is trained, it can be used to generate **text embeddings** -- a **vector** of real numbers that plot arbitrary text in multidimensional space.
+Once an LLM is trained, it can be used to generate **text embeddings** -- a **vector** of real numbers that plot arbitrary text in multidimensional space. This can be used to cluster related concepts together.
 
-These embeddings are derived in various ways, but a common method is to use the last hidden layer of a neural network and optionally reduce its dimensionality.
-
-While higher dimensions may lead to better semantic understanding, they come at a higher computational cost.
+These embeddings are derived in various ways, but a common method is to use the last hidden layer of a neural network.
 
 The OpenAI API returns a vector of (1,536) 32-bit floating point numbers for each text passage we send it.
+
+While a higher dimension count may lead to better semantic understanding, it comes at a higher computational cost. An optional additional step could reduce the dimensionality to a more manageable size. For instance, from 1,536 dimensions to 768 or 384.
 
 ### Comparing the similarity of text embeddings
 
@@ -98,17 +100,17 @@ We can intuitively understand the distance between vectors in a few dimensions:
 
 * In two-dimensional space, the points `(1,1)` and `(2,2)` have a Manhattan distance of `2`. They are `1` apart on the x-axis plus `1` apart on the y-axis. Their Euclidean distance is roughly `1.414` (a direct diagonal line of `sqrt(2)`). For special cases like geospatial (GPS) coordinates, our distance function may need to account for factors like the Earth being an imperfect sphere.
 
-* In three-dimensional space, coordinates include a third `z` axis (perhaps height) but are otherwise handled in a similar way. Simpler cases can compare vectors with Manhattan distance, Euclidean distance, or cosine similarity (comparing angles between vectors).
+* In three-dimensional space, coordinates include a third `z` axis (perhaps height) but are otherwise handled in a similar way. Simpler cases can compare vectors with Manhattan distance, Euclidean distance, dot product, cosine similarity (comparing angles between vectors), etc.
 
-* In four-dimensional spatiotemporal space, we can consider an example of being at the same point on Earth at the same time (longitude, latitude, elevation, time). For instance, I could be standing at the top of the modern day Great Pyramid of Giza (`29°58′34″N 31°7′58″E`) at elevation of 137 meters. We could compare this against the original vector -- the Great Pyramid was constructed over 4,600 years ago, its apex has eroded around 10 meters, and continental drift has likely changed its GPS coordinates by a few centimeters per year.
+* In four-dimensional spatiotemporal space, we can consider an example of being at the same point on Earth at the same time (longitude, latitude, elevation, time). For instance, I could be standing at the top of the modern day Great Pyramid of Giza (`29°58′34″N 31°7′58″E`) at an elevation of 137 meters. We could compare this against the original vector -- the Great Pyramid was constructed over 4,600 years ago, its apex has eroded around 10 meters, and continental drift has likely changed its GPS coordinates by a few centimeters per year.
 
 * In higher dimensional space we could add heading, speed, temperature, and so on. 
 
 It's harder to visualize the comparison of points in 1,536-dimensional space, which can represent: language, word meaning, syntax, grammar, context, semantics, sentiment, entities, topics, temporality, geography, culture, and more. Dimensions are not explicitly defined and are a product of the specific training data used.
 
-With effective text embeddings we would expect to find "Cerb is team-based email management" much more closely related to "My inbox is overflowing" than "Ludwig van Beethoven was baptized in Bonn in December 1770".
+With effective text embeddings we would expect to find the sentence "Cerb is team-based email management" much more closely related to "My inbox is overflowing" than "Ludwig van Beethoven was baptized in Bonn in December 1770".
 
-At any rate, the math for comparing vectors is automatically handled for you, either by Cerb or a vector database.
+At any rate, the math for comparing vectors is automatically handled for you; either by Cerb or a vector database.
 
 ### Text embeddings as a service
 
@@ -124,7 +126,7 @@ If your topic is highly specialized, it's possible that a general purpose model 
 
 You can build an LLM from scratch. However, this currently requires considerable resources to achieve state-of-the-art performance. If you have a big budget and a lot of training data available, you may be able to get "good enough" results to justify it.
 
-A better option for most people is to **fine-tune** an existing pre-trained model. This is faster, easier, and more economical. By starting with a general-purpose model, you can provide additional training examples that illustrate how various pairs of text are similar or different. This changes the weights in the neural network, and consequently changes how embeddings position texts. Both Hugging Face and OpenAI support fine-tuning their models.
+A better option for most people is to **fine-tune** an existing pre-trained model. This is faster, easier, and more economical. By starting with a general-purpose model, you can provide additional training examples that illustrate how various pairs of text from your own data are similar or different. This changes the weights in the neural network, and consequently changes how embeddings position texts. Both Hugging Face and OpenAI support fine-tuning their models.
 
 These topics are outside the scope of this guide. However, you're welcome to contact us with questions.
 
@@ -152,13 +154,13 @@ It continues to respond in character:
 
 As we've seen above, we can use the prompt to lock ChatGPT to a persona, such as a friendly Support Bot that can answer questions about your product.
 
-However, unless your organization or product is well-known, ChatGPT is unlikely to accurately answer more than cursory questions without "hallucinating" a convincing-sounding answer.
+Unfortunately, unless your organization or product is well-known and included in its training data, ChatGPT is likely to confidently provide inaccurate answers. These are referred to as **hallucinations**.
 
-We can successfully ask:
+We can ask something like:
 
 > What is Cerb?
 
-And it answers:
+And it correctly answers:
 
 > Cerb is a customer service and support platform that helps businesses manage their customer interactions. It offers features such as ticket management, automation, collaboration tools, and reporting to streamline customer support processes.
 
@@ -174,15 +176,15 @@ That's convincing and mostly accurate. However, KATA stands for "Key-Annotated T
 
 Retrieval-augmented generation (RAG) is a fancy way of saying that we can take a user's message, text embed it, use semantic search to fetch the most similar entries from our FAQ, and include those extra facts in our prompt to ChatGPT.
 
-This allows us to take advantage of text generation; which gives our bot personality, allows it to summarize info from multiple sources, to converse in multiple languages, etc.
+This allows us to take advantage of text generation; giving our bot personality, allowing it to summarize info from multiple sources, and being able to converse in multiple languages.
 
-By including some real-time hints from our FAQ, we can reduce hallucinated answers; even when we ask about topics ChatGPT wasn't trained on (i.e. niche topics, events that occurred after its knowledge cutoff, bias/misinformation).
+By including some real-time hints from our FAQ, we can reduce hallucinated answers; even when we ask about topics ChatGPT wasn't trained on (niche topics, events that occurred after its knowledge cutoff, bias/misinformation, etc).
 
-Our FAQ bot will use text generation to summarize the Q&A we give it. We'll add a warning that such answers are machine generated. If you're in an industry where occasional inaccurate answers are unacceptable or dangerous (e.g. health care), you can easily disable the generated answer and only return the more similar FAQ entries.
+Our FAQ bot will use text generation to summarize the Q&A we give it. We'll add a warning that such answers are machine generated. If you're in an industry where occasional inaccurate answers are unacceptable or dangerous (e.g. health care), you can easily disable the generated answer and only return the most similar FAQ entries.
 
 # Connecting to the OpenAI API
 
-**OpenAI** popularized large language models with their proprietary GPT (Generative Pre-Trained Transformer) model. The company has remarked that the cost to train their most recent state-of-the-art model (GPT-4) was $100 million USD. OpenAI provides third-parties with low-cost API access to state-of-the-art models, including [text embeddings](https://platform.openai.com/docs/guides/embeddings/) (at a cost of $0.0001 USD per 1,000 tokens).
+**OpenAI** popularized large language models with their proprietary GPT (Generative Pre-Trained Transformer) model. The company has remarked that the cost to train their most recent state-of-the-art model (GPT-4) was $100 million USD. OpenAI provides third-parties with low-cost API access to their models, including [text embeddings](https://platform.openai.com/docs/guides/embeddings/) (at a cost of $0.0001 USD per 1,000 tokens).
 
 The examples in this guide will cost you a few pennies. You can set a monthly spending limit on your OpenAI account (e.g. $10 USD).
 
