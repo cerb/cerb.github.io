@@ -40,6 +40,14 @@ div.cerb-screenshot {
 			left: 0;
 		}
 	}
+
+	video {
+		border:1px solid rgb(220,220,220);
+		@include border-radius(5px);
+
+		max-width: 100%;
+		height: auto;
+	}
 }
 
 ul.cerb-convo-bubbles {
