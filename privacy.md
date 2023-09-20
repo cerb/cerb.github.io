@@ -40,7 +40,7 @@ WGM has further committed to refer unresolved Data Privacy Framework complaints 
 
 ### Independent Arbitration
 
-Under certain limited circumstances, European Union individuals may invoke binding Data Privacy Framework arbitration as a last resort if all other forms of dispute resolution have been unsuccessful. To learn more about this method of resolution and its availability to you, please read more about [Data Privacy Framework](https://www.dataprivacyframework.gov/).
+Under certain limited circumstances, individuals may invoke binding Data Privacy Framework arbitration as a last resort if all other forms of dispute resolution have been unsuccessful. To learn more about this method of resolution and its availability to you, please read more about [Data Privacy Framework](https://www.dataprivacyframework.gov/).
 
 ### Liability For Onward Transfers
 
@@ -268,6 +268,8 @@ If you require a signed Data Protection Addendum (DPA) for [GDPR](https://en.wik
 Although most changes are likely to be minor, we may modify this Privacy Policy from time to time at our sole discretion. You are encouraged to frequently check this page for any changes to the Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.
 
 ### Changelog
+
+* **19-September-2023**: Clarified that arbitration is a right of all covered individuals under the DPF (EU, UK, Swiss).
 
 * **06-September-2023**: Updated the 'Data Privacy Framework', 'Your Personal Data Rights', and 'Why and To Whom We Disclose Personal Data' sections for DPF certification.
 
