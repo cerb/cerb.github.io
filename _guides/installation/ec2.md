@@ -178,5 +178,4 @@ ssh ubuntu@1.2.3.4
 
 These guides cover the installation of Cerb and its dependencies:
 
-* [Amazon Linux](/guides/installation/amazon-linux/)
 * [Ubuntu](/guides/installation/ubuntu/)
