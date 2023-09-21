@@ -1,10 +1,12 @@
 ---
 title: Parse and visualize DMARC report email attachments
 excerpt: In this guide we’ll demonstrate how to read a DMARC report file attachment and display its contents. As a bonus, we’ll use the ipstack API to geolocate the IPs found in the report and display them on a world map.
-social_image_url: /assets/images/guides/automations/worker-interactions/dmarc-reports/ip-lookup.png
+social_image_url: /assets/images/guides/automations/interaction.worker/dmarc-reports/ip-lookup.png
 layout: integration
 topic: Automations
-subtopic: Worker Interactions
+subtopic: interaction.worker
+redirect_from:
+  - /guides/automations/dmarc-reports/
 jumbotron:
   title: Parse and visualize DMARC report email attachments
   tagline: ""
@@ -137,7 +139,7 @@ From **Setup >> Packages >> Import** paste the following package to create a sam
       "attach": [
         "message:{{{uid.message_dmarc}}}"
       ],
-      "content": "data:application/zip;base64,H4sICOxJCmUAA2N1c3RvbWVyLmV4YW1wbGUhY2VyYi5leGFtcGxlITE2OTUwNzgwMDMhMTY5NTE2NDQwNy54bWwA7VbbjtsgFHzfr4jyXl9yr8SyfeoXtM8WgeOErg0IcJr+fcGA7U3SbbRVpapa5SFmzsCcM0ysoKdz28xOoA2X4nFeZsV8BoJKxsXhcf71y+cPu/nsCT+gGoDtCX3GD7MZinzs6ChPC1/QoKS2VQuWMGKJxxwq9aESpAVMO2NlCzqDM2lVAygfSoEJLeENZi3R9NM1OVQj82w1qagUllBbcVHLX2+7poYzYrecYVLuF3TJVrCuNzdOGIlho5sNKk3EIfbtoD0cuDNk83FdbHdFsUR5QFIdBOur5Wa1KrauKZEOy1+eNqhNTURKNpz+qFS3b7g5wtCIdJYITEHvx24jGBiEPfMWG5SHhwgaVfeY/w6Qwhq+AbUoVxExI2QSpqjFZeEu3T/0zd5qzBlLpU49avl9cMHITlOouMKrbJktstKdPUCJRGUnvAzKw1PCoxScSNM5y1gqeB+4UdJw63MopPAmTJAJz3ugiHGzj3bEaetYGDyZjHeh6e4oDYU4A2F5zd2vYNh2BMJAV7WW7cXdTCtjNE7QSAW3+C9rUfxKEpHOHisNpmvs2MXFhL/NSvABGnflUvc8Z0ZajowgE82Ki8GvqSaaOHm/PnXT4taP69T7xZ3SY5bzSzs8OSXynnCus/7zSjj/VjZr94Z7z+afZjO4+H9ms9zusnK9ysrF7tXX5xsTml75b8loKLxn9F/P6G3puzKK8uGP4E8SDFfPOwoAAA=="
+      "content": "data:application/zip;base64,H4sICI+NC2UAA2N1c3RvbWVyLmV4YW1wbGUhY2VyYi5leGFtcGxlITE2OTUwNzgwMDMhMTY5NTE2NDQwNy54bWwA7VbbjtsgFHzfr4jyXl9y21Ri2T71C9pni8BxQtcGBDhN/75gwPYm2TbqbqWqWuUhZs6YOWcYO0GPp7aZHUEbLsXDvMyK+QwElYyL/cP865fPH7bz2SO+QzUA2xH6hO9mMxT52NFRnha+oEFJbasWLGHEEo85VOp9JUgLmHbGyhZ0BifSqgZQPpQCE1rCG8xaoumnS3KoRubJalJRKSyhtuKili/fdkkNe8RuOcOk3C3okq1gXW+u7DASw41uNqg0EfvYt4N2sOfOkM3HdXG/LYolygOS6iBYXy03q1Vx75oSabP8+W6D2tREpGTD6Y9KdbuGmwMMjUhnicAU9G7sNoKBQdgTb7FBebiIoFF1j/nvACms4RtQi3IVETNCJmGKWlwW7tD9Rd/stcacsVTq1KOW3wcXjOw0hYorvMqW2SIr3d4DlEhUdsLLoDxcJTxKwZE0nbOMpYL3gRslDbc+h0IKb8IEmfC8B4oYN/toR5y2joXBk8l4Z5rujNJQiDMQltfcPQXDbQcgDHRVa9menc20MkbjCI1UcI3/vBbFLyQR6eyh0mC6xo5dnE3426wEH6BxRy51z3NmpOXICDLRrLgY/JpqoomTt+tTNy1u/bhOvV/cKD1mOT+3w5NTIm8J5zrrP78I59/KZu3ecO/ZfG02g4v/ZzbLYpEtt9liXfgf37cOaHrj/0lEQ+E9ov96RK9L3xRRlA//A38Cx2teijoKAAA="
     }
   ]
 }
@@ -156,19 +158,19 @@ You can find it in the package import results, or from **Search >> Tickets**.
 Click on the attachment:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/automations/worker-interactions/dmarc-reports/message-attachment.png" class="screenshot">
+<img src="/assets/images/guides/automations/interaction.worker/dmarc-reports/message-attachment.png" class="screenshot">
 </div>
 
 Click the new **DMARC Report** button. This will only show up for attachments matching the filename pattern.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/automations/worker-interactions/dmarc-reports/attachment-card-toolbar.png" class="screenshot">
+<img src="/assets/images/guides/automations/interaction.worker/dmarc-reports/attachment-card-toolbar.png" class="screenshot">
 </div>
 
 You'll see a visual summary of the DMARC report:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/automations/worker-interactions/dmarc-reports/dmarc-interaction.png" class="screenshot">
+<img src="/assets/images/guides/automations/interaction.worker/dmarc-reports/dmarc-interaction.png" class="screenshot">
 </div>
 
 # Enable IP geolocation maps
@@ -196,7 +198,7 @@ Click the **Save Changes** button at the bottom of the automation editor.
 Now when you view a DMARC report, you can click on an IP to see its location. The hostname will also be displayed if a DNS `PTR` record exists.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/automations/worker-interactions/dmarc-reports/ip-lookup.png" class="screenshot">
+<img src="/assets/images/guides/automations/interaction.worker/dmarc-reports/ip-lookup.png" class="screenshot">
 </div>
 
 # References
