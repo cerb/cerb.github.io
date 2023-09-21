@@ -24,7 +24,7 @@ jumbotron:
 
 # Introduction
 
-We recommend building [automations](/docs/automations/) and [webhooks](/guides/webhooks/configure/) in a [local development environment](/guides/developers/run-webdriver-tests/) before deploying them to production.  This allows you to test without risking unexpected changes to your live data.
+We recommend building [automations](/docs/automations/) and [webhooks](/guides/webhooks/configure/) in a [local development environment](/docs/installation/docker/) before deploying them to production.  This allows you to test without risking unexpected changes to your live data.
 
 Your development machine may be behind a firewall or assigned a dynamic IP address. This makes it difficult to test functionality like webhooks where a remote server needs to directly access a URL on your machine. It also makes it difficult to use other testing tools like BrowserStack[^browserstack] that run against a publicly accessible URL.
 
@@ -36,7 +36,7 @@ To get started, you'll need to [download ngrok](https://ngrok.com/download) from
 
 On Linux, you can usually install ngrok from your package manager (e.g. apt, yum).
 
-On Mac, you can also install ngrok using Homebrew[^homebrew] (note: you will need to install via `brew cask install ngok`).
+On Mac, you can also install ngrok using Homebrew[^homebrew] (note: you will need to install via `brew install --cask ngrok`).
 
 # Start ngrok
 
