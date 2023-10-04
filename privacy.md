@@ -36,7 +36,7 @@ We are subject to the investigatory and enforcement powers of the United States 
 
 In compliance with the Data Privacy Framework, WGM commits to resolve complaints about our collection or use of your personal information. EU, UK, and Swiss individuals with inquiries or complaints regarding our Data Privacy Framework policy should first contact us at: [team@cerb.ai](mailto:team@cerb.ai)
 
-WGM has further committed to refer unresolved Data Privacy Framework complaints to JAMS, an alternative dispute resolution provider located in the United States. If you do not receive timely acknowledgment of your complaint from us, or if we have not addressed your complaint to your satisfaction, please contact or visit <https://www.jamsadr.com/eu-us-data-privacy-framework> for more information or to file a complaint. The services of JAMS are provided at no cost to you.
+WGM has further committed to refer unresolved Data Privacy Framework complaints to JAMS, an alternative dispute resolution provider located in the United States. If you do not receive timely acknowledgment of your complaint from us, or if we have not addressed your complaint to your satisfaction, please contact or visit <https://www.jamsadr.com/dpf-dispute-resolution> for more information or to file a complaint. The services of JAMS are provided at no cost to you.
 
 ### Independent Arbitration
 
@@ -268,6 +268,8 @@ If you require a signed Data Protection Addendum (DPA) for [GDPR](https://en.wik
 Although most changes are likely to be minor, we may modify this Privacy Policy from time to time at our sole discretion. You are encouraged to frequently check this page for any changes to the Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.
 
 ### Changelog
+
+* **02-October-2023**: Updated the URL for JAMS dispute resolution.
 
 * **19-September-2023**: Clarified that arbitration is a right of all covered individuals under the DPF (EU, UK, Swiss).
 
