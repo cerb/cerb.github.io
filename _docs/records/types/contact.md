@@ -118,11 +118,14 @@ These [filters](/docs/search/#filters) are available in contact [search queries]
 | `lastLogin:` | [date](/docs/search/#dates) | Last Login
 | `lastName:` | [text](/docs/search/#text) | Last Name
 | `links:` | [links](/docs/search/#links) | Record Links
+| `mobile:` | [text](/docs/search/#text) | Mobile
 | `org:` | [record](/docs/search/#deep-search) | [Org](/docs/records/types/org/)
 | `org.id:` | [chooser](/docs/search/#choosers) | [Organization](/docs/records/types/org/)
+| `phone:` | [text](/docs/search/#text) | Phone
 | `timezone:` | [text](/docs/search/#text) | Timezone
 | `title:` | [text](/docs/search/#text) | Title
 | `updated:` | [date](/docs/search/#dates) | Updated
+| `username:` | [text](/docs/search/#text) | Username
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns

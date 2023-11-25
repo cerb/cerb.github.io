@@ -46,10 +46,11 @@ The automation event [dictionary](/docs/automations/#dictionaries) starts with t
 
 ## set:
 
-| Key | Type | Notes
-|-|-|-
-|`custom_fields:` | object | An object of ticket custom field keys (ID/URIs) and values
-|`email_subject:` | string | Rewrite the email subject
-|`email_body:` | string | Rewrite the email plaintext body
-|`email_body_html:` | string | Rewrite the email HTML body
-|`headers:` | object | An object of header keys (names) and values
+| Key                    | Type   | Notes                                                      |
+|------------------------|--------|------------------------------------------------------------|
+| `custom_fields:`       | object | An object of ticket custom field keys (ID/URIs) and values |
+| `email_body:`          | string | Rewrite the email plaintext body                           |
+| `email_body_html:`     | string | Rewrite the email HTML body                                |
+| `email_sender_org_id:` | number | Link the sender address to an organization                 |
+| `email_subject:`       | string | Rewrite the email subject                                  |
+| `headers:`             | object | An object of header keys (names) and values                |

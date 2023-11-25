@@ -74,6 +74,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 | `comments` | comments | [Comments](/docs/guide/developers/dictionaries/#key-expansion)
 | `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
 | `links` | links | [Links](/docs/guide/developers/dictionaries/#key-expansion)
+| `script` | text | The script code in KATA format
 | `watchers` | watchers | [Watchers](/docs/guide/developers/dictionaries/#key-expansion)
 	
 ### Search Query Fields

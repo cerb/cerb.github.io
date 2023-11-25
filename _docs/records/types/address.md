@@ -46,6 +46,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `mail_transport_id` | [number](/docs/records/fields/types/number/) | If this address is used for outgoing mail, the [mail transport](/docs/records/types/mail_transport/) to use; otherwise empty 
 |   | `org_id` | [number](/docs/records/fields/types/number/) | The [organization](/docs/records/types/org/) linked to this email 
+|   | `org` | [text](/docs/records/fields/types/text/) | The [organization](/docs/records/types/org/) linked to this email. Alternative to `org_id` 
 |   | `updated` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 |   | `worker_id` | [number](/docs/records/fields/types/number/) | Is this address owned by a [worker](/docs/records/types/worker/)? 
 
