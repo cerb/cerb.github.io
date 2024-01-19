@@ -1,13 +1,13 @@
 ---
 title: Release History
-excerpt: Cerb has 21 years worth of incremental improvements from community feedback.
+excerpt: Cerb has 22 years worth of incremental improvements from community feedback.
 permalink: /docs/history/
 redirect_from:
   - /versions/
   - /releases/
 jumbotron:
   title: Release History
-  tagline: Cerb has 21 years worth of incremental improvements from community feedback
+  tagline: Cerb has 22 years worth of incremental improvements from community feedback
 ---
 
 {% assign last_section = '' %}
