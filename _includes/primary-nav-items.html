@@ -5,17 +5,17 @@
 		<a href="/tour/">Tour</a>
 	</li>
 	{% endcomment %}
-	<li class="{% if page_path[0] == 'docs' or page_path[0] == 'resources' or page_path[0] == 'guides' or page_path[0] == 'packages' %}current{% endif %}">
-		<a href="/resources/">Learn</a>
+	<li class="{% if page_path[0] == 'resources' or (page_path[0] == 'docs' and page_path[1] != 'history') or page_path[0] == 'guides' or page_path[0] == 'packages' %}current{% endif %}">
+		<a href="/resources/">Docs</a>
 	</li>
 	<li class="{% if page_path[0] == 'pricing' %}current{% endif %}">
 		<a href="/pricing/">Pricing</a>
 	</li>
+	<li class="{% if page_path[0] == 'docs' and page_path[1] == 'history' %}current{% endif %}">
+		<a href="/docs/history/">Releases</a>
+	</li>
 	<li class="{% if page_path[0] == 'clients' %}current{% endif %}">
 		<a href="/clients/">Testimonials</a>
-	</li>
-	<li class="{% if page_path[0] == 'blog' or page_path[0] == 'releases' %}current{% endif %}">
-		<a href="/blog/">News</a>
 	</li>
 	<li class="{% if page_path[0] == 'help' %}current{% endif %}">
 		<a href="/help/">Help</a>
