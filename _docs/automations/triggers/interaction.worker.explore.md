@@ -74,3 +74,10 @@ await:
         keyboard: ]
 </code>
 </pre>
+
+Interactions in a custom [toolbar](/docs/toolbars/) can use the following `after:` options:
+
+| Key | Type | 
+|---
+| `explore_page:`    | string | A default for the next page in the explore set when the interaction doesn't return one.
+| `refresh_widgets@list:` | array | Refresh widgets if the current page is a record profile.

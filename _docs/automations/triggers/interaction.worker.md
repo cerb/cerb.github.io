@@ -50,16 +50,17 @@ For instance, an interaction may be started from a toolbar in the email reply ed
 
 An interaction automation [dictionary](/docs/automations/#dictionaries) starts with the following input values:
 
-| Key | Type | Notes
-|-|-|-
-| `caller_name` | string | The [caller](#callers) which started the interaction.
-| `caller_params` | dictionary | Built-in parameters based on the caller type.
-| `client_browser_name` | string | The client browser name (e.g. Safari).
-| `client_browser_platform` | string | The client browser platform (e.g. Macintosh).
-| `client_browser_version` | string | The client browser version.
-| `client_ip` | string | The client IP address.
-| `inputs` | dictionary | [Custom input](/docs/automations/#inputs) values from the caller.
-| `worker_*` | record | The active [worker](/docs/records/types/worker/) record. Supports key expansion.
+| Key                       | Type       | Notes                                                                            |
+|---------------------------|------------|----------------------------------------------------------------------------------|
+| `caller_name`             | string     | The [caller](#callers) which started the interaction.                            |
+| `caller_params`           | dictionary | Built-in parameters based on the caller type.                                    |
+| `client_browser_name`     | string     | The client browser name (e.g. Safari).                                           |
+| `client_browser_platform` | string     | The client browser platform (e.g. Macintosh).                                    |
+| `client_browser_version`  | string     | The client browser version.                                                      |
+| `client_ip`               | string     | The client IP address.                                                           |
+| `client_url`              | string     | The client browser URL for the current page.                                     |
+| `inputs`                  | dictionary | [Custom input](/docs/automations/#inputs) values from the caller.                |
+| `worker_*`                | record     | The active [worker](/docs/records/types/worker/) record. Supports key expansion. |
 
 # Outputs
 

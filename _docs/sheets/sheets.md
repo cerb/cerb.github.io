@@ -249,9 +249,20 @@ columns:
 
 The `link` column type displays a relative or external link with some text.
 
-The link is provided in the `href:` (or `href_key:`, `href_template:`) param. For instance: `/path/to/page`, `https://cerb.ai`.
+#### Params:
+{:.no_toc}
 
-The `text:` (or `text_key:`, `text_template:`) param provides the label of the link.
+| Key     | Description 
+|---------|
+| `href:` | The static URL to open. This can be a relative path (e.g. `/path/to/page`) or an absolute path (e.g. `https://cerb.ai/`)
+| `href_key:` | The dynamic key with a URL to open.
+| `href_template@raw:` | A [script](/docs/scripting/) that outputs a URL to open with placeholders for each row.
+| `href_new_tab@bool:` | If `yes` the link opens in a new tab, otherwise it opens in the current tab (default).
+| `icon:` | An [icon](/docs/developers/icons/) to display adjacent to the link text (e.g. `new-window-alt`).
+| `icon_at:` | `start` or `end` 
+| `text:` | The static label of the link.
+| `text_key:` | The dynamic key with the label of the link.
+| `text_template@raw:` | A [script](/docs/scripting/) that outputs a label for the link with placeholders for each row.
 
 <pre>
 <code class="language-cerb">

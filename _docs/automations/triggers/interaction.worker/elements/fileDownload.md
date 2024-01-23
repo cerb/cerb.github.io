@@ -60,4 +60,4 @@ The filename to show on the download button.
 
 ### uri:
 
-A URI for an [attachment](/docs/records/types/attachment/) or [automation resource](/docs/records/types/automation_resource/) to download.
+A URI for an [attachment](/docs/records/types/attachment/), [automation resource](/docs/records/types/automation_resource/), or [resource](/docs/records/types/resource/) to download.

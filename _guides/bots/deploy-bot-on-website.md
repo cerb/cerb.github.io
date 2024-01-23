@@ -1626,6 +1626,7 @@ Copy and paste the following JSON:
       "context": "address",
       "custom_fieldset_id": "{{{uid.fieldset_mailing_list}}}",
       "name": "Opt-In",
+      "uri": "mailingList_optIn",
       "type": "C",
       "params": {
       }
