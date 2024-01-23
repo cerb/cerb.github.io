@@ -169,11 +169,15 @@ Yes. We offer a 25% discount in support of academic institutions.
 
 To qualify for an academic discount, institutions must be accredited by an agency recognized by the U.S. Department of Education (or their own national equivalent).  All publicly funded K-12 and preschools automatically qualify.
 
+[Contact us](/help/) for a coupon code.
+
 <div id="non-profit"></div>
 
 ## What qualifies a charity or non-profit organization for a free license donation?
 
-To receive a free Cerb license with ongoing software updates, a charity or non-profit must have a charter that seeks to improve the public good and be registered as a 501(c)(3) organization (or their own national equivalent).  The organization should be primarily funded through public donations or grants, and such contributions should be tax deductible by the donors.
+To receive a free Cerb license with ongoing software updates, a charity or non-profit must have a charter that seeks to improve the public good and be registered as a 501(c)(3) organization (or their own national equivalent).  The organization should be primarily funded through public donations or grants, and such contributions should be tax-deductible by the donors.
+
+Please [contact us](/help/) for details.
 
 <div id="opensource"></div>
 
@@ -183,3 +187,10 @@ To receive a free Cerb license with ongoing software updates, an open source pro
 
 An open source license should only be used for that purpose, and not mixed with other commercial activity.
 
+Please [contact us](/help/) for details.
+
+## What if I plan to eventually switch to a Cerb Cloud subscription?
+
+Your self-hosted Cerb configuration and data can be migrated to a Cerb Cloud subscription at any time.
+
+[Contact us](/help/) to start the process.

@@ -198,17 +198,21 @@ No! All we require is a valid email address to contact you. You will <b>never</b
 
 ## Do you provide academic discounts?
 
-Yes! We offer a 25% discount to qualified academic institutions. Please <a href="javascript:;" data-cerb-bot-interaction="contact">contact us</a> for details.
+Yes! We offer a 25% discount to academic institutions. To qualify, institutions must be accredited by an agency recognized by the U.S. Department of Education (or their own national equivalent).  All publicly funded K-12 and preschools automatically qualify. 
+
+[Contact us](/help/) for details.
 
 <div id="nonprofit"></div>
 
 ## Do you offer a discount to charities and non-profits?
 
-Yes! Please <a href="javascript:;" data-cerb-bot-interaction="contact">contact us</a> for details.
+Yes! To receive a free Cerb license with ongoing software updates, a charity or non-profit must have a charter that seeks to improve the public good and be registered as a 501(c)(3) organization (or their own national equivalent).  The organization should be primarily funded through public donations or grants, and such contributions should be tax-deductible by the donors.
+
+[Contact us](/help/) for details.
 
 ## How many workers can I invite to a Cerb Cloud trial?
 
-By default, your trial allows unlimited worker accounts with __10__ seats. <a href="javascript:;" data-cerb-bot-interaction="contact">Contact us</a> if you need to test with more seats and we can raise the limit.
+By default, your trial allows unlimited worker accounts with __3__ seats. [Contact us](/help/) if you need to test with more seats, and we can raise the limit.
 
 ## Do I need my own email server to use Cerb Cloud?
 
