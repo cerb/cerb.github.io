@@ -797,6 +797,7 @@ There can now be multiple `enabled:` or `disabled:` rules. The first rule to ret
 ### Actions
 
 |-|-
+| [**api.command:**](/docs/automations/commands/data.query/) | Execute an API command and return the response.
 | [**data.query:**](/docs/automations/commands/data.query/) | Execute a [data query](/docs/data-queries/) and return the response.
 | [**decrypt.pgp:**](/docs/automations/commands/decrypt.pgp/) | Decrypt a PGP encrypted message.
 | [**email.parse:**](/docs/automations/commands/email.parse/) | Parse a MIME-encoded email message into a [ticket](/docs/records/types/ticket/).
