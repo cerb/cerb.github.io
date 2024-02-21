@@ -43,7 +43,7 @@ Copy the `cerb-package-exporter.php` script to a directory on your server:
 
 <pre class="command-line" data-user="user" data-host="host">
 <code class="language-bash">
-curl -O "https://raw.githubusercontent.com/cerb/cerb-release/v10.0/install/extras/impex/cerb-package-exporter.php"
+curl -O "https://raw.githubusercontent.com/cerb/cerb-release/v10.4/install/extras/impex/cerb-package-exporter.php"
 </code>
 </pre>
 
@@ -55,7 +55,7 @@ In the same directory, create a `config.json` file:
 <code class="language-json">
 {
 	"exporter": {
-		"source": "Cerb9",
+		"source": "Cerb10",
 		"options": {
 			"db_host": "localhost",
 			"db_name": "cerb",
@@ -122,7 +122,7 @@ You will see output as your data exports. A large dataset will be broken up into
         "name": "Ticket #1",
         "revision": 1,
         "requires": {
-            "cerb_version": "9.5.7",
+            "cerb_version": "10.4.9",
             "plugins": []
         },
         "configure": {
