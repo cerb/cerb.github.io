@@ -761,6 +761,7 @@ There can now be multiple `enabled:` or `disabled:` rules. The first rule to ret
 | [**mail.draft**](/docs/automations/events/mail.draft/) | Modify a new or resumed draft before the editor is opened
 | [**mail.draft.validate**](/docs/automations/events/mail.draft.validate/) | Validate an email draft before sending
 | [**mail.filter**](/docs/automations/events/mail.filter/) | Modify or reject an inbound message based on its properties
+| [**mail.moved**](/docs/automations/events/mail.moved/) | After a ticket is moved to a new group/bucket
 | [**mail.received**](/docs/automations/events/mail.received/) | After a new email message is received
 | [**mail.route**](/docs/automations/events/mail.route/) | Determine a destination group inbox given properties of an incoming message
 | [**mail.send**](/docs/automations/events/mail.send/) | Before a sent message is delivered
