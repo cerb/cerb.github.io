@@ -772,6 +772,8 @@ There can now be multiple `enabled:` or `disabled:` rules. The first rule to ret
 | [**record.merged**](/docs/automations/events/record.merged/) | After a set of records was merged
 | [**record.viewed**](/docs/automations/events/record.viewed/) | After a record profile is viewed by a worker
 | [**reminder.remind**](/docs/automations/events/reminder.remind/) | Send notifications about a reminder
+| [**worker.authenticate.failed**](/docs/automations/events/worker.authenticate.failed/) | After a [worker](/docs/workers/) failed to log in (e.g. invalid password)
+| [**worker.authenticated**](/docs/automations/events/worker.authenticated/) | After a [worker](/docs/workers/) logged in successfully
 
 # Commands
 
