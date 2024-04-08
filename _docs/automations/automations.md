@@ -767,6 +767,7 @@ There can now be multiple `enabled:` or `disabled:` rules. The first rule to ret
 | [**record.changed**](/docs/automations/events/record.changed/) | React to changes in record field values
 | [**record.merge**](/docs/automations/events/record.merge/) | Allow or deny record merge requests
 | [**record.merged**](/docs/automations/events/record.merged/) | After a set of records was merged
+| [**record.viewed**](/docs/automations/events/record.viewed/) | After a record profile is viewed by a worker
 | [**reminder.remind**](/docs/automations/events/reminder.remind/) | Send notifications about a reminder
 
 # Commands
