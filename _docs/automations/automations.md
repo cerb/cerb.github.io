@@ -724,7 +724,7 @@ Automations are automatically **triggered** in response to events within Cerb.
 | [**record.changed**](/docs/automations/triggers/record.changed/) | √ | | Actions that run when [record](/docs/records/types/) fields change
 | [**reminder.remind**](/docs/automations/triggers/reminder.remind/) | √ | | Actions that run for [reminder](/docs/reminders/) alerts 
 | [**resource.get**](/docs/automations/triggers/resource.get/) | √ | | Dynamic [resource](/docs/resources/) content
-| [**scripting.function**](/docs/automations/triggers/scripting.function/) | √ | | Run an [automation](/docs/automations/) from the [cerb_automation()](/docs/scripting/functions/#cerb_automation) function in scripting.
+| [**scripting.function**](/docs/automations/triggers/scripting.function/) | √ | | Run an [automation](/docs/automations/) from the [cerb_automation()](/docs/scripting/functions/#cerb_automation) function in scripting
 | [**ui.chart.data**](/docs/automations/triggers/ui.chart.data/) | √ | | Data sources for [Chart KATA widgets](/docs/dashboards/)
 | [**ui.sheet.data**](/docs/automations/triggers/ui.sheet.data/) | √ | | Data sources for [sheets](/docs/sheets/)
 | [**ui.widget**](/docs/automations/triggers/ui.widget/) | √ | | Custom output for [card](/docs/records/types/card_widget/), [profile](/docs/records/types/profile_widget/), or [workspace](/docs/records/types/workspace_widget/) widgets
