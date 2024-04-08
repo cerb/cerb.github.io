@@ -713,6 +713,7 @@ Automations are automatically **triggered** in response to events within Cerb.
 |-|:-:|:-:|-
 | [**automation.function**](/docs/automations/triggers/automation.function/) | √ | | A reusable function with shared functionality called by other automations
 | [**automation.timer**](/docs/automations/triggers/automation.timer/) | √ | √ | A scheduled automation with [continuations](#continuations)
+| [**behavior.action**](/docs/automations/triggers/behavior.action/) | √ | | Execute an automation from a legacy bot behavior
 | [**data.query**](/docs/automations/triggers/data.query/) | √ | | Return results for custom [data queries](/docs/data-queries/)
 | [**interaction.worker**](/docs/automations/triggers/interaction.worker/) | √ | √ | Worker [interactions](/docs/interactions/) on [toolbars](/docs/toolbars/) and widgets
 | [**interaction.worker.explore**](/docs/automations/triggers/interaction.worker.explore/) | √ | √ | Worker [interactions](/docs/interactions/) that use custom logic to return the next record in explore mode
