@@ -37,9 +37,10 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
 |   | `automation_kata` | [text](/docs/records/fields/types/text/) |  
+|   | `cache_until` | [timestamp](/docs/records/fields/types/timestamp/) |  
 |   | `content` | [text](/docs/records/fields/types/text/) | The optional content of this resource. For text, use a string. For binary, base64-encode in [data URI format](https://en.wikipedia.org/wiki/Data_URI_scheme). This may also be an automation resource URI (e.g. `cerb:automation_resource:TOKEN`) 
 |   | `description` | [text](/docs/records/fields/types/text/) |  
-| **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | A [cerb.resource.type](/docs/plugins/extensions/points/cerb.resource.type/#extensions) extension ID.
+| **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) | A [cerb.resource.type](/docs/plugins/extensions/points/cerb.resource.type/#extensions) extension ID. 
 |   | `is_dynamic` | [boolean](/docs/records/fields/types/boolean/) |  
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this resource 
@@ -56,6 +57,7 @@ These [placeholders](/docs/scripting/variables/#placeholders) are available in [
 | `_label` | text | Label
 | `_type` | text | [Record type](/docs/records/types/) alias
 | `automation_kata` | text | Automation
+| `cache_until` | date | Cache Until
 | `description` | text | Description
 | `extension_id` | text | Type
 | `id` | number | Id
@@ -81,6 +83,7 @@ These [filters](/docs/search/#filters) are available in resource [search queries
 |---
 | Field | Type | Description
 |-|-|-
+| `cacheUntil:` | [date](/docs/search/#dates) | Cache
 | `description:` | [text](/docs/search/#text) | Description
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/#numbers) | Id
@@ -99,6 +102,7 @@ These columns are available on resource [worklists](/docs/worklists/):
 | Column | Description
 |-|-
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
+| `r_cache_until` | Cache
 | `r_description` | Description
 | `r_extension_id` | Type
 | `r_id` | Id

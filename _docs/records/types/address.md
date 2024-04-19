@@ -45,8 +45,8 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `is_trusted` | [boolean](/docs/records/fields/types/boolean/) | Is this sender trusted to display external images and links? 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `mail_transport_id` | [number](/docs/records/fields/types/number/) | If this address is used for outgoing mail, the [mail transport](/docs/records/types/mail_transport/) to use; otherwise empty 
+|   | `org` | [text](/docs/records/fields/types/text/) | The exact name of the [organization](/docs/records/types/org/) linked to this email address; alternative to `org_id` 
 |   | `org_id` | [number](/docs/records/fields/types/number/) | The [organization](/docs/records/types/org/) linked to this email 
-|   | `org` | [text](/docs/records/fields/types/text/) | The [organization](/docs/records/types/org/) linked to this email. Alternative to `org_id` 
 |   | `updated` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 |   | `worker_id` | [number](/docs/records/fields/types/number/) | Is this address owned by a [worker](/docs/records/types/worker/)? 
 
@@ -86,8 +86,8 @@ These optional placeholders are also available with **key expansion** in [dictio
 | `comment_count` | number | [Comment](/docs/records/types/comments/) count on the record
 | `comments` | comments | [Comments](/docs/guide/developers/dictionaries/#key-expansion)
 | `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
-| `last_recipient_message` | record | Latest [Message](/docs/records/types/message/) Received
-| `last_sender_message` | record | Latest [Message](/docs/records/types/message/) Sent
+| `last_recipient_message` | record | Latest [Message](/docs/records/types/message/) Received To
+| `last_sender_message` | record | Latest [Message](/docs/records/types/message/) Sent From
 | `links` | links | [Links](/docs/guide/developers/dictionaries/#key-expansion)
 | `watchers` | watchers | [Watchers](/docs/guide/developers/dictionaries/#key-expansion)
 	

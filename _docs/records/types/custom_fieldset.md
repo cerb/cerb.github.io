@@ -96,6 +96,7 @@ These columns are available on custom fieldset [worklists](/docs/worklists/):
 |-|-
 | `*_owner` | Owner
 | `c_context` | Context
+| `c_id` | Id
 | `c_name` | Name
 | `c_updated_at` | Updated
 
