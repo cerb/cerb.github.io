@@ -44,18 +44,19 @@ This guide demonstrates how to enable one-click single sign-on (SSO) for Cerb wo
 
 1. Log in to [Okta](https://okta.com/) as an administrator.
 
-1. Click **Applications** in the top menu.
+1. Click the **Admin** button in the top menu.
 
-1. Click the green **Create New App** button in the top right.
+1. Expand the **Applications** menu in the left sidebar.
 
-1. Enter the following details:
+1. Click **Applications**.
 
-	|---
-	|-|-
-    | **Platform** | Web
-    | **Sign on method** | OpenID Connect
+1. Click the blue **Create App Integration** button at the top.
 
-1. Click the green **Create** button in the popup.
+1. Select **OIDC - OpenID Connect**.
+
+1. Select **Web Application**.
+
+1. Click the blue **Next** button in the bottom right.
 
 1. Enter the following details:
 
@@ -63,13 +64,15 @@ This guide demonstrates how to enable one-click single sign-on (SSO) for Cerb wo
 	|-|-
     | **Application name** | Cerb
     | **Application logo** | <https://cerb.ai/assets/images/home/cerby.png>
-    | **Login redirect URIs** | `https://<YOUR-CERB-URL>/sso/okta-oidc`
+    | **Grant type** | Authorization Code
+    | **Sign-in redirect URIs** | `https://<YOUR-CERB-URL>/sso/okta-oidc`
+	  | **Sign-out redirect URIs** | (blank)
 
-1. Click the green **Save** button
+1. Click the blue **Save** button.
 
 1. In the application settings screen, scroll down and copy the **Client ID** and **Client Secret**.
 
-1. Make a note of your **Issuer** URL. You'll need it below.
+1. Make a note of your **Issuer** URL. You'll need it below. This is typically your Okta subdomain (e.g. `https://example.okta.com`).
 
 1. Assign the application to groups or users.
 
@@ -137,7 +140,7 @@ Log in to Cerb as an administrator.
 	      "params": {
 	        "client_id": "{{{prompt_client_id}}}",
 	        "client_secret": "{{{prompt_client_secret}}}",
-	        "scope": "openid profile",
+	        "scope": "openid email",
 	        "issuer": "{{{prompt_issuer_url}}}",
 	        "authorization_url": "{{{prompt_issuer_url}}}/oauth2/v1/authorize",
 	        "access_token_url": "{{{prompt_issuer_url}}}/oauth2/v1/token",
