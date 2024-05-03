@@ -46,3 +46,5 @@ The automation [dictionary](/docs/automations/#dictionaries) starts with the fol
 | Key |
 |-|-
 | `deny:` | If defined, the worker login is denied with the given error message. For instance, combine this with an approved list of known client IPs, or reject very old browser versions.
+| `motd:button:` | The label of the button to acknowledge the MOTD (e.g. 'I accept'). Defaults to 'Continue'.
+| `motd:message:` | An optional MOTD (Message of the Day) to display before logging in. Formatted with Markdown.
