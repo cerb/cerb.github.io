@@ -39,7 +39,7 @@ jumbotron:
 ## Server requirements
 
 - Any of these 64-bit operating systems:
-	- Linux _(recommended, using Ubuntu 23.04)_
+	- Linux _(recommended, using Ubuntu 23.10)_
 	- BSD
 	- macOS
 	- Windows
@@ -51,7 +51,7 @@ jumbotron:
 	- Microsoft Internet Information Server (IIS)
 	- Built-in PHP webserver (for development and evaluation)
 
-- PHP 8.1 (64-bit) or later
+- PHP 8.2 (64-bit) or later
 	- With the following extensions enabled:
 		- curl
 		- dom
@@ -92,7 +92,7 @@ The following general instructions assume that you have console access to a Linu
 
 You can follow one of these guides to set up a new server:
 
-* [Installing Cerb on Ubuntu 23.04 LTS with Nginx and PHP-FPM](/guides/installation/ubuntu/)
+* [Installing Cerb on Ubuntu 23.10 LTS with Nginx and PHP-FPM](/guides/installation/ubuntu/)
 {% comment %}
 * [Installing Cerb on Debian 9 with Nginx and PHP-FPM](/guides/installation/debian/)
 {% endcomment %}
