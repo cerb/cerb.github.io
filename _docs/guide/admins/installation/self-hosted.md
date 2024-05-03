@@ -56,7 +56,6 @@ jumbotron:
 		- curl
 		- dom
 		- gd
-		- imap
 		- json
 		- mailparse
 		- mbstring
