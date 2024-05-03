@@ -352,7 +352,11 @@ You can install a [purchased license](/pricing/self-hosted/) in **Setup >> Confi
 
 Click the **Continue** button.
 
-## Step 10: Finished
+## Step 10: Security
+
+Review the [security recommendations](/docs/security).
+
+## Step 11: Finished
 
 That's it!  You're ready to start using Cerb.
 
