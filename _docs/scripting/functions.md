@@ -375,6 +375,29 @@ Calculate the time elapsed (in seconds) between two dates using calendar availab
 18 hours, 13 mins
 ```
 
+## cerb_current_worker
+
+(Added in [10.4.14](/releases/10.4.14/))
+
+Return a dictionary for the currently logged in worker. This returns an empty dictionary when used outside a browser session.
+
+`cerb_current_worker(expand)`
+
+|-|-|-
+| **expand** | An optional comma-delimited string or array of dictionary keys to expand.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+Hello {{cerb_current_worker().first_name}}!
+{% endraw %}
+</code>
+</pre>
+
+```
+Hello Kina!
+```
+
 ## cerb_extract_uris
 
 (Added in [9.5.3](/releases/9.5.3/))

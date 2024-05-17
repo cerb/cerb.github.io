@@ -119,6 +119,7 @@ These [filters](/docs/search/#filters) are available in email address [search qu
 | `ticket.id:` | [chooser](/docs/search/#choosers) | [Ticket](/docs/records/types/ticket/)
 | `updated:` | [date](/docs/search/#dates) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
+| `worker:` | [record](/docs/search/#deep-search) | [Worker](/docs/records/types/worker/)
 | `worker.id:` | [chooser](/docs/search/#choosers) | [Worker](/docs/records/types/worker/)
 	
 ### Worklist Columns
