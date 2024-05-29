@@ -88,7 +88,7 @@ Each `series.*` series should provide:
 |-|-
 | `metric:` | The [metric](/docs/metrics/) name
 | `by:` | A comma-separated list of [dimension](/docs/metrics/#dimensions) keys to group by
-| `function:` | `sum`, `min`, `max`, `average`, `samples`, `distinct`
+| `function:` | `sum`, `min`, `max`, `average`, `samples`, `distinct`, `faceted_average`, `faceted_min`, `faceted_max`. The faceted functions sum samples with different dimensions into a single total.
 | `label:` | A human-readable label for this series
 | `missing:` | How to handle missing sample periods: `null` (default), `zero` (set to 0), or `carry` (carry the last sample)
 | `query:` | An optional query using [dimension](/docs/metrics/#dimensions) keys to filter samples.

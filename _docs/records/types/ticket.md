@@ -137,6 +137,7 @@ These [filters](/docs/search/#filters) are available in ticket [search queries](
 | `lastOpenedAt:` | [date](/docs/search/#dates) | Last Opened At
 | `links:` | [links](/docs/search/#links) | Record Links
 | `mask:` | [text](/docs/search/#text) | Mask
+| `mask.merged:` | [text](/docs/search/#text) | Masks Previously Merged Into Ticket
 | `messages:` | [record](/docs/search/#deep-search) | [Messages](/docs/records/types/message/)
 | `messages.count:` | [number](/docs/search/#numbers) | # Messages
 | `messages.count.in:` | [number](/docs/search/#numbers) | # Messages In
