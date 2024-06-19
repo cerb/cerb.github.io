@@ -155,6 +155,8 @@ These [filters](/docs/search/#filters) are available in ticket [search queries](
 | `resolution.first:` | [number](/docs/search/#numbers) | First Resolution
 | `response.first:` | [number](/docs/search/#numbers) | First Response
 | `responsibility:` | [number](/docs/search/#numbers) | Responsibility
+| `sender.first:` | [record](/docs/search/#deep-search) | [Sender First](/docs/records/types/address/)
+| `sender.last:` | [record](/docs/search/#deep-search) | [Sender Last](/docs/records/types/address/)
 | `spam.score:` | [number](/docs/search/#numbers) | Spam Score
 | `spam.training:` | virtual | Spam Training
 | `status:` | virtual | Status
