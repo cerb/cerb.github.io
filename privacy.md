@@ -24,7 +24,7 @@ WGM has certified to the U.S. Department of Commerce that it adheres to the EU-U
 
 WGM has certified to the U.S. Department of Commerce that it adheres to the Swiss-U.S. Data Privacy Framework Principles (Swiss-U.S. DPF Principles) with regard to the processing of personal data received from Switzerland in reliance on the Swiss-U.S. DPF.
 
-If there is any conflict between the terms in this privacy policy and the EU-U.S. DPF Principles and/or the Swiss-U.S. DPF Principles, the Principles shall govern.  To learn more about the Data Privacy Framework (DPF) program, and to view our certification, please visit <https://www.dataprivacyframework.gov/>.
+If there is any conflict between the terms in this privacy policy and the EU-U.S. DPF Principles and/or the Swiss-U.S. DPF Principles, the Principles shall govern.  To learn more about the Data Privacy Framework (DPF) program, and to view our certification, please visit <https://www.dataprivacyframework.gov/framework-article/ANNEX-I-introduction>.
 
 ### Jurisdiction
 
@@ -40,7 +40,7 @@ WGM has further committed to refer unresolved Data Privacy Framework complaints 
 
 ### Independent Arbitration
 
-Under certain limited circumstances, individuals may invoke binding Data Privacy Framework arbitration as a last resort if all other forms of dispute resolution have been unsuccessful. To learn more about this method of resolution and its availability to you, please read more about [Data Privacy Framework](https://www.dataprivacyframework.gov/).
+Under certain limited circumstances, individuals may invoke binding Data Privacy Framework arbitration as a last resort if all other forms of dispute resolution have been unsuccessful. To learn more about this method of resolution and its availability to you, please read more about [Data Privacy Framework](https://www.dataprivacyframework.gov/framework-article/ANNEX-I-introduction).
 
 ### Liability For Onward Transfers
 
@@ -268,6 +268,8 @@ If you require a signed Data Protection Addendum (DPA) for [GDPR](https://en.wik
 Although most changes are likely to be minor, we may modify this Privacy Policy from time to time at our sole discretion. You are encouraged to frequently check this page for any changes to the Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.
 
 ### Changelog
+
+* **16-August-2024**: Updated the URL for the Data Privacy Framework for DPF certification renewal.
 
 * **02-October-2023**: Updated the URL for JAMS dispute resolution.
 
