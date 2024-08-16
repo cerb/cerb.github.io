@@ -19,14 +19,14 @@ jumbotron:
 
 # platform.extensions
 
-`platform.extensions` data queries return a filterable and pageable list of plugin [extensions](/docs/record/types/) for a given `point`.
+`platform.extensions` data queries return a filterable and pageable list of plugin [extensions](/docs/records/types/) for a given `point`.
 
 ### Inputs
 {: .no_toc}
 
 |Req'd|Key|Notes
 |:-:|-|-
-|**√**| `point:` | An [extension point](/docs/record/types/)
+|**√**| `point:` | An [extension point](/docs/records/types/)
 | | `filter:` | An optional keyword used to filter the results
 | | `limit:` | The desired number of results per page
 | | `page:` | The desired starting page (zero-based)

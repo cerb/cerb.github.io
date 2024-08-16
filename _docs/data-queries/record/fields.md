@@ -19,7 +19,7 @@ jumbotron:
 
 # record.fields
 
-`record.fields` data queries return a filterable and pageable list of fields from a [record type](/docs/record/types/).
+`record.fields` data queries return a filterable and pageable list of fields from a [record type](/docs/records/types/).
 
 ### Inputs
 {: .no_toc}

@@ -56,12 +56,12 @@ columns:
   card/_label:
     label: Ticket
     params:
-      bold: no
+      bold@bool: no
   
   card/initial_message_sender__label:
     label: Requester
     params:
-      underline: no
+      underline@bool: no
 
   text/initial_message_sender_org_country:
     label: Country
@@ -74,8 +74,8 @@ columns:
   card/owner__label:
     label: Owner
     params:
-      image: yes
-      underline: no
+      image@bool: yes
+      underline@bool: no
   
   slider/importance:
   
@@ -95,7 +95,7 @@ Will display this **sheet**:
 
 Unlike a worklist that is limited to records, the results of the data query above could have come from anywhere (third-party API call, subtotals, computation). As text, sheets can be quickly modified and shared, retrieved from the API, or constructed dynamically by bots.
 
-You'll also notice that we're displaying the country of the initial sender's organization as a column. The group and bucket are displayed as a single column. We're electing which columns to show cards and profile images for. We're changing the date format. All of this wasn't possible with worklists.
+You'll also notice that we're displaying the country of the initial sender's organization as a column. The group and bucket are displayed as a single column. We're selecting which columns to show cards and profile images for. We're changing the date format. None of this was possible with worklists.
 
 * TOC
 {:toc}
