@@ -1,9 +1,9 @@
 FROM ubuntu:22.04
 
-ENV LC_ALL C.UTF-8
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US.UTF-8
-ENV JEKYLL_ENV development
+ENV LC_ALL=C.UTF-8
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US.UTF-8
+ENV JEKYLL_ENV=development
 
 RUN apt-get update \
   && apt-get -y install ruby ruby-dev make git gcc g++ \
