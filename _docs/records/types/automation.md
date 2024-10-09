@@ -89,6 +89,7 @@ These [filters](/docs/search/#filters) are available in automation [search queri
 | `id:` | [number](/docs/search/#numbers) | Id
 | `links:` | [links](/docs/search/#links) | Record Links
 | `name:` | [text](/docs/search/#text) | Name
+| `script:` | [fulltext](/docs/search/#fulltext) | Fulltext
 | `trigger:` | [text](/docs/search/#text) | Extension
 | `updated:` | [date](/docs/search/#dates) | Updated
 | `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)

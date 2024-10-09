@@ -89,10 +89,13 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
 | `format` | `parsedown` (Markdown), or blank for plaintext
 | `from` | The `From:` sender (uses system default if omitted)
+| `from_personal` | The personal `From:` sender (uses system default if omitted)
 | `headers` | An array of email headers to set, with header names as keys
 | `html_template_id` | An optional [HTML template](/docs/records/types/html_template/) ID if `format` is `parsedown`
 | `options_gpg_encrypt` | `1` to enable PGP encryption, `0` (or omit) to disable
 | `options_gpg_sign` | `1` to enable PGP signatures, `0` (or omit) to disable
+| `reply_to` | The optional `Reply-To:`
+| `return_path` | The optional `Return-Path:`
 | `subject` | The message `Subject:`
 | `to` | The `To:` recipients
 

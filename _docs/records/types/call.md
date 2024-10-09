@@ -68,6 +68,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 |---
 | Field | Type | Description
 |-|-|-
+| `comment_count` | number | [Comment](/docs/records/types/comments/) count on the record
 | `comments` | comments | [Comments](/docs/guide/developers/dictionaries/#key-expansion)
 | `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
 | `links` | links | [Links](/docs/guide/developers/dictionaries/#key-expansion)
@@ -90,7 +91,7 @@ These [filters](/docs/search/#filters) are available in call [search queries](/d
 | `phone:` | [text](/docs/search/#text) | Phone
 | `subject:` | [text](/docs/search/#text) | Subject
 | `updated:` | [date](/docs/search/#dates) | Updated
-| `watchers:` | [watchers](/docs/search/#watchers) | Watchers
+| `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
 	
 ### Worklist Columns
 

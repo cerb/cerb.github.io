@@ -1,11 +1,11 @@
 ---
-title: Feed Records
-permalink: /docs/records/types/feed/
+title: Automation Event Listener Records
+permalink: /docs/records/types/automation_event_listener/
 toc:
-  title: Feed
+  title: Automation Event Listener
   expand: Records
 jumbotron:
-  title: Feed
+  title: Automation Event Listener
   tagline: 
   breadcrumbs:
   -
@@ -21,10 +21,10 @@ jumbotron:
 
 |---
 |-|-
-| **Name (singular):** | Feed
-| **Name (plural):** | Feeds
-| **Alias (uri):** | feed
-| **Identifier (ID):** | cerberusweb.contexts.feed
+| **Name (singular):** | Automation Event Listener
+| **Name (plural):** | Automation Event Listeners
+| **Alias (uri):** | automation_event_listener
+| **Identifier (ID):** | cerb.contexts.automation.event.listener
 
 * TOC
 {:toc}
@@ -36,9 +36,14 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
+|   | `event_kata` | [text](/docs/records/fields/types/text/) |  
+| **x** | **`event_name`** | [text](/docs/records/fields/types/text/) |  
+|   | `is_disabled` | [number](/docs/records/fields/types/number/) | (0-1) 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
-| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this feed 
-| **x** | **`url`** | [url](/docs/records/fields/types/url/) | The URL of the RSS feed 
+| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this automation event listener 
+|   | `priority` | [number](/docs/records/fields/types/number/) | (0-255) 
+|   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
+|   | `workflow_id` | [number](/docs/records/fields/types/number/) |  
 
 ### Dictionary Placeholders
 
@@ -50,9 +55,15 @@ These [placeholders](/docs/scripting/variables/#placeholders) are available in [
 | `_context` | text | [Record type](/docs/records/types/) extension ID
 | `_label` | text | Label
 | `_type` | text | [Record type](/docs/records/types/) alias
+| `event_kata` | text | Event Kata
+| `event_name` | text | Automation Event
 | `id` | number | Id
+| `is_disabled` | boolean | Disabled
 | `name` | text | Name
-| `url` | text | Url
+| `priority` | number | Priority
+| `record_url` | text | Record Url
+| `updated_at` | date | Updated
+| `workflow_id` | number | Common.workflow.id
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/guide/developers/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
@@ -63,33 +74,41 @@ These optional placeholders are also available with **key expansion** in [dictio
 | `comments` | comments | [Comments](/docs/guide/developers/dictionaries/#key-expansion)
 | `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
 | `links` | links | [Links](/docs/guide/developers/dictionaries/#key-expansion)
-| `watchers` | watchers | [Watchers](/docs/guide/developers/dictionaries/#key-expansion)
 	
 ### Search Query Fields
 
-These [filters](/docs/search/#filters) are available in feed [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in automation event listener [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
+| `created:` | [date](/docs/search/#dates) | Created
+| `event:` | [text](/docs/search/#text) | Event
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/#numbers) | Id
+| `isDisabled:` | [boolean](/docs/search/#booleans) | Disabled
 | `links:` | [links](/docs/search/#links) | Record Links
 | `name:` | [text](/docs/search/#text) | Name
-| `url:` | [text](/docs/search/#text) | Url
-| `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
+| `priority:` | [number](/docs/search/#numbers) | Priority
+| `updated:` | [date](/docs/search/#dates) | Updated
+| `workflow.id:` | [chooser](/docs/search/#choosers) | [Workflow](/docs/records/types/workflow/)
 	
 ### Worklist Columns
 
-These columns are available on feed [worklists](/docs/worklists/):
+These columns are available on automation event listener [worklists](/docs/worklists/):
 
 |---
 | Column | Description
 |-|-
+| `a_created_at` | Created
+| `a_event_name` | Event
+| `a_id` | Id
+| `a_is_disabled` | Disabled
+| `a_name` | Name
+| `a_priority` | Priority
+| `a_updated_at` | Updated
+| `a_workflow_id` | Workflow
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
-| `t_id` | Id
-| `t_name` | Name
-| `t_url` | Url
 
 <div class="section-nav">
 	<div class="left">

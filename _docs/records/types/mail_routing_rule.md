@@ -1,11 +1,11 @@
 ---
-title: Feed Records
-permalink: /docs/records/types/feed/
+title: Mail Routing Rule Records
+permalink: /docs/records/types/mail_routing_rule/
 toc:
-  title: Feed
+  title: Mail Routing Rule
   expand: Records
 jumbotron:
-  title: Feed
+  title: Mail Routing Rule
   tagline: 
   breadcrumbs:
   -
@@ -21,10 +21,10 @@ jumbotron:
 
 |---
 |-|-
-| **Name (singular):** | Feed
-| **Name (plural):** | Feeds
-| **Alias (uri):** | feed
-| **Identifier (ID):** | cerberusweb.contexts.feed
+| **Name (singular):** | Email Routing Rule
+| **Name (plural):** | Email Routing Rules
+| **Alias (uri):** | mail_routing_rule
+| **Identifier (ID):** | cerb.contexts.mail.routing.rule
 
 * TOC
 {:toc}
@@ -36,9 +36,13 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
+|   | `is_disabled` | [boolean](/docs/records/fields/types/boolean/) |  
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
-| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this feed 
-| **x** | **`url`** | [url](/docs/records/fields/types/url/) | The URL of the RSS feed 
+| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this email routing rule 
+|   | `priority` | [number](/docs/records/fields/types/number/) | (0-255) 
+|   | `routing_kata` | [text](/docs/records/fields/types/text/) |  
+|   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
+|   | `workflow_id` | [number](/docs/records/fields/types/number/) |  
 
 ### Dictionary Placeholders
 
@@ -50,9 +54,14 @@ These [placeholders](/docs/scripting/variables/#placeholders) are available in [
 | `_context` | text | [Record type](/docs/records/types/) extension ID
 | `_label` | text | Label
 | `_type` | text | [Record type](/docs/records/types/) alias
+| `created_at` | date | Created
 | `id` | number | Id
 | `name` | text | Name
-| `url` | text | Url
+| `priority` | text | Priority
+| `record_url` | text | Record Url
+| `routing_kata` | text | Routing Kata
+| `updated_at` | date | Updated
+| `workflow_id` | number | Common.workflow.id
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/guide/developers/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
@@ -63,33 +72,39 @@ These optional placeholders are also available with **key expansion** in [dictio
 | `comments` | comments | [Comments](/docs/guide/developers/dictionaries/#key-expansion)
 | `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
 | `links` | links | [Links](/docs/guide/developers/dictionaries/#key-expansion)
-| `watchers` | watchers | [Watchers](/docs/guide/developers/dictionaries/#key-expansion)
 	
 ### Search Query Fields
 
-These [filters](/docs/search/#filters) are available in feed [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in mail routing rule [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
+| `created:` | [date](/docs/search/#dates) | Created
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `id:` | [number](/docs/search/#numbers) | Id
+| `isDisabled:` | [boolean](/docs/search/#booleans) | Disabled
 | `links:` | [links](/docs/search/#links) | Record Links
 | `name:` | [text](/docs/search/#text) | Name
-| `url:` | [text](/docs/search/#text) | Url
-| `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
+| `priority:` | [number](/docs/search/#numbers) | Priority
+| `updated:` | [date](/docs/search/#dates) | Updated
+| `workflow.id:` | [chooser](/docs/search/#choosers) | [Workflow](/docs/records/types/workflow/)
 	
 ### Worklist Columns
 
-These columns are available on feed [worklists](/docs/worklists/):
+These columns are available on mail routing rule [worklists](/docs/worklists/):
 
 |---
 | Column | Description
 |-|-
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
-| `t_id` | Id
-| `t_name` | Name
-| `t_url` | Url
+| `m_created_at` | Created
+| `m_id` | Id
+| `m_is_disabled` | Disabled
+| `m_name` | Name
+| `m_priority` | Priority
+| `m_updated_at` | Updated
+| `m_workflow_id` | Workflow
 
 <div class="section-nav">
 	<div class="left">

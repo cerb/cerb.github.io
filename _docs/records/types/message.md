@@ -37,6 +37,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
 | **x** | **`content`** | [text](/docs/records/fields/types/text/) | Message content 
+|   | `content_html` | [text](/docs/records/fields/types/text/) | Optional alternative content for the HTML version of a message 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
 |   | `hash_header_message_id` | [text](/docs/records/fields/types/text/) | A SHA-1 hash of the `Message-Id:` header; used for message threading 
 | **x** | **`headers`** | [text](/docs/records/fields/types/text/) | Message headers 

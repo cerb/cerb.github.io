@@ -1,11 +1,11 @@
 ---
-title: Toolbar Records
-permalink: /docs/records/types/toolbar/
+title: Email Delivery Log Records
+permalink: /docs/records/types/mail_delivery_log/
 toc:
-  title: Toolbar
+  title: Email Delivery Log
   expand: Records
 jumbotron:
-  title: Toolbar
+  title: Email Delivery Log
   tagline: 
   breadcrumbs:
   -
@@ -21,10 +21,10 @@ jumbotron:
 
 |---
 |-|-
-| **Name (singular):** | Toolbar
-| **Name (plural):** | Toolbars
-| **Alias (uri):** | toolbar
-| **Identifier (ID):** | cerb.contexts.toolbar
+| **Name (singular):** | Email Delivery Log
+| **Name (plural):** | Email Delivery Logs
+| **Alias (uri):** | mail_delivery_log
+| **Identifier (ID):** | cerb.contexts.mail.delivery.log
 
 * TOC
 {:toc}
@@ -37,11 +37,15 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
 |   | `created_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
-|   | `description` | [text](/docs/records/fields/types/text/) |  
-| **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) |  
+|   | `from_id` | [number](/docs/records/fields/types/number/) |  
+|   | `header_message_id` | [text](/docs/records/fields/types/text/) |  
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
-| **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this toolbar 
-|   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
+|   | `mail_transport_id` | [number](/docs/records/fields/types/number/) |  
+|   | `status_id` | [number](/docs/records/fields/types/number/) | (0-2) 
+|   | `status_message` | [text](/docs/records/fields/types/text/) |  
+|   | `subject` | [text](/docs/records/fields/types/text/) |  
+|   | `to` | [text](/docs/records/fields/types/text/) |  
+|   | `type` | [text](/docs/records/fields/types/text/) |  
 
 ### Dictionary Placeholders
 
@@ -54,12 +58,14 @@ These [placeholders](/docs/scripting/variables/#placeholders) are available in [
 | `_label` | text | Label
 | `_type` | text | [Record type](/docs/records/types/) alias
 | `created_at` | date | Created
-| `description` | text | Description
-| `extension_id` | text | Extension
+| `header_message_id` | text | Header Message-Id
 | `id` | number | Id
-| `name` | text | Name
 | `record_url` | text | Record Url
-| `updated_at` | date | Updated
+| `status_id` | number | Status
+| `status_message` | text | Status Message
+| `subject` | text | Subject
+| `to` | text | To
+| `type` | text | Type
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/guide/developers/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):
 
@@ -70,39 +76,48 @@ These optional placeholders are also available with **key expansion** in [dictio
 | `comments` | comments | [Comments](/docs/guide/developers/dictionaries/#key-expansion)
 | `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
 | `links` | links | [Links](/docs/guide/developers/dictionaries/#key-expansion)
-| `watchers` | watchers | [Watchers](/docs/guide/developers/dictionaries/#key-expansion)
+| `properties` | object | Properties
 	
 ### Search Query Fields
 
-These [filters](/docs/search/#filters) are available in toolbar [search queries](/docs/search/):
+These [filters](/docs/search/#filters) are available in email delivery log [search queries](/docs/search/):
 
 |---
 | Field | Type | Description
 |-|-|-
 | `created:` | [date](/docs/search/#dates) | Created
-| `description:` | [text](/docs/search/#text) | Description
-| `extension:` | [text](/docs/search/#text) | Extension
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
+| `from:` | [record](/docs/search/#deep-search) | [From](/docs/records/types/address/)
+| `from.id:` | [chooser](/docs/search/#choosers) | [From](/docs/records/types/address/)
+| `header.messageId:` | [text](/docs/search/#text) | Header Message-Id
 | `id:` | [number](/docs/search/#numbers) | Id
 | `links:` | [links](/docs/search/#links) | Record Links
-| `name:` | [text](/docs/search/#text) | Name
-| `updated:` | [date](/docs/search/#dates) | Updated
-| `watchers:` | [record](/docs/search/#deep-search) | [Watchers](/docs/records/types/worker/)
+| `mailTransport:` | [record](/docs/search/#deep-search) | [Mailtransport](/docs/records/types/mail_transport/)
+| `mailTransport.id:` | [chooser](/docs/search/#choosers) | [Email Transport](/docs/records/types/mail_transport/)
+| `status:` | virtual | Status
+| `status.id:` | [number](/docs/search/#numbers) | Status
+| `subject:` | [text](/docs/search/#text) | Subject
+| `to:` | [text](/docs/search/#text) | To
+| `type:` | [text](/docs/search/#text) | Type
 	
 ### Worklist Columns
 
-These columns are available on toolbar [worklists](/docs/worklists/):
+These columns are available on email delivery log [worklists](/docs/worklists/):
 
 |---
 | Column | Description
 |-|-
 | `cf_<id>` | [Custom Field](/docs/records/types/custom_field/)
-| `t_created_at` | Created
-| `t_description` | Description
-| `t_extension_id` | Extension
-| `t_id` | Id
-| `t_name` | Name
-| `t_updated_at` | Updated
+| `m_created_at` | Created
+| `m_from_id` | From
+| `m_header_message_id` | Header Message-Id
+| `m_id` | Id
+| `m_mail_transport_id` | Email Transport
+| `m_status_id` | Status
+| `m_status_message` | Status Message
+| `m_subject` | Subject
+| `m_to` | To
+| `m_type` | Type
 
 <div class="section-nav">
 	<div class="left">

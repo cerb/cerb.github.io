@@ -36,7 +36,6 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
-|   | `automations_kata` | [text](/docs/records/fields/types/text/) |  
 |   | `description` | [text](/docs/records/fields/types/text/) |  
 | **x** | **`extension_id`** | [text](/docs/records/fields/types/text/) |  
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 

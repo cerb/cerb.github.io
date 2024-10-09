@@ -48,6 +48,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `reply_personal` | [text](/docs/records/fields/types/text/) | The default personal name in the `From:` of replies 
 |   | `reply_signature_id` | [number](/docs/records/fields/types/number/) | The ID of the default [signature](/docs/records/types/email_signature/) used when sending replies from this group 
 |   | `reply_signing_key_id` | [number](/docs/records/fields/types/number/) | The [private key](/docs/records/types/gpg_private_key/) used to cryptographically sign outgoing mail 
+|   | `routing_kata` | [text](/docs/records/fields/types/text/) | Routing rules in KATA format 
 |   | `updated` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 
 ### Dictionary Placeholders
@@ -72,6 +73,7 @@ These [placeholders](/docs/scripting/variables/#placeholders) are available in [
 | `reply_signature_owner_` | record | Signature Owner
 | `reply_signing_key_` | record | [Signing Key](/docs/records/types/gpg_private_key/)
 | `replyto_` | record | [Send From](/docs/records/types/address/)
+| `routing_kata` | text | Dao.bucket.routing_Kata
 | `updated` | date | Updated
 
 These optional placeholders are also available with **key expansion** in [dictionaries](/docs/guide/developers/dictionaries/#key-expansion) and the [API](/docs/api/responses/#expanding-keys-in-api-requests):

@@ -44,6 +44,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `group` | [text](/docs/records/fields/types/text/) | The [group](/docs/records/types/group/) of the ticket; alternative to `group_id` 
 | **x** | **`group_id`** | [number](/docs/records/fields/types/number/) | The ID of the [group](/docs/records/types/group/) containing this ticket 
 |   | `importance` | [number](/docs/records/fields/types/number/) | A number from `0` (least) to `100` (most) 
+|   | `last_opened_at` | [timestamp](/docs/records/fields/types/timestamp/) |  
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `mask` | [text](/docs/records/fields/types/text/) | The randomized reference number for this ticket; auto-generated if blank 
 |   | `org` | [text](/docs/records/fields/types/text/) | The exact name of the [organization](/docs/records/types/org/) linked to this ticket; alternative to `org_id` 
