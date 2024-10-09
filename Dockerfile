@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:23.10
 
 ENV LC_ALL=C.UTF-8
 ENV LANG=en_US.UTF-8
@@ -15,9 +15,9 @@ COPY Gem* /var/cerb-docs/
 
 WORKDIR /var/cerb-docs
 
-RUN bundle3.0 install
+RUN bundle install
 
 VOLUME ["/var/cerb-docs"]
 EXPOSE 4000
 
-CMD ["bundle3.0","exec","jekyll","serve","-H","0.0.0.0","--incremental"]
+CMD ["bundle","exec","jekyll","serve","-H","0.0.0.0","--incremental"]
