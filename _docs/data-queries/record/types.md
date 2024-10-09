@@ -24,12 +24,13 @@ jumbotron:
 ### Inputs
 {: .no_toc}
 
-|Req'd|Key|Notes
-|:-:|-|-
-| | `filter:` | An optional keyword used to filter the results
-| | `limit:` | The desired number of results per page
-| | `options:` | `autocomplete`, `avatars`, `cards`, `comments`, `custom_fields`, `links`, `owner`, `records`, `search`, `snippets`, `va_variable`, `watchers`, `workspace`
-| | `page:` | The desired starting page (zero-based)
+| Req'd | Key               | Notes                                                                                                                                                      |
+|:-----:|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|       | `exclude_custom:` | `yes` to exclude custom record types (default `no`)                                                                                                        |
+|       | `filter:`         | An optional keyword used to filter the results                                                                                                             |
+|       | `limit:`          | The desired number of results per page                                                                                                                     |
+|       | `options:`        | `autocomplete`, `avatars`, `cards`, `comments`, `custom_fields`, `links`, `owner`, `records`, `search`, `snippets`, `va_variable`, `watchers`, `workspace` |
+|       | `page:`           | The desired starting page (zero-based)                                                                                                                     |
 
 ### Response Formats
 {: .no_toc}

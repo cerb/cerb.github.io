@@ -102,6 +102,8 @@ You'll also notice that we're displaying the country of the initial sender's org
 
 # Layout
 
+## Styles
+
 ### Tables
 
 By default, sheets display as a **table** of rows and columns.
@@ -128,6 +130,28 @@ layout:
 </code>
 </pre>
 
+### Columns
+
+The `columns` layout displays rows as equal width columns.
+
+<pre>
+<code class="language-cerb">
+layout:
+  style: columns
+</code>
+</pre>
+
+### Grid
+
+The `grid` layout displays rows as a dynamically sized grid.
+
+<pre>
+<code class="language-cerb">
+layout:
+  style: grid
+</code>
+</pre>
+
 ### Buttons
 
 The `buttons` layout displays rows as buttons. This also supports one-click continue in [interactions](/docs/interactions/).
@@ -139,7 +163,41 @@ layout:
 </code>
 </pre>
 
+## Colors
+
+Color palettes for use with `color:` and `text_color:` in columns. 
+
+When used with the `@raw` annotation, the value may contain scripting and row placeholders. The value should be the key of a color set defined in layout:colors: as a list of HEX color codes (e.g. `#ffcc00`). The value may contain a `:n` suffix, where n is the 0-based index from the color set. This can be done dynamically for threshold colors. 
+
+By default, the first color is used. 
+
+If a color set contains a `_dark` suffix, it will be used automatically in dark mode (e.g. `rainbow12` will check for the existence of `rainbow12_dark`). 
+
+Entire rows can be colorized by using the same `color:` parameter on all columns.
+
+<pre>
+<code class="language-cerb">
+layout:
+  colors:
+    rainbow12@csv: #6e40aa, #b83cb0, #f6478d, #ff6956, #f59f30, #c4d93e, #83f557, #38f17a, #19d3b5, #29a0dd, #5069d9, #6e40aa
+columns:
+  text/example:
+    params:
+      color: rainbow12:0
+      text_color: rainbow12:1
+</code>
+</pre>
+
 # Columns
+
+The following properties are available on all columns:
+
+|---
+|-|-
+|`color:`| The cell's background color from `layout:colors:` (a suffix of `:n` selects a particular 0-based color index)
+|`text_align:`| The cell's text alignment: `left`, `center`, or `right`.
+|`text_color:`| The cell's text color from `layout:colors:` (a suffix of `:n` selects a particular 0-based color index)
+|`text_size:`| This cell's text size as a numeric percentage (e.g. text_size: 150). This is particularly useful with `layout:style:` fieldsets when rendering cards.
 
 ## Card
 
@@ -212,16 +270,51 @@ columns:
         {% if can_sign %}
         circle-ok
         {% endif %}
-      #record_uri: cerb:group:123
 {% endraw %}
 </code>
 </pre>
+
+### record_uri:
 
 Optionally, a `record_uri:` key can contain a record URI value (`cerb:<record_type>:<id>`). This will display its profile image as the icon.
 
 The `record_uri:` may also be an image-based `automation_resource` token.
 
 If both `record_uri:` and `image:` are defined, the former will be checked first and if empty fall back to the latter.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+columns:
+  icon/group:
+    label: Group
+    params:
+      record_uri: cerb:group:123
+{% endraw %}
+</code>
+</pre>
+
+### svg:
+
+Render arbitrary in-line SVG images with the `svg:` key. Rendered SVG images are automatically sanitized. 
+
+This is particularly useful for dynamic or single-use images. For instance, a survey could display happy/sad or thumbs up/down images on buttons.
+
+<pre>
+<code class="language-cerb">
+{% raw %}
+columns:
+  icon/group:
+    label: Group
+    params:
+      svg:
+        data@text:
+          &lt;svg xmlns="http://www.w3.org/2000/svg" width="500" viewBox="0 0 240 135"&gt;
+          ...
+          &lt;/svg&gt;
+{% endraw %}
+</code>
+</pre>
 
 ## Interaction
 
@@ -303,6 +396,8 @@ Clicking the links runs search `query:` (or `query_key:`, `query_template:`) aga
 
 For instance, a table of calculated results could open a search popup to the source data.
 
+The `icon:` parameter has the same options as an [icon](#icon) column.
+
 <pre>
 <code class="language-cerb">
 {% raw %}
@@ -375,6 +470,10 @@ columns:
 
 The `slider` column type visually displays a `value:` (or `value_key:`, `value_template:`) on a continuum with configurable `min:` and `max:` bounds. The output is similar to the "Importance" column on ticket/task worklists.
 
+Use the `show_labels: yes` option to show the min and max values on either side of the slider. This defaults to `no`.
+
+Specify custom `threshold_colors:` to override the defaults. This is a map with limits as keys and colors as values.
+
 <pre>
 <code class="language-cerb">
 {% raw %}
@@ -387,6 +486,7 @@ columns:
       #value: 50
       #value_key: importance
       #value_template@raw: {{importance+10}}
+      #show_labels@bool: no
 {% endraw %}
 </code>
 </pre>

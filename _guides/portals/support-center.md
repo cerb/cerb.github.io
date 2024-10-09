@@ -41,7 +41,7 @@ Type `support` in the search box and verify that the Support Center plugin is in
 
 Now we're ready to create a new Support Center.
 
-Navigate to **Search >> Community Portals**.
+Navigate to **Search >> Portals**.
 
 Click the **(+)** icon above the worklist.
 

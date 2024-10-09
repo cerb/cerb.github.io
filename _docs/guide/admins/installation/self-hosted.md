@@ -78,8 +78,8 @@ jumbotron:
 		- post_max_size = 32M _(or higher)_
 
 - Any of these database servers:
-	- MySQL 5.7 or later
-	- MariaDB 10.2 or later
+	- MySQL 8.0 or later
+	- MariaDB 10.5 or later
 	- Amazon Aurora
 
 <div class="cerb-box note">

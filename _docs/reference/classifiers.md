@@ -12,6 +12,8 @@ jumbotron:
     label: Reference &raquo;
 ---
 
+(As of [10.5](/releases/10.5/) this is an optional plugin)
+
 **Classifiers** provide a simple implementation of machine learning[^machine-learning] in [automations](/docs/automations/). A classifier takes textual input and statistically predicts a most likely **classification** based on its accumulated learning from human-supervised **training examples**.
 
 Here are some common examples:

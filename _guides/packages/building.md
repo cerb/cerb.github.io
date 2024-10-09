@@ -169,6 +169,7 @@ The **library** key uses the following structure:
 * `profile_widget:`[&lt;record_alias&gt;](/docs/records/types/) 
 * `project_board` 
 * `task` 
+* `workflow` 
 * `workspace_page` 
 * `workspace_tab` 
 * `workspace_widget`

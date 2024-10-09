@@ -39,19 +39,15 @@ start:
         sheet/prompt_choice:
           label: Make a selection:
           required@bool: yes
-          data@json:
-            [
-              {
-                "key": "option1",
-                "name": "Option 1",
-                "description": "This is a description of option one."
-              },
-              {
-                "key": "option2",
-                "name": "Option 2",
-                "description": "This is a description of option two."
-              }
-            ]
+          data:
+            0:
+              key: option1
+              name: Option 1
+              description: This is a description of option one.
+            1:
+              key: option2
+              name: Option 2
+              description: This is a description of option two.
           limit: 5
           default: option1
           schema:

@@ -50,6 +50,12 @@ start:
 
 # Syntax
 
+### data:
+
+(Added in [10.5](/releases/10.5/))
+
+The raw content to download. Alternative to `uri:`.
+
 ### label:
 
 The optional label to display above the form element.
@@ -60,4 +66,4 @@ The filename to show on the download button.
 
 ### uri:
 
-A URI for an [attachment](/docs/records/types/attachment/), [automation resource](/docs/records/types/automation_resource/), or [resource](/docs/records/types/resource/) to download.
+A URI for an [attachment](/docs/records/types/attachment/), [automation resource](/docs/records/types/automation_resource/), or [resource](/docs/records/types/resource/) to download. Alternative to `data:`.

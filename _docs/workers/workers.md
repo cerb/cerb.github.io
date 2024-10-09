@@ -15,7 +15,7 @@ The people who officially represent your team to the outside world are called **
 
 These are your full-time and part-time staff, interns, volunteers, managers, executives, investors, and partners.
 
-Workers log in to Cerb using their standard web browser (e.g. Chrome, Safari, Firefox, Opera, Edge) on desktop computers, laptops, tablets, or smartphones. A single worker can be logged in from multiple devices at the same time.
+Workers log in to Cerb using their standard web browser (e.g. Safari, Firefox, Opera, Edge, Chrome) on desktop computers, laptops, tablets, or smartphones. A single worker can be logged in from multiple devices at the same time.
 
 This flexibility allows your team to get work done from almost anywhere.
 

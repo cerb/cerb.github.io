@@ -94,7 +94,10 @@ A form can be created with any combination of the following element types:
 
 | Element |
 |-|-
-| [**editor:**](/docs/automations/triggers/interaction.worker/elements/editor/) | A code editor with syntax highlighting, autocompletion, and a custom toolbar.
+| [**audio:**](/docs/automations/triggers/interaction.worker/elements/audio/) | Play an audio file
+| [**chart:**](/docs/automations/triggers/interaction.worker/elements/chart/) | Render an interactive data visualization
+| [**chooser:**](/docs/automations/triggers/interaction.worker/elements/chooser/) | A search popup for selecting records
+| [**editor:**](/docs/automations/triggers/interaction.worker/elements/editor/) | A code editor with syntax highlighting, autocompletion, and a custom toolbar
 | [**fileDownload:**](/docs/automations/triggers/interaction.worker/elements/fileDownload/) | File download prompt
 | [**fileUpload:**](/docs/automations/triggers/interaction.worker/elements/fileUpload/) | File upload prompt
 | [**map:**](/docs/automations/triggers/interaction.worker/elements/map/) | Interactive [map](/docs/maps/) 
@@ -398,6 +401,7 @@ The following keys are available on all worker interactions:
 | Key | Description
 |-|-
 | `alert:` | Display a time-limited message at the top of a worker's browser. This is particularly useful to confirm non-interactive actions (e.g. "Copied!").
+| `callout:` | Trigger a callout in the UI. This is particularly useful for onboarding, tutorials, and tours. A callout requires a DOM `selector` and `message` to display. Optional `my` and `at` position elements align the callout to the target element (e.g. `right top`, `left+20 bottom-5`.
 | `clipboard:` | Copy the given text to the worker's keyboard. This is only available in response to a worker gesture (e.g. clicking an interaction toolbar).
 | `open_link:` | Open a new browser tab with the given URL. 
 | `open_url:` | Open the given URL in the current browser tab. 

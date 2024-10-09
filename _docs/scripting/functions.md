@@ -561,6 +561,31 @@ Return an [object](/docs/scripting/arrays-objects/) with every placeholder in th
 }
 ```
 
+## cerb_plugin_enabled
+
+(Added in [10.5](/releases/10.5/))
+
+Test if a Cerb plugin is installed and enabled.
+
+For instance, this can be used to make dashboard tabs or widgets conditional on a particular plugin being enabled (e.g. project boards).
+
+`cerb_plugin_enabled(plugin_id)`
+
+|-|-|-
+| **plugin_id** | The name or ID of the [workflow](/docs/workflows/).
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{{cerb_plugin_enabled('cerb.classifiers')}}
+{% endraw %}
+</code>
+</pre>
+
+```
+1
+```
+
 ## cerb_record_readable
 
 (Added in [9.0](/releases/9.0/))
@@ -617,6 +642,54 @@ This automatically adapts to use within Cerb and community portals (e.g. SSL, pr
 
 ```
 https://cerb.example/profiles/ticket/5
+```
+
+## cerb_workflow_config
+
+(Added in [10.5](/releases/10.5/))
+
+Perform runtime configuration lookups from any feature that supports automation scripting (e.g. automations, workflows, snippets). For instance, you can create a workflow just for sharing values (e.g. API keys) between multiple workflows.
+
+`cerb_workflow_config(name_or_id,key,default)`
+
+|-|-|-
+| **name_or_id** | The name or ID of the [workflow](/docs/workflows/).
+| **key** | The optional config key to return. If omitted, all keys/values are returned as a map.
+| **default** | The optional default value if the key doesn't exist.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{{cerb_workflow_config('example.workflow','secretCode',null)}}
+{% endraw %}
+</code>
+</pre>
+
+```
+sup3rs3cr3t
+```
+
+## cerb_workflow_resources
+
+(Added in [10.5](/releases/10.5/))
+
+Perform runtime resource lookups and return a map of workflow resources and their local record IDs. This is useful from automations, event listeners, and toolbars.
+
+`cerb_workflow_resources(name_or_id)`
+
+|-|-|-
+| **name_or_id** | The name or ID of the [workflow](/docs/workflows/).
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{{cerb_workflow_resources('example.workflow'|json_encode}}
+{% endraw %}
+</code>
+</pre>
+
+```
+{"records":{"automation/example":123}}
 ```
 
 ## clamp_float
