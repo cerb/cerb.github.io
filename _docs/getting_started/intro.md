@@ -13,7 +13,7 @@ jumbotron:
 ---
 
 <div class="cerb-screenshot">
-<img src="{{ "/assets/images/docs/getting-started/cerb_browser_dark.png" | prepend: site.cdn.baseurl }}" class="screenshot" width="2763" height="1662">
+<img src="/assets/images/docs/getting-started/cerb_browser_dark.png" class="screenshot" width="2763" height="1662" alt="A screenshot of the Cerb web interface">
 </div>
 
 # What is Cerb?
