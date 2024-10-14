@@ -115,6 +115,22 @@ layout:
 </code>
 </pre>
 
+To specify fixed column widths:
+
+<pre>
+<code class="language-cerb">
+layout:
+  style: table
+  params:
+    column_widths:
+      description: 70%
+
+columns:
+  text/name:
+  text/description:
+</code>
+</pre>
+
 ### Fieldsets
 
 <div class="cerb-screenshot">
@@ -229,6 +245,28 @@ columns:
       underline: yes
       #icon:
       #  image: circle-ok
+</code>
+</pre>
+
+## Code
+
+The `code` column type displays code fragments with a fixed-width font and syntax highlighting.
+
+The `syntax:` parameter may be one of:
+
+|---
+|-|-
+| `plaintext` | No syntax (default)
+| `diff` | Unified diff
+
+<pre>
+<code class="language-cerb">
+columns:
+  code/toolbar_kata:
+    label: Code
+    params:
+      syntax: kata
+      value_key: toolbar_kata
 </code>
 </pre>
 

@@ -23,7 +23,11 @@ jumbotron:
     url: /docs/automations/#triggers
 ---
 
-**interaction.worker** [automations](/docs/automations/) are worker-based [interactions](/docs/interactions/) that use [continuations](/docs/automations/#continuations) to pause and resume a multi-step workflow.
+**interaction.worker** [automations](/docs/automations/) are [conversational](/docs/interactions/) processes that can [pause](/docs/automations/#continuations) between steps to collect additional input, such as web-based forms or other external events.
+
+An interaction continues to the next step once additional input is received.
+
+The most common source of additional input is a web-based form with multiple fields.
 
 * TOC
 {:toc}

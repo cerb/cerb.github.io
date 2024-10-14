@@ -19,7 +19,9 @@ jumbotron:
 
 Here's a simple workflow KATA template that creates a new task using a configurable name and owner.
 
-```yaml
+<pre>
+<code class="language-text">
+{% raw %}
 workflow:
   name: example.newTask
   version@date: 2025-12-31T00:00:00Z
@@ -41,9 +43,11 @@ records:
   task/newTask:
     deletionPolicy: retain
     fields:
-      owner_id: $${config.taskOwner_id|default(0)}
-      title: $${config.taskName}
-```
+      owner_id: {{config.taskOwner_id|default(0)}}
+      title: {{config.taskName}}
+{% endraw %}
+</code>
+</pre>
 
 When you make a changes to a workflow template, any records that were previously created by the workflow are automatically updated to match. The workflow manages the mapping between template "keys" and local record IDs.
 
@@ -118,9 +122,9 @@ Read a single key with a default value using: `{% raw %}{{cerb_workflow_config('
 
 The `{% raw %}{{cerb_workflow_resources('workflow_name')}}{% endraw %}` function performs runtime lookups and returns a map of workflow resources and their local record IDs. This is useful from automations, event listeners, and toolbars.
 
-Statically replace configuration values in the template with: `$${config.keyName}`
+Statically replace configuration values in the template with: `{% raw %}{{config.keyName}}{% endraw %}`
 
-If the configuration value is a `chooser:`, you can expand its dictionary keys like: `$${config.keyName__label}`
+If the configuration value is a `chooser:`, you can expand its dictionary keys like: `{% raw %}{{config.keyName__label}}{% endraw %}`
 
 Workflow placeholders also support automation scripting [filters](/docs/scripting/filters/), such as: `{% raw %}{{config.keyName|lower|sha1}}{% endraw %}`
 
