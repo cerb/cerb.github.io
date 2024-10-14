@@ -1,0 +1,171 @@
+---
+title: Custom Records (Academia)
+excerpt: "A set of custom records for academic institutions: instructors, courses, rooms, and students."
+layout: integration
+topic: Workflows
+permalink: /workflows/wgm.example.custom_records.academia/
+jumbotron:
+  title: Custom Records (Academia)
+  tagline: ""
+  breadcrumbs:
+  -
+    label: Resources &raquo;
+    url: /resources/
+  -
+    label: Workflows &raquo;
+    url: /resources/workflows/
+---
+
+* TOC
+{:toc}
+
+# Introduction
+
+This package imports a set of custom records for academic institutions:
+
+* Courses
+  * Name
+  * Code
+  * Instructor
+  * Room
+  * Schedule
+* Instructors
+  * Name
+* Rooms
+  * Name
+* Students
+  * Name
+
+You can use this for evaluation and testing, or as the basis for your own workflow.
+
+# Importing the workflow
+
+Navigate to **Search >> Workflows >> (+) >> Empty**.
+
+Paste the following workflow KATA into the large text box:
+
+<pre style="max-height: 29.25em;">
+<code class="language-cerb">
+{% raw %}
+workflow:
+  name: wgm.example.custom_records.academia
+  version: 2024-10-10T00:00:00Z
+  description: Demonstrates the use of custom records for use in academia
+  requirements:
+    cerb_version: >=11.0 <11.1
+    cerb_plugins: cerberusweb.core
+
+records:
+  custom_record/course:
+    fields:
+      name: Course
+      name_plural: Courses
+      uri: course
+  custom_field/course_code:
+    fields:
+      name: Code
+      context: course
+      uri: code
+      type: S
+  custom_field/course_instructor:
+    fields:
+      name: Instructor
+      context: course
+      uri: instructor
+      type: L
+      params:
+        context: instructor
+  custom_field/course_room:
+    fields:
+      name: Room
+      context: course
+      uri: room
+      type: L
+      params:
+        context: room
+  custom_field/course_schedule:
+    fields:
+      name: Schedule
+      context: course
+      uri: schedule
+      type: S
+  custom_record/instructor:
+    fields:
+      name: Instructor
+      name_plural: Instructors
+      uri: instructor
+  custom_record/room:
+    fields:
+      name: Room
+      name_plural: Rooms
+      uri: room
+  custom_record/student:
+    fields:
+      name: Student
+      name_plural: Students
+      uri: student
+  instructor/instructor_codd:
+    fields:
+      name: Codd, Ted
+  instructor/instructor_emell:
+    fields:
+      name: Emell, H.T.
+  room/room_berners:
+    fields:
+      name: Berners-Lee Hall
+  room/room_ibm:
+    fields:
+      name: IBM Auditorium
+  course/course_cs120:
+    fields:
+      name: CS120: Introduction to Web Application Development
+      code: CS120
+      schedule: MWF 2:00-4:04p
+      instructor: {{records.instructor_emell.id}}
+      room: {{records.room_berners.id}}
+  course/course_cs140:
+    fields:
+      name: CS140: Introduction to Databases
+      code: CS140
+      schedule: TuTh 7:23-8:03p
+      instructor: {{records.instructor_codd.id}}
+      room: {{records.room_ibm.id}}
+  card_widget/course_card_fields:
+    fields:
+      name: Properties
+      record_type: course
+      extension_id: cerb.card.widget.fields
+      pos: 1
+      width_units: 4
+      zone: content
+      extension_params:
+        context: course
+        context_id@raw: {{record_id}}
+        properties:
+          0@list:
+            cf_{{records.course_code.id}}
+            cf_{{records.course_instructor.id}}
+            cf_{{records.course_room.id}}
+            cf_{{records.course_schedule.id}}
+            updated
+{% endraw %}
+</code>
+</pre>
+
+Click the **Continue** button.
+
+You should see the following output:
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/custom-records-academia/imported.png" class="screenshot">
+</div>
+
+# Using custom records
+
+Modify the fields on the custom records from **Search >> Custom Records**.
+
+Add new records from the **Search** menu (e.g. **Search >> Courses**) by clicking on the **(+)** icon above the worklist.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/custom-records-academia/custom-records-peek.png" class="screenshot">
+</div>
