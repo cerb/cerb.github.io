@@ -39,6 +39,9 @@ collections:
   plugins:
     output: true
     permalink: /plugins/:path/
+  workflows:
+    output: true
+    permalink: /workflows/:path/
 
 # Build settings
 markdown: kramdown
@@ -86,6 +89,12 @@ defaults:
       jumbotron:
         title: Blog
         tagline: Release announcements, helpful tips, and community discussion
+  -
+    scope:
+      path: ""
+      type: "workflows"
+    values:
+      layout: "integration"
 
 #elasticsearch:
 #  url: https://cerb-ai-staging-2820505987.us-west-2.bonsaisearch.net

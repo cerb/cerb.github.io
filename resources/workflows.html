@@ -1,0 +1,33 @@
+---
+layout: page
+title: Workflows
+excerpt: Workflows are templates with versioned updates that keep a related set of records in sync between multiple environments.
+permalink: /resources/workflows/
+jumbotron:
+  title: Workflows
+  tagline: 
+  breadcrumbs:
+  - 
+    label: Resources
+    url: /resources/
+---
+
+<a href="/docs/workflows/">Workflows</a> are templates with versioned updates that keep a related set of records in sync between multiple environments (e.g. dev, staging, production).
+
+<div class="integrations" style="column-width:400px;">
+	{% assign workflows = site.workflows | sort: 'title' %}
+	
+	<ul class="articles">
+	{% for workflow in workflows %}
+		<li style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
+			<a href="{{ workflow.url }}">{{ workflow.title }}</a>
+			<br>
+			{{ workflow.excerpt }}
+		</li>
+	{% endfor %}
+	</ul>
+</div>
+
+<br>
+
+{% include testimonials.html %}
