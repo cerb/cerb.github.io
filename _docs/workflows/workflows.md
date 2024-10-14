@@ -14,7 +14,7 @@ jumbotron:
 **Workflows** are templates with versioned updates that keep a related set of records in sync between multiple environments (e.g. dev, staging, production).
 
 |---
-| **Since version:** | [10.5](/releases/10.5/)
+| **Since version:** | [11.0](/releases/11.0/)
 | **Found at:** | Search >> Workflows
 
 Here's a simple workflow KATA template that creates a new task using a configurable name and owner.
@@ -25,7 +25,7 @@ workflow:
   version@date: 2025-12-31T00:00:00Z
   description: This example workflow manages a task record
   requirements:
-    cerb_version: >=10.5 <11.0
+    cerb_version: >=11.0 <11.1
     cerb_plugins: cerberusweb.core,
   config:
     text/taskName:

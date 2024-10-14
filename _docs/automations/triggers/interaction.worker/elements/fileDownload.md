@@ -52,7 +52,7 @@ start:
 
 ### data:
 
-(Added in [10.5](/releases/10.5/))
+(Added in [11.0](/releases/11.0/))
 
 The raw content to download. Alternative to `uri:`.
 

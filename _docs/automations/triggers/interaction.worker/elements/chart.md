@@ -24,7 +24,7 @@ jumbotron:
     url: /docs/automations/triggers/interaction.worker/#elements
 ---
 
-(Added in [10.5](/releases/10.5/))
+(Added in [11.0](/releases/11.0/))
 
 In [interaction](/docs/automations/triggers/interaction.worker/) web forms, a **chart** element renders an interactive data visualization.
 

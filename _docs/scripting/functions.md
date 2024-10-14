@@ -563,7 +563,7 @@ Return an [object](/docs/scripting/arrays-objects/) with every placeholder in th
 
 ## cerb_plugin_enabled
 
-(Added in [10.5](/releases/10.5/))
+(Added in [11.0](/releases/11.0/))
 
 Test if a Cerb plugin is installed and enabled.
 
@@ -646,7 +646,7 @@ https://cerb.example/profiles/ticket/5
 
 ## cerb_workflow_config
 
-(Added in [10.5](/releases/10.5/))
+(Added in [11.0](/releases/11.0/))
 
 Perform runtime configuration lookups from any feature that supports automation scripting (e.g. automations, workflows, snippets). For instance, you can create a workflow just for sharing values (e.g. API keys) between multiple workflows.
 
@@ -671,7 +671,7 @@ sup3rs3cr3t
 
 ## cerb_workflow_resources
 
-(Added in [10.5](/releases/10.5/))
+(Added in [11.0](/releases/11.0/))
 
 Perform runtime resource lookups and return a map of workflow resources and their local record IDs. This is useful from automations, event listeners, and toolbars.
 

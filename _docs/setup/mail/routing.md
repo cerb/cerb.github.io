@@ -18,7 +18,7 @@ jumbotron:
     url: /docs/setup/#incoming-mail
 ---
 
-(Added in [10.5](/releases/10.5/))
+(Added in [11.0](/releases/11.0/))
 
 You can configure rules to automatically route new mail to groups based on message properties.
 
