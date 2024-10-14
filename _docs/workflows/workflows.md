@@ -122,4 +122,8 @@ Statically replace configuration values in the template with: `$${config.keyName
 
 If the configuration value is a `chooser:`, you can expand its dictionary keys like: `$${config.keyName__label}`
 
-Workflow placeholders also support automation scripting [filters](/docs/scripting/filters/), such as: `$${config.keyName|lower|sha1}`
+Workflow placeholders also support automation scripting [filters](/docs/scripting/filters/), such as: `{% raw %}{{config.keyName|lower|sha1}}{% endraw %}`
+
+## Next Steps
+
+* [Workflow Library](/resources/workflows/)
