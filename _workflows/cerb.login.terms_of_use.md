@@ -1,0 +1,125 @@
+---
+title: Worker Login Terms of Use
+excerpt: Require acceptance of Terms of Use before a worker can log in.
+layout: integration
+topic: Workflows
+permalink: /workflows/cerb.login.terms_of_use/
+jumbotron:
+  title: Worker Login Terms of Use
+  tagline: ""
+  breadcrumbs:
+  -
+    label: Resources &raquo;
+    url: /resources/
+  -
+    label: Workflows &raquo;
+    url: /resources/workflows/
+---
+
+* TOC
+{:toc}
+
+# Introduction
+
+This workflow requires acceptance of Terms of Use before a worker can log in.
+
+# Installation
+
+This workflow is built into Cerb [11.0+](/releases/11.0/). It will automatically update.
+
+You can enable it from **Search >> Workflows >> (+) >> Login Terms of Use**.
+
+# Reference
+
+You can build your own **Worker Login Terms of Use** workflow using this template as a reference.
+
+Change occurrences of **cerb.login.terms_of_use** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
+
+<pre style="max-height: 29.25em;">
+<code class="language-cerb">
+{% raw %}
+workflow:
+  name: cerb.login.terms_of_use
+  version: 2024-10-14T00:00:00Z
+  description: Require consent to 'Terms of Use' when workers login in
+  requirements:
+    cerb_version: >=11.0 <11.1
+    cerb_plugins: cerberusweb.core
+  config:
+    text/continueButtonLabel:
+      label: Continue Button Label:
+      default: I accept the terms of use
+
+records:
+  snippet/snippet_tou:
+    updatePolicy@csv:
+    fields:
+      title: Worker Login Terms of Use
+      context: cerberus.contexts.worker
+      owner__context: app
+      owner_id: 0
+      content@raw:
+        # Terms of Use
+
+        You are required to adhere to the following guidelines regarding customer privacy:
+
+        ## Confidentiality
+        You must maintain strict confidentiality of all customer information. Do not share, disclose, or discuss customer data with unauthorized individuals, both inside and outside the company.
+
+        ## Data Access
+        Access to customer data is limited to authorized personnel and only for legitimate business purposes. Do not access or use customer information unless it is necessary for your role.
+
+        ## Data Sharing
+        You are prohibited from sharing customer data with any third parties without prior authorization. This includes not transferring or sharing data via personal devices, unapproved platforms, or outside of official company channels.
+
+        ## Security Practices
+        Follow all company security protocols to protect customer data from unauthorized access, breaches, or loss. This includes using strong passwords, enabling two-factor authentication, and securing devices used for work.
+
+        ## Incident Reporting
+        Immediately report any data breaches, unauthorized access, or suspicious activity related to customer information to your supervisor or the relevant department.
+
+        ## Compliance
+        You must comply with all company policies and applicable privacy laws (e.g., GDPR, CCPA) to ensure the protection of customer data.
+
+        ## Disciplinary Action
+        Failure to adhere to these terms may result in disciplinary action, including termination of employment.
+
+  automation/tou:
+    fields:
+      name: cerb.login.termsOfUse
+      extension_id: cerb.trigger.worker.authenticated
+      description@text:
+      script@raw:
+        start:
+          set:
+            config@json: {{cerb_workflow_config('cerb.login.terms_of_use')|json_encode}}
+            snippet__context: snippet
+            snippet_id: {{cerb_workflow_resources('cerb.login.terms_of_use')['records']['snippet/snippet_tou']}}
+
+          kata.parse:
+            output: content
+            inputs:
+              kata:
+                template: {{snippet_content}}
+              dict@json:
+                {{cerb_placeholders_list('worker_', '')|json_encode}}
+
+          return:
+            motd:
+              button: {{config.continueButtonLabel}}
+              message: {{snippet_content}}
+      policy_kata@raw:
+        commands:
+
+  automation_event_listener/listener_tou:
+    fields:
+      name: Worker Login Terms of Use
+      event_name: worker.authenticated
+      priority: 200
+      is_disabled: 0
+      event_kata@raw:
+        automation/tou:
+          uri: cerb:automation:cerb.login.termsOfUse
+{% endraw %}
+</code>
+</pre>
