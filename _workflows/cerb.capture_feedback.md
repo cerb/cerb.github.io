@@ -1,0 +1,252 @@
+---
+title: Capture Feedback
+excerpt: Capture user feedback while reading email messages.
+layout: integration
+topic: Workflows
+permalink: /workflows/cerb.capture_feedback/
+jumbotron:
+  title: Capture Feedback
+  tagline: ""
+  breadcrumbs:
+  -
+    label: Resources &raquo;
+    url: /resources/
+  -
+    label: Workflows &raquo;
+    url: /resources/workflows/
+---
+
+* TOC
+{:toc}
+
+# Introduction
+
+This workflow adds a **Feedback** custom record type and a **Capture Feedback** interaction when reading email messages.
+
+# Installation
+
+This workflow is built into Cerb [11.0+](/releases/11.0/). It will automatically update.
+
+You can enable it from **Search >> Workflows >> (+) >> Capture Feedback**.
+
+# Reference
+
+You can build your own capture feedback workflow using this template as a reference.
+
+Change occurrences of **cerb.capture_feedback** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
+
+<pre style="max-height: 29.25em;">
+<code class="language-cerb">
+{% raw %}
+workflow:
+  name: cerb.capture_feedback
+  version: 2024-10-14T00:00:00Z
+  description: Capture user feedback while reading email messages
+  requirements:
+    cerb_version: >=11.0 <11.1
+    cerb_plugins: cerberusweb.core
+
+records:
+  custom_record/feedback:
+    fields:
+      name: Feedback
+      name_plural: Feedback
+      uri: feedback
+      params:
+        owners:
+          contexts@csv: cerberusweb.contexts.app
+        options@csv: comments
+  custom_field/feedback_comment:
+    fields:
+      name: Comment
+      context: feedback
+      uri: comment
+      type: T
+  custom_field/feedback_sentiment:
+    fields:
+      name: Sentiment
+      context: feedback
+      uri: sentiment
+      type: D
+      params:
+        options@csv: Praise, Neutral, Criticism
+  custom_field/feedback_author:
+    fields:
+      name: Author
+      context: feedback
+      uri: author
+      type: L
+      params:
+        context: cerberusweb.contexts.address
+  custom_field/feedback_source_url:
+    fields:
+      name: Source URL
+      context: feedback
+      uri: source_url
+      type: U
+  custom_field/feedback_is_closed:
+    fields:
+      name: Is Closed
+      context: feedback
+      uri: is_closed
+      type: C
+
+  card_widget/card_record_fields:
+    fields:
+      name: Properties
+      record_type: feedback
+      extension_id: cerb.card.widget.fields
+      pos: 1
+      width_units: 4
+      zone: content
+      extension_params:
+        context: feedback
+        context_id@raw: {{record_id}}
+        properties:
+          0@list:
+            cf_{{records.feedback_author.id}}
+            created
+            updated
+            cf_{{records.feedback_is_closed.id}}
+            owner_id
+            cf_{{records.feedback_sentiment.id}}
+        links:
+          show: 1
+
+  profile_tab/tab_overview:
+    fields:
+      name: Overview
+      context: feedback
+      extension_id: cerb.profile.tab.dashboard
+      pos@int: 1
+      extension_params:
+        layout: sidebar_left
+
+  profile_widget/profile_record_fields:
+    fields:
+      name: Feedback
+      extension_id: cerb.profile.tab.widget.fields
+      profile_tab_id: {{records.tab_overview.id}}
+      pos: 1
+      width_units: 4
+      zone: content
+      extension_params:
+        context: feedback
+        context_id@raw: {{record_id}}
+        properties:
+          0@list:
+            cf_{{records.feedback_author.id}}
+            created
+            updated
+            cf_{{records.feedback_is_closed.id}}
+            owner_id
+            cf_{{records.feedback_sentiment.id}}
+        links:
+          show: 1
+
+  automation/captureFeedback:
+    fields:
+      name: cerb.captureFeedback.interaction
+      extension_id: cerb.trigger.interaction.worker
+      description: Capture user feedback while reading email messages
+      script@raw:
+        inputs:
+          record/message:
+            record_type: message
+            required@bool: yes
+            expand: sender__label
+
+        start:
+          set:
+            sentiments:
+              praise:
+                name: Praise
+              neutral:
+                name: Neutral
+              criticism:
+                name: Criticism
+          await:
+            form:
+              title: Capture Feedback
+              elements:
+                textarea/prompt_feedback:
+                  label: Feedback:
+                  required@bool: yes
+                  default@text,trim:
+                    {% if caller_params.selected_text is not empty %}
+                    {{caller_params.selected_text}}
+                    {% else %}
+                    {{inputs.message.content}}
+                    {% endif %}
+                sheet/prompt_sentiment:
+                  label: Sentiment:
+                  required@bool: yes
+                  data@key: sentiments
+                  default: Neutral
+                  schema:
+                    layout:
+                      style: grid
+                      headings@bool: no
+                      paging@bool: no
+                    columns:
+                      selection/key:
+                        params:
+                          mode: single
+                          value_key: name
+                      text/name:
+                        params:
+                          bold@bool: yes
+
+          record.create/feedback:
+            output: record_feedback
+            inputs:
+              # See: https://cerb.ai/docs/records/types/feedback/#records-api
+              record_type: feedback
+              fields:
+                name: {{prompt_feedback|truncate(200)}}
+                author: {{inputs.message.sender_id}}
+                comment: {{prompt_feedback}}
+                source_url: {{inputs.message.record_url}}
+                sentiment: {{prompt_sentiment}}
+                is_closed: 0
+                links@list:
+                  message:{{inputs.message.id}}
+            on_error:
+              await:
+                form:
+                  title: Error
+                  elements:
+                    say/error:
+                      content@text:
+                        ## An unexpected error occurred.
+                        ~~~
+                        {{record_feedback.error}}
+                        ~~~
+              error: {{record_feedback.error}}
+
+          return:
+            alert: Feedback captured!
+
+      policy_kata@raw:
+        commands:
+          record.create:
+            deny/type@bool: {{inputs.record_type is not record type ('feedback')}}
+            allow: yes
+
+  toolbar_section/mail_read:
+    fields:
+      name: Capture Feedback
+      toolbar_name: mail.read
+      priority: 50
+      is_disabled: 0
+      toolbar_kata@raw:
+        interaction/captureFeedback:
+          label: Capture Feedback
+          uri: cerb:automation:cerb.captureFeedback.interaction
+          icon: conversation
+          hidden@bool: {{message_is_outgoing}}
+          inputs:
+            message: {{message_id}}
+{% endraw %}
+</code>
+</pre>
