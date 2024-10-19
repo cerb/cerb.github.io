@@ -41,7 +41,7 @@ Change occurrences of **cerb.login.terms_of_use** to your own workflow identifie
 workflow:
   name: cerb.login.terms_of_use
   version: 2024-10-14T00:00:00Z
-  description: Require consent to 'Terms of Use' when workers login in
+  description: Require acceptance of 'Terms of Use' before a worker can login in.
   requirements:
     cerb_version: >=11.0 <11.1
     cerb_plugins: cerberusweb.core
