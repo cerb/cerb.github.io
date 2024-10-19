@@ -92,6 +92,7 @@ records:
 
 |---
 | **chooser:** | An interactive record chooser.
+| **picklist:** | A single-selection dropdown or multiple-selection set of checkboxes.
 | **text:** | A text input. 
 
 ### extensions:
