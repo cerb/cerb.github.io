@@ -350,6 +350,33 @@ Retrieve the avatar image URL for a given record type and ID.
 https://cerb.example/avatars/worker/1?v=1513212702
 ```
 
+## cerb_calendar_get_relative_date
+
+(Added in [11.0](/releases/11.0/))
+
+Calculate a future timestamp using calendar availability. For instance, this can be used for SLAs to generate a due date like "+4 business hours".
+
+`cerb_calendar_get_relative_date(calendar,rel_date,now)`
+
+|-|-|-
+| **calendar** | The ID of the [calendar](/docs/records/types/calendar/) to use for determining availability.
+| **date_rel** | The time increment (e.g. "+2 hours").
+| **now** | An optional starting date/time.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+Now: {{"now"|date('r')}}
+Due: {{cerb_calendar_get_relative_date(123,'+2 hours')|date('r')}}
+{% endraw %}
+</code>
+</pre>
+
+```
+Now: Fri, 18 Oct 2024 20:02:18 -0700
+Due: Mon, 21 Oct 2024 09:00:00 -0700
+```
+
 ## cerb_calendar_time_elapsed
 
 (Added in [10.1.1](/releases/10.1.1/))

@@ -42,13 +42,38 @@ Change occurrences of **cerb.auto_responder** to your own workflow identifier. U
 {% raw %}
 workflow:
   name: cerb.auto_responder
-  version@date: 2024-10-04T00:00:00Z
+  version@date: 2024-10-14T00:00:00Z
   description: Send an automatic response when new tickets are opened
   requirements:
     cerb_version: >=11.0 <11.1
     cerb_plugins: cerberusweb.core,
 
 records:
+  custom_fieldset/fieldset_auto_responder:
+    fields:
+      name: Auto-Responder
+      context: group
+      owner__context: app
+      owner_id@int: 0
+  custom_field/field_auto_responder_enabled:
+    fields:
+      name: Enabled
+      context: group
+      uri: auto_responder_enabled
+      custom_fieldset_id: {{records.fieldset_auto_responder.id}}
+      type: C
+      pos@int: 1
+  custom_field/field_auto_responder_snippet:
+    fields:
+      name: Template
+      context: group
+      uri: auto_responder_snippet
+      custom_fieldset_id: {{records.fieldset_auto_responder.id}}
+      type: L
+      pos@int: 2
+      params:
+        context: snippet
+
   snippet/snippet_autoresponder:
     updatePolicy@csv:
     fields:
@@ -68,15 +93,20 @@ records:
       extension_id: cerb.trigger.mail.received
       script@raw:
         start:
-          set:
-            snippet__context: snippet
-            snippet_id: {{cerb_workflow_resources('cerb.auto_responder')['records']['snippet/snippet_autoresponder']}}
+          outcome/validate:
+            if@bool:
+              {{
+                not message_ticket_group_auto_responder_enabled
+                or not message_ticket_group_auto_responder_snippet_id
+              }}
+            then:
+              return:
 
           kata.parse:
             output: results
             inputs:
               kata:
-                template: {{snippet_content}}
+                template: {{message_ticket_group_auto_responder_snippet_content}}
               dict@json:
                 {% do message_ticket_ %}
                 {{cerb_placeholders_list('message_ticket_', '')|json_encode}}
@@ -118,6 +148,8 @@ records:
           disabled@bool:
             {{
               not is_new_ticket
+              or not message_ticket_group_auto_responder_enabled
+              or not message_ticket_group_auto_responder_snippet_id
               or message_sender_is_banned
               or message_sender_is_defunct
               or message_sender_address is pattern (

@@ -61,7 +61,7 @@ Change occurrences of **cerb.email.org_by_hostname** to your own workflow identi
 workflow:
   name: cerb.email.org_by_hostname
   version: 2024-10-17T00:00:00Z
-  description: Assign organizations to new senders based on their email hostname
+  description: Automatically assign organizations to new senders based on their email hostname
   requirements:
     cerb_version: >=11.0 <11.1
     cerb_plugins: cerberusweb.core

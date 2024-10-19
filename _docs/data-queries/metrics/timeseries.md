@@ -125,4 +125,6 @@ The metric results can be returned in various formats:
 |---
 | Format
 |-
-| `timeseries` | Returns series-based data suitable for a time-series chart (with the 'x' axis values as timestamps)
+| `dictionaries` | Returns series data suitable for a sheet or automation.
+| `timeblock` | Returns data suitable for a timeblocks widget
+| `timeseries` | (Default) Returns series-based data suitable for a time-series chart (with the 'x' axis values as timestamps)
