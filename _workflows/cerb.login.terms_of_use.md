@@ -29,6 +29,24 @@ This workflow is built into Cerb [11.0+](/releases/11.0/). It will automatically
 
 You can enable it from **Search >> Workflows >> (+) >> Login Terms of Use**.
 
+# Usage
+
+### Editing the Terms of Use snippet
+
+To change the terms of use shown to workers at login, navigate to **Search >> Snippets** and edit the **Worker Login Terms of Use** snippet.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/worker-login-terms-of-use/tou-snippet.png" class="screenshot">
+</div>
+
+### During a login
+
+Workers will see the following page during a login. They must accept the terms before continuing.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/worker-login-terms-of-use/tou.png" class="screenshot">
+</div>
+
 # Reference
 
 You can build your own **Worker Login Terms of Use** workflow using this template as a reference.
@@ -42,6 +60,7 @@ workflow:
   name: cerb.login.terms_of_use
   version: 2024-10-14T00:00:00Z
   description: Require acceptance of 'Terms of Use' before a worker can login in.
+  website: https://cerb.ai/workflows/cerb.login.terms_of_use/
   requirements:
     cerb_version: >=11.0 <11.1
     cerb_plugins: cerberusweb.core

@@ -62,6 +62,7 @@ workflow:
   name: cerb.email.org_by_hostname
   version: 2024-10-17T00:00:00Z
   description: Automatically assign organizations to new senders based on their email hostname
+  website: https://cerb.ai/workflows/cerb.email.org_by_hostname/
   requirements:
     cerb_version: >=11.0 <11.1
     cerb_plugins: cerberusweb.core

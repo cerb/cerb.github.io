@@ -31,6 +31,60 @@ This workflow is built into Cerb [11.0+](/releases/11.0/). It will automatically
 
 You can enable it from **Search >> Workflows >> (+) >> Auto Responder**.
 
+# Usage
+
+### Snippet templates
+
+The workflow creates a **Ticket Auto-Response** snippet for the default auto-response email template. You can create as many ticket-based snippets as you like for different groups in **Search >> Snippets**.
+
+### Enabling automatic responses per group
+
+From **Search >> Groups**, edit each group to enable automatic responses to new tickets where desirable.
+
+Click the **Add Fieldset** button and select the **Auto-Responder** fieldset.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/auto-responder/group-fieldset.png" class="screenshot">
+</div>
+
+Check the **Enabled** box and select the snippet to use for the group.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/auto-responder/group-fieldset-enabled.png" class="screenshot">
+</div>
+
+Click the **Save Changes** button.
+
+### Test the auto responder
+
+You can send a new message into Cerb from your normal email client, or paste a test message from **Setup >> Mail >> Incoming >> Import**
+
+<pre>
+<code class="language-text">
+{% raw %}
+From: customer@cerb.example
+To: demo@cerb.example
+Subject: This is a demo ticket
+
+This is a demo ticket
+{% endraw %}
+</code>
+</pre>
+
+You'll see an auto-response queued for delivery on new tickets.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/auto-responder/autoreply-draft.png" class="screenshot">
+</div>
+
+Automatic responses are queued so they can be delivered efficiently without impacting email parser performance.
+
+### Suppressing auto responses to automated senders
+
+The workflow will attempt to use message headers to detect automated senders to avoid sending them an automated response. It will also avoid sending an automated response to banned or defunct senders, or mailboxes that start with `mailer-daemon@`, `postmaster@`, `noreply@`, or `no-reply@`.
+
+You can use a [mail.filter](/docs/automations/events/mail.filter/) automation to add an `Auto-Submitted: auto-generated` email header to inbound messages that should not receive an automatic response.
+
 # Reference
 
 You can build your own auto-responder workflow using this template as a reference.
@@ -44,6 +98,7 @@ workflow:
   name: cerb.auto_responder
   version@date: 2024-10-14T00:00:00Z
   description: Send an automatic response when new tickets are opened
+  website: https://cerb.ai/workflows/cerb.auto_responder/
   requirements:
     cerb_version: >=11.0 <11.1
     cerb_plugins: cerberusweb.core,

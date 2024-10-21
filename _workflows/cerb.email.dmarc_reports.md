@@ -29,6 +29,49 @@ This workflow is built into Cerb [11.0+](/releases/11.0/). It will automatically
 
 You can enable it from **Search >> Workflows >> (+) >> DMARC Reports**.
 
+# Usage
+
+### Testing the DMARC report interaction
+
+Navigate to **Search >> Attachments**.
+
+Open the card for the file: `customer.example!cerb.example!1695078003!1695164407.xml.gz`
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/dmarc-reports/attachment-card.png" class="screenshot">
+</div>
+
+Click the **Open DMARC Report** button at the bottom of the popup.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/dmarc-reports/dmarc-report.png" class="screenshot">
+</div>
+
+The **DMARC Reporting** card widget will only appear on these attachments.
+
+### Configure delivery of DMARC reports to Cerb
+
+In the DNS of all sender domains, you should have a DMARC record configured like:
+
+<pre>
+<code class="language-text">
+{% raw %}
+TXT _dmarc.cerb.example
+v=DMARC1; p=reject; sp=reject; rf=afrf; adkim=s; aspf=s; pct=100; ri=86400;fo=1;
+{% endraw %}
+</code>
+</pre>
+
+Add the following options to enable DMARC delivery reports. Replace `dmarc-reports@cerb.example` with an email address that delivers into Cerb.
+
+<pre>
+<code class="language-text">
+{% raw %}
+rua=mailto:dmarc-reports@cerb.example; ruf=mailto:dmarc-reports@cerb.example;
+{% endraw %}
+</code>
+</pre>
+
 # Reference
 
 You can build your own DMARC reports workflow using this template as a reference.
@@ -42,6 +85,7 @@ workflow:
   name: cerb.email.dmarc_reports
   version: 2024-10-14T00:00:00Z
   description: Parse DMARC report attachments in email
+  website: https://cerb.ai/workflows/cerb.email.dmarc_reports/
   requirements:
     cerb_version: >=11.0 <11.1
     cerb_plugins: cerberusweb.core

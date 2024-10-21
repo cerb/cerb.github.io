@@ -31,6 +31,116 @@ You can enable it from **Search >> Workflows >> (+) >> Service Level Agreements*
 
 # Usage
 
+### Adding SLA plans
+
+An **SLA plan** contains an availability calendar and a response time target.
+
+You can manage SLA plans from **Search >> Sla Plans**.
+
+A default **Priority** plan has been created for you, along with a business hour calendar and 2-hour response time target.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/sla/sla-plan-card.png" class="screenshot">
+</div>
+
+### Assigning SLA plans to organizations
+
+Navigate to **Search >> Organizations**.
+
+Edit an organization to assign an SLA plan to it.
+
+Click the **Add Fieldset** button and select **SLA**.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/sla/sla-to-org.png" class="screenshot">
+</div>
+
+Select an SLA plan. An optional expiration date is available if you sell annual subscriptions to priority support. Otherwise you can set this to a large number like `+10 years`.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/sla/sla-edit.png" class="screenshot">
+</div>
+
+Click the **Save Changes** button to save the organization record.
+
+### Send a test message from that organization
+
+You can simulate an inbound email in MIME format from **Setup >> Mail >> Incoming >> Import**.
+
+<pre>
+<code class="language-text">
+{% raw %}
+From: Maria Vasquez <maria.vasquez@baston.example>
+To: support@cerb.example
+Subject: Issues with email notifications not sending
+Message-ID: <54321@baston.example>
+Date: Fri, 18 Oct 2024 12:05:47 +0200
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+Hello Support Team,
+
+We're currently having an issue with our email notifications not being sent out. Our team relies on these notifications for critical updates, and they've stopped being delivered in the past couple of days. I've checked the spam folders, and nothing is there either.
+
+Is this a known issue? Could you please advise on how we can fix this as soon as possible?
+
+Thank you for your help!
+
+Best regards,  
+Maria Vasquez  
+IT Support  
+Baston Inc.
+{% endraw %}
+</code>
+</pre>
+
+### Add the SLA widget to ticket profiles
+
+Navigate to the ticket profile page for your test message above from **Search >> Tickets**.
+
+Click on the **Add Widget** button at the top of the profile page.
+
+Select **SLA Deadline** from the widget **Library** tab and click the **Create** button.
+
+You can drag the new widget into your preferred placement from the drag handle in its top right corner when hovering over it.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/sla/ticket-profile-sla.png" class="screenshot">
+</div>
+
+The widget will change colors when a ticket is overdue.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/sla/ticket-profile-sla-overdue.png" class="screenshot">
+</div>
+
+### Updating SLA hours
+
+From **Search >> SLA Plans**, edit a plan's calendar to update the service operating hours.
+
+You can add events and recurring events (like office holidays) to block out availability.
+
+### Sorting work by SLA
+
+You can filter and sort ticket worklists by SLA:
+
+```
+sla.deadline:!null sort:sla.deadline
+```
+
+### SLA deadline lifecycle
+
+When a worker replies to a ticket with an SLA deadline and a non-open status, it will clear the deadline.
+
+When a participant responds to the ticket without an existing SLA deadline, a new deadline will be added to the ticket.
+
+# Related workflows
+
+You can enable the [Sender Org By Hostname](/workflows/cerb.email.org_by_hostname/) workflow to automatically add organizations to new contacts by email hostname. This will ensure they receive the appropriate SLA deadline.
+
+Use the [Auto Dispatcher](/workflows/cerb.auto_dispatcher/) workflow to give priority assignment to tickets with an approaching SLA deadline.
+
 # Reference
 
 You can build your own Service Level Agreement workflow using this template as a reference.
@@ -42,8 +152,9 @@ Change occurrences of **cerb.sla** to your own workflow identifier. Use a prefix
 {% raw %}
 workflow:
   name: cerb.sla
-  version: 2024-10-17T00:00:00Z
+  version: 2024-10-21T00:00:00Z
   description: Enforce Service Level Agreements (SLA) for tickets from organizations
+  website: https://cerb.ai/workflows/cerb.sla/
   requirements:
     cerb_version: >=11.0 <11.1
     cerb_plugins: cerberusweb.core
@@ -53,6 +164,9 @@ records:
       name: SLA Plan
       name_plural: SLA Plans
       uri: sla_plan
+      params:
+        owners:
+          contexts@csv: cerberusweb.contexts.app
   custom_field/sla_plan_calendar:
     fields:
       name: Calendar

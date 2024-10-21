@@ -64,6 +64,7 @@ workflow:
   name: cerb.search.simple
   version@date: 2024-10-16T00:00:00Z
   description: Simplified point-and-click ticket search popup without using search queries
+  website: https://cerb.ai/workflows/cerb.search.simple/
   requirements:
     cerb_version: >=11.0 <11.1
     cerb_plugins: cerberusweb.core,

@@ -42,6 +42,8 @@ You can use this for evaluation and testing, or as the basis for your own workfl
 
 Navigate to **Search >> Workflows >> (+) >> Empty**.
 
+Click the **Update Template** button at the top of the popup.
+
 Paste the following workflow KATA into the large text box:
 
 <pre style="max-height: 29.25em;">
@@ -49,8 +51,9 @@ Paste the following workflow KATA into the large text box:
 {% raw %}
 workflow:
   name: wgm.example.custom_records.academia
-  version: 2024-10-10T00:00:00Z
   description: Demonstrates the use of custom records for use in academia
+  website: https://cerb.ai/workflows/wgm.example.custom_records.academia/
+  version: 2024-10-10T00:00:00Z
   requirements:
     cerb_version: >=11.0 <11.1
     cerb_plugins: cerberusweb.core
@@ -152,15 +155,15 @@ records:
 </code>
 </pre>
 
-Click the **Continue** button.
+Click the **Continue** button three times.
 
-You should see the following output:
+You should see results like the following:
 
 <div class="cerb-screenshot">
 <img src="/assets/images/workflows/custom-records-academia/imported.png" class="screenshot">
 </div>
 
-# Using custom records
+# Usage
 
 Modify the fields on the custom records from **Search >> Custom Records**.
 

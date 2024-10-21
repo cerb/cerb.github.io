@@ -29,6 +29,24 @@ This workflow is built into Cerb [11.0+](/releases/11.0/). It will automatically
 
 You can enable it from **Search >> Workflows >> (+) >> Capture Feedback**.
 
+# Usage
+
+When viewing any ticket profile, a new **Capture Feedback** button is available on received email messages.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/capture-feedback/capture-feedback-button.png" class="screenshot">
+</div>
+
+By default, the entire message will be quoted as feedback. You can also highlight a passage to use as the quote before clicking **Capture Feedback**.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/capture-feedback/capture-feedback-popup.png" class="screenshot">
+</div>
+
+Select a **Sentiment** and click the **Continue** button to log the feedback.
+
+Captured feedback records can be found at **Search >> Feedback**.
+
 # Reference
 
 You can build your own capture feedback workflow using this template as a reference.
@@ -42,6 +60,7 @@ workflow:
   name: cerb.capture_feedback
   version: 2024-10-14T00:00:00Z
   description: Capture user feedback while reading email messages
+  website: https://cerb.ai/workflows/cerb.capture_feedback/
   requirements:
     cerb_version: >=11.0 <11.1
     cerb_plugins: cerberusweb.core

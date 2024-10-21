@@ -37,7 +37,31 @@ This workflow is built into Cerb [11.0+](/releases/11.0/). It will automatically
 
 You can enable it from **Search >> Workflows >> (+) >> Customer Satisfaction Surveys**.
 
-# Testing an NPS survey
+# Usage
+
+### Customizing the workflow
+
+Edit the **cerb.satisfaction.surveys** workflow from **Search >> Workflows**.
+
+Click the **Update Template** at the top of the popup.
+
+Click the **Continue** button at the bottom.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/satisfaction/workflow-config.png" class="screenshot">
+</div>
+
+You can enable surveys from here, and customize the survey questions.
+
+If you've [deployed the portal](/guides/portals/nginx-proxy/) to a custom domain name, update the **portalBaseUrl**. By default, the workflow will use your Cerb URL which you may not want to expose to your clients.
+
+<div class="cerb-box note">
+<p>If you're a <a href="/pricing/">Cerb Cloud</a> subscriber, we include high-availability community portal hosting. This is already handled for you.</p>
+</div>
+
+Once you've made changes, click the **Continue** button twice.
+
+### Testing an NPS survey
 
 Navigate to **Search >> Workspace Pages** and click on **Satisfaction**.
 
@@ -57,7 +81,7 @@ Copy or click on the survey link to test the survey interaction.
 
 Select a rating, optionally add a comment, and then click the blue continue button.
 
-# Using the satisfaction dashboard
+### Using the satisfaction dashboard
 
 You should now have your first NPS rating.
 
@@ -69,7 +93,7 @@ You should see your first NPS rating:
 <img src="/assets/images/workflows/satisfaction/dashboard.png" class="screenshot">
 </div>
 
-# Broadcasting NPS survey links
+### Broadcasting NPS survey links
 
 Navigate to an email based worklist like **Search >> Contacts**. Filter the list as needed.
 
@@ -106,6 +130,8 @@ We'd really appreciate your feedback on this two question survey about your expe
 </code>
 </pre>
 
+You can see the queued email messages from **Setup >> Mail >> Outgoing >> Queue**. Each recipient receives a personalized survey link.
+
 # Reference
 
 You can build your own customer satisfaction workflow using this template as a reference.
@@ -117,14 +143,17 @@ Change occurrences of **cerb.satisfaction.surveys** to your own workflow identif
 {% raw %}
 workflow:
   name: cerb.satisfaction.surveys
-  version: 2024-10-15T00:00:00Z
+  version: 2024-10-21T00:00:00Z
   description: Gather and monitor customer satisfaction metrics like NPS, CSAT, and CES.
+  website: https://cerb.ai/workflows/cerb.satisfaction.surveys/
   requirements:
     cerb_version: >=11.0 <11.1
     cerb_plugins: cerberusweb.core, cerb.website.interactions
   config:
     text/portalTitle:
       default: Cerb - Customer Satisfaction
+    text/portalBaseUrl:
+      default: {{cerb_url('c=portal&p=csat-survey')}}
     picklist/surveysEnabled:
       label: Surveys Enabled:
       multiple@bool: yes
@@ -638,11 +667,13 @@ records:
             required@bool: yes
         start:
           set:
+            config@json: {{cerb_workflow_config('cerb.satisfaction.surveys')|json_encode}}
+            survey_base_url: {{config.portalBaseUrl|trim('/', 'right')}}
             params:
               email: {{inputs.email}}
               expires@date: +1 week
           return:
-            signed_url: {{cerb_url('c=portal&p=csat-survey&a=nps')}}?{{params|url_encode}}&s={{params|values|join|hash_hmac(cerb_workflow_config('cerb.satisfaction.surveys','hashSecret'),"sha256")[8:24]}}
+            signed_url: {{survey_base_url}}/nps?{{params|url_encode}}&s={{params|values|join|hash_hmac(cerb_workflow_config('cerb.satisfaction.surveys','hashSecret'),"sha256")[8:24]}}
 
   automation/automationNpsScriptingGetLink:
     fields:
@@ -845,12 +876,13 @@ records:
         start:
           set:
             config@json: {{cerb_workflow_config('cerb.satisfaction.surveys')|json_encode}}
+            survey_base_url: {{config.portalBaseUrl|trim('/', 'right')}}
             expires_in@date: 7 days
             draft_token: {{inputs.message.token}}
             hash: {{[draft_token,expires_in]|join|hash_hmac(config.hashSecret)[26:18]}}
           return:
             survey_link@text:
-              {{cerb_url('c=portal&p=csat-survey&a=csat')}}?m={{draft_token}}&s={{hash}}&expires={{expires_in}}
+              {{survey_base_url}}/csat?m={{draft_token}}&s={{hash}}&expires={{expires_in}}
       policy_kata@raw:
         commands:
 
@@ -1075,10 +1107,11 @@ records:
         start:
           set:
             config@json: {{cerb_workflow_config('cerb.satisfaction.surveys')|json_encode}}
+            survey_base_url: {{config.portalBaseUrl|trim('/', 'right')}}
             expires_in@date: 7 days
             survey_link@text:
               {% set hash = [draft_token,expires_in]|join|hash_hmac(config.hashSecret)[26:18] %}
-              {{cerb_url('c=portal&p=csat-survey&a=csat')}}?m={{draft_token}}&s={{hash}}&expires={{expires_in}}
+              {{survey_base_url}}/csat?m={{draft_token}}&s={{hash}}&expires={{expires_in}}
           return:
             content:
               # Remove from the saved copy
@@ -1137,9 +1170,10 @@ records:
 
           set:
             config@json: {{cerb_workflow_config('cerb.satisfaction.surveys')|json_encode}}
+            survey_base_url: {{config.portalBaseUrl|trim('/', 'right')}}
             survey_link@trim:
               {% set hash = [record_mask]|join|hash_hmac(config.hashSecret)[26:18] %}
-              {{cerb_url('c=portal&p=csat-survey&a=ces')}}?m={{record_mask}}&s={{hash}}
+              {{survey_base_url}}/ces?m={{record_mask}}&s={{hash}}
 
           record.create:
             output: new_draft

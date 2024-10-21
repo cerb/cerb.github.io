@@ -69,6 +69,16 @@ Each worker is shown their next most important issue based on their group member
 
 Once an issue has been resolved or delegated, a worker can click the **Next** button in the top right for their next assignment. They will be reminded to unassign the issue if someone else can handle the follow-up. 
 
+### Waiting shortcuts
+
+If work is waiting for a future date/time, the **Waiting** shortcuts can be used in the **Status** widget from the right sidebar.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/auto-dispatcher/waiting.png" class="screenshot">
+</div>
+
+If you don't see this option in an existing Cerb environment, you can re-create the **Status** widget from the **Add Widget** button. 
+
 ### Assignment rejections
 
 If a worker clicks the **Next** button before handling the current issue, they must either resume work or provide a reason why they cannot work on it.

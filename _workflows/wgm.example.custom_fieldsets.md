@@ -25,7 +25,7 @@ jumbotron:
 
 This workflow create a custom fieldset that includes an example of every custom field type. This is particularly useful for evaluation, development, and testing.
 
-# Importing the workflow
+# Installation
 
 Navigate to **Search >> Workflows >> (+) >> Empty**.
 
@@ -38,6 +38,7 @@ workflow:
   name: wgm.example.custom_fieldsets
   version: 2024-10-10T00:00:00Z
   description: A custom fieldset for that includes an example of every custom field type
+  website: https://cerb.ai/workflows/wgm.example.custom_fieldsets/
   requirements:
     cerb_version: >=11.0 <11.1
     cerb_plugins: cerberusweb.core
@@ -180,17 +181,21 @@ records:
 
 Click the **Continue** button.
 
-You should see the following output:
+You should see output like the following:
 
 <div class="cerb-screenshot">
 <img src="/assets/images/workflows/test-custom-fieldset/imported.png" class="screenshot">
 </div>
 
-# Using the custom fieldset
+# Usage
 
-You can add the custom fieldset to any record of the type you selected.
+### Using the custom fieldset
 
-For instance, if you kept the default of **tasks**, you can navigate to **Search >> Tasks** and open the card for a task record. Click the **Edit** button and select **Test Fieldset** in the **Add Fieldset** menu.
+You can add the custom fieldset to any ticket record.
+
+Navigate to **Search >> Tickets** and open a record's card popup.
+
+Click the **Edit** button and select **Test Fieldset** in the **Add Fieldset** menu.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/workflows/test-custom-fieldset/fieldset-add.png" class="screenshot">
