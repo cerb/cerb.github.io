@@ -23,15 +23,25 @@ jumbotron:
 
 This workflow sends email notifications to workers when they are @mentioned in a comment.
 
-<div class="cerb-screenshot">
-<img src="/assets/images/workflows/mentions-emailer/comment_mention.png" class="screenshot">
-</div>
-
 # Installation
 
 This workflow is built into Cerb [11.0+](/releases/11.0/). It will automatically update.
 
 You can enable it from **Search >> Workflows >> (+) >> @Mention Email Notifications**.
+
+# Usage
+
+Comment on any record (e.g. ticket) with an `@mention`.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/mentions-emailer/comment_mention.png" class="screenshot">
+</div>
+
+Cerb will send an email notification to the worker. You can find this in **Setup >> Mail >> Outgoing >> Queue** or **Setup >> Mail >> Outgoing >> Log**.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/mentions-emailer/outgoing_email.png" class="screenshot">
+</div>
 
 # Reference
 
@@ -46,6 +56,7 @@ workflow:
   name: cerb.notifications.mention_emailer
   version@date: 2024-10-16T00:00:00Z
   description: Email workers when they are @mentioned in a comment
+  website: https://cerb.ai/workflows/cerb.notifications.mention_emailer/
   requirements:
     cerb_version: >=11.0 <11.1
     cerb_plugins: cerberusweb.core,

@@ -21,13 +21,89 @@ jumbotron:
 
 # Introduction
 
-This workflow automatically assigns work to workers based on priority.
+The **cerb.auto_dispatcher** workflow enables workers to simply request their next assignment by clicking a button on a workspace. 
+
+This workflow ensures issues are handled in a consistent, prioritized order without an overlap of effort. It resolves most issues with a large team of workers cherry-picking from the same shared worklist.
+
+By default, the auto-dispatcher assigns open tickets from a worker's group memberships in the following order:
+
+1. Tickets assigned to the worker before unassigned
+2. Tickets with the highest importance to lowest
+3. Tickets that have been open the longest to the most recent
+
+These filters are stacked, so the very first ticket recommended to a worker would be one assigned to them, with high importance, that has been waiting for a reply the longest.
+
+The last ticket would be unassigned, low importance, and most recently opened.
 
 # Installation
 
 This workflow is built into Cerb [11.0+](/releases/11.0/). It will automatically update.
 
 You can enable it from **Search >> Workflows >> (+) >> Auto Dispatcher**.
+
+# Usage
+
+### Add the workspace widget
+
+On a workspace page, click the **Add Widget** button.
+
+In the **Library** tab, select **Auto Dispatcher** and click the **Create** button.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/auto-dispatcher/widget-library.png" class="screenshot">
+</div>
+
+The workspace will now have a **Start Work** button.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/auto-dispatcher/start-work-button.png" class="screenshot">
+</div>
+
+When the **Start Work** button is clicked it starts the auto-dispatcher interaction in explore mode.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/auto-dispatcher/explorer.png" class="screenshot">
+</div>
+
+Each worker is shown their next most important issue based on their group memberships and assignments.
+
+Once an issue has been resolved or delegated, a worker can click the **Next** button in the top right for their next assignment. They will be reminded to unassign the issue if someone else can handle the follow-up. 
+
+### Assignment rejections
+
+If a worker clicks the **Next** button before handling the current issue, they must either resume work or provide a reason why they cannot work on it.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/auto-dispatcher/next-unresolved.png" class="screenshot">
+</div>
+
+They can click on the **I can't work on it** button to choose a reason. 
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/auto-dispatcher/reject-reasons.png" class="screenshot">
+</div>
+
+Choosing a reason creates an **Assignment Rejection** record. The same issue will not be recommended again to the same worker. These records can be used in reporting to improve mail routing or worker training.
+
+### Customizing the assignment rejection reasons
+
+The list of assignment rejection reasons can be customized from the workflow.
+
+From **Search >> Workflows**, edit the **cerb.auto_dispatcher** workflow and click **Edit Template** at the top of the popup. 
+
+Then click **Continue** at the bottom of the popup.
+
+Add one rejection reason per line.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/auto-dispatcher/add-reasons.png" class="screenshot">
+</div>
+
+Then click **Continue** twice to save the changes to the workflow.
+
+### Customizing the work order
+
+You can change the query used for assignments in the `cerb.autoDispatcher.workerExplore` automation.
 
 # Reference
 
@@ -42,6 +118,7 @@ workflow:
   name: cerb.auto_dispatcher
   version@date: 2024-10-14T00:00:00Z
   description: Automatically assign tickets to workers based on priority
+  website: https://cerb.ai/workflows/cerb.auto_dispatcher/
   requirements:
     cerb_version: >=11.0 <11.1
     cerb_plugins: cerberusweb.core,
