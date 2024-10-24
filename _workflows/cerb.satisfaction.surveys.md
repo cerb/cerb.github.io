@@ -61,6 +61,8 @@ If you've [deployed the portal](/guides/portals/nginx-proxy/) to a custom domain
 
 Once you've made changes, click the **Continue** button twice.
 
+## NPS
+
 ### Testing an NPS survey
 
 Navigate to **Search >> Workspace Pages** and click on **Satisfaction**.
@@ -123,7 +125,7 @@ In **Compose:** enter a message with placeholders like:
 Hi {{broadcast_email_address}},
 
 We'd really appreciate your feedback on this two question survey about your experience with Cerb:
-{{cerb_automation('cerb.satisfaction.surveys.nps.scriptingGetLink',inputs).return.signed_url}}
+{{cerb_automation('cerb.satisfaction.surveys.nps.scriptingGetLink',inputs).return.survey_link}}
 
 #signature
 {% endraw %}
@@ -131,6 +133,88 @@ We'd really appreciate your feedback on this two question survey about your expe
 </pre>
 
 You can see the queued email messages from **Setup >> Mail >> Outgoing >> Queue**. Each recipient receives a personalized survey link.
+
+## CSAT
+
+### Enabling CSAT surveys
+
+CSAT survey links on outgoing messages are enabled per group.
+
+Navigate to **Search >> Groups** and edit a group.
+
+If the **Customer Satisfaction** fieldset isn't added yet, click the **Add Fieldset** button and select it.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/satisfaction/csat-add-fieldset.png" class="screenshot">
+</div>
+
+Check the box to the right of **Enable CSAT surveys:** and click the **Save Changes** button.
+
+### Testing CSAT surveys
+
+When you reply to a message from a group with CSAT surveys enabled, you'll see a `#survey-csat` tag below your `#signature`.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/satisfaction/csat-reply-tag.png" class="screenshot">
+</div>
+
+When your message is sent, this tag will be converted to a survey link in plaintext and HTML formats. The link will only be appended to the delivered message and not the copy saved in Cerb.
+
+An administrator can view the outgoing message with the survey link from **Setup >> Mail >> Outgoing >> Log**.
+
+You can also generate a CSAT survey link from the **Search >> Workspace Pages >> Satisfaction** page in the **CSAT** tab.
+
+The link opens a survey interaction.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/satisfaction/survey-csat.png" class="screenshot">
+</div>
+
+Responses are displayed on the **CSAT** tab of the **Satisfaction** workspace page.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/satisfaction/dashboard-csat.png" class="screenshot">
+</div>
+
+## CES
+
+### Enabling CES surveys
+
+CES survey links for closed tickets are enabled per group.
+
+Navigate to **Search >> Groups** and edit a group.
+
+If the **Customer Satisfaction** fieldset isn't added yet, click the **Add Fieldset** button and select it.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/satisfaction/ces-add-fieldset.png" class="screenshot">
+</div>
+
+Select a ticket-based snippet in **CES Email Template:**.
+
+We've included a default snippet of **Satisfaction CES Survey Email**. You can optionally create your own and use the `{% raw %}{{survey_link}}{% endraw %}` placeholder.
+
+Click the **Save Changes** button.
+
+### Testing CES surveys
+
+When you closed a ticket in a group with CES surveys enabled, a survey link will be emailed to the initial sender.
+
+An administrator can view the outgoing message with the survey link from **Setup >> Mail >> Outgoing >> Log**.
+
+You can also generate a CES survey link from the **Search >> Workspace Pages >> Satisfaction** page in the **CES** tab.
+
+The link opens a survey interaction.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/satisfaction/survey-ces.png" class="screenshot">
+</div>
+
+Responses are displayed on the **CES** tab of the **Satisfaction** workspace page.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/satisfaction/dashboard-ces.png" class="screenshot">
+</div>
 
 # Reference
 
@@ -143,7 +227,7 @@ Change occurrences of **cerb.satisfaction.surveys** to your own workflow identif
 {% raw %}
 workflow:
   name: cerb.satisfaction.surveys
-  version: 2024-10-21T00:00:00Z
+  version: 2024-10-22T00:00:00Z
   description: Gather and monitor customer satisfaction metrics like NPS, CSAT, and CES.
   website: https://cerb.ai/workflows/cerb.satisfaction.surveys/
   requirements:
@@ -154,21 +238,45 @@ workflow:
       default: Cerb - Customer Satisfaction
     text/portalBaseUrl:
       default: {{cerb_url('c=portal&p=csat-survey')}}
-    picklist/surveysEnabled:
-      label: Surveys Enabled:
-      multiple@bool: yes
-      default@csv: NPS
-      options@csv: NPS, CSAT, CES
     text/npsQuestion:
       default: How likely are you to recommend Cerb to your friends and colleagues?
     text/npsCommentLabel:
       default: Why did you choose this rating? (optional)
     text/csatQuestion:
       default: How satisfied are you with the service you received?
+    text/cesQuestion:
+      default: The Cerb team made it easy to resolve my issue.
+    text/cesEmailSubject:
+      default: How did we do?
     text/hashSecret:
       default: {{random_string(40)}}
 
 records:
+  custom_fieldset/fieldset_group_satisfaction:
+    fields:
+      name: Customer Satisfaction
+      context: group
+      owner__context: app
+      owner_id@int: 0
+  custom_field/field_group_satisfaction_csat:
+    fields:
+      name: Enable CSAT surveys
+      context: group
+      uri: satisfaction_csat_enabled
+      custom_fieldset_id: {{records.fieldset_group_satisfaction.id}}
+      type: C
+      pos@int: 1
+  custom_field/field_group_satisfaction_ces_snippet:
+    fields:
+      name: CES Email Template
+      context: group
+      uri: satisfaction_ces_snippet
+      custom_fieldset_id: {{records.fieldset_group_satisfaction.id}}
+      type: L
+      pos@int: 2
+      params:
+        context: snippet
+
   custom_record/recordNps:
     fields:
       name: NPS Survey
@@ -286,6 +394,21 @@ records:
       uri: ip
       type: S
 
+  snippet/snippet_ces_email:
+    updatePolicy@csv:
+    fields:
+      title: Satisfaction CES Survey Email
+      context: cerberusweb.contexts.ticket
+      owner__context: app
+      owner_id: 0
+      content@raw:
+        Hello! You recently contacted us for support.
+
+        Reference: #{{mask}}
+        Subject: {{subject}}
+
+        [How satisfied are you with the service you received?]({{survey_link}})
+
   workspace_page/satisfactionPage:
     fields:
       name: Satisfaction
@@ -301,8 +424,7 @@ records:
       pos: 1
       params:
         layout: sidebar_left
-      options_kata@raw:
-        hidden@bool: {{'NPS' not in cerb_workflow_config('cerb.satisfaction.surveys','surveysEnabled')}}
+      options_kata@text:
 
   workspace_widget/npsWidgetScore:
     fields:
@@ -433,8 +555,7 @@ records:
       pos: 2
       params:
         layout: sidebar_left
-      options_kata@raw:
-        hidden@bool: {{'CSAT' not in cerb_workflow_config('cerb.satisfaction.surveys','surveysEnabled')}}
+      options_kata@text:
 
   workspace_widget/widgetCsatScore:
     fields:
@@ -465,16 +586,49 @@ records:
               params:
                 text_align: center
                 text_size@raw: 500%
-                value_template@raw: {{rating|number_format(1)}}/10
+                value_template@raw: {{rating|number_format(1)}}
                 bold@bool: yes
+            slider/csat:
+              params:
+                show_labels@bool: yes
+                text_align: center
+                text_size@raw: 200%
+                min: 0
+                max: 10
+                value_template@raw: {{rating}}
+                threshold_colors:
+                  1: #FF0000
+                  3: #FF9900
+                  5: #CCCCCC
+                  7: #00AA00
+                  9: #00FF00
+
+  workspace_widget/widgetCsatActions:
+    fields:
+      label: Actions
+      extension_id: core.workspace.widget.form_interaction
+      tab_id: {{records.satisfactionTabCsat.id}}
+      pos@int: 1
+      width_units@int: 4
+      zone: content
+      params:
+        interactions_kata@raw:
+          interaction/createLink:
+            label: Create CSAT survey link
+            uri: cerb:automation:cerb.satisfaction.surveys.csat.getSignedLink.interaction
+            icon: check
+            hidden@bool: {{not worker_is_superuser}}
+        is_popup: 1
+      options_kata@raw:
+        hidden@bool: {{not current_worker_is_superuser}}
 
   workspace_widget/widgetCsatResponses:
     fields:
       label: Recent Survey Responses
       extension_id: core.workspace.widget.sheet
       tab_id: {{records.satisfactionTabCsat.id}}
-      pos: 2
-      width_units: 4
+      pos@int: 2
+      width_units@int: 4
       zone: content
       params:
         data_query@text:
@@ -531,8 +685,7 @@ records:
       pos: 3
       params:
         layout: sidebar_left
-      options_kata@raw:
-        hidden@bool: {{'CES' not in cerb_workflow_config('cerb.satisfaction.surveys','surveysEnabled')}}
+      options_kata@text:
 
   workspace_widget/widgetCesScore:
     fields:
@@ -563,8 +716,41 @@ records:
               params:
                 text_align: center
                 text_size@raw: 500%
-                value_template@raw: {{rating|number_format(1)}}/7
+                value_template@raw: {{rating|number_format(1)}}
                 bold@bool: yes
+            slider/ces:
+              params:
+                show_labels@bool: yes
+                text_align: center
+                text_size@raw: 200%
+                min: 0
+                max: 7
+                value_template@raw: {{rating}}
+                threshold_colors:
+                  1: #FF0000
+                  3: #FF9900
+                  4: #CCCCCC
+                  5: #00AA00
+                  6: #00FF00
+
+  workspace_widget/widgetCesActions:
+    fields:
+      label: Actions
+      extension_id: core.workspace.widget.form_interaction
+      tab_id: {{records.satisfactionTabCes.id}}
+      pos@int: 1
+      width_units@int: 4
+      zone: content
+      params:
+        interactions_kata@raw:
+          interaction/createLink:
+            label: Create CES survey link
+            uri: cerb:automation:cerb.satisfaction.surveys.ces.getSignedLink.interaction
+            icon: check
+            hidden@bool: {{not worker_is_superuser}}
+        is_popup: 1
+      options_kata@raw:
+        hidden@bool: {{not current_worker_is_superuser}}
 
   workspace_widget/widgetCesResponses:
     fields:
@@ -629,6 +815,9 @@ records:
           automation/csat:
             uri: cerb:automation:cerb.satisfaction.surveys.csat.interaction
             disabled@bool: {{interaction != 'csat'}}
+          automation/ces:
+            uri: cerb:automation:cerb.satisfaction.surveys.ces.interaction
+            disabled@bool: {{interaction != 'ces'}}
         cors_origins_allowed@text:
         portal_kata@raw:
           layout:
@@ -642,18 +831,6 @@ records:
               #    label: Back to website
               #    href: https://cerb.ai/
               #    class: cerb-link-button
-
-  automation/automationCsatLink:
-    fields:
-      name: cerb.satisfaction.surveys.csat.replyLink
-      description: Generate a signed link for a CSAT survey
-      extension_id: cerb.trigger.automation.function
-      policy_kata@raw:
-        commands:
-          data.query@bool: yes
-      script@raw:
-        start:
-          return:
 
   automation/automationNpsLink:
     fields:
@@ -673,7 +850,7 @@ records:
               email: {{inputs.email}}
               expires@date: +1 week
           return:
-            signed_url: {{survey_base_url}}/nps?{{params|url_encode}}&s={{params|values|join|hash_hmac(cerb_workflow_config('cerb.satisfaction.surveys','hashSecret'),"sha256")[8:24]}}
+            survey_link: {{survey_base_url}}/nps?{{params|url_encode}}&s={{params|values|join|hash_hmac(cerb_workflow_config('cerb.satisfaction.surveys','hashSecret'),"sha256")[8:24]}}
 
   automation/automationNpsScriptingGetLink:
     fields:
@@ -694,7 +871,7 @@ records:
               email: {{inputs.email}}
             on_success:
               return:
-                signed_url: {{results.signed_url}}
+                survey_link: {{results.survey_link}}
       policy_kata@raw:
         commands:
           function:
@@ -753,7 +930,7 @@ records:
             form:
               elements:
                 say:
-                  content: {{results.signed_url}}
+                  content: {{results.survey_link}}
       policy_kata@raw:
         commands:
           function:
@@ -770,7 +947,7 @@ records:
             deny/type@bool: {{inputs.record_type is not record type ('nps_survey')}}
             allow@bool: yes
           record.search:
-            deny/type@bool: {{inputs.record_type is not record type ('address')}}
+            deny/type@bool: {{inputs.record_type is not record type ('address', 'nps_survey')}}
             allow@bool: yes
       script@raw:
         start:
@@ -787,7 +964,7 @@ records:
               if@bool: {{interaction_params.expires < 'now'|date('U')}}
               then@ref: invalidLink
 
-          record.search:
+          record.search/email:
             output: email
             inputs:
               record_type: address
@@ -798,6 +975,18 @@ records:
               validation@raw:
                 {{email.id is empty ? 'Record not found.'}}
             on_error@ref: invalidLink
+
+          record.search/survey:
+            output: nps_survey
+            inputs:
+              record_type: nps_survey
+              record_query: email.id:${lookup_email_id} created:"today -30 days to now" limit:1
+              record_query_params:
+                lookup_email_id@int: {{email.id}}
+            on_success:
+              outcome/dupe:
+                if@bool: {{nps_survey.id}}
+                then@ref: dupeSurvey
 
           await/survey:
             form:
@@ -828,13 +1017,12 @@ records:
                 textarea/prompt_comment:
                   label: {{config.npsCommentLabel}}
 
-          # [TODO] Don't allow dupes from the same email within 30d
           record.create/nps:
             output: nps_survey
             inputs:
               record_type: nps_survey
               fields:
-                name: {{email._label}} rated {{prompt_rating}}/10{% if prompt_comment %}: {{prompt_comment|truncate(128)}}{% endif %}
+                name: {{email._label}} rated {{prompt_rating}} / 10{% if prompt_comment %}: {{prompt_comment|truncate(128)}}{% endif %}
                 email@int: {{email.id}}
                 rating: {{prompt_rating|round}}
                 cohort: {{prompt_rating > 8 ? 'Promoter' : (prompt_rating < 7 ? 'Detractor' : 'Passive')}}
@@ -863,6 +1051,18 @@ records:
                   reset@bool: no
           return:
 
+        &dupeSurvey:
+          await:
+            form:
+              elements:
+                say:
+                  message@text:
+                    Thanks! We have already recorded your response to this survey link.
+                submit:
+                  continue@bool: no
+                  reset@bool: no
+          return:
+
   automation/functionCsatSurveyLink:
     fields:
       name: cerb.satisfaction.surveys.csat.getSurveyLink
@@ -873,6 +1073,7 @@ records:
           record/message:
             record_type: message
             required@bool: yes
+
         start:
           set:
             config@json: {{cerb_workflow_config('cerb.satisfaction.surveys')|json_encode}}
@@ -885,6 +1086,41 @@ records:
               {{survey_base_url}}/csat?m={{draft_token}}&s={{hash}}&expires={{expires_in}}
       policy_kata@raw:
         commands:
+
+  automation/automationCsatLinkInteraction:
+    fields:
+      name: cerb.satisfaction.surveys.csat.getSignedLink.interaction
+      extension_id: cerb.trigger.interaction.worker
+      description@text:
+      script@raw:
+        start:
+          await/prompt:
+            form:
+              title: Generate CSAT Survey Link
+              elements:
+                chooser/prompt_message_id:
+                  label: Choose an outgoing message:
+                  record_type: message
+                  query@text: isOutgoing:y created:"-7 days"
+                  multiple@bool: no
+                  required@bool: yes
+
+          function:
+            output: results
+            uri: cerb:automation:cerb.satisfaction.surveys.csat.getSurveyLink
+            inputs:
+              message: {{prompt_message_id}}
+
+          await/results:
+            form:
+              elements:
+                say:
+                  content: {{results.survey_link}}
+      policy_kata@raw:
+        commands:
+          function:
+            deny/uri@bool: {{uri != 'cerb:automation:cerb.satisfaction.surveys.csat.getSurveyLink'}}
+            allow@bool: yes
 
   automation/interactionCsatSurvey:
     fields:
@@ -916,7 +1152,7 @@ records:
               record_query: token:${lookup_token} limit:1
               record_query_params:
                 lookup_token: {{interaction_params.m}}
-              record_expand: _label
+              record_expand: _label, worker__label
               validation@raw:
                 {{message.id is empty ? 'Record not found.'}}
             on_error@ref: invalidLink
@@ -943,21 +1179,21 @@ records:
                   label: {{config.csatQuestion}}
                   required@bool: yes
                   data:
-                    1:
-                      label: very dissatisfied
-                      rating: 1
-                    3:
-                      label: dissatisfied
-                      rating: 3
-                    5:
-                      label: neutral
-                      rating: 5
-                    7:
-                      label: satisfied
-                      rating: 7
                     10:
                       label: very satisfied
                       rating: 10
+                    7:
+                      label: satisfied
+                      rating: 7
+                    5:
+                      label: neutral
+                      rating: 5
+                    3:
+                      label: dissatisfied
+                      rating: 3
+                    1:
+                      label: very dissatisfied
+                      rating: 1
                   validation@raw:
                     {{(prompt_rating is not numeric or prompt_rating < 0 or prompt_rating > 10) ? 'Rating must be from 0 to 10'}}
                   limit: 5
@@ -981,7 +1217,7 @@ records:
             inputs:
               record_type: csat_survey
               fields:
-                name: Rated {{message.worker__label}} as {{prompt_rating}}/10{% if prompt_comment %}: {{prompt_comment|truncate(128)}}{% endif %}
+                name: Rated {{message.worker__label}} as {{prompt_rating}} / 10{% if prompt_comment %}: {{prompt_comment|truncate(128)}}{% endif %}
                 message@int: {{message.id}}
                 worker@int: {{message.worker_id}}
                 rating: {{prompt_rating|round}}
@@ -1028,6 +1264,206 @@ records:
             allow@bool: yes
           record.search:
             deny/type@bool: {{inputs.record_type is not record type ('csat_survey','message')}}
+            allow@bool: yes
+
+  automation/functionCesSurveyLink:
+    fields:
+      name: cerb.satisfaction.surveys.ces.getSurveyLink
+      extension_id: cerb.trigger.automation.function
+      description@text:
+      script@raw:
+        inputs:
+          record/ticket:
+            record_type: ticket
+            required@bool: yes
+        start:
+          set:
+            config@json: {{cerb_workflow_config('cerb.satisfaction.surveys')|json_encode}}
+            survey_base_url: {{config.portalBaseUrl|trim('/', 'right')}}
+            expires_in@date: 7 days
+            ticket_mask: {{inputs.ticket.mask}}
+            hash: {{[ticket_mask,expires_in]|join|hash_hmac(config.hashSecret)[26:18]}}
+          return:
+            survey_link@text:
+              {{survey_base_url}}/ces?m={{ticket_mask}}&s={{hash}}&expires={{expires_in}}
+      policy_kata@raw:
+        commands:
+
+  automation/automationCesLinkInteraction:
+    fields:
+      name: cerb.satisfaction.surveys.ces.getSignedLink.interaction
+      extension_id: cerb.trigger.interaction.worker
+      description@text:
+      script@raw:
+        start:
+          await/prompt:
+            form:
+              title: Generate CES Survey Link
+              elements:
+                chooser/prompt_ticket_id:
+                  label: Ticket:
+                  record_type: ticket
+                  query@text: status:c created:"-7 days"
+                  multiple@bool: no
+                  required@bool: yes
+
+          function:
+            output: results
+            uri: cerb:automation:cerb.satisfaction.surveys.ces.getSurveyLink
+            inputs:
+              ticket: {{prompt_ticket_id}}
+
+          await/results:
+            form:
+              elements:
+                say:
+                  content: {{results.survey_link}}
+      policy_kata@raw:
+        commands:
+          function:
+            deny/uri@bool: {{uri != 'cerb:automation:cerb.satisfaction.surveys.ces.getSurveyLink'}}
+            allow@bool: yes
+
+  automation/interactionCesSurvey:
+    fields:
+      name: cerb.satisfaction.surveys.ces.interaction
+      extension_id: cerb.trigger.interaction.website
+      description@text:
+      script@raw:
+        start:
+          set:
+            config@json: {{cerb_workflow_config('cerb.satisfaction.surveys')|json_encode}}
+            valid_s: {{[interaction_params.m,interaction_params.expires]|join|hash_hmac(config.hashSecret)[26:18]}}
+
+          decision/validation:
+            outcome/missingLink:
+              if@bool: {{interaction_params.m is empty or interaction_params.expires is empty or interaction_params.s is empty}}
+              then@ref: invalidLink
+            outcome/badSignature:
+              if@bool: {{valid_s != interaction_params.s}}
+              then@ref: invalidLink
+            outcome/expiredSig:
+              if@bool: {{interaction_params.expires < 'now'|date('U')}}
+              then@ref: invalidLink
+
+          # Find the ticket by token
+          record.search/ticket:
+            output: ticket
+            inputs:
+              record_type: ticket
+              record_query: mask:${lookup_mask} limit:1
+              record_query_params:
+                lookup_mask: {{interaction_params.m}}
+              record_expand: _label
+              validation@raw:
+                {{ticket.id is empty ? 'Record not found.'}}
+            on_error@ref: invalidLink
+
+          # Does this survey already exist?
+          record.search/survey:
+            output: lookup_survey
+            inputs:
+              record_type: ces_survey
+              record_query: ticket.id:${ticket_id} limit:1
+              record_query_params:
+                ticket_id@int: {{ticket.id}}
+              validation@raw:
+                {{lookup_survey.id is not empty ? 'Survey response already exists.'}}
+            on_error@ref: alreadyExists
+
+          # Prompt for the survey response
+          await/survey:
+            form:
+              title: Survey
+              elements:
+                sheet/prompt_rating:
+                  label: {{config.cesQuestion}}
+                  required@bool: yes
+                  data:
+                    7:
+                      label: strongly agree
+                      rating: 7
+                    5:
+                      label: agree
+                      rating: 5
+                    4:
+                      label: neutral
+                      rating: 4
+                    3:
+                      label: disagree
+                      rating: 3
+                    1:
+                      label: strongly disagree
+                      rating: 1
+                  validation@raw:
+                    {{(prompt_rating is not numeric or prompt_rating < 1 or prompt_rating > 7) ? 'Rating must be from 1 to 7'}}
+                  limit: 5
+                  schema:
+                    layout:
+                      filtering@bool: no
+                      headings@bool: no
+                      paging@bool: no
+                      style: scale
+                    columns:
+                      selection/rating:
+                        params:
+                          mode: single
+                      # [TODO] SVG icon
+                      text/label:
+                textarea/prompt_comment:
+                  label: {{config.npsCommentLabel}}
+
+          record.create/ces:
+            output: ces_survey
+            inputs:
+              record_type: ces_survey
+              fields:
+                name: Rated [#{{ticket.mask}}] as {{prompt_rating}} / 7{% if prompt_comment %}: {{prompt_comment|truncate(128)}}{% endif %}
+                ticket@int: {{ticket.id}}
+                rating: {{prompt_rating|round}}
+                comment@key,optional: prompt_comment
+                ip: {{client_ip}}
+                owner__context: app
+                owner_id@int: 0
+
+          await/confirm:
+            form:
+              elements:
+                say:
+                  message: Thanks for your feedback!
+                submit:
+                  continue@bool: no
+                  reset@bool: no
+
+        &invalidLink:
+          await:
+            form:
+              elements:
+                say:
+                  message@text:
+                    Sorry! This is an invalid or expired link.
+                submit:
+                  continue@bool: no
+                  reset@bool: no
+          return:
+        &alreadyExists:
+          await:
+            form:
+              elements:
+                say:
+                  message@text:
+                    We already have a response for this survey link.
+                submit:
+                  continue@bool: no
+                  reset@bool: no
+          return:
+      policy_kata@raw:
+        commands:
+          record.create:
+            deny/type@bool: {{inputs.record_type is not record type ('ces_survey')}}
+            allow@bool: yes
+          record.search:
+            deny/type@bool: {{inputs.record_type is not record type ('ces_survey','ticket')}}
             allow@bool: yes
 
   automation/dataQueryNpsScore:
@@ -1161,8 +1597,11 @@ records:
             if@bool:
               {{
                 is_new
+                or record__type is not record type ('ticket')
+                or not record_group_satisfaction_ces_snippet_id
                 or record_status == was_record_status
                 or record_status != 'closed'
+                or 0 == record_num_messages_out
                 or was_record_elapsed_resolution_first
               }}
             then:
@@ -1171,9 +1610,19 @@ records:
           set:
             config@json: {{cerb_workflow_config('cerb.satisfaction.surveys')|json_encode}}
             survey_base_url: {{config.portalBaseUrl|trim('/', 'right')}}
+            expires_in@date: 7 days
+            hash: {{[record_mask,expires_in]|join|hash_hmac(config.hashSecret)[26:18]}}
             survey_link@trim:
-              {% set hash = [record_mask]|join|hash_hmac(config.hashSecret)[26:18] %}
-              {{survey_base_url}}/ces?m={{record_mask}}&s={{hash}}
+              {{survey_base_url}}/ces?m={{record_mask}}&expires={{expires_in}}&s={{hash}}
+
+          kata.parse:
+            output: survey_email
+            inputs:
+              kata:
+                subject: {{config.cesEmailSubject}}
+                body: {{record_group_satisfaction_ces_snippet_content}}
+              dict@json:
+                {{cerb_placeholders_list('record_', '')|merge({'survey_link':survey_link})|json_encode}}
 
           record.create:
             output: new_draft
@@ -1186,18 +1635,12 @@ records:
                 name: CES survey for {{record_initial_message_sender_address}} on {{record__label}}
                 params:
                   to: {{record_initial_message_sender_address}}
-                  subject: How did we do?
+                  subject: {{survey_email.subject}}
+                  headers:
+                    Auto-Submitted: yes
+                    X-Auto-Response-Suppress: All
                   format: parsedown
-                  content@text:
-                    You recently contacted us.
-
-                    Reference: #{{record_mask}}
-                    Subject: {{record_subject}}
-
-                    [How did we do?]({{survey_link}})
-
-                    --
-                    Support
+                  content: {{survey_email.body}}
       policy_kata@raw:
         commands:
           record.create:
@@ -1209,15 +1652,18 @@ records:
       name: CES Surveys
       event_name: record.changed
       priority@int: 50
-      is_disabled: {{'CES' not in cerb_workflow_config('cerb.satisfaction.surveys','surveysEnabled')}}
+      is_disabled: 0
       event_kata@raw:
         automation/cesClosedSurvey:
           uri: cerb:automation:cerb.satisfaction.surveys.ces.sendClosedTicketSurvey
           disabled@bool:
             {{
               is_new
+              or record__type is not record type ('ticket')
+              or not record_group_satisfaction_ces_snippet_id
               or record_status == was_record_status
               or record_status != 'closed'
+              or 0 == record_num_messages_out
               or was_record_elapsed_resolution_first
             }}
 
@@ -1226,7 +1672,7 @@ records:
       name: CSAT Surveys
       event_name: mail.draft
       priority@int: 50
-      is_disabled: {{'CSAT' not in cerb_workflow_config('cerb.satisfaction.surveys','surveysEnabled')}}
+      is_disabled: 0
       event_kata@raw:
         automation/csatLink:
           uri: cerb:automation:cerb.satisfaction.surveys.csat.replyAppendCsatLink
@@ -1234,6 +1680,8 @@ records:
             {{
               is_resumed
               or draft_type != 'ticket.reply'
+              or not draft_ticket_group_satisfaction_csat_enabled
+              or not record_group_satisfaction_ces_snippet_id
               or '#survey-csat' in draft_params.content
             }}
 
@@ -1242,7 +1690,7 @@ records:
       name: CSAT Surveys
       event_name: mail.send
       priority@int: 50
-      is_disabled: {{'CSAT' not in cerb_workflow_config('cerb.satisfaction.surveys','surveysEnabled')}}
+      is_disabled: 0
       event_kata@raw:
         automation/csatLink:
           uri: cerb:automation:cerb.satisfaction.surveys.csat.generateSentCsatLink
@@ -1250,6 +1698,7 @@ records:
             {{
               draft_type != 'ticket.reply'
               or draft_worker_id is empty
+              or not draft_ticket_group_satisfaction_csat_enabled
               or '#survey-csat' not in draft_params.content
             }}
 
@@ -1259,9 +1708,21 @@ records:
       type: gauge
       description: Net Promoter Score (NPS) over time
 
-  automation_timer/timer_nps:
+  metric/metric_csat_avg:
     fields:
-      name: Sample NPS score to metric
+      name: cerb.satisfaction.surveys.csat.score
+      type: gauge
+      description: Avg. Customer Satisfaction (CSAT) over time by worker
+
+  metric/metric_ces_avg:
+    fields:
+      name: cerb.satisfaction.surveys.ces.score
+      type: gauge
+      description: Avg. Customer Effort Score (CES) over time by worker
+
+  automation_timer/timer_metrics:
+    fields:
+      name: Sample satisfaction metrics
       is_recurring: 1
       recurring_patterns@raw:
         # Every hour
