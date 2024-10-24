@@ -50,7 +50,7 @@ Click the **Add new application** button in the top right.
 | Field | 
 |-|-
 | **Name:** | `Cerb`
-| **Redirect URI:** | `https://<your-cerb-url/oauth/callback`
+| **Redirect URI:** | `https://<YOUR-CERB-URL>/oauth/callback`
 | **Confidential:** | (checked)
 | **Scopes:** | `api`, `read_user`
 
