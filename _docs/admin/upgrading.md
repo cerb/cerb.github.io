@@ -120,7 +120,7 @@ Switch to the desired major version branch:
 
 <pre class="command-line" data-user="user" data-host="host">
 <code class="language-bash">
-git checkout v10.4
+git checkout v11.0
 </code>
 </pre>
 
