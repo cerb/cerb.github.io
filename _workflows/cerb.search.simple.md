@@ -1,6 +1,6 @@
 ---
 title: Simple Ticket Search
-excerpt: Simplified point-and-click ticket search popup without using search queries
+excerpt: Simplified point-and-click ticket search popup without using search queries.
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.search.simple/

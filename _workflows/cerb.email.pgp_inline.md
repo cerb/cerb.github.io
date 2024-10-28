@@ -1,6 +1,6 @@
 ---
 title: PGP Inline Encryption
-excerpt: Encrypt messages with PGP and paste them inline in outgoing email
+excerpt: Encrypt messages with PGP and paste them inline in outgoing email.
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.email.pgp_inline/

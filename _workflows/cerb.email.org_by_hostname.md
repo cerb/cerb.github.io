@@ -1,6 +1,6 @@
 ---
 title: Sender Org By Hostname
-excerpt: Assign organizations to new senders based on their email @hostname
+excerpt: Assign organizations to new senders based on their email @hostname.
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.email.org_by_hostname/
