@@ -28,7 +28,7 @@ jumbotron:
 
 # Introduction
 
-In this guide we'll walk through the process of linking Cerb to Amazon Web Services (AWS). You'll be able to use any AWS API from bots in Cerb.
+In this guide we'll walk through the process of linking Cerb to Amazon Web Services (AWS). You'll be able to use any AWS API from automations in Cerb.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/aws/cerb-and-aws.png" class="screenshot">
@@ -40,29 +40,13 @@ We'll start by logging in to the [AWS Management Console](https://console.aws.am
 
 If you don't have an AWS account, you can sign up for free at: <https://aws.amazon.com>
 
-## Create a new user
-
 We're going to create the new user account for our Cerb bot to use.
 
 If you haven't already selected the **IAM** service, do so now.
 
-Select **Users** in the left navigation.
-
-Click the blue **Add user** button at the top of the page.
-
-Type `Cerb` in **User name**.
-
-In **Access type**, check _Programmatic access_.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/common/aws-iam-create-user.png" class="screenshot">
-</div>
-
-Click the blue **Next: Permissions** button in the bottom right.
-
 ### Create a policy
 
-At the top, select **Attach existing policies directly**.
+Select **Policies** in the left navigation.
 
 Click the **Create policy** button at the top.
 
@@ -74,10 +58,10 @@ Paste the following policy:
 <code class="language-json">
 {% raw %}
 {
-  "Version": "2018-12-18",
+  "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "VisualEditor0",
+      "Sid": "CerbIam",
       "Effect": "Allow",
       "Action": "iam:GetUser",
       "Resource": "arn:aws:iam::*:user/${aws:username}"
@@ -88,31 +72,53 @@ Paste the following policy:
 </code>
 </pre>
 
-You can add new permissions here depending on the services your bot needs to access. This is covered in those specific guides.
+You can add new permissions here depending on the services your automation needs to access. This is covered in those specific guides.
 
-Click the **Review Policy** button in the lower right.
+Click the **Next** button in the lower right.
 
-* **Name:** `CerbBot`
+Use the policy name: **CerbAutomationsPolicy**
 
-Click the **Create Policy** in the lower right.
+Click the **Create Policy** button in the lower right.
 
-Select the policy.
+### Create a new user
 
-Click the blue **Next: Tags** button in the bottom right.
+Select **Users** in the left navigation.
 
-### Finish up
+Click the orange **Create user** button in the top right of the page.
 
-Click the blue **Next: Review** button in the bottom right.
-
-Verify the new user and click the blue **Create user** button in the bottom right.
+Type `CerbAutomations` in **User name**.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/common/aws-iam-create-confirm.png" class="screenshot">
+<img src="/assets/images/guides/aws/common/aws-iam-create-user.png" class="screenshot">
 </div>
+
+Click the orange **Next** button in the bottom right.
+
+At the top, select **Attach existing policies directly**.
+
+Select **CerbAutomationsPolicy**.
+
+Click the **Next** button in the lower right.
+
+Click the **Create user** button in the lower right.
+
+### Generate programmatic credentials
+
+Click on **CerbAutomations** in the users list.
+
+Select the **Security credentials** tab.
+
+In the **Access Keys** section, click the **Create access key** button near the middle of the page.
+
+Select **Other** and click the **Next** button in the lower right.
+
+Click the **Create access key** button in the lower right.
 
 Click the **Download .csv** button to save a copy of your new credentials.  You'll need these in a moment when adding a new connected account in Cerb.
 
-That's everything we need to do in AWS. You can close the AWS Management Console.
+Click the **Done** button.
+
+That's everything we need to do in AWS.
 
 # Create the AWS service in Cerb
 
@@ -134,11 +140,12 @@ That's everything we need to do in AWS. You can close the AWS Management Console
 
 1. Click the **Create** button.
 
-# Use the connected account in bot behaviors
+# Use the connected account in automations
 
-You can use the connected account you just created to access [AWS APIs](https://aws.amazon.com/) from bot behaviors in Cerb.  This is typically accomplished using the **Execute HTTP Request** action from a bot, and selecting the connected account in the **Authentication:** section.
+You can use the connected account you just created to access [AWS APIs](https://aws.amazon.com/) from [automations](/docs/automations/) in Cerb.  This is typically accomplished using the [http.request](/docs/automations/commands/http.request/) command from an automation and referencing this connected account in the **authentication:** option.
 
-# Related guides
+# Related resources
 
-* [Run AWS Lambda functions from a Cerb bot](/guides/integrations/aws/lambda/)
-* [Give Cerb bots the power of speech with Amazon Polly](/guides/integrations/aws/polly-speech/)
+* Workflow: [Generate Profile Images (Amazon Bedrock)](/workflows/cerb.integrations.aws_bedrock.profile_images/)
+* Guide: [Run AWS Lambda functions from a Cerb bot](/guides/integrations/aws/lambda/)
+* Guide: [Give Cerb bots the power of speech with Amazon Polly](/guides/integrations/aws/polly-speech/)

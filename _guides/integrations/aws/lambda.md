@@ -160,7 +160,7 @@ We're going to add access to invoke AWS Lambda functions prefixed with **Cerb***
 
 Select **Policies** in the navigation on the left.
 
-Find your bot's policy in the list or create a new one. In the earlier [instructions](/guides/integration/aws/) we created a policy named **CerbBot**.
+Find your bot's policy in the list or create a new one. In the earlier [instructions](/guides/integrations/aws/) we created a policy named **CerbBot**.
 
 Click the **Edit Policy** button.
 
