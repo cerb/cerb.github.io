@@ -105,11 +105,53 @@ Click the orange **Save changes** button in the bottom right.
 
 ## Cerb
 
-### Import the workflow
+### Install the workflow
 
-Back in Cerb, navigate to **Search >> Workflows >> (+) >> Empty**.
+This workflow is built into Cerb [11.0+](/releases/11.0/). It will automatically update.
 
-Paste the following KATA into the large text box:
+You can enable it from **Search >> Workflows >> (+) >> Generate Profile Images (Amazon Bedrock)**.
+
+Link the workflow to the Amazon Web Services connected account you created above.
+
+# Usage
+
+Use the **Search** menu in the top right to open the editor for any record with profile images: worker, group, organization, contact, bot, etc.
+
+Click the **Edit** button to the right of the profile image.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/aws-bedrock-profile-images/record-editor.png" class="screenshot">
+</div>
+
+Click the new **AI Image Generation** button.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/aws-bedrock-profile-images/image-editor-peek.png" class="screenshot">
+</div>
+
+Enter an image description like our earlier example:
+
+> A close-up profile picture of a female cyberpunk hacker in anime graphic novel style. She wears sleek, futuristic tech gear with digital implants and has a determined expression. Binary code and data streams flow visually into her head, symbolizing knowledge being downloaded directly into her brain. She is set against a high-tech background with holographic screens and computer interfaces. The color scheme features bright neon tones in blue, pink, and purple, capturing the cyberpunk aesthetic.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/aws-bedrock-profile-images/image-prompt.png" class="screenshot">
+</div>
+
+Click the blue **Continue** button.
+
+You'll be shown a preview of the generated image.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/workflows/aws-bedrock-profile-images/image-output.png" class="screenshot">
+</div>
+
+Click the blue **Use this image** button to keep it, or click **Generate** to generate a new image.
+
+# Reference
+
+You can build your own Generate Profile Images workflow using this template as a reference.
+
+Change occurrences of **cerb.integrations.aws_bedrock.profile_images** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
 
 <pre style="max-height: 29.25em;">
 <code class="language-cerb">
@@ -312,39 +354,3 @@ records:
 {% endraw %}
 </code>
 </pre>
-
-Click the **Continue** button.
-
-# Usage
-
-Use the **Search** menu in the top right to open the editor for any record with profile images: worker, group, organization, contact, bot, etc.
-
-Click the **Edit** button to the right of the profile image.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/workflows/aws-bedrock-profile-images/record-editor.png" class="screenshot">
-</div>
-
-Click the new **AI Image Generation** button.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/workflows/aws-bedrock-profile-images/image-editor-peek.png" class="screenshot">
-</div>
-
-Enter an image description like our earlier example:
-
-> A close-up profile picture of a female cyberpunk hacker in anime graphic novel style. She wears sleek, futuristic tech gear with digital implants and has a determined expression. Binary code and data streams flow visually into her head, symbolizing knowledge being downloaded directly into her brain. She is set against a high-tech background with holographic screens and computer interfaces. The color scheme features bright neon tones in blue, pink, and purple, capturing the cyberpunk aesthetic.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/workflows/aws-bedrock-profile-images/image-prompt.png" class="screenshot">
-</div>
-
-Click the blue **Continue** button.
-
-You'll be shown a preview of the generated image.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/workflows/aws-bedrock-profile-images/image-output.png" class="screenshot">
-</div>
-
-Click the blue **Use this image** button to keep it, or click **Generate** to generate a new image.
