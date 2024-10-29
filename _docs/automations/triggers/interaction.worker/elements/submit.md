@@ -53,6 +53,8 @@ When clicked, a `continue:` button sets the `submit:` element's `key` to its val
 
 There may be multiple continue buttons (e.g. yes/no, allow/deny). This is much simpler than using a sheet, and it no longer requires a second click to continue.
 
+A `hidden@bool:` option can be used to conditionally hide buttons.
+
 When `submit:buttons:` isn't provided, the default 'continue' and 'reset' buttons are automatically added; and these can still be controlled with the `submit:continue@bool:` and `submit:reset@bool:` shortcuts.
 
 The current alternative styles for buttons are 'secondary' (gray like reset) or 'outline' (blue like continue but not filled). This makes it easy to visually distinguish primary/default and secondary options.
@@ -76,6 +78,7 @@ start:
               label: No
               style: secondary
               value: no{% endraw %}
+              hidden@bool: no
 </code>
 </pre>
 
