@@ -3,7 +3,7 @@ title: Geolocate IPs (IPstack)
 excerpt: Geolocate IPs and render locations on maps with IPstack.
 layout: integration
 topic: Workflows
-permalink: /workflows/cerb.interactions.ipstack/
+permalink: /workflows/cerb.integrations.ipstack/
 jumbotron:
   title: IPstack
   tagline: ""
