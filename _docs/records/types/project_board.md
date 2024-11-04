@@ -41,7 +41,6 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this project board 
 |   | `owner__context` | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) of this project board's owner: `app`, `role`, `group`, or `worker` 
 |   | `owner_id` | [number](/docs/records/fields/types/number/) | The ID of this project board's owner 
-|   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 
 ### Dictionary Placeholders
@@ -57,7 +56,6 @@ These [placeholders](/docs/scripting/variables/#placeholders) are available in [
 | `cards_kata` | text | Common.cards_Kata
 | `id` | number | Id
 | `name` | text | Name
-| `params` | object | Params
 | `record_url` | text | Record Url
 | `updated_at` | date | Updated
 

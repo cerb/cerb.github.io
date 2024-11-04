@@ -42,7 +42,6 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `functions_kata` | [text](/docs/records/fields/types/text/) |  
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this project board column 
-|   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `pos` | [number](/docs/records/fields/types/number/) | (0-4294967296) 
 |   | `toolbar_kata` | [text](/docs/records/fields/types/text/) |  
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 

@@ -40,7 +40,6 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `member_query_worker` | [text](/docs/records/fields/types/text/) |  
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this role 
-|   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `privs_mode` | [text](/docs/records/fields/types/text/) | ["", all, itemized] 
 |   | `reader_query_worker` | [text](/docs/records/fields/types/text/) |  
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
