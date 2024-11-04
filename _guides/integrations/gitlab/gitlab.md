@@ -36,7 +36,60 @@ In this guide we'll walk through the process of linking Cerb to GitLab. You'll b
 <img src="{{page.social_image_url}}" class="screenshot">
 </div>
 
-# Create an OAuth application at GitLab
+# GitLab Authentication
+
+There are two alternative authentication methods when using the GitLab API.
+
+* **Personal Access Tokens:** A long-lived secret token for a specific GitLab user. Rotating the token must be done manually. This is the simplest option.
+
+* **OAuth2:** A short-lived access token and long-lived refresh token. This allows multiple GitLab users to link their account to Cerb. It requires a more involved OAuth application setup, but is the most secure option since secret rotation is automatic and indefinite.
+
+## Method 1: Personal access token
+
+### Create a personal access token at GitLab
+
+To create a personal access token, log into GitLab.
+
+Click on your profile image in the top of the left sidebar.
+
+Select **Preferences** from the menu.
+
+Select **Access tokens** in the left sidebar.
+
+In the **Personal access tokens** section, click the **Add new token** button in the top right.
+
+The options for **Select scopes** depend on your needs. For instance: `read_api` and `read_repository`.
+
+### Create a connected service in Cerb
+
+In Cerb, navigate to **Search >> Connected Services >> (+)** and select the **Build** tab at the top.
+
+|---
+| Field |
+|-|-
+| **Name:** | `GitLab (Access Token)`
+| **Type:** | Token Bearer
+| **Token Name:** | `Bearer`
+
+Click the **Save Changes** button.
+
+### Create a connected account in Cerb
+
+In Cerb, navigate to **Search >> Connected Accounts >> (+)**.
+
+Select **GitLab (Access Token)**.
+
+Choose any name (e.g. `GitLab (example-user)`) and URI (e.g. `gitlab-example-user`).
+
+In **Token:** paste the personal access token you generated at GitLab in the first section above.
+
+Click the **Save Changes** button.
+
+[Test](#use-the-connected-account-in-automations) the connected account in automations.
+
+## Method 2: OAuth2
+
+### Create an OAuth application at GitLab
 
 Log into GitLab. We recommend creating a 'Cerb' user account for automations.
 
@@ -58,7 +111,7 @@ Click the blue **Save application** button.
 
 Copy the **Application ID** and **Secret** for the next step.
 
-# Create the GitLab service in Cerb
+### Create the GitLab service in Cerb
 
 In Cerb, navigate to **Search >> Connected Services >> (+)** and select **GitLab** from the list.
 
@@ -66,7 +119,7 @@ Paste your **Application ID** and **Secret**.
 
 Click the **Create** button.
 
-# Link the connected account to GitLab in Cerb
+### Link the connected account to GitLab in Cerb
 
 Navigate to **Search >> Connected Accounts >> (+)** and select **GitLab**.
 
@@ -85,7 +138,7 @@ Review the consent form and then click **Authorize Cerb**.
 
 Click the **Save Changes** button.
 
-# Use the connected account in automations
+# Use the connected account in Cerb automations
 
 Create an [automation.function](/docs/automations/triggers/automation.function/) automation:
 
