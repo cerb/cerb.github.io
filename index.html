@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Fully customizable helpdesk and workflow automation
-except: "Cerb is a fully customizable, web-based helpdesk and workflow automation platform."
+title: Fully customizable web-based platform for team email and workflow automation
+except: "Cerb is a fully customizable web-based platform for team email and workflow automation."
 jumbotron:
-  title: Fully customizable helpdesk and workflow automation
+  title: Web-based platform for team email and workflow automation
   tagline: Build interactive low-code automations in your browser. Integrate with any API.
   style: jumbotron-center
   #tagline: For 22 years Cerb has helped thousands of teams be more productive.
@@ -64,7 +64,7 @@ testimonials:
 	<div class="feature">
 		<div class="align-center">
 			<p>
-				<b>Cerb</b> is a fully customizable, web-based helpdesk and workflow automation platform. The project has continuously evolved for over 22 years based on the feedback of thousands of teams around the world in almost every industry. It is used by everyone from solo founders to 1,000+ person teams managing millions of customer requests.
+				<b>Cerb</b> is a fully customizable web-based platform for team email and workflow automation. The project has continuously evolved for over 22 years based on the feedback of thousands of teams around the world in nearly every industry. It is used by everyone from solo founders to 1,000+ person teams managing millions of customer requests.
 			</p>
 
 			<p>
@@ -72,19 +72,15 @@ testimonials:
 			</p>
 
 			<p>
-				Teams and individuals can build a personalized "mission control" using highly a wide array of configurable widgets to stay focused on their most important tasks. Custom records and fields organize of any kind of task (email, calls, social media, orders, survey responses, todo, etc). Pre-built solutions can be easily shared within the community using <a href="https://cerb.ai/docs/packages/">packages</a>.
+				Teams and individuals can build a personalized "mission control" using highly a wide array of configurable widgets to stay focused on their most important tasks. Custom records and fields organize of any kind of task (email, calls, social media, orders, survey responses, todo, etc). Pre-built solutions can be easily shared within the community using <a href="https://cerb.ai/resources/workflows/">workflows</a>.
 			</p>
 
 			<p>
-				The most common use case is converting standard POP3/IMAP mailboxes (e.g. `support@`, `team@`) into high-volume team-based webmail with automated triage, internal discussions with `@mentions`, built-in productivity tools, custom actions, reporting, and a shared history.
+				The most common use case is converting standard POP3/IMAP mailboxes (<code>support@</code>) into high-volume team-based webmail with automated triage, internal discussions with @mentions, built-in productivity tools, custom actions, reporting, and a shared history.
 			</p>
 
 			<p>
-				An emerging use case is integrating with large language models (LLMs) to automatically suggest answers to customer requests based on existing team knowledge (documentation, FAQs, articles).
-			</p>
-
-			<p>
-				100% of the source code is available on <a href="https://github.com/cerb/cerb-release/">GitHub</a>. Try Cerb in <a href="/docs/installation/docker/">Docker</a> for free with no time limit.
+				Try Cerb in <a href="/docs/installation/docker/">Docker</a> or <a href="/signup/">Cerb Cloud</a> for free with no time limit. 100% of the source code is available on <a href="https://github.com/cerb/cerb-release/">GitHub</a>.
 			</p>
 		</div>
 	</div>
@@ -173,14 +169,16 @@ testimonials:
 
 <script type="text/javascript">
 document.addEventListener("DOMContentLoaded", function(event) {
-	try {
-		var $testimonials_container = document.querySelector('#cerb-testimonials');
-		var $testimonials = $testimonials_container.querySelectorAll('.cerb-testimonial');
-		var $testimonial = $testimonials[0];
-		var testimonial_count = $testimonials.length;
+	event.stopPropagation();
 
-		var testimonial_carosel = function() {
-			var r = Math.floor(Math.random()*testimonial_count);
+	try {
+		let $testimonials_container = document.querySelector('#cerb-testimonials');
+		let $testimonials = $testimonials_container.querySelectorAll('.cerb-testimonial');
+		let $testimonial = $testimonials[0];
+		let testimonial_count = $testimonials.length;
+
+		let testimonial_carosel = function() {
+			let r = Math.floor(Math.random()*testimonial_count);
 			$testimonial.style['display'] = 'none';
 			$testimonial = $testimonials[r];
 			$testimonial.style['display'] = 'block';
