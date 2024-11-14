@@ -1,5 +1,5 @@
 ---
-title: GitLab Issues
+title: Issue Tracking (GitLab Issues)
 excerpt: Search and link GitLab issues to tickets.
 layout: integration
 topic: Workflows
