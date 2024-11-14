@@ -20,6 +20,7 @@ jumbotron:
 	{% assign topics = site.guides | sort: 'id' | group_by: 'topic' %}
 	
 	{% for topic in topics %}
+	<div style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
 		<h1 id="{{ topic.name | slugify }}">{{ topic.name }}</h1>
 		
 		{% if topic.name == 'Automations' or topic.name == 'Bots' or topic.name == 'Dashboards' or topic.name == 'Integrations' or topic.name == 'Developers' or topic.name == 'Mail' or topic.name == 'Machine Learning' %}
@@ -53,7 +54,7 @@ jumbotron:
 			{% endfor %}
 			</ul>
 		{% endif %}
-		
+	</div>
 	{% endfor %}
 </div>
 
