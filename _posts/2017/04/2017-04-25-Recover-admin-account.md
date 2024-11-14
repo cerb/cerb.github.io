@@ -49,5 +49,5 @@ UPDATE worker_auth_hash SET pass_hash = SHA1(CONCAT(pass_salt,MD5('s3cr3t'))) WH
 You then need to [clear the server-side cache](/tips/clear-server-cache/).
 
 <div class="cerb-box note"><p>
-	If you use Cerb Cloud, <a href="/contact/">contact us</a> to resolve this issue for you.
+	If you use Cerb Cloud, <a href="/help/#email">contact us</a> to resolve this issue for you.
 </p></div>
