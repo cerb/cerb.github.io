@@ -28,76 +28,111 @@ jumbotron:
 
 # Introduction
 
-In this guide we'll walk through the process of linking Cerb to Slack. You'll be able to use Slack's full API from bots in Cerb to automate whatever you need.
+In this guide we'll walk through the process of linking Cerb to Slack. You'll be able to use Slack's full API from automations in Cerb.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/slack/plugin/cerb-and-slack.png" class="screenshot">
 </div>
 
-# Create an app at Slack
+# Create a new app at Slack
 
-Next, you need to create a new app on Slack for Cerb to connect to.
+First, you need to create a new app on Slack for Cerb to connect to.
 
-1. Log in to [Slack's developer portal](https://api.slack.com/apps).
+Log in to [Slack's developer portal](https://api.slack.com/apps).
 
-1. Click the green **Create New App** button.
+Click the green **Create New App** button.
 
-1. Enter the following details:
-- **App Name:** Cerb
-- **Development Slack Team:** (your team name)
+Select **From scratch**.
 
-	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/slack/plugin/slack-new-app.png" class="screenshot">
-	</div>
+Enter the following details:
 
-1. Click the **Create App** button.
+|---
+|-|-
+| **App Name:** | Cerb
+| **Development Slack Team:** | (your team name)
 
-1. Scroll down to **App Credentials** and make a note of your **Client ID** and **Client Secret** for the next step.
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/slack/plugin/slack-new-app.png" class="screenshot">
+</div>
 
-1. Select **OAuth & Permissions** from the left sidebar.
+Click the **Create App** button.
 
-1. Click the **Add Redirect URL** button and enter the base URL to your Cerb install (e.g. `https://YOUR-CERB-HOST/`).
+## Configure Slack authentication
 
-# Create the Slack service in Cerb
+You can choose to authenticate with either **bot tokens** or **OAuth2**.
 
-1. Navigate to **Search >> Connected Services**.
+### Option 1: Bot Tokens (Recommended)
 
-1. Click the **(+)** icon in the top right of the list.
+This is the simplest authentication method. It uses a single OAuth2 token for the bot and doesn't link Slack user accounts.
 
-1. Select **Slack**.
+Select **OAuth & Permissions** from the left sidebar.
 
-	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/common/package-library-connected-services.png" class="screenshot">
-	</div>
+Scroll down to **Scopes**.
 
-1. Enter your Client ID and Client Secret.
+In **Bot Token Scopes** click the **Add an OAuth Scope** button.
 
-	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/slack/package-library-service-slack.png" class="screenshot">
-	</div>
+Add the `chat:write` scope.
 
-1. Click the **Create** button.
+Scroll up to **OAuth Tokens** and click the **Install** button.
 
-# Link the connected account to Slack in Cerb
+Click **Allow** on the consent screen.
 
-1. Navigate to **Search >> Connected Accounts**.
+Copy the **Bot User OAuth Token**.
 
-1. Click the **(+)** icon in the top right of the list.
+### Option 2: OAuth2
 
-1. Select **Slack**.
+This authentication method links individual Slack users to Cerb connected accounts. Use this if you need to automate a user's account.
 
-1. Click the blue **Link to Slack** button.
+Select **Basic Information** in the left sidebar.
 
-1. Accept consent on Slack.
+Scroll down to **App Credentials** and make a note of your **Client ID** and **Client Secret** for the next step.
 
-    <div class="cerb-screenshot">
-    <img src="/assets/images/guides/slack/plugin/oauth-approve.png" class="screenshot">
-    </div>
+Select **OAuth & Permissions** from the left sidebar.
 
-1. Click the **Save Changes** button.
+Scroll down to **Redirect URLs**.
 
-# Use the connected account in bot behaviors
+Click the **Add Redirect URL** button and enter the base URL to your Cerb install (e.g. `https://YOUR-CERB-HOST/`).
 
-You can use the connected account you just created to access [Slack's API](https://api.slack.com/web) from bot behaviors in Cerb.  This is typically accomplished using the **Execute HTTP Request** action from a bot, and selecting the connected account in the **Authentication:** section.
+# Create the Slack connected account in Cerb
 
-You can import the [Slack Bot](/packages/slack-bot/) package for a working example.
+In Cerb, navigate to **Search >> Connected Services**.
+
+Click the **(+)** icon in the top right of the list.
+
+Select **Slack**.
+
+Enter either the **[Bot Tokens]** or **[OAuth2]** fields depending on your authentication option above. 
+
+Click the **Create** button at the bottom of the popup.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/slack/package-library-service-slack.png" class="screenshot">
+</div>
+
+### Bot Tokens
+
+You're done!
+
+### OAuth2
+
+If you're using OAuth2 authentication, you need to link Slack user accounts to Cerb.
+
+Navigate to **Search >> Connected Accounts**.
+
+Click the **(+)** icon in the top right of the list.
+
+Select **Slack**.
+
+Click the blue **Link to Slack** button.
+
+Accept consent on Slack.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/slack/plugin/oauth-approve.png" class="screenshot">
+</div>
+
+Click the **Save Changes** button.
+
+# Related Resources
+
+* Workflow: [Slack Notifications](/workflows/cerb.integrations.slack.notifications/)
