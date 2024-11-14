@@ -5,6 +5,8 @@ excerpt:
 permalink: /signup/thanks/
 jumbotron: 
   title: Thanks for signing up to try Cerb!
+search_index:
+  exclude: true
 ---
 
 Your account information is on the way.
