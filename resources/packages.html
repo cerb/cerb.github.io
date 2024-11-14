@@ -14,13 +14,11 @@ jumbotron:
     url: /resources/
 ---
 
-{% include testimonials.html %}
-
 <div class="cerb-box note">
 	<p>This functionality is now provided by <a href="/resources/workflows/">workflows</a> in Cerb <a href="/releases/11.0/">11.0+</a></p>
 </div>
 
-<div class="integrations" style="column-width:400px;">
+<div class="integrations" style="column-width:400px;margin-bottom:20px;">
 	{% assign packages = site.packages | sort: 'id' %}
 	
 	<ul class="articles">
@@ -33,3 +31,5 @@ jumbotron:
 	{% endfor %}
 	</ul>
 </div>
+
+{% include testimonials.html %}

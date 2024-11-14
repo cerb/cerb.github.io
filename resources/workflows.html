@@ -5,7 +5,7 @@ excerpt: Workflows are templates with versioned updates that keep a related set 
 permalink: /resources/workflows/
 jumbotron:
   title: Workflows
-  tagline: 
+  tagline:
   breadcrumbs:
   - 
     label: Resources
@@ -14,7 +14,7 @@ jumbotron:
 
 <a href="/docs/workflows/">Workflows</a> are templates with versioned updates that keep a related set of records in sync between multiple environments (e.g. dev, staging, production).
 
-<div class="integrations" style="column-width:400px;">
+<div class="integrations" style="column-width:400px;margin-bottom:20px;">
 	{% assign workflows = site.workflows | sort: 'title' %}
 	
 	<ul class="articles">
@@ -27,7 +27,5 @@ jumbotron:
 	{% endfor %}
 	</ul>
 </div>
-
-<br>
 
 {% include testimonials.html %}

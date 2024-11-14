@@ -16,9 +16,7 @@ jumbotron:
     url: /resources/
 ---
 
-{% include testimonials.html %}
-
-<div class="integrations" style="margin-left:20px;column-width:400px;">
+<div class="integrations" style="margin-bottom:20px;column-width:400px;">
 	{% assign topics = site.guides | sort: 'id' | group_by: 'topic' %}
 	
 	{% for topic in topics %}
@@ -58,3 +56,5 @@ jumbotron:
 		
 	{% endfor %}
 </div>
+
+{% include testimonials.html %}
