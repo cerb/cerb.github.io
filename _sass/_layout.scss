@@ -16,15 +16,9 @@ nav {
 
 .main-nav, .mobile-nav {
 	margin-top: 15px;
+	text-align: right;
 	
-	ul {
-		display: inline-block;
-		float: right;
-	}
-
 	li {
-		//margin-right: 5px;
-
 		a {
 			@include border-radius(5px);
 			border: 1px solid transparent;
@@ -35,27 +29,32 @@ nav {
 			text-transform: uppercase;
 
 			&:hover {
-				background-color: #eee;
-			}
-		}
-		
-		&.cta {
-			a {
-				color: #6ea032;
+				background-color: rgba(100,100,100,0.7);
 			}
 		}
 
 		&.current {
 			a {
-				background-color: #666;
+				background-color: rgb(57, 98, 201);
 				color: white;
 			}
 		}
 	}
+
+	input[type=search] {
+		appearance: none;
+		-webkit-appearance:none;
+		font-size:1.2em;
+		outline:none;
+		padding: 0.25em;
+		border: 0;
+		margin-top: 0.75em;
+		border-radius: 0.25em;
+	}
 }
 
 .mobile-nav {
-	margin-top: 0px;
+	margin-top: 0;
 	padding-top: 10px;
 	text-align: center;
 	
@@ -112,7 +111,7 @@ nav {
 	}
 
 	@include media-query($on-laptop) {
-			font-size: 36px;
+		font-size: 36px;
 	}
 }
 
@@ -127,7 +126,7 @@ nav {
 		font-size: 32px;
 
 		@include media-query($on-laptop) {
-				font-size: 28px;
+			font-size: 28px;
 		}
 	}
 
@@ -135,7 +134,7 @@ nav {
 		font-size: 26px;
 
 		@include media-query($on-laptop) {
-				font-size: 22px;
+			font-size: 22px;
 		}
 	}
 
@@ -143,7 +142,7 @@ nav {
 		font-size: 20px;
 
 		@include media-query($on-laptop) {
-				font-size: 18px;
+			font-size: 18px;
 		}
 	}
 }
