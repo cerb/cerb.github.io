@@ -30,7 +30,7 @@ search_index:
     let searchBox = document.getElementById('search-box');
     let searchResults = document.getElementById('search-results');
     let searchTerm = getQueryVariable('q');
-    let documents = [];
+    let documents = { };
 
     if (searchTerm) {
         searchBox.setAttribute("value", searchTerm);
@@ -38,15 +38,27 @@ search_index:
 
     function loadSearchIndex() {
         let xhr = new XMLHttpRequest();
-        xhr.open("GET", "/assets/search/search_index.json?v={{ site.version }}", true);
-        xhr.responseType = "json";
+        xhr.open("GET", "/assets/search/search_index.jsonl?v={{ site.version }}", true);
+        xhr.responseType = "text";
 
         xhr.onload = function () {
           if (xhr.status === 200) { // If the request was successful
-            documents = xhr.response;
+            // Split by CRLF and load as JSON
+            xhr.responseText.split("\n").forEach(function(v) {
+                if('string' == typeof v && v.length) {
+                    try {
+                        let doc = JSON.parse(v);
+                        if ('object' == typeof doc && doc.hasOwnProperty('id'))
+                            documents[doc.id] = doc;
+                    } catch(ex) { console.error(ex); }
+                }
+            });
+
+            searchResults.innerText = 'Loaded ' + Object.keys(documents).length + ' documents...';
             startSearch();
           } else {
             console.error("Error loading JSON: " + xhr.status);
+            searchResults.innerText = 'Failed to load the search index. Please try again. (' + xhr.status + ')';
           }
         };
 
@@ -92,6 +104,8 @@ search_index:
     setTimeout(loadSearchIndex, 10);
 
     function startSearch() {
+        searchResults.innerText = 'Indexing ' + Object.keys(documents).length + ' documents...';
+
         let idx = lunr(function () {
             this.ref('id');
             this.field('title', {boost: 100});
@@ -105,6 +119,8 @@ search_index:
                 });
             }, this);
         });
+
+        searchResults.innerText = '';
 
         searchBox.addEventListener('search', function(e) {
             e.stopPropagation();

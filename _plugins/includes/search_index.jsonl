@@ -1,13 +1,6 @@
-{
 {%- assign posts = site.pages | concat: site.posts | concat: site.docs | concat: site.guides | concat: site.workflows -%}
-{% for post in posts %}
+{%- for post in posts -%}
 {%- unless post.search_index.exclude or post.url == '/sitemap.xml' or post.url == '/robots.txt' or post.url == '/search_index.json' or post.url contains '/css/' or post.title == '' or post.content == '' -%}
-"{{ post.url | slugify }}": {
-"title": "{{ post.title | xml_escape }}",
-"url": "{{ post.url | xml_escape }}",
-"content": {{ post.content | strip_html | replace: "\n",' ' | normalize_whitespace | jsonify }}
-}
-{%- unless forloop.last %},{% endunless %}
-{%- endunless -%}
-{% endfor %}
-}
+{ "id": "{{ post.url | slugify }}", "title": "{{ post.title | xml_escape }}", "url": "{{ post.url | xml_escape }}", "content": {{ post.content | strip_html | jsonify }} }
+{% endunless -%}
+{%- endfor -%}

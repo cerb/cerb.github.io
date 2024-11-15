@@ -7,8 +7,8 @@ module CerbSearchIndex
 
         def generate(site)
             puts "Generating search index..."
-            search_index = Jekyll::Page.new(site, __dir__, '', 'includes/search_index.json')
-            search_index.data['permalink'] = '/assets/search/search_index.json'
+            search_index = Jekyll::Page.new(site, __dir__, '', 'includes/search_index.jsonl')
+            search_index.data['permalink'] = '/assets/search/search_index.jsonl'
             search_index.data['layout'] = nil
             site.pages << search_index
             puts "... done"
