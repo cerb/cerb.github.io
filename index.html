@@ -20,40 +20,8 @@ jumbotron:
 		<br>
 	</div>
 
-	<div id="cerb-testimonials" class="unit two-thirds" style="margin-top:10px;">
-		{% for testimonial_index in page.testimonials.featured %}
-		{% assign testimonial = site.data.testimonials[testimonial_index] %}
-		<table class="cerb-testimonial" width="100%" cellspacing="0" cellpadding="0" style="display:none;">
-			<tr>
-				<td style="padding-right:10px;vertical-align:top;">
-					<span class="client-logo client-{{ testimonial.client }}"></span>
-				</td>
-				<td style="font-size: 90%;padding-left: 10px; border-left: 1px solid rgb(200,200,200);">
-					<q>{{ testimonial.quote }}</q>
-					<div style="margin-left: 15px;">
-						<b>- {{ testimonial.author }}</b>
-					</div>
-				</td>
-			</tr>
-		</table>
-		{% endfor %}
-		
-		<noscript>
-			{% assign testimonial = site.data.testimonials|first %}
-			<table class="cerb-testimonial" width="100%" cellspacing="0" cellpadding="0" style="display:none;">
-				<tr>
-					<td style="padding-right:10px;">
-						<span class="client-logo client-{{ testimonial.client }}"></span>
-					</td>
-					<td style="font-size: 90%;padding-left: 10px; border-left: 1px solid rgb(200,200,200);">
-						<q>{{ testimonial.quote }}</q>
-						<div style="margin-left: 15px;">
-							<b>- {{ testimonial.author }}</b>
-						</div>
-					</td>
-				</tr>
-			</table>
-		</noscript>
+	<div class="unit two-thirds" style="margin-top:10px;">
+		{% include testimonials.html %}
 	</div>
 </div>
 
@@ -182,28 +150,3 @@ jumbotron:
 		</form>
 	</div>
 </div>
-
-<script type="text/javascript">
-document.addEventListener("DOMContentLoaded", function(event) {
-	event.stopPropagation();
-
-	try {
-		let $testimonials_container = document.querySelector('#cerb-testimonials');
-		let $testimonials = $testimonials_container.querySelectorAll('.cerb-testimonial');
-		let $testimonial = $testimonials[0];
-		let testimonial_count = $testimonials.length;
-
-		let testimonial_carosel = function() {
-			let r = Math.floor(Math.random()*testimonial_count);
-			$testimonial.style['display'] = 'none';
-			$testimonial = $testimonials[r];
-			$testimonial.style['display'] = 'block';
-		}
-
-		testimonial_carosel();
-
-		//setInterval(testimonial_carosel, 30000);
-
-	} catch(e) {}
-});
-</script>
