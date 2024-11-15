@@ -14,12 +14,12 @@ search_index:
 <div id="search" class="search" style="min-height:500px;">
 
 <form action="#" method="GET" onsubmit="return false;">
-	<input id="search-box" type="text" name="q" value="" style="width:97%;padding:5px;font-size:24px;" placeholder="What can we help you find?" autofocus="autofocus" spellcheck="false">
+	<input id="search-box" type="text" name="q" value="" style="outline:none;-webkit-appearance:none;appearance:none;border:1px solid rgb(200,200,200);width:97%;padding:5px;font-size:2em;" placeholder="Type what you're looking for and press <ENTER>" autofocus="autofocus" spellcheck="false">
 </form>
 
 <div class="search-stats" style="color:rgb(150,150,150);font-size:0.9em;"></div>
 
-<div id="search-results" class="search-results" style="margin-top:20px;"></div>
+<div id="search-results" class="search-results" style="margin-top:20px;">Building search index...</div>
 
 </div>
 
@@ -29,15 +29,21 @@ search_index:
 (function() {
     let searchBox = document.getElementById('search-box');
     let searchResults = document.getElementById('search-results');
+    let searchTerm = getQueryVariable('q');
+    let documents = [];
+
+    if (searchTerm) {
+        searchBox.setAttribute("value", searchTerm);
+    }
 
     function loadSearchIndex() {
         let xhr = new XMLHttpRequest();
-        xhr.open("GET", "/search_index.json", true);
+        xhr.open("GET", "/assets/search/search_index.json?v={{ site.version }}", true);
         xhr.responseType = "json";
 
         xhr.onload = function () {
           if (xhr.status === 200) { // If the request was successful
-            window.store = xhr.response;
+            documents = xhr.response;
             startSearch();
           } else {
             console.error("Error loading JSON: " + xhr.status);
@@ -53,15 +59,15 @@ search_index:
         xhr.send();
     }
 
-    function displaySearchResults(results, store) {
+    function displaySearchResults(results) {
         if (results.length) { // Are there any results?
             let appendString = '';
 
             for (let i = 0; i < results.length; i++) {  // Iterate over the results
-                let item = store[results[i].ref];
-                appendString += '<div><a href="' + item.url + '" style="font-size:1.1em;">' + item.title + '</a></div>';
-                appendString += '<div><a href="' + item.url + '" style="font-size:0.8em;color:rgb(120,120,120);">' + item.url + '</a></div>';
-                appendString += '<div style="margin:0 0 1em 0;">' + item.content.substring(0, 250) + '...</div>';
+                let doc = documents[results[i].ref];
+                appendString += '<div><a href="' + doc.url + '" style="font-size:1.1em;">' + doc.title + '</a></div>';
+                appendString += '<div><a href="' + doc.url + '" style="font-size:0.8em;color:rgb(120,120,120);">' + doc.url + '</a></div>';
+                appendString += '<div style="margin:0 0 1em 0;">' + doc.content.substring(0, 250) + '...</div>';
             }
 
             searchResults.innerHTML = appendString;
@@ -83,7 +89,7 @@ search_index:
         }
     }
 
-    loadSearchIndex()
+    setTimeout(loadSearchIndex, 10);
 
     function startSearch() {
         let idx = lunr(function () {
@@ -91,21 +97,31 @@ search_index:
             this.field('title', {boost: 100});
             this.field('content');
 
-            this.metadataWhitelist = ['position']
-
-            Object.keys(window.store).forEach(function(key) {
+            Object.keys(documents).forEach(function(key) {
                 this.add({
                     'id': key,
-                    'title': window.store[key].title,
-                    'content': window.store[key].content
+                    'title': documents[key].title,
+                    'content': documents[key].content
                 });
             }, this);
         });
 
         searchBox.addEventListener('search', function(e) {
             e.stopPropagation();
-            let results = idx.search(searchBox.value);
-            displaySearchResults(results, window.store);
+            searchResults.innerText = 'Searching...';
+            try {
+                let results = idx.search(searchBox.value);
+                searchBox.select();
+                displaySearchResults(results);
+            } catch(ex) {
+                console.error(ex);
+
+                if(ex.name === 'QueryParseError' && ex.hasOwnProperty('message')) {
+                    searchResults.innerText = '[Error] ' + ex.message;
+                } else {
+                    searchResults.innerText = 'An error occurred. Please try again.';
+                }
+            }
         });
 
         searchBox.addEventListener('keyup', function(e) {
@@ -116,10 +132,7 @@ search_index:
             searchBox.dispatchEvent(new CustomEvent('search'));
         });
 
-        let searchTerm = getQueryVariable('q');
-
         if (searchTerm) {
-            searchBox.setAttribute("value", searchTerm);
             searchBox.dispatchEvent(new CustomEvent('search'));
         }
     }
