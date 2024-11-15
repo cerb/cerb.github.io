@@ -4,13 +4,13 @@
 	{% include head.html %}
 
 	<body>
-
 		{% include header.html %}
-		
-		{% if page.jumbotron and page.jumbotron.title %}
-		<header class="jumbotron {{page.jumbotron.style}}">
-			<div class="wrapper">
-				{% for crumb in page.jumbotron.breadcrumbs %}
+
+		<div class="page-content">
+			{% if page.jumbotron and page.jumbotron.title %}
+			<div class="jumbotron {{page.jumbotron.style}}">
+				<div class="wrapper">
+					{% for crumb in page.jumbotron.breadcrumbs %}
 					<p class="jumbotron-breadcrumbs">
 						{% if crumb.url %}
 						<a href="{{ crumb.url }}">{{ crumb.label }}</a>
@@ -18,18 +18,17 @@
 						<span style="font-weight:400;">{{ crumb.label }}</span>
 						{% endif %}
 					</p>
-				{% endfor %}
-				
-				<h1>{{ page.jumbotron.title }}</h1>
-				
-				{% if page.jumbotron.tagline %}
+					{% endfor %}
+
+					<h1>{{ page.jumbotron.title }}</h1>
+
+					{% if page.jumbotron.tagline %}
 					<p>{{page.jumbotron.tagline}}</p>
-				{% endif %}
+					{% endif %}
+				</div>
 			</div>
-		</header>
-		{% endif %}
-		
-		<div class="page-content">
+			{% endif %}
+
 			<div class="wrapper">
 				{{ content }}
 			</div>

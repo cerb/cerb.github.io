@@ -75,61 +75,54 @@ ul.cerb-convo-bubbles {
 }
 
 header {
-	&.wip {
-		padding: 10px;
-		color: rgb(151,99,32);
-		background-color:rgb(252,240,187);
-		text-align: center;
-		@include border-radius(5px);
-		
-		a {
-			color: #e08600;
-		}
-	}
-	
 	&.top-navigation {
-		background-color: rgb(248,248,248);
+		background-color: rgb(32, 32, 32);
+
+		a {
+			color: rgb(235,235,235);
+		}
 	}
-	
-	&.jumbotron {
-		text-shadow: 0 0 2px rgb(50,50,50);
-		
-		p.jumbotron-breadcrumbs {
-			display: inline-block;
-			
-			a {
-				color: white;
-			}
+}
+
+.jumbotron {
+	text-shadow: 0 0 2px rgb(50,50,50);
+
+	p.jumbotron-breadcrumbs {
+		display: inline-block;
+
+		a {
+			color: white;
 		}
-		
-		&.jumbotron-medium {
-			h1 {
-				font-size: 24px;
-				margin: 0;
-				padding: 0;
-			}
-		}
-	
-		&.jumbotron-center {
-			text-align: center;
-		}
-	
+	}
+
+	&.jumbotron-medium {
 		h1 {
-			display: block;
-			font-size: 36px;
-			margin: 0;
-			padding: 0;
-		}
-	
-		p {
 			font-size: 24px;
-			font-weight: 200;
 			margin: 0;
 			padding: 0;
 		}
-	
-		text-align: left;
-		padding: 10px 0 10px 0;
+	}
+
+	&.jumbotron-center {
+		text-align: center;
+	}
+
+	h1 {
+		display: block;
+		font-size: 36px;
+		margin: 0;
+		padding: 0;
+	}
+
+	p {
+		font-size: 24px;
+		font-weight: 200;
+		margin: 0;
+		padding: 0;
+	}
+
+	text-align: left;
+	padding: 10px 0 10px 0;
 
 		background-color: #32429a;
 		background-image: linear-gradient(67deg, rgb(63,94,171) 55%, rgb(57, 98, 201) 100%);
