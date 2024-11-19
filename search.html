@@ -12,131 +12,115 @@ search_index:
 ---
 
 <div id="search" class="search" style="min-height:500px;">
+    <form action="#" method="GET" onsubmit="return false;">
+        <input id="search-box" type="text" name="q" value="" style="outline:none;-webkit-appearance:none;appearance:none;border:1px solid rgb(200,200,200);width:97%;padding:5px;font-size:2em;" placeholder="Describe what you're searching for and press <ENTER>" autofocus="autofocus" spellcheck="false">
+    </form>
 
-<form action="#" method="GET" onsubmit="return false;">
-	<input id="search-box" type="text" name="q" value="" style="outline:none;-webkit-appearance:none;appearance:none;border:1px solid rgb(200,200,200);width:97%;padding:5px;font-size:2em;" placeholder="Type what you're looking for and press <ENTER>" autofocus="autofocus" spellcheck="false">
-</form>
-
-<div class="search-stats" style="color:rgb(150,150,150);font-size:0.9em;"></div>
-
-<div id="search-results" class="search-results" style="margin-top:20px;">Building search index...</div>
-
+    <div class="search-stats" style="color:rgb(150,150,150);font-size:0.9em;"></div>
+    <div id="search-results" class="search-results" style="margin-top:20px;"></div>
 </div>
 
-<script src="{{ "/assets/js/lunr.js" | prepend: site.baseurl }}"></script>
-
 <script type="text/javascript">
-(function() {
-    let searchBox = document.getElementById('search-box');
-    let searchResults = document.getElementById('search-results');
-    let searchTerm = getQueryVariable('q');
-    let documents = { };
+    (function() {
+        let searchBox = document.getElementById('search-box');
+        let searchResults = document.getElementById('search-results');
+        let searchTerm = getQueryVariable('q');
 
-    if (searchTerm) {
-        searchBox.setAttribute("value", searchTerm);
-    }
+        if (searchTerm) {
+            searchBox.setAttribute("value", searchTerm);
+        }
 
-    function loadSearchIndex() {
-        let xhr = new XMLHttpRequest();
-        xhr.open("GET", "/assets/search/search_index.jsonl?v={{ site.version }}", true);
-        xhr.responseType = "text";
+        function searchQuery() {
+            if(0 === searchBox.value.length) {
+                searchResults.innerText = '';
+                return;
+            }
 
-        xhr.onload = function () {
-          if (xhr.status === 200) { // If the request was successful
-            // Split by CRLF and load as JSON
-            xhr.responseText.split("\n").forEach(function(v) {
-                if('string' == typeof v && v.length) {
-                    try {
-                        let doc = JSON.parse(v);
-                        if ('object' == typeof doc && doc.hasOwnProperty('id'))
-                            documents[doc.id] = doc;
-                    } catch(ex) { console.error(ex); }
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "{{ site.search_endpoint_url }}?v={{ site.version }}", true);
+            xhr.responseType = "json";
+
+            xhr.onload = function () {
+                if (
+                    xhr.status === 200
+                    && 'object' == typeof xhr.response
+                    && xhr.response.hasOwnProperty('results')
+                ) {
+                    displaySearchResults(xhr.response.results)
+                } else {
+                    searchResults.innerText = 'Failed to load the search results. Please try again. (' + xhr.status + ')';
                 }
-            });
+            };
 
-            searchResults.innerText = 'Loaded ' + Object.keys(documents).length + ' documents...';
-            startSearch();
-          } else {
-            console.error("Error loading JSON: " + xhr.status);
-            searchResults.innerText = 'Failed to load the search index. Please try again. (' + xhr.status + ')';
-          }
-        };
+            xhr.onerror = function () {
+                searchResults.innerText = 'Failed to load the search results. Please try again. (' + xhr.status + ')';
+            };
 
-        // Handle errors
-        xhr.onerror = function () {
-          console.error("Request failed");
-        };
+            let formData = new FormData();
+            formData.append('query', searchBox.value);
+            formData.append('limit', '25');
 
-        // Send the request
-        xhr.send();
-    }
-
-    function displaySearchResults(results) {
-        if (results.length) { // Are there any results?
-            let appendString = '';
-
-            for (let i = 0; i < results.length; i++) {  // Iterate over the results
-                let doc = documents[results[i].ref];
-                appendString += '<div><a href="' + doc.url + '" style="font-size:1.1em;">' + doc.title + '</a></div>';
-                appendString += '<div><a href="' + doc.url + '" style="font-size:0.8em;color:rgb(120,120,120);">' + doc.url + '</a></div>';
-                appendString += '<div style="margin:0 0 1em 0;">' + doc.content.substring(0, 250) + '...</div>';
-            }
-
-            searchResults.innerHTML = appendString;
-        } else {
-            searchResults.innerHTML = '<p>No results found</p>';
+            xhr.send(formData);
         }
-    }
 
-    function getQueryVariable(variable) {
-        let query = window.location.search.substring(1);
-        let vars = query.split('&');
+        function displaySearchResults(results) {
+            if (results.length) { // Are there any results?
+                searchResults.innerHTML = '';
 
-        for (let i = 0; i < vars.length; i++) {
-            let pair = vars[i].split('=');
+                for (let i = 0; i < results.length; i++) {  // Iterate over the results
+                    let doc = results[i];
 
-            if (pair[0] === variable) {
-                return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
+                    let title_href = document.createElement('a');
+                    title_href.setAttribute('href', doc.url);
+                    title_href.style['font-size'] = '1.1em';
+                    title_href.innerText = doc.title;
+
+                    let title = document.createElement('div');
+                    title.appendChild(title_href);
+                    searchResults.appendChild(title);
+
+                    let url_href = document.createElement('a');
+                    url_href.setAttribute('href', doc.url);
+                    url_href.style['font-size'] = '0.8em';
+                    url_href.style['color'] = 'rgb(120,120,120)';
+                    url_href.innerText = doc.url;
+
+                    let url = document.createElement('div');
+                    url.appendChild(url_href);
+                    searchResults.appendChild(url);
+
+                    let content = document.createElement('div');
+                    content.style['margin'] = '0 0 1em 0';
+                    content.innerText = doc.content;
+                    searchResults.appendChild(content);
+                }
+
+            } else {
+                searchResults.innerHTML = '<p>No results found</p>';
             }
         }
-    }
 
-    setTimeout(loadSearchIndex, 10);
+        function getQueryVariable(variable) {
+            let query = window.location.search.substring(1);
+            let vars = query.split('&');
 
-    function startSearch() {
-        searchResults.innerText = 'Indexing ' + Object.keys(documents).length + ' documents...';
+            for (let i = 0; i < vars.length; i++) {
+                let pair = vars[i].split('=');
 
-        let idx = lunr(function () {
-            this.ref('id');
-            this.field('title', {boost: 100});
-            this.field('content');
-
-            Object.keys(documents).forEach(function(key) {
-                this.add({
-                    'id': key,
-                    'title': documents[key].title,
-                    'content': documents[key].content
-                });
-            }, this);
-        });
-
-        searchResults.innerText = '';
+                if (pair[0] === variable) {
+                    return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
+                }
+            }
+        }
 
         searchBox.addEventListener('search', function(e) {
             e.stopPropagation();
             searchResults.innerText = 'Searching...';
             try {
-                let results = idx.search(searchBox.value);
-                searchBox.select();
-                displaySearchResults(results);
+                searchQuery();
             } catch(ex) {
+                searchResults.innerText = 'An error occurred. Please try again.';
                 console.error(ex);
-
-                if(ex.name === 'QueryParseError' && ex.hasOwnProperty('message')) {
-                    searchResults.innerText = '[Error] ' + ex.message;
-                } else {
-                    searchResults.innerText = 'An error occurred. Please try again.';
-                }
             }
         });
 
@@ -151,6 +135,5 @@ search_index:
         if (searchTerm) {
             searchBox.dispatchEvent(new CustomEvent('search'));
         }
-    }
-})();
+    })();
 </script>
