@@ -1661,6 +1661,38 @@ Client ID: 1
 Invoice ID: 123
 ```
 
+## xml_xpath_remove
+
+Remove elements from an XML document with an XPath query.
+
+`xml_xpath_remove(xml,path)`
+
+* **xml**: An XML object created by [xml_decode](#xml_decode).
+* **path**: The [XPath](#xml_xpath) query to match elements for removal.
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set string_of_xml =
+"&lt;response&gt;
+  &lt;client_id&gt;1&lt;/client_id&gt;
+  &lt;invoice_id&gt;123&lt;/invoice_id&gt;
+&lt;/response&gt;"
+-%}
+{% set xml = xml_decode(string_of_xml) %}
+{% set xml = xml_xpath_remove(xml, '//invoice_id') %}
+{{xml_encode(xml)}}
+{% endraw %}
+</code>
+</pre>
+
+```
+<?xml version="1.0"?>
+<response>
+  <client_id>1</client_id>
+</response>
+```
+
 <div class="section-nav">
 	<div class="left">
 		<a href="/docs/scripting/commands/" class="prev">&lt; Commands</a>
