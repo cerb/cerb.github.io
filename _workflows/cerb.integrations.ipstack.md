@@ -5,7 +5,7 @@ layout: integration
 topic: Workflows
 permalink: /workflows/cerb.integrations.ipstack/
 jumbotron:
-  title: IPstack
+  title: Geolocate IPs (IPstack)
   tagline: ""
   breadcrumbs:
   -
