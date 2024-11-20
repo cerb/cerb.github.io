@@ -1,5 +1,5 @@
 ---
-title: Install Cerb on Ubuntu Linux 23.10
+title: Install Cerb on Ubuntu Linux 24.04
 layout: integration
 topic: Installation
 excerpt: This guide will walk you through preparing an Ubuntu 23.10 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
@@ -35,7 +35,7 @@ If you don't already have a server, you can use Docker or Amazon EC2.
 
 <pre>
 <code class="language-bash">
-docker run -it --rm -p 80:80 ubuntu:23.10 /bin/bash
+docker run -it --rm -p 80:80 ubuntu:24.04 /bin/bash
 </code>
 </pre>
 
@@ -65,12 +65,12 @@ apt-get update && apt-get -y upgrade
 </code>
 </pre>
 
-Install PHP 8.2:
+Install PHP 8.3:
 
 <pre>
 <code class="language-bash">
-apt-get install -y php8.2 php8.2-fpm php8.2-mysql php8.2-mbstring php8.2-gd php8.2-curl \
-   php8.2-yaml php8.2-gmp php8.2-zip php8.2-mailparse php8.2-dom php8.2-xml
+apt-get install -y php8.3 php8.3-cli php8.3-fpm php8.3-mysql php8.3-mbstring php8.3-gd \
+   php8.3-curl php8.3-yaml php8.3-gmp php8.3-zip php8.3-mailparse php8.3-dom php8.3-xml
 </code>
 </pre>
 
@@ -291,7 +291,7 @@ server {
     #allow 10.0.0.0/16;
     deny all;
     include fastcgi_params;
-    fastcgi_pass   unix:/run/php/php8.2-fpm.sock;
+    fastcgi_pass   unix:/run/php/php8.3-fpm.sock;
   }
 
   location / {
@@ -345,7 +345,7 @@ server {
     proxy_read_timeout 30;
     
     fastcgi_split_path_info ^(.+\.php)(/.+)$;
-    fastcgi_pass   unix:/run/php/php8.2-fpm.sock;
+    fastcgi_pass   unix:/run/php/php8.3-fpm.sock;
     fastcgi_index  index.php;
     include    fastcgi_params;
     fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
@@ -361,7 +361,7 @@ server {
     
     location ~ ^/install/(index|servercheck|phpinfo)\.php$ {
       fastcgi_split_path_info ^(.+\.php)(/.+)$;
-      fastcgi_pass unix:/run/php/php8.2-fpm.sock;
+      fastcgi_pass unix:/run/php/php8.3-fpm.sock;
       fastcgi_index  /install/index.php;
       include    fastcgi_params;
       fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
@@ -428,7 +428,7 @@ service nginx restart
 
 <pre>
 <code class="language-bash">
-service php8.2-fpm restart
+service php8.3-fpm restart
 </code>
 </pre>
 
