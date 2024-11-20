@@ -48,7 +48,6 @@ kramdown:
   parse_block_html: false
 plugins:
   - jekyll-redirect-from
-#  - searchyll
 
 # Defaults
 defaults:

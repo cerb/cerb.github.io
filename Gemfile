@@ -24,7 +24,6 @@ gem "reverse_markdown"
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
    gem "jekyll-redirect-from", "~> 0.12.1"
-   #gem "searchyll"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
