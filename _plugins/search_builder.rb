@@ -38,6 +38,7 @@ def write_pages_to_json(pages, file)
             id: permalink,
             title: page.data['title'],
             url: page.url,
+            summary: page.data['summary'] || '',
             content: clean_markdown(ReverseMarkdown.convert(page.content))
         }
         file.write(JSON.generate(row) + "\n")
