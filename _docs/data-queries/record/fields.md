@@ -1,19 +1,27 @@
 ---
-title: "Data Queries: Record Fields"
-excerpt: 
+title: 'Data Queries: Record Fields'
+excerpt: This page provides detailed information on `record.fields` data queries in
+  Cerb, which are used to retrieve a list of fields from a specified record type.
+summary: This page provides detailed information on `record.fields` data queries in
+  Cerb, which are used to retrieve a list of fields from a specified record type.
+  It outlines the required and optional inputs for these queries, such as the record
+  type, filters, result limits, and pagination. The response format is primarily in
+  dictionaries, suitable for integration with sheets and APIs. The page includes an
+  example query for ticket records and a comprehensive response detailing various
+  field attributes like key, immutability, requirement status, notes, and data types.
+  This information is crucial for users looking to understand and utilize the `record.fields`
+  query functionality effectively.
 permalink: /docs/data-queries/record/fields/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: Record Fields
 jumbotron:
   title: Record Fields
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

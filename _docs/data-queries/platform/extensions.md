@@ -1,19 +1,28 @@
 ---
-title: "Data Queries: Platform Extensions"
-excerpt: 
+title: 'Data Queries: Platform Extensions'
+excerpt: This page provides information on data queries related to platform extensions
+  in Cerb.
+summary: This page provides information on data queries related to platform extensions
+  in Cerb. It explains how to retrieve a list of plugin extensions for a specified
+  extension point, with options to filter and paginate the results. The inputs required
+  for the query include the extension point, and optionally, a filter keyword, limit
+  on the number of results per page, and the starting page number. The response is
+  formatted as dictionaries by default, making it suitable for spreadsheets and API
+  results. An example query and its corresponding response are provided, showcasing
+  various plugin extensions such as "Attachment Viewer," "Behavior Tree," and "Knowledgebase
+  Article," each with specific identifiers, names, classes, and associated plugin
+  IDs.
 permalink: /docs/data-queries/platform/extensions/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: Platform Extensions
 jumbotron:
   title: Platform Extensions
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

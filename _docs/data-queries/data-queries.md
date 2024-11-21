@@ -1,16 +1,26 @@
 ---
 title: Data Queries
-excerpt: Retrieve complex data using simple text queries and prepare the results for visualizations.
+excerpt: Retrieve complex data using simple text queries and prepare the results for
+  visualizations.
+summary: This page provides an overview of Cerb's data queries, a text-based query
+  language designed to retrieve, transform, and format data for visualizations. It
+  details the structure of data queries, which consist of `key:value` pairs, and emphasizes
+  the necessity of a `type:` key in every query. The page lists various query types,
+  such as attachment manifests, calendar events, classifier predictions, and worklist
+  metrics, each serving different data retrieval and processing purposes. It also
+  explains how data queries can be executed through different Cerb features, including
+  dashboard widgets, bot behaviors, and the API, with results returned in JSON format.
+  The page highlights the ease of automating these queries in various Cerb components,
+  making them a versatile tool for data management and visualization.
 permalink: /docs/data-queries/
 redirect_from:
-  - /docs/data-queries/using/
+- /docs/data-queries/using/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 jumbotron:
   title: Data Queries
   tagline: A text-based grammar for querying and transforming data to drive visualizations
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
 ---
 

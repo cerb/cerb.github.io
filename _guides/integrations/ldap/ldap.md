@@ -1,6 +1,15 @@
 ---
 title: Authenticate worker logins with an LDAP corporate directory
 excerpt: A step-by-step guide for configuring Cerb's LDAP plugin
+summary: This page provides a comprehensive guide on how to authenticate worker logins
+  in Cerb using an LDAP corporate directory. It covers the introduction to LDAP as
+  a centralized authentication mechanism, the necessary requirements for setting up
+  LDAP with Cerb, and detailed steps to create an LDAP service within Cerb. The guide
+  also explains how to enable single sign-on (SSO) with LDAP, allowing workers to
+  log in using their LDAP credentials. Additionally, it outlines the process for logging
+  in with LDAP, including handling two-factor authentication and using multiple LDAP
+  services for different corporate directories. References are provided for further
+  reading on LDAP.
 permalink: /guides/integrations/ldap/
 layout: integration
 topic: Integrations
@@ -9,17 +18,13 @@ jumbotron:
   title: Authenticate worker logins with an LDAP corporate directory
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: LDAP &raquo;
+  - label: LDAP &raquo;
     url: /resources/guides/#ldap
 ---
 

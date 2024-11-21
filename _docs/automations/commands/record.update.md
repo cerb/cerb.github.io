@@ -1,23 +1,28 @@
 ---
-title: "Automations: record.update"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: record.update'
+excerpt: This page provides detailed information on the "record.update" command in
+  Cerb automations, which is used to update existing records with specified fields.
+summary: This page provides detailed information on the "record.update" command in
+  Cerb automations, which is used to update existing records with specified fields.
+  It outlines the syntax and parameters required for the command, including inputs
+  such as record type, record ID, and fields to update. The page also explains optional
+  parameters like disabling events for modified records and handling different scenarios
+  through on_simulate, on_success, and on_error commands. The output of the command
+  is a dictionary that reflects the updated record, and error handling is addressed
+  with a structured error message output.
 permalink: /docs/automations/commands/record.update/
 toc:
   title: record.update
   expand: Automations
 jumbotron:
   title: record.update
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

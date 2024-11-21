@@ -1,21 +1,31 @@
 ---
 title: Classifier Classification Records
+excerpt: This page provides detailed information about the classification records
+  in Cerb, including their structure and usage within the system.
+summary: This page provides detailed information about the classification records
+  in Cerb, including their structure and usage within the system. It outlines the
+  fields available in the Records API, which are essential for managing classifications,
+  such as `classifier_id`, `name`, and `updated_at`. The page also describes dictionary
+  placeholders used in automations, snippets, and API responses, offering a range
+  of fields like `_context`, `id`, and `record_url`. Additionally, it covers search
+  query fields that facilitate filtering classification records based on criteria
+  like `classifier`, `id`, and `name`. Lastly, it lists the worklist columns available
+  for viewing classification data, including `c_classifier_id`, `c_name`, and `c_updated_at`,
+  providing a comprehensive guide for users to effectively manage and utilize classification
+  records in Cerb.
 permalink: /docs/records/types/classifier_class/
 toc:
   title: Classifier Classification
   expand: Records
 jumbotron:
   title: Classifier Classification
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

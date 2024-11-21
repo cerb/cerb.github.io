@@ -1,21 +1,30 @@
 ---
 title: Profile Widget Records
+excerpt: This page provides detailed information about Profile Widget records in Cerb,
+  including their structure and usage within the system.
+summary: This page provides detailed information about Profile Widget records in Cerb,
+  including their structure and usage within the system. It outlines the fields available
+  in the Records API, such as `extension_id`, `name`, and `profile_tab_id`, and describes
+  their types and purposes. The page also explains the dictionary placeholders that
+  can be used in automations, snippets, and API responses, offering a comprehensive
+  list of fields like `id`, `name`, and `zone`. Additionally, it details the search
+  query fields that can be used to filter profile widget records, such as `id:`, `name:`,
+  and `updated:`, and lists the worklist columns available for organizing these records,
+  including `p_name`, `p_pos`, and `p_zone`. This information is crucial for developers
+  and users who need to manage and customize profile widgets within the Cerb platform.
 permalink: /docs/records/types/profile_widget/
 toc:
   title: Profile Widget
   expand: Records
 jumbotron:
   title: Profile Widget
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

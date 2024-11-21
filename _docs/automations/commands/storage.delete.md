@@ -1,23 +1,27 @@
 ---
-title: "Automations: storage.delete"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: storage.delete'
+excerpt: This page provides detailed information on the "storage.delete" command used
+  in Cerb automations to remove a value from long-term storage.
+summary: This page provides detailed information on the "storage.delete" command used
+  in Cerb automations to remove a value from long-term storage. It includes a practical
+  example demonstrating how to set, delete, and attempt to retrieve a storage value,
+  resulting in a null output after deletion. The page outlines the syntax for using
+  the command, including required inputs such as the storage key, and optional outputs.
+  It also describes the behavior of the command during simulation, success, and error
+  states, offering placeholders for handling outcomes and error messages.
 permalink: /docs/automations/commands/storage.delete/
 toc:
   title: storage.delete
   expand: Automations
 jumbotron:
   title: storage.delete
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

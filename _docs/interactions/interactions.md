@@ -1,20 +1,27 @@
 ---
 title: Interactions
-excerpt: Interactions are interactive automations that use continuations to pause and resume a multi-step workflow.
-#social_image_url: /assets/images/search/kata.png
+excerpt: Interactions are interactive automations that use continuations to pause
+  and resume a multi-step workflow.
+summary: This page provides an overview of "Interactions" in Cerb, which are automated,
+  conversational processes designed to collect additional input through web-based
+  forms or external events. These interactions can pause between steps and resume
+  once the necessary input is received. Examples include troubleshooting interactions
+  that ask specific questions to diagnose issues and verification interactions that
+  send codes for email verification. Users can create custom interactions and integrate
+  them into various Cerb components like widgets, cards, and email messages. The page
+  also lists triggers used to build these interactions, such as those for worker interactions
+  and website visitor interactions.
 permalink: /docs/interactions/
 toc:
   title: Interactions
   expand: Reference
 jumbotron:
   title: Interactions
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
 ---
 

@@ -1,18 +1,30 @@
 ---
-layout: page
 title: Pricing for Cerb Cloud subscriptions
 excerpt: Deploy Cerb in the cloud or host it yourself. Start a free trial.
+summary: This page provides detailed information about the pricing and features of
+  Cerb Cloud subscriptions. It outlines the cost per seat for both yearly and monthly
+  billing, and describes the comprehensive services included in Cerb Cloud, such as
+  high availability, scalability, security, and performance optimization. The page
+  also explains the support options available, including standard and enterprise support,
+  and highlights the benefits of using Cerb Cloud, such as automated backups, 24/7
+  monitoring, and integrated email services. Additionally, it addresses frequently
+  asked questions about trial requirements, discounts for academic institutions and
+  non-profits, and the ability to use custom domains and email servers. The page emphasizes
+  the ease of transitioning from a Cerb Cloud trial to a self-hosted license, ensuring
+  a seamless experience for users.
+layout: page
 permalink: /pricing/
 redirect_from:
-  - /buy/
-  - /cloud/
-  - /demo/
-  - /pricing/cloud/
-  - /trial/
-  - /try/
-jumbotron: 
+- /buy/
+- /cloud/
+- /demo/
+- /pricing/cloud/
+- /trial/
+- /try/
+jumbotron:
   title: Pricing for Cerb Cloud subscriptions
-  tagline: Deploy a fully managed copy of Cerb in a fast, secure, and highly available environment
+  tagline: Deploy a fully managed copy of Cerb in a fast, secure, and highly available
+    environment
 keywords: pricing price cost subscription
 ---
 

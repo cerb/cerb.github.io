@@ -1,26 +1,29 @@
 ---
-title: "Say - Interaction Form Element"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: Say - Interaction Form Element
+excerpt: This page provides information on the "say" interaction form element used
+  in Cerb's website interaction forms.
+summary: This page provides information on the "say" interaction form element used
+  in Cerb's website interaction forms. It explains how the "say" element is utilized
+  to display blocks of text or Markdown within a form. The page includes a syntax
+  example demonstrating how to configure the "say" element with content in Markdown
+  format, highlighting the use of headings and paragraphs. Additionally, it outlines
+  the syntax options available for displaying content, such as using the "content"
+  attribute for Markdown and the "message" attribute for plain text.
 permalink: /docs/automations/triggers/interaction.website/elements/say/
 toc:
   title: Say
   expand: Automations
 jumbotron:
   title: Say
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: interaction.website &raquo;
+  - label: interaction.website &raquo;
     url: /docs/automations/triggers/interaction.website/
-  -
-    label: Elements &raquo;
+  - label: Elements &raquo;
     url: /docs/automations/triggers/interaction.website/#elements
 ---
 

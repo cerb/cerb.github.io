@@ -1,20 +1,22 @@
 ---
 title: Localization
-permalink: /docs/setup/configure/localization/
 excerpt: Each worker can configure their own timezone and language settings.
+summary: This page provides information on configuring localization settings in Cerb,
+  specifically focusing on timezone settings. It explains that each worker can set
+  their own timezone preferences, but also allows for the configuration of a default
+  timezone and time format for workers who have not set their own. By default, Cerb
+  uses the web server's timezone.
+permalink: /docs/setup/configure/localization/
 toc:
   expand: Admin Guide
 jumbotron:
   title: Localization
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Configure &raquo;
+  - label: Configure &raquo;
     url: /docs/setup/#configure
 ---
 

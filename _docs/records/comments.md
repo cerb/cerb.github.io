@@ -1,15 +1,22 @@
 ---
 title: Comments
+excerpt: This page explains the functionality of adding comments to records in Cerb,
+  which is useful for documenting changes, coordinating work, and asking questions.
+summary: This page explains the functionality of adding comments to records in Cerb,
+  which is useful for documenting changes, coordinating work, and asking questions.
+  It highlights how comments can be used to document progress on tasks, facilitating
+  quick information sharing and creating a historical record for future reference.
+  The page also describes the use of @mentions to notify specific workers about a
+  comment, allowing multiple workers to be notified simultaneously by including several
+  mentions within the comment.
 permalink: /docs/comments/
 jumbotron:
   title: Comments
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
 ---
 

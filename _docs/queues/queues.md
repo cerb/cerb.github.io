@@ -1,16 +1,24 @@
 ---
 title: Queues
-excerpt: Queues store a set of temporary messages from producers and distribute them to consumers in the order they were received.
-#social_image_url: /assets/images/search/kata.png
+excerpt: Queues store a set of temporary messages from producers and distribute them
+  to consumers in the order they were received.
+summary: "This page provides an overview of queues in Cerb, detailing their function
+  as temporary storage for messages from producers, which are then distributed to
+  consumers in the order received. It covers key aspects such as naming conventions
+  for queues, where each queue has a unique identifier often based on a reverse domain
+  name to ensure global uniqueness. The page explains the states of messages within
+  a queue\u2014available, in_flight, failed, or complete\u2014and how consumers interact
+  with these messages. It also discusses the retry mechanism for in_flight messages
+  and the conditions for marking messages as complete or failed. Additionally, the
+  page outlines how queues can be utilized in automations, with specific commands
+  for popping and pushing items in a queue."
 permalink: /docs/queues/
-toc:
-title: Queues
+toc: ~
 jumbotron:
   title: Queues
-  tagline:
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
 ---
 

@@ -1,18 +1,28 @@
 ---
 title: Chat Bot Portal
-excerpt: 
+excerpt: This page introduces Cerb's Chat Bot Portal, which allows users to create
+  and deploy chat bots directly from their web browser without the need for extensive
+  front-end or back-end development.
+summary: This page introduces Cerb's Chat Bot Portal, which allows users to create
+  and deploy chat bots directly from their web browser without the need for extensive
+  front-end or back-end development. These chat bots can be integrated into existing
+  websites with just a single line of code and can assist visitors with various tasks
+  such as contact methods, mailing list management, product explanations, signups,
+  ordering, scheduling, troubleshooting, surveys, and more. The page highlights the
+  ease of embedding bot interactions throughout a website and the ability to initiate
+  conversations via links shared through email, chats, or social media. Additionally,
+  a floating chat button is available on every page to help visitors explore their
+  options. A guide is provided for adding conversational bots to any website.
 permalink: /docs/portals/chat-bot/
 toc:
   title: Chat Bot
 jumbotron:
   title: Chat Bot
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Community Portals &raquo;
+  - label: Community Portals &raquo;
     url: /docs/portals/
 ---
 

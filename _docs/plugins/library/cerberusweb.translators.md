@@ -1,18 +1,25 @@
 ---
-title: "Plugin: Translation Editor"
+title: 'Plugin: Translation Editor'
+excerpt: This page provides information about the Translation Editor plugin for Cerb,
+  developed by Webgroup Media, LLC.
+summary: This page provides information about the Translation Editor plugin for Cerb,
+  developed by Webgroup Media, LLC. The plugin offers a graphical user interface (GUI)
+  for translating the Cerb interface into different languages, enhancing accessibility
+  for non-English speaking users. It integrates into the Cerb system by adding a 'Translations'
+  tab within the Configuration section. The page also details the specific extensions
+  included with the plugin, such as the Page Menu Item and Page Section, which facilitate
+  navigation and organization of translation tasks within the setup pages.
 permalink: /docs/plugins/cerberusweb.translators/
 toc:
-  title: "Translation Editor"
+  title: Translation Editor
   expand: Plugins
 jumbotron:
-  title: "Translation Editor"
-  tagline: 
+  title: Translation Editor
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

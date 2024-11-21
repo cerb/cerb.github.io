@@ -1,21 +1,31 @@
 ---
 title: Portal Records
+excerpt: This page provides detailed information about the "Portal" record type in
+  Cerb, including its API fields, dictionary placeholders, search query fields, and
+  worklist columns.
+summary: This page provides detailed information about the "Portal" record type in
+  Cerb, including its API fields, dictionary placeholders, search query fields, and
+  worklist columns. It outlines the structure and requirements for interacting with
+  portal records through the Records API, specifying fields such as `code`, `extension_id`,
+  `name`, `uri`, and `updated_at`. The page also describes the available dictionary
+  placeholders for use in automations and API responses, as well as optional placeholders
+  with key expansion. Additionally, it lists the search query fields that can be used
+  to filter portal records and the columns available for display in portal worklists.
+  This comprehensive guide is essential for developers and users managing portal records
+  within Cerb.
 permalink: /docs/records/types/community_portal/
 toc:
   title: Portal
   expand: Records
 jumbotron:
   title: Portal
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

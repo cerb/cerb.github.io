@@ -1,18 +1,26 @@
 ---
 title: Backups
+excerpt: This page provides a comprehensive guide on setting up and managing backups
+  for Cerb installations.
+summary: This page provides a comprehensive guide on setting up and managing backups
+  for Cerb installations. It covers the creation of a dedicated backups user and database
+  user with restricted access for security purposes. The document emphasizes the importance
+  of backing up both the MySQL database and the storage filesystem, recommending tools
+  like mysqldump for database backups and rsync for filesystem backups. It also discusses
+  enabling and backing up MySQL's binary logs for incremental backups and point-in-time
+  recovery. The guide suggests using Amazon S3 for off-site backups, detailing the
+  use of AWS CLI for automating the backup process. It highlights best practices for
+  ensuring data integrity and security, including the use of shadow passwords and
+  IAM roles for restricted access. The document is tailored for Unix-based systems
+  and provides detailed command-line instructions for each step.
 permalink: /docs/backups/
-excerpt: To fully protect your Cerb data you need to backup both the MySQL database and the storage filesystem.
 jumbotron:
   title: Backups
-  #tagline: ...
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Admin Guide &raquo;
-  -
-    label: Installation &raquo;
+  - label: Admin Guide &raquo;
+  - label: Installation &raquo;
     url: /docs/installation/self-hosted/
 ---
 

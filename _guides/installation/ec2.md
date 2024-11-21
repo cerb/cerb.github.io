@@ -1,21 +1,32 @@
 ---
 title: Launch EC2 instances in Amazon Web Services
+excerpt: This webpage provides a comprehensive guide on launching and configuring
+  Amazon EC2 instances in preparation for installing Cerb.
+summary: This webpage provides a comprehensive guide on launching and configuring
+  Amazon EC2 instances in preparation for installing Cerb. It emphasizes the benefits
+  of using cloud computing with Amazon Web Services (AWS) for scalable and high-availability
+  server solutions. The guide walks through the process of creating an EC2 instance,
+  including selecting an Amazon Machine Image (AMI), choosing an instance type, configuring
+  instance details, adding storage, tagging, and setting up security groups. It also
+  covers connecting to the EC2 instance via SSH and provides recommendations for using
+  additional AWS services like Elastic Filesystem (EFS) and Relational Database Service
+  (RDS) for optimal performance and reliability. The guide suggests adopting a cloud
+  computing mindset by treating EC2 instances as disposable and using auto-scaling
+  and load balancing for redundancy. Additionally, it offers guidance on using Cerb
+  Cloud for those unfamiliar with cloud computing to ensure high availability without
+  the complexity of managing infrastructure.
 layout: integration
 topic: Installation
-excerpt: This guide explains how to create an EC2 instance in preparation for installing Cerb.
 permalink: /guides/installation/ec2/
 jumbotron:
   title: Launch EC2 instances in Amazon Web Services
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Installation &raquo;
+  - label: Installation &raquo;
     url: /resources/guides/#installation
 ---
 

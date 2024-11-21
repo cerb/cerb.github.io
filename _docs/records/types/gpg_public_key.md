@@ -1,21 +1,30 @@
 ---
 title: PGP Public Key Records
+excerpt: This page provides detailed information about PGP Public Key records in Cerb,
+  including their structure and usage within the system.
+summary: This page provides detailed information about PGP Public Key records in Cerb,
+  including their structure and usage within the system. It outlines the fields available
+  in the Records API, such as `fingerprint`, `key_text`, and `name`, and explains
+  their types and purposes. The page also describes dictionary placeholders for automations,
+  snippets, and API responses, offering fields like `expires_at`, `fingerprint`, and
+  `record_url`. Additionally, it details search query fields that can be used to filter
+  PGP public key records, such as `expires:`, `fingerprint:`, and `name:`. Lastly,
+  it lists the worklist columns available for displaying PGP public key information,
+  including `g_expires_at`, `g_fingerprint`, and `g_name`. This comprehensive guide
+  is essential for managing and utilizing PGP Public Key records within Cerb.
 permalink: /docs/records/types/gpg_public_key/
 toc:
   title: PGP Public Key
   expand: Records
 jumbotron:
   title: PGP Public Key
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

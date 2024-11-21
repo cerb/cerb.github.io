@@ -1,6 +1,15 @@
 ---
 title: Launch Cerb in Docker
-excerpt: Launch Cerb using Docker Compose for evaluation and development.
+excerpt: This page provides a comprehensive guide on launching Cerb using Docker for
+  local evaluation, development, and testing.
+summary: This page provides a comprehensive guide on launching Cerb using Docker for
+  local evaluation, development, and testing. It details the setup process, including
+  installing Docker, starting containers with Docker Compose, and accessing the Cerb
+  installer via a web browser. The guide also covers updating Cerb, changing the web
+  server port, connecting to the MySQL console, and managing containers, including
+  pausing, resuming, and deleting them. Additionally, it explains how to edit code
+  with immediate reflection in the containers, making it a useful resource for developers
+  working with Cerb in a Docker environment.
 toc:
   expand: Admin Guide
 permalink: /docs/installation/docker/
@@ -8,13 +17,10 @@ jumbotron:
   title: Launch Cerb in Docker
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Admin Guide &raquo;
-  -
-    label: Installation &raquo;
+  - label: Admin Guide &raquo;
+  - label: Installation &raquo;
     url: /docs/installation/
 ---
 

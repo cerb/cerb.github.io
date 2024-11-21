@@ -1,20 +1,28 @@
 ---
 title: Customer Satisfaction Surveys
 excerpt: Gather and monitor customer satisfaction metrics like NPS, CSAT, and CES.
+summary: 'This page provides a comprehensive guide on implementing and utilizing customer
+  satisfaction surveys within Cerb. It introduces a workflow that tracks three key
+  metrics: Net Promoter Score (NPS), Customer Satisfaction (CSAT), and Customer Effort
+  Score (CES). The guide covers installation, customization, and usage of the surveys,
+  including testing and broadcasting NPS surveys, enabling and testing CSAT and CES
+  surveys, and using the satisfaction dashboard. It also includes detailed instructions
+  on setting up automations, creating survey links, and managing survey responses
+  through a community portal. The page serves as a reference for building custom satisfaction
+  workflows, offering a template and configuration details for integrating these surveys
+  into Cerb.'
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.satisfaction.surveys/
 redirect_from:
-  - /packages/customer-satisfaction/
+- /packages/customer-satisfaction/
 jumbotron:
   title: Customer Satisfaction Surveys
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Workflows &raquo;
+  - label: Workflows &raquo;
     url: /resources/workflows/
 ---
 

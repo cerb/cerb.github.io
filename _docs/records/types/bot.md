@@ -1,21 +1,27 @@
 ---
 title: Bot Records
+excerpt: This page provides detailed information about the bot records in Cerb, including
+  their API fields, dictionary placeholders, search query fields, and worklist columns.
+summary: This page provides detailed information about the bot records in Cerb, including
+  their API fields, dictionary placeholders, search query fields, and worklist columns.
+  It outlines the structure and types of data associated with bot records, such as
+  creation and update timestamps, owner information, and status indicators like whether
+  a bot is disabled. The page also describes how these fields can be used in various
+  contexts, such as automations, snippets, and API responses, and provides guidance
+  on how to filter and display bot records using search queries and worklist columns.
 permalink: /docs/records/types/bot/
 toc:
   title: Bot
   expand: Records
 jumbotron:
   title: Bot
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

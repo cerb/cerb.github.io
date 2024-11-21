@@ -1,5 +1,13 @@
 ---
 title: Groups
+excerpt: This page provides instructions for modifying group rosters in Cerb using
+  the REST API.
+summary: This page provides instructions for modifying group rosters in Cerb using
+  the REST API. It details the use of the PUT method at the endpoint `/rest/groups/members.json`
+  to update group memberships. The page outlines the required parameters, specifically
+  a JSON-formatted string that specifies changes to group memberships, such as assigning
+  roles or removing members. An example is provided to demonstrate how to structure
+  the JSON data and make the API call to update group information.
 permalink: /docs/api/endpoints/groups/
 toc:
   expand: API
@@ -7,14 +15,11 @@ jumbotron:
   title: Groups
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
-  -
-    label: Endpoints &raquo;
+  - label: Endpoints &raquo;
     url: /docs/api/endpoints/
 ---
 

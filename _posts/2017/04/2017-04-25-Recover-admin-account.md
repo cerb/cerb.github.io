@@ -1,9 +1,17 @@
 ---
+title: 'Tip: Recover your administrator account'
+excerpt: You can recover your administrator account by switching back to password
+  authentication directly from the database.
+summary: This page provides a step-by-step guide on how to recover an administrator
+  account in Cerb if you become locked out, such as when an LDAP server is unavailable.
+  It explains how to switch back to password authentication directly from the database
+  by connecting to the database, identifying the administrator's worker ID, and updating
+  the authentication settings. It also includes instructions for resetting the password
+  and clearing the server-side cache. For Cerb Cloud users, it advises contacting
+  support for assistance.
 layout: post
-title: "Tip: Recover your administrator account"
-excerpt: You can recover your administrator account by switching back to password authentication directly from the database.
 author: The Cerb Team
-date: 2017-04-25 13:05:00 -0700
+date: "2017-04-25 13:05:00 -0700"
 permalink: /tips/recover-admin-account/
 tags: cerb tips mailbag
 ---

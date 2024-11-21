@@ -1,18 +1,25 @@
 ---
-title: "Plugin: Webhooks"
+title: 'Plugin: Webhooks'
+excerpt: This page provides detailed information about the Webhooks plugin for Cerb,
+  developed by Webgroup Media, LLC.
+summary: This page provides detailed information about the Webhooks plugin for Cerb,
+  developed by Webgroup Media, LLC. The plugin allows Cerb to handle webhooks and
+  trigger bot behaviors in response. It includes various extensions such as Bot Event,
+  Controller, Page Section, Portal, and Record Type, each with specific functionalities
+  like receiving webhooks, managing webhook controllers, and setting up webhook listener
+  sections and portals. The plugin is identified by the ID "cerb.webhooks" and is
+  located in the "features/cerb.webhooks/" path.
 permalink: /docs/plugins/cerb.webhooks/
 toc:
-  title: "Webhooks"
+  title: Webhooks
   expand: Plugins
 jumbotron:
-  title: "Webhooks"
-  tagline: 
+  title: Webhooks
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

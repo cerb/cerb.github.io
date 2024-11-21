@@ -1,18 +1,26 @@
 ---
-title: "Plugin: Collaborative Feed Reader"
+title: 'Plugin: Collaborative Feed Reader'
+excerpt: This page provides detailed information about the Collaborative Feed Reader
+  plugin for Cerb, developed by Webgroup Media, LLC.
+summary: This page provides detailed information about the Collaborative Feed Reader
+  plugin for Cerb, developed by Webgroup Media, LLC. The plugin facilitates the creation
+  of new records for Feeds and Feed Items, enabling users to collaboratively manage
+  and monitor RSS/Atom feeds. It supports various tasks such as moderating blog comments,
+  auditing wiki changes, reading new forum posts, and tracking vendor announcements.
+  The plugin includes several extensions like Bot Event, Event Listener, Page Section,
+  Record Type, and Scheduled Job, each serving specific functions to enhance feed
+  management and collaboration.
 permalink: /docs/plugins/cerberusweb.feed_reader/
 toc:
-  title: "Collaborative Feed Reader"
+  title: Collaborative Feed Reader
   expand: Plugins
 jumbotron:
-  title: "Collaborative Feed Reader"
-  tagline: 
+  title: Collaborative Feed Reader
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

@@ -1,19 +1,27 @@
 ---
-title: "Data Queries: Calendar Events"
-excerpt: 
+title: 'Data Queries: Calendar Events'
+excerpt: This page provides detailed information on how to perform data queries for
+  calendar events using the `calendar.events` function.
+summary: This page provides detailed information on how to perform data queries for
+  calendar events using the `calendar.events` function. It outlines the necessary
+  inputs required for the queries, such as specifying which calendar records to include,
+  the date range for the events, and any additional keys to expand in the returned
+  event dictionaries. The page also describes the response format, which is primarily
+  in a table-based dictionary format suitable for integration with sheets and APIs.
+  An example query is provided to illustrate how to retrieve events from specified
+  calendars within a given date range, demonstrating the practical application of
+  the function.
 permalink: /docs/data-queries/calendar/events/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: Calendar Events
 jumbotron:
   title: Calendar Events
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

@@ -1,21 +1,26 @@
 ---
-title: "Scripting Reference: Operators"
-excerpt: 
+title: 'Scripting Reference: Operators'
+excerpt: This page serves as a scripting reference for operators in Cerb, detailing
+  how to use various operators to perform comparisons and assignments in expressions.
+summary: This page serves as a scripting reference for operators in Cerb, detailing
+  how to use various operators to perform comparisons and assignments in expressions.
+  It covers assignment with the `=` operator, equality checks with `==`, inequality
+  with `!=`, and comparisons using `<`, `<=`, `>`, and `>=`. Additionally, it explains
+  how to check for the presence of a value in a list using `in` and `not in`. The
+  page provides code examples for each operator to illustrate their usage in practical
+  scenarios.
 permalink: /docs/scripting/operators/
 toc:
   title: Operators
   expand: Developer Guide
 jumbotron:
   title: Operators
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Developer Guide &raquo;
-  -
-    label: Scripting &raquo;
+  - label: Developer Guide &raquo;
+  - label: Scripting &raquo;
     url: /docs/scripting/
 ---
 

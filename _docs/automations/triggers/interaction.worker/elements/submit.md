@@ -1,26 +1,31 @@
 ---
-title: "Submit - Interaction Form Element"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: Submit - Interaction Form Element
+excerpt: This page provides detailed information on the "submit" element in interaction
+  web forms within Cerb.
+summary: This page provides detailed information on the "submit" element in interaction
+  web forms within Cerb. It explains how the "submit" element automatically adds 'Continue'
+  and 'Reset' buttons when an interaction exits in the await state, eliminating the
+  need for manual addition. The page also covers the customization of buttons, allowing
+  for custom labels, icons, styles, and values, with options for multiple 'continue'
+  buttons for different actions like yes/no or allow/deny. It describes how to conditionally
+  hide buttons and outlines the default behavior when custom buttons are not specified.
+  Additionally, it discusses alternative button styles to visually distinguish between
+  primary and secondary options.
 permalink: /docs/automations/triggers/interaction.worker/elements/submit/
 toc:
   title: Submit
   expand: Automations
 jumbotron:
   title: Submit
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: interaction.worker &raquo;
+  - label: interaction.worker &raquo;
     url: /docs/automations/triggers/interaction.worker/
-  -
-    label: Elements &raquo;
+  - label: Elements &raquo;
     url: /docs/automations/triggers/interaction.worker/#elements
 ---
 

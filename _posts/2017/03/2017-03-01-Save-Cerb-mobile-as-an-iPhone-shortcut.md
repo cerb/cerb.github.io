@@ -1,9 +1,15 @@
 ---
-layout: post
-title: "Tip: Save Cerb mobile as an iPhone shortcut"
+title: 'Tip: Save Cerb mobile as an iPhone shortcut'
 excerpt: Add a shortcut to Cerb's mobile interface on your iPhone home screen.
+summary: This page provides instructions for saving Cerb as a shortcut on an iPhone
+  home screen using Safari Mobile. It guides users through switching to the mobile
+  interface, using the Share icon to add Cerb to the home screen, and renaming the
+  shortcut. It also notes that users will need to log in again the first time they
+  use the new shortcut, as cookies are not shared between Safari Mobile and website
+  shortcuts.
+layout: post
 author: The Cerb Team
-date: 2017-03-01 17:53:00 -0700
+date: "2017-03-01 17:53:00 -0700"
 permalink: /tips/save-cerb-mobile-iphone-shortcut/
 tags: cerb tips mailbag
 ---

@@ -1,5 +1,16 @@
 ---
 title: Cerb Web-API Library for Node.js
+excerpt: This page provides a detailed overview of the Cerb Web-API Library for Node.js,
+  which is designed to facilitate interaction with the Cerb API.
+summary: This page provides a detailed overview of the Cerb Web-API Library for Node.js,
+  which is designed to facilitate interaction with the Cerb API. It includes the source
+  code for the `cerb.lib.js` module, which allows Node.js applications to perform
+  API requests such as GET, POST, PUT, and DELETE. The page explains how to set up
+  the library by including the file in a script, initializing it with `require()`,
+  and configuring API credentials using the `setCredentials()` function. It also provides
+  example usage, demonstrating how to make API calls to retrieve data, such as worker
+  information, using the library's methods. The page emphasizes the ease of integrating
+  Cerb's API into Node.js applications through this library.
 permalink: /docs/api/libraries/nodejs/
 toc:
   expand: API
@@ -7,14 +18,11 @@ jumbotron:
   title: Cerb Web-API Library for Node.js
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
-  -
-    label: Libraries &raquo;
+  - label: Libraries &raquo;
     url: /docs/api/libraries/
 ---
 

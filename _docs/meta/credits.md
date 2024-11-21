@@ -1,5 +1,16 @@
 ---
 title: Credits
+excerpt: This page provides credits for the development and contributions to Cerb,
+  highlighting key individuals such as Jeff Standen and Dan Hildebrandt, who have
+  played significant roles in its development.
+summary: This page provides credits for the development and contributions to Cerb,
+  highlighting key individuals such as Jeff Standen and Dan Hildebrandt, who have
+  played significant roles in its development. It outlines the platform and infrastructure
+  used, including Devblocks, HTML5, PHP, MySQL, Amazon Web Services, Docker, and GitHub.
+  The page also lists various libraries and tools integrated into Cerb, such as Ace,
+  C3.js, jQuery, PHPUnit, and Swift Mailer, among others, which support functionalities
+  like code editing, charting, and secure communications. Additionally, it mentions
+  the licenses and references related to the project.
 permalink: /docs/credits/
 layout: docs
 jumbotron:

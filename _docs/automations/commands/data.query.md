@@ -1,23 +1,27 @@
 ---
-title: "Automations: data.query"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: data.query'
+excerpt: This page provides detailed information on the "data.query" command used
+  in Cerb automations.
+summary: This page provides detailed information on the "data.query" command used
+  in Cerb automations. It explains how to execute a data query and handle the response,
+  including the syntax for inputs, outputs, and handling different states such as
+  success, simulation, and error. The page outlines how to structure the query, manage
+  query parameters, and process the results or errors through specified commands.
+  It serves as a guide for implementing data queries within Cerb's automation framework,
+  ensuring users can effectively retrieve and manage data.
 permalink: /docs/automations/commands/data.query/
 toc:
   title: data.query
   expand: Automations
 jumbotron:
   title: data.query
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

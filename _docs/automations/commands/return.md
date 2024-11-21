@@ -1,23 +1,26 @@
 ---
-title: "Automations: return"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: return'
+excerpt: This page provides information on the "return" command in Cerb automations,
+  which is used to successfully terminate an automation in the `return` state and
+  return a dictionary.
+summary: This page provides information on the "return" command in Cerb automations,
+  which is used to successfully terminate an automation in the `return` state and
+  return a dictionary. It includes syntax examples, demonstrating how to use the command
+  to output a message with dynamic content. The specific structure of the `return:`
+  dictionary is determined by the automation trigger.
 permalink: /docs/automations/commands/return/
 toc:
   title: return
   expand: Automations
 jumbotron:
   title: return
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

@@ -1,15 +1,20 @@
 ---
 title: Activity Log
+excerpt: This page describes the activity log feature in Cerb, which provides an auditable
+  history of events affecting records.
+summary: This page describes the activity log feature in Cerb, which provides an auditable
+  history of events affecting records. Each log entry includes details such as the
+  timestamp of the event, the type of activity (e.g., comment, record deletion, failed
+  login), the actor responsible (which could be a worker, contact, or bot), and the
+  target record impacted by the event.
 permalink: /docs/activity-log/
 jumbotron:
   title: Activity Log
   tagline: An auditable history of past record events
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
 ---
 

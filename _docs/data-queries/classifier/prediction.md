@@ -1,19 +1,26 @@
 ---
-title: "Data Queries: Classifier Prediction"
-excerpt: 
+title: 'Data Queries: Classifier Prediction'
+excerpt: This page provides information on how to use the `classifier.prediction`
+  feature in Cerb to obtain predicted classifications for given text inputs using
+  specified classifiers.
+summary: This page provides information on how to use the `classifier.prediction`
+  feature in Cerb to obtain predicted classifications for given text inputs using
+  specified classifiers. It details the necessary inputs, such as the classifier to
+  use and the text to classify, and describes the available response formats, with
+  the default being a dictionary format suitable for spreadsheets and API results.
+  An example is provided to illustrate how a "Yes/No" classifier might predict an
+  `answer.maybe` for the input "I am not sure."
 permalink: /docs/data-queries/classifier/prediction/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: Classifier Prediction
 jumbotron:
   title: Classifier Prediction
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

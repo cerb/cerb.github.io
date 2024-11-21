@@ -1,23 +1,28 @@
 ---
-title: "Automations: decrypt.pgp"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: decrypt.pgp'
+excerpt: This page provides detailed information on the "decrypt.pgp" command used
+  in Cerb automations to decrypt PGP-encrypted text blocks.
+summary: This page provides detailed information on the "decrypt.pgp" command used
+  in Cerb automations to decrypt PGP-encrypted text blocks. It outlines the syntax
+  and structure for using this command, including the necessary inputs, such as the
+  PGP-encrypted message, and the expected output, which is the decrypted message.
+  The page also explains the different states of the automation process, such as on_success,
+  on_simulate, and on_error, detailing the actions to be taken in each scenario. The
+  documentation is designed to guide users in effectively implementing the decryption
+  process within their automation workflows.
 permalink: /docs/automations/commands/decrypt.pgp/
 toc:
   title: decrypt.pgp
   expand: Automations
 jumbotron:
   title: decrypt.pgp
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

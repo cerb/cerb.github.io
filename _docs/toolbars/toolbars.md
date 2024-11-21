@@ -1,19 +1,27 @@
 ---
 title: Toolbars
-excerpt: Toolbars...
-#social_image_url: /assets/images/search/kata.png
+excerpt: This page provides a detailed overview of toolbars in Cerb, focusing on their
+  configuration and functionality.
+summary: This page provides a detailed overview of toolbars in Cerb, focusing on their
+  configuration and functionality. It explains that toolbars are collections of interactions
+  and menus, with top-level items displayed as buttons and menu items as links. The
+  page introduces the KATA dialect used for configuring toolbars, allowing custom
+  input through placeholders. It describes how interactions are initiated and the
+  various attributes that can be configured, such as URI, inputs, labels, icons, tooltips,
+  keyboard shortcuts, badges, and conditional visibility. Additionally, it covers
+  menu configurations, which can include interactions and submenus. The page also
+  lists various toolbar configurations available in Cerb, such as for automation editing,
+  email composing, and record viewing.
 permalink: /docs/toolbars/
 toc:
   title: Toolbars
 jumbotron:
   title: Toolbars
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
 ---
 

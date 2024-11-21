@@ -1,5 +1,16 @@
 ---
 title: Cerb Web-API Library for PHP
+excerpt: This page provides a PHP library for interacting with the Cerb Web-API, including
+  the source code for the CerbApi.
+summary: This page provides a PHP library for interacting with the Cerb Web-API, including
+  the source code for the CerbApi.php file. It outlines the implementation of a class,
+  Cerb_WebAPI, which facilitates HTTP requests (GET, PUT, POST, PATCH, DELETE) to
+  a Cerb installation using cURL. The library requires the 'curl' PHP extension and
+  includes methods for setting up authentication using access and secret keys. The
+  page also includes a usage example demonstrating how to instantiate the Cerb_WebAPI
+  class and make API calls, with placeholders for the base URL, access key, and secret
+  key. The code is provided under a permissive license, allowing for modification
+  and distribution.
 permalink: /docs/api/libraries/php/
 toc:
   expand: API
@@ -7,14 +18,11 @@ jumbotron:
   title: Cerb Web-API Library for PHP
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
-  -
-    label: Libraries &raquo;
+  - label: Libraries &raquo;
     url: /docs/api/libraries/
 ---
 

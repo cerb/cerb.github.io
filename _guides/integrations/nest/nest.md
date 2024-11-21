@@ -1,6 +1,13 @@
 ---
 title: Integrate with Nest
 excerpt: A step-by-step guide for integrating Cerb and Nest.
+summary: This page provides a comprehensive guide on integrating Cerb with Nest, enabling
+  the use of Nest's API for automation through Cerb bots. It outlines the steps to
+  create an OAuth application in the Nest Developer Console, including setting up
+  necessary credentials like Client ID and Client Secret. The guide then details how
+  to create a Nest service within Cerb, link a connected account to Nest, and utilize
+  this connection in bot behaviors. This integration allows for executing HTTP requests
+  and automating tasks using Nest's API directly from Cerb.
 permalink: /guides/integrations/nest/
 social_image_url: /assets/images/guides/nest/cerb-and-nest.png
 layout: integration
@@ -10,17 +17,13 @@ jumbotron:
   title: Cerb + Nest
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Nest &raquo;
+  - label: Nest &raquo;
     url: /resources/guides/#nest
 ---
 

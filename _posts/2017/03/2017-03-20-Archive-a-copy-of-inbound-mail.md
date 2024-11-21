@@ -1,9 +1,15 @@
 ---
-layout: post
-title: "Tip: Archive a copy of all inbound mail"
+title: 'Tip: Archive a copy of all inbound mail'
 excerpt: Configure Cerb to archive a copy of all inbound mail.
+summary: This page provides a tip for archiving all inbound mail in Cerb before it
+  is processed. By adding a specific line of code to the `framework.config.php` file,
+  users can ensure that all incoming messages are archived in the filesystem under
+  a structured directory path based on the year, month, and day. The archived files
+  are not further processed by Cerb, allowing users the flexibility to move or delete
+  them as necessary.
+layout: post
 author: The Cerb Team
-date: 2017-03-20 13:55:00 -0700
+date: "2017-03-20 13:55:00 -0700"
 permalink: /tips/archive-inbound-mail/
 tags: cerb tips mailbag
 ---

@@ -1,23 +1,30 @@
 ---
-title: "mail.route"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: mail.route
+excerpt: This page provides detailed information on the "mail.route" automation events
+  in Cerb, which are used to determine the appropriate destination group inbox for
+  incoming messages based on various properties such as sender, subject, recipients,
+  headers, and body content.
+summary: This page provides detailed information on the "mail.route" automation events
+  in Cerb, which are used to determine the appropriate destination group inbox for
+  incoming messages based on various properties such as sender, subject, recipients,
+  headers, and body content. It outlines the placeholders available in the automation
+  event dictionary, including sender email records, message subject, headers, body
+  in plaintext and HTML, and recipient addresses. Additionally, it describes the outputs
+  of the automation events, specifying how to designate the group or bucket for message
+  delivery using either IDs or names.
 permalink: /docs/automations/events/mail.route/
 toc:
   title: mail.route
   expand: Automations
 jumbotron:
   title: mail.route
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Events &raquo;
+  - label: Events &raquo;
     url: /docs/automations/#events
 ---
 

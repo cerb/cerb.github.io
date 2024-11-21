@@ -1,23 +1,26 @@
 ---
 title: draft.read
-#excerpt: Toolbars...
-#social_image_url: /assets/images/search/kata.png
+excerpt: This page provides detailed information on configuring and using the `draft.read`
+  toolbar in Cerb when reading a mail draft.
+summary: This page provides detailed information on configuring and using the `draft.read`
+  toolbar in Cerb when reading a mail draft. It guides users on how to navigate to
+  the toolbar settings, edit the `draft.read` record, and add interactions using toolbar
+  KATA. The page outlines available placeholders for draft and worker records, and
+  describes the interactions, including the caller parameters and expected outputs.
+  It also specifies how to refresh widgets after interactions.
 permalink: /docs/toolbars/interactions/draft.read/
 toc:
   title: Toolbars
   expand: Automations
 jumbotron:
   title: draft.read
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Toolbars &raquo;
+  - label: Toolbars &raquo;
     url: /docs/toolbars/
 ---
 

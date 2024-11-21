@@ -1,21 +1,28 @@
 ---
 title: Custom Fieldset Records
+excerpt: This page provides detailed information about Custom Fieldset records in
+  Cerb, including their structure and usage within the platform.
+summary: This page provides detailed information about Custom Fieldset records in
+  Cerb, including their structure and usage within the platform. It outlines the fields
+  available in the Records API, such as context, name, owner context, and updated
+  timestamp, and explains how these fields can be utilized in automations, snippets,
+  and API responses through dictionary placeholders. Additionally, it describes the
+  search query fields that can be used to filter custom fieldset records and the worklist
+  columns available for organizing and displaying these records. The page serves as
+  a comprehensive guide for managing and interacting with custom fieldsets in Cerb.
 permalink: /docs/records/types/custom_fieldset/
 toc:
   title: Custom Fieldset
   expand: Records
 jumbotron:
   title: Custom Fieldset
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

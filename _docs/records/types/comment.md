@@ -1,21 +1,31 @@
 ---
 title: Comment Records
+excerpt: This page provides detailed information about the structure and functionality
+  of comment records in Cerb.
+summary: This page provides detailed information about the structure and functionality
+  of comment records in Cerb. It outlines the fields available in the Records API,
+  including required fields such as author context, author ID, comment text, target
+  context, and target ID. The page also describes dictionary placeholders used in
+  automations, snippets, and API responses, highlighting fields like author, comment
+  content, and creation date. Additionally, it covers search query fields that allow
+  filtering comments based on various criteria such as attachments, author, comment
+  content, creation date, and more. Lastly, it lists the worklist columns available
+  for organizing comment data, including target, creation date, ID, markdown status,
+  and custom fields. This comprehensive guide is essential for understanding and utilizing
+  comment records within the Cerb platform.
 permalink: /docs/records/types/comment/
 toc:
   title: Comment
   expand: Records
 jumbotron:
   title: Comment
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

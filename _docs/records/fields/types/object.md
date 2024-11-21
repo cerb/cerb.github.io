@@ -1,21 +1,25 @@
 ---
 title: Object Record Fields
+excerpt: This page provides information on object record fields in Cerb, which consist
+  of collections of keys and their associated values.
+summary: This page provides information on object record fields in Cerb, which consist
+  of collections of keys and their associated values. It explains how these fields
+  can be represented in JSON format within packages and how they can be utilized in
+  PUT or POST requests through the Records API. The examples illustrate how to structure
+  data for fields such as "color" and "quantity" using both JSON and API request formats.
 permalink: /docs/records/fields/types/object/
 toc:
   title: Object
   expand: Records
 jumbotron:
   title: Object
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Field Types &raquo;
+  - label: Field Types &raquo;
     url: /docs/records/#fields
 ---
 

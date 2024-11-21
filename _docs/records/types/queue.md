@@ -1,21 +1,29 @@
 ---
 title: Queue Records
+excerpt: This page provides detailed information about Queue Records in Cerb, including
+  their structure and usage within the system.
+summary: This page provides detailed information about Queue Records in Cerb, including
+  their structure and usage within the system. It outlines the fields available in
+  the Records API, such as creation and update timestamps, links, and the queue name.
+  The page also describes dictionary placeholders used in automations, snippets, and
+  API responses, offering a range of fields like context, label, and record URL. Additionally,
+  it covers search query fields that can be used to filter queue records based on
+  criteria like creation date, fieldset, and watchers. Lastly, it lists the worklist
+  columns available for displaying queue records, including custom fields and standard
+  attributes like ID, name, and timestamps.
 permalink: /docs/records/types/queue/
 toc:
   title: Queue
   expand: Records
 jumbotron:
   title: Queue
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

@@ -1,25 +1,37 @@
 ---
 title: Plugins
+excerpt: This page provides a comprehensive guide on using plugins in Cerb to enhance
+  and customize its functionality without conflicting with the core platform updates.
+summary: This page provides a comprehensive guide on using plugins in Cerb to enhance
+  and customize its functionality without conflicting with the core platform updates.
+  It explains the structure and components of plugins, including IDs, manifests, extensions,
+  events, patches, classloader, permissions, translations, resources, templates, and
+  activity points. The page details how plugins can integrate with third-party services,
+  add new record types, augment automations, and expand workspaces and dashboards.
+  It also covers the requirements and dependencies for plugins, how to register extensions,
+  and the use of the Smarty template engine for plugin templates. Additionally, it
+  outlines the library of features, authentication, integration, legacy components,
+  localization, record types, and storage options available through plugins. The guide
+  emphasizes the importance of using plugins to maintain simplicity and efficiency
+  in Cerb while allowing for extensive customization and functionality expansion.
 permalink: /docs/plugins/
 redirect_from:
-  - /docs/plugins/manifests/
-  - /docs/plugins/extensions/
-  - /docs/plugins/events/
-  - /docs/plugins/patches/
-  - /docs/plugins/classloader/
-  - /docs/plugins/permissions/
-  - /docs/plugins/translations/
-  - /docs/plugins/resources/
-  - /docs/plugins/templates/
-
+- /docs/plugins/manifests/
+- /docs/plugins/extensions/
+- /docs/plugins/events/
+- /docs/plugins/patches/
+- /docs/plugins/classloader/
+- /docs/plugins/permissions/
+- /docs/plugins/translations/
+- /docs/plugins/resources/
+- /docs/plugins/templates/
 toc:
   title: Plugins
 jumbotron:
   title: Plugins
   tagline: Add new functionality to Cerb
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
 ---
 

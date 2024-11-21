@@ -1,15 +1,25 @@
 ---
 title: Worklists
+excerpt: This page provides a comprehensive overview of worklists in Cerb, highlighting
+  their functionality as customizable, searchable, pageable, and sortable sets of
+  records.
+summary: This page provides a comprehensive overview of worklists in Cerb, highlighting
+  their functionality as customizable, searchable, pageable, and sortable sets of
+  records. Key features include the ability to search and filter records, sort them
+  by specific fields, and view detailed information through the peek function. Worklists
+  support pagination for managing large sets of data and allow for subtotals to group
+  records by similar values. Users can perform bulk updates on selected records, import
+  and export data in various formats, and utilize explore mode for sequentially viewing
+  record profiles. These features enable efficient data management and streamlined
+  workflows within Cerb.
 permalink: /docs/worklists/
 jumbotron:
   title: Worklists
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Workspaces &raquo;
+  - label: Workspaces &raquo;
     url: /docs/workspaces/
 ---
 

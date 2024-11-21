@@ -1,19 +1,25 @@
 ---
 title: Search
+excerpt: This page discusses the implementation of full-text search filters in Cerb
+  worklists, which allow users to search record content using specific terms and phrases.
+summary: This page discusses the implementation of full-text search filters in Cerb
+  worklists, which allow users to search record content using specific terms and phrases.
+  It explains that while MySQL's FULLTEXT indexes are used by default and optimized
+  for efficiency, they may not be ideal for larger environments. For scalability,
+  the page suggests switching to more robust search engines like Elasticsearch or
+  Sphinx, which offer faster performance and greater control over content indexing,
+  albeit requiring additional service management.
 permalink: /docs/setup/configure/search/
 toc:
   expand: Admin Guide
 jumbotron:
   title: Search
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Configure &raquo;
+  - label: Configure &raquo;
     url: /docs/setup/#configure
 ---
 

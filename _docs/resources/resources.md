@@ -1,16 +1,24 @@
 ---
 title: Resources
-excerpt: Resources are shared assets used by automations and widgets.
-#social_image_url: /assets/images/search/kata.png
+excerpt: This page provides an overview of resources in Cerb, which are shared assets
+  utilized by automations and widgets.
+summary: 'This page provides an overview of resources in Cerb, which are shared assets
+  utilized by automations and widgets. It explains the two main types of resources:
+  file-based, which involve infrequently changing uploaded files, and automation-based,
+  which dynamically generate resources by fetching and transforming live data. The
+  page highlights the importance of resources in efficiently managing large data sets
+  for map widgets, providing logo images and stylesheets for portals, and supplying
+  datasets for charts and dashboards. It also details various resource types, including
+  datasets in CSV and JSON Lines formats, fonts, images, maps, map points, and map
+  properties, each serving specific functions within the Cerb platform.'
 permalink: /docs/resources/
 toc:
   title: Resources
 jumbotron:
   title: Resources
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
 ---
 

@@ -1,17 +1,23 @@
 ---
 title: Email Signatures
+excerpt: This page provides information on how email signatures are managed in Cerb.
+summary: "This page provides information on how email signatures are managed in Cerb.
+  It explains that signatures are automatically appended to emails using a `#signature`
+  placeholder and can be configured for entire groups or buckets rather than individual
+  workers. This approach ensures consistent signatures across teams and allows for
+  easy switching between different brands and markets. The page also details how signatures
+  can include placeholders for personalization, and how workers can adjust their preferences
+  for signature placement or disable automatic insertion. Signature records can be
+  created and modified through the \"Search \xBB Email Signatures\" feature."
 permalink: /docs/groups/signatures/
 toc:
   title: Signatures
 jumbotron:
   title: Signatures
-  #tagline: ...
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Groups &raquo;
+  - label: Groups &raquo;
     url: /docs/groups/
 ---
 

@@ -1,21 +1,30 @@
 ---
 title: Automation Event Listener Records
+excerpt: This page provides detailed information about Automation Event Listener records
+  in Cerb.
+summary: This page provides detailed information about Automation Event Listener records
+  in Cerb. It covers the fields available in the Records API, including required fields
+  like `event_name` and `name`, and optional fields such as `event_kata`, `is_disabled`,
+  and `priority`. The page also outlines dictionary placeholders for use in automations,
+  snippets, and API responses, offering a range of fields like `event_name`, `id`,
+  and `updated_at`. Additionally, it describes search query fields that can be used
+  to filter automation event listener records, such as `created:`, `event:`, and `isDisabled:`.
+  Lastly, it lists the worklist columns available for displaying these records, including
+  `a_created_at`, `a_event_name`, and `a_priority`. This comprehensive guide is essential
+  for managing and utilizing automation event listeners within Cerb.
 permalink: /docs/records/types/automation_event_listener/
 toc:
   title: Automation Event Listener
   expand: Records
 jumbotron:
   title: Automation Event Listener
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

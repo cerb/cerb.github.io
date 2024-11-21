@@ -1,21 +1,30 @@
 ---
 title: Draft Records
+excerpt: This page provides detailed information about the draft records in Cerb,
+  including their structure, fields, and usage within the system.
+summary: This page provides detailed information about the draft records in Cerb,
+  including their structure, fields, and usage within the system. It outlines the
+  Records API, specifying the fields available for drafts such as `is_queued`, `name`,
+  `params`, `ticket_id`, and `worker_id`, among others. The page also describes the
+  parameters for different types of drafts, including `mail.compose`, `mail.transactional`,
+  and `ticket.reply/ticket.forward`, detailing the keys and values for each. Additionally,
+  it covers dictionary placeholders for automations and API responses, search query
+  fields for filtering drafts, and worklist columns for organizing draft records.
+  This comprehensive guide is essential for understanding how to manage and utilize
+  draft records within Cerb.
 permalink: /docs/records/types/draft/
 toc:
   title: Draft
   expand: Records
 jumbotron:
   title: Draft
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

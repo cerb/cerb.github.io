@@ -1,19 +1,27 @@
 ---
-title: "Data Queries: PGP Key Info"
-excerpt: 
+title: 'Data Queries: PGP Key Info'
+excerpt: This page provides information on how to use `gpg.keyinfo` data queries to
+  retrieve details about a PGP Public Key.
+summary: This page provides information on how to use `gpg.keyinfo` data queries to
+  retrieve details about a PGP Public Key. It outlines the necessary inputs, such
+  as the public key fingerprint and optional filters for user IDs or subkeys. The
+  response format is primarily in dictionaries, which is suitable for integration
+  with spreadsheets and APIs. An example query and its corresponding response are
+  provided, demonstrating the type of data returned, including key attributes like
+  whether the key is disabled, expired, revoked, or secret, as well as its capabilities
+  for signing and encrypting. The example also includes detailed information about
+  user IDs and subkeys associated with the PGP key.
 permalink: /docs/data-queries/gpg/keyinfo/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: PGP Key Info
 jumbotron:
   title: PGP Key Info
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

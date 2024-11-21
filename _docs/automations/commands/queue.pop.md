@@ -1,23 +1,28 @@
 ---
-title: "Automations: queue.pop"
-excerpt: The queue.pop command reads messages from a queue. 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: queue.pop'
+excerpt: The queue.pop command reads messages from a queue.
+summary: 'This page provides detailed documentation on the "queue.pop" command used
+  in Cerb automations to read messages from a specified queue. It outlines the syntax
+  and parameters required for the command, including inputs like `queue_name` and
+  `limit`, and describes how to handle outputs. The page also explains the optional
+  sections for handling different scenarios: `on_simulate` for simulation commands,
+  `on_success` for actions upon successful message retrieval, and `on_error` for error
+  handling. Examples are provided to illustrate how the command can be implemented,
+  including the structure of the output dictionary containing consumer IDs and message
+  details.'
 permalink: /docs/automations/commands/queue.pop/
 toc:
   title: queue.pop
   expand: Reference
 jumbotron:
   title: queue.pop
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

@@ -1,23 +1,28 @@
 ---
-title: "Automation Inputs: Text"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automation Inputs: Text'
+excerpt: This page provides detailed information on automation inputs for Cerb, specifically
+  focusing on text inputs such as email.
+summary: This page provides detailed information on automation inputs for Cerb, specifically
+  focusing on text inputs such as email. It outlines the requirements for these inputs,
+  including whether they are mandatory, their default values, and their data types.
+  The page includes a comprehensive table listing various data types supported by
+  Cerb, such as boolean, date, decimal, email, freeform text, geopoint, IP addresses,
+  record types, numbers, timestamps, URIs, and URLs, along with examples for each
+  type. This serves as a guide for users to understand and implement the correct input
+  formats in their automation processes.
 permalink: /docs/automations/inputs/text/
 toc:
   title: Text
   expand: Automations
 jumbotron:
   title: Text
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Inputs &raquo;
+  - label: Inputs &raquo;
     url: /docs/automations/#inputs
 ---
 

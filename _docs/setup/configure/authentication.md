@@ -1,20 +1,25 @@
 ---
 title: Authentication
+excerpt: This page provides information on authentication methods for Cerb, focusing
+  on Single Sign-on (SSO) and Multi-Factor Authentication (MFA).
+summary: This page provides information on authentication methods for Cerb, focusing
+  on Single Sign-on (SSO) and Multi-Factor Authentication (MFA). It explains how connected
+  services that support SSO, such as OpenID Connect and SAML, can be used to allow
+  workers to log in using their existing identities from platforms like G Suite and
+  Salesforce. Additionally, it describes the MFA feature, which enhances security
+  by allowing trusted devices to be remembered, thus requiring a security code only
+  during new logins after a specified period.
 permalink: /docs/setup/configure/authentication/
-excerpt: ~
 toc:
   expand: Admin Guide
 jumbotron:
   title: Authentication
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Configure &raquo;
+  - label: Configure &raquo;
     url: /docs/setup/#configure
 ---
 

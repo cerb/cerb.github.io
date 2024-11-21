@@ -1,21 +1,30 @@
 ---
 title: Email Address Records
+excerpt: This page provides detailed information about email address records in Cerb,
+  including their structure and usage within the system.
+summary: This page provides detailed information about email address records in Cerb,
+  including their structure and usage within the system. It outlines the fields available
+  in the Records API, such as contact ID, email, host, and various status indicators
+  like whether an email is banned, defunct, or trusted. The page also describes dictionary
+  placeholders for automations and API responses, offering fields like address, contact,
+  and organization details. Additionally, it covers search query fields that allow
+  filtering email addresses based on criteria like creation date, email content, and
+  associated records. Lastly, it lists worklist columns that can be used to organize
+  and display email address data, including fields for contact, email, host, and custom
+  fields.
 permalink: /docs/records/types/address/
 toc:
   title: Email Address
   expand: Records
 jumbotron:
   title: Email Address
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

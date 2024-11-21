@@ -1,23 +1,29 @@
 ---
-title: "mail.send"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: mail.send
+excerpt: This page provides detailed information on the "mail.send" automation events
+  in Cerb, which allow for the modification of sent message drafts before delivery.
+summary: This page provides detailed information on the "mail.send" automation events
+  in Cerb, which allow for the modification of sent message drafts before delivery.
+  It explains how users can append unique content, set custom fields, or add custom
+  mail headers to outgoing messages, specifically targeting text or HTML content.
+  The page outlines the structure of the automation event dictionary, including keys
+  for draft records and content modifications. It also describes the outputs, such
+  as content and draft parameter modifications, and details the processes for appending,
+  prepending, and replacing text in message content, with options to specify the target
+  format (HTML, text, saved, or sent).
 permalink: /docs/automations/events/mail.send/
 toc:
   title: mail.send
   expand: Automations
 jumbotron:
   title: mail.send
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Events &raquo;
+  - label: Events &raquo;
     url: /docs/automations/#events
 ---
 

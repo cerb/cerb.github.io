@@ -1,6 +1,17 @@
 ---
 title: Generate Profile Images (Amazon Bedrock)
-excerpt: Generate profile images from a text prompt using Amazon Bedrock foundational models.
+excerpt: Generate profile images from a text prompt using Amazon Bedrock foundational
+  models.
+summary: This webpage provides a comprehensive guide on generating profile images
+  using Amazon Bedrock's foundational models through a workflow integrated with Cerb.
+  It covers the necessary installation steps, including setting up an AWS account,
+  accessing Amazon Bedrock, and updating IAM policies to allow Cerb automations to
+  invoke AWS Bedrock models. The guide details the process of testing image generation
+  using specific prompts and configuring Cerb to utilize these capabilities. It also
+  includes instructions on how to use the workflow within Cerb to generate and select
+  profile images, and offers a reference template for building custom workflows. The
+  page is structured to assist users in seamlessly integrating and utilizing AI-driven
+  image generation within their Cerb environment.
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.integrations.aws_bedrock.profile_images/
@@ -8,11 +19,9 @@ jumbotron:
   title: Generate Profile Images (Amazon Bedrock)
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Workflows &raquo;
+  - label: Workflows &raquo;
     url: /resources/workflows/
 ---
 

@@ -1,18 +1,27 @@
 ---
-title: "Plugin: Sensors"
+title: 'Plugin: Sensors'
+excerpt: This page provides detailed information about the "Sensors" plugin for Cerb,
+  developed by Webgroup Media, LLC.
+summary: This page provides detailed information about the "Sensors" plugin for Cerb,
+  developed by Webgroup Media, LLC. The plugin introduces flexible Sensor objects
+  designed for network and server monitoring and operational intelligence. It includes
+  various extensions such as Bot Event, Page Section, Page Type, Record Type, Rest
+  API Controller, Scheduled Job, Sensor Type, and Workspace Widget Datasource. Each
+  extension is associated with specific functionalities, like recording custom behavior
+  on sensors, managing sensor page sections, and handling different sensor types such
+  as External, HTTP, and Port. The plugin is structured to enhance monitoring capabilities
+  within the Cerb environment.
 permalink: /docs/plugins/cerberusweb.datacenter.sensors/
 toc:
-  title: "Sensors"
+  title: Sensors
   expand: Plugins
 jumbotron:
-  title: "Sensors"
-  tagline: 
+  title: Sensors
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

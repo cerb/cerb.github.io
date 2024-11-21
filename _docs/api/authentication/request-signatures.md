@@ -1,5 +1,17 @@
 ---
-title: "API: Authentication with Request Signatures (Deprecated)"
+title: 'API: Authentication with Request Signatures (Deprecated)'
+excerpt: This page discusses the deprecated method of authenticating API requests
+  in Cerb using request signatures, which involved an access key and a secret key.
+summary: This page discusses the deprecated method of authenticating API requests
+  in Cerb using request signatures, which involved an access key and a secret key.
+  It explains the process of creating and using these keys, including how the secret
+  key is used to cryptographically sign requests without being directly transmitted.
+  The page provides guidance on creating an API key-pair, using provided libraries
+  for automatic request signing, and manually signing requests in custom scripts.
+  It emphasizes the importance of securely storing secret keys and suggests using
+  OAuth2 for authentication instead. An example is provided to illustrate the process
+  of generating a signature for authentication. The page also lists supported API
+  libraries and references related to MD5 and replay attacks.
 permalink: /docs/api/authentication/request-signatures/
 toc:
   title: Request Signatures (Deprecated)
@@ -7,14 +19,11 @@ jumbotron:
   title: Request Signatures (Deprecated)
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
-  -
-    label: Authentication &raquo;
+  - label: Authentication &raquo;
     url: /docs/api/authentication/
 ---
 

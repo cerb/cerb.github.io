@@ -1,5 +1,15 @@
 ---
 title: Packages
+excerpt: This page provides instructions for importing a pre-built workflow package
+  in Cerb using a POST request to the `/rest/packages/import.json` endpoint.
+summary: This page provides instructions for importing a pre-built workflow package
+  in Cerb using a POST request to the `/rest/packages/import.json` endpoint. It specifies
+  that administrator privileges are required to perform this action. The page details
+  the necessary fields for the request, including `package_json` and `prompts[]`,
+  which vary by package. An example is provided, illustrating how to structure the
+  JSON string for a package named "Create a task," which includes configuration prompts
+  for task name and task owner. The example also demonstrates how to use PHP to send
+  the request with the appropriate postfields.
 permalink: /docs/api/endpoints/packages/
 toc:
   expand: API
@@ -7,14 +17,11 @@ jumbotron:
   title: Packages
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
-  -
-    label: Endpoints &raquo;
+  - label: Endpoints &raquo;
     url: /docs/api/endpoints/
 ---
 

@@ -1,23 +1,29 @@
 ---
-title: "Automations: api.command"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: api.command'
+excerpt: This page provides detailed information on the "api.command" feature in Cerb,
+  which allows for interaction with APIs to perform actions that were previously not
+  possible through automation code.
+summary: This page provides detailed information on the "api.command" feature in Cerb,
+  which allows for interaction with APIs to perform actions that were previously not
+  possible through automation code. It explains the structure and syntax of API commands,
+  including required inputs such as the command name and parameters, and optional
+  outputs and error handling. The page lists various API commands available, such
+  as creating activity log entries, validating OAuth2 tokens, and creating dynamic
+  explore sets. It also describes how new API commands can be added using the plugin
+  system, and outlines the process for handling success and error states in automation.
 permalink: /docs/automations/commands/api.command/
 toc:
   title: api.command
   expand: Automations
 jumbotron:
   title: api.command
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

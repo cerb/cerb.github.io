@@ -1,22 +1,28 @@
 ---
 title: Install Cerb on Microsoft Windows Server 2022
-date: 2022-04-06 00:00:00 -0700
+excerpt: This guide will walk you through preparing a Microsoft Windows Server 2022
+  server for installing Cerb, including IIS, PHP, and MySQL.
+summary: This webpage provides a comprehensive guide for installing Cerb on a Microsoft
+  Windows Server 2022. It covers the entire setup process, including provisioning
+  a server, connecting via Remote Desktop Protocol, and installing necessary components
+  such as IIS, PHP, and MySQL. The guide details the installation of PHP extensions
+  like mailparse and YAML, configuring PHP settings, and setting up a MySQL database
+  and user. It also includes instructions for downloading Cerb from Git, setting file
+  permissions, and running the Cerb installer. The guide concludes with recommendations
+  for setting up friendly URLs and reviewing security best practices.
+date: "2022-04-06 00:00:00 -0700"
 layout: integration
 topic: Installation
-excerpt: This guide will walk you through preparing a Microsoft Windows Server 2022 server for installing Cerb, including IIS, PHP, and MySQL.
 permalink: /guides/installation/windows-server-2022/
 jumbotron:
   title: Install Cerb on Microsoft Windows Server 2022
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Installation &raquo;
+  - label: Installation &raquo;
     url: /resources/guides/#installation
 ---
 

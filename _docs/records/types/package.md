@@ -1,21 +1,29 @@
 ---
 title: Package Records
+excerpt: This page provides detailed information about the structure and functionality
+  of Package Records in Cerb.
+summary: This page provides detailed information about the structure and functionality
+  of Package Records in Cerb. It outlines the fields available in the Records API,
+  including required fields like name, package_json, point, and uri, as well as optional
+  fields such as description, image, and links. The page also describes dictionary
+  placeholders used in automations, snippets, and API responses, offering a comprehensive
+  list of fields and their types. Additionally, it covers search query fields that
+  can be used to filter package records and lists the columns available in package
+  worklists, providing a complete guide for managing and utilizing package records
+  within the Cerb platform.
 permalink: /docs/records/types/package/
 toc:
   title: Package
   expand: Records
 jumbotron:
   title: Package
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

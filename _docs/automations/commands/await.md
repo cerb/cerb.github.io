@@ -1,23 +1,27 @@
 ---
-title: "Automations: await"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: await'
+excerpt: This page provides information on the "await" command in Cerb automations,
+  which pauses an automation in the `await` state and returns a dictionary.
+summary: This page provides information on the "await" command in Cerb automations,
+  which pauses an automation in the `await` state and returns a dictionary. It explains
+  how this command creates a continuation for resuming the automation at the current
+  point. The page includes syntax examples and details on how the expected dictionary
+  varies depending on the trigger. It specifically mentions that the `interaction.worker`
+  trigger supports the `await` state, where the dictionary describes a form for gathering
+  user input.
 permalink: /docs/automations/commands/await/
 toc:
   title: await
   expand: Automations
 jumbotron:
   title: await
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

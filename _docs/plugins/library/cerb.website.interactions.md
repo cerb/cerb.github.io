@@ -1,18 +1,23 @@
 ---
-title: "Plugin: Website Interactions"
+title: 'Plugin: Website Interactions'
+excerpt: This page provides information about the "Website Interactions" plugin for
+  Cerb, developed by Webgroup Media, LLC.
+summary: This page provides information about the "Website Interactions" plugin for
+  Cerb, developed by Webgroup Media, LLC. The plugin, identified as "cerb.website.interactions,"
+  is designed to embed customer-facing interactions on any website. It includes an
+  extension called "Portal," which is part of the plugin's features. The page outlines
+  the plugin's purpose and its integration capabilities for enhancing website interactions.
 permalink: /docs/plugins/cerb.website.interactions/
 toc:
-  title: "Website Interactions"
+  title: Website Interactions
   expand: Plugins
 jumbotron:
-  title: "Website Interactions"
-  tagline: 
+  title: Website Interactions
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

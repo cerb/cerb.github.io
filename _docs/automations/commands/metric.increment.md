@@ -1,23 +1,28 @@
 ---
-title: "Automations: metric.increment"
-excerpt: The metric.increment command adds samples to a metric 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: metric.increment'
+excerpt: The metric.increment command adds samples to a metric
+summary: This page provides detailed information on the `metric.increment` command
+  used in Cerb automations to add new samples to a metric. It outlines the syntax
+  and parameters required for the command, including `inputs`, `output`, `on_simulate`,
+  `on_success`, and `on_error`. The `inputs` section specifies keys such as `metric_name`,
+  `dimensions`, `values`, `is_realtime`, and `timestamp`, explaining their roles in
+  defining the metric's characteristics and behavior. The `output` section describes
+  how to store the result of the metric operation, while `on_simulate`, `on_success`,
+  and `on_error` sections detail the commands to execute during different stages of
+  the automation process, including handling errors and successful executions.
 permalink: /docs/automations/commands/metric.increment/
 toc:
   title: metric.increment
   expand: Reference
 jumbotron:
   title: metric.increment
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

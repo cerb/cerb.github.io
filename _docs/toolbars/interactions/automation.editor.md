@@ -1,23 +1,28 @@
 ---
 title: automation.editor
-#excerpt: Toolbars...
-#social_image_url: /assets/images/search/kata.png
+excerpt: This page provides detailed instructions for configuring the toolbar in the
+  Cerb automation editor.
+summary: This page provides detailed instructions for configuring the toolbar in the
+  Cerb automation editor. It guides users on how to navigate to the toolbar settings,
+  specifically for `automation.editor`, and how to add interactions using the KATA
+  scripting language. The page outlines the available placeholders in KATA, such as
+  `trigger_id`, `trigger_name`, and `worker_*`, which can be used to customize the
+  automation triggers. Additionally, it describes the expected output format for interactions,
+  specifically the `return:` dictionary, which includes a `snippet` key for inserting
+  text into the editor.
 permalink: /docs/toolbars/interactions/automation.editor/
 toc:
   title: Toolbars
   expand: Automations
 jumbotron:
   title: automation.editor
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Toolbars &raquo;
+  - label: Toolbars &raquo;
     url: /docs/toolbars/
 ---
 

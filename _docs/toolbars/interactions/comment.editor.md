@@ -1,23 +1,28 @@
 ---
 title: comment.editor
-#excerpt: Toolbars...
-#social_image_url: /assets/images/search/kata.png
+excerpt: This page provides detailed instructions for configuring and utilizing the
+  comment editor toolbar in Cerb.
+summary: This page provides detailed instructions for configuring and utilizing the
+  comment editor toolbar in Cerb. It explains how to navigate to the toolbar settings,
+  edit the `comment.editor` record, and add interactions using the KATA scripting
+  language. The page outlines available placeholders for use in KATA, such as `record_*`
+  and `worker_*`, which provide context about the record being commented on and the
+  active worker. It also describes the inputs and outputs for interactions with the
+  toolbar, detailing the parameters passed to the interaction and the expected return
+  values, such as inserting text snippets into the editor.
 permalink: /docs/toolbars/interactions/comment.editor/
 toc:
   title: Toolbars
   expand: Automations
 jumbotron:
   title: comment.editor
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Toolbars &raquo;
+  - label: Toolbars &raquo;
     url: /docs/toolbars/
 ---
 

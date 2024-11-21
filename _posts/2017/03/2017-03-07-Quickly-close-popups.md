@@ -1,9 +1,14 @@
 ---
-layout: post
-title: "Tip: Quickly close popups"
+title: 'Tip: Quickly close popups'
 excerpt: Learn how to quickly close popups using a keyboard shortcut.
+summary: This page provides a tip for efficiently managing popups in Cerb. It explains
+  how users can quickly close popups by pressing the `<ESC>` key instead of clicking
+  the close icon. This shortcut is particularly useful when working with multiple
+  popups, as users can click on a specific popup and press `<ESC>` to close it, streamlining
+  their workflow.
+layout: post
 author: The Cerb Team
-date: 2017-03-07 17:12:00 -0700
+date: "2017-03-07 17:12:00 -0700"
 permalink: /tips/quickly-close-popups/
 tags: cerb tips mailbag
 ---

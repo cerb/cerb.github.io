@@ -1,5 +1,14 @@
 ---
 title: Cerb Web-API Library for Perl
+excerpt: This page provides a Perl library for interacting with the Cerb Web-API.
+summary: This page provides a Perl library for interacting with the Cerb Web-API,
+  authored by Net Ground. The library, defined in the Cerb_WebAPI.pm module, facilitates
+  HTTP requests to the Cerb API using methods such as GET, PUT, POST, and DELETE.
+  It includes functionality for setting up HTTP headers, managing payloads, and generating
+  authentication signatures using MD5 hashing. The library leverages the WWW::Curl::Easy
+  module for handling HTTP requests and responses, and it includes methods for sorting
+  query strings and managing content types. The code is structured to handle different
+  HTTP verbs and construct the necessary headers for API authentication and communication.
 permalink: /docs/api/libraries/perl/
 toc:
   expand: API
@@ -7,14 +16,11 @@ jumbotron:
   title: Cerb Web-API Library for Perl
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
-  -
-    label: Libraries &raquo;
+  - label: Libraries &raquo;
     url: /docs/api/libraries/
 ---
 

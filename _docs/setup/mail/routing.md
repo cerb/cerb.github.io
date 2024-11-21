@@ -1,5 +1,18 @@
 ---
-title: "Setup: Mail Routing"
+title: 'Setup: Mail Routing'
+excerpt: This page provides guidance on setting up mail routing in Cerb, introduced
+  in version 11.0.
+summary: This page provides guidance on setting up mail routing in Cerb, introduced
+  in version 11.0. It explains how to configure rules to automatically direct incoming
+  emails to specific groups based on message properties such as recipient addresses.
+  Examples include routing emails sent to `support@*` to the Support group, `orders@*`
+  to Sales, and `receipts@*` to Billing. The page also introduces the concept of Routing
+  KATA, which allows for complex workflows through automations, though they are not
+  mandatory. It details the use of conditions and actions within routing rules, such
+  as checking recipients, subject lines, and other message attributes to determine
+  the appropriate group for each email. The page includes sample rules for various
+  departments like Development, Sales, Billing, Corporate, and Support, demonstrating
+  how to set up these automated routing processes.
 permalink: /docs/setup/mail/routing/
 toc:
   title: Routing
@@ -7,14 +20,11 @@ toc:
 jumbotron:
   title: Routing
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Mail &raquo;
+  - label: Mail &raquo;
     url: /docs/setup/#incoming-mail
 ---
 

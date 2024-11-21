@@ -1,6 +1,14 @@
 ---
 title: Integrate with LinkedIn
 excerpt: A step-by-step guide for integrating Cerb and LinkedIn.
+summary: This page provides a comprehensive guide on integrating Cerb with LinkedIn,
+  enabling users to utilize LinkedIn's API for automation through Cerb bots. It details
+  the steps to create a LinkedIn app, configure authentication, and set up a LinkedIn
+  service within Cerb. The guide also explains how to link a connected account to
+  LinkedIn in Cerb and use this connection in bot behaviors, allowing for automated
+  interactions with LinkedIn's REST API. The process includes creating an app on LinkedIn,
+  configuring OAuth settings, and using the connected account for executing HTTP requests
+  in bot actions.
 permalink: /guides/integrations/linkedin/
 layout: integration
 topic: Integrations
@@ -9,17 +17,13 @@ jumbotron:
   title: Cerb + LinkedIn
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: LinkedIn &raquo;
+  - label: LinkedIn &raquo;
     url: /resources/guides/#linkedin
 ---
 

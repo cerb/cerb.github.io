@@ -1,23 +1,28 @@
 ---
-title: "Automations: file.read"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: file.read'
+excerpt: This page provides detailed information on the "file.read" command used in
+  Cerb automations to read chunks of bytes from attachments or automation resource
+  records.
+summary: This page provides detailed information on the "file.read" command used in
+  Cerb automations to read chunks of bytes from attachments or automation resource
+  records. It outlines the syntax and inputs required, such as URI, filters, offset,
+  length, length_split, and password, and describes the output structure and handling
+  of success and error states. The page includes examples demonstrating how to read
+  the contents of a binary attachment and decompress and read a gzip file, showcasing
+  the command's functionality in processing various file types and formats.
 permalink: /docs/automations/commands/file.read/
 toc:
   title: file.read
   expand: Automations
 jumbotron:
   title: file.read
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

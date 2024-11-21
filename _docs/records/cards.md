@@ -1,15 +1,20 @@
 ---
 title: Cards
+excerpt: This page explains the concept of "cards" in Cerb, which are popup windows
+  that summarize specific records.
+summary: This page explains the concept of "cards" in Cerb, which are popup windows
+  that summarize specific records. Cards enable users to quickly retrieve and display
+  information without navigating away from the current page. They also offer shortcuts
+  to frequently used functions related to the record type, enhancing efficiency and
+  accessibility within the platform.
 permalink: /docs/cards/
 jumbotron:
   title: Cards
   tagline: Record summaries in a floating popup
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
 ---
 

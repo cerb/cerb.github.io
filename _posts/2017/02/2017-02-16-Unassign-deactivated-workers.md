@@ -1,9 +1,17 @@
 ---
-layout: post
-title: "Tip: Remove assignments from deactivated workers"
+title: 'Tip: Remove assignments from deactivated workers'
 excerpt: Clear assignments on records owned by worker accounts that are deactivated.
+summary: This page provides guidance for administrators on managing assignments for
+  deactivated worker accounts in Cerb. It explains how to deactivate worker accounts
+  and highlights that while deactivated workers cannot log in or be included in active
+  assignment lists, their historical data remains intact. The page introduces the
+  deep quick search feature in Cerb 7.3, which allows administrators to identify records,
+  such as tickets, that are still assigned to deactivated workers. It provides example
+  queries to find and update these records, ensuring that assignments are appropriately
+  managed without altering the records' existing statuses unless specified.
+layout: post
 author: The Cerb Team
-date: 2017-02-16 10:00:00 -0700
+date: "2017-02-16 10:00:00 -0700"
 permalink: /tips/unassign-deactivated-workers/
 tags: cerb tips mailbag
 ---

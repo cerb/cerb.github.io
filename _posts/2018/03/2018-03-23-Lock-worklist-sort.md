@@ -1,9 +1,17 @@
 ---
-layout: post
-title: "Tip: Lock worklist sorting"
+title: 'Tip: Lock worklist sorting'
 excerpt: Prevent workers from changing the sorting on a worklist.
+summary: This page provides guidance on how to lock the sorting of worklists in Cerb
+  to improve team efficiency and reduce task collisions. It explains the importance
+  of sorting worklists by responsibility rather than defaulting to the most recent
+  updates, which can lead to inefficiencies. The page details how to prevent workers
+  from changing the sort order by using the "Prevent workers from changing the sort
+  column" option and how to explicitly set a specific sort column through the quick
+  search query. This ensures that all team members view the worklist in a consistent
+  manner, aligned with their responsibilities and priorities.
+layout: post
 author: The Cerb Team
-date: 2018-03-23 15:00:00 -0700
+date: "2018-03-23 15:00:00 -0700"
 permalink: /tips/worklists-lock-sorting/
 tags: cerb tips mailbag
 ---

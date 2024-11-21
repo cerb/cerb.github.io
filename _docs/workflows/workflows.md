@@ -1,13 +1,24 @@
 ---
 title: Workflows
-excerpt: 
+excerpt: This page provides an overview of Cerb's Workflow KATA, a feature introduced
+  in version 11.0, which allows users to create and manage workflows as templates
+  with versioned updates.
+summary: This page provides an overview of Cerb's Workflow KATA, a feature introduced
+  in version 11.0, which allows users to create and manage workflows as templates
+  with versioned updates. These workflows help synchronize related records across
+  different environments like development, staging, and production. The page includes
+  a sample workflow template for creating tasks with configurable names and owners,
+  and explains the schema components such as config, extensions, and records. It details
+  how to use placeholders and scripting functions like cerb_workflow_config() and
+  cerb_workflow_resources() to dynamically manage workflow configurations and resources.
+  The page also outlines the deletion and update policies for records within workflows,
+  and provides guidance on using automation scripting filters with workflow placeholders.
 permalink: /docs/workflows/
 jumbotron:
   title: Workflows
   tagline: Evolving blueprints for records and automations
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
 ---
 

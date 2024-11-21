@@ -1,18 +1,25 @@
 ---
-title: "Plugin: Devblocks Framework"
+title: 'Plugin: Devblocks Framework'
+excerpt: This page provides an overview of the Devblocks Framework, a PHP7 application
+  development framework created by Webgroup Media, LLC.
+summary: This page provides an overview of the Devblocks Framework, a PHP7 application
+  development framework created by Webgroup Media, LLC. It details various extensions
+  available within the framework, including Cache Engine, Search Engine, and Storage
+  Engine. The Cache Engine supports Filesystem, Memcached, and Redis. The Search Engine
+  is compatible with Elasticsearch, MySQL Fulltext, and Sphinx. The Storage Engine
+  options include Amazon S3, Database, and Disk. The page serves as a technical reference
+  for developers utilizing the Devblocks Framework in their projects.
 permalink: /docs/plugins/devblocks.core/
 toc:
-  title: "Devblocks Framework"
+  title: Devblocks Framework
   expand: Plugins
 jumbotron:
-  title: "Devblocks Framework"
-  tagline: 
+  title: Devblocks Framework
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

@@ -1,23 +1,30 @@
 ---
-title: "mail.reply.validate"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: mail.reply.validate
+excerpt: This page provides detailed information on the `mail.reply.validate` automation
+  events in Cerb, which are used to implement interactive custom validators before
+  replying to emails.
+summary: This page provides detailed information on the `mail.reply.validate` automation
+  events in Cerb, which are used to implement interactive custom validators before
+  replying to emails. These validators function similarly to worker interactions and
+  can be configured to check recent worker activity to prevent duplication of effort.
+  The page explains how interactive validators can allow workers to bypass warnings
+  and proceed with sending emails, unlike non-interactive validators that would require
+  error correction before continuing. It also outlines the structure of the automation
+  event dictionary, including placeholders and outputs, and emphasizes the importance
+  of filtering unnecessary validators to optimize the process.
 permalink: /docs/automations/events/mail.reply.validate/
 toc:
   title: mail.reply.validate
   expand: Automations
 jumbotron:
   title: mail.reply.validate
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Events &raquo;
+  - label: Events &raquo;
     url: /docs/automations/#events
 ---
 

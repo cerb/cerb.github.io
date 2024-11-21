@@ -1,10 +1,22 @@
 ---
 title: Philosophy
-excerpt: Cerb is more than just code, it's a philosophy about our increasingly digital world.
+excerpt: This page outlines the core philosophy behind Cerb, emphasizing the importance
+  of customizable platforms and toolkits that empower users to tailor their environments
+  to their specific needs.
+summary: This page outlines the core philosophy behind Cerb, emphasizing the importance
+  of customizable platforms and toolkits that empower users to tailor their environments
+  to their specific needs. It highlights a commitment to serving tech-savvy individuals
+  who value complexity and creativity in problem-solving. The philosophy also underscores
+  a dedication to commercial open source, advocating for transparency and community
+  involvement while rejecting paranoia over intellectual property theft. Privacy is
+  a key tenet, with a firm stance on respecting user data and rejecting monetization
+  through advertising. Lastly, the page asserts that well-designed software is akin
+  to art, prioritizing functionality and usability over fleeting design trends.
 permalink: /docs/philosophy/
 jumbotron:
   title: Philosophy
-  tagline: Cerb is more than just code, it's a philosophy about our increasingly digital world
+  tagline: Cerb is more than just code, it's a philosophy about our increasingly digital
+    world
 ---
 
 ## We believe in platforms and toolkits

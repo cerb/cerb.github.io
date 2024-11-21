@@ -1,23 +1,27 @@
 ---
-title: "automation.function"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: automation.function
+excerpt: This page provides an overview of the **automation.function** feature in
+  Cerb, which allows for the creation of reusable shared functions that can be triggered
+  by other automations.
+summary: This page provides an overview of the **automation.function** feature in
+  Cerb, which allows for the creation of reusable shared functions that can be triggered
+  by other automations. It details the structure of inputs and outputs for these functions,
+  explaining that the automation dictionary begins with custom input values from the
+  caller. The page also describes how the function returns key/value pairs to the
+  caller, with the possibility of nesting keys to return dictionaries.
 permalink: /docs/automations/triggers/automation.function/
 toc:
   title: automation.function
   expand: Automations
 jumbotron:
   title: automation.function
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Triggers &raquo;
+  - label: Triggers &raquo;
     url: /docs/automations/#triggers
 ---
 

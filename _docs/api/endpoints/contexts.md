@@ -1,5 +1,16 @@
 ---
 title: Contexts
+excerpt: This webpage provides detailed API documentation for Cerb, focusing on managing
+  record types, activity logs, and links.
+summary: This webpage provides detailed API documentation for Cerb, focusing on managing
+  record types, activity logs, and links. It explains how to retrieve a list of object
+  contexts, including those contributed by plugins, using the GET method. The page
+  also covers how to list and create activity log events, detailing the necessary
+  fields and data formats for creating log entries. Additionally, it describes how
+  to add and remove links between context records using POST requests, with examples
+  illustrating the process for both linking and unlinking records. The documentation
+  is aimed at developers looking to integrate or extend Cerb's functionality through
+  its REST API.
 permalink: /docs/api/endpoints/contexts/
 toc:
   expand: API
@@ -7,14 +18,11 @@ jumbotron:
   title: Contexts
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
-  -
-    label: Endpoints &raquo;
+  - label: Endpoints &raquo;
     url: /docs/api/endpoints/
 ---
 

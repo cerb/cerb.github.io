@@ -1,21 +1,31 @@
 ---
 title: Automation Resource Records
+excerpt: This page provides detailed information about Automation Resource Records
+  in Cerb, including their structure and usage within the system.
+summary: This page provides detailed information about Automation Resource Records
+  in Cerb, including their structure and usage within the system. It outlines the
+  fields available in the Records API, such as links, mime type, name, token, and
+  updated timestamp. The page also describes dictionary placeholders that can be used
+  in automations, snippets, and API responses, offering fields like context, label,
+  type, id, mime type, name, record URL, size, token, and updated date. Additionally,
+  it lists search query fields that can filter automation resource searches, including
+  fieldset, id, links, mimetype, name, size, token, and updated date. Lastly, it details
+  the worklist columns available for automation resources, which include custom fields,
+  id, mime type, name, storage extension, storage key, storage profile, size, token,
+  and updated timestamp.
 permalink: /docs/records/types/automation_resource/
 toc:
   title: Automation Resource
   expand: Records
 jumbotron:
   title: Automation Resource
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

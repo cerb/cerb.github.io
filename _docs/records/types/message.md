@@ -1,21 +1,31 @@
 ---
 title: Message Records
+excerpt: This page provides detailed information about message records in Cerb, including
+  their structure and usage within the platform.
+summary: This page provides detailed information about message records in Cerb, including
+  their structure and usage within the platform. It outlines the fields available
+  in the Records API, which are essential for managing message content, headers, sender
+  information, and related metadata. The page also describes dictionary placeholders
+  used in automations and API responses, offering a comprehensive list of fields and
+  their types. Additionally, it covers search query fields that facilitate filtering
+  messages based on various criteria such as content, sender, and encryption status.
+  Lastly, it details the worklist columns available for organizing and displaying
+  message data, highlighting key attributes like response time, broadcast status,
+  and associated ticket information. This resource is crucial for developers and users
+  looking to integrate or utilize message records effectively within Cerb.
 permalink: /docs/records/types/message/
 toc:
   title: Message
   expand: Records
 jumbotron:
   title: Message
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

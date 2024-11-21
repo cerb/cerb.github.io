@@ -1,23 +1,28 @@
 ---
-title: "automation.timer"
-excerpt: automation.timer automations are executed by timers at a future time, or at various intervals. They support continuations to pause and resume. 
-#social_image_url: /assets/images/search/kata.png
+title: automation.timer
+excerpt: automation.timer automations are executed by timers at a future time, or
+  at various intervals. They support continuations to pause and resume.
+summary: This page provides detailed information about the "automation.timer" feature
+  in Cerb, which allows automations to be executed at a future time or at various
+  intervals using timers. It explains how these automations can pause and resume between
+  executions through continuations. The page outlines the process of selecting an
+  automation using events KATA on the first invocation and describes the input and
+  output structures, including custom input values and the conditions for pausing
+  (await) and concluding (return) the automation. It also details how the timer is
+  rescheduled based on whether it has a recurring schedule or is a one-shot timer.
 permalink: /docs/automations/triggers/automation.timer/
 toc:
   title: automation.timer
   expand: Automations
 jumbotron:
   title: automation.timer
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Triggers &raquo;
+  - label: Triggers &raquo;
     url: /docs/automations/#triggers
 ---
 

@@ -1,19 +1,27 @@
 ---
-title: "Data Queries: Custom Datasources"
-excerpt: 
+title: 'Data Queries: Custom Datasources'
+excerpt: This page provides an overview of creating custom data queries using the
+  `behavior.*` data queries in Cerb.
+summary: This page provides an overview of creating custom data queries using the
+  `behavior.*` data queries in Cerb. It explains how these queries are initiated on
+  the 'Data Query Datasource' event, allowing behaviors to gather data from various
+  sources such as external APIs or worklist results. The page details how to configure
+  an alias for these queries, which can then be used as a data query type. It covers
+  the inputs required for these queries, the JSON format of the responses, and provides
+  examples, such as fetching stock price data. The example demonstrates how bots can
+  utilize these behaviors to return data from any source by sending query parameters
+  as input variables and receiving data in JSON format.
 permalink: /docs/data-queries/custom/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: Custom Datasources
 jumbotron:
   title: Custom Datasources
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

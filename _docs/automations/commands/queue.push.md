@@ -1,23 +1,28 @@
 ---
-title: "Automations: queue.push"
-excerpt: The queue.push command adds messages to a queue. 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: queue.push'
+excerpt: This page provides detailed information on the "queue.push" command used
+  in Cerb automations to add new messages to a queue.
+summary: This page provides detailed information on the "queue.push" command used
+  in Cerb automations to add new messages to a queue. It outlines the syntax and parameters
+  required for the command, including inputs like `queue_name` and `messages`, and
+  optional settings such as `available_at@date`. The page also explains how to handle
+  outputs, simulate the command, and manage success and error scenarios. It includes
+  examples and descriptions of how to use placeholders for results and error handling,
+  ensuring users can effectively implement and troubleshoot the queue.push command
+  in their automation workflows.
 permalink: /docs/automations/commands/queue.push/
 toc:
   title: queue.push
   expand: Reference
 jumbotron:
   title: queue.push
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

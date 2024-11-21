@@ -1,23 +1,28 @@
 ---
 title: records.worklist
-#excerpt: Toolbars...
-#social_image_url: /assets/images/search/kata.png
+excerpt: This page provides detailed information on configuring and customizing the
+  `records.worklist` toolbar in Cerb.
+summary: This page provides detailed information on configuring and customizing the
+  `records.worklist` toolbar in Cerb. It guides users on how to navigate to the toolbar
+  settings, edit records, and add custom interactions using KATA scripting. The page
+  outlines available placeholders for dynamic content and explains how to override
+  built-in functionalities with custom interactions. It also details the inputs and
+  outputs expected during interactions, including parameters like worklist ID, record
+  type, and selected record IDs. The page is a comprehensive resource for users looking
+  to tailor the worklist toolbar to their specific needs in Cerb.
 permalink: /docs/toolbars/interactions/records.worklist/
 toc:
   title: Toolbars
   expand: Automations
 jumbotron:
   title: records.worklist
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Toolbars &raquo;
+  - label: Toolbars &raquo;
     url: /docs/toolbars/
 ---
 

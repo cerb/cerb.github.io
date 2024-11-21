@@ -1,18 +1,23 @@
 ---
-title: "Plugin: LDAP Integration"
+title: 'Plugin: LDAP Integration'
+excerpt: This page provides information about the LDAP Integration plugin for Cerb,
+  developed by Webgroup Media, LLC.
+summary: This page provides information about the LDAP Integration plugin for Cerb,
+  developed by Webgroup Media, LLC. The plugin, identified as "wgm.ldap," is designed
+  to authenticate worker and customer logins through LDAP. It includes an extension
+  called the Support Center Login Authenticator, which is specifically identified
+  as "sc.login.auth.ldap." The plugin is stored in the path "storage/plugins/wgm.ldap/".
 permalink: /docs/plugins/wgm.ldap/
 toc:
-  title: "LDAP Integration"
+  title: LDAP Integration
   expand: Plugins
 jumbotron:
-  title: "LDAP Integration"
-  tagline: 
+  title: LDAP Integration
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

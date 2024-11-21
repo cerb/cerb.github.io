@@ -1,21 +1,25 @@
 ---
-title: "Scripting Reference: Strings"
-excerpt: 
+title: 'Scripting Reference: Strings'
+excerpt: This page serves as a scripting reference for handling strings in Cerb.
+summary: This page serves as a scripting reference for handling strings in Cerb. It
+  covers the basics of defining strings using single or double quotes and demonstrates
+  how to modify strings with filters. The page explains string concatenation using
+  the tilde (`~`) operator to join multiple strings or variables. It also addresses
+  managing whitespace in template text, showing how to prevent unintended spaces around
+  commands using a dash (`-`). The content is part of a broader guide, with sections
+  on variables, arrays, and objects indicated as adjacent topics.
 permalink: /docs/scripting/strings/
 toc:
   title: Strings
   expand: Developer Guide
 jumbotron:
   title: Strings
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Developer Guide &raquo;
-  -
-    label: Scripting &raquo;
+  - label: Developer Guide &raquo;
+  - label: Scripting &raquo;
     url: /docs/scripting/
 ---
 

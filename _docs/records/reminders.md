@@ -1,16 +1,20 @@
 ---
 title: Reminders
-excerpt: 
+excerpt: This page provides an overview of the reminder feature in Cerb, which allows
+  users to schedule messages to be sent to workers at a specific future date and time.
+summary: This page provides an overview of the reminder feature in Cerb, which allows
+  users to schedule messages to be sent to workers at a specific future date and time.
+  Reminders can be associated with multiple records and, when triggered, can initiate
+  various automations to contact workers through different channels such as notifications,
+  emails, mobile text messages, or Slack, depending on the urgency of the reminder.
 permalink: /docs/reminders/
 jumbotron:
   title: Reminders
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
 ---
 

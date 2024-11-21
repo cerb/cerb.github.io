@@ -1,23 +1,28 @@
 ---
-title: "Automations: encrypt.pgp"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: encrypt.pgp'
+excerpt: This page provides detailed information on the "encrypt.pgp" automation command
+  in Cerb, which is used to encrypt a block of text using PGP public keys.
+summary: This page provides detailed information on the "encrypt.pgp" automation command
+  in Cerb, which is used to encrypt a block of text using PGP public keys. It outlines
+  the syntax and structure of the command, including the necessary inputs such as
+  the message to be encrypted and the public keys required for encryption. The page
+  also explains the output handling, and the procedures for simulation, success, and
+  error states. It specifies how to manage the encrypted message output and error
+  messages, ensuring users can effectively implement and troubleshoot the encryption
+  process within their automations.
 permalink: /docs/automations/commands/encrypt.pgp/
 toc:
   title: encrypt.pgp
   expand: Automations
 jumbotron:
   title: encrypt.pgp
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

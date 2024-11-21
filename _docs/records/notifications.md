@@ -1,16 +1,22 @@
 ---
 title: Notifications
-excerpt: Notifications keep the right people informed about recent activity on any record.
+excerpt: Notifications keep the right people informed about recent activity on any
+  record.
+summary: This page explains the notification system in Cerb, which keeps users informed
+  about recent activities on records they are watching. It describes how unread notifications
+  are indicated by a red badge on the interface, and how clicking this badge opens
+  a notifications worklist. Users can interact with their notifications directly from
+  this popup, with links that open relevant record cards. The system efficiently marks
+  notifications as read and refreshes the worklist, allowing users to manage their
+  notifications without navigating away from the popup.
 permalink: /docs/notifications/
 jumbotron:
   title: Notifications
   tagline: Keep the right people informed about recent activity
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
 ---
 

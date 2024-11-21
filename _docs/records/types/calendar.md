@@ -1,21 +1,29 @@
 ---
 title: Calendar Records
+excerpt: This page provides detailed information about Calendar Records in Cerb, including
+  their structure, fields, and functionalities.
+summary: This page provides detailed information about Calendar Records in Cerb, including
+  their structure, fields, and functionalities. It outlines the Records API, specifying
+  required and optional fields such as `name`, `owner__context`, and `owner_id`, along
+  with parameters for customization like event colors and synchronization settings.
+  The page also describes dictionary placeholders available for automations and API
+  responses, offering fields like `id`, `name`, and `timezone`. Additionally, it covers
+  search query fields for filtering calendar records and lists available worklist
+  columns for organizing calendar data. The document serves as a comprehensive guide
+  for managing and utilizing calendar records within the Cerb platform.
 permalink: /docs/records/types/calendar/
 toc:
   title: Calendar
   expand: Records
 jumbotron:
   title: Calendar
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

@@ -1,19 +1,28 @@
 ---
-title: "Data Queries: Sample Data"
-excerpt: 
+title: 'Data Queries: Sample Data'
+excerpt: This page provides examples and details on how to generate sample data queries
+  for different types of data visualizations in Cerb.
+summary: 'This page provides examples and details on how to generate sample data queries
+  for different types of data visualizations in Cerb. It covers three main types of
+  data queries: `sample.geo.points`, which returns simulated GeoJSON data for map-based
+  visualizations; `sample.timeseries`, which provides simulated time-series data for
+  visualizations; and `sample.xy`, which generates simulated X/Y data for scatterplots.
+  Each section outlines the necessary inputs for creating these data queries, such
+  as series names, coordinates, labels, and trends, and specifies the default response
+  formats like GeoJSON, timeseries, and scatterplot. The page includes examples for
+  each data type to illustrate how to structure the queries and the kind of data they
+  return.'
 permalink: /docs/data-queries/sample/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: Sample Data
 jumbotron:
   title: Sample Data
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

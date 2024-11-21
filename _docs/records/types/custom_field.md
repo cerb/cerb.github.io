@@ -1,21 +1,29 @@
 ---
 title: Custom Field Records
+excerpt: This page provides detailed information about custom field records in Cerb,
+  including their structure and usage within the platform.
+summary: This page provides detailed information about custom field records in Cerb,
+  including their structure and usage within the platform. It outlines the fields
+  available in the Records API, such as context, name, type, and URI, and explains
+  their types and requirements. The page also describes dictionary placeholders used
+  in automations, snippets, and API responses, offering a comprehensive list of fields
+  and their descriptions. Additionally, it covers search query fields that can be
+  used to filter custom field records and lists the available columns for custom field
+  worklists, providing a complete guide for managing and utilizing custom fields in
+  Cerb.
 permalink: /docs/records/types/custom_field/
 toc:
   title: Custom Field
   expand: Records
 jumbotron:
   title: Custom Field
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

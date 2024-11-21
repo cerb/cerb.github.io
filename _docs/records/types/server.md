@@ -1,21 +1,30 @@
 ---
 title: Server Records
+excerpt: This page provides detailed information about server records in Cerb, including
+  their API fields, dictionary placeholders, search query fields, and worklist columns.
+summary: This page provides detailed information about server records in Cerb, including
+  their API fields, dictionary placeholders, search query fields, and worklist columns.
+  It outlines the essential fields available in the Records API, such as creation
+  and update timestamps, server name, and links. The page also describes dictionary
+  placeholders used in automations and API responses, including context, label, and
+  record URL. Additionally, it lists optional placeholders for comments, custom fields,
+  and watchers. The search query fields section details filters for server searches,
+  like comments, creation date, and record links. Lastly, the worklist columns section
+  specifies the columns available for server worklists, including custom fields and
+  server details like ID, name, and timestamps.
 permalink: /docs/records/types/server/
 toc:
   title: Server
   expand: Records
 jumbotron:
   title: Server
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

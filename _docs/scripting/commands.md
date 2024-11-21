@@ -1,21 +1,26 @@
 ---
-title: "Scripting Reference: Commands"
+title: 'Scripting Reference: Commands'
 excerpt: A reference of the template commands in bot scripting.
+summary: This page serves as a scripting reference for Cerb, detailing various commands
+  available for use in bot scripts and snippets. It covers the functionality and usage
+  of commands such as "do," "filter," "for," "if," "set," "spaceless," "verbatim,"
+  and "with." Each command is explained with examples, demonstrating how to evaluate
+  expressions, apply filters, iterate over arrays, implement conditional logic, define
+  variables, manage whitespace, avoid parsing template syntax, and create separate
+  variable scopes. The page provides practical insights into effectively utilizing
+  these commands within Cerb's scripting environment.
 permalink: /docs/scripting/commands/
 toc:
   title: Commands
   expand: Developer Guide
 jumbotron:
-  title: "Reference: Commands"
-  tagline: 
+  title: 'Reference: Commands'
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Developer Guide &raquo;
-  -
-    label: Scripting &raquo;
+  - label: Developer Guide &raquo;
+  - label: Scripting &raquo;
     url: /docs/scripting/
 ---
 

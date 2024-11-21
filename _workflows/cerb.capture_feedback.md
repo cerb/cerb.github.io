@@ -1,6 +1,17 @@
 ---
 title: Capture Feedback
 excerpt: Capture user feedback while reading email messages.
+summary: This webpage provides a comprehensive guide on the "Capture Feedback" workflow
+  in Cerb, which is integrated into Cerb 11.0 and later versions. It introduces a
+  custom record type for feedback and an interaction for capturing feedback from email
+  messages. The page details the installation process, which involves enabling the
+  workflow through the Cerb interface, and explains how to use the feature by quoting
+  entire messages or highlighted passages as feedback. Users can select a sentiment
+  for the feedback and log it, with all captured feedback accessible through the search
+  function. Additionally, the page offers a reference for building custom feedback
+  capture workflows, including a detailed template and instructions for customization.
+  The workflow includes various fields for feedback records, such as sentiment, author,
+  and source URL, and provides a script for automating the feedback capture process.
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.capture_feedback/
@@ -8,11 +19,9 @@ jumbotron:
   title: Capture Feedback
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Workflows &raquo;
+  - label: Workflows &raquo;
     url: /resources/workflows/
 ---
 

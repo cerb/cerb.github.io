@@ -1,21 +1,30 @@
 ---
 title: Bucket Records
+excerpt: This page provides detailed information about Bucket records in Cerb, including
+  their structure and usage within the system.
+summary: This page provides detailed information about Bucket records in Cerb, including
+  their structure and usage within the system. It outlines the fields available in
+  the Records API, which are essential for managing bucket records, such as group
+  ID, name, and reply settings. The page also describes dictionary placeholders that
+  can be used in automations, snippets, and API responses, offering a range of fields
+  like record type, name, and updated timestamp. Additionally, it covers search query
+  fields that allow users to filter bucket records based on various criteria, such
+  as group, name, and email template. Lastly, it lists the worklist columns available
+  for displaying bucket records, including group ID, name, and custom fields, providing
+  a comprehensive guide for managing and utilizing bucket records in Cerb.
 permalink: /docs/records/types/bucket/
 toc:
   title: Bucket
   expand: Records
 jumbotron:
   title: Bucket
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

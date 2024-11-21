@@ -1,21 +1,25 @@
 ---
 title: URL Record Fields
+excerpt: This page provides information on how to format and use URL fields within
+  Cerb, detailing the structure of a URL and how it should be represented in JSON
+  packages and API requests.
+summary: This page provides information on how to format and use URL fields within
+  Cerb, detailing the structure of a URL and how it should be represented in JSON
+  packages and API requests. It includes examples of encoding URLs for PUT or POST
+  requests in the Records API, ensuring proper handling of hyperlinks in the system.
 permalink: /docs/records/fields/types/url/
 toc:
   title: URL
   expand: Records
 jumbotron:
   title: URL
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Field Types &raquo;
+  - label: Field Types &raquo;
     url: /docs/records/#fields
 ---
 

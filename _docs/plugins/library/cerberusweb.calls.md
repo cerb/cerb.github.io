@@ -1,18 +1,25 @@
 ---
-title: "Plugin: Call Logging"
+title: 'Plugin: Call Logging'
+excerpt: This page provides detailed information about the Call Logging plugin for
+  Cerb, developed by Webgroup Media, LLC.
+summary: This page provides detailed information about the Call Logging plugin for
+  Cerb, developed by Webgroup Media, LLC. The plugin introduces a new Call record
+  type designed for logging both incoming and outgoing phone activities. It includes
+  various extensions such as Bot Action, Bot Event, Event Listener, Page Section,
+  and Record Type, each with specific identifiers and functionalities. These extensions
+  enable users to log call events, record custom behaviors, listen to call events,
+  and manage call records within the Cerb platform.
 permalink: /docs/plugins/cerberusweb.calls/
 toc:
-  title: "Call Logging"
+  title: Call Logging
   expand: Plugins
 jumbotron:
-  title: "Call Logging"
-  tagline: 
+  title: Call Logging
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

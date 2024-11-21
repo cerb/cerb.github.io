@@ -1,5 +1,15 @@
 ---
 title: Tickets
+excerpt: This page provides detailed instructions for using the Cerb API to create
+  and reply to ticket messages.
+summary: This page provides detailed instructions for using the Cerb API to create
+  and reply to ticket messages. It outlines the parameters required for composing
+  a new ticket and replying to an existing ticket, including fields such as `bcc`,
+  `cc`, `content`, `group_id`, `status`, and more. The page also includes examples
+  of how to structure the API requests with various optional and required fields,
+  demonstrating how to handle attachments, set delivery times, and manage ticket statuses.
+  The information is aimed at developers looking to integrate Cerb's ticketing functionality
+  into their applications.
 permalink: /docs/api/endpoints/tickets/
 toc:
   expand: API
@@ -7,14 +17,11 @@ jumbotron:
   title: Tickets
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
-  -
-    label: Endpoints &raquo;
+  - label: Endpoints &raquo;
     url: /docs/api/endpoints/
 ---
 

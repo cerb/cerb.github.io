@@ -1,18 +1,25 @@
 ---
-title: "Plugin: Legacy Profile Attachments ZIP Download"
+title: 'Plugin: Legacy Profile Attachments ZIP Download'
+excerpt: This page provides information about the "Legacy Profile Attachments ZIP
+  Download" plugin for Cerb, developed by Webgroup Media, LLC.
+summary: This page provides information about the "Legacy Profile Attachments ZIP
+  Download" plugin for Cerb, developed by Webgroup Media, LLC. The plugin allows users
+  to download all attachments associated with a record as a single ZIP file. It includes
+  extensions such as a Download ZIP Controller and a Profile Attachments Download
+  Script, which facilitate the functionality of downloading attachments in bulk. The
+  plugin is identified by the ID "cerb.legacy.profile.attachments" and is stored in
+  the specified path within the Cerb system.
 permalink: /docs/plugins/cerb.legacy.profile.attachments/
 toc:
-  title: "Legacy Profile Attachments ZIP Download"
+  title: Legacy Profile Attachments ZIP Download
   expand: Plugins
 jumbotron:
-  title: "Legacy Profile Attachments ZIP Download"
-  tagline: 
+  title: Legacy Profile Attachments ZIP Download
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

@@ -1,9 +1,15 @@
 ---
-layout: post
-title: "Tip: Quickly add or remove yourself as a watcher from worklists"
+title: 'Tip: Quickly add or remove yourself as a watcher from worklists'
 excerpt: Learn how to quickly toggle your watcher subscriptions from a worklist.
+summary: This page provides a tip for efficiently managing watcher status on worklists
+  in Cerb. It explains how users can quickly add or remove themselves as watchers
+  by holding the `<SHIFT>` key while clicking on a watcher button, bypassing the detailed
+  popup that shows the status of each group member. This shortcut streamlines the
+  process for users who only need to adjust their own watcher status without reviewing
+  or modifying the status of others.
+layout: post
 author: The Cerb Team
-date: 2017-03-07 17:22:00 -0700
+date: "2017-03-07 17:22:00 -0700"
 permalink: /tips/quickly-watch-records-from-worklists/
 tags: cerb tips mailbag
 ---

@@ -1,26 +1,29 @@
 ---
-title: "Chart - Interaction Form Element"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: Chart - Interaction Form Element
+excerpt: This page provides information on the "chart" interaction form element introduced
+  in Cerb 11.0.
+summary: This page provides information on the "chart" interaction form element introduced
+  in Cerb 11.0. It explains how this element is used to render interactive data visualizations
+  within web forms. The page includes a detailed example of a chart configuration,
+  showcasing how to display ticket data by group over the past year using a bar chart.
+  It outlines the syntax for defining the chart's label, datasets, and schema, including
+  data types, series, and axis formatting options. The page serves as a guide for
+  users to implement and customize chart elements in their interaction forms.
 permalink: /docs/automations/triggers/interaction.worker/elements/chart/
 toc:
   title: Chart
   expand: Automations
 jumbotron:
   title: Chart
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: interaction.worker &raquo;
+  - label: interaction.worker &raquo;
     url: /docs/automations/triggers/interaction.worker/
-  -
-    label: Elements &raquo;
+  - label: Elements &raquo;
     url: /docs/automations/triggers/interaction.worker/#elements
 ---
 

@@ -1,23 +1,28 @@
 ---
-title: "Automations: email.parse"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: email.parse'
+excerpt: This page provides detailed information on the "email.parse" command used
+  in Cerb automations to convert a MIME-encoded email message into a ticket.
+summary: This page provides detailed information on the "email.parse" command used
+  in Cerb automations to convert a MIME-encoded email message into a ticket. It outlines
+  the syntax and structure of the command, including the necessary inputs, such as
+  the MIME-encoded email message, and the expected output, which is a ticket dictionary.
+  The page also explains the different stages of the command execution, including
+  "on_simulate" for simulation commands, "on_success" for successful execution commands,
+  and "on_error" for handling failures. Each section is clearly defined to guide users
+  in implementing the command effectively within their automation workflows.
 permalink: /docs/automations/commands/email.parse/
 toc:
   title: email.parse
   expand: Automations
 jumbotron:
   title: email.parse
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

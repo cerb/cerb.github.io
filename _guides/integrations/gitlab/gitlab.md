@@ -1,9 +1,17 @@
 ---
 title: Integrate with GitLab
 excerpt: A step-by-step guide for integrating Cerb and GitLab.
+summary: 'This webpage provides a comprehensive guide on integrating Cerb with GitLab,
+  focusing on authentication methods and automation usage. It details two authentication
+  methods: using a personal access token and OAuth2. The personal access token method
+  involves creating a token in GitLab and setting up a connected service and account
+  in Cerb. The OAuth2 method requires creating an OAuth application in GitLab, setting
+  up a GitLab service in Cerb, and linking the connected account. The guide also explains
+  how to use the connected GitLab account in Cerb automations, providing step-by-step
+  instructions and examples for setting up and testing these integrations.'
 permalink: /guides/integrations/gitlab/
 social_image_url: /assets/images/guides/gitlab/cerb-and-gitlab.png
-date: 2024-10-15 00:00:00 -0700
+date: "2024-10-15 00:00:00 -0700"
 layout: integration
 topic: Integrations
 subtopic: GitLab
@@ -11,17 +19,13 @@ jumbotron:
   title: Cerb + GitLab
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: GitLab &raquo;
+  - label: GitLab &raquo;
     url: /resources/guides/#gitlab
 ---
 

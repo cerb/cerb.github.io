@@ -1,23 +1,27 @@
 ---
 title: mail.reply
-#excerpt: Toolbars...
-#social_image_url: /assets/images/search/kata.png
+excerpt: This page provides detailed instructions on configuring and using the reply
+  toolbar in Cerb when sending an email reply.
+summary: This page provides detailed instructions on configuring and using the reply
+  toolbar in Cerb when sending an email reply. It guides users on how to navigate
+  to the toolbar settings, specifically for `mail.reply`, and how to add interactions
+  using the toolbar KATA. The page outlines the available placeholders for KATA, such
+  as `message_*` and `worker_*`, which support key expansion. It also describes the
+  interactions, including the caller parameters like `selected_text` and `text`, and
+  the expected output, which is a text snippet to be inserted in the editor.
 permalink: /docs/toolbars/interactions/mail.reply/
 toc:
   title: Toolbars
   expand: Automations
 jumbotron:
   title: mail.reply
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Toolbars &raquo;
+  - label: Toolbars &raquo;
     url: /docs/toolbars/
 ---
 

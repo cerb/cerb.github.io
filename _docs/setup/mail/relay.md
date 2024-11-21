@@ -1,6 +1,22 @@
 ---
-title: "Setup: External Relay"
-excerpt: The email relay allows workers to respond to messages from external mail applications.
+title: 'Setup: External Relay'
+excerpt: This page provides detailed information on setting up an external email relay
+  for Cerb, allowing workers to respond to messages using external mail applications
+  like Gmail, Outlook, or mobile phones, while maintaining the appearance of sending
+  from Cerb.
+summary: This page provides detailed information on setting up an external email relay
+  for Cerb, allowing workers to respond to messages using external mail applications
+  like Gmail, Outlook, or mobile phones, while maintaining the appearance of sending
+  from Cerb. This setup ensures the privacy of workers' personal email addresses and
+  retains Cerb's features such as shared history and assignments. The page explains
+  the authentication process for relayed messages, which involves checking mail headers
+  and using a secret key in the `Message-Id:` header. It also addresses potential
+  issues with certain email applications that may not adhere to standard conventions
+  and offers guidance on disabling built-in authentication with caution. Additionally,
+  it emphasizes the importance of setting up alternative authentication methods to
+  prevent unauthorized message relaying and advises on handling "spoofed" sender messages.
+  The page includes a resource guide for responding to messages from an external email
+  client.
 permalink: /docs/setup/mail/relay/
 toc:
   title: External Relay
@@ -8,14 +24,11 @@ toc:
 jumbotron:
   title: External Relay
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Mail &raquo;
+  - label: Mail &raquo;
     url: /docs/setup/#incoming-mail
 ---
 

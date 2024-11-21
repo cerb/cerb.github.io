@@ -1,5 +1,12 @@
 ---
-title: "Setup: Automated Email Templates"
+title: 'Setup: Automated Email Templates'
+excerpt: This page details the configuration options for automated email templates
+  in Cerb.
+summary: This page details the configuration options for automated email templates
+  in Cerb. It explains how users can customize various aspects of automated emails,
+  such as the sender information, subject line, and body content. These templates
+  are used for specific events like new worker invitations, email confirmations for
+  workers, and worker account recovery processes.
 permalink: /docs/setup/mail/templates/
 toc:
   title: Automated Email Templates
@@ -7,14 +14,11 @@ toc:
 jumbotron:
   title: Automated Email Templates
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Mail &raquo;
+  - label: Mail &raquo;
     url: /docs/setup/#outgoing-mail
 ---
 

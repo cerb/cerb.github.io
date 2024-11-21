@@ -1,23 +1,27 @@
 ---
-title: "projectBoard.renderCard"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: projectBoard.renderCard
+excerpt: This page provides detailed information about the "projectBoard.renderCard"
+  automations in Cerb, which are triggered when a card is displayed on a project board.
+summary: This page provides detailed information about the "projectBoard.renderCard"
+  automations in Cerb, which are triggered when a card is displayed on a project board.
+  It explains the use of event handler KATA, where the first enabled automation is
+  executed based on criteria such as the record type of the card. The page outlines
+  the inputs required for the automation, including details about the project board,
+  card record, custom input values, and the active worker. It also describes the output,
+  which is a sheet schema used to display the card's layout.
 permalink: /docs/automations/triggers/projectBoard.renderCard/
 toc:
   title: projectBoard.renderCard
   expand: Automations
 jumbotron:
   title: projectBoard.renderCard
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Triggers &raquo;
+  - label: Triggers &raquo;
     url: /docs/automations/#triggers
 ---
 

@@ -1,6 +1,13 @@
 ---
 title: Issue Tracking (GitLab Issues)
 excerpt: Search and link GitLab issues to tickets.
+summary: This page provides a comprehensive guide on integrating Cerb with GitLab
+  for issue tracking. It covers the installation process, including creating a GitLab
+  connected account, importing and configuring the workflow, and setting up necessary
+  fields and automations. The guide also details how to use the integration, such
+  as navigating ticket profiles, linking GitLab issues to tickets, and managing linked
+  issues through the Cerb interface. The integration allows users to search, link,
+  and unlink GitLab issues directly from Cerb, enhancing issue management and collaboration.
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.integrations.gitlab.issues/
@@ -8,11 +15,9 @@ jumbotron:
   title: GitLab Issues
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Workflows &raquo;
+  - label: Workflows &raquo;
     url: /resources/workflows/
 ---
 

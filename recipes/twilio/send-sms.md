@@ -1,13 +1,19 @@
 ---
 title: Send SMS messages from Cerb bots using Twilio
+excerpt: This page provides a guide on how to send SMS messages from Cerb bots using
+  Twilio.
+summary: This page provides a guide on how to send SMS messages from Cerb bots using
+  Twilio. It includes instructions on enabling the Twilio plugin within Cerb, creating
+  a new bot for organization, and adding "Send SMS via Twilio" actions to bot behaviors.
+  The guide walks through the process of setting up a new bot, configuring its details,
+  and importing specific behaviors to facilitate SMS sending through Twilio.
 permalink: /guides/twilio/send-sms/
 layout: integration
 jumbotron:
   title: Send SMS messages from Cerb bots using Twilio
   tagline: ""
   breadcrumbs:
-  -
-    label: Guides &raquo; Twilio &raquo;
+  - label: Guides &raquo; Twilio &raquo;
     url: /guides/twilio/
 ---
 

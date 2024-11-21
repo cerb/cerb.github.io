@@ -1,21 +1,29 @@
 ---
 title: Contact Records
+excerpt: This page provides comprehensive information about contact records in Cerb,
+  detailing the fields available in the Records API, dictionary placeholders for automations
+  and API responses, search query fields, and worklist columns.
+summary: This page provides comprehensive information about contact records in Cerb,
+  detailing the fields available in the Records API, dictionary placeholders for automations
+  and API responses, search query fields, and worklist columns. It outlines the structure
+  and types of data that can be associated with a contact, such as personal information
+  (name, email, phone, etc.), organizational details, and metadata like comments and
+  custom fields. The page also explains how these fields can be utilized in search
+  queries and displayed in worklists, offering a robust framework for managing and
+  interacting with contact data within the Cerb platform.
 permalink: /docs/records/types/contact/
 toc:
   title: Contact
   expand: Records
 jumbotron:
   title: Contact
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

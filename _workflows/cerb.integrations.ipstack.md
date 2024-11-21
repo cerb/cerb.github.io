@@ -1,6 +1,15 @@
 ---
 title: Geolocate IPs (IPstack)
 excerpt: Geolocate IPs and render locations on maps with IPstack.
+summary: This page provides a comprehensive guide on integrating Cerb with IPstack
+  to geolocate IP addresses and display their locations on maps. It covers the installation
+  process, including the requirement to create an IPstack connected account and enabling
+  the workflow in Cerb 11.0+. The usage section explains how to interact with the
+  system to locate IP addresses, including using the Cerb interface and adding the
+  interaction to custom widgets and toolbars. Additionally, the page offers a reference
+  template for building a custom "Geolocate IPs" workflow, detailing the necessary
+  configurations, scripts, and policies to retrieve and display geospatial data about
+  IP addresses.
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.integrations.ipstack/
@@ -8,11 +17,9 @@ jumbotron:
   title: Geolocate IPs (IPstack)
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Workflows &raquo;
+  - label: Workflows &raquo;
     url: /resources/workflows/
 ---
 

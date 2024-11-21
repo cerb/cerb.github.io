@@ -1,21 +1,29 @@
 ---
 title: Activity Log Records
+excerpt: This page provides detailed information about the Activity Log records in
+  Cerb, including their structure and usage within the system.
+summary: This page provides detailed information about the Activity Log records in
+  Cerb, including their structure and usage within the system. It outlines the fields
+  available in the Records API, such as `activity_point`, `actor__context`, and `target__context`,
+  and explains their types and requirements. The page also describes the parameters
+  for logging messages, including placeholders and variable URLs. Additionally, it
+  covers dictionary placeholders for automations and API responses, search query fields
+  for filtering activity logs, and worklist columns for organizing and displaying
+  log data. This comprehensive guide is essential for understanding how to manage
+  and utilize activity logs within Cerb.
 permalink: /docs/records/types/activity_log/
 toc:
   title: Activity Log
   expand: Records
 jumbotron:
   title: Activity Log
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

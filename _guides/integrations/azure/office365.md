@@ -1,6 +1,12 @@
 ---
 title: Integrate with Office365
 excerpt: A step-by-step guide for integrating Cerb and Office365.
+summary: This page provides a detailed guide on integrating Cerb with Office365 by
+  configuring an Azure app and setting up Cerb. It includes step-by-step instructions
+  for creating a new app and client secret in Azure, as well as creating a connected
+  service and account in Cerb. The guide is designed to help users automate tasks
+  using Azure APIs with Cerb bots. It concludes with a reference to further steps
+  for authenticating an Office365 mailbox using XOAUTH2.
 permalink: /guides/integrations/azure/office365/
 social_image_url: /assets/images/guides/azure/cerb-and-azure.png
 layout: integration
@@ -10,17 +16,13 @@ jumbotron:
   title: Cerb + Office365
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Azure &raquo;
+  - label: Azure &raquo;
     url: /resources/guides/#azure
 ---
 

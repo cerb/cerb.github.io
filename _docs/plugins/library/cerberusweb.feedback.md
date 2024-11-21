@@ -1,18 +1,26 @@
 ---
-title: "Plugin: Feedback Capture"
+title: 'Plugin: Feedback Capture'
+excerpt: This page provides information about the Feedback Capture plugin for Cerb,
+  developed by Webgroup Media, LLC.
+summary: This page provides information about the Feedback Capture plugin for Cerb,
+  developed by Webgroup Media, LLC. The plugin is designed to facilitate the organic
+  capture of feedback, whether praise or criticism, and share it with decision makers.
+  It integrates a Feedback tab into the Activity page and allows users to capture
+  feedback directly from emails by highlighting text and using the toolbar. The plugin
+  includes several extensions such as a Feedback Controller, a Message Toolbar Item
+  for tickets, a Record Type for feedback, and a REST API Controller, all aimed at
+  enhancing feedback management within the Cerb platform.
 permalink: /docs/plugins/cerberusweb.feedback/
 toc:
-  title: "Feedback Capture"
+  title: Feedback Capture
   expand: Plugins
 jumbotron:
-  title: "Feedback Capture"
-  tagline: 
+  title: Feedback Capture
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

@@ -1,19 +1,29 @@
 ---
 title: Scheduler
+excerpt: This page provides an overview of the scheduler in Cerb, which is responsible
+  for planning and executing automated background tasks known as jobs.
+summary: This page provides an overview of the scheduler in Cerb, which is responsible
+  for planning and executing automated background tasks known as jobs. These jobs
+  include activities like checking mailboxes for new messages, search indexing, performing
+  maintenance, and triggering automation timers. The page explains how jobs are scheduled
+  at specific intervals and can be disabled if needed. It also describes how jobs
+  can run concurrently, with each job being locked during execution to prevent duplicates.
+  Users can manually run jobs for troubleshooting, but automation is recommended for
+  production environments. The page details the configuration required for automatic
+  job execution, such as using a third-party tool to request the `/cron` page every
+  minute, with specific instructions for Unix and Windows systems. It also mentions
+  security measures like IP address allowlisting for accessing the `/cron` page.
 permalink: /docs/setup/configure/scheduler/
 toc:
   expand: Admin Guide
 jumbotron:
   title: Scheduler
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Configure &raquo;
+  - label: Configure &raquo;
     url: /docs/setup/#configure
 ---
 

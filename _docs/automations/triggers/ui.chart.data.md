@@ -1,23 +1,28 @@
 ---
-title: "ui.chart.data"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: ui.chart.data
+excerpt: This page provides information on "ui.chart.data" automations, which are
+  utilized as datasets by Chart KATA widgets in Cerb.
+summary: This page provides information on "ui.chart.data" automations, which are
+  utilized as datasets by Chart KATA widgets in Cerb. It outlines the structure of
+  the automation dictionary, detailing the input values such as custom inputs from
+  the caller, and records related to the widget and active worker, both of which support
+  key expansion. The page also describes the expected output format, which includes
+  a dictionary containing chart data as an array of series with consistent lengths.
+  An example of the output format is provided, illustrating how time series data and
+  corresponding series values are structured in CSV format.
 permalink: /docs/automations/triggers/ui.chart.data/
 toc:
   title: ui.chart.data
   expand: Automations
 jumbotron:
   title: ui.chart.data
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Triggers &raquo;
+  - label: Triggers &raquo;
     url: /docs/automations/#triggers
 ---
 

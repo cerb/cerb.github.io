@@ -1,21 +1,30 @@
 ---
 title: Knowledgebase Article Records
+excerpt: This page provides detailed information about Knowledgebase Article records
+  in Cerb, including their structure and usage within the system.
+summary: This page provides detailed information about Knowledgebase Article records
+  in Cerb, including their structure and usage within the system. It outlines the
+  fields available in the Records API, such as categories, content, format, and title,
+  and explains how these fields can be utilized in automations, snippets, and API
+  responses through dictionary placeholders. The page also describes the search query
+  fields that can be used to filter knowledgebase articles, such as category, content,
+  format, and views. Additionally, it lists the worklist columns available for organizing
+  and displaying knowledgebase articles, including custom fields, format, title, and
+  updated date. This comprehensive guide is essential for managing and utilizing knowledgebase
+  articles effectively within Cerb.
 permalink: /docs/records/types/kb_article/
 toc:
   title: Knowledgebase Article
   expand: Records
 jumbotron:
   title: Knowledgebase Article
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

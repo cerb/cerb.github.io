@@ -1,26 +1,29 @@
 ---
-title: "Audio - Interaction Form Element"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: Audio - Interaction Form Element
+excerpt: This page provides details on the audio interaction form element introduced
+  in Cerb 11.0.
+summary: This page provides details on the audio interaction form element introduced
+  in Cerb 11.0. It explains how to incorporate an audio element into web forms, allowing
+  sound files to be played. The page outlines the syntax for configuring the audio
+  element, including options for labels, autoplay, controls, looping, and specifying
+  the audio source. The source can be a base64-encoded MPEG data URI or a Cerb automation
+  resource token. The default settings are autoplay enabled, controls visible, and
+  no looping.
 permalink: /docs/automations/triggers/interaction.worker/elements/audio/
 toc:
   title: Audio
   expand: Automations
 jumbotron:
   title: Audio
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: interaction.worker &raquo;
+  - label: interaction.worker &raquo;
     url: /docs/automations/triggers/interaction.worker/
-  -
-    label: Elements &raquo;
+  - label: Elements &raquo;
     url: /docs/automations/triggers/interaction.worker/#elements
 ---
 

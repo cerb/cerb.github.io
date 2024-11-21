@@ -1,23 +1,27 @@
 ---
-title: "reminder.remind"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: reminder.remind
+excerpt: This page provides information about the "reminder.remind" automation events
+  in Cerb, which are activated when a reminder record hits its specified "remind at"
+  date.
+summary: This page provides information about the "reminder.remind" automation events
+  in Cerb, which are activated when a reminder record hits its specified "remind at"
+  date. It details the placeholders available in the automation event dictionary,
+  specifically highlighting the use of the `reminder_*` key for accessing the reminder
+  record with support for key expansion. The page notes that there are no outputs
+  associated with this event.
 permalink: /docs/automations/events/reminder.remind/
 toc:
   title: reminder.remind
   expand: Automations
 jumbotron:
   title: reminder.remind
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Events &raquo;
+  - label: Events &raquo;
     url: /docs/automations/#events
 ---
 

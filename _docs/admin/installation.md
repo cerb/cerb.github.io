@@ -1,12 +1,23 @@
 ---
 title: Installation
+excerpt: This page provides information on the various installation options for Cerb,
+  including Docker, Cerb Cloud, and on-premises solutions.
+summary: This page provides information on the various installation options for Cerb,
+  including Docker, Cerb Cloud, and on-premises solutions. It highlights the ease
+  of using a pre-configured Docker container for self-hosted evaluation, testing,
+  and development, which requires minimal server configuration. Cerb Cloud offers
+  a subscription-based, ready-to-use service with high availability and security,
+  allowing users to focus on their mission without handling technical details. It
+  supports custom domain names and integrates with existing email providers. For those
+  needing to self-host Cerb in production, such as for compliance reasons, the page
+  outlines the requirements and offers enterprise support contracts for additional
+  technical assistance.
 permalink: /docs/installation/
 jumbotron:
   title: Installation
   tagline: Deploy Cerb in Docker, the cloud, or on your own servers
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
 ---
 

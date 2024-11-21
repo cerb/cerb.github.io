@@ -1,21 +1,26 @@
 ---
-title: "Scripting Reference: Dates"
-excerpt: 
+title: 'Scripting Reference: Dates'
+excerpt: This page provides a scripting reference for handling dates in Cerb, focusing
+  on formatting, timezones, Unix timestamps, and timestamp manipulation.
+summary: This page provides a scripting reference for handling dates in Cerb, focusing
+  on formatting, timezones, Unix timestamps, and timestamp manipulation. It explains
+  how to use the date filter to format strings or variables as dates, with examples
+  of different date formats. The page also covers specifying timezones for date formatting,
+  obtaining Unix timestamps, and manipulating dates using the date_modify filter.
+  The examples demonstrate practical applications of these functions, such as displaying
+  current dates in various timezones and calculating future dates.
 permalink: /docs/scripting/dates/
 toc:
   title: Dates
   expand: Developer Guide
 jumbotron:
   title: Dates
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Developer Guide &raquo;
-  -
-    label: Scripting &raquo;
+  - label: Developer Guide &raquo;
+  - label: Scripting &raquo;
     url: /docs/scripting/
 ---
 

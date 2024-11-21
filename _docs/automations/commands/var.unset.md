@@ -1,23 +1,28 @@
 ---
-title: "Automations: var.unset"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: var.unset'
+excerpt: This page provides detailed information on the "var.unset" command used in
+  Cerb automations to remove a placeholder using a specified key path.
+summary: This page provides detailed information on the "var.unset" command used in
+  Cerb automations to remove a placeholder using a specified key path. It includes
+  an example demonstrating how to unset a phone number from a nested data structure.
+  The page outlines the syntax for using "var.unset," including required inputs, optional
+  outputs, and commands to execute during simulation, on success, and on error. It
+  explains how to specify key paths, handle simulation scenarios, and manage success
+  and error states, providing a comprehensive guide for users to effectively utilize
+  this command in their automation workflows.
 permalink: /docs/automations/commands/var.unset/
 toc:
   title: var.unset
   expand: Automations
 jumbotron:
   title: var.unset
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

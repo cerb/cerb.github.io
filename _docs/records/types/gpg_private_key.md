@@ -1,21 +1,30 @@
 ---
 title: PGP Private Key Records
+excerpt: This page provides detailed information about PGP Private Key records in
+  Cerb, including their structure and usage within the system.
+summary: This page provides detailed information about PGP Private Key records in
+  Cerb, including their structure and usage within the system. It outlines the fields
+  available in the Records API, such as `fingerprint`, `name`, and `updated_at`, and
+  describes how these fields can be utilized in automations, snippets, and API responses
+  through dictionary placeholders. The page also details the search query fields that
+  can be used to filter PGP private key records, such as `expires`, `fingerprint`,
+  and `name`. Additionally, it lists the worklist columns available for organizing
+  and displaying PGP private key data, including custom fields and key attributes
+  like `expires_at` and `fingerprint`. This comprehensive guide is essential for managing
+  and integrating PGP private key records within Cerb.
 permalink: /docs/records/types/gpg_private_key/
 toc:
   title: PGP Private Key
   expand: Records
 jumbotron:
   title: PGP Private Key
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

@@ -1,18 +1,27 @@
 ---
-title: "Plugin: Time Tracking"
+title: 'Plugin: Time Tracking'
+excerpt: This page provides detailed information about the Time Tracking plugin for
+  Cerb, developed by Webgroup Media, LLC.
+summary: This page provides detailed information about the Time Tracking plugin for
+  Cerb, developed by Webgroup Media, LLC. The plugin is designed to help users track
+  time spent on various helpdesk activities, such as replying to tickets. It introduces
+  a "Track Time" button to the Display Ticket and Organizations interfaces and adds
+  a Time Tracking tab to the Activity page. The page outlines various extensions associated
+  with the plugin, including Bot Event, Event Listener, Page Section, Page Type, Prebody
+  Renderer, Profile Script, Record Type, Reply Toolbar Item, and Rest API Controller,
+  each with specific identifiers and functions to enhance time tracking capabilities
+  within the Cerb platform.
 permalink: /docs/plugins/cerberusweb.timetracking/
 toc:
-  title: "Time Tracking"
+  title: Time Tracking
   expand: Plugins
 jumbotron:
-  title: "Time Tracking"
-  tagline: 
+  title: Time Tracking
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

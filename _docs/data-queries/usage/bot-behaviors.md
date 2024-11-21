@@ -1,19 +1,25 @@
 ---
-title: "Data Queries: Bot Behavior Usage"
-excerpt: 
+title: 'Data Queries: Bot Behavior Usage'
+excerpt: This page provides information on data queries related to the historical
+  usage of bot behaviors in Cerb, including metrics such as uses, average runtime,
+  and total runtime over time.
+summary: This page provides information on data queries related to the historical
+  usage of bot behaviors in Cerb, including metrics such as uses, average runtime,
+  and total runtime over time. It outlines the available response formats for these
+  queries, which include a default tabular format for table visualizations and a timeseries
+  format for time series visualizations. The page also includes an example of how
+  to structure a query using the timeseries format.
 permalink: /docs/data-queries/usage/bot-behaviors/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: Bot Behavior Usage
 jumbotron:
   title: Bot Behavior Usage
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

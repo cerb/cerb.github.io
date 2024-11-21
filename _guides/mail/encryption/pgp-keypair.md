@@ -1,6 +1,15 @@
 ---
 title: Generate a PGP key-pair for encryption
-excerpt: ...
+excerpt: '...'
+summary: This page provides a comprehensive guide on generating and managing PGP key-pairs
+  for encryption within Cerb. It explains that Cerb has eliminated the need for the
+  GnuPG PHP extension, allowing PGP key-pairs to be generated directly in the browser,
+  which supports various key lengths and multiple user IDs. The guide details the
+  steps for creating a new key-pair, including selecting key length and adding user
+  IDs, and emphasizes the importance of choosing the appropriate key strength based
+  on the sensitivity of the information. Additionally, it covers how to share the
+  public key by copying and distributing it to those who need to send encrypted messages,
+  highlighting that the public key is not confidential and can be shared widely.
 permalink: /guides/mail/encryption/pgp-keypair/
 layout: integration
 topic: Mail
@@ -9,17 +18,13 @@ jumbotron:
   title: Generate a PGP key-pair for encryption
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Mail &raquo;
+  - label: Mail &raquo;
     url: /resources/guides/#mail
-  -
-    label: Encryption &raquo;
+  - label: Encryption &raquo;
     url: /resources/guides/#mail-encryption
 ---
 

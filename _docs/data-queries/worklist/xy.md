@@ -1,19 +1,27 @@
 ---
-title: "Data Queries: Worklist X/Y"
-excerpt: 
+title: 'Data Queries: Worklist X/Y'
+excerpt: This page provides detailed information on using `worklist.xy` data queries
+  in Cerb to plot two-dimensional data for visualizing clusters or correlations.
+summary: This page provides detailed information on using `worklist.xy` data queries
+  in Cerb to plot two-dimensional data for visualizing clusters or correlations. It
+  outlines the necessary inputs for creating these queries, including specifying labels,
+  record types, and metrics for both x and y axes. The page also describes how to
+  filter and sort data within each series query. Various response formats are available,
+  such as pie, categories, scatterplot, and table, each suitable for different types
+  of visualizations. An example is provided to demonstrate generating a table of the
+  top 10 quickest message response times, showcasing the practical application of
+  these queries.
 permalink: /docs/data-queries/worklist/xy/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: Worklist X/Y
 jumbotron:
   title: Worklist X/Y
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

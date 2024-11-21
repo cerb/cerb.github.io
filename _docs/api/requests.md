@@ -1,5 +1,18 @@
 ---
-title: "API: Requests"
+title: 'API: Requests'
+excerpt: This page provides a detailed overview of how to interact with Cerb's web
+  API using various HTTP verbs, including GET, PUT, POST, PATCH, and DELETE.
+summary: This page provides a detailed overview of how to interact with Cerb's web
+  API using various HTTP verbs, including GET, PUT, POST, PATCH, and DELETE. It explains
+  how each verb is used for different actions such as retrieving, updating, creating,
+  partially modifying, and deleting records. The page also describes how to format
+  requests, including specifying the response format with extensions like .json or
+  .xml and using payloads for certain actions. Examples are provided for each verb
+  to illustrate how to perform specific tasks, such as retrieving a ticket record,
+  updating a subject, searching for tickets, upserting an organization, and deleting
+  a ticket. The page emphasizes the automatic handling of payload encoding when using
+  official libraries and references additional documentation for detailed module and
+  action-specific information.
 permalink: /docs/api/requests/
 toc:
   title: Requests
@@ -7,11 +20,9 @@ jumbotron:
   title: Requests
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
 ---
 

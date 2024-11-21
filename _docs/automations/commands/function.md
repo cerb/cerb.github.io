@@ -1,23 +1,30 @@
 ---
-title: "Automations: function"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: function'
+excerpt: This page provides detailed information on using the "function" command in
+  Cerb automations, specifically focusing on executing an automation function and
+  returning an output dictionary.
+summary: This page provides detailed information on using the "function" command in
+  Cerb automations, specifically focusing on executing an automation function and
+  returning an output dictionary. It includes an example of an automation function
+  named `example.math.sum` that calculates the sum of numbers. The page outlines the
+  syntax and components required to run an automation function, such as `uri`, `inputs`,
+  `output`, `on_simulate`, `on_success`, and `on_error`. It explains how to define
+  inputs, handle outputs, and manage success and error states within the automation
+  process. The example provided demonstrates how to input a series of numbers and
+  return their sum, showcasing the practical application of these commands.
 permalink: /docs/automations/commands/function/
 toc:
   title: function
   expand: Automations
 jumbotron:
   title: function
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

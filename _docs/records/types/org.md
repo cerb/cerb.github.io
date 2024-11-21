@@ -1,21 +1,30 @@
 ---
 title: Organization Records
+excerpt: This page provides detailed information about organization records in Cerb,
+  including their structure and usage within the platform.
+summary: This page provides detailed information about organization records in Cerb,
+  including their structure and usage within the platform. It outlines the fields
+  available in the Records API, such as city, country, email, and website, and specifies
+  which fields are required. The page also describes dictionary placeholders for automations,
+  snippets, and API responses, offering a comprehensive list of fields like name,
+  phone, and address. Additionally, it details search query fields that can be used
+  to filter organization records, such as city, country, and email, and lists the
+  columns available in organization worklists, which include city, country, and created
+  date. The page serves as a guide for managing and utilizing organization records
+  effectively within Cerb.
 permalink: /docs/records/types/org/
 toc:
   title: Organization
   expand: Records
 jumbotron:
   title: Organization
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

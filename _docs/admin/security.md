@@ -1,18 +1,29 @@
 ---
 title: Security
+excerpt: This page provides a comprehensive guide on securing a Cerb installation,
+  focusing on protecting filesystem access, setting appropriate file permissions,
+  and restricting PHP functions.
+summary: This page provides a comprehensive guide on securing a Cerb installation,
+  focusing on protecting filesystem access, setting appropriate file permissions,
+  and restricting PHP functions. It explains the Model-View-Controller (MVC) design
+  pattern used by Cerb, where content is served virtually rather than through direct
+  file access. The document details how to configure web servers like Nginx and Apache
+  to restrict access to sensitive directories and files, ensuring only necessary files
+  are exposed to the web. It also outlines best practices for setting file permissions
+  to prevent unauthorized modifications, particularly emphasizing the importance of
+  restricting write access to PHP files. Additionally, the page discusses considerations
+  for implementing HTTP authentication and IP-based security, especially in the context
+  of scheduled tasks, Web-API integrations, and community portals. References to external
+  resources on MVC, Ajax, and Apache security tips are provided for further reading.
 permalink: /docs/security/
-excerpt: Best practices for securing your Cerb installation.
 jumbotron:
   title: Security
   tagline: Best practices for securing your Cerb installation.
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Admin Guide &raquo;
-  -
-    label: Installation &raquo;
+  - label: Admin Guide &raquo;
+  - label: Installation &raquo;
     url: /docs/installation/self-hosted/
 ---
 

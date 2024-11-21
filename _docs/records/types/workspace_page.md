@@ -1,21 +1,31 @@
 ---
 title: Workspace Page Records
+excerpt: This page provides detailed information about Workspace Page records in Cerb,
+  including their structure and usage within the system.
+summary: This page provides detailed information about Workspace Page records in Cerb,
+  including their structure and usage within the system. It covers the Records API,
+  which outlines the required and optional fields for Workspace Pages, such as `extension_id`,
+  `name`, and `owner_id`. The page also explains Dictionary Placeholders used in automations,
+  snippets, and API responses, offering a list of available fields and their descriptions.
+  Additionally, it details the Search Query Fields that can be used to filter Workspace
+  Page searches, such as `id`, `name`, and `owner`. Lastly, it describes the Worklist
+  Columns available for displaying Workspace Page data, including columns for owner,
+  custom fields, and update timestamps. This comprehensive guide is essential for
+  developers and users looking to manage and interact with Workspace Pages in Cerb
+  effectively.
 permalink: /docs/records/types/workspace_page/
 toc:
   title: Workspace Page
   expand: Records
 jumbotron:
   title: Workspace Page
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

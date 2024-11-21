@@ -1,21 +1,24 @@
 ---
 title: Text Record Fields
+excerpt: This page provides guidance on handling text fields in Cerb, specifically
+  focusing on how to format and encode text for use in JSON packages and API requests.
+summary: This page provides guidance on handling text fields in Cerb, specifically
+  focusing on how to format and encode text for use in JSON packages and API requests.
+  It explains the use of control characters for multi-line text in JSON and the necessity
+  of URL encoding text in API requests, including encoding new line characters.
 permalink: /docs/records/fields/types/text/
 toc:
   title: Text
   expand: Records
 jumbotron:
   title: Text
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Field Types &raquo;
+  - label: Field Types &raquo;
     url: /docs/records/#fields
 ---
 

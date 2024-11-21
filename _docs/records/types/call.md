@@ -1,21 +1,30 @@
 ---
 title: Call Records
+excerpt: This page provides detailed information about the call records in Cerb, including
+  their structure and usage within the system.
+summary: This page provides detailed information about the call records in Cerb, including
+  their structure and usage within the system. It outlines the fields available in
+  the Records API, such as creation and update timestamps, call resolution status,
+  and phone numbers. The page also describes dictionary placeholders for automations
+  and API responses, offering fields like record type, subject, and links. Additionally,
+  it lists search query fields that can be used to filter call records based on various
+  criteria, such as comments, creation date, and call status. Lastly, it details the
+  columns available in call worklists, which include fields like creation date, call
+  status, and custom fields. This comprehensive guide is essential for managing and
+  utilizing call records effectively within Cerb.
 permalink: /docs/records/types/call/
 toc:
   title: Call
   expand: Records
 jumbotron:
   title: Call
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

@@ -1,21 +1,30 @@
 ---
 title: Connected Account Records
+excerpt: This page provides detailed information about Connected Account Records in
+  Cerb, including their structure and usage within the platform.
+summary: This page provides detailed information about Connected Account Records in
+  Cerb, including their structure and usage within the platform. It outlines the fields
+  available in the Records API, which are essential for linking, identifying, and
+  managing connected accounts. The page also describes dictionary placeholders that
+  can be used in automations, snippets, and API responses, offering a range of fields
+  such as record type, owner, and service provider. Additionally, it lists search
+  query fields that facilitate filtering connected accounts based on various criteria
+  like creation date, owner, and service. Lastly, it details the worklist columns
+  available for organizing and displaying connected account data, highlighting key
+  attributes such as owner, creation date, and service provider.
 permalink: /docs/records/types/connected_account/
 toc:
   title: Connected Account
   expand: Records
 jumbotron:
   title: Connected Account
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

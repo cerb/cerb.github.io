@@ -1,21 +1,28 @@
 ---
 title: Opportunity Records
+excerpt: This page provides detailed information about Opportunity Records in Cerb,
+  including their structure and usage within the system.
+summary: This page provides detailed information about Opportunity Records in Cerb,
+  including their structure and usage within the system. It outlines the fields available
+  in the Records API, such as amount, currency, status, and timestamps for creation
+  and updates. The page also describes dictionary placeholders for automations and
+  API responses, offering fields like context, label, and record URL. Additionally,
+  it covers search query fields that allow filtering opportunities by attributes like
+  amount, status, and creation date. Lastly, it lists the worklist columns available
+  for displaying opportunity data, including custom fields, closed date, and status.
 permalink: /docs/records/types/opportunity/
 toc:
   title: Opportunity
   expand: Records
 jumbotron:
   title: Opportunity
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

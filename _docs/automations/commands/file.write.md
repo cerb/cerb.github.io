@@ -1,23 +1,30 @@
 ---
-title: "Automations: file.write"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: file.write'
+excerpt: This page provides detailed information on the "file.write" command in Cerb
+  automations, which is used to write arbitrary bytes to a temporary automation resource
+  record with a unique token identifier.
+summary: This page provides detailed information on the "file.write" command in Cerb
+  automations, which is used to write arbitrary bytes to a temporary automation resource
+  record with a unique token identifier. It explains the efficiency of this method
+  over storing large data within the automation state and describes how the command
+  can generate a ZIP file from multiple attachments or resources. The page outlines
+  the syntax, including inputs like content, expiration, MIME type, and URI, and details
+  the outputs and error handling. It also provides examples of creating a simple text
+  file, a ZIP file from mixed bytes and attachments, and an attachment from an automation
+  resource, complete with the expected output structure for each scenario.
 permalink: /docs/automations/commands/file.write/
 toc:
   title: file.write
   expand: Automations
 jumbotron:
   title: file.write
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

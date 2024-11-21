@@ -1,23 +1,27 @@
 ---
-title: "Automations: record.delete"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: record.delete'
+excerpt: This page provides detailed information on the "record.delete" command used
+  in Cerb automations.
+summary: This page provides detailed information on the "record.delete" command used
+  in Cerb automations. It explains the syntax and parameters required to delete a
+  record of a specified type, such as "task," by providing the record type and ID.
+  The page outlines the structure for inputs, outputs, and handling different scenarios
+  like simulation, success, and error states. It describes how the output placeholder
+  is used to store the dictionary of the deleted record or error messages, ensuring
+  users can effectively manage record deletion within their automations.
 permalink: /docs/automations/commands/record.delete/
 toc:
   title: record.delete
   expand: Automations
 jumbotron:
   title: record.delete
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

@@ -1,21 +1,31 @@
 ---
 title: Classifier Example Records
+excerpt: This page provides detailed information about the structure and functionality
+  of "Classifier Example" records in Cerb.
+summary: This page provides detailed information about the structure and functionality
+  of "Classifier Example" records in Cerb. It outlines the fields available in the
+  Records API, including required fields like `classifier_id` and `expression`, and
+  optional fields such as `links` and `updated_at`. The page also describes dictionary
+  placeholders used in automations, snippets, and API responses, offering a comprehensive
+  list of fields like `_context`, `class_`, and `record_url`. Additionally, it details
+  search query fields that can be used to filter classifier example records, such
+  as `class:`, `classifier:`, and `expression:`. Lastly, it lists the worklist columns
+  available for organizing classifier example data, including `c_class_id`, `c_classifier_id`,
+  and `c_updated_at`. This information is crucial for users looking to manage and
+  utilize classifier examples effectively within Cerb.
 permalink: /docs/records/types/classifier_example/
 toc:
   title: Classifier Example
   expand: Records
 jumbotron:
   title: Classifier Example
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

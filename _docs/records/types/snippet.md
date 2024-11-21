@@ -1,21 +1,30 @@
 ---
 title: Snippet Records
+excerpt: This page provides detailed information about Snippet Records in Cerb, including
+  their structure and usage within the platform.
+summary: This page provides detailed information about Snippet Records in Cerb, including
+  their structure and usage within the platform. It outlines the fields available
+  in the Records API, which are essential for managing snippets, such as content,
+  context, owner details, and usage statistics. The page also describes dictionary
+  placeholders that can be used in automations, snippets, and API responses, offering
+  a comprehensive list of fields and their descriptions. Additionally, it covers search
+  query fields that allow users to filter snippets based on various criteria, such
+  as content, owner, and usage. Lastly, it details the worklist columns available
+  for organizing and displaying snippet information, emphasizing the flexibility and
+  customization options for managing snippets in Cerb.
 permalink: /docs/records/types/snippet/
 toc:
   title: Snippet
   expand: Records
 jumbotron:
   title: Snippet
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

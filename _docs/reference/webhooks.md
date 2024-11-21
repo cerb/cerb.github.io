@@ -1,5 +1,16 @@
 ---
 title: Webhooks
+excerpt: This page provides an overview of Cerb's webhooks plugin, which allows users
+  to create automated responses to real-time events from various services without
+  needing to write custom code.
+summary: This page provides an overview of Cerb's webhooks plugin, which allows users
+  to create automated responses to real-time events from various services without
+  needing to write custom code. It explains how webhooks work as efficient "push notifications"
+  compared to traditional polling methods. The page details how users can set up webhook
+  listeners with unique URLs for integration with services like Amazon CloudWatch,
+  Freshbooks, Github, JIRA, Mailgun, Slack, Twilio, and Zapier. These integrations
+  enable automated notifications and actions, such as sending alerts to Slack, managing
+  invoices, tracking issues, and more, all through Cerb's web-based interface.
 permalink: /docs/webhooks/
 toc:
   title: Webhooks
@@ -7,11 +18,9 @@ jumbotron:
   title: Webhooks
   tagline: Automatically and instantly respond to external events with bots
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Reference &raquo;
+  - label: Reference &raquo;
 ---
 
 Many modern apps and services provide **webhooks**[^webhooks] for real-time _"push notifications"_ about events.  These notifications are usually simple HTTP POSTs[^http-post] with either request parameters or JSON/XML payloads that are sent to a URL you provide.  This is in contrast to the less efficient _"poll"_ approach, where a service is constantly polled at regular intervals to check for new changes.

@@ -1,23 +1,28 @@
 ---
-title: "worker.authenticate.failed"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: worker.authenticate.failed
+excerpt: This page provides information on the "worker.authenticate.failed" automations
+  in Cerb, which are triggered when a worker's login attempt fails due to issues like
+  an invalid password.
+summary: This page provides information on the "worker.authenticate.failed" automations
+  in Cerb, which are triggered when a worker's login attempt fails due to issues like
+  an invalid password. It details the use of event handler KATA to execute all enabled
+  automations upon such an event. The page outlines the placeholders available in
+  the automation dictionary, including custom input values, client browser details
+  (name, platform, version), client IP address, and worker record information. There
+  are no outputs specified for this automation trigger.
 permalink: /docs/automations/events/worker.authenticate.failed/
 toc:
   title: worker.authenticate.failed
   expand: Automations
 jumbotron:
   title: worker.authenticate.failed
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Events &raquo;
+  - label: Events &raquo;
     url: /docs/automations/#events
 ---
 

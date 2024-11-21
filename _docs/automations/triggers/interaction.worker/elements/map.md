@@ -1,26 +1,30 @@
 ---
-title: "Map - Interaction Form Element"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: Map - Interaction Form Element
+excerpt: This page provides detailed information on the "map" interaction form element
+  in Cerb, which is used to display interactive maps within web forms.
+summary: This page provides detailed information on the "map" interaction form element
+  in Cerb, which is used to display interactive maps within web forms. It explains
+  how the map element utilizes map KATA to return selected regions or points, such
+  as displaying the geographical location of an IP address with a pin on a map. The
+  page includes an example configuration for setting up a map with specific parameters
+  like resource URI, projection type, scale, center coordinates, and point data. Additionally,
+  it covers syntax details, including the optional requirement for user input on the
+  map element.
 permalink: /docs/automations/triggers/interaction.worker/elements/map/
 toc:
   title: Map
   expand: Automations
 jumbotron:
   title: Map
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: interaction.worker &raquo;
+  - label: interaction.worker &raquo;
     url: /docs/automations/triggers/interaction.worker/
-  -
-    label: Elements &raquo;
+  - label: Elements &raquo;
     url: /docs/automations/triggers/interaction.worker/#elements
 ---
 

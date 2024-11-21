@@ -1,21 +1,31 @@
 ---
 title: Feed Item Records
+excerpt: This page provides detailed information about Feed Item Records in Cerb,
+  including their structure and usage within the system.
+summary: This page provides detailed information about Feed Item Records in Cerb,
+  including their structure and usage within the system. It outlines the fields available
+  in the Records API, such as `created_at`, `feed_id`, `guid`, `is_closed`, `title`,
+  and `url`, which are essential for managing feed items. The page also describes
+  dictionary placeholders that can be used in automations, snippets, and API responses,
+  offering a range of fields like `_context`, `_label`, `created_at`, and `record_url`.
+  Additionally, it covers search query fields that allow users to filter feed items
+  based on criteria like comments, creation date, feed, and title. Lastly, it lists
+  the worklist columns available for organizing feed items, including custom fields,
+  creation date, feed ID, and title. This comprehensive guide is crucial for developers
+  and users looking to effectively manage and interact with feed items in Cerb.
 permalink: /docs/records/types/feed_item/
 toc:
   title: Feed Item
   expand: Records
 jumbotron:
   title: Feed Item
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

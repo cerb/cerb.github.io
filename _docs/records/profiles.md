@@ -1,15 +1,20 @@
 ---
 title: Profiles
+excerpt: This page explains the concept of profiles in Cerb, where each record has
+  a dedicated profile page organized into customizable tabs.
+summary: This page explains the concept of profiles in Cerb, where each record has
+  a dedicated profile page organized into customizable tabs. Users can add, modify,
+  or remove tabs, and each tab has a type that dictates its content. New tab types
+  can be created through plugins, and by default, new tabs are dashboards with customizable
+  widgets.
 permalink: /docs/profiles/
 jumbotron:
   title: Profiles
   tagline: A dedicated page for each record
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
 ---
 

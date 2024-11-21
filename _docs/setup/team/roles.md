@@ -1,5 +1,11 @@
 ---
 title: Roles
+excerpt: This page provides information on configuring roles within Cerb.
+summary: This page provides information on configuring roles within Cerb. It likely
+  includes details on how to set up and manage roles, assign permissions, and customize
+  access levels for different users or groups within the platform. This functionality
+  is essential for maintaining security and ensuring that users have the appropriate
+  access to features and data based on their responsibilities.
 permalink: /docs/setup/team/roles/
 toc:
   title: Roles
@@ -7,14 +13,11 @@ toc:
 jumbotron:
   title: Roles
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  -
-    label: Team &raquo;
+  - label: Team &raquo;
     url: /docs/setup/#team
 ---
 

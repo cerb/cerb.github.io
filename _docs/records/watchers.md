@@ -1,15 +1,20 @@
 ---
 title: Watchers
+excerpt: This page explains the concept of "watchers" in Cerb, which refers to workers
+  who receive notifications for all new activities on a specific record.
+summary: This page explains the concept of "watchers" in Cerb, which refers to workers
+  who receive notifications for all new activities on a specific record. It provides
+  an example of a manager monitoring outgoing messages in a group to ensure quality
+  responses to clients. Additionally, it notes that a worker assigned as a record's
+  owner is automatically considered a watcher for the period of their ownership.
 permalink: /docs/watchers/
 jumbotron:
   title: Watchers
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
 ---
 

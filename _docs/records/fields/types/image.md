@@ -1,21 +1,25 @@
 ---
 title: Image Record Fields
+excerpt: This page provides information on handling image fields in Cerb, specifically
+  focusing on Base64-encoded images.
+summary: This page provides information on handling image fields in Cerb, specifically
+  focusing on Base64-encoded images. It details how images are represented in JSON
+  packages and how they can be managed through the Records API using PUT or POST requests.
+  Additionally, it explains the process for removing an image by setting its data
+  to null.
 permalink: /docs/records/fields/types/image/
 toc:
   title: Image
   expand: Records
 jumbotron:
   title: Image
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Field Types &raquo;
+  - label: Field Types &raquo;
     url: /docs/records/#fields
 ---
 

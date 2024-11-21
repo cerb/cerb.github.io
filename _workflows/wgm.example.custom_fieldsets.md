@@ -1,20 +1,28 @@
 ---
 title: Test Custom Fieldset
-excerpt: A custom fieldset for that includes an example of every custom field type. This is useful for evaluation, development, and testing.
+excerpt: A custom fieldset for that includes an example of every custom field type.
+  This is useful for evaluation, development, and testing.
+summary: This page provides a comprehensive guide on creating and using a custom fieldset
+  in Cerb, which includes examples of every custom field type. It covers the introduction,
+  installation, and usage of the custom fieldset, making it particularly useful for
+  evaluation, development, and testing purposes. The installation section provides
+  detailed instructions on how to set up the custom fieldset using KATA, specifying
+  the necessary fields and parameters for each custom field type, such as checkbox,
+  currency, date, decimal, file, list, number, picklist, record link, text, URL, and
+  worker. The usage section explains how to add the custom fieldset to any ticket
+  record, allowing users to experiment with different field types.
 layout: integration
 topic: Workflows
 permalink: /workflows/wgm.example.custom_fieldsets/
 redirect_from:
-  - /packages/test-custom-fieldset/
+- /packages/test-custom-fieldset/
 jumbotron:
   title: Test Custom Fieldset
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Workflows &raquo;
+  - label: Workflows &raquo;
     url: /resources/workflows/
 ---
 

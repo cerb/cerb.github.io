@@ -1,23 +1,28 @@
 ---
-title: "Automations: storage.get"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: storage.get'
+excerpt: This page provides detailed information on the "storage.get" command used
+  in Cerb automations to retrieve previously saved values from long-term storage.
+summary: This page provides detailed information on the "storage.get" command used
+  in Cerb automations to retrieve previously saved values from long-term storage.
+  It explains how this key/value system can be shared between different automations
+  and invocations. The page outlines the syntax for using "storage.get," including
+  required and optional inputs such as the storage key and default value, as well
+  as placeholders for output. It also describes the commands to execute during simulation,
+  on success, and on error, providing a comprehensive guide for implementing this
+  command effectively in automation workflows.
 permalink: /docs/automations/commands/storage.get/
 toc:
   title: storage.get
   expand: Automations
 jumbotron:
   title: storage.get
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

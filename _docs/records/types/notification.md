@@ -1,21 +1,29 @@
 ---
 title: Notification Records
+excerpt: This page provides detailed information about notification records in Cerb,
+  including their structure and usage within the system.
+summary: This page provides detailed information about notification records in Cerb,
+  including their structure and usage within the system. It outlines the fields available
+  in the Records API, such as activity points, creation timestamps, read status, and
+  worker IDs. The page also describes the parameters for notifications, including
+  customizable messages and variable URLs. Additionally, it covers dictionary placeholders
+  for automations and API responses, search query fields for filtering notifications,
+  and worklist columns for organizing notification data. This comprehensive guide
+  is essential for understanding how notifications are managed and utilized within
+  Cerb.
 permalink: /docs/records/types/notification/
 toc:
   title: Notification
   expand: Records
 jumbotron:
   title: Notification
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

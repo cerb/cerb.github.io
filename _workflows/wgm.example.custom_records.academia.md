@@ -1,6 +1,15 @@
 ---
 title: Custom Records (Academia)
-excerpt: "A set of custom records for academic institutions: instructors, courses, rooms, and students."
+excerpt: 'A set of custom records for academic institutions: instructors, courses,
+  rooms, and students.'
+summary: This page provides a comprehensive guide on implementing custom records for
+  academic institutions using Cerb. It includes an introduction to the package, which
+  covers records for courses, instructors, rooms, and students, and details the process
+  of importing the workflow. The guide offers step-by-step instructions on how to
+  update templates and input workflow KATA for setting up custom records, such as
+  course details including name, code, instructor, room, and schedule. Additionally,
+  it explains how to modify fields and add new records through the Cerb interface,
+  making it a useful resource for evaluating, testing, or developing academic workflows.
 layout: integration
 topic: Workflows
 permalink: /workflows/wgm.example.custom_records.academia/
@@ -8,11 +17,9 @@ jumbotron:
   title: Custom Records (Academia)
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Workflows &raquo;
+  - label: Workflows &raquo;
     url: /resources/workflows/
 ---
 

@@ -1,21 +1,26 @@
 ---
-title: "Scripting Reference: Tests"
+title: 'Scripting Reference: Tests'
 excerpt: A reference of the template tests in bot scripting.
+summary: This webpage serves as a scripting reference for tests in Cerb, detailing
+  various boolean expressions that can be used in bot scripts and snippets. It explains
+  how to perform tests using the `is` and `is not` operators, which return `true`
+  or `false` values. The page covers a range of tests including checking if a variable
+  is empty, even, iterable, null, numeric, odd, matches a pattern, is prefixed or
+  suffixed, is of a specific record type, or is the same as another variable. Each
+  test is accompanied by examples demonstrating its usage and expected output, providing
+  a comprehensive guide for users to implement these tests effectively in their scripts.
 permalink: /docs/scripting/tests/
 toc:
   title: Tests
   expand: Developer Guide
 jumbotron:
-  title: "Reference: Tests"
-  tagline: 
+  title: 'Reference: Tests'
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Developer Guide &raquo;
-  -
-    label: Scripting &raquo;
+  - label: Developer Guide &raquo;
+  - label: Scripting &raquo;
     url: /docs/scripting/
 ---
 

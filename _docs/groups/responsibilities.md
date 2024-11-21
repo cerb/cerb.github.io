@@ -1,20 +1,29 @@
 ---
 title: Bucket Responsibilities
+excerpt: This page discusses the concept of bucket responsibilities within a group,
+  where each member is assigned a specific level of responsibility for different tasks
+  or "buckets." It highlights how personalizing the list of available work according
+  to each member's skills and duties helps prevent duplication of effort, a common
+  problem in shared environments like traditional email accounts used by teams.
+summary: This page discusses the concept of bucket responsibilities within a group,
+  where each member is assigned a specific level of responsibility for different tasks
+  or "buckets." It highlights how personalizing the list of available work according
+  to each member's skills and duties helps prevent duplication of effort, a common
+  problem in shared environments like traditional email accounts used by teams. This
+  approach ensures that team members do not overlap in their efforts and can efficiently
+  find suitable work without conflict.
 permalink: /docs/responsibilities/
 toc:
   title: Responsibilities
 jumbotron:
   title: Responsibilities
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Groups &raquo;
+  - label: Groups &raquo;
     url: /docs/groups/
-  -
-    label: Buckets &raquo;
+  - label: Buckets &raquo;
     url: /docs/buckets/
 ---
 

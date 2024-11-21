@@ -1,18 +1,24 @@
 ---
 title: Worker Roles
 excerpt: Permissions are granted to workers using roles.
+summary: This page explains the concept of worker roles and privileges in Cerb. It
+  describes how roles are used to grant specific sets of privileges to workers, ensuring
+  that not all workers have equal authority, particularly in sensitive tasks. Multiple
+  roles can be assigned to a single worker, and roles can be automatically applied
+  based on group memberships. A privilege is granted if any of a worker's roles allow
+  it. Additionally, the page highlights the role of administrators, who have unrestricted
+  privileges and are responsible for determining the necessary privileges for other
+  workers to perform their duties effectively.
 permalink: /docs/roles/
 toc:
   title: Roles
 jumbotron:
   title: Roles
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Workers &raquo;
+  - label: Workers &raquo;
     url: /docs/workers/
 ---
 

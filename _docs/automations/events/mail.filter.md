@@ -1,23 +1,30 @@
 ---
-title: "mail.filter"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: mail.filter
+excerpt: This page provides detailed information on the "mail.filter" automation events
+  in Cerb, which are used to modify or reject inbound email messages based on various
+  properties such as sender, subject, recipients, headers, and body before acceptance.
+summary: This page provides detailed information on the "mail.filter" automation events
+  in Cerb, which are used to modify or reject inbound email messages based on various
+  properties such as sender, subject, recipients, headers, and body before acceptance.
+  It outlines the placeholders available in the automation event dictionary, including
+  sender email records, message subject, headers, body in plaintext and HTML, and
+  recipient addresses. The page also describes the outputs of these events, which
+  include options to reject delivery or modify message properties. Specific modifications
+  can be made to custom fields, email body, subject, and headers, and the sender address
+  can be linked to an organization.
 permalink: /docs/automations/events/mail.filter/
 toc:
   title: mail.filter
   expand: Automations
 jumbotron:
   title: mail.filter
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Events &raquo;
+  - label: Events &raquo;
     url: /docs/automations/#events
 ---
 

@@ -1,23 +1,29 @@
 ---
-title: "mail.received"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: mail.received
+excerpt: This page provides information on the "mail.received" automation events in
+  Cerb, which are designed to respond to incoming messages once they are added to
+  a ticket.
+summary: This page provides information on the "mail.received" automation events in
+  Cerb, which are designed to respond to incoming messages once they are added to
+  a ticket. It explains how these events can be used, such as sending an automatic
+  reply confirmation for new tickets. The page details the placeholders available
+  in the automation event dictionary, including keys like `is_new_ticket` to determine
+  if a message is opening a new ticket or replying to an existing one, and `message_*`
+  for accessing the message record with key expansion. There are no outputs specified
+  for these events.
 permalink: /docs/automations/events/mail.received/
 toc:
   title: mail.received
   expand: Automations
 jumbotron:
   title: mail.received
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Events &raquo;
+  - label: Events &raquo;
     url: /docs/automations/#events
 ---
 

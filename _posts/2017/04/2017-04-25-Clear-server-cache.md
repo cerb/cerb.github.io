@@ -1,9 +1,18 @@
 ---
+title: 'Tip: Clear the server-side cache'
+excerpt: Cerb uses a server-side cache to speed up operations like database queries.
+  If you modify the database directly then you need to flush the cache.
+summary: This page provides instructions on how to clear the server-side cache in
+  Cerb. It explains the purpose of the cache, which is to speed up operations like
+  database queries by storing temporary copies of resources. While Cerb typically
+  manages cache clearing automatically during modifications or upgrades, manual intervention
+  is required if the database is altered directly. The page outlines a simple process
+  for flushing the cache by appending 'update' to the URL while logged into Cerb.
+  It also addresses potential authorization issues, advising users to add their IP
+  to the allowlist in the security settings if necessary.
 layout: post
-title: "Tip: Clear the server-side cache"
-excerpt: Cerb uses a server-side cache to speed up operations like database queries. If you modify the database directly then you need to flush the cache.
 author: The Cerb Team
-date: 2017-04-25 13:20:00 -0700
+date: "2017-04-25 13:20:00 -0700"
 permalink: /tips/clear-server-cache/
 tags: cerb tips mailbag
 ---

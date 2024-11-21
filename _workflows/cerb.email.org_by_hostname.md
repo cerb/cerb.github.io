@@ -1,6 +1,17 @@
 ---
 title: Sender Org By Hostname
 excerpt: Assign organizations to new senders based on their email @hostname.
+summary: This page provides a detailed overview of the "Sender Org By Hostname" workflow
+  in Cerb, which is designed to automatically assign organizations to new email senders
+  based on their email hostname. It includes sections on introduction, installation,
+  usage, and reference. The workflow is integrated into Cerb version 11.0 and above,
+  and can be enabled through the Cerb interface. The usage section explains how to
+  assign email hostnames to organizations, simplifying processes like Service Level
+  Agreements (SLAs). The reference section offers guidance on customizing the workflow,
+  including changing identifiers and using a domain-based prefix. The page also includes
+  a template for building a custom workflow, detailing the necessary fields, extensions,
+  and automation scripts to facilitate the automatic assignment of organizations to
+  email senders.
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.email.org_by_hostname/
@@ -8,11 +19,9 @@ jumbotron:
   title: Sender Org By Hostname
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Workflows &raquo;
+  - label: Workflows &raquo;
     url: /resources/workflows/
 ---
 

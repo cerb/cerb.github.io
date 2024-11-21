@@ -1,26 +1,31 @@
 ---
-title: "Text - Interaction Form Element"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: Text - Interaction Form Element
+excerpt: This page provides detailed information on the "text" interaction form element
+  used in website forms within Cerb.
+summary: This page provides detailed information on the "text" interaction form element
+  used in website forms within Cerb. It explains how to configure a text input field
+  with various validation options, including formats like date, decimal, email, URL,
+  and more. The page outlines the syntax for setting labels, required fields, input
+  types, placeholders, default values, maximum length, and custom validation scripts.
+  It includes examples of how to implement these elements in a form, such as requiring
+  a name and email with specific validation rules. The document serves as a guide
+  for developers to create and validate text input fields effectively in Cerb's interaction
+  forms.
 permalink: /docs/automations/triggers/interaction.website/elements/text/
 toc:
   title: Text
   expand: Automations
 jumbotron:
   title: Text
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: interaction.website &raquo;
+  - label: interaction.website &raquo;
     url: /docs/automations/triggers/interaction.website/
-  -
-    label: Elements &raquo;
+  - label: Elements &raquo;
     url: /docs/automations/triggers/interaction.website/#elements
 ---
 

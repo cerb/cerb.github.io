@@ -1,21 +1,29 @@
 ---
 title: Toolbar Records
+excerpt: This page provides detailed information about toolbar records in Cerb, including
+  their API fields, dictionary placeholders, search query fields, and worklist columns.
+summary: This page provides detailed information about toolbar records in Cerb, including
+  their API fields, dictionary placeholders, search query fields, and worklist columns.
+  It outlines the structure and requirements for toolbar records, such as mandatory
+  fields like `extension_id` and `name`, and optional fields like `links` and `description`.
+  The page also describes how these records can be utilized in automations, snippets,
+  and API responses through dictionary placeholders. Additionally, it lists the available
+  filters for toolbar search queries and the columns that can be displayed in toolbar
+  worklists, offering a comprehensive guide for managing and interacting with toolbar
+  records in Cerb.
 permalink: /docs/records/types/toolbar/
 toc:
   title: Toolbar
   expand: Records
 jumbotron:
   title: Toolbar
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

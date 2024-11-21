@@ -1,23 +1,30 @@
 ---
-title: "interaction.worker.explore"
-excerpt: interaction.worker.explore automations use custom logic to return the next record in explore mode. 
-#social_image_url: /assets/images/search/kata.png
+title: interaction.worker.explore
+excerpt: interaction.worker.explore automations use custom logic to return the next
+  record in explore mode.
+summary: This page details the functionality of the "interaction.worker.explore" feature
+  in Cerb, which allows for dynamic exploration of worklists. Unlike the static explore
+  mode that captures a snapshot of the first 1,000 records, the dynamic explore mode
+  updates in real-time to prioritize new and relevant tasks. It provides a mechanism
+  for determining the next most important task by using custom logic and interactions.
+  The page explains how to implement this feature, including the use of custom toolbars,
+  keyboard shortcuts, and the ability to create explore sets through automation commands.
+  It also outlines the inputs and outputs required for these interactions, emphasizing
+  the flexibility and efficiency improvements in managing workflows such as task dispatching
+  and onboarding tours.
 permalink: /docs/automations/triggers/interaction.worker.explore/
 toc:
   title: interaction.worker.explore
   expand: Automations
 jumbotron:
   title: interaction.worker.explore
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Triggers &raquo;
+  - label: Triggers &raquo;
     url: /docs/automations/#triggers
 ---
 

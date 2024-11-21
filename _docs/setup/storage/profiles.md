@@ -1,5 +1,12 @@
 ---
-title: "Setup: Storage Profiles"
+title: 'Setup: Storage Profiles'
+excerpt: This page provides information on setting up storage profiles in Cerb.
+summary: This page provides information on setting up storage profiles in Cerb. By
+  default, Cerb stores objects in the database and the local filesystem, with message
+  content in the database and attachments in the filesystem. The page explains how
+  to create a new storage profile to store objects in alternative locations, such
+  as Amazon Simple Storage Service (S3). Once a storage profile is created, it can
+  be applied to a storage schema, allowing for flexible and customizable storage solutions.
 permalink: /docs/setup/storage/profiles/
 toc:
   title: Profiles
@@ -7,14 +14,11 @@ toc:
 jumbotron:
   title: Profiles
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Storage &raquo;
+  - label: Storage &raquo;
     url: /docs/setup/#storage
 ---
 

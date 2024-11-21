@@ -1,26 +1,31 @@
 ---
-title: "Sheet - Interaction Form Element"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: Sheet - Interaction Form Element
+excerpt: This page provides detailed information on the "sheet" element used in interaction
+  web forms within Cerb.
+summary: This page provides detailed information on the "sheet" element used in interaction
+  web forms within Cerb. It explains how a sheet element can display a schema using
+  either static or dynamic data, with options for single or multiple selections. The
+  page outlines the syntax for various attributes such as labels, required fields,
+  data sources, limits, pagination, filtering, default selections, and schema definitions.
+  It also covers the use of synthesized data, interaction toolbars, and custom validation
+  scripts to enhance form functionality. The document includes examples of how to
+  configure these elements, emphasizing flexibility in data presentation and user
+  interaction.
 permalink: /docs/automations/triggers/interaction.worker/elements/sheet/
 toc:
   title: Sheet
   expand: Automations
 jumbotron:
   title: Sheet
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: interaction.worker &raquo;
+  - label: interaction.worker &raquo;
     url: /docs/automations/triggers/interaction.worker/
-  -
-    label: Elements &raquo;
+  - label: Elements &raquo;
     url: /docs/automations/triggers/interaction.worker/#elements
 ---
 

@@ -1,21 +1,30 @@
 ---
 title: Email Transport Records
+excerpt: This page provides detailed information about Email Transport records in
+  Cerb, including their structure and usage within the system.
+summary: This page provides detailed information about Email Transport records in
+  Cerb, including their structure and usage within the system. It outlines the fields
+  available in the Records API, which are essential for creating and managing email
+  transport records, such as `created`, `extension_id`, `name`, and `updated_at`.
+  The page also describes dictionary placeholders that can be used in automations,
+  snippets, and API responses, offering a range of fields like `id`, `name`, and `record_url`.
+  Additionally, it lists the search query fields that can be used to filter email
+  transport records, such as `created`, `id`, and `name`. Lastly, it details the worklist
+  columns available for organizing and displaying email transport records, including
+  custom fields and standard fields like `m_created_at` and `m_name`.
 permalink: /docs/records/types/mail_transport/
 toc:
   title: Email Transport
   expand: Records
 jumbotron:
   title: Email Transport
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

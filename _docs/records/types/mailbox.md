@@ -1,21 +1,28 @@
 ---
 title: Mailbox Account Records
+excerpt: This page provides detailed information about the structure and functionality
+  of email mailbox account records in Cerb.
+summary: This page provides detailed information about the structure and functionality
+  of email mailbox account records in Cerb. It outlines the fields available in the
+  Records API, including essential fields like host, name, and username, and describes
+  their types and purposes. The page also explains dictionary placeholders used in
+  automations and API responses, offering a comprehensive list of fields and their
+  descriptions. Additionally, it covers search query fields that can be used to filter
+  mailbox accounts and lists the columns available in mailbox account worklists, which
+  help in organizing and managing email mailbox data effectively.
 permalink: /docs/records/types/mailbox/
 toc:
   title: Mailbox Account
   expand: Records
 jumbotron:
   title: Mailbox Account
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

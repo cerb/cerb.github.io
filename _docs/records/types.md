@@ -1,17 +1,26 @@
 ---
 title: Record Types
+excerpt: This page provides a comprehensive reference for the various record types
+  available in Cerb, including both built-in and plugin-provided types.
+summary: This page provides a comprehensive reference for the various record types
+  available in Cerb, including both built-in and plugin-provided types. It details
+  the aliases and corresponding records, which are essential for building automations,
+  search queries, data queries, or interacting with the API. The built-in record types
+  cover a wide range of functionalities such as activity logs, email management, automation,
+  calendars, contacts, and more. Additionally, plugin-provided record types extend
+  the system's capabilities with features like calls, classifications, knowledgebase
+  management, and time tracking. This reference is crucial for developers and users
+  looking to customize and extend Cerb's functionality.
 permalink: /docs/records/types/
 toc:
   title: Record Types
 jumbotron:
   title: Record Types
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
 ---
 

@@ -1,21 +1,29 @@
 ---
 title: Custom Record Records
+excerpt: This page provides detailed information about Custom Records in Cerb, including
+  their structure and usage within the platform.
+summary: This page provides detailed information about Custom Records in Cerb, including
+  their structure and usage within the platform. It outlines the fields available
+  in the Records API, such as `name`, `name_plural`, `uri`, and `updated_at`, and
+  explains how to use these fields for linking and managing records. The page also
+  describes the parameters for record ownership and options, as well as dictionary
+  placeholders for automations, snippets, and API responses. Additionally, it covers
+  search query fields and worklist columns, which are essential for filtering and
+  displaying custom records in Cerb. The document serves as a comprehensive guide
+  for managing and utilizing custom records effectively within the Cerb environment.
 permalink: /docs/records/types/custom_record/
 toc:
   title: Custom Record
   expand: Records
 jumbotron:
   title: Custom Record
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

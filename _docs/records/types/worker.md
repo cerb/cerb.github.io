@@ -1,21 +1,29 @@
 ---
 title: Worker Records
+excerpt: This page provides detailed information about worker records in Cerb, including
+  the fields available in the Records API, dictionary placeholders for automations
+  and API responses, search query fields, and worklist columns.
+summary: This page provides detailed information about worker records in Cerb, including
+  the fields available in the Records API, dictionary placeholders for automations
+  and API responses, search query fields, and worklist columns. It outlines the various
+  attributes associated with worker records, such as personal information (e.g., name,
+  email, date of birth), account settings (e.g., language, timezone, MFA requirements),
+  and administrative roles. The page also describes how these fields can be used in
+  search queries and displayed in worklists, offering a comprehensive guide for managing
+  and utilizing worker data within the Cerb platform.
 permalink: /docs/records/types/worker/
 toc:
   title: Worker
   expand: Records
 jumbotron:
   title: Worker
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

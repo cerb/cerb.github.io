@@ -1,18 +1,24 @@
 ---
 title: Friendly URLs
-permalink: /docs/friendly-urls/
 excerpt: Cerb supports rewriting to make the URLs shorter and more user-friendly.
+summary: This page provides detailed instructions on enabling friendly URLs in Cerb
+  to improve the appearance and professionalism of URLs by removing the default `/index.php/`
+  path. It explains the concept of virtual URLs in Cerb and offers step-by-step guidance
+  for enabling URL rewriting on different web servers, including Nginx, Apache, and
+  IIS. For Nginx, it involves creating a `.htaccess` file or editing the `framework.config.php`
+  file. For Apache, it requires enabling `mod_rewrite` and copying a configuration
+  file. For IIS, it involves using the URL Rewrite module to set up a rule for friendly
+  URLs. The page emphasizes that these changes are not enabled by default and depend
+  on the web server's capabilities.
+permalink: /docs/friendly-urls/
 jumbotron:
   title: Friendly URLs
   tagline: Enable professional looking URLs
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Admin Guide &raquo;
-  -
-    label: Installation &raquo;
+  - label: Admin Guide &raquo;
+  - label: Installation &raquo;
     url: /docs/installation/self-hosted/
 ---
 

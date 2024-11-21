@@ -1,5 +1,13 @@
 ---
 title: Cerb Web-API Library for Python
+excerpt: This page provides information about the Cerb Web-API Library for Python,
+  contributed by CyberTechCafe-LLC.
+summary: This page provides information about the Cerb Web-API Library for Python,
+  contributed by CyberTechCafe-LLC. It includes links to the library's PyPI and GitHub
+  pages, instructions for installing the library using pip, and examples of how to
+  use the library to interact with the Cerb API. The usage examples demonstrate how
+  to initialize the Cerb API client, retrieve a specific record, list available contexts,
+  and perform a search query on records.
 permalink: /docs/api/libraries/python/
 toc:
   expand: API
@@ -7,14 +15,11 @@ jumbotron:
   title: Cerb Web-API Library for Python
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
-  -
-    label: Libraries &raquo;
+  - label: Libraries &raquo;
     url: /docs/api/libraries/
 ---
 

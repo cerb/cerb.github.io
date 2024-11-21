@@ -1,26 +1,32 @@
 ---
-title: "Chart KATA - Dashboard Widgets"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: Chart KATA - Dashboard Widgets
+excerpt: This page provides a comprehensive guide on configuring and utilizing the
+  Chart KATA widget for creating complex, dynamic charts in Cerb.
+summary: This page provides a comprehensive guide on configuring and utilizing the
+  Chart KATA widget for creating complex, dynamic charts in Cerb. It details the configuration
+  of datasets and chart schemas using a KATA dialect, allowing for mixed visualizations
+  and data from multiple sources. The page outlines various dataset types, including
+  automation, data queries, and manual data, and explains how to define chart elements
+  such as axes, colors, data series, grids, legends, and tooltips. It also includes
+  examples of different chart types, such as timeseries, pie, and donut charts, demonstrating
+  how to visualize data like ticket creation by group or contact methods. The guide
+  is designed to help users effectively leverage the Chart KATA widget for advanced
+  data visualization in their dashboards.
 permalink: /docs/dashboards/widgets/chart-kata/
 toc:
   title: Chart KATA
   expand: Reference
 jumbotron:
   title: Chart KATA
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Workspaces &raquo;
+  - label: Workspaces &raquo;
     url: /docs/workspaces/
-  -
-    label: Dashboards &raquo;
+  - label: Dashboards &raquo;
     url: /docs/dashboards/
-  -
-    label: Widgets &raquo;
+  - label: Widgets &raquo;
     url: /docs/dashboards/#widgets
 ---
 

@@ -1,21 +1,29 @@
 ---
 title: Calendar Event Records
+excerpt: This page provides detailed information about Calendar Event records in Cerb,
+  including their structure and usage within the system.
+summary: This page provides detailed information about Calendar Event records in Cerb,
+  including their structure and usage within the system. It outlines the fields available
+  in the Records API, such as calendar ID, start and end dates, availability status,
+  and event name. The page also describes dictionary placeholders for use in automations,
+  snippets, and API responses, offering fields like context, label, calendar details,
+  and record URL. Additionally, it lists search query fields that can be used to filter
+  calendar events, including calendar, end date, start date, and status. Lastly, it
+  details the worklist columns available for displaying calendar events, covering
+  aspects like calendar ID, start and end dates, availability, and custom fields.
 permalink: /docs/records/types/calendar_event/
 toc:
   title: Calendar Event
   expand: Records
 jumbotron:
   title: Calendar Event
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

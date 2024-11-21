@@ -1,23 +1,29 @@
 ---
 title: record.profile.image.editor
-excerpt: "The profile image editor toolbar is displayed when editing a record's profile image, and allows automations to generate profile images."
-#social_image_url: /assets/images/search/kata.png
+excerpt: The profile image editor toolbar is displayed when editing a record's profile
+  image, and allows automations to generate profile images.
+summary: This page provides detailed information about the profile image editor toolbar
+  in Cerb, available since version 10.4.2. It explains how the toolbar facilitates
+  the creation of profile images through interaction.worker automations, allowing
+  for the generation of images from text, emojis, file uploads, or external APIs like
+  Stable Diffusion. The page outlines the configuration process, including how to
+  navigate to the toolbar settings and add custom interactions using KATA. It also
+  describes the available placeholders and the inputs and outputs for interactions,
+  emphasizing the ability to customize image creation with features like profanity
+  and adult content filters.
 permalink: /docs/toolbars/interactions/record.profile.image.editor/
 toc:
   title: Toolbars
   expand: Automations
 jumbotron:
   title: record.profile.image.editor
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Toolbars &raquo;
+  - label: Toolbars &raquo;
     url: /docs/toolbars/
 ---
 

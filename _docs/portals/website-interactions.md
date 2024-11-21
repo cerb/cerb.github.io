@@ -1,19 +1,24 @@
 ---
 title: Website Interactions Portal
-excerpt: 
+excerpt: This page describes the Website Interactions portal, which facilitates interactions
+  with visitors on third-party websites by using continuations to manage multi-step
+  workflows.
+summary: This page describes the Website Interactions portal, which facilitates interactions
+  with visitors on third-party websites by using continuations to manage multi-step
+  workflows. It highlights various applications such as contact forms, sign-up forms,
+  troubleshooters, customer service bots, email address verification, surveys, and
+  mailing list management, among others.
 permalink: /docs/portals/website-interactions/
 toc:
   title: Website Interactions
   expand: Reference
 jumbotron:
   title: Website Interactions
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Portals &raquo;
+  - label: Portals &raquo;
     url: /docs/portals/
 ---
 

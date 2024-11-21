@@ -1,19 +1,30 @@
 ---
-title: "Data Queries: Worklist Subtotals"
-excerpt: 
+title: 'Data Queries: Worklist Subtotals'
+excerpt: This page provides detailed information on using `worklist.subtotals` data
+  queries in Cerb to perform aggregate functions on worklist records.
+summary: This page provides detailed information on using `worklist.subtotals` data
+  queries in Cerb to perform aggregate functions on worklist records. It explains
+  how to specify the type of records to subtotal using the `of:` key and how to define
+  the fields for subtotals with the `by:` key, including nested subtotals, aggregate
+  functions, date histograms, links, and limits. The page also covers additional query
+  parameters such as `timeout`, `timezone`, and `metric`, which allow for customization
+  of query execution time, timezone settings, and mathematical operations on results.
+  The `group:` key is introduced for treating nested subtotals as samples to calculate
+  statistics, and various output formats are described, including tree, dictionaries,
+  categories, pie, table, and timeseries. Examples are provided to illustrate how
+  to generate specific visualizations, such as a stacked bar chart of tickets by owner
+  and status.
 permalink: /docs/data-queries/worklist/subtotals/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: Worklist Subtotals
 jumbotron:
   title: Worklist Subtotals
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

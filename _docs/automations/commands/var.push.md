@@ -1,23 +1,29 @@
 ---
-title: "Automations: var.push"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: var.push'
+excerpt: This page provides detailed information on the "var.push" command used in
+  Cerb automations, which appends a value to an array.
+summary: This page provides detailed information on the "var.push" command used in
+  Cerb automations, which appends a value to an array. It includes a practical example
+  demonstrating how to append a value to an existing array and the resulting output.
+  The page outlines the syntax for using "var.push," including required inputs such
+  as the key path and value to append, and optional outputs for storing results. It
+  also describes additional commands that can be executed during simulation, on success,
+  and on error, with specific placeholders for handling errors. This documentation
+  is essential for users looking to understand and implement the "var.push" command
+  effectively in their automation workflows.
 permalink: /docs/automations/commands/var.push/
 toc:
   title: var.push
   expand: Automations
 jumbotron:
   title: var.push
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

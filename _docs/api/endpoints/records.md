@@ -1,5 +1,17 @@
 ---
 title: Records
+excerpt: This page provides comprehensive documentation for the Cerb records API,
+  detailing how to create, retrieve, update, upsert, search, and delete records through
+  a single endpoint.
+summary: This page provides comprehensive documentation for the Cerb records API,
+  detailing how to create, retrieve, update, upsert, search, and delete records through
+  a single endpoint. It explains the use of specific HTTP methods for each operation,
+  such as GET for retrieval, POST for creation, PUT for updates, PATCH for upserts,
+  and DELETE for record removal. The page also covers how to manage record links,
+  including linking and unlinking records, with examples for each operation. Parameters
+  for each API call are outlined, including fields for setting record attributes and
+  search queries for filtering results. The documentation is designed to guide users
+  in effectively managing records within Cerb using the API.
 permalink: /docs/api/endpoints/records/
 toc:
   title: Modifying Records
@@ -8,14 +20,11 @@ jumbotron:
   title: Records
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
-  -
-    label: Endpoints &raquo;
+  - label: Endpoints &raquo;
     url: /docs/api/endpoints/
 ---
 

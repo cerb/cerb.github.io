@@ -1,5 +1,11 @@
 ---
-title: "Setup: Import Message"
+title: 'Setup: Import Message'
+excerpt: This page provides instructions for importing email messages in the Internet
+  Message Format into Cerb.
+summary: This page provides instructions for importing email messages in the Internet
+  Message Format into Cerb. It is particularly useful for testing, development, and
+  importing individual messages from other systems such as Gmail. The page references
+  RFC-5322, which defines the Internet Message Format.
 permalink: /docs/setup/mail/import/
 toc:
   title: Import Message
@@ -7,14 +13,11 @@ toc:
 jumbotron:
   title: Import Message
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Mail &raquo;
+  - label: Mail &raquo;
     url: /docs/setup/#incoming-mail
 ---
 

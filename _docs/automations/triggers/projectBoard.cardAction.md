@@ -1,23 +1,28 @@
 ---
-title: "projectBoard.cardAction"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: projectBoard.cardAction
+excerpt: This page provides detailed information about the "projectBoard.cardAction"
+  automations in Cerb, which are triggered when a project board card moves to a new
+  column, either manually or automatically.
+summary: This page provides detailed information about the "projectBoard.cardAction"
+  automations in Cerb, which are triggered when a project board card moves to a new
+  column, either manually or automatically. It explains the use of event handler KATA
+  for executing all enabled automations and outlines the initial values in the automation
+  dictionary, including keys for the project board, card record, column, custom input
+  values, and the active worker. The page specifies that there are no outputs for
+  this automation.
 permalink: /docs/automations/triggers/projectBoard.cardAction/
 toc:
   title: projectBoard.cardAction
   expand: Automations
 jumbotron:
   title: projectBoard.cardAction
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Triggers &raquo;
+  - label: Triggers &raquo;
     url: /docs/automations/#triggers
 ---
 

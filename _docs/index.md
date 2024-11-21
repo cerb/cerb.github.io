@@ -1,6 +1,17 @@
 ---
 title: Documentation
-excerpt: The first step in mastering Cerb is becoming familiar with the new tools at your disposal.
+excerpt: This webpage serves as a comprehensive documentation hub for Cerb, covering
+  various guides and references essential for different user roles.
+summary: This webpage serves as a comprehensive documentation hub for Cerb, covering
+  various guides and references essential for different user roles. It includes an
+  introduction and getting started section, an admin guide with topics like installation,
+  security, and backups, and a worker guide focusing on the user interface. The developer
+  guide provides insights into dictionaries, scripting, and plugins. The reference section
+  is extensive, detailing features such as activity logs, automations, calendars, dashboards,
+  notifications, and workflows, among others. Additionally, the API section offers information
+  on authentication, requests, responses, and endpoints. The meta section provides release history,
+  philosophy, and credits, making this a complete resource for understanding and utilizing Cerb
+  effectively.
 layout: page
 permalink: /docs/home/
 redirect_from:

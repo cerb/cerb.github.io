@@ -1,23 +1,29 @@
 ---
-title: "interaction.website"
-excerpt: interaction.website automations are worker-based interactions that use continuations to pause and resume a multi-step workflow. 
-#social_image_url: /assets/images/search/kata.png
+title: interaction.website
+excerpt: interaction.website automations are worker-based interactions that use continuations
+  to pause and resume a multi-step workflow.
+summary: This webpage provides a detailed overview of interaction.website automations,
+  which facilitate interactions with visitors on third-party websites through multi-step
+  workflows that can pause and resume. These interactions are applicable for various
+  purposes such as surveys, sign-up forms, contact forms, troubleshooters, and customer
+  service bots. The page outlines the inputs and outputs of these interactions, including
+  the use of forms and delegate interactions to enhance modularity and reusability.
+  It also explains the process of initiating interactions through website elements
+  or shared links and concludes with instructions on installation and implementation
+  on websites.
 permalink: /docs/automations/triggers/interaction.website/
 toc:
   title: interaction.website
   expand: Automations
 jumbotron:
   title: interaction.website
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Triggers &raquo;
+  - label: Triggers &raquo;
     url: /docs/automations/#triggers
 ---
 

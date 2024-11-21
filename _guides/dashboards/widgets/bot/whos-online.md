@@ -1,6 +1,16 @@
 ---
 title: Display currently active workers as a dashboard widget
-excerpt: A step-by-step guide for reproducing the old Who's Online functionality using dashboard widgets.
+excerpt: A step-by-step guide for reproducing the old Who's Online functionality using
+  dashboard widgets.
+summary: This page provides a detailed guide on creating a customizable dashboard
+  widget in Cerb to display currently active workers. It explains the transition from
+  a static list of active workers on workspace pages to a more flexible widget system
+  introduced in version 9.1.4. The guide includes instructions for importing a bot
+  package named "Who's Online Bot," which facilitates the creation of a "Dashboard
+  render widget" behavior. It provides a step-by-step process for setting up the widget,
+  including configuring the bot to load and render active workers based on their last
+  activity within 30 minutes. The page also offers customization options for the widget's
+  output, allowing users to tailor the display to their needs.
 permalink: /guides/dashboards/widgets/bot/whos-online/
 layout: integration
 topic: Dashboards
@@ -9,17 +19,13 @@ jumbotron:
   title: Display currently active workers as a dashboard widget
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Dashboards &raquo;
+  - label: Dashboards &raquo;
     url: /resources/guides/#dashboards
-  -
-    label: Bot-powered Widgets &raquo;
+  - label: Bot-powered Widgets &raquo;
     url: /resources/guides/#dashboards-bot-powered-widgets
 ---
 

@@ -1,21 +1,29 @@
 ---
 title: Export data to JSON
+excerpt: This guide provides instructions on exporting data from Cerb to a neutral
+  JSON format.
+summary: This webpage provides a comprehensive guide on exporting data from Cerb to
+  a JSON format, which is useful for data migration or merging multiple Cerb installations.
+  It outlines the necessary requirements, including access to the Cerb database and
+  storage directory, and the installation of PHP CLI. The guide details the installation
+  process of the `cerb-package-exporter.php` script and the configuration of a `config.json`
+  file to specify database and storage details. It also covers customization options
+  such as ID mapping and scope adjustments to tailor the export process to specific
+  needs. The exporting process is explained, with instructions on running the script
+  to export ticket data and other records. An example JSON output is provided to illustrate
+  the format and structure of the exported data.
 layout: integration
 topic: Import/Export
-excerpt: This guide provides instructions on exporting data from Cerb to a neutral JSON format.
 permalink: /guides/impex/export-json/
 jumbotron:
   title: Export data to JSON
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Import/Export &raquo;
+  - label: Import/Export &raquo;
     url: /resources/guides/#impex
 ---
 

@@ -1,21 +1,31 @@
 ---
 title: Workspace Widget Records
+excerpt: This page provides detailed information about Workspace Widget Records in
+  Cerb, including their structure and usage within the system.
+summary: This page provides detailed information about Workspace Widget Records in
+  Cerb, including their structure and usage within the system. It covers the fields
+  available in the Records API, which are essential for defining and managing workspace
+  widgets, such as `extension_id`, `label`, `tab_id`, and `updated_at`. The page also
+  explains the Dictionary Placeholders that can be used in automations, snippets,
+  and API responses, offering a range of fields like `id`, `label`, and `zone`. Additionally,
+  it outlines the Search Query Fields that can be used to filter workspace widget
+  searches, including `id`, `name`, and `updated`. Lastly, it lists the Worklist Columns
+  available for workspace widget worklists, providing options for displaying information
+  like `w_label`, `w_pos`, and `w_zone`. This comprehensive guide is crucial for users
+  looking to effectively utilize and customize workspace widgets within Cerb.
 permalink: /docs/records/types/workspace_widget/
 toc:
   title: Workspace Widget
   expand: Records
 jumbotron:
   title: Workspace Widget
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

@@ -1,23 +1,33 @@
 ---
-title: "mail.draft"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: mail.draft
+excerpt: This page provides detailed information about the "mail.draft" automation
+  events in Cerb, which allow modifications to be made to any property of a new or
+  resumed email draft after a worker initiates a 'Compose' or 'Reply' action, but
+  before the editor popup appears.
+summary: This page provides detailed information about the "mail.draft" automation
+  events in Cerb, which allow modifications to be made to any property of a new or
+  resumed email draft after a worker initiates a 'Compose' or 'Reply' action, but
+  before the editor popup appears. It explains that these automations are cumulative,
+  meaning multiple automations can alter the draft, with later changes overwriting
+  earlier ones on the same fields. The page also describes how to use the `uri` field
+  for setting custom fields and how new changes are merged with existing fields. Additionally,
+  it outlines the placeholders available in the automation event dictionary, such
+  as `draft_*` for the draft record and `is_resumed` to indicate if the draft was
+  resumed. The outputs section details how draft parameter modifications are structured
+  in a dictionary format.
 permalink: /docs/automations/events/mail.draft/
 toc:
   title: mail.draft
   expand: Automations
 jumbotron:
   title: mail.draft
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Events &raquo;
+  - label: Events &raquo;
     url: /docs/automations/#events
 ---
 

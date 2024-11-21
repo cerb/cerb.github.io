@@ -1,5 +1,13 @@
 ---
 title: Failed Messages
+excerpt: This page explains how Cerb handles failed email messages during processing.
+summary: This page explains how Cerb handles failed email messages during processing.
+  It outlines potential issues that can cause message processing to fail, such as
+  malformed messages, excessive memory or execution time requirements, interruptions,
+  or server configuration changes. Cerb is designed to prevent email loss by moving
+  messages to a fail directory if they encounter issues, allowing for review and retry.
+  The page also provides tools for reviewing failed messages, retrying them, and accessing
+  detailed error logs to diagnose and resolve issues.
 permalink: /docs/setup/mail/failed/
 toc:
   title: Failed Messages
@@ -7,14 +15,11 @@ toc:
 jumbotron:
   title: Failed Messages
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Mail &raquo;
+  - label: Mail &raquo;
     url: /docs/setup/#incoming-mail
 ---
 

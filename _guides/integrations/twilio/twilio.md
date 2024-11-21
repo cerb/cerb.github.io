@@ -1,6 +1,12 @@
 ---
 title: Integrate with Twilio
 excerpt: A step-by-step guide for integrating Cerb and Twilio.
+summary: This page provides a step-by-step guide on integrating Cerb with Twilio,
+  enabling the use of Twilio's API within Cerb's bot behaviors. It covers obtaining
+  API keys from the Twilio Dashboard, setting up a Twilio service in Cerb by entering
+  the Account SID and Auth Token, and utilizing the connected account to execute HTTP
+  requests through bot behaviors. The guide also mentions the availability of a Twilio
+  Bot package for practical implementation examples.
 permalink: /guides/integrations/twilio/
 layout: integration
 topic: Integrations
@@ -9,17 +15,13 @@ jumbotron:
   title: Cerb + Twilio
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Twilio &raquo;
+  - label: Twilio &raquo;
     url: /resources/guides/#twilio
 ---
 

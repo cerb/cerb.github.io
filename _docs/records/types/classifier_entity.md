@@ -1,21 +1,30 @@
 ---
 title: Classifier Entity Records
+excerpt: This page provides detailed information about Classifier Entity Records in
+  Cerb, including their structure and usage within the system.
+summary: This page provides detailed information about Classifier Entity Records in
+  Cerb, including their structure and usage within the system. It outlines the fields
+  available in the Records API, such as name, type, description, and links, and specifies
+  which fields are required. The page also describes dictionary placeholders that
+  can be used in automations, snippets, and API responses, offering a range of fields
+  like context, label, and record URL. Additionally, it lists search query fields
+  that can be used to filter classifier entities, such as description, fieldset, and
+  updated date. Lastly, it details the worklist columns available for classifier entities,
+  including description, ID, name, type, and updated date, providing a comprehensive
+  guide for managing and utilizing classifier entities within Cerb.
 permalink: /docs/records/types/classifier_entity/
 toc:
   title: Classifier Entity
   expand: Records
 jumbotron:
   title: Classifier Entity
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

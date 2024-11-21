@@ -1,18 +1,28 @@
 ---
-title: "Plugin: Knowledgebase"
+title: 'Plugin: Knowledgebase'
+excerpt: This page provides detailed information about the Knowledgebase plugin for
+  Cerb, developed by Webgroup Media, LLC.
+summary: This page provides detailed information about the Knowledgebase plugin for
+  Cerb, developed by Webgroup Media, LLC. It outlines the plugin's purpose of creating
+  and categorizing articles to facilitate knowledge sharing among workers or within
+  a community. The page lists various extensions associated with the plugin, including
+  Bot Event, Controller, Event Listener, Page Section, Page Type, Profile Widget Type,
+  Record Type, Reply Toolbar Item, Rest API Controller, Search Schema, Support Center
+  Controller, Support Center RSS Feed, and Workspace Widget Type. Each extension is
+  described with its specific function and identifier, highlighting the comprehensive
+  capabilities of the Knowledgebase plugin in managing and accessing knowledge resources
+  within Cerb.
 permalink: /docs/plugins/cerberusweb.kb/
 toc:
-  title: "Knowledgebase"
+  title: Knowledgebase
   expand: Plugins
 jumbotron:
-  title: "Knowledgebase"
-  tagline: 
+  title: Knowledgebase
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

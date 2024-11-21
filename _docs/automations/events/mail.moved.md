@@ -1,23 +1,25 @@
 ---
-title: "mail.moved"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: mail.moved
+excerpt: This page provides information about the "mail.moved" automation events in
+  Cerb, which are triggered when a ticket is moved to a new group or bucket.
+summary: This page provides information about the "mail.moved" automation events in
+  Cerb, which are triggered when a ticket is moved to a new group or bucket. It details
+  the placeholders available in the automation event dictionary, including keys for
+  the current actor, the previous group and bucket, and the new state of the moved
+  ticket. The page specifies that there are no outputs for this event.
 permalink: /docs/automations/events/mail.moved/
 toc:
   title: mail.moved
   expand: Automations
 jumbotron:
   title: mail.moved
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Events &raquo;
+  - label: Events &raquo;
     url: /docs/automations/#events
 ---
 

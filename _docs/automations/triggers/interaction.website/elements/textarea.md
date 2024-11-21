@@ -1,26 +1,30 @@
 ---
-title: "Textarea - Interaction Form Element"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: Textarea - Interaction Form Element
+excerpt: This page provides detailed information on the use of the "textarea" element
+  in website interaction forms within Cerb.
+summary: This page provides detailed information on the use of the "textarea" element
+  in website interaction forms within Cerb. It explains the syntax and various configuration
+  options available for the textarea, such as setting a label, making the input required,
+  adding a placeholder, specifying default values, and defining maximum and minimum
+  input lengths. Additionally, it covers the option to truncate input exceeding the
+  maximum length and includes guidance on implementing custom validation scripts to
+  ensure input meets specific criteria. The example provided demonstrates how to require
+  a comment and enforce a minimum character length using conditional logic.
 permalink: /docs/automations/triggers/interaction.website/elements/textarea/
 toc:
   title: Textarea
   expand: Automations
 jumbotron:
   title: Textarea
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: interaction.website &raquo;
+  - label: interaction.website &raquo;
     url: /docs/automations/triggers/interaction.website/
-  -
-    label: Elements &raquo;
+  - label: Elements &raquo;
     url: /docs/automations/triggers/interaction.website/#elements
 ---
 

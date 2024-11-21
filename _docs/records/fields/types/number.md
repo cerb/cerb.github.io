@@ -1,21 +1,25 @@
 ---
 title: Number Record Fields
+excerpt: This page provides information on number record fields in Cerb, which are
+  used to store integer (whole number) values.
+summary: This page provides information on number record fields in Cerb, which are
+  used to store integer (whole number) values. It includes examples of how these fields
+  are represented in JSON format for packages and how they can be utilized in PUT
+  or POST requests through the Records API. The page serves as a guide for implementing
+  and managing number fields within Cerb's system.
 permalink: /docs/records/fields/types/number/
 toc:
   title: Number
   expand: Records
 jumbotron:
   title: Number
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Field Types &raquo;
+  - label: Field Types &raquo;
     url: /docs/records/#fields
 ---
 

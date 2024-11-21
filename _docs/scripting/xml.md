@@ -1,21 +1,25 @@
 ---
-title: "Scripting Reference: XML"
-excerpt: 
+title: 'Scripting Reference: XML'
+excerpt: This page provides a scripting reference for handling XML in Cerb, detailing
+  functions for XML decoding, XPath querying, namespace handling, and XML encoding.
+summary: This page provides a scripting reference for handling XML in Cerb, detailing
+  functions for XML decoding, XPath querying, namespace handling, and XML encoding.
+  It includes examples of using the `xml_decode()` function to convert XML strings
+  into objects, extracting values with `xml_xpath()` and `xml_xpath_ns()` for namespace-specific
+  queries, and encoding objects back into XML with `xml_encode()`. The page also references
+  external resources for further reading on XML and XPath.
 permalink: /docs/scripting/xml/
 toc:
   title: XML
   expand: Developer Guide
 jumbotron:
   title: XML
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Developer Guide &raquo;
-  -
-    label: Scripting &raquo;
+  - label: Developer Guide &raquo;
+  - label: Scripting &raquo;
     url: /docs/scripting/
 ---
 

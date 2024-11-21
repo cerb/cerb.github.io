@@ -1,7 +1,23 @@
 ---
 title: Privacy
-excerpt: Our policy is to respect your privacy regarding any data we may collect on our websites and services.
+excerpt: This webpage outlines the privacy policy of Webgroup Media, LLC (WGM), the
+  company behind Cerb, a web-based platform for enterprise collaboration and workflow
+  automation.
+summary: This webpage outlines the privacy policy of Webgroup Media, LLC (WGM), the
+  company behind Cerb, a web-based platform for enterprise collaboration and workflow
+  automation. The policy emphasizes WGM's commitment to respecting user privacy and
+  details the types of personal data collected, including non-personally identifying
+  information, potentially personally identifying information, and personally identifying
+  information. It explains the circumstances under which personal data may be disclosed,
+  such as to employees, contractors, and affiliated organizations, or in compliance
+  with legal obligations. The policy also covers data protection measures, user rights
+  regarding personal data, and the company's adherence to the EU-U.S. and Swiss-U.S.
+  Data Privacy Frameworks. Additionally, it provides information on security safeguards,
+  business transfers, and privacy choices available to users, such as opting out of
+  data sharing and marketing communications. The document concludes with a changelog
+  of updates to the privacy policy and a note on its licensing.
 layout: page
+permalink: /privacy/
 jumbotron:
   title: Privacy Policy
   tagline: Our commitment to protecting your privacy and data

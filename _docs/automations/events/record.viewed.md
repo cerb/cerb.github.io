@@ -1,23 +1,25 @@
 ---
-title: "record.viewed"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: record.viewed
+excerpt: This page provides information about the "record.viewed" automation events
+  in Cerb, which are triggered after a worker views a record profile.
+summary: This page provides information about the "record.viewed" automation events
+  in Cerb, which are triggered after a worker views a record profile. It details the
+  placeholders available in the automation event dictionary, including keys for the
+  viewed record and the current worker, both of which support key expansion. The page
+  notes that there are no outputs associated with this event.
 permalink: /docs/automations/events/record.viewed/
 toc:
   title: record.viewed
   expand: Automations
 jumbotron:
   title: record.viewed
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Events &raquo;
+  - label: Events &raquo;
     url: /docs/automations/#events
 ---
 

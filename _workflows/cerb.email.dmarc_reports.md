@@ -1,6 +1,15 @@
 ---
 title: DMARC Reports
 excerpt: Automatically parse DMARC report attachments in email.
+summary: This page provides detailed information on the DMARC Reports workflow in
+  Cerb, which is designed to automatically parse DMARC report attachments in emails.
+  It includes sections on installation, usage, and configuration. The workflow is
+  integrated into Cerb version 11.0 and above, and can be enabled through the Cerb
+  interface. The usage section guides users on testing DMARC report interactions and
+  configuring the delivery of DMARC reports to Cerb by setting up appropriate DNS
+  records. Additionally, the page offers a reference template for building custom
+  DMARC report workflows, detailing the necessary configurations and scripts to parse
+  and interact with DMARC report attachments effectively.
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.email.dmarc_reports/
@@ -8,11 +17,9 @@ jumbotron:
   title: DMARC Reports
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Workflows &raquo;
+  - label: Workflows &raquo;
     url: /resources/workflows/
 ---
 

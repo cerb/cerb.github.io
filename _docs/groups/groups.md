@@ -1,12 +1,22 @@
 ---
 title: Groups
+excerpt: This page explains the concept of organizing workers into groups within Cerb,
+  where members share similar skills and duties.
+summary: This page explains the concept of organizing workers into groups within Cerb,
+  where members share similar skills and duties. It details the role of group managers
+  in controlling rosters, assets, and task organization. Groups often mirror existing
+  departments like sales, support, development, and billing, but can also be customized
+  based on various criteria such as division or product line. Cerb facilitates efficient
+  task routing to appropriate groups, allowing them to manage their workload and ensuring
+  tasks reach the right person. The page also suggests starting with a few large groups
+  and creating new ones as needed, with the potential for automation to streamline
+  task routing over time.
 permalink: /docs/groups/
 jumbotron:
   title: Groups
   tagline: Teams of workers with a common purpose
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
 ---
 

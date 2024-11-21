@@ -2,27 +2,33 @@
 title: Install Cerb on Ubuntu Linux 24.04
 layout: integration
 topic: Installation
-excerpt: This guide will walk you through preparing an Ubuntu 23.10 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
+excerpt: This guide will walk you through preparing an Ubuntu 24.04 server for installing
+  Cerb, including Nginx, PHP-FPM, and MySQL.
+summary: This is a comprehensive guide for installing Cerb on an Ubuntu 24.04 LTS
+  server. It covers the entire setup process, including provisioning a server using
+  Docker or Amazon EC2, installing necessary packages like PHP 8.3, Nginx, and MySQL,
+  and configuring the MySQL database for Cerb. The guide also details the installation
+  of Cerb itself, setting up Nginx with SSL certificates, creating virtual hosts,
+  and testing the Nginx configuration. Additionally, it includes instructions for
+  enabling friendly URLs and running the Cerb installer, ensuring a complete and secure
+  installation process.
 permalink: /guides/installation/ubuntu/
 jumbotron:
-  title: Install Cerb on Ubuntu Linux 23.10
+  title: Install Cerb on Ubuntu Linux 24.04
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Installation &raquo;
+  - label: Installation &raquo;
     url: /resources/guides/#installation
 ---
 
 # Introduction
 {:.no_toc}
 
-This guide will walk you through preparing an Ubuntu 23.10 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
+{{page.summary}}
 
 * TOC
 {:toc}

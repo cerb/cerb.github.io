@@ -1,21 +1,30 @@
 ---
 title: Knowledgebase Category Records
+excerpt: This page provides detailed information about Knowledgebase Category records
+  in Cerb, including their structure and usage within the system.
+summary: This page provides detailed information about Knowledgebase Category records
+  in Cerb, including their structure and usage within the system. It outlines the
+  fields available in the Records API, such as `name`, `parent_id`, and `updated_at`,
+  and explains how these fields can be used to manage knowledgebase categories. The
+  page also describes dictionary placeholders for automations, snippets, and API responses,
+  offering fields like `id`, `name`, and `updated_at`, along with optional placeholders
+  for comments, custom fields, and links. Additionally, it details search query fields
+  that can be used to filter knowledgebase categories, including `article.id`, `name`,
+  and `updated`. Lastly, it lists the worklist columns available for displaying knowledgebase
+  category information, such as `kbc_id`, `kbc_name`, and `kbc_updated_at`.
 permalink: /docs/records/types/kb_category/
 toc:
   title: Knowledgebase Category
   expand: Records
 jumbotron:
   title: Knowledgebase Category
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

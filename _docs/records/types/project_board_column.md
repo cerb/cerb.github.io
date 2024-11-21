@@ -1,21 +1,28 @@
 ---
 title: Project Board Column Records
+excerpt: This page provides detailed information about the Project Board Column records
+  in Cerb, including their API fields, dictionary placeholders, search query fields,
+  and worklist columns.
+summary: This page provides detailed information about the Project Board Column records
+  in Cerb, including their API fields, dictionary placeholders, search query fields,
+  and worklist columns. It outlines the structure and types of data associated with
+  project board columns, such as board IDs, card links, names, positions, and timestamps.
+  The page also describes how these fields can be utilized in the Records API, automation
+  dictionaries, and search queries, offering a comprehensive guide for managing and
+  interacting with project board columns within Cerb.
 permalink: /docs/records/types/project_board_column/
 toc:
   title: Project Board Column
   expand: Records
 jumbotron:
   title: Project Board Column
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

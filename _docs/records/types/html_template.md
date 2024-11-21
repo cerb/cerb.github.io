@@ -1,21 +1,31 @@
 ---
 title: Email Template Records
+excerpt: This page provides detailed information about email template records in Cerb,
+  including their structure and usage within the system.
+summary: This page provides detailed information about email template records in Cerb,
+  including their structure and usage within the system. It outlines the fields available
+  in the Records API, such as content, name, owner context, and updated timestamp,
+  which are essential for managing email templates. The page also describes dictionary
+  placeholders that can be used in automations, snippets, and API responses, offering
+  a range of fields like content, name, and record URL. Additionally, it covers search
+  query fields that allow users to filter email templates based on various criteria,
+  such as comments, content, and updated date. Lastly, it lists the worklist columns
+  available for organizing and displaying email templates, including custom fields,
+  content, and signature information. This comprehensive guide is crucial for users
+  looking to effectively manage and utilize email templates within Cerb.
 permalink: /docs/records/types/html_template/
 toc:
   title: Email Template
   expand: Records
 jumbotron:
   title: Email Template
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

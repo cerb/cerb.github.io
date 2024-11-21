@@ -1,26 +1,31 @@
 ---
-title: "Editor - Interaction Form Element"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: Editor - Interaction Form Element
+excerpt: This page provides detailed information on the "editor" element used in interaction
+  web forms within Cerb.
+summary: This page provides detailed information on the "editor" element used in interaction
+  web forms within Cerb. It describes how the editor element functions as a code editor
+  with features like syntax highlighting, autocompletion, and a customizable toolbar.
+  The page outlines various configuration options for the editor, including setting
+  a label, specifying the syntax language (such as cerb_query, HTML, JSON, Markdown,
+  text, or YAML), and defining default text. It also covers options for displaying
+  line numbers, setting the editor to read-only, and requiring user input. Additionally,
+  the page explains how to add a toolbar for worker interactions and how to implement
+  custom validation scripts to ensure input meets specific criteria.
 permalink: /docs/automations/triggers/interaction.worker/elements/editor/
 toc:
   title: Editor
   expand: Automations
 jumbotron:
   title: Editor
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: interaction.worker &raquo;
+  - label: interaction.worker &raquo;
     url: /docs/automations/triggers/interaction.worker/
-  -
-    label: Elements &raquo;
+  - label: Elements &raquo;
     url: /docs/automations/triggers/interaction.worker/#elements
 ---
 

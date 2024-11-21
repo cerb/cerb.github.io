@@ -1,18 +1,26 @@
 ---
-title: "Plugin: Opportunity Tracking"
+title: 'Plugin: Opportunity Tracking'
+excerpt: This page provides detailed information about the Opportunity Tracking plugin
+  for Cerb, developed by Webgroup Media, LLC.
+summary: This page provides detailed information about the Opportunity Tracking plugin
+  for Cerb, developed by Webgroup Media, LLC. It outlines the functionality of creating
+  and managing sales leads linked to email addresses within the Cerb platform. The
+  plugin allows users to create opportunity records from the Activity menu or while
+  reading tickets. It includes various extensions such as Bot Actions for creating
+  opportunities, Bot Events for recording custom behaviors, Event Listeners for CRM
+  activities, Page Sections for opportunity profiles, Record Types for opportunity
+  management, and a REST API Controller for handling opportunities programmatically.
 permalink: /docs/plugins/cerberusweb.crm/
 toc:
-  title: "Opportunity Tracking"
+  title: Opportunity Tracking
   expand: Plugins
 jumbotron:
-  title: "Opportunity Tracking"
-  tagline: 
+  title: Opportunity Tracking
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

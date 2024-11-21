@@ -1,6 +1,12 @@
 ---
 title: Integrate with ipstack
 excerpt: A step-by-step guide for integrating Cerb and ipstack.
+summary: This page provides a guide on integrating Cerb with ipstack to utilize its
+  API for geolocation purposes. It outlines the steps to sign up for an ipstack account,
+  obtain a free API key, and create a connected account in Cerb to enable IP-based
+  geolocation. The guide emphasizes the approximate nature of IP-derived locations
+  due to factors like VPNs and proxies. Additionally, it includes related resources
+  for further workflow automation using ipstack within Cerb.
 permalink: /guides/integrations/ipstack/
 social_image_url: /assets/images/guides/integrations/ipstack/interaction-geolocate.png
 layout: integration
@@ -10,17 +16,13 @@ jumbotron:
   title: Cerb + ipstack
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: ipstack &raquo;
+  - label: ipstack &raquo;
     url: /resources/guides/#ipstack
 ---
 

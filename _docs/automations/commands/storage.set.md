@@ -1,23 +1,28 @@
 ---
-title: "Automations: storage.set"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: storage.set'
+excerpt: This page provides detailed information on the "storage.set" command used
+  in Cerb automations to save a value to long-term storage.
+summary: This page provides detailed information on the "storage.set" command used
+  in Cerb automations to save a value to long-term storage. It explains how this key/value
+  pair can be shared between different automations and invocations. The page outlines
+  the syntax for using "storage.set," including required inputs such as the storage
+  key and value, and optional parameters like expiration time. It also describes the
+  optional outputs and the commands to execute during simulation, on success, and
+  on error. The page includes an example of how to use the command and the expected
+  result, demonstrating the process of setting and retrieving a stored value.
 permalink: /docs/automations/commands/storage.set/
 toc:
   title: storage.set
   expand: Automations
 jumbotron:
   title: storage.set
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

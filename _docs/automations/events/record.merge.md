@@ -1,23 +1,31 @@
 ---
-title: "record.merge"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: record.merge
+excerpt: This page provides detailed information on the **record.merge** automation
+  events in Cerb, which are used to allow or reject record merge requests based on
+  specific properties such as record type, source and target IDs, and worker permissions.
+summary: This page provides detailed information on the **record.merge** automation
+  events in Cerb, which are used to allow or reject record merge requests based on
+  specific properties such as record type, source and target IDs, and worker permissions.
+  It explains the process that occurs after merge mapping and emphasizes that a worker
+  must have the necessary permissions to merge records. The page outlines how policies
+  can be implemented, such as requiring tickets to share the same group or participants
+  before merging. It also describes the placeholders and outputs involved in the automation
+  event dictionary, including keys like `record_type_*`, `records`, `source_ids`,
+  `target_id`, and `worker_*`, as well as the `deny:` output key that determines whether
+  a merge is allowed or denied.
 permalink: /docs/automations/events/record.merge/
 toc:
   title: record.merge
   expand: Automations
 jumbotron:
   title: record.merge
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Events &raquo;
+  - label: Events &raquo;
     url: /docs/automations/#events
 ---
 

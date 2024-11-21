@@ -1,12 +1,22 @@
 ---
 title: Setup
+excerpt: This page provides a comprehensive guide for administrators to configure
+  Cerb and its installed plugins through the setup page, accessible from the navigation
+  bar.
+summary: This page provides a comprehensive guide for administrators to configure
+  Cerb and its installed plugins through the setup page, accessible from the navigation
+  bar. It is organized into several sections, each offering specific configuration
+  options. Key sections include Configure, Security, Records, Team, Mail, Packages,
+  Storage, Developers, and Plugins. Each section contains detailed options such as
+  branding, authentication, custom fields, roles, mail settings, storage profiles,
+  automation logs, and plugin configuration. This setup page serves as a centralized
+  hub for managing various aspects of Cerb's functionality and customization.
 permalink: /docs/setup/
 jumbotron:
   title: Setup
   tagline: A guide for Administrators
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
 ---
 

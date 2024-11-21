@@ -1,21 +1,30 @@
 ---
 title: Workspace Worklist Records
+excerpt: This page provides detailed information about Workspace Worklist Records
+  in Cerb, including their structure and functionality.
+summary: This page provides detailed information about Workspace Worklist Records
+  in Cerb, including their structure and functionality. It outlines the fields available
+  in the Records API, such as context, name, and tab ID, and describes how these fields
+  are used in JSON-encoded objects for managing workspace worklists. The page also
+  explains the use of dictionary placeholders for automations, snippets, and API responses,
+  offering a comprehensive list of fields like columns, context, and options. Additionally,
+  it covers search query fields that can be used to filter workspace worklists, including
+  fieldset, id, and name. Lastly, it details the available worklist columns, which
+  include custom fields, type, id, name, and updated date, providing a robust framework
+  for organizing and accessing workspace worklist data within Cerb.
 permalink: /docs/records/types/workspace_list/
 toc:
   title: Workspace Worklist
   expand: Records
 jumbotron:
   title: Workspace Worklist
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

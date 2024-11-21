@@ -1,19 +1,24 @@
 ---
-title: "Data Queries: UI Icons"
-excerpt: 
+title: 'Data Queries: UI Icons'
+excerpt: This page provides information on `ui.icons` data queries, which return a
+  filterable and pageable list of icons.
+summary: This page provides information on `ui.icons` data queries, which return a
+  filterable and pageable list of icons. It details the inputs required for the query,
+  such as optional filters, the number of results per page, and the starting page.
+  The response format is primarily in dictionaries, suitable for sheets and API results.
+  An example query is provided, demonstrating how to filter icons related to "git"
+  and limit the results to 10 per page, along with the corresponding response structure.
 permalink: /docs/data-queries/ui/icons/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: UI Icons
 jumbotron:
   title: UI Icons
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

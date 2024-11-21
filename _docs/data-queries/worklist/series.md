@@ -1,19 +1,28 @@
 ---
-title: "Data Queries: Worklist Series"
-excerpt: 
+title: 'Data Queries: Worklist Series'
+excerpt: This page provides detailed information on using `worklist.series` data queries
+  in Cerb to generate series-based data from worklists, such as tracking tickets created
+  by month and status.
+summary: This page provides detailed information on using `worklist.series` data queries
+  in Cerb to generate series-based data from worklists, such as tracking tickets created
+  by month and status. It outlines the necessary inputs for constructing a query,
+  including specifying labels, record types, x and y-axis fields, metrics, and functions
+  like count, min, max, average, and sum. The page also explains how to filter results
+  using queries and adjust the number of data points returned. Additionally, it covers
+  timezone settings for date labels and describes various response formats available
+  for visualizing the data, such as dictionaries, pie charts, tables, and time series.
+  An example query is provided to illustrate how to return series data from a worklist.
 permalink: /docs/data-queries/worklist/series/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: Worklist Series
 jumbotron:
   title: Worklist Series
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

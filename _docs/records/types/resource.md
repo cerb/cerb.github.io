@@ -1,21 +1,31 @@
 ---
 title: Resource Records
+excerpt: This page provides detailed information about Resource Records in Cerb, including
+  their structure and usage within the system.
+summary: This page provides detailed information about Resource Records in Cerb, including
+  their structure and usage within the system. It outlines the fields available in
+  the Records API, which are essential for managing resources, such as `automation_kata`,
+  `content`, `extension_id`, and `name`. The page also describes dictionary placeholders
+  that can be used in automations, snippets, and API responses, offering a comprehensive
+  list of fields like `description`, `is_dynamic`, and `record_url`. Additionally,
+  it covers search query fields that facilitate filtering resources based on attributes
+  like `cacheUntil`, `description`, and `type`. Lastly, it details the worklist columns
+  available for resource management, providing insights into fields like `r_cache_until`,
+  `r_name`, and `r_updated_at`. This resource is crucial for developers and users
+  looking to effectively utilize and manage resources within the Cerb platform.
 permalink: /docs/records/types/resource/
 toc:
   title: Resource
   expand: Records
 jumbotron:
   title: Resource
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

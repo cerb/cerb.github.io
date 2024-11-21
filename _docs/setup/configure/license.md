@@ -1,19 +1,25 @@
 ---
 title: License
+excerpt: This page provides information about Cerb's licensing model, which is based
+  on the number of concurrent user logins, referred to as "seats." It explains that
+  Cerb can be deployed on independent servers or as a cloud-based service.
+summary: This page provides information about Cerb's licensing model, which is based
+  on the number of concurrent user logins, referred to as "seats." It explains that
+  Cerb can be deployed on independent servers or as a cloud-based service. Users who
+  purchase a Cerb license can enter it to increase their available seats, while those
+  without a license can use Cerb in evaluation mode with a single seat and no other
+  restrictions. The section is not applicable to users with a Cerb Cloud subscription.
 permalink: /docs/setup/configure/license/
 toc:
   expand: Admin Guide
 jumbotron:
   title: License
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Configure &raquo;
+  - label: Configure &raquo;
     url: /docs/setup/#configure
 ---
 

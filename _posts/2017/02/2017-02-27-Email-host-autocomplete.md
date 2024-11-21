@@ -1,9 +1,17 @@
 ---
+title: 'Tip: Autocomplete an email address by host'
+excerpt: When autocompleting an email address, you can start your search with @ to
+  filter by the hostname first.
+summary: This page provides a tip for efficiently autocompleting email addresses by
+  focusing on the hostname. It explains how users can start their search with an `@`
+  symbol to filter email addresses by the domain, which is particularly useful when
+  the exact beginning of the email address is uncertain. The example given demonstrates
+  how to find a contact at Twinton University by starting the search with `@twin`,
+  and further refines the search by including the first letter of the mailbox, such
+  as `j*@twin`.
 layout: post
-title: "Tip: Autocomplete an email address by host"
-excerpt: When autocompleting an email address, you can start your search with @ to filter by the hostname first.
 author: The Cerb Team
-date: 2017-02-27 14:35:00 -0700
+date: "2017-02-27 14:35:00 -0700"
 permalink: /tips/autocomplete-email-by-host/
 tags: cerb tips mailbag
 ---

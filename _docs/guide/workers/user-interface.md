@@ -1,17 +1,24 @@
 ---
 title: User Interface
+excerpt: This page provides an overview of the user interface in Cerb, focusing on
+  the global navigation controls available at the top of every page.
+summary: This page provides an overview of the user interface in Cerb, focusing on
+  the global navigation controls available at the top of every page. It details the
+  functionality of the navigation bar, including how to reorder workspace pages and
+  set a default page. The page also explains the use of the logo for quick navigation,
+  the worker menu for account-specific actions, and the toggle for light/dark mode.
+  Additionally, it covers notifications, the search menu for filtering records, and
+  the setup link for administrators.
 permalink: /docs/guide/workers/user-interface/
 redirect_from:
-  - /docs/navigation/
+- /docs/navigation/
 jumbotron:
   title: User Interface
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Worker Guide &raquo;
+  - label: Worker Guide &raquo;
 ---
 
 The global navigation controls are at the top of every page in Cerb.

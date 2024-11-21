@@ -1,18 +1,28 @@
 ---
-title: "Plugin: Web Services API (JSON/XML)"
+title: 'Plugin: Web Services API (JSON/XML)'
+excerpt: This page provides detailed information about the Web Services API (JSON/XML)
+  plugin for Cerb, developed by Webgroup Media, LLC.
+summary: This page provides detailed information about the Web Services API (JSON/XML)
+  plugin for Cerb, developed by Webgroup Media, LLC. It describes a RESTful interface
+  designed to facilitate integration between Cerb and other applications or tools.
+  The page outlines various extensions associated with the plugin, including controllers,
+  page sections, and record types. Specific REST API controllers are listed, covering
+  a wide range of functionalities such as activity logs, addresses, attachments, bots,
+  calendars, comments, contacts, contexts, custom fields, data, groups, mail HTML
+  templates, messages, notifications, organizations, packages, parsers, records, saved
+  searches, snippets, tasks, tickets, workers, and workspaces. This comprehensive
+  API allows for extensive interaction and data exchange with Cerb's system.
 permalink: /docs/plugins/cerberusweb.restapi/
 toc:
-  title: "Web Services API (JSON/XML)"
+  title: Web Services API (JSON/XML)
   expand: Plugins
 jumbotron:
-  title: "Web Services API (JSON/XML)"
-  tagline: 
+  title: Web Services API (JSON/XML)
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

@@ -1,21 +1,28 @@
 ---
 title: Email Signature Records
+excerpt: This page provides detailed information about email signature records in
+  Cerb, including their structure and usage within the system.
+summary: This page provides detailed information about email signature records in
+  Cerb, including their structure and usage within the system. It outlines the fields
+  available in the Records API, such as name, owner context, and signature templates,
+  and explains how these fields can be utilized in automations, snippets, and API
+  responses through dictionary placeholders. The page also describes the search query
+  fields that can be used to filter email signature records and lists the worklist
+  columns available for organizing these records. Additionally, it provides guidance
+  on linking and unlinking records and managing custom fields and comments.
 permalink: /docs/records/types/email_signature/
 toc:
   title: Email Signature
   expand: Records
 jumbotron:
   title: Email Signature
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

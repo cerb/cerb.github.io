@@ -1,20 +1,27 @@
 ---
 title: Auto Responder
 excerpt: Send an automatic response when new tickets are opened.
+summary: This page provides a comprehensive guide on setting up and using the Auto
+  Responder workflow in Cerb, which automatically sends confirmation emails to clients
+  when they open new tickets. It includes detailed instructions on installation, which
+  is built into Cerb 11.0+, and usage, such as creating snippet templates for auto-response
+  emails, enabling automatic responses for different groups, and testing the auto
+  responder. The guide also covers how to suppress auto responses to automated senders
+  by detecting message headers and using mail.filter automation. Additionally, it
+  offers a reference section for building custom auto-responder workflows, complete
+  with a template and detailed configuration options.
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.auto_responder/
 redirect_from:
-  - /packages/autoreply-bot/
+- /packages/autoreply-bot/
 jumbotron:
   title: Auto Responder
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Workflows &raquo;
+  - label: Workflows &raquo;
     url: /resources/workflows/
 ---
 

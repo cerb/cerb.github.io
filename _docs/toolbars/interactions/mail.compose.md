@@ -1,23 +1,26 @@
 ---
 title: mail.compose
-#excerpt: Toolbars...
-#social_image_url: /assets/images/search/kata.png
+excerpt: This page provides detailed instructions on configuring the compose toolbar
+  in Cerb for sending new emails.
+summary: This page provides detailed instructions on configuring the compose toolbar
+  in Cerb for sending new emails. It guides users on how to navigate to the toolbar
+  settings, edit the `mail.compose` record, and add interactions using the toolbar
+  KATA. The page outlines the available placeholders, such as `worker_*`, for use
+  in KATA, and describes the inputs and outputs for interactions, including how to
+  handle selected text and insert snippets into the email editor.
 permalink: /docs/toolbars/interactions/mail.compose/
 toc:
   title: Toolbars
   expand: Automations
 jumbotron:
   title: mail.compose
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Toolbars &raquo;
+  - label: Toolbars &raquo;
     url: /docs/toolbars/
 ---
 

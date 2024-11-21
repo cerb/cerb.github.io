@@ -1,23 +1,29 @@
 ---
-title: "Automations: record.create"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: record.create'
+excerpt: This page provides detailed instructions on using the `record.create` command
+  in Cerb to create records with specified fields.
+summary: This page provides detailed instructions on using the `record.create` command
+  in Cerb to create records with specified fields. It outlines the syntax and parameters
+  required, including `inputs`, `output`, `on_simulate`, `on_success`, and `on_error`.
+  The `inputs` section specifies the record type and fields to set, with options to
+  expand keys and disable events for new records. The `output` section describes how
+  to save the record dictionary, while `on_simulate`, `on_success`, and `on_error`
+  sections detail the commands to execute during simulation, upon success, and in
+  case of errors, respectively. This guide is essential for automating record creation
+  in Cerb workflows.
 permalink: /docs/automations/commands/record.create/
 toc:
   title: record.create
   expand: Automations
 jumbotron:
   title: record.create
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

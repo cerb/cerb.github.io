@@ -1,18 +1,25 @@
 ---
-title: "Plugin: Notifications Emailer"
+title: 'Plugin: Notifications Emailer'
+excerpt: This page provides information about the "Notifications Emailer" plugin for
+  Cerb, developed by Webgroup Media, LLC.
+summary: This page provides information about the "Notifications Emailer" plugin for
+  Cerb, developed by Webgroup Media, LLC. The plugin is designed to automatically
+  send email notifications to workers when they receive new notifications, consolidating
+  multiple notifications into a single digest email. It includes a scheduled job extension
+  identified as `wgm.notifications.emailer.cron`, which manages the timing and delivery
+  of these email digests. The plugin is stored in the specified path within the Cerb
+  system.
 permalink: /docs/plugins/wgm.notifications.emailer/
 toc:
-  title: "Notifications Emailer"
+  title: Notifications Emailer
   expand: Plugins
 jumbotron:
-  title: "Notifications Emailer"
-  tagline: 
+  title: Notifications Emailer
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

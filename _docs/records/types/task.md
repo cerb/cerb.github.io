@@ -1,21 +1,30 @@
 ---
 title: Task Records
+excerpt: This page provides detailed information about task records in Cerb, including
+  their structure and usage within the platform.
+summary: This page provides detailed information about task records in Cerb, including
+  their structure and usage within the platform. It outlines the fields available
+  in the Records API, such as timestamps for creation, completion, and deadlines,
+  as well as fields for task importance, ownership, and status. The page also describes
+  dictionary placeholders for automations and API responses, offering a range of fields
+  like task title, status, and owner. Additionally, it covers search query fields
+  that allow filtering tasks based on various criteria, and it lists worklist columns
+  that can be used to display task information in a structured format. This comprehensive
+  guide is essential for users looking to manage and automate tasks effectively within
+  Cerb.
 permalink: /docs/records/types/task/
 toc:
   title: Task
   expand: Records
 jumbotron:
   title: Task
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

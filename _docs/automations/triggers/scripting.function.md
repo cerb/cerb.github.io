@@ -1,23 +1,28 @@
 ---
-title: "scripting.function"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: scripting.function
+excerpt: This page provides an overview of the "scripting.function" feature in Cerb,
+  which allows automations to be triggered using the cerb_automation() function from
+  various parts of the platform, such as automations, behaviors, snippets, events,
+  and toolbars.
+summary: This page provides an overview of the "scripting.function" feature in Cerb,
+  which allows automations to be triggered using the cerb_automation() function from
+  various parts of the platform, such as automations, behaviors, snippets, events,
+  and toolbars. It details the structure of the automation dictionary, which includes
+  custom input values from the caller, and explains how the function can return multiple
+  key/value pairs, including nested dictionaries, to the caller upon completion.
 permalink: /docs/automations/triggers/scripting.function/
 toc:
   title: scripting.function
   expand: Automations
 jumbotron:
   title: scripting.function
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Triggers &raquo;
+  - label: Triggers &raquo;
     url: /docs/automations/#triggers
 ---
 

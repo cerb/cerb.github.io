@@ -1,6 +1,16 @@
 ---
 title: Auto Dispatcher
 excerpt: Automatically assign tickets to workers based on priority.
+summary: This page provides a comprehensive guide on the Auto Dispatcher workflow
+  in Cerb, which allows workers to efficiently request their next assignment with
+  a simple button click on a workspace. The workflow prioritizes and assigns tickets
+  based on group memberships, importance, and duration of being open, ensuring a consistent
+  and non-overlapping handling of issues. The guide covers installation, usage, and
+  customization of the Auto Dispatcher, including adding workspace widgets, managing
+  assignment rejections, and customizing rejection reasons and work order queries.
+  It also includes a reference section for building custom auto-dispatcher workflows
+  using the provided template. The Auto Dispatcher is integrated into Cerb 11.0+ and
+  can be enabled through the Cerb interface.
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.auto_dispatcher/
@@ -8,11 +18,9 @@ jumbotron:
   title: Auto Dispatcher
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Workflows &raquo;
+  - label: Workflows &raquo;
     url: /resources/workflows/
 ---
 

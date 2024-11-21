@@ -1,19 +1,22 @@
 ---
 title: Snippets
+excerpt: This page describes the functionality of worklists for snippets in Cerb,
+  emphasizing the access control based on worker roles and group memberships.
+summary: This page describes the functionality of worklists for snippets in Cerb,
+  emphasizing the access control based on worker roles and group memberships. It highlights
+  that workers are restricted from viewing each other's private snippets, while administrators
+  have the capability to view and manage all snippets, irrespective of ownership.
 permalink: /docs/setup/records/snippets/
 toc:
   expand: Admin Guide
 jumbotron:
   title: Snippets
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/setup/#records
 ---
 

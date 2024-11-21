@@ -1,21 +1,31 @@
 ---
 title: Time Tracking Records
+excerpt: This page provides detailed information about time tracking records in Cerb,
+  including their structure and usage within the system.
+summary: This page provides detailed information about time tracking records in Cerb,
+  including their structure and usage within the system. It outlines the fields available
+  in the Records API, which are essential for managing time tracking entries, such
+  as activity ID, log date, and worker ID. The page also describes dictionary placeholders
+  used in automations and API responses, offering a range of fields like record type,
+  log date, and time spent. Additionally, it covers search query fields that facilitate
+  filtering time tracking data based on various criteria, such as activity, comments,
+  and worker details. Lastly, it lists the worklist columns available for displaying
+  time tracking information, including custom fields, activity, log date, and time
+  spent. This comprehensive guide is crucial for users looking to effectively manage
+  and query time tracking data within Cerb.
 permalink: /docs/records/types/time_entry/
 toc:
   title: Time Tracking
   expand: Records
 jumbotron:
   title: Time Tracking
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

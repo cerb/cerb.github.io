@@ -1,5 +1,14 @@
 ---
-title: "API: Custom Fields"
+title: 'API: Custom Fields'
+excerpt: This page provides detailed information on how to work with custom fields
+  in the Cerb API.
+summary: This page provides detailed information on how to work with custom fields
+  in the Cerb API. It covers the types of custom fields available, such as checkboxes,
+  dropdowns, dates, files, and more. The page explains how to build a list of available
+  custom fields, retrieve custom fields on records and search results, and set custom
+  fields on records using API requests. It includes examples of API calls for each
+  operation, demonstrating how to use key expansion to access custom field data in
+  both GET and POST requests, as well as how to update custom fields with PUT requests.
 permalink: /docs/api/custom-fields/
 toc:
   title: Custom Fields
@@ -7,11 +16,9 @@ jumbotron:
   title: Custom Fields
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
 ---
 

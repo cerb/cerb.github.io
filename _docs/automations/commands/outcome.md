@@ -1,23 +1,27 @@
 ---
-title: "Automations: outcome"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: outcome'
+excerpt: This page provides an overview of the "outcome" command in Cerb automations,
+  which allows for conditional execution of a sequence of commands.
+summary: This page provides an overview of the "outcome" command in Cerb automations,
+  which allows for conditional execution of a sequence of commands. Each outcome must
+  have a unique name and is determined by a boolean condition specified with the `if@bool:`
+  key. If the condition resolves to "yes," the commands under the `then:` key are
+  executed. The page includes syntax examples, such as checking if the current day
+  is a weekend, and explains that multiple outcomes can be grouped, with the first
+  matching outcome being executed.
 permalink: /docs/automations/commands/outcome/
 toc:
   title: outcome
   expand: Automations
 jumbotron:
   title: outcome
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

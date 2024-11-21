@@ -1,23 +1,24 @@
 ---
-title: "Automations: error"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: error'
+excerpt: This page provides information on the **error:** command used in Cerb automations.
+summary: This page provides information on the **error:** command used in Cerb automations.
+  It explains that this command is used to terminate an automation unsuccessfully
+  by setting it to an `error` state and returning a specified error message to the
+  caller. The page includes a syntax example demonstrating how to implement the command
+  within an automation script.
 permalink: /docs/automations/commands/error/
 toc:
   title: error
   expand: Automations
 jumbotron:
   title: error
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

@@ -1,21 +1,32 @@
 ---
 title: Calendar Recurring Event Records
+excerpt: This page provides detailed information about Calendar Recurring Event Records
+  in Cerb, including their structure and usage within the system.
+summary: This page provides detailed information about Calendar Recurring Event Records
+  in Cerb, including their structure and usage within the system. It outlines the
+  fields available in the Records API, which are essential for managing recurring
+  events, such as calendar ID, event start and end times, availability status, and
+  recurrence patterns. The page also describes dictionary placeholders that can be
+  used in automations, snippets, and API responses, offering a comprehensive list
+  of fields like event name, timezone, and record URL. Additionally, it details the
+  search query fields that can be used to filter calendar recurring events, such as
+  calendar ID, event name, and availability status. Lastly, it lists the worklist
+  columns available for displaying recurring event data, including calendar ID, event
+  name, and recurrence details. This information is crucial for developers and users
+  who need to integrate or manage recurring events within the Cerb platform.
 permalink: /docs/records/types/calendar_recurring_event/
 toc:
   title: Calendar Recurring Event
   expand: Records
 jumbotron:
   title: Calendar Recurring Event
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

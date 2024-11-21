@@ -1,18 +1,24 @@
 ---
 title: Upgrading
+excerpt: This page provides a comprehensive guide on upgrading Cerb, focusing on using
+  Git for updates on Unix-based servers.
+summary: This page provides a comprehensive guide on upgrading Cerb, focusing on using
+  Git for updates on Unix-based servers. It covers preparation steps, including making
+  backups and verifying Git installation, and details the process of updating Cerb
+  files using Git commands. The guide also addresses handling conflicts during updates
+  and outlines the necessary steps to finalize the upgrade, such as setting file permissions
+  and updating the database schema. Additionally, it provides instructions for updating
+  Community Portals if needed. The page emphasizes the advantages of using Git for
+  version control and suggests using Cerb Cloud for those unable to manage upgrades
+  themselves.
 permalink: /docs/upgrading/
-excerpt: You can use Git to quickly update your local Cerb files to the latest version.
 jumbotron:
   title: Upgrading
-  #tagline: ...
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Admin Guide &raquo;
-  -
-    label: Installation &raquo;
+  - label: Admin Guide &raquo;
+  - label: Installation &raquo;
     url: /docs/installation/self-hosted/
 keywords: upgrade
 ---

@@ -1,19 +1,25 @@
 ---
 title: Avatars
+excerpt: This page provides information on configuring avatars in Cerb, which are
+  the profile pictures associated with various records such as workers, groups, and
+  bots.
+summary: This page provides information on configuring avatars in Cerb, which are
+  the profile pictures associated with various records such as workers, groups, and
+  bots. It explains the options available for default avatars, including monograms
+  and silhouettes. Monograms are images created using the initials of a person's first
+  and last name, with different background colors for visual distinction in conversations.
+  Silhouettes are gendered outlines that can be used as avatars.
 permalink: /docs/setup/records/avatars/
 toc:
   expand: Admin Guide
 jumbotron:
   title: Avatars
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/setup/#records
 ---
 

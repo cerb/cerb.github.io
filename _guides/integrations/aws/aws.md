@@ -1,6 +1,13 @@
 ---
 title: Integrate with Amazon Web Services
 excerpt: A step-by-step guide for integrating Cerb and Amazon Web Services (AWS).
+summary: This page provides a comprehensive guide on integrating Cerb with Amazon
+  Web Services (AWS). It covers the steps to log into AWS, create a policy, set up
+  a new user, and generate programmatic credentials necessary for the integration.
+  The guide then explains how to create the AWS service within Cerb and utilize the
+  connected account for automations, allowing users to access AWS APIs directly from
+  Cerb. Additionally, it references related resources for further enhancing Cerb's
+  capabilities with AWS services like Amazon Bedrock, AWS Lambda, and Amazon Polly.
 permalink: /guides/integrations/aws/
 layout: integration
 topic: Integrations
@@ -9,17 +16,13 @@ jumbotron:
   title: Cerb + Amazon Web Services
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Amazon Web Services &raquo;
+  - label: Amazon Web Services &raquo;
     url: /resources/guides/#amazon-web-services
 ---
 

@@ -1,21 +1,28 @@
 ---
-title: "Scripting Reference: Functions"
-excerpt: A reference of the template functions in bot scripting.
+title: 'Scripting Reference: Functions'
+excerpt: This webpage serves as a comprehensive scripting reference for functions
+  available in Cerb's bot scripts and snippets.
+summary: This webpage serves as a comprehensive scripting reference for functions
+  available in Cerb's bot scripts and snippets. It details a wide array of functions,
+  including those for manipulating arrays (e.g., array_column, array_diff, array_sort_keys),
+  handling JSON and XML data (e.g., json_decode, xml_decode, xml_xpath), and performing
+  various utility operations (e.g., random_string, validate_email, clamp_int). Additionally,
+  it covers Cerb-specific functions for automation, calendar management, and permissions
+  (e.g., cerb_automation, cerb_calendar_get_relative_date, cerb_has_priv). Each function
+  is explained with examples, showcasing its syntax and potential use cases, making
+  this page a valuable resource for developers working with Cerb's scripting capabilities.
 permalink: /docs/scripting/functions/
 toc:
   title: Functions
   expand: Developer Guide
 jumbotron:
-  title: "Reference: Functions"
-  tagline: 
+  title: 'Reference: Functions'
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Developer Guide &raquo;
-  -
-    label: Scripting &raquo;
+  - label: Developer Guide &raquo;
+  - label: Scripting &raquo;
     url: /docs/scripting/
 ---
 

@@ -1,26 +1,31 @@
 ---
-title: "File Download - Interaction Form Element"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: File Download - Interaction Form Element
+excerpt: This page provides detailed information on the **fileDownload** element used
+  in interaction web forms within Cerb.
+summary: This page provides detailed information on the **fileDownload** element used
+  in interaction web forms within Cerb. It explains how this element can be utilized
+  to create a form button that facilitates the downloading of attachments or automation
+  resource files, which is particularly beneficial for interactions that produce large
+  or binary outputs such as dynamic images, CSV/JSON exports, or ZIP archives. The
+  page includes syntax details for implementing the fileDownload element, covering
+  parameters like `data`, `label`, `filename`, and `uri`, which define the content
+  to download, the label displayed, the filename on the download button, and the URI
+  for the resource, respectively.
 permalink: /docs/automations/triggers/interaction.worker/elements/fileDownload/
 toc:
   title: File Download
   expand: Automations
 jumbotron:
   title: File Download
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: interaction.worker &raquo;
+  - label: interaction.worker &raquo;
     url: /docs/automations/triggers/interaction.worker/
-  -
-    label: Elements &raquo;
+  - label: Elements &raquo;
     url: /docs/automations/triggers/interaction.worker/#elements
 ---
 

@@ -1,14 +1,26 @@
 ---
 title: Introduction
+excerpt: This page provides an overview of Cerb, a customizable web-based platform
+  designed for enterprise communication and process automation.
+summary: This page provides an overview of Cerb, a customizable web-based platform
+  designed for enterprise communication and process automation. Cerb has evolved over
+  22 years, integrating with API-based services to automate digital workflows using
+  its KATA language and browser-based tools. It allows teams to create personalized
+  workspaces with customizable widgets and manage various tasks through custom records
+  and fields. Common use cases include transforming standard email systems into high-volume
+  team-based webmail with automated features and integrating with large language models
+  for customer support. Cerb can be deployed on personal hardware, Docker, or as a
+  managed service in Cerb Cloud, with its source code available on GitHub. It is free
+  for single-seat use, ensuring users can maintain their data without ongoing costs.
+  The page also directs users to guides for administrators, workers, and developers.
 permalink: /docs/intro/
 toc:
   title: Introduction
 jumbotron:
   title: Introduction
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
 ---
 

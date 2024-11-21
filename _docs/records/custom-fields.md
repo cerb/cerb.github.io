@@ -1,15 +1,23 @@
 ---
 title: Custom Fields
+excerpt: This page provides an overview of custom fields in Cerb, detailing how they
+  can be added to any record type to meet specific team needs.
+summary: This page provides an overview of custom fields in Cerb, detailing how they
+  can be added to any record type to meet specific team needs. It lists various types
+  of custom fields, such as checkboxes, currency, dates, decimals, files, geospatial
+  coordinates, lists, multiple checkboxes, numbers, picklists, record links, text
+  entries, URLs, and worker records. Each field type is described with examples, illustrating
+  how they can be used to enhance record management by allowing tailored data entry
+  and reciprocal search filters. Custom fields are integrated into existing record
+  types and are visible across all records of that type.
 permalink: /docs/custom-fields/
 jumbotron:
   title: Custom Fields
   tagline: Add your own attributes to any record type
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
 ---
 

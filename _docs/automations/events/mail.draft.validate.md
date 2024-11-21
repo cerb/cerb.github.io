@@ -1,23 +1,30 @@
 ---
-title: "mail.draft.validate"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: mail.draft.validate
+excerpt: This page provides detailed information on the `mail.draft.validate` automation
+  events in Cerb, which are used to implement interactive custom validators during
+  email composition and replies.
+summary: This page provides detailed information on the `mail.draft.validate` automation
+  events in Cerb, which are used to implement interactive custom validators during
+  email composition and replies. These validators can address issues such as missing
+  recipients, profanity, missing attachments, and improper formatting. The page explains
+  how interactive validators allow workers to bypass warnings and continue sending
+  emails, unlike non-interactive validators that require corrections before proceeding.
+  It also outlines the configuration of these validators, the structure of the automation
+  event dictionary, and the outputs, including how to abort sending a message. Examples
+  of custom interactive validators are provided to illustrate their application.
 permalink: /docs/automations/events/mail.draft.validate/
 toc:
   title: mail.draft.validate
   expand: Automations
 jumbotron:
   title: mail.draft.validate
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Events &raquo;
+  - label: Events &raquo;
     url: /docs/automations/#events
 ---
 

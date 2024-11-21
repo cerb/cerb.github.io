@@ -1,15 +1,22 @@
 ---
 title: Custom Fieldsets
+excerpt: This page explains the concept of custom fieldsets in Cerb, which allow users
+  to group related custom fields together and add them to records as a unit.
+summary: This page explains the concept of custom fieldsets in Cerb, which allow users
+  to group related custom fields together and add them to records as a unit. It provides
+  an example of a "SLA" (Service Level Agreement) fieldset for organization records,
+  detailing how fieldsets can automate processes like ticket assignment and client
+  reminders. The page also highlights the versatility of fieldsets in categorizing
+  broad record types, such as using specific fieldsets for different asset types like
+  vehicles and computers.
 permalink: /docs/custom-fieldsets/
 jumbotron:
   title: Custom Fieldsets
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
 ---
 

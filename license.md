@@ -1,10 +1,22 @@
 ---
 title: License
 excerpt: The terms and conditions by which we license Cerb to you.
+summary: This page outlines the terms and conditions of the Devblocks Public License
+  1.0 (DPL) provided by Webgroup Media, LLC. It details the rights granted to users,
+  including the ability to use, modify, and redistribute the software under specific
+  conditions. The license emphasizes the protection of the software as the intellectual
+  property of the licensor under U.S. copyright law and international treaties. Key
+  sections include definitions, the grant of rights, governing law and venue, a limited
+  warranty, a disclaimer of warranties, and limitations of liability and remedies.
+  The license specifies that the software is provided "AS IS" without any implied
+  warranties, and limits the licensor's liability to the maximum extent permitted
+  by law. The governing law is based in the United States, with Orange County, California
+  designated as the venue for any legal proceedings related to the license.
+permalink: /license/
 layout: page
 jumbotron:
   title: Software License
-  tagline: The terms and conditions by which we license Cerb to you.
+  tagline: The terms and conditions by which we license Cerb to you
 ---
 
 # Devblocks Public License 1.0 (DPL)

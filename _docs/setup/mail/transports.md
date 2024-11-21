@@ -1,19 +1,27 @@
 ---
-title: "Setup: Mail Transports"
+title: 'Setup: Mail Transports'
+excerpt: This page provides an overview of mail transports in Cerb, which are used
+  for sending outgoing email messages.
+summary: This page provides an overview of mail transports in Cerb, which are used
+  for sending outgoing email messages. It explains the default types of mail transports
+  available, including SMTP for delivering emails via a mail server and Null for discarding
+  emails in development environments. The page also discusses the possibility of using
+  plugins to implement new mail transport types and the flexibility of using different
+  transports for various email addresses. It emphasizes the importance of email deliverability
+  and outlines several validation systems like SPF, DKIM, DMARC, and RBL that help
+  ensure legitimate emails reach recipients while blocking spam. The page advises
+  on configuring these systems correctly when setting up a new SMTP mail transport.
 permalink: /docs/setup/mail/transports/
 toc:
   expand: Admin Guide
 jumbotron:
   title: Mail Transports
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Mail &raquo;
+  - label: Mail &raquo;
     url: /docs/setup/#outgoing-mail
 ---
 

@@ -1,21 +1,25 @@
 ---
-title: "Scripting Reference: Loops"
-excerpt: 
+title: 'Scripting Reference: Loops'
+excerpt: This page provides a scripting reference for using loops in Cerb, specifically
+  focusing on 'for' loops.
+summary: This page provides a scripting reference for using loops in Cerb, specifically
+  focusing on 'for' loops. It explains how to iterate over arrays and ranges, demonstrating
+  with examples how to loop through a list of names and a range of numbers. The page
+  also notes that variables defined within a loop are not accessible outside of it
+  unless they are defined beforehand. Additionally, it briefly mentions operators
+  and regular expressions, suggesting further topics related to scripting in Cerb.
 permalink: /docs/scripting/loops/
 toc:
   title: Loops
   expand: Developer Guide
 jumbotron:
   title: Loops
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Developer Guide &raquo;
-  -
-    label: Scripting &raquo;
+  - label: Developer Guide &raquo;
+  - label: Scripting &raquo;
     url: /docs/scripting/
 ---
 

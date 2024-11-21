@@ -1,21 +1,25 @@
 ---
-title: "Scripting Reference: Conditional Logic"
-excerpt: 
+title: 'Scripting Reference: Conditional Logic'
+excerpt: This page provides a scripting reference for implementing conditional logic
+  in Cerb.
+summary: This page provides a scripting reference for implementing conditional logic
+  in Cerb. It explains how to use expressions to display different content based on
+  conditions, such as checking if a service level agreement (SLA) is active or expired.
+  The example given demonstrates setting a date for SLA expiration and using an if-else
+  statement to determine and display the appropriate message. The page also mentions
+  the use of operators in handling dates within these expressions.
 permalink: /docs/scripting/conditional-logic/
 toc:
   title: Conditional Logic
   expand: Developer Guide
 jumbotron:
   title: Conditional Logic
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Developer Guide &raquo;
-  -
-    label: Scripting &raquo;
+  - label: Developer Guide &raquo;
+  - label: Scripting &raquo;
     url: /docs/scripting/
 ---
 

@@ -1,21 +1,31 @@
 ---
 title: Connected Service Records
+excerpt: This page provides detailed information about Connected Service records in
+  Cerb, including their structure and usage within the system.
+summary: This page provides detailed information about Connected Service records in
+  Cerb, including their structure and usage within the system. It outlines the fields
+  available in the Records API, which are essential for managing connected services,
+  such as `extension_id`, `name`, and `updated_at`. The page also describes dictionary
+  placeholders that can be used in automations, snippets, and API responses, offering
+  a range of fields like `id`, `name`, and `record_url`. Additionally, it covers search
+  query fields that facilitate filtering connected services based on criteria like
+  `id`, `name`, and `updated`. Lastly, it lists the worklist columns available for
+  displaying connected service data, including `c_extension_id`, `c_name`, and custom
+  fields. This comprehensive guide is crucial for developers and users who need to
+  integrate and manage connected services within Cerb.
 permalink: /docs/records/types/connected_service/
 toc:
   title: Connected Service
   expand: Records
 jumbotron:
   title: Connected Service
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

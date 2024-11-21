@@ -1,21 +1,25 @@
 ---
 title: Boolean Record Fields
+excerpt: This page provides information on boolean record fields in Cerb, explaining
+  that these fields hold true or false values represented as `1` or `0`.
+summary: This page provides information on boolean record fields in Cerb, explaining
+  that these fields hold true or false values represented as `1` or `0`. It includes
+  examples of how boolean fields are used in JSON packages and in PUT or POST requests
+  through the Records API, demonstrating how to set a boolean field to true or false
+  in these contexts.
 permalink: /docs/records/fields/types/boolean/
 toc:
   title: Boolean
   expand: Records
 jumbotron:
   title: Boolean
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Field Types &raquo;
+  - label: Field Types &raquo;
     url: /docs/records/#fields
 ---
 

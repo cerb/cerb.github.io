@@ -1,21 +1,24 @@
 ---
 title: Float Record Fields
+excerpt: This page provides information on float record fields in Cerb, which are
+  used to store numbers with decimal precision.
+summary: This page provides information on float record fields in Cerb, which are
+  used to store numbers with decimal precision. It explains how these floating point
+  numbers are represented in JSON format within packages and how they can be utilized
+  in PUT or POST requests through the Records API.
 permalink: /docs/records/fields/types/float/
 toc:
   title: Float
   expand: Records
 jumbotron:
   title: Float
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Field Types &raquo;
+  - label: Field Types &raquo;
     url: /docs/records/#fields
 ---
 

@@ -1,23 +1,26 @@
 ---
-title: "reminder.remind"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: reminder.remind
+excerpt: This page provides information about the "reminder.remind" automation trigger
+  in Cerb, which is activated by a reminder alarm.
+summary: This page provides information about the "reminder.remind" automation trigger
+  in Cerb, which is activated by a reminder alarm. It explains that this trigger utilizes
+  event handler KATA, executing all enabled automations. The page details the inputs
+  available in the automation dictionary, including custom input values from the caller
+  and the reminder record, which supports key expansion. There are no outputs specified
+  for this trigger.
 permalink: /docs/automations/triggers/reminder.remind/
 toc:
   title: reminder.remind
   expand: Automations
 jumbotron:
   title: reminder.remind
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Triggers &raquo;
+  - label: Triggers &raquo;
     url: /docs/automations/#triggers
 ---
 

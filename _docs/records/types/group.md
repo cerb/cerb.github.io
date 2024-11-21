@@ -1,21 +1,28 @@
 ---
 title: Group Records
+excerpt: This page provides detailed information about the "Group" record type in
+  Cerb, including its API fields, dictionary placeholders, search query fields, and
+  worklist columns.
+summary: This page provides detailed information about the "Group" record type in
+  Cerb, including its API fields, dictionary placeholders, search query fields, and
+  worklist columns. It outlines the structure and attributes of group records, such
+  as creation and update timestamps, privacy settings, member lists, and email reply
+  configurations. The page also describes how these fields can be used in the Records
+  API, automation dictionaries, and search queries, offering a comprehensive guide
+  for managing group records within the Cerb platform.
 permalink: /docs/records/types/group/
 toc:
   title: Group
   expand: Records
 jumbotron:
   title: Group
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

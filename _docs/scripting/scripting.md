@@ -1,22 +1,31 @@
 ---
-title: "Scripting Reference"
-excerpt: Bot actions can generate text using a full-featured templating language. Here's everything you need to know.
+title: Scripting Reference
+excerpt: This page provides a scripting reference for Cerb, focusing on the use of
+  a templating language based on Twig to generate dynamic text for various features
+  like automations and snippets.
+summary: This page provides a scripting reference for Cerb, focusing on the use of
+  a templating language based on Twig to generate dynamic text for various features
+  like automations and snippets. It highlights the need for dynamic content generation
+  in tasks such as setting record fields, sending messages, and executing HTTP requests.
+  The page explains how Cerb's templating language simplifies text output compared
+  to traditional programming languages by treating everything as text unless a special
+  command is encountered. Key topics covered include variables, strings, arrays, objects,
+  dates, conditional logic, operators, loops, regular expressions, JSON, XML, commands,
+  functions, filters, and tests.
 permalink: /docs/scripting/
 redirect_from:
-  - /docs/bots/scripting/
-  - /docs/building-bots/scripting/
+- /docs/bots/scripting/
+- /docs/building-bots/scripting/
 toc:
   title: Scripting
   expand: Developer Guide
 jumbotron:
   title: Scripting
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Developer Guide &raquo;
+  - label: Developer Guide &raquo;
 ---
 
 <div class="cerb-screenshot">

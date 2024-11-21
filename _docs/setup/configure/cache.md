@@ -1,20 +1,24 @@
 ---
 title: Cache
-permalink: /docs/setup/configure/cache/
 excerpt: To optimize performance, Cerb caches frequently accessed content.
+summary: This page explains how Cerb optimizes performance by caching frequently accessed
+  but infrequently changed content, such as worker data, to reduce database query
+  traffic. It describes the caching mechanism, which involves storing data like worker
+  records, groups, buckets, sender addresses, bots, and behaviors, and invalidating
+  the cache when changes occur. The default caching method involves saving cache files
+  to the filesystem, but for scaling beyond a single server or addressing filesystem
+  I/O bottlenecks, distributed caching with Redis or Memcached is supported.
+permalink: /docs/setup/configure/cache/
 toc:
   expand: Admin Guide
 jumbotron:
   title: Cache
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Configure &raquo;
+  - label: Configure &raquo;
     url: /docs/setup/#configure
 ---
 

@@ -1,19 +1,28 @@
 ---
-title: "Data Queries: Attachment Manifest"
-excerpt: 
+title: 'Data Queries: Attachment Manifest'
+excerpt: This page provides detailed information on how to use the `attachment.manifest`
+  data queries in Cerb to list files within an archive attachment, such as a `.zip`
+  file.
+summary: This page provides detailed information on how to use the `attachment.manifest`
+  data queries in Cerb to list files within an archive attachment, such as a `.zip`
+  file. It outlines the various input parameters that can be used to customize the
+  query, including `filter` for matching specific file patterns, `format` for specifying
+  the output format, `id` for identifying the attachment record, `limit` for the number
+  of file paths to return, and `offset` for the starting point of the file paths.
+  The default response format is `dictionaries`, which is suitable for integration
+  with sheets and APIs. An example query is provided to illustrate the usage of these
+  parameters.
 permalink: /docs/data-queries/attachment/manifest/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: Attachment Manifest
 jumbotron:
   title: Attachment Manifest
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

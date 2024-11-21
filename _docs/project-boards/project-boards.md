@@ -1,17 +1,22 @@
 ---
 title: Project Boards
 excerpt: Project boards visually organize and automate a multi-step process.
+summary: This page provides an overview of Cerb's project boards, which are based
+  on the kanban development process. It explains how project boards organize work
+  into cards and columns, emphasizing the principle of limiting work in progress.
+  The page highlights the simplicity of kanban and describes how Cerb's digital implementation
+  enhances this process with features like team visibility, activity logs, and automations
+  for card movements. These automations can update fields, add comments, send notifications,
+  and more, ensuring that cards display the most current information.
 permalink: /docs/project-boards/
 social_image_url: /assets/images/guides/project-boards/configure/cerb-and-project-boards.png
 jumbotron:
   title: Project Boards
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Workspaces &raquo;
+  - label: Workspaces &raquo;
     url: /docs/workspaces/
 ---
 

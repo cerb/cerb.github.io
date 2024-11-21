@@ -1,5 +1,16 @@
 ---
-title: "API: Responses"
+title: 'API: Responses'
+excerpt: This page provides detailed information on how the Cerb Web API responds
+  to requests with JSON or XML encoded objects, focusing on the structure and functionality
+  of single-level dictionaries of key/value pairs.
+summary: This page provides detailed information on how the Cerb Web API responds
+  to requests with JSON or XML encoded objects, focusing on the structure and functionality
+  of single-level dictionaries of key/value pairs. It explains how to expand keys
+  in API requests to efficiently retrieve related records without multiple HTTP requests,
+  thereby reducing overhead. The page also discusses the use of meta data in API responses,
+  which includes labels and data types for available keys, aiding in understanding
+  and utilizing the data effectively. The `show_meta` option is highlighted as a way
+  to access this meta data, which is particularly useful for deciphering custom fields.
 permalink: /docs/api/responses/
 toc:
   title: Responses
@@ -7,11 +18,9 @@ jumbotron:
   title: Responses
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
 ---
 

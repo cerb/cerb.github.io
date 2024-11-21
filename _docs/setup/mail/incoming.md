@@ -1,5 +1,17 @@
 ---
-title: "Setup: Incoming Mail Settings"
+title: 'Setup: Incoming Mail Settings'
+excerpt: This page provides detailed information on configuring incoming mail settings
+  in Cerb.
+summary: This page provides detailed information on configuring incoming mail settings
+  in Cerb. Key topics include the "Reply to All" feature, which allows all email addresses
+  in the 'To:' and 'Cc:' headers to be added as participants on new tickets, and the
+  option to exclude certain email addresses from being participants to prevent auto-responder
+  loops. It also covers settings for handling email attachments, including enabling/disabling
+  them and setting a maximum file size. Additionally, the page discusses displaying
+  HTML messages using the Tidy PHP extension to correct syntax errors and clean up
+  extraneous markup. Lastly, it explains the default ticket mask format used for generating
+  reference masks for new tickets, emphasizing the importance of a format that allows
+  for efficient lookups and meets a minimum cardinality requirement.
 permalink: /docs/setup/mail/incoming/
 toc:
   title: Incoming Mail
@@ -7,14 +19,11 @@ toc:
 jumbotron:
   title: Incoming Mail
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Mail &raquo;
+  - label: Mail &raquo;
     url: /docs/setup/#incoming-mail
 ---
 

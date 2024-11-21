@@ -1,23 +1,27 @@
 ---
 title: mail.read
-#excerpt: Toolbars...
-#social_image_url: /assets/images/search/kata.png
+excerpt: This page provides detailed instructions on configuring the message toolbar
+  for viewing email messages on a ticket profile page in Cerb.
+summary: This page provides detailed instructions on configuring the message toolbar
+  for viewing email messages on a ticket profile page in Cerb. It guides users on
+  how to navigate to the toolbar settings, edit the `mail.read` record, and add interactions
+  using toolbar KATA. The page outlines available placeholders for KATA, such as message,
+  widget, and worker records, and describes the interactions, inputs, and expected
+  outputs for the `cerb.toolbar.mail.read` caller. It also explains how to handle
+  outputs, including refreshing profile widgets.
 permalink: /docs/toolbars/interactions/mail.read/
 toc:
   title: Toolbars
   expand: Automations
 jumbotron:
   title: mail.read
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Toolbars &raquo;
+  - label: Toolbars &raquo;
     url: /docs/toolbars/
 ---
 

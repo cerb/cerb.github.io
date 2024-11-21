@@ -1,23 +1,28 @@
 ---
-title: "ui.widget"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: ui.widget
+excerpt: This page provides information on the "ui.widget" automations in Cerb, which
+  enable custom output for card, profile, or workspace widgets, replacing the deprecated
+  bot behavior-based widgets.
+summary: This page provides information on the "ui.widget" automations in Cerb, which
+  enable custom output for card, profile, or workspace widgets, replacing the deprecated
+  bot behavior-based widgets. It details the use of event handler KATA for triggering
+  automations, with the first enabled automation being executed. The page outlines
+  the structure of the automation dictionary, including inputs such as custom input
+  values, current record dictionaries, widget records, and worker records. It also
+  describes the expected output, specifically the HTML to be rendered for the widget.
 permalink: /docs/automations/triggers/ui.widget/
 toc:
   title: ui.widget
   expand: Automations
 jumbotron:
   title: ui.widget
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Triggers &raquo;
+  - label: Triggers &raquo;
     url: /docs/automations/#triggers
 ---
 

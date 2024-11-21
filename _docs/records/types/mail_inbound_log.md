@@ -1,21 +1,28 @@
 ---
 title: Email Inbound Log Records
+excerpt: This page provides detailed information about the Email Inbound Log records
+  in Cerb.
+summary: This page provides detailed information about the Email Inbound Log records
+  in Cerb. It outlines the fields available in the Records API, including timestamps,
+  message IDs, and status information. The page also describes dictionary placeholders
+  for use in automations, snippets, and API responses, offering fields like record
+  type, status, and subject. Additionally, it lists search query fields that can be
+  used to filter email inbound logs based on criteria such as creation date, mailbox,
+  and ticket ID. Lastly, it details the worklist columns available for organizing
+  and displaying email inbound log data, including custom fields and message details.
 permalink: /docs/records/types/mail_inbound_log/
 toc:
   title: Email Inbound Log
   expand: Records
 jumbotron:
   title: Email Inbound Log
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

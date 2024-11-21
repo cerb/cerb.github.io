@@ -1,21 +1,29 @@
 ---
 title: Saved Search Records
+excerpt: This page provides detailed information about Saved Search records in Cerb,
+  including their structure and usage within the platform.
+summary: This page provides detailed information about Saved Search records in Cerb,
+  including their structure and usage within the platform. It outlines the fields
+  available in the Records API, such as context, name, owner, and query, and explains
+  how these fields can be utilized in packages. The page also describes dictionary
+  placeholders that can be used in automations, snippets, and API responses, offering
+  a comprehensive list of fields and their types. Additionally, it covers search query
+  fields that can be used to filter saved searches and lists the worklist columns
+  available for displaying saved search data. This information is crucial for users
+  looking to manage and utilize saved searches effectively within Cerb.
 permalink: /docs/records/types/saved_search/
 toc:
   title: Saved Search
   expand: Records
 jumbotron:
   title: Saved Search
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

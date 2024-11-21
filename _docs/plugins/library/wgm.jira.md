@@ -1,18 +1,27 @@
 ---
-title: "Plugin: JIRA Integration (Legacy)"
+title: 'Plugin: JIRA Integration (Legacy)'
+excerpt: This page provides details about the JIRA Integration (Legacy) plugin for
+  Cerb, developed by Webgroup Media, LLC.
+summary: This page provides details about the JIRA Integration (Legacy) plugin for
+  Cerb, developed by Webgroup Media, LLC. The plugin facilitates integration with
+  Atlassian JIRA through its REST API, serving as a bridge for other plugins to interact
+  with JIRA services. It includes various extensions such as Bot Events for tracking
+  new issues, comments, and status changes in JIRA, as well as custom behaviors for
+  JIRA issues and projects. Additionally, it features Page Sections for displaying
+  JIRA issue and project information, Record Types for managing JIRA issues and projects
+  within Cerb, a Scheduled Job for JIRA synchronization, and a Search Schema for querying
+  JIRA issues.
 permalink: /docs/plugins/wgm.jira/
 toc:
-  title: "JIRA Integration (Legacy)"
+  title: JIRA Integration (Legacy)
   expand: Plugins
 jumbotron:
-  title: "JIRA Integration (Legacy)"
-  tagline: 
+  title: JIRA Integration (Legacy)
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

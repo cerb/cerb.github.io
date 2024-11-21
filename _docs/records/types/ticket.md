@@ -1,21 +1,29 @@
 ---
 title: Ticket Records
+excerpt: This page provides comprehensive information about ticket records in Cerb,
+  detailing the fields and functionalities available through the Records API, dictionary
+  placeholders, search query fields, and worklist columns.
+summary: This page provides comprehensive information about ticket records in Cerb,
+  detailing the fields and functionalities available through the Records API, dictionary
+  placeholders, search query fields, and worklist columns. It outlines the structure
+  and attributes of ticket records, including identifiers, timestamps, group and bucket
+  associations, importance levels, and status indicators. The page also explains how
+  to utilize these fields in automations, snippets, and API responses, and offers
+  guidance on constructing search queries and organizing worklists to efficiently
+  manage and analyze ticket data.
 permalink: /docs/records/types/ticket/
 toc:
   title: Ticket
   expand: Records
 jumbotron:
   title: Ticket
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

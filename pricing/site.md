@@ -1,12 +1,24 @@
 ---
-layout: page
 title: Pricing for self-hosted Cerb licenses
-excerpt: Deploy Cerb in the cloud or host it yourself. Start a free trial.
+excerpt: This page provides detailed information on the pricing and features of self-hosted
+  Cerb licenses.
+summary: This page provides detailed information on the pricing and features of self-hosted
+  Cerb licenses. It outlines the cost per seat, billing options, and the responsibilities
+  of self-hosting, such as installation and maintenance. The page highlights the benefits
+  of self-hosting, including compliance with regulations like GDPR and HIPAA, access
+  to the full source code, and a perpetual license for versions released during the
+  coverage period. It also describes the support options available, including standard
+  support included with the license and an optional enterprise support package offering
+  priority assistance and additional services. The FAQ section addresses common questions
+  about seat allocation, installation, renewal discounts, and eligibility for academic,
+  charity, and open source project discounts. Additionally, it explains the process
+  for migrating to a Cerb Cloud subscription.
+layout: page
 permalink: /pricing/self-hosted/
 redirect_from:
-  - /download/
-  - /pricing/site/
-jumbotron: 
+- /download/
+- /pricing/site/
+jumbotron:
   title: Pricing for self-hosted Cerb licenses
   tagline: Deploy a self-managed copy of Cerb installation on your own hardware
 keywords: pricing price cost download

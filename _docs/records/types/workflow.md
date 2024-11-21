@@ -1,21 +1,29 @@
 ---
 title: Workflow Records
+excerpt: This page provides detailed information about workflow records in Cerb, including
+  their structure and usage within the system.
+summary: This page provides detailed information about workflow records in Cerb, including
+  their structure and usage within the system. It outlines the fields available in
+  the Records API, such as `name`, `created_at`, and `updated_at`, and describes how
+  these fields can be utilized in automations, snippets, and API responses through
+  dictionary placeholders. The page also details the search query fields that can
+  be used to filter workflows, such as `created`, `description`, and `name`, and lists
+  the columns available in workflow worklists, including `a_created_at`, `a_description`,
+  and `a_name`. Additionally, it explains the concept of key expansion for optional
+  placeholders, which allows for more detailed customization and linking of records.
 permalink: /docs/records/types/workflow/
 toc:
   title: Workflow
   expand: Records
 jumbotron:
   title: Workflow
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

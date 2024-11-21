@@ -1,21 +1,28 @@
 ---
 title: Toolbar Section Records
+excerpt: This page provides detailed information about the "Toolbar Section" records
+  in Cerb, including their API fields, dictionary placeholders, search query fields,
+  and worklist columns.
+summary: This page provides detailed information about the "Toolbar Section" records
+  in Cerb, including their API fields, dictionary placeholders, search query fields,
+  and worklist columns. It outlines the structure and attributes of toolbar sections,
+  such as their name, priority, and associated workflows. The page also explains how
+  these records can be linked, queried, and displayed within the Cerb platform, offering
+  a comprehensive guide for developers and users to manage and utilize toolbar sections
+  effectively.
 permalink: /docs/records/types/toolbar_section/
 toc:
   title: Toolbar Section
   expand: Records
 jumbotron:
   title: Toolbar Section
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

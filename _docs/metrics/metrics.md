@@ -1,16 +1,28 @@
 ---
 title: Metrics
-excerpt: Metrics aggregate, store, and compute statistics for time-based data.
+excerpt: his page provides a comprehensive overview of the metrics system in Cerb,
+ detailing how metrics are used to aggregate, store, and compute statistics for time-based
+ data.
+summary: This page provides a comprehensive overview of the metrics system in Cerb,
+  detailing how metrics are used to aggregate, store, and compute statistics for time-based
+  data. It covers key aspects such as naming conventions, types of metrics (counters
+  and gauges), dimensions, periods, statistics, retention policies, and eventual consistency.
+  The page explains how metrics are uniquely identified, how they can be partitioned
+  using dimensions, and how data is aggregated over different time periods for efficient
+  reporting. It also discusses the built-in metrics managed by Cerb, such as automation
+  durations, mail transport deliveries, and open ticket counts, and how these metrics
+  can be utilized in reports and automations. The document emphasizes the importance
+  of retention strategies to manage storage and processing costs and describes how
+  metrics can be efficiently collected and processed in high volumes without performance
+  degradation.
 social_image_url: /assets/images/docs/data-queries/data-queries-metrics-timeseries.png
 permalink: /docs/metrics/
-toc:
-title: Metrics
+toc: ~
 jumbotron:
   title: Metrics
-  tagline:
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
 ---
 

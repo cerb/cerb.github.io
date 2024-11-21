@@ -1,20 +1,31 @@
 ---
 title: Admin Quick Start
+excerpt: This webpage serves as an administrative quick start guide for setting up
+  a new instance of Cerb.
+summary: This webpage serves as an administrative quick start guide for setting up
+  a new instance of Cerb. It provides detailed instructions on personalizing the platform
+  with a team logo, configuring both outbound and inbound email settings, and ensuring
+  mail deliverability. The guide covers setting up mail transports, sender addresses,
+  email signatures, and mail routing. It also includes steps for reviewing and setting
+  up groups, testing mail deliverability, and managing worker permissions through
+  roles. Additionally, it guides administrators on inviting workers, configuring mailboxes,
+  and reviewing mail routing rules. The guide touches on configuring the scheduler,
+  reviewing security considerations, and exploring available plugins to enhance Cerb's
+  functionality. This comprehensive setup guide is intended for administrators performing
+  the initial configuration of a fresh Cerb instance.
 permalink: /docs/guide/admins/quick-start/
 toc:
   title: Quick Start
   expand: Admin Guide
 redirect_from:
-  - /docs/quick-start/
+- /docs/quick-start/
 jumbotron:
   title: Quick Start
   tagline: Get started quickly with this brief tour through Cerb functionality
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Admin Guide &raquo;
+  - label: Admin Guide &raquo;
 ---
 
 * TOC

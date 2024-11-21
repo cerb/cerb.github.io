@@ -1,23 +1,28 @@
 ---
-title: "Automations: var.set"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: var.set'
+excerpt: This page provides detailed information on the "var.set" command used in
+  Cerb automations, which allows setting a value using a specified key path.
+summary: This page provides detailed information on the "var.set" command used in
+  Cerb automations, which allows setting a value using a specified key path. It includes
+  a practical example demonstrating how to set and retrieve values using key paths,
+  resulting in the output "Kina Halpue." The page outlines the syntax for the command,
+  including required and optional inputs such as key, value, and delimiter. It also
+  describes the optional sections for handling output, simulation, success, and error
+  scenarios, providing a comprehensive guide for implementing the "var.set" command
+  effectively in automation workflows.
 permalink: /docs/automations/commands/var.set/
 toc:
   title: var.set
   expand: Automations
 jumbotron:
   title: var.set
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

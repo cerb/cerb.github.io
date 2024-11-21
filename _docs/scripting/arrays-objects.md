@@ -1,21 +1,28 @@
 ---
-title: "Scripting Reference: Arrays and Objects"
-excerpt: 
+title: 'Scripting Reference: Arrays and Objects'
+excerpt: This page serves as a scripting reference for working with arrays and objects
+  in Cerb.
+summary: This page serves as a scripting reference for working with arrays and objects
+  in Cerb. It explains how to create and manipulate arrays, which are lists of values
+  indexed numerically, and objects, which are collections of key-value pairs. The
+  page provides examples of accessing and modifying elements within arrays and objects
+  using dot notation and brackets. It also covers advanced operations such as setting
+  deeply nested keys, appending items to arrays, and computing the difference between
+  two arrays using the `array_diff()` function. The reference includes practical code
+  snippets to illustrate these concepts, making it a useful guide for developers working
+  with Cerb's scripting capabilities.
 permalink: /docs/scripting/arrays-objects/
 toc:
   title: Arrays and Objects
   expand: Developer Guide
 jumbotron:
   title: Arrays and Objects
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Developer Guide &raquo;
-  -
-    label: Scripting &raquo;
+  - label: Developer Guide &raquo;
+  - label: Scripting &raquo;
     url: /docs/scripting/
 ---
 

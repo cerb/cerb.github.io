@@ -1,21 +1,31 @@
 ---
 title: Behavior Scheduled Records
+excerpt: This page provides detailed information about Behavior Scheduled Records
+  in Cerb, including their structure and usage within the system.
+summary: This page provides detailed information about Behavior Scheduled Records
+  in Cerb, including their structure and usage within the system. It outlines the
+  fields available in the Records API, which are essential for scheduling behaviors,
+  such as `behavior_id`, `run_date`, `target__context`, and `target_id`. The page
+  also describes dictionary placeholders that can be used in automations, snippets,
+  and API responses, offering a range of fields like `_context`, `_label`, `behavior_`,
+  and `run_date`. Additionally, it covers search query fields that facilitate filtering
+  behavior schedules, with options like `behavior:`, `bot:`, and `runDate:`. Lastly,
+  it lists the worklist columns available for behavior scheduled worklists, which
+  include columns like `*_target`, `b_behavior_bot_id`, and `c_run_date`, providing
+  a comprehensive guide for managing and utilizing behavior schedules in Cerb.
 permalink: /docs/records/types/scheduled_behavior/
 toc:
   title: Behavior Scheduled
   expand: Records
 jumbotron:
   title: Behavior Scheduled
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

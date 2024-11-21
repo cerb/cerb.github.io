@@ -1,6 +1,13 @@
 ---
 title: Integrate with Dropbox
 excerpt: A step-by-step guide for integrating Cerb and Dropbox.
+summary: This page provides a comprehensive guide on integrating Cerb with Dropbox.
+  It covers the entire process, starting with creating an app on Dropbox to enable
+  Cerb to connect and use Dropbox's API. The guide details the steps to create a Dropbox
+  service in Cerb, link a connected account to Dropbox, and utilize this connection
+  in bot behaviors within Cerb. It includes instructions for setting up OAuth 2 Redirect
+  URIs, entering necessary credentials, and using the connected account to automate
+  tasks through Dropbox's API using Cerb's bot functionalities.
 permalink: /guides/integrations/dropbox/
 social_image_url: /assets/images/guides/dropbox/cerb-and-dropbox.png
 layout: integration
@@ -10,17 +17,13 @@ jumbotron:
   title: Cerb + Dropbox
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Dropbox &raquo;
+  - label: Dropbox &raquo;
     url: /resources/guides/#dropbox
 ---
 

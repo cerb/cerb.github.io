@@ -1,6 +1,14 @@
 ---
 title: Translate (DeepL)
-excerpt: Translate inbound and outbound email messages using the DeepL API. 
+excerpt: Translate inbound and outbound email messages using the DeepL API.
+summary: This webpage provides a comprehensive guide on integrating Cerb with DeepL
+  to facilitate the translation of inbound and outbound email messages. It includes
+  detailed instructions on setting up a DeepL account, creating a connected account
+  in Cerb, importing and configuring the necessary workflow, and utilizing the translation
+  features. The guide covers translating both incoming and outgoing emails, with step-by-step
+  processes for setting up the translation workflow, selecting target languages, and
+  using the translation tools within Cerb's interface. The integration supports a
+  wide range of languages and offers options for both free and production API endpoints.
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.integrations.deepl.translate/
@@ -8,11 +16,9 @@ jumbotron:
   title: Translate (DeepL)
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Workflows &raquo;
+  - label: Workflows &raquo;
     url: /resources/workflows/
 ---
 

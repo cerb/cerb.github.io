@@ -1,21 +1,27 @@
 ---
 title: Sensor Records
+excerpt: This page provides detailed information about sensor records in Cerb, including
+  their API fields, dictionary placeholders, search query fields, and worklist columns.
+summary: This page provides detailed information about sensor records in Cerb, including
+  their API fields, dictionary placeholders, search query fields, and worklist columns.
+  It outlines the structure and types of data associated with sensors, such as metrics,
+  status, and tags, and explains how these can be utilized in various Cerb functionalities
+  like automations and API responses. The page also describes how to filter and display
+  sensor data using search queries and worklist columns, offering a comprehensive
+  guide for managing sensor records within the Cerb platform.
 permalink: /docs/records/types/sensor/
 toc:
   title: Sensor
   expand: Records
 jumbotron:
   title: Sensor
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

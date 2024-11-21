@@ -1,5 +1,13 @@
 ---
-title: "API: Data Types"
+title: 'API: Data Types'
+excerpt: This page provides a detailed overview of the data types used in API requests
+  for Cerb.
+summary: This page provides a detailed overview of the data types used in API requests
+  for Cerb. It describes each data type, including "bit" for binary flags, "char"
+  for single characters, "integer" for whole numbers, "mixed" for various types depending
+  on custom fields, "string" for text values, and "timestamp" for Unix 32-bit timestamps.
+  Each type is explained with examples to clarify their usage in request options and
+  payload fields.
 permalink: /docs/api/data-types/
 toc:
   title: Data Types
@@ -7,11 +15,9 @@ jumbotron:
   title: Data Types
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
 ---
 

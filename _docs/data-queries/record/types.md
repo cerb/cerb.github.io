@@ -1,19 +1,26 @@
 ---
-title: "Data Queries: Record Types"
-excerpt: 
+title: 'Data Queries: Record Types'
+excerpt: This page provides information on `record.types` data queries in Cerb, which
+  return a list of record types that can be filtered and paginated.
+summary: This page provides information on `record.types` data queries in Cerb, which
+  return a list of record types that can be filtered and paginated. It details the
+  inputs required for these queries, such as options to exclude custom record types,
+  apply filters, set result limits, and specify page numbers. The response format
+  is primarily in dictionaries, suitable for integration with sheets and APIs. An
+  example query and its corresponding response are provided, illustrating how to filter
+  for specific record types like widgets and retrieve their details in a structured
+  format.
 permalink: /docs/data-queries/record/types/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: Record Types
 jumbotron:
   title: Record Types
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

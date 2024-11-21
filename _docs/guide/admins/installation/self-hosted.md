@@ -1,19 +1,28 @@
 ---
 title: Installation
+excerpt: This page provides a comprehensive guide for installing Cerb, detailing the
+  necessary browser and server requirements, including supported operating systems,
+  webserver applications, PHP version, and database servers.
+summary: This page provides a comprehensive guide for installing Cerb, detailing the
+  necessary browser and server requirements, including supported operating systems,
+  webserver applications, PHP version, and database servers. It outlines the steps
+  to log in to the server, download the source code from GitHub, set file permissions,
+  and create a database. The guide walks through the Cerb installation process with
+  a step-by-step guided installer, covering requirements check, license agreement,
+  database setup, configuration file saving, database initialization, general settings,
+  outgoing mail configuration, admin account creation, testing mode, and security
+  recommendations. The page concludes with instructions for finalizing the installation
+  and references for further information.
 permalink: /docs/installation/self-hosted/
 toc:
-  expand: Admin Guide 
+  expand: Admin Guide
 jumbotron:
   title: Self-Hosted
-  #tagline: Deploy Cerb on your own server
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Admin Guide &raquo;
-  -
-    label: Installation &raquo;
+  - label: Admin Guide &raquo;
+  - label: Installation &raquo;
     url: /docs/installation/
 ---
 

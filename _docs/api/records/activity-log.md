@@ -1,5 +1,14 @@
 ---
 title: Activity Log
+excerpt: This page provides detailed examples of how to interact with the activity
+  log in Cerb through its REST API.
+summary: This page provides detailed examples of how to interact with the activity
+  log in Cerb through its REST API. It includes instructions on retrieving an activity
+  log record by its ID, searching for activity log entries related to a specific record,
+  and creating a new activity log entry. Each example includes the necessary HTTP
+  requests and expected JSON responses, demonstrating how to authenticate and format
+  data for these operations. The page is a practical guide for developers looking
+  to manage activity logs programmatically within the Cerb platform.
 permalink: /docs/api/records/activity-log/
 toc:
   expand: API
@@ -7,14 +16,11 @@ jumbotron:
   title: Activity Log
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/api/endpoints/records/
 ---
 

@@ -1,13 +1,19 @@
 ---
 title: Workers
-excerpt: 
+excerpt: This page describes the concept of "workers" in Cerb, who are the individuals
+  representing a team to the outside world.
+summary: This page describes the concept of "workers" in Cerb, who are the individuals
+  representing a team to the outside world. Workers include full-time and part-time
+  staff, interns, volunteers, managers, executives, investors, and partners. They
+  access Cerb through standard web browsers on various devices such as desktop computers,
+  laptops, tablets, or smartphones, and can be logged in from multiple devices simultaneously.
+  This setup provides flexibility for the team to work from virtually any location.
 permalink: /docs/workers/
 jumbotron:
   title: Workers
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
 ---
 

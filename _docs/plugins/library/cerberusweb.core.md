@@ -1,18 +1,29 @@
 ---
-title: "Plugin: Cerb Core"
+title: 'Plugin: Cerb Core'
+excerpt: This page provides a comprehensive overview of the Cerb Core plugin, detailing
+  its core functionalities and various extensions.
+summary: This page provides a comprehensive overview of the Cerb Core plugin, detailing
+  its core functionalities and various extensions. It includes a wide range of extensions
+  such as Bot Actions, Bot Events, Calendar Datasources, Connected Service Providers,
+  Controllers, Custom Field Types, Event Listeners, HTTP Request Listeners, Mail Transport
+  Types, Page Sections, Page Types, Profile Tab Types, Profile Widget Types, Record
+  Types, Scheduled Jobs, Search Schemas, Storage Schemas, Workspace Page Types, Workspace
+  Tab Types, Workspace Widget Datasources, and Workspace Widget Types. Each extension
+  is listed with its specific functionalities and identifiers, showcasing the extensive
+  capabilities and integrations available within the Cerb Core framework. This detailed
+  enumeration highlights the plugin's versatility in managing and automating various
+  tasks and processes within the Cerb environment.
 permalink: /docs/plugins/cerberusweb.core/
 toc:
-  title: "Cerb Core"
+  title: Cerb Core
   expand: Plugins
 jumbotron:
-  title: "Cerb Core"
-  tagline: 
+  title: Cerb Core
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

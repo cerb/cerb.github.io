@@ -1,19 +1,21 @@
 ---
 title: Icon Reference
-#excerpt: ...
+excerpt: This page provides a comprehensive reference list of icons available in the
+  Cerb platform, licensed from GLYPHICONS.
+summary: This page provides a comprehensive reference list of icons available in the
+  Cerb platform, licensed from GLYPHICONS. It includes a wide variety of icons representing
+  different activities, objects, and concepts, such as transportation, communication,
+  technology, and everyday items. The list serves as a resource for users to identify
+  and utilize specific icons for their needs within the Cerb environment.
 permalink: /docs/developers/icons/
-#social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   expand: Developer Guide
 jumbotron:
   title: Icon Reference
-  #tagline: 
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Developers &raquo;
+  - label: Developers &raquo;
 ---
 
 <div style="column-width:200px;margin-bottom:20px;">

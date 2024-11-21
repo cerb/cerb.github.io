@@ -1,21 +1,25 @@
 ---
 title: Links Record Fields
+excerpt: This page provides information on the "links" field in Cerb, which is used
+  to store a list of `context:id` pairs that reference other records.
+summary: This page provides information on the "links" field in Cerb, which is used
+  to store a list of `context:id` pairs that reference other records. It explains
+  how these links are represented as an array of `type:id` pairs and provides examples
+  of how they are formatted in JSON for packages and in PUT or POST requests through
+  the Records API.
 permalink: /docs/records/fields/types/links/
 toc:
   title: Links
   expand: Records
 jumbotron:
   title: Links
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Field Types &raquo;
+  - label: Field Types &raquo;
     url: /docs/records/#fields
 ---
 

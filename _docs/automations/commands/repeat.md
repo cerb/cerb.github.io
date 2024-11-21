@@ -1,23 +1,29 @@
 ---
-title: "Automations: repeat"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: repeat'
+excerpt: This page provides a detailed explanation of the "repeat" command in Cerb
+  automations, which is used to iterate over an array and execute a sequence of commands
+  for each element.
+summary: This page provides a detailed explanation of the "repeat" command in Cerb
+  automations, which is used to iterate over an array and execute a sequence of commands
+  for each element. It includes a practical example where numbers from 1 to 10 are
+  summed, resulting in a total of 55. The page also outlines the syntax for using
+  the "repeat" command, including the keys "each:", "as:", and "do:". The "each:"
+  key specifies the array to iterate over, which can be formatted as CSV, JSON, or
+  a newline-delimited list. The "as:" key names the placeholder for the current iteration's
+  value, and the "do:" key contains the commands to be executed repeatedly.
 permalink: /docs/automations/commands/repeat/
 toc:
   title: repeat
   expand: Automations
 jumbotron:
   title: repeat
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

@@ -1,16 +1,28 @@
 ---
 title: Automations
-excerpt: Automations are state machines written in KATA that transform an input dictionary into an output dictionary. The results are used to automate and customize workflows throughout Cerb.
-#social_image_url: /assets/images/search/kata.png
+excerpt: Automations are state machines written in KATA that transform an input dictionary
+  into an output dictionary. The results are used to automate and customize workflows
+  throughout Cerb.
+summary: This page provides an in-depth guide on automations in Cerb, focusing on
+  their structure, execution, and management. Automations are described as state machines
+  written in KATA, designed to transform input dictionaries into output dictionaries,
+  thereby automating workflows. Key topics include the syntax of KATA, such as dictionaries,
+  dialects, scripting, and annotations, as well as execution details like inputs,
+  exit states, error handling, and simulation. The page also covers policies that
+  govern automation permissions, including scopes, placeholders, and rules, and explains
+  triggers and events that initiate automations. Additionally, it details commands
+  for state transitions, flow control, logging, and actions, and provides information
+  on the automation editor, including features like change history, export options,
+  and visualizations. The document serves as a comprehensive resource for understanding
+  and implementing automations within Cerb.
 permalink: /docs/automations/
 toc:
   title: Automations
 jumbotron:
   title: Automations
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
 ---
 

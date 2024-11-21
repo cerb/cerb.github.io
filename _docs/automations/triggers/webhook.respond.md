@@ -1,23 +1,29 @@
 ---
-title: "webhook.respond"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: webhook.respond
+excerpt: This page provides detailed information on the "webhook.respond" automation
+  feature in Cerb, which is activated by a webhook listener upon receiving an HTTP
+  request.
+summary: This page provides detailed information on the "webhook.respond" automation
+  feature in Cerb, which is activated by a webhook listener upon receiving an HTTP
+  request. It outlines the use of event handler KATA to execute the first enabled
+  automation. The page specifies the input parameters available in the automation
+  dictionary, such as request body, client IP, headers, method, parameters, and path.
+  It also describes the expected outputs, including the response body, headers, and
+  HTTP status code, offering guidance on how to handle and return data in response
+  to webhook requests.
 permalink: /docs/automations/triggers/webhook.respond/
 toc:
   title: webhook.respond
   expand: Automations
 jumbotron:
   title: webhook.respond
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Triggers &raquo;
+  - label: Triggers &raquo;
     url: /docs/automations/#triggers
 ---
 

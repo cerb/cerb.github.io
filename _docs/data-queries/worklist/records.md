@@ -1,19 +1,28 @@
 ---
-title: "Data Queries: Worklist Records"
-excerpt: 
+title: 'Data Queries: Worklist Records'
+excerpt: This page provides detailed information on using `worklist.records` data
+  queries in Cerb to retrieve record dictionaries based on specific search criteria.
+summary: This page provides detailed information on using `worklist.records` data
+  queries in Cerb to retrieve record dictionaries based on specific search criteria.
+  It explains various parameters such as `of:`, which specifies the type of records
+  to retrieve, and `query:`, which filters the results. The page also covers optional
+  parameters like `expand:`, which determines which key paths to expand in the results,
+  `page:`, for pagination, and `timeout:`, which sets a time limit for the query.
+  The default format for results is `dictionaries`, suitable for sheets and API outputs.
+  Additionally, the page includes examples, such as returning a stacked bar chart
+  of tickets by owner and status, to illustrate the practical application of these
+  queries.
 permalink: /docs/data-queries/worklist/records/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: Worklist Records
 jumbotron:
   title: Worklist Records
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

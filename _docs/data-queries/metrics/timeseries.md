@@ -1,19 +1,28 @@
 ---
-title: "Data Queries: Metrics Timeseries"
+title: 'Data Queries: Metrics Timeseries'
 excerpt: Metrics aggregate, store, and compute statistics for time-based data.
+summary: This page provides detailed information on the `metrics.timeseries` data
+  queries in Cerb, which are used to aggregate metrics statistics over specified date
+  ranges. It explains how to retrieve multiple series, each with different metrics
+  and functions such as average, sum, minimum, maximum, and count. The page outlines
+  how these series can be aggregated or filtered by various metric dimensions. Key
+  components include defining the period for the level of detail (minute, hour, day,
+  week, month, year), setting the date range for statistics, and specifying series
+  details like metric name, grouping dimensions, functions, labels, and handling of
+  missing data. It also covers the use of dimension filters, query timeouts, timezone
+  adjustments, and output formats for the results, such as dictionaries, timeblock,
+  and timeseries.
 permalink: /docs/data-queries/metrics/timeseries/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: Metrics Timeseries
 jumbotron:
   title: Metrics Timeseries
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

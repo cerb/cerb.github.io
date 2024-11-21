@@ -1,21 +1,30 @@
 ---
 title: Webhook Listener Records
+excerpt: This page provides detailed information about Webhook Listener Records in
+  Cerb, including their structure and usage within the platform.
+summary: This page provides detailed information about Webhook Listener Records in
+  Cerb, including their structure and usage within the platform. It outlines the fields
+  available in the Records API, such as `guid`, `name`, and `updated_at`, and explains
+  their types and purposes. The page also describes dictionary placeholders that can
+  be used in automations, snippets, and API responses, offering a comprehensive list
+  of fields like `automations_kata`, `guid`, and `record_url`. Additionally, it details
+  the search query fields that can be used to filter webhook listener records, such
+  as `guid:`, `id:`, and `name:`, and lists the worklist columns available for organizing
+  these records, including custom fields and update timestamps. This information is
+  crucial for users looking to integrate and manage webhooks effectively within Cerb.
 permalink: /docs/records/types/webhook_listener/
 toc:
   title: Webhook Listener
   expand: Records
 jumbotron:
   title: Webhook Listener
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

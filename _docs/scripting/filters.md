@@ -1,21 +1,29 @@
 ---
-title: "Scripting Reference: Filters"
+title: 'Scripting Reference: Filters'
 excerpt: A reference of the template filters in bot scripting.
+summary: This webpage serves as a comprehensive scripting reference for filters available
+  in Cerb's bot scripts and snippets. It details a wide array of filters, such as
+  `abs`, `alphanum`, `append`, `array_sum`, `base_convert`, `base64_encode`, `capitalize`,
+  `cerb_translate`, `date`, `escape`, `filter`, `hash`, `json_encode`, `markdown_to_html`,
+  `md5`, `number_format`, `parse_csv`, `regexp`, `reverse`, `sha1`, `sort`, `split`,
+  `striptags`, `title`, `trim`, `truncate`, `upper`, `url_encode`, and many more.
+  Each filter is explained with its functionality, parameters, and examples, providing
+  users with the necessary tools to manipulate data, format strings, handle arrays,
+  and perform various transformations and calculations within Cerb's environment.
+  This reference is essential for developers and users looking to enhance their automation
+  and scripting capabilities in Cerb.
 permalink: /docs/scripting/filters/
 toc:
   title: Filters
   expand: Developer Guide
 jumbotron:
-  title: "Reference: Filters"
-  tagline: 
+  title: 'Reference: Filters'
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Developer Guide &raquo;
-  -
-    label: Scripting &raquo;
+  - label: Developer Guide &raquo;
+  - label: Scripting &raquo;
     url: /docs/scripting/
 ---
 

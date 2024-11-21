@@ -1,23 +1,28 @@
 ---
-title: "Automations: while"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: while'
+excerpt: This page provides an overview of the "while" command in Cerb automations,
+  which is used to conditionally repeat a sequence of actions, effectively creating
+  controlled loops for various interactions and timers.
+summary: This page provides an overview of the "while" command in Cerb automations,
+  which is used to conditionally repeat a sequence of actions, effectively creating
+  controlled loops for various interactions and timers. It includes a sample script
+  demonstrating how to increment a counter until a condition is met. The page details
+  the syntax for the "if" and "do" keys, explaining that "if@bool" must resolve to
+  a boolean value to determine whether the loop continues, and "do" contains the commands
+  to be repeated.
 permalink: /docs/automations/commands/while/
 toc:
   title: while
   expand: Automations
 jumbotron:
   title: while
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

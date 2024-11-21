@@ -1,6 +1,17 @@
 ---
 title: Decrypt messages in your browser with Mailvelope
-excerpt: This guide describes how to use Mailvelope and Cerb together to communicate more securely through email by delegating decryption to only authorized workers.
+excerpt: This guide describes how to use Mailvelope and Cerb together to communicate
+  more securely through email by delegating decryption to only authorized workers.
+summary: This webpage provides a comprehensive guide on using Mailvelope, a browser
+  extension, to decrypt encrypted emails within Cerb, a platform that supports OpenPGP
+  for secure email communication. It outlines the steps for installing Mailvelope,
+  generating encryption keys, and configuring Cerb as an email provider. The guide
+  emphasizes the importance of security, advising against storing private keys without
+  passphrases on public servers due to potential risks. It suggests best practices
+  for handling sensitive information, such as using separate encryption keys for shared
+  mailboxes and individual workers. The page also details the process of sending and
+  decrypting encrypted messages in Cerb, ensuring that only authorized workers can
+  access the decrypted content.
 permalink: /guides/mail/encryption/mailvelope/
 layout: integration
 topic: Mail
@@ -9,17 +20,13 @@ jumbotron:
   title: Decrypt messages in your browser with Mailvelope
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Mail &raquo;
+  - label: Mail &raquo;
     url: /resources/guides/#mail
-  -
-    label: Encryption &raquo;
+  - label: Encryption &raquo;
     url: /resources/guides/#mail-encryption
 ---
 

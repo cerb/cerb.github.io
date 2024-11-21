@@ -1,21 +1,31 @@
 ---
 title: Mail Routing Rule Records
+excerpt: This page provides detailed information about the structure and functionality
+  of Email Routing Rule records in Cerb.
+summary: This page provides detailed information about the structure and functionality
+  of Email Routing Rule records in Cerb. It outlines the fields available in the Records
+  API, including required and optional fields such as `name`, `priority`, and `workflow_id`.
+  The page also describes dictionary placeholders that can be used in automations,
+  snippets, and API responses, offering a range of fields like `created_at`, `id`,
+  and `routing_kata`. Additionally, it lists search query fields that can be used
+  to filter mail routing rules, such as `created:`, `isDisabled:`, and `workflow.id:`.
+  Lastly, it details the worklist columns available for displaying mail routing rules,
+  including custom fields and standard fields like `m_name`, `m_priority`, and `m_updated_at`.
+  This comprehensive guide is essential for managing and utilizing email routing rules
+  within the Cerb platform.
 permalink: /docs/records/types/mail_routing_rule/
 toc:
   title: Mail Routing Rule
   expand: Records
 jumbotron:
   title: Mail Routing Rule
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

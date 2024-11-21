@@ -1,20 +1,26 @@
 ---
 title: Slack Notifications
 excerpt: Notify a Slack channel about new ticket messages.
+summary: This page provides a comprehensive guide on integrating Cerb with Slack to
+  send notifications to Slack channels. It covers the installation process, including
+  the necessary requirements for both Slack and Cerb, and details on configuring the
+  workflow within Cerb. The guide explains how to enable Slack notifications for specific
+  groups, allowing users to receive alerts in designated Slack channels when new messages
+  are received. Additionally, it offers a reference template for building custom Slack
+  notification workflows, complete with configuration details and automation scripts
+  for posting messages to Slack channels.
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.integrations.slack.notifications/
 redirect_from:
-  - /packages/slack-bot/
+- /packages/slack-bot/
 jumbotron:
   title: Slack Notifications
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Workflows &raquo;
+  - label: Workflows &raquo;
     url: /resources/workflows/
 ---
 

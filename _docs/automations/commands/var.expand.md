@@ -1,23 +1,29 @@
 ---
-title: "Automations: var.expand"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: var.expand'
+excerpt: This page provides detailed information on the `var.expand` command used
+  in Cerb automations.
+summary: This page provides detailed information on the `var.expand` command used
+  in Cerb automations. It explains how to expand nested keys at a specified dictionary
+  path within automation scripts. The page includes syntax details for the command,
+  outlining required and optional keys such as `key` and `paths`, and describes how
+  to handle different scenarios with `on_simulate`, `on_success`, and `on_error` commands.
+  An example is provided to illustrate the command's functionality, showing how to
+  extract and format data from a dictionary. The page serves as a guide for users
+  looking to implement or understand the `var.expand` command in their automation
+  workflows.
 permalink: /docs/automations/commands/var.expand/
 toc:
   title: var.expand
   expand: Automations
 jumbotron:
   title: var.expand
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

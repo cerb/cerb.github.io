@@ -1,19 +1,28 @@
 ---
-title: "Data Queries: Worklist Metrics"
-excerpt: 
+title: 'Data Queries: Worklist Metrics'
+excerpt: This page provides detailed information on using `worklist.metrics` queries
+  in Cerb to compute metrics from worklist data, such as calculating the average ticket
+  first response time over a specified period.
+summary: This page provides detailed information on using `worklist.metrics` queries
+  in Cerb to compute metrics from worklist data, such as calculating the average ticket
+  first response time over a specified period. It outlines the necessary inputs for
+  these queries, including parameters like label, record type, field, function, metric,
+  and query filters. The page also describes the available response formats, such
+  as pie charts and tables, and provides examples of how to calculate metrics like
+  average response times and multiple functions in a single query. This resource is
+  essential for users looking to analyze and visualize worklist data effectively in
+  Cerb.
 permalink: /docs/data-queries/worklist/metrics/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: Worklist Metrics
 jumbotron:
   title: Worklist Metrics
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

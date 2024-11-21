@@ -1,6 +1,14 @@
 ---
 title: Integrate with GitHub
 excerpt: A step-by-step guide for integrating Cerb and GitHub
+summary: This page provides a comprehensive guide on integrating Cerb with GitHub,
+  enabling the use of GitHub's API through Cerb's bots for automation purposes. It
+  outlines the steps to create an OAuth application on GitHub, including registering
+  a new application and obtaining the necessary Client ID and Client Secret. The guide
+  then details how to create a GitHub service within Cerb, link a connected account
+  to GitHub, and utilize this connection in bot behaviors. The process involves using
+  the "Execute HTTP Request" action in bots and selecting the connected account for
+  authentication, with an option to import a GitHub Bot package for practical implementation.
 permalink: /guides/integrations/github/
 layout: integration
 topic: Integrations
@@ -9,17 +17,13 @@ jumbotron:
   title: Cerb + GitHub
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: GitHub &raquo;
+  - label: GitHub &raquo;
     url: /resources/guides/#github
 ---
 

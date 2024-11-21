@@ -1,20 +1,24 @@
 ---
 title: Branding
-permalink: /docs/setup/configure/branding/
 excerpt: Personalize Cerb with your organization's name and logo.
+summary: This page provides guidance on customizing the branding of a Cerb instance.
+  It covers how to upload and manage an organization's logo, including resetting to
+  the default logo if needed. The page also explains how to configure the browser
+  title and favicon URL to enhance the user experience. Additionally, it offers instructions
+  on using a custom stylesheet to modify the interface's appearance, with specific
+  tips on targeting the logo for responsiveness and interactivity. The document includes
+  examples of referencing uploaded logos and using external URLs for logo images.
+permalink: /docs/setup/configure/branding/
 toc:
   expand: Admin Guide
 jumbotron:
   title: Branding
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Configure &raquo;
+  - label: Configure &raquo;
     url: /docs/setup/#configure
 ---
 

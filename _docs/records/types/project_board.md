@@ -1,21 +1,32 @@
 ---
 title: Project Board Records
+excerpt: This page provides detailed information about the Project Board records in
+  Cerb, including their API fields, dictionary placeholders, search query fields,
+  and worklist columns.
+summary: This page provides detailed information about the Project Board records in
+  Cerb, including their API fields, dictionary placeholders, search query fields,
+  and worklist columns. It outlines the structure and types of data available for
+  Project Boards, such as the required and optional fields in the Records API, which
+  include attributes like `name`, `owner__context`, and `updated_at`. The page also
+  describes the dictionary placeholders used in automations and API responses, offering
+  a range of fields from basic identifiers to custom fields and links. Additionally,
+  it specifies the search query filters available for Project Boards, allowing users
+  to search by attributes like `name`, `id`, and `updated`. Lastly, it lists the columns
+  available in worklists for Project Boards, which help in organizing and displaying
+  data efficiently.
 permalink: /docs/records/types/project_board/
 toc:
   title: Project Board
   expand: Records
 jumbotron:
   title: Project Board
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

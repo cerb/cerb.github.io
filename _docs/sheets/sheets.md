@@ -1,17 +1,29 @@
 ---
 title: Sheets
 excerpt: Tabular data visualization with a fully customizable text-based schema.
+summary: This page provides an in-depth overview of "Sheets" in Cerb, a flexible and
+  automation-friendly data visualization tool that surpasses the limitations of traditional
+  worklists. Sheets are customizable collections of rows and columns defined by a
+  KATA-based text schema, allowing for dynamic and interactive data representation.
+  The page details how sheets can incorporate various column types such as card, date,
+  text, and more, each with configurable options. It explains how sheets utilize placeholder
+  dictionaries to render cells, enabling them to display data from diverse sources,
+  including third-party APIs. The page also covers the layout styles available for
+  sheets, such as tables, fieldsets, columns, grids, and buttons, and how colors can
+  be customized. Additionally, it describes the properties and functionalities of
+  different column types, including card, code, date, icon, interaction, link, markdown,
+  search, search button, selection, slider, text, and time elapsed, providing examples
+  and parameters for each. Overall, the page highlights the versatility and adaptability
+  of sheets in Cerb for various data visualization needs.
 permalink: /docs/sheets/
 social_image_url: /assets/images/docs/sheets/sheets.png
 jumbotron:
   title: Sheets
   tagline: A text-based grammar for building rich data grids
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Workspaces &raquo;
+  - label: Workspaces &raquo;
     url: /docs/workspaces/
 ---
 

@@ -1,23 +1,27 @@
 ---
-title: "worker.authenticated"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: worker.authenticated
+excerpt: This page details the "worker.authenticated" automations in Cerb, which are
+  triggered when a worker successfully logs in.
+summary: This page details the "worker.authenticated" automations in Cerb, which are
+  triggered when a worker successfully logs in. It explains the use of event handler
+  KATA to execute all enabled automations and provides a list of placeholders available
+  in the automation dictionary, such as client browser details and worker records.
+  The page also outlines possible outputs, including denying login with a specific
+  error message, setting a button label for acknowledging a Message of the Day (MOTD),
+  and displaying an optional MOTD formatted with Markdown.
 permalink: /docs/automations/events/worker.authenticated/
 toc:
   title: worker.authenticated
   expand: Automations
 jumbotron:
   title: worker.authenticated
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Events &raquo;
+  - label: Events &raquo;
     url: /docs/automations/#events
 ---
 

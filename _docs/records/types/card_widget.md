@@ -1,21 +1,29 @@
 ---
 title: Card Widget Records
+excerpt: This page provides detailed information about Card Widget records in Cerb,
+  including their API fields, dictionary placeholders, search query fields, and worklist
+  columns.
+summary: This page provides detailed information about Card Widget records in Cerb,
+  including their API fields, dictionary placeholders, search query fields, and worklist
+  columns. It outlines the structure and attributes of Card Widgets, such as their
+  extension ID, name, position, record type, and update timestamp. The page also describes
+  how these widgets can be linked to other records and customized with JSON-encoded
+  parameters. Additionally, it explains the available dictionary placeholders for
+  automations and API responses, as well as the search filters and worklist columns
+  that can be used to manage and organize Card Widgets effectively.
 permalink: /docs/records/types/card_widget/
 toc:
   title: Card Widget
   expand: Records
 jumbotron:
   title: Card Widget
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

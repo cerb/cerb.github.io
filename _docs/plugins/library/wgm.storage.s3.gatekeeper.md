@@ -1,18 +1,25 @@
 ---
-title: "Plugin: S3 Gatekeeper Storage Engine"
+title: 'Plugin: S3 Gatekeeper Storage Engine'
+excerpt: This page provides information about the S3 Gatekeeper Storage Engine plugin
+  for Cerb, developed by Webgroup Media, LLC.
+summary: This page provides information about the S3 Gatekeeper Storage Engine plugin
+  for Cerb, developed by Webgroup Media, LLC. The plugin introduces a storage engine
+  for Amazon S3 that enhances security by not storing or exposing AWS account credentials.
+  Instead, it uses a remote gatekeeper script to authenticate and obtain a secure,
+  pre-signed URL for making requests. The plugin is identified by the ID "wgm.storage.s3.gatekeeper"
+  and is located in the path "storage/plugins/wgm.storage.s3.gatekeeper/". The page
+  also lists the extension type as a Storage Engine with the identifier "devblocks.storage.engine.gatekeeper".
 permalink: /docs/plugins/wgm.storage.s3.gatekeeper/
 toc:
-  title: "S3 Gatekeeper Storage Engine"
+  title: S3 Gatekeeper Storage Engine
   expand: Plugins
 jumbotron:
-  title: "S3 Gatekeeper Storage Engine"
-  tagline: 
+  title: S3 Gatekeeper Storage Engine
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

@@ -1,6 +1,12 @@
 ---
 title: Integrate with Facebook
 excerpt: A step-by-step guide for integrating Cerb and Facebook.
+summary: This page provides a comprehensive guide on integrating Facebook with Cerb.
+  It outlines the steps to create a Facebook app, set up a Facebook service in Cerb,
+  and link a connected account to Facebook. The guide also details how to create connected
+  accounts for Facebook Pages and utilize these accounts in bot behaviors within Cerb.
+  By following these instructions, users can leverage Facebook's full API to automate
+  tasks using Cerb's bot functionalities.
 permalink: /guides/integrations/facebook/
 layout: integration
 topic: Integrations
@@ -9,17 +15,13 @@ jumbotron:
   title: Cerb + Facebook
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Facebook &raquo;
+  - label: Facebook &raquo;
     url: /resources/guides/#facebook
 ---
 

@@ -1,21 +1,30 @@
 ---
 title: Role Records
+excerpt: This page provides detailed information about role records in Cerb, including
+  their structure and usage within the system.
+summary: This page provides detailed information about role records in Cerb, including
+  their structure and usage within the system. It outlines the fields available in
+  the Records API, which are essential for managing roles, such as `name`, `privs_mode`,
+  and `updated_at`. The page also describes dictionary placeholders that can be used
+  in automations, snippets, and API responses, offering a comprehensive list of fields
+  like `editor_query_worker`, `member_query_worker`, and `reader_query_worker`. Additionally,
+  it covers search query fields that facilitate role searches, including filters like
+  `editor:`, `member:`, and `name:`. Lastly, it details the worklist columns available
+  for roles, which help in organizing and displaying role data effectively, with columns
+  such as `w_name`, `w_privs_mode`, and `w_updated_at`.
 permalink: /docs/records/types/role/
 toc:
   title: Role
   expand: Records
 jumbotron:
   title: Role
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

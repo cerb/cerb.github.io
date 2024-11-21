@@ -1,18 +1,26 @@
 ---
 title: Dictionaries
+excerpt: This page explains how Cerb uses dictionaries to represent records, simplifying
+  complex hierarchical data structures into flat key-value pairs.
+summary: This page explains how Cerb uses dictionaries to represent records, simplifying
+  complex hierarchical data structures into flat key-value pairs. This approach enhances
+  the functionality of various features like automations, toolbars, data queries,
+  and the API by reducing complexity and improving performance. The page details how
+  dictionaries replace tree-based data models, allowing for easier iteration and access
+  to data without recursion. It introduces the concept of "key expansion," where only
+  necessary data is loaded on demand, optimizing resource use. The page also describes
+  how Cerb handles linked records through lazy loading, ensuring efficient data retrieval
+  and management.
 permalink: /docs/guide/developers/dictionaries/
 toc:
   title: Dictionaries
   expand: Developer Guide
 jumbotron:
   title: Dictionaries
-  #tagline: ...
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Developer Guide &raquo;
+  - label: Developer Guide &raquo;
 ---
 
 Every [record](/docs/records/) in Cerb can be represented as a **dictionary**.

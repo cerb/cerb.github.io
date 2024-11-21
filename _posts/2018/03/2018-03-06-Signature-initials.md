@@ -1,9 +1,15 @@
 ---
-layout: post
-title: "Tip: Initials in signatures"
+title: 'Tip: Initials in signatures'
 excerpt: Display initials for a worker's first or last name in their signature.
+summary: This page provides guidance on using the Twig templating language to manipulate
+  text in signatures, specifically focusing on extracting initials from a worker's
+  last name. It explains how to use substring syntax to display the first initial
+  of a last name and offers examples of other text manipulations, such as extracting
+  the first letter, everything except the first letter, and the last three letters
+  of a string.
+layout: post
 author: The Cerb Team
-date: 2018-03-06 17:30:00 -0700
+date: "2018-03-06 17:30:00 -0700"
 permalink: /tips/signature-initials/
 tags: cerb tips mailbag
 ---

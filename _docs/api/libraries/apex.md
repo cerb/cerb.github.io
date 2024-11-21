@@ -1,5 +1,16 @@
 ---
 title: Cerb Web-API Library for Apex
+excerpt: This page provides a detailed overview of the Cerb Web-API Library for Apex,
+  designed to facilitate Salesforce applications in interacting with the Cerb API.
+summary: This page provides a detailed overview of the Cerb Web-API Library for Apex,
+  designed to facilitate Salesforce applications in interacting with the Cerb API.
+  It includes the source code for the Cerb.apxc class, which allows developers to
+  perform HTTP requests (GET, POST, PUT, DELETE) to the Cerb API. The page outlines
+  how to set up API credentials and make API calls within a Salesforce environment.
+  It also includes a sample usage section demonstrating how to configure the API base
+  URL, access key, and secret key, and how to execute a POST request to search for
+  tickets. The code is provided under a permissive license, allowing for modification
+  and distribution.
 permalink: /docs/api/libraries/apex/
 toc:
   expand: API
@@ -7,14 +18,11 @@ jumbotron:
   title: Cerb Web-API Library for Apex
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
-  -
-    label: Libraries &raquo;
+  - label: Libraries &raquo;
     url: /docs/api/libraries/
 ---
 

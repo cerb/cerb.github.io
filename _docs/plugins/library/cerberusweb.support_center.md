@@ -1,18 +1,27 @@
 ---
-title: "Plugin: Support Center"
+title: 'Plugin: Support Center'
+excerpt: This page provides detailed information about the Support Center plugin for
+  Cerb, developed by Webgroup Media, LLC.
+summary: This page provides detailed information about the Support Center plugin for
+  Cerb, developed by Webgroup Media, LLC. It outlines the plugin's purpose of creating
+  a public-facing support portal and lists its various extensions, including Bot Event,
+  Event Listener, Portal, Support Center Controller, and Support Center Login Authenticator.
+  Each extension is described with its specific functionalities, such as handling
+  new contact registrations, managing support center events, and providing various
+  controller actions like Ajax, Announcements, Avatar, Contact Us, Home, Login, My
+  Account, and Ticket History. The default login authenticator for the Support Center
+  is also mentioned.
 permalink: /docs/plugins/cerberusweb.support_center/
 toc:
-  title: "Support Center"
+  title: Support Center
   expand: Plugins
 jumbotron:
-  title: "Support Center"
-  tagline: 
+  title: Support Center
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

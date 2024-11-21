@@ -1,5 +1,13 @@
 ---
-title: "API: Endpoints"
+title: 'API: Endpoints'
+excerpt: This page provides a list of API endpoints available in Cerb, covering various
+  functionalities such as Attachments, Automations, Bots, Contexts, Data, Groups,
+  Packages, Parser, Records, Tickets, and Workers.
+summary: This page provides a list of API endpoints available in Cerb, covering various
+  functionalities such as Attachments, Automations, Bots, Contexts, Data, Groups,
+  Packages, Parser, Records, Tickets, and Workers. These endpoints facilitate interaction
+  with different components of the Cerb platform, enabling users to manage and automate
+  tasks efficiently.
 permalink: /docs/api/endpoints/
 toc:
   title: Endpoints
@@ -7,11 +15,9 @@ jumbotron:
   title: Endpoints
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
 ---
 

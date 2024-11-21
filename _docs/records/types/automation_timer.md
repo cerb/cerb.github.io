@@ -1,21 +1,28 @@
 ---
 title: Automation Timer Records
+excerpt: This page provides detailed information about Automation Timer records in
+  Cerb, including their API fields, dictionary placeholders, search query fields,
+  and worklist columns.
+summary: This page provides detailed information about Automation Timer records in
+  Cerb, including their API fields, dictionary placeholders, search query fields,
+  and worklist columns. It outlines the structure and attributes of Automation Timer
+  records, such as creation and update timestamps, recurring patterns, and links.
+  The page also describes how these records can be queried and displayed in worklists,
+  offering a comprehensive guide for managing and utilizing Automation Timers within
+  the Cerb platform.
 permalink: /docs/records/types/automation_timer/
 toc:
   title: Automation Timer
   expand: Records
 jumbotron:
   title: Automation Timer
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

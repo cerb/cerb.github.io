@@ -1,21 +1,28 @@
 ---
 title: OAuth App Records
+excerpt: This page provides detailed information about OAuth App records in Cerb,
+  including their structure and usage within the platform.
+summary: This page provides detailed information about OAuth App records in Cerb,
+  including their structure and usage within the platform. It outlines the fields
+  available in the Records API, such as access token expiration, callback URL, client
+  ID, and client secret, which are essential for managing OAuth applications. The
+  page also describes dictionary placeholders for automations and API responses, search
+  query fields for filtering OAuth app records, and worklist columns for organizing
+  and displaying these records. This comprehensive guide is designed to help users
+  effectively manage and integrate OAuth applications within Cerb.
 permalink: /docs/records/types/oauth_app/
 toc:
   title: OAuth App
   expand: Records
 jumbotron:
   title: OAuth App
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

@@ -1,21 +1,28 @@
 ---
 title: Currency Records
+excerpt: This page provides detailed information about currency records in Cerb, including
+  their structure and usage within the system.
+summary: This page provides detailed information about currency records in Cerb, including
+  their structure and usage within the system. It outlines the fields available in
+  the Records API, such as currency code, decimal places, default status, and symbols.
+  The page also describes dictionary placeholders for automations and API responses,
+  offering fields like context, label, and record URL. Additionally, it covers search
+  query fields for filtering currency records and worklist columns for organizing
+  and displaying currency data. The document serves as a comprehensive guide for managing
+  and utilizing currency records within Cerb's platform.
 permalink: /docs/records/types/currency/
 toc:
   title: Currency
   expand: Records
 jumbotron:
   title: Currency
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

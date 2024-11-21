@@ -1,21 +1,27 @@
 ---
-title: "Scripting Reference: Variables"
-excerpt: 
+title: 'Scripting Reference: Variables'
+excerpt: This page provides a comprehensive guide on using variables in scripting
+  for automations, specifically within the context of Cerb.
+summary: This page provides a comprehensive guide on using variables in scripting
+  for automations, specifically within the context of Cerb. It explains how variables
+  can be used to customize outputs based on different inputs, such as personalizing
+  messages with a user's first name. The page details how to create variables using
+  the set command, the concept of variable scope, and the use of placeholders as pre-set
+  variables. It also covers modifying variable values with filters, including changing
+  text to uppercase and setting default values for empty variables. Additionally,
+  it explains how to stack multiple filters to process variable values in sequence.
 permalink: /docs/scripting/variables/
 toc:
   title: Variables
   expand: Developer Guide
 jumbotron:
   title: Variables
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Developer Guide &raquo;
-  -
-    label: Scripting &raquo;
+  - label: Developer Guide &raquo;
+  - label: Scripting &raquo;
     url: /docs/scripting/
 ---
 

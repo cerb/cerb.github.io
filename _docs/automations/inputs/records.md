@@ -1,23 +1,27 @@
 ---
-title: "Automation Inputs: Records"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automation Inputs: Records'
+excerpt: This page provides detailed information on configuring automation inputs
+  for records in Cerb.
+summary: This page provides detailed information on configuring automation inputs
+  for records in Cerb. It explains how to define inputs for records, specifying whether
+  they are required, the type of records, and default values if inputs are omitted.
+  Additionally, it describes the use of the 'expand' option, which allows for the
+  expansion of specific keys in the record dictionaries. The page is intended for
+  users looking to set up or customize automation inputs by specifying record IDs
+  or URIs, with a focus on address record types.
 permalink: /docs/automations/inputs/records/
 toc:
   title: Records
   expand: Automations
 jumbotron:
   title: Records
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Inputs &raquo;
+  - label: Inputs &raquo;
     url: /docs/automations/#inputs
 ---
 

@@ -1,6 +1,15 @@
 ---
 title: Worker Login Terms of Use
 excerpt: Require acceptance of Terms of Use before a worker can log in.
+summary: This page outlines the "Worker Login Terms of Use" workflow for Cerb, which
+  mandates that workers accept terms of use before logging in. It details the installation
+  process, which is integrated into Cerb 11.0 and can be enabled through the Cerb
+  interface. The page provides instructions on editing the terms of use snippet and
+  describes the login process where workers must accept the terms to proceed. Additionally,
+  it offers a reference template for creating a custom workflow, emphasizing confidentiality,
+  data access, sharing, security practices, incident reporting, compliance, and potential
+  disciplinary actions for non-compliance. The page also includes technical details
+  for configuring and automating the workflow within Cerb.
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.login.terms_of_use/
@@ -8,11 +17,9 @@ jumbotron:
   title: Worker Login Terms of Use
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Workflows &raquo;
+  - label: Workflows &raquo;
     url: /resources/workflows/
 ---
 

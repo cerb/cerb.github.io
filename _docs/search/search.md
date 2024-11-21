@@ -1,22 +1,32 @@
 ---
 title: Search queries
-excerpt: 
+excerpt: This page provides a comprehensive guide to using search queries in Cerb,
+  a text-based language designed for filtering records efficiently and expressively.
+summary: This page provides a comprehensive guide to using search queries in Cerb,
+  a text-based language designed for filtering records efficiently and expressively.
+  It covers various types of filters, including text, full-text, numbers, booleans,
+  dates, nullness, choosers, links, and watchers, each with specific expressions and
+  examples. The page also explains advanced search functionalities such as autocompletion,
+  deep search, and boolean groups (AND, OR, NOT), allowing users to perform complex
+  queries and automate tasks. Additionally, it details sorting options, including
+  ascending, descending, and nested sorting, to organize search results effectively.
+  The guide emphasizes the flexibility and power of search queries in automating and
+  simplifying complex operations within Cerb.
 social_image_url: /assets/images/search/search.png
 permalink: /docs/search/
 redirect_from:
-  - /docs/search/autocompletion/
-  - /docs/search/filters/
-  - /docs/search/deep-search
-  - /docs/search/and-or/
-  - /docs/search/sorting/
+- /docs/search/autocompletion/
+- /docs/search/filters/
+- /docs/search/deep-search
+- /docs/search/and-or/
+- /docs/search/sorting/
 toc:
   title: Search
 jumbotron:
   title: Search Queries
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
 ---
 

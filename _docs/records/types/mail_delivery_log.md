@@ -1,21 +1,29 @@
 ---
 title: Email Delivery Log Records
+excerpt: This page provides detailed information about the Email Delivery Log records
+  in Cerb, including their structure and usage within the system.
+summary: This page provides detailed information about the Email Delivery Log records
+  in Cerb, including their structure and usage within the system. It outlines the
+  fields available in the Records API, which are essential for creating and managing
+  email delivery logs. The page also describes dictionary placeholders that can be
+  used in automations, snippets, and API responses, offering a comprehensive guide
+  to the available fields and their types. Additionally, it details the search query
+  fields that can be used to filter email delivery logs, as well as the worklist columns
+  that can be displayed in email delivery log worklists. This information is crucial
+  for users looking to effectively manage and utilize email delivery logs within Cerb.
 permalink: /docs/records/types/mail_delivery_log/
 toc:
   title: Email Delivery Log
   expand: Records
 jumbotron:
   title: Email Delivery Log
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

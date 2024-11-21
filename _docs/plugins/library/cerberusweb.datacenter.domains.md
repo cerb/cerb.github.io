@@ -1,18 +1,26 @@
 ---
-title: "Plugin: Domains"
+title: 'Plugin: Domains'
+excerpt: This page provides detailed information about the "Domains" plugin for Cerb,
+  developed by Webgroup Media, LLC.
+summary: This page provides detailed information about the "Domains" plugin for Cerb,
+  developed by Webgroup Media, LLC. The plugin is designed to manage Domain objects
+  within web hosting, SaaS, and on-demand infrastructure environments. It includes
+  various extensions such as Bot Actions for creating domains, Bot Events for recording
+  custom behaviors, Event Listeners, and Page Sections and Types for domain management.
+  Additionally, it supports a Record Type for domains and a REST API Controller for
+  domain-related operations. The plugin is identified by the ID "cerberusweb.datacenter.domains"
+  and is located in the specified storage path.
 permalink: /docs/plugins/cerberusweb.datacenter.domains/
 toc:
-  title: "Domains"
+  title: Domains
   expand: Plugins
 jumbotron:
-  title: "Domains"
-  tagline: 
+  title: Domains
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

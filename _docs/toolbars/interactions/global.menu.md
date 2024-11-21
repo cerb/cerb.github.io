@@ -1,23 +1,27 @@
 ---
 title: global.menu
-#excerpt: Toolbars...
-#social_image_url: /assets/images/search/kata.png
+excerpt: This page provides instructions on configuring the global interactions toolbar
+  in Cerb, accessible via the floating Cerb icon on every page.
+summary: "This page provides instructions on configuring the global interactions toolbar
+  in Cerb, accessible via the floating Cerb icon on every page. It guides users on
+  navigating to the Search \xBB Toolbars section to edit the `global.menu` record
+  and add interactions using toolbar KATA. The page also lists available placeholders
+  in KATA, such as `worker_*` for the active worker record, and details the caller
+  for interactions as `cerb.toolbar.global.menu`, noting that there are no specific
+  inputs or outputs for these interactions."
 permalink: /docs/toolbars/interactions/global.menu/
 toc:
   title: Toolbars
   expand: Automations
 jumbotron:
   title: global.menu
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Toolbars &raquo;
+  - label: Toolbars &raquo;
     url: /docs/toolbars/
 ---
 

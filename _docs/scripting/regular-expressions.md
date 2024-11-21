@@ -1,21 +1,23 @@
 ---
-title: "Scripting Reference: Regular Expressions"
-excerpt: 
+title: 'Scripting Reference: Regular Expressions'
+excerpt: This page provides a scripting reference for using regular expressions with
+  the regexp filter in Cerb to match or extract patterns from text.
+summary: This page provides a scripting reference for using regular expressions with
+  the regexp filter in Cerb to match or extract patterns from text. It includes an
+  example of extracting an order ID from a string using a regular expression. Additionally,
+  it references an external link to Wikipedia for further information on regular expressions.
 permalink: /docs/scripting/regex/
 toc:
   title: Regular Expressions
   expand: Developer Guide
 jumbotron:
   title: Regular Expressions
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Developer Guide &raquo;
-  -
-    label: Scripting &raquo;
+  - label: Developer Guide &raquo;
+  - label: Scripting &raquo;
     url: /docs/scripting/
 ---
 

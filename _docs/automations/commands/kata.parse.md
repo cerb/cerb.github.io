@@ -1,23 +1,28 @@
 ---
-title: "Automations: kata.parse"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: kata.parse'
+excerpt: This page provides detailed information on the "kata.parse" command used
+  in Cerb automations to parse KATA documents with placeholder substitution.
+summary: This page provides detailed information on the "kata.parse" command used
+  in Cerb automations to parse KATA documents with placeholder substitution. It explains
+  the syntax and components involved, such as inputs, outputs, and error handling.
+  The inputs include a KATA document, a dictionary for placeholder values, and an
+  optional validation schema to ensure the document's integrity. The page also describes
+  the types of data that can be used within a KATA document, such as arrays, booleans,
+  lists, objects, and text. Additionally, it outlines the procedures for handling
+  simulation, success, and error scenarios, ensuring robust automation processes.
 permalink: /docs/automations/commands/kata.parse/
 toc:
   title: kata.parse
   expand: Automations
 jumbotron:
   title: kata.parse
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

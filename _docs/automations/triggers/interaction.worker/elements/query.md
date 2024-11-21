@@ -1,26 +1,28 @@
 ---
-title: "Search Query - Interaction Form Element"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: Search Query - Interaction Form Element
+excerpt: This page provides information on the "query" element used in interaction
+  web forms within Cerb.
+summary: This page provides information on the "query" element used in interaction
+  web forms within Cerb. It explains how this element displays a search query prompt
+  with filter autocompletion, specifically for searching records like tickets or workers.
+  The page details the syntax for configuring the query element, including optional
+  parameters such as the label to display above the form element, the record type
+  for autocompletion, and whether user input is required.
 permalink: /docs/automations/triggers/interaction.worker/elements/query/
 toc:
   title: Search Query
   expand: Automations
 jumbotron:
   title: Search Query
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: interaction.worker &raquo;
+  - label: interaction.worker &raquo;
     url: /docs/automations/triggers/interaction.worker/
-  -
-    label: Elements &raquo;
+  - label: Elements &raquo;
     url: /docs/automations/triggers/interaction.worker/#elements
 ---
 

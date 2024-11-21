@@ -1,5 +1,13 @@
 ---
-title: "Setup: Plugin Library"
+title: 'Setup: Plugin Library'
+excerpt: This page provides information on the Plugin Library for Cerb, where administrators
+  can discover and install audited and approved plugins safely.
+summary: This page provides information on the Plugin Library for Cerb, where administrators
+  can discover and install audited and approved plugins safely. It explains that plugins
+  are versioned to ensure compatibility with specific Cerb versions, and incompatible
+  plugins are not displayed. Additionally, it warns about the risks of installing
+  third-party plugins from external sources, as they have full access to data and
+  can execute code on the server, potentially compromising the system.
 permalink: /docs/setup/plugins/library/
 toc:
   title: Plugin Library
@@ -7,14 +15,11 @@ toc:
 jumbotron:
   title: Plugin Library
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/setup/#plugins
 ---
 

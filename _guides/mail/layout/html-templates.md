@@ -1,6 +1,16 @@
 ---
-title: "Send email on company letterhead"
-excerpt: In this example we'll create a letterhead mail template and demonstrate how to use it when sending mail from the browser or using bots.
+title: Send email on company letterhead
+excerpt: In this example we'll create a letterhead mail template and demonstrate how
+  to use it when sending mail from the browser or using bots.
+summary: This page provides a comprehensive guide on how to create and use email templates
+  with company letterhead in Cerb. It covers the process of setting up a new HTML
+  template for emails, including adding a company logo, customizing the layout with
+  CSS, and incorporating HTML signatures. The guide also explains how to apply these
+  templates when sending emails from the browser or through bots, ensuring consistent
+  corporate branding. Additionally, it highlights the ability to toggle between plaintext
+  and HTML modes and offers tips for previewing and modifying templates for compatibility
+  with various email readers. References to external resources, such as Wikipedia
+  on Cascading Style Sheets, are also included for further reading.
 permalink: /guides/mail/html-templates/
 layout: integration
 topic: Mail
@@ -9,17 +19,13 @@ jumbotron:
   title: Send email on company letterhead
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Mail &raquo;
+  - label: Mail &raquo;
     url: /resources/guides/#mail
-  -
-    label: Layout &raquo;
+  - label: Layout &raquo;
     url: /resources/guides/#mail-layout
 ---
 

@@ -1,21 +1,29 @@
 ---
 title: Domain Records
+excerpt: This page provides detailed information about domain records in Cerb, including
+  their structure and usage within the system.
+summary: This page provides detailed information about domain records in Cerb, including
+  their structure and usage within the system. It outlines the fields available in
+  the Records API, such as creation and update timestamps, domain name, and server
+  ID. The page also describes dictionary placeholders for automations and API responses,
+  offering fields like context, label, and record URL. Additionally, it lists search
+  query fields for filtering domain records based on attributes like comments, creation
+  date, and server details. Lastly, it specifies worklist columns for displaying domain
+  information, including custom fields and timestamps. This comprehensive guide is
+  essential for managing and interacting with domain records in Cerb.
 permalink: /docs/records/types/domain/
 toc:
   title: Domain
   expand: Records
 jumbotron:
   title: Domain
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

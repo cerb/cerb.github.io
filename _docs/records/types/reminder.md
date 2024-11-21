@@ -1,21 +1,29 @@
 ---
 title: Reminder Records
+excerpt: This page provides detailed information about Reminder Records in Cerb, including
+  their structure and usage within the system.
+summary: This page provides detailed information about Reminder Records in Cerb, including
+  their structure and usage within the system. It outlines the fields available in
+  the Records API, such as `name`, `remind_at`, and `worker_id`, and explains how
+  these fields can be utilized in automations, snippets, and API responses through
+  dictionary placeholders. The page also describes the search query fields that can
+  be used to filter reminders, such as `closed`, `name`, and `worker`, and lists the
+  worklist columns available for displaying reminder data, including custom fields
+  and status indicators like `is_closed` and `remind_at`. This comprehensive guide
+  is essential for managing and integrating reminder functionalities within Cerb.
 permalink: /docs/records/types/reminder/
 toc:
   title: Reminder
   expand: Records
 jumbotron:
   title: Reminder
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

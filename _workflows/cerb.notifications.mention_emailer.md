@@ -1,18 +1,27 @@
 ---
-title: "@Mention Email Notifications"
+title: '@Mention Email Notifications'
 excerpt: Email workers when they are @mentioned in a comment.
+summary: This page provides detailed information on the @Mention Email Notifications
+  workflow in Cerb. It covers the introduction, installation, usage, and reference
+  for setting up email notifications when workers are @mentioned in comments. The
+  workflow is integrated into Cerb version 11.0 and above, and it can be enabled through
+  the Cerb interface. The page explains how to use the feature by commenting on records
+  with @mentions, which triggers email notifications to the mentioned workers. Additionally,
+  it offers a template for creating custom @Mention Email Notifications workflows,
+  including instructions on modifying the workflow identifier and setting up the necessary
+  automation scripts. The reference section provides a comprehensive guide to the
+  workflow's structure and requirements, ensuring users can effectively implement
+  and customize the notification system.
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.notifications.mention_emailer/
 jumbotron:
-  title: "@Mention Email Notifications"
+  title: '@Mention Email Notifications'
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Workflows &raquo;
+  - label: Workflows &raquo;
     url: /resources/workflows/
 ---
 

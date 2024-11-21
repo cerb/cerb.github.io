@@ -1,23 +1,28 @@
 ---
-title: "Automations: record.upsert"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: record.upsert'
+excerpt: This page provides detailed information on the "record.upsert" command in
+  Cerb automations, which is used to create or update records with specified fields.
+summary: This page provides detailed information on the "record.upsert" command in
+  Cerb automations, which is used to create or update records with specified fields.
+  It outlines the syntax and parameters required for the command, including inputs
+  like `record_type`, `record_query`, and `fields`, as well as options to handle events
+  and errors. The page also explains how to manage outputs and simulate commands,
+  offering guidance on handling success and error scenarios with specific commands
+  and placeholders. This documentation is essential for users looking to automate
+  record management in Cerb effectively.
 permalink: /docs/automations/commands/record.upsert/
 toc:
   title: record.upsert
   expand: Automations
 jumbotron:
   title: record.upsert
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

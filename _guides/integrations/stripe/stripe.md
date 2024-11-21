@@ -1,6 +1,13 @@
 ---
 title: Integrate with Stripe
 excerpt: A step-by-step guide for integrating Cerb and Stripe.
+summary: This page provides a comprehensive guide on integrating Cerb with Stripe.
+  It covers the steps to obtain API keys from the Stripe dashboard, create a Stripe
+  service within Cerb, and utilize the connected account in bot behaviors. The guide
+  explains how to automate processes using Stripe's API through Cerb bots, including
+  executing HTTP requests with the connected account for authentication. Additionally,
+  it mentions the availability of a Stripe Bot package for practical implementation
+  examples.
 permalink: /guides/integrations/stripe/
 layout: integration
 topic: Integrations
@@ -9,17 +16,13 @@ jumbotron:
   title: Cerb + Stripe
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Stripe &raquo;
+  - label: Stripe &raquo;
     url: /resources/guides/#stripe
 ---
 

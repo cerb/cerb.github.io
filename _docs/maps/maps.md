@@ -1,7 +1,18 @@
 ---
 title: Maps
 excerpt: Create interactive map visualizations with geospatial data.
-#social_image_url: /assets/images/search/kata.png
+summary: This page provides a comprehensive guide on creating interactive map visualizations
+  in Cerb using geospatial data formatted in GeoJSON. It details the use of a map
+  schema defined with KATA, which includes resources, properties, region colorization,
+  point datasets, and interactions. The page explains how to handle map resources
+  efficiently, using reusable resource records to store detailed map data, and describes
+  various projection types like Mercator, Natural Earth, and AlbersUSA. It also covers
+  the customization of map regions and points, including filtering, labeling, and
+  colorization based on property values. Additionally, the page includes an example
+  of visualizing COVID-19 cases in the U.S., demonstrating how to integrate external
+  data into map visualizations. The guide emphasizes the flexibility and reusability
+  of map resources and provides instructions for automating data updates and handling
+  user interactions through automations.
 permalink: /docs/maps/
 toc:
   title: Maps
@@ -9,11 +20,9 @@ jumbotron:
   title: Maps
   tagline: Create interactive map visualizations with geospatial data
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Workspaces &raquo;
+  - label: Workspaces &raquo;
     url: /docs/workspaces/
 ---
 

@@ -1,23 +1,30 @@
 ---
-title: "Automations: http.request"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: http.request'
+excerpt: This page provides a detailed guide on using the `http.request` command in
+  Cerb automations to send data to HTTP endpoints and handle responses.
+summary: This page provides a detailed guide on using the `http.request` command in
+  Cerb automations to send data to HTTP endpoints and handle responses. It explains
+  how to perform both simple and complex HTTP requests, including `GET` and `POST`
+  methods, and how to manage headers, body content, and authentication. The page also
+  covers handling binary and large responses, streaming large file uploads directly
+  from attachment records, and downloading into attachment records. It includes syntax
+  details for various inputs like method, URL, headers, body, timeout, and authentication,
+  as well as output handling and error management. Examples demonstrate practical
+  applications, such as streaming large uploads from attachments, ensuring efficient
+  data handling without memory limitations.
 permalink: /docs/automations/commands/http.request/
 toc:
   title: http.request
   expand: Automations
 jumbotron:
   title: http.request
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

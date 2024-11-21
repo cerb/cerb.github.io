@@ -1,18 +1,24 @@
 ---
-title: "Plugin: Project Boards"
+title: 'Plugin: Project Boards'
+excerpt: This page provides detailed information about the "Project Boards" plugin
+  for Cerb, developed by Webgroup Media, LLC.
+summary: This page provides detailed information about the "Project Boards" plugin
+  for Cerb, developed by Webgroup Media, LLC. It describes the plugin's functionality
+  in enabling bot-powered project management through Kanban-style boards. The page
+  outlines various extensions associated with the plugin, including page sections,
+  profile widget types, record types, and workspace widget types, each with specific
+  identifiers for integration within the Cerb platform.
 permalink: /docs/plugins/cerb.project_boards/
 toc:
-  title: "Project Boards"
+  title: Project Boards
   expand: Plugins
 jumbotron:
-  title: "Project Boards"
-  tagline: 
+  title: Project Boards
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

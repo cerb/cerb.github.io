@@ -1,19 +1,27 @@
 ---
-title: "Setup: Mailboxes"
+title: 'Setup: Mailboxes'
+excerpt: This page provides instructions for configuring mailboxes in Cerb, emphasizing
+  the efficiency of using a single "dropbox" mailbox to consolidate emails from multiple
+  addresses.
+summary: This page provides instructions for configuring mailboxes in Cerb, emphasizing
+  the efficiency of using a single "dropbox" mailbox to consolidate emails from multiple
+  addresses. It explains how to redirect emails from various addresses to a central
+  mailbox, allowing for streamlined mail routing and filtering. For Cerb Cloud users,
+  it suggests redirecting incoming mail to a specific Cerb email address for instant
+  delivery, eliminating the need for additional mailbox setup. The page also details
+  the process of adding a new mailbox, including necessary fields like protocol and
+  credentials, and offers guidance on testing mailbox connections.
 permalink: /docs/setup/mail/mailboxes/
 toc:
   expand: Admin Guide
 jumbotron:
   title: Mailboxes
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Mail &raquo;
+  - label: Mail &raquo;
     url: /docs/setup/#incoming-mail
 ---
 

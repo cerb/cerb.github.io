@@ -1,14 +1,24 @@
 ---
 title: Records
+excerpt: This page provides an overview of Cerb's record management system, which
+  is essential for organizing team data.
+summary: This page provides an overview of Cerb's record management system, which
+  is essential for organizing team data. It explains that a record is a uniquely identifiable
+  entity requiring a record type and a unique numeric ID. The page details various
+  field types used to describe record attributes, such as Boolean, Context, Float,
+  Image, and more. It also illustrates how fields are applied in a worker record example.
+  Additionally, the page discusses the creation of custom records to cater to specific
+  team and industry needs, with examples from transportation, product management,
+  and educational institutions. It highlights the flexibility of linking records to
+  various entities, enhancing team collaboration and data management.
 permalink: /docs/records/
 redirect_from:
-  - /docs/records/custom-records/
+- /docs/records/custom-records/
 jumbotron:
   title: Records
   tagline: Remember anything about everything
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
 ---
 

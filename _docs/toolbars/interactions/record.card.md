@@ -1,23 +1,29 @@
 ---
 title: record.card
-#excerpt: Toolbars...
-#social_image_url: /assets/images/search/kata.png
+excerpt: This page provides detailed instructions on configuring and customizing the
+  card toolbar in Cerb when viewing a record's card popup.
+summary: This page provides detailed instructions on configuring and customizing the
+  card toolbar in Cerb when viewing a record's card popup. It guides users through
+  navigating to the toolbar settings, editing the `record.card` configuration, and
+  adding interactions using the KATA scripting language. The page explains the use
+  of placeholders for accessing record and worker information and outlines the expected
+  inputs and outputs for interactions, including parameters and return values. Additionally,
+  it describes how to refresh card widgets after interactions. This information is
+  essential for users looking to enhance their workflow by customizing the card toolbar
+  in Cerb.
 permalink: /docs/toolbars/interactions/record.card/
 toc:
   title: Toolbars
   expand: Automations
 jumbotron:
   title: record.card
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Toolbars &raquo;
+  - label: Toolbars &raquo;
     url: /docs/toolbars/
 ---
 

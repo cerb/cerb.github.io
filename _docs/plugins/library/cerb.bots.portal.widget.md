@@ -1,18 +1,25 @@
 ---
-title: "Plugin: Chat Bots for Websites"
+title: 'Plugin: Chat Bots for Websites'
+excerpt: This page provides information about the "Chat Bots for Websites" plugin
+  developed by Webgroup Media, LLC.
+summary: This page provides information about the "Chat Bots for Websites" plugin
+  developed by Webgroup Media, LLC. It details the plugin's ability to embed conversational
+  bots on any website, enhancing user interaction through chat. The plugin includes
+  extensions for handling bot events and portal interactions, specifically focusing
+  on managing conversations with portal visitors. The key components of the plugin
+  are the Bot Event and Portal extensions, which facilitate seamless communication
+  between the bot and website visitors.
 permalink: /docs/plugins/cerb.bots.portal.widget/
 toc:
-  title: "Chat Bots for Websites"
+  title: Chat Bots for Websites
   expand: Plugins
 jumbotron:
-  title: "Chat Bots for Websites"
-  tagline: 
+  title: Chat Bots for Websites
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

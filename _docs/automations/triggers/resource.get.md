@@ -1,23 +1,27 @@
 ---
-title: "resource.get"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: resource.get
+excerpt: This page provides detailed information about the "resource.get" automation
+  trigger in Cerb, which is activated by dynamic resources.
+summary: This page provides detailed information about the "resource.get" automation
+  trigger in Cerb, which is activated by dynamic resources. It explains the use of
+  event handler KATA, where the first enabled automation is executed. The page outlines
+  the structure of the automation dictionary, including inputs such as the current
+  actor dictionary, custom input values, and the resource record. It also describes
+  the outputs, specifically focusing on the return of file metadata, which includes
+  the file content and expiration timestamp for caching purposes.
 permalink: /docs/automations/triggers/resource.get/
 toc:
   title: resource.get
   expand: Automations
 jumbotron:
   title: resource.get
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Triggers &raquo;
+  - label: Triggers &raquo;
     url: /docs/automations/#triggers
 ---
 

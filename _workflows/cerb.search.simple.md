@@ -1,6 +1,14 @@
 ---
 title: Simple Ticket Search
 excerpt: Simplified point-and-click ticket search popup without using search queries.
+summary: This page provides a comprehensive guide on the Simple Ticket Search workflow
+  in Cerb, which offers a user-friendly, point-and-click interface for searching tickets
+  without the need for complex search queries. It includes sections on introduction,
+  installation, usage, and reference. The workflow is integrated into Cerb version
+  11.0 and above, and can be enabled through the Search menu. Users can easily modify
+  search filters and update results through an intuitive popup interface. Additionally,
+  the page offers a template for creating custom Simple Search workflows, detailing
+  how to adapt the workflow identifier and providing a structured script for implementation.
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.search.simple/
@@ -8,11 +16,9 @@ jumbotron:
   title: Simple Ticket Search
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Workflows &raquo;
+  - label: Workflows &raquo;
     url: /resources/workflows/
 ---
 

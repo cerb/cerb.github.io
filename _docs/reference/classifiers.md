@@ -1,15 +1,28 @@
 ---
 title: Classifiers
+excerpt: This page provides an overview of the Classifiers plugin in Cerb, which offers
+  a straightforward implementation of machine learning for automations.
+summary: This page provides an overview of the Classifiers plugin in Cerb, which offers
+  a straightforward implementation of machine learning for automations. Classifiers
+  are used to predict classifications from textual input based on human-supervised
+  training examples. Examples include sorting responses with a 'Yes/No' classifier,
+  analyzing sentiment, and detecting intent from commands. Classifiers can also be
+  applied to workflows like assignment, routing, and anti-spam. The page highlights
+  the integration benefits of using Cerb's classifiers over third-party services,
+  as Cerb automatically manages entity information and updates. Training classifiers
+  in Cerb is user-friendly, allowing workers to input text, view predictions, and
+  tag examples to enhance accuracy. The current implementation uses Naive Bayes for
+  its efficiency and simplicity, with plans to incorporate additional models like
+  Support Vector Machines and neural networks, as well as expanding classifier capabilities
+  with more entities and options.
 permalink: /docs/classifiers/
 jumbotron:
   title: Classifiers
   tagline: Make predictions and extract useful data from text
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Reference &raquo;
+  - label: Reference &raquo;
 ---
 
 (As of [11.0](/releases/11.0/) this is an optional plugin)

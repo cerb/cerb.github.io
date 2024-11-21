@@ -1,18 +1,26 @@
 ---
-title: "Plugin: Servers"
+title: 'Plugin: Servers'
+excerpt: This page provides detailed information about the "Servers" plugin for Cerb,
+  developed by Webgroup Media, LLC.
+summary: This page provides detailed information about the "Servers" plugin for Cerb,
+  developed by Webgroup Media, LLC. The plugin is designed to manage datacenter assets
+  by introducing Server objects. It includes various extensions such as Bot Actions
+  for creating servers, Bot Events for recording custom server behaviors, Event Listeners,
+  and Page Sections for server management. Additionally, it defines a specific Page
+  Type for datacenter management, a Record Type for server contexts, and a REST API
+  Controller for server-related operations. The plugin is identified by the ID "cerberusweb.datacenter.servers"
+  and is located in the specified storage path.
 permalink: /docs/plugins/cerberusweb.datacenter.servers/
 toc:
-  title: "Servers"
+  title: Servers
   expand: Plugins
 jumbotron:
-  title: "Servers"
-  tagline: 
+  title: Servers
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

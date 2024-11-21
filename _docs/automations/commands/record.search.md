@@ -1,23 +1,27 @@
 ---
-title: "Automations: record.search"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: record.search'
+excerpt: This page provides detailed documentation on the `record.search` command
+  used in Cerb automations.
+summary: This page provides detailed documentation on the `record.search` command
+  used in Cerb automations. It explains how to configure the command to return record
+  dictionaries based on a search query, specifying the syntax for inputs, outputs,
+  and handling different events like simulation, success, and error. Key elements
+  include defining the record type, constructing search queries with parameters, and
+  using validation templates to manage errors. The page also outlines how to handle
+  simulation scenarios and the structure of the output and error messages.
 permalink: /docs/automations/commands/record.search/
 toc:
   title: record.search
   expand: Automations
 jumbotron:
   title: record.search
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

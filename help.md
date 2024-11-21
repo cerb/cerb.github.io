@@ -1,10 +1,19 @@
 ---
-layout: page
 title: Help
+excerpt: This page provides contact information and resources for Cerb, including
+  an email address for general inquiries, links to documentation, discussion forums,
+  an issue tracker, and a newsletter archive.
+summary: This page provides contact information and resources for Cerb, including
+  an email address for general inquiries, links to documentation, discussion forums,
+  an issue tracker, and a newsletter archive. It also includes details about automated
+  demos, license updates, and renewals. For sales inquiries, a phone number is provided.
+  Additionally, the mailing address for Webgroup Media, LLC, the company behind Cerb,
+  is listed.
+layout: page
 permalink: /help/
-jumbotron: 
+jumbotron:
   title: How can we help?
-  tagline: 
+  tagline: ~
 ---
 
 ## Email

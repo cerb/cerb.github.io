@@ -1,23 +1,28 @@
 ---
-title: "map.clicked"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: map.clicked
+excerpt: This page provides detailed information about the "map.clicked" automations
+  in Cerb, which are activated when users click on regions or points within a map
+  widget.
+summary: This page provides detailed information about the "map.clicked" automations
+  in Cerb, which are activated when users click on regions or points within a map
+  widget. It outlines the structure of the automation dictionary, including key inputs
+  such as the type of feature clicked, its properties, custom input values, and details
+  about the widget and active worker. The page also describes the expected output,
+  specifically the "sheet" key, which determines the schema to display based on the
+  clicked feature's properties.
 permalink: /docs/automations/triggers/map.clicked/
 toc:
   title: map.clicked
   expand: Automations
 jumbotron:
   title: map.clicked
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Triggers &raquo;
+  - label: Triggers &raquo;
     url: /docs/automations/#triggers
 ---
 

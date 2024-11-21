@@ -1,23 +1,29 @@
 ---
-title: "Automations: decision"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: decision'
+excerpt: This page provides an overview of the "decision" command in Cerb automations,
+  which is used to conditionally select one of multiple potential outcomes based on
+  specified conditions.
+summary: This page provides an overview of the "decision" command in Cerb automations,
+  which is used to conditionally select one of multiple potential outcomes based on
+  specified conditions. It explains the syntax and structure of the decision command,
+  highlighting the use of multiple "outcome" commands, each with a unique name. The
+  page details how each outcome is evaluated using the `if@bool:` key to determine
+  if it is desirable, and the `then:` key to specify the commands to execute if the
+  outcome matches. An example is provided to illustrate how the decision command can
+  differentiate between weekdays and weekends.
 permalink: /docs/automations/commands/decision/
 toc:
   title: decision
   expand: Automations
 jumbotron:
   title: decision
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

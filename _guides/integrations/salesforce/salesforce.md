@@ -1,6 +1,12 @@
 ---
 title: Integrate with Salesforce
 excerpt: A step-by-step guide for integrating Cerb and Salesforce.
+summary: This page provides a comprehensive guide on integrating Cerb with Salesforce.
+  It details the steps to create a new app in Salesforce, including configuring basic
+  information and OAuth settings, and obtaining OAuth credentials. The guide then
+  explains how to create a Salesforce service in Cerb, link a connected account to
+  Salesforce, and utilize this connection in bot behaviors within Cerb. The integration
+  allows users to automate tasks using the Salesforce API through Cerb's bot functionalities.
 permalink: /guides/integrations/salesforce/
 layout: integration
 topic: Integrations
@@ -9,17 +15,13 @@ jumbotron:
   title: Cerb + Salesforce
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Salesforce &raquo;
+  - label: Salesforce &raquo;
     url: /resources/guides/#salesforce
 ---
 

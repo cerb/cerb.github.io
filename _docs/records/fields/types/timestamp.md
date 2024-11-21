@@ -1,21 +1,27 @@
 ---
 title: Timestamp Record Fields
+excerpt: This page provides information on timestamp record fields in Cerb, detailing
+  how Unix timestamps are represented as 32-bit integers indicating seconds since
+  January 1, 1970.
+summary: This page provides information on timestamp record fields in Cerb, detailing
+  how Unix timestamps are represented as 32-bit integers indicating seconds since
+  January 1, 1970. It explains how timestamps can be expressed in JSON packages using
+  relative or absolute date formats, as well as Unix timestamps in seconds. Additionally,
+  it covers how to use these timestamp fields in PUT or POST requests through the
+  Records API.
 permalink: /docs/records/fields/types/timestamp/
 toc:
   title: Timestamp
   expand: Records
 jumbotron:
   title: Timestamp
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Field Types &raquo;
+  - label: Field Types &raquo;
     url: /docs/records/#fields
 ---
 

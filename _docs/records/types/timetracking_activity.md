@@ -1,21 +1,30 @@
 ---
 title: Time Tracking Activity Records
+excerpt: This page provides detailed information about Time Tracking Activity Records
+  in Cerb, including their structure and usage within the system.
+summary: This page provides detailed information about Time Tracking Activity Records
+  in Cerb, including their structure and usage within the system. It outlines the
+  fields available in the Records API, such as `name` and `updated_at`, and describes
+  how these fields can be utilized in automations, snippets, and API responses through
+  dictionary placeholders. The page also details the search query fields that can
+  be used to filter time tracking activities, such as `id`, `name`, and `updated`.
+  Additionally, it lists the worklist columns available for displaying time tracking
+  activities, including custom fields and standard identifiers. This comprehensive
+  guide is essential for users looking to manage and integrate time tracking activities
+  within Cerb effectively.
 permalink: /docs/records/types/timetracking_activity/
 toc:
   title: Time Tracking Activity
   expand: Records
 jumbotron:
   title: Time Tracking Activity
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

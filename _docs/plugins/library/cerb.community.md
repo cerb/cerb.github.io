@@ -1,18 +1,23 @@
 ---
-title: "Plugin: Community"
+title: 'Plugin: Community'
+excerpt: This page provides information about the "Community" plugin for Cerb, developed
+  by Webgroup Media, LLC.
+summary: This page provides information about the "Community" plugin for Cerb, developed
+  by Webgroup Media, LLC. It details the plugin's identifier, storage path, and its
+  primary function of creating public-facing, modular community portals. The page
+  also highlights the extension "Community Portal Type," which is associated with
+  the community portal functionality within the plugin.
 permalink: /docs/plugins/cerb.community/
 toc:
-  title: "Community"
+  title: Community
   expand: Plugins
 jumbotron:
-  title: "Community"
-  tagline: 
+  title: Community
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

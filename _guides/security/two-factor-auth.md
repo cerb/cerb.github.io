@@ -1,29 +1,33 @@
 ---
 title: Configure two-factor authentication
-excerpt: A step-by-step guide for configuring two-factor authentication to improve the security of Cerb worker accounts.
+excerpt: A step-by-step guide for configuring two-factor authentication to improve
+  the security of Cerb worker accounts.
+summary: This page provides a comprehensive guide on configuring two-factor authentication
+  (2FA) for Cerb to enhance account security. It emphasizes the importance of multi-factor
+  authentication in protecting against cybercrime and outlines best practices for
+  password management. The guide details the process of setting up 2FA, including
+  configuring policies, using popular TOTP apps like 1Password, Google Authenticator,
+  and Authy, and enabling the "remember trusted devices" feature. It also covers the
+  steps for logging in with 2FA and the benefits of using 1Password for generating
+  one-time passwords. The page underscores the critical role of 2FA in safeguarding
+  online accounts and provides references for further reading on password strength
+  and authentication methods.
 permalink: /guides/security/two-factor-auth/
 redirect_from:
-  - /guides/security/2FA/
-  - /guides/security/configure-two-factor/
+- /guides/integrations/totp/configure-plugin/
 layout: integration
 topic: Security
-redirect_from:
-  - /guides/integrations/totp/configure-plugin/
 jumbotron:
   title: Configure two-factor authentication
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Security &raquo;
+  - label: Security &raquo;
     url: /resources/guides/#security
 ---
 

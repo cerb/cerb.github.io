@@ -1,23 +1,26 @@
 ---
-title: "record.changed"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: record.changed
+excerpt: This page provides information on the "record.changed" automations in Cerb,
+  which are triggered when one or more fields of a record are modified.
+summary: This page provides information on the "record.changed" automations in Cerb,
+  which are triggered when one or more fields of a record are modified. It explains
+  that this trigger utilizes event handler KATA, executing the first enabled automation.
+  The page details the inputs available in the automation dictionary, including keys
+  like `actor_*`, `change_type`, `inputs`, `record_*`, and `was_record_*`, each with
+  specific roles and types. There are no outputs specified for this automation.
 permalink: /docs/automations/triggers/record.changed/
 toc:
   title: record.changed
   expand: Automations
 jumbotron:
   title: record.changed
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Triggers &raquo;
+  - label: Triggers &raquo;
     url: /docs/automations/#triggers
 ---
 

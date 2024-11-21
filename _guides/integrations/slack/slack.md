@@ -1,6 +1,14 @@
 ---
 title: Integrate with Slack
-excerpt: A step-by-step guide for integrating Cerb and Slack.
+excerpt: This page provides a comprehensive guide on integrating Cerb with Slack,
+  detailing the steps to create a new Slack app and configure authentication using
+  either bot tokens or OAuth2.
+summary: This page provides a comprehensive guide on integrating Cerb with Slack,
+  detailing the steps to create a new Slack app and configure authentication using
+  either bot tokens or OAuth2. It explains how to set up a Slack connected account
+  in Cerb, with specific instructions for both authentication methods. The guide also
+  includes related resources for further integration, such as setting up Slack notifications
+  within Cerb.
 permalink: /guides/integrations/slack/
 layout: integration
 topic: Integrations
@@ -9,17 +17,13 @@ jumbotron:
   title: Cerb + Slack
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Slack &raquo;
+  - label: Slack &raquo;
     url: /resources/guides/#slack
 ---
 

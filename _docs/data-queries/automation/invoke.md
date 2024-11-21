@@ -1,19 +1,25 @@
 ---
-title: "Data Queries: Automation Invoke"
-excerpt: 
+title: 'Data Queries: Automation Invoke'
+excerpt: This page provides information on using the `automation.invoke` feature in
+  Cerb to run data queries that return custom results.
+summary: This page provides information on using the `automation.invoke` feature in
+  Cerb to run data queries that return custom results. It explains how this functionality
+  can be used to integrate with third-party data sources, such as APIs. The page outlines
+  the necessary inputs for invoking an automation, specifically the automation name
+  and the inputs to be sent. It also mentions that the supported response formats
+  are determined by each automation. An example is provided to illustrate how to use
+  `automation.invoke` to fetch data with specific parameters.
 permalink: /docs/data-queries/automation/invoke/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: Automation Invoke
 jumbotron:
   title: Automation Invoke
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

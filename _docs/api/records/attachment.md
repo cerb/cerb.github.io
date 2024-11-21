@@ -1,5 +1,15 @@
 ---
 title: Attachment
+excerpt: This page provides detailed examples of how to create attachments using the
+  Cerb API.
+summary: This page provides detailed examples of how to create attachments using the
+  Cerb API. It includes instructions for creating attachments with both plaintext
+  and binary content. The examples demonstrate the necessary HTTP POST requests, including
+  the required headers and URL-encoded fields, such as the attachment's name, MIME
+  type, and content. The page also explains how to optionally link attachments to
+  specific contexts using context:id tuples. The responses from the API are shown,
+  indicating successful creation with details like the attachment's ID, MIME type,
+  name, size, storage information, and update timestamp.
 permalink: /docs/api/records/attachment/
 toc:
   expand: API
@@ -7,14 +17,11 @@ jumbotron:
   title: Attachment
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/api/endpoints/records/
 ---
 

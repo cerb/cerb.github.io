@@ -1,21 +1,31 @@
 ---
 title: Profile Tab Records
+excerpt: This page provides detailed information about Profile Tab records in Cerb,
+  including their structure and usage within the system.
+summary: This page provides detailed information about Profile Tab records in Cerb,
+  including their structure and usage within the system. It covers the fields available
+  in the Records API, which are essential for adding profile tabs to specific record
+  types, and includes required fields such as context, extension ID, and name. The
+  page also outlines dictionary placeholders that can be used in automations, snippets,
+  and API responses, offering a range of fields like context, extension ID, and updated
+  timestamps. Additionally, it describes search query fields that facilitate filtering
+  profile tabs based on criteria like fieldset, ID, and name. Lastly, it lists the
+  worklist columns available for organizing and displaying profile tab data, including
+  custom fields and update timestamps. This comprehensive guide is crucial for developers
+  and users looking to integrate and manage profile tabs within Cerb effectively.
 permalink: /docs/records/types/profile_tab/
 toc:
   title: Profile Tab
   expand: Records
 jumbotron:
   title: Profile Tab
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

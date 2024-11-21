@@ -1,23 +1,28 @@
 ---
-title: "Automations: record.get"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: record.get'
+excerpt: This page provides detailed information on the "record.get" command used
+  in Cerb automations to load a record based on a specified type and ID.
+summary: This page provides detailed information on the "record.get" command used
+  in Cerb automations to load a record based on a specified type and ID. It outlines
+  the syntax and structure of the command, including the necessary inputs such as
+  `record_type` and `record_id`, and the expected output. The page also explains the
+  optional parameters like `on_simulate`, `on_success`, and `on_error`, which define
+  the actions to take during simulation, upon successful execution, or in case of
+  an error, respectively. The example provided demonstrates how to load a task record
+  and format the output message.
 permalink: /docs/automations/commands/record.get/
 toc:
   title: record.get
   expand: Automations
 jumbotron:
   title: record.get
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

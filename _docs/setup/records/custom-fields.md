@@ -1,19 +1,23 @@
 ---
 title: Custom Fields
+excerpt: This page provides information on custom fields and fieldsets in Cerb, which
+  enable users to add personalized fields to records.
+summary: This page provides information on custom fields and fieldsets in Cerb, which
+  enable users to add personalized fields to records. It outlines the various types
+  of custom fields available, including checkbox, date, file, multiple files, multiple
+  checkboxes, number, picklist, record link, multi-line text, single-line text, URL,
+  and worker. The page also notes that the owner of a fieldset controls its visibility.
 permalink: /docs/setup/records/custom-fields/
 toc:
   expand: Admin Guide
 jumbotron:
   title: Custom Fields
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/setup/#records
 ---
 

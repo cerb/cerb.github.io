@@ -1,21 +1,30 @@
 ---
 title: Attachment Records
+excerpt: This page provides detailed information about attachment records in Cerb,
+  including their API fields, dictionary placeholders, search query fields, and worklist
+  columns.
+summary: This page provides detailed information about attachment records in Cerb,
+  including their API fields, dictionary placeholders, search query fields, and worklist
+  columns. It outlines the structure and types of data associated with attachments,
+  such as file content, MIME type, and links to other records. The page also describes
+  how to use these fields in the Records API and packages, and how to incorporate
+  them into automations, snippets, and API responses. Additionally, it explains the
+  available search filters for querying attachments and the columns that can be displayed
+  in attachment worklists. This comprehensive guide is essential for managing and
+  utilizing attachment records within the Cerb platform.
 permalink: /docs/records/types/attachment/
 toc:
   title: Attachment
   expand: Records
 jumbotron:
   title: Attachment
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

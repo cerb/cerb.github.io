@@ -1,23 +1,29 @@
 ---
-title: "data.query"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: data.query
+excerpt: This page provides an overview of the "data.query" feature in Cerb, which
+  allows for the generation of custom data query results through automation.
+summary: This page provides an overview of the "data.query" feature in Cerb, which
+  allows for the generation of custom data query results through automation. It explains
+  how this feature can be used to interact with third-party data sources in various
+  Cerb functionalities like sheets and charts. The page details the inputs required
+  for the automation dictionary, including custom input values and the requested query
+  results format. It also describes the expected outputs, specifically the format
+  of the data returned, which can vary based on the specified query format, such as
+  an array of dictionaries. The page highlights the flexibility of returning more
+  complex data structures using annotations like `@json` or `@key`.
 permalink: /docs/automations/triggers/data.query/
 toc:
   title: data.query
   expand: Automations
 jumbotron:
   title: data.query
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Triggers &raquo;
+  - label: Triggers &raquo;
     url: /docs/automations/#triggers
 ---
 

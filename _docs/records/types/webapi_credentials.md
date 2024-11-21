@@ -1,21 +1,28 @@
 ---
 title: Web Api Credentials Records
+excerpt: This page provides detailed information about Web API Credentials Records
+  in Cerb, including their structure and usage within the system.
+summary: This page provides detailed information about Web API Credentials Records
+  in Cerb, including their structure and usage within the system. It outlines the
+  fields available in the Records API, such as `name`, `worker_id`, and `updated_at`,
+  and explains how these fields can be utilized in automations, snippets, and API
+  responses through dictionary placeholders. The page also describes the search query
+  fields that can be used to filter web API credentials, such as `accessKey`, `name`,
+  and `worker`, and lists the worklist columns available for organizing and displaying
+  these records, including custom fields and worker information.
 permalink: /docs/records/types/webapi_credentials/
 toc:
   title: Web Api Credentials
   expand: Records
 jumbotron:
   title: Web Api Credentials
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

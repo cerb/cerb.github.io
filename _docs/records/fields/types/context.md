@@ -1,21 +1,25 @@
 ---
 title: Context Record Fields
+excerpt: This page provides information on context record fields in Cerb, explaining
+  that a context field contains a record type identified by an ID or URI.
+summary: This page provides information on context record fields in Cerb, explaining
+  that a context field contains a record type identified by an ID or URI. It includes
+  examples of how context fields are used in JSON packages and in PUT or POST requests
+  through the Records API, specifically showing how to set a context field to a record
+  type like "ticket."
 permalink: /docs/records/fields/types/context/
 toc:
   title: Context
   expand: Records
 jumbotron:
   title: Context
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Field Types &raquo;
+  - label: Field Types &raquo;
     url: /docs/records/#fields
 ---
 

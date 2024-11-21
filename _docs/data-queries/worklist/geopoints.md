@@ -1,19 +1,27 @@
 ---
-title: "Data Queries: Geo Points"
-excerpt: 
+title: 'Data Queries: Geo Points'
+excerpt: This page provides detailed information on using the `worklist.geo.points`
+  data queries in Cerb to retrieve and plot geolocation data from worklist records.
+summary: This page provides detailed information on using the `worklist.geo.points`
+  data queries in Cerb to retrieve and plot geolocation data from worklist records.
+  It explains the structure and components of the query, including the `series.*`
+  parameters such as `of`, `point`, `fields`, `query`, and `query.required`, which
+  define the type of records, the field containing geolocation data, additional fields
+  to include, and filtering criteria. The page also describes the output formats available,
+  such as `geopoints` and `table`, and provides examples, like plotting organizations
+  based on geolocation custom fields, to illustrate practical applications of these
+  queries.
 permalink: /docs/data-queries/worklist/geopoints/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: Worklist Geo Points
 jumbotron:
   title: Worklist Geo Points
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Data Queries &raquo;
+  - label: Data Queries &raquo;
     url: /docs/data-queries/
 ---
 

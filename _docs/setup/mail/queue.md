@@ -1,5 +1,13 @@
 ---
-title: "Setup: Mail Queue"
+title: 'Setup: Mail Queue'
+excerpt: This page provides information on the mail queue setup in Cerb, where certain
+  functionalities, such as bulk broadcasts from worklists, add outgoing emails to
+  a queue instead of sending them immediately.
+summary: This page provides information on the mail queue setup in Cerb, where certain
+  functionalities, such as bulk broadcasts from worklists, add outgoing emails to
+  a queue instead of sending them immediately. It details how users can view the contents
+  of this queue and modify the status of any message within it, offering control over
+  the management and dispatch of queued emails.
 permalink: /docs/setup/mail/queue/
 toc:
   title: Mail Queue
@@ -7,14 +15,11 @@ toc:
 jumbotron:
   title: Mail Queue
   breadcrumbs:
-  - 
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  - 
-    label: Setup &raquo;
+  - label: Setup &raquo;
     url: /docs/setup/
-  - 
-    label: Mail &raquo;
+  - label: Mail &raquo;
     url: /docs/setup/#outgoing-mail
 ---
 

@@ -1,5 +1,13 @@
 ---
 title: Parser
+excerpt: This page provides instructions for using the Cerb API to parse new messages
+  and replies.
+summary: This page provides instructions for using the Cerb API to parse new messages
+  and replies. It includes examples of how to import a raw message source and how
+  to parse a reply to an existing message. The examples demonstrate the use of MIME
+  format for message content and the importance of headers like `Message-Id` and `In-Reply-To`
+  for message threading. The page also highlights the use of subject masks as a fallback
+  option for identifying message threads.
 permalink: /docs/api/endpoints/parser/
 toc:
   expand: API
@@ -7,14 +15,11 @@ jumbotron:
   title: Parser
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
-  -
-    label: Endpoints &raquo;
+  - label: Endpoints &raquo;
     url: /docs/api/endpoints/
 ---
 

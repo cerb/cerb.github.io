@@ -1,23 +1,27 @@
 ---
-title: "record.merged"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: record.merged
+excerpt: This page provides information about the "record.merged" automation events
+  in Cerb, which are triggered after records have been merged into a target but before
+  the source records are deleted.
+summary: This page provides information about the "record.merged" automation events
+  in Cerb, which are triggered after records have been merged into a target but before
+  the source records are deleted. It details the placeholders available in the automation
+  event dictionary, including keys for the merged record type, an array of merged
+  record dictionaries, source record IDs, the target record ID, and the current worker
+  dictionary. The page specifies that there are no outputs for this event.
 permalink: /docs/automations/events/record.merged/
 toc:
   title: record.merged
   expand: Automations
 jumbotron:
   title: record.merged
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Events &raquo;
+  - label: Events &raquo;
     url: /docs/automations/#events
 ---
 

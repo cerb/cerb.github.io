@@ -1,21 +1,27 @@
 ---
 title: Install Cerb on Debian Linux 9.6
+excerpt: This guide will walk you through preparing an Debian Linux 9.6 server for
+  installing Cerb, including Nginx, PHP-FPM, and MySQL.
+summary: This webpage provides a comprehensive guide for installing Cerb on a Debian
+  Linux 9.6 server. It covers the entire setup process, including provisioning a server,
+  connecting via SSH, and installing necessary packages such as Nginx, PHP-FPM, and
+  MariaDB 10.2. The guide details creating a database for Cerb, configuring Nginx
+  with SSL certificates, and setting up a virtual host. It also includes instructions
+  for testing the Nginx configuration and restarting services. Finally, it guides
+  users through running the Cerb installer via a web browser to complete the installation
+  process.
 layout: integration
 topic: Installation
-excerpt: This guide will walk you through preparing an Debian Linux 9.6 server for installing Cerb, including Nginx, PHP-FPM, and MySQL.
 permalink: /guides/installation/debian/
 jumbotron:
   title: Install Cerb on Debian Linux 9.6
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Installation &raquo;
+  - label: Installation &raquo;
     url: /resources/guides/#installation
 ---
 

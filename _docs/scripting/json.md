@@ -1,21 +1,26 @@
 ---
-title: "Scripting Reference: JSON"
-excerpt: 
+title: 'Scripting Reference: JSON'
+excerpt: This page provides a scripting reference for handling JSON in Cerb, covering
+  key operations such as decoding, modifying, encoding, and prettifying JSON data.
+summary: This page provides a scripting reference for handling JSON in Cerb, covering
+  key operations such as decoding, modifying, encoding, and prettifying JSON data.
+  It includes examples of using functions like `json_decode` to convert JSON strings
+  into objects, `dict_set` to modify JSON objects, and `json_encode` to serialize
+  data back into JSON format. Additionally, it demonstrates how to format JSON data
+  for readability using the `json_pretty` filter. The page serves as a practical guide
+  for working with JSON in Cerb's scripting environment.
 permalink: /docs/scripting/json/
 toc:
   title: JSON
   expand: Developer Guide
 jumbotron:
   title: JSON
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Developer Guide &raquo;
-  -
-    label: Scripting &raquo;
+  - label: Developer Guide &raquo;
+  - label: Scripting &raquo;
     url: /docs/scripting/
 ---
 

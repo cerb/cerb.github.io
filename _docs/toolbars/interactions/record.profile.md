@@ -1,23 +1,27 @@
 ---
 title: record.profile
-#excerpt: Toolbars...
-#social_image_url: /assets/images/search/kata.png
+excerpt: This page provides detailed instructions on configuring and customizing the
+  profile toolbar for viewing a record's profile page in Cerb.
+summary: This page provides detailed instructions on configuring and customizing the
+  profile toolbar for viewing a record's profile page in Cerb. It guides users on
+  navigating to the toolbar configuration section, editing the `record.profile` record,
+  and adding interactions using the KATA scripting language. The page explains how
+  to use placeholders like `record_*` and `worker_*` for dynamic content and outlines
+  the inputs and outputs for interactions, specifically focusing on the `cerb.toolbar.record.profile`
+  caller. It also describes how to refresh profile widgets after interactions.
 permalink: /docs/toolbars/interactions/record.profile/
 toc:
   title: Toolbars
   expand: Automations
 jumbotron:
   title: record.profile
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Toolbars &raquo;
+  - label: Toolbars &raquo;
     url: /docs/toolbars/
 ---
 

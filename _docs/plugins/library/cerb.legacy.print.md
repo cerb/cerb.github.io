@@ -1,18 +1,24 @@
 ---
-title: "Plugin: Legacy Printing"
+title: 'Plugin: Legacy Printing'
+excerpt: This page provides information about the "Legacy Printing" plugin for Cerb,
+  developed by Webgroup Media, LLC.
+summary: This page provides information about the "Legacy Printing" plugin for Cerb,
+  developed by Webgroup Media, LLC. The plugin restores the print functionality from
+  Cerb versions prior to 9.0. It includes extensions such as a Print Controller, a
+  Ticket Message Toolbar Print Item, and a Ticket Profile Print Script, all designed
+  to integrate with Cerb's interface to facilitate printing tasks. The plugin is identified
+  by the ID "cerb.legacy.print" and is located in the specified storage path.
 permalink: /docs/plugins/cerb.legacy.print/
 toc:
-  title: "Legacy Printing"
+  title: Legacy Printing
   expand: Plugins
 jumbotron:
-  title: "Legacy Printing"
-  tagline: 
+  title: Legacy Printing
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

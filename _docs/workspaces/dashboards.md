@@ -1,17 +1,28 @@
 ---
 title: Dashboards
+excerpt: This page provides an in-depth overview of Cerb's dashboard functionality,
+  focusing on the customization and configuration of widgets and prompts.
+summary: This page provides an in-depth overview of Cerb's dashboard functionality,
+  focusing on the customization and configuration of widgets and prompts. It explains
+  how dashboards are responsive and adaptable to different screen sizes, allowing
+  for flexible layout configurations with various zones for widget placement. The
+  page details the types of prompts available, such as chooser, date range, picklist,
+  and text, and how these can be configured using a simple text-based format called
+  KATA. It also describes how prompts can be used to filter data across all widgets
+  on a dashboard, enhancing real-time data interaction. Additionally, the page lists
+  various types of widgets that can be used on dashboards, including charts, calendars,
+  maps, and project boards, highlighting the versatility and customization options
+  available to users.
 permalink: /docs/dashboards/
 redirect_from:
-  - /guides/dashboards/filters/
+- /guides/dashboards/filters/
 jumbotron:
   title: Dashboards
   tagline: Visual insight from highly customizable widgets
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Workspaces &raquo;
+  - label: Workspaces &raquo;
     url: /docs/workspaces/
 ---
 

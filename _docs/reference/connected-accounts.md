@@ -1,5 +1,18 @@
 ---
 title: Connected Accounts
+excerpt: This page discusses the use of connected accounts in Cerb to enable automations
+  to authenticate and interact with third-party APIs through cryptographic signing
+  of HTTP requests.
+summary: This page discusses the use of connected accounts in Cerb to enable automations
+  to authenticate and interact with third-party APIs through cryptographic signing
+  of HTTP requests. It highlights the flexibility this provides by allowing bots to
+  access a wide range of services beyond predefined actions. The sharing of connected
+  accounts is controlled by the account owner, allowing for both team-wide and individual
+  access. Integration examples are provided for popular services like Amazon Web Services,
+  Dropbox, Facebook, GitHub, LinkedIn, Salesforce, Slack, Stripe, and Twilio. The
+  page also recommends creating automation functions for each service to centralize
+  credential management and API interactions, facilitating secure and reusable automation
+  processes.
 permalink: /docs/connected-accounts/
 jumbotron:
   title: Connected Accounts

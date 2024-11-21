@@ -1,7 +1,17 @@
 ---
-title: "interaction.worker"
-excerpt: interaction.worker automations are worker-based interactions that use continuations to pause and resume a multi-step workflow. 
-#social_image_url: /assets/images/search/kata.png
+title: interaction.worker
+excerpt: interaction.worker automations are worker-based interactions that use continuations
+  to pause and resume a multi-step workflow.
+summary: This page provides a comprehensive overview of the "interaction.worker" automations
+  in Cerb, which are designed to facilitate conversational processes that can pause
+  to collect additional input, such as through web-based forms or external events.
+  It details the structure and functionality of these interactions, including inputs,
+  outputs, and the various states like await:form, await:draft, await:duration, await:interaction,
+  and await:record. The page also explains how interactions are initiated by callers,
+  such as toolbars and built-in features like project boards and sheets, and how they
+  return results to the caller. The document emphasizes the modularity and reusability
+  of these interactions, allowing them to be easily integrated and customized within
+  different components of Cerb.
 permalink: /docs/automations/triggers/interaction.worker/
 redirect_from:
 - /docs/automations/triggers/interaction.web.worker/
@@ -10,16 +20,13 @@ toc:
   expand: Automations
 jumbotron:
   title: interaction.worker
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Triggers &raquo;
+  - label: Triggers &raquo;
     url: /docs/automations/#triggers
 ---
 

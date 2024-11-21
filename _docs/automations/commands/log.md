@@ -1,23 +1,27 @@
 ---
-title: "Automations: log"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: 'Automations: log'
+excerpt: This page provides information on the "log" command used in Cerb automations
+  to write data to the automation log with specified severity levels.
+summary: This page provides information on the "log" command used in Cerb automations
+  to write data to the automation log with specified severity levels. It details the
+  syntax for logging messages, including different severity levels such as notice,
+  warning, error, and alert. Each log entry records the automation name, node, creation
+  date, log level, and message, which can be accessed through data queries. The page
+  serves as a guide for using the log command to assist with error reporting and debugging
+  in automations.
 permalink: /docs/automations/commands/log/
 toc:
   title: log
   expand: Automations
 jumbotron:
   title: log
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Commands &raquo;
+  - label: Commands &raquo;
     url: /docs/automations/#commands
 ---
 

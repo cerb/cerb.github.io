@@ -1,23 +1,28 @@
 ---
 title: global.search
-#excerpt: Toolbars...
-#social_image_url: /assets/images/search/kata.png
+excerpt: This page provides information on configuring and using the global search
+  toolbar in Cerb.
+summary: "This page provides information on configuring and using the global search
+  toolbar in Cerb. It explains how to access the toolbar from the search icon on every
+  page and details the configuration process through the \"Search \xBB Toolbars\"
+  menu. The page includes instructions for editing the global search record and adding
+  interactions using toolbar KATA, with an example of a ticket search interaction.
+  It also lists available placeholders in KATA, such as `worker_*` for the active
+  worker record. The page outlines the caller and input/output specifications for
+  interactions related to the global search toolbar."
 permalink: /docs/toolbars/interactions/global.search/
 toc:
   title: Toolbars
   expand: Automations
 jumbotron:
   title: global.search
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: Toolbars &raquo;
+  - label: Toolbars &raquo;
     url: /docs/toolbars/
 ---
 

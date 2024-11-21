@@ -1,7 +1,17 @@
 ---
 title: KATA
-excerpt: KATA is a human-friendly format for modeling structured data that is used throughout Cerb to describe configurations, customizations, and automations.
-#social_image_url: /assets/images/search/kata.png
+excerpt: KATA is a human-friendly format for modeling structured data that is used
+  throughout Cerb to describe configurations, customizations, and automations.
+summary: This page provides a comprehensive overview of KATA, a human-friendly format
+  used in Cerb for modeling structured data. It explains how KATA is designed to avoid
+  common pitfalls associated with YAML, such as automatic data type detection and
+  security issues with local objects. The page details KATA's syntax, including indentation,
+  key names, values, and annotations, and how these elements are used to build a tree
+  of key/value relationships. It also covers the use of references to manage complex
+  data structures and provides an annotation reference for various data types and
+  operations, such as base64, bool, csv, date, int, json, and more. The page emphasizes
+  KATA's flexibility and security, highlighting its ability to handle text blocks,
+  comments, and placeholders without requiring escaping or executing external code.
 permalink: /docs/kata/
 toc:
   title: KATA
@@ -9,8 +19,7 @@ jumbotron:
   title: KATA
   tagline: A human-friendly format for modeling structured data
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
 ---
 

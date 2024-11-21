@@ -1,21 +1,28 @@
 ---
 title: Feedback Records
+excerpt: This page provides detailed information about feedback records in Cerb, including
+  their structure and usage within the system.
+summary: This page provides detailed information about feedback records in Cerb, including
+  their structure and usage within the system. It outlines the fields available in
+  the Records API, such as author ID, creation timestamp, mood, and feedback content.
+  The page also describes dictionary placeholders for automations and API responses,
+  offering fields like author, mood, and quote. Additionally, it covers search query
+  fields for filtering feedback based on criteria like creation date, email, mood,
+  and worker. Lastly, it lists the columns available in feedback worklists, which
+  include custom fields, log date, mood, quote, and source URL.
 permalink: /docs/records/types/feedback/
 toc:
   title: Feedback
   expand: Records
 jumbotron:
   title: Feedback
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

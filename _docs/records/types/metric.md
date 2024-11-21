@@ -1,21 +1,29 @@
 ---
 title: Metric Records
+excerpt: This page provides detailed information about Metric Records in Cerb, including
+  their structure and usage within the platform.
+summary: This page provides detailed information about Metric Records in Cerb, including
+  their structure and usage within the platform. It outlines the fields available
+  in the Records API, such as creation and update timestamps, descriptions, and types.
+  The page also describes dictionary placeholders for automations, snippets, and API
+  responses, offering a comprehensive list of fields like context, label, and record
+  URL. Additionally, it covers search query fields that can be used to filter metrics
+  based on various criteria, and lists the columns available in metric worklists for
+  organizing and displaying metric data. The document serves as a guide for understanding
+  and utilizing metric records within Cerb's ecosystem.
 permalink: /docs/records/types/metric/
 toc:
   title: Metric
   expand: Records
 jumbotron:
   title: Metric
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /docs/records/
-  -
-    label: Types &raquo;
+  - label: Types &raquo;
     url: /docs/records/types/
 ---
 

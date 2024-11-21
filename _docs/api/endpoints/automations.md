@@ -1,5 +1,14 @@
 ---
 title: Automations
+excerpt: This page provides information on how to search automation logs in Cerb.
+summary: This page provides information on how to search automation logs in Cerb,
+  available from version 10.4.9 onwards. It details the REST API endpoint `GET /rest/automations/logs/search.json`
+  used for retrieving automation logs. The page outlines the parameters that can be
+  used in the search, such as `limit`, `page`, and `q` for query filters. It also
+  describes various query filters that can be applied, including filtering by automation
+  name, node path, creation date, log entry ID, severity level, and log message content.
+  An example of how to use the API to search for logs with a specific severity level
+  is also provided.
 permalink: /docs/api/endpoints/automations/
 toc:
   expand: API
@@ -7,14 +16,11 @@ jumbotron:
   title: Automations
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
-  -
-    label: Endpoints &raquo;
+  - label: Endpoints &raquo;
     url: /docs/api/endpoints/
 ---
 

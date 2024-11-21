@@ -1,5 +1,17 @@
 ---
-title: "API: Authentication"
+title: 'API: Authentication'
+excerpt: This page provides detailed information on how Cerb uses the OAuth 2.0 standard
+  for authenticating API requests.
+summary: This page provides detailed information on how Cerb uses the OAuth 2.0 standard
+  for authenticating API requests, replacing the older request signature method used
+  in versions prior to 9.1. It outlines the process for creating an OAuth app within
+  Cerb, which includes generating API credentials, defining scopes, and understanding
+  the roles of Client ID and Client Secret. The page also explains how to authenticate
+  API requests using the Authorization Code grant type, detailing the necessary steps
+  and information required, such as the Authorization URL, Access Token URL, and the
+  inclusion of access tokens in HTTP headers. The document emphasizes the importance
+  of scopes in defining the privileges associated with access tokens and provides
+  examples of default scopes available in Cerb.
 permalink: /docs/api/authentication/
 toc:
   title: Authentication
@@ -7,11 +19,9 @@ jumbotron:
   title: Authentication
   tagline: ""
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /docs/api/
 ---
 

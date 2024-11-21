@@ -1,26 +1,31 @@
 ---
-title: "File Upload - Interaction Form Element"
-#excerpt: 
-#social_image_url: /assets/images/search/kata.png
+title: File Upload - Interaction Form Element
+excerpt: This page provides detailed information on the "fileUpload" element used
+  in interaction web forms within Cerb.
+summary: This page provides detailed information on the "fileUpload" element used
+  in interaction web forms within Cerb. It explains how this element facilitates file
+  uploads by creating an attachment or automation resource record and returning its
+  ID or token. The document outlines the syntax for using the "fileUpload" element,
+  including setting a placeholder with the element name, handling key expansion for
+  file fields, and specifying the record type to create with the uploaded file. It
+  also covers optional features such as labeling the form element, requiring user
+  input, and implementing custom validation scripts to ensure the uploaded file meets
+  specific criteria, such as being a valid image or not exceeding a certain size.
 permalink: /docs/automations/triggers/interaction.worker/elements/fileUpload/
 toc:
   title: File Upload
   expand: Automations
 jumbotron:
   title: File Upload
-  tagline: 
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /docs/automations/
-  -
-    label: interaction.worker &raquo;
+  - label: interaction.worker &raquo;
     url: /docs/automations/triggers/interaction.worker/
-  -
-    label: Elements &raquo;
+  - label: Elements &raquo;
     url: /docs/automations/triggers/interaction.worker/#elements
 ---
 

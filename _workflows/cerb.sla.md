@@ -1,6 +1,15 @@
 ---
 title: Service Level Agreements
 excerpt: Enforce Service Level Agreements (SLA) for tickets from organizations.
+summary: This page provides a comprehensive guide on implementing and managing Service
+  Level Agreements (SLAs) within Cerb. It covers the introduction, installation, and
+  detailed usage instructions for adding and assigning SLA plans to organizations,
+  sending test messages, and integrating SLA widgets into ticket profiles. The guide
+  also explains how to update SLA hours, sort work by SLA, and manage the SLA deadline
+  lifecycle. Additionally, it includes related workflows to automate organization
+  assignment and prioritize tickets nearing SLA deadlines. The reference section offers
+  a template for creating custom SLA workflows, ensuring users can tailor the system
+  to their specific needs.
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.sla/
@@ -8,11 +17,9 @@ jumbotron:
   title: Service Level Agreements
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Workflows &raquo;
+  - label: Workflows &raquo;
     url: /resources/workflows/
 ---
 

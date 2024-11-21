@@ -1,9 +1,17 @@
 ---
+title: 'Tip: Private shared workspaces with roles'
+excerpt: Use roles to share private workspaces with specific workers from different
+  groups.
+summary: This page provides guidance on creating private shared workspaces in Cerb,
+  focusing on the different ownership types and their permissions. It explains how
+  app-owned, role-owned, group-owned, and worker-owned workspaces function, particularly
+  emphasizing the flexibility of role-owned workspaces for sharing with select workers
+  across different groups. The page also includes a step-by-step process for admins
+  to create a new role, assign it to workers or groups, and use it to manage workspace
+  ownership and access.
 layout: post
-title: "Tip: Private shared workspaces with roles"
-excerpt: Use roles to share private workspaces with specific workers from different groups.
 author: The Cerb Team
-date: 2017-02-27 16:00:00 -0700
+date: "2017-02-27 16:00:00 -0700"
 permalink: /tips/private-shared-workspaces-with-roles/
 tags: cerb tips mailbag
 ---

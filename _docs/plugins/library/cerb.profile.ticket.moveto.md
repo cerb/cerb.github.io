@@ -1,18 +1,23 @@
 ---
-title: "Plugin: Ticket Profile 'Move To' Shortcut"
+title: 'Plugin: Ticket Profile ''Move To'' Shortcut'
+excerpt: This page provides information about the "Ticket Profile 'Move To' Shortcut"
+  plugin for Cerb.
+summary: This page provides information about the "Ticket Profile 'Move To' Shortcut"
+  plugin for Cerb. Developed by Webgroup Media, LLC, this plugin adds a convenient
+  "move to" shortcut at the top of ticket profiles, enhancing the user interface for
+  managing tickets. The plugin includes a Profile Script extension identified as `cerb.profile.ticket.moveto.script`,
+  and it is stored in the specified path within the Cerb system.
 permalink: /docs/plugins/cerb.profile.ticket.moveto/
 toc:
-  title: "Ticket Profile 'Move To' Shortcut"
+  title: Ticket Profile 'Move To' Shortcut
   expand: Plugins
 jumbotron:
-  title: "Ticket Profile 'Move To' Shortcut"
-  tagline: 
+  title: Ticket Profile 'Move To' Shortcut
+  tagline: ~
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Plugins &raquo;
+  - label: Plugins &raquo;
     url: /docs/plugins/
 ---
 

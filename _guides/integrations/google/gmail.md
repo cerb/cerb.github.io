@@ -1,9 +1,16 @@
 ---
 title: Integrate with Gmail
 excerpt: A step-by-step guide for integrating Cerb and Gmail.
+summary: This page provides a comprehensive guide on integrating Cerb with Gmail by
+  configuring Google APIs and setting up Cerb. It details the steps to create a new
+  project in Google Cloud, configure the OAuth consent screen, enable the Gmail API,
+  and add necessary credentials. The guide then explains how to configure Cerb by
+  creating a connected service and account, using the credentials obtained from Google.
+  It concludes with next steps for authenticating a Gmail mailbox using IMAP and XOAUTH2,
+  making it a useful resource for automating tasks with Google APIs through Cerb bots.
 permalink: /guides/integrations/google/gmail/
 redirect_from:
- - /guides/integrations/google/
+- /guides/integrations/google/
 social_image_url: /assets/images/guides/google/cerb-and-google.png
 layout: integration
 topic: Integrations
@@ -12,17 +19,13 @@ jumbotron:
   title: Cerb + Gmail
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Google &raquo;
+  - label: Google &raquo;
     url: /resources/guides/#google
 ---
 
