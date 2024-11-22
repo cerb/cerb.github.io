@@ -11,6 +11,7 @@ services:
       - ./_site:/var/cerb-docs/_site
       - ./Gemfile.lock:/var/cerb-docs/Gemfile.lock
       - ./.sass-cache:/var/cerb-docs/.sass-cache
+      - ./.jekyll-cache:/var/cerb-docs/.jekyll-cache
       - ./.jekyll-metadata:/var/cerb-docs/.jekyll-metadata
     environment:
       JEKYLL_ENV: development

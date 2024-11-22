@@ -6,10 +6,13 @@ ENV LANGUAGE=en_US.UTF-8
 ENV JEKYLL_ENV=development
 
 RUN apt-get update \
-  && apt-get -y install ruby ruby-dev make git gcc g++ \
-  && gem install bundler:2.3.13 \
-  && useradd -ms /bin/bash -d /var/cerb-docs/ jekyll \
-  && rm -rf /var/lib/apt/lists/*
+  && apt-get -y install ruby ruby-dev make git gcc g++
+
+RUN gem install bundler:2.5.23
+
+RUN useradd -ms /bin/bash -d /var/cerb-docs/ jekyll
+
+RUN rm -rf /var/lib/apt/lists/*
 
 COPY Gem* /var/cerb-docs/
 
