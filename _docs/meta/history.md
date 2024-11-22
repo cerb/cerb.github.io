@@ -20,10 +20,10 @@ jumbotron:
 ---
 
 {% assign last_section = '' %}
-{% for post in site.posts %}
+{% assign releases = site.releases | reverse %}
+{% for post in releases %}
 {% assign section = post.date | date: "%B %Y" %}
 
-{% if post.tags contains 'releases' %}
 {% if section != last_section %}
 {% if last_section != '' %}
 </ul>
@@ -43,5 +43,4 @@ jumbotron:
 {% endif %}
 
 {% assign last_section = section %}
-  {% endif %}
 {% endfor %}
