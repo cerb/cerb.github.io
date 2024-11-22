@@ -1,5 +1,5 @@
 ---
-title: 'Tip: Autocomplete an email address by host'
+title: 'Autocomplete an email address by host'
 excerpt: When autocompleting an email address, you can start your search with @ to
   filter by the hostname first.
 summary: This page provides a tip for efficiently autocompleting email addresses by
@@ -9,11 +9,19 @@ summary: This page provides a tip for efficiently autocompleting email addresses
   how to find a contact at Twinton University by starting the search with `@twin`,
   and further refines the search by including the first letter of the mailbox, such
   as `j*@twin`.
-layout: post
+layout: integration
 author: The Cerb Team
 date: "2017-02-27 14:35:00 -0700"
 permalink: /tips/autocomplete-email-by-host/
-tags: cerb tips mailbag
+jumbotron:
+  title: 'Autocomplete an email address by host'
+  breadcrumbs:
+    -
+      label: Resources &raquo;
+      url: /resources/
+    -
+      label: Tips &raquo;
+      url: /resources/tips/
 ---
 
 When autocompleting an email address, you can start your search with an `@` to filter by the hostname first.

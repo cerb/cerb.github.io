@@ -1,5 +1,5 @@
 ---
-title: 'Tip: Lock worklist sorting'
+title: 'Lock worklist sorting'
 excerpt: Prevent workers from changing the sorting on a worklist.
 summary: This page provides guidance on how to lock the sorting of worklists in Cerb
   to improve team efficiency and reduce task collisions. It explains the importance
@@ -9,11 +9,19 @@ summary: This page provides guidance on how to lock the sorting of worklists in 
   column" option and how to explicitly set a specific sort column through the quick
   search query. This ensures that all team members view the worklist in a consistent
   manner, aligned with their responsibilities and priorities.
-layout: post
+layout: integration
 author: The Cerb Team
 date: "2018-03-23 15:00:00 -0700"
 permalink: /tips/worklists-lock-sorting/
-tags: cerb tips mailbag
+jumbotron:
+  title: 'Lock worklist sorting'
+  breadcrumbs:
+    -
+      label: Resources &raquo;
+      url: /resources/
+    -
+      label: Tips &raquo;
+      url: /resources/tips/
 ---
 
 A client asked:

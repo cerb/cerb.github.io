@@ -1,5 +1,5 @@
 ---
-title: 'Tip: Review bot behaviors by event'
+title: 'Review bot behaviors by event'
 excerpt: Review bot behaviors for each event using subtotals on a worklist.
 summary: This page provides guidance on how to review bot behaviors by event in Cerb,
   particularly highlighting improvements made in the 7.3 update. It explains how to
@@ -7,11 +7,19 @@ summary: This page provides guidance on how to review bot behaviors by event in 
   by event, and apply filters to focus on specific events. The instructions aim to
   simplify the process of managing and analyzing bot behaviors in response to various
   events.
-layout: post
+layout: integration
 author: The Cerb Team
 date: "2017-03-07 17:39:00 -0700"
 permalink: /tips/review-bot-behaviors-by-event/
-tags: cerb tips mailbag
+jumbotron:
+  title: 'Review bot behaviors by event'
+  breadcrumbs:
+    -
+      label: Resources &raquo;
+      url: /resources/
+    -
+      label: Packages &raquo;
+      url: /resources/packages/
 ---
 
 In [earlier versions](/docs/history/) of Cerb there wasn't a simple way to review all the bot behaviors that would respond to a specific event. This was made much simpler in the [7.3](/releases/7.3/) update.

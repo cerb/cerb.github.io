@@ -1,5 +1,5 @@
 ---
-title: 'Tip: Find other senders from the same email host'
+title: 'Find other senders from the same email host'
 excerpt: On email address cards, the Similar button is a shortcut for finding senders
   with the same email host.
 summary: This page provides a tip for Cerb users on how to find other senders from
@@ -7,11 +7,19 @@ summary: This page provides a tip for Cerb users on how to find other senders fr
   users can click on the "Similar" button at the top. This feature serves as a shortcut
   to locate all contacts in the address book that share the same email host, enhancing
   the ability to manage and organize contacts efficiently.
-layout: post
+layout: integration
 author: The Cerb Team
 date: "2017-03-20 15:50:00 -0700"
 permalink: /tips/find-similar-senders/
-tags: cerb tips mailbag
+jumbotron:
+  title: 'Find other senders from the same email host'
+  breadcrumbs:
+    -
+      label: Resources &raquo;
+      url: /resources/
+    -
+      label: Tips &raquo;
+      url: /resources/tips/
 ---
 
 When viewing the card of an email address, you can click on the **Similar** button at the top:

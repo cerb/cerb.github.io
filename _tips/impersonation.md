@@ -1,5 +1,5 @@
 ---
-title: 'Tip: Impersonate other workers as an administrator'
+title: 'Impersonate other workers as an administrator'
 excerpt: Administrators can impersonate other workers to assist with configuration
   or troubleshooting.
 summary: This page provides instructions for administrators on how to impersonate
@@ -8,11 +8,19 @@ summary: This page provides instructions for administrators on how to impersonat
   by navigating to the Workers section, selecting a worker's profile, and clicking
   the Impersonate button. To return to their own account, administrators simply click
   on their own name in the top right corner of the browser window.
-layout: post
+layout: integration
 author: The Cerb Team
 date: "2017-07-18 17:30:00 -0700"
 permalink: /tips/impersonation/
-tags: cerb tips mailbag
+jumbotron:
+  title: 'Impersonate other workers as an administrator'
+  breadcrumbs:
+    -
+      label: Resources &raquo;
+      url: /resources/
+    -
+      label: Tips &raquo;
+      url: /resources/tips/
 ---
 
 It's sometimes useful to see Cerb as another [worker](/docs/workers/), whether that's to help them set up their interface or to see an issue from their perspective.  Administrators have the ability to impersonate other workers to help make this easy.

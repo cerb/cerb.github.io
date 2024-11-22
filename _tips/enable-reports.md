@@ -1,5 +1,5 @@
 ---
-title: 'Tip: Enable the default reports'
+title: 'Enable the default reports'
 excerpt: Cerb ships with several built-in reports that you can access from a workspace
   page.
 summary: This page provides a step-by-step guide on how to enable default reports
@@ -7,11 +7,19 @@ summary: This page provides a step-by-step guide on how to enable default report
   from a workspace page. The instructions include navigating the interface, selecting
   reports from the package library, and adding a Reports page to the top navigation
   bar for easy access.
-layout: post
+layout: integration
 author: The Cerb Team
 date: "2018-09-18 00:00:00 -0700"
 permalink: /tips/enable-reports/
-tags: cerb tips mailbag
+jumbotron:
+  title: Enable the default reports
+  breadcrumbs:
+    -
+      label: Resources &raquo;
+      url: /resources/
+    -
+      label: Tips &raquo;
+      url: /resources/tips/
 ---
 
 You can use [dashboards](/docs/dashboards/) to build your own reports.  Cerb also ships with many built-in reports that you can access from a workspace page.

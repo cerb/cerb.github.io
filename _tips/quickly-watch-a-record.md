@@ -1,5 +1,5 @@
 ---
-title: 'Tip: Quickly add or remove yourself as a watcher from worklists'
+title: 'Quickly add or remove yourself as a watcher from worklists'
 excerpt: Learn how to quickly toggle your watcher subscriptions from a worklist.
 summary: This page provides a tip for efficiently managing watcher status on worklists
   in Cerb. It explains how users can quickly add or remove themselves as watchers
@@ -7,11 +7,21 @@ summary: This page provides a tip for efficiently managing watcher status on wor
   popup that shows the status of each group member. This shortcut streamlines the
   process for users who only need to adjust their own watcher status without reviewing
   or modifying the status of others.
-layout: post
+layout: integration
 author: The Cerb Team
 date: "2017-03-07 17:22:00 -0700"
 permalink: /tips/quickly-watch-records-from-worklists/
-tags: cerb tips mailbag
+jumbotron:
+  title: 'Quickly add or remove yourself as a watcher from worklists'
+  tagline: ""
+  breadcrumbs:
+    -
+      label: Resources &raquo;
+      url: /resources/
+    -
+      label: Packages &raquo;
+      url: /resources/packages/
+
 ---
 
 Most [worklists](/docs/worklists/) have a column of [watcher](/docs/records/#watchers) buttons where you can subscribe to a record and receive [notifications](/docs/notifications/) of new activity:

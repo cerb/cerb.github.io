@@ -37,6 +37,9 @@ collections:
   packages:
     output: true
     permalink: /packages/:path/
+  tips:
+    output: true
+    permalink: /tips/:path/
   workflows:
     output: true
     permalink: /workflows/:path/
@@ -80,6 +83,12 @@ defaults:
       jumbotron:
         title: Blog
         tagline: Release announcements, helpful tips, and community discussion
+  -
+    scope:
+      path: ""
+      type: "tips"
+    values:
+      layout: "integration"
   -
     scope:
       path: ""

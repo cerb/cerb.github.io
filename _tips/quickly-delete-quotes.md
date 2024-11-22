@@ -1,5 +1,5 @@
 ---
-title: 'Tip: Quickly delete quoted text while replying'
+title: 'Quickly delete quoted text while replying'
 excerpt: You can use the delete command in a reply to quickly remove huge blocks of
   quoted text.
 summary: This page provides a tip for efficiently deleting quoted text in Cerb when
@@ -7,11 +7,19 @@ summary: This page provides a tip for efficiently deleting quoted text in Cerb w
   large blocks of quoted text, streamlining the process compared to manually selecting
   and deleting text. This shortcut is applicable in both desktop and mobile interfaces,
   enhancing productivity by saving time and effort.
-layout: post
+layout: integration
 author: The Cerb Team
 date: "2017-02-27 14:50:00 -0700"
 permalink: /tips/quickly-delete-quoted-text/
-tags: cerb tips mailbag
+jumbotron:
+  title: 'Quickly delete quoted text while replying'
+  breadcrumbs:
+    -
+      label: Resources &raquo;
+      url: /resources/
+    -
+      label: Tips &raquo;
+      url: /resources/tips/
 ---
 
 When you reply to a message, Cerb quotes the original content by default. This is designed to make it easy for you trim a few relevant lines from the original message to give context to your response[^inline-replying].

@@ -1,5 +1,5 @@
 ---
-title: 'Tip: Use prompted placeholders in snippets'
+title: 'Use prompted placeholders in snippets'
 excerpt: Use prompted placeholders to personalize a snippet based on worker input.
 summary: This page provides guidance on using prompted placeholders in Cerb snippets.
   It explains how snippets can be used to quickly insert predefined text into messages,
@@ -9,11 +9,19 @@ summary: This page provides guidance on using prompted placeholders in Cerb snip
   customization by introducing prompted placeholders, allowing users to input additional
   details or choose specific content before inserting the snippet. This feature enhances
   the flexibility and personalization of communication within Cerb.
-layout: post
+layout: integration
 author: The Cerb Team
 date: "2017-03-15 18:50:00 -0700"
 permalink: /tips/snippet-prompted-placeholders/
-tags: cerb tips mailbag
+jumbotron:
+  title: 'Use prompted placeholders in snippets'
+  breadcrumbs:
+    -
+      label: Resources &raquo;
+      url: /resources/
+    -
+      label: Packages &raquo;
+      url: /resources/packages/
 ---
 
 [Snippets](/docs/tickets/#snippets) let you quickly insert predefined text into messages. You can think of snippets as copying and pasting from a giant shared clipboard.

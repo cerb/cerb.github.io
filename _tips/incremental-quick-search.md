@@ -1,5 +1,5 @@
 ---
-title: 'Tip: Incremental quick search'
+title: 'Incremental quick search'
 excerpt: Add new filters to a worklist using quick search without replacing the existing
   filters.
 summary: This page provides a tip for using incremental quick search in Cerb to add
@@ -9,11 +9,19 @@ summary: This page provides a tip for using incremental quick search in Cerb to 
   by open tickets linked to certain organizations and wants to further filter by tickets
   updated in the past year. By using the `+` prefix, users can efficiently refine
   their search results without losing the original filters.
-layout: post
+layout: integration
 author: The Cerb Team
 date: "2017-02-17 10:30:00 -0700"
 permalink: /tips/incremental-quick-search/
-tags: cerb tips mailbag
+jumbotron:
+  title: 'Incremental quick search'
+  breadcrumbs:
+    -
+      label: Resources &raquo;
+      url: /resources/
+    -
+      label: Tips &raquo;
+      url: /resources/tips/
 ---
 
 You've probably noticed that when you quick search a [worklist](/docs/worklists/) it replaces the existing filters using the new query.  This is efficient and convenient when you want to change all of the filters at once.  Sometimes, however, you just want to add a few more filters and keep the existing ones.

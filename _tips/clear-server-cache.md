@@ -1,5 +1,5 @@
 ---
-title: 'Tip: Clear the server-side cache'
+title: 'Clear the server-side cache'
 excerpt: Cerb uses a server-side cache to speed up operations like database queries.
   If you modify the database directly then you need to flush the cache.
 summary: This page provides instructions on how to clear the server-side cache in
@@ -10,11 +10,19 @@ summary: This page provides instructions on how to clear the server-side cache i
   for flushing the cache by appending 'update' to the URL while logged into Cerb.
   It also addresses potential authorization issues, advising users to add their IP
   to the allowlist in the security settings if necessary.
-layout: post
+layout: integration
 author: The Cerb Team
 date: "2017-04-25 13:20:00 -0700"
 permalink: /tips/clear-server-cache/
-tags: cerb tips mailbag
+jumbotron:
+  title: 'Clear the server-side cache'
+  breadcrumbs:
+    -
+      label: Resources &raquo;
+      url: /resources/
+    -
+      label: Tips &raquo;
+      url: /resources/tips/
 ---
 
 You're probably familiar with the file cache in your web browser. It saves a temporary copy of website resources on your device to speed up subsequent network requests.  This is useful for files that change infrequently, like images, stylesheets, fonts, and scripts.

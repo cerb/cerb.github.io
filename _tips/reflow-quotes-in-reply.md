@@ -1,5 +1,5 @@
 ---
-title: 'Tip: Reflow quotes in a reply'
+title: 'Reflow quotes in a reply'
 excerpt: Design research shows that the ideal line length for human readers is around
   50-60 characters. This keyboard shortcut reflows quoted text for you.
 summary: This page provides guidance on how Cerb reflows quoted text in email replies
@@ -10,11 +10,19 @@ summary: This page provides guidance on how Cerb reflows quoted text in email re
   offers practical instructions on using Cerb's features, such as starting a paragraph
   with a `>` character and employing a keyboard shortcut (`<CTRL>` + `<SHIFT>` + `Q`)
   to automatically reflow quotes, making it easier for users to format text efficiently.
-layout: post
+layout: integration
 author: The Cerb Team
 date: "2017-02-27 15:25:00 -0700"
 permalink: /tips/reflow-reply-quotes/
-tags: cerb tips mailbag
+jumbotron:
+  title: 'Reflow quotes in a reply'
+  breadcrumbs:
+    -
+      label: Resources &raquo;
+      url: /resources/
+    -
+      label: Packages &raquo;
+      url: /resources/packages/
 ---
 
 When you reply to a message, Cerb "reflows" the quoted text so that each line is no longer than 76 characters. This comes from a decades old Internet convention[^rfc2045] intended to improve readability.

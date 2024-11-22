@@ -1,5 +1,5 @@
 ---
-title: 'Tip: Private shared workspaces with roles'
+title: 'Private shared workspaces with roles'
 excerpt: Use roles to share private workspaces with specific workers from different
   groups.
 summary: This page provides guidance on creating private shared workspaces in Cerb,
@@ -9,11 +9,19 @@ summary: This page provides guidance on creating private shared workspaces in Ce
   across different groups. The page also includes a step-by-step process for admins
   to create a new role, assign it to workers or groups, and use it to manage workspace
   ownership and access.
-layout: post
+layout: integration
 author: The Cerb Team
 date: "2017-02-27 16:00:00 -0700"
 permalink: /tips/private-shared-workspaces-with-roles/
-tags: cerb tips mailbag
+jumbotron:
+  title: 'Private shared workspaces with roles'
+  breadcrumbs:
+    -
+      label: Resources &raquo;
+      url: /resources/
+    -
+      label: Tips &raquo;
+      url: /resources/tips/
 ---
 
 When you create a [workspace](/docs/workspaces/) in Cerb, the owner determines who is able to use or modify it.
