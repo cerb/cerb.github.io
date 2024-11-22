@@ -88,7 +88,7 @@ position: relative;
 		<li>Same business day support directly from Cerb's developers.</li>
 		<li>Discount for <abbr title="Renew your license within 30 days after expiration to receive the timely renewal discount." style="cursor:help;">timely</abbr> future annual renewals (<b>$34/seat-month</b>).</li>
 		<li>Ideal for regulatory compliance (GDPR, HIPAA, Sarbanes-Oxley).</li>
-		<li>Requires PHP 7.0+ and MySQL 5.6+.</li>
+		<li>Requires PHP 8.2+ and MySQL 8.0+.</li>
 		<li>Access to 100% of our source code on <a href="https://github.com/cerb/cerb-release/" target="_blank">GitHub</a>.</li>
 		<li>Your license never expires for versions released during your software updates coverage.</li>
 		<li><a href="/docs/upgrading/">Upgrade</a> from any version to the latest update within minutes.</li>
