@@ -1,11 +1,57 @@
 - title: Getting Started
   docs:
   - intro
+  - installation
   - tutorial
+
+- title: Reference
+  docs:
+    - activity-log
+    - automations
+    - buckets
+    - calendars
+    - cards
+    - classifiers
+    - comments
+    - connected-accounts
+    - connected-services
+    - contacts
+    - custom-fields
+    - custom-fieldsets
+    - dashboards
+    - data-queries
+    - groups
+    - interactions
+    - kata
+    - maps
+    - metrics
+    - notifications
+    - orgs
+    - packages
+    - portals
+    - profiles
+    - project-boards
+    - queues
+    - records
+    - records/links
+    - records/types
+    - reminders
+    - resources
+    - roles
+    - search
+    - sheets
+    - snippets
+    - tickets
+    - toolbars
+    - watchers
+    - webhooks
+    - workers
+    - workflows
+    - worklists
+    - workspaces
 
 - title: Admin Guide
   docs:
-  - installation
   - friendly-urls
   - security
   #- scheduler
@@ -15,14 +61,6 @@
  # - scaling
   - setup
 
-- title: Worker Guide
-  docs:
-  - guide/workers/user-interface
-  # - guide/workers/search
-  # - guide/workers/worklists (peek, subtotals, filters, customize)
-  # - guide/workers/workspaces (add page, add to menu, tabs, widgets, dashboard filters)
-  # - guide/workers/email
-
 - title: Developer Guide
   docs:
   - guide/developers/dictionaries
@@ -30,52 +68,6 @@
   #- automations
   - plugins
   - developers/icons
-
-- title: Reference
-  docs:
-  - activity-log
-  - automations
-  - buckets
-  - calendars
-  - cards
-  - classifiers
-  - comments
-  - connected-accounts
-  - connected-services
-  - contacts
-  - custom-fields
-  - custom-fieldsets
-  - dashboards
-  - data-queries
-  - groups
-  - interactions
-  - kata
-  - maps
-  - metrics
-  - notifications
-  - orgs
-  - packages
-  - portals
-  - profiles
-  - project-boards
-  - queues
-  - records
-  - records/links
-  - records/types
-  - reminders
-  - resources
-  - roles
-  - search
-  - sheets
-  - snippets
-  - tickets
-  - toolbars
-  - watchers
-  - webhooks
-  - workers
-  - workflows
-  - worklists
-  - workspaces
 
 - title: API
   docs:

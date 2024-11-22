@@ -28,7 +28,7 @@ jumbotron:
 
 - [Ben Halsted](http://www.linkedin.com/in/bhalsted)
 - [Brenan Cavish](http://www.linkedin.com/pub/brenan-cavish/21/a89/57b)
-- Corey Cohen
+- [Corey Cohen](https://www.linkedin.com/in/corey-cohen-33727a17/)
 - [Darren Sugita](http://www.linkedin.com/pub/darren-sugita/24/234/978)
 - [Jacob Cavish](https://www.linkedin.com/in/jacob-cavish-coding/)
 - [Jeremy Johnstone](http://www.linkedin.com/in/jsjohnst)
