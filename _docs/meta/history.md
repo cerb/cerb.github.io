@@ -12,7 +12,6 @@ summary: This page provides a comprehensive release history for Cerb, detailing 
   enhancement.
 permalink: /docs/history/
 redirect_from:
-- /versions/
 - /releases/
 jumbotron:
   title: Release History

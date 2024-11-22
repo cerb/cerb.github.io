@@ -16,8 +16,6 @@ layout: page
 permalink: /docs/home/
 redirect_from:
   - /docs/
-  - /book/
-  - /book/latest/
 toc:
   title: Introduction
 jumbotron:
