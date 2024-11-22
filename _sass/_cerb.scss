@@ -1,3 +1,8 @@
+@use "sass:color";
+@use "sass:math";
+@use "mixins" as m;
+@use "base" as base;
+
 html {
 	background-color: rgb(51,51,51);
 }
@@ -35,7 +40,7 @@ div.cerb-screenshot {
 	
 	img {
 		border:1px solid rgb(220,220,220);
-		@include border-radius(5px);
+		@include m.border-radius(5px);
 		
 		max-width: 100%;
 		height: auto;
@@ -49,7 +54,7 @@ div.cerb-screenshot {
 
 	video {
 		border:1px solid rgb(220,220,220);
-		@include border-radius(5px);
+		@include m.border-radius(5px);
 
 		max-width: 100%;
 		height: auto;
@@ -405,7 +410,7 @@ div.page-content {
 	aside {
 		//padding: 10px;
 		//background-color: #f5f5f5;
-		//@include border-radius(5px);
+		//@include m.border-radius(5px);
 	
 		h4 {
 			font-size: 16px;
@@ -560,9 +565,9 @@ div.pricing {
 		font-weight: 800;
 		text-decoration: none;
 		padding: 8px 12px 10px;
-		@include border-radius(5px);
+		@include m.border-radius(5px);
 		/*border: 1px solid #333;*/
-		//@include box-shadow(0 1px 3px rgba(0,0,0,.3), inset 0 1px 1px rgba(255,255,255,.5));
+		//@include m.box-shadow(0 1px 3px rgba(0,0,0,.3), inset 0 1px 1px rgba(255,255,255,.5));
 		background-color: #eee;
 	}
 
@@ -583,7 +588,7 @@ footer {
 	color: rgb(255,255,255);
 	text-shadow: rgb(32,32,32) 0 1px 0;
 	font-weight: 200;
-	padding: $spacing-unit/2 0;
+	padding: math.div(base.$spacing-unit, 2) 0;
 	background: url("/assets/images/home/email-meteors.png") no-repeat center center rgb(51,51,51);
 	background-size: cover;
 	width: 100%;
@@ -712,7 +717,7 @@ form.cerb-form {
 			padding: 10px;
 			color: rgb(121,159,68);
 			background-color:rgb(223,245,201);
-			@include border-radius(5px);
+			@include m.border-radius(5px);
 		}
 
 		div.warning {
@@ -720,7 +725,7 @@ form.cerb-form {
 			padding: 10px;
 			color: rgb(151,99,32);
 			background-color:rgb(252,240,187);
-			@include border-radius(5px);
+			@include m.border-radius(5px);
 		}
 		
 		div.error {
@@ -728,7 +733,7 @@ form.cerb-form {
 			padding: 10px;
 			color: rgb(150,0,0);
 			background-color: #ffc0c0;
-			@include border-radius(5px);
+			@include m.border-radius(5px);
 		}
 		
 	}
@@ -816,15 +821,15 @@ form.cerb-form {
 		font-size: 1.3em;
 		text-align: left;
 		font-style: normal;
-		border: 0; // 1px solid darken(rgb(110,160,50), 10%);
+		border: 0;
 		//border-width: 1px 1px 3px;
 		margin-bottom: 10px;
-		@include border-radius(5px);
+		@include m.border-radius(5px);
 	}
 	input[type="submit"]:hover,
 	input[type="button"]:hover
 	{
-		background: lighten(rgb(110,160,50), 5%);
+		background: color.adjust(rgb(110,160,50), $lightness: 5%);
 	}
 }
 
@@ -848,7 +853,7 @@ table.cerb-data-table {
 div.cerb-box {
 	padding: 10px 20px;
 	margin: 10px 0px;
-	@include border-radius(5px);
+	@include m.border-radius(5px);
 	
 	p {
 		margin: 0;

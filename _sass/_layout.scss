@@ -1,3 +1,7 @@
+@use "sass:math";
+@use "mixins" as m;
+@use "base" as base;
+
 /* Header */
 
 header {
@@ -20,7 +24,7 @@ nav {
 	
 	li {
 		a {
-			@include border-radius(5px);
+			@include m.border-radius(5px);
 			border: 1px solid transparent;
 			color: #222;
 			font-weight: 900;
@@ -85,8 +89,8 @@ nav {
  */
 
 .post-meta {
-	font-size: $small-font-size;
-	color: $grey-color;
+	font-size: base.$small-font-size;
+	color: base.$grey-color;
 }
 
 .post-link {
@@ -98,7 +102,7 @@ nav {
  * Posts
  */
 .post-header {
-	margin-bottom: $spacing-unit/3;
+	margin-bottom: math.div(base.$spacing-unit,3);
 }
 
 .post-title {
@@ -110,13 +114,13 @@ nav {
 		color: #000;
 	}
 
-	@include media-query($on-laptop) {
+	@include m.media-query(base.$on-laptop) {
 		font-size: 36px;
 	}
 }
 
 .post-content {
-	margin-bottom: $spacing-unit;
+	margin-bottom: base.$spacing-unit;
 
 	h1 {
 		margin-bottom: 5px;
@@ -125,7 +129,7 @@ nav {
 	h2 {
 		font-size: 32px;
 
-		@include media-query($on-laptop) {
+		@include m.media-query(base.$on-laptop) {
 			font-size: 28px;
 		}
 	}
@@ -133,7 +137,7 @@ nav {
 	h3 {
 		font-size: 26px;
 
-		@include media-query($on-laptop) {
+		@include m.media-query(base.$on-laptop) {
 			font-size: 22px;
 		}
 	}
@@ -141,7 +145,7 @@ nav {
 	h4 {
 		font-size: 20px;
 
-		@include media-query($on-laptop) {
+		@include m.media-query(base.$on-laptop) {
 			font-size: 18px;
 		}
 	}
