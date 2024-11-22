@@ -1,6 +1,7 @@
 ---
 title: Integrate with Office365
-excerpt: A step-by-step guide for integrating Cerb and Office365.
+excerpt: This page provides a detailed guide on integrating Cerb with Office365 by
+  configuring an Azure app and setting up Cerb.
 summary: This page provides a detailed guide on integrating Cerb with Office365 by
   configuring an Azure app and setting up Cerb. It includes step-by-step instructions
   for creating a new app and client secret in Azure, as well as creating a connected

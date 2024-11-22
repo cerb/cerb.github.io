@@ -1,6 +1,18 @@
 ---
 title: Authenticate worker single sign-on (SSO) from G Suite using SAML
-excerpt: A step-by-step guide for single sign-on authentication using G Suite accounts
+excerpt: This webpage provides a comprehensive guide on setting up single sign-on
+  (SSO) for Cerb using G Suite accounts through the SAML (Security Assertion Markup
+  Language) protocol.
+summary: This webpage provides a comprehensive guide on setting up single sign-on
+  (SSO) for Cerb using G Suite accounts through the SAML (Security Assertion Markup
+  Language) protocol. It details the step-by-step process of configuring G Suite to
+  create a SAML app, including obtaining Google IdP information, setting up service
+  provider details, and enabling the service for all users. The guide also covers
+  configuring Cerb to authenticate with G Suite SAML by creating a SAML service and
+  setting up SSO for worker logins. Finally, it explains how users can log in to Cerb
+  using their G Suite credentials, enabling seamless access with a single click as
+  long as they remain logged into G Suite.
+permalink: /guides/integrations/google/sso-saml/
 layout: integration
 topic: Integrations
 subtopic: Google
@@ -8,17 +20,13 @@ jumbotron:
   title: Authenticate worker single sign-on (SSO) from G Suite using SAML
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Google &raquo;
+  - label: Google &raquo;
     url: /resources/guides/#google
 ---
 

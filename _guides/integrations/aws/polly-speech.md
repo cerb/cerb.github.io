@@ -1,5 +1,18 @@
 ---
 title: Give Cerb bots the power of speech with Amazon Polly
+excerpt: This page provides a comprehensive guide on integrating Amazon Polly with
+  Cerb to enable text-to-speech capabilities for bots.
+summary: This page provides a comprehensive guide on integrating Amazon Polly with
+  Cerb to enable text-to-speech capabilities for bots. It details the process of creating
+  a connected account with Amazon Polly, setting up a delegate bot named Polly Bot
+  to manage credentials and provide text-to-speech services, and using this bot to
+  generate audio streams from text. The guide includes steps for configuring Amazon
+  Web Services, updating IAM policies, and creating and testing the Polly Bot within
+  Cerb. It also explains how to use Polly Bot in conversational bots to respond with
+  speech directly in a web browser, and offers insights into customizing and testing
+  the behavior using a bot simulator. The page concludes with references to AWS documentation
+  for further customization and understanding of Polly's capabilities.
+permalink: /guides/integrations/aws/polly-speech/
 layout: integration
 topic: Integrations
 subtopic: Amazon Web Services
@@ -7,17 +20,13 @@ jumbotron:
   title: Give Cerb bots the power of speech with Amazon Polly
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: AWS &raquo;
+  - label: AWS &raquo;
     url: /resources/guides/#amazon-web-services
 ---
 

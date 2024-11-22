@@ -1,6 +1,17 @@
 ---
-title: "Close idle tickets with bots"
-excerpt: "In this guide we'll create a bot that automatically closes tickets that have been waiting for a client reply for more than 30 days."
+title: Close idle tickets with bots
+excerpt: This webpage provides a comprehensive guide on creating and implementing
+  a bot in Cerb to automatically close idle tickets that have been waiting for a client
+  response for more than 30 days.
+summary: This webpage provides a comprehensive guide on creating and implementing
+  a bot in Cerb to automatically close idle tickets that have been waiting for a client
+  response for more than 30 days. It details the process of creating a new bot, importing
+  necessary behaviors, and understanding how these behaviors function together to
+  close tickets and notify clients. The guide also includes instructions for testing
+  the auto-close behavior and applying it retroactively to existing tickets. Additionally,
+  it suggests potential next steps, such as sending warning notifications to clients
+  before closing their tickets.
+permalink: /guides/bots/close-idle-tickets/
 layout: integration
 topic: Bots
 subtopic: Workflow Automation
@@ -8,14 +19,11 @@ jumbotron:
   title: Close idle tickets with bots
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Bots &raquo;
+  - label: Bots &raquo;
     url: /resources/guides/#bots
 ---
 

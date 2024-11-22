@@ -1,20 +1,28 @@
 ---
-title: "Translate Cerb to a new language"
-excerpt: Cerb includes a plugin for translating the UI into new languages. We offer a billing credit for sharing translation work.
+title: Translate Cerb to a new language
+excerpt: This page provides a comprehensive guide on translating Cerb's user interface
+  into new languages using the Translation Editor plugin.
+summary: This page provides a comprehensive guide on translating Cerb's user interface
+  into new languages using the Translation Editor plugin. It details the process of
+  enabling the plugin, creating a new language, and translating text using the built-in
+  translation editor. The guide also explains how to share translations in the TMX1
+  format, which can be imported by other Cerb users. Additionally, it offers a financial
+  incentive for translation work, with a billing credit of $0.50 USD per phrase. The
+  page includes step-by-step instructions for each part of the translation process,
+  from enabling the plugin to exporting the completed translations. References to
+  the TMX format are also provided for further understanding.
+permalink: /guides/localization/create-translation/
 layout: integration
 topic: Localization
 jumbotron:
   title: Translate Cerb to a new language
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Localization &raquo;
+  - label: Localization &raquo;
     url: /resources/guides/#localization
 ---
 

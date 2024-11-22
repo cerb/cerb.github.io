@@ -1,6 +1,18 @@
 ---
 title: Share secure access to a local development environment with ngrok
-excerpt: Ngrok creates a temporary public URL for sharing secure access to your local development environment.
+excerpt: This page provides a comprehensive guide on using ngrok to share secure access
+  to a local development environment.
+summary: This page provides a comprehensive guide on using ngrok to share secure access
+  to a local development environment. It covers the installation process for ngrok
+  on various operating systems, including Mac, Windows, Linux, and FreeBSD, and provides
+  instructions on starting ngrok to create a temporary public URL. The guide explains
+  how to test ngrok by accessing local applications like Cerb through the generated
+  URLs and highlights the benefits of using ngrok for testing webhooks. It also details
+  how to monitor ngrok connections using its web interface, which aids in debugging
+  by allowing inspection and replaying of requests. The page concludes with information
+  on ngrok's free and paid plans, outlining the limitations and benefits of each.
+  References to related tools like BrowserStack and Homebrew are also included.
+permalink: /guides/developers/ngrok/
 layout: integration
 topic: Developers
 subtopic: Tools
@@ -8,14 +20,11 @@ jumbotron:
   title: Share secure access to a local development environment with ngrok
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Developers &raquo;
+  - label: Developers &raquo;
     url: /resources/guides/#developers
 ---
 

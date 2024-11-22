@@ -1,6 +1,20 @@
 ---
 title: Synchronize Cerb ticket data to Salesforce objects
-excerpt: A step-by-step guide for synchronizing Cerb data into Salesforce custom objects
+excerpt: This webpage provides a comprehensive guide on synchronizing Cerb ticket
+  data with Salesforce objects.
+summary: This webpage provides a comprehensive guide on synchronizing Cerb ticket
+  data with Salesforce objects. It outlines the process of configuring the Salesforce
+  service, creating a new custom object in Salesforce for storing Cerb tickets, and
+  adding necessary custom fields. The guide details the steps to build a Salesforce
+  Bot in Cerb, including importing the Salesforce Bot package, modifying its configuration,
+  and setting up recurrent behaviors for ticket synchronization. It also covers testing
+  the synchronization process using a simulator, verifying the data in Salesforce,
+  and enabling the synchronization for regular updates. Additionally, the guide hints
+  at future enhancements for deeper integration between Cerb and Salesforce using
+  Salesforce Canvas and VisualForce. The document is intended for users of Cerb 8.1
+  or later and suggests testing in a Salesforce development sandbox before production
+  deployment.
+permalink: /guides/integrations/salesforce/sync-to-sobjects/
 layout: integration
 topic: Integrations
 subtopic: Salesforce
@@ -8,17 +22,13 @@ jumbotron:
   title: Synchronize Cerb ticket data to Salesforce objects
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Salesforce &raquo;
+  - label: Salesforce &raquo;
     url: /resources/guides/#salesforce
 ---
 

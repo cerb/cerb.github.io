@@ -1,6 +1,19 @@
 ---
 title: Run AWS Lambda functions from a Cerb bot
-excerpt: Add new capabilities to Cerb bots using Lambda from Amazon Web Services.
+excerpt: This page provides a comprehensive guide on how to run AWS Lambda functions
+  from a Cerb bot, enabling the automation of workflows that require external services
+  beyond Cerb's built-in capabilities.
+summary: This page provides a comprehensive guide on how to run AWS Lambda functions
+  from a Cerb bot, enabling the automation of workflows that require external services
+  beyond Cerb's built-in capabilities. It details the process of configuring Amazon
+  Web Services (AWS) within Cerb, creating and deploying a Lambda function, and updating
+  IAM policies to allow Cerb bots to invoke these functions. The guide includes a
+  step-by-step walkthrough for importing and testing an AWS Lambda Bot in Cerb, which
+  can perform DNS lookups by interacting with AWS Lambda. It also explains the underlying
+  mechanics of the bot's behaviors, including how it handles conversations, processes
+  inputs, and communicates with AWS Lambda through HTTP requests. The page concludes
+  with instructions on how to extend or modify the bot for additional functionalities.
+permalink: /guides/integrations/aws/lambda/
 layout: integration
 topic: Integrations
 subtopic: Amazon Web Services
@@ -8,17 +21,13 @@ jumbotron:
   title: Run AWS Lambda functions from a Cerb bot
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: AWS &raquo;
+  - label: AWS &raquo;
     url: /resources/guides/#amazon-web-services
 ---
 

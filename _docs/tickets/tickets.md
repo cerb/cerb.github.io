@@ -1,5 +1,17 @@
 ---
 title: Tickets
+excerpt: This page provides a comprehensive overview of the ticketing system in Cerb,
+  describing how tickets function as brief projects centered around specific questions
+  or issues.
+summary: This page provides a comprehensive overview of the ticketing system in Cerb,
+  describing how tickets function as brief projects centered around specific questions
+  or issues. It explains the organization of tickets into groups and buckets, the
+  role of participants and owners, and the use of unique reference masks for privacy.
+  The page details ticket statuses, including open, waiting for reply, closed, and
+  deleted, and discusses the importance of managing response times and ticket importance.
+  It also covers features like anti-spam measures, drafts, and the ability to merge
+  or split tickets. The system encourages efficient communication and collaboration
+  among workers while maintaining a streamlined workflow.
 permalink: /docs/tickets/
 toc:
   title: Tickets
@@ -7,8 +19,7 @@ jumbotron:
   title: Tickets
   tagline: Conversations with your audience
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
 ---
 

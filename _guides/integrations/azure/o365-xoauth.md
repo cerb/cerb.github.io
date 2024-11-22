@@ -1,6 +1,15 @@
 ---
-title: Authenticate an Office365 mailbox using XOAUTH2 
-excerpt: A step-by-step guide for using XOAUTH2 to authenticate against Office365 accounts
+title: Authenticate an Office365 mailbox using XOAUTH2
+excerpt: This page provides a comprehensive guide on how to authenticate an Office365
+  mailbox using XOAUTH2 in Cerb.
+summary: This page provides a comprehensive guide on how to authenticate an Office365
+  mailbox using XOAUTH2 in Cerb. It outlines the steps to configure an Azure app and
+  set up mail transport with specific details for SMTP settings. The guide also includes
+  instructions on configuring a mailbox in Cerb, testing the mailbox connection, and
+  ensuring proper functionality by running the scheduler. The document emphasizes
+  the transition from legacy passwords to OAuth2 access tokens for Office365, highlighting
+  Cerb's support for XOAUTH2 authentication since version 9.6.
+permalink: /guides/integrations/azure/o365-xoauth/
 social_image_url: /assets/images/guides/azure/cerb-and-azure.png
 layout: integration
 topic: Integrations
@@ -9,17 +18,13 @@ jumbotron:
   title: Authenticate an Office365 mailbox using XOAUTH2
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Azure &raquo;
+  - label: Azure &raquo;
     url: /resources/guides/#azure
 ---
 

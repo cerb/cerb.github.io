@@ -1,22 +1,28 @@
 ---
 title: Configure webhooks
-excerpt: Webhooks provide a way to trigger bot behaviors when external events occur in other applications and services.
+excerpt: This page provides a comprehensive guide on configuring webhooks in Cerb.
+summary: This page provides a comprehensive guide on configuring webhooks in Cerb.
+  It covers enabling the webhooks plugin, importing an automation to handle webhooks,
+  creating a webhook, and testing it using a web browser or cURL. The guide explains
+  how webhooks can trigger automations in response to external events from applications
+  like Freshbooks, GitHub, Twilio, and Zapier. It includes detailed steps for setting
+  up and testing webhooks, as well as suggestions for next steps, such as adding new
+  actions or registering the webhook URL with external services. References to Wikipedia
+  articles on webhooks and HTTP POST are also provided for further reading.
+permalink: /guides/webhooks/configure/
 layout: integration
 topic: Webhooks
 redirect_from:
-  - /guides/webhooks/
+- /guides/webhooks/
 jumbotron:
   title: Configure webhooks
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Webhooks &raquo;
+  - label: Webhooks &raquo;
     url: /resources/guides/#webhooks
 ---
 

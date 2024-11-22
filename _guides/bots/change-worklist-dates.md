@@ -1,6 +1,16 @@
 ---
-title: "Change how dates are displayed in worklists using bots"
-excerpt: "This guide demonstrates how to modify the style and content of worklists using bot behaviors."
+title: Change how dates are displayed in worklists using bots
+excerpt: This page provides a detailed guide on how to change the date display format
+  in Cerb worklists from relative to absolute using bot behaviors.
+summary: This page provides a detailed guide on how to change the date display format
+  in Cerb worklists from relative to absolute using bot behaviors. It includes instructions
+  on importing and implementing a specific bot behavior that modifies the display
+  of created and updated dates in ticket worklists. The guide explains the process
+  of creating or selecting a bot, importing the behavior script, and testing it on
+  a worklist. It also offers an in-depth explanation of how the behavior works, utilizing
+  a decision tree and jQuery script to swap relative and absolute dates. Additionally,
+  references to jQuery and the Document Object Model are provided for further understanding.
+permalink: /guides/bots/change-worklist-dates/
 layout: integration
 topic: Bots
 subtopic: UI Customization
@@ -8,14 +18,11 @@ jumbotron:
   title: Change how dates are displayed in worklists using bots
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Bots &raquo;
+  - label: Bots &raquo;
     url: /resources/guides/#bots
 ---
 

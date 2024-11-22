@@ -1,6 +1,20 @@
 ---
 title: Build a question answering chat bot with Cerb and ChatGPT
-excerpt: We're going to build a chat bot that answers questions from a FAQ stored in Cerb. We'll index our FAQ for semantic search, and use that to teach ChatGPT new facts and improve its accuracy for niche topics it wasn't trained on.
+excerpt: This webpage provides a comprehensive guide on building a question-answering
+  chatbot using Cerb and ChatGPT, focusing on semantic search and retrieval-augmented
+  generation.
+summary: This webpage provides a comprehensive guide on building a question-answering
+  chatbot using Cerb and ChatGPT, focusing on semantic search and retrieval-augmented
+  generation. It explains the concept of semantic search, the role of large language
+  models (LLMs), and the use of text embeddings to compare text similarity. The guide
+  details the process of connecting to the OpenAI API, creating a chatbot (Beethoven
+  Bot) for answering FAQs, and managing FAQs within Cerb. It also covers importing
+  FAQ data, testing semantic search, and customizing the chatbot. Additionally, it
+  provides instructions for creating a new FAQ bot on a different topic, customizing
+  bot features, and scaling for larger FAQs or high-traffic scenarios using vector
+  databases. The guide is designed for administrators using Cerb 10.4.3 or later and
+  includes practical steps for implementing and testing the chatbot functionality.
+permalink: /guides/machine-learning/question-answering/faq-bot-chatgpt/
 layout: integration
 topic: Machine Learning
 subtopic: Question Answering
@@ -9,17 +23,13 @@ jumbotron:
   title: Build a question answering chat bot with Cerb and ChatGPT
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Machine Learning &raquo;
+  - label: Machine Learning &raquo;
     url: /resources/guides/#machine-learning
-  -
-    label: Question Answering &raquo;
+  - label: Question Answering &raquo;
     url: /resources/guides/#machine-learning-question-answering
 ---
 

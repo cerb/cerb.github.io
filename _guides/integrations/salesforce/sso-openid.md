@@ -1,6 +1,18 @@
 ---
 title: Authenticate worker single sign-on (SSO) from Salesforce using OpenID Connect
-excerpt: A step-by-step guide for single sign-on authentication using Salesforce accounts
+excerpt: This webpage provides a comprehensive guide on setting up single sign-on
+  (SSO) for Cerb workers using Salesforce as an identity provider through the OpenID
+  Connect (OIDC) standard.
+summary: This webpage provides a comprehensive guide on setting up single sign-on
+  (SSO) for Cerb workers using Salesforce as an identity provider through the OpenID
+  Connect (OIDC) standard. It details the steps to configure Salesforce as an OpenID
+  Connect identity provider, including setting up a connected app for Cerb and obtaining
+  necessary OAuth credentials. The guide also explains how to configure Cerb to authenticate
+  with Salesforce by creating an OpenID service and enabling SSO. The process involves
+  associating Salesforce accounts with Cerb worker records and potentially disabling
+  password-based logins for enhanced security. The guide ensures a seamless login
+  experience for users by allowing them to authenticate using their Salesforce credentials.
+permalink: /guides/integrations/salesforce/sso-openid/
 layout: integration
 topic: Integrations
 subtopic: Salesforce
@@ -8,17 +20,13 @@ jumbotron:
   title: Authenticate worker single sign-on (SSO) from Salesforce using OpenID Connect
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Salesforce &raquo;
+  - label: Salesforce &raquo;
     url: /resources/guides/#salesforce
 ---
 

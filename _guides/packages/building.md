@@ -1,6 +1,19 @@
 ---
 title: Build a new package
-excerpt: Packages are a blueprint for importing a related set of pre-configured records.
+excerpt: This webpage provides a comprehensive guide on building packages in Cerb,
+  which are blueprints for importing pre-configured records like workspaces, dashboards,
+  and bots.
+summary: This webpage provides a comprehensive guide on building packages in Cerb,
+  which are blueprints for importing pre-configured records like workspaces, dashboards,
+  and bots. It details the structure of a package using JSON format, including sections
+  for records and bots, and explains the use of scripting and placeholders for dynamic
+  content. The page also covers the Package Library, where pre-approved packages can
+  be stored and accessed, and discusses making packages configurable through built-in
+  placeholders and prompts, such as text entries, picklists, and choosers. Additionally,
+  it provides examples of using random code generators and data queries within packages.
+  The guide concludes with next steps for adding records to packages and importing
+  them, along with references for further reading.
+permalink: /guides/packages/building/
 social_image_url: /assets/images/guides/packages/packages.png
 layout: integration
 topic: Packages
@@ -8,14 +21,11 @@ jumbotron:
   title: Building packages
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Packages &raquo;
+  - label: Packages &raquo;
     url: /resources/guides/#packages
 ---
 

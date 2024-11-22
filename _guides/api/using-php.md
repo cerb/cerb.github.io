@@ -1,20 +1,27 @@
 ---
-title: "Get started with the API using the PHP library"
-excerpt: This step-by-step guide demonstrates how to use Cerb's PHP library to interact with the API.
+title: Get started with the API using the PHP library
+excerpt: This webpage provides a comprehensive guide on how to get started with the
+  Cerb API using a PHP library.
+summary: This webpage provides a comprehensive guide on how to get started with the
+  Cerb API using a PHP library. It covers essential steps such as creating an API
+  key-pair, setting up a sample PHP project, and sending requests to the Cerb API.
+  The guide includes detailed instructions on running a search for open tickets, creating
+  a task, and marking the task as completed. It also provides code snippets and expected
+  JSON responses for each action, ensuring users can effectively interact with the
+  Cerb API. The page concludes with a suggestion to consult the API documentation
+  for further exploration of available requests.
+permalink: /guides/api/using-php/
 layout: integration
 topic: API
 jumbotron:
   title: Get started with the API using the PHP library
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /resources/guides/#api
 ---
 

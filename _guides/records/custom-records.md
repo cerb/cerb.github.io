@@ -1,6 +1,18 @@
 ---
-title: "Create custom records"
-excerpt: New record types can be created in the browser without writing code. These have all the functionality of built-in records.
+title: Create custom records
+excerpt: This webpage provides a comprehensive guide on creating custom records in
+  Cerb, focusing on the fundamental concept of record keeping and its evolution within
+  the platform.
+summary: This webpage provides a comprehensive guide on creating custom records in
+  Cerb, focusing on the fundamental concept of record keeping and its evolution within
+  the platform. It highlights the ability to create new record types directly from
+  a web browser, eliminating the need for plugins or developers. The guide uses an
+  academic setting as an example, detailing the process of creating custom records
+  for instructors, rooms, and courses, and adding fields to these records. It also
+  covers setting default card fields, performing deep searches, and linking records
+  to enhance team collaboration and workflow automation. The page emphasizes the flexibility
+  and ease of customizing Cerb to fit specific industry needs.
+permalink: /guides/records/custom-records/
 layout: integration
 topic: Records
 subtopic: Custom Records
@@ -8,14 +20,11 @@ jumbotron:
   title: Create custom records
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Records &raquo;
+  - label: Records &raquo;
     url: /resources/guides/#records
 ---
 

@@ -1,5 +1,18 @@
 ---
 title: Send commands to a Cerb bot using Slack
+excerpt: This page provides a detailed guide on integrating Cerb with Slack using
+  Slack's slash commands feature.
+summary: This page provides a detailed guide on integrating Cerb with Slack using
+  Slack's slash commands feature. It outlines the steps to enable the webhooks plugin
+  in Cerb, create a bot behavior for handling webhook events, and set up a new webhook
+  in Cerb. The guide also explains how to add a new slash command in Slack that triggers
+  the Cerb bot, allowing users to send commands like "/cerb" to interact with Cerb
+  through Slack. Additionally, it offers suggestions for expanding the bot's capabilities,
+  such as personalizing interactions and using natural language processing to understand
+  various user intents. The page serves as a comprehensive resource for setting up
+  and testing the integration, with potential for further customization and functionality
+  enhancements.
+permalink: /guides/integrations/slack/slash-commands/
 layout: integration
 topic: Integrations
 subtopic: Slack
@@ -7,17 +20,13 @@ jumbotron:
   title: Send commands to a Cerb bot using Slack
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Slack &raquo;
+  - label: Slack &raquo;
     url: /resources/guides/#slack
 ---
 

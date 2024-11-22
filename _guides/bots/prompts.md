@@ -1,6 +1,18 @@
 ---
 title: Prompt for input from conversational bots
-excerpt: You can now format, validate, and save a copy of responses within the prompt action itself.
+excerpt: This webpage provides a comprehensive guide on configuring various types
+  of prompts for conversational bots in Cerb.
+summary: This webpage provides a comprehensive guide on configuring various types
+  of prompts for conversational bots in Cerb. It covers different prompt types such
+  as buttons, chooser, date input, file upload, images, text input, and wait prompts,
+  detailing how each can be set up and utilized to collect user input effectively.
+  The page also explains how to save responses to placeholders, format them using
+  templates, and validate them to ensure correct data entry. Additionally, it offers
+  practical examples for formatting and validation, such as formatting numbers and
+  dates, and validating dates, numbers, and email addresses. The guide emphasizes
+  the improvements made in the 8.3.1 update, which simplified the process of formatting,
+  validating, and saving responses within the prompt action itself.
+permalink: /guides/bots/prompts/
 social_image_url: /assets/images/guides/bots/prompts/prompts.png
 layout: integration
 topic: Bots
@@ -9,17 +21,13 @@ jumbotron:
   title: Prompting for user input
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Bots &raquo;
+  - label: Bots &raquo;
     url: /resources/guides/#bots
-  -
-    label: Conversational Bots &raquo;
+  - label: Conversational Bots &raquo;
     url: /resources/guides/#bots-conversational-bots
 ---
 

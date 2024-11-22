@@ -1,20 +1,29 @@
 ---
-title: "Import a translation language pack"
-excerpt: The text within Cerb's interface can be translated into any language. This guide walks through the process of installing a new language pack.
+title: Import a translation language pack
+excerpt: This page provides a comprehensive guide on importing a translation language
+  pack into Cerb.
+summary: This page provides a comprehensive guide on importing a translation language
+  pack into Cerb. It covers enabling the Translation Editor plugin, downloading and
+  importing language packs, and configuring language preferences for both personal
+  and other users' settings. The guide explains the format and naming conventions
+  of language packs, which are shared as `.xml` files in the TMX1 format, and provides
+  examples of language codes using ISO standards. Additionally, it offers instructions
+  on how to enable the necessary plugin, download available language packs, and import
+  them into the system. The page also includes references to relevant Wikipedia articles
+  for further information on translation memory exchange and ISO language and country
+  codes.
+permalink: /guides/localization/import-translation/
 layout: integration
 topic: Localization
 jumbotron:
   title: Import a translation language pack
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Localization &raquo;
+  - label: Localization &raquo;
     url: /resources/guides/#localization
 ---
 

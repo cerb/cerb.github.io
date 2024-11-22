@@ -1,22 +1,35 @@
 ---
 title: Scalable automatic ticket assignment without worklists
-excerpt: "Use explore mode automations to receive a continuous set of assignments without digging through shared worklists and colliding with other workers. Capture and report on the exact reason a worker can't complete an assignment."
+excerpt: This page provides a comprehensive guide on implementing scalable automatic
+  ticket assignment in Cerb without relying on worklists.
+summary: This page provides a comprehensive guide on implementing scalable automatic
+  ticket assignment in Cerb without relying on worklists. It introduces a workflow
+  that allows workers to efficiently receive their next ticket assignment through
+  a simple "Start work" button, ensuring that assignments are triaged based on customizable
+  business logic such as service-level agreements and ticket importance. The guide
+  details the process of setting up this system, including importing a pre-built package,
+  configuring assignment rejection reasons, and customizing the assignment logic.
+  It emphasizes the benefits of this approach, such as reducing ticket cherry-picking,
+  improving customer satisfaction, and providing managers with insights into assignment
+  patterns. The page also outlines the necessary Cerb features and automations required
+  to build this workflow, ensuring a seamless and efficient ticket handling process
+  for workers.
+permalink: /guides/automations/interaction.worker.explore/auto-assignment/
 social_image_url: /assets/images/guides/automations/interaction.worker.explore/auto-assignment/explore-next.png
 layout: integration
 topic: Automations
 subtopic: interaction.worker.explore
 jumbotron:
   title: Scalable automatic ticket assignment without worklists
-  tagline: "Use explore mode automations to receive a continuous set of assignments without digging through shared worklists and colliding with other workers. Capture and report on the exact reason a worker can't complete an assignment."
+  tagline: Use explore mode automations to receive a continuous set of assignments
+    without digging through shared worklists and colliding with other workers. Capture
+    and report on the exact reason a worker can't complete an assignment.
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /resources/guides/#automations
 ---
 

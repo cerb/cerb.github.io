@@ -1,6 +1,17 @@
 ---
 title: Authenticate worker single sign-on (SSO) from Okta using OpenID Connect
-excerpt: A step-by-step guide for single sign-on authentication using Okta accounts
+excerpt: This page provides a comprehensive guide on setting up single sign-on (SSO)
+  for Cerb workers using Okta as an identity provider through the OpenID Connect (OIDC)
+  standard.
+summary: This page provides a comprehensive guide on setting up single sign-on (SSO)
+  for Cerb workers using Okta as an identity provider through the OpenID Connect (OIDC)
+  standard. It details the steps to configure Okta as an OpenID Connect identity provider,
+  including creating an app integration and obtaining necessary credentials like the
+  Client ID, Client Secret, and Issuer URL. The guide also explains how to configure
+  Cerb to authenticate with Okta by creating an OpenID service, setting up SSO, and
+  logging in. It emphasizes the need to associate Okta email addresses with Cerb worker
+  records and offers the option to disable password-based logins for enhanced security.
+permalink: /guides/integrations/okta/sso-openid/
 social_image_url: /assets/images/guides/okta/cerb-and-okta.png
 layout: integration
 topic: Integrations
@@ -9,17 +20,13 @@ jumbotron:
   title: Authenticate worker single sign-on (SSO) from Okta using OpenID Connect
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Okta &raquo;
+  - label: Okta &raquo;
     url: /resources/guides/#okta
 ---
 

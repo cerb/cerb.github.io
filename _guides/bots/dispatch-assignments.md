@@ -1,6 +1,17 @@
 ---
-title: "Dispatch assignments to available workers using bots"
-excerpt: In this guide we'll build a dispatcher bot that assigns new tickets to available group members using a round-robin rotation.
+title: Dispatch assignments to available workers using bots
+excerpt: This webpage provides a comprehensive guide on automating the dispatch of
+  assignments to available workers using bots in Cerb.
+summary: This webpage provides a comprehensive guide on automating the dispatch of
+  assignments to available workers using bots in Cerb. It introduces the concept of
+  a dispatcher bot that assigns new tickets to group members based on their availability,
+  determined by their calendars, using a round-robin rotation. The guide details the
+  process of importing and configuring the behavior, understanding its operation,
+  and testing it through simulation. It also discusses potential enhancements, such
+  as requiring a quorum for assignments, expanding auto-assignment beyond the inbox,
+  and notifying workers through various channels. The page serves as a starting point
+  for users to develop their own automated dispatch systems within Cerb.
+permalink: /guides/bots/dispatch-assignments/
 layout: integration
 topic: Bots
 subtopic: Workflow Automation
@@ -8,14 +19,11 @@ jumbotron:
   title: Dispatch assignments to available workers using bots
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Bots &raquo;
+  - label: Bots &raquo;
     url: /resources/guides/#bots
 ---
 

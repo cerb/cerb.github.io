@@ -1,6 +1,16 @@
 ---
-title: "Send automatic replies from bots"
-excerpt: Bots can send personalized automatic responses to clients. They can even predict the sender's intent and offer suggestions before you've read the message.
+title: Send automatic replies from bots
+excerpt: This page provides a comprehensive guide on setting up automatic replies
+  using bots in Cerb.
+summary: This page provides a comprehensive guide on setting up automatic replies
+  using bots in Cerb. It covers the creation and understanding of behaviors for sending
+  personalized automatic responses to new email messages, while avoiding responses
+  to automated senders. The guide includes detailed instructions on configuring decision
+  trees and actions within the bot, such as using placeholders for personalization
+  and adding custom headers to indicate automated replies. Additionally, it touches
+  on advanced topics like improving detection of automated senders and using mail
+  templates for sending messages with company branding.
+permalink: /guides/bots/send-automatic-replies/
 layout: integration
 topic: Bots
 subtopic: Mail
@@ -8,14 +18,11 @@ jumbotron:
   title: Send automatic replies from bots
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Bots &raquo;
+  - label: Bots &raquo;
     url: /resources/guides/#bots
 ---
 

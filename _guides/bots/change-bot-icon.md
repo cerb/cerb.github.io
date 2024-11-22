@@ -1,6 +1,17 @@
 ---
 title: Change the bot icon on your website
-excerpt: You can change the bot icon on your website by adding a new rule to your stylesheet.
+excerpt: This page provides instructions on how to change the default bot icon on
+  a website when using Cerb's conversational bot.
+summary: This page provides instructions on how to change the default bot icon on
+  a website when using Cerb's conversational bot. It explains that the default icon
+  appears in the lower right corner of a website and can be customized by modifying
+  the website's stylesheet. The customization involves adding a new rule for the CSS
+  selector `#cerb-bot-interaction-button .cerb-bot-interaction-button-icon` and specifying
+  a new `background-image`, which can be a URL or a base64-encoded image. The page
+  also includes an example of changing the icon to a question mark, providing the
+  necessary CSS code snippet for implementation. For optimal results, it is recommended
+  to use an image with square dimensions.
+permalink: /guides/bots/change-bot-icon/
 layout: integration
 topic: Bots
 subtopic: Conversational Bots
@@ -8,14 +19,11 @@ jumbotron:
   title: Change the bot icon on your website
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Bots &raquo;
+  - label: Bots &raquo;
     url: /resources/guides/#bots
 ---
 

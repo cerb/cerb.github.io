@@ -1,6 +1,16 @@
 ---
 title: Synchronize Salesforce accounts to Cerb organizations
-excerpt: A step-by-step guide for synchronizing changes on Salesforce accounts to Cerb organizations
+excerpt: This webpage provides a comprehensive guide for integrating Salesforce with
+  Cerb to synchronize account changes with Cerb organization records.
+summary: This webpage provides a comprehensive guide for integrating Salesforce with
+  Cerb to synchronize account changes with Cerb organization records. It includes
+  detailed instructions on authorizing a remote site in Salesforce, importing an example
+  package in Cerb, creating an Apex class and trigger in Salesforce, and testing the
+  webhook. The guide emphasizes the importance of setting up the integration in a
+  Salesforce development sandbox before deploying it in a production environment.
+  It also provides specific code snippets and configuration steps to ensure seamless
+  data synchronization between Salesforce and Cerb.
+permalink: /guides/integrations/salesforce/sync-accounts/
 layout: integration
 topic: Integrations
 subtopic: Salesforce
@@ -8,17 +18,13 @@ jumbotron:
   title: Synchronize Salesforce accounts to Cerb organizations
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Salesforce &raquo;
+  - label: Salesforce &raquo;
     url: /resources/guides/#salesforce
 ---
 

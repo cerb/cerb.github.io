@@ -1,20 +1,26 @@
 ---
 title: Create a new Support Center community portal
-excerpt: This guide provides step-by-step instructions for creating a new Support Center portal.
+excerpt: This page provides a comprehensive guide on setting up a new Support Center
+  community portal in Cerb.
+summary: This page provides a comprehensive guide on setting up a new Support Center
+  community portal in Cerb. It covers the installation of the Support Center plugin,
+  the creation of a new community portal, and the configuration of the Support Center,
+  including branding and module setup. The guide concludes with instructions on deploying
+  the Support Center, ensuring that users can effectively manage customer interactions
+  through announcements, knowledgebase searches, contact forms, profile management,
+  and ticket history reviews.
+permalink: /guides/portals/support-center/
 layout: integration
 topic: Portals
 jumbotron:
   title: Create a new Support Center community portal
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Portals &raquo;
+  - label: Portals &raquo;
     url: /resources/guides/#portals
 ---
 

@@ -1,6 +1,16 @@
 ---
-title: "Relay worker comment notifications to email"
-excerpt: In this guide we'll build a worker-owned bot for instantly relaying new notifications to email. This can be customized to notify in various ways (Slack, SMS, etc).
+title: Relay worker comment notifications to email
+excerpt: This webpage provides a comprehensive guide on setting up a worker-owned
+  bot in Cerb to relay comment notifications to email.
+summary: This webpage provides a comprehensive guide on setting up a worker-owned
+  bot in Cerb to relay comment notifications to email. It covers the process of importing
+  a pre-built behavior, understanding its functionality, and testing it to ensure
+  it works as intended. The guide explains how to customize the behavior to suit individual
+  worker preferences, such as sending notifications via Slack or SMS instead of email.
+  It also includes detailed instructions on scripting within the behavior to extract
+  and utilize comment data. The page concludes with suggestions for further customization
+  and implementation strategies for administrators.
+permalink: /guides/bots/relay-comment-notifications-email/
 layout: integration
 topic: Bots
 subtopic: Mail
@@ -8,14 +18,11 @@ jumbotron:
   title: Relay worker comment notifications to email
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Bots &raquo;
+  - label: Bots &raquo;
     url: /resources/guides/#bots
 ---
 

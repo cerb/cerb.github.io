@@ -1,6 +1,18 @@
 ---
 title: Import a package
-excerpt: Packages can be imported from setup, bots, and the API.
+excerpt: This page provides a comprehensive guide on importing packages into Cerb,
+  detailing what packages are and how they function as blueprints for importing pre-configured
+  records like workspaces, dashboards, and bots.
+summary: 'This page provides a comprehensive guide on importing packages into Cerb,
+  detailing what packages are and how they function as blueprints for importing pre-configured
+  records like workspaces, dashboards, and bots. It explains the process of importing
+  packages through different methods: directly from the setup interface, using bots,
+  and via the API. The guide includes step-by-step instructions for each method, such
+  as copying a package, pasting it into the appropriate field, and configuring any
+  necessary options. It also describes how bots can automate package imports and how
+  the API can be used for programmatic imports, providing examples and JSON structures
+  to facilitate understanding.'
+permalink: /guides/packages/importing/
 social_image_url: /assets/images/guides/packages/packages.png
 layout: integration
 topic: Packages
@@ -8,14 +20,11 @@ jumbotron:
   title: Importing packages
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Packages &raquo;
+  - label: Packages &raquo;
     url: /resources/guides/#packages
 ---
 

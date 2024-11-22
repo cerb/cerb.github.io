@@ -1,6 +1,16 @@
 ---
-title: "Detect automated messages"
-excerpt: In this example we'll create a reusable bot behavior that can check the most common headers on a message to see if it came from an automated sender.
+title: Detect automated messages
+excerpt: This page provides a comprehensive guide on detecting automated messages
+  in Cerb to prevent unnecessary auto-replies and potential mail loops.
+summary: This page provides a comprehensive guide on detecting automated messages
+  in Cerb to prevent unnecessary auto-replies and potential mail loops. It explains
+  the importance of identifying automated responses, such as "Out of Office" messages,
+  and outlines how to import and implement a reusable bot behavior to check for common
+  headers indicating an auto-reply. The guide includes detailed instructions on importing
+  the behavior, understanding its decision tree, and integrating it with other bots
+  to ensure they do not respond to automated messages. Additionally, it references
+  RFC-3834 for best practices in handling automatic email responses.
+permalink: /guides/bots/detect-automated-messages/
 layout: integration
 topic: Bots
 subtopic: Mail
@@ -8,14 +18,11 @@ jumbotron:
   title: Detect automated messages
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Bots &raquo;
+  - label: Bots &raquo;
     url: /resources/guides/#bots
 ---
 

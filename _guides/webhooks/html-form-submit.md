@@ -1,19 +1,28 @@
 ---
 title: Submit web forms directly to bots in Cerb
+excerpt: This page provides a detailed guide on how to submit web forms directly to
+  bot behaviors in Cerb using custom webhook URLs.
+summary: This page provides a detailed guide on how to submit web forms directly to
+  bot behaviors in Cerb using custom webhook URLs. It explains the process of enabling
+  the Webhooks plugin, creating bot behaviors, and setting up new webhooks in Cerb.
+  The guide includes instructions for building a simple contact form on a static website,
+  which can validate form fields, handle CORS access control, and verify CAPTCHA challenges.
+  It also covers testing form validation and success, restricting access to webhook
+  URLs, and enhancing security with reCAPTCHA and proxy configurations. The page is
+  aimed at users who want to maintain the benefits of a static site while leveraging
+  Cerb's automation capabilities for form processing.
+permalink: /guides/webhooks/html-form-submit/
 layout: integration
 topic: Webhooks
 jumbotron:
   title: Submit web forms directly to bots in Cerb
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Webhooks &raquo;
+  - label: Webhooks &raquo;
     url: /resources/guides/#webhooks
 ---
 

@@ -1,6 +1,19 @@
 ---
 title: Create a reusable set of related records in a single package
-excerpt: You can include any number of records in a single package and define how they relate to each other.
+excerpt: This page provides a comprehensive guide on creating reusable packages of
+  related records in Cerb.
+summary: This page provides a comprehensive guide on creating reusable packages of
+  related records in Cerb. It explains how to include various records such as tickets,
+  messages, senders, and attachments in a single package, and how these records can
+  be interconnected using unique identifiers (UIDs). The guide details the structure
+  of a package in JSON format, highlighting the use of UIDs for linking records, setting
+  custom fields, and creating links between records. It also covers the modification
+  of automation events and toolbars within packages. An example is provided to illustrate
+  the creation of a new ticket with associated messages and attachments, demonstrating
+  the use of placeholders and scripting syntax for dynamic content. This approach
+  streamlines the process of creating complex records and enhances automation capabilities
+  in Cerb.
+permalink: /guides/packages/create-records/
 social_image_url: /assets/images/guides/packages/packages.png
 layout: integration
 topic: Packages
@@ -8,14 +21,11 @@ jumbotron:
   title: Create a reusable set of related records in a single package
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Packages &raquo;
+  - label: Packages &raquo;
     url: /resources/guides/#packages
 ---
 

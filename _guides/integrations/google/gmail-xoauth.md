@@ -1,6 +1,16 @@
 ---
-title: Authenticate a Gmail mailbox using IMAP and XOAUTH2 
-excerpt: A step-by-step guide for using XOAUTH2 to authenticate against Gmail IMAP accounts
+title: Authenticate a Gmail mailbox using IMAP and XOAUTH2
+excerpt: This page provides a detailed guide on how to authenticate a Gmail mailbox
+  using IMAP and XOAUTH2 in Cerb.
+summary: This page provides a detailed guide on how to authenticate a Gmail mailbox
+  using IMAP and XOAUTH2 in Cerb. It explains the necessity of using OAuth2 access
+  tokens for Gmail authentication due to Google's retirement of passwords for POP3
+  and IMAP connections. The guide includes steps for configuring Google APIs and setting
+  up a Gmail mailbox in Cerb, detailing the necessary settings such as protocol, host,
+  and port. It also covers testing the mailbox connection to ensure successful authentication
+  and proper functioning, including running the scheduler to verify the mailbox setup
+  and process new messages.
+permalink: /guides/integrations/google/gmail-xoauth/
 social_image_url: /assets/images/guides/google/cerb-and-google.png
 layout: integration
 topic: Integrations
@@ -9,17 +19,13 @@ jumbotron:
   title: Authenticate a Gmail mailbox using IMAP and XOAUTH2
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Google &raquo;
+  - label: Google &raquo;
     url: /resources/guides/#google
 ---
 

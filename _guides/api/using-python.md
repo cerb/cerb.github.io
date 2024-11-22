@@ -1,20 +1,27 @@
 ---
-title: "Get started with the API using the Python"
-excerpt: This step-by-step guide demonstrates how to use Python to interact with the Cerb API.
+title: Get started with the API using the Python
+excerpt: This webpage provides a comprehensive guide on how to get started with the
+  Cerb API using Python.
+summary: 'This webpage provides a comprehensive guide on how to get started with the
+  Cerb API using Python. It includes detailed instructions on creating an OAuth app
+  in Cerb to generate client credentials, setting up OAuth2 variables, and optionally
+  disabling SSL for test environments. The guide explains how to handle token persistence
+  and offers two methods for generating tokens: using a pre-generated token or through
+  3-legged interactive web authentication. It also covers making requests to the Cerb
+  API and displaying the response. The page concludes with a suggestion to refer to
+  the API documentation for further exploration of possible requests.'
+permalink: /guides/api/using-python/
 layout: integration
 topic: API
 jumbotron:
   title: Get started with the API using Python
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /resources/guides/#api
 ---
 

@@ -1,27 +1,33 @@
 ---
-title: "Create profile images with Stable Diffusion"
-excerpt: In this guide we'll use the Stable Diffusion API to generate profile images for workers, groups, roles, etc.
+title: Create profile images with Stable Diffusion
+excerpt: This webpage provides a comprehensive guide on using Stable Diffusion to
+  create profile images within Cerb, requiring version 10.4.2 or later.
+summary: This webpage provides a comprehensive guide on using Stable Diffusion to
+  create profile images within Cerb, requiring version 10.4.2 or later. It outlines
+  the steps to create a Stability.ai account, generate an API key, and set up a connected
+  service in Cerb. The guide details importing a package to facilitate the integration
+  and modifying the toolbar to include a Stable Diffusion interaction. Users are instructed
+  on how to generate profile images by providing text prompts, with the option to
+  select from multiple generated images. The page also includes references to Stable
+  Diffusion's background and additional resources.
+permalink: /guides/machine-learning/image-generation/stable-diffusion-profile-images/
 layout: integration
 topic: Machine Learning
 subtopic: Image Generation
 social_image_url: /assets/images/guides/automations/stable-diffusion-images/ai-profile-editor.png
 redirect_from:
-  - /guides/automations/stable-diffusion-profile-images/
+- /guides/automations/stable-diffusion-profile-images/
 jumbotron:
   title: Create profile images with Stable Diffusion
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Machine Learning &raquo;
+  - label: Machine Learning &raquo;
     url: /resources/guides/#machine-learning
-  -
-    label: Image Generation &raquo;
+  - label: Image Generation &raquo;
     url: /resources/guides/#machine-learning-image-generation
 ---
 

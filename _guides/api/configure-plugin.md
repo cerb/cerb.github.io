@@ -1,20 +1,26 @@
 ---
-title: "Configure the REST API plugin"
-excerpt: The REST API plugin provides the ability to remote control Cerb from other apps and services.
+title: Configure the REST API plugin
+excerpt: This page provides a detailed guide on configuring the REST API plugin for
+  Cerb.
+summary: This page provides a detailed guide on configuring the REST API plugin for
+  Cerb. It covers the steps to enable the API plugin, generate an API key-pair, and
+  view the key-pair. The guide explains how to navigate the Cerb interface to enable
+  the Web Services API plugin, create new API credentials, and manage permissions
+  for API requests. It also includes instructions on how to restrict API access to
+  specific endpoints. Additionally, the page offers a resource link to a Wikipedia
+  article on Representational State Transfer (REST) for further reading.
+permalink: /guides/api/configure-plugin/
 layout: integration
 topic: API
 jumbotron:
   title: Configure the REST API plugin
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: API &raquo;
+  - label: API &raquo;
     url: /resources/guides/#api
 ---
 

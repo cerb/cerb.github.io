@@ -1,6 +1,7 @@
 ---
 title: Generate a PGP key-pair for encryption
-excerpt: '...'
+excerpt: This page provides a comprehensive guide on generating and managing PGP key-pairs
+  for encryption within Cerb.
 summary: This page provides a comprehensive guide on generating and managing PGP key-pairs
   for encryption within Cerb. It explains that Cerb has eliminated the need for the
   GnuPG PHP extension, allowing PGP key-pairs to be generated directly in the browser,

@@ -1,6 +1,16 @@
 ---
 title: Send JotForm responses to Cerb bots using webhooks
-excerpt: This guide demonstrates how to configure webhooks for integration between JotForm and Cerb.
+excerpt: This webpage provides a comprehensive guide on integrating JotForm with Cerb
+  using webhooks.
+summary: This webpage provides a comprehensive guide on integrating JotForm with Cerb
+  using webhooks. It details the process of creating a bot in Cerb to handle JotForm
+  submissions, setting up a webhook listener in Cerb, and configuring JotForm to send
+  data to Cerb via webhooks. The guide includes step-by-step instructions for creating
+  and testing the integration, allowing users to automate actions such as adding comments
+  or creating records in Cerb based on form submissions. It emphasizes the advantages
+  of using webhooks over email for handling form responses, particularly in terms
+  of data parsing and automation capabilities.
+permalink: /guides/integrations/jotform/jotform-webhooks/
 layout: integration
 topic: Integrations
 subtopic: JotForm
@@ -8,17 +18,13 @@ jumbotron:
   title: Send JotForm responses to Cerb bots using webhooks
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: JotForm &raquo;
+  - label: JotForm &raquo;
     url: /resources/guides/#jotform
 ---
 

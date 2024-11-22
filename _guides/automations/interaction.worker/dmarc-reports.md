@@ -1,24 +1,32 @@
 ---
 title: Parse and visualize DMARC report email attachments
-excerpt: In this guide we’ll demonstrate how to read a DMARC report file attachment and display its contents. As a bonus, we’ll use the ipstack API to geolocate the IPs found in the report and display them on a world map.
+excerpt: This webpage provides a comprehensive guide on how to parse and visualize
+  DMARC report email attachments using Cerb.
+summary: This webpage provides a comprehensive guide on how to parse and visualize
+  DMARC report email attachments using Cerb. It covers the introduction to DMARC reports,
+  which are used for email authentication and security, detailing their contents and
+  significance. The guide walks through the process of importing automations in Cerb
+  to handle DMARC report attachments, including a step-by-step method to import a
+  sample DMARC report for testing. It also explains how to enable IP geolocation maps
+  using the ipstack API to enhance the visualization of the report by showing the
+  location and hostname of IP addresses. The page concludes with references for further
+  reading on DMARC.
+permalink: /guides/automations/interaction.worker/dmarc-reports/
 social_image_url: /assets/images/guides/automations/interaction.worker/dmarc-reports/ip-lookup.png
 layout: integration
 topic: Automations
 subtopic: interaction.worker
 redirect_from:
-  - /guides/automations/dmarc-reports/
+- /guides/automations/dmarc-reports/
 jumbotron:
   title: Parse and visualize DMARC report email attachments
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /resources/guides/#automations
 ---
 

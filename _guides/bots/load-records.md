@@ -1,6 +1,16 @@
 ---
-title: "Load arbitrary records into a behavior variable"
-excerpt: You can use behavior variables to load matching records of any type from any event. This guide outlines the steps to loading records into a behavior variable.
+title: Load arbitrary records into a behavior variable
+excerpt: This webpage provides a comprehensive guide on how to load arbitrary records
+  into a behavior variable within Cerb.
+summary: This webpage provides a comprehensive guide on how to load arbitrary records
+  into a behavior variable within Cerb. It walks through the process of creating a
+  bot and a behavior, specifically focusing on loading ticket records into a behavior
+  variable. The guide details how to use these records in scripts and as targets in
+  actions, offering practical examples for each use case. It also includes instructions
+  on testing the behavior using a simulator to ensure functionality. The conclusion
+  emphasizes the utility of being able to load arbitrary records from any behavior,
+  enhancing the flexibility and capability of bot behaviors in Cerb.
+permalink: /guides/bots/load-records/
 layout: integration
 topic: Bots
 subtopic: Scripting
@@ -8,14 +18,11 @@ jumbotron:
   title: Load arbitrary records into a behavior variable
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Bots &raquo;
+  - label: Bots &raquo;
     url: /resources/guides/#bots
 ---
 

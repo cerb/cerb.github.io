@@ -1,6 +1,17 @@
 ---
-title: "Configure project boards"
-excerpt: Project boards visually organize and automate a multi-step process. In this guide, we'll build a project board to explore how bot behaviors and scriptable templates can improve productivity.
+title: Configure project boards
+excerpt: This webpage provides a comprehensive guide on configuring project boards
+  in Cerb, focusing on the kanban methodology for visualizing and organizing workflows.
+summary: This webpage provides a comprehensive guide on configuring project boards
+  in Cerb, focusing on the kanban methodology for visualizing and organizing workflows.
+  It details the steps to enable the project boards plugin, create a project board,
+  and manage tasks using columns and cards. The guide also explains how to automate
+  task management with bot behaviors, such as automatically closing tasks when they
+  reach a certain stage. Additionally, it covers customizing the visual display of
+  task cards using scriptable templates to enhance clarity and efficiency. The page
+  concludes with practical applications of these features to streamline multi-step
+  workflows.
+permalink: /guides/project-boards/configure/
 layout: integration
 topic: Project Boards
 social_image_url: /assets/images/guides/project-boards/configure/cerb-and-project-boards.png
@@ -8,14 +19,11 @@ jumbotron:
   title: Configure project boards
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Project Boards &raquo;
+  - label: Project Boards &raquo;
     url: /resources/guides/#project-boards
 ---
 

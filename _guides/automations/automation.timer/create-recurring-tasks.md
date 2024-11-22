@@ -1,24 +1,28 @@
 ---
-title: "Create recurring tasks with automations"
-excerpt: Many teams need to create a set of tasks on a repeating schedule.
+title: Create recurring tasks with automations
+excerpt: This page provides a guide on creating recurring tasks in Cerb using automation
+  timers and the records API.
+summary: This page provides a guide on creating recurring tasks in Cerb using automation
+  timers and the records API. It includes instructions on importing an example package
+  to set up an automation timer that schedules tasks on a repeating basis, such as
+  daily or weekly. The guide explains how to define schedules using cron expressions
+  and demonstrates how to create task records automatically. It also offers next steps
+  for customizing the automation timer and tasks to fit specific needs, along with
+  references for further understanding of cron expressions.
+permalink: /guides/automations/automation.timer/create-recurring-tasks/
 social_image_url: /assets/images/guides/automations/automation.timer/create-recurring-tasks/recurring-tasks.png
 layout: integration
 topic: Automations
 subtopic: automation.timer
-redirect_from:
-  - /guides/bots/create-recurring-tasks/
 jumbotron:
   title: Create recurring tasks with automations
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Automations &raquo;
+  - label: Automations &raquo;
     url: /resources/guides/#automations
 ---
 

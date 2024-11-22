@@ -1,6 +1,20 @@
 ---
 title: Migrate legacy macro behaviors to bot interactions
-excerpt: This guide is simplifies the process of migrating from legacy macros in earlier versions to bot interactions in Cerb 8.0+.
+excerpt: This webpage provides a comprehensive guide on migrating legacy macro behaviors
+  to bot interactions in Cerb.
+summary: This webpage provides a comprehensive guide on migrating legacy macro behaviors
+  to bot interactions in Cerb. It begins with an introduction to the limitations of
+  pre-8.0 macros and the advantages of the new bot interactions, which offer a more
+  dynamic and interactive experience. The guide details the migration process, including
+  saving and running a migration script, exporting existing bot macros, and importing
+  packages into Cerb 8.3.1 or later. It also explains how to use and extend the new
+  bot interactions, highlighting the steps to get macro interactions for workers,
+  handle macro interactions, and run macro behaviors through conversational interfaces.
+  The page emphasizes the benefits of bot interactions, such as multi-step inputs,
+  personalized interactions, and the ability to handle long-running actions, while
+  providing a step-by-step approach to transition from macros to a more robust interaction
+  system.
+permalink: /guides/bots/migrate-macros/
 layout: integration
 topic: Bots
 subtopic: Conversational Bots
@@ -8,17 +22,13 @@ jumbotron:
   title: Migrate legacy macro behaviors to bot interactions
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Bots &raquo;
+  - label: Bots &raquo;
     url: /resources/guides/#bots
-  -
-    label: Conversational Bots &raquo;
+  - label: Conversational Bots &raquo;
     url: /resources/guides/#bots-conversational-bots
 ---
 

@@ -1,20 +1,31 @@
 ---
 title: Build and authenticate a custom API using webhook portals
-excerpt: "Use automations and webhooks to build a custom API endpoint for your integrations. For instance, you can enrich data by combining multiple data queries into a single request. This moves complexity to Cerb rather than your client-side code."
+excerpt: This webpage provides a comprehensive guide on building and authenticating
+  a custom API using webhook portals in Cerb.
+summary: 'This webpage provides a comprehensive guide on building and authenticating
+  a custom API using webhook portals in Cerb. It covers the process of enabling the
+  webhooks plugin, importing the necessary package, and testing the API endpoint using
+  three different authentication methods: API Key, OAuth2 Token, and HMAC Signature.
+  Each method is explained in detail, including how to simulate requests from the
+  automation editor, test using curl, and implement in your application. The guide
+  also discusses the importance of protecting against replay attacks and provides
+  code examples for generating HMAC signatures. Additionally, it offers instructions
+  on extending the custom API by creating automation functions for each endpoint and
+  managing permissions through a policy tab. This resource is ideal for developers
+  looking to integrate Cerb with other applications while ensuring secure and efficient
+  API interactions.'
+permalink: /guides/webhooks/custom-api/
 layout: integration
 topic: Webhooks
 jumbotron:
   title: Build and authenticate a custom API using webhook portals
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Webhooks &raquo;
+  - label: Webhooks &raquo;
     url: /resources/guides/#webhooks
 ---
 

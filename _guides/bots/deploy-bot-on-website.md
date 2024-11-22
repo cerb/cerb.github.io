@@ -1,6 +1,18 @@
 ---
-title: "Add a conversational bot to any website"
-excerpt: You can enable conversational bot interactions on your website with a single line of code.
+title: Add a conversational bot to any website
+excerpt: This webpage provides a comprehensive guide on integrating a conversational
+  bot into any website using Cerb.
+summary: This webpage provides a comprehensive guide on integrating a conversational
+  bot into any website using Cerb. It outlines the process of enabling the bot portal
+  plugin, importing the Help Bot package, deploying the bot portal, and testing it.
+  The guide also covers deploying the bot to a personal website, including handling
+  CORS, adding script tags, and customizing styling. It explains how to embed bot
+  interactions on a website, use permalinks for bot interactions, and secure URLs
+  with signatures. The page emphasizes the ease of adding interactivity to websites
+  through conversational bots, which can handle tasks like contact methods, mailing
+  list management, product explanations, and more, all with minimal coding. The guide
+  concludes with suggestions for customizing the Help Bot to fit specific needs.
+permalink: /guides/bots/deploy-bot-on-website/
 layout: integration
 topic: Bots
 subtopic: Conversational Bots
@@ -8,17 +20,13 @@ jumbotron:
   title: Add a conversational bot to any website
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Bots &raquo;
+  - label: Bots &raquo;
     url: /resources/guides/#bots
-  -
-    label: Conversational Bots &raquo;
+  - label: Conversational Bots &raquo;
     url: /resources/guides/#bots-conversational-bots
 ---
 

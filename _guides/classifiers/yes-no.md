@@ -1,19 +1,30 @@
 ---
 title: Build a yes/no classifier
+excerpt: This webpage provides a comprehensive guide on building a yes/no classifier
+  using natural language processing to enhance automation in conversational bots.
+summary: This webpage provides a comprehensive guide on building a yes/no classifier
+  using natural language processing to enhance automation in conversational bots.
+  It explains the process of creating a classifier that can interpret user responses
+  to questions like "Are you sure?" and categorize them into "yes," "no," or "maybe"
+  intents. The guide covers steps such as creating a new classifier, importing and
+  training with real-world examples, testing predictions, and continuing to refine
+  the classifier for improved accuracy. It emphasizes the importance of using a diverse
+  set of training data to avoid overfitting or underfitting and demonstrates how to
+  adjust the classifier's predictions through additional training. The page also suggests
+  potential next steps, such as integrating the classifier into bot behaviors or developing
+  more complex classifiers for tasks like sentiment analysis or intent detection.
+permalink: /guides/classifiers/yes-no/
 layout: integration
 topic: Classifiers
 jumbotron:
   title: Build a yes/no classifier
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Classifiers &raquo;
+  - label: Classifiers &raquo;
     url: /resources/guides/#classifiers
 ---
 

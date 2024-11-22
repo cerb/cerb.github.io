@@ -1,6 +1,19 @@
 ---
 title: Respond to messages from an external email client
-excerpt: The email relay allows workers to respond to messages from external mail applications.
+excerpt: This page provides detailed information on how Cerb's email relay feature
+  allows workers to respond to messages using external email clients like Gmail, Outlook,
+  or mobile phones, while maintaining the benefits of Cerb's platform such as shared
+  history and privacy protection.
+summary: 'This page provides detailed information on how Cerb''s email relay feature
+  allows workers to respond to messages using external email clients like Gmail, Outlook,
+  or mobile phones, while maintaining the benefits of Cerb''s platform such as shared
+  history and privacy protection. It explains how administrators can enable the mail
+  relay, and how messages can be relayed to external accounts either through bots
+  or directly from the Cerb user interface. The page also outlines the use of specific
+  #commands in email replies, which allow users to perform actions like adding comments,
+  cutting content, changing conversation status, and managing conversation watch status,
+  all while ensuring that personal email addresses remain private.'
+permalink: /guides/mail/relaying/
 layout: integration
 topic: Mail
 keywords: relay
@@ -8,14 +21,11 @@ jumbotron:
   title: Respond to messages from an external email client
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Mail &raquo;
+  - label: Mail &raquo;
     url: /resources/guides/#mail
 ---
 

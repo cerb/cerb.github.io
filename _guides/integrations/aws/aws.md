@@ -1,6 +1,7 @@
 ---
 title: Integrate with Amazon Web Services
-excerpt: A step-by-step guide for integrating Cerb and Amazon Web Services (AWS).
+excerpt: This page provides a comprehensive guide on integrating Cerb with Amazon
+  Web Services (AWS).
 summary: This page provides a comprehensive guide on integrating Cerb with Amazon
   Web Services (AWS). It covers the steps to log into AWS, create a policy, set up
   a new user, and generate programmatic credentials necessary for the integration.

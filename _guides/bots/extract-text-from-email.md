@@ -1,5 +1,16 @@
 ---
-title: "Extract text from email messages using bots"
+title: Extract text from email messages using bots
+excerpt: This page provides a detailed guide on how to extract text from email messages
+  using bots in Cerb.
+summary: This page provides a detailed guide on how to extract text from email messages
+  using bots in Cerb. It covers the process of building a bot behavior to parse email
+  content, utilizing regular expressions to extract specific values from messages,
+  and running the behavior in a simulator. The guide includes an example of a bot
+  behavior script that can be customized to extract fields like organization name,
+  email, and color from form submissions sent via email. Additionally, it explains
+  the use of regular expressions in detail, including pattern matching and capture
+  groups, to facilitate the extraction process.
+permalink: /guides/bots/extract-text-from-email/
 layout: integration
 topic: Bots
 subtopic: Mail
@@ -7,14 +18,11 @@ jumbotron:
   title: Extract text from email messages using bots
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Bots &raquo;
+  - label: Bots &raquo;
     url: /resources/guides/#bots
 ---
 

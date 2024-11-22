@@ -1,20 +1,29 @@
 ---
 title: Host community portals using Nginx
-excerpt: This step-by-step guide explains how to host Cerb community portals using nginx.
+excerpt: This page provides a detailed guide on hosting community portals using Nginx,
+  specifically for Cerb users.
+summary: This page provides a detailed guide on hosting community portals using Nginx,
+  specifically for Cerb users. It introduces a PHP-based reverse proxy script for
+  testing purposes but strongly recommends using Nginx for production environments.
+  The guide includes step-by-step instructions for setting up a virtual host in Nginx,
+  configuring SSL certificates, and ensuring proper URL rewriting. It also covers
+  the necessary modifications to the Nginx configuration file, such as setting domain
+  variables and handling SSL. Additionally, it provides instructions for reloading
+  Nginx and testing the community portal. The page is aimed at users who want to host
+  their community portals efficiently and securely, with references to related resources
+  for further assistance.
+permalink: /guides/portals/nginx-proxy/
 layout: integration
 topic: Portals
 jumbotron:
   title: Host community portals using Nginx
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Portals &raquo;
+  - label: Portals &raquo;
     url: /resources/guides/#portals
 ---
 

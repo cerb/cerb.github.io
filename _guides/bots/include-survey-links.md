@@ -1,6 +1,17 @@
 ---
-title: "Include survey links on outgoing messages with bots"
-excerpt: Let’s assume that you want to include a survey link at the bottom of each outgoing message to measure customer satisfaction.
+title: Include survey links on outgoing messages with bots
+excerpt: This webpage provides a comprehensive guide on how to include survey links
+  in outgoing messages using bots in Cerb.
+summary: This webpage provides a comprehensive guide on how to include survey links
+  in outgoing messages using bots in Cerb. It covers the creation of a Survey Bot
+  to automatically append survey links to worker messages, enabling integration with
+  popular survey tools. The guide details the process of setting up behaviors that
+  insert and replace survey tokens with actual survey links before messages are sent.
+  It also offers tips for customizing the implementation, such as using custom fields
+  for worker aliases, filtering messages for survey links, and using different tags
+  for various groups. Additionally, it suggests alternatives like sending survey links
+  only when a ticket is closed.
+permalink: /guides/bots/include-survey-links/
 layout: integration
 topic: Bots
 subtopic: Mail
@@ -8,14 +19,11 @@ jumbotron:
   title: Include survey links on outgoing messages with bots
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Bots &raquo;
+  - label: Bots &raquo;
     url: /resources/guides/#bots
 ---
 

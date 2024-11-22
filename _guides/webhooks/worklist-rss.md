@@ -1,19 +1,28 @@
 ---
 title: Generate an RSS feed for any worklist
+excerpt: This page provides a detailed guide on generating an RSS feed for any worklist
+  in Cerb using a bot and webhook listener.
+summary: This page provides a detailed guide on generating an RSS feed for any worklist
+  in Cerb using a bot and webhook listener. It outlines the steps to enable the Webhooks
+  plugin, create a bot behavior to handle webhook events, and set up a new webhook
+  in Cerb. The guide explains how to configure the bot to output worklist data in
+  RSS format, allowing users to monitor updates through third-party tools like RSS
+  readers or services like Zapier. The process is designed to simplify monitoring
+  worklist records without requiring complex REST API integrations. The page also
+  suggests potential applications for this setup, such as creating RSS feeds for notifications
+  or daily tasks.
+permalink: /guides/webhooks/worklist-rss/
 layout: integration
 topic: Webhooks
 jumbotron:
   title: Generate an RSS feed for any worklist
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Webhooks &raquo;
+  - label: Webhooks &raquo;
     url: /resources/guides/#webhooks
 ---
 

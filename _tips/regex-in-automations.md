@@ -1,6 +1,7 @@
 ---
 title: Regular expressions in automation scripting
-excerpt: Use regular expressions to extract text from automation scripting.
+excerpt: 'This page provides an example of using regular expressions within automation scripting to extract specific text patterns.'
+summary: 'This page provides an example of using regular expressions within automation scripting to extract specific text patterns. It demonstrates how to define a text string and a regular expression pattern to identify and extract a ticket mask from the text. The example includes a conditional outcome that checks if the mask is found and returns a formatted output with the extracted ticket mask. This illustrates the practical application of regular expressions in automating text processing tasks.'
 layout: integration
 author: The Cerb Team
 date: 2024-04-19 08:00:00 -0800

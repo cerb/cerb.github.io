@@ -1,5 +1,7 @@
 ---
 title: Send encrypted email using OpenPGP
+excerpt: 'This page provides a comprehensive guide on sending encrypted emails using OpenPGP in Cerb.'
+summary: 'This page provides a comprehensive guide on sending encrypted emails using OpenPGP in Cerb. It explains the limitations of typical email security and the necessity of encrypting email content to ensure privacy. The page details both symmetric and asymmetric encryption methods, highlighting their strengths and weaknesses, and introduces OpenPGP as a solution that combines both approaches. It describes how OpenPGP works, including the use of public and private keys, and emphasizes the importance of trusting the source of public keys. The page also outlines how to manage public keys in Cerb, send encrypted messages, and handle encrypted emails received in Cerb, including the process of automatic decryption and the security considerations involved. Additionally, it provides a sample public key and discusses the role of public key servers and services like Keybase in verifying key authenticity.'
 layout: integration
 topic: Mail
 subtopic: Encryption

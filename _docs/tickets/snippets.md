@@ -1,5 +1,14 @@
 ---
 title: Snippets
+excerpt: This page explains the concept of snippets in Cerb, which allow workers and
+  automations to insert predefined text into messages efficiently.
+summary: This page explains the concept of snippets in Cerb, which allow workers and
+  automations to insert predefined text into messages efficiently. Snippets function
+  like a shared clipboard but with advanced scripting capabilities, including placeholders
+  and conditional logic, enabling dynamic content adaptation based on context. A typical
+  example provided is an auto-responder message that uses placeholders to personalize
+  responses, demonstrating how snippets can streamline communication processes by
+  automatically filling in details like names and ticket information.
 permalink: /docs/snippets/
 toc:
   title: Snippets
@@ -7,11 +16,9 @@ jumbotron:
   title: Snippets
   tagline: Quickly reply with predefined responses
   breadcrumbs:
-  -
-    label: Docs &raquo;
+  - label: Docs &raquo;
     url: /docs/home/
-  -
-    label: Tickets &raquo;
+  - label: Tickets &raquo;
     url: /docs/tickets/
 ---
 

@@ -1,25 +1,34 @@
 ---
-title: Authenticate worker single sign-on (SSO) from Microsoft Azure AD using OpenID Connect
-excerpt: A step-by-step guide for single sign-on authentication using Microsoft accounts
+title: Authenticate worker single sign-on (SSO) from Microsoft Azure AD using OpenID
+  Connect
+excerpt: This page provides a comprehensive guide on setting up single sign-on (SSO)
+  for Cerb using Microsoft Azure Active Directory (AD) through the OpenID Connect
+  (OIDC) standard.
+summary: This page provides a comprehensive guide on setting up single sign-on (SSO)
+  for Cerb using Microsoft Azure Active Directory (AD) through the OpenID Connect
+  (OIDC) standard. It details the steps to configure Azure AD, including creating
+  an OAuth app for Cerb, generating a client secret, and setting up optional claims.
+  The guide also covers configuring Cerb to connect with Azure, enabling SSO, and
+  the process for logging in using Azure AD credentials. This setup allows Cerb workers
+  to authenticate seamlessly with their existing Microsoft accounts, enhancing security
+  and user convenience by potentially disabling password-based logins.
 social_image_url: /assets/images/guides/azure/cerb-and-azure.png
+permalink: /guides/integrations/azure/sso-openid/
 layout: integration
 topic: Integrations
 subtopic: Microsoft Azure
 jumbotron:
-  title: Authenticate worker single sign-on (SSO) from Microsoft Azure AD using OpenID Connect
+  title: Authenticate worker single sign-on (SSO) from Microsoft Azure AD using OpenID
+    Connect
   tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
+  - label: Resources &raquo;
     url: /resources/
-  -
-    label: Guides &raquo;
+  - label: Guides &raquo;
     url: /resources/guides/
-  -
-    label: Integrations &raquo;
+  - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  -
-    label: Microsoft Azure &raquo;
+  - label: Microsoft Azure &raquo;
     url: /resources/guides/#microsoft-azure
 ---
 
