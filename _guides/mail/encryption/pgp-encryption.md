@@ -1,10 +1,21 @@
 ---
-layout: post
-title: "Preview: Encrypted email communication using OpenPGP in Cerb 8.1"
-excerpt: A preview of encrypted email communication using OpenPGP in Cerb 8.1
-author: The Cerb Team
-date: 2017-08-16 18:40:00 -0700
-tags: cerb sneak-peek
+title: Send encrypted email using OpenPGP
+layout: integration
+topic: Mail
+subtopic: Encryption
+permalink: /guides/mail/encryption/pgp/
+jumbotron:
+  title: Send encrypted email using OpenPGP
+  tagline: ""
+  breadcrumbs:
+    - label: Resources &raquo;
+      url: /resources/
+    - label: Guides &raquo;
+      url: /resources/guides/
+    - label: Mail &raquo;
+      url: /resources/guides/#mail
+    - label: Encryption &raquo;
+      url: /resources/guides/#mail-encryption
 ---
 
 ### Most email isn't secure
@@ -13,7 +24,7 @@ When you send a typical email message, it's readable by more than just the sende
 
 To send a truly secure email message, the contents of the message itself must be encrypted in a way that only the sender and recipient understand. This leaves only the _"metadata"_ of the message exposed (the sender, recipient, date, etc).  Without the metadata, mail servers wouldn't know how to route the message.
 
-The upcoming [8.1](/releases/8.1/) release includes support for encrypted email communication using the OpenPGP[^openpgp] standard.
+The [8.1](/releases/8.1/) release includes support for encrypted email communication using the OpenPGP[^openpgp] standard.
 
 ### Symmetric encryption
 
@@ -42,7 +53,7 @@ OpenPGP combines the strengths of both approaches.  Each time a new message is e
 Here's what that process looks like:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/blog/2017/08/17/pgp-diagram.svg" style="width:650px;" class="screenshot">
+<img src="/assets/images/guides/mail/encryption/pgp/pgp-diagram.svg" style="width:650px;" class="screenshot">
 <div><small>source: <a href="https://en.wikipedia.org/wiki/File:PGP_diagram.svg">wikipedia</a></small></div>
 </div>
 
@@ -143,7 +154,7 @@ We highly recommend using a service like Keybase[^keybase], which not only verif
 You can import public keys from Keybase right into Cerb.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/blog/2017/08/17/keybase.png" class="screenshot">
+<img src="/assets/images/guides/mail/encryption/pgp/keybase.png" class="screenshot">
 </div>
 
 ### Sending encrypted messages in Cerb
@@ -153,25 +164,25 @@ In Cerb 8.1, you can manage public keys from **Search >> Public Keys**.
 When adding a new record by clicking on the **(+)** above the worklist, you can import a public key by pasting it:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/blog/2017/08/17/public-key-import.png" class="screenshot">
+<img src="/assets/images/guides/mail/encryption/pgp/public-key-import.png" class="screenshot">
 </div>
 
 You can then see all the information about a public key from its card:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/blog/2017/08/17/public-key-card.png" class="screenshot">
+<img src="/assets/images/guides/mail/encryption/pgp/public-key-card.png" class="screenshot">
 </div>
 
 When you compose email or send a reply, there's a new **Encrypt message using recipient public keys** option.  Cerb will automatically check your keyring for matching public keys based on the recipient email addresses (they should match UIDs on the keys).  A single public key can specify multiple email addresses as UIDs.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/blog/2017/08/17/compose-encrypted.png" class="screenshot">
+<img src="/assets/images/guides/mail/encryption/pgp/compose-encrypted.png" class="screenshot">
 </div>
 
 To send an encrypted message, you must have a public key on file for every recipient.  If you don't, you'll see an error message like this:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/blog/2017/08/17/compose-no-public-key.png" class="screenshot">
+<img src="/assets/images/guides/mail/encryption/pgp/compose-no-public-key.png" class="screenshot">
 </div>
 
 Here's what an encrypted email message looks like when it's traveling over the network:
@@ -243,7 +254,7 @@ jyOi8AknGL+XJlOh2t0lJjAJ6KbbFQIbUJ6moQ==
 In conversation threads in Cerb, we add a badge for any messages that were encrypted when sent or received:
 
 <div class="cerb-screenshot">
-<img src="/assets/images/blog/2017/08/17/message-encrypted-icon.png" class="screenshot">
+<img src="/assets/images/guides/mail/encryption/pgp/message-encrypted-icon.png" class="screenshot">
 </div>
 
 ### Receiving encrypted messages in Cerb
@@ -251,10 +262,6 @@ In conversation threads in Cerb, we add a badge for any messages that were encry
 To automatically decrypt a received encrypted message in Cerb, you need to have the corresponding private key in your keyring.  If you receive an encrypted message that can't be decrypted, Cerb will leave the encrypted content as an attachment on the message that you can decrypt offline.  This is the most secure option, but the content of the message won't be readable or searchable within Cerb.
 
 If you want automatic decryption of messages, you need to consider the security implications of leaving your private key on the server.  At the minimum, we recommend that you create a new decryption _subkey_ without storing your _master_ private key on the server.  We're also exploring options for browser-based decryption.
-
-### Comments?
-
-Have something to add?  Let us know in the comments.
 
 # References
 
