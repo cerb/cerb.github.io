@@ -33,18 +33,22 @@ collections:
     permalink: /docs/:path/
   guides:
     output: true
+    sort_by: title
     permalink: /guides/:path/
   packages:
     output: true
+    sort_by: title
     permalink: /packages/:path/
   releases:
     output: true
     permalink: /releases/:path/
   tips:
     output: true
+    sort_by: title
     permalink: /tips/:path/
   workflows:
     output: true
+    sort_by: title
     permalink: /workflows/:path/
 
 # Build settings
