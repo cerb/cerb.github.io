@@ -1,5 +1,7 @@
 ---
 title: Tutorial
+excerpt: "This page describes the built-in 'Tutorial' workflow in Cerb, which provides a workspace page with detailed descriptions and examples of Cerb features."
+summary: "This page describes the built-in 'Tutorial' workflow in Cerb, which provides a workspace page with detailed descriptions and examples of Cerb features. The tutorial is automatically installed on new instances and updated with new versions. For instances created before version 11.0, the tutorial can be enabled through the search and workflows menu. It is especially beneficial for demonstration, testing, development, and onboarding new workers."
 permalink: /docs/tutorial/
 toc:
   title: Tutorial
