@@ -11,6 +11,11 @@ permalink: /docs/calendars/
 jumbotron:
   title: Calendars
   tagline: ~
+  breadcrumbs:
+  - label: Docs &raquo;
+    url: /docs/home/
+  - label: Reference &raquo;
+    
 ---
 
 **Calendars** can plot any date-based record data on a familiar grid of months and days.
