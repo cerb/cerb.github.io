@@ -106,14 +106,14 @@ Data queries can be used to build visualizations on dashboards.
 <img src="/assets/images/docs/data-queries/data-queries-workspace-widget.png" class="screenshot">
 </div>
 
-## Bot behaviors
+## Automations
 
-All bot behaviors can use the **Execute >> Data Query** action to run a data query and retrieve the results.
+Automations can use the [data.query](/docs/automations/commands/data.query/) command to run a data query and retrieve the results.
 
-This is a much simpler way to exchange information between bots and APIs.
+This is a much simpler way to exchange information between multiple functions and APIs.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/data-queries/data-queries-bot-execute.png" class="screenshot">
+<img src="/assets/images/docs/data-queries/data-queries-automation.png" class="screenshot">
 </div>
 
 ## API
@@ -124,7 +124,7 @@ For a `GET` the query should be provided in the `q` query parameter.
 
 For a `POST` the query should be provided as text in the HTTP request body.
 
-The results will always be in JSON format. This is now the recommended way to extract data from worklists and bots for use in other applications.
+The results will always be in JSON format. This is now the recommended way to extract data from worklists and other functions for use in other applications.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/data-queries/data-queries-api-post-body.png" class="screenshot">
