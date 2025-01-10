@@ -18,7 +18,9 @@ COPY Gem* /var/cerb-docs/
 
 WORKDIR /var/cerb-docs
 
-RUN bundle install
+RUN rm -Rf .jekyll-metadata \
+    && touch .jekyll-metadata \
+    && bundle install
 
 VOLUME ["/var/cerb-docs"]
 EXPOSE 4000
