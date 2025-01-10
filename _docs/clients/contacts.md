@@ -9,8 +9,13 @@ summary: This page provides an overview of the concept of "Contacts" within Cerb
   Cerb platform to facilitate interactions and relationships.
 permalink: /docs/contacts/
 jumbotron:
-  title: Contacts
-  tagline: The audience you serve
+    title: Contacts
+    tagline: The audience you serve
+    breadcrumbs:
+    - label: Docs &raquo;
+      url: /docs/home/
+    - label: Records &raquo;
+      url: /docs/records/
 ---
 
 **Contacts** are the clients, customers, partners, and other entities that workers interact with.

@@ -16,6 +16,10 @@ permalink: /docs/connected-services/
 jumbotron:
   title: Connected Services
   tagline: Securely integrate and automate third-party apps and services
+  breadcrumbs:
+    - label: Docs &raquo;
+      url: /docs/home/
+    - label: Reference &raquo;
 ---
 
 **Connected services** provide authentication, secure storage, and reuse of user credentials for arbitrary third-party services.

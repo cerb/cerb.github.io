@@ -17,6 +17,10 @@ permalink: /docs/connected-accounts/
 jumbotron:
   title: Connected Accounts
   tagline: Securely integrate and automate third-party apps and services
+  breadcrumbs:
+    - label: Docs &raquo;
+      url: /docs/home/
+    - label: Reference &raquo;
 ---
 
 [Automations](/docs/automations/) can use **connected accounts** to cryptographically sign (or otherwise authenticate) arbitrary HTTP requests for a specific [service provider](/docs/connected-services/).

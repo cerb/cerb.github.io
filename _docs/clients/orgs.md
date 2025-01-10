@@ -11,6 +11,10 @@ permalink: /docs/orgs/
 jumbotron:
   title: Organizations
   tagline: The audience you serve
+  breadcrumbs:
+    - label: Docs &raquo;
+      url: /docs/home/
+    - label: Clients &raquo;
 ---
 
 An **organization** is a group of related [contacts](/docs/contacts/).
