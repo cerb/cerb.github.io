@@ -10,8 +10,6 @@ baseurl: ""
 logo_url: /assets/cerb_logo.svg
 social_image_url: /assets/images/cerb-social.png
 search_endpoint_url: https://api.cerb.cloud/docs/search
-mastodon_username: "@cerb.social"
-github_username:  cerb
 timezone: America/Los_Angeles
 encoding: UTF-8
 
