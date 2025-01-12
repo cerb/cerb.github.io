@@ -4,7 +4,7 @@ excerpt: This page provides an overview of Cerb, a customizable web-based platfo
   designed for enterprise communication and process automation.
 summary: This page provides an overview of Cerb, a customizable web-based platform
   designed for enterprise communication and process automation. Cerb has evolved over
-  22 years, integrating with API-based services to automate digital workflows using
+  23 years, integrating with API-based services to automate digital workflows using
   its KATA language and browser-based tools. It allows teams to create personalized
   workspaces with customizable widgets and manage various tasks through custom records
   and fields. Common use cases include transforming standard email systems into high-volume
@@ -30,7 +30,7 @@ jumbotron:
 
 # What is Cerb?
 
-[**Cerb**](/) is a fully customizable, web-based platform for enterprise communication and process automation. The project has continuously evolved for 22+ years based on the feedback of thousands of teams around the world in almost every industry. It is used by everyone from solo founders to 1,000+ person teams managing millions of customer requests.
+[**Cerb**](/) is a fully customizable, web-based platform for enterprise communication and process automation. The project has continuously evolved for over 23 years based on the feedback of thousands of teams around the world in almost every industry. It is used by everyone from solo founders to 1,000+ person teams managing millions of customer requests.
 
 Cerb integrates with any API-based service. It can automate nearly any repetitive digital workflow with its specialized [KATA](/docs/kata/) language and browser-based coding tools. [Automations](/docs/automations/) add conditional actions to any event. [Interactions](/docs/interactions/) extend any toolbar for complex multistep workflows that require user input.
 
