@@ -194,7 +194,7 @@ Paste your package into the **Package: (JSON)** section and click the **Save Cha
 
 # Making packages configurable
 
-**Built-in placeholders** and **prompts** are used to customize packages every time they are imported.
+**Built-in placeholders**, **prompts** and **options** are used to customize packages every time they are imported.
 
 ## Built-in placeholders
 
@@ -483,6 +483,26 @@ After importing the package, the new task is automatically assigned to the worke
   {% endraw %}
 </p>
 </div>
+
+## Options
+
+### disable_events
+
+The **disable_events** option prevents bot behaviors or automations from triggering on new records. 
+
+<pre style="max-height:29.5em;">
+<code class="language-json">
+        "configure": {
+            "prompts": [],
+            "placeholders": [],
+            "options": {
+                "disable_events": true
+            }
+        }
+</code>
+</pre>
+
+This can be useful, for example, when importing historical records from another system where you don't want workflows for autoresponders or customer surveys to trigger.
 
 # Next steps
 
