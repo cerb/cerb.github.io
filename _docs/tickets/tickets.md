@@ -42,7 +42,7 @@ The [worker](/docs/workers/) who is currently responsible for a ticket's complet
 
 # Masks
 
-Every ticket is automatically assigned a unique, non-sequential reference **mask**, like `RYS-07092-012`.
+Every ticket is automatically assigned a unique, non-sequential reference **mask**, like `NCY-35312-825`.
 
 The term _"mask"_ refers to the fact that the randomized reference number (opposed to a numeric ID) doesn't disclose information about your total number of tickets or your daily email volume.
 
