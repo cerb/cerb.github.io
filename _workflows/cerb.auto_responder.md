@@ -15,6 +15,7 @@ topic: Workflows
 permalink: /workflows/cerb.auto_responder/
 redirect_from:
 - /packages/autoreply-bot/
+- /guides/bots/send-automatic-replies/
 jumbotron:
   title: Auto Responder
   tagline: ""
@@ -29,6 +30,10 @@ jumbotron:
 {:toc}
 
 # Introduction
+
+It's a common practice in professional environments to send an automatic response to new messages. This acknowledges that you received them, and it lets you set expectations up front about office hours and response times. You can note the obligations of a service level agreement if the client has one, and if they don't you can briefly make the case for purchasing one.
+
+Most email management applications support automatic responses in some form. The simplest feature just responds with a fixed message like _"Thanks for your message. We'll respond soon."_ or _"I'm out of the office this week and will return next Monday"._ Sophisticated implementations, like Cerb, can send highly personalized automatic responses by considering everything you know about the client and their organization, their history, your team's schedules, your current workload, etc. Cerb can even predict a client's intent and send them suggestions before you've even read their message.
 
 This workflow automatically sends a confirmation email to clients when they open a new ticket.
 
