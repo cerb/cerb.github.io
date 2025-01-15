@@ -61,80 +61,80 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 #### params (mail.compose)
 
 |---
-| Key | Value
-|-|-
-| `bcc` | The `Bcc:` recipients
-| `bucket_id` | The [bucket](/docs/records/types/bucket/) ID to move the ticket to
-| `cc` | The `Cc:` recipients
-| `content` | The message content
-| `custom_fields` | An object with custom field IDs as keys and their values
-| `custom_fields_uri` | A read-only object with custom field URIs as keys and their values
-| `format` | `parsedown` (Markdown), or blank for plaintext
-| `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
-| `group_id` | The [group](/docs/records/types/group/) ID to move the ticket to
-| `headers` | An array of email headers to set, with header names as keys
-| `html_template_id` | An optional [HTML template](/docs/records/types/html_template/) ID if `format` is `parsedown`
-| `message_custom_fields` | An object with message custom field IDs as keys and their values
-| `message_custom_fields_uri` | A read-only object with message custom field URIs as keys and their values
-| `options_gpg_encrypt` | `1` to enable PGP encryption, `0` (or omit) to disable
-| `options_gpg_sign` | `1` to enable PGP signatures, `0` (or omit) to disable
-| `org_id` | The [org](/docs/records/types/org/) ID to assign
-| `org_name` | The [org](/docs/records/types/org/) name to assign
-| `owner_id` | The [worker](/docs/records/types/worker/) ID to assign
-| `send_at` | The optional timestamp to deliver the message at
-| `status_id` | `0` (open), `1` (waiting), `2` (closed)
-| `subject` | The message `Subject:`
-| `ticket_reopen` | When the status is waiting or closed, the timestamp to reopen at
-| `to` | The `To:` recipients
+| Req'd | Key | Value
+|:-:|-|-
+| | `bcc` | The `Bcc:` recipients
+| | `bucket_id` | The [bucket](/docs/records/types/bucket/) ID to move the ticket to
+| | `cc` | The `Cc:` recipients
+| | `content` | The message content
+| | `custom_fields` | An object with custom field IDs as keys and their values
+| | `custom_fields_uri` | A read-only object with custom field URIs as keys and their values
+| | `format` | `parsedown` (Markdown), or blank for plaintext
+| | `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
+| **x** | `group_id` | The [group](/docs/records/types/group/) ID to move the ticket to
+| | `headers` | An array of email headers to set, with header names as keys
+| | `html_template_id` | An optional [HTML template](/docs/records/types/html_template/) ID if `format` is `parsedown`
+| | `message_custom_fields` | An object with message custom field IDs as keys and their values
+| | `message_custom_fields_uri` | A read-only object with message custom field URIs as keys and their values
+| | `options_gpg_encrypt` | `1` to enable PGP encryption, `0` (or omit) to disable
+| | `options_gpg_sign` | `1` to enable PGP signatures, `0` (or omit) to disable
+| | `org_id` | The [org](/docs/records/types/org/) ID to assign
+| | `org_name` | The [org](/docs/records/types/org/) name to assign
+| | `owner_id` | The [worker](/docs/records/types/worker/) ID to assign
+| | `send_at` | The optional timestamp to deliver the message at
+| | `status_id` | `0` (open), `1` (waiting), `2` (closed)
+| | `subject` | The message `Subject:`
+| | `ticket_reopen` | When the status is waiting or closed, the timestamp to reopen at
+| **x** | `to` | The `To:` recipients
 
 #### params (mail.transactional)
 
 |---
-| Key | Value
-|-|-
-| `bcc` | The `Bcc:` recipients
-| `cc` | The `Cc:` recipients
-| `content` | The message content
-| `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
-| `format` | `parsedown` (Markdown), or blank for plaintext
-| `from` | The `From:` sender (uses system default if omitted)
-| `from_personal` | The personal `From:` sender (uses system default if omitted)
-| `headers` | An array of email headers to set, with header names as keys
-| `html_template_id` | An optional [HTML template](/docs/records/types/html_template/) ID if `format` is `parsedown`
-| `options_gpg_encrypt` | `1` to enable PGP encryption, `0` (or omit) to disable
-| `options_gpg_sign` | `1` to enable PGP signatures, `0` (or omit) to disable
-| `reply_to` | The optional `Reply-To:`
-| `return_path` | The optional `Return-Path:`
-| `subject` | The message `Subject:`
-| `to` | The `To:` recipients
+| Req'd | Key | Value
+|:-:|-|-
+| | `bcc` | The `Bcc:` recipients
+| | `cc` | The `Cc:` recipients
+| | `content` | The message content
+| | `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
+| | `format` | `parsedown` (Markdown), or blank for plaintext
+| | `from` | The `From:` sender (uses system default if omitted)
+| | `from_personal` | The personal `From:` sender (uses system default if omitted)
+| | `headers` | An array of email headers to set, with header names as keys
+| | `html_template_id` | An optional [HTML template](/docs/records/types/html_template/) ID if `format` is `parsedown`
+| | `options_gpg_encrypt` | `1` to enable PGP encryption, `0` (or omit) to disable
+| | `options_gpg_sign` | `1` to enable PGP signatures, `0` (or omit) to disable
+| | `reply_to` | The optional `Reply-To:`
+| | `return_path` | The optional `Return-Path:`
+| **x** | `subject` | The message `Subject:`
+| **x** | `to` | The `To:` recipients
 
 #### params (ticket.reply / ticket.forward)
 
 |---
-| Key | Value
-|-|-
-| `bcc` | The `Bcc:` recipients
-| `bucket_id` | The [bucket](/docs/records/types/bucket/) ID to move the ticket to
-| `cc` | The `Cc:` recipients
-| `content` | The message content
-| `custom_fields` | An object with custom field IDs as keys and their values
-| `custom_fields_uri` | A read-only object with custom field URIs as keys and their values
-| `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
-| `format` | `parsedown` (Markdown), or blank for plaintext
-| `group_id` | The [group](/docs/records/types/group/) ID to move the ticket to
-| `headers` | An array of email headers to set, with header names as keys
-| `html_template_id` | An optional [HTML template](/docs/records/types/html_template/) ID if `format` is `parsedown`
-| `in_reply_message_id` | The [message](/docs/records/types/message/) ID being responded to
-| `message_custom_fields` | An object with message custom field IDs as keys and their values
-| `message_custom_fields_uri` | A read-only object with message custom field URIs as keys and their values
-| `options_gpg_encrypt` | `1` to enable PGP encryption, `0` (or omit) to disable
-| `options_gpg_sign` | `1` to enable PGP signatures, `0` (or omit) to disable
-| `owner_id` | The [worker](/docs/records/types/worker/) ID to assign
-| `send_at` | The optional timestamp to deliver the message at
-| `status_id` | `0` (open), `1` (waiting), `2` (closed)
-| `subject` | The message `Subject:`
-| `ticket_reopen` | When the status is waiting or closed, the timestamp to reopen at
-| `to` | The `To:` recipients
+| Req'd | Key | Value
+|:-:|-|-
+| | `bcc` | The `Bcc:` recipients
+| | `bucket_id` | The [bucket](/docs/records/types/bucket/) ID to move the ticket to
+| | `cc` | The `Cc:` recipients
+| | `content` | The message content
+| | `custom_fields` | An object with custom field IDs as keys and their values
+| | `custom_fields_uri` | A read-only object with custom field URIs as keys and their values
+| | `file_ids` | An array of [attachment](/docs/records/types/attachment/) IDs
+| | `format` | `parsedown` (Markdown), or blank for plaintext
+| | `group_id` | The [group](/docs/records/types/group/) ID to move the ticket to
+| | `headers` | An array of email headers to set, with header names as keys
+| | `html_template_id` | An optional [HTML template](/docs/records/types/html_template/) ID if `format` is `parsedown`
+| | `in_reply_message_id` | The [message](/docs/records/types/message/) ID being responded to
+| | `message_custom_fields` | An object with message custom field IDs as keys and their values
+| | `message_custom_fields_uri` | A read-only object with message custom field URIs as keys and their values
+| | `options_gpg_encrypt` | `1` to enable PGP encryption, `0` (or omit) to disable
+| | `options_gpg_sign` | `1` to enable PGP signatures, `0` (or omit) to disable
+| | `owner_id` | The [worker](/docs/records/types/worker/) ID to assign
+| | `send_at` | The optional timestamp to deliver the message at
+| | `status_id` | `0` (open), `1` (waiting), `2` (closed)
+| | `subject` | The message `Subject:`
+| | `ticket_reopen` | When the status is waiting or closed, the timestamp to reopen at
+| | `to` | The `To:` recipients
 
 ### Dictionary Placeholders
 
