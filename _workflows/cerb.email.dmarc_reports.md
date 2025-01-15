@@ -13,6 +13,8 @@ summary: This page provides detailed information on the DMARC Reports workflow i
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.email.dmarc_reports/
+redirect_from:
+- /guides/automations/interaction.worker/dmarc-reports/
 jumbotron:
   title: DMARC Reports
   tagline: ""
@@ -27,6 +29,10 @@ jumbotron:
 {:toc}
 
 # Introduction
+
+A DMARC[^dmarc] (Domain-based Message Authentication, Reporting, and Conformance) report is a feedback mechanism used in email authentication to provide organizations with information about the successful and blocked deliveries of their emails using their own domain name (hostname) from various sender IP addresses. These reports help organizations monitor and enhance their email security and authentication practices.
+
+DMARC reports include details about email authentication results, such as whether an email passed or failed SPF (Sender Policy Framework) and DKIM (DomainKeys Identified Mail) checks. They also provide insights into the source IP addresses of email senders and whether their emails were accepted, rejected, or marked as suspicious. This information is valuable for organizations to identify and address potential email spoofing, phishing, or unauthorized use of their domain names.
 
 This workflow automatically parses DMARC report attachments in email.
 
@@ -288,3 +294,5 @@ records:
 {% endraw %}
 </code>
 </pre>
+
+[^dmarc]: Wikipedia - DMARC <https://en.wikipedia.org/wiki/DMARC>
