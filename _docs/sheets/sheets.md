@@ -17,6 +17,7 @@ summary: This page provides an in-depth overview of "Sheets" in Cerb, a flexible
   of sheets in Cerb for various data visualization needs.
 permalink: /docs/sheets/
 social_image_url: /assets/images/docs/sheets/sheets.png
+redirect_from: /guides/bots/change-worklist-dates/
 jumbotron:
   title: Sheets
   tagline: A text-based grammar for building rich data grids
