@@ -16,6 +16,7 @@ topic: Workflows
 permalink: /workflows/cerb.satisfaction.surveys/
 redirect_from:
 - /packages/customer-satisfaction/
+- /guides/bots/include-survey-links/
 jumbotron:
   title: Customer Satisfaction Surveys
   tagline: ""
