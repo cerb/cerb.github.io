@@ -33,6 +33,10 @@ feed:
 
 # Collections
 collections:
+  automation_cookbook:
+    output: true
+    sort_by: title
+    permalink: /automation/cookbook/:path/
   docs:
     output: true
     permalink: /docs/:path/
@@ -66,6 +70,12 @@ plugins:
 
 # Defaults
 defaults:
+  -
+    scope:
+      path: ""
+      type: "automations-cookbook"
+    values:
+      layout: "integration"
   -
     scope:
       path: ""

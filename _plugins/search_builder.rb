@@ -64,6 +64,7 @@ Jekyll::Hooks.register :site, :post_write do |site|
             write_pages_to_json site.collections['guides'].docs, file
             write_pages_to_json site.collections['docs'].docs, file
             write_pages_to_json site.collections['workflows'].docs, file
+            write_pages_to_json site.collections['automation_cookbook'].docs, file
             write_pages_to_json site.collections['tips'].docs, file
         end
     end

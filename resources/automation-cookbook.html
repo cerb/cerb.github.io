@@ -1,0 +1,30 @@
+---
+title: Automation Cookbook
+excerpt: Browse recipes in the automation cookbook.
+#summary:
+layout: page
+permalink: /resources/automation-cookbook/
+jumbotron:
+  title: Automation Cookbook
+  tagline: Browse recipes in the automation cookbook
+  breadcrumbs:
+  - label: Resources
+    url: /resources/
+---
+
+<div class="integrations" style="column-width:400px;margin-bottom:20px;">
+	<ul class="articles">
+
+		{% assign recipes = site.automation_cookbook | sort: 'title' %}
+		{% for recipe in recipes %}
+		<li style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
+			<a href="{{ recipe.url }}" style="font-size:120%;">{{ recipe.title }}</a>
+			<br>
+			{{recipe.excerpt}}
+		</li>
+		{% endfor %}
+
+	</ul>
+</div>
+
+{% include testimonials.html %}
