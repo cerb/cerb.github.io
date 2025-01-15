@@ -16,6 +16,7 @@ topic: Workflows
 permalink: /workflows/cerb.auto_dispatcher/
 redirect_from:
   - /guides/bots/dispatch-assignments/
+  - /guides/automations/interaction.worker.explore/auto-assignment/
 jumbotron:
   title: Auto Dispatcher
   tagline: ""
@@ -32,6 +33,10 @@ jumbotron:
 # Introduction
 
 The **cerb.auto_dispatcher** workflow enables workers to simply request their next assignment by clicking a button on a workspace. 
+
+Once you have more than a few simultaneous [workers](/docs/workers/) handling [tickets](/docs/tickets/) in Cerb, it becomes inefficient for them to manually select their own next assignments from shared [worklists](/docs/worklists/). Workers may inadvertently choose the same ticket to work on, leading to wasted effort. This can also negatively impact customer satisfaction and service-level agreements, as workers may cherry-pick newer, simpler, or more interesting tickets while other issues frequently languish.
+
+Furthermore, while tickets can be automatically assigned to workers during routing, this should not happen without user interaction, as an overly busy worker could block other available workers from handling new issues.
 
 This workflow ensures issues are handled in a consistent, prioritized order without an overlap of effort. It resolves most issues with a large team of workers cherry-picking from the same shared worklist.
 
