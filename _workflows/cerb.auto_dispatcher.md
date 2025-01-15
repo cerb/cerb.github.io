@@ -14,6 +14,8 @@ summary: This page provides a comprehensive guide on the Auto Dispatcher workflo
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.auto_dispatcher/
+redirect_from:
+  - /guides/bots/dispatch-assignments/
 jumbotron:
   title: Auto Dispatcher
   tagline: ""
