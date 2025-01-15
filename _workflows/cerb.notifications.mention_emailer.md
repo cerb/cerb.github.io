@@ -15,6 +15,8 @@ summary: This page provides detailed information on the @Mention Email Notificat
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.notifications.mention_emailer/
+redirect_from:
+  - /guides/bots/relay-comment-notifications-email/
 jumbotron:
   title: '@Mention Email Notifications'
   tagline: ""
@@ -30,7 +32,11 @@ jumbotron:
 
 # Introduction
 
-This workflow sends email notifications to workers when they are @mentioned in a comment.
+[Notifications](/docs/notifications/) keep workers informed about recent activity when they're watching a [record](/docs/records/) or someone `@mentions` them.  Notifications are displayed in the top right when a worker is logged in.  This is great for workers who use Cerb as part of their daily routine, but workers who only log in when they're needed should be notified in real-time a different way.
+
+In this guide we'll build a workflow for instantly relaying new notifications to email. This can be customized to notify workers in different ways (Slack, SMS, etc).
+
+You will need at least Cerb [11.0](/releases/11.0/) to follow along.
 
 # Installation
 
