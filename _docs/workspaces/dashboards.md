@@ -370,7 +370,7 @@ format:dictionaries
 | Chart: Pie |
 | Chart: Time Blocks |
 | Chart: Time Series |
-| Clock |
+| [Clock](/docs/dashboards/widgets/clock/) | A clock widget with a configurable timezone and format (12/24-hr)
 | Countdown |
 | Counter |
 | Interactions Toolbar |
