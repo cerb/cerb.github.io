@@ -20,8 +20,8 @@ jumbotron:
       label: Resources &raquo;
       url: /resources/
     -
-      label: Packages &raquo;
-      url: /resources/packages/
+      label: Tips &raquo;
+      url: /resources/tips/
 ---
 
 [Snippets](/docs/tickets/#snippets) let you quickly insert predefined text into messages. You can think of snippets as copying and pasting from a giant shared clipboard.

@@ -18,8 +18,8 @@ jumbotron:
       label: Resources &raquo;
       url: /resources/
     -
-      label: Packages &raquo;
-      url: /resources/packages/
+      label: Tips &raquo;
+      url: /resources/tips/
 ---
 
 In [earlier versions](/docs/history/) of Cerb there wasn't a simple way to review all the bot behaviors that would respond to a specific event. This was made much simpler in the [7.3](/releases/7.3/) update.
