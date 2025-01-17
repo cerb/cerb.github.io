@@ -19,8 +19,8 @@ jumbotron:
       label: Resources &raquo;
       url: /resources/
     -
-      label: Packages &raquo;
-      url: /resources/packages/
+      label: Tips &raquo;
+      url: /resources/tips/
 
 ---
 

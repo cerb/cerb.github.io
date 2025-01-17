@@ -21,8 +21,8 @@ jumbotron:
       label: Resources &raquo;
       url: /resources/
     -
-      label: Packages &raquo;
-      url: /resources/packages/
+      label: Tips &raquo;
+      url: /resources/tips/
 ---
 
 When you reply to a message, Cerb "reflows" the quoted text so that each line is no longer than 76 characters. This comes from a decades old Internet convention[^rfc2045] intended to improve readability.

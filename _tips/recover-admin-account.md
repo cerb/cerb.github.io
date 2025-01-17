@@ -20,8 +20,8 @@ jumbotron:
       label: Resources &raquo;
       url: /resources/
     -
-      label: Packages &raquo;
-      url: /resources/packages/
+      label: Tips &raquo;
+      url: /resources/tips/
 ---
 
 In rare situations, it's possible to become locked out of your administrator account in Cerb. For example, if you authenticate against an LDAP server that becomes unavailable then you won't be able to log in.

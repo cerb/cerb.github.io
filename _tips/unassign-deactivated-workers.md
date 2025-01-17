@@ -20,8 +20,8 @@ jumbotron:
       label: Resources &raquo;
       url: /resources/
     -
-      label: Packages &raquo;
-      url: /resources/packages/
+      label: Tips &raquo;
+      url: /resources/tips/
 ---
 
 As an administrator, you can deactivate worker accounts by clicking on **Workers** in the [Search](/docs/guide/workers/user-interface/#search-menu) menu.  A deactivated worker is no longer able to log in, and they aren't included in active worker lists when making assignments; but their entire history of email replies and comments is preserved.
