@@ -365,7 +365,7 @@ format:dictionaries
 | Type | Description
 |-|-
 | Automation | 
-| Calendar |
+| [Calendar](/docs/dashboards/widgets/calendar) | A calendar widget with dates and events
 | [Chart KATA](/docs/dashboards/widgets/chart-kata/) | A highly customizable chart combining multiple datasources from data queries and automations.
 | Chart: Pie |
 | Chart: Time Blocks |
