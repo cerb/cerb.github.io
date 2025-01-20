@@ -1,7 +1,10 @@
 ---
 title: Create a comment
 excerpt: Use record.create to make a comment
-summary: 
+summary: "This page explains how to create a comment on any record using the `record.create` command in 
+  Cerb. It also provides examples of how to specify the author, target record, and other fields 
+  for the comment, as well as an example of how to implement a deny policy for the 
+  `record.create` command to only allow comments on records of type `comment`."
 layout: integration
 jumbotron:
   title: Create a comment

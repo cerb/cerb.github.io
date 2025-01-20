@@ -1,7 +1,7 @@
 ---
 title: Search records with a query
 excerpt: Search records with an arbitrary query and save the results into a variable.
-summary: 
+summary: 'This page provides instructions on using the `record.search` command in Cerb to query and load records for automation purposes. It includes examples of how to find open tickets and workers who have been active within the past 30 minutes. The page also outlines the policies for these queries, specifying conditions under which the `record.search` command is allowed or denied based on the type of record being queried.'
 layout: integration
 redirect_from:
   - /guides/bots/load-records/

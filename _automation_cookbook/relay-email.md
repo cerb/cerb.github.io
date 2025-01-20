@@ -1,7 +1,8 @@
 ---
 title: Relay email messages to workers
 excerpt: Relay email messages to workers using an external email client.
-summary: 
+summary: "This page provides an overview of email relay in Cerb, which enables workers to respond to 
+  messages from external email clients instead of being forced to use the web browser."
 layout: integration
 jumbotron:
   title: Relay email messages to workers

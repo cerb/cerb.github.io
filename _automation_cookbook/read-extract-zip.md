@@ -1,7 +1,11 @@
 ---
 title: Read and extract from a ZIP
 excerpt: Read a ZIP manifest and extract files from an attachment record
-summary: 
+summary: "This page explains how to read and extract specific files from a ZIP attachment using Cerb's 
+  `data.query:` and `file.read:` commands. It provides step-by-step examples of how to read the 
+  manifest of a `.zip` attachment record, filter extracted files based on filename patterns, 
+  extract a specific file path, and decompress gzip files, as well as implement deny policies 
+  for these commands to restrict access."
 layout: integration
 jumbotron:
   title: Read and extract from a ZIP

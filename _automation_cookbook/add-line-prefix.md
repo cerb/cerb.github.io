@@ -1,7 +1,9 @@
 ---
 title: Add prefixes to a line
 excerpt: Add prefixes to each line of a given block of text
-summary: 
+summary: "This page provides an example of how to add prefixes to each line of a given block of text in 
+  Cerb, using the `set` and `return` blocks. It also describes variations for using the output 
+  with workers, including copying it to the clipboard or pasting it into an existing message."
 layout: integration
 jumbotron:
   title: Add prefixes to a line

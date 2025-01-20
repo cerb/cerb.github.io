@@ -1,7 +1,11 @@
 ---
 title: HTTP GET request
 excerpt: Run a HTTP GET request
-summary: 
+summary: "This page explains how to make an HTTP GET request using the `http.request` command in Cerb. 
+  It shows an example of how to send a GET request to the Cerb API, demonstrating its 
+  functionality. Additionally, the page provides an example of how to implement deny policies 
+  for the `http.request` command, which can be used to restrict certain types of requests or 
+  URLs from being sent."
 layout: integration
 jumbotron:
   title: HTTP GET request

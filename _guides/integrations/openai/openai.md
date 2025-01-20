@@ -1,6 +1,7 @@
 ---
 title: Integrate with OpenAI
 excerpt: A step-by-step guide for integrating Cerb and OpenAI.
+summary: "This page provides a comprehensive guide on integrating Cerb with OpenAI, enabling the use of OpenAI's API within Cerb automations. It includes detailed instructions on configuring both OpenAI and Cerb. For OpenAI, it covers creating a project and generating an API key. For Cerb, it explains how to connect to OpenAI using the API key. Additionally, the page references related resources, such as a guide on building a question-answering chatbot with Cerb and ChatGPT."
 social_image_url: /assets/images/guides/openai/cerb-and-openai.png
 permalink: /guides/integrations/openai/
 layout: integration
