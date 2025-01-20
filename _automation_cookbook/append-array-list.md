@@ -1,6 +1,6 @@
 ---
-title: Appending values to arrays and lists
-excerpt: Append values to an array or list.
+title: Append values to arrays and lists
+excerpt: Add new values to existing arrays and lists.
 summary: "This page demonstrates various techniques for appending values to arrays and lists in Cerb automations, including using var.push, var.set, merge filters, and CSV concatenation. Each method offers different benefits depending on your use case."
 layout: integration
 jumbotron:

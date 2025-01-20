@@ -1,6 +1,6 @@
 ---
-title: Key expandable placeholder
-excerpt: Create key expandable placeholders using a shared prefix.
+title: Create a key expandable placeholder
+excerpt: Create an arbitrary variable that supports key expansion by using a shared prefix.
 summary: "This page explains how to create key expandable placeholders in Cerb using a common prefix. By setting variables with `_context` and `id` suffixes, you can automatically create an expandable `_label` placeholder. This is useful for referencing record labels throughout your automations without explicitly loading each record."
 layout: integration
 jumbotron:

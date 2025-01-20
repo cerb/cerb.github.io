@@ -1,10 +1,10 @@
 ---
-title: Iterate through search results
-excerpt: "Using the repeat: command to process multiple records from search results."
+title: Loop through search results
+excerpt: "Use the `repeat:` command to iterate records from search results."
 summary: This page demonstrates how to use the repeat function in automation scripting to efficiently iterate through search results. It shows best practices for processing multiple records using record IDs, making it useful for batch operations and record management tasks.
 layout: integration
 jumbotron:
-  title: Iterate through search results
+  title: Loop through search results
   breadcrumbs:
     -
       label: Resources &raquo;
@@ -20,8 +20,6 @@ jumbotron:
 * Search result handling
 * Record expansion and custom fields
 {% endcomment %}
-
-## repeat:
 
 Here is an example using the **`repeat:`** command for iterating through record IDs (using records[id] notation) in automation scripting. This approach is more efficient than looping through records directly since it doesn't duplicate the list during iteration.
 

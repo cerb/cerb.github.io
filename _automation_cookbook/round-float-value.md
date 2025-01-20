@@ -1,6 +1,6 @@
 ---
 title: Round floating point numbers
-excerpt: Using various rounding methods to format decimal numbers in automation scripting.
+excerpt: Various rounding methods to format decimal numbers in automation scripting.
 summary: This page demonstrates different ways to round floating point numbers in automation scripting. It covers basic rounding, ceiling, floor, and precision control using Pi as an example. The examples show how to use different rounding methods to achieve desired numeric formatting in a scripting context.
 layout: integration
 jumbotron:

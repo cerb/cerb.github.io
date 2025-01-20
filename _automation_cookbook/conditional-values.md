@@ -1,10 +1,10 @@
 ---
-title: Perform inline conditional logic in a placeholder value
-excerpt: Use the ternary operator shortcut for conditional logic.
+title: Conditional values
+excerpt: Perform inline conditional logic in a placeholder value.
 summary: "This page explains how to use ternary operators in Cerb automations to create conditional logic. You can chain multiple conditions together to check various states and return different values based on those conditions."
 layout: integration
 jumbotron:
-  title: Ternary Operator
+  title: Conditional values
   breadcrumbs:
     -
       label: Resources &raquo;
@@ -21,9 +21,15 @@ jumbotron:
 * Common pattern for role-based checks
 {% endcomment %}
 
-## {% raw %}{{expression ? if_true : if_false}}{% endraw %}
+The **ternary operator** provides a compact way to write an if/else condition in a single expression:
 
-The **ternary operator** provides a compact way to write an if/else condition in a single expression.
+<pre>
+<code class="language-twig">
+{% raw %}
+{{expression ? if_true : if_false}}
+{% endraw %}
+</code>
+</pre>
 
 ## Check user role using ternary operator
 

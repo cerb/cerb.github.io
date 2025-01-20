@@ -1,6 +1,6 @@
 ---
-title: Retrieve arbitrary records
-excerpt: Retrieve arbitrary records to use in other automations with record.search. 
+title: Search records with a query
+excerpt: Search records with an arbitrary query and save the results into a variable.
 summary: 
 layout: integration
 redirect_from:
@@ -16,11 +16,9 @@ jumbotron:
       url: /resources/automation-cookbook/
 ---
 
-## record.search
-
 **record.search** can be used to load records and make them available to an automation.
 
-### Find open tickets:
+## Find open tickets:
 <pre>
 <code class="language-cerb">
 {% raw %}
@@ -48,7 +46,7 @@ commands:
 </code>
 </pre>
 
-### Find workers active within the past 30 minutes:
+## Find workers active within the past 30 minutes:
 <pre>
 <code class="language-cerb">
 {% raw %}
