@@ -27,7 +27,7 @@ inputs:
 
 start:
   return:
-    emails: {{inputs.ticket.participants|column('email')|join(',')}}
+    emails: {{inputs.ticket.participants|column('email')|join(', ')}}
 {% endraw %}
 </code>
 </pre>

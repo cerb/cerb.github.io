@@ -21,7 +21,7 @@ jumbotron:
 * Whitespace handling
 {% endcomment %}
 
-Here are examples of using the `|strip_lines` filter (prefix removal, quote stripping) for text processing in automation scripting.
+Here are examples of using the [\|strip_lines](/docs/scripting/filters#strip_lines) filter (prefix removal, quote stripping) for text processing in automation scripting.
 
 ## Removing email quotes
 

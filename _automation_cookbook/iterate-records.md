@@ -21,7 +21,9 @@ jumbotron:
 * Record expansion and custom fields
 {% endcomment %}
 
-Here is an example using the **`repeat:`** command for iterating through record IDs (using records[id] notation) in automation scripting. This approach is more efficient than looping through records directly since it doesn't duplicate the list during iteration.
+Here is an example using the [repeat:](https://cerb.ai/docs/automations/commands/repeat/) command for iterating through record IDs (using `records[id]` notation) in automation scripting.
+
+This approach is more efficient than looping through records directly since it doesn't duplicate the list during iteration.
 
 ## Processing search results
 

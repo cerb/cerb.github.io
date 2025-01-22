@@ -1,6 +1,6 @@
 ---
-title: Add prefixes to a line
-excerpt: Add prefixes to each line of a given block of text
+title: Prepend a prefix to a text block
+excerpt: Add a prefix to each line in a given block of text.
 summary: "This page provides an example of how to add prefixes to each line of a given block of text in 
   Cerb, using the `set` and `return` blocks. It also describes variations for using the output 
   with workers, including copying it to the clipboard or pasting it into an existing message."
@@ -16,7 +16,8 @@ jumbotron:
       url: /resources/automation-cookbook/
 ---
 
-In this example we quote a prior email message by adding the standard > character to the start of each line.
+In this example we quote a prior email message by adding the standard `>` character to the start of each line.
+
 <pre>
 <code class="language-cerb">
 {% raw %}
@@ -36,6 +37,7 @@ start:
 </pre>
 
 The output gives us:
+
 <pre>
 <code class="language-cerb">
 {% raw %}
@@ -51,7 +53,9 @@ __return:
 </pre>
 
 #### Variations:
+
 In a worker interaction you can use ```return: clipboard:``` to immediately copy the output to the clipboard.
+
 <pre>
 <code class="language-cerb">
 {% raw %}
@@ -62,6 +66,7 @@ return:
 </pre>
 
 Or use ```return: snippet:``` to paste the output in an existing message at the cursor point.
+
 <pre>
 <code class="language-cerb">
 {% raw %}

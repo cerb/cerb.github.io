@@ -22,7 +22,7 @@ jumbotron:
 * Conditional filtering
 {% endcomment %}
 
-Here is an example of using the **`|filter`** modifier with arrow functions to filter array values based on conditions in automation scripting.
+Here is an example of using the [\|filter](https://cerb.ai/docs/scripting/filters#filter) modifier with arrow functions to filter array values based on conditions in automation scripting.
 
 ## Finding multiples of 5
 

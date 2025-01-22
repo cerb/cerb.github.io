@@ -15,7 +15,7 @@ jumbotron:
       label: Automation Cookbook &raquo;
       url: /resources/automation-cookbook/
 ---
-With email relay, workers can respond to messages from external email clients rather than always being forces to use Cerb in the web browser.
+With [email relay](/guides/mail/relaying/), workers can respond to messages from external email clients rather than their web browser.
 
 <pre>
 <code class="language-cerb">
@@ -31,5 +31,3 @@ start:
 {% endraw %}
 </code>
 </pre>
-
-See [Email Relay](/guides/mail/relaying/) for more detailed information.

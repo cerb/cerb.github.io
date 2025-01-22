@@ -1,7 +1,7 @@
 ---
 title: Set a dynamic key name
-excerpt: Use var.set to make a key with a dynamic name
-summary: "This page demonstrates how to set dynamic key names using Cerb's `var.set` command, which 
+excerpt: Use `var.set:` to make a key with a dynamic name.
+summary: "This page demonstrates how to set dynamic key names using Cerb's `var.set:` command, which 
   allows for flexible and non-standard key names that are not valid in KATA scripting. It 
   provides examples of setting random key names, using special characters like `@`, and changing 
   the delimiter from the standard `:` if needed."
@@ -16,7 +16,8 @@ jumbotron:
       label: Automation Cookbook &raquo;
       url: /resources/automation-cookbook/
 ---
-You can't use scripting in a KATA key, but if you want to set a dynamic key name, you can do so with `var.set`:
+
+You can't use scripting in a KATA key, but if you want to set a dynamic key name, you can do so with [var.set:](https://cerb.ai/docs/automations/commands/var.set/)
 
 <pre>
 <code class="language-cerb">
@@ -30,7 +31,7 @@ start:
 </code>
 </pre>
 
-This can also be used if you want a key name that isn't valid in KATA, such as a ```:``` or `@`.
+This can also be used if you want a key name that isn't valid in KATA, such as a `:` or `@`.
 
 <pre>
 <code class="language-cerb">
@@ -57,4 +58,4 @@ start:
 </code>
 </pre>
 
-You can also use the `delimiter` field to change the delimiter from the standard `:` if necessary.
+You can also use the `delimiter:` field to change the delimiter from the standard `:` if necessary.

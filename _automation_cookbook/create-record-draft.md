@@ -21,7 +21,7 @@ jumbotron:
 * Attachments
 {% endcomment %}
 
-## mail.transactional
+## Create a transactional email draft
 
 A `mail.transactional` [draft](/docs/records/types/draft/) is sent by the system rather than a particular worker. This does not create a [ticket](/docs/tickets/) record.
 

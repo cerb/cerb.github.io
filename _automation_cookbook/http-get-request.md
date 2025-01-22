@@ -1,6 +1,6 @@
 ---
-title: HTTP GET request
-excerpt: Run a HTTP GET request
+title: Send an HTTP GET request
+excerpt: Fetch data from an HTTP endpoint.
 summary: "This page explains how to make an HTTP GET request using the `http.request` command in Cerb. 
   It shows an example of how to send a GET request to the Cerb API, demonstrating its 
   functionality. Additionally, the page provides an example of how to implement deny policies 
@@ -17,10 +17,11 @@ jumbotron:
       label: Automation Cookbook &raquo;
       url: /resources/automation-cookbook/
 ---
-You can use ```http.request``` to make a request to any server. Here's an example of a GET request.
+You can use [http.request:](https://cerb.ai/docs/automations/commands/http.request/) to make a request to any server. Here's an example of a GET request.
+
 <pre>
 <code class="language-cerb">
-{% raw %}:
+{% raw %}
 start:
   http.request/get:
     output: http_response
@@ -34,6 +35,7 @@ start:
 </pre>
 
 Use this policy:
+
 <pre>
 <code class="language-cerb">
 {% raw %}

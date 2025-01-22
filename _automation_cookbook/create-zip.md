@@ -1,6 +1,6 @@
 ---
 title: Create a ZIP attachment
-excerpt: Use file.write to create a ZIP archive with arbitrary files
+excerpt: Use `file.write:` to create a ZIP archive with arbitrary files.
 summary: "This page explains how to create a ZIP attachment using the `file.write` command in Cerb. It 
   shows an example of how to write a ZIP archive with two files (a README file and a Dockerfile) 
   and then use `record.create` to create an attachment that links to the newly created ZIP file."
@@ -15,7 +15,8 @@ jumbotron:
       label: Automation Cookbook &raquo;
       url: /resources/automation-cookbook/
 ---
-The `file.write:` command can create a ZIP archive with files from arbitrary text, temporary automation resources, or existing file attachments. You can then use `record.create` to create an attachment to link to other records like tickets, messages etc.
+The [file.write:](https://cerb.ai/docs/automations/commands/file.write/) command can create a ZIP archive with files from arbitrary text, temporary automation resources, or existing file attachments. You can then use [record.create:](https://cerb.ai/docs/automations/commands/record.create/) to create an attachment to link to other records like tickets, messages, etc.
+
 <pre>
 <code class="language-cerb">
 {% raw %}
@@ -49,6 +50,7 @@ start:
 </pre>
 
 Use this policy:
+
 <pre>
 <code class="language-cerb">
 {% raw %}

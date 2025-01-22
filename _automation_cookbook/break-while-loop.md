@@ -1,6 +1,6 @@
 ---
 title: Break a while loop with a condition
-excerpt: You can break an infinite while loop with conditional logic
+excerpt: Abort an infinite while loop with conditional logic.
 summary: "This page explains how to break a while loop in Cerb with conditional logic, using the `while` 
   command with a probability-based condition that breaks the loop 25% of the time. It also shows 
   an example of how to use this to implement an infinite loop that can be stopped at any time."
@@ -15,7 +15,9 @@ jumbotron:
       label: Automation Cookbook &raquo;
       url: /resources/automation-cookbook/
 ---
-[while:](https://cerb.ai/docs/automations/commands/while/) will continuously loop a command while certain criteria remains. This is an infinite loop that will break with 25% probability `(random(n)` is a random number from 0 to n inclusive). The while: loop repeats until `isLooping` is `false`.
+The [while:](https://cerb.ai/docs/automations/commands/while/) command continuously repeats its child commands while its criteria remains `true`.
+
+This example is an infinite loop that will break with 25% probability (`random(n)` is a random number from `0` to `n` inclusive). The loop repeats until `isLooping` is `false`.
 
 At the end, the `counter` value shows how many times it looped, which will be different each time it runs.
 
@@ -37,4 +39,4 @@ start:
 </code>
 </pre>
 
-Loops like this can be used around an `await:` to repeat an interaction until stopped.
+Loops like this can be used around an `await:` block to repeat an interaction until aborted by the user.

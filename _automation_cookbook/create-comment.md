@@ -1,6 +1,6 @@
 ---
 title: Create a comment
-excerpt: Use record.create to make a comment
+excerpt: Use `record.create:` to create a comment on any record.
 summary: "This page explains how to create a comment on any record using the `record.create` command in 
   Cerb. It also provides examples of how to specify the author, target record, and other fields 
   for the comment, as well as an example of how to implement a deny policy for the 
@@ -16,7 +16,9 @@ jumbotron:
       label: Automation Cookbook &raquo;
       url: /resources/automation-cookbook/
 ---
-You can use ```record.create``` to create a comment on any record.
+
+You can use [record.create:](https://cerb.ai/docs/automations/commands/record.create/) to create a [comment](/docs/comments/) on any [record](/docs/records/).
+
 <pre>
 <code class="language-cerb">
 {% raw %}
@@ -37,10 +39,12 @@ start:
 </code>
 </pre>
 
-```author__context:``` can be one of: app, role, group, worker
-```target_context``` is the target [record type](/docs/records/types) for the comment (ticket, message, task etc.)
+`author__context:` can be one of: app, role, group, worker
+
+`target_context:` is the target [record type](/docs/records/types) for the comment (ticket, message, task, etc.)
 
 Use this policy:
+
 <pre>
 <code class="language-cerb">
 {% raw %}

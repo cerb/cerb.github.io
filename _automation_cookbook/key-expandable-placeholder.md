@@ -21,11 +21,9 @@ jumbotron:
 * Common pattern for referencing records
 {% endcomment %}
 
-## set:
-
 When you set both `prefix__context` and `prefix_id` variables using a common prefix, Cerb automatically creates an expandable `prefix__label` placeholder for referencing the record.
 
-**Create a ticket label placeholder:**
+## Create a ticket label placeholder
 
 <pre>
 <code class="language-cerb">

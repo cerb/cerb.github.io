@@ -16,7 +16,7 @@ jumbotron:
       url: /resources/automation-cookbook/
 ---
 
-**record.search** can be used to load records and make them available to an automation.
+[record.search:](https://cerb.ai/docs/automations/commands/record.search/) can be used to load records and make them available to an automation.
 
 ## Find open tickets:
 <pre>

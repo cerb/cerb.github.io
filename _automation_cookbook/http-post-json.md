@@ -1,6 +1,6 @@
 ---
-title: HTTP POST request with a JSON payload
-excerpt: Send a JSON payload as an HTTP Request in KATA
+title: Send an HTTP POST request with a JSON payload
+excerpt: Send a JSON payload to an HTTP endpoint.
 summary: "This page explains how to make an HTTP POST request with a JSON payload using the 
   `http.request` command in Cerb. It shows an example of how to send a POST request to a server 
   with a formatted JSON body, including fields such as name_first, name_last, and email. The 
