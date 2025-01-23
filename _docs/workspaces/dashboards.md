@@ -378,5 +378,5 @@ format:dictionaries
 | Map |
 | Project Board |
 | Record Fields |
-| Sheet |
+| [Sheet](/docs/dashboards/widgets/sheet) | A highly customizable data grid tool for displaying records.
 | [Worklist](/docs/dashboards/widgets/worklist/) | A record worklist with configurable search queries and columns.

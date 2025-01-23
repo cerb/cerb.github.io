@@ -1,0 +1,26 @@
+---
+title: Sheet - Dashboard Widgets
+excerpt: A highly customizable data grid tool for displaying records.
+permalink: /docs/dashboards/widgets/sheet/
+toc:
+  title: Calendar
+  expand: Reference
+jumbotron:
+  title: Sheet
+  tagline: ~
+  breadcrumbs:
+  - label: Docs &raquo;
+    url: /docs/home/
+  - label: Workspaces &raquo;
+    url: /docs/workspaces/
+  - label: Dashboards &raquo;
+    url: /docs/dashboards/
+  - label: Widgets &raquo;
+    url: /docs/dashboards/#widgets
+---
+
+The [**Sheet**](/docs/sheet) widget provides you with a highly customizable grid based vizualization tool. Sheets are similar to worklists, but far more flexible.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/dashboards/widgets/sheet-widget.png" class="screenshot">
+</div>
