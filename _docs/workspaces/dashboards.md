@@ -373,7 +373,7 @@ format:dictionaries
 | [Clock](/docs/dashboards/widgets/clock/) | A clock widget with a configurable timezone and format (12/24-hr).
 | Countdown |
 | Counter |
-| Interactions Toolbar |
+| [Interactions Toolbar ](/docs/dashboards/widgets/interactions-toolbar/ )| A toolbar widget for running worker interactions.
 | Knowledgebase Browser |
 | Map |
 | Project Board |
