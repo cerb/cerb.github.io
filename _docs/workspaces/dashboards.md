@@ -365,12 +365,12 @@ format:dictionaries
 | Type | Description
 |-|-
 | Automation | 
-| [Calendar](/docs/dashboards/widgets/calendar) | A calendar widget with dates and events
+| [Calendar](/docs/dashboards/widgets/calendar) | A calendar widget with dates and events.
 | [Chart KATA](/docs/dashboards/widgets/chart-kata/) | A highly customizable chart combining multiple datasources from data queries and automations.
 | Chart: Pie |
 | Chart: Time Blocks |
 | Chart: Time Series |
-| [Clock](/docs/dashboards/widgets/clock/) | A clock widget with a configurable timezone and format (12/24-hr)
+| [Clock](/docs/dashboards/widgets/clock/) | A clock widget with a configurable timezone and format (12/24-hr).
 | Countdown |
 | Counter |
 | Interactions Toolbar |
@@ -379,4 +379,4 @@ format:dictionaries
 | Project Board |
 | Record Fields |
 | Sheet |
-| Worklist |
+| [Worklist](/docs/dashboards/widgets/worklist/) | A record worklist with configurable search queries and columns.
