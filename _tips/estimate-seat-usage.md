@@ -1,6 +1,7 @@
 ---
 title: 'Estimate seat usage'
 excerpt: Estimate seat usage from activity log data.
+summary: "This page provides tips on estimating seat usage from activity log data. It suggests using data queries to retrieve raw data, such as the number of activity logs by worker over the past week, and offers examples of queries that can be run using the Data Query Tester, including filtering workers by group and showing distinct workers per day."
 layout: integration
 author: The Cerb Team
 permalink: /tips/estimate-seat-usage/

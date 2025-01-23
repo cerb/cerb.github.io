@@ -1,7 +1,7 @@
 ---
 title: 'Identity problematic automations or behaviors'
 excerpt: Find automations or behaviors that invoke too often or take too long to run.
-
+summary: "This page provides tips on identifying problematic automations or behaviors in Cerb, which can be optimized to run less frequently or more efficiently. To find automations that have run too often or take too long to execute, users can use data queries to track automation and behavior invocations over the past month, and then visualize the results using a chart or data query tester. By analyzing these metrics, users can identify slowest automations and behaviors and optimize them with better conditions in their automation events."
 layout: integration
 author: The Cerb Team
 permalink: /tips/identify-problematic-automations/
