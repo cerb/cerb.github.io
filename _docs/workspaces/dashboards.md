@@ -368,7 +368,7 @@ format:dictionaries
 | [Calendar](/docs/dashboards/widgets/calendar) | A calendar widget with dates and events.
 | [Chart KATA](/docs/dashboards/widgets/chart-kata/) | A highly customizable chart combining multiple datasources from data queries and automations.
 | Chart: Pie |
-| Chart: Time Blocks |
+| [Chart: Time Blocks](/docs/dashboards/widgets/timeblocks/) | A heatmap-style chart useful for availability visualizations.
 | Chart: Time Series |
 | [Clock](/docs/dashboards/widgets/clock/) | A clock widget with a configurable timezone and format (12/24-hr).
 | Countdown |
