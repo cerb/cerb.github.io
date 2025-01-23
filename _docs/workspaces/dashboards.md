@@ -369,7 +369,7 @@ format:dictionaries
 | [Chart KATA](/docs/dashboards/widgets/chart-kata/) | A highly customizable chart combining multiple datasources from data queries and automations.
 | Chart: Pie |
 | [Chart: Time Blocks](/docs/dashboards/widgets/timeblocks/) | A heatmap-style chart useful for availability visualizations.
-| Chart: Time Series |
+| [Chart: Time Series](/docs/dashboards/widgets/timeseries/) | A chart used for visualizing changes over time.
 | [Clock](/docs/dashboards/widgets/clock/) | A clock widget with a configurable timezone and format (12/24-hr).
 | Countdown |
 | Counter |
