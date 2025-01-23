@@ -1457,6 +1457,28 @@ Sort an array:
 [1,3,4,5,6,9]
 ```
 
+You can also provide an arrow function as a custom comparator for advanced sorting rules. The spaceship operator (`<=>`) automatically returns in comparator format (e.g. `-1`, `0`, or `1`):
+- (A <=> B) < 0 is true if A < B
+- (A <=> B) > 0 is true if A > B
+- (A <=> B) == 0 is true if A and B are equal/equivalent
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% set items = [
+    {name: "Item C", priority: 3},
+    {name: "Item A", priority: 1},
+    {name: "Item B", priority: 2}
+] %}
+{{items|sort((a,b) => a.priority <=> b.priority)|column('name')|join(', ')}}
+{% endraw %}
+</code>
+</pre>
+
+```
+Item A, Item B, Item C
+```
+
 ## split
 
 Convert a string to an array with the given delimiter.
