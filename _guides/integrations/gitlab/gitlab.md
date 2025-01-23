@@ -183,3 +183,7 @@ inputs:
 {% endraw %}
 </code>
 </pre>
+
+# Use the connected account in Cerb workflows
+
+Once created, you can use the connected account with the prebuilt [GitLab Issues workflow](/workflows/cerb.integrations.gitlab.issues/) to search and link GitLab issues to tickets within Cerb.
