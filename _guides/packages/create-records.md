@@ -112,6 +112,67 @@ When this package is imported, the message would be added to the ticket `ticket_
 
 Cerb will handle all dependencies between UIDs for you -- you don't have to define records in any particular order.  The message could be defined first and it would still be created after the ticket is created.
 
+## Using _exclude
+
+Records can be conditionally included or excluded during package import using the `_exclude` key. This key accepts scripting syntax that evaluates to a boolean value:
+
+<pre style="max-height:29.5em;">
+<code class="language-json">
+{% raw %}
+{
+  "uid": "example_record",
+  "_context": "record_type",
+  "_exclude": "{{% if some_condition %}}true{{% endif %}}",
+  "name": "Example Record"
+}
+{% endraw %}
+</code>
+</pre>
+
+When the `_exclude` condition evaluates to `true`, the record will be excluded during package import.
+
+This is particularly useful when combined with package prompts to allow workers to choose which records to import. For example:
+
+<pre style="max-height:29.5em;">
+<code class="language-json">
+{% raw %}
+{
+  "configure": {
+    "prompts": [
+      {
+        "type": "picklist",
+        "label": "Dataset:",
+        "key": "prompt_dataset",
+        "params": {
+          "options": {
+            "Open Tickets": "tickets_open",
+            "My Tasks": "tasks_my"
+          }
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "uid": "widget_open_tickets",
+      "_context": "workspace_widget",
+      "_exclude": "{{% if prompt_dataset != 'tickets_open' %}}true{{% endif %}}",
+      "label": "Open Tickets"
+    },
+    {
+      "uid": "widget_my_tasks",
+      "_context": "workspace_widget", 
+      "_exclude": "{{% if prompt_dataset != 'tasks_my' %}}true{{% endif %}}",
+      "label": "My Tasks"
+    }
+  ]
+}
+{% endraw %}
+</code>
+</pre>
+
+In this example, based on the worker's dataset selection in the prompt, only one widget record will be imported. If they select "Open Tickets" then the `widget_my_tasks` record will be excluded, and vice versa.
+
 ## Custom fields
 
 You can set a custom field by including a key with the format `custom_<id>`, where `<id>` is the ID of the custom field. These IDs can be found from **Search >> Custom Fields** in Cerb by adding the **ID** column to the worklist.
