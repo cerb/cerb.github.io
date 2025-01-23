@@ -1,0 +1,31 @@
+---
+title: Interactions Toolbar - Dashboard Widgets
+excerpt: A toolbar for running worker interactions
+permalink: /docs/dashboards/widgets/interactions-toolbar/
+jumbotron:
+  title: Interactions Toolbar
+  tagline: ~
+  breadcrumbs:
+  - label: Docs &raquo;
+    url: /docs/home/
+  - label: Workspaces &raquo;
+    url: /docs/workspaces/
+  - label: Dashboards &raquo;
+    url: /docs/dashboards/
+  - label: Widgets &raquo;
+    url: /docs/dashboards/#widgets
+---
+
+The **Interactions Toolbar** widget provides a space to run [worker interactions](/docs/automations/triggers/interaction.worker/) from any dashboard. You can place multiple interactions on a single toolbar or create a dropdown menu of selectable interactions.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/dashboards/widgets/interactions-toolbar/interactions-toolbar.png" class="screenshot">
+</div>
+
+## Configuration
+
+In the widget configuration, you can define the interactions you want to place on the toolbar, assign each a label and icon, define a `hidden@bool:`statement, and define any actions you want to take place after the interaction runs (such as refreshing the page). You can also select if you want the interactions to run within the widget or as separate popup windows. 
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/dashboards/widgets/interactions-toolbar/interactions-toolbar-settings.png" class="screenshot">
+</div>
