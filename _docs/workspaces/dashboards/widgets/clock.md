@@ -1,5 +1,5 @@
 ---
-title: Chart KATA - Dashboard Widgets
+title: Clock - Dashboard Widgets
 excerpt: A clock widget with a configurable timezone and format (12/24-hr).
 summary: This page provides an overview of the Clock widget, a customizable dashboard component that displays the current time with a selectable timezone and format.
 permalink: /docs/dashboards/widgets/clock/
