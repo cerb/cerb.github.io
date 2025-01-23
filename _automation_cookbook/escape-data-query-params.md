@@ -21,7 +21,7 @@ jumbotron:
 * Shows proper parameter escaping
 {% endcomment %}
 
-The **`query_params:`** option provides a secure way to substitute user input into data queries. This prevents query injection attacks by properly escaping the input values.
+The `query_params:` option provides a secure way to substitute user input into data queries. This prevents query injection attacks by properly escaping the input values.
 
 ## Safe query parameter usage
 
@@ -46,7 +46,7 @@ start:
 </code>
 </pre>
 
-The **`query_params:`** option is a key-value object. The `${...}` syntax in a data query references those keys. This is more secure because `${...}` placeholders aren't evaluated until the query is parsed, so they can never modify the query structure.
+The `query_params:` option is a key-value object. The `${...}` syntax in a data query references those keys. This is more secure because `${...}` placeholders aren't evaluated until the query is parsed, so they can never modify the query structure.
 
 ## Unsafe direct interpolation (vulnerable to injection)
 

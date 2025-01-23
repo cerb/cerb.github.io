@@ -4,7 +4,7 @@ excerpt: Create an arbitrary variable that supports key expansion by using a sha
 summary: "This page explains how to create key expandable placeholders in Cerb using a common prefix. By setting variables with `_context` and `id` suffixes, you can automatically create an expandable `_label` placeholder. This is useful for referencing record labels throughout your automations without explicitly loading each record."
 layout: integration
 jumbotron:
-  title: Key expandable placeholder
+  title: Create a key expandable placeholder
   breadcrumbs:
     -
       label: Resources &raquo;

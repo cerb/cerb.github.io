@@ -6,7 +6,7 @@ summary: "This page provides an example of how to add prefixes to each line of a
   with workers, including copying it to the clipboard or pasting it into an existing message."
 layout: integration
 jumbotron:
-  title: Add prefixes to a line
+  title: Prepend a prefix to a text block
   breadcrumbs:
     -
       label: Resources &raquo;

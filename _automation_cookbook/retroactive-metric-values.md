@@ -1,6 +1,7 @@
 ---
 title: Log retroactive metric values
 excerpt: Log retroactive or custom values on a metric.
+summary: "This page explains how to log retroactive metric values using Cerb's `metric.increment` command, which can be useful for backfilling data. The command allows users to specify a custom or retroactive value on a specific metric, and can also be used with policies to control access. Examples are provided in the documentation, including a code snippet that demonstrates how to use `metric.increment` with inputs such as a metric name, timestamp, and values, as well as a policy example to deny access unless the specified metric name matches a certain condition."
 layout: integration
 jumbotron:
   title: Log retroactive metric values
@@ -13,7 +14,7 @@ jumbotron:
       url: /resources/automation-cookbook/
 ---
 
-Using `metric.increment` you can log retroactive or custom values on a metric. This can be useful for backfilling.
+Using [metric.increment:](/docs/automations/commands/metric.increment/) you can log retroactive or custom values on a metric. This can be useful for backfilling.
 
 <pre>
 <code class="language-cerb">

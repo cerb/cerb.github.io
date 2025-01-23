@@ -9,7 +9,7 @@ summary: "This page explains how to simulate random errors or successes for HTTP
   script, such as `on_success` or `on_error`."
 layout: integration
 jumbotron:
-  title: Simulate errors in HTTP requests
+  title: Simulate errors
   breadcrumbs:
     -
       label: Resources &raquo;

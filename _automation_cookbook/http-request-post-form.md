@@ -1,10 +1,10 @@
 ---
-title: Send HTTP Post request
-excerpt: Make an HTTP Post request with form-encoded data and handle JSON responses.
+title: Send HTTP POST request
+excerpt: Make an HTTP POST request with form-encoded data and handle JSON responses.
 summary: This page demonstrates how to make HTTP POST requests with form-encoded data. It shows how to set headers, send form data, and process JSON responses, making it useful for API integrations and web service interactions.
 layout: integration
 jumbotron:
-  title: Send HTTP Post request
+  title: Send HTTP POST request
   breadcrumbs:
     -
       label: Resources &raquo;

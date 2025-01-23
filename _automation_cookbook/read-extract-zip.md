@@ -8,7 +8,7 @@ summary: "This page explains how to read and extract specific files from a ZIP a
   for these commands to restrict access."
 layout: integration
 jumbotron:
-  title: Read and extract from a ZIP
+  title: Read and extract files from a ZIP
   breadcrumbs:
     -
       label: Resources &raquo;

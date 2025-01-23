@@ -1,6 +1,7 @@
 ---
 title: Sheet with paging in an interaction
 excerpt: Make a sheet of records with paging in a worker interaction.
+summary: "This page provides a step-by-step guide to creating a sheet with paging in a worker interaction using the `cerb.data.records` automation data source. It includes a code snippet demonstrating how to use the `form` automation trigger to create a paged sheet of records, including setting pagination limits and displaying specific fields such as status, group, and owner."
 layout: integration
 jumbotron:
   title: Sheet with paging in an interaction

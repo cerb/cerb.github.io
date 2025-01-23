@@ -4,7 +4,7 @@ excerpt: Extract a comma-separated list of participant emails from a ticket.
 summary: This page provides a guide on how to extract a comma-separated list of participant emails from a ticket using an automation in Cerb.
 layout: integration
 jumbotron:
-  title: Get a CSV list of participants
+  title: Get a CSV list of ticket participants
   breadcrumbs:
     -
       label: Resources &raquo;

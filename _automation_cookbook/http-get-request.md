@@ -8,7 +8,7 @@ summary: "This page explains how to make an HTTP GET request using the `http.req
   URLs from being sent."
 layout: integration
 jumbotron:
-  title: HTTP GET request
+  title: Send an HTTP GET request
   breadcrumbs:
     -
       label: Resources &raquo;

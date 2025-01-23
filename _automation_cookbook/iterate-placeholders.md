@@ -22,7 +22,7 @@ jumbotron:
 * Shows prefix-based filtering
 {% endcomment %}
 
-Here is an example of using the **`cerb_placeholders_list()`** function to iterate through placeholders with unknown keys.
+Here is an example of using the [cerb_placeholders_list()](/docs/scripting/functions/#cerb_placeholders_list) function to iterate through placeholders with unknown keys.
 
 ## Creating and iterating random placeholders
 

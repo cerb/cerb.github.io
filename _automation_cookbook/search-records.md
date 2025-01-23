@@ -6,7 +6,7 @@ layout: integration
 redirect_from:
   - /guides/bots/load-records/
 jumbotron:
-  title: Retrieve arbitrary records
+  title: Search records with a query
   breadcrumbs:
     -
       label: Resources &raquo;

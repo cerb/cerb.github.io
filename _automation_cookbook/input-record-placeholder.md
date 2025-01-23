@@ -1,10 +1,10 @@
 ---
-title: Pass record type and ID as input
+title: Receive arbitrary record types as input
 excerpt: Accept an arbitrary record type and ID as input to create an expandable placeholder.
 summary: This page demonstrates how to accept a record type and ID as input parameters in an automation, then use them to create an expandable record placeholder. This pattern is useful when you need to work with different types of records dynamically based on input parameters.
 layout: integration
 jumbotron:
-  title: Pass record type and ID as input
+  title: Receive arbitrary record types as input
   breadcrumbs:
     -
       label: Resources &raquo;

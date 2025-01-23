@@ -10,7 +10,7 @@ summary: "This page explains how to make an HTTP POST request with a JSON payloa
   or URLs from being sent."
 layout: integration
 jumbotron:
-  title: HTTP GET request
+  title: Send an HTTP POST request with a JSON payload
   breadcrumbs:
     -
       label: Resources &raquo;
@@ -19,7 +19,11 @@ jumbotron:
       label: Automation Cookbook &raquo;
       url: /resources/automation-cookbook/
 ---
+
 You can write an HTTP request in KATA and have Cerb format and send it to the server as a JSON payload.
+
+When using `Content-Type: application/json`, a `body:` dictionary will automatically be encoded as JSON.
+
 <pre>
 <code class="language-cerb">
 {% raw %}
@@ -42,6 +46,7 @@ start:
 </pre>
 
 Use this policy:
+
 <pre>
 <code class="language-cerb">
 {% raw %}

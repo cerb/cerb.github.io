@@ -22,7 +22,7 @@ jumbotron:
 * Value transformation
 {% endcomment %}
 
-Here is an example of using the **`|map`** modifier with arrow functions to transform array values.
+Here is an example of using the [\|map](/docs/scripting/filters/#map) modifier with arrow functions to transform array values.
 
 ## Calculating squares and cubes
 

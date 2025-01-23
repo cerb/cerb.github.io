@@ -1,7 +1,7 @@
 ---
 title: Debug search query SQL
 excerpt: Generate the underlying SQL statement for any record search query.
-summary: This page demonstrates how to use the cerb.commands.worklist.query.debug command to expose the SQL query that powers any record search. This is valuable for debugging performance issues, understanding how queries are constructed, and optimizing search operations.
+summary: This page demonstrates how to use the `cerb.commands.worklist.query.debug` command to expose the SQL query that powers any record search. This is valuable for debugging performance issues, understanding how queries are constructed, and optimizing search operations.
 layout: integration
 jumbotron:
   title: Debug search query SQL
@@ -22,7 +22,7 @@ jumbotron:
 * Helps with query troubleshooting
 {% endcomment %}
 
-You can use the **`cerb.commands.worklist.query.debug`** command to view the SQL statement that will be executed for any record search query.
+You can use the `cerb.commands.worklist.query.debug` command to view the SQL statement that will be executed for any record search query.
 
 ## Debug a ticket search query
 
