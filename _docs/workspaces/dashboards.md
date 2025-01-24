@@ -375,7 +375,7 @@ format:dictionaries
 | Counter |
 | Interactions Toolbar |
 | Knowledgebase Browser |
-| Map |
+| [Map](/docs/dashboards/widgets/map/) | A map widget that displays interactive geographic visualizations with regions and data points.
 | Project Board |
 | Record Fields |
 | Sheet |
