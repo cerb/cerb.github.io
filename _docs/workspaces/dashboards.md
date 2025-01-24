@@ -377,6 +377,6 @@ format:dictionaries
 | Knowledgebase Browser |
 | [Map](/docs/dashboards/widgets/map/) | A map widget that displays interactive geographic visualizations with regions and data points.
 | Project Board |
-| Record Fields |
+| [Record Fields](/docs/dashboards/widgets/record-fields/) | A widget that displays field metadata for record types.
 | Sheet |
 | Worklist |
