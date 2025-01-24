@@ -365,7 +365,7 @@ format:dictionaries
 | Type | Description
 |-|-
 | Automation | 
-| [Calendar](/docs/dashboards/widgets/calendar) | A calendar widget with dates and events.
+| [Calendar](/docs/dashboards/widgets/calendar/) | A calendar widget with dates and events.
 | [Chart KATA](/docs/dashboards/widgets/chart-kata/) | A highly customizable chart combining multiple datasources from data queries and automations.
 | Chart: Pie |
 | [Chart: Time Blocks](/docs/dashboards/widgets/timeblocks/) | A heatmap-style chart useful for availability visualizations.
@@ -377,6 +377,6 @@ format:dictionaries
 | Knowledgebase Browser |
 | [Map](/docs/dashboards/widgets/map/) | A map widget that displays interactive geographic visualizations with regions and data points.
 | Project Board |
-| Record Fields |
-| [Sheet](/docs/dashboards/widgets/sheet) | A highly customizable data grid tool for displaying records.
+| [Record Fields](/docs/dashboards/widgets/record-fields/) | A widget that displays field metadata for record types.
+| [Sheet](/docs/dashboards/widgets/sheet/) | A highly customizable data grid tool for displaying records.
 | [Worklist](/docs/dashboards/widgets/worklist/) | A record worklist with configurable search queries and columns.
