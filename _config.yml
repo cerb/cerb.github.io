@@ -67,6 +67,7 @@ kramdown:
   parse_block_html: false
 plugins:
   - jekyll-redirect-from
+  - jekyll-tabs
 
 # Defaults
 defaults:
