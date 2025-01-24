@@ -375,7 +375,7 @@ format:dictionaries
 | Counter |
 | [Interactions Toolbar ](/docs/dashboards/widgets/interactions-toolbar/ )| A toolbar widget for running worker interactions.
 | Knowledgebase Browser |
-| Map |
+| [Map](/docs/dashboards/widgets/map/) | A map widget that displays interactive geographic visualizations with regions and data points.
 | Project Board |
 | Record Fields |
 | [Sheet](/docs/dashboards/widgets/sheet) | A highly customizable data grid tool for displaying records.
