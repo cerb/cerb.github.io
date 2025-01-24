@@ -9,6 +9,7 @@ summary: "This page explains how to make an HTTP POST request with a JSON payloa
   implement deny policies for the `http.request` command to restrict certain types of requests 
   or URLs from being sent."
 layout: integration
+social_image_url: /assets/images/automation-cookbook/http-post-json.png
 jumbotron:
   title: Send an HTTP POST request with a JSON payload
   breadcrumbs:
@@ -20,15 +21,20 @@ jumbotron:
       url: /resources/automation-cookbook/
 ---
 
+<div class="cerb-screenshot">
+<img src="{{page.social_image_url}}" class="screenshot no-border" style="width:1200px;">
+</div>
+
 You can write an HTTP request in KATA and have Cerb format and send it to the server as a JSON payload.
 
 When using `Content-Type: application/json`, a `body:` dictionary will automatically be encoded as JSON.
 
-<pre>
-<code class="language-cerb">
-{% raw %}
+{% tabs post %}
+
+{% tab post automation %}
+```cerb
 start:
-  http.request/get:
+  http.request/post:
     output: http_response
     inputs:
       method: POST
@@ -39,16 +45,11 @@ start:
         name_first: Kina
         name_last: Halpue
         email: kina.halpue@cerb.example
-    on_success:
-    on_error:
-{% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-Use this policy:
-
-<pre>
-<code class="language-cerb">
+{% tab post policy %}
+```cerb
 {% raw %}
 commands:
   http.request:
@@ -56,5 +57,7 @@ commands:
     deny/url@bool: {{inputs.url is not prefixed ('http://','https://')}}
     allow@bool: yes
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
+
+{% endtabs %}

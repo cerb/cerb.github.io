@@ -1,10 +1,11 @@
 ---
-title: Escape data query parameters
+title: Escape untrusted data query parameters
 excerpt: Safely handle user input in data queries using query parameters.
 summary: This page demonstrates how to securely handle user input in data queries by using query parameters. It shows how to prevent query injection attacks by using the ${...} syntax for parameter substitution instead of direct placeholder interpolation.
 layout: integration
+social_image_url: /assets/images/automation-cookbook/escape-data-query-params.png
 jumbotron:
-  title: Escape data query parameters
+  title: Escape untrusted data query parameters
   breadcrumbs:
     -
       label: Resources &raquo;
@@ -14,6 +15,10 @@ jumbotron:
       url: /resources/automation-cookbook/
 ---
 
+<div class="cerb-screenshot">
+<img src="{{page.social_image_url}}" class="screenshot no-border" style="width:1200px;">
+</div>
+
 {% comment %}
 * Uses query_params for safe parameter substitution
 * Prevents query injection attacks
@@ -21,12 +26,16 @@ jumbotron:
 * Shows proper parameter escaping
 {% endcomment %}
 
-The `query_params:` option provides a secure way to substitute user input into data queries. This prevents query injection attacks by properly escaping the input values.
+## Safely handling untrusted user input in data queries
 
-## Safe query parameter usage
+When using the [data.query:](/docs/automations/commands/data.query/) command, the `query_params:` option provides a secure way to substitute untrusted user input into queries.
 
-<pre>
-<code class="language-cerb">
+Its value is a dictionary. The `${...}` placeholder syntax in a query references these sanitized keys. These placeholders aren't evaluated until the query is parsed, so they can never modify the structure of the query (e.g. changing other filters).
+
+{% tabs example %}
+
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   data.query:
@@ -43,12 +52,27 @@ start:
       query_params:
         email: customer@cerb.example
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-The `query_params:` option is a key-value object. The `${...}` syntax in a data query references those keys. This is more secure because `${...}` placeholders aren't evaluated until the query is parsed, so they can never modify the query structure.
+{% tab example policy %}
+```cerb
+{% raw %}
+commands:
+  data.query:
+    deny/type@bool: {{query.type != 'worklist.records'}}
+    allow@bool: yes
+{% endraw %}
+```
+{% endtab %}
 
-## Unsafe direct interpolation (vulnerable to injection)
+{% endtabs %}
+
+## Unsafe placeholders (vulnerable to injection)
+
+Here's an example of an unsafe data query where malicious user input in the `{% raw %}{{email}}{% endraw %}` placeholder breaks out the filter and matches all records.
+
+This happens because the placeholder is evaluated before the query is parsed.
 
 <pre>
 <code class="language-cerb">
@@ -67,19 +91,6 @@ start:
           status:o
         )
         format:dictionaries
-{% endraw %}
-</code>
-</pre>
-
-## Policy
-
-<pre>
-<code class="language-cerb">
-{% raw %}
-commands:
-  data.query:
-    deny/type@bool: {{query.type != 'worklist.records'}}
-    allow@bool: yes
 {% endraw %}
 </code>
 </pre>

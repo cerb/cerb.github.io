@@ -3,6 +3,7 @@ title: Parse HTML responses with XPath
 excerpt: Make an HTTP GET request and extract data from HTML responses using XPath.
 summary: This page demonstrates how to make HTTP GET requests and process HTML responses using XPath. It shows how to extract specific elements from web pages, making it useful for web scraping and content extraction tasks.
 layout: integration
+social_image_url: /assets/images/automation-cookbook/http-request-get-xpath.png
 jumbotron:
   title: Parse HTML responses with XPath
   breadcrumbs:
@@ -14,6 +15,10 @@ jumbotron:
       url: /resources/automation-cookbook/
 ---
 
+<div class="cerb-screenshot">
+<img src="{{page.social_image_url}}" class="screenshot no-border" style="width:1200px;">
+</div>
+
 {% comment %}
 * Uses http.request/get command
 * Processes HTML responses
@@ -22,12 +27,14 @@ jumbotron:
 * Includes error handling
 {% endcomment %}
 
-Here is an example of making an HTTP GET request and using XPath to extract data from an HTML response.
-
 ## Making the GET request and parsing HTML
 
-<pre>
-<code class="language-cerb">
+Here is an example of making an HTTP GET request and using XPath to extract data from an HTML response.
+
+{% tabs example %}
+
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   http.request/get:
@@ -46,34 +53,11 @@ start:
         http_response@json: null
     on_error:
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-## Output
-
-<pre>
-<code class="language-cerb">
-{% raw %}
-status_code: 200
-versions:
-- 'In Development: 11.0.3 - /releases/11.0.3/'
-- 11.0.2 - /releases/11.0.2/
-- 'In Development: 11.1 - /releases/11.1/'
-- 11.0.1 - /releases/11.0.1/
-- 11.0 - /releases/11.0/
-- 10.4.22 - /releases/10.4.22/
-- 10.4.21 - /releases/10.4.21/
-- 10.4.20 - /releases/10.4.20/
-- 10.4.19 - /releases/10.4.19/
-# ...
-{% endraw %}
-</code>
-</pre>
-
-## Policy
-
-<pre>
-<code class="language-cerb">
+{% tab example policy %}
+```cerb
 {% raw %}
 commands:
   http.request:
@@ -81,5 +65,23 @@ commands:
     deny/url@bool: {{inputs.url is not prefixed ('http://','https://')}}
     allow@bool: yes
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
+
+{% tab example output %}
+```yaml
+status_code: 200
+versions:
+- 11.0.3 - /releases/11.0.3/
+- 11.0.2 - /releases/11.0.2/
+- 11.0.1 - /releases/11.0.1/
+- 11.0 - /releases/11.0/
+- 10.4.22 - /releases/10.4.22/
+- 10.4.21 - /releases/10.4.21/
+- 10.4.20 - /releases/10.4.20/
+- 10.4.19 - /releases/10.4.19/
+# ...
+```
+{% endtab %}
+
+{% endtabs %}
