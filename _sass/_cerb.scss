@@ -50,6 +50,10 @@ div.cerb-screenshot {
 			top: 0;
 			left: 0;
 		}
+
+		&.no-border {
+			border: 0;
+		}
 	}
 
 	video {
@@ -207,6 +211,10 @@ div.page-content {
 		margin-bottom: 10px;
 		border: 1px solid rgb(220, 220, 220);
 		display: inline-block;
+
+		&.no-border {
+			border: 0;
+		}
 	}
 	
 	ul.blog-post-group {
@@ -291,10 +299,14 @@ div.page-content {
 		}
 		
 		div.screenshot {
-			margin: 25px 0px 0px 0px;
+			margin: 25px 0 0 0;
 			
 			img {
 				border: 1px solid rgb(235,235,235);
+
+				&.no-border {
+					border: 0;
+				}
 			}
 		}
 	}
