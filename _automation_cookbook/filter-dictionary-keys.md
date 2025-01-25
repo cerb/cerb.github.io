@@ -1,9 +1,12 @@
 ---
 title: Filter dictionary keys
 excerpt: Use the `|filter` modifier with arrow functions to match dictionary keys.
-summary: This page demonstrates how to use the filter modifier with arrow functions to filter dictionaries based on their key names. It shows how to use lambda expressions with key parameters to filter objects by specific key patterns.
+summary: This page demonstrates how to use the filter modifier with arrow functions
+  to filter dictionaries based on their key names. It shows how to use lambda expressions
+  with key parameters to filter objects by specific key patterns.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/filter-dictionary-keys.png
 ---
 
 {% comment %}

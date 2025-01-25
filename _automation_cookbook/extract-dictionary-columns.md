@@ -1,9 +1,9 @@
 ---
 title: Extract dictionary columns
 excerpt: Extract a column from a list of dictionaries
-#summary: 
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/extract-dictionary-columns.png
 ---
 
 ## Using |column

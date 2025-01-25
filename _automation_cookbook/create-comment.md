@@ -1,12 +1,14 @@
 ---
 title: Create a comment
 excerpt: Use `record.create:` to create a comment on any record.
-summary: "This page explains how to create a comment on any record using the `record.create` command in 
-  Cerb. It also provides examples of how to specify the author, target record, and other fields 
-  for the comment, as well as an example of how to implement a deny policy for the 
-  `record.create` command to only allow comments on records of type `comment`."
+summary: This page explains how to create a comment on any record using the `record.create`
+  command in Cerb. It also provides examples of how to specify the author, target
+  record, and other fields for the comment, as well as an example of how to implement
+  a deny policy for the `record.create` command to only allow comments on records
+  of type `comment`.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/create-comment.png
 ---
 
 You can use [record.create:](https://cerb.ai/docs/automations/commands/record.create/) to create a [comment](/docs/comments/) on any [record](/docs/records/).

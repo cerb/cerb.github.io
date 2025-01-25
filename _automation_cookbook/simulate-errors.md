@@ -1,14 +1,15 @@
 ---
 title: Simulate errors
 excerpt: Simulate random errors in automation commands with `on_simulate:`.
-summary: "This page explains how to simulate random errors or successes for HTTP requests in Cerb's 
-  automation editor, using the `on_simulate` command. This allows you to test error handling and 
-  functionality without executing the actual request, making it a useful tool for testing 
-  automation scripts in Cerb's simulator. The `simulate.success:` and `simulate.error:` commands 
-  can be used to mock successful or failed responses, triggering corresponding events in your 
-  script, such as `on_success` or `on_error`."
+summary: This page explains how to simulate random errors or successes for HTTP requests
+  in Cerb's automation editor, using the `on_simulate` command. This allows you to
+  test error handling and functionality without executing the actual request, making
+  it a useful tool for testing automation scripts in Cerb's simulator. The `simulate.success:`
+  and `simulate.error:` commands can be used to mock successful or failed responses,
+  triggering corresponding events in your script, such as `on_success` or `on_error`.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/simulate-errors.png
 ---
 
 ## Simulate random errors

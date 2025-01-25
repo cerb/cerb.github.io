@@ -1,9 +1,13 @@
 ---
 title: Receive arbitrary record types as input
 excerpt: Accept an arbitrary record type and ID as input to create an expandable placeholder.
-summary: This page demonstrates how to accept a record type and ID as input parameters in an automation, then use them to create an expandable record placeholder. This pattern is useful when you need to work with different types of records dynamically based on input parameters.
+summary: This page demonstrates how to accept a record type and ID as input parameters
+  in an automation, then use them to create an expandable record placeholder. This
+  pattern is useful when you need to work with different types of records dynamically
+  based on input parameters.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/input-record-placeholder.png
 ---
 
 {% comment %}

@@ -1,9 +1,12 @@
 ---
 title: Conditional values
 excerpt: Perform inline conditional logic in a placeholder value.
-summary: "This page explains how to use ternary operators in Cerb automations to create conditional logic. You can chain multiple conditions together to check various states and return different values based on those conditions."
+summary: This page explains how to use ternary operators in Cerb automations to create
+  conditional logic. You can chain multiple conditions together to check various states
+  and return different values based on those conditions.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/conditional-values.png
 ---
 
 {% comment %}

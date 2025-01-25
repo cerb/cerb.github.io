@@ -1,9 +1,14 @@
 ---
 title: Create an array of random numbers
 excerpt: Generate an array filled with random numeric values.
-summary: "This page demonstrates how to create an array of random numbers using range mapping and the random function in Cerb. It provides a step-by-step example, including using `range()` for array size, applying `map()` for random value generation, and JSON encoding for output format, resulting in an array filled with unique random numbers."
+summary: This page demonstrates how to create an array of random numbers using range
+  mapping and the random function in Cerb. It provides a step-by-step example, including
+  using `range()` for array size, applying `map()` for random value generation, and
+  JSON encoding for output format, resulting in an array filled with unique random
+  numbers.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/random-array-values.png
 ---
 
 {% comment %}

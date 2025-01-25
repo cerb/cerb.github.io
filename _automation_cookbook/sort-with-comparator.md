@@ -1,9 +1,12 @@
 ---
 title: Sort with comparator
 excerpt: Use the `|sort` filter with arrow functions to create custom sorting rules.
-summary: This page demonstrates how to use the sort filter with arrow functions to create custom sorting rules for complex data structures. It shows how to sort arrays of objects using specific object properties.
+summary: This page demonstrates how to use the sort filter with arrow functions to
+  create custom sorting rules for complex data structures. It shows how to sort arrays
+  of objects using specific object properties.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/sort-with-comparator.png
 ---
 
 {% comment %}

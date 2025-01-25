@@ -1,11 +1,13 @@
 ---
 title: Break a while loop with a condition
 excerpt: Abort an infinite while loop with conditional logic.
-summary: "This page explains how to break a while loop in Cerb with conditional logic, using the `while` 
-  command with a probability-based condition that breaks the loop 25% of the time. It also shows 
-  an example of how to use this to implement an infinite loop that can be stopped at any time."
+summary: This page explains how to break a while loop in Cerb with conditional logic,
+  using the `while` command with a probability-based condition that breaks the loop
+  25% of the time. It also shows an example of how to use this to implement an infinite
+  loop that can be stopped at any time.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/break-while-loop.png
 ---
 
 ## Break an infinite loop

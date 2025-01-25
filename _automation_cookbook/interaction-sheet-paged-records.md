@@ -1,9 +1,14 @@
 ---
 title: Search results in a paged sheet
 excerpt: Display a sheet of record search results with paging in a worker interaction.
-summary: "This page provides a step-by-step guide to creating a sheet with paging in a worker interaction using the `cerb.data.records` automation data source. It includes a code snippet demonstrating how to use the `form` automation trigger to create a paged sheet of records, including setting pagination limits and displaying specific fields such as status, group, and owner."
+summary: This page provides a step-by-step guide to creating a sheet with paging in
+  a worker interaction using the `cerb.data.records` automation data source. It includes
+  a code snippet demonstrating how to use the `form` automation trigger to create
+  a paged sheet of records, including setting pagination limits and displaying specific
+  fields such as status, group, and owner.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/interaction-sheet-paged-records.png
 ---
 
 ## Record search results in a sheet with paging

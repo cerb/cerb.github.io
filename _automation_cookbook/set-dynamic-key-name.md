@@ -1,12 +1,13 @@
 ---
 title: Set a dynamic key name
 excerpt: Use `var.set:` to make a key with a dynamic name.
-summary: "This page demonstrates how to set dynamic key names using Cerb's `var.set:` command, which 
-  allows for flexible and non-standard key names that are not valid in KATA scripting. It 
-  provides examples of setting random key names, using special characters like `@`, and changing 
-  the delimiter from the standard `:` if needed."
+summary: This page demonstrates how to set dynamic key names using Cerb's `var.set:`
+  command, which allows for flexible and non-standard key names that are not valid
+  in KATA scripting. It provides examples of setting random key names, using special
+  characters like `@`, and changing the delimiter from the standard `:` if needed.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/set-dynamic-key-name.png
 ---
 
 ## Using scripting in a key name

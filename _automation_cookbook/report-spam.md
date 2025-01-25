@@ -1,9 +1,14 @@
 ---
 title: Report a ticket as spam
 excerpt: Report a ticket as spam with automations.
-summary: "This page provides an integration guide for reporting a ticket as spam using automations in Cerb, a project management tool. The example demonstrates how to use the `cerb.commands.email.spam.train` command to report a specific ticket ID (1234) as spam and implement a policy that denies any other commands with similar functionality."
+summary: This page provides an integration guide for reporting a ticket as spam using
+  automations in Cerb, a project management tool. The example demonstrates how to
+  use the `cerb.commands.email.spam.train` command to report a specific ticket ID
+  (1234) as spam and implement a policy that denies any other commands with similar
+  functionality.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/report-spam.png
 ---
 
 ## Using api.command:

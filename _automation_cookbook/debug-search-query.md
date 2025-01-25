@@ -1,9 +1,13 @@
 ---
 title: Debug search query SQL
 excerpt: Generate the underlying SQL statement for any record search query.
-summary: This page demonstrates how to use the `cerb.commands.worklist.query.debug` command to expose the SQL query that powers any record search. This is valuable for debugging performance issues, understanding how queries are constructed, and optimizing search operations.
+summary: This page demonstrates how to use the `cerb.commands.worklist.query.debug`
+  command to expose the SQL query that powers any record search. This is valuable
+  for debugging performance issues, understanding how queries are constructed, and
+  optimizing search operations.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/debug-search-query.png
 ---
 
 {% comment %}

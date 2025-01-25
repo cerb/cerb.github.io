@@ -1,9 +1,12 @@
 ---
 title: Set dictionary values
 excerpt: Use dictionary structures to set and expand dynamic values.
-summary: This page demonstrates how to use dictionary structures to set and expand dynamic values. It shows how to define nested attributes and conditionally display values based on dictionary properties.
+summary: This page demonstrates how to use dictionary structures to set and expand
+  dynamic values. It shows how to define nested attributes and conditionally display
+  values based on dictionary properties.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/set-dictionary-values.png
 ---
 
 {% comment %}

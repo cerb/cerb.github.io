@@ -1,9 +1,12 @@
 ---
 title: Filter array values
 excerpt: Use the `|filter` modifier with arrow functions to match specific array values.
-summary: This page demonstrates how to use the filter modifier with arrow functions in automation scripting to filter array values based on conditions. It shows how to use lambda expressions to create flexible filtering rules for lists of data.
+summary: This page demonstrates how to use the filter modifier with arrow functions
+  in automation scripting to filter array values based on conditions. It shows how
+  to use lambda expressions to create flexible filtering rules for lists of data.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/filter-array-values.png
 ---
 
 {% comment %}

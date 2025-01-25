@@ -1,9 +1,13 @@
 ---
 title: Conditional branching statements
 excerpt: Use decision blocks and conditional logic for branching.
-summary: This page demonstrates different approaches to conditional branching, including using decision blocks with multiple outcomes and simplified dictionary-based value selection. It provides examples of both command-based branching and value-based conditional selection.
+summary: This page demonstrates different approaches to conditional branching, including
+  using decision blocks with multiple outcomes and simplified dictionary-based value
+  selection. It provides examples of both command-based branching and value-based
+  conditional selection.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/conditional-branching.png
 ---
 
 {% comment %}

@@ -1,9 +1,14 @@
 ---
 title: Strip common prefixes from text lines
-excerpt: Use the `|strip_lines` filter to remove prefixes from each line in a block of text.
-summary: This page demonstrates how to use the strip_lines filter in automation scripting to remove common prefixes from text lines. It shows how to strip quoted email text and other prefixed content, making it useful for email processing and text manipulation tasks.
+excerpt: Use the `|strip_lines` filter to remove prefixes from each line in a block
+  of text.
+summary: This page demonstrates how to use the strip_lines filter in automation scripting
+  to remove common prefixes from text lines. It shows how to strip quoted email text
+  and other prefixed content, making it useful for email processing and text manipulation
+  tasks.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/strip-line-prefix.png
 ---
 
 {% comment %}

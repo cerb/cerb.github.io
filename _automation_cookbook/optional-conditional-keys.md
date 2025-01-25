@@ -1,9 +1,12 @@
 ---
 title: Optional conditional keys
 excerpt: Use the `@optional` annotation to omit keys based on conditional values.
-summary: "This page demonstrates how to use the `@optional` annotation to conditionally include or omit dictionary keys based on their values. When a key with the `@optional` annotation evaluates to null, it is removed from the output."
+summary: This page demonstrates how to use the `@optional` annotation to conditionally
+  include or omit dictionary keys based on their values. When a key with the `@optional`
+  annotation evaluates to null, it is removed from the output.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/optional-conditional-keys.png
 ---
 
 {% comment %}

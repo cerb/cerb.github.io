@@ -1,10 +1,12 @@
 ---
 title: Relay email messages to workers
 excerpt: Relay email messages to workers using an external email client.
-summary: "This page provides an overview of email relay in Cerb, which enables workers to respond to 
-  messages from external email clients instead of being forced to use the web browser."
+summary: This page provides an overview of email relay in Cerb, which enables workers
+  to respond to messages from external email clients instead of being forced to use
+  the web browser.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/relay-email.png
 ---
 
 ## Using api.command:

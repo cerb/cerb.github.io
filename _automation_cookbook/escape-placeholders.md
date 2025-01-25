@@ -1,13 +1,15 @@
 ---
 title: Escape placeholders
 excerpt: Escape placeholders in a value using the `@raw` annotation.
-summary: "This page explains how to escape placeholders in a value using the `@raw` annotation in Cerb. 
-  It shows an example of how this annotation can be used to preserve plain text values, 
-  particularly when working with sheets. The output demonstrates that using `@raw`, placeholders are treated
-  as literal text, rather than being evaluated or replaced. This allows for more control over the formatting
-  and appearance of values in a sheet, making it easier to work with complex data."
+summary: This page explains how to escape placeholders in a value using the `@raw`
+  annotation in Cerb. It shows an example of how this annotation can be used to preserve
+  plain text values, particularly when working with sheets. The output demonstrates
+  that using `@raw`, placeholders are treated as literal text, rather than being evaluated
+  or replaced. This allows for more control over the formatting and appearance of
+  values in a sheet, making it easier to work with complex data.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/escape-placeholders.png
 ---
 
 ## Using @raw

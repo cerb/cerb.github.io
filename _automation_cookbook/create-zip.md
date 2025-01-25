@@ -1,11 +1,13 @@
 ---
 title: Create a ZIP attachment
 excerpt: Use `file.write:` to create a ZIP archive with arbitrary files.
-summary: "This page explains how to create a ZIP attachment using the `file.write` command in Cerb. It 
-  shows an example of how to write a ZIP archive with two files (a README file and a Dockerfile) 
-  and then use `record.create` to create an attachment that links to the newly created ZIP file."
+summary: This page explains how to create a ZIP attachment using the `file.write`
+  command in Cerb. It shows an example of how to write a ZIP archive with two files
+  (a README file and a Dockerfile) and then use `record.create` to create an attachment
+  that links to the newly created ZIP file.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/create-zip.png
 ---
 
 ## Create a ZIP attachment using file.write

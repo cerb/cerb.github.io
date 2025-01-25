@@ -1,11 +1,13 @@
 ---
 title: Prepend a prefix to a text block
 excerpt: Add a prefix to each line in a given block of text.
-summary: "This page provides an example of how to add prefixes to each line of a given block of text in 
-  Cerb, using the `set` and `return` blocks. It also describes variations for using the output 
-  with workers, including copying it to the clipboard or pasting it into an existing message."
+summary: This page provides an example of how to add prefixes to each line of a given
+  block of text in Cerb, using the `set` and `return` blocks. It also describes variations
+  for using the output with workers, including copying it to the clipboard or pasting
+  it into an existing message.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/prepend-lines.png
 ---
 
 ## Using |indent

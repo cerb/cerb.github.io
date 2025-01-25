@@ -1,11 +1,18 @@
 ---
 title: Extract text using regular expressions
-excerpt: Use regular expression patterns to extract matching text within automation scripting.
-summary: This page provides examples of using regular expressions in automation scripting to extract matching text. It demonstrates how to use a single capture group to extract an order ID from a string and how to use multiple capture groups to extract numerical values from a formatted string. The examples illustrate the syntax and methods for defining patterns and capturing specific parts of text using regular expressions in a scripting context.
+excerpt: Use regular expression patterns to extract matching text within automation
+  scripting.
+summary: This page provides examples of using regular expressions in automation scripting
+  to extract matching text. It demonstrates how to use a single capture group to extract
+  an order ID from a string and how to use multiple capture groups to extract numerical
+  values from a formatted string. The examples illustrate the syntax and methods for
+  defining patterns and capturing specific parts of text using regular expressions
+  in a scripting context.
 layout: automation-cookbook
 redirect_from:
-  - /tips/regex-in-automations/
+- /tips/regex-in-automations/
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/extract-text-with-regexp.png
 ---
 
 Here are examples of using regular expressions to extract matching text in automation scripting.

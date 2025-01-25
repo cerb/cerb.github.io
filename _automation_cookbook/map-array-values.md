@@ -1,9 +1,12 @@
 ---
 title: Map array values
 excerpt: Use the `|map` modifier with arrow functions to transform array values.
-summary: This page demonstrates how to use the map modifier with arrow functions in automation scripting to transform array values. It shows how to use lambda expressions to apply mathematical operations and transformations to lists of numbers.
+summary: This page demonstrates how to use the map modifier with arrow functions in
+  automation scripting to transform array values. It shows how to use lambda expressions
+  to apply mathematical operations and transformations to lists of numbers.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/map-array-values.png
 ---
 
 {% comment %}

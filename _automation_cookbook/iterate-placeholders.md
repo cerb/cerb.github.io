@@ -1,9 +1,14 @@
 ---
 title: Iterate through unknown placeholders
-excerpt: Use `cerb_placeholders_list()` to iterate through placeholders with unknown keys.
-summary: "This page demonstrates how to use the `cerb_placeholders_list()` function to iterate through placeholders when their keys are not known in advance. It shows how to filter placeholders by prefix and access their values dynamically, making it useful for working with dynamically generated placeholder names."
+excerpt: Use `cerb_placeholders_list()` to iterate through placeholders with unknown
+  keys.
+summary: This page demonstrates how to use the `cerb_placeholders_list()` function
+  to iterate through placeholders when their keys are not known in advance. It shows
+  how to filter placeholders by prefix and access their values dynamically, making
+  it useful for working with dynamically generated placeholder names.
 layout: automation-cookbook
 jumbotron: []
+social_image_url: /assets/images/automation-cookbook/iterate-placeholders.png
 ---
 
 {% comment %}
