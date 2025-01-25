@@ -2,16 +2,8 @@
 title: Conditional branching statements
 excerpt: Use decision blocks and conditional logic for branching.
 summary: This page demonstrates different approaches to conditional branching, including using decision blocks with multiple outcomes and simplified dictionary-based value selection. It provides examples of both command-based branching and value-based conditional selection.
-layout: integration
-jumbotron:
-  title: Conditional branching statements
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
 
 {% comment %}
@@ -23,10 +15,12 @@ jumbotron:
 
 Here are examples of different approaches to conditional branching, demonstrating if/else-if statements with decision blocks and switch statements using dictionaries.
 
-## Using if/else-if with decision blocks
+## Using a decision block
 
-<pre>
-<code class="language-cerb">
+{% tabs example %}
+
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   set:
@@ -47,26 +41,28 @@ start:
       if@bool: {{3 == option}}
       then:
         return:
-          output: You picked option 3.          
+          output: You picked option 3.
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-## Output
-
-<pre>
-<code class="language-cerb">
+{% tab example output %}
+```cerb
 {% raw %}
 __return:
   output: You picked option 2.
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-## Using switch with dictionaries
+{% endtabs %}
 
-<pre>
-<code class="language-cerb">
+## Using dynamic dictionary keys
+
+{% tabs example %}
+
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   set:
@@ -79,16 +75,16 @@ start:
   return:
     output: {{options[option]}}
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-## Output
-
-<pre>
-<code class="language-cerb">
+{% tab example output %}
+```cerb
 {% raw %}
 __return:
   output: You picked option 3
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
+
+{% endtabs %}

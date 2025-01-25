@@ -1,25 +1,19 @@
 ---
-title: Sheet with paging in an interaction
-excerpt: Make a sheet of records with paging in a worker interaction.
+title: Search results in a paged sheet
+excerpt: Display a sheet of record search results with paging in a worker interaction.
 summary: "This page provides a step-by-step guide to creating a sheet with paging in a worker interaction using the `cerb.data.records` automation data source. It includes a code snippet demonstrating how to use the `form` automation trigger to create a paged sheet of records, including setting pagination limits and displaying specific fields such as status, group, and owner."
-layout: integration
-jumbotron:
-  title: Sheet with paging in an interaction
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
 
-By using the `cerb.data.records` automation data source in a sheet, you can make a paged sheet of records in a [worker interaction](/docs/automations/triggers/interaction.worker/)
+## Record search results in a sheet with paging
 
-Using:
+By using the `cerb.data.records` automation data source in a sheet, you can make a paged sheet of records in a [worker interaction](/docs/automations/triggers/interaction.worker/).
 
-<pre>
-<code class="language-cerb">
+{% tabs example %}
+
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   await:
@@ -51,11 +45,7 @@ start:
                 label: Owner
               date/updated:
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-Gives you:
-
-<div class="cerb-screenshot">
-<img src="/assets/images/cookbook/sheet-paging-interaction/sheet.png" class="screenshot">
-</div>
+{% endtabs %}

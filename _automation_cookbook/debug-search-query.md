@@ -2,16 +2,8 @@
 title: Debug search query SQL
 excerpt: Generate the underlying SQL statement for any record search query.
 summary: This page demonstrates how to use the `cerb.commands.worklist.query.debug` command to expose the SQL query that powers any record search. This is valuable for debugging performance issues, understanding how queries are constructed, and optimizing search operations.
-layout: integration
-jumbotron:
-  title: Debug search query SQL
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
 
 {% comment %}
@@ -26,8 +18,10 @@ You can use the `cerb.commands.worklist.query.debug` command to view the SQL sta
 
 ## Debug a ticket search query
 
-<pre>
-<code class="language-cerb">
+{% tabs example %}
+
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   api.command:
@@ -38,13 +32,22 @@ start:
         record_type: ticket
         query: status:o created:"-1 week" group:(name:"Support")
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-## Output
+{% tab example policy %}
+```cerb
+{% raw %}
+commands:
+  api.command:
+    deny/name@bool: {{inputs.name not in ['cerb.commands.worklist.query.debug']}}
+    allow@bool: yes
+{% endraw %}
+```
+{% endtab %}
 
-<pre>
-<code class="language-cerb">
+{% tab example output %}
+```cerb
 {% raw %}
 results:
   sql: SELECT t.id AS t_id , t.updated_date AS t_updated_date FROM ticket t  WHERE
@@ -52,18 +55,7 @@ results:
     IN (SELECT g.id FROM worker_group g WHERE (g.name = 'Support') )  ORDER BY t_updated_date
     DESC LIMIT 0,10
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-## Policy
-
-<pre>
-<code class="language-cerb">
-{% raw %}
-commands:
-  api.command:
-    deny/name@bool: {{inputs.name not in ['cerb.commands.worklist.query.debug']}}
-    allow@bool: yes
-{% endraw %}
-</code>
-</pre>
+{% endtabs %}

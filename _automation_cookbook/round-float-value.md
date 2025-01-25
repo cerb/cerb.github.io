@@ -2,16 +2,8 @@
 title: Round floating point numbers
 excerpt: Various rounding methods to format decimal numbers in automation scripting.
 summary: This page demonstrates different ways to round floating point numbers in automation scripting. It covers basic rounding, ceiling, floor, and precision control using Pi as an example. The examples show how to use different rounding methods to achieve desired numeric formatting in a scripting context.
-layout: integration
-jumbotron:
-  title: Round floating point numbers
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
 
 {% comment %}
@@ -20,12 +12,14 @@ jumbotron:
 * Mathematical constants and irrational numbers
 {% endcomment %}
 
-Here are examples of rounding methods (round, ceil, floor, and precision control) for floating point numbers in automation scripting.
-
 ## Using different rounding methods
 
-<pre>
-<code class="language-cerb">
+Here are examples of rounding methods (round, ceil, floor, and precision control) for floating point numbers in automation scripting.
+
+{% tabs example %}
+
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   set:
@@ -36,13 +30,11 @@ start:
     floor@int: {{number|round(0, 'floor')}}
     precision@float: {{number|round(5)}}
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-## Output
-
-<pre>
-<code class="language-cerb">
+{% tab example output %}
+```cerb
 {% raw %}
 __return:
   round: 3
@@ -50,5 +42,7 @@ __return:
   floor: 3
   precision: 3.14159
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
+
+{% endtabs %}

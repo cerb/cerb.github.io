@@ -2,16 +2,8 @@
 title: Create a key expandable placeholder
 excerpt: Create an arbitrary variable that supports key expansion by using a shared prefix.
 summary: "This page explains how to create key expandable placeholders in Cerb using a common prefix. By setting variables with `_context` and `id` suffixes, you can automatically create an expandable `_label` placeholder. This is useful for referencing record labels throughout your automations without explicitly loading each record."
-layout: integration
-jumbotron:
-  title: Create a key expandable placeholder
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
 
 {% comment %}
@@ -21,9 +13,11 @@ jumbotron:
 * Common pattern for referencing records
 {% endcomment %}
 
-When you set both `prefix__context` and `prefix_id` variables using a common prefix, Cerb automatically creates an expandable `prefix__label` placeholder for referencing the record.
+When you set both `{prefix}__context` and `{prefix}_id` variables using a common prefix, Cerb automatically creates a key expandable dictionary for the referenced record.
 
-## Create a ticket label placeholder
+This is a shortcut for [record.get:](/docs/automations/commands/record.get/)
+
+## Create a ticket dictionary
 
 <pre>
 <code class="language-cerb">

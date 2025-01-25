@@ -2,16 +2,8 @@
 title: Create an array of random numbers
 excerpt: Generate an array filled with random numeric values.
 summary: "This page demonstrates how to create an array of random numbers using range mapping and the random function in Cerb. It provides a step-by-step example, including using `range()` for array size, applying `map()` for random value generation, and JSON encoding for output format, resulting in an array filled with unique random numbers."
-layout: integration
-jumbotron:
-  title: Create an array of random numbers
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
 
 {% comment %}
@@ -20,24 +12,24 @@ jumbotron:
 * JSON encoding for output format
 {% endcomment %}
 
-Here is an example of generating an array filled with random numbers.
-
 ## Generate random numbers
 
-<pre>
-<code class="language-cerb">
+This automation generates an array of 10 random numbers between 0 and 100 (inclusive).
+
+{% tabs example %}
+
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   return:
     values@json: {{range(1, 10)|map((v) => random(0, 100))|json_encode}}
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-## Output
-
-<pre>
-<code class="language-cerb">
+{% tab example output %}
+```cerb
 {% raw %}
 __return:
   values:
@@ -52,5 +44,7 @@ __return:
   - 72
   - 37
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
+
+{% endtabs %}

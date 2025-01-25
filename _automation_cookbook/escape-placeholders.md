@@ -6,39 +6,35 @@ summary: "This page explains how to escape placeholders in a value using the `@r
   particularly when working with sheets. The output demonstrates that using `@raw`, placeholders are treated
   as literal text, rather than being evaluated or replaced. This allows for more control over the formatting
   and appearance of values in a sheet, making it easier to work with complex data."
-layout: integration
-jumbotron:
-  title: Escape placeholders
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
+
+## Using @raw
 
 Sometimes you don't want a placeholder to be evaluated in a literal value. You can do this with the [@raw](https://cerb.ai/docs/automations/#annotations) annotation. This is particularly useful in [sheets](https://cerb.ai/docs/sheets/).
 
-<pre>
-<code class="language-cerb">
+{% tabs example %}
+
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   return:
     unescaped: You escape {{placeholders}} with the `@raw` annotation
     escaped@raw: You escape {{placeholders}} with the `@raw` annotation
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-Gives this output:
-
-<pre>
-<code class="language-cerb">
+{% tab example output %}
+```cerb
 {% raw %}
 __return:
   unescaped: You escape  with the `@raw` annotation
   escaped: You escape {{placeholders}} with the `@raw` annotation
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
+
+{% endtabs %}

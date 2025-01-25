@@ -4,21 +4,18 @@ excerpt: Use `file.write:` to create a ZIP archive with arbitrary files.
 summary: "This page explains how to create a ZIP attachment using the `file.write` command in Cerb. It 
   shows an example of how to write a ZIP archive with two files (a README file and a Dockerfile) 
   and then use `record.create` to create an attachment that links to the newly created ZIP file."
-layout: integration
-jumbotron:
-  title: Create a ZIP attachment
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
+
+## Create a ZIP attachment using file.write
+
 The [file.write:](https://cerb.ai/docs/automations/commands/file.write/) command can create a ZIP archive with files from arbitrary text, temporary automation resources, or existing file attachments. You can then use [record.create:](https://cerb.ai/docs/automations/commands/record.create/) to create an attachment to link to other records like tickets, messages, etc.
 
-<pre>
-<code class="language-cerb">
+{% tabs example %}
+
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   file.write:
@@ -46,13 +43,11 @@ start:
         mime_type: application/vnd.cerb.uri
         content: {{tmp_file.uri}}
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-Use this policy:
-
-<pre>
-<code class="language-cerb">
+{% tab example policy %}
+```cerb
 {% raw %}
 commands:
   file.write:
@@ -61,5 +56,7 @@ commands:
     deny/type@bool: {{inputs.record_type is not record type ('attachment')}}
     allow@bool: yes
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
+
+{% endtabs %}

@@ -2,16 +2,8 @@
 title: Iterate through unknown placeholders
 excerpt: Use `cerb_placeholders_list()` to iterate through placeholders with unknown keys.
 summary: "This page demonstrates how to use the `cerb_placeholders_list()` function to iterate through placeholders when their keys are not known in advance. It shows how to filter placeholders by prefix and access their values dynamically, making it useful for working with dynamically generated placeholder names."
-layout: integration
-jumbotron:
-  title: Iterate through unknown placeholders
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
 
 {% comment %}
@@ -22,12 +14,14 @@ jumbotron:
 * Shows prefix-based filtering
 {% endcomment %}
 
-Here is an example of using the [cerb_placeholders_list()](/docs/scripting/functions/#cerb_placeholders_list) function to iterate through placeholders with unknown keys.
-
 ## Creating and iterating random placeholders
 
-<pre>
-<code class="language-cerb">
+Here is an example of using the [cerb_placeholders_list()](/docs/scripting/functions/#cerb_placeholders_list) function to iterate through placeholders with unknown keys. The optional first argument is a prefix filter. 
+
+{% tabs example %}
+
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   repeat:
@@ -45,13 +39,11 @@ start:
       random_{{key}}: {{value}}
       {% endfor %}
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-## Output
-
-<pre>
-<code class="language-cerb">
+{% tab example policy %}
+```cerb
 {% raw %}
 __return:
   output: |
@@ -66,5 +58,7 @@ __return:
     random_DQFJPH: QTCUM3
     random_N6P8AK: 8TQR3U
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
+
+{% endtabs %}

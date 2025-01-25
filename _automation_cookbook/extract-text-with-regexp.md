@@ -2,23 +2,17 @@
 title: Extract text using regular expressions
 excerpt: Use regular expression patterns to extract matching text within automation scripting.
 summary: This page provides examples of using regular expressions in automation scripting to extract matching text. It demonstrates how to use a single capture group to extract an order ID from a string and how to use multiple capture groups to extract numerical values from a formatted string. The examples illustrate the syntax and methods for defining patterns and capturing specific parts of text using regular expressions in a scripting context.
-layout: integration
+layout: automation-cookbook
 redirect_from:
   - /tips/regex-in-automations/
-jumbotron:
-  title: Extract text using regular expressions
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+jumbotron: []
 ---
 
 Here are examples of using regular expressions to extract matching text in automation scripting.
 
-## Using a single capture group
+## Matching a single capture group
+
+The pattern is a [KATA](/docs/kata/) key.
 
 <pre>
 <code class="language-cerb">
@@ -32,6 +26,10 @@ start:
 {% endraw %}
 </code>
 </pre>
+
+## Setting the pattern as a variable
+
+The pattern is a [scripting](/docs/scripting/) variable.
 
 <pre>
 <code class="language-cerb">
@@ -54,6 +52,8 @@ start:
 
 ## Using multiple capture groups
 
+The second argument to `|regexp` specifies the capture group to return.
+
 <pre>
 <code class="language-cerb">
 {% raw %}
@@ -67,3 +67,54 @@ start:
 {% endraw %}
 </code>
 </pre>
+
+## Returning all matches for all capture groups
+
+Use the [regexp_match_all()](/docs/scripting/functions/#regexp_match_all) function to return multiple capture groups for all matches.
+
+{% tabs example %}
+
+{% tab example automation %}
+```cerb
+{% raw %}
+start:
+  set:
+    headers@text:
+      X-Mailer: Cerb
+      From: customer@cerb.example
+      To: support@cerb.example
+  return:
+    results@text:
+      {% set results = regexp_match_all("#^(.*?): (.*?)$#m", headers) %}
+      {{results|json_encode|json_pretty}}
+{% endraw %}
+```
+{% endtab %}
+
+{% tab example policy %}
+```cerb
+{% raw %}
+__return:
+  results: |-
+    [
+        [
+            "X-Mailer: Cerb",
+            "From: customer@cerb.example",
+            "To: support@cerb.example"
+        ],
+        [
+            "X-Mailer",
+            "From",
+            "To"
+        ],
+        [
+            "Cerb",
+            "customer@cerb.example",
+            "support@cerb.example"
+        ]
+    ]
+{% endraw %}
+```
+{% endtab %}
+
+{% endtabs %}

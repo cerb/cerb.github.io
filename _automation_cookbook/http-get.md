@@ -6,21 +6,18 @@ summary: "This page explains how to make an HTTP GET request using the `http.req
   functionality. Additionally, the page provides an example of how to implement deny policies 
   for the `http.request` command, which can be used to restrict certain types of requests or 
   URLs from being sent."
-layout: integration
-jumbotron:
-  title: Send an HTTP GET request
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
+
+## Basic GET request
+
 You can use [http.request:](https://cerb.ai/docs/automations/commands/http.request/) to make a request to any server. Here's an example of a GET request.
 
-<pre>
-<code class="language-cerb">
+{% tabs example %}
+
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   http.request/get:
@@ -31,13 +28,11 @@ start:
     on_success:
     on_error:
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-Use this policy:
-
-<pre>
-<code class="language-cerb">
+{% tab example policy %}
+```cerb
 {% raw %}
 commands:
   http.request:
@@ -45,5 +40,7 @@ commands:
     deny/url@bool: {{inputs.url is not prefixed ('http://','https://')}}
     allow@bool: yes
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
+
+{% endtabs %}

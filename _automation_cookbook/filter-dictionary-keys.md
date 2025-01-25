@@ -2,16 +2,8 @@
 title: Filter dictionary keys
 excerpt: Use the `|filter` modifier with arrow functions to match dictionary keys.
 summary: This page demonstrates how to use the filter modifier with arrow functions to filter dictionaries based on their key names. It shows how to use lambda expressions with key parameters to filter objects by specific key patterns.
-layout: integration
-jumbotron:
-  title: Filter dictionary keys
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
 
 {% comment %}
@@ -21,12 +13,14 @@ jumbotron:
 * Header filtering example
 {% endcomment %}
 
-Here is an example of using the [\|filter](https://cerb.ai/docs/scripting/filters#filter) modifier with arrow functions to filter dictionary keys.
-
 ## Filtering headers by prefix
 
-<pre>
-<code class="language-cerb">
+Here is an example of using the [\|filter](https://cerb.ai/docs/scripting/filters#filter) modifier with arrow functions to filter dictionary keys.
+
+{% tabs example %}
+
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   set:
@@ -37,17 +31,17 @@ start:
   return:
     gitlab_headers@json: {{message_headers|filter((v,k) => k is prefixed ('x-gitlab'))|json_encode}}
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-## Output
-
-<pre>
-<code class="language-cerb">
+{% tab example output %}
+```cerb
 {% raw %}
 __return:
   gitlab_headers:
     x-gitlab-project: abc123
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
+
+{% endtabs %}

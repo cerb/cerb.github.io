@@ -1,17 +1,9 @@
 ---
-title: Send an HTTP POST request
-excerpt: Make an HTTP POST request with form-encoded data and handle JSON responses.
+title: Send an HTTP POST request with a form payload
+excerpt: Make an HTTP POST request with form-encoded data.
 summary: This page demonstrates how to make HTTP POST requests with form-encoded data. It shows how to set headers, send form data, and process JSON responses, making it useful for API integrations and web service interactions.
-layout: integration
-jumbotron:
-  title: Send an HTTP POST request
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
 
 {% comment %}
@@ -22,12 +14,16 @@ jumbotron:
 * Validates response content type
 {% endcomment %}
 
-Here is an example of making an HTTP POST request with form data and handling a JSON response.
+## HTTP POST with form-encoded payload
 
-## Making the POST request
+Here is an example of making an HTTP POST request with form-encoded data and handling a JSON response.
 
-<pre>
-<code class="language-cerb">
+When using `Content-Type: application/x-www-form-urlencoded`, a `body:` dictionary will automatically be encoded as form data.
+
+{% tabs example %}
+
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   http.request/post:
@@ -49,13 +45,11 @@ start:
             http_response@json: {{http_response.body}}
     on_error:
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-## Policy
-
-<pre>
-<code class="language-cerb">
+{% tab example policy %}
+```cerb
 {% raw %}
 commands:
   http.request:
@@ -63,5 +57,7 @@ commands:
     deny/url@bool: {{inputs.url is not prefixed ('http://','https://')}}
     allow@bool: yes
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
+
+{% endtabs %}

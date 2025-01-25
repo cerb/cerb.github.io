@@ -1,23 +1,10 @@
 ---
 title: Escape untrusted data query parameters
-excerpt: Safely handle user input in data queries using query parameters.
+excerpt: Safely handle untrusted user input in data queries using query parameters.
 summary: This page demonstrates how to securely handle user input in data queries by using query parameters. It shows how to prevent query injection attacks by using the ${...} syntax for parameter substitution instead of direct placeholder interpolation.
-layout: integration
-social_image_url: /assets/images/automation-cookbook/escape-data-query-params.png
-jumbotron:
-  title: Escape untrusted data query parameters
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
-
-<div class="cerb-screenshot">
-<img src="{{page.social_image_url}}" class="screenshot no-border" style="width:1200px;">
-</div>
 
 {% comment %}
 * Uses query_params for safe parameter substitution

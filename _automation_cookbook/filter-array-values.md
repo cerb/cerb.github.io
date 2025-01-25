@@ -2,16 +2,8 @@
 title: Filter array values
 excerpt: Use the `|filter` modifier with arrow functions to match specific array values.
 summary: This page demonstrates how to use the filter modifier with arrow functions in automation scripting to filter array values based on conditions. It shows how to use lambda expressions to create flexible filtering rules for lists of data.
-layout: integration
-jumbotron:
-  title: Filter array values
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
 
 {% comment %}
@@ -20,14 +12,17 @@ jumbotron:
 * Mathematical operations
 * List processing
 * Conditional filtering
+* Filtering out null/blank
 {% endcomment %}
+
+## Filtering multiples of 5
 
 Here is an example of using the [\|filter](https://cerb.ai/docs/scripting/filters#filter) modifier with arrow functions to filter array values based on conditions in automation scripting.
 
-## Finding multiples of 5
+{% tabs example %}
 
-<pre>
-<code class="language-cerb">
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   set:
@@ -35,13 +30,11 @@ start:
   return:
     multiples5@csv: {{numbers|filter((n,k) => 0 == n % 5)|join(',')}}
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-## Output
-
-<pre>
-<code class="language-cerb">
+{% tab example output %}
+```cerb
 {% raw %}
 __return:
   multiples5:
@@ -66,5 +59,7 @@ __return:
   - "95"
   - "100"
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
+
+{% endtabs %}

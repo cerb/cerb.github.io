@@ -2,16 +2,8 @@
 title: Sort with comparator
 excerpt: Use the `|sort` filter with arrow functions to create custom sorting rules.
 summary: This page demonstrates how to use the sort filter with arrow functions to create custom sorting rules for complex data structures. It shows how to sort arrays of objects using specific object properties.
-layout: integration
-jumbotron:
-  title: Sort with comparator
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
 
 {% comment %}
@@ -21,12 +13,14 @@ jumbotron:
 * Complex data structures
 {% endcomment %}
 
-Here is an example of using the [\|sort](https://twig.symfony.com/doc/3.x/filters/sort.html) filter with arrow functions to create custom sorting rules.
-
 ## Sort objects by key property
 
-<pre>
-<code class="language-cerb">
+Here is an example of using the [\|sort](https://twig.symfony.com/doc/3.x/filters/sort.html) filter with arrow functions to create custom sorting rules.
+
+{% tabs example %}
+
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   set:
@@ -39,16 +33,16 @@ start:
   return:
     sorted: {{example_data|sort((a,b)=> a.key<=>b.key)|column('name')|join(', ')}}
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-## Output
-
-<pre>
-<code class="language-cerb">
+{% tab example output %}
+```cerb
 {% raw %}
 __return:
   sorted: Item 3, Item 2, Item 1
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
+
+{% endtabs %}

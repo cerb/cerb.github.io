@@ -8,22 +8,11 @@ summary: "This page explains how to make an HTTP POST request with a JSON payloa
   the body input field to set the payload. Additionally, the page provides an example of how to 
   implement deny policies for the `http.request` command to restrict certain types of requests 
   or URLs from being sent."
-layout: integration
-social_image_url: /assets/images/automation-cookbook/http-post-json.png
-jumbotron:
-  title: Send an HTTP POST request with a JSON payload
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
 
-<div class="cerb-screenshot">
-<img src="{{page.social_image_url}}" class="screenshot no-border" style="width:1200px;">
-</div>
+## HTTP POST with JSON payload
 
 You can write an HTTP request in KATA and have Cerb format and send it to the server as a JSON payload.
 

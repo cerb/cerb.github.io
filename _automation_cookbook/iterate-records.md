@@ -2,16 +2,8 @@
 title: Loop through search results
 excerpt: "Use the `repeat:` command to iterate records from search results."
 summary: This page demonstrates how to use the repeat function in automation scripting to efficiently iterate through search results. It shows best practices for processing multiple records using record IDs, making it useful for batch operations and record management tasks.
-layout: integration
-jumbotron:
-  title: Loop through search results
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
 
 {% comment %}
@@ -21,14 +13,16 @@ jumbotron:
 * Record expansion and custom fields
 {% endcomment %}
 
+## Using record.search: and repeat:
+
 Here is an example using the [repeat:](https://cerb.ai/docs/automations/commands/repeat/) command for iterating through record IDs (using `records[id]` notation) in automation scripting.
 
 This approach is more efficient than looping through records directly since it doesn't duplicate the list during iteration.
 
-## Processing search results
+{% tabs example %}
 
-<pre>
-<code class="language-cerb">
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   record.search:
@@ -44,18 +38,18 @@ start:
     do:
       log: Editing #{{ticket_id}} {{tickets[ticket_id]._label}}
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-## Policy
-
-<pre>
-<code class="language-cerb">
+{% tab example policy %}
+```cerb
 {% raw %}
 commands:
   record.search:
     deny/type@bool: {{inputs.record_type is not record type ('ticket')}}
     allow@bool: yes
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
+
+{% endtabs %}

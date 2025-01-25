@@ -5,22 +5,18 @@ summary: "This page explains how to create a comment on any record using the `re
   Cerb. It also provides examples of how to specify the author, target record, and other fields 
   for the comment, as well as an example of how to implement a deny policy for the 
   `record.create` command to only allow comments on records of type `comment`."
-layout: integration
-jumbotron:
-  title: Create a comment
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
 
 You can use [record.create:](https://cerb.ai/docs/automations/commands/record.create/) to create a [comment](/docs/comments/) on any [record](/docs/records/).
 
-<pre>
-<code class="language-cerb">
+## Create a formatted comment as Cerb on a ticket record
+
+{% tabs example %}
+
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   record.create/comment:
@@ -36,22 +32,24 @@ start:
         comment@text:
           This is a **comment** from an automation.
 {% endraw %}
-</code>
-</pre>
+```
 
-`author__context:` can be one of: app, role, group, worker
+|---
+| Field |
+|-|-
+| `author__context:` | [record type](/docs/records/types/) of author (`app`, `role`, `group`, `worker`)
+| `target__context:` | [record type](/docs/records/types/) to comment on (`ticket`, `message`, `task`, etc.)
+{% endtab %}
 
-`target_context:` is the target [record type](/docs/records/types) for the comment (ticket, message, task, etc.)
-
-Use this policy:
-
-<pre>
-<code class="language-cerb">
+{% tab example policy %}
+```cerb
 {% raw %}
 commands:
   record.create:
     deny/type@bool: {{inputs.record_type is not record type ('comment')}}
     allow@bool: yes
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
+
+{% endtabs %}

@@ -2,16 +2,8 @@
 title: Optional conditional keys
 excerpt: Use the `@optional` annotation to omit keys based on conditional values.
 summary: "This page demonstrates how to use the `@optional` annotation to conditionally include or omit dictionary keys based on their values. When a key with the `@optional` annotation evaluates to null, it is removed from the output."
-layout: integration
-jumbotron:
-  title: Optional conditional keys
-  breadcrumbs:
-    -
-      label: Resources &raquo;
-      url: /resources/
-    -
-      label: Automation Cookbook &raquo;
-      url: /resources/automation-cookbook/
+layout: automation-cookbook
+jumbotron: []
 ---
 
 {% comment %}
@@ -20,12 +12,16 @@ jumbotron:
 * Dictionary output formatting
 {% endcomment %}
 
-Here is an example of using the [@optional](https://cerb.ai/docs/automations/#annotations) annotation to conditionally include dictionary keys based on their values. The gdpr key will be removed when the region is not EU.
+## Using @optional
 
-## Conditionally include record.region
+Here is an example of using the [@optional](https://cerb.ai/docs/automations/#annotations) annotation to conditionally include dictionary keys based on their values. The key is omitted when the value is empty or false.
 
-<pre>
-<code class="language-cerb">
+The `gdpr:` key will be removed when the region is not `EU`.
+
+{% tabs example %}
+
+{% tab example automation %}
+```cerb
 {% raw %}
 start:
   set:
@@ -39,18 +35,18 @@ start:
       email: {{record.email}}
       gdpr@optional,bool: {{'EU' == record.region ? true}}
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
 
-## Output
-
-<pre>
-<code class="language-cerb">
+{% tab example policy %}
+```cerb
 {% raw %}
 __return:
   output:
     name: Kina Halpue
     email: kina@cerb.example
 {% endraw %}
-</code>
-</pre>
+```
+{% endtab %}
+
+{% endtabs %}
