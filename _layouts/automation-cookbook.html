@@ -1,0 +1,25 @@
+---
+layout: default
+jumbotron:
+  breadcrumbs:
+    -
+      label: Resources &raquo;
+      url: /resources/
+    -
+      label: Automation Cookbook &raquo;
+      url: /resources/automation-cookbook/
+---
+
+<section class="automation-cookbook">
+	<article>
+		<div class="cerb-screenshot">
+			<img src="/assets/images/automation-cookbook/{{page.name|split:'.'|first}}.png" class="screenshot no-border">
+		</div>
+
+		{{ content }}
+	</article>
+</section>
+
+{% if page.next or page.previous %}
+{% include prev_next.html %}
+{% endif %}

@@ -7,10 +7,11 @@
 		{% include header.html %}
 
 		<div class="page-content">
-			{% if page.jumbotron and page.jumbotron.title %}
+			{% if page.jumbotron %}
 			<div class="jumbotron {{page.jumbotron.style}}">
 				<div class="wrapper">
-					{% for crumb in page.jumbotron.breadcrumbs %}
+					{% assign breadcrumbs = page.jumbotron.breadcrumbs | default: layout.jumbotron.breadcrumbs %}
+					{% for crumb in breadcrumbs %}
 					<p class="jumbotron-breadcrumbs">
 						{% if crumb.url %}
 						<a href="{{ crumb.url }}">{{ crumb.label }}</a>
@@ -20,10 +21,10 @@
 					</p>
 					{% endfor %}
 
-					<h1>{{ page.jumbotron.title }}</h1>
+					<h1>{{ page.jumbotron.title | default: page.title }}</h1>
 
-					{% if page.jumbotron.tagline %}
-					<p>{{page.jumbotron.tagline}}</p>
+					{% if page.jumbotron.tagline or layout.jumbotron.tagline %}
+					<p>{{ page.jumbotron.tagline | default: layout.jumbotron.tagline }}</p>
 					{% endif %}
 				</div>
 			</div>
