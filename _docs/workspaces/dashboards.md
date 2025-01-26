@@ -376,7 +376,7 @@ format:dictionaries
 | Interactions Toolbar |
 | Knowledgebase Browser |
 | Map |
-| Project Board |
+| [Project Board](/docs/dashboards/widgets/project-board/) | A project board that visually organizes and automates multi-step processes.
 | Record Fields |
 | Sheet |
 | Worklist |
