@@ -376,7 +376,7 @@ format:dictionaries
 | [Interactions Toolbar ](/docs/dashboards/widgets/interactions-toolbar/ )| A toolbar widget for running worker interactions.
 | Knowledgebase Browser |
 | [Map](/docs/dashboards/widgets/map/) | A map widget that displays interactive geographic visualizations with regions and data points.
-| Project Board |
+| [Project Board](/docs/dashboards/widgets/project-board/) | A project board that visually organizes and automates multi-step processes.
 | [Record Fields](/docs/dashboards/widgets/record-fields/) | A widget that displays field metadata for record types.
 | [Sheet](/docs/dashboards/widgets/sheet/) | A highly customizable data grid tool for displaying records.
 | [Worklist](/docs/dashboards/widgets/worklist/) | A record worklist with configurable search queries and columns.
