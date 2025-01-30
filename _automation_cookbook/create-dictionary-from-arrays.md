@@ -6,7 +6,7 @@ summary: "This page demonstrates how to use the `array_combine()` function to
     It's useful for converting parallel arrays into associative arrays or dictionaries."
 layout: automation-cookbook
 jumbotron: []
-social_image_url: /assets/images/automation-cookbook/create-dictionary-from-array.png
+social_image_url: /assets/images/automation-cookbook/create-dictionary-from-arrays.png
 ---
 
 {% comment %}
