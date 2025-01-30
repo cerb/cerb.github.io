@@ -1,5 +1,8 @@
 {% assign page_path = page.url|downcase|remove_first:'/'|split:'/' %}
 <ul>
+	<li class="{% if page.url == '/' %}current{% endif %}">
+		<a href="/">Home</a>
+	</li>
 	<li class="{% if page_path[0] == 'resources' or (page_path[0] == 'docs' and page_path[1] != 'history') or page_path[0] == 'guides' or page_path[0] == 'packages' %}current{% endif %}">
 		<a href="/resources/">Docs</a>
 	</li>
