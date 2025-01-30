@@ -1,6 +1,12 @@
 ---
 title: Extract dictionary columns
 excerpt: Extract a column from a list of dictionaries
+summary: "This page explains how to extract a column from a list of dictionaries 
+  using Cerb filters. Two methods are provided: `|column` and `|map`. The `|column` 
+  filter extracts the specified column directly, while the `|map` filter uses an arrow 
+  function to transform each dictionary into a value for that column. Both methods 
+  can be used to extract the email columns from a list of people dictionaries, with 
+  examples demonstrating their usage."
 layout: automation-cookbook
 jumbotron: []
 social_image_url: /assets/images/automation-cookbook/extract-dictionary-columns.png

@@ -76,7 +76,7 @@ Hello, {{first_name}}!
 * [Conditional Logic](/docs/scripting/conditional-logic/)
 * [Operators](/docs/scripting/operators/)
 * [Loops](/docs/scripting/loops/)
-* [Regular Expressions](/docs/scripting/regular-expressions/)
+* [Regular Expressions](/docs/scripting/regex/)
 * [JSON](/docs/scripting/json/)
 * [XML](/docs/scripting/xml/)
 * [Commands](/docs/scripting/commands/)
