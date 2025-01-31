@@ -20,9 +20,9 @@ social_image_url: /assets/images/automation-cookbook/add-dictionary-column.png
 
 The [\|merge](/docs/scripting/filters/#merge) filter combines two arrays or objects. We can use it in [\|map](/docs/scripting/filters/#map) to add new columns to dictionaries.
 
-{% tabs example %}
+{% tabs add_dictionary_column %}
 
-{% tab example automation %}
+{% tab add_dictionary_column automation %}
 ```cerb
 {% raw %}
 start:
@@ -40,7 +40,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example output %}
+{% tab add_dictionary_column output %}
 ```cerb
 {% raw %}
 people:

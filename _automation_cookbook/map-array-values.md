@@ -21,9 +21,9 @@ social_image_url: /assets/images/automation-cookbook/map-array-values.png
 
 Here is an example of using the [\|map](/docs/scripting/filters/#map) modifier with arrow functions to transform array values.
 
-{% tabs example %}
+{% tabs map_array_values %}
 
-{% tab example automation %}
+{% tab map_array_values automation %}
 ```cerb
 {% raw %}
 start:
@@ -36,7 +36,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example output %}
+{% tab map_array_values output %}
 ```cerb
 {% raw %}
 __return:

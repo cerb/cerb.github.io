@@ -22,9 +22,9 @@ You can use the `cerb.commands.worklist.query.debug` command to view the SQL sta
 
 ## Debug a ticket search query
 
-{% tabs example %}
+{% tabs debug_search_query %}
 
-{% tab example automation %}
+{% tab debug_search_query automation %}
 ```cerb
 {% raw %}
 start:
@@ -39,7 +39,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example policy %}
+{% tab debug_search_query policy %}
 ```cerb
 {% raw %}
 commands:
@@ -50,7 +50,7 @@ commands:
 ```
 {% endtab %}
 
-{% tab example output %}
+{% tab debug_search_query output %}
 ```cerb
 {% raw %}
 results:

@@ -20,9 +20,9 @@ social_image_url: /assets/images/automation-cookbook/sort-with-comparator.png
 
 Here is an example of using the [\|sort](https://twig.symfony.com/doc/3.x/filters/sort.html) filter with arrow functions to create custom sorting rules.
 
-{% tabs example %}
+{% tabs sort_with_comparator %}
 
-{% tab example automation %}
+{% tab sort_with_comparator automation %}
 ```cerb
 {% raw %}
 start:
@@ -39,7 +39,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example output %}
+{% tab sort_with_comparator output %}
 ```cerb
 {% raw %}
 __return:

@@ -20,9 +20,9 @@ social_image_url: /assets/images/automation-cookbook/round-float-value.png
 
 Here are examples of rounding methods (round, ceil, floor, and precision control) for floating point numbers in automation scripting.
 
-{% tabs example %}
+{% tabs round_float_value %}
 
-{% tab example automation %}
+{% tab round_float_value automation %}
 ```cerb
 {% raw %}
 start:
@@ -37,7 +37,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example output %}
+{% tab round_float_value output %}
 ```cerb
 {% raw %}
 __return:

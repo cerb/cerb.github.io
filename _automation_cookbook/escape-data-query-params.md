@@ -22,9 +22,9 @@ When using the [data.query:](/docs/automations/commands/data.query/) command, th
 
 Its value is a dictionary. The `${...}` placeholder syntax in a query references these sanitized keys. These placeholders aren't evaluated until the query is parsed, so they can never modify the structure of the query (e.g. changing other filters).
 
-{% tabs example %}
+{% tabs escape_data_query_params %}
 
-{% tab example automation %}
+{% tab escape_data_query_params automation %}
 ```cerb
 {% raw %}
 start:
@@ -45,7 +45,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example policy %}
+{% tab escape_data_query_params policy %}
 ```cerb
 {% raw %}
 commands:

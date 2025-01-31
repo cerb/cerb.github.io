@@ -13,9 +13,9 @@ social_image_url: /assets/images/automation-cookbook/report-spam.png
 
 ## Using api.command:
 
-{% tabs example %}
+{% tabs report_spam %}
 
-{% tab example automation %}
+{% tab report_spam automation %}
 ```cerb
 {% raw %}
 start:
@@ -29,7 +29,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example policy %}
+{% tab report_spam policy %}
 ```cerb
 {% raw %}
 commands:

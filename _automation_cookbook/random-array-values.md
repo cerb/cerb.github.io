@@ -21,9 +21,9 @@ social_image_url: /assets/images/automation-cookbook/random-array-values.png
 
 This automation generates an array of 10 random numbers between 0 and 100 (inclusive).
 
-{% tabs example %}
+{% tabs random_array_values %}
 
-{% tab example automation %}
+{% tab random_array_values automation %}
 ```cerb
 {% raw %}
 start:
@@ -33,7 +33,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example output %}
+{% tab random_array_values output %}
 ```cerb
 {% raw %}
 __return:

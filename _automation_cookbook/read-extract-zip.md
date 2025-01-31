@@ -15,9 +15,9 @@ Using [data.query:](https://cerb.ai/docs/automations/commands/data.query/) and [
 
 ## Read a ZIP archive manifest 
 
-{% tabs example %}
+{% tabs read_extract_zip %}
 
-{% tab example automation %}
+{% tab read_extract_zip automation %}
 ```cerb
 {% raw %}
 start:
@@ -35,7 +35,7 @@ start:
 The optional `filter:` key matches a filename pattern with `*` as wildcards. 
 {% endtab %}
 
-{% tab example policy %}
+{% tab read_extract_zip policy %}
 ```cerb
 {% raw %}
 commands:
@@ -50,9 +50,9 @@ commands:
 
 ## Extract a specific file path from a ZIP archive
 
-{% tabs example %}
+{% tabs read_extract_zip2 %}
 
-{% tab example automation %}
+{% tab read_extract_zip2 automation %}
 ```cerb
 {% raw %}
 start:
@@ -67,7 +67,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example policy %}
+{% tab read_extract_zip2 policy %}
 ```cerb
 {% raw %}
 commands:

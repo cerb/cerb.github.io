@@ -23,9 +23,9 @@ Here is an example using the [repeat:](https://cerb.ai/docs/automations/commands
 
 This approach is more efficient than looping through records directly since it doesn't duplicate the list during iteration.
 
-{% tabs example %}
+{% tabs iterate_records %}
 
-{% tab example automation %}
+{% tab iterate_records automation %}
 ```cerb
 {% raw %}
 start:
@@ -45,7 +45,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example policy %}
+{% tab iterate_records policy %}
 ```cerb
 {% raw %}
 commands:

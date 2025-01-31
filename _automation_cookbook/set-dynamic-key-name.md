@@ -14,8 +14,8 @@ social_image_url: /assets/images/automation-cookbook/set-dynamic-key-name.png
 
 You can't use scripting in a KATA key, but if you want to set a dynamic key name, you can do so with [var.set:](https://cerb.ai/docs/automations/commands/var.set/)
 
-{% tabs example %}
-{% tab example automation %}
+{% tabs set_dynamic_key_name %}
+{% tab set_dynamic_key_name automation %}
 ```cerb
 {% raw %}
 start:
@@ -33,8 +33,8 @@ start:
 
 This approach can also be used if you want a key name that isn't valid in KATA, such as a `:` or `@`.
 
-{% tabs example2 %}
-{% tab example2 automation %}
+{% tabs set_dynamic_key_name2 %}
+{% tab set_dynamic_key_name2 automation %}
 ```cerb
 {% raw %}
 start:
@@ -51,8 +51,8 @@ start:
 
 You can also use the `delimiter:` field to change the delimiter from the standard `:` if necessary. This allows you to use `:` in a key name.
 
-{% tabs example3 %}
-{% tab example3 automation %}
+{% tabs set_dynamic_key_name3 %}
+{% tab set_dynamic_key_name3 automation %}
 ```cerb
 {% raw %}
 start:

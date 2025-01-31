@@ -16,9 +16,9 @@ social_image_url: /assets/images/automation-cookbook/extract-dictionary-columns.
 
 You can extract the same column from a list of dictionaries with the `|column` filter.
 
-{% tabs example %}
+{% tabs extract_dictionary_columns %}
 
-{% tab example automation %}
+{% tab extract_dictionary_columns automation %}
 ```cerb
 {% raw %}
 start:
@@ -36,7 +36,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example output %}
+{% tab extract_dictionary_columns output %}
 ```cerb
 {% raw %}
 __return:
@@ -51,9 +51,9 @@ __return:
 
 You can extract the same column from a list of dictionaries with the `|map` filter.
 
-{% tabs example %}
+{% tabs extract_dictionary_columns %}
 
-{% tab example automation %}
+{% tab extract_dictionary_columns automation %}
 ```cerb
 {% raw %}
 start:
@@ -71,7 +71,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example output %}
+{% tab extract_dictionary_columns output %}
 ```cerb
 {% raw %}
 __return:

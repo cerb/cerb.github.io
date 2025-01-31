@@ -15,9 +15,9 @@ You can use [record.create:](https://cerb.ai/docs/automations/commands/record.cr
 
 ## Create a formatted comment as Cerb on a ticket record
 
-{% tabs example %}
+{% tabs create_comment %}
 
-{% tab example automation %}
+{% tab create_comment automation %}
 ```cerb
 {% raw %}
 start:
@@ -43,7 +43,7 @@ start:
 | `target__context:` | [record type](/docs/records/types/) to comment on (`ticket`, `message`, `task`, etc.)
 {% endtab %}
 
-{% tab example policy %}
+{% tab create_comment policy %}
 ```cerb
 {% raw %}
 commands:

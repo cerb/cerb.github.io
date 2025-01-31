@@ -21,9 +21,9 @@ Here are examples of different approaches to conditional branching, demonstratin
 
 ## Using a decision block
 
-{% tabs example %}
+{% tabs conditional_branching %}
 
-{% tab example automation %}
+{% tab conditional_branching automation %}
 ```cerb
 {% raw %}
 start:
@@ -50,7 +50,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example output %}
+{% tab conditional_branching output %}
 ```cerb
 {% raw %}
 __return:
@@ -63,9 +63,9 @@ __return:
 
 ## Using dynamic dictionary keys
 
-{% tabs example %}
+{% tabs conditional_branching %}
 
-{% tab example automation %}
+{% tab conditional_branching automation %}
 ```cerb
 {% raw %}
 start:
@@ -82,7 +82,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example output %}
+{% tab conditional_branching output %}
 ```cerb
 {% raw %}
 __return:

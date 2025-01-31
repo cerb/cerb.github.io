@@ -16,9 +16,9 @@ social_image_url: /assets/images/automation-cookbook/escape-placeholders.png
 
 Sometimes you don't want a placeholder to be evaluated in a literal value. You can do this with the [@raw](https://cerb.ai/docs/automations/#annotations) annotation. This is particularly useful in [sheets](https://cerb.ai/docs/sheets/).
 
-{% tabs example %}
+{% tabs escape_placeholders %}
 
-{% tab example automation %}
+{% tab escape_placeholders automation %}
 ```cerb
 {% raw %}
 start:
@@ -29,7 +29,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example output %}
+{% tab escape_placeholders output %}
 ```cerb
 {% raw %}
 __return:

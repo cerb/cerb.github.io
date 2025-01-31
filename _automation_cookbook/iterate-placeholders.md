@@ -23,9 +23,9 @@ social_image_url: /assets/images/automation-cookbook/iterate-placeholders.png
 
 Here is an example of using the [cerb_placeholders_list()](/docs/scripting/functions/#cerb_placeholders_list) function to iterate through placeholders with unknown keys. The optional first argument is a prefix filter. 
 
-{% tabs example %}
+{% tabs iterate_placeholders %}
 
-{% tab example automation %}
+{% tab iterate_placeholders automation %}
 ```cerb
 {% raw %}
 start:
@@ -47,7 +47,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example policy %}
+{% tab iterate_placeholders output %}
 ```cerb
 {% raw %}
 __return:

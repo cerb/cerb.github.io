@@ -79,9 +79,9 @@ start:
 
 Use the [regexp_match_all()](/docs/scripting/functions/#regexp_match_all) function to return multiple capture groups for all matches.
 
-{% tabs example %}
+{% tabs extract_text_with_regexp %}
 
-{% tab example automation %}
+{% tab extract_text_with_regexp automation %}
 ```cerb
 {% raw %}
 start:
@@ -98,7 +98,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example policy %}
+{% tab extract_text_with_regexp output %}
 ```cerb
 {% raw %}
 __return:

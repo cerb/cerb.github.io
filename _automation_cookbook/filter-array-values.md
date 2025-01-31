@@ -22,9 +22,9 @@ social_image_url: /assets/images/automation-cookbook/filter-array-values.png
 
 Here is an example of using the [\|filter](https://cerb.ai/docs/scripting/filters#filter) modifier with arrow functions to filter array values based on conditions in automation scripting.
 
-{% tabs example %}
+{% tabs filter_array_values %}
 
-{% tab example automation %}
+{% tab filter_array_values automation %}
 ```cerb
 {% raw %}
 start:
@@ -36,7 +36,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example output %}
+{% tab filter_array_values output %}
 ```cerb
 {% raw %}
 __return:

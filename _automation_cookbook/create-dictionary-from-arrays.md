@@ -21,9 +21,9 @@ social_image_url: /assets/images/automation-cookbook/create-dictionary-from-arra
 
 Here's an example of using `array_combine()` to create a dictionary from separate key and value lists.
 
-{% tabs example %}
+{% tabs create_dictionary_from_arrays %}
 
-{% tab example automation %}
+{% tab create_dictionary_from_arrays automation %}
 ```cerb
 {% raw %}
 start:
@@ -36,7 +36,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example output %}
+{% tab create_dictionary_from_arrays output %}
 ```cerb
 {% raw %}
 __return:

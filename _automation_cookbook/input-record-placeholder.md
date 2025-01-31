@@ -22,9 +22,9 @@ social_image_url: /assets/images/automation-cookbook/input-record-placeholder.pn
 
 You can accept any record type and ID as input parameters, then use them to create an expandable record placeholder.
 
-{% tabs example %}
+{% tabs input_record_placeholder %}
 
-{% tab example automation %}
+{% tab input_record_placeholder automation %}
 ```cerb
 {% raw %}
 inputs:

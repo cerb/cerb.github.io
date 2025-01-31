@@ -22,9 +22,9 @@ social_image_url: /assets/images/automation-cookbook/strip-line-prefix.png
 
 Here are examples of using the [\|strip_lines](/docs/scripting/filters#strip_lines) filter (prefix removal, quote stripping) for text processing in automation scripting.
 
-{% tabs example %}
+{% tabs strip_line_prefix %}
 
-{% tab example automation %}
+{% tab strip_line_prefix automation %}
 ```cerb
 {% raw %}
 start:
@@ -41,7 +41,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example output %}
+{% tab strip_line_prefix output %}
 ```cerb
 {% raw %}
 __return:

@@ -21,9 +21,9 @@ Here is an example of using the [@optional](https://cerb.ai/docs/automations/#an
 
 The `gdpr:` key will be removed when the region is not `EU`.
 
-{% tabs example %}
+{% tabs optional_conditional_keys %}
 
-{% tab example automation %}
+{% tab optional_conditional_keys automation %}
 ```cerb
 {% raw %}
 start:
@@ -41,7 +41,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example policy %}
+{% tab optional_conditional_keys output %}
 ```cerb
 {% raw %}
 __return:

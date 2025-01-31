@@ -25,9 +25,9 @@ social_image_url: /assets/images/automation-cookbook/create-record-draft.png
 
 A `mail.transactional` [draft](/docs/records/types/draft/) is sent by the system rather than a particular worker. This does not create a [ticket](/docs/tickets/) record.
 
-{% tabs example %}
+{% tabs create_record_draft %}
 
-{% tab example automation %}
+{% tab create_record_draft automation %}
 ```cerb
 {% raw %}
 start:
@@ -54,7 +54,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example policy %}
+{% tab create_record_draft policy %}
 ```cerb
 {% raw %}
 commands:

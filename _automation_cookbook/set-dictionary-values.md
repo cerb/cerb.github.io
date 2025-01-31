@@ -20,9 +20,9 @@ social_image_url: /assets/images/automation-cookbook/set-dictionary-values.png
 
 When a value (like a model ID selected from a [sheet](https://cerb.ai/docs/sheets/)) needs to be expanded, a dictionary structure can associate multiple attributes with that key. This enables dynamic lookups and conditional formatting based on those attributes in subsequent logic.
 
-{% tabs example %}
+{% tabs set_dictionary_values %}
 
-{% tab example automation %}
+{% tab set_dictionary_values automation %}
 ```cerb
 {% raw %}
 start:
@@ -47,7 +47,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example output %}
+{% tab set_dictionary_values output %}
 ```cerb
 {% raw %}
 output@text:

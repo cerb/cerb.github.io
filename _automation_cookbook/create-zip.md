@@ -14,9 +14,9 @@ social_image_url: /assets/images/automation-cookbook/create-zip.png
 
 The [file.write:](https://cerb.ai/docs/automations/commands/file.write/) command can create a ZIP archive with files from arbitrary text, temporary automation resources, or existing file attachments. You can then use [record.create:](https://cerb.ai/docs/automations/commands/record.create/) to create an attachment to link to other records like tickets, messages, etc.
 
-{% tabs example %}
+{% tabs create_zip %}
 
-{% tab example automation %}
+{% tab create_zip automation %}
 ```cerb
 {% raw %}
 start:
@@ -48,7 +48,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example policy %}
+{% tab create_zip policy %}
 ```cerb
 {% raw %}
 commands:

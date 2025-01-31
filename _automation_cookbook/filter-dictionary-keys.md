@@ -20,9 +20,9 @@ social_image_url: /assets/images/automation-cookbook/filter-dictionary-keys.png
 
 Here is an example of using the [\|filter](https://cerb.ai/docs/scripting/filters#filter) modifier with arrow functions to filter dictionary keys.
 
-{% tabs example %}
+{% tabs filter_dictionary_keys %}
 
-{% tab example automation %}
+{% tab filter_dictionary_keys automation %}
 ```cerb
 {% raw %}
 start:
@@ -37,7 +37,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example output %}
+{% tab filter_dictionary_keys output %}
 ```cerb
 {% raw %}
 __return:

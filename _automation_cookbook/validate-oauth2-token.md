@@ -22,9 +22,9 @@ In a webhook automation you can use the [cerb.commands.oauth2.token.validate](ht
 
 Create an example OAuth2 token from **Cerb >> Setup >> Developers >> OAuth2 Token Generator**.
 
-{% tabs example %}
+{% tabs validate_oauth2_token %}
 
-{% tab example automation %}
+{% tab validate_oauth2_token automation %}
 ```cerb
 {% raw %}
 start:
@@ -54,7 +54,7 @@ Cerb does not assume a Bearer token follows a specific format. You can:
 - Validate HMAC signatures using shared secrets
 {% endtab %}
 
-{% tab example policy %}
+{% tab validate_oauth2_token policy %}
 ```cerb
 {% raw %}
 commands:

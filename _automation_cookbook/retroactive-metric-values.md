@@ -17,9 +17,9 @@ social_image_url: /assets/images/automation-cookbook/retroactive-metric-values.p
 
 Using [metric.increment:](/docs/automations/commands/metric.increment/) you can log retroactive or custom values on a [metric](/docs/metrics/). This can be useful for backfilling.
 
-{% tabs example %}
+{% tabs retroactive_metric_values %}
 
-{% tab example automation %}
+{% tab retroactive_metric_values automation %}
 ```cerb
 {% raw %}
 start:
@@ -32,7 +32,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example policy %}
+{% tab retroactive_metric_values policy %}
 ```cerb
 {% raw %}
 commands:
@@ -47,9 +47,9 @@ commands:
 
 You can verify the data in **Setup >> Developers >> Data Query Tester**:
 
-{% tabs example2 %}
+{% tabs retroactive_metric_values2 %}
 
-{% tab example2 data query %}
+{% tab retroactive_metric_values2 data query %}
 ```cerb
 {% raw %}
 type:metrics.timeseries

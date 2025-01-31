@@ -15,9 +15,9 @@ social_image_url: /assets/images/automation-cookbook/interaction-sheet-paged-rec
 
 By using the `cerb.data.records` automation data source in a sheet, you can make a paged sheet of records in a [worker interaction](/docs/automations/triggers/interaction.worker/).
 
-{% tabs example %}
+{% tabs interaction_sheet_paged_records %}
 
-{% tab example automation %}
+{% tab interaction_sheet_paged_records automation %}
 ```cerb
 {% raw %}
 start:

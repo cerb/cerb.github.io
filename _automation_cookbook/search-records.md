@@ -18,9 +18,9 @@ social_image_url: /assets/images/automation-cookbook/search-records.png
 
 ## Find open tickets:
 
-{% tabs example %}
+{% tabs search_records %}
 
-{% tab example automation %}
+{% tab search_records automation %}
 ```cerb
 {% raw %}
 start:
@@ -33,7 +33,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example policy %}
+{% tab search_records policy %}
 ```cerb
 {% raw %}
 commands:
@@ -48,9 +48,9 @@ commands:
 
 ## Find workers active within the past 30 minutes:
 
-{% tabs example %}
+{% tabs search_records %}
 
-{% tab example automation %}
+{% tab search_records automation %}
 ```cerb
 {% raw %}
 start:
@@ -65,7 +65,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example policy %}
+{% tab search_records policy %}
 ```cerb
 {% raw %}
 commands:

@@ -23,9 +23,9 @@ Here is an example of making an HTTP POST request with form-encoded data and han
 
 When using `Content-Type: application/x-www-form-urlencoded`, a `body:` dictionary will automatically be encoded as form data.
 
-{% tabs example %}
+{% tabs http_post_form %}
 
-{% tab example automation %}
+{% tab http_post_form automation %}
 ```cerb
 {% raw %}
 start:
@@ -51,7 +51,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example policy %}
+{% tab http_post_form policy %}
 ```cerb
 {% raw %}
 commands:

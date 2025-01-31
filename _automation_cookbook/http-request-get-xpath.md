@@ -21,9 +21,9 @@ social_image_url: /assets/images/automation-cookbook/http-request-get-xpath.png
 
 Here is an example of making an HTTP GET request and using XPath to extract data from an HTML response.
 
-{% tabs example %}
+{% tabs http_request_get_xpath %}
 
-{% tab example automation %}
+{% tab http_request_get_xpath automation %}
 ```cerb
 {% raw %}
 start:
@@ -46,7 +46,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example policy %}
+{% tab http_request_get_xpath policy %}
 ```cerb
 {% raw %}
 commands:
@@ -58,7 +58,7 @@ commands:
 ```
 {% endtab %}
 
-{% tab example output %}
+{% tab http_request_get_xpath output %}
 ```yaml
 status_code: 200
 versions:

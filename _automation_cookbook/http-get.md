@@ -14,9 +14,9 @@ social_image_url: /assets/images/automation-cookbook/http-get.png
 
 You can use [http.request:](https://cerb.ai/docs/automations/commands/http.request/) to make a request to any server. Here's an example of a GET request.
 
-{% tabs example %}
+{% tabs http_get %}
 
-{% tab example automation %}
+{% tab http_get automation %}
 ```cerb
 {% raw %}
 start:
@@ -31,7 +31,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example policy %}
+{% tab http_get policy %}
 ```cerb
 {% raw %}
 commands:

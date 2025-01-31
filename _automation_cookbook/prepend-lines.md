@@ -14,9 +14,9 @@ social_image_url: /assets/images/automation-cookbook/prepend-lines.png
 
 In this example we quote a prior email message by adding the standard `>` character to the start of each line.
 
-{% tabs example %}
+{% tabs prepend_lines %}
 
-{% tab example automation %}
+{% tab prepend_lines automation %}
 ```cerb
 {% raw %}
 start:
@@ -34,7 +34,7 @@ start:
 ```
 {% endtab %}
 
-{% tab example output %}
+{% tab prepend_lines output %}
 ```cerb
 {% raw %}
 __return:

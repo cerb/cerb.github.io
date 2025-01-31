@@ -18,9 +18,9 @@ The `on_simulate:` command will only be used by the automation editor's simulato
 
 In this example, we are randomly simulating both successful and failed HTTP requests.
 
-{% tabs example %}
+{% tabs simulate_errors %}
 
-{% tab example automation %}
+{% tab simulate_errors automation %}
 ```cerb
 {% raw %}
 start:
@@ -55,7 +55,7 @@ The `random(1)` function returns a value of 0 or 1 (50% chance of either outcome
 `simulate.error:` triggers the `on_error:` event. This way you can test failure modes on command and make sure your error handling works as intended.
 {% endtab %}
 
-{% tab example policy %}
+{% tab simulate_errors policy %}
 ```cerb
 {% raw %}
 commands:
