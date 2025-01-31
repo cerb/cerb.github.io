@@ -195,7 +195,7 @@ In such events we defer to the AWS privacy policy: <https://aws.amazon.com/priva
 
 **Limit your disclosure to AWS:** Use a Cerb self-hosted license rather than the Cerb Cloud managed service.
 
-### Banking through Freshbooks, WePay, Stripe, Wells Fargo, and PayPal
+### Banking through Freshbooks, Stripe, Wells Fargo, and PayPal
 
 We do not store credit card information on our servers.
 
@@ -203,7 +203,7 @@ For one-time transactions we do not save credit card or bank account numbers any
 
 For recurring transactions, payment information is stored with vendors who adhere to the Payment Card Industry Data Security Standards (PCI DSS).  We contract with [FreshBooks](http://www.freshbooks.com>) and [Stripe](https://www.stripe.com/) for sending invoices and collecting payments, and they protect and encrypt financial information in accordance with regulations.
 
-The electronic payments we receive through Freshbooks are collected by WePay.
+The electronic payments we receive through Freshbooks are collected by Stripe.
 
 Depending on a client's preferred payment method, these transactions may alternatively take place through other vendors like PayPal, Stripe, or wire transfers to Wells Fargo Bank NA.
 
@@ -284,6 +284,8 @@ If you require a signed Data Protection Addendum (DPA) for [GDPR](https://en.wik
 Although most changes are likely to be minor, we may modify this Privacy Policy from time to time at our sole discretion. You are encouraged to frequently check this page for any changes to the Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.
 
 ### Changelog
+
+* **30-January-2025**: Removed WePay as a payment processor. This is now handled by Stripe.
 
 * **16-August-2024**: Updated the URL for the Data Privacy Framework for DPF certification renewal.
 
