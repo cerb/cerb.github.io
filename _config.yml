@@ -2,9 +2,9 @@
 title: "Cerb"
 company: "Webgroup Media, LLC."
 copyright: 2002-2025
-version: 2024112101
+version: 2025013001
 email: team@cerb.ai
-description: Cerb automates team email and workflows. Boost team productivity with bots, dashboards, and shared inboxes.
+description: Cerb automates helpdesk inboxes and workflows. Boost team productivity with interactive agents, personalized dashboards, and endless API integrations.
 url: "https://cerb.ai"
 baseurl: ""
 logo_url: /assets/cerb_logo.svg
