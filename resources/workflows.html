@@ -33,7 +33,7 @@ jumbotron:
 	<ul class="articles">
 	{% for workflow in workflows %}
 		<li style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
-			<a href="{{ workflow.url }}">{{ workflow.title }}</a>
+			<a href="{{ workflow.url }}" style="font-size:120%;font-weight:600;">{{ workflow.title }}</a>
 			<br>
 			{{ workflow.excerpt }}
 		</li>

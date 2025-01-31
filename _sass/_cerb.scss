@@ -441,7 +441,7 @@ div.page-content {
 		}
 	
 		li {
-			font-size: 13px;
+			font-size: 15px;
 			list-style: none;
 			margin: 0;
 			padding: 0;
@@ -606,7 +606,10 @@ footer {
 	width: 100%;
 
 	b {
-		color: rgb(109, 166, 252);
+		color: rgb(110,165,255);
+		background-color: rgba(0,0,0,0.5);
+		padding: 0.25em;
+		margin-left: -0.2em;
 	}
 
 	a, a:link, a:visited {
@@ -935,16 +938,23 @@ a.cerb-button {
 button.cerb-button, a.cerb-button {
 	text-decoration: none;
 	font-size: 32px;
-	color: white;
-	border-radius: 20px;
+	font-weight: bold;
 	border: 0;
 	background-color: rgb(60, 130, 230);
-	padding: 10px 20px;
-	font-weight: bold;
-	cursor: pointer;
-	
+
+	margin: 10px;
+	padding: 15px 45px;
+	text-align: center;
+	transition: 0.5s;
+	background-size: 200% auto;
+	color: white;
+	box-shadow: 0 0 20px #eee;
+	border-radius: 10px;
+
+
 	&:hover {
-		//background-color: lighten(rgb(60, 130, 230), 10%);
+		background-position: right center; /* change the direction of the change here */
+		background-color: color.adjust(rgb(60, 130, 230), $lightness: -10%);
 		text-decoration: underline;
 	}
 }

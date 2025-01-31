@@ -59,12 +59,7 @@ vertical-align: bottom;
     text-align: center;
     border-bottom: 1px solid white;
     z-index: 2;
-    color: rgb(18, 101, 186);
-    background: -webkit-linear-gradient(top, #eff9ff, white);
-    background: -moz-linear-gradient(270deg, #eff9ff, white);
-    background: -o-linear-gradient(top, #eff9ff, white);
-    background: -ms-linear-gradient(top, #eff9ff, white);
-    background: linear-gradient(top, #eff9ff, white);">Self-Hosted</h1>
+    color: rgb(18, 101, 186);">Self-Hosted</h1>
     
 <div style="
 position: relative;

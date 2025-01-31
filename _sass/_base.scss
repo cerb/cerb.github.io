@@ -3,11 +3,11 @@
 @use "sass:color";
 
 // Our variables
-$base-font-family: 'Helvetica Neue', 'Segoe UI', Helvetica, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: normal;
+$base-font-family: sans-serif;
+$base-font-size:   18px;
+$base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-line-height: 1.6;
 
 $spacing-unit:     30px;
 
@@ -120,14 +120,14 @@ h1, h2, h3, h4, h5, h6 {
 a {
 		color: $brand-color;
 		text-decoration: none;
-		font-weight: 400;
+		font-weight: 500;
 
 		&:visited {
 			color: $brand-color;
 		}
 
 		&:hover {
-			color: $text-color;
+			color: $brand-color;
 			text-decoration: underline;
 		}
 }
