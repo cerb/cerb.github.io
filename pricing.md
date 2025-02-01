@@ -24,9 +24,8 @@ redirect_from:
 - /trial/
 - /try/
 jumbotron:
-  title: Pricing for Cerb Cloud subscriptions
-  tagline: Deploy a fully managed copy of Cerb in a fast, secure, and highly available
-    environment
+  title: Pricing
+  tagline: Deploy Cerb self-hosted or in the cloud.
 keywords: pricing price cost subscription
 ---
 

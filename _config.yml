@@ -2,7 +2,7 @@
 title: "Cerb"
 company: "Webgroup Media, LLC."
 copyright: 2002-2025
-version: 2025013001
+version: 2025013101
 email: team@cerb.ai
 description: Cerb automates helpdesk inboxes and workflows. Boost team productivity with interactive agents, personalized dashboards, and endless API integrations.
 url: "https://cerb.ai"
@@ -15,6 +15,7 @@ encoding: UTF-8
 
 exclude:
   - .idea
+  - .github
   - Dockerfile
   - docker-compose.yml
   - Gemfile
