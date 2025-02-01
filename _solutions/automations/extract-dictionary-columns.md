@@ -8,7 +8,14 @@ summary: 'This page explains how to extract a column from a list of dictionaries
   to extract the email columns from a list of people dictionaries, with examples demonstrating
   their usage.'
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/extract-dictionary-columns.png
 redirect_from:
 - /automation/cookbook/extract-dictionary-columns/

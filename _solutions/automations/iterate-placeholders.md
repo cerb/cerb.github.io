@@ -7,7 +7,14 @@ summary: This page demonstrates how to use the `cerb_placeholders_list()` functi
   how to filter placeholders by prefix and access their values dynamically, making
   it useful for working with dynamically generated placeholder names.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/iterate-placeholders.png
 redirect_from:
 - /automation/cookbook/iterate-placeholders/

@@ -7,7 +7,14 @@ summary: This page demonstrates how to use the strip_lines filter in automation 
   and other prefixed content, making it useful for email processing and text manipulation
   tasks.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/strip-line-prefix.png
 redirect_from:
 - /automation/cookbook/strip-line-prefix/

@@ -5,7 +5,14 @@ summary: This page demonstrates how to use the sort filter with arrow functions 
   create custom sorting rules for complex data structures. It shows how to sort arrays
   of objects using specific object properties.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/sort-with-comparator.png
 redirect_from:
 - /automation/cookbook/sort-with-comparator/

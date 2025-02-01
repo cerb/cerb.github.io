@@ -1,5 +1,5 @@
 ---
-title: Extract files from a ZIP archive
+title: Extract ZIP files
 excerpt: Read a ZIP manifest and extract files from an attachment record.
 summary: This page explains how to read and extract specific files from a ZIP attachment
   using Cerb's `data.query:` and `file.read:` commands. It provides step-by-step examples
@@ -7,8 +7,15 @@ summary: This page explains how to read and extract specific files from a ZIP at
   based on filename patterns, extract a specific file path, and decompress gzip files,
   as well as implement deny policies for these commands to restrict access.
 layout: solution
-jumbotron: []
-social_image_url: /assets/images/solutions/automations/read-extract-zip.png
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
+social_image_url: /assets/images/solutions/automations/extract-zip-files.png
 redirect_from:
 - /automation/cookbook/read-extract-zip/
 ---

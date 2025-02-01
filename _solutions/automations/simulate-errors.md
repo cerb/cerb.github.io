@@ -8,7 +8,14 @@ summary: This page explains how to simulate random errors or successes for HTTP 
   and `simulate.error:` commands can be used to mock successful or failed responses,
   triggering corresponding events in your script, such as `on_success` or `on_error`.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/simulate-errors.png
 redirect_from:
 - /automation/cookbook/simulate-errors/

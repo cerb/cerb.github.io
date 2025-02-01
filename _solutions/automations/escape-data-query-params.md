@@ -5,7 +5,14 @@ summary: This page demonstrates how to securely handle user input in data querie
   by using query parameters. It shows how to prevent query injection attacks by using
   the ${...} syntax for parameter substitution instead of direct placeholder interpolation.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/escape-data-query-params.png
 redirect_from:
 - /automation/cookbook/escape-data-query-params/

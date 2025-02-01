@@ -6,7 +6,14 @@ summary: This page provides an example of how to add prefixes to each line of a 
   for using the output with workers, including copying it to the clipboard or pasting
   it into an existing message.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/prepend-lines.png
 redirect_from:
 - /automation/cookbook/prepend-lines/

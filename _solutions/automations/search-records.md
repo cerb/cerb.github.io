@@ -10,7 +10,14 @@ summary: This page provides instructions on using the `record.search` command in
 layout: solution
 redirect_from:
 - /automation/cookbook/search-records/
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/search-records.png
 ---
 

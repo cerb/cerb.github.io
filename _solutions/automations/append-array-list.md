@@ -6,7 +6,14 @@ summary: This page demonstrates various techniques for appending values to array
   and CSV concatenation. Each method offers different benefits depending on your use
   case.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/append-array-list.png
 redirect_from:
 - /automation/cookbook/append-array-list/

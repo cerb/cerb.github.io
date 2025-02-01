@@ -5,7 +5,14 @@ summary: This page demonstrates how to validate OAuth2 bearer tokens in webhook 
   using the `cerb.commands.oauth2.token.validate` command. It shows how to extract
   and validate JWT tokens from authorization headers.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/validate-oauth2-token.png
 redirect_from:
 - /automation/cookbook/validate-oauth2-token/

@@ -5,7 +5,14 @@ summary: This page explains how to use ternary operators in Cerb automations to 
   conditional logic. You can chain multiple conditions together to check various states
   and return different values based on those conditions.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/conditional-values.png
 redirect_from:
 - /automation/cookbook/conditional-values/

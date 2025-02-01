@@ -6,7 +6,14 @@ summary: This page explains how to create a ZIP attachment using the `file.write
   (a README file and a Dockerfile) and then use `record.create` to create an attachment
   that links to the newly created ZIP file.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/create-zip.png
 redirect_from:
 - /automation/cookbook/create-zip/

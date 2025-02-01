@@ -6,7 +6,14 @@ summary: This page demonstrates different approaches to conditional branching, i
   selection. It provides examples of both command-based branching and value-based
   conditional selection.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/conditional-branching.png
 redirect_from:
 - /automation/cookbook/conditional-branching/

@@ -6,7 +6,14 @@ summary: This page demonstrates how to set dynamic key names using Cerb's `var.s
   in KATA scripting. It provides examples of setting random key names, using special
   characters like `@`, and changing the delimiter from the standard `:` if needed.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/set-dynamic-key-name.png
 redirect_from:
 - /automation/cookbook/set-dynamic-key-name/

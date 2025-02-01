@@ -8,7 +8,14 @@ summary: This page explains how to escape placeholders in a value using the `@ra
   or replaced. This allows for more control over the formatting and appearance of
   values in a sheet, making it easier to work with complex data.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/escape-placeholders.png
 redirect_from:
 - /automation/cookbook/escape-placeholders/

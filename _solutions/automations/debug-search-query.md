@@ -6,7 +6,14 @@ summary: This page demonstrates how to use the `cerb.commands.worklist.query.deb
   for debugging performance issues, understanding how queries are constructed, and
   optimizing search operations.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/debug-search-query.png
 redirect_from:
 - /automation/cookbook/debug-search-query/

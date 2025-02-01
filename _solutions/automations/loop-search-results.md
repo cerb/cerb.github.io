@@ -1,13 +1,20 @@
 ---
-title: Loop through search results
+title: Loop search results
 excerpt: Use the `repeat:` command to iterate records from search results.
 summary: This page demonstrates how to use the repeat function in automation scripting
   to efficiently iterate through search results. It shows best practices for processing
   multiple records using record IDs, making it useful for batch operations and record
   management tasks.
 layout: solution
-jumbotron: []
-social_image_url: /assets/images/solutions/automations/iterate-records.png
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
+social_image_url: /assets/images/solutions/automations/loop-search-results.png
 redirect_from:
 - /automation/cookbook/iterate-records/
 ---

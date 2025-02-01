@@ -1,5 +1,5 @@
 ---
-title: Create an array of random numbers
+title: Random array values
 excerpt: Generate an array filled with random numeric values.
 summary: This page demonstrates how to create an array of random numbers using range
   mapping and the random function in Cerb. It provides a step-by-step example, including
@@ -7,7 +7,14 @@ summary: This page demonstrates how to create an array of random numbers using r
   JSON encoding for output format, resulting in an array filled with unique random
   numbers.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/random-array-values.png
 redirect_from:
 - /automation/cookbook/random-array-values/

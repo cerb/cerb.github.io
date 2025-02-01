@@ -7,7 +7,14 @@ summary: This page explains how to create a comment on any record using the `rec
   a deny policy for the `record.create` command to only allow comments on records
   of type `comment`.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/create-comment.png
 redirect_from:
 - /automation/cookbook/create-comment/

@@ -11,7 +11,14 @@ summary: This page provides examples of using regular expressions in automation 
 layout: solution
 redirect_from:
 - /automation/cookbook/extract-text-with-regexp/
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/extract-text-with-regexp.png
 ---
 

@@ -5,7 +5,14 @@ summary: This page demonstrates how to use the `array_combine()` function to cre
   a dictionary by pairing two arrays - one for keys and one for values. It's useful
   for converting parallel arrays into associative arrays or dictionaries.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/create-dictionary-from-arrays.png
 redirect_from:
 - /automation/cookbook/create-dictionary-from-arrays/

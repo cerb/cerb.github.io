@@ -5,7 +5,14 @@ summary: This page demonstrates how to use dictionary structures to set and expa
   dynamic values. It shows how to define nested attributes and conditionally display
   values based on dictionary properties.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/set-dictionary-values.png
 redirect_from:
 - /automation/cookbook/set-dictionary-values/

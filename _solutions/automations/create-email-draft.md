@@ -10,8 +10,15 @@ summary: This page provides a detailed guide on creating a transactional email d
   the correct type are permitted. The example provided schedules the email for delivery
   five minutes after creation and includes a link to time-saving tips for the recipient.
 layout: solution
-jumbotron: []
-social_image_url: /assets/images/solutions/automations/create-record-draft.png
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
+social_image_url: /assets/images/solutions/automations/create-email-draft.png
 redirect_from:
 - /automation/cookbook/create-record-draft/
 ---

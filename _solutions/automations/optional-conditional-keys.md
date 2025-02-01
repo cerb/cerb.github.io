@@ -5,7 +5,14 @@ summary: This page demonstrates how to use the `@optional` annotation to conditi
   include or omit dictionary keys based on their values. When a key with the `@optional`
   annotation evaluates to null, it is removed from the output.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/optional-conditional-keys.png
 redirect_from:
 - /automation/cookbook/optional-conditional-keys/

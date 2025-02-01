@@ -1,5 +1,5 @@
 ---
-title: Send an HTTP POST request with a JSON payload
+title: HTTP POST request with a JSON payload
 excerpt: Send a JSON payload to an HTTP endpoint.
 summary: This page explains how to make an HTTP POST request with a JSON payload using
   the `http.request` command in Cerb. It shows an example of how to send a POST request
@@ -9,7 +9,14 @@ summary: This page explains how to make an HTTP POST request with a JSON payload
   the page provides an example of how to implement deny policies for the `http.request`
   command to restrict certain types of requests or URLs from being sent.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/http-post-json.png
 redirect_from:
 - /automation/cookbook/http-post-json/

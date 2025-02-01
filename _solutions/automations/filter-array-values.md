@@ -5,7 +5,14 @@ summary: This page demonstrates how to use the filter modifier with arrow functi
   in automation scripting to filter array values based on conditions. It shows how
   to use lambda expressions to create flexible filtering rules for lists of data.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/filter-array-values.png
 redirect_from:
 - /automation/cookbook/filter-array-values/

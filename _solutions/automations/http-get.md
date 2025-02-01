@@ -1,12 +1,19 @@
 ---
-title: Send an HTTP GET request
+title: HTTP GET request
 excerpt: Fetch data from an HTTP endpoint.
 summary: This page explains how to make an HTTP GET request using the `http.request:`
   command in Cerb automations. It supports various authentication methods (OAuth,
   HTTP Basic, Bearer, API keys). The response headers and content are stored in a
   variable for further processing.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/http-get.png
 redirect_from:
 - /automation/cookbook/http-get/

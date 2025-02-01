@@ -1,11 +1,18 @@
 ---
-title: Send an HTTP POST request with a form payload
+title: HTTP POST request with a form payload
 excerpt: Make an HTTP POST request with form-encoded data.
 summary: This page demonstrates how to make HTTP POST requests with form-encoded data.
   It shows how to set headers, send form data, and process JSON responses, making
   it useful for API integrations and web service interactions.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/http-post-form.png
 redirect_from:
 - /automation/cookbook/http-post-form/

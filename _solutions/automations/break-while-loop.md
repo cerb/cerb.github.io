@@ -6,7 +6,14 @@ summary: This page explains how to break a while loop in Cerb with conditional l
   25% of the time. It also shows an example of how to use this to implement an infinite
   loop that can be stopped at any time.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/break-while-loop.png
 redirect_from:
 - /automation/cookbook/break-while-loop/

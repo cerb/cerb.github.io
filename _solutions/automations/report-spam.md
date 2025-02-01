@@ -7,7 +7,14 @@ summary: This page provides an integration guide for reporting a ticket as spam 
   (1234) as spam and implement a policy that denies any other commands with similar
   functionality.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/report-spam.png
 redirect_from:
 - /automation/cookbook/report-spam/

@@ -5,7 +5,14 @@ summary: This page demonstrates how to use the merge filter to add new columns t
   existing dictionaries. The example shows adding random age values to a list of people,
   illustrating dictionary manipulation techniques.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/add-dictionary-column.png
 redirect_from:
 - /automation/cookbook/add-dictionary-column/

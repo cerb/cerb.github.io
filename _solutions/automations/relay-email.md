@@ -5,7 +5,14 @@ summary: This page provides an overview of email relay in Cerb, which enables wo
   to respond to messages from external email clients instead of being forced to use
   the web browser.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/relay-email.png
 redirect_from:
 - /automation/cookbook/relay-email/

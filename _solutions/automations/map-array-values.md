@@ -5,7 +5,14 @@ summary: This page demonstrates how to use the map modifier with arrow functions
   automation scripting to transform array values. It shows how to use lambda expressions
   to apply mathematical operations and transformations to lists of numbers.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/map-array-values.png
 redirect_from:
 - /automation/cookbook/map-array-values/

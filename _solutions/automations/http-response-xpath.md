@@ -1,12 +1,19 @@
 ---
-title: Parse HTML responses with XPath
+title: HTTP responses with XPath
 excerpt: Make an HTTP GET request and extract data from HTML responses using XPath.
 summary: This page demonstrates how to make HTTP GET requests and process HTML responses
   using XPath. It shows how to extract specific elements from web pages, making it
   useful for web scraping and content extraction tasks.
 layout: solution
-jumbotron: []
-social_image_url: /assets/images/solutions/automations/http-request-get-xpath.png
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
+social_image_url: /assets/images/solutions/automations/http-response-xpath.png
 redirect_from:
 - /automation/cookbook/http-request-get-xpath/
 ---

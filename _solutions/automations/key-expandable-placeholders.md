@@ -1,5 +1,5 @@
 ---
-title: Create a key expandable placeholder
+title: Key expandable placeholders
 excerpt: Create an arbitrary variable that supports key expansion by using a shared
   prefix.
 summary: This page explains how to create key expandable placeholders in Cerb using
@@ -7,8 +7,15 @@ summary: This page explains how to create key expandable placeholders in Cerb us
   automatically create an expandable `_label` placeholder. This is useful for referencing
   record labels throughout your automations without explicitly loading each record.
 layout: solution
-jumbotron: []
-social_image_url: /assets/images/solutions/automations/key-expandable-placeholder.png
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
+social_image_url: /assets/images/solutions/automations/key-expandable-placeholders.png
 redirect_from:
 - /automation/cookbook/key-expandable-placeholder/
 ---

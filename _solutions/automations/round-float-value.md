@@ -6,7 +6,14 @@ summary: This page demonstrates different ways to round floating point numbers i
   using Pi as an example. The examples show how to use different rounding methods
   to achieve desired numeric formatting in a scripting context.
 layout: solution
-jumbotron: []
+jumbotron:
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+  - label: Solutions Hub &raquo;
+    url: /solutions/
+  - label: Automations &raquo;
+    url: /solutions/#automations
 social_image_url: /assets/images/solutions/automations/round-float-value.png
 redirect_from:
 - /automation/cookbook/round-float-value/
