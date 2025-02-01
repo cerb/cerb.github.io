@@ -1,0 +1,59 @@
+---
+title: Create a comment
+excerpt: Use `record.create:` to create a comment on any record.
+summary: This page explains how to create a comment on any record using the `record.create`
+  command in Cerb. It also provides examples of how to specify the author, target
+  record, and other fields for the comment, as well as an example of how to implement
+  a deny policy for the `record.create` command to only allow comments on records
+  of type `comment`.
+layout: solution
+jumbotron: []
+social_image_url: /assets/images/solutions/automations/create-comment.png
+redirect_from:
+- /automation/cookbook/create-comment/
+---
+
+You can use [record.create:](https://cerb.ai/docs/automations/commands/record.create/) to create a [comment](/docs/comments/) on any [record](/docs/records/).
+
+## Create a formatted comment as Cerb on a ticket record
+
+{% tabs create_comment %}
+
+{% tab create_comment automation %}
+```cerb
+{% raw %}
+start:
+  record.create/comment:
+    output: new_comment
+    inputs:
+      record_type: comment
+      fields:
+        author__context: app
+        author_id@int: 0
+        target__context: ticket
+        target_id@int: 123
+        is_markdown@int: 1
+        comment@text:
+          This is a **comment** from an automation.
+{% endraw %}
+```
+
+|---
+| Field |
+|-|-
+| `author__context:` | [record type](/docs/records/types/) of author (`app`, `role`, `group`, `worker`)
+| `target__context:` | [record type](/docs/records/types/) to comment on (`ticket`, `message`, `task`, etc.)
+{% endtab %}
+
+{% tab create_comment policy %}
+```cerb
+{% raw %}
+commands:
+  record.create:
+    deny/type@bool: {{inputs.record_type is not record type ('comment')}}
+    allow@bool: yes
+{% endraw %}
+```
+{% endtab %}
+
+{% endtabs %}

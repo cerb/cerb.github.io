@@ -33,10 +33,6 @@ feed:
 
 # Collections
 collections:
-  automation_cookbook:
-    output: true
-    sort_by: title
-    permalink: /automation/cookbook/:path/
   docs:
     output: true
     permalink: /docs/:path/
@@ -51,6 +47,10 @@ collections:
   releases:
     output: true
     permalink: /releases/:path/
+  solutions:
+    output: true
+    sort_by: title
+    permalink: /solutions/:path/
   tips:
     output: true
     sort_by: title
@@ -71,12 +71,6 @@ plugins:
 
 # Defaults
 defaults:
-  -
-    scope:
-      path: ""
-      type: "automations-cookbook"
-    values:
-      layout: "integration"
   -
     scope:
       path: ""
@@ -118,6 +112,12 @@ defaults:
           -
             label: Releases &raquo;
             url: /docs/history/
+  -
+    scope:
+      path: ""
+      type: "solutions"
+    values:
+      layout: "solution"
   -
     scope:
       path: ""

@@ -1,0 +1,27 @@
+---
+layout: default
+jumbotron:
+  breadcrumbs:
+    -
+      label: Resources &raquo;
+      url: /resources/
+    -
+      label: Solutions Hub &raquo;
+      url: /solutions/
+---
+
+<section class="solutions">
+	<article>
+        {% if page.social_image_url %}
+		<div class="cerb-screenshot">
+			<img src="{{ page.social_image_url }}" class="screenshot no-border">
+		</div>
+        {% endif %}
+
+		{{ content }}
+	</article>
+</section>
+
+{% if page.next or page.previous %}
+{% include prev_next.html %}
+{% endif %}

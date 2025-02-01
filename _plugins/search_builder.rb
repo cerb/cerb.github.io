@@ -59,13 +59,13 @@ Jekyll::Hooks.register :site, :post_write do |site|
 
         File.open(path, 'w') do |file|
             write_pages_to_json site.pages, file
-            write_pages_to_json site.collections['posts'].docs, file
-            write_pages_to_json site.collections['releases'].docs, file
-            write_pages_to_json site.collections['guides'].docs, file
             write_pages_to_json site.collections['docs'].docs, file
+            write_pages_to_json site.collections['solutions'].docs, file
             write_pages_to_json site.collections['workflows'].docs, file
-            write_pages_to_json site.collections['automation_cookbook'].docs, file
+            write_pages_to_json site.collections['guides'].docs, file
+            write_pages_to_json site.collections['releases'].docs, file
             write_pages_to_json site.collections['tips'].docs, file
+            write_pages_to_json site.collections['posts'].docs, file
         end
     end
 end

@@ -1,0 +1,39 @@
+---
+title: Solutions Hub
+excerpt: Browse the collection of expertly crafted automations, integrations, widgets, and data queries.
+summary: ""
+layout: page
+permalink: /solutions/
+redirect_from:
+- /cookbook/
+- /examples/
+- /integrations/
+jumbotron:
+  title: Solutions Hub
+  tagline: Browse the collection of expertly crafted automations, integrations, widgets, and data queries.
+  breadcrumbs:
+  - label: Resources &raquo;
+    url: /resources/
+---
+
+{% assign grouped = site.solutions | group_by_exp: "item", "item.path | split: '/' | slice: 1, 1 | first" %}
+
+{% for group in grouped %}
+<h1>{{ group.name | capitalize }}</h1>
+
+<div class="integrations" style="column-count:2;column-width:500px;margin-bottom:20px;">
+    <ul class="articles">
+
+        {% for solution in group.items %}
+        <li style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
+            <a href="{{ solution.url }}" style="font-size:120%;font-weight:600;">{{ solution.title }}</a>
+            <br>
+            {{solution.excerpt}}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endfor %}
+
+{% include testimonials.html %}
