@@ -50,7 +50,7 @@ collections:
     permalink: /releases/:path/
   solutions:
     output: true
-    sort_by: title
+    sort_by: path
     permalink: /solutions/:path/
   tips:
     output: true

@@ -23,15 +23,16 @@ jumbotron:
     url: /resources/
 ---
 
-<div class="integrations" style="column-width:400px;margin-bottom:20px;">
+<div class="integrations" style="column-count:2;column-width:500px;margin-bottom:20px;">
 	<ul class="articles">
 
 	{% assign tips = site.tips | sort: 'title' %}
 	{% for tip in tips %}
 	<li style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
-		<a href="{{ tip.url }}" style="font-size:120%;font-weight:600;">{{ tip.title }}</a>
-		<br>
-		{{tip.excerpt}}
+		<a href="{{ tip.url }}" style="font-size:110%;font-weight:600;color:rgb(60,60,60);">{{ tip.title }}</a>
+		<div style="font-size:90%;font-weight:200;">
+		    {{tip.excerpt}}
+        </div>
 	</li>
 	{% endfor %}
 

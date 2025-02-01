@@ -28,7 +28,7 @@ jumbotron:
 </ul>
 {% endif %}
 
-<h2>{{ section }}</h2>
+<h2 style="font-weight:600;">{{ section }}</h2>
 
 <ul class="blog-post-group">
 {% endif %}

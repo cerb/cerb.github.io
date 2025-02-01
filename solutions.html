@@ -26,9 +26,8 @@ jumbotron:
 
         {% for solution in group.items %}
         <li style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
-            <a href="{{ solution.url }}" style="font-size:120%;font-weight:600;">{{ solution.title }}</a>
-            <br>
-            {{solution.excerpt}}
+            <a href="{{ solution.url }}" style="font-size:110%;font-weight:600;color:rgb(60,60,60);">{{ solution.title }}</a>
+            <div style="font-size:90%;font-weight:200;">{{solution.excerpt}}</div>
         </li>
         {% endfor %}
     </ul>
