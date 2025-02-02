@@ -18,8 +18,14 @@ jumbotron:
 
 {% assign grouped = site.solutions | group_by_exp: "item", "item.path | split: '/' | slice: 1, 1 | first" %}
 
+<ul>
+    {% for group in grouped %}
+    <li><a href="#{{ group.name | slugify }}">{{ group.name | capitalize }}</a></li>
+    {% endfor %}
+</ul>
+
 {% for group in grouped %}
-<h1>{{ group.name | capitalize }}</h1>
+<h1 id="{{ group.name | slugify }}">{{ group.name | capitalize }}</h1>
 
 <div class="integrations" style="column-count:2;column-width:500px;margin-bottom:20px;">
     <ul class="articles">
