@@ -13,7 +13,6 @@ summary: This webpage provides a comprehensive guide on integrating JotForm with
 permalink: /guides/integrations/jotform/jotform-webhooks/
 layout: integration
 topic: Integrations
-subtopic: JotForm
 jumbotron:
   title: Send JotForm responses to Cerb bots using webhooks
   tagline: ""

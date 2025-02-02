@@ -14,7 +14,6 @@ summary: This page provides a comprehensive guide on how to create and use email
 permalink: /guides/mail/html-templates/
 layout: integration
 topic: Mail
-subtopic: Layout
 jumbotron:
   title: Send email on company letterhead
   tagline: ""

@@ -16,7 +16,6 @@ summary: This page provides a comprehensive guide on how to run AWS Lambda funct
 permalink: /guides/integrations/aws/lambda/
 layout: integration
 topic: Integrations
-subtopic: Amazon Web Services
 jumbotron:
   title: Run AWS Lambda functions from a Cerb bot
   tagline: ""

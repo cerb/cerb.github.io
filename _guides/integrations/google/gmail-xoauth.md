@@ -14,7 +14,6 @@ permalink: /guides/integrations/google/gmail-xoauth/
 social_image_url: /assets/images/guides/google/cerb-and-google.png
 layout: integration
 topic: Integrations
-subtopic: Google
 jumbotron:
   title: Authenticate a Gmail mailbox using IMAP and XOAUTH2
   tagline: ""

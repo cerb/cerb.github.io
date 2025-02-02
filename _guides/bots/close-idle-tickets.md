@@ -14,7 +14,6 @@ summary: This webpage provides a comprehensive guide on creating and implementin
 permalink: /guides/bots/close-idle-tickets/
 layout: integration
 topic: Bots
-subtopic: Workflow Automation
 jumbotron:
   title: Close idle tickets with bots
   tagline: ""

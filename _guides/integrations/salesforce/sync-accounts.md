@@ -13,7 +13,6 @@ summary: This webpage provides a comprehensive guide for integrating Salesforce 
 permalink: /guides/integrations/salesforce/sync-accounts/
 layout: integration
 topic: Integrations
-subtopic: Salesforce
 jumbotron:
   title: Synchronize Salesforce accounts to Cerb organizations
   tagline: ""

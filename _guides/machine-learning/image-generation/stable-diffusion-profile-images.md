@@ -13,7 +13,6 @@ summary: This webpage provides a comprehensive guide on using Stable Diffusion t
 permalink: /guides/machine-learning/image-generation/stable-diffusion-profile-images/
 layout: integration
 topic: Machine Learning
-subtopic: Image Generation
 social_image_url: /assets/images/guides/automations/stable-diffusion-images/ai-profile-editor.png
 redirect_from:
 - /guides/automations/stable-diffusion-profile-images/

@@ -17,7 +17,6 @@ summary: This webpage provides a comprehensive guide on synchronizing Cerb ticke
 permalink: /guides/integrations/salesforce/sync-to-sobjects/
 layout: integration
 topic: Integrations
-subtopic: Salesforce
 jumbotron:
   title: Synchronize Cerb ticket data to Salesforce objects
   tagline: ""

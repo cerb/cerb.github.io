@@ -16,7 +16,6 @@ permalink: /guides/bots/prompts/
 social_image_url: /assets/images/guides/bots/prompts/prompts.png
 layout: integration
 topic: Bots
-subtopic: Conversational Bots
 jumbotron:
   title: Prompting for user input
   tagline: ""

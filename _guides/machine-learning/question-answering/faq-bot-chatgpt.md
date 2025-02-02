@@ -17,7 +17,6 @@ summary: This webpage provides a comprehensive guide on building a question-answ
 permalink: /guides/machine-learning/question-answering/faq-bot-chatgpt/
 layout: integration
 topic: Machine Learning
-subtopic: Question Answering
 social_image_url: /assets/images/guides/machine-learning/question-answering/faq-bot-chatgpt/beethoven-bot.png
 jumbotron:
   title: Build a question answering chat bot with Cerb and ChatGPT

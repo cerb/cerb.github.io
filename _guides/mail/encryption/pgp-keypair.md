@@ -14,7 +14,6 @@ summary: This page provides a comprehensive guide on generating and managing PGP
 permalink: /guides/mail/encryption/pgp-keypair/
 layout: integration
 topic: Mail
-subtopic: Encryption
 jumbotron:
   title: Generate a PGP key-pair for encryption
   tagline: ""

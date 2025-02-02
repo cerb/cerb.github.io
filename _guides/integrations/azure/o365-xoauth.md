@@ -13,7 +13,6 @@ permalink: /guides/integrations/azure/o365-xoauth/
 social_image_url: /assets/images/solutions/integrations/azure/cerb-and-azure.png
 layout: integration
 topic: Integrations
-subtopic: Microsoft Azure
 jumbotron:
   title: Authenticate an Office365 mailbox using XOAUTH2
   tagline: ""

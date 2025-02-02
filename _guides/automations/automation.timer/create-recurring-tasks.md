@@ -13,7 +13,6 @@ permalink: /guides/automations/automation.timer/create-recurring-tasks/
 social_image_url: /assets/images/guides/automations/automation.timer/create-recurring-tasks/recurring-tasks.png
 layout: integration
 topic: Automations
-subtopic: automation.timer
 jumbotron:
   title: Create recurring tasks with automations
   tagline: ""

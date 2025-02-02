@@ -15,7 +15,6 @@ summary: This webpage provides a comprehensive guide on integrating a conversati
 permalink: /guides/bots/deploy-bot-on-website/
 layout: integration
 topic: Bots
-subtopic: Conversational Bots
 jumbotron:
   title: Add a conversational bot to any website
   tagline: ""

@@ -14,7 +14,6 @@ summary: This page provides instructions on how to change the default bot icon o
 permalink: /guides/bots/change-bot-icon/
 layout: integration
 topic: Bots
-subtopic: Conversational Bots
 jumbotron:
   title: Change the bot icon on your website
   tagline: ""

@@ -15,7 +15,6 @@ summary: This webpage provides a comprehensive guide on using Mailvelope, a brow
 permalink: /guides/mail/encryption/mailvelope/
 layout: integration
 topic: Mail
-subtopic: Encryption
 jumbotron:
   title: Decrypt messages in your browser with Mailvelope
   tagline: ""

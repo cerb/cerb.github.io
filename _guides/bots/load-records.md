@@ -13,7 +13,6 @@ summary: This webpage provides a comprehensive guide on how to load arbitrary re
 permalink: /guides/bots/load-records/
 layout: integration
 topic: Bots
-subtopic: Scripting
 jumbotron:
   title: Load arbitrary records into a behavior variable
   tagline: ""

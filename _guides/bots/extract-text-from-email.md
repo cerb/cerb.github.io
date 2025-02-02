@@ -13,7 +13,6 @@ summary: This page provides a detailed guide on how to extract text from email m
 permalink: /guides/bots/extract-text-from-email/
 layout: integration
 topic: Bots
-subtopic: Mail
 jumbotron:
   title: Extract text from email messages using bots
   tagline: ""

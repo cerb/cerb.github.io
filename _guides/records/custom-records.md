@@ -15,7 +15,6 @@ summary: This webpage provides a comprehensive guide on creating custom records 
 permalink: /guides/records/custom-records/
 layout: integration
 topic: Records
-subtopic: Custom Records
 jumbotron:
   title: Create custom records
   tagline: ""

@@ -15,7 +15,6 @@ summary: This page provides a comprehensive guide on using ngrok to share secure
 permalink: /guides/developers/ngrok/
 layout: integration
 topic: Developers
-subtopic: Tools
 jumbotron:
   title: Share secure access to a local development environment with ngrok
   tagline: ""

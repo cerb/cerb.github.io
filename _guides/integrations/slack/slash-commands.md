@@ -15,7 +15,6 @@ summary: This page provides a detailed guide on integrating Cerb with Slack usin
 permalink: /guides/integrations/slack/slash-commands/
 layout: integration
 topic: Integrations
-subtopic: Slack
 jumbotron:
   title: Send commands to a Cerb bot using Slack
   tagline: ""

@@ -15,7 +15,6 @@ summary: This page provides a comprehensive guide on integrating Amazon Polly wi
 permalink: /guides/integrations/aws/polly-speech/
 layout: integration
 topic: Integrations
-subtopic: Amazon Web Services
 jumbotron:
   title: Give Cerb bots the power of speech with Amazon Polly
   tagline: ""

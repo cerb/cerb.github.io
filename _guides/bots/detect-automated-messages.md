@@ -13,7 +13,6 @@ summary: This page provides a comprehensive guide on detecting automated message
 permalink: /guides/bots/detect-automated-messages/
 layout: integration
 topic: Bots
-subtopic: Mail
 jumbotron:
   title: Detect automated messages
   tagline: ""

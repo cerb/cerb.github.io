@@ -13,7 +13,6 @@ summary: This page provides a comprehensive guide on how to authenticate worker 
 permalink: /guides/integrations/ldap/
 layout: integration
 topic: Integrations
-subtopic: LDAP
 jumbotron:
   title: Authenticate worker logins with an LDAP corporate directory
   tagline: ""

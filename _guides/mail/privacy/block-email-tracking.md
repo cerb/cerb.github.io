@@ -13,7 +13,6 @@ summary: This page provides a guide on how to block email tracking pixels and be
 permalink: /guides/mail/privacy/block-email-tracking/
 layout: integration
 topic: Mail
-subtopic: Privacy
 jumbotron:
   title: Block email tracking pixels and beacons
   tagline: ""
