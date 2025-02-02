@@ -1,5 +1,5 @@
 ---
-title: Integrate with Gmail
+title: Gmail
 excerpt: This page provides a comprehensive guide on integrating Cerb with Gmail by
   configuring Google APIs and setting up Cerb.
 summary: This page provides a comprehensive guide on integrating Cerb with Gmail by
@@ -9,25 +9,19 @@ summary: This page provides a comprehensive guide on integrating Cerb with Gmail
   creating a connected service and account, using the credentials obtained from Google.
   It concludes with next steps for authenticating a Gmail mailbox using IMAP and XOAUTH2,
   making it a useful resource for automating tasks with Google APIs through Cerb bots.
-permalink: /guides/integrations/google/gmail/
+social_image_url: /assets/images/solutions/integrations/gmail/cerb-and-google.png
 redirect_from:
-- /guides/integrations/google/
-social_image_url: /assets/images/guides/google/cerb-and-google.png
-layout: integration
-topic: Integrations
-subtopic: Google
+  - /guides/integrations/google/
+  - /guides/integrations/google/gmail/
+layout: solution
 jumbotron:
-  title: Cerb + Gmail
-  tagline: ""
   breadcrumbs:
-  - label: Resources &raquo;
-    url: /resources/
-  - label: Guides &raquo;
-    url: /resources/guides/
-  - label: Integrations &raquo;
-    url: /resources/guides/#integrations
-  - label: Google &raquo;
-    url: /resources/guides/#google
+    - label: Resources &raquo;
+      url: /resources/
+    - label: Solutions Hub &raquo;
+      url: /solutions/
+    - label: Integrations &raquo;
+      url: /solutions/#integrations
 ---
 
 * TOC
@@ -36,10 +30,6 @@ jumbotron:
 # Introduction
 
 In this guide we'll walk through the process of linking Cerb to Gmail. You can use the same process with any [Google API](https://developers.google.com/apis-explorer/#p/) from Cerb bots to automate whatever you need.
-
-<div class="cerb-screenshot">
-<img src="{{page.social_image_url}}" class="screenshot">
-</div>
 
 # Configure Google APIs
 

@@ -29,7 +29,7 @@ This package creates **GitHub Bot** for demonstrating integration between Cerb a
 
 # Configure the GitHub service
 
-If you haven't already, follow [these instructions](/guides/integrations/github/) to configure the GitHub service and add your first connected account.
+If you haven't already, follow [these instructions](/solutions/integrations/github/) to configure the GitHub service and add your first connected account.
 
 # Import the package
 

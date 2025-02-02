@@ -1,5 +1,5 @@
 ---
-title: Integrate with Slack
+title: Slack
 excerpt: This page provides a comprehensive guide on integrating Cerb with Slack,
   detailing the steps to create a new Slack app and configure authentication using
   either bot tokens or OAuth2.
@@ -9,22 +9,18 @@ summary: This page provides a comprehensive guide on integrating Cerb with Slack
   in Cerb, with specific instructions for both authentication methods. The guide also
   includes related resources for further integration, such as setting up Slack notifications
   within Cerb.
-permalink: /guides/integrations/slack/
-layout: integration
-topic: Integrations
-subtopic: Slack
+social_image_url: /assets/images/solutions/integrations/slack/cerb-and-slack.png
+redirect_from:
+  - /guides/integrations/slack/
+layout: solution
 jumbotron:
-  title: Cerb + Slack
-  tagline: ""
   breadcrumbs:
-  - label: Resources &raquo;
-    url: /resources/
-  - label: Guides &raquo;
-    url: /resources/guides/
-  - label: Integrations &raquo;
-    url: /resources/guides/#integrations
-  - label: Slack &raquo;
-    url: /resources/guides/#slack
+    - label: Resources &raquo;
+      url: /resources/
+    - label: Solutions Hub &raquo;
+      url: /solutions/
+    - label: Integrations &raquo;
+      url: /solutions/#integrations
 ---
 
 * TOC
@@ -33,10 +29,6 @@ jumbotron:
 # Introduction
 
 In this guide we'll walk through the process of linking Cerb to Slack. You'll be able to use Slack's full API from automations in Cerb.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/slack/plugin/cerb-and-slack.png" class="screenshot">
-</div>
 
 # Create a new app at Slack
 
@@ -56,7 +48,7 @@ Enter the following details:
 | **Development Slack Team:** | (your team name)
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/slack/plugin/slack-new-app.png" class="screenshot">
+<img src="/assets/images/solutions/integrations/slack/slack-new-app.png" class="screenshot">
 </div>
 
 Click the **Create App** button.
@@ -110,7 +102,7 @@ Enter either the **[Bot Tokens]** or **[OAuth2]** fields depending on your authe
 Click the **Create** button at the bottom of the popup.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/slack/package-library-service-slack.png" class="screenshot">
+<img src="/assets/images/solutions/integrations/slack/package-library-service-slack.png" class="screenshot">
 </div>
 
 ### Bot Tokens
@@ -132,7 +124,7 @@ Click the blue **Link to Slack** button.
 Accept consent on Slack.
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/slack/plugin/oauth-approve.png" class="screenshot">
+<img src="/assets/images/solutions/integrations/slack/oauth-approve.png" class="screenshot">
 </div>
 
 Click the **Save Changes** button.

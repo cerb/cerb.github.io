@@ -29,7 +29,7 @@ This package creates **Twilio Bot** for demonstrating integration between Cerb a
 
 # Configure the Twilio service
 
-If you haven't already, follow [these instructions](/guides/integrations/twilio/) to configure the Twilio service and add your first connected account.
+If you haven't already, follow [these instructions](/solutions/integrations/twilio/) to configure the Twilio service and add your first connected account.
 
 # Import the package
 

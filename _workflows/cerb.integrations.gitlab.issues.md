@@ -32,7 +32,7 @@ This workflow integrates Cerb with GitLab for searching and linking issues to ti
 
 ### Create a GitLab connected account
 
-[Create a GitLab connected account](/guides/integrations/gitlab/) if you haven't already.
+[Create a GitLab connected account](/solutions/integrations/gitlab/) if you haven't already.
 
 ### Import the workflow
 
@@ -398,7 +398,7 @@ Click the **Continue** button.
 |---
 | Field | 
 |-|-
-| **GitLab Account:** | A GitLab [connected account](/guides/integrations/gitlab/).
+| **GitLab Account:** | A GitLab [connected account](/solutions/integrations/gitlab/).
 | **GitLab Base URL:** | Defaults to `https://gitlab.com/` for the managed service. Use your own URL if self-hosted.
 | **GitLab Project Names:** | One full repository name per line (e.g. `example/example-project`).
 | **Ticket Profile Tab:** | The 'Linked GitLab Issues' profile widget will be added to this ticket profile tab. 

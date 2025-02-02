@@ -12,7 +12,7 @@ summary: This page provides a comprehensive guide on setting up single sign-on (
   the process for logging in using Azure AD credentials. This setup allows Cerb workers
   to authenticate seamlessly with their existing Microsoft accounts, enhancing security
   and user convenience by potentially disabling password-based logins.
-social_image_url: /assets/images/guides/azure/cerb-and-azure.png
+social_image_url: /assets/images/solutions/integrations/azure/cerb-and-azure.png
 permalink: /guides/integrations/azure/sso-openid/
 layout: integration
 topic: Integrations

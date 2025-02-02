@@ -50,7 +50,7 @@ Finally, we'll demonstrate how to use Polly Bot as a delegate from a conversatio
 
 1. Navigate to **Search >> Connected Accounts**.
 
-1. If you don't have a connected account for Amazon Web Services yet, you can [follow these instructions](/guides/integrations/aws/) to create one.
+1. If you don't have a connected account for Amazon Web Services yet, you can [follow these instructions](/solutions/integrations/aws/) to create one.
 
 # Log in to Amazon Web Services
 
@@ -72,7 +72,7 @@ We're going to update the IAM policy to provide:
 
 Select **Policies** in the navigation on the left.
 
-Find your bot's policy in the list or create a new one. In the earlier [instructions](/guides/integrations/aws/) we created a policy named **CerbBot**.
+Find your bot's policy in the list or create a new one. In the earlier [instructions](/solutions/integrations/aws/) we created a policy named **CerbBot**.
 
 Click the **Edit Policy** button.
 

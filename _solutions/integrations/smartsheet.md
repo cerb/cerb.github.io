@@ -1,5 +1,5 @@
 ---
-title: Integrate with Smartsheet
+title: Smartsheet
 excerpt: A step-by-step guide for integrating Cerb and Smartsheet.
 summary: This page provides a detailed guide on integrating Cerb with Smartsheet,
   enabling the use of Smartsheet's API within Cerb's bot behaviors for automation
@@ -8,23 +8,18 @@ summary: This page provides a detailed guide on integrating Cerb with Smartsheet
   The guide includes instructions for generating an access token in Smartsheet, configuring
   the Smartsheet service in Cerb (version 9.2.1 or later), and using the connected
   account to execute HTTP requests through Cerb's bots.
-permalink: /guides/integrations/smartsheet/
-social_image_url: /assets/images/guides/smartsheet/cerb-and-smartsheet.png
-layout: integration
-topic: Integrations
-subtopic: Smartsheet
+social_image_url: /assets/images/solutions/integrations/smartsheet/cerb-and-smartsheet.png
+redirect_from:
+  - /guides/integrations/smartsheet/
+layout: solution
 jumbotron:
-  title: Cerb + Smartsheet
-  tagline: ""
   breadcrumbs:
-  - label: Resources &raquo;
-    url: /resources/
-  - label: Guides &raquo;
-    url: /resources/guides/
-  - label: Integrations &raquo;
-    url: /resources/guides/#integrations
-  - label: Smartsheet &raquo;
-    url: /resources/guides/#smartsheet
+    - label: Resources &raquo;
+      url: /resources/
+    - label: Solutions Hub &raquo;
+      url: /solutions/
+    - label: Integrations &raquo;
+      url: /solutions/#integrations
 ---
 
 * TOC
@@ -33,10 +28,6 @@ jumbotron:
 # Introduction
 
 In this guide we'll walk through the process of linking Cerb to Smartsheet. You'll be able to use Smartsheet's full API from bots in Cerb to automate whatever you need.
-
-<div class="cerb-screenshot">
-<img src="{{page.social_image_url}}" class="screenshot">
-</div>
 
 # Create an OAuth access token at Smartsheet
 

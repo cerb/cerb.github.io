@@ -63,7 +63,7 @@ By the end of this guide, you should be capable of synchronizing any record data
 
 Navigate to **Search >> Connected Services**.
 
-If you don't have a Salesforce service set up yet, you can [configure one here](/guides/integrations/salesforce/).
+If you don't have a Salesforce service set up yet, you can [configure one here](/solutions/integrations/salesforce/).
 
 # Create a new object in Salesforce
 

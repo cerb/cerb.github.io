@@ -24,12 +24,12 @@ jumbotron:
 This package creates **Salesforce Bot** for demonstrating integration between Cerb and the [Salesforce API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/).
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/salesforce/plugin/cerb-and-salesforce.png" class="screenshot">
+<img src="/assets/images/solutions/integrations/salesforce/cerb-and-salesforce.png" class="screenshot">
 </div>
 
 # Configure the Salesforce service
 
-If you haven't already, follow [these instructions](/guides/integrations/salesforce/) to configure the Salesforce service and add your first connected account.
+If you haven't already, follow [these instructions](/solutions/integrations/salesforce/) to configure the Salesforce service and add your first connected account.
 
 # Import the package
 

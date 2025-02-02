@@ -387,7 +387,7 @@ Click the **Continue** button.
 | Field | 
 |-|-
 | **API Endpoint:** | Choose between the free or production API endpoints.
-| **DeepL Account:** | A DeepL [connected account](/guides/integrations/gitlab/).
+| **DeepL Account:** | A DeepL [connected account](/solutions/integrations/deepl/).
 
 Click the **Continue** button twice.
 

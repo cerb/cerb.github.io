@@ -1,5 +1,5 @@
 ---
-title: Integrate with Amazon Web Services
+title: Amazon Web Services (AWS)
 excerpt: This page provides a comprehensive guide on integrating Cerb with Amazon
   Web Services (AWS).
 summary: This page provides a comprehensive guide on integrating Cerb with Amazon
@@ -9,22 +9,18 @@ summary: This page provides a comprehensive guide on integrating Cerb with Amazo
   connected account for automations, allowing users to access AWS APIs directly from
   Cerb. Additionally, it references related resources for further enhancing Cerb's
   capabilities with AWS services like Amazon Bedrock, AWS Lambda, and Amazon Polly.
-permalink: /guides/integrations/aws/
-layout: integration
-topic: Integrations
-subtopic: Amazon Web Services
+social_image_url: /assets/images/solutions/integrations/aws/cerb-and-aws.png
+redirect_from:
+  - /guides/integrations/aws/
+layout: solution
 jumbotron:
-  title: Cerb + Amazon Web Services
-  tagline: ""
   breadcrumbs:
-  - label: Resources &raquo;
-    url: /resources/
-  - label: Guides &raquo;
-    url: /resources/guides/
-  - label: Integrations &raquo;
-    url: /resources/guides/#integrations
-  - label: Amazon Web Services &raquo;
-    url: /resources/guides/#amazon-web-services
+    - label: Resources &raquo;
+      url: /resources/
+    - label: Solutions Hub &raquo;
+      url: /solutions/
+    - label: Integrations &raquo;
+      url: /solutions/#integrations
 ---
 
 * TOC
@@ -33,10 +29,6 @@ jumbotron:
 # Introduction
 
 In this guide we'll walk through the process of linking Cerb to Amazon Web Services (AWS). You'll be able to use any AWS API from automations in Cerb.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/aws/cerb-and-aws.png" class="screenshot">
-</div>
 
 # Log in to Amazon Web Services
 
@@ -139,7 +131,7 @@ That's everything we need to do in AWS.
 1. Enter your Access Key and Secret Key from AWS.
 
 	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/aws/package-library-service-aws.png" class="screenshot">
+	<img src="/assets/images/solutions/integrations/aws/package-library-service-aws.png" class="screenshot">
 	</div>
 
 1. Click the **Create** button.

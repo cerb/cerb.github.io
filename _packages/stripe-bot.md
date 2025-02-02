@@ -29,7 +29,7 @@ This package creates **Stripe Bot** for demonstrating integration between Cerb a
 
 # Configure the Stripe service
 
-If you haven't already, follow [these instructions](/guides/integrations/stripe/) to configure the Stripe service and add your first connected account.
+If you haven't already, follow [these instructions](/solutions/integrations/stripe/) to configure the Stripe service and add your first connected account.
 
 # Import the package
 

@@ -1,5 +1,5 @@
 ---
-title: Integrate with ipstack
+title: ipstack
 excerpt: A step-by-step guide for integrating Cerb and ipstack.
 summary: This page provides a guide on integrating Cerb with ipstack to utilize its
   API for geolocation purposes. It outlines the steps to sign up for an ipstack account,
@@ -7,23 +7,18 @@ summary: This page provides a guide on integrating Cerb with ipstack to utilize 
   geolocation. The guide emphasizes the approximate nature of IP-derived locations
   due to factors like VPNs and proxies. Additionally, it includes related resources
   for further workflow automation using ipstack within Cerb.
-permalink: /guides/integrations/ipstack/
-social_image_url: /assets/images/guides/integrations/ipstack/interaction-geolocate.png
-layout: integration
-topic: Integrations
-subtopic: Ipstack
+social_image_url: /assets/images/solutions/integrations/ipstack/interaction-geolocate.png
+redirect_from:
+  - /guides/integrations/ipstack/
+layout: solution
 jumbotron:
-  title: Cerb + ipstack
-  tagline: ""
   breadcrumbs:
-  - label: Resources &raquo;
-    url: /resources/
-  - label: Guides &raquo;
-    url: /resources/guides/
-  - label: Integrations &raquo;
-    url: /resources/guides/#integrations
-  - label: ipstack &raquo;
-    url: /resources/guides/#ipstack
+    - label: Resources &raquo;
+      url: /resources/
+    - label: Solutions Hub &raquo;
+      url: /solutions/
+    - label: Integrations &raquo;
+      url: /solutions/#integrations
 ---
 
 * TOC
@@ -36,10 +31,6 @@ In this guide we'll walk through the process of linking Cerb to ipstack. You'll 
 Let's assume we have a list of client IP addresses and want to plot them on a map to visualize where activity is coming from.
 
 First, it's important to acknowledge that locations derived from IP addresses are approximate. Clients may be using VPNs, proxies, third party services, etc. The location may be an ISP, or the contact information for the registered owner of a block of IP addresses.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/integrations/ipstack/interaction-geolocate.png" class="screenshot">
-</div>
 
 # Sign up at ipstack
 

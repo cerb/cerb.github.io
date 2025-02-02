@@ -1,5 +1,5 @@
 ---
-title: Integrate with GitHub
+title: GitHub
 excerpt: A step-by-step guide for integrating Cerb and GitHub
 summary: This page provides a comprehensive guide on integrating Cerb with GitHub,
   enabling the use of GitHub's API through Cerb's bots for automation purposes. It
@@ -9,22 +9,18 @@ summary: This page provides a comprehensive guide on integrating Cerb with GitHu
   to GitHub, and utilize this connection in bot behaviors. The process involves using
   the "Execute HTTP Request" action in bots and selecting the connected account for
   authentication, with an option to import a GitHub Bot package for practical implementation.
-permalink: /guides/integrations/github/
-layout: integration
-topic: Integrations
-subtopic: GitHub
+social_image_url: /assets/images/solutions/integrations/github/plugin/cerb-and-github.png
+redirect_from:
+  - /guides/integrations/github/
+layout: solution
 jumbotron:
-  title: Cerb + GitHub
-  tagline: ""
   breadcrumbs:
-  - label: Resources &raquo;
-    url: /resources/
-  - label: Guides &raquo;
-    url: /resources/guides/
-  - label: Integrations &raquo;
-    url: /resources/guides/#integrations
-  - label: GitHub &raquo;
-    url: /resources/guides/#github
+    - label: Resources &raquo;
+      url: /resources/
+    - label: Solutions Hub &raquo;
+      url: /solutions/
+    - label: Integrations &raquo;
+      url: /solutions/#integrations
 ---
 
 * TOC
@@ -33,10 +29,6 @@ jumbotron:
 # Introduction
 
 In this guide we'll walk through the process of linking Cerb to GitHub. You'll be able to use GitHub's full API from bots in Cerb to automate whatever you need.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/github/plugin/cerb-and-github.png" class="screenshot">
-</div>
 
 # Create an OAuth application at GitHub
 
@@ -53,13 +45,13 @@ Next, you need to create a new oauth app on GitHub for Cerb to connect to. Revie
 - **Authorization callback URL:** `https://YOUR-CERB-HOST/oauth/callback`
 
 	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/github/plugin/github-new-app.png" class="screenshot">
+	<img src="/assets/images/solutions/integrations/github/plugin/github-new-app.png" class="screenshot">
 	</div>
 
 1. Click the **Register application** button.
 
 	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/github/plugin/github-new-app2.png" class="screenshot">
+	<img src="/assets/images/solutions/integrations/github/plugin/github-new-app2.png" class="screenshot">
 	</div>
 
 1. Make a note of your **Client ID** and **Client Secret** for the next step.
@@ -79,7 +71,7 @@ Next, you need to create a new oauth app on GitHub for Cerb to connect to. Revie
 1. Enter your Client ID and Client Secret.
 
 	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/github/package-library-service-github.png" class="screenshot">
+	<img src="/assets/images/solutions/integrations/github/package-library-service-github.png" class="screenshot">
 	</div>
 
 1. Click the **Create** button.
@@ -97,7 +89,7 @@ Next, you need to create a new oauth app on GitHub for Cerb to connect to. Revie
 1. Accept consent on GitHub.
 
     <div class="cerb-screenshot">
-    <img src="/assets/images/guides/github/plugin/oauth-approve.png" class="screenshot">
+    <img src="/assets/images/solutions/integrations/github/plugin/oauth-approve.png" class="screenshot">
     </div>
 
 1. Click the **Save Changes** button.

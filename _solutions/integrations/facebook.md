@@ -1,5 +1,5 @@
 ---
-title: Integrate with Facebook
+title: Facebook
 excerpt: A step-by-step guide for integrating Cerb and Facebook.
 summary: This page provides a comprehensive guide on integrating Facebook with Cerb.
   It outlines the steps to create a Facebook app, set up a Facebook service in Cerb,
@@ -7,32 +7,24 @@ summary: This page provides a comprehensive guide on integrating Facebook with C
   accounts for Facebook Pages and utilize these accounts in bot behaviors within Cerb.
   By following these instructions, users can leverage Facebook's full API to automate
   tasks using Cerb's bot functionalities.
-permalink: /guides/integrations/facebook/
-layout: integration
-topic: Integrations
-subtopic: Facebook
+social_image_url: /assets/images/solutions/integrations/facebook/plugin/cerb-and-facebook.png
+redirect_from:
+  - /guides/integrations/facobook/
+layout: solution
 jumbotron:
-  title: Cerb + Facebook
-  tagline: ""
   breadcrumbs:
-  - label: Resources &raquo;
-    url: /resources/
-  - label: Guides &raquo;
-    url: /resources/guides/
-  - label: Integrations &raquo;
-    url: /resources/guides/#integrations
-  - label: Facebook &raquo;
-    url: /resources/guides/#facebook
+    - label: Resources &raquo;
+      url: /resources/
+    - label: Solutions Hub &raquo;
+      url: /solutions/
+    - label: Integrations &raquo;
+      url: /solutions/#integrations
 ---
 
 * TOC
 {:toc}
 
 # Introduction
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/facebook/plugin/cerb-and-facebook.png" class="screenshot">
-</div>
 
 In this guide we'll walk through the process of linking a Facebook account to Cerb. You'll be able to use Facebook's full API from bots in Cerb to automate whatever you need.
 
@@ -44,7 +36,7 @@ Next, you need to create a new app on Facebook for Cerb to connect to.
 
 1. In the top right, click **My Apps >> Add a New App**.
     <div class="cerb-screenshot">
-    <img src="/assets/images/guides/facebook/plugin/facebook-new-app.png" class="screenshot">
+    <img src="/assets/images/solutions/integrations/facebook/plugin/facebook-new-app.png" class="screenshot">
     </div>
 
 1. In the menu on the left, select **Settings**.
@@ -74,7 +66,7 @@ Next, you need to create a new app on Facebook for Cerb to connect to.
 1. Enter your App ID and App Secret.
 
 	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/facebook/package-library-service-facebook.png" class="screenshot">
+	<img src="/assets/images/solutions/integrations/facebook/package-library-service-facebook.png" class="screenshot">
 	</div>
 
 1. Click the **Create** button.

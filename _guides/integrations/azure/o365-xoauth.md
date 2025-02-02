@@ -10,7 +10,7 @@ summary: This page provides a comprehensive guide on how to authenticate an Offi
   the transition from legacy passwords to OAuth2 access tokens for Office365, highlighting
   Cerb's support for XOAUTH2 authentication since version 9.6.
 permalink: /guides/integrations/azure/o365-xoauth/
-social_image_url: /assets/images/guides/azure/cerb-and-azure.png
+social_image_url: /assets/images/solutions/integrations/azure/cerb-and-azure.png
 layout: integration
 topic: Integrations
 subtopic: Microsoft Azure
@@ -43,7 +43,7 @@ This guide explains how to configure the new feature.
 
 # Configure an Azure app
 
-If you haven't already configured an Office365 connected account in Cerb, [follow these instructions](/guides/integrations/azure/office365/).
+If you haven't already configured an Office365 connected account in Cerb, [follow these instructions](/solutions/integrations/azure/).
 
 Once your connected account is created you can continue to configuring the mailbox.
 

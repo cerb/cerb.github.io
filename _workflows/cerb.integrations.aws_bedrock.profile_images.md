@@ -38,7 +38,7 @@ This workflow generates profile images from a text prompt using Amazon Bedrock f
 
 You must have an Amazon Web Services (AWS) account to use this workflow.
 
-If you don't have a connected account in Cerb for Amazon Web Services yet, you can [follow these instructions](/guides/integrations/aws/) to create one.
+If you don't have a connected account in Cerb for Amazon Web Services yet, you can [follow these instructions](/solutions/integrations/aws/) to create one.
 
 ## Amazon Bedrock
 
@@ -83,7 +83,7 @@ We're going to add access to invoke AWS Bedrock models.
 
 Select **Policies** in the navigation on the left.
 
-Find your existing policy in the list or create a new one. In the earlier [instructions](/guides/integrations/aws/) we created a policy named **CerbAutomationsPolicy**.
+Find your existing policy in the list or create a new one. In the earlier [instructions](/solutions/integrations/aws/) we created a policy named **CerbAutomationsPolicy**.
 
 Click on the policy and click the **Edit** button in the top right.
 

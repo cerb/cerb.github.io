@@ -1,5 +1,5 @@
 ---
-title: Integrate with LinkedIn
+title: LinkedIn
 excerpt: A step-by-step guide for integrating Cerb and LinkedIn.
 summary: This page provides a comprehensive guide on integrating Cerb with LinkedIn,
   enabling users to utilize LinkedIn's API for automation through Cerb bots. It details
@@ -9,22 +9,18 @@ summary: This page provides a comprehensive guide on integrating Cerb with Linke
   interactions with LinkedIn's REST API. The process includes creating an app on LinkedIn,
   configuring OAuth settings, and using the connected account for executing HTTP requests
   in bot actions.
-permalink: /guides/integrations/linkedin/
-layout: integration
-topic: Integrations
-subtopic: LinkedIn
+social_image_url: /assets/images/solutions/integrations/linkedin/plugin/cerb-and-linkedin.png
+redirect_from:
+  - /guides/integrations/linkedin/
+layout: solution
 jumbotron:
-  title: Cerb + LinkedIn
-  tagline: ""
   breadcrumbs:
-  - label: Resources &raquo;
-    url: /resources/
-  - label: Guides &raquo;
-    url: /resources/guides/
-  - label: Integrations &raquo;
-    url: /resources/guides/#integrations
-  - label: LinkedIn &raquo;
-    url: /resources/guides/#linkedin
+    - label: Resources &raquo;
+      url: /resources/
+    - label: Solutions Hub &raquo;
+      url: /solutions/
+    - label: Integrations &raquo;
+      url: /solutions/#integrations
 ---
 
 * TOC
@@ -33,10 +29,6 @@ jumbotron:
 # Introduction
 
 In this guide we'll walk through the process of linking Cerb to LinkedIn. You'll be able to use LinkedIn's full API from bots in Cerb to automate whatever you need.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/linkedin/plugin/cerb-and-linkedin.png" class="screenshot">
-</div>
 
 # Create an app at LinkedIn
 
@@ -61,7 +53,7 @@ Next, you need to create a new app on LinkedIn for Cerb to connect to.
 - **Business Phone:** (your phone number)
 
 	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/linkedin/plugin/linkedin-new-app.png" class="screenshot">
+	<img src="/assets/images/solutions/integrations/linkedin/plugin/linkedin-new-app.png" class="screenshot">
 	</div>
 
 1. Review the [API Terms of Use](https://developer.linkedin.com/legal/api-terms-of-use) and check **agree**.
@@ -84,7 +76,7 @@ Next, you need to create a new app on LinkedIn for Cerb to connect to.
 1. Click the **Add Redirect URL** button and enter the base URL to your Cerb install (e.g. `https://YOUR-CERB-HOST/`).
 
 	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/linkedin/plugin/linkedin-app-auth.png" class="screenshot">
+	<img src="/assets/images/solutions/integrations/linkedin/plugin/linkedin-app-auth.png" class="screenshot">
 	</div>
 
 1. Click the blue **Update** button.
@@ -104,7 +96,7 @@ Next, you need to create a new app on LinkedIn for Cerb to connect to.
 1. Enter your Client ID and Client Secret.
 
 	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/linkedin/package-library-service-linkedin.png" class="screenshot">
+	<img src="/assets/images/solutions/integrations/linkedin/package-library-service-linkedin.png" class="screenshot">
 	</div>
 
 1. Click the **Create** button.
@@ -122,7 +114,7 @@ Next, you need to create a new app on LinkedIn for Cerb to connect to.
 1. Accept consent on LinkedIn.
 
     <div class="cerb-screenshot">
-    <img src="/assets/images/guides/linkedin/plugin/oauth-approve.png" class="screenshot">
+    <img src="/assets/images/solutions/integrations/linkedin/plugin/oauth-approve.png" class="screenshot">
     </div>
     
 1. Click the **Save Changes** button.

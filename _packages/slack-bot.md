@@ -24,12 +24,12 @@ jumbotron:
 This package creates **Slack Bot** for demonstrating integration between Cerb and [Slack's API](https://api.slack.com/web).
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/slack/plugin/cerb-and-slack.png" class="screenshot">
+<img src="/assets/images/solutions/integrations/slack/cerb-and-slack.png" class="screenshot">
 </div>
 
 # Configure the Slack service
 
-If you haven't already, follow [these instructions](/guides/integrations/slack/) to configure the Slack service and add your first connected account.
+If you haven't already, follow [these instructions](/solutions/integrations/slack/) to configure the Slack service and add your first connected account.
 
 # Import the package
 

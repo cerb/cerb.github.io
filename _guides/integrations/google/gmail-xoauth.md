@@ -44,7 +44,7 @@ This guide explains how to configure the new feature.
 
 # Configure Google APIs
 
-If you haven't already configured a Gmail connected account in Cerb, [follow these instructions](/guides/integrations/google/gmail/).
+If you haven't already configured a Gmail connected account in Cerb, [follow these instructions](/solutions/integrations/gmail/).
 
 Once your connected account is created you can continue to configuring the mailbox.
 

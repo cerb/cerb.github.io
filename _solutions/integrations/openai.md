@@ -1,28 +1,19 @@
 ---
-title: Integrate with OpenAI
+title: OpenAI
 excerpt: A step-by-step guide for integrating Cerb and OpenAI.
 summary: "This page provides a comprehensive guide on integrating Cerb with OpenAI, enabling the use of OpenAI's API within Cerb automations. It includes detailed instructions on configuring both OpenAI and Cerb. For OpenAI, it covers creating a project and generating an API key. For Cerb, it explains how to connect to OpenAI using the API key. Additionally, the page references related resources, such as a guide on building a question-answering chatbot with Cerb and ChatGPT."
 social_image_url: /assets/images/guides/openai/cerb-and-openai.png
-permalink: /guides/integrations/openai/
-layout: integration
-topic: Integrations
-subtopic: OpenAI
+redirect_from:
+  - /guides/integrations/openai/
+layout: solution
 jumbotron:
-  title: Cerb + OpenAI
-  tagline: ""
   breadcrumbs:
-  -
-    label: Resources &raquo;
-    url: /resources/
-  -
-    label: Guides &raquo;
-    url: /resources/guides/
-  -
-    label: Integrations &raquo;
-    url: /resources/guides/#integrations
-  -
-    label: OpenAI &raquo;
-    url: /resources/guides/#openai
+    - label: Resources &raquo;
+      url: /resources/
+    - label: Solutions Hub &raquo;
+      url: /solutions/
+    - label: Integrations &raquo;
+      url: /solutions/#integrations
 ---
 
 * TOC
@@ -31,10 +22,6 @@ jumbotron:
 # Introduction
 
 In this guide we'll walk through the process of linking Cerb to OpenAI. You'll be able to use OpenAI's full API from automations in Cerb.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/openai/cerb-and-openai.png" class="screenshot">
-</div>
 
 # Configuration
 

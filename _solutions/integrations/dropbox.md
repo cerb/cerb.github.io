@@ -1,5 +1,5 @@
 ---
-title: Integrate with Dropbox
+title: Dropbox
 excerpt: A step-by-step guide for integrating Cerb and Dropbox.
 summary: This page provides a comprehensive guide on integrating Cerb with Dropbox.
   It covers the entire process, starting with creating an app on Dropbox to enable
@@ -8,33 +8,24 @@ summary: This page provides a comprehensive guide on integrating Cerb with Dropb
   in bot behaviors within Cerb. It includes instructions for setting up OAuth 2 Redirect
   URIs, entering necessary credentials, and using the connected account to automate
   tasks through Dropbox's API using Cerb's bot functionalities.
-permalink: /guides/integrations/dropbox/
-social_image_url: /assets/images/guides/dropbox/cerb-and-dropbox.png
-layout: integration
-topic: Integrations
-subtopic: Dropbox
+social_image_url: /assets/images/solutions/integrations/dropbox/cerb-and-dropbox.png
+redirect_from:
+  - /guides/integrations/dropbox/
+layout: solution
 jumbotron:
-  title: Cerb + Dropbox
-  tagline: ""
   breadcrumbs:
-  - label: Resources &raquo;
-    url: /resources/
-  - label: Guides &raquo;
-    url: /resources/guides/
-  - label: Integrations &raquo;
-    url: /resources/guides/#integrations
-  - label: Dropbox &raquo;
-    url: /resources/guides/#dropbox
+    - label: Resources &raquo;
+      url: /resources/
+    - label: Solutions Hub &raquo;
+      url: /solutions/
+    - label: Integrations &raquo;
+      url: /solutions/#integrations
 ---
 
 * TOC
 {:toc}
 
 # Introduction
-
-<div class="cerb-screenshot">
-<img src="{{page.social_image_url}}" class="screenshot">
-</div>
 
 In this guide we'll walk through the process of linking Cerb to Dropbox. You'll be able to use Dropbox's full API from bots in Cerb to automate whatever you need.
 
@@ -46,7 +37,7 @@ First, you need to create a new app on Dropbox for Cerb to connect to.
 
 1. In the top right, click **Create app**.
     <div class="cerb-screenshot">
-    <img src="/assets/images/guides/dropbox/plugin/dropbox-new-app.png" class="screenshot">
+    <img src="/assets/images/solutions/integrations/dropbox/plugin/dropbox-new-app.png" class="screenshot">
     </div>
 
 1. Select **Dropbox API**.
@@ -84,7 +75,7 @@ Make a note of your **App key** and **App secret** for the next step.
 1. Enter your App Key and App Secret.
 
 	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/dropbox/package-library-service-dropbox.png" class="screenshot">
+	<img src="/assets/images/solutions/integrations/dropbox/package-library-service-dropbox.png" class="screenshot">
 	</div>
 
 1. Click the **Create** button.
@@ -102,7 +93,7 @@ Make a note of your **App key** and **App secret** for the next step.
 1. Accept consent on Dropbox.
 
     <div class="cerb-screenshot">
-    <img src="/assets/images/guides/dropbox/plugin/oauth-approve.png" class="screenshot">
+    <img src="/assets/images/solutions/integrations/dropbox/plugin/oauth-approve.png" class="screenshot">
     </div>
     
 1. Click the **Save Changes** button.

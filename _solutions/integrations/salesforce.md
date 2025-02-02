@@ -1,5 +1,5 @@
 ---
-title: Integrate with Salesforce
+title: Salesforce
 excerpt: A step-by-step guide for integrating Cerb and Salesforce.
 summary: This page provides a comprehensive guide on integrating Cerb with Salesforce.
   It details the steps to create a new app in Salesforce, including configuring basic
@@ -7,22 +7,18 @@ summary: This page provides a comprehensive guide on integrating Cerb with Sales
   explains how to create a Salesforce service in Cerb, link a connected account to
   Salesforce, and utilize this connection in bot behaviors within Cerb. The integration
   allows users to automate tasks using the Salesforce API through Cerb's bot functionalities.
-permalink: /guides/integrations/salesforce/
-layout: integration
-topic: Integrations
-subtopic: Salesforce
+social_image_url: /assets/images/solutions/integrations/salesforce/cerb-and-salesforce.png
+redirect_from:
+  - /guides/integrations/salesforce/
+layout: solution
 jumbotron:
-  title: Cerb + Salesforce
-  tagline: ""
   breadcrumbs:
-  - label: Resources &raquo;
-    url: /resources/
-  - label: Guides &raquo;
-    url: /resources/guides/
-  - label: Integrations &raquo;
-    url: /resources/guides/#integrations
-  - label: Salesforce &raquo;
-    url: /resources/guides/#salesforce
+    - label: Resources &raquo;
+      url: /resources/
+    - label: Solutions Hub &raquo;
+      url: /solutions/
+    - label: Integrations &raquo;
+      url: /solutions/#integrations
 ---
 
 * TOC
@@ -31,10 +27,6 @@ jumbotron:
 # Introduction
 
 In this guide we'll walk through the process of linking Cerb to Salesforce. You'll be able to use the full Salesforce API from bots in Cerb to automate whatever you need.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/salesforce/plugin/cerb-and-salesforce.png" class="screenshot">
-</div>
 
 # Create an app at Salesforce
 
@@ -58,7 +50,7 @@ Next, you need to create a new app on Salesforce for Cerb to connect to.
 - **Logo URL:** [image](/assets/cerb_mascot.png)
 
 	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/salesforce/plugin/new-app-basic.png" class="screenshot">
+	<img src="/assets/images/solutions/integrations/salesforce/new-app-basic.png" class="screenshot">
 	</div>
 
 ## Configure OAuth
@@ -73,7 +65,7 @@ In the **API (Enable OAuth Settings)** section:
 	- Provide access to your data via the Web (web)
 
 	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/salesforce/plugin/new-app-oauth.png" class="screenshot">
+	<img src="/assets/images/solutions/integrations/salesforce/new-app-oauth.png" class="screenshot">
 	</div>
 	
 ## Copy your OAuth credentials
@@ -117,7 +109,7 @@ In the **API (Enable OAuth Settings)** section:
 1. Accept consent on Salesforce.
 
 	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/salesforce/plugin/oauth-approve.png" class="screenshot">
+	<img src="/assets/images/solutions/integrations/salesforce/oauth-approve.png" class="screenshot">
 	</div>
 
 1. Click the **Save Changes** button.

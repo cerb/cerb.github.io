@@ -34,7 +34,7 @@ This workflow integrates Cerb with IPstack for geolocating IP addresses and rend
 
 ## Requirements
 
-[Create an IPstack connected account](/guides/integrations/ipstack/) if you haven't already.
+[Create an IPstack connected account](/solutions/integrations/ipstack/) if you haven't already.
 
 ## Cerb
 

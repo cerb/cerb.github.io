@@ -61,7 +61,7 @@ We'll demonstrate Lambda integration in this guide by adding DNS[^dns] lookup fu
 
 1. Navigate to **Search >> Connected Accounts**.
 
-1. If you don't have a connected account for Amazon Web Services yet, you can [follow these instructions](/guides/integrations/aws/) to create one.
+1. If you don't have a connected account for Amazon Web Services yet, you can [follow these instructions](/solutions/integrations/aws/) to create one.
 
 # Log in to Amazon Web Services
 
@@ -169,7 +169,7 @@ We're going to add access to invoke AWS Lambda functions prefixed with **Cerb***
 
 Select **Policies** in the navigation on the left.
 
-Find your bot's policy in the list or create a new one. In the earlier [instructions](/guides/integrations/aws/) we created a policy named **CerbBot**.
+Find your bot's policy in the list or create a new one. In the earlier [instructions](/solutions/integrations/aws/) we created a policy named **CerbBot**.
 
 Click the **Edit Policy** button.
 

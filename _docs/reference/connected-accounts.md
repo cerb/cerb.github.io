@@ -31,14 +31,14 @@ The _owner_ of a connected account determines how it's shared. For instance, a c
 
 We have [integration examples](/resources/guides/#integrations) for many popular services:
 
-- [Amazon Web Services](/guides/integrations/aws/)
-- [Dropbox](/guides/integrations/dropbox/)
-- [Facebook](/guides/integrations/facebook/)
-- [GitHub](/guides/integrations/github/)
-- [LinkedIn](/guides/integrations/linkedin/)
-- [Salesforce](/guides/integrations/salesforce/)
-- [Slack](/guides/integrations/slack/)
-- [Stripe](/guides/integrations/stripe/)
-- [Twilio](/guides/integrations/twilio/)
+- [Amazon Web Services](/solutions/integrations/aws/)
+- [Dropbox](/solutions/integrations/dropbox/)
+- [Facebook](/solutions/integrations/facebook/)
+- [GitHub](/solutions/integrations/github/)
+- [LinkedIn](/solutions/integrations/linkedin/)
+- [Salesforce](/solutions/integrations/salesforce/)
+- [Slack](/solutions/integrations/slack/)
+- [Stripe](/solutions/integrations/stripe/)
+- [Twilio](/solutions/integrations/twilio/)
 
 We recommend creating an automation function for each service (e.g. _Facebook Bot_) to act as a delegate. That way the credentials and API interaction for a particular service are handled in a single place, and any number of other automations can use [automation.function:](/docs/automations/commands/automation.function/) to interface with those services in a secure and reusable way.

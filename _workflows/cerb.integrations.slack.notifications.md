@@ -35,7 +35,7 @@ This workflow integrates Cerb with Slack for sending notifications to channels.
 
 ## Requirements
 
-[Create a Slack connected account](/guides/integrations/slack/) if you haven't already.
+[Create a Slack connected account](/solutions/integrations/slack/) if you haven't already.
 
 ## Slack
 
@@ -60,7 +60,7 @@ You can enable it from **Search >> Workflows >> (+) >> Slack Notifications**.
 |---
 | Field | 
 |-|-
-| **Slack Account:** | A Slack [connected account](/guides/integrations/slack/).
+| **Slack Account:** | A Slack [connected account](/solutions/integrations/slack/).
 
 Click the **Continue** button twice.
 

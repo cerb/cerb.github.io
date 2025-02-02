@@ -1,5 +1,5 @@
 ---
-title: Integrate with GitLab
+title: GitLab
 excerpt: A step-by-step guide for integrating Cerb and GitLab.
 summary: 'This webpage provides a comprehensive guide on integrating Cerb with GitLab,
   focusing on authentication methods and automation usage. It details two authentication
@@ -9,24 +9,18 @@ summary: 'This webpage provides a comprehensive guide on integrating Cerb with G
   up a GitLab service in Cerb, and linking the connected account. The guide also explains
   how to use the connected GitLab account in Cerb automations, providing step-by-step
   instructions and examples for setting up and testing these integrations.'
-permalink: /guides/integrations/gitlab/
-social_image_url: /assets/images/guides/gitlab/cerb-and-gitlab.png
-date: "2024-10-15 00:00:00 -0700"
-layout: integration
-topic: Integrations
-subtopic: GitLab
+social_image_url: /assets/images/solutions/integrations/gitlab/cerb-and-gitlab.png
+redirect_from:
+  - /guides/integrations/gitlab/
+layout: solution
 jumbotron:
-  title: Cerb + GitLab
-  tagline: ""
   breadcrumbs:
-  - label: Resources &raquo;
-    url: /resources/
-  - label: Guides &raquo;
-    url: /resources/guides/
-  - label: Integrations &raquo;
-    url: /resources/guides/#integrations
-  - label: GitLab &raquo;
-    url: /resources/guides/#gitlab
+    - label: Resources &raquo;
+      url: /resources/
+    - label: Solutions Hub &raquo;
+      url: /solutions/
+    - label: Integrations &raquo;
+      url: /solutions/#integrations
 ---
 
 * TOC
@@ -35,10 +29,6 @@ jumbotron:
 # Introduction
 
 In this guide we'll walk through the process of linking Cerb to GitLab. You'll be able to use [GitLab's full API](https://docs.gitlab.com/ee/api/) from automations in Cerb to automate whatever you need.
-
-<div class="cerb-screenshot">
-<img src="{{page.social_image_url}}" class="screenshot">
-</div>
 
 # GitLab Authentication
 

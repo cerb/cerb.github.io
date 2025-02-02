@@ -29,7 +29,7 @@ This package creates **Facebook Page Bot** for demonstrating integration between
 
 # Configure the Facebook service
 
-If you haven't already, follow [these instructions](/guides/integrations/facebook/) to configure the Facebook service and add your first connected account.
+If you haven't already, follow [these instructions](/solutions/integrations/facebook/) to configure the Facebook service and add your first connected account.
 
 # Import the package
 
