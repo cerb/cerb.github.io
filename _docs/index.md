@@ -23,28 +23,22 @@ jumbotron:
   tagline: Let's get you up to speed
 ---
 
-<div style="column-width:300px;">
 {% for section in site.data.docs %}
-<div>
-<h4>{{ section.title }}</h4>
+<div class="docs-index">
+<h1>{{ section.title }}</h1>
 
-<ul>
-{% for item in section.docs %}
-  {% assign item_id = item | prepend:"/docs/" %}
-  {% assign p = site.docs | where:"id",item_id | first %}
-
-  {% if p.id == page.id %}
-  {% assign c = "current" %}
-  {% else %}
-  {% assign c = "" %}
-  {% endif %}
-
-  <li class="{{ c }}"><a href="{{ p.url }}">{% if p.toc.title %}{{ p.toc.title }}{% else %}{{ p.title }}{% endif %}</a></li>
-{% endfor %}
-</ul>
+<div style="column-count:2;column-width:400px;margin-bottom:20px;">
+    {% for item in section.docs %}
+      {% assign item_id = item | prepend:"/docs/" %}
+      {% assign solution = site.docs | where:"id",item_id | first %}
+    
+      <div class="docs-page" style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside:avoid;">
+          <a href="{{ solution.url }}" style="font-size:110%;font-weight:600;color:rgb(60,60,60);">{% if solution.toc.title %}{{ solution.toc.title }}{% else %}{{ solution.title }}{% endif %}</a>
+          <div style="font-size:90%;font-weight:200;">{{solution.excerpt}}</div>
+      </div>
+    {% endfor %}
 </div>
 {% endfor %}
-</div>
 
 {% comment %}
 **Cerb is a completely customizable team workflow platform.** Turn any email account into a supercharged team inbox. Bring your whole to-do list: email, calls, orders, projects, tasks, reminders, calendar events, and more. Triage and distribute work by taking into account its importance and the responsibilities of each team member. Build collaborative workspaces to easily keep track of everyone's assignments, contributions, and progress.

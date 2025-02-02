@@ -378,6 +378,22 @@ div.page-content {
 	}
 }
 
+.docs-index {
+	.docs-page {
+		margin-left: 0;
+		padding: 10px;
+
+		a {
+			font-weight: 500;
+			//color: black;
+		}
+
+		&:nth-child(odd) {
+			background-color:rgb(240,240,240);
+		}
+	}
+}
+
 .solution, .docs, .integration, .post {
 	.content { padding: 0; }
 	

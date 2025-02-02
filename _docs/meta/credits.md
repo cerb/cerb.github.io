@@ -20,7 +20,7 @@ jumbotron:
 
 # Developers
 
-- [Jeff Standen](http://www.linkedin.com/in/jeffstanden) has nearly 30 years of software development experience, and is the founding partner at Webgroup Media LLC. He has been Cerb's software architect and lead programmer from the first line of code in January 2002[^bdfl].
+- [Jeff Standen](http://www.linkedin.com/in/jeffstanden) has over 30 years of software development experience, and is the founding partner at Webgroup Media LLC. He has been Cerb's software architect and lead programmer from the first line of code in January 2002.
 
 - [Dan Hildebrandt](http://www.linkedin.com/in/danielhildebrandt) is a partner at Webgroup Media LLC and an active Cerb developer since 2005.
 
@@ -113,6 +113,5 @@ jumbotron:
 
 # References
 
-[^bdfl]: <https://en.wikipedia.org/wiki/Benevolent_dictator_for_life>
 [^s3]: <http://aws.amazon.com/s3/>
 [^markdown]: <http://daringfireball.net/projects/markdown/>
