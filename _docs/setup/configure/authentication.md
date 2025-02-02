@@ -33,8 +33,8 @@ jumbotron:
 
 If you have created [connected services](/docs/connected-services/) that support SSO (e.g. OpenID Connect, SAML), they will be displayed here. You can select those services to allow workers to log in to Cerb using their existing identities.
 
-* [Authenticate worker single sign-on (SSO) from G Suite using SAML](/guides/integrations/google/sso-saml/)
-* [Authenticate worker single sign-on (SSO) from Salesforce using OpenID Connect](/guides/integrations/salesforce/sso-openid/)
+* [Authenticate worker single sign-on (SSO) from G Suite using SAML](/guides/sso/google-saml/)
+* [Authenticate worker single sign-on (SSO) from Salesforce using OpenID Connect](/guides/sso/salesforce-openid/)
 
 ## Multi-Factor Authentication
 

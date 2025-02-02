@@ -12,22 +12,21 @@ summary: This webpage provides a comprehensive guide on setting up single sign-o
   associating Salesforce accounts with Cerb worker records and potentially disabling
   password-based logins for enhanced security. The guide ensures a seamless login
   experience for users by allowing them to authenticate using their Salesforce credentials.
-permalink: /guides/integrations/salesforce/sso-openid/
+permalink: /guides/sso/salesforce-openid/
+redirect_url:
+  - /guides/integrations/salesforce/sso-openid/
 layout: integration
-topic: Integrations
-subtopic: Salesforce
+topic: SSO
 jumbotron:
   title: Authenticate worker single sign-on (SSO) from Salesforce using OpenID Connect
   tagline: ""
   breadcrumbs:
-  - label: Resources &raquo;
-    url: /resources/
-  - label: Guides &raquo;
-    url: /resources/guides/
-  - label: Integrations &raquo;
-    url: /resources/guides/#integrations
-  - label: Salesforce &raquo;
-    url: /resources/guides/#salesforce
+    - label: Resources &raquo;
+      url: /resources/
+    - label: Guides &raquo;
+      url: /resources/guides/
+    - label: SSO &raquo;
+      url: /resources/guides/#sso
 ---
 
 * TOC
@@ -72,12 +71,12 @@ This guide demonstrates how to enable one-click single sign-on (SSO) for Cerb wo
 ### API (Enable OAuth Settings)
 
 1. Enter the following details:
-	* Enable OAuth Settings: [**x**]
-	* Callback URL: `https://YOUR-CERB-HOST/sso/salesforce-oidc`
-	* Select OAuth Scopes:
-		* Access your basic information (id, profile, email, address, phone)
-		* Allow access to your unique identifier (openid)
-	* Require Secret for Web Server Flow: [**x**]
+  * Enable OAuth Settings: [**x**]
+  * Callback URL: `https://YOUR-CERB-HOST/sso/salesforce-oidc`
+  * Select OAuth Scopes:
+    * Access your basic information (id, profile, email, address, phone)
+    * Allow access to your unique identifier (openid)
+  * Require Secret for Web Server Flow: [**x**]
 
 1. Click the **Save** button at the bottom of the page.
 
@@ -89,7 +88,7 @@ Make a note of the **Consumer Key** (Client ID) and **Consumer Secret** (Consume
 
 At this point you'll have to wait up to 10 minutes to test the integration, so let's work on configuring Cerb.
 
-# Configure Cerb for authentication with Salesforce 
+# Configure Cerb for authentication with Salesforce
 
 Log in to Cerb as an administrator.
 
@@ -99,73 +98,73 @@ Log in to Cerb as an administrator.
 
 1. Paste the following package:
 
-	<pre style="max-height:29.5em;">
-	<code class="language-json">
-	{% raw %}
-	{
-	  "package": {
-	    "name": "Salesforce OpenID Connect Provider",
-	    "revision": 1,
-	    "requires": {
-	      "cerb_version": "9.1.0",
-	      "plugins": []
-	    },
-	    "configure": {
-	      "placeholders": [],
-	      "prompts": [
-	        {
-	          "type": "text",
-	          "label": "Client ID",
-	          "key": "prompt_client_id",
-	          "params": {
-	            "default": "",
-	            "placeholder": "(paste your Client ID)"
-	          }
-	        },
-	        {
-	          "type": "text",
-	          "label": "Client Secret",
-	          "key": "prompt_client_secret",
-	          "params": {
-	            "default": "",
-	            "placeholder": "(paste your Client Secret)"
-	          }
-	        },
-	        {
-	          "type": "text",
-	          "label": "Issuer URL",
-	          "key": "prompt_issuer_url",
-	          "params": {
-	            "default": "",
-	            "placeholder": "(paste your Issuer URL from Salesforce)"
-	          }
-	        }
-	      ]
-	    }
-	  },
-	  "records": [
-	    {
-	      "uid": "service_salesforce",
-	      "_context": "connected_service",
-	      "name": "Salesforce",
-	      "uri": "salesforce-oidc",
-	      "extension_id": "cerb.service.provider.oidc",
-	      "params": {
-	        "client_id": "{{{prompt_client_id}}}",
-	        "client_secret": "{{{prompt_client_secret}}}",
-	        "scope": "openid profile",
-	        "issuer": "{{{prompt_issuer_url}}}",
-	        "authorization_url": "{{{prompt_issuer_url}}}/services/oauth2/authorize",
-	        "access_token_url": "{{{prompt_issuer_url}}}/services/oauth2/token",
-	        "userinfo_url": "{{{prompt_issuer_url}}}/services/oauth2/userinfo",
-	        "jwks_url": "{{{prompt_issuer_url}}}/id/keys"
-	      }
-	    }
-	  ]
-	}
-	{% endraw %}
-	</code>
-	</pre>
+   <pre style="max-height:29.5em;">
+   <code class="language-json">
+   {% raw %}
+   {
+     "package": {
+       "name": "Salesforce OpenID Connect Provider",
+       "revision": 1,
+       "requires": {
+         "cerb_version": "9.1.0",
+         "plugins": []
+       },
+       "configure": {
+         "placeholders": [],
+         "prompts": [
+           {
+             "type": "text",
+             "label": "Client ID",
+             "key": "prompt_client_id",
+             "params": {
+               "default": "",
+               "placeholder": "(paste your Client ID)"
+             }
+           },
+           {
+             "type": "text",
+             "label": "Client Secret",
+             "key": "prompt_client_secret",
+             "params": {
+               "default": "",
+               "placeholder": "(paste your Client Secret)"
+             }
+           },
+           {
+             "type": "text",
+             "label": "Issuer URL",
+             "key": "prompt_issuer_url",
+             "params": {
+               "default": "",
+               "placeholder": "(paste your Issuer URL from Salesforce)"
+             }
+           }
+         ]
+       }
+     },
+     "records": [
+       {
+         "uid": "service_salesforce",
+         "_context": "connected_service",
+         "name": "Salesforce",
+         "uri": "salesforce-oidc",
+         "extension_id": "cerb.service.provider.oidc",
+         "params": {
+           "client_id": "{{{prompt_client_id}}}",
+           "client_secret": "{{{prompt_client_secret}}}",
+           "scope": "openid profile",
+           "issuer": "{{{prompt_issuer_url}}}",
+           "authorization_url": "{{{prompt_issuer_url}}}/services/oauth2/authorize",
+           "access_token_url": "{{{prompt_issuer_url}}}/services/oauth2/token",
+           "userinfo_url": "{{{prompt_issuer_url}}}/services/oauth2/userinfo",
+           "jwks_url": "{{{prompt_issuer_url}}}/id/keys"
+         }
+       }
+     ]
+   }
+   {% endraw %}
+   </code>
+   </pre>
 
 1. Click the **Import** button.
 

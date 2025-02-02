@@ -11,23 +11,22 @@ summary: This page provides a comprehensive guide on setting up single sign-on (
   Cerb to authenticate with Okta by creating an OpenID service, setting up SSO, and
   logging in. It emphasizes the need to associate Okta email addresses with Cerb worker
   records and offers the option to disable password-based logins for enhanced security.
-permalink: /guides/integrations/okta/sso-openid/
+permalink: /guides/sso/okta-openid/
+redirect_url:
+  - /guides/integrations/okta/sso-openid/
 social_image_url: /assets/images/guides/okta/cerb-and-okta.png
 layout: integration
-topic: Integrations
-subtopic: Okta
+topic: SSO
 jumbotron:
   title: Authenticate worker single sign-on (SSO) from Okta using OpenID Connect
   tagline: ""
   breadcrumbs:
-  - label: Resources &raquo;
-    url: /resources/
-  - label: Guides &raquo;
-    url: /resources/guides/
-  - label: Integrations &raquo;
-    url: /resources/guides/#integrations
-  - label: Okta &raquo;
-    url: /resources/guides/#okta
+    - label: Resources &raquo;
+      url: /resources/
+    - label: Guides &raquo;
+      url: /resources/guides/
+    - label: SSO &raquo;
+      url: /resources/guides/#sso
 ---
 
 <div class="cerb-screenshot">
@@ -67,13 +66,13 @@ This guide demonstrates how to enable one-click single sign-on (SSO) for Cerb wo
 
 1. Enter the following details:
 
-	|---
-	|-|-
-    | **Application name** | Cerb
-    | **Application logo** | <https://cerb.ai/assets/images/home/cerby.png>
-    | **Grant type** | Authorization Code
-    | **Sign-in redirect URIs** | `https://<YOUR-CERB-URL>/sso/okta-oidc`
-	  | **Sign-out redirect URIs** | (blank)
+   |---
+   |-|-
+   | **Application name** | Cerb
+   | **Application logo** | <https://cerb.ai/assets/images/home/cerby.png>
+   | **Grant type** | Authorization Code
+   | **Sign-in redirect URIs** | `https://<YOUR-CERB-URL>/sso/okta-oidc`
+   | **Sign-out redirect URIs** | (blank)
 
 1. Click the blue **Save** button.
 
@@ -83,7 +82,7 @@ This guide demonstrates how to enable one-click single sign-on (SSO) for Cerb wo
 
 1. Assign the application to groups or users.
 
-# Configure Cerb for authentication with Okta 
+# Configure Cerb for authentication with Okta
 
 Log in to Cerb as an administrator.
 
@@ -93,73 +92,73 @@ Log in to Cerb as an administrator.
 
 1. Paste the following package:
 
-	<pre style="max-height:29.5em;">
-	<code class="language-json">
-	{% raw %}
-	{
-	  "package": {
-	    "name": "Okta OpenID Connect Provider",
-	    "revision": 1,
-	    "requires": {
-	      "cerb_version": "9.5.0",
-	      "plugins": []
-	    },
-	    "configure": {
-	      "placeholders": [],
-	      "prompts": [
-	        {
-	          "type": "text",
-	          "label": "Client ID",
-	          "key": "prompt_client_id",
-	          "params": {
-	            "default": "",
-	            "placeholder": "(paste your Client ID)"
-	          }
-	        },
-	        {
-	          "type": "text",
-	          "label": "Client Secret",
-	          "key": "prompt_client_secret",
-	          "params": {
-	            "default": "",
-	            "placeholder": "(paste your Client Secret)"
-	          }
-	        },
-	        {
-	          "type": "text",
-	          "label": "Issuer URL",
-	          "key": "prompt_issuer_url",
-	          "params": {
-	            "default": "",
-	            "placeholder": "(paste your Issuer URL from Okta)"
-	          }
-	        }
-	      ]
-	    }
-	  },
-	  "records": [
-	    {
-	      "uid": "service_okta",
-	      "_context": "connected_service",
-	      "name": "Okta",
-	      "uri": "okta-oidc",
-	      "extension_id": "cerb.service.provider.oidc",
-	      "params": {
-	        "client_id": "{{{prompt_client_id}}}",
-	        "client_secret": "{{{prompt_client_secret}}}",
-	        "scope": "openid email",
-	        "issuer": "{{{prompt_issuer_url}}}",
-	        "authorization_url": "{{{prompt_issuer_url}}}/oauth2/v1/authorize",
-	        "access_token_url": "{{{prompt_issuer_url}}}/oauth2/v1/token",
-	        "userinfo_url": "{{{prompt_issuer_url}}}/oauth2/v1/userinfo",
-	        "jwks_url": "{{{prompt_issuer_url}}}/oauth2/v1/keys"
-	      }
-	    }
-	  ]
-	}
-	{% endraw %}
-	</code>
-	</pre>
+   <pre style="max-height:29.5em;">
+   <code class="language-json">
+   {% raw %}
+   {
+     "package": {
+       "name": "Okta OpenID Connect Provider",
+       "revision": 1,
+       "requires": {
+         "cerb_version": "9.5.0",
+         "plugins": []
+       },
+       "configure": {
+         "placeholders": [],
+         "prompts": [
+           {
+             "type": "text",
+             "label": "Client ID",
+             "key": "prompt_client_id",
+             "params": {
+               "default": "",
+               "placeholder": "(paste your Client ID)"
+             }
+           },
+           {
+             "type": "text",
+             "label": "Client Secret",
+             "key": "prompt_client_secret",
+             "params": {
+               "default": "",
+               "placeholder": "(paste your Client Secret)"
+             }
+           },
+           {
+             "type": "text",
+             "label": "Issuer URL",
+             "key": "prompt_issuer_url",
+             "params": {
+               "default": "",
+               "placeholder": "(paste your Issuer URL from Okta)"
+             }
+           }
+         ]
+       }
+     },
+     "records": [
+       {
+         "uid": "service_okta",
+         "_context": "connected_service",
+         "name": "Okta",
+         "uri": "okta-oidc",
+         "extension_id": "cerb.service.provider.oidc",
+         "params": {
+           "client_id": "{{{prompt_client_id}}}",
+           "client_secret": "{{{prompt_client_secret}}}",
+           "scope": "openid email",
+           "issuer": "{{{prompt_issuer_url}}}",
+           "authorization_url": "{{{prompt_issuer_url}}}/oauth2/v1/authorize",
+           "access_token_url": "{{{prompt_issuer_url}}}/oauth2/v1/token",
+           "userinfo_url": "{{{prompt_issuer_url}}}/oauth2/v1/userinfo",
+           "jwks_url": "{{{prompt_issuer_url}}}/oauth2/v1/keys"
+         }
+       }
+     ]
+   }
+   {% endraw %}
+   </code>
+   </pre>
 
 1. Click the **Import** button.
 

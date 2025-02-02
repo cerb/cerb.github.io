@@ -12,22 +12,21 @@ summary: This webpage provides a comprehensive guide on setting up single sign-o
   setting up SSO for worker logins. Finally, it explains how users can log in to Cerb
   using their G Suite credentials, enabling seamless access with a single click as
   long as they remain logged into G Suite.
-permalink: /guides/integrations/google/sso-saml/
+permalink: /guides/sso/google-saml/
+redirect_url:
+  - /guides/integrations/google/sso-saml/
 layout: integration
-topic: Integrations
-subtopic: Google
+topic: SSO
 jumbotron:
   title: Authenticate worker single sign-on (SSO) from G Suite using SAML
   tagline: ""
   breadcrumbs:
-  - label: Resources &raquo;
-    url: /resources/
-  - label: Guides &raquo;
-    url: /resources/guides/
-  - label: Integrations &raquo;
-    url: /resources/guides/#integrations
-  - label: Google &raquo;
-    url: /resources/guides/#google
+    - label: Resources &raquo;
+      url: /resources/
+    - label: Guides &raquo;
+      url: /resources/guides/
+    - label: SSO &raquo;
+      url: /resources/guides/#sso
 ---
 
 * TOC
@@ -64,24 +63,24 @@ This guide demonstrates how to enable one-click single sign-on (SSO) for Cerb wo
 ### Basic information for your Custom App
 
 1. Enter the following details:
-	* Application Name: `Cerb SSO`
-	* Upload logo: <https://cerb.ai/assets/cerb_mascot.png>
+  * Application Name: `Cerb SSO`
+  * Upload logo: <https://cerb.ai/assets/cerb_mascot.png>
 
 1. Click the blue **Next** link in the bottom right of the popup.
 
 ### Service Provider Details
 
 1. Enter the following details:
-	* ACS URL: `https://YOUR-CERB-HOST/sso/gsuite`
-	* Entity ID: `https://YOUR-CERB-HOST/sso/gsuite/metadata`
-	* Signed Response: [**x**]
-	* Name ID: **Basic Information** >> **Primary Email**
-	* Name ID Format: **EMAIL**
-	
-	<div class="cerb-box note">
-	<p>Replace <tt>YOUR-CERB-HOST</tt> above with your own hostname (e.g. <tt>cerb.example</tt>).</p>
-	</div>
-	
+  * ACS URL: `https://YOUR-CERB-HOST/sso/gsuite`
+  * Entity ID: `https://YOUR-CERB-HOST/sso/gsuite/metadata`
+  * Signed Response: [**x**]
+  * Name ID: **Basic Information** >> **Primary Email**
+  * Name ID Format: **EMAIL**
+
+   <div class="cerb-box note">
+   <p>Replace <tt>YOUR-CERB-HOST</tt> above with your own hostname (e.g. <tt>cerb.example</tt>).</p>
+   </div>
+
 1. Click the blue **Next** link in the bottom right of the popup.
 
 ### Attribute Mapping
@@ -109,10 +108,10 @@ Click the blue **OK** link in the bottom right of the popup.
 1. Click the **(+)** icon above the worklist.
 
 1. Enter the following details:
-	* Name: `G Suite`
-	* URI: `gsuite`
-	* Type: **SAML Identity Provider**
-	
+  * Name: `G Suite`
+  * URI: `gsuite`
+  * Type: **SAML Identity Provider**
+
 1. Enter the SAML details from G Suite above: **SSO URL**, **Entity ID**, and **X.509 Certificate**.
 
 1. Click the **Save Changes** button.

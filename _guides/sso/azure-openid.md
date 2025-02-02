@@ -13,23 +13,24 @@ summary: This page provides a comprehensive guide on setting up single sign-on (
   to authenticate seamlessly with their existing Microsoft accounts, enhancing security
   and user convenience by potentially disabling password-based logins.
 social_image_url: /assets/images/solutions/integrations/azure/cerb-and-azure.png
-permalink: /guides/integrations/azure/sso-openid/
+permalink: /guides/sso/azure-openid/
+redirect_url:
+  - /guides/integrations/azure/sso-openid/
 layout: integration
-topic: Integrations
-subtopic: Microsoft Azure
+topic: SSO
 jumbotron:
   title: Authenticate worker single sign-on (SSO) from Microsoft Azure AD using OpenID
     Connect
   tagline: ""
   breadcrumbs:
-  - label: Resources &raquo;
-    url: /resources/
-  - label: Guides &raquo;
-    url: /resources/guides/
-  - label: Integrations &raquo;
-    url: /resources/guides/#integrations
-  - label: Microsoft Azure &raquo;
-    url: /resources/guides/#microsoft-azure
+    - label: Resources &raquo;
+      url: /resources/
+    - label: Guides &raquo;
+      url: /resources/guides/
+    - label: Integrations &raquo;
+      url: /resources/guides/#integrations
+    - label: Microsoft Azure &raquo;
+      url: /resources/guides/#microsoft-azure
 ---
 
 <div class="cerb-screenshot">
@@ -59,11 +60,11 @@ Log in to the [Azure Portal](https://portal.azure.com/).
 
 1. Click the **New registration** button at the top.
 
-	|---
-	|-|-
-	| **Name** | Cerb SSO
-	| **Supported account types** | (Default Directory)
-	| **Redirect URI** | (Web) `https://{CERB-URL}/sso/azure-ad`
+   |---
+   |-|-
+   | **Name** | Cerb SSO
+   | **Supported account types** | (Default Directory)
+   | **Redirect URI** | (Web) `https://{CERB-URL}/sso/azure-ad`
 
 1. Click the blue **Register** button at the bottom.
 
@@ -73,11 +74,11 @@ Log in to the [Azure Portal](https://portal.azure.com/).
 
 2. Click the **New client secret** button in the **Client secrets** section near the middle of the page.
 
-    |---
-    |-|-
-    | **Description** | Cerb SSO
-    | **Expires** | Never
-	
+   |---
+   |-|-
+   | **Description** | Cerb SSO
+   | **Expires** | Never
+
 3. Click the blue **Add** button.
 
 4. Copy the **Value** (not the **Secret ID**).
@@ -102,18 +103,18 @@ Log in to Cerb as an administrator.
 
 1. Navigate to **Search >> Connected Services** and click the **(+)** icon above the worklist.
 
-	|---
-	|-|-
-	| **Name** | Azure AD
-	| **URI** | `azure-ad`
-	| **Type** | OpenID Connect Identity Provider
-	
-	| **Client ID** | (from Azure app above)
-	| **Client Secret** | (from Azure app above)
-	| **Authorize Scope** | `openid email`
-	| **Issuer** | `https://login.microsoftonline.com/{DIRECTORY-ID}/v2.0`
+   |---
+   |-|-
+   | **Name** | Azure AD
+   | **URI** | `azure-ad`
+   | **Type** | OpenID Connect Identity Provider
 
-	You can find the `{DIRECTORY-ID}` in the Azure portal for your app registration as **Directory (tenant) ID**.
+   | **Client ID** | (from Azure app above)
+   | **Client Secret** | (from Azure app above)
+   | **Authorize Scope** | `openid email`
+   | **Issuer** | `https://login.microsoftonline.com/{DIRECTORY-ID}/v2.0`
+
+   You can find the `{DIRECTORY-ID}` in the Azure portal for your app registration as **Directory (tenant) ID**.
 
 1. Click the **Run Discovery** button.
 
