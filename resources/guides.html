@@ -26,44 +26,29 @@ jumbotron:
     url: /resources/
 ---
 
-<div class="integrations" style="margin-bottom:20px;column-width:400px;">
+<ul>
+    {% assign topics = site.guides | sort: 'id' | group_by: 'topic' %}
+    {% for topic in topics %}
+    <li><a href="#{{ topic.name | slugify }}">{{ topic.name }}</a></li>
+    {% endfor %}
+</ul>
+
+<div class="docs-index">
 	{% assign topics = site.guides | sort: 'id' | group_by: 'topic' %}
 	
 	{% for topic in topics %}
-	<div style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
+	<div style="margin:10px 0 30px 0;">
 		<h1 id="{{ topic.name | slugify }}">{{ topic.name }}</h1>
-		
-		{% if topic.name == 'Automations' or topic.name == 'Bots' or topic.name == 'Dashboards' or topic.name == 'Integrations' or topic.name == 'Developers' or topic.name == 'Mail' or topic.name == 'Machine Learning' %}
-			{% assign subtopics = topic.items | sort: 'id' | group_by: 'subtopic' %}
-		
-			<div style="margin-left:15px;">
-			{% assign subs = subtopics|sort:'name' %}
-			{% for subtopic in subs %}
-			<div style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
-				<b id="{{ topic.name | append: '-' | append: subtopic.name | slugify }}">{{ subtopic.name }}</b>
-		
-				<ul class="articles">
-				{% assign items = subtopic.items | sort: 'title' %}
-				{% for guide in items %}
-					<li>
-						<a href="{{ guide.url }}">{{ guide.title }}</a>
-					</li>
-				{% endfor %}
-				</ul>
+
+		{% assign items = topic.items | sort: 'title' %}
+		<div style="column-count:2;column-width:400px;">
+		{% for guide in items %}
+			<div class="docs-page" style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside:avoid;">
+				<a href="{{ guide.url }}" style="font-size:110%;font-weight:600;color:rgb(60,60,60);">{{ guide.title }}</a>
+				<div style="font-size:90%;font-weight:200;">{{guide.excerpt}}</div>
 			</div>
-			{% endfor %}
-			</div>
-		
-		{% else %}
-			<ul class="articles">
-			{% assign items = topic.items | sort: 'title' %}
-			{% for guide in items %}
-				<li>
-					<a href="{{ guide.url }}">{{ guide.title }}</a>
-				</li>
-			{% endfor %}
-			</ul>
-		{% endif %}
+		{% endfor %}
+		</div>
 	</div>
 	{% endfor %}
 </div>
