@@ -1,5 +1,5 @@
 ---
-title: Shuffle list and string
+title: Shuffle lists and strings
 excerpt: Use the `shuffle` function to randomly reorder lists and strings.
 summary: This page demonstrates how to use the `shuffle` function to randomly reorder 
   elements in lists and strings. It shows examples of shuffling both numerical arrays 
