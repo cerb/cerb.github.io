@@ -131,7 +131,6 @@ header {
 
 	p {
 		font-size: 24px;
-		font-weight: 200;
 		margin: 0;
 		padding: 0;
 	}
@@ -276,12 +275,8 @@ div.page-content {
 		}
 
 		p, ul {
-			//margin: 0;
-			//padding: 0;
-			//font-size: 18px;
-			font-weight: normal;
 			margin: 0 20px;
-			text-align: justify;
+			text-align: left;
 		}
 		
 		p { 
@@ -378,22 +373,6 @@ div.page-content {
 	}
 }
 
-.docs-index {
-	.docs-page {
-		margin-left: 0;
-		padding: 10px;
-
-		a {
-			font-weight: 500;
-			//color: black;
-		}
-
-		&:nth-child(odd) {
-			background-color:rgb(240,240,240);
-		}
-	}
-}
-
 .solution, .docs, .integration, .post {
 	.content { padding: 0; }
 	
@@ -436,14 +415,8 @@ div.page-content {
 	}
 	
 	aside {
-		//padding: 10px;
-		//background-color: #f5f5f5;
-		//@include m.border-radius(5px);
-	
 		h4 {
-			font-size: 16px;
-			font-weight: bold;
-			margin: 0px 0px 5px 0px;
+			margin: 0 0 5px 0;
 			padding: 0;
 			
 			a {
@@ -457,12 +430,11 @@ div.page-content {
 		}
 	
 		li {
-			font-size: 15px;
 			list-style: none;
-			margin: 0;
 			padding: 0;
-			margin-left: -20px;
-		
+			margin: 0 0 0 -20px;
+			font-size: 0.85em;
+
 			&.current {
 				font-weight: bold;
 				text-decoration: none;
@@ -482,7 +454,6 @@ div.page-content {
 		
 			a {
 				color: #888;
-				line-height: 1.7em;
 			}
 		}
 	}
@@ -504,14 +475,15 @@ div.page-content {
 	
 	ul.articles {
 		list-style: none;
-		margin-left: 0px;
+		margin-left: 0;
 		
-		li {
+		> li {
 			padding: 10px;
 			
-			a {
-				font-weight: 500;
-				//color: black;
+			> a {
+				font-weight: bold;
+				font-size: 1.2em;
+				color: rgb(50,50,50);
 			}
 			
 			&:nth-child(odd) {
@@ -547,7 +519,8 @@ section.solutions, section.integration {
 		ul {
 			list-style: none;
 			padding: 0;
-			margin-left: 0px;
+			margin-left: 0;
+			font-size: 0.85em;
 			
 			li {
 				font-size: 14px;
@@ -615,7 +588,6 @@ footer {
 	line-height: 1.4em;
 	color: rgb(255,255,255);
 	text-shadow: rgb(32,32,32) 0 1px 0;
-	font-weight: 200;
 	padding: math.div(base.$spacing-unit, 2) 0;
 	background: url("/assets/images/home/email-meteors.png") no-repeat center center rgb(51,51,51);
 	background-size: cover;
@@ -801,24 +773,20 @@ form.cerb-form {
 	input[type="url"],
 	textarea,
 	select {
-		//background: rgba(255,255,255,.1);
-		border: none;
+		border: 1px solid rgb(150,150,150);
 		border-radius: 4px;
 		font-size: 16px;
-		margin: 0;
+		margin: 0 0 10px 0;
 		outline: 0;
 		padding: 7px;
 		width: 100%;
 		box-sizing: border-box; 
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box; 
-		background-color: #ebebeb;
+		background-color: #f5f5f5;
 		color:#222;
 		font-weight: 500;
 		-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
 		box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-		margin-bottom: 10px;
-		
+
 		&.form-inline {
 			width: inherit;
 		}
@@ -834,7 +802,7 @@ form.cerb-form {
 	input[type="url"]:focus,
 	textarea:focus,
 	select:focus{
-		background: #f5f5f5;
+		background: #ebebeb;
 	}
 	select{
 		-webkit-appearance: menulist-button;
@@ -957,6 +925,7 @@ button.cerb-button, a.cerb-button {
 	font-weight: bold;
 	border: 0;
 	background-color: rgb(60, 130, 230);
+	cursor: pointer;
 
 	margin: 10px;
 	padding: 15px 45px;
@@ -966,7 +935,6 @@ button.cerb-button, a.cerb-button {
 	color: white;
 	box-shadow: 0 0 20px #eee;
 	border-radius: 10px;
-
 
 	&:hover {
 		background-position: right center; /* change the direction of the change here */

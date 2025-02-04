@@ -2,12 +2,11 @@
 @use "sass:math";
 @use "sass:color";
 
-// Our variables
-$base-font-family: sans-serif;
-$base-font-size:   18px;
+$base-font-family: Inter, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$base-font-size:   100%;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.6;
+$base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
@@ -45,11 +44,6 @@ body {
 		color: $text-color;
 		background-color: $background-color;
 		-webkit-text-size-adjust: 100%;
-		-webkit-font-feature-settings: "kern" 1;
-		-moz-font-feature-settings: "kern" 1;
-		-o-font-feature-settings: "kern" 1;
-		font-feature-settings: "kern" 1;
-		font-kerning: normal;
 }
 
 
@@ -109,7 +103,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-		font-weight: $base-font-weight;
+		font-weight: 600;
 }
 
 
@@ -120,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
 		color: $brand-color;
 		text-decoration: none;
-		font-weight: 500;
+		font-weight: $base-font-weight;
 
 		&:visited {
 			color: $brand-color;
