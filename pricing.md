@@ -45,6 +45,19 @@ keywords: pricing price cost subscription
 <button type="button" class="cerb-button" data-cerb-bot-interaction="cloud">Manage your subscription</button>
 {% endcomment %}
 
+<div class="grid">
+	<div class="whole" style="text-align:center">
+		<p>
+			<h1 style="font-weight:bold;">Self-host or deploy in Cerb Cloud</h1>
+			<a href="/signup/" class="cerb-button">
+				Sign up to try Cerb for free
+				<br>
+				<small style="font-size:0.8em;">(no payment info required)</small>
+			</a>
+		</p>
+	</div>
+</div>
+
 <div style="font-size:125%;">
 	<b>Add <u>optional</u> enterprise technical support from Cerb's highly experienced developers with no long-term commitments:</b>
 </div>
