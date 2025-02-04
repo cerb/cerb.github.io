@@ -34,6 +34,7 @@ jumbotron:
 - [Jeremy Johnstone](http://www.linkedin.com/in/jsjohnst)
 - [Jerry Kanoholani](http://www.linkedin.com/pub/jerry-kanoholani/19/74/977)
 - Joe Geck
+- [Josh Clemens](http://www.linkedin.com/in/joshuaclemens)
 - [Mike Fogg](http://www.linkedin.com/in/mikefogg)
 - [Niek Beernink](http://nl.linkedin.com/in/nbeernink)
 - [Robert Middleswarth](http://www.linkedin.com/in/robertmiddleswarth)
