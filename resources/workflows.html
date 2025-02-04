@@ -19,9 +19,9 @@ layout: page
 permalink: /resources/workflows/
 jumbotron:
   title: Workflows
-  tagline: ~
+  tagline: Pre-built templates with versioned updates that keep related records in sync between multiple environments.
   breadcrumbs:
-  - label: Resources
+  - label: Resources &raquo;
     url: /resources/
 ---
 
@@ -33,8 +33,8 @@ jumbotron:
 	<ul class="articles">
 	{% for workflow in workflows %}
 		<li style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
-			<a href="{{ workflow.url }}" style="font-size:110%;font-weight:600;color:rgb(60,60,60);">{{ workflow.title }}</a>
-			<div style="font-size:90%;font-weight:200;">{{ workflow.excerpt }}</div>
+			<a href="{{ workflow.url }}">{{ workflow.title }}</a>
+			<div>{{ workflow.excerpt }}</div>
 		</li>
 	{% endfor %}
 	</ul>

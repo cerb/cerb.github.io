@@ -20,7 +20,10 @@ toc:
   title: Introduction
 jumbotron:
   title: Documentation
-  tagline: Let's get you up to speed
+  tagline: Various guides and references essential for different user roles.
+  breadcrumbs:
+    - label: Resources &raquo;
+      url: /resources/
 ---
 
 <ul>
@@ -30,18 +33,19 @@ jumbotron:
 </ul>
 
 {% for section in site.data.docs %}
-<div class="docs-index">
 <h1 id="{{ section.title | slugify }}">{{ section.title }}</h1>
 
-<div style="column-count:2;column-width:400px;margin-bottom:20px;">
+<div class="integrations">
+    <ul class="articles"  style="column-count:2;column-width:500px;margin-bottom:20px;">
     {% for item in section.docs %}
       {% assign item_id = item | prepend:"/docs/" %}
       {% assign solution = site.docs | where:"id",item_id | first %}
-    
-      <div class="docs-page" style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside:avoid;">
-          <a href="{{ solution.url }}" style="font-size:110%;font-weight:600;color:rgb(60,60,60);">{% if solution.toc.title %}{{ solution.toc.title }}{% else %}{{ solution.title }}{% endif %}</a>
-          <div style="font-size:90%;font-weight:200;">{{solution.excerpt}}</div>
-      </div>
+      <li style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
+        <a href="{{ solution.url }}">{% if solution.toc.title %}{{ solution.toc.title }}{% else %}{{ solution.title }}{% endif %}</a>
+        <br>
+        {{solution.excerpt}}
+      </li>
     {% endfor %}
+    </ul>
 </div>
 {% endfor %}

@@ -14,7 +14,6 @@ jumbotron:
   breadcrumbs:
     - label: Docs &raquo;
       url: /docs/home/
-    - label: Clients &raquo;
 ---
 
 An **organization** is a group of related [contacts](/docs/contacts/).

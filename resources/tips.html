@@ -19,7 +19,7 @@ redirect_from:
 jumbotron:
   title: Tips &amp; Tricks
   breadcrumbs:
-  - label: Resources
+  - label: Resources &raquo;
     url: /resources/
 ---
 
@@ -29,8 +29,8 @@ jumbotron:
 	{% assign tips = site.tips | sort: 'title' %}
 	{% for tip in tips %}
 	<li style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
-		<a href="{{ tip.url }}" style="font-size:110%;font-weight:600;color:rgb(60,60,60);">{{ tip.title }}</a>
-		<div style="font-size:90%;font-weight:200;">
+		<a href="{{ tip.url }}">{{ tip.title }}</a>
+		<div>
 		    {{tip.excerpt}}
         </div>
 	</li>
