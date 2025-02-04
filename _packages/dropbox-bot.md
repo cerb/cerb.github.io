@@ -1,7 +1,7 @@
 ---
 title: Dropbox Bot
 excerpt: A bot demonstrating integration between Cerb and Dropbox.
-social_image_url: /assets/images/guides/dropbox/cerb-and-dropbox.png
+social_image_url: /assets/images/solutions/integrations/dropbox/cerb-and-dropbox.png
 layout: integration
 topic: Packages
 permalink: /packages/dropbox-bot/

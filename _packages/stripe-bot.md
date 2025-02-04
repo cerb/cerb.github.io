@@ -24,7 +24,7 @@ jumbotron:
 This package creates **Stripe Bot** for demonstrating integration between Cerb and [Stripe's API](https://stripe.com/docs/api/curl).
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/stripe/plugin/cerb-and-stripe.png" class="screenshot">
+<img src="/assets/images/solutions/integrations/stripe/plugin/cerb-and-stripe.png" class="screenshot">
 </div>
 
 # Configure the Stripe service

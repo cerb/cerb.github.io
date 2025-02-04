@@ -24,7 +24,7 @@ jumbotron:
 This package creates **LinkedIn Bot** for demonstrating integration between Cerb and the [LinkedIn API](https://developer.linkedin.com/docs/rest-api).
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/linkedin/plugin/cerb-and-linkedin.png" class="screenshot">
+<img src="/assets/images/solutions/integrations/linkedin/plugin/cerb-and-linkedin.png" class="screenshot">
 </div>
 
 # Configure the LinkedIn service

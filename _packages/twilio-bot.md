@@ -24,7 +24,7 @@ jumbotron:
 This package creates **Twilio Bot** for demonstrating integration between Cerb and [Twilio's API](https://www.twilio.com/docs/api/).
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/twilio/plugin/cerb-and-twilio.png" class="screenshot">
+<img src="/assets/images/solutions/integrations/twilio/plugin/cerb-and-twilio.png" class="screenshot">
 </div>
 
 # Configure the Twilio service

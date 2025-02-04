@@ -24,7 +24,7 @@ jumbotron:
 This package creates **GitHub Bot** for demonstrating integration between Cerb and [GitHub's API](https://developer.github.com/v3/).
 
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/github/plugin/cerb-and-github.png" class="screenshot">
+<img src="/assets/images/solutions/integrations/github/plugin/cerb-and-github.png" class="screenshot">
 </div>
 
 # Configure the GitHub service
