@@ -13,7 +13,18 @@ search_index:
 
 <div id="search" class="search" style="min-height:500px;">
     <form action="#" method="GET" onsubmit="return false;">
-        <input id="search-box" type="text" name="q" value="" style="outline:none;-webkit-appearance:none;appearance:none;border:1px solid rgb(200,200,200);width:97%;padding:5px;font-size:2em;" placeholder="Describe what you're searching for and press <ENTER>" autofocus="autofocus" spellcheck="false">
+        <div>
+            <input id="search-box" type="text" name="q" value="" style="outline:none;-webkit-appearance:none;appearance:none;border:1px solid rgb(200,200,200);width:97%;padding:5px;font-size:2em;" placeholder="Describe what you're searching for and press <ENTER>" autofocus="autofocus" spellcheck="false">
+        </div>
+        <div id="search-filters">
+            <label><input type="checkbox" name="tags" value="docs"> docs</label>
+            <label><input type="checkbox" name="tags" value="guides"> guides</label>
+            <label><input type="checkbox" name="tags" value="docs-records-types"> record types</label>
+            <label><input type="checkbox" name="tags" value="releases"> releases</label>
+            <label><input type="checkbox" name="tags" value="solutions"> solutions</label>
+            <label><input type="checkbox" name="tags" value="tips"> tips</label>
+            <label><input type="checkbox" name="tags" value="workflows"> workflows</label>
+        </div>
     </form>
 
     <div class="search-stats" style="color:rgb(150,150,150);font-size:0.9em;"></div>
@@ -23,6 +34,7 @@ search_index:
 <script type="text/javascript">
     (function() {
         let searchBox = document.getElementById('search-box');
+        let searchFilters = document.getElementById('search-filters');
         let searchResults = document.getElementById('search-results');
         let searchTerm = getQueryVariable('q');
 
@@ -60,6 +72,14 @@ search_index:
             formData.append('query', searchBox.value);
             formData.append('limit', '25');
 
+            let filterTags = searchFilters.querySelectorAll('input[name=tags]:checked');
+
+            if(filterTags.length > 0) {
+                for (let i = 0; i < filterTags.length; i++) {
+                    formData.append('tags', filterTags[i].value);
+                }
+            }
+
             xhr.send(formData);
         }
 
@@ -93,6 +113,11 @@ search_index:
                     content.style['margin'] = '0 0 1em 0';
                     content.innerText = doc.content;
                     searchResults.appendChild(content);
+
+                    //let tags = document.createElement('div');
+                    //tags.style['margin'] = '0 0 1em 0';
+                    //tags.innerText = JSON.stringify(doc.tags);
+                    //searchResults.appendChild(tags);
                 }
 
             } else {
