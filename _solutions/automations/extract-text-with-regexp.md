@@ -11,6 +11,7 @@ summary: This page provides examples of using regular expressions in automation 
 layout: solution
 redirect_from:
 - /automation/cookbook/extract-text-with-regexp/
+- /guides/bots/extract-text-from-email/
 jumbotron:
   breadcrumbs:
   - label: Resources &raquo;
@@ -40,6 +41,15 @@ start:
 {% endraw %}
 </code>
 </pre>
+
+We're taking the value of the `text` placeholder and applying a `|regexp` filter to it. That filter expects its first argument to be a regular expression `pattern`, and the optional second argument is a specific capture group to return (opposed to all matches as an array).
+
+In the first argument, we're giving the pattern `/Amazon Order #([A-Z0-9\-]+)/`:
+
+* `/` is the pattern delimiter, in the format of `/<pattern>/<flags>`.
+* `Amazon Order #` matches text that starts with that phrase.
+* `(...)` is a "capture group" for text after the previous match. Capture groups are defined with parentheses and you can have many of them. They can also be nested like `((\d)-(\w+))`, in which case they're numbered from the left-most opening parenthesis `(`.
+* `[A-Z0-9\-]+` matches one or more consecutive characters while they are capital letters, digits, or a dash (`-`). The `[...]` brackets list the characters to match. The `+` at the end means "one or more", opposed to `*` which would mean "zero or more'.
 
 ## Setting the pattern as a variable
 
