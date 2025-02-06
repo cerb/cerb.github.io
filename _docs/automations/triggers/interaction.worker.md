@@ -15,6 +15,8 @@ summary: This page provides a comprehensive overview of the "interaction.worker"
 permalink: /docs/automations/triggers/interaction.worker/
 redirect_from:
 - /docs/automations/triggers/interaction.web.worker/
+- /guides/bots/prompts/
+- /packages/prompt-bot/
 toc:
   title: interaction.worker
   expand: Automations
