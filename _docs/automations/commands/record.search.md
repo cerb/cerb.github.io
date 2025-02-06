@@ -10,6 +10,8 @@ summary: This page provides detailed documentation on the `record.search` comman
   using validation templates to manage errors. The page also outlines how to handle
   simulation scenarios and the structure of the output and error messages.
 permalink: /docs/automations/commands/record.search/
+redirect_from:
+  - /guides/bots/load-records/
 toc:
   title: record.search
   expand: Automations
