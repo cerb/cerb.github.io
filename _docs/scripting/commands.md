@@ -29,6 +29,24 @@ These commands are available in bot scripts and snippets:
 * TOC
 {:toc}
 
+## apply
+
+Apply the given filters to the enclosed block of text:
+
+<pre>
+<code class="language-twig">
+{% raw %}
+{% apply upper %}
+All of this text will be uppercase.
+{% endapply %}
+{% endraw %}
+</code>
+</pre>
+
+```
+ALL OF THIS TEXT WILL BE UPPERCASE.
+```
+
 ## do
 
 Evaluate a variable or expression without outputting anything:
@@ -50,24 +68,6 @@ This is primarily useful for expanding placeholders in dictionaries before seria
 {% endraw %}
 </code>
 </pre>
-
-## filter
-
-Apply the given filters to the enclosed block of text:
-
-<pre>
-<code class="language-twig">
-{% raw %}
-{% filter upper %}
-All of this text will be uppercase.
-{% endfilter %}
-{% endraw %}
-</code>
-</pre>
-
-```
-ALL OF THIS TEXT WILL BE UPPERCASE.
-```
 
 ## for
 
