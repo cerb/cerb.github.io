@@ -62,13 +62,13 @@ The rest of this guide assumes you have a Python project or Jupyter notebook.
 
 Add the following dependencies using your preferred package manager:
 
-```shell
+{% highlight bash %}
 pip install requests requests-oauthlib
-```
+{% endhighlight %}
 
 ## Set OAuth2 variables
 
-```python
+{% highlight python %}
 redirect_uri = 'http://localhost/'
 request_base_url = 'http://localhost/'
 auth_url = request_base_url + 'oauth/authorize'
@@ -77,7 +77,7 @@ extra = {
     'client_id': '...',
     'client_secret': '...',
 }
-```
+{% endhighlight %}
 
 |---
 | Variable | Description
@@ -93,29 +93,29 @@ If you're in a test environment (e.g. `localhost`) you can disable the SSL requi
 
 Otherwise, skip this step.
 
-```python
+{% highlight python %}
 import os
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
-```
+{% endhighlight %}
 
 ## Imports
 
 Import the following:
 
-```python
+{% highlight python %}
 import json
 from requests_oauthlib import OAuth2Session
-```
+{% endhighlight %}
 
 ## Handle token persistence
 
 Define a function to persist the generated token. This can store the token object in the filesystem, a database, etc.
 
-```python
+{% highlight python %}
 def token_saver(token):
     # [TODO] Persist the token somewhere
     pass
-```
+{% endhighlight %}
 
 ## Generate a token
 
@@ -131,7 +131,7 @@ If you generated a token from **Setup >> Developers >> OAuth2 Token Generator** 
 
 Set `access_token`, `refresh_token`, and `expires_in`.
 
-```python
+{% highlight python %}
 def token_loader():
     # [TODO] Load the token from somewhere (inverse of token_saver)
     return {
@@ -142,7 +142,7 @@ def token_loader():
     }
 
 oauth = OAuth2Session(client_id=extra['client_id'], token=token_loader(), auto_refresh_url=token_url, auto_refresh_kwargs=extra, token_updater=token_saver)
-```
+{% endhighlight %}
 
 This code is configured to automatically refresh the access token when it expires (by default hourly).
 
@@ -158,7 +158,7 @@ In production, you'd use an HTTP redirect to the `authorization_url` and the **C
 
 For machine-to-machine scripts, Option 1 above is much simpler.
 
-```python
+{% highlight python %}
 scopes = ['api']
 
 oauth = OAuth2Session(client_id=extra['client_id'], redirect_uri=redirect_uri, scope=scopes, auto_refresh_url=token_url, auto_refresh_kwargs=extra, token_updater=token_saver)
@@ -166,13 +166,13 @@ oauth = OAuth2Session(client_id=extra['client_id'], redirect_uri=redirect_uri, s
 authorization_url, state = oauth.authorization_url(auth_url, access_type="offline")
 
 print('Visit %s in your browser and authorize access.' % authorization_url)
-```
+{% endhighlight %}
 
 Paste the URL into your browser and log in if required. Click the **Accept** button.
 
 You'll be redirected back to Cerb. Copy the new URL in the browser location bar and paste it into the next step.
 
-```python
+{% highlight python %}
 authorization_response = input("Paste the callback URL from your browser location bar:")
 
 token = oauth.fetch_token(
@@ -180,26 +180,26 @@ token = oauth.fetch_token(
     authorization_response=authorization_response,
     client_secret=extra['client_secret']
 )
-```
+{% endhighlight %}
 
 ## Make a request to the Cerb API
 
 The `oauth` client object will automatically add the bearer token to the `Authorization:` HTTP header.
 
-```python
+{% highlight python %}
 r = oauth.get(request_base_url + 'rest/workers/me.json')
-```
+{% endhighlight %}
 
 ### Display the response
 
-```python
+{% highlight python %}
 import json
 json.loads(r.content)
-```
+{% endhighlight %}
 
 You should see JSON output like:
 
-```json
+{% highlight json %}
 {
   "__build": 2023091401,
   "__status": "success",
@@ -222,7 +222,7 @@ You should see JSON output like:
   "title": "Administrator",
   "updated": 1695067418
 }
-```
+{% endhighlight %}
 
 # Next steps
 

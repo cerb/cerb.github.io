@@ -31,19 +31,17 @@ This can be accomplished with **variables**.  A variable is a special token that
 
 Assuming we had a variable named `first_name`, we could write:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 Hello, {{first_name}}!
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 This will output something like:
 
-```
+{% highlight text %}
 Hello, Kina!
-```
+{% endhighlight %}
 
 <div class="cerb-box note">
 <p>A variable is indicated by a pair of double curly braces around the variable's name.</p>
@@ -53,19 +51,17 @@ Hello, Kina!
 
 You can make your own variables in a template using the [set](/docs/scripting/commands/#set) command:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set name = "Kina" %}
 {% set quantity = 5 %}
 {{name}} has {{quantity}} gold stars.
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Kina has 5 gold stars.
-```
+{% endhighlight %}
 
 Variables are temporary. When you define a new variable in one action, it can't be referenced from other actions.  In programmer parlance, the **scope** of a variable is limited to the same template.
 
@@ -81,51 +77,45 @@ When editing actions on a bot behavior, the possible filters are automatically s
 
 For example, we can use the [upper](/docs/scripting/filters/#upper) filter to display a variable's value in uppercase:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 Hi, {{first_name|upper}}!
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Hi, KINA!
-```
+{% endhighlight %}
 
 # Default values
 
 You can use the [default](/docs/scripting/filters/#default) filter to give a default value to empty variables:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set name = '' %}
 Hi {{name|default('there')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Hi there
-```
+{% endhighlight %}
 
 # Stacking filters
 
 You can send the output from one filter as the input to another filter:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set first_name = null %}
 Hi, {{first_name|default('there')|upper}}!
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Hi, THERE!
-```
+{% endhighlight %}
 
 <div class="section-nav">
 	<div class="left">

@@ -39,16 +39,14 @@ Edit the record for `mail.reply`.
 
 Add [interactions](/docs/automations/triggers/interaction.worker/) using [toolbar KATA](/docs/toolbars/#kata).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 interaction/autoreply:
   label: Auto-Reply
   uri: cerb:automation:example.autoreply
   icon: magic
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The following **placeholders** are available in KATA:
 

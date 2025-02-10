@@ -28,8 +28,7 @@ jumbotron:
 
 The **record.get:** command loads a record from a [type](/docs/records/types/) and ID. 
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   record.get:
@@ -41,14 +40,11 @@ start:
     output@text:
       Loaded {{record._context}} #{{record.id}}: {{record._label}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 output: Loaded cerberusweb.contexts.task #123: Install Cerb
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

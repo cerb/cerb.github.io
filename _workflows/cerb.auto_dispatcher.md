@@ -136,8 +136,7 @@ You can build your own auto-dispatcher workflow using this template as a referen
 
 Change occurrences of **cerb.auto_dispatcher** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.auto_dispatcher
@@ -518,5 +517,4 @@ records:
           ]
         }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

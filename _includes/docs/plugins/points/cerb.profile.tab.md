@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerb.profile.tab&quot;&gt;
 			&lt;id&gt;cerb.profile.tab.dashboard&lt;/id&gt;
 			&lt;name&gt;Dashboard&lt;/name&gt;
@@ -15,13 +14,11 @@
 			&lt;params&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_ProfileTab {
 	public function renderConfig(Model_ProfileTab $model) {
@@ -37,6 +34,5 @@ class ExampleExtension extends Extension_ProfileTab {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

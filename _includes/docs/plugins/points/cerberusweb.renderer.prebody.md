@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerberusweb.renderer.prebody&quot;&gt;
 			&lt;id&gt;timetracking.renderer.prebody&lt;/id&gt;
 			&lt;name&gt;Time Tracking Pre-body Renderer&lt;/name&gt;
@@ -15,19 +14,16 @@
 			&lt;params&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_AppPreBodyRenderer {
 	public function render() {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

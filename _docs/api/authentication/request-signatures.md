@@ -47,16 +47,14 @@ The process of signing a request is automatically handled by the [libraries](/do
 
 To sign an API request manually, create an MD5[^md5] signature of the following string:
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 verb\n
 http_date\n
 url_path\n
 url_query_string\n
 payload\n
 secret\n
-</code>
-</pre>
+{% endhighlight %}
 
 * **verb**
 
@@ -84,11 +82,9 @@ secret\n
     
 The generated signature should be sent with the request as a header in the following format:
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 Cerb-Auth: &lt;access_key&gt;:&lt;signature&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-box note"><p>
 	If you're having trouble authenticating and you're sure that the signature is correct, verify that the current time is accurate on both the client and server.
@@ -104,8 +100,7 @@ Let's look at an example signature for testing your own authentication implement
 
 For this request:
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 POST /rest/tickets/search.json?show_meta=0 HTTP/1.1
 Date: Wed, 08 Feb 2017 19:53:35 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
@@ -114,8 +109,7 @@ Connection: close
 Content-Length: 27
 
 expand=custom_&q=status%3Ao
-</code>
-</pre>
+{% endhighlight %}
 
 Using these credentials:
 
@@ -124,16 +118,13 @@ Using these credentials:
 
 The authentication header is comprised of `<access-key>:<signature>`:
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 Cerb-Auth: pjlfmn339fgh:0cfe2f3b06552c060c8e77f7a0c875ee
-</code>
-</pre>
+{% endhighlight %}
 
 In PHP, the signature is generated as follows:
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $secret_hash = md5('fw4y9fjjd5tqjlsk3u9zkjjr154xbftc');
 
 $string_to_sign = <<< EOF
@@ -147,16 +138,13 @@ $secret_hash
 EOF;
 
 echo md5($string_to_sign);
-</code>
-</pre>
+{% endhighlight %}
 
 This outputs:
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 0cfe2f3b06552c060c8e77f7a0c875ee
-</code>
-</pre>
+{% endhighlight %}
 
 # API Libraries
 

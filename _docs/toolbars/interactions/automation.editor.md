@@ -44,8 +44,7 @@ Edit the record for `automation.editor`.
 
 Add [interactions](/docs/automations/triggers/interaction.worker/) using [toolbar KATA](/docs/toolbars/#kata).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 interaction/magic:
   uri: cerb:automation:wgm.example.openai
@@ -57,8 +56,7 @@ interaction/magic:
       'interaction.worker',
     ]}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The following **placeholders** are available in KATA:
 

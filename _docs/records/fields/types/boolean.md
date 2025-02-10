@@ -31,27 +31,23 @@ The value is `1` (true) or `0` (false).
 
 As JSON from [packages](/docs/packages/):
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
 	"checkbox": 1
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Records API
 
 In [PUT](/docs/api/endpoints/records/#update) or [POST](/docs/api/endpoints/records/#create) requests from the [API](/docs/api/):
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 {% raw %}
 &amp;fields[checkbox]=1
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 
 <div class="section-nav">

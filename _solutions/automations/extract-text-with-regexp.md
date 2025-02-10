@@ -29,8 +29,7 @@ Here are examples of using regular expressions to extract matching text in autom
 
 The pattern is a [KATA](/docs/kata/) key.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -39,9 +38,7 @@ start:
   return:
     order_id: {{text|regexp(pattern, 1)}}
 {% endraw %}
-</code>
-</pre>
-
+{% endhighlight %}
 We're taking the value of the `text` placeholder and applying a `|regexp` filter to it. That filter expects its first argument to be a regular expression `pattern`, and the optional second argument is a specific capture group to return (opposed to all matches as an array).
 
 In the first argument, we're giving the pattern `/Amazon Order #([A-Z0-9\-]+)/`:
@@ -55,8 +52,7 @@ In the first argument, we're giving the pattern `/Amazon Order #([A-Z0-9\-]+)/`:
 
 The pattern is a [scripting](/docs/scripting/) variable.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -71,15 +67,13 @@ start:
       return:
         output: The ticket mask is #: {{mask}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Using multiple capture groups
 
 The second argument to `|regexp` specifies the capture group to return.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -89,8 +83,7 @@ start:
     x@int: {{text|regexp(pattern, 1)}}
     y@int: {{text|regexp(pattern, 2)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Returning all matches for all capture groups
 
@@ -99,7 +92,7 @@ Use the [regexp_match_all()](/docs/scripting/functions/#regexp_match_all) functi
 {% tabs extract_text_with_regexp %}
 
 {% tab extract_text_with_regexp automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -112,11 +105,11 @@ start:
       {% set results = regexp_match_all("#^(.*?): (.*?)$#m", headers) %}
       {{results|json_encode|json_pretty}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab extract_text_with_regexp output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   results: |-
@@ -138,7 +131,7 @@ __return:
         ]
     ]
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

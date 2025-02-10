@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;usermeet.sc.rss.controller&quot;&gt;
 			&lt;id&gt;cerberusweb.kb.sc.rss.controller&lt;/id&gt;
 			&lt;name&gt;Knowledgebase RSS&lt;/name&gt;
@@ -16,19 +15,16 @@
 				&lt;param key=&quot;uri&quot; value=&quot;kb&quot;/&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_UmScRssController {
 	public function handleRequest(DevblocksHttpRequest $request) {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

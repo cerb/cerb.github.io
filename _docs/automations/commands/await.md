@@ -31,8 +31,7 @@ This creates a [continuation](/docs/automations/#continuations) for resuming the
 
 # Syntax
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await:
@@ -46,8 +45,7 @@ start:
     output@text:
       Hello, {{prompt_name}}!
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The expected dictionary depends on the trigger.
 

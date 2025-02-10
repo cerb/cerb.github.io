@@ -82,8 +82,7 @@ Click the **(+)** icon above the behaviors worklist to add a new behavior:
 
 Copy the following behavior script to your clipboard:
 
-<pre style="max-height:29.25em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "behavior":{
@@ -266,8 +265,7 @@ Copy the following behavior script to your clipboard:
   }
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Select **Import** at the top of the popup and paste the copied behavior.
 

@@ -16,23 +16,23 @@ jumbotron:
     url: /solutions/#automations
 ---
 
-You can use [\|reverse](/docs/scripting/filters/#reverse) in scripting to reverse any given block of text or list. ```|reverse(true)``` will do so while preserving array keys. 
+You can use [\|reverse](/docs/scripting/filters/#reverse) in scripting to reverse any given block of text or list. `|reverse(true)` will do so while preserving array keys.  %}
 
 {% tabs reverse_text %}
 
 {% tab reverse_text automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   return:
     reversed_list@csv: {{[1,2,3,4,5]|reverse|join(',')}}
     reversed_text: {{"This is text to reverse."|reverse}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab reverse_text output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   reversed_list:
@@ -43,7 +43,7 @@ __return:
   - "1"
   reversed_text: .esrever ot txet si sihT
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

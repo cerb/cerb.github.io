@@ -33,16 +33,13 @@ The Web API answers requests with one or more **objects** encoded in JSON or XML
 
 Suppose we send this `GET` request to the API to retrieve ticket #123 in JSON format:
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 GET /rest/records/ticket/123.json
-</code>
-</pre>
+{% endhighlight %}
 
 The response looks like:
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {
     __build: 2017013001,
     __status: "success",
@@ -93,8 +90,7 @@ The response looks like:
     subject: "Do you offer volume discounts?",
     updated: 1360990928,
     url: "https://cerb.example/profiles/ticket/JCA-16346-351"
-}</code>
-</pre>
+}{% endhighlight %}
 
 You can read more about how [dictionaries](/docs/guide/developers/dictionaries/) work in the documentation for bots.
 
@@ -102,12 +98,10 @@ You can read more about how [dictionaries](/docs/guide/developers/dictionaries/)
 
 In the above example, you'll notice that some related records weren't loaded by default:
 
-<pre>
-<code class="language-json">
+{% highlight json %}
     group__context: "cerberusweb.contexts.group",
     group_id: 6,	
-</code>
-</pre>
+{% endhighlight %}
 
 When you're using a dictionary in [automations](/docs/automations/) you can continue to expand keys as needed.
 
@@ -119,27 +113,21 @@ Instead, you can request that multiple keys be expanded when you make the origin
 
 Let's take another look at our original `GET` request:
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 GET /rest/tickets/123.json
-</code>
-</pre>
+{% endhighlight %}
 
 If we wanted the `group_name` and `latest_message_sender_org_name` keys to be available in the response, we'd add the following option to the request:
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 GET /rest/tickets/123.json?expand=group_name,latest_message_sender_org_name
-</code>
-</pre>
+{% endhighlight %}
 
 Remember, this would also load any other related key/value pairs from the group and organization records.  In fact, the following shortcut also works:
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 GET /rest/tickets/123.json?expand=group_,latest_message_sender_org_
-</code>
-</pre>
+{% endhighlight %}
 
 In the above request, we're requesting the expansion of the keys for the ticket's group and the latest message sender's organization by specifying only their key prefix.  This will also load the latest message and the latest message's sender, because they're both hierarchal parents of the organization's record.
 

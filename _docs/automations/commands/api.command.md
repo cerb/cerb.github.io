@@ -33,8 +33,7 @@ Each API command has a `name:` and an optional set of `params:`.
 
 New API commands can be added using the [plugin](/docs/plugins/) system.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   api.command:
@@ -46,8 +45,7 @@ start:
           worklist_id: cust_1
     output: results
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

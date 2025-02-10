@@ -40,8 +40,7 @@ In [website interactions](/docs/automations/triggers/interaction.website/) forms
 
 ## Upload a single file
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await/form:
@@ -58,8 +57,7 @@ start:
             The file ({{prompt_file_size|bytes_pretty}}) must be smaller than 1MB.
             {% endif %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The output placeholder is set to the new automation resource token.
 
@@ -67,8 +65,7 @@ The placeholder is also key expandable. In the above example, `prompt_file` coul
 
 ## Upload multiple files
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await/form:
@@ -92,8 +89,7 @@ start:
             * {{prompt_file.name}} ({{prompt_file.size|bytes_pretty}})
             {% endfor %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The output placeholder is set to a list of automation resource tokens.
 
@@ -101,8 +97,7 @@ Another output placeholder is set with a `__records` suffix. This includes the f
 
 ## Upload multiple files and convert to attachments
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await/form:
@@ -128,8 +123,7 @@ start:
             content: cerb:automation_resource:{{prompt_file.token}}
         output: new_file
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Syntax
 
@@ -157,8 +151,7 @@ An optional custom validation script. Any output is considered to be an error.
 
 You can use `if...elseif` to check multiple conditions.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 fileUpload/prompt_file:
   label: Upload a file:
@@ -170,5 +163,4 @@ fileUpload/prompt_file:
     The file ({{prompt_file_size|bytes_pretty}}) must be smaller than 1MB.
     {% endif %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

@@ -30,8 +30,7 @@ This class can be included by **Salesforce** applications to simplify interactio
 
 ## Cerb.apxc
 
-<pre>
-<code class="language-java">
+{% highlight java %}
 /***********************************************************************
   Cerb for Salesforce
   (c) Copyright 2017 WebGroup Media LLC
@@ -123,8 +122,7 @@ public class CerbApiTest {
   
     return null;
   }
-}</code>
-</pre>
+}{% endhighlight %}
 
 # Usage
 
@@ -132,8 +130,7 @@ public class CerbApiTest {
 * Set your API credentials.
 * Make API calls using `Cerb.get()`, `Cerb.post()`, etc.
 
-<pre>
-<code class="language-java">
+{% highlight java %}
 Cerb.setApiBaseUrl('https://example.cerb.me/rest/');
 Cerb.setApiAccessKey('xxxxxxxxxxxx');
 Cerb.setApiSecretKey('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
@@ -153,5 +150,4 @@ if(null != res) {
   
   Integer count = (Integer) results.get('count');
   List&lt;Object&gt; rows = (List&lt;Object&gt;) results.get('results');
-}</code>
-</pre>
+}{% endhighlight %}

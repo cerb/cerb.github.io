@@ -64,8 +64,7 @@ You can build your own Sender Org By Hostname workflow using this template as a 
 
 Change occurrences of **cerb.email.org_by_hostname** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.email.org_by_hostname
@@ -159,5 +158,4 @@ records:
           # Skip when sender has an org assigned
           disabled@bool: {{email_sender_org_id}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

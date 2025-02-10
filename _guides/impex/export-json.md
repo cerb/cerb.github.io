@@ -49,18 +49,15 @@ Before you begin, verify you have:
 
 Copy the `cerb-package-exporter.php` script to a directory on your server:
 
-<pre class="command-line" data-user="user" data-host="host">
-<code class="language-bash">
+{% highlight bash %}
 curl -O "https://raw.githubusercontent.com/cerb/cerb-release/v11.0/install/extras/impex/cerb-package-exporter.php"
-</code>
-</pre>
+{% endhighlight %}
 
 # Configuration
 
 In the same directory, create a `config.json` file:
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {
 	"exporter": {
 		"source": "Cerb10",
@@ -74,8 +71,7 @@ In the same directory, create a `config.json` file:
 		}
 	}
 }
-</code>
-</pre>
+{% endhighlight %}
 
 * `exporter.options.db_host` is the server (IP or hostname) containing your Cerb database
 * `exporter.options.db_name` is the name of your Cerb database
@@ -110,11 +106,9 @@ By default, the script will export your ticket data (tickets, messages, comments
 
 In the directory where you installed `cerb-package-exporter.php`, run the following command:
 
-<pre class="command-line" data-user="user" data-host="host">
-<code class="language-bash">
+{% highlight bash %}
 php cerb-package-exporter.php -c config.json -o output
-</code>
-</pre>
+{% endhighlight %}
 
 You will see output as your data exports. A large dataset will be broken up into multiple subdirectories.
 
@@ -122,8 +116,7 @@ You will see output as your data exports. A large dataset will be broken up into
 
 **03-tickets-000001/000000001.json:**
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
     "package": {
@@ -185,5 +178,4 @@ You will see output as your data exports. A large dataset will be broken up into
     ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

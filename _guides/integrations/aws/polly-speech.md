@@ -77,8 +77,7 @@ Select the **JSON** tab.
 
 Add the following block to the `Statement` list:
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {
   "Effect": "Allow",
   "Action": [
@@ -91,8 +90,7 @@ Add the following block to the `Statement` list:
     "*"
   ]
 }
-</code>
-</pre>
+{% endhighlight %}
 
 Click the blue **Review policy** button in the bottom right.
 
@@ -106,8 +104,7 @@ Navigate to **Setup >> Packages >> Import**.
 
 Copy and paste the following behavior into the large text box:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -464,8 +461,7 @@ Copy and paste the following behavior into the large text box:
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Import** button.
 
@@ -572,15 +568,13 @@ You can do anything with the audio stream URL at this point.  For instance:
 
 In a conversational bot behavior, you can use the **Respond with script** action to speak the URL:
 
-<pre>
-<code class="language-html">
+{% highlight html %}
 {% raw %}
 &lt;script&gt;
 Devblocks.playAudioUrl('{{_behavior.polly_speech_url}}');
 &lt;/script&gt;
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # References
 

@@ -33,8 +33,7 @@ This is a shortcut for [record.get:](/docs/automations/commands/record.get/)
 
 ## Create a ticket dictionary
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -43,5 +42,4 @@ start:
   return:
     output: {{ticket__label}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

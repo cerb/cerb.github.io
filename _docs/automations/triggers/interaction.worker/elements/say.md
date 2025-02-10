@@ -28,8 +28,7 @@ jumbotron:
 
 In [interaction](/docs/automations/triggers/interaction.worker/) web forms, a **say** element displays a block of text or Markdown.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await:
@@ -40,8 +39,7 @@ start:
             # Heading
             This is a **paragraph** in Markdown.
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/automations/triggers/interaction.worker/elements/say.png" class="screenshot">

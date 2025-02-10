@@ -28,8 +28,7 @@ jumbotron:
 
 The **record.upsert:** command creates or updates a record with the given fields.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   record.upsert:
@@ -41,8 +40,7 @@ start:
       fields:
         importance: 75
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

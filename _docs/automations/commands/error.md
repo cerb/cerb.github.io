@@ -26,13 +26,11 @@ The **error:** command unsuccessfully terminates an [automation](/docs/automatio
 
 # Syntax
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   error: An unexpected error occurred!
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The error message is returned to the caller.

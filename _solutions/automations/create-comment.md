@@ -27,7 +27,7 @@ You can use [record.create:](https://cerb.ai/docs/automations/commands/record.cr
 {% tabs create_comment %}
 
 {% tab create_comment automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   record.create/comment:
@@ -43,7 +43,7 @@ start:
         comment@text:
           This is a **comment** from an automation.
 {% endraw %}
-```
+{% endhighlight %}
 
 |---
 | Field |
@@ -53,14 +53,14 @@ start:
 {% endtab %}
 
 {% tab create_comment policy %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 commands:
   record.create:
     deny/type@bool: {{inputs.record_type is not record type ('comment')}}
     allow@bool: yes
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

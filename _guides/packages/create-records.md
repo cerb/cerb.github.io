@@ -54,29 +54,25 @@ With a package, you can include all of these records in a single package and def
 
 Packages are in JSON format. At the top-level of the package object you'll find the `records` key:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {
   "package": {
     "name": "Example package"
   }
   "records": []
 }
-</code>
-</pre>
+{% endhighlight %}
 
 This key holds an array of record objects.  Each record object has two required keys:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "uid": "example_uid",
   "_context": "record_type"
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * **uid** is a unique identifier for this record that can be referenced elsewhere in the package. It will be replaced with the real record ID when the package is imported.
 * **_context** is the type of record: `attachment`, `comment`, `ticket`, `task`, etc.
@@ -89,8 +85,7 @@ When you create a record like a `message`, it requires a `ticket_id` key.  If yo
 
 This is the purpose of UIDs.  Each UID has a placeholder in the format `{%raw%}{{{uid.<uid-name>}}}{%endraw%}`.  You can use this placeholder as the value of any key in a record object:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 "records": [
   {
@@ -105,8 +100,7 @@ This is the purpose of UIDs.  Each UID has a placeholder in the format `{%raw%}{
   }
 ]
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 When this package is imported, the message would be added to the ticket `ticket_001` from the same package.
 
@@ -116,8 +110,7 @@ Cerb will handle all dependencies between UIDs for you -- you don't have to defi
 
 Records can be conditionally included or excluded during package import using the `_exclude` key. This key accepts scripting syntax that evaluates to a boolean value:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "uid": "example_record",
@@ -126,15 +119,13 @@ Records can be conditionally included or excluded during package import using th
   "name": "Example Record"
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 When the `_exclude` condition evaluates to `true`, the record will be excluded during package import.
 
 This is particularly useful when combined with package prompts to allow workers to choose which records to import. For example:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "configure": {
@@ -168,8 +159,7 @@ This is particularly useful when combined with package prompts to allow workers 
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 In this example, based on the worker's dataset selection in the prompt, only one widget record will be imported. If they select "Open Tickets" then the `widget_my_tasks` record will be excluded, and vice versa.
 
@@ -177,8 +167,7 @@ In this example, based on the worker's dataset selection in the prompt, only one
 
 You can set a custom field by including a key with the format `custom_<id>`, where `<id>` is the ID of the custom field. These IDs can be found from **Search >> Custom Fields** in Cerb by adding the **ID** column to the worklist.
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "uid": "example_record",
@@ -188,15 +177,13 @@ You can set a custom field by including a key with the format `custom_<id>`, whe
   "custom_3": ["Option 1", "Option 2"]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Links
 
 You can create links between records by including a `links` key in your record object.  The value is an array of `context:id` pairs.
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "uid": "example_record",
@@ -207,15 +194,13 @@ You can create links between records by including a `links` key in your record o
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Automation events
 
 Automation event records are modified but not created. You can use the `events` key to append to an event by name.
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -227,15 +212,13 @@ Automation event records are modified but not created. You can use the `events` 
     }
   ]
 }{% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Toolbars
 
 Toolbar records are modified but not created. You can use the `toolbars` key to append to a toolbar by name.
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -247,8 +230,7 @@ Toolbar records are modified but not created. You can use the `toolbars` key to 
     }
   ]
 }{% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Examples
 
@@ -258,8 +240,7 @@ Let's look at some working examples for different record types.
 
 This package creates a new ticket with one message. The message has both plaintext and HTML versions, and an image attachment:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -324,8 +305,7 @@ This package creates a new ticket with one message. The message has both plainte
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The `group_id` and `bucket_id` keys use special placeholders from the `default` object. You could also set these to specific ID values, or use a prompt to ask for them at import time.
 

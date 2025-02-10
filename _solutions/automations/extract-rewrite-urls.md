@@ -33,23 +33,11 @@ In the response, URLs are replaced with tokens in the template which can be modi
 
 For instance, this function can be used to rewrite all links in an email template for click tracking.
 
-```
-{% raw %}
-{% set html %}
-This is some <b>HTML</b> with <a href="https://cerb.ai/">links</a>.
-{% endset %}
-{% set results = cerb_extract_uris(html) %}
-{% set new_urls = results.tokens|map(
-  (url,token) => "https://proxy.example/click?url=" ~ url|url_encode
-)%}
-{{results.template|replace(new_urls)}}
-{% endraw %}
-```
-
 {% tabs extract_rewrite_urls %}
 
 {% tab extract_rewrite_urls automation %}
-```cerb
+
+{% highlight cerb %}
 {% raw %}
 start:
   set/init:
@@ -66,11 +54,11 @@ start:
   return:
     output@text: {{message|replace(urls)}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab extract_rewrite_urls output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   output: Visit our website at https://click.example/?url=https%3A%2F%2Fcerb.ai%2F to learn more.
@@ -78,7 +66,7 @@ __return:
   urls:
     https://cerb.ai/: https://click.example/?url=https%3A%2F%2Fcerb.ai%2F
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

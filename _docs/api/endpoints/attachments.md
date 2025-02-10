@@ -28,8 +28,6 @@ Download an attachment.
 
 **Example:**
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $out = $cerb->get($base_url . 'attachments/1/download.json');
-</code>
-</pre>
+{% endhighlight %}

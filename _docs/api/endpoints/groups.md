@@ -38,8 +38,7 @@ Modify group rosters.
 
 ### Example
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $changes = [
   "groups" => [
     "1" => [
@@ -61,5 +60,4 @@ $postfields = array(
     array('json', json_encode($changes)),
 );
 $out = $cerb->put($base_url . 'groups/123.json', $postfields);
-</code>
-</pre>
+{% endhighlight %}

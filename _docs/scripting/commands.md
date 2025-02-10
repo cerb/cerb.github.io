@@ -33,69 +33,60 @@ These commands are available in bot scripts and snippets:
 
 Apply the given filters to the enclosed block of text:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% apply upper %}
 All of this text will be uppercase.
 {% endapply %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 ALL OF THIS TEXT WILL BE UPPERCASE.
-```
+{% endhighlight %}
 
 ## do
 
 Evaluate a variable or expression without outputting anything:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% do "This won't print" %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 This is primarily useful for expanding placeholders in dictionaries before serializing the object to [JSON](/docs/scripting/#json) or [XML](/docs/scripting/#xml):
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% do ticket_custom_ %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## for
 
 Arrays can be iterated with **for** loops:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set list_of_names = ["Jeff", "Dan", "Darren"] %}
 {% for name in list_of_names %}
 * {{name}}
 {% endfor %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 * Jeff
 * Dan
 * Darren
-```
+{% endhighlight %}
 
 ## if
 
 Conditional logic can display different content based on the result of any number of **expressions**:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set sla_expiration = '+2 weeks'|date('U') %}
 {% if sla_expiration >= 'now'|date('U') %}
@@ -104,30 +95,27 @@ Your SLA coverage is active.
 Your SLA coverage has expired.
 {% endif %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Your SLA coverage is active.
-```
+{% endhighlight %}
 
 ## set
 
 You can make your own variables in a template using the **set** command:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set name = "Kina" %}
 {% set quantity = 5 %}
 {{name}} has {{quantity}} gold stars.
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Kina has 5 gold stars.
-```
+{% endhighlight %}
 
 Variables are temporary. When you define a new variable in one action, it can't be referenced from other actions.  In programmer parlance, the **scope** of a variable is limited to the same template.
 
@@ -136,8 +124,7 @@ Variables are temporary. When you define a new variable in one action, it can't 
 
 Remove whitespace between HTML tags in the enclosed block of text with **spaceless**:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% spaceless %}
 &lt;div&gt;
@@ -145,12 +132,11 @@ Remove whitespace between HTML tags in the enclosed block of text with **spacele
 &lt;/div&gt;
 {% endspaceless %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 <div><span>This will all be on a single line.</span></div>
-```
+{% endhighlight %}
 
 <div class="cerb-box note">
 <p>This is also useful when you're using a lot of template commands (if, for) to mark up text. You won't have to add <tt>-</tt> to every tag.</p>
@@ -160,26 +146,23 @@ Remove whitespace between HTML tags in the enclosed block of text with **spacele
 
 You can avoid parsing template syntax by enclosing the code in **verbatim** tags:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% verbatim %}
 You can print a variable by typing {{variable_name}}
 {% endverbatim %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 You can print a variable by typing {%raw %}{{variable_name}}{% endraw %}
-```
+{% endhighlight %}
 
 ## with
 
 Create a separate variable scope using the **with** command:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% with %}
 {% set name = 'Kina' -%}
@@ -189,13 +172,12 @@ Hi, {{name}}!
 Where did you go?
 {% endif %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Hi, Kina!
 Where did you go?
-```
+{% endhighlight %}
 
 <div class="section-nav">
 	<div class="left">

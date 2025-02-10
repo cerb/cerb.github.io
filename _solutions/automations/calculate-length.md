@@ -20,24 +20,24 @@ With [\|length](/docs/scripting/filters/#length) you can calculate the length of
 {% tabs calculate_length %}
 
 {% tab calculate_length automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   return:
     list_len@int: {{[1,2,3,4,5,6,7,8,9,10]|length}}
     text_len@int: {{'This is some text'|length}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab calculate_length output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   list_len: 10
   text_len: 17
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

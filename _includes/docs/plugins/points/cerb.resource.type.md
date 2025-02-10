@@ -1,7 +1,6 @@
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerb.resource.type&quot;&gt;
 			&lt;id&gt;cerb.resource.dataset.csv&lt;/id&gt;
 			&lt;name&gt;Dataset (.csv)&lt;/name&gt;
@@ -11,13 +10,11 @@
 			&lt;/class&gt;
 			&lt;params/&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 class ExampleExtension extends Extension_ResourceType {
 	/**
 	 * @param Model_Resource $resource
@@ -35,6 +32,5 @@ class ExampleExtension extends Extension_ResourceType {
 	public function validateContentData($fp, $extension_params, $error)
 
 }
-</code>
-</pre>
+{% endhighlight %}
 

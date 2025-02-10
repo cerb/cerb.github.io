@@ -45,21 +45,18 @@ jumbotron:
 
 #### Query: 
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:ui.icons
 filter:git
 limit:10
 format:dictionaries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Response:
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {
   "data": [
     {
@@ -105,5 +102,4 @@ format:dictionaries
     }
   }
 }
-</code>
-</pre>
+{% endhighlight %}

@@ -22,8 +22,7 @@ redirect_from:
 
 With [email relay](/guides/mail/relaying/), workers can respond to messages from external email clients rather than their web browser.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   api.command:
@@ -34,5 +33,4 @@ start:
         emails@csv: kina@cerb.example, mara@cerb.example
     output: results
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

@@ -33,16 +33,14 @@ In [interaction](/docs/automations/triggers/interaction.worker/) web forms, a **
 
 This is automatically added when an interaction exits in the [await state](/docs/automations/#exit-states). You do not need to do it yourself.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await:
     form:
       elements:
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/automations/triggers/interaction.worker/elements/submit.png" class="screenshot">
@@ -64,8 +62,7 @@ When `submit:buttons:` isn't provided, the default 'continue' and 'reset' button
 
 The current alternative styles for buttons are 'secondary' (gray like reset) or 'outline' (blue like continue but not filled). This makes it easy to visually distinguish primary/default and secondary options.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await:
@@ -82,10 +79,10 @@ start:
             continue/no:
               label: No
               style: secondary
-              value: no{% endraw %}
+              value: no
               hidden@bool: no
-</code>
-</pre>
+{% endraw %}
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/automations/triggers/interaction.worker/elements/submit-buttons.png" class="screenshot">

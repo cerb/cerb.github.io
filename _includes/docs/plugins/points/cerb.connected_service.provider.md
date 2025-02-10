@@ -1,7 +1,6 @@
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerb.connected_service.provider&quot;&gt;
 			&lt;id&gt;cerb.service.provider.aws&lt;/id&gt;
 			&lt;name&gt;Amazon Web Services&lt;/name&gt;
@@ -17,13 +16,11 @@
 				&lt;/param&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 class ExampleExtension extends Extension_ConnectedServiceProvider {
 	public function ajaxAction()
 
@@ -38,6 +35,5 @@ class ExampleExtension extends Extension_ConnectedServiceProvider {
 	public function saveConfigForm(Model_ConnectedService $service, array $params, $error)
 
 }
-</code>
-</pre>
+{% endhighlight %}
 

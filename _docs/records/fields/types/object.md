@@ -29,8 +29,7 @@ An **object** field contains a _collection_ of **keys** and their associated **v
 
 As JSON from [packages](/docs/packages/):
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
 	"params": {
@@ -39,21 +38,18 @@ As JSON from [packages](/docs/packages/):
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Records API
 
 In [PUT](/docs/api/endpoints/records/#update) or [POST](/docs/api/endpoints/records/#create) requests from the [API](/docs/api/):
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 {% raw %}
 &amp;fields[params][color]=red
 &amp;fields[params][quantity]=6
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="section-nav">
 	<div class="left">

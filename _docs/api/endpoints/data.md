@@ -31,12 +31,10 @@ Run a [data query](/docs/data-queries/).
 ### Example
 {: .no_toc}
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $query = http_build_query([
   'q' => 'type:worklist.subtotals of:tickets by:[created@year,group]',
 ]);
   
 $out = $cerb->get($base_url . 'data/query.json?' . $query);
-</code>
-</pre>
+{% endhighlight %}

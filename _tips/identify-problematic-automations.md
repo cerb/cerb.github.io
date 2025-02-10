@@ -19,8 +19,7 @@ You can use a [data query](docs/data-queries/) to identify which automations or 
 
 You can add these queries to a chart or run then in the data query tester found in **Setup >> Developers >> Data Query Tester**: 
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:metrics.timeseries
 series.automations:(
@@ -35,13 +34,11 @@ range:"-1 month"
 period:year
 format:dictionaries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 You can find the slowest automations and behaviors (in milliseconds) with this query:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:metrics.timeseries
 series.automations:(
@@ -56,5 +53,4 @@ range:"-1 month"
 period:year
 format:dictionaries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

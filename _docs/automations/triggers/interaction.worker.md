@@ -81,15 +81,13 @@ An interaction automation [dictionary](/docs/automations/#dictionaries) starts w
 
 When suspending in the `await:form:` state, the interaction displays a web form with the desired elements. The form may prompt for user input, validate it, and set dictionary keys (placeholders) with the responses.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 await:
   form:
     title: Your form title
     elements:
       # ...
-</code>
-</pre>
+{% endhighlight %}
 
 ### title:
 {: .no_toc}
@@ -123,8 +121,7 @@ A form can be created with any combination of the following element types:
 
 When the interaction suspends in the `await` state, a `submit:` element is automatically appended to the form if one doesn't already exist.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await/who:
@@ -146,8 +143,7 @@ start:
     user:
       name@key: prompt_name
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## await:draft:
 
@@ -168,8 +164,7 @@ An optional `output:` parameter has the following keys:
 
 This allows the interaction to make decisions based on those outcomes.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   record.create:
@@ -200,8 +195,7 @@ start:
         form:
           say: Message sent!
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## await:duration:
 
@@ -228,8 +222,7 @@ The `until:` parameter is an absolute (`2021-12-31 08:00 America/New_York`) or r
 
 (none)
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -271,8 +264,7 @@ start:
           set:
             isPlaying@bool: no
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## await:interaction:
 
@@ -292,8 +284,7 @@ The `uri:` parameter specifies the delegate [automation](/docs/records/types/aut
 
 An `output:` key specifies the placeholder that should receive the results from the delegate.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   while:
@@ -337,8 +328,7 @@ start:
                 'echo': 'wgm.interaction.echo',
               }[prompt_menu]}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## await:record:
 
@@ -361,8 +351,7 @@ An optional `output:` parameter specifies a placeholder to store the status of t
 
 This allows the interaction to make decisions based on those outcomes.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 inputs:
   text/record_type:
@@ -390,8 +379,7 @@ start:
               project_board_column:{{inputs.column.id}}
 
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## return:
 
@@ -399,14 +387,12 @@ When the interaction concludes in the `return` state, it returns any number of k
 
 Each [caller](#callers) has a set of expected return keys to control its behavior.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 return:
   key1: value1
   key2: value2
   ...
-</code>
-</pre>
+{% endhighlight %}
 
 The following keys are available on all worker interactions:
 

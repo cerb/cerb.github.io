@@ -84,8 +84,7 @@ Click on **(Empty)**.
 
 Paste the following workflow template:
 
-<pre style="max-height:29.5em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: wgm.example.website.agent
@@ -299,8 +298,7 @@ records:
             deny/url@bool: {{inputs.url is not prefixed ('https://api.cerb.cloud/docs/')}}
             allow@bool: yes
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Continue** button twice.
 
@@ -324,7 +322,7 @@ On your portal's profile page, select the **Configure** tab, then copy the code 
 
 For example, paste the following `<script>` tag in the footer of your website (ideally above the `</body>`).
 
-```html
+{% highlight html %}
 <script id="cerb-interactions"
   data-cerb-badge-interaction="menu"
   type="text/javascript"
@@ -332,7 +330,7 @@ For example, paste the following `<script>` tag in the footer of your website (i
   crossorigin="anonymous"
   defer
 ></script>
-```
+{% endhighlight %}
 
 * Replace `https://cerb.example/` above with your own Cerb base URL.
 * Replace `my-portal` with your own portal path.
@@ -345,9 +343,9 @@ You can include URL-encoded parameters in a `data-cerb-interaction-params` attri
 
 For instance:
 
-```html
+{% highlight html %}
 <button type="button" data-cerb-interaction="example" data-cerb-interaction-params="&param1=value1&param2=value2">Example Interaction</button>
-```
+{% endhighlight %}
 
 ### Triggering interactions from links
 
@@ -355,9 +353,9 @@ You can also append an anchor tag to any URL on your website and open an interac
 
 Append the following anchor to the URL of any page on your website:
 
-```
+{% highlight text %}
 #/nps&email=customer@cerb.example&s=qbISkLjv
-```
+{% endhighlight %}
 
 #### Securing permalink URLs with signatures
 
@@ -369,24 +367,22 @@ When you need to tamper-proof interaction parameters, you should create a signat
 
 For instance, if you were generating the unsubscribe URLs from a bot behavior in Cerb, we could do something like:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set email = "customer@example.com" %}
 {% set hmac_secret = "a1b2c3d4e5f6abcd1234" %}
 {% set signature = [email]|join|hash_hmac(hmac_secret,"sha256") %}
 https://website.example/#/unsubscribe&email={{email}}&s={{signature}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 If you had multiple parameters to sign, you'd append them like `[email,param2,param3]|join` above.
 
 This generates a URL like:
 
-```
+{% highlight text %}
 https://website.example/#/unsubscribe&email=customer@example.com&s=a0cf063304b33ea27f93e22c7dc559958cc126d1a68f0a8049eec5b4c4b8e640
-```
+{% endhighlight %}
 
 Note that a SHA-256 signature is 64 characters long, which can result in unwieldy URLs.
 
@@ -394,24 +390,22 @@ Based on the desired level of security, you can shorten the URL by only includin
 
 It's a simple change to our URL generation script to use a signature segment instead:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set email = "customer@example.com" %}
 {% set hmac_secret = "a1b2c3d4e5f6abcd1234" %}
 {% set signature = [email]|join|hash_hmac(hmac_secret,"sha256") %}
 https://website.example/#/unsubscribe&email={{email}}&s={{signature[24:16]}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The `signature[24:16]` syntax returns the next 16 characters of `signature` starting at the 24th position.  You could use any segment, as long as you're comparing it in the same way later.
 
 This gives us a much shorter URL, like:
 
-```
+{% highlight text %}
 https://website.example/#/unsubscribe&email=customer@example.com&s=7dc559958cc126d1
-```
+{% endhighlight %}
 
 To verify a signature, your automation would need to read the value of the `s` (signature) parameter and compare it to the signature it generates itself using the secret key and the other given parameter values. Essentially, this is just repeating the process of generating the signature above, but testing the user's provided value for the `email` parameter. If using signature segments, make sure you use the same offset and length in your comparison.
 
@@ -461,14 +455,12 @@ You can style the Cerb bot chat bubble and window on your website using CSS sele
 
 For instance:
 
-<pre>
-<code class="language-css">
+{% highlight css %}
 .cerb-interaction-badge .cerb-interaction-badge--icon { }
 .cerb-interaction-popup { }
 .cerb-interaction-popup .cerb-interaction-popup--title { }
 .cerb-interaction-popup .cerb-interaction-popup--form-elements-button {} 
-</code>
-</pre>
+{% endhighlight %}
 
 You can change the icon in the chat bubble, change the bubble's size or position, change the colors in the chat window, etc.
 

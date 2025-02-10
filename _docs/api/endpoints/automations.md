@@ -57,8 +57,6 @@ Search automation logs.
 ## Example
 {:.no_toc}
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $out = $cerb->get($base_url . 'automation/logs/search.json?q=level:error');
-</code>
-</pre>
+{% endhighlight %}

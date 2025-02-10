@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerberusweb.rest.controller&quot;&gt;
 			&lt;id&gt;cerberusweb.datacenter.domains.rest&lt;/id&gt;
 			&lt;name&gt;Domains&lt;/name&gt;
@@ -16,13 +15,11 @@
 				&lt;param key=&quot;uri&quot; value=&quot;domains&quot;/&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_RestController {
 	public function deleteAction($stack) {
@@ -41,6 +38,5 @@ class ExampleExtension extends Extension_RestController {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

@@ -29,7 +29,7 @@ Here is an example of using the [dict_set()](/docs/scripting/functions/#dict_set
 
 {% tabs set-nested-dictionary-keys %}
 {% tab set-nested-dictionary-keys automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -42,11 +42,11 @@ start:
   return:
     worker@key: worker
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab set-nested-dictionary-keys output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 __return:
   worker:
@@ -57,6 +57,6 @@ __return:
           first: Kina
           last: Halpue
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}

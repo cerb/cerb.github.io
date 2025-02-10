@@ -45,11 +45,9 @@ The automation [dictionary](/docs/automations/#dictionaries) starts with the fol
 
 When the function concludes in the `return` state, it returns any number of key/value pairs to the caller. Keys may be nested to return dictionaries.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 return:
   key1: value1
   key2: value2
   ...
-</code>
-</pre>
+{% endhighlight %}

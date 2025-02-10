@@ -93,16 +93,14 @@ Select the **JSON** tab.
 
 Add the following block to the `Statement` list:
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {
   "Sid": "CerbBedrockModels",
   "Effect": "Allow",
   "Action": "bedrock:InvokeModel",
   "Resource": "*"
 }
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-box note">
 	<p>You can tighten up the <code>Resource</code> policy based on your needs once you confirm the integration is working.</p>
@@ -162,8 +160,7 @@ You can build your own Generate Profile Images workflow using this template as a
 
 Change occurrences of **cerb.integrations.aws_bedrock.profile_images** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.integrations.aws_bedrock.profile_images
@@ -361,5 +358,4 @@ records:
           uri: cerb:automation:cerb.integrations.aws_bedrock.profile_images.interaction
           icon: magic
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

@@ -30,21 +30,19 @@ JSON[^json] is a popular format for serializing or exchanging human-readable dat
 
 You can decode a JSON-encoded string with the [json_decode()](/docs/scripting/functions/#json_decode) function:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set json_string = "{\"name\":\"Joe Customer\",\"order_id\":12345}" %}
 {% set json = json_decode(json_string) %}
 Customer: {{json.name}}
 Order #: {{json.order_id}}	
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Customer: Joe Customer
 Order #: 12345
-```
+{% endhighlight %}
 
 This returns an [object](/docs/scripting/arrays-objects/#objects).
 
@@ -52,8 +50,7 @@ This returns an [object](/docs/scripting/arrays-objects/#objects).
 
 You can construct or modify a JSON object using the [dict_set()](/docs/scripting/functions/#dict_set) function:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set json = {'name': 'Joe Customer', 'order_id': 12345} %}
 {% set json = dict_set(json, 'order_id', 54321) %}
@@ -64,22 +61,20 @@ Order #: {{json.order_id}}
 Status: {{json.status.text}}
 Tracking #: {{json.status.tracking_id}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Customer: Joe Customer
 Order #: 54321
 Status: shipped
 Tracking #: Z1F238
-```
+{% endhighlight %}
 
 # JSON Encoding
 
 You can encode any variable as a JSON string with the [json_encode](/docs/scripting/filters/#json_encode) filter:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set json = {'name': 'Joe Customer'} %}
 {% set json = dict_set(json, 'order_id', 54321) %}
@@ -87,19 +82,17 @@ You can encode any variable as a JSON string with the [json_encode](/docs/script
 {% set json = dict_set(json, 'status.tracking_id', 'Z1F238') %}
 {{json|json_encode}}	
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {"name":"Joe Customer","order_id":54321,"status":{"text":"shipped","tracking_id":"Z1F238"}}	
-```
+{% endhighlight %}
 
 # JSON Prettification
 
 You can _"prettify"_ a JSON string with the [json_pretty](/docs/scripting/filters/#json_pretty) filter:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set json = {'name': 'Joe Customer'} %}
 {% set json = dict_set(json, 'order_id', 54321) %}
@@ -107,10 +100,9 @@ You can _"prettify"_ a JSON string with the [json_pretty](/docs/scripting/filter
 {% set json = dict_set(json, 'status.tracking_id', 'Z1F238') %}
 {{json|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {
   "name": "Joe Customer",
   "order_id": 54321,
@@ -119,7 +111,7 @@ You can _"prettify"_ a JSON string with the [json_pretty](/docs/scripting/filter
     "tracking_id": "Z1F238"
   }
 }
-```
+{% endhighlight %}
 
 <div class="section-nav">
 	<div class="left">

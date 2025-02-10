@@ -27,8 +27,7 @@ jumbotron:
 
 The **record.delete:** command deletes a record of the given type.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   record.delete:
@@ -37,8 +36,7 @@ start:
       record_type: task
       record_id: 123
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Syntax
 

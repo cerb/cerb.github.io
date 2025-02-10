@@ -31,8 +31,7 @@ You can decode an XML string into an XML object with the [xml_decode()](/docs/sc
 
 Use the [xml_xpath()](/docs/scripting/functions/#xml_xpath) function to extract values with XPath[^xpath] queries.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set string_of_xml = 
 "&lt;response&gt;
@@ -46,20 +45,18 @@ Use the [xml_xpath()](/docs/scripting/functions/#xml_xpath) function to extract 
 Client ID: {{client_id}}
 Invoice ID: {{invoice_id}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Client ID: 1
 Invoice ID: 123
-```
+{% endhighlight %}
 
 # XML Namespaces
 
 You can define an XML namespace with the [xml_xpath_ns()](/docs/scripting/functions/#xml_xpath_ns) function:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set string_of_xml = 
 "&lt;response xmlns=\"http://www.example.com/api/\"&gt;
@@ -74,20 +71,18 @@ You can define an XML namespace with the [xml_xpath_ns()](/docs/scripting/functi
 Client ID: {{client_id}}
 Invoice ID: {{invoice_id}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Client ID: 1
 Invoice ID: 123
-```
+{% endhighlight %}
 
 # XML Encoding
 
 You can encode an object as XML with the [xml_encode()](/docs/scripting/functions/#xml_encode) function:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set string_of_xml = 
 "&lt;response xmlns=\"http://www.example.com/api/\"&gt;
@@ -98,12 +93,11 @@ You can encode an object as XML with the [xml_encode()](/docs/scripting/function
 {% set xml = xml_decode(string_of_xml) %}
 {{xml_encode(xml.client_id)}}	
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight xml %}
 <client_id>1</client_id>
-```
+{% endhighlight %}
 
 <div class="section-nav">
 	<div class="left">

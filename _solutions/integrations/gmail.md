@@ -35,127 +35,125 @@ In this guide we'll walk through the process of linking Cerb to Gmail. You can u
 
 ### Create a new project
 
-1. Log in to: <https://console.cloud.google.com/apis/> as a workspace user.
+Log in to: <https://console.cloud.google.com/apis/> as a workspace user.
 
-1. Click **Create Project** in the top right.
+Click **Create Project** in the top right.
 
-1. Enter:
+Enter:
 
-    |-|-
-    | Project Name: | `Cerb`
-    | Organization: | (your organization)
-    | Location: | (your organization)
+|-|-
+| Project Name: | `Cerb`
+| Organization: | (your organization)
+| Location: | (your organization)
 
-1. Click the blue **Create** button.
+Click the blue **Create** button.
 
-1. Click **Select Project** in the notification in the top right.
+Click **Select Project** in the notification in the top right.
 
 ### Configure the consent screen
 
-1. Select **OAuth consent screen** in the left sidebar.
+Select **OAuth consent screen** in the left sidebar.
 
-1. Enter:
+Enter:
 
-    |-|-
-    | User Type: | Internal (only available in workspaces)
+|-|-
+| User Type: | Internal (only available in workspaces)
 
-1. Click the blue **Create** button.
+Click the blue **Create** button.
 
-1. Enter:
+Enter:
 
-    |-|-
-    | Application name: | Cerb
-    | Scopes for Google APIs: | email, profile, openid
-    | Authorized domains: | _(your Cerb base URL; e.g. `cerb.me`)_
+|-|-
+| Application name: | Cerb
+| Scopes for Google APIs: | email, profile, openid
+| Authorized domains: | _(your Cerb base URL; e.g. `cerb.me`)_
 
-1. Click the blue **Save** button.
+Click the blue **Save** button.
 
 ### Enable Gmail API
 
-1. Click **Library** in the left sidebar.
+Click **Library** in the left sidebar.
 
-1. Search for `Gmail` and select **Gmail API**.
+Search for `Gmail` and select **Gmail API**.
 
-1. Click the blue **Enable** button at the top of the page.
+Click the blue **Enable** button at the top of the page.
 
 ### Add credentials
 
-1. Click **Create Credentials** in top right.
+Click **Create Credentials** in top right.
 
-1. Enter:
+Enter:
 
-    |-|-
-    | Select an API: | Gmail API
-    | What data will you be accessing: | User data
+|-|-
+| Select an API: | Gmail API
+| What data will you be accessing: | User data
 
-1. Click the **Next** button.
+Click the **Next** button.
 
-1. Click the **Add or Remove Scopes** button.
+Click the **Add or Remove Scopes** button.
 
-1. Select `https://mail.google.com/` (Gmail API) from the list.
+Select `https://mail.google.com/` (Gmail API) from the list.
 
-1. Select `https://www.googleapis.com/auth/userinfo.profile` from the list.
+Select `https://www.googleapis.com/auth/userinfo.profile` from the list.
 
-1. Click the **Update** button.
+Click the **Update** button.
 
-1. Click the **Save and Continue** button.
+Click the **Save and Continue** button.
 
-1. In **Application type** select **Web application**.
+In **Application type** select **Web application**.
 
-1. Enter:
+Enter:
 
-    |-|-
-    | Name: | Cerb
-    | Authorized redirect URIs: | `https://YOUR-CERB-HOST/oauth/callback`
+|-|-
+| Name: | Cerb
+| Authorized redirect URIs: | `https://YOUR-CERB-HOST/oauth/callback`
 
-1. Click the blue **Create** button.
+Click the blue **Create** button.
 
-1. Click the **Download** button.
+Click the **Download** button.
 
-1. Click the **Done** button.
+Click the **Done** button.
 
 # Configure Cerb
 
 ### Create the connected service
 
-1. Navigate to **Search >> Connected Services**.
+Navigate to **Search >> Connected Services**.
 
-1. Click **(+)** button in the right of the gray bar above the worklist.
+Click **(+)** button in the right of the gray bar above the worklist.
 
-1. In the **Library** tab, select the **Google** package.
+In the **Library** tab, select the **Google** package.
 
-1. Paste your **Client ID** and **Client Secret** from the credentials you downloaded earlier.
+Paste your **Client ID** and **Client Secret** from the credentials you downloaded earlier.
 
-1. Scope:
+Scope:
 
-    <pre>
-    <code class="language-text">
-    https://mail.google.com/ https://www.googleapis.com/auth/userinfo.profile
-    </code>
-    </pre>
+{% highlight text %}
+https://mail.google.com/ https://www.googleapis.com/auth/userinfo.profile
+{% endhighlight %}
 
-1. Click the **Create** button.
+Click the **Create** button.
 
 ### Create the connected account
 
-1. Navigate to **Search >> Connected Accounts**.
+Navigate to **Search >> Connected Accounts**.
 
-1. Click **(+)** button in the right of the gray bar above the worklist.
+Click **(+)** button in the right of the gray bar above the worklist.
 
-1. Select **Google**.
+Select **Google**.
 
-1. Enter:
+Enter:
 
-    |-|-
-    | Name: | `Gmail (you@example.com)` 
+|-|-
+| Name: | `Gmail (you@example.com)` 
 
-1. Click the blue **Link to Google** button.
+Click the blue **Link to Google** button.
 
-1. Log in with your Google account.
+Log in with your Google account.
 
-1. Click **Allow**.
+Click **Allow**.
 
-1. Click the **Save Changes** button.
+Click the **Save Changes** button.
 
 # Next steps
 

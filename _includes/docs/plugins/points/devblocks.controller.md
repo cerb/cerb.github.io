@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;devblocks.controller&quot;&gt;
 			&lt;id&gt;core.controller.ui&lt;/id&gt;
 			&lt;name&gt;UI Controller&lt;/name&gt;
@@ -16,13 +15,11 @@
 				&lt;param key=&quot;uri&quot; value=&quot;ui&quot;/&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends DevblocksControllerExtension {
 	public function handleRequest(DevblocksHttpRequest $request) {
@@ -32,6 +29,5 @@ class ExampleExtension extends DevblocksControllerExtension {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

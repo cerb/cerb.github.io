@@ -34,8 +34,7 @@ jumbotron:
 
 **Request:**
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 POST /rest/records/attachment/create.json HTTP/1.1
 Cerb-Auth: XXXX:XXXX
 Date: {{'now'|date:"%a, %d %b %Y %T %Z"}}
@@ -47,16 +46,14 @@ fields[name]=filename.txt
 &fields[content]=This is some plaintext content created through the API.
 &fields[attach][]=message:123
 &fields[attach][]=comment:123
-</code>
-</pre>
+{% endhighlight %}
 
 * `&fields[attach][]` is an optional list of `context:id` tuples to link the attachment to.
 * The `POST` fields should be URL-encoded. They are decoded here for readability.
 
 **Response:**
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {
   "__build": 2017110901,
   "__status": "success",
@@ -72,15 +69,13 @@ fields[name]=filename.txt
   "storage_sha1hash": "260588f317aec33c59534dddfa91da68e841c424",
   "updated": 1510680491
 }
-</code>
-</pre>
+{% endhighlight %}
 
 ## Create an attachment with binary content
 
 **Request:**
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 POST /rest/records/attachment/create.json?expand= HTTP/1.1
 Cerb-Auth: XXXX:XXXX
 Date: {{'now'|date:"%a, %d %b %Y %T %Z"}}
@@ -92,16 +87,14 @@ fields[name]=cerby.png
 &fields[content]=data:application/octet-stream;base64,[BASE64-ENCODED-CONTENT]
 &fields[attach][]=message:123
 &fields[attach][]=comment:123
-</code>
-</pre>
+{% endhighlight %}
 
 * Replace `[BASE64-ENCODED-CONTENT]` above with your [Base64-encoded](https://en.wikipedia.org/wiki/Base64) binary content.
 * The `POST` fields should be URL-encoded. They are decoded here for readability.
 
 **Response:**
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {
   "__build": 2017110901,
   "__status": "success",
@@ -118,6 +111,5 @@ fields[name]=cerby.png
   "storage_sha1hash": "c44ebaf197155c080ae47809dc5cd51c7715fd7c",
   "updated": 1510681295
 }
-</code>
-</pre>
+{% endhighlight %}
 

@@ -48,8 +48,7 @@ Each `series.*` should provide:
 ### Examples
 {: .no_toc}
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:sample.geo.points
 series.cities:(
@@ -61,8 +60,7 @@ series.cities:(
 )
 format:geojson
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/data-queries/data-queries-sample-geopoints.png" class="screenshot">
@@ -89,8 +87,7 @@ Each `series.*` should provide:
 ### Examples
 {: .no_toc}
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:sample.timeseries
 x.count:10
@@ -115,8 +112,7 @@ series.created_calls:(
 )
 format:timeseries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/data-queries/data-queries-sample-timeseries.png" class="screenshot">
@@ -146,8 +142,7 @@ Each `series.*` should provide:
 ### Examples
 {: .no_toc}
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:sample.xy
 series.standard:(
@@ -170,8 +165,7 @@ series.enterprise:(
 )
 format:scatterplot
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/data-queries/data-queries-sample-xy.png" class="screenshot">

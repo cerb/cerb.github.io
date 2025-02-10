@@ -62,8 +62,7 @@ Navigate to **Setup >> Packages >> Import**.
 
 Paste the following package into the large text box:
 
-<pre style="max-height: 29.25em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -1092,8 +1091,7 @@ Paste the following package into the large text box:
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 You should see the following:
 
@@ -1191,8 +1189,7 @@ This sends the `{% raw %}message{% endraw %}` placeholder (the worker's chat mes
 
 The `_prediction` placeholder is a JSON object with this structure:
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
 	"text": "I need some help"
@@ -1210,8 +1207,7 @@ The `_prediction` placeholder is a JSON object with this structure:
 	]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## React to the intent
 
@@ -1245,18 +1241,15 @@ Our goal is to break up the monotony of common responses by adding a few variati
 
 To accomplish that, we're creating an _array_ of possible responses in the `r` _variable_ (_'r'_ as in _responses_).  That basic syntax is:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set r = ['hi','hey','hello'] %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 For readability, we're putting each array member on a separate line.  For the above example, that looks like:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set r = [
 	'hi',
@@ -1264,8 +1257,7 @@ For readability, we're putting each array member on a separate line.  For the ab
 	'hello'
 ] %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 For each of those responses we want to address the worker by their first name.  We already have a dictionary of worker placeholders, so we can use `worker_first_name`.
 

@@ -72,8 +72,7 @@ You can build your own **Geolocate IPs** workflow using this template as a refer
 
 Change occurrences of **cerb.integrations.ipstack** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.integrations.ipstack
@@ -295,5 +294,4 @@ records:
           uri: cerb:automation:cerb.integrations.ipstack.lookupIP.interaction
           icon: map
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

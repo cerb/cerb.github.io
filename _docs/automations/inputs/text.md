@@ -26,15 +26,13 @@ jumbotron:
     url: /docs/automations/#inputs
 ---
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 inputs:
   text/email:
     required@bool: yes
     default: you@example.com
     type: email
-</code>
-</pre>
+{% endhighlight %}
 
 ### required:
 

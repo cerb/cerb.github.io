@@ -30,7 +30,7 @@ The [with](https://twig.symfony.com/doc/3.x/tags/with.html) command creates an i
 
 {% tabs scope-script-variables %}
 {% tab scope-script-variables automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -45,11 +45,11 @@ start:
   return:
     output@key: message
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab scope-script-variables output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   output: |-
@@ -57,7 +57,7 @@ __return:
     Inside scope doubled numbers are: 2,4,6,8,10
     Doubled numbers are not visible here anymore
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}
 
@@ -67,7 +67,7 @@ Pass variables directly in the [with](https://twig.symfony.com/doc/3.x/tags/with
 
 {% tabs scope-script-variables2 %}
 {% tab scope-script-variables2 automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -79,17 +79,17 @@ start:
   return:
     output@key: message
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab scope-script-variables2 output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   output: |
     Inside mapping scope tripled numbers are: 3,6,9,12,15
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}
 
@@ -99,7 +99,7 @@ The [with](https://twig.symfony.com/doc/3.x/tags/with.html) command creates an i
 
 {% tabs scope-script-variables3 %}
 {% tab scope-script-variables3 automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -111,17 +111,17 @@ start:
   return:
     output@key: message
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab scope-script-variables3 output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   output: |
     With only: I am visible, outer value is not accessible.
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}
 
@@ -131,7 +131,7 @@ The [with](/docs/scripting/commands/#with) command creates an isolated scope. Va
 
 {% tabs scope-script-variables4 %}
 {% tab scope-script-variables4 automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -146,17 +146,17 @@ start:
   return:
     output@key: message
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab scope-script-variables4 output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   output: |
     Hi, Kina!
     Where did you go?
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}

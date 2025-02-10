@@ -51,8 +51,7 @@ The results can be returned in these formats:
 
 # Examples
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:calendar.availability
 range:"this month"
@@ -61,8 +60,7 @@ calendars:(
 )
 format:timeblocks
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 {% comment %}
 <div class="cerb-screenshot">

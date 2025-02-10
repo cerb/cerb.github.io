@@ -36,11 +36,9 @@ For instance, let's assume that you already have a [ticket](/docs/tickets/) work
 
 You can use this quick search:
 
-<pre>
-<code class="language-text">
+{% highlight cerb %}
 +updated:"-1 year"
-</code>
-</pre>
+{% endhighlight %}
 
 The worklist now has three filters:
 

@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;devblocks.listener.event&quot;&gt;
 			&lt;id&gt;calls.listener&lt;/id&gt;
 			&lt;name&gt;Event Listener&lt;/name&gt;
@@ -20,13 +19,11 @@
 				&lt;/param&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends DevblocksEventListenerExtension {
 	/**
@@ -36,6 +33,5 @@ class ExampleExtension extends DevblocksEventListenerExtension {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

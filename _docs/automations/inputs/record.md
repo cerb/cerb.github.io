@@ -27,16 +27,14 @@ jumbotron:
     url: /docs/automations/#inputs
 ---
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 inputs:
   record/ticket:
     required@bool: yes
     record_type: ticket
     expand: owner_,customfields
     #default: 1
-</code>
-</pre>
+{% endhighlight %}
 
 The value should be a record ID (`123`) or URI (`cerb:record_type:record_alias`).
 

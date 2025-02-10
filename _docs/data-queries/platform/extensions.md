@@ -50,20 +50,17 @@ jumbotron:
 
 #### Query: 
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:platform.extensions
 point:cerb.card.widget
 format:dictionaries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Response:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {
   "data": [
     {
@@ -128,5 +125,4 @@ format:dictionaries
     "format": "dictionaries"
   }
 }
-</code>
-</pre>
+{% endhighlight %}

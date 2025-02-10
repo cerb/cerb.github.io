@@ -29,8 +29,7 @@ jumbotron:
 
 The **record.search:** command returns record dictionaries from a search query.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   record.search:
@@ -41,8 +40,7 @@ start:
         status: o
     output: results
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

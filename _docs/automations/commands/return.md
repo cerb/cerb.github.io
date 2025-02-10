@@ -28,8 +28,7 @@ The **return:** command successfully terminates an [automation](/docs/automation
 
 # Syntax
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -38,7 +37,6 @@ start:
     output@text:
       Hello, {{name}}!
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The expected `return:` dictionary depends on the automation [trigger](/docs/automations/#triggers).

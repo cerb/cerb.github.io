@@ -33,7 +33,7 @@ Here is an example of using the [\|map](/docs/scripting/filters/#map) modifier w
 {% tabs map_array_values %}
 
 {% tab map_array_values automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -42,11 +42,11 @@ start:
     squares@json: {{numbers|map((n) => n ** 2)|json_encode}}
     cubes@json: {{numbers|map((n) => n ** 3)|json_encode}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab map_array_values output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   squares:
@@ -72,7 +72,7 @@ __return:
   - 729
   - 1000
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

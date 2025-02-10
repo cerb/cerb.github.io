@@ -25,39 +25,33 @@ jumbotron:
 
 A **URL** field contains a hyperlink to a web page in the format:
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 {% raw %}
 &lt;protocol&gt;://&lt;host:port&gt;/&lt;path-to-resource&gt;
 {% endraw %}
-</code>
-</pre>	
+{% endhighlight %}	
 
 ### Packages
 
 As JSON from [packages](/docs/packages/):
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
 	"website": "https://cerb.ai/docs/"
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Records API
 
 In [PUT](/docs/api/endpoints/records/#update) or [POST](/docs/api/endpoints/records/#create) requests from the [API](/docs/api/), the URL should be encoded:
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 {% raw %}
 &amp;fields[website]=https%3A%2F%2Fcerb.ai%2Fdocs%2F
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="section-nav">
 	<div class="left">

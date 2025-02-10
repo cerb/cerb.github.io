@@ -28,8 +28,7 @@ jumbotron:
 
 The **queue.push:** command adds new messages to a [queue](/docs/queues/).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   queue.push:
@@ -44,8 +43,7 @@ start:
           priority: low
     output: results
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

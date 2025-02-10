@@ -50,8 +50,8 @@ Select the **JSON** tab.
 
 Paste the following policy:
 
-<pre>
-<code class="language-json">
+
+{% highlight json %}
 {% raw %}
 {
   "Version": "2012-10-17",
@@ -65,8 +65,7 @@ Paste the following policy:
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 You can add new permissions here depending on the services your automation needs to access. This is covered in those specific guides.
 

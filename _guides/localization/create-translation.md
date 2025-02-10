@@ -37,8 +37,7 @@ The TMX format is pretty simple.  Each `<tu>` tag defines a new phrase with the 
 
 For example:
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 &lt;tmx&gt;
 	&lt;header creationtool="Cerb" creationtoolversion="8.1.4" srclang="en_US" /&gt;
 	&lt;body&gt;
@@ -54,20 +53,17 @@ For example:
 		&lt;!-- ... --&gt;
 	&lt;/body&gt;
 &lt;/tmx&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 We store each translated language in its own TMX file, so there's only one `<tuv>` child within each `<tu>` phrase.
 
 In Cerb, templates in plugins can use these phrases like:
 
-<pre>
-<code class="language-smarty">
+{% highlight smarty %}
 {% raw %}
 {'common.notspam'|devblocks_translate|capitalize}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 This way we display each phrase in the preferred language of each worker or contact.
 
@@ -111,11 +107,9 @@ First, make sure the Translation Editor plugin is enabled.
 
 1. Use quick search to filter the worklist to phrases in your new language without a translation.  For example:
 
-	<pre>
-	<code class="language-text">
-	lang:fr_FR mine:""
-	</code>
-	</pre>
+{% highlight cerb %}
+lang:fr_FR mine:""
+{% endhighlight %}
 
 1. Cerb automatically provides the English version of each phrase. Translate that phrase into your language in the textbox below each entry.
 
@@ -133,11 +127,9 @@ To share your new translation:
 
 1. Use quick search to filter the worklist to phrases in your new language.  For example:
 
-	<pre>
-	<code class="language-text">
-	lang:fr_FR
-	</code>
-	</pre>
+{% highlight cerb %}
+lang:fr_FR
+{% endhighlight %}
 
 1. Click the **Export** button below the worklist.
 

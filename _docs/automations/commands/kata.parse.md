@@ -28,8 +28,7 @@ jumbotron:
 
 The **kata.parse:** command parses an arbitrary [KATA](/docs/kata/) document with placeholder substitution.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   kata.parse:
@@ -45,8 +44,7 @@ start:
   return:
     output: {{results.template}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}
@@ -67,8 +65,7 @@ A dictionary of keys/values for placeholders.
 
 A validation schema for the KATA document. This is useful if the document is dynamically generated or user-provided.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
   schema:
     attributes:
@@ -88,8 +85,7 @@ A validation schema for the KATA document. This is useful if the document is dyn
                 types:
                   list:
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Keys
 

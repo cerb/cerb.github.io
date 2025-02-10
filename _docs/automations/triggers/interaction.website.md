@@ -67,15 +67,13 @@ An interaction automation [dictionary](/docs/automations/#dictionaries) starts w
 
 When suspending in the `await` state, the interaction displays a web form with the desired elements. The form may prompt for user input, validate it, and set dictionary keys (placeholders) with the responses.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 await:
   form:
     title: Your form title
     elements:
       # ...
-</code>
-</pre>
+{% endhighlight %}
 
 ### title:
 {: .no_toc}
@@ -102,8 +100,7 @@ A form can be created with any combination of the following element types:
 
 When the interaction suspends in the `await` state, a `submit:` element is automatically appended to the form if one doesn't already exist.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await/who:
@@ -125,8 +122,7 @@ start:
     user:
       name@key: prompt_name
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## await:interaction:
 
@@ -146,8 +142,7 @@ The `uri:` parameter specifies the delegate [automation](/docs/records/types/aut
 
 An `output:` key specifies the placeholder that should receive the results from the delegate.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   while:
@@ -191,8 +186,7 @@ start:
                 'echo': 'wgm.interaction.echo',
               }[prompt_menu]}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## return:
 

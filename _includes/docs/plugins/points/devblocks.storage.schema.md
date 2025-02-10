@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;devblocks.storage.schema&quot;&gt;
 			&lt;id&gt;cerberusweb.storage.schema.attachments&lt;/id&gt;
 			&lt;name&gt;Attachments&lt;/name&gt;
@@ -18,13 +17,11 @@
 				&lt;param key=&quot;archive_after_days&quot; value=&quot;7&quot;/&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_DevblocksStorageSchema {
 	public static function archive($stop_time) {
@@ -55,6 +52,5 @@ class ExampleExtension extends Extension_DevblocksStorageSchema {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

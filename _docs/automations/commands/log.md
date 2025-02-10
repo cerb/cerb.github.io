@@ -30,8 +30,7 @@ The **log:** command writes data to the automation log with a given severity. Au
 * TOC
 {:toc}
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   log: This is a notice
@@ -39,8 +38,7 @@ start:
   log.error: This is an error
   log.alert: This is an alert
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Each log entry contains:
 

@@ -28,8 +28,7 @@ This workflow adds a worker interaction and a toolbar button on email record car
 
 You can enable it from **Search >> Workflows >> (+) >> (empty)** and entering in the following Workflow KATA:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.email.samehost
@@ -97,8 +96,7 @@ records:
             email: {{record_id}}
           hidden@bool: {{record__type is not record type ('address')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Usage
 

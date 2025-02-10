@@ -33,8 +33,7 @@ In [website interactions](/docs/automations/triggers/interaction.website/) forms
 
 Selection prompt can be set to 'single' or 'multiple'.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await:
@@ -70,8 +69,7 @@ start:
                   bold@bool: yes
               text/description:
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/automations/triggers/interaction.website/elements/sheet.png" class="screenshot">
@@ -93,8 +91,7 @@ A sheet element can display an array of dictionaries as a dataset.
 
 Alternatively, a [ui.sheet.data](/docs/automations/triggers/ui.sheet.data/) automation can fetch a dynamic dataset.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await:
@@ -125,15 +122,13 @@ start:
                   bold@bool: yes
                   image@bool: yes
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Synthesized data
 
 You can also specify a list of keys in `data:` without properties. These will be available as the `key` property.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await:
@@ -155,8 +150,7 @@ start:
             columns:
               text/key:
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### limit:
 
@@ -190,8 +184,7 @@ An optional custom validation script. Any output is considered to be an error.
 
 You can use `if...elseif` to check multiple conditions.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 text/prompt_name:
   label: Name:
@@ -204,6 +197,6 @@ text/prompt_name:
     A name must be 8 or more characters. 
     {% elseif prompt_name|length > 32 %}
     A name must be less than 32 characters. 
-    {% endif %}{% endraw %}
-</code>
-</pre>
+    {% endif %}
+{% endraw %}
+{% endhighlight %}

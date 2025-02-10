@@ -28,49 +28,41 @@ A **text** field contains free-form text.
 
 As JSON from [packages](/docs/packages/):
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
 	"subject": "I need some help with this software"
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 To enter multiple lines of text, use `\n` control characters.
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
 	"subject": "Line 1\nLine 2\n"
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Records API
 
 In [PUT](/docs/api/endpoints/records/#update) or [POST](/docs/api/endpoints/records/#create) requests from the [API](/docs/api/) the text should be URL encoded.
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 {% raw %}
 &amp;fields[subject]=I+need+help+with+this+software
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 To enter multiple lines of text, encode `\n` as `%0A`:
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 {% raw %}
 &amp;fields[subject]=Line+1%0ALine+2
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="section-nav">
 	<div class="left">

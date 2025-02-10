@@ -26,7 +26,7 @@ In this example we quote a prior email message by adding the standard `>` charac
 {% tabs prepend_lines %}
 
 {% tab prepend_lines automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -40,11 +40,11 @@ start:
       
       ... and this is our reply.
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab prepend_lines output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   new_message: |-
@@ -54,7 +54,7 @@ __return:
 
     ... and this is our reply.
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

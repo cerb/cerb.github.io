@@ -43,14 +43,12 @@ jumbotron:
 
 # Examples
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:usage.behaviors
 format:timeseries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/data-queries/data-queries-bot-usage.png" class="screenshot">

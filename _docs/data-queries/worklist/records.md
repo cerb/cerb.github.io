@@ -31,8 +31,7 @@ jumbotron:
 
 `worklist.records` [data queries](/docs/data-queries/) retrieve record dictionaries with a [search query](/docs/search/).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:worklist.records
 of:ticket
@@ -44,8 +43,7 @@ query:(
 )
 format:dictionaries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}
@@ -54,13 +52,11 @@ format:dictionaries
 
 The `of:` key specifies the type of [records](/docs/records/) to retrieve.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 of:ticket
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # query:
 
@@ -74,13 +70,11 @@ The `query.required:` key specifies the required [query](/docs/search/) for filt
 
 The `expand:` key specifies which key paths should be expanded in the results.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 expand:[custom_,group_,owner_]
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # page:
 
@@ -100,15 +94,13 @@ The worklist results can be returned in these formats:
 
 ## Return a stacked bar chart of tickets by owner by status
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 type:worklist.records
 of:ticket
 query:(status:open owner.id:me)
 expand:[group_,owner_]
 format:dictionaries
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/data-queries/data-queries-worklist-records-tickets.png" class="screenshot">

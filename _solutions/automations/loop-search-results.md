@@ -35,7 +35,7 @@ This approach is more efficient than looping through records directly since it d
 {% tabs iterate_records %}
 
 {% tab iterate_records automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   record.search:
@@ -51,18 +51,18 @@ start:
     do:
       log: Editing #{{ticket_id}} {{tickets[ticket_id]._label}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab iterate_records policy %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 commands:
   record.search:
     deny/type@bool: {{inputs.record_type is not record type ('ticket')}}
     allow@bool: yes
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

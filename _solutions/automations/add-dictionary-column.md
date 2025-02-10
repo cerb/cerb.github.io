@@ -32,7 +32,7 @@ The [\|merge](/docs/scripting/filters/#merge) filter combines two arrays or obje
 {% tabs add_dictionary_column %}
 
 {% tab add_dictionary_column automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -46,11 +46,11 @@ start:
   set/merge:
     people@json: {{people|map((v) => v|merge({'age':random(20,65)}))|json_encode}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab add_dictionary_column output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 people:
   kina:
@@ -62,7 +62,7 @@ people:
     email: milo@cerb.example
     age: 38
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

@@ -28,8 +28,7 @@ jumbotron:
 
 # CerbApi.php
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 <?php
 /***********************************************************************
 Cerb Web-API Library for PHP
@@ -196,14 +195,12 @@ class Cerb_WebAPI {
 		return $output;
 	}
 };
-</code>
-</pre>
+{% endhighlight %}
 
 Usage
 =====
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 <?php
 require_once("CerbApi.php");
 
@@ -220,5 +217,4 @@ if(null != ($content_type = $cerb->getContentType())) {
 	header("Content-Type: " . $content_type);
 	echo $out;
 }
-</code>
-</pre>
+{% endhighlight %}

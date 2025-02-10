@@ -62,8 +62,7 @@ Load series data from a [ui.chart.data](/docs/automations/triggers/ui.chart.data
 
 This can synthesize and preprocess chart data from anywhere: third-party APIs, Cerb records, business intelligence tools, etc.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 automation/avgInflow:
   uri: cerb:automation:example.chartData.avgTicketInflows
@@ -71,15 +70,13 @@ automation/avgInflow:
     date_range: today to +4 weeks
   disabled@bool: no
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### dataQuery:
 
 Load data from a [data query](/docs/data-queries/).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 dataQuery/tickets:
   query@text:
@@ -91,8 +88,7 @@ dataQuery/tickets:
   query_params:
     format: timeseries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 |---
 | Key | 
@@ -106,16 +102,14 @@ dataQuery/tickets:
 
 Load static data.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 manual/series0:
   data:
     x@csv: 2022-01-01,2022-02-01,2022-03-01,2022-04-01
     custom@csv: 33,66,99,500
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Chart
 
@@ -132,8 +126,7 @@ For instance, a [grid:](#grid) line can be rendered from a dynamically computed 
 | [legend:](#legend)
 | [tooltip:](#tooltip)
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 data:
   type: bar
@@ -173,8 +166,7 @@ grid:
         text: Target ({{datasets.baseline.value}})
         position: start
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### axis:
 
@@ -336,8 +328,7 @@ Each line must have a unique key name containing:
 
 **Datasets:**
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 dataQuery/tickets:
   query@text:
@@ -347,13 +338,11 @@ dataQuery/tickets:
     query:(created:"first day of this month -1 year")
     format:timeseries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 **Chart:**
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 data:
   type: bar
@@ -372,8 +361,7 @@ axis:
 tooltip:
   grouped@bool: no
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Timeseries: Line comparison of contact methods
 
@@ -383,8 +371,7 @@ tooltip:
 
 **Datasets:**
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 dataQuery/calls:
   query@text:
@@ -408,13 +395,11 @@ dataQuery/tickets:
     query:(status:!d)
     format: timeseries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 **Chart:**
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 data:
   type: line
@@ -438,8 +423,7 @@ axis:
 tooltip:
   grouped@bool: no
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 
 ### Pie: Tickets created this year by bucket
@@ -450,8 +434,7 @@ tooltip:
 
 **Datasets:**
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 dataQuery/tickets:
   query@text:
@@ -461,21 +444,18 @@ dataQuery/tickets:
     query:(created:"this year")
     format:pie
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 **Chart:**
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 data:
   type: pie
   series:
     tickets:
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Donut: Contact methods
 
@@ -485,8 +465,7 @@ data:
 
 **Datasets:**
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 dataQuery/calls:
   query@text:
@@ -521,13 +500,11 @@ dataQuery/tickets:
     )
     format: pie
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 **Chart:**
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 data:
   type: donut
@@ -539,5 +516,4 @@ data:
     tickets:
       name: # Tickets
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

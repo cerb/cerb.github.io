@@ -64,8 +64,7 @@ When creating an OAuth App you can define the scopes that are available.
 
 The available scopes are defined in YAML:
 
-<pre>
-<code class="language-yaml">
+{% highlight yaml %}
 "profile":
  label: Access your profile information
  endpoints:
@@ -85,8 +84,7 @@ The available scopes are defined in YAML:
  label: Make any API request on your behalf
  endpoints:
   - "*" #[GET, PATCH, POST, PUT, DELETE]
-</code>
-</pre>
+{% endhighlight %}
 
 Each scope is identified by a name.
 
@@ -134,11 +132,9 @@ You will need the following information to generate an access token:
 
 Once you receive an access token, you need to include it in the HTTP headers of API requests:
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 Authorization: Bearer &lt;YOUR-ACCESS-TOKEN&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 {% comment %}
 * example HTTP requests (auth + request w/ bearer token)

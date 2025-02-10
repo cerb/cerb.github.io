@@ -27,8 +27,7 @@ jumbotron:
 
 The **set:** command associates a value with a placeholder key.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -38,16 +37,13 @@ start:
     output@text:
       {{name}} is a {{title}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Result:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 output: Kina is a Customer Support Manager
-</code>
-</pre>
+{% endhighlight %}
 
 # Syntax
 
@@ -57,8 +53,7 @@ One or more key/value pairs may be children of the `set:` command.
 
 You can refer to any keys set above the current one.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -67,23 +62,19 @@ start:
     c@int: {{b*2}}
   return:
     answer@int: {{a + b + c}}{% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Result:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 answer: 14
-</code>
-</pre>
+{% endhighlight %}
 
 ### Dictionaries
 
 A [dictionary](/docs/automations/#dictionaries) may be provided as the value:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -94,16 +85,13 @@ start:
   return:
     output@text:
       {{person.name}} is a {{person.role.title}}{% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Result:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 output: Kina is a Customer Support Manager
-</code>
-</pre>
+{% endhighlight %}
 
 ### Paths
 

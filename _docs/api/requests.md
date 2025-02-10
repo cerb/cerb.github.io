@@ -47,19 +47,15 @@ A `GET` request performs simple retrieval actions.  It may only specify options 
 
 For instance, this request retrieves the record for ticket #5 in JSON format:
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 GET /rest/records/ticket/5.json
-</code>
-</pre>
+{% endhighlight %}
 
 Similarly, this request retrieves the record for organization #9 in XML format, including custom fields:
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 GET /rest/records/org/9.xml?expand=custom_
-</code>
-</pre>
+{% endhighlight %}
 
 ## PUT
 
@@ -67,14 +63,12 @@ A `PUT` request updates an existing record.  It may specify options in the URL a
 
 For instance, this request updates the subject on ticket record #5 using a form-encoded payload:
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 PUT /rest/records/ticket/5.json
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 
 fields[subject]=This+is+a+new+subject
-</code>
-</pre>
+{% endhighlight %}
 
 Notice how the path above is exactly the same as the first `GET` example?  The path refers to a specific record, and the verb describes what is being done to it.  The `PUT` verb performs a different action.
 
@@ -88,14 +82,12 @@ A `POST` request performs complex actions that require a payload, such as record
 
 For instance, this request searches tickets for masks that start with `ABC` and returns results in JSON format:
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 POST /rest/records/ticket/search.json
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 
 q=mask%3AABC%2A
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-box note"><p>
 	Like with a <tt>PUT</tt> request, the payload encoding of a <tt>POST</tt> is handled automatically by the official libraries.  The payload format is described by the documentation for each module and action.
@@ -107,14 +99,12 @@ A `PATCH` request partially modifies a record. Currently, patching is only used 
 
 For instance, this request upserts (updates or inserts) an organization record and returns results in JSON format:
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 PATCH /rest/records/org/upsert.json
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 
 query=name:"Apple"&fields[name]=Apple
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-box note"><p>
 	Like with a <tt>PUT</tt> request, the payload encoding of a <tt>PATCH</tt> is handled automatically by the official libraries.  The payload format is described by the documentation for each module and action.
@@ -126,11 +116,9 @@ A `DELETE` request permanently removes the record specified in the URL.
 
 For instance, this request deletes ticket record #5:
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 DELETE /rest/records/ticket/5.json
-</code>
-</pre>
+{% endhighlight %}
 
 # References
 

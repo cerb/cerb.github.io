@@ -31,36 +31,32 @@ You enclose a string within single (`'`) or double (`"`) quotes.
 
 You can modify a string with filters just like a variable:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{"This is literal text"|truncate(7)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 This is...
-```
+{% endhighlight %}
 
 # Concatenation
 
 You can join multiple strings or variables together with `~` (tilde):
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set first_name = "Kina" %}
 {% set last_name = "Halpue" %}
 {% set full_name = first_name ~ " " ~ last_name %}
 {{full_name}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Kina Halpue
-```
+{% endhighlight %}
 
 # Whitespace
 
@@ -68,8 +64,7 @@ One issue with treating all template text as output is that you can get unintend
 
 You can ignore whitespace at the beginning or end of a tag with a dash (`-`):
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 This text
 
@@ -77,12 +72,11 @@ This text
 
 in it.
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 This text has no leading or trailing whitespace in it.
-```
+{% endhighlight %}
 
 <div class="section-nav">
 	<div class="left">

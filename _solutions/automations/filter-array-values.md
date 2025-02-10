@@ -34,7 +34,7 @@ Here is an example of using the [\|filter](https://cerb.ai/docs/scripting/filter
 {% tabs filter_array_values %}
 
 {% tab filter_array_values automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -42,11 +42,11 @@ start:
   return:
     multiples5@csv: {{numbers|filter((n,k) => 0 == n % 5)|join(',')}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab filter_array_values output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   multiples5:
@@ -71,7 +71,7 @@ __return:
   - "95"
   - "100"
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

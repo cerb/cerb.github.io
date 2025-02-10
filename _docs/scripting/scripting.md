@@ -47,11 +47,9 @@ The content of this text may need to vary depending on any number of factors -- 
 
 In a traditional programming language, you typically generate text output like:
 
-<pre>
-<code class="language-python">
+{% highlight python %}
 print("Hello, " + firstName + "!");
-</code>
-</pre>
+{% endhighlight %}
 
 This is cumbersome when you're dealing with a lot of text.
 
@@ -59,13 +57,11 @@ Instead, Cerb scripting is a full-featured templating language based on Twig[^tw
 
 The example code above would instead be written as:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 Hello, {{first_name}}!
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Topics
 

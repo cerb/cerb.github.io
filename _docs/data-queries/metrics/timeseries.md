@@ -35,8 +35,7 @@ jumbotron:
 <img src="/assets/images/docs/data-queries/data-queries-metrics-timeseries.png" class="screenshot">
 </div>
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:metrics.timeseries
 period:hour
@@ -59,8 +58,7 @@ series.avg:(
 timezone:Europe/Berlin
 format:timeseries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

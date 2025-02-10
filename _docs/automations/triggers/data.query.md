@@ -55,8 +55,7 @@ The format of `data:` will depend on the given `query_format`.
 
 For instance, the `dictionaries` format is an array of dictionaries, like:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 return:
   data:
@@ -67,7 +66,6 @@ return:
       id: 2
       name: Record 2
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 More complex values can be returned using the `@json` or `@key` annotations.

@@ -118,8 +118,7 @@ The `output:` placeholder receives a dictionary with these keys:
 
 This automation reads the attachment with ID `1`:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   file.read:
@@ -128,13 +127,11 @@ start:
       uri: cerb:attachment:1
     output: results
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Output:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 results:
   bytes: data:image/png;base64,iVBORw0KGgoAAAA[...]
   uri: cerb:attachment:1
@@ -143,13 +140,11 @@ results:
   offset_to: 23886
   mime_type: image/png
   size: 23886
-</code>
-</pre>
+{% endhighlight %}
 
 ## Decompress and read a gzip file
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   file.read:
@@ -160,12 +155,11 @@ start:
         gzip.decompress:
     output: results</code>
 {% endraw %}
-</pre>
+{% endhighlight %}
 
 Output:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 results:
   bytes@text:
@@ -180,5 +174,4 @@ results:
   mime_type: application/x-gzip
   size: 599
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

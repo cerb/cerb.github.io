@@ -56,16 +56,14 @@ When the automation pauses in the `await` state, the timer is rescheduled to con
 |-|-|-
 | `until` | timestamp | The future UNIX timestamp to resume the automation at the current point
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   # Run some commands
   await:
     until@date: +5 mins
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## return:
 

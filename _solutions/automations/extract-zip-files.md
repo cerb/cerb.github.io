@@ -27,7 +27,7 @@ Using [data.query:](https://cerb.ai/docs/automations/commands/data.query/) and [
 {% tabs read_extract_zip %}
 
 {% tab read_extract_zip automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   data.query/zip:
@@ -39,20 +39,20 @@ start:
         format:dictionaries
     output: results
 {% endraw %}
-```
+{% endhighlight %}
 
 The optional `filter:` key matches a filename pattern with `*` as wildcards. 
 {% endtab %}
 
 {% tab read_extract_zip policy %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 commands:
   data.query:
     deny/type@bool: {{query.type != 'attachment.manifest'}}
     allow@bool: yes
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}
@@ -62,7 +62,7 @@ commands:
 {% tabs read_extract_zip2 %}
 
 {% tab read_extract_zip2 automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   file.read:
@@ -73,17 +73,17 @@ start:
       filters:
         gzip.decompress:
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab read_extract_zip2 policy %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 commands:
   file.read:
     allow@bool: yes
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

@@ -55,8 +55,7 @@ Navigate to **Setup >> Packages >> Import**.
 
 Paste the following package:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -212,8 +211,7 @@ Paste the following package:
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Import** button.
 
@@ -231,8 +229,7 @@ Click the **New** button above the view.
 
 Paste the following code:
 
-<pre>
-<code class="language-apex">
+{% highlight apex %}
 {% raw %}
 public with sharing class CerbWebhookRequest {
     @future (callout=true)
@@ -254,8 +251,7 @@ public with sharing class CerbWebhookRequest {
     }
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Save** button above the editor.
 
@@ -265,8 +261,7 @@ Navigate to **Setup >> Build >> Develop >> Apex Triggers**.
 
 Paste the following code:
 
-<pre>
-<code class="language-apex">
+{% highlight apex %}
 {% raw %}
 trigger AccountChangeToCerbWebhook on Account (After Insert, After Update) {
   String webhook_url = 'https://cerb.example/webhooks/a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2';
@@ -303,8 +298,7 @@ trigger AccountChangeToCerbWebhook on Account (After Insert, After Update) {
   }
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * Replace the value of `webhook_url` with your Cerb webhook URL. You can find this from **Search >> Webhooks** in the **URL** column. Copy that link and paste it over the `cerb.example` here.
 

@@ -29,8 +29,7 @@ jumbotron:
 
 The **record.create:** command creates a record with the given fields.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   record.create/newTask:
@@ -43,8 +42,7 @@ start:
         status: open
         importance: 50
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

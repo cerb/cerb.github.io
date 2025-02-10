@@ -51,16 +51,14 @@ Edit the record for `record.profile.image.editor`.
 
 Add [interactions](/docs/automations/triggers/interaction.worker/) using [toolbar KATA](/docs/toolbars/#kata).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 interaction/stability:
   label: Stable Diffusion
   icon: picture
   uri: cerb:automation:example.interaction.recordProfileImage.stabilityai
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The following **placeholders** are available in KATA:
 

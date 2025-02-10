@@ -33,7 +33,7 @@ Here's an example of using `array_combine()` to create a dictionary from separat
 {% tabs create_dictionary_from_arrays %}
 
 {% tab create_dictionary_from_arrays automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -42,11 +42,11 @@ start:
   return:
     report@json: {{array_combine(keys,values)|json_encode}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab create_dictionary_from_arrays output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 __return:
   report:
@@ -63,7 +63,7 @@ __return:
     Nov: 19
     Dec: 54
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

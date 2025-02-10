@@ -110,11 +110,9 @@ You can follow one of these guides to set up a new server:
 
 Navigate to your website's document directory on the filesystem. The directory will usually be named something like `htdocs`, `httpdocs`, `public_html`, or `www`.
 
-<pre class="command-line" data-user="user" data-host="host">
-<code class="language-bash">
+{% highlight bash %}
 cd /path/to/example.com/httpdocs
-</code>
-</pre>
+{% endhighlight %}
 
 When deploying Cerb on a production server you should use **Git** to manage the project files. This provides many useful capabilities:
 
@@ -128,21 +126,17 @@ You won't need to download the entire project again after your initial installat
 
 You can download Cerb into a specific directory with a single command:
 
-<pre class="command-line" data-user="user" data-host="host">
-<code class="language-bash">
+{% highlight bash %}
 git clone git://github.com/cerb/cerb-release.git cerb
-</code>
-</pre>
+{% endhighlight %}
 
 You would access Cerb at a URL with a base path like `https://example.com/cerb`.  You can change the last argument above to whatever path you want: `support`, `helpdesk`, etc.
 
 To download Cerb into the root of your domain instead, use:
 
-<pre class="command-line" data-user="user" data-host="host">
-<code class="language-bash">
+{% highlight bash %}
 git clone git://github.com/cerb/cerb-release.git .
-</code>
-</pre>
+{% endhighlight %}
 
 This results in a URL without a base path, like `https://support.example.com/`
 
@@ -159,13 +153,11 @@ You only need to enable write access to the webserver in two locations:
 
 Give ownership of all the files to the webserver daemon using `chown`, and make the two locations above writable using `chmod`:
 
-<pre class="command-line" data-user="user" data-host="host">
-<code class="language-bash">
+{% highlight bash %}
 cd cerb
 chown -R www-data:www-data .
 chmod -R u+w framework.config.php storage
-</code>
-</pre>
+{% endhighlight %}
 
 You must use your own user and group for `www-data` in the example above.
 
@@ -181,15 +173,13 @@ Create a new MySQL database using the console or your favorite GUI tool.
 
 From the MySQL console, you can issue the following SQL statements:
 
-<pre>
-<code class="language-sql">
+{% highlight sql %}
 CREATE DATABASE cerb CHARACTER SET utf8;
 
 CREATE USER cerb@localhost IDENTIFIED BY 'secret_password';
 
 GRANT ALL PRIVILEGES ON cerb.* TO cerb@localhost;
-</code>
-</pre>
+{% endhighlight %}
 
 Substitute your own database name and login in place of `cerb`, and replace `secret_password` with something that's actually a secret. If you're connecting to a remote database, change `@localhost` to the network address of the webserver where you'll be connecting from.
 

@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;devblocks.event.action&quot;&gt;
 			&lt;id&gt;example.bot.action&lt;/id&gt;
 			&lt;name&gt;Example Bot Action&lt;/name&gt;
@@ -21,8 +20,7 @@
 				&lt;/param&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 ### Params
 
@@ -32,8 +30,7 @@
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class BotAction_Example extends Extension_DevblocksEventAction {
 	const ID = 'example.bot.action';
@@ -84,6 +81,5 @@ class BotAction_Example extends Extension_DevblocksEventAction {
 	}
 };
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

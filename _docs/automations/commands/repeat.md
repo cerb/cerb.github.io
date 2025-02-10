@@ -29,8 +29,7 @@ jumbotron:
 
 The **repeat:** command iterates an array and repeats a sequence of commands for each value.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -44,14 +43,11 @@ start:
   return:
     counter@key: counter
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 counter: 55
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

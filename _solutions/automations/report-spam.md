@@ -25,7 +25,7 @@ redirect_from:
 {% tabs report_spam %}
 
 {% tab report_spam automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   api.command:
@@ -35,18 +35,18 @@ start:
       params:
         ticket_id@int: 1234
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab report_spam policy %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 commands:
   api.command:
     deny/name@bool: {{inputs.name not in ['cerb.commands.email.spam.train']}}
     allow@bool: yes
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

@@ -1,7 +1,6 @@
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerb.automation.trigger&quot;&gt;
 			&lt;id&gt;cerb.trigger.api.request&lt;/id&gt;
 			&lt;name&gt;api.request&lt;/name&gt;
@@ -18,13 +17,11 @@
 				&lt;/param&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 class ExampleExtension extends Extension_AutomationTrigger {
 	protected function _getRecordTypeSuggestions()
 
@@ -51,6 +48,5 @@ class ExampleExtension extends Extension_AutomationTrigger {
 	public function validateConfig($params, $error)
 
 }
-</code>
-</pre>
+{% endhighlight %}
 

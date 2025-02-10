@@ -28,8 +28,7 @@ jumbotron:
 
 The **storage.get:** command retrieves a previously saved value from long-term storage. This key/value can be shared between automations and invocations.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   storage.set:
@@ -45,16 +44,13 @@ start:
   return:
     output@key: result
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Result:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 output: This is the saved value.
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

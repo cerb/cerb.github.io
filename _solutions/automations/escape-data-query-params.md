@@ -34,7 +34,7 @@ Its value is a dictionary. The `${...}` placeholder syntax in a query references
 {% tabs escape_data_query_params %}
 
 {% tab escape_data_query_params automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   data.query:
@@ -51,18 +51,18 @@ start:
       query_params:
         email: customer@cerb.example
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab escape_data_query_params policy %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 commands:
   data.query:
     deny/type@bool: {{query.type != 'worklist.records'}}
     allow@bool: yes
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}
@@ -73,8 +73,7 @@ Here's an example of an unsafe data query where malicious user input in the `{% 
 
 This happens because the placeholder is evaluated before the query is parsed.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -91,5 +90,4 @@ start:
         )
         format:dictionaries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

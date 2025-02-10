@@ -28,7 +28,7 @@ Here is an example of using the [\|split](/docs/scripting/filters/#split) filter
 
 {% tabs split-text-delimiter %}
 {% tab split-text-delimiter automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   return:
@@ -37,11 +37,11 @@ start:
     split_limit@json: {{"/usr/share/html/cerb/storage/"|trim('/')|split('/', limit=2)|json_encode}}
     split_chunks@json: {{"abcdefgh"|split('',limit=2)|json_encode}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab split-text-delimiter output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   split_list:
@@ -61,6 +61,6 @@ __return:
   - ef
   - gh
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}

@@ -30,7 +30,7 @@ In this example, we are randomly simulating both successful and failed HTTP requ
 {% tabs simulate_errors %}
 
 {% tab simulate_errors automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   http.request/get:
@@ -55,7 +55,7 @@ start:
       log.error: This is an error message
     on_success:
 {% endraw %}
-```
+{% endhighlight %}
 
 The `random(1)` function returns a value of 0 or 1 (50% chance of either outcome).
 
@@ -65,14 +65,14 @@ The `random(1)` function returns a value of 0 or 1 (50% chance of either outcome
 {% endtab %}
 
 {% tab simulate_errors policy %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 commands:
   http.request:
     deny/method@bool: {{inputs.method not in ['GET']}}
     allow@bool: yes
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

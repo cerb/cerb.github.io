@@ -53,8 +53,7 @@ Packages can be imported from [setup](/docs/setup/), bots, and the [API](/docs/a
 
 Here's an example package for testing imports:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -70,8 +69,7 @@ Here's an example package for testing imports:
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Setup
 
@@ -111,8 +109,7 @@ In the example above, we're building the JSON object with the [dict_set()](/docs
 
 The action returns a placeholder named `_results` with details about the created records in the format:
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "cerberusweb.contexts.task": {
@@ -123,8 +120,7 @@ The action returns a placeholder named `_results` with details about the created
   }
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The results object is keyed by record type.  Each record type contains an object keyed by `uid`, with an `id` and `label` for each record created.
 

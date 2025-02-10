@@ -35,15 +35,13 @@ Our templating language is based on [Twig](https://twig.symfony.com/doc/2.x/filt
 
 So you could display the first initial of a worker's last name using:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set first_name = "Kina" %}
 {% set last_name = "Halpue" %}
 {{first_name}} {{last_name[0:1]}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Which would output:
 
@@ -53,8 +51,7 @@ Kina H
 
 You can also do things like:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set first_name = "Kina" %}
 {% set last_name = "Halpue" %}
@@ -68,8 +65,7 @@ You can also do things like:
 {# The last three letters #}
 {{last_name[-3:]}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Which outputs:
 

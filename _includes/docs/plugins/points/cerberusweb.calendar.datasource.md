@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerberusweb.calendar.datasource&quot;&gt;
 			&lt;id&gt;calendar.datasource.calendar&lt;/id&gt;
 			&lt;name&gt;Calendar&lt;/name&gt;
@@ -15,13 +14,11 @@
 			&lt;params&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_CalendarDatasource {
 	public function getData(Model_Calendar $calendar, array $params, $params_prefix, $date_range_from, $date_range_to) {
@@ -31,6 +28,5 @@ class ExampleExtension extends Extension_CalendarDatasource {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

@@ -29,7 +29,7 @@ Here is an example of using the [\|keys](/docs/scripting/filters/#keys) filter t
 
 {% tabs return-dictionary-keys %}
 {% tab return-dictionary-keys automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -40,11 +40,11 @@ start:
   return:
     keys@csv: {{person|keys|join(', ')}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab return-dictionary-keys output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   keys:
@@ -52,6 +52,6 @@ __return:
   - name_last
   - email
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}

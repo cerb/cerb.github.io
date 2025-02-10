@@ -57,8 +57,7 @@ Optionally, multiple functions can be specified for a series, like `functions:[s
 
 ## Calculating the average first response time from a worklist of tickets
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 type:worklist.metrics 
 values.total:(
   of:ticket
@@ -70,8 +69,7 @@ values.total:(
   )
 )
 format:table
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/data-queries/data-queries-worklist-metric-counter.png" class="screenshot">
@@ -79,8 +77,7 @@ format:table
 
 ## Calculating multiple functions in a single query
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:worklist.metrics
 values.response_time:(
@@ -97,8 +94,7 @@ values.response_time:(
 )
 format:table
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/data-queries/data-queries-worklist-metric-response_times.png" class="screenshot">

@@ -28,8 +28,7 @@ jumbotron:
 
 The **queue.pop:** command reads messages from a [queue](/docs/queues/).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   queue.pop:
@@ -38,8 +37,7 @@ start:
       limit: 1
     output: results
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}
@@ -77,8 +75,7 @@ The `output:` placeholder receives a dictionary with these keys:
 
 For example:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 results:
   consumer_id: "0x1ec8aee9cb856fd48e0a8d3225229102"
@@ -89,8 +86,7 @@ results:
         id: message0
         priority: high
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## on_error:
 

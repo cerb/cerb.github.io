@@ -26,7 +26,7 @@ You can use [http.request:](https://cerb.ai/docs/automations/commands/http.reque
 {% tabs http_get %}
 
 {% tab http_get automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   http.request/get:
@@ -37,11 +37,11 @@ start:
     on_success:
     on_error:
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab http_get policy %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 commands:
   http.request:
@@ -49,7 +49,7 @@ commands:
     deny/url@bool: {{inputs.url is not prefixed ('http://','https://')}}
     allow@bool: yes
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

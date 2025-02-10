@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerberusweb.cron&quot;&gt;
 			&lt;id&gt;cron.mailbox&lt;/id&gt;
 			&lt;name&gt;Mailbox Checker and Email Downloader&lt;/name&gt;
@@ -14,13 +13,11 @@
 			&lt;/class&gt;
 			&lt;params/&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends CerberusCronPageExtension {
 	public function configure($instance) {
@@ -30,6 +27,5 @@ class ExampleExtension extends CerberusCronPageExtension {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

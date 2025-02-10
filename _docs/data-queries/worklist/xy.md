@@ -61,8 +61,7 @@ You can specify a `limit:` and `sort:` within each series `query:()`. Nested sor
 
 ## Generate a table of the top 10 quickest message response times
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 type:worklist.xy
 series.replies:(
   of:messages 
@@ -75,8 +74,7 @@ series.replies:(
   )
 )
 format:table
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/data-queries/data-queries-worklist-xy-replies.png" class="screenshot">

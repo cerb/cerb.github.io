@@ -27,22 +27,20 @@ jumbotron:
 
 Arrays can be iterated with [for](/docs/scripting/commands/#for) loops:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set list_of_names = ["Jeff", "Dan", "Darren"] %}
 {% for name in list_of_names %}
 * {{name}}
 {% endfor %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 * Jeff
 * Dan
 * Darren
-```
+{% endhighlight %}
 
 <div class="cerb-box note">
 <p>A variable defined within a loop is not accessible outside of it. You can first define a variable before using it in the loop to change this.</p>
@@ -52,23 +50,21 @@ Arrays can be iterated with [for](/docs/scripting/commands/#for) loops:
 
 Loop through a range of values with `..`:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% for n in 1..5 %}
 {{n}}...
 {% endfor %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 1...
 2...
 3...
 4...
 5...
-```
+{% endhighlight %}
 
 <div class="section-nav">
 	<div class="left">

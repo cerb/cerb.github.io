@@ -21,8 +21,7 @@ You can add these queries to a chart or run then in the data query tester found 
 
 Use the following query:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:worklist.subtotals
 of:activity_log
@@ -30,13 +29,11 @@ by:[actor~500]
 query:(actor:worker created:"today -1 week")
 format:pie
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 You can filter workers by group like this:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:worklist.subtotals
 of:activity_log
@@ -44,13 +41,11 @@ by:[actor~500]
 query:(actor:worker created:"today -1 week" actor.worker:(group:(name:"Support")))
 format:pie
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 You can also show the number of distinct workers each day in the activity logs:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:worklist.subtotals
 of:activity_log
@@ -58,7 +53,6 @@ by.distinct:[created@day,actor~500]
 query:(actor:worker created:"today -1 week" actor.worker:(group:(name:"Support")))
 format:timeseries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 That won't tell you how long each session was, but it gives a general idea of activity per worker.

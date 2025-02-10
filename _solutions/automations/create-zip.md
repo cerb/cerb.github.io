@@ -26,7 +26,7 @@ The [file.write:](https://cerb.ai/docs/automations/commands/file.write/) command
 {% tabs create_zip %}
 
 {% tab create_zip automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   file.write:
@@ -54,11 +54,11 @@ start:
         mime_type: application/vnd.cerb.uri
         content: {{tmp_file.uri}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab create_zip policy %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 commands:
   file.write:
@@ -67,7 +67,7 @@ commands:
     deny/type@bool: {{inputs.record_type is not record type ('attachment')}}
     allow@bool: yes
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

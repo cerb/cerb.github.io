@@ -23,7 +23,7 @@ The [\|date](/docs/scripting/filters/#date) filter can convert human-readable da
 {% tabs check_date %}
 
 {% tab check_date automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -36,17 +36,17 @@ start:
       Your SLA coverage has expired.
       {% endif %}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab check_date output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   output: |
     Your SLA coverage is active.
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

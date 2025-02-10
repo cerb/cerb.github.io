@@ -28,8 +28,7 @@ jumbotron:
 
 The **record.update:** command updates an existing record with the given fields.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   record.update:
@@ -41,8 +40,7 @@ start:
       fields:
         importance: 90
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

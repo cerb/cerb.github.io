@@ -65,8 +65,7 @@ We've provided examples for each of the three authentication methods.
 
 Navigate to **Setup >> Packages >> Import** and paste the following package:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -156,8 +155,7 @@ Navigate to **Setup >> Packages >> Import** and paste the following package:
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Import** button at the bottom.
 
@@ -201,10 +199,10 @@ It's to the right of `valid_api_key`:
 
 You can test a request from **Input:** in the lower left of the automation editor. Set the `Authorization:` header to your API key and click the play button.
 
-```yaml
+{% highlight yaml %}
 request_headers:
   authorization: a1b2c3d4e5f6
-```
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/webhooks/custom-api/auth-api-key-simulate.png" class="screenshot">
@@ -216,9 +214,9 @@ If you change or omit the API key the request will fail as expected.
 
 A request from a utility like `curl` would look like:
 
-```bash
+{% highlight bash %}
 curl -i -H "Authorization: a1b2c3d4e5f6" "https://cerb.example/portal/custom-api"
-```
+{% endhighlight %}
 
 ### Implementing in your app
 
@@ -238,12 +236,12 @@ If you want to allow Cerb workers to log in to your integration to generate toke
 
 You can add your own scopes. The default provides an `api` scope that allows all endpoints and methods. Your automation will need to validate scopes.
 
-```yaml
+{% highlight yaml %}
 "api":
  label: Make any API request on your behalf
  endpoints:
   - "*" #[GET, PATCH, POST, PUT, DELETE]
-```
+{% endhighlight %}
 
 The scopes are set when a token is generated. If a worker logs in to Cerb from a third-party app, a confirmation screen will show them the requested scopes before they consent. If you use the token generator, you can pick a token's scope.
 
@@ -269,16 +267,16 @@ Click the **Create** button and copy the **Access Token**.
 
 You can test a request from **Input:** in the lower left of the automation editor. Set the `Authorization: Bearer` header to your token and click the play button.
 
-```yaml
+{% highlight yaml %}
 request_headers:
   authorization: Bearer eyJ0eXAiOi[...]
-```
+{% endhighlight %}
 
 ### Testing from curl
 
-```bash
+{% highlight bash %}
 curl -i -H "Authorization: Bearer eyJ0eXAiOi[...]" "https://cerb.example/portal/custom-api"
-```
+{% endhighlight %}
 
 ### Implementing in your app
 
@@ -302,7 +300,7 @@ It's to the right of `hmac_secret`:
 
 You can test a request from **Input:** in the lower left of the automation editor. Set the `Authorization: Bearer` header to your token and click the play button.
 
-```yaml
+{% highlight yaml %}
 request_method: POST
 request_path: some/path
 request_params:
@@ -313,7 +311,7 @@ request_headers:
   date: "Wed, 21 Feb 2024 03:20:45 +0000"
   authorization: a3832d3b6c6d7d987bb76fb7bac85e7dc84849e81689eb06ff8503434551d866
 request_body: This is a test body
-```
+{% endhighlight %}
 
 Your signature **Input** for `authorization:` will be different from the example above since your HMAC secret was randomly generated. Run the automation simulator once and copy the value for `generated_signature:` in the **Output** on the bottom right. Your subsequent request should now be successful.
 
@@ -329,7 +327,7 @@ After changing that value, re-simulating the automation should return an expired
 
 Your app needs to generate an HMAC hash with the same process as the automation. For example in PHP:
 
-```php
+{% highlight php %}
 $secret = 'F7WDMN65Y3BNZN1TV6UWE7NWF76FW5G3';
 
 $string_to_sign = implode(
@@ -349,15 +347,15 @@ echo $string_to_sign,
   "\n",
   hash_hmac('sha256', $string_to_sign, $secret)
 ;
-```
+{% endhighlight %}
 
 Include the signature in the `Authorization:` HTTP request header:
 
-```bash
+{% highlight bash %}
 curl -i -X POST -H "Authorization: 11213c4eef09e3597ef3d41ac0dde59fa94fc4c0157877dbf815461073a5ce44" \
   -H "Content-Type: application/json" -H "Date: Wed, 21 Feb 2024 03:32:56 +0000" \
   -d "This is a test body" "https://cerb.example/portal/custom-api/some/path/?b=bar&a=foo"
-```
+{% endhighlight %}
 
 You can modify the "string to sign" in both your app and the automation to meet your needs.
 
@@ -369,16 +367,14 @@ Name the automations using the same namespace as your `webhook.respond` automati
 
 In the **Policy** tab of your webhook automation, allow all [function:](/docs/automations/commands/function/) calls to that namespace:
 
-<pre>
-<code class="language-text">
+{% highlight cerb %}
 {% raw %}
 commands:
   function:
     deny/uri@bool: {{uri is not prefixed ('cerb:automation:example.webhookPortal.customApi.')}}
     allow@bool: yes
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 After your authentication, run the automation function for the requested endpoint.
 
@@ -388,8 +384,7 @@ You can pass `inputs:` to the function from the HTTP request.
 
 You can use `output:` from the function in your `return:body:`.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
   # The signature is valid at this point
   decision/endpoint:
@@ -415,5 +410,4 @@ You can use `output:` from the function in your `return:body:`.
         return:
           status_code: 404
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

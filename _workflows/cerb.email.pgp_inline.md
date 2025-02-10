@@ -53,8 +53,7 @@ You can import these from **Search >> PGP Public Keys >> (+)**.
 
 Here's ours:
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 {% raw %}
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Comment: https://keybase.io/wgm
@@ -110,8 +109,7 @@ fofJE6UzEDu4i71xK84y9oQQRSqQPw==
 =1rCz
 -----END PGP PUBLIC KEY BLOCK-----
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Send encrypted messages
 
@@ -144,8 +142,7 @@ You can build your own PGP Inline Encryption workflow using this template as a r
 
 Change occurrences of **cerb.email.pgp_inline** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.email.pgp_inline
@@ -219,5 +216,4 @@ records:
           tooltip: Encrypt with PGP
           icon: message-lock
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

@@ -252,14 +252,13 @@ As you would expect, you can search course records by the new fields you created
 
 You can also use _deep search_ to search courses based on the fields of instructors and/or rooms.
 
-1. Navigate to **Search >> Courses**.
+Navigate to **Search >> Courses**.
 
-1. Enter the following quick search:
-	<pre>
-	<code class="language-text">
-	instructor:(name:Emell) room:(name:Berners)
-	</code>
-	</pre>
+Enter the following quick search:
+
+{% highlight cerb %}
+instructor:(name:Emell) room:(name:Berners)
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/records/custom-records/courses-deep-search.png" class="screenshot">

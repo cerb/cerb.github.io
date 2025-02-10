@@ -29,7 +29,7 @@ Using [metric.increment:](/docs/automations/commands/metric.increment/) you can 
 {% tabs retroactive_metric_values %}
 
 {% tab retroactive_metric_values automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   metric.increment:
@@ -38,18 +38,18 @@ start:
       timestamp@date: Jan 1 2025 5pm America/Los_Angeles
       values@csv: 1,2,3
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab retroactive_metric_values policy %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 commands:
   metric.increment:
     deny/metric_name@bool: {{inputs.metric_name != 'example.metric.name'}}
     allow@bool: yes
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}
@@ -59,7 +59,7 @@ You can verify the data in **Setup >> Developers >> Data Query Tester**:
 {% tabs retroactive_metric_values2 %}
 
 {% tab retroactive_metric_values2 data query %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 type:metrics.timeseries
 series.intervals:(
@@ -71,7 +71,7 @@ period:day
 range:"this month"
 format:timeseries
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

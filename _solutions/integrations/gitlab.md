@@ -136,8 +136,7 @@ Click the **Save Changes** button.
 
 Create an [automation.function](/docs/automations/triggers/automation.function/) automation:
 
-<pre>
-<code class="language-text">
+{% highlight cerb %}
 {% raw %}
 inputs:
   text/repo:
@@ -159,20 +158,17 @@ start:
         search_results@json: {{http_response.body}}
     on_error:
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 From the **Inputs:** section in the lower left of the automation editor, simulate with:
 
-<pre>
-<code class="language-text">
+{% highlight cerb %}
 {% raw %}
 inputs:
   repo: cerb.ai/example-project
   query: tempore
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Use the connected account in Cerb workflows
 

@@ -25,8 +25,7 @@ jumbotron:
 
 Conditional logic can display different content based on the result of any number of **expressions**:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set sla_expiration = '+2 weeks'|date('U') %}
 {% if sla_expiration >= 'now'|date('U') %}
@@ -35,12 +34,11 @@ Your SLA coverage is active.
 Your SLA coverage has expired.
 {% endif %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Your SLA coverage is active.
-```
+{% endhighlight %}
 
 {% comment %}
 AND/OR

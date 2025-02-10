@@ -43,21 +43,17 @@ A data query is a collection of `key:value` pairs.
 
 Every query must include a `type:` key:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 type:worklist.subtotals
-</code>
-</pre>
+{% endhighlight %}
 
 Additional keys are available depending on the type of data being requested.
 
 A `format:` key prepares the response for different visualizations:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 format:dictionaries
-</code>
-</pre>
+{% endhighlight %}
 
 # Types
 

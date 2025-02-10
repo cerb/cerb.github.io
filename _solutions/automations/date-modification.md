@@ -28,7 +28,7 @@ Here is an example of using the [\|date_modify](/docs/scripting/filters/#date_mo
 
 {% tabs modify-dates %}
 {% tab modify-dates automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   return:
@@ -39,11 +39,11 @@ start:
       +2 days: {{timestamp|date_modify('+2 days')|date(format)}}
       -1 week, 3 days: {{timestamp|date_modify('-1 week, -3 days')|date(format)}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab modify-dates output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   output: |-
@@ -51,6 +51,6 @@ __return:
     +2 days: Tue, 17 Jun 2025 PDT
     -1 week, 3 days: Thu, 05 Jun 2025 PDT
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}

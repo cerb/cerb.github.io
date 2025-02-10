@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;devblocks.storage.engine&quot;&gt;
 			&lt;id&gt;devblocks.storage.engine.disk&lt;/id&gt;
 			&lt;name&gt;Disk&lt;/name&gt;
@@ -15,13 +14,11 @@
 			&lt;params&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_DevblocksStorageEngine {
 	public function batchDelete($namespace, $keys) {
@@ -49,6 +46,5 @@ class ExampleExtension extends Extension_DevblocksStorageEngine {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

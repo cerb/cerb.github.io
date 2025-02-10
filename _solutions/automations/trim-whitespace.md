@@ -29,7 +29,7 @@ Adding a dash `-` to opening or closing scripting tags will trim leading or trai
 
 {% tabs trim-whitespace %}
 {% tab trim-whitespace automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   return:
@@ -40,16 +40,16 @@ start:
       
       in it.
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab trim-whitespace output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 __return:
   output: This text has no leading or trailing whitespace in it.
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}
 
@@ -59,7 +59,7 @@ The `|spaceless` filter removes whitespace between HTML tags.
 
 {% tabs trim-whitespace2 %}
 {% tab trim-whitespace2 automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   return:
@@ -71,16 +71,16 @@ start:
         </div>"|spaceless
       }}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab trim-whitespace2 output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 __return:
   output: <div><p>This has extra space</p><p>between tags</p></div>
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}
 
@@ -90,7 +90,7 @@ For larger blocks of HTML, you can use the apply spaceless approach.
 
 {% tabs trim-whitespace3 %}
 {% tab trim-whitespace3 automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   return:
@@ -101,15 +101,15 @@ start:
       </div>
       {% endapply %}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab trim-whitespace3 output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 __return:
   output: <div><span>This will all be on a single line.</span></div>
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}

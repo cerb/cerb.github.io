@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerberusweb.ui.workspace.widget&quot;&gt;
 			&lt;id&gt;core.workspace.widget.bot&lt;/id&gt;
 			&lt;name&gt;Bot Custom Widget&lt;/name&gt;
@@ -15,13 +14,11 @@
 			&lt;params&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_WorkspaceWidget {
 	public function render(Model_WorkspaceWidget $widget, $refresh_options) {
@@ -34,6 +31,5 @@ class ExampleExtension extends Extension_WorkspaceWidget {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

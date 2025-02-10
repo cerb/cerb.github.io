@@ -33,8 +33,7 @@ In [interaction](/docs/automations/triggers/interaction.worker/) web forms, a **
 
 This is particularly useful for interactions that generate large or binary output, like a dynamic image, a CSV/JSON export, or a ZIP archive.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await:
@@ -46,8 +45,7 @@ start:
           uri: cerb:automation_resource:3b1f58c2-1234-11ed-b9e9-01791ccb5549
           filename: example.zip
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/automations/triggers/interaction.worker/elements/file-download.png" class="screenshot">

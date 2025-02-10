@@ -35,8 +35,7 @@ The element name (e.g. `fileUpload/photo` in the example below) is used to set a
 
 If uploading an attachment and the name ends with `_id`, then a corresponding `__context` key will be added with the same prefix. Otherwise, keys for `_id` and `__context` will be added with the element name as the prefix. This allows key expansion of the file's fields (e.g. `name`, `size`) directly on the placeholder, as well as from within a `validation@raw:` script.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await:
@@ -46,8 +45,7 @@ start:
           label: Upload a photo:
           as: automation_resource
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/automations/triggers/interaction.worker/elements/fileUpload.png" class="screenshot">
@@ -79,8 +77,7 @@ An optional custom validation script. Any output is considered to be an error.
 
 You can use `if...elseif` to check multiple conditions.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await:
@@ -98,5 +95,4 @@ start:
             {% elseif prompt_image_size > 50000 %}
             The image must be smaller than 50KB ({{prompt_image_size|bytes_pretty}}).
             {% endif %}{% endraw %}
-</code>
-</pre>
+{% endhighlight %}

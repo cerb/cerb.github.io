@@ -46,8 +46,7 @@ Navigate to **Setup >> Packages >> Import**.
 
 Copy and paste the following package into the **JSON:** section:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -77,8 +76,7 @@ Copy and paste the following package into the **JSON:** section:
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Import** button.
 
@@ -106,15 +104,15 @@ Click the **Edit** button at the top of the card.
 
 The **Repeat:** schedules are define as a concise cron expression[^cron-expression] with the format:
 
-```
+{% highlight text %}
 [minute] [hour] [day of month] [month of year] [day of week]
-```
+{% endhighlight %}
 
 Our format is:
 
-```
+{% highlight text %}
 0 8 * * 1-5
-```
+{% endhighlight %}
 
 The automation will run on the 0th minute of the 8th hour (08:00), every day of the month, every month of the year, when the day of the week is Mon-Fri.
 
@@ -124,9 +122,9 @@ You can define multiple schedules, and the next occurrence will be automatically
 
 For instance, you could also run this automation at 10:45am and 10:45pm on Saturdays during January with:
 
-```
+{% highlight text %}
 45 10,22 * 1 6
-```
+{% endhighlight %}
 
 Cron expressions are very flexible.
 
@@ -138,7 +136,7 @@ Now click on the **example.automationTimer.createDailyTasks** automation in the 
 
 The automation uses the [record.create](/docs/automations/commands/record.create/) command to create tasks records.
 
-```cerb
+{% highlight cerb %}
 start:
   record.create/coffee:
     output: new_task
@@ -149,7 +147,7 @@ start:
         due@date: today 8:30am
         importance: 90
         owner_id@int: 0
-```
+{% endhighlight %}
 
 The first two tasks are created every day at 8:30am and 4pm.
 

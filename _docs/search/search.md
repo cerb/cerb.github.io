@@ -45,13 +45,11 @@ As text, queries can be built dynamically using [automation scripting](/docs/scr
 
 To give you an idea of what you can do with queries, here's an example query that returns open tickets in the Sales or Support group that are less than a month old:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 status:open created:"-1 month" group:(sales OR support)
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 In the following sections we'll cover query syntax and advanced functionality.
 
@@ -81,13 +79,11 @@ For instance, if a worklist is meant to only show open conversations from client
 
 A query is a list of **filters** separated by a space. Each filter uses the format:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 filter:expression
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The possible **expressions** depend on the type of filter:
 
@@ -100,65 +96,55 @@ These expressions can be used on text-based [filters](/docs/search/#filters).
 
 Simple text (without spaces) can be used as the entire expression:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 firstName:Kina
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Phrases
 {:.no_toc}
 
 Enclose phrases in double quotes (`"`):
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 subject:"This phrase contains spaces"
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Wildcards
 {:.no_toc}
 
 Use asterisks (`*`) to denote wildcards:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 mask:abc*
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Sets
 {:.no_toc}
 
 Find records that match _any_ of the given values:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 color:[red,green,blue]
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Negation
 {:.no_toc}
 
 Prefix an expression with an exclamation point (`!`) to negate it. This returns any records that don't match.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 status:!open
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Fulltext
 
@@ -176,52 +162,44 @@ This is a more efficient way to search [records](/docs/records/) with a large am
 
 By default, records will be returned if they match all of the given terms.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 bug bluetooth report
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Phrases
 {:.no_toc}
 
 Enter text within quotes to search for exact phrases:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 "bug report"
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Mixing terms and phrases
 {:.no_toc}
 
 (Added in [10.1](/releases/10.1/))
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 content:("an exact phrase" other terms)
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Negation
 {:.no_toc}
 
 (Added in [10.1](/releases/10.1/))
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 text:!(not these words)
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Numbers
 
@@ -232,78 +210,66 @@ These expressions can be used on numeric [filters](/docs/search/#filters).
 
 To filter by records with an exact numeric value, use a number as the expression:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 age:35
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Not Equal
 {:.no_toc}
 
 Find all records that don't match a value by prefixing the expression with an exclamation point (`!`):
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 priority:!1
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Greater than
 {:.no_toc}
 
 To filter by records with a value greater than the expression, use `>` or `>=`:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 age:&gt;21
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Less than
 {:.no_toc}
 
 To filter by records with a value less than the expression, use `<` or `<=`:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 order:&lt;=100
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Between
 {:.no_toc}
 
 Find records with a value within a range by using `...`:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 importance:25...75
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Sets
 {:.no_toc}
 
 Find records that match _any_ of the given values:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 importance:[0,50,75]
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Booleans
 
@@ -318,13 +284,11 @@ To filter for records with a `true` boolean value, you can use the expressions:
 * `y`
 * `true`
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 checkbox:y
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### False
 {:.no_toc}
@@ -335,13 +299,11 @@ To filter for records with a `false` boolean value, you can use the expressions:
 * `n`
 * `false`
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 isAdmin:n
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Dates
 
@@ -352,82 +314,64 @@ These expressions can be used on date-based [filters](/docs/search/#filters).
 
 To filter by records with a date after a given point in time:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 created:today
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 created:"-1 month"
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 created:"2018-01-01"
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 created:"January 1 2018"
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 created:"first day of this month"
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Between
 {:.no_toc}
 
 To filter by records with a date within a given range, provide two dates separated by the word `to`:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 created:"today to now"
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 created:"January 1 to June 30"
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 created:"-1 year to -6 months"
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 created:"big bang to first day of this month"
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Advanced
 
@@ -435,13 +379,11 @@ Since: [9.6](/releases/9.6/)
 
 Date-based filters may use an optional advanced parameterized expression, with the format:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 created:(since:"-1 week" until:now months:Jan,Feb,Mar days:Weekdays times:9a-5p)
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The `since:` option sets the beginning of the date range (default `big bang`).
 
@@ -468,26 +410,22 @@ This is particularly useful for [custom fields](/docs/custom-fields/).
 
 Use the expression `null` to find records _without_ any value set:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 sla.level:null
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Not null
 {:.no_toc}
 
 Use the expression `!null` to find records _with_ any value set:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 checkbox:!null
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Choosers
 
@@ -502,26 +440,22 @@ Chooser filters support all [numeric](/docs/search/#numbers) expressions.
 
 To find records with a single matching record ID:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 group.id:1
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### IDs
 {:.no_toc}
 
 To find records matching any of a list of record IDs:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 group.id:[1,2,3]
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Links
 
@@ -532,13 +466,11 @@ These expressions can be used on link [filters](/docs/search/#filters).
 
 To filter by records with a link to a specific other [record type](/docs/records/types/), use its alias as the expression:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 links:ticket
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Deep search by links
 {:.no_toc}
@@ -547,13 +479,11 @@ You can also use [deep search](/docs/search/#deep-search) to filter records base
 
 Append the [record type alias](/docs/records/types/) to `links` following a period (`.`), then the expression can be any [search query](/docs/search/) for that record type:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 links.ticket:(mask:a*)
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Watchers
 
@@ -564,65 +494,55 @@ These expressions can be used on watcher [filters](/docs/search/#filters).
 
 To filter for records watched by specific workers, enter partial names:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 watchers:kina,karl
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Me
 {:.no_toc}
 
 To filter for records you're watching, use the `me` expression:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 watchers:me
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Any
 {:.no_toc}
 
 To filter for records watched by any workers, use the `any` expression:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 watchers:any
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### None
 {:.no_toc}
 
 To filter for records **not** watched by any workers, use the `none` expression:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 watchers:none
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### IDs
 {:.no_toc}
 
 To filter for records watched by specific worker IDs, enter a comma-separated list of IDs:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 watchers:1,2,3
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Autocompletion
 
@@ -650,13 +570,11 @@ This is one of the most powerful features in Cerb.
 
 When performing a deep search, your expression is another search query:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 status:open group:(name:S*)
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The above example returns records that are open and in a group that begin with the letter _'S'_.
 
@@ -664,15 +582,13 @@ The above example returns records that are open and in a group that begin with t
 
 You can perform multiple deep searches at once:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 owner:(gender:f) 
 group:(name:[support,sales]) 
 org:(sla.plan:!null)
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The above example returns records owned by a female worker, in the _Support_ or _Sales_ group, from an organization with any service level agreement (a [custom fieldset](/docs/custom-fieldsets/) picklist).
 
@@ -680,8 +596,7 @@ The above example returns records owned by a female worker, in the _Support_ or 
 
 You can perform a deep search, within a deep search, within a deep search (ad nauseam):
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 messages.first:(
   sender:(
@@ -693,8 +608,7 @@ messages.first:(
   )
 )
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The above example returns records where the sender of the first message is a member of an organization in the health care industry in Europe with a "Priority" service level agreement.
 
@@ -702,13 +616,11 @@ The above example returns records where the sender of the first message is a mem
 
 You can also negate a deep search by prefixing an exclamation mark (`!`). This returns all records that **don't match**:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 group:!(name:S*)
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The above example returns records that are in a group whose name **doesn't** start with the letter _'S'_.
 
@@ -720,21 +632,17 @@ You can group [filters](/docs/search/#filters) into `AND` and `OR` (boolean) set
 
 Return records that match **all** of the given filters:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 status:open AND created:today AND group:support
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 status:open created:today group:support
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-box note">
 <p>A query automatically uses <code>AND</code> by default if you specify multiple filters and separate them with a space.</p>
@@ -744,13 +652,11 @@ status:open created:today group:support
 
 Return records that match **any** of the given filters:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 owner.id:me OR owner.id:none
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The above example will return records that are "owned by the current worker" or "have no owner". It will exclude records owned by any other worker.
 
@@ -758,13 +664,11 @@ The above example will return records that are "owned by the current worker" or 
 
 You can prefix a boolean filter group with an exclamation mark (`!`) to negate it:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 !(mimetype:image/png size:<100KB)
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The above example will return everything **except** "PNGs smaller than 100KB".
 
@@ -772,13 +676,11 @@ The above example will return everything **except** "PNGs smaller than 100KB".
 
 You can mix boolean filter groups by using parentheses (`()`):
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 (mimetype:image/png size:&gt;100KB) OR (mimetype:image/jpeg size:&lt;100KB)
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The above example will return **both** "PNGs larger than 100KB" and "JPEGs smaller than 100KB".
 
@@ -790,25 +692,21 @@ A special `sort:` [filter](/docs/search/#filters) is available on every record t
 
 To sort matching records in ascending order (e.g. A-Z, oldest-newest), specify a filter name:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 sort:subject
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Sort descending
 
 To sort matching records in descending order (e.g. Z-A, newest-oldest), prefix the filter name with a dash (`-`):
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 sort:-updated
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Nested sorting
 
@@ -816,13 +714,11 @@ You can also sort by multiple fields by separating filter names with a comma (`,
 
 For example, to return the most important and oldest issues first:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 sort:-importance,created
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 If multiple records shared `importance:90`, they would be sub-sorted by `created` so the oldest record is first and newest is last.
 

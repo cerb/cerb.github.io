@@ -71,8 +71,7 @@ Click the **Save Changes** button.
 
 You can send a new message into Cerb from your normal email client, or paste a test message from **Setup >> Mail >> Incoming >> Import**
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 {% raw %}
 From: customer@cerb.example
 To: demo@cerb.example
@@ -80,8 +79,7 @@ Subject: This is a demo ticket
 
 This is a demo ticket
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 You'll see an auto-response queued for delivery on new tickets.
 
@@ -103,8 +101,7 @@ You can build your own auto-responder workflow using this template as a referenc
 
 Change occurrences of **cerb.auto_responder** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.auto_responder
@@ -241,5 +238,4 @@ records:
               )
             }}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

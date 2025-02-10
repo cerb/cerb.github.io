@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;usermeet.login.authenticator&quot;&gt;
 			&lt;id&gt;sc.login.auth.ldap&lt;/id&gt;
 			&lt;name&gt;LDAP&lt;/name&gt;
@@ -17,13 +16,11 @@
 				&lt;param key=&quot;switcher_label&quot; value=&quot;Log in with LDAP&quot;/&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_ScLoginAuthenticator {
 	/**
@@ -48,6 +45,5 @@ class ExampleExtension extends Extension_ScLoginAuthenticator {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

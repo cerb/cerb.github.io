@@ -33,7 +33,7 @@ Here is an example of making an HTTP GET request and using XPath to extract data
 {% tabs http_request_get_xpath %}
 
 {% tab http_request_get_xpath automation %}
-```cerb
+{% highlight cerb%}
 {% raw %}
 start:
   http.request/get:
@@ -52,11 +52,11 @@ start:
         http_response@json: null
     on_error:
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab http_request_get_xpath policy %}
-```cerb
+{% highlight cerb%}
 {% raw %}
 commands:
   http.request:
@@ -64,11 +64,11 @@ commands:
     deny/url@bool: {{inputs.url is not prefixed ('http://','https://')}}
     allow@bool: yes
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab http_request_get_xpath output %}
-```yaml
+{% highlight yaml %}
 status_code: 200
 versions:
 - 11.0.3 - /releases/11.0.3/
@@ -80,7 +80,7 @@ versions:
 - 10.4.20 - /releases/10.4.20/
 - 10.4.19 - /releases/10.4.19/
 # ...
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

@@ -30,7 +30,7 @@ The [\|batch](/docs/scripting/filters/#batch) filter divides a list into smaller
 
 {% tabs batch-list-items %}
 {% tab batch-list-items automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -38,15 +38,15 @@ start:
   return:
     batches: {{items|batch(size=3, fill=-1, preserve_keys=false)|json_encode}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab batch-list-items output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   batches: '[[1,2,3],[4,5,6],[7,8,9],[10,-1,-1]]'
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}

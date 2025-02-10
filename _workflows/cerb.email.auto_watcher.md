@@ -53,8 +53,7 @@ You can build your own auto-watcher workflow using this template as a reference.
 
 Change occurrences of **cerb.email.auto_watcher** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.email.auto_watcher
@@ -100,5 +99,4 @@ records:
             deny/type@bool: {{inputs.record_type is not record type ('ticket')}}
             allow@bool: yes
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

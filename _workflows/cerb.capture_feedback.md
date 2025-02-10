@@ -62,8 +62,7 @@ You can build your own capture feedback workflow using this template as a refere
 
 Change occurrences of **cerb.capture_feedback** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.capture_feedback
@@ -276,5 +275,4 @@ records:
           inputs:
             message: {{message_id}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

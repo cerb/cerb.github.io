@@ -27,8 +27,7 @@ jumbotron:
 
 The **data.query:** command executes a [data query](/docs/data-queries/) and returns the response.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   data.query:
@@ -42,8 +41,7 @@ start:
       return:
         records@key: results:data
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerberusweb.ui.page.menu.item&quot;&gt;
 			&lt;id&gt;wgmclickatell.setup.menu.plugins.clickatell&lt;/id&gt;
 			&lt;name&gt;Clickatell&lt;/name&gt;
@@ -17,19 +16,16 @@
 				&lt;param key=&quot;menu_id&quot; value=&quot;core.setup.menu.services&quot;/&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_ContextProfileScript {
 	public function renderScript($context, $context_id) {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

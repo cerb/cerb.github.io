@@ -60,8 +60,7 @@ Here's what that process looks like:
 
 Here's our own public key:
 
-<pre style="max-height:15.5em;">
-<code class="language-text">
+{% highlight pgp %}
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: Keybase OpenPGP v2.0.61
 Comment: https://keybase.io/crypto
@@ -139,8 +138,7 @@ fIsuSas99Fwl3MbChVHzBljuIoUynscOzRvfyGwoRdP8ImeaydfM9YTO/R4VA9QP
 Cjt59T4=
 =BJ/A
 -----END PGP PUBLIC KEY BLOCK-----
-</code>
-</pre>
+{% endhighlight %}
 
 ### Public key servers
 
@@ -186,8 +184,7 @@ To send an encrypted message, you must have a public key on file for every recip
 
 Here's what an encrypted email message looks like when it's traveling over the network:
 
-<pre style="max-height:29.5em;">
-<code class="language-text">
+{% highlight text %}
 Message-ID: <af1d48312aa8449f709a6d5a35086d81@localhost>
 Date: Wed, 16 Aug 2017 19:06:49 -0700
 Subject: This message is encrypted
@@ -247,8 +244,7 @@ jyOi8AknGL+XJlOh2t0lJjAJ6KbbFQIbUJ6moQ==
 
 
 --_=_swift_v4_1502935609_82fe295e000d2484f7388d11c98b8d53_=_--
-</code>
-</pre>
+{% endhighlight %}
 
 In conversation threads in Cerb, we add a badge for any messages that were encrypted when sent or received:
 

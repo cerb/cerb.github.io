@@ -34,7 +34,7 @@ You can use the `cerb.commands.worklist.query.debug` command to view the SQL sta
 {% tabs debug_search_query %}
 
 {% tab debug_search_query automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   api.command:
@@ -45,22 +45,22 @@ start:
         record_type: ticket
         query: status:o created:"-1 week" group:(name:"Support")
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab debug_search_query policy %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 commands:
   api.command:
     deny/name@bool: {{inputs.name not in ['cerb.commands.worklist.query.debug']}}
     allow@bool: yes
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab debug_search_query output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 results:
   sql: SELECT t.id AS t_id , t.updated_date AS t_updated_date FROM ticket t  WHERE
@@ -68,7 +68,7 @@ results:
     IN (SELECT g.id FROM worker_group g WHERE (g.name = 'Support') )  ORDER BY t_updated_date
     DESC LIMIT 0,10
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

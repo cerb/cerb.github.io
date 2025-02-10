@@ -99,15 +99,13 @@ As mentioned earlier, map schemas use [KATA](/docs/kata/), our human-friendly te
 
 A map starts with a `map:resource:`:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 map:
   resource:
     uri: cerb:resource:map.country.usa.states
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Notice that the resource is referred to by a `map:resource:uri:` (uniform resource identifier). This always starts with a `cerb:` prefix, then a record type, another colon `:`, and ends with the unique identifier for a record of that type (an alias or record ID).
 
@@ -127,46 +125,40 @@ Cerb supports the following projection types:
 
 Mercator has been the general purpose standard projection for nearly 500 years.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 map:
   projection:
     type: mercator
     scale: 90
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### naturalEarth
 
 Natural Earth is a relatively new projection, suitable for showing worldwide maps at a small scale.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 map:
   projection:
     type: naturalEarth
     scale: 90
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### albersUsa
 
 AlbersUSA is a "composite" projection for displaying a more compact map of the United States, with resized Alaska/Hawaii moved near the continental southwest.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 map:
   projection:
     type: albersUsa
     scale: 650
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### scale:
 
@@ -174,23 +166,20 @@ The `map:projection:scale:` key determines the initial size of the rendered map 
 
 You can determine the ideal scale by panning and zooming the map, then looking at the current values in the bottom right.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 map:
   projection:
     type: mercator
     scale: 90
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### center:
 
 The `map:projection:center:` key determines the default location at the center of the map's viewport. If omitted, the default is 0º Latitude, 0º Longitude (off the west coast of Africa).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 map:
   projection:
@@ -200,8 +189,7 @@ map:
         latitude: 0
         longitude: 0
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-box note">
 <p>The <code>albersUsa</code> projection does not support this option, and is instead always centered on the United States by default. You can use <code>zoom:</code> to change the focus.</p>
@@ -213,8 +201,7 @@ While `map:projection:center:` determines the baseline map position, the `map:pr
 
 Interactions can also use the `zoom:` option to move around an existing map.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 map:
   projection:
@@ -228,8 +215,7 @@ map:
         longitude: -97.74
         scale: 2
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The `map:projection:zoom:scale:` key is a zoom multiplier from `1` to `40`. 
 
@@ -249,8 +235,7 @@ To improve reusability, you can use `map:regions:properties:` to merge additiona
 
 Use the `map:regions:properties:data:` key to specify additional properties to merge into the existing map regions.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   resource:
     uri: cerb:resource:map.country.usa.states
@@ -267,15 +252,13 @@ map:
       join:
         property: postal
         case: upper
-</code>
-</pre>
+{% endhighlight %}
 
 #### resource:
 
 Use the `map:regions:properties:resource:` key to fetch a 'Map Properties' [resource](/docs/resources/) and merge it into the existing map regions.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   resource:
     uri: cerb:resource:map.country.usa.states
@@ -289,13 +272,11 @@ map:
       join:
         property: name
         case: upper
-</code>
-</pre>
+{% endhighlight %}
 
 The map properties resource must have the following JSON object format:
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {
     "VALUE_TO_MATCH": {
         "new_property": "some value",
@@ -303,13 +284,11 @@ The map properties resource must have the following JSON object format:
     },
     ...
 }
-</code>
-</pre>
+{% endhighlight %}
 
 For instance:
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {
     "CALIFORNIA": {
         "state_animal": "California grizzly bear" 
@@ -318,8 +297,7 @@ For instance:
         "state_animal": "Nine-banded armadillo"
     }
 }
-</code>
-</pre>
+{% endhighlight %}
 
 #### join:
 
@@ -339,8 +317,7 @@ It's useful to be able to see all of the properties on a feature when designing 
 
 You can use the `map:regions:label:` key to control the contents of the floating label.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   resource:
     uri: cerb:resource:map.country.usa.states
@@ -362,8 +339,7 @@ map:
         pop_est:
           label: Population
           format: number
-</code>
-</pre>
+{% endhighlight %}
 
 ### filter:
 
@@ -374,8 +350,7 @@ Use `map:regions:filter:` to extract or omit certain features from a larger map 
 
 Use `is:` to match a single property value:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   resource:
     uri: cerb:resource:map.country.usa.states
@@ -386,16 +361,14 @@ map:
     filter:
       property: name
       is: California
-</code>
-</pre>
+{% endhighlight %}
 
 #### is@list:
 {: .no_toc}
 
 Use `is@list:` or `is@csv:` to match multiple values in a single property:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   resource:
     uri: cerb:resource:map.world.countries
@@ -414,8 +387,7 @@ map:
         France
         Germany
         Switzerland
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/maps/map-kata-regions-filter-in-list.png" class="screenshot">
@@ -426,8 +398,7 @@ map:
 
 Use `not:` to exclude a single property value:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   resource:
     uri: cerb:resource:map.world.countries
@@ -441,8 +412,7 @@ map:
     filter:
       property: continent
       not: North America
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/maps/map-kata-regions-filter-not.png" class="screenshot">
@@ -453,8 +423,7 @@ map:
 
 Use `not@list:` or `not@csv:` to exclude multiple values in a single property:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   resource:
     uri: cerb:resource:map.world.countries
@@ -468,8 +437,7 @@ map:
     filter:
       property: name
       not@csv: Australia, New Zealand, Antarctica
-</code>
-</pre>
+{% endhighlight %}
 
 ### fill:
 
@@ -487,22 +455,19 @@ Colors should be specified using [web colors](https://en.wikipedia.org/wiki/Web_
 
 Use `map:regions:fill:color_key:` to select colors directly from a property.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   regions:
     fill:
       color_key:
         property: country_color
-</code>
-</pre>
+{% endhighlight %}
 
 #### color_map:
 
 Use `map:regions:fill:color_map:` to associate colors with specific property values.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   regions:
     fill:
@@ -514,23 +479,20 @@ map:
           3: green
           4: orange
           5: red
-</code>
-</pre>
+{% endhighlight %}
 
 #### choropleth:
 
 Use `map:regions:fill:choropleth:` to interpolate color intensity on a scale based on a numeric property.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   regions:
     fill:
       choropleth:
         property: mapcolor9
         classes: 9
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/maps/map-kata-regions-fill-choropleth.png" class="screenshot">
@@ -544,14 +506,12 @@ Points of interest can be plotted on a map using geospatial coordinates (latitud
 
 Like map data, points can be loaded from a [resource](#resources) URI using `map:points:resource:`:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   points:
     resource:
       uri: cerb:resource:mapPoints.worldCapitalCities
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/maps/map-kata-points-resource.png" class="screenshot">
@@ -563,8 +523,7 @@ You can also use `map:points:data:` to manually specify points and their propert
 
 If you specify both `map:points:resource:` and `map:points:data:`, the points will be merged into a single dataset.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   points:
     data:
@@ -589,8 +548,7 @@ map:
           name: Sydney
           country: Australia
           continent: Oceania
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/maps/map-kata-points-data.png" class="screenshot">
@@ -604,8 +562,7 @@ map:
 
 Like with regions, clicking on a point displays its properties. You can use `map:points:label:` to select which properties to show.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   points:
     resource:
@@ -624,8 +581,7 @@ map:
           label: Latitude
         longitude:
           label: Longitude
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/maps/map-kata-points-label.png" class="screenshot">
@@ -640,8 +596,7 @@ Use `map:points:filter:` to extract or omit certain points from a resource.
 
 Use `is:` to match a single property value:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   points:
     resource:
@@ -649,8 +604,7 @@ map:
     filter:
       property: continent
       is: Europe
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/maps/map-kata-points-filter-is.png" class="screenshot">
@@ -661,8 +615,7 @@ map:
 
 Use `is@list:` or `is@csv:` to match multiple values in a single property:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   points:
     resource:
@@ -675,16 +628,14 @@ map:
         London
         Moscow
         Washington, D.C.
-</code>
-</pre>
+{% endhighlight %}
 
 #### not:
 {: .no_toc}
 
 Use `not:` to exclude a single property value:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   points:
     resource:
@@ -692,16 +643,14 @@ map:
     filter:
       property: megacity
       not: 0
-</code>
-</pre>
+{% endhighlight %}
 
 #### not@list:
 {: .no_toc}
 
 Use `not@list:` or `not@csv:` to exclude multiple values in a single property:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   points:
     resource:
@@ -711,8 +660,7 @@ map:
       not@list:
         Asia
         Oceania
-</code>
-</pre>
+{% endhighlight %}
 
 ### size:
 
@@ -722,23 +670,20 @@ Use `map:points:size:` to configure the size of each point.
 
 The `map:points:size:default:` key configures the default size for points which don't match any other rules. The size should be specified as a number.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   points:
     resource:
       uri: cerb:resource:mapPoints.worldCapitalCities
     size:
       default: 2.5
-</code>
-</pre>
+{% endhighlight %}
 
 #### value_map:
 
 Use `map:points:size:value_map:` to associate point sizes based on the value of a property.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   points:
     resource:
@@ -749,8 +694,7 @@ map:
         property: worldcity
         values:
           1: 5.0
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/maps/map-kata-points-size-value-map.png" class="screenshot">
@@ -772,16 +716,14 @@ Colors should be specified using [web colors](https://en.wikipedia.org/wiki/Web_
 
 The `map:points:fill:default:` key configures the default color for points which don't match any other rules.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   points:
     resource:
       uri: cerb:resource:mapPoints.worldCapitalCities
     fill:
       default: red
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/maps/map-kata-points-fill-default.png" class="screenshot">
@@ -791,8 +733,7 @@ map:
 
 Use `map:points:fill:color_map:` to colorize points based on the value of a property.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   points:
     resource:
@@ -803,8 +744,7 @@ map:
         property: worldcity
         colors:
           1: red
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/maps/map-kata-points-fill-color-map.png" class="screenshot">
@@ -836,8 +776,7 @@ Visualizations of the United States often use a compact format with a smaller Al
 
 Our map KATA begins with:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 map:
   resource:
@@ -846,8 +785,7 @@ map:
     type: albersUsa
     scale: 650
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 This shows all 50 states in a compact format, and scaled up to fill the widget:
 
@@ -870,8 +808,7 @@ For demonstration, we'll do the conversion manually, so you're better prepared t
 
 You could write a simple script for this in any programming language; but you can also use the **Setup >> Developers >> Bot Scripting Tester** and write a quick and disposable script in Cerb's [bot scripting](/docs/scripting/) language.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {# https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports_us/11-23-2020.csv #}
 {% set csv %}
@@ -950,8 +887,7 @@ Wyoming,US,2020-11-24 05:30:26,42.756,-107.3025,29431,202,17452.0,11777.0,56.0,5
 {% endfor %}
 {{results|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-box note">
 <p>Omitting <code>|json_pretty</code> gives more compact output, and will often produce a considerably smaller file for large data sets.</p>
@@ -961,8 +897,7 @@ Don't worry if the above script doesn't make sense to you. It's not important fo
 
 This script gives us the following JSON output:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {
   "Alabama": {
     "covid_incident_rate": 4774.04,
@@ -1487,8 +1422,7 @@ This script gives us the following JSON output:
     "covid_fips": 56
   }
 }
-</code>
-</pre>
+{% endhighlight %}
 
 We can copy the output above and save it to a file with a name like `usa-covid-2020-11-23.json.txt`.
 
@@ -1500,8 +1434,7 @@ Now we can create a new resource in Cerb from **Search >> Resources** by clickin
 
 After saving the file, we can refer to it by name in our map KATA.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   resource:
     uri: cerb:resource:map.country.usa.states
@@ -1514,8 +1447,7 @@ map:
         property: name
       resource:
         uri: cerb:resource:mapProperties.usaCovidByState
-</code>
-</pre>
+{% endhighlight %}
 
 The map doesn't look any different yet, but if you click on any state then you'll see that the new `covid_` properties have been merged into the bottom of the list:
 
@@ -1525,8 +1457,7 @@ The map doesn't look any different yet, but if you click on any state then you'l
 
 We can use the `map:regions:fill:choropleth` feature and the `covid_incident_rate` property to colorize the map.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   resource:
     uri: cerb:resource:map.country.usa.states
@@ -1543,8 +1474,7 @@ map:
       choropleth:
         property: covid_incident_rate
         classes: 8
-</code>
-</pre>
+{% endhighlight %}
 
 We can now easily see that the darker states have a higher incidence rate of the virus:
 
@@ -1556,8 +1486,7 @@ We can now easily see that the darker states have a higher incidence rate of the
 
 Now we can configure the labels to only show the virus-related properties:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 map:
   resource:
     uri: cerb:resource:map.country.usa.states
@@ -1595,8 +1524,7 @@ map:
         covid_active:
           label: Active
           format: number
-</code>
-</pre>
+{% endhighlight %}
 
 And we see a much more readable label:
 

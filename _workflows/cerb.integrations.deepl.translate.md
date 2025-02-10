@@ -61,8 +61,7 @@ Navigate to **Search >> Workflows >> (+) >> Empty**.
 
 Paste the following KATA into the large text box:
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.integrations.deepl.translate
@@ -376,8 +375,7 @@ records:
           uri: cerb:automation:cerb.integrations.deepl.translate.interaction
           icon: translate
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Continue** button.
 
@@ -399,8 +397,7 @@ Navigate to the profile of a ticket in a foreign language.
 
 Alternatively, use **Setup >> Mail >> Incoming >> Import** to import a test message like the following:
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 {% raw %}
 From: Lukas Müller <lukas.mueller@cerb.example>
 To: support@cerb.example
@@ -420,8 +417,7 @@ Vielen Dank für Ihre Unterstützung!
 Mit freundlichen Grüßen,  
 Lukas Müller
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 On the ticket profile, a new **Translate** button is in the message toolbar.
 

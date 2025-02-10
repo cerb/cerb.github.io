@@ -31,7 +31,7 @@ When using `Content-Type: application/json`, a `body:` dictionary will automatic
 {% tabs post %}
 
 {% tab post automation %}
-```cerb
+{% highlight cerb %}
 start:
   http.request/post:
     output: http_response
@@ -44,11 +44,11 @@ start:
         name_first: Kina
         name_last: Halpue
         email: kina.halpue@cerb.example
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab post policy %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 commands:
   http.request:
@@ -56,7 +56,7 @@ commands:
     deny/url@bool: {{inputs.url is not prefixed ('http://','https://')}}
     allow@bool: yes
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

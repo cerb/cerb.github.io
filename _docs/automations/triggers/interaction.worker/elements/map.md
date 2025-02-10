@@ -32,8 +32,7 @@ In [interaction](/docs/automations/triggers/interaction.worker/) web forms, a **
 
 For instance, an interaction that displays the geographical location of an IP address can drop a pin on a map prompt.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await:
@@ -57,8 +56,7 @@ start:
                 longitude: 13.4033
                 properties:
                   name: Berlin{% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/automations/triggers/interaction.worker/elements/map.png" class="screenshot">

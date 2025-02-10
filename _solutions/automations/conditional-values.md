@@ -29,8 +29,7 @@ redirect_from:
 
 The **ternary operator** provides a compact way to write an if/else condition: `{% raw %}{{expression ? if_true : if_false}}{% endraw %}`
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -38,5 +37,4 @@ start:
   return:
     is_admin: {{is_admin ? 'yes' : 'no'}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

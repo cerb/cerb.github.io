@@ -85,8 +85,7 @@ In **Configure function**:
 
 In **Lambda function code**, paste the following:
 
-<pre>
-<code class="language-javascript">
+{% highlight javascript %}
 {% raw %}
 'use strict';
 const dns = require('dns');
@@ -141,8 +140,7 @@ exports.handler = (event, context, callback) => {
   }
 };
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 In **Lambda function handler and role**:
 
@@ -174,8 +172,7 @@ Select the **JSON** tab.
 
 Add the following block to the `Statement` list:
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {
     "Sid": "CerbLambdaInvoke",
     "Effect": "Allow",
@@ -187,8 +184,7 @@ Add the following block to the `Statement` list:
         "arn:aws:lambda:*:*:function:Cerb*"
     ]
 }
-</code>
-</pre>
+{% endhighlight %}
 
 Click the blue **Review policy** button in the bottom right.
 
@@ -202,8 +198,7 @@ Navigate to **Setup >> Packages >> Import**.
 
 Copy and paste the following behavior into the large text box:
 
-<pre style="max-height: 29.25em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -948,8 +943,7 @@ Copy and paste the following behavior into the large text box:
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Import** button.
 

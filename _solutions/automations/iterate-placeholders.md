@@ -35,7 +35,7 @@ Here is an example of using the [cerb_placeholders_list()](/docs/scripting/funct
 {% tabs iterate_placeholders %}
 
 {% tab iterate_placeholders automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   repeat:
@@ -53,11 +53,11 @@ start:
       random_{{key}}: {{value}}
       {% endfor %}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab iterate_placeholders output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   output: |
@@ -72,7 +72,7 @@ __return:
     random_DQFJPH: QTCUM3
     random_N6P8AK: 8TQR3U
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

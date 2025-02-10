@@ -29,8 +29,7 @@ jumbotron:
 
 The **var.push:** command appends a value to an array.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -45,18 +44,15 @@ start:
       {{numbers|join(', ')}}
       {{result|json_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Result:
 
-<pre>
-<code class="language-cerb">
-output:
+{% highlight cerb %}
+output@text:
   1, 2, 3, 4, 5
   ["1","2","3","4","5"]
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

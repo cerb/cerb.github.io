@@ -40,16 +40,14 @@ Edit the record for `comment.editor`.
 
 Add [interactions](/docs/automations/triggers/interaction.worker/) using [toolbar KATA](/docs/toolbars/#kata).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 interaction/snippets:
   uri: cerb:automation:wgm.example.snippet
   icon: paste
   tooltip: Paste snippets
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The following **placeholders** are available in KATA:
 

@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerberusweb.datacenter.sensor&quot;&gt;
 			&lt;id&gt;cerberusweb.datacenter.sensor.external&lt;/id&gt;
 			&lt;name&gt;External&lt;/name&gt;
@@ -15,13 +14,11 @@
 			&lt;params&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_Sensor {
 	public function renderConfig($params) {
@@ -31,6 +28,5 @@ class ExampleExtension extends Extension_Sensor {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

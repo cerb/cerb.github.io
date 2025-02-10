@@ -66,8 +66,7 @@ Click the **(+)** icon above the worklist to add a new behavior.
 
 Select the **Import** option and paste the following behavior:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
 	"behavior": {
@@ -478,8 +477,7 @@ Select the **Import** option and paste the following behavior:
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Save Changes** button.
 

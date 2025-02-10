@@ -25,16 +25,14 @@ jumbotron:
     url: /docs/automations/#inputs
 ---
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 inputs:
   records/participants:
     required@bool: yes
     record_type: address
     expand: owner_,customfields
     #default@csv: 1,2,3
-</code>
-</pre>
+{% endhighlight %}
 
 The value should be an array of record IDs (`123`) or URIs (`cerb:record_type:record_alias`).
 

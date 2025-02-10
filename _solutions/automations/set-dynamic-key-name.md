@@ -25,7 +25,7 @@ You can't use scripting in a KATA key, but if you want to set a dynamic key name
 
 {% tabs set_dynamic_key_name %}
 {% tab set_dynamic_key_name automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   var.set/random:
@@ -33,7 +33,7 @@ start:
       key: random_{{random_string(6)}}
       value: {{random_string(6)}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}
 
@@ -44,7 +44,7 @@ This approach can also be used if you want a key name that isn't valid in KATA, 
 
 {% tabs set_dynamic_key_name2 %}
 {% tab set_dynamic_key_name2 automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   var.set/email:
@@ -52,7 +52,7 @@ start:
       key@text: customer@cerb.example
       value: allow
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}
 
@@ -62,7 +62,7 @@ You can also use the `delimiter:` field to change the delimiter from the standar
 
 {% tabs set_dynamic_key_name3 %}
 {% tab set_dynamic_key_name3 automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   var.set/colon:
@@ -71,7 +71,7 @@ start:
       delimiter: ::
       value: https://example.com/images/social.png
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}
 

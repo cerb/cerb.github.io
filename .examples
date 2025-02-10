@@ -56,16 +56,13 @@ These two paragraphs will be...
 
 ### Bash
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 sudo apt-get update
-</code>
-</pre>
+{% endhighlight %}
 
 ### JSON
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {
   "package": {
     "name": "Customer Satisfaction Workflow",
@@ -79,13 +76,11 @@ sudo apt-get update
     }
   }
 }
-</code>
-</pre>
+{% endhighlight %}
 
 ### PHP
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 class DevblocksSearchFieldContextKeys {
 	public $where_key = null;
 	public $field_key = null;
@@ -97,8 +92,7 @@ class DevblocksSearchFieldContextKeys {
 		$this->dict_key = $dict_key;
 	}
 };
-</code>
-</pre>
+{% endhighlight %}
 
 ## Screenshots
 

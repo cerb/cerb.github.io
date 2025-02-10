@@ -44,14 +44,12 @@ jumbotron:
 
 # Examples
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:usage.snippets
 format:timeseries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/data-queries/data-queries-snippet-usage.png" class="screenshot">

@@ -38,8 +38,7 @@ Navigate to **Setup >> Packages >> Import**.
 
 Paste the following package into the large text box:
 
-<pre style="max-height: 29.25em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -199,8 +198,7 @@ Paste the following package into the large text box:
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Import** button.
 

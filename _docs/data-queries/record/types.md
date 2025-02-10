@@ -49,21 +49,18 @@ jumbotron:
 
 #### Query: 
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:record.types
 filter:widget
 options:[search]
 format:dictionaries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Response:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {
   "data": {
     "18": {
@@ -96,5 +93,4 @@ format:dictionaries
     "format": "dictionaries"
   }
 }
-</code>
-</pre>
+{% endhighlight %}

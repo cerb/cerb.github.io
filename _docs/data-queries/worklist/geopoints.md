@@ -30,8 +30,7 @@ jumbotron:
 
 `worklist.geo.points` [data queries](/docs/data-queries/) returns geolocation data from worklist records.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:worklist.geo.points
 series.points:(
@@ -42,8 +41,7 @@ series.points:(
 )
 format:geojson
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}
@@ -56,61 +54,51 @@ Each `series.*` should provide:
 
 The `of:` key specifies the type of [records](/docs/records/) to search.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 of:tickets
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## point:
 
 The `point:` key specifies the record [field](/docs/records/fields/) containing latitude/longitude data.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 point:coordinates
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## fields:
 
 The `fields:` key specifies the record [fields](/docs/records/fields/) to include with each plotted point.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 point:coordinates
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## query:
 
 The `query:` key specifies a [search query](/docs/search/) for filtering records.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 query:(region:Europe)
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## query.required:
 
 The `query.required:` key specifies a mandatory [search query](/docs/search/) for filtering records. This should be protected from user-entered filters.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 query.required:(ids:[1,2,3])
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # format:
 
@@ -124,8 +112,7 @@ The results can be returned in various formats:
 
 ## Plot organizations based on a geolocation custom field.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 type:worklist.geo.points
 series.points:(
   of:org
@@ -134,8 +121,7 @@ series.points:(
   query:(coordinates:!null)
 )
 format:geojson
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/data-queries/data-queries-worklist-geopoints-world.png" class="screenshot">

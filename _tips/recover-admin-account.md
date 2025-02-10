@@ -32,35 +32,29 @@ Connect to your database from the console or a tool like phpMyAdmin.
 
 Find your administrator's worker ID:
 
-<pre>
-<code class="language-sql">
+{% highlight sql %}
 {% raw %}
 SELECT id, CONCAT_WS(' ',first_name,last_name) AS name FROM worker;
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Let's assume your ID is `123`.
 
 Change back to password authentication for your account:
 
-<pre>
-<code class="language-sql">
+{% highlight sql %}
 {% raw %}
 UPDATE worker SET is_password_disabled = 0 WHERE id = 123;
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 You can also reset your password if needed (replace `s3cr3t` below with your new password):
 
-<pre>
-<code class="language-sql">
+{% highlight sql %}
 {% raw %}
 UPDATE worker_auth_hash SET pass_hash = SHA1(CONCAT(pass_salt,MD5('s3cr3t'))) WHERE worker_id = 123;
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 You then need to [clear the server-side cache](/tips/clear-server-cache/).
 

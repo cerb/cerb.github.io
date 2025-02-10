@@ -27,7 +27,7 @@ By using the `cerb.data.records` automation data source in a sheet, you can make
 {% tabs interaction_sheet_paged_records %}
 
 {% tab interaction_sheet_paged_records automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   await:
@@ -59,7 +59,7 @@ start:
                 label: Owner
               date/updated:
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

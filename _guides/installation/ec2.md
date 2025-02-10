@@ -167,19 +167,15 @@ For common AMIs, the default users are:
 
 If this is the first time you're using your private key, you may need to add it to your keychain:
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 ssh-add /path/to/private.key
-</code>
-</pre>
+{% endhighlight %}
 
 Then you can connect to the server:
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 ssh ubuntu@1.2.3.4
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-box note">
 <p>If you're on Windows, you can use <a href="https://winscp.net/eng/docs/ui_puttygen" target="_blank">PuTTYgen</a> to import a private key.</p>

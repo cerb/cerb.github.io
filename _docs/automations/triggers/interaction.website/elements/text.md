@@ -33,8 +33,7 @@ In [website interactions](/docs/automations/triggers/interaction.website/) forms
 
 Formats: date, decimal, bool, email, ip, geopoint, number, record type, timestamp, uri, url
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await:
@@ -56,8 +55,7 @@ start:
           type: url
           placeholder: https://website.example
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/automations/triggers/interaction.website/elements/text.png" class="screenshot">
@@ -118,8 +116,7 @@ An optional custom validation script. Any output is considered to be an error.
 
 You can use `if...elseif` to check multiple conditions.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 text/prompt_name:
   label: Name:
@@ -132,6 +129,6 @@ text/prompt_name:
     A name must be 8 or more characters. 
     {% elseif prompt_name|length > 32 %}
     A name must be less than 32 characters. 
-    {% endif %}{% endraw %}
-</code>
-</pre>
+    {% endif %}
+{% endraw %}
+{% endhighlight %}

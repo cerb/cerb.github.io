@@ -24,8 +24,7 @@ jumbotron:
     url: /docs/automations/#inputs
 ---
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 inputs:
   array/colors:
     required@bool: yes
@@ -33,8 +32,7 @@ inputs:
     #  Red
     #  Green
     #  Blue
-</code>
-</pre>
+{% endhighlight %}
 
 ### required:
 

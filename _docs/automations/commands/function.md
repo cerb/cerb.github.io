@@ -32,8 +32,7 @@ The **function:** command executes an [automation.function](/docs/automations/tr
 
 With this automation function named `example.math.sum`:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 inputs:
   array/numbers:
@@ -44,13 +43,11 @@ start:
     sum@text,int:
       {{array_sum(inputs.numbers)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 This automation uses the function:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   function/sum:
@@ -62,16 +59,13 @@ start:
       return:
         sum@key: result:sum
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 To return:
 
-<pre>
-<code class="language-cerb">
-  sum: 14
-</code>
-</pre>
+{% highlight cerb %}
+sum: 14
+{% endhighlight %}
 
 * TOC
 {:toc}

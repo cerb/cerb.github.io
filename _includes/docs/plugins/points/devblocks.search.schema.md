@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;devblocks.search.schema&quot;&gt;
 			&lt;id&gt;cerb.search.schema.address&lt;/id&gt;
 			&lt;name&gt;Email Addresses&lt;/name&gt;
@@ -15,13 +14,11 @@
 			&lt;params&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_DevblocksSearchSchema {
 	public function delete($ids) {
@@ -43,6 +40,5 @@ class ExampleExtension extends Extension_DevblocksSearchSchema {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

@@ -29,27 +29,23 @@ An **image** field contains a Base64-encoded image.
 
 As JSON from [packages](/docs/packages/):
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
 	"image": "data:image/png;base64,iVBORw0KGgo..."
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Records API
 
 In [PUT](/docs/api/endpoints/records/#update) or [POST](/docs/api/endpoints/records/#create) requests from the [API](/docs/api/):
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 {% raw %}
 &amp;fields[image]=data:image/png;base64,iVBORw0KGgo...
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Remove
 

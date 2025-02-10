@@ -60,8 +60,7 @@ Navigate to **Setup >> Packages >> Import**.
 
 Paste the following into the textbox:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -91,8 +90,7 @@ Paste the following into the textbox:
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Import** button.
 
@@ -137,12 +135,10 @@ You'll see those keys and values show up in the `http.params` section.
 
 If you have access to the `curl` command at the console, you can send a `POST` request with a custom header and some query parameters:
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 curl -i -X POST -H "X-CustomHeader: true" \
 "https://cerb.example/webhooks/b5d89ded60c1e4da7b7b2750182e026a5b975cf3?key=value"
-</code>
-</pre>
+{% endhighlight %}
 
 You'll see these options reflected in the JSON response.
 

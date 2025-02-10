@@ -28,7 +28,7 @@ Here are examples of using different comparison [operators](/docs/scripting/oper
 
 {% tabs compare-with-operators %}
 {% tab compare-with-operators automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   return:
@@ -39,11 +39,11 @@ start:
     in@bool: {{5 in [1,2,3,4,5,6]}}
     nin@bool: {{100 not in [1,2,3]}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab compare-with-operators output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 __return:
   eq: true
@@ -53,6 +53,6 @@ __return:
   in: true
   nin: true
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}

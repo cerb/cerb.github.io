@@ -66,24 +66,20 @@ The **DMARC Reporting** card widget will only appear on these attachments.
 
 In the DNS of all sender domains, you should have a DMARC record configured like:
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 {% raw %}
 TXT _dmarc.cerb.example
 v=DMARC1; p=reject; sp=reject; rf=afrf; adkim=s; aspf=s; pct=100; ri=86400;fo=1;
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Add the following options to enable DMARC delivery reports. Replace `dmarc-reports@cerb.example` with an email address that delivers into Cerb.
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 {% raw %}
 rua=mailto:dmarc-reports@cerb.example; ruf=mailto:dmarc-reports@cerb.example;
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Reference
 
@@ -91,8 +87,7 @@ You can build your own DMARC reports workflow using this template as a reference
 
 Change occurrences of **cerb.email.dmarc_reports** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.email.dmarc_reports
@@ -292,7 +287,6 @@ records:
       attach@list:
         workflow:{{workflow_id}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 [^dmarc]: Wikipedia - DMARC <https://en.wikipedia.org/wiki/DMARC>

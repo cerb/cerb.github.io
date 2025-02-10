@@ -74,8 +74,7 @@ Click the **Save Changes** button to save the organization record.
 
 You can simulate an inbound email in MIME format from **Setup >> Mail >> Incoming >> Import**.
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 {% raw %}
 From: Maria Vasquez <maria.vasquez@baston.example>
 To: support@cerb.example
@@ -99,8 +98,7 @@ Maria Vasquez
 IT Support  
 Baston Inc.
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Add the SLA widget to ticket profiles
 
@@ -132,9 +130,9 @@ You can add events and recurring events (like office holidays) to block out avai
 
 You can filter and sort ticket worklists by SLA:
 
-```
+{% highlight cerb %}
 sla.deadline:!null sort:sla.deadline
-```
+{% endhighlight %}
 
 ### SLA deadline lifecycle
 
@@ -154,8 +152,7 @@ You can build your own Service Level Agreement workflow using this template as a
 
 Change occurrences of **cerb.sla** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.sla
@@ -429,5 +426,4 @@ records:
           ]
         }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

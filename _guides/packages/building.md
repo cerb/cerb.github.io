@@ -68,8 +68,7 @@ Packages use the JSON[^json] file format. This is something you can easily creat
 
 Here's the basic structure of a package:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -89,8 +88,7 @@ Here's the basic structure of a package:
   "bots": []
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 First, let's look at the `package` section:
 
@@ -138,8 +136,7 @@ Pre-approved packages can be added to the package library as templates for use b
 
 The **library** key uses the following structure:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -154,8 +151,7 @@ The **library** key uses the following structure:
   }
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * **name** is the human-friendly name of the package shown in the library.
 * **uri** is a globally unique identifier for the package (lowercase letters, numbers, and underscores).
@@ -206,8 +202,7 @@ For instance, the [Customer Satisfaction Surveys](/packages/customer-satisfactio
 
 Here's an example package that uses the random code generating to generate random tasks:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -233,8 +228,7 @@ Here's an example package that uses the random code generating to generate rando
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Every time you import this package it will generate a new task record with a random 8-character code, like:
 
@@ -246,8 +240,7 @@ Every time you import this package it will generate a new task record with a ran
 
 Added in [9.6](/releases/9.6/).
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -278,8 +271,7 @@ Added in [9.6](/releases/9.6/).
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Prompts
 
@@ -291,8 +283,7 @@ The simplest prompted placeholder is a text box.
 
 This package will prompt you for the name of a new task before creating it:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -320,8 +311,7 @@ This package will prompt you for the name of a new task before creating it:
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 When you import the package you'll see the following prompt:
 
@@ -341,8 +331,7 @@ Your package can prompt with a picklist of pre-defined options.
 
 This package will prompt you for the importance before creating a task:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -375,8 +364,7 @@ This package will prompt you for the importance before creating a task:
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 When you import the package, you'll be prompted for the importance with a dropdown:
 
@@ -392,18 +380,15 @@ After importing the package, the new task has the importance you assigned:
 
 The options can be specified as a simple array:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 "options": ["Option 1", "Option 2", "Option 3"]
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Or as an object with label/value pairs:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 "options": {
   "First": "Value 1",
@@ -413,8 +398,7 @@ Or as an object with label/value pairs:
   "Fifth": "Value 5"
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Choosers
 
@@ -424,8 +408,7 @@ To accomplish this, you can include a **chooser prompt**.
 
 This package prompts for a worker and assigns them a task:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -459,8 +442,7 @@ This package prompts for a worker and assigns them a task:
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 When you import the package, you'll be prompted to pick a task assignee with a chooser:
 
@@ -490,8 +472,7 @@ After importing the package, the new task is automatically assigned to the worke
 
 The **disable_events** option prevents bot behaviors or automations from triggering on new records. 
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
         "configure": {
             "prompts": [],
             "placeholders": [],
@@ -499,8 +480,7 @@ The **disable_events** option prevents bot behaviors or automations from trigger
                 "disable_events": true
             }
         }
-</code>
-</pre>
+{% endhighlight %}
 
 This can be useful, for example, when importing historical records from another system where you don't want workflows for autoresponders or customer surveys to trigger.
 

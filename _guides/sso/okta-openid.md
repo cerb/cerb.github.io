@@ -88,83 +88,81 @@ Log in to Cerb as an administrator.
 
 ## Create an OpenID service for Okta
 
-1. Navigate to **Setup >> Packages >> Import**.
+Navigate to **Setup >> Packages >> Import**.
 
-1. Paste the following package:
+Paste the following package:
 
-   <pre style="max-height:29.5em;">
-   <code class="language-json">
-   {% raw %}
-   {
-     "package": {
-       "name": "Okta OpenID Connect Provider",
-       "revision": 1,
-       "requires": {
-         "cerb_version": "9.5.0",
-         "plugins": []
-       },
-       "configure": {
-         "placeholders": [],
-         "prompts": [
-           {
-             "type": "text",
-             "label": "Client ID",
-             "key": "prompt_client_id",
-             "params": {
-               "default": "",
-               "placeholder": "(paste your Client ID)"
-             }
-           },
-           {
-             "type": "text",
-             "label": "Client Secret",
-             "key": "prompt_client_secret",
-             "params": {
-               "default": "",
-               "placeholder": "(paste your Client Secret)"
-             }
-           },
-           {
-             "type": "text",
-             "label": "Issuer URL",
-             "key": "prompt_issuer_url",
-             "params": {
-               "default": "",
-               "placeholder": "(paste your Issuer URL from Okta)"
-             }
-           }
-         ]
-       }
-     },
-     "records": [
-       {
-         "uid": "service_okta",
-         "_context": "connected_service",
-         "name": "Okta",
-         "uri": "okta-oidc",
-         "extension_id": "cerb.service.provider.oidc",
-         "params": {
-           "client_id": "{{{prompt_client_id}}}",
-           "client_secret": "{{{prompt_client_secret}}}",
-           "scope": "openid email",
-           "issuer": "{{{prompt_issuer_url}}}",
-           "authorization_url": "{{{prompt_issuer_url}}}/oauth2/v1/authorize",
-           "access_token_url": "{{{prompt_issuer_url}}}/oauth2/v1/token",
-           "userinfo_url": "{{{prompt_issuer_url}}}/oauth2/v1/userinfo",
-           "jwks_url": "{{{prompt_issuer_url}}}/oauth2/v1/keys"
-         }
-       }
-     ]
-   }
-   {% endraw %}
-   </code>
-   </pre>
+{% highlight json %}
+{% raw %}
+{
+  "package": {
+    "name": "Okta OpenID Connect Provider",
+    "revision": 1,
+    "requires": {
+      "cerb_version": "9.5.0",
+      "plugins": []
+    },
+    "configure": {
+      "placeholders": [],
+      "prompts": [
+        {
+          "type": "text",
+          "label": "Client ID",
+          "key": "prompt_client_id",
+          "params": {
+            "default": "",
+            "placeholder": "(paste your Client ID)"
+          }
+        },
+        {
+          "type": "text",
+          "label": "Client Secret",
+          "key": "prompt_client_secret",
+          "params": {
+            "default": "",
+            "placeholder": "(paste your Client Secret)"
+          }
+        },
+        {
+          "type": "text",
+          "label": "Issuer URL",
+          "key": "prompt_issuer_url",
+          "params": {
+            "default": "",
+            "placeholder": "(paste your Issuer URL from Okta)"
+          }
+        }
+      ]
+    }
+  },
+  "records": [
+    {
+      "uid": "service_okta",
+      "_context": "connected_service",
+      "name": "Okta",
+      "uri": "okta-oidc",
+      "extension_id": "cerb.service.provider.oidc",
+      "params": {
+        "client_id": "{{{prompt_client_id}}}",
+        "client_secret": "{{{prompt_client_secret}}}",
+        "scope": "openid email",
+        "issuer": "{{{prompt_issuer_url}}}",
+        "authorization_url": "{{{prompt_issuer_url}}}/oauth2/v1/authorize",
+        "access_token_url": "{{{prompt_issuer_url}}}/oauth2/v1/token",
+        "userinfo_url": "{{{prompt_issuer_url}}}/oauth2/v1/userinfo",
+        "jwks_url": "{{{prompt_issuer_url}}}/oauth2/v1/keys"
+      }
+    }
+  ]
+}
+{% endraw %}
+{% endhighlight %}
 
-1. Click the **Import** button.
+Click the **Import** button.
 
-1. Enter your client ID, client secret, and issuer URL from Okta.
+Enter your client ID, client secret, and issuer URL from Okta.
 
-1. Click the **Import** button again.
+Click the **Import** button again.
 
 ### Configure SSO
 

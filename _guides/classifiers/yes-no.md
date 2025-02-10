@@ -88,8 +88,7 @@ Once the popup opens, click the **Import** button at the top.
 
 Copy the following training data to your clipboard:
 
-<pre style="max-height: 29.25em;">
-<code class="language-text">
+{% highlight csv %}
 answer.maybe,"I don't have a clue"
 answer.maybe,"I don't have a clue"
 answer.maybe,"I don't know"
@@ -242,8 +241,7 @@ answer.yes,yep
 answer.yes,yeppers
 answer.yes,yes
 answer.yes,yes
-</code>
-</pre>
+{% endhighlight %}
 
 Paste the examples into the textbox on the import popup:
 

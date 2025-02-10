@@ -56,48 +56,46 @@ This sample blocklist is not comprehensive, but it will block image tracking fro
 
 1. Copy this sample blocklist:
 
-	<pre style="max-height:29.5em;">
-	<code class="language-text">
-	.amazon.com/gp/r.html?
-	.amazonaws.com/prod/excess-aws-track-email-open
-	.campaign.adobe.com/r/
-	.chtah.com/a/
-	.com/Default.aspx?open=
-	.com/app/?tok
-	.com/imp?
-	.com/open.aspx
-	.com/pixel.gif
-	.com/pub/as?
-	.com/pub/open.php
-	.com/trk
-	.com/wf/open
-	.demdex.net/event
-	.emltrk.com
-	.facebook.com/email_open
-	.google-analytics.com
-	.hana.ondemand.com/data-buffer/sap/public/
-	.list-manage.com/track/open.php
-	.net/on.jsp?
-	.net/pixel.gif
-	.paypal-communication.com/O/
-	.sendgrid.net/mpss
-	.sendgrid.net/wf/open
-	ad.doubleclick.net
-	ads.perfectaudience.com
-	beacon.krxd.net
-	click.ngpvan.com
-	clicks.att.com
-	d.turn.com
-	github.com/notifications/beacon/
-	pixel.app.returnpath.net/pixel.gif
-	pixel.inbox.exacttarget.com/pixel.gif
-	secure.adnxs.com/seg
-	tags.bluekai.com
-	track.sp.actionkit.com
-	trk.email.dynect.net
-	twitter.com/scribe/
-	</code>
-	</pre>
+{% highlight text %}
+.amazon.com/gp/r.html?
+.amazonaws.com/prod/excess-aws-track-email-open
+.campaign.adobe.com/r/
+.chtah.com/a/
+.com/Default.aspx?open=
+.com/app/?tok
+.com/imp?
+.com/open.aspx
+.com/pixel.gif
+.com/pub/as?
+.com/pub/open.php
+.com/trk
+.com/wf/open
+.demdex.net/event
+.emltrk.com
+.facebook.com/email_open
+.google-analytics.com
+.hana.ondemand.com/data-buffer/sap/public/
+.list-manage.com/track/open.php
+.net/on.jsp?
+.net/pixel.gif
+.paypal-communication.com/O/
+.sendgrid.net/mpss
+.sendgrid.net/wf/open
+ad.doubleclick.net
+ads.perfectaudience.com
+beacon.krxd.net
+click.ngpvan.com
+clicks.att.com
+d.turn.com
+github.com/notifications/beacon/
+pixel.app.returnpath.net/pixel.gif
+pixel.inbox.exacttarget.com/pixel.gif
+secure.adnxs.com/seg
+tags.bluekai.com
+track.sp.actionkit.com
+trk.email.dynect.net
+twitter.com/scribe/
+{% endhighlight %}
 
 1. As an administrator, navigate to **Setup >> Mail >> Incoming Mail >> HTML**.
 

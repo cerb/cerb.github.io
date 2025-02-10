@@ -23,19 +23,17 @@ jumbotron:
 
 You can use regular expressions[^regexp] with the [regexp](/docs/scripting/filters/#regexp) filter to match or extract patterns in text:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set text = "Your Amazon Order #Z-1234-5678-9 has shipped!" %}
 {% set order_id = text|regexp("/Amazon Order #([A-Z0-9\-]+)/", 1) %}
 Amazon Order #: {{order_id}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Amazon Order #: Z-1234-5678-9
-```
+{% endhighlight %}
 
 <div class="section-nav">
 	<div class="left">

@@ -39,15 +39,13 @@ Edit the record for `global.menu`.
 
 Add [interactions](/docs/automations/triggers/interaction.worker/) using [toolbar KATA](/docs/toolbars/#kata).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 interaction/hello:
   label: Hello
   uri: cerb:automation:example.hello
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The following **placeholders** are available in KATA:
 

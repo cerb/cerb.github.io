@@ -33,20 +33,17 @@ jumbotron:
 
 **Request:**
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 GET /rest/records/activity_log/1.json?expand=custom_&show_meta=0 HTTP/1.1
 Cerb-Auth: XXXX:XXXX
 Date: {{'now'|date:"%a, %d %b %Y %T %Z"}}
 Host: cerb.example
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
-</code>
-</pre>
+{% endhighlight %}
 
 **Response:**
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {
   "__build": 2017110901,
   "__status": "success",
@@ -62,27 +59,23 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
   "target__context": "",
   "target_id": "0"
 }
-</code>
-</pre>
+{% endhighlight %}
 
 ## Search activity log entries on a specific record
 
 **Request:**
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 GET /rest/records/activity_log/search.json?q=activity:worker.logged_in&show_meta=0 HTTP/1.1
 Cerb-Auth: XXXX:XXXX
 Date: {{'now'|date:"%a, %d %b %Y %T %Z"}}
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Host: cerb.example
-</code>
-</pre>
+{% endhighlight %}
 
 **Response:**
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {
   "__build": 2017110901,
   "__status": "success",
@@ -106,25 +99,21 @@ Host: cerb.example
   ],
   "total": "1000"
 }
-</code>
-</pre>
+{% endhighlight %}
 
 ## Create an activity log entry
 
 **Request:**
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 POST /rest/records/activity_log/create.json?show_meta=0 HTTP/1.1
 Cerb-Auth: XXXX:XXXX
 Date: {{'now'|date:"%a, %d %b %Y %T %Z"}}
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Host: cerb.example
-</code>
-</pre>
+{% endhighlight %}
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 fields[activity_point]=custom.other
 &fields[actor__context]=worker
 &fields[actor_id]=1
@@ -132,15 +121,13 @@ fields[activity_point]=custom.other
 &fields[params][message]=This is a custom message on another worker.
 &fields[target__context]=worker
 &fields[target_id]=3
-</code>
-</pre>
+{% endhighlight %}
 
 * The `POST` fields should be URL-encoded. They are decoded here for readability.
 
 **Response:**
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {
   "__build": 2017110901,
   "__status": "success",
@@ -156,6 +143,5 @@ fields[activity_point]=custom.other
   "target__context": "cerberusweb.contexts.worker",
   "target_id": "3"
 }
-</code>
-</pre>
+{% endhighlight %}
 

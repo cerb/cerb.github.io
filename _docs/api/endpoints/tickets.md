@@ -61,8 +61,7 @@ Create a ticket object.
 ### Example
 {: .no_toc}
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $postfields = [
     array('expand','bucket_,group_,custom_'),
     array('group_id','6'),
@@ -82,8 +81,7 @@ $postfields = [
     array('custom_4','Option 3'), // picklist
 ];
 $out = $cerb->post($base_url . 'tickets/compose.json', $postfields);
-</code>
-</pre>
+{% endhighlight %}
 
 # Reply
 
@@ -129,8 +127,7 @@ Reply to a ticket message as a worker.
 ### Example
 {: .no_toc}
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $postfields = [
     array('expand','bucket_,group_,custom_'),
     array('message_id','1024'),
@@ -148,5 +145,5 @@ $postfields = [
     array('to','customer@example.com'), // optional
     array('html_template_id', '1'), // optional
 ];
-$out = $cerb->post($base_url . 'tickets/reply.json', $postfields);</code>
-</pre>
+$out = $cerb->post($base_url . 'tickets/reply.json', $postfields);
+{% endhighlight %}

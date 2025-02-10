@@ -39,8 +39,7 @@ Edit the record for `mail.read`.
 
 Add [interactions](/docs/automations/triggers/interaction.worker/) using [toolbar KATA](/docs/toolbars/#kata).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 interaction/feedback:
   label: Capture Feedback
@@ -48,8 +47,7 @@ interaction/feedback:
   uri: cerb:automation:example.captureFeedback
   #after:
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The following **placeholders** are available in KATA:
 

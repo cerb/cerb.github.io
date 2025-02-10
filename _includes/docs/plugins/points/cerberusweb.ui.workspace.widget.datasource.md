@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerberusweb.ui.workspace.widget.datasource&quot;&gt;
 			&lt;id&gt;core.workspace.widget.datasource.manual&lt;/id&gt;
 			&lt;name&gt;Manual Input&lt;/name&gt;
@@ -21,13 +20,11 @@
 				&lt;/param&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_WorkspaceWidgetDatasource {
 	public function getData(Model_WorkspaceWidget $widget, array $params, $params_prefix) {
@@ -37,6 +34,5 @@ class ExampleExtension extends Extension_WorkspaceWidgetDatasource {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

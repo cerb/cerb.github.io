@@ -30,8 +30,6 @@ Retrieve the object for the current worker based on the given API credentials.
 ### Example
 {: .no_toc}
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $out = $cerb->get($base_url . 'workers/me.json');
-</code>
-</pre>
+{% endhighlight %}

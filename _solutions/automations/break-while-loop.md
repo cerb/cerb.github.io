@@ -27,8 +27,7 @@ This example is an infinite loop that will break with 25% probability (`random(n
 
 At the end, the `counter` value shows how many times it looped, which will be different each time it runs.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -42,7 +41,5 @@ start:
         counter@int: {{counter + 1}}
         isLooping@bool: {{3 != random(3)}}
 {% endraw %}
-</code>
-</pre>
-
+{% endhighlight %}
 Loops like this can be used around an `await:` block to repeat an interaction until aborted by the user.

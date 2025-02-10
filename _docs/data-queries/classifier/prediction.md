@@ -47,14 +47,12 @@ The results can be returned in these formats:
 
 # Examples
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 type:classifier.prediction
 classifier:(name:Yes/No)
 text:"I am not sure"
 format:dictionaries
-</code>
-</pre>
+{% endhighlight %}
 
 {% comment %}
 <div class="cerb-screenshot">

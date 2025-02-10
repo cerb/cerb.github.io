@@ -28,8 +28,7 @@ jumbotron:
 
 The **email.parse:** command parses a MIME-encoded email message into a [ticket](/docs/records/types/ticket/).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   email.parse/parse:
@@ -50,8 +49,7 @@ start:
       return:
         ticket_id@key: results:id
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

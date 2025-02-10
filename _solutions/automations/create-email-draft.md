@@ -37,7 +37,7 @@ A `mail.transactional` [draft](/docs/records/types/draft/) is sent by the system
 {% tabs create_record_draft %}
 
 {% tab create_record_draft automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   record.create:
@@ -60,18 +60,18 @@ start:
             Have you seen these time-saving tips?
             https://product.example/link/
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab create_record_draft policy %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 commands:
   record.create:
     deny/type@bool: {{inputs.record_type is not record type ('draft')}}
     allow@bool: yes
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

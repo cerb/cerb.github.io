@@ -44,11 +44,9 @@ Retrieve a record [dictionary](/docs/guide/developers/dictionaries/).
 ### Example
 {: .no_toc}
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $out = $cerb->get($base_url . 'records/asset/1.json');
-</code>
-</pre>
+{% endhighlight %}
 
 # Create
 
@@ -67,8 +65,7 @@ Create a new record.
 ### Example
 {: .no_toc}
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $postfields = [
     ['expand','custom_'],
     ['fields[email]','customer@cerb.example'],
@@ -76,8 +73,7 @@ $postfields = [
     ['fields[custom_123]','Some value'],
 ];
 $out = $cerb->post($base_url . 'records/address/create.json', $postfields);
-</code>
-</pre>
+{% endhighlight %}
 
 # Update
 
@@ -96,16 +92,14 @@ Update a record object.
 ### Example
 {: .no_toc}
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $postfields = [
     ['fields[is_private]','0'],
     ['fields[name]','Support'],
     ['fields[reply_personal]','Example Support Team'],
 ];
 $out = $cerb->put($base_url . 'records/group/1.json', $postfields);
-</code>
-</pre>
+{% endhighlight %}
 
 # Upsert
 
@@ -125,8 +119,7 @@ Update an existing record if matched, or create a new record otherwise.
 ### Example
 {: .no_toc}
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $postfields = [
     ['fields[country]','United States'],
     ['fields[name]','Apple, Inc.'],
@@ -134,8 +127,7 @@ $postfields = [
     ['query', 'name:"Apple, Inc."'],
 ];
 $out = $cerb->patch($base_url . 'records/org/upsert.json', $postfields);
-</code>
-</pre>
+{% endhighlight %}
 
 # Search
 
@@ -172,8 +164,7 @@ Return subtotal results based on the given fields. These options vary depending 
 ### Example
 {: .no_toc}
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $query = http_build_query([
   'q' => 'mimetype:"image/png" size:>200kb sort:-size page:1',
 ]);
@@ -182,8 +173,7 @@ $out = $cerb->get($base_url .
   'records/attachments/search.json?' .
   $query
 );
-</code>
-</pre>
+{% endhighlight %}
 
 # Delete
 
@@ -194,11 +184,9 @@ Delete a record.
 ### Example
 {: .no_toc}
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $out = $cerb->delete($base_url . 'records/call/1.json');
-</code>
-</pre>
+{% endhighlight %}
 
 # Links
 
@@ -211,15 +199,13 @@ The key can be provided multiple times to link multiple records. Be sure to appe
 ### Example
 {: .no_toc}
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $postfields = [
     ['fields[links][]', 'org:123'],
     ['fields[links][]', 'ticket:456'],
 ];
 $out = $cerb->put($base_url . 'records/task/1.json', $postfields);
-</code>
-</pre>
+{% endhighlight %}
 
 ## Unlink
 
@@ -230,12 +216,10 @@ You may mix link additions and removals in the same request.
 ### Example
 {: .no_toc}
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $postfields = [
     ['fields[links][]', '-org:123'],
     ['fields[links][]', 'ticket:456'],
 ];
 $out = $cerb->put($base_url . 'records/task/1.json', $postfields);
-</code>
-</pre>
+{% endhighlight %}

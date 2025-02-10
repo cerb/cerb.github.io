@@ -36,48 +36,42 @@ These filters are available in bot scripts and snippets:
 
 Return the absolute value of a number:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{-5|abs}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 5
-```
+{% endhighlight %}
 
 ## alphanum
 
 Remove non-alphanumeric characters from a string:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{"* Ignore spaces and non-alphanumeric characters+1$2%3!"|alphanum}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Ignorespacesandnonalphanumericcharacters123
-```
+{% endhighlight %}
 
 Also allow specific characters:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{"* Ignore non-alphanumeric but allow spaces$%#!"|alphanum(' !')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 
-```
+{% highlight text %}
 Ignore nonalphanumeric but allow spaces!
-```
+{% endhighlight %}
 
 ## append
 
@@ -92,47 +86,41 @@ Append a suffix to the current text.
 | **delimiter** | An optional delimiter to add between the current text and the suffix, only if the current text is non-empty.
 | **trim** | Optional characters to remove from the end of the current value (e.g. dangling commas). When omitted the trim is set to the same value as the delimiter.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set emails = "customer@cerb.example" %}
 {{emails|append('vendor@cerb.example', delimiter=', ')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 customer@cerb.example, vendor@cerb.example
-```
+{% endhighlight %}
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set emails = null %}
 {{emails|append('vendor@cerb.example', delimiter=', ')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 vendor@cerb.example
-```
+{% endhighlight %}
 
 ## array_sum
 
 Sum the numeric elements of an array.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{array_sum([1,2,3,4,5])}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 15
-```
+{% endhighlight %}
 
 ## base_convert
 
@@ -140,8 +128,7 @@ Convert between number system bases.
 
 (Introduced in [9.0.8](/releases/9.0.8/))
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set int = 123456789 %}
 {{int|base_convert(10,16)}}
@@ -149,47 +136,42 @@ Convert between number system bases.
 {% set hex = '75bcd15' %}
 {{hex|base_convert(16,10)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 75bcd15
 
 123456789
-```
+{% endhighlight %}
 
 ## base64_decode
 
 Decode a base64-encoded string:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set b64 = "VGhpcyB3YXMgYmFzZTY0LWVuY29kZWQ=" %}
 {{b64|base64_decode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 This was base64-encoded
-```
+{% endhighlight %}
 
 ## base64_encode
 
 Encode a string in base64:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{"This was base64-encoded"|base64_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 VGhpcyB3YXMgYmFzZTY0LWVuY29kZWQ=
-```
+{% endhighlight %}
 
 ## base64url_decode
 
@@ -197,18 +179,16 @@ VGhpcyB3YXMgYmFzZTY0LWVuY29kZWQ=
 
 Decode a base64url-encoded string:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set b64 = "VGhpcyB3YXMgYmFzZTY0dXJsLWVuY29kZWQ" %}
 {{b64|base64url_decode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 This was base64url-encoded
-```
+{% endhighlight %}
 
 ## base64url_encode
 
@@ -216,32 +196,28 @@ This was base64url-encoded
 
 Encode a string in base64url:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{"This was base64url-encoded"|base64url_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 VGhpcyB3YXMgYmFzZTY0dXJsLWVuY29kZWQ
-```
+{% endhighlight %}
 
 ## batch
 
 Break a list into smaller chunks with **batch**:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set items = ['red','blue','green'] %}
 {{items|batch(2, '(empty)')|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 [
     [
         "red",
@@ -252,23 +228,21 @@ Break a list into smaller chunks with **batch**:
         "(empty)"
     ]
 ]
-```
+{% endhighlight %}
 
 ## bytes_pretty
 
 Convert a number into a human readable number of bytes:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{"123456789"|bytes_pretty(2)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 123.46 MB
-```
+{% endhighlight %}
 
 The optional argument determines the number of digits of precision.
 
@@ -276,18 +250,16 @@ The optional argument determines the number of digits of precision.
 
 Capitalize the first character of a string (and lowercase the rest):
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set first_name = "kina" %}
 {{first_name|capitalize}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Kina
-```
+{% endhighlight %}
 
 ## cerb_translate
 
@@ -295,17 +267,15 @@ Kina
 
 Converts string IDs (like `status.open`) into text in the current worker’s language.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 The ticket is {{'status.open'|cerb_translate}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 The ticket is open.
-```
+{% endhighlight %}
 
 ## column
 
@@ -313,8 +283,7 @@ The ticket is open.
 
 Extract a key from each item in an array as a new array. This has the same effect as the [array_column()](/docs/scripting/functions/#array_column) function.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set people = [
   {'name':'Kina Halpue', 'email':'kina@cerb.example'},
@@ -322,12 +291,11 @@ Extract a key from each item in an array as a new array. This has the same effec
 ] %}
 {{people|column('email')|join(', ')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 kina@cerb.example, milo@cerb.example
-```
+{% endhighlight %}
 
 ## context_name
 
@@ -338,36 +306,32 @@ Convert a Cerb `context` ID into a human readable label.
 |-|-|-
 | **type** | `singular`, `plural`, `id`, `uri`
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{'cerberusweb.contexts.ticket'|context_name('singular')}}
 {{'cerberusweb.contexts.task'|context_name('plural')}}
 {{'worker'|context_name('id')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 tickets
 task
-```
+{% endhighlight %}
 
 ## convert_encoding
 
 Convert character encodings to the first argument from the second. If the second argument is blank then Cerb will attempt to auto-detect the current encoding.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{"This has 😂 emoji"|convert_encoding('iso-8859-1', 'utf-8')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 This has ? emoji
-```
+{% endhighlight %}
 
 ## csv
 
@@ -375,8 +339,7 @@ This has ? emoji
 
 Format an array as a comma-separated values list. This is useful for exporting reports for Excel from bots.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set records = [
 	{
@@ -391,41 +354,37 @@ Format an array as a comma-separated values list. This is useful for exporting r
 ID,Subject
 {{records|csv}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 ID,Subject
 1,"Help with the API"
 2,"Automating email replies"
-```
+{% endhighlight %}
 
 ## date
 
 Use the **date** filter to format a [string](/docs/scripting/#strings) or [variable](/docs/scripting/#variables) as a date:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{'now'|date('F d, Y h:ia T')}}
 {{'tomorrow 5pm'|date('D, d F Y H:i T')}}
 {{'+2 weeks 08:00'|date('Y-m-d h:ia T')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 December 12, 2017 11:50am PST
 Wed, 13 December 2017 17:00 PST
 2017-12-26 08:00am PST
-```
+{% endhighlight %}
 
 You can use any of the formatting options from [PHP DateTime::format](https://www.php.net/manual/en/datetime.format.php).
 
 The second parameter to the **date** filter can specify a timezone to use:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set ts_now = 'now' -%}
 
@@ -433,82 +392,73 @@ Bangalore: {{ts_now|date(time_format, 'Asia/Calcutta')}}
 Berlin: {{ts_now|date(time_format, 'Europe/Berlin')}}
 New York: {{ts_now|date(time_format, 'America/New_York')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Bangalore: December 13, 2017 01:27
 Berlin: December 12, 2017 20:57
 New York: December 12, 2017 14:57
-```
+{% endhighlight %}
 
 You can get a Unix timestamp (seconds since 1-Jan-1970 00:00:00 UTC) from a date value with the `|date('U')` filter:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 It has been {{'now'|date('U')}} seconds since {{'0'|date(null, 'UTC')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 It has been 1513108417 seconds since January 1, 1970 00:00
-```
+{% endhighlight %}
 
 ## date_modify
 
 If you need to manipulate a date, create a date object with the [date](/docs/scripting/functions/#date) function and use the **date_modify** filter:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set format = 'D, d M Y T' %}
 {% set timestamp = date('now') %}
 Now: {{timestamp|date(format)}}
 +2 days: {{timestamp|date_modify('+2 days')|date(format)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Now: Tue, 12 Dec 2017 PST
 +2 days: Thu, 14 Dec 2017 PST
-```
+{% endhighlight %}
 
 ## date_pretty
 
 Convert a Unix timestamp into a human-readable, relative date:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set timestamp = date("Jan 9 2002 10am", "America/Los_Angeles") %}
 {{timestamp|date('U')|date_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 18 years ago
-```
+{% endhighlight %}
 
 ## default
 
 You can use the **default** filter to give a default value to empty variables:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set name = '' %}
 Hi {{name|default('there')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Hi there
-```
+{% endhighlight %}
 
 ## escape
 
@@ -520,19 +470,17 @@ Escape strings and variables with the following modes:
 * `url`
 * `html_attr`
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{'This is "escaped" for Javascript'|escape('js')}}
 {{'This is "escaped" for &lt;b&gt;HTML&lt;/b&gt;'|e('html')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 This\x20is\x20\x22escaped\x22\x20for\x20Javascript
 This is &quot;escaped&quot; for &lt;b&gt;HTML&lt;/b&gt;
-```
+{% endhighlight %}
 
 ## filter
 
@@ -545,53 +493,47 @@ Exclude items from an array using an arrow function.
 |-|-|-
 | **func(v,k)** | An arrow function that returns `true` (include) or `false` (exclude) for each item. It receives `v` (value) and `k` (key) as arguments.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set arr = [1,2,3,4,5,6,7,8] %}
 {{arr|filter((v,k) => v is even)|values|join(',')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 2,4,6,8
-```
+{% endhighlight %}
 
 ## first
 
 Return the first item of an array, object, or string:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set items = [1,2,3] %}
 {{items|first}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 1
-```
+{% endhighlight %}
 
 ## format
 
 Insert variables into a [string](/docs/scripting/#strings):
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set who = "Kina" %}
 {% set quantity = 120 %}
 {{"%s closed %d tickets today!"|format(who, quantity)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Kina closed 120 tickets today!
-```
+{% endhighlight %}
 
 For formatting specifiers, see: <https://www.php.net/sprintf> 
 
@@ -608,22 +550,20 @@ Generate a one-way hash.
 The **algorithm** can be one of:
 `crc32`, `md5`, `murmur3a`, `murmur3c`, `murmur3f`, `sha1`, `sha256`, `sha512/224`, `sha512/256`, `sha512`, `sha3-224`, `sha3-256`, `sha3-384`, `sha3-512`, `whirlpool`, `xxh32`, `xxh64`, `xxh3`, `xxh128`
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set text = 'This string will be hashed' %}
 SHA-512: {{text|hash('sha512')}}
 Murmur3a: {{text|hash('murmur3a')}}
 xxh128: {{text|hash('xxh128')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 SHA-512: 8b0a3e297c0447e43e20e966d1cbf4a20163c9ddebb95e1d4ba44e2542c1915597375c1a39dfce4f5786d1d187a4ce5f780817d34632fcbc571694533b3961f0
 Murmur3a: 4a9df623
 xxh128: 0da37dd25c7ee8945e2947cd89e86549
-```
+{% endhighlight %}
 
 ## hash_hmac
 
@@ -638,18 +578,16 @@ Generate a hash-based message authentication code (HMAC[^hmac]) using a secret k
 
 For instance, you can use this to sign parameters in a survey URL to verify that the recipient didn't modify them.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set data = {'email': 'kina@cerb.example', 'survey_id': 123} %}
 {{data|json_encode|hash_hmac("THIS IS SECRET","sha256")}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 5514f8aed3b39159d455f9a8f74b5d23d4f96391fa4a27d1bea6f940cb7d410f
-```
+{% endhighlight %}
 
 <div class="cerb-box note">
 <p>Provide your own value for <tt>THIS IS SECRET</tt>. You an store it in the bot configuration.</p>
@@ -664,8 +602,7 @@ Convert HTML content to plain text.
 |-|-|-
 | **truncate** | The maximum length to parse (bytes)
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set html %}
 &lt;p&gt;
@@ -682,10 +619,9 @@ Convert HTML content to plain text.
 {% endset %}
 {{html|html_to_text}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 This has bold and underlined text with links <https://cerb.ai/>.
  
 List:
@@ -693,7 +629,7 @@ List:
 * is
 * a
 * list
-```
+{% endhighlight %}
 
 ## image_info
 
@@ -703,18 +639,16 @@ Returns information about an image. The image may be provided as bytes or in [da
 
 `|image_info()`
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set image_string %}
 data:image/png;base64,iVBORw0KGgoAAAA....
 {% endset %}
 {{image_string|image_info|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {
     "width": 100,
     "height": 100,
@@ -722,7 +656,7 @@ data:image/png;base64,iVBORw0KGgoAAAA....
     "bits": 8,
     "type": "image/png"
 }
-```
+{% endhighlight %}
 
 ## indent
 
@@ -736,8 +670,7 @@ Prefix the start of each line with a given marker in a block of text.
 | **marker** | The prefix to add to the beginning of each line.
 | **start_line** | The line number to start prefixing from (0-based).
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget diam 
 eu orci hendrerit elementum. Suspendisse egestas, dolor at efficitur sollicitudin, magna eros 
@@ -749,10 +682,9 @@ Suspendisse maximus fringilla tellus, a pellentesque sem tincidunt sit amet." -%
 
 {{text|indent('> ')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget diam 
 > eu orci hendrerit elementum. Suspendisse egestas, dolor at efficitur sollicitudin, magna eros 
 > scelerisque risus, at tincidunt massa augue a eros. Nullam scelerisque luctus suscipit. Sed 
@@ -760,33 +692,30 @@ Suspendisse maximus fringilla tellus, a pellentesque sem tincidunt sit amet." -%
 > tristique quam euismod pellentesque. Curabitur ut libero sagittis sem semper ultrices. Nullam 
 > et mi id arcu vulputate fringilla ut quis nibh. Fusce lobortis magna eu quam porta scelerisque.
 > Suspendisse maximus fringilla tellus, a pellentesque sem tincidunt sit amet.
-```
+{% endhighlight %}
 
 ## join
 
 Convert an [array](/docs/scripting/arrays-objects/) to a string with delimiters:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set items = [1,2,3] %}
 {{items|join(',')}}
 {{items|join(' ')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 1,2,3
 1 2 3
-```
+{% endhighlight %}
 
 ## json_encode
 
 You can encode any variable as a JSON string with the **json_encode** filter:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set json = {'name': 'Joe Customer'} %}
 {% set json = dict_set(json, 'order_id', 54321) %}
@@ -794,19 +723,17 @@ You can encode any variable as a JSON string with the **json_encode** filter:
 {% set json = dict_set(json, 'status.tracking_id', 'Z1F238') %}
 {{json|json_encode}}	
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {"name":"Joe Customer","order_id":54321,"status":{"text":"shipped","tracking_id":"Z1F238"}}	
-```
+{% endhighlight %}
 
 ## json_pretty
 
 You can _"prettify"_ a JSON string with the **json_pretty** filter:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set json = {'name': 'Joe Customer'} %}
 {% set json = dict_set(json, 'order_id', 54321) %}
@@ -814,10 +741,9 @@ You can _"prettify"_ a JSON string with the **json_pretty** filter:
 {% set json = dict_set(json, 'status.tracking_id', 'Z1F238') %}
 {{json|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {
   "name": "Joe Customer",
   "order_id": 54321,
@@ -826,14 +752,13 @@ You can _"prettify"_ a JSON string with the **json_pretty** filter:
     "tracking_id": "Z1F238"
   }
 }
-```
+{% endhighlight %}
 
 ## kata_encode
 
 Emit an object/array as a KATA text block:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set object = {
 	colors: ["red","green","blue"],
@@ -841,23 +766,21 @@ Emit an object/array as a KATA text block:
 } %}
 {{object|kata_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 colors@list:
   red
   green
   blue
 size: 100
-```
+{% endhighlight %}
 
 ## keys
 
 Return the keys of an array or object:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set list = ['red','green','blue'] %}
 {% set obj = { 'name': 'Kina', 'age': 35, 'title': 'Customer Support Supervisor'} %}
@@ -865,65 +788,58 @@ Return the keys of an array or object:
 {{list|keys|join(',')}}
 {{obj|keys|json_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 0,1,2
 
 ["name","age","title"]
-```
+{% endhighlight %}
 
 ## last
 
 Return the last item of an array, object, or string:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set items = [1,2,3] %}
 {{items|last}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 3
-```
+{% endhighlight %}
 
 ## length
 
 Return the length of a string or array:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{"This is a string"|length}}
 {{[1,2,3,4,5]|length}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 16
 5
-```
+{% endhighlight %}
 
 ## lower
 
 Convert a string to lowercase:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{"WHY ARE YOU YELLING?"|lower}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 why are you yelling?
-```
+{% endhighlight %}
 
 ## map
 
@@ -936,8 +852,7 @@ Apply a function to each item in an array to create a new array.
 |-|-|-
 | **func(v,k)** | An arrow function that returns the new value for each item. It receives `v` (value) and `k` (key) as arguments.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set samples = [
 	[1,2,3,4,5],
@@ -948,13 +863,12 @@ Apply a function to each item in an array to create a new array.
 Averages:
 {{samples|map((v,k) => array_sum(v)/(samples[k]|length))|join(', ')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Averages:
 3, 8, 5, 6
-```
+{% endhighlight %}
 
 ## markdown_to_html
 
@@ -962,61 +876,54 @@ Averages:
 
 Convert Markdown[^markdown] formatting to HTML:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set markdown %}
 This is **bold** text with a [link](https://cerb.ai/)
 {% endset %}
 {{markdown|markdown_to_html}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 <p>This is <strong>bold</strong> text with a <a href="https://cerb.ai/">link</a></p>
-```
+{% endhighlight %}
 
 ## md5
 
 Generate an MD5[^md5] hash for a string:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{"You can verify this hash"|md5}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 1c20552e3bae1c4711cf697137002581
-```
+{% endhighlight %}
 
 ## merge
 
 Combine two arrays or objects:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set mfgs = ['Tesla','Ford'] %}
 {% set mfgs = mfgs|merge(['Toyota','GM']) %}
 {{mfgs|json_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 ["Tesla","Ford","Toyota","GM"]
-```
+{% endhighlight %}
 
 ## nl2br
 
 Convert newline characters (`\n`) to HTML breaks (`<br />`):
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set text = "This has
 line feeds
@@ -1024,31 +931,28 @@ in the text
 "%}
 {{text|nl2br}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 This has<br />
 line feeds<br />
 in the text<br />
-```
+{% endhighlight %}
 
 ## number_format
 
 Format a number with thousand separators and decimal places:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set cost = 16858 %}
 That will be ${{cost|number_format(2,'.',',')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 That will be $16,858.00
-```
+{% endhighlight %}
 
 ## parse_csv
 
@@ -1063,8 +967,7 @@ Parse a document with rows of comma-separated columns. Returns an array of rows 
 | **enclosure** | An optional character to enclose fields. Defaults to double quote (`"`). The enclosure field can be used inside a field by doubling it (as an alternative to escaping).
 | **escape** | An optional character to escape special characters (e.g. `\n`). This defaults to backslash (`\`), and escaping can be disabled with an empty string.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set text %}
 "Person Name",Email,Organization
@@ -1073,10 +976,9 @@ Parse a document with rows of comma-separated columns. Returns an array of rows 
 {% endset %}
 {{text|parse_csv|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 [
     [
         "Person Name",
@@ -1094,22 +996,20 @@ Parse a document with rows of comma-separated columns. Returns an array of rows 
         "Baston Defence"
     ]
 ]
-```
+{% endhighlight %}
 
 ## parse_emails
 
 Parse a delimited string of email addresses into an object. This also assists with email validation.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set emails = "kina@cerb.example, milo@cerb.example, karl" %}
 {{emails|parse_emails|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {
     "kina@cerb.example": {
         "full_email": "kina@cerb.example",
@@ -1133,22 +1033,20 @@ Parse a delimited string of email addresses into an object. This also assists wi
         "personal": null
     }
 }
-```
+{% endhighlight %}
 
 ## parse_url
 
 Parse a URL string into an object for validation.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set url = "https://cerb.ai/search?q=oauth2#fragment" %}
 {{url|parse_url|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {
     "scheme": "https",
     "host": "cerb.ai",
@@ -1156,7 +1054,7 @@ Parse a URL string into an object for validation.
     "query": "q=oauth2",
     "fragment": "fragment"
 }
-```
+{% endhighlight %}
 
 ## parse_user_agent
 
@@ -1164,46 +1062,41 @@ Parse a URL string into an object for validation.
 
 Parse a user-agent string into an object for validation.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set user_agent %}
 Mozilla/5.0 (Macintosh; Intel Mac OS X 13_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15
 {% endset %}
 {{user_agent|parse_user_agent|json_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {
     "platform": "Macintosh",
     "browser": "Safari",
     "version": "16.1"
 }
-```
+{% endhighlight %}
 
 ## permalink
 
 (Added in [9.2.3](/releases/9.2.3/))
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set text = "This is the title of a record!" %}
 {{text|permalink|lower}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 this-is-the-title-of-a-record
-```
+{% endhighlight %}
 
 ## quote
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set text = "This is a message you are replying to.
 
@@ -1211,14 +1104,13 @@ You should quote it.
 " %}
 {{text|quote}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 > This is a message you are replying to.
 >
 > You should quote it.
-```
+{% endhighlight %}
 
 ## reduce
 
@@ -1232,8 +1124,7 @@ Reduce an array of items into a single output value.
 | **func(carry,v)** | An arrow function that returns the new carry value after each item. It receives the old `carry` value and the current item `v` (value).
 | **initial** | An optional starting value for `carry`.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set samples = [
 	[1,2,3,4,5],
@@ -1244,13 +1135,12 @@ Reduce an array of items into a single output value.
 Sum:
 {{samples|reduce((carry,v) => carry + array_sum(v))}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Sum:
 110
-```
+{% endhighlight %}
 
 ## regexp
 
@@ -1265,24 +1155,21 @@ You can use regular expressions[^regexp] with the **regexp** filter to match or 
 
 Example:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set text = "Your Amazon Order #Z-1234-5678-9 has shipped!" %}
 {% set order_id = text|regexp("/Amazon Order #([A-Z0-9\-]+)/", 1) %}
 Amazon Order #: {{order_id}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Amazon Order #: Z-1234-5678-9
-```
+{% endhighlight %}
 
 If you need to escape characters in your regexp pattern, you should use a [set](/docs/scripting/commands/#set) block rather than a string:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set pattern %}
 #\[.*?\] (.*)#
@@ -1290,12 +1177,11 @@ If you need to escape characters in your regexp pattern, you should use a [set](
 {% set bracketed_text = "[ABC-123-45678] Order Processing - 7 Days" %}
 {{bracketed_text|regexp(pattern, 1)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Order Processing - 7 Days
-```
+{% endhighlight %}
 
 ## repeat
 
@@ -1308,49 +1194,43 @@ Repeat a string a given number of times.
 |-|-|-
 | **times** | The number of times to repeat the string.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{"*"|repeat(5)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 *****
-```
+{% endhighlight %}
 
 ## replace
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{"I really like %food%"|replace({'%food%':'ice cream'})}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 I really like ice cream
-```
+{% endhighlight %}
 
 ## reverse
 
 Reverse a string or array:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{"Leonardo da Vinci"|reverse}}
 {{[1,2,3,4,5]|reverse|join}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 icniV ad odranoeL
 54321
-```
+{% endhighlight %}
 
 <div class="cerb-box note">
 <p>The optional <tt>preserve_keys</tt> parameter will maintain object keys.</p>
@@ -1369,56 +1249,50 @@ Round a number with desired precision.
   * ceil
   * floor
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set pi = 3.141592653589793238462643383279502884197169399375105820974944592307816406286 %}
 {{pi|round}}
 {{pi|round(5)}}
 {{pi|round(5,'ceil')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 3
 3.14159
 3.1416
-```
+{% endhighlight %}
 
 ## secs_pretty
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{"300"|secs_pretty}}
 {{"86400"|secs_pretty}}
 {{"604800"|secs_pretty()}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 5 mins
 1 day
 1 week
-```
+{% endhighlight %}
 
 ## sha1
 
 Generate an SHA-1[^sha1] hash for a string:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{"You can verify this hash"|sha1}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 50ae61a375994fd178cd47fc7d29f7ec5724dda3
-```
+{% endhighlight %}
 
 ## slice
 
@@ -1426,44 +1300,39 @@ Extract part of a string, array, or object.
 
 `|slice(start, length, preserve_keys)`
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{[1,2,3,4,5]|slice(2,2)|json_encode}}
 {{"This is some text"|slice(0,4)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 [3,4]
 This
-```
+{% endhighlight %}
 
 ## sort
 
 Sort an array:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set x = [9,5,1,6,4,3] %}
 {{x|sort|slice(0,6)|json_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 [1,3,4,5,6,9]
-```
+{% endhighlight %}
 
 You can also provide an arrow function as a custom comparator for advanced sorting rules. The spaceship operator (`<=>`) automatically returns in comparator format (e.g. `-1`, `0`, or `1`):
 - (A <=> B) < 0 is true if A < B
 - (A <=> B) > 0 is true if A > B
 - (A <=> B) == 0 is true if A and B are equal/equivalent
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set items = [
     {name: "Item C", priority: 3},
@@ -1472,12 +1341,11 @@ You can also provide an arrow function as a custom comparator for advanced sorti
 ] %}
 {{items|sort((a,b) => a.priority <=> b.priority)|column('name')|join(', ')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Item A, Item B, Item C
-```
+{% endhighlight %}
 
 ## split
 
@@ -1485,17 +1353,15 @@ Convert a string to an array with the given delimiter.
 
 `|split(delimiter, limit)`
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{"1,2,3,4,5"|split(',')|json_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 ["1","2","3","4","5"]
-```
+{% endhighlight %}
 
 ## split_crlf
 
@@ -1507,8 +1373,7 @@ Split a string on any combination of carriage return (`\r`) and linefeed (`\n`) 
 | **keep_blanks** | Remove lines that are comprised of only whitespace.
 | **trim_lines** | Remove whitespace before and after each line.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set rainbow = "red
 orange
@@ -1519,29 +1384,26 @@ indigo
 violet" %}
 {{rainbow|split_crlf|json_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 ["red","orange","yellow","green","blue","indigo","violet"]
-```
+{% endhighlight %}
 
 ## split_csv
 
 Split a string on comma delimiters. This automatically handles whitespace padding.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set coins = "BTC,   ETH   ,LTC" %}
 {{coins|split_csv|json_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 ["BTC","ETH","LTC"]
-```
+{% endhighlight %}
 
 ## stat
 
@@ -1555,18 +1417,16 @@ Calculate a statistical measure for a given array of numbers.
 | **measure** | `count`, `max`, `mean`, `median`, `min`, `mode`, `stdevp`, `stdevs`, `sum`, `varp`, `vars`
 | **decimals** | The number of decimal places for rounding
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set samples = [1,2,3,4,5,6,7,8,9,10] %}
 {{samples|stat(measure='median')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 5.5
-```
+{% endhighlight %}
 
 ## str_pos
 
@@ -1581,19 +1441,17 @@ Return the position of a substring (needle) within a larger text (haystack). Thi
 | **offset** | The position to start searching from.
 | **ignoreCase** | `true` for case-insensitive matching, `false` for case-sensitive
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set alphabet %}
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
 {% endset %}
 {{alphabet|str_pos(needle='hi', offset=0, ignoreCase=true)}}{% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 7
-```
+{% endhighlight %}
 
 ## str_sub
 
@@ -1607,19 +1465,17 @@ Extract a substring from a larger string using starting and ending positions. Th
 | **from** | The position to start extracting a substring from (inclusive).
 | **to** | The position to end extraction at (exclusive).
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set alphabet %}
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
 {% endset %}
 {{alphabet|str_sub(7,9)}}{% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 HI
-```
+{% endhighlight %}
 
 ## strip_lines
 
@@ -1627,8 +1483,7 @@ Remove lines in a text block that begin with one of the given `prefixes`.
 
 `|strip_lines(prefixes)`
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set email_message %}
 > This is some quoted text
@@ -1637,44 +1492,39 @@ Remove lines in a text block that begin with one of the given `prefixes`.
 This is the original message
 {% endset %}
 {{email_message|strip_lines(prefixes='>')}}{% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 This is the original message
-```
+{% endhighlight %}
 
 ## striptags
 
 Remove HTML tags from a string.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set html = "This &lt;b&gt;string&lt;/b&gt; has &lt;b&gt;HTML&lt;/b&gt; tags!" %}
 {{html|striptags}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 This string has HTML tags!
-```
+{% endhighlight %}
 
 ## title
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set book_title = "the ultimate bot builder handbook" %}
 {{book_title|title}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 The Ultimate Bot Builder Handbook
-```
+{% endhighlight %}
 
 ## tokenize
 
@@ -1682,8 +1532,7 @@ Return an array of word tokens from a text block. This ignores punctuation and r
 
 `|tokenize`
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set message %}
 KATA ("Key Annotated Tree of Attributes") is a human-friendly format for modeling structured 
@@ -1691,10 +1540,9 @@ data that is used throughout Cerb to describe configurations, customizations, sh
 automations. KATA was inspired by YAML but avoids many of its pitfalls.
 {% endset %}
 {{array_count_values(message|tokenize)|sort|reverse|json_encode|json_pretty}}{% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {
     "kata": 2,
     "of": 2,
@@ -1732,7 +1580,7 @@ automations. KATA was inspired by YAML but avoids many of its pitfalls.
     "was": 1,
     "pitfalls": 1
 }
-```
+{% endhighlight %}
 
 ## trim
 
@@ -1747,22 +1595,20 @@ Remove leading and/or trailing whitespace from a string.
 	* left
 	* right
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set str = "    whitespace    " %}
 {{str|trim}}
 {{str|trim(' ', 'left')}}
 {{str|trim(' ', side='right')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 whitespace
 whitespace    
     whitespace
-```
+{% endhighlight %}
 
 ## truncate
 
@@ -1770,84 +1616,74 @@ Ensure that a string is no longer than the given limit.
 
 `|truncate(limit)`
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set str = "This string is longer than we'd prefer" %}
 {{str|truncate(11)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 This string...
-```
+{% endhighlight %}
 
 ## unescape
 
 Decode HTML entities:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{"&amp;quot;iPhone&amp;quot; is &amp;copy; Apple, Inc."|unescape}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 "iPhone" is © Apple, Inc.
-```
+{% endhighlight %}
 
 ## upper
 
 Convert a string to uppercase:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{"I can't hear you!"|upper}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 I CAN'T HEAR YOU!
-```
+{% endhighlight %}
 
 ## url_decode
 
 Decode a URL query string into an array:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set query = "name=Kina&action=light_on" %}
 {{query|url_decode('json')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {"name":"Kina","action":"light_on"}
-```
+{% endhighlight %}
 
 ## url_encode
 
 Build a URL query string from an array:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set args = {"name": "Kina", "action": "light_on" } %}
 {{args|url_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 name=Kina&action=light_on
-```
+{% endhighlight %}
 
 ## values
 
@@ -1855,8 +1691,7 @@ name=Kina&action=light_on
 
 Return the values of an array with sequential keys. This is the filter equivalent of the [array_values()](/docs/scripting/functions/#array_values) function.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set countries = {
   'CA': 'Canada',
@@ -1868,12 +1703,11 @@ Return the values of an array with sequential keys. This is the filter equivalen
 } %}
 {{countries|values|json_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 ["Canada","China","Germany","India","Mexico","United States"]
-```
+{% endhighlight %}
 
 <div class="section-nav">
 	<div class="left">

@@ -28,8 +28,7 @@ jumbotron:
 
 The **metric.increment:** command adds new samples to a [metric](/docs/metrics/).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   metric.increment:
@@ -41,8 +40,7 @@ start:
       values: 1
     output: results
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

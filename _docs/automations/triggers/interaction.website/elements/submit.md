@@ -30,8 +30,7 @@ In [website interactions](/docs/automations/triggers/interaction.website/) forms
 
 This is automatically added when an interaction exits in the [await state](/docs/automations/#exit-states). You do not need to do it yourself.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await:
@@ -41,8 +40,7 @@ start:
         submit:
           continue@bool: yes
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/automations/triggers/interaction.website/elements/submit.png" class="screenshot">

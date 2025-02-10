@@ -28,7 +28,7 @@ social_image_url: /assets/images/solutions/automations/search-records.png
 {% tabs search_records %}
 
 {% tab search_records automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   record.search:
@@ -37,18 +37,18 @@ start:
       record_query: status:o
     output: results
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab search_records policy %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 commands:
   record.search:
     deny/type@bool: {{inputs.record_type is not record type ('ticket')}}
     allow@bool: yes
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}
@@ -58,7 +58,7 @@ commands:
 {% tabs search_records %}
 
 {% tab search_records automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   record.search:
@@ -69,18 +69,18 @@ start:
         when: -30 mins
     output: results
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab search_records policy %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 commands:
   record.search:
     deny/type@bool: {{inputs.record_type is not record type ('worker')}}
     allow@bool: yes
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

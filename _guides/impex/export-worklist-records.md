@@ -32,11 +32,9 @@ From **Search >> Attachments**, run a [search query](/docs/search/) to filter an
 
 For instance, PNG images attached to messages within tickets created in the past 90 days:
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 name:*.png on.message:(ticket:(created:"-90 days"))
-</code>
-</pre>
+{% endhighlight %}
 
 Click on the export icon in the top right of the worklist.
 
@@ -56,8 +54,7 @@ For instance, the following Export KATA includes:
 * The URL of the first ticket linked to each attachment
 * The filename
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 column/updated:
   label: Created
@@ -69,8 +66,7 @@ column/ticket_url:
 column/name:
   label: Filename
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The `value@raw:` annotation is used to delay evaluation of placeholders until each row is exported. Without the `@raw` annotation, a placeholder would be evaluated when the KATA is first read and its value would be the same for each record.
 
@@ -78,14 +74,12 @@ Click on the **Export** button to export the worklist results to your desired fo
 
 You can optionally use the [\|date](/docs/scripting/filters/#date) filter to convert the date into a human-readable format:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 column/updated:
   label: Created
   value@raw: {{updated|date('Y-m-d H:i:s')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 You can find the dictionary placeholders for each [record type](/docs/records/types/) in the docs.

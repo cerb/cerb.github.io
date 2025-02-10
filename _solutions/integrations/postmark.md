@@ -41,8 +41,7 @@ This workflow adds the `X-PM-KeepId: true` header to outgoing mail.
 
 As an administrator, navigate to **Search >> Workflows >> (+) >> (Empty)** and paste the following template:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.integrations.postmark
@@ -76,5 +75,4 @@ records:
         automation/keepId:
           uri: cerb:automation:cerb.integrations.postmark.keepMessageId
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

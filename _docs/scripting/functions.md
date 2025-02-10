@@ -37,8 +37,7 @@ These functions are available in bot scripts and snippets:
 
 The **array_column** function extracts a column from the elements of an array:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set people = [
 	{"id": 1, "name": "Kina Halpue", "email": "kina@cerb.example"},
@@ -47,12 +46,11 @@ The **array_column** function extracts a column from the elements of an array:
 ] %}
 The email addresses are: {{array_column(people,'email')|join(', ')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 The email addresses are: kina@cerb.example, milo@cerb.example, janey@cerb.example
-```
+{% endhighlight %}
 
 ## array_combine
 
@@ -60,20 +58,18 @@ The email addresses are: kina@cerb.example, milo@cerb.example, janey@cerb.exampl
 
 The **array_combine** function creates a new array with the given `keys` and `values`:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set keys = ['name', 'age', 'email'] %}
 {% set values = ['Janey Youve', '30-ish', 'janey@cerb.example'] %}
 {% set person = array_combine(keys, values) %}
 {{person.name}} can be reached at {{person.email}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Janey Youve can be reached at janey@cerb.example
-```
+{% endhighlight %}
 
 ## array_count_values
 
@@ -81,41 +77,37 @@ Janey Youve can be reached at janey@cerb.example
 
 The **array_count_values** function takes an array of values as input, and returns an array with distinct values as keys and their count of occurrences. This function only works on arrays of strings or numbers.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set values = [1,2,3,1,3,2,3,1,2,1,3,1,3] %}
 {{array_count_values(values)|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {
     "1": 5,
     "2": 3,
     "3": 5
 }
-```
+{% endhighlight %}
 
 ## array_diff
 
 The **array_diff** function returns the items in the second array that are not present in the first array:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set arr1 = ['Apple', 'Google', 'Microsoft'] %}
 {% set arr2 = ['Apple', 'Microsoft', 'Cerb'] %}
 {% set diff = array_diff(arr2, arr1) %}
 These are new: {{diff|join(', ')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 These are new: Cerb
-```
+{% endhighlight %}
 
 ## array_extract_keys
 
@@ -123,8 +115,7 @@ These are new: Cerb
 
 Returns the given keys from all elements of a list.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set records = [
 	{
@@ -143,14 +134,13 @@ Returns the given keys from all elements of a list.
 Sender,Subject,Status
 {{array_extract_keys(records, ['sender','subject','status'])|csv}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Sender,Subject,Status
 customer@cerb.example,"Help with the API",open
 customer@cerb.example,"Automating email replies",open
-```
+{% endhighlight %}
 
 ## array_fill_keys
 
@@ -160,17 +150,15 @@ Create an array with the given keys, each set to the default value.
 
 `array_fill_keys(keys,value)`
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{array_fill_keys(range(1,10),true)|json_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {"1":true,"2":true,"3":true,"4":true,"5":true,"6":true,"7":true,"8":true,"9":true,"10":true}
-```
+{% endhighlight %}
 
 ## array_intersect
 
@@ -178,20 +166,18 @@ Create an array with the given keys, each set to the default value.
 
 Returns a new array for all the elements in array1 that are also present in array2. This is the opposite of [array_diff](#array_diff).
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set arr1 = ['Apple', 'Google', 'Microsoft'] %}
 {% set arr2 = ['Apple', 'Microsoft', 'Cerb'] %}
 {% set intersect = array_intersect(arr2, arr1) %}
 These are in both: {{intersect|join(', ')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 These are in both: Apple, Microsoft
-```
+{% endhighlight %}
 
 ## array_matches
 
@@ -199,20 +185,18 @@ These are in both: Apple, Microsoft
 
 Compares an array of values to an array of patterns.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set recipients = ['support@cerb.example','sales@cerb.example'] %}
 {% set patterns = ['sales@*'] %}
 {% set results = array_matches(recipients, patterns) %}
 Matches: {{results|join(', ')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Matches: sales@cerb.example
-```
+{% endhighlight %}
 
 ## array_sort_keys
 
@@ -220,19 +204,17 @@ Matches: sales@cerb.example
 
 Sort an associative array by its keys rather than its values.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set arr = {"z":"A", "a":"B", "m":"C"} %}
 {% set arr = array_sort_keys(arr) %}
 {{arr|keys|join(',')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 a,m,z
-```
+{% endhighlight %}
 
 ## array_unique
 
@@ -240,18 +222,16 @@ a,m,z
 
 Return a new array with only the distinct values from the `array` argument.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set arr = [1,1,2,2,3,3,4,4,5,5,6] %}
 Unique values {{array_unique(arr)|join(',')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Unique values 1,2,3,4,5,6
-```
+{% endhighlight %}
 
 ## array_values
 
@@ -259,36 +239,32 @@ Unique values 1,2,3,4,5,6
 
 Return the values from an associative array as a new indexed array. For instance, this can affect the output in JSON encoding by using `[]` rather than `{key:value}`.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set arr = {"z":"A", "a":"B", "m":"C"} %}
 {{array_values(arr)|json_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 ["A","B","C"]
-```
+{% endhighlight %}
 
 ## attribute
 
 Access the values of an object with a variable key:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set person = {"first_name": "Kina", "last_name": "Halpue", "title": "Customer Support Supervisor"} %}
 {% set key = 'title' %}
 {{attribute(person, key)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Customer Support Supervisor
-```
+{% endhighlight %}
 
 ## cerb_automation
 
@@ -306,20 +282,18 @@ For instance, a snippet could use an automation to dynamically generate content 
 | **uri** | The URI of an [automation](/docs/automations/) record to invoke. It must be of type `scripting.function`.
 | **inputs** | A key/value dictionary of inputs. The possible keys depend on the function being invoked.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set ip_data = cerb_automation('wgm.scripting.getLocationByIP', { ip:"1.2.3.4" } ) %}
 {% if ip_data.return.data %}
 I see you are contacting us from {{ip_data.return.data.country_name}}.
 {% endif %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 I see you are contacting us from Australia.
-```
+{% endhighlight %}
 
 ## cerb_avatar_image
 
@@ -327,17 +301,15 @@ Retrieve the avatar image for a given record type and ID.
 
 `cerb_avatar_image(record_type, id, updated)`
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{cerb_avatar_image('worker','1','now'|date('U'))}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 <img src="https:/cerb.example/avatars/worker/1?v=1513212603" style="height:16px;width:16px;border-radius:16px;vertical-align:middle;">
-```
+{% endhighlight %}
 
 ## cerb_avatar_url
 
@@ -345,17 +317,15 @@ Retrieve the avatar image URL for a given record type and ID.
 
 `cerb_avatar_url(record_type, id, updated)`
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{cerb_avatar_url('worker','1','now'|date('U'))}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 https://cerb.example/avatars/worker/1?v=1513212702
-```
+{% endhighlight %}
 
 ## cerb_calendar_get_relative_date
 
@@ -370,19 +340,17 @@ Calculate a future timestamp using calendar availability. For instance, this can
 | **date_rel** | The time increment (e.g. "+2 hours").
 | **now** | An optional starting date/time.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 Now: {{"now"|date('r')}}
 Due: {{cerb_calendar_get_relative_date(123,'+2 hours')|date('r')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Now: Fri, 18 Oct 2024 20:02:18 -0700
 Due: Mon, 21 Oct 2024 09:00:00 -0700
-```
+{% endhighlight %}
 
 ## cerb_calendar_time_elapsed
 
@@ -397,17 +365,15 @@ Calculate the time elapsed (in seconds) between two dates using calendar availab
 | **date_from** | The starting date/time.
 | **date_to** | The ending date/time.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{cerb_calendar_time_elapsed(123,'last Friday 5pm','now')|secs_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 18 hours, 13 mins
-```
+{% endhighlight %}
 
 ## cerb_current_worker
 
@@ -420,17 +386,15 @@ Return a dictionary for the currently logged in worker. This returns an empty di
 |-|-|-
 | **expand** | An optional comma-delimited string or array of dictionary keys to expand.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 Hello {{cerb_current_worker().first_name}}!
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Hello Kina!
-```
+{% endhighlight %}
 
 ## cerb_extract_uris
 
@@ -447,8 +411,7 @@ For instance, this function can be used to rewrite all links in an email templat
 |-|-|-
 | **html** | The HTML content to extract links from.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set html %}
 This is some &lt;b&gt;HTML&lt;/b&gt; with &lt;a href="https://cerb.ai/"&gt;links&lt;/a&gt;.
@@ -456,10 +419,9 @@ This is some &lt;b&gt;HTML&lt;/b&gt; with &lt;a href="https://cerb.ai/"&gt;links
 {% set results = cerb_extract_uris(html) %}
 {{results|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {
     "tokens": {
         "#uri-61411f091662a": "https://cerb.ai/"
@@ -485,12 +447,11 @@ This is some &lt;b&gt;HTML&lt;/b&gt; with &lt;a href="https://cerb.ai/"&gt;links
     },
     "template": "This is some <b>HTML</b> with <a href=\"#uri-61411f091662a\">links</a>.\n"
 }
-```
+{% endhighlight %}
 
 To rewrite links:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set html %}
 This is some &lt;b&gt;HTML&lt;/b&gt; with &lt;a href="https://cerb.ai/"&gt;links&lt;/a&gt;.
@@ -501,12 +462,11 @@ This is some &lt;b&gt;HTML&lt;/b&gt; with &lt;a href="https://cerb.ai/"&gt;links
 )%}
 {{results.template|replace(new_urls)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 This is some <b>HTML</b> with <a href="https://proxy.example/click?url=https%3A%2F%2Fcerb.ai%2F">links</a>.
-```
+{% endhighlight %}
 
 ## cerb_file_url
 
@@ -516,17 +476,15 @@ This automatically adapts to use within Cerb and community portals (e.g. SSL, pr
 
 `cerb_file_url(id)`
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{cerb_file_url('1')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 https://cerb.example/files/1/original_message.html
-```
+{% endhighlight %}
 
 ## cerb_has_priv
 
@@ -534,19 +492,17 @@ https://cerb.example/files/1/original_message.html
 
 Returns a boolean depending on whether the given actor has the given privilege among their roles. If no actor is given, the current worker is assumed. This allows bot functionality, snippets, and widgets, to adapt based on worker permissions. This is particularly useful in HTML-based profile widgets.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% if cerb_has_priv('contexts.cerberusweb.context.ticket.create', 'worker', 1) %}
 Worker #1 has permission to create tickets.
 {% endif %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Worker #1 has permission to create tickets.
-```
+{% endhighlight %}
 
 ## cerb_placeholders_list
 
@@ -558,15 +514,13 @@ Return an [object](/docs/scripting/arrays-objects/) with every placeholder in th
 | **extract** | The key prefix to extract (e.g. `ticket_group_`)
 | **prefix** | The optional new prefix to add (e.g. `group_`)
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{cerb_placeholders_list()|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {
   "worker__context": "cerberusweb.contexts.worker",
   "worker__loaded": true,
@@ -593,7 +547,7 @@ Return an [object](/docs/scripting/arrays-objects/) with every placeholder in th
   "worker_record_url": "https://cerb.example/profiles/worker/1-Kina-Halpue",
   ...
 }
-```
+{% endhighlight %}
 
 ## cerb_plugin_enabled
 
@@ -608,17 +562,15 @@ For instance, this can be used to make dashboard tabs or widgets conditional on 
 |-|-|-
 | **plugin_id** | The name or ID of the [workflow](/docs/workflows/).
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{cerb_plugin_enabled('cerb.classifiers')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 1
-```
+{% endhighlight %}
 
 ## cerb_record_readable
 
@@ -626,19 +578,17 @@ For instance, this can be used to make dashboard tabs or widgets conditional on 
 
 Returns a boolean if the given actor has read access to the given record. If no actor is provided then the current worker is assumed. This allows bots and widgets to adapt based on record permissions. For instance, an HTML widget on a profile dashboard could only show a button to workers who can modify the record.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% if cerb_record_readable('ticket', 123, 'worker', 1) %}
 Worker #1 can read ticket #123.
 {% endif %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Worker #1 can read ticket #123.
-```
+{% endhighlight %}
 
 ## cerb_record_writeable
 
@@ -646,19 +596,17 @@ Worker #1 can read ticket #123.
 
 Returns a boolean if the given actor has write access to the given record. If no actor is provided then the current worker is assumed. This allows bots and widgets to adapt based on record permissions. For instance, an HTML widget on a profile dashboard could only show a button to workers who can modify the record.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% if cerb_record_writeable('ticket', 123, 'worker', 1) %}
 Worker #1 can modify ticket #123.
 {% endif %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Worker #1 can modify ticket #123.
-```
+{% endhighlight %}
 
 ## cerb_url
 
@@ -666,17 +614,15 @@ Retrieve a full URL to a page or resource in Cerb.
 
 This automatically adapts to use within Cerb and community portals (e.g. SSL, proxies).
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{cerb_url("c=profiles&type=ticket&id=5")}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 https://cerb.example/profiles/ticket/5
-```
+{% endhighlight %}
 
 ## cerb_workflow_config
 
@@ -691,17 +637,15 @@ Perform runtime configuration lookups from any feature that supports automation 
 | **key** | The optional config key to return. If omitted, all keys/values are returned as a map.
 | **default** | The optional default value if the key doesn't exist.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{cerb_workflow_config('example.workflow','secretCode',null)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 sup3rs3cr3t
-```
+{% endhighlight %}
 
 ## cerb_workflow_resources
 
@@ -714,66 +658,58 @@ Perform runtime resource lookups and return a map of workflow resources and thei
 |-|-|-
 | **name_or_id** | The name or ID of the [workflow](/docs/workflows/).
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{cerb_workflow_resources('example.workflow'|json_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {"records":{"automation/example":123}}
-```
+{% endhighlight %}
 
 ## clamp_float
 
 Set the range boundaries for a decimal value.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{clamp_float(-105.19,0,100)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 0
-```
+{% endhighlight %}
 
 ## clamp_int
 
 Set the range boundaries for an integer value.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{clamp_int(110,-90,90)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 90
-```
+{% endhighlight %}
 
 ## cycle
 
 Round-robin through a sequence.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set options = ['odd','even'] %}
 {% for n in 1..10 %}
 * {{cycle(options, n)}}
 {% endfor %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 * even
 * odd
 * even
@@ -784,24 +720,22 @@ Round-robin through a sequence.
 * odd
 * even
 * odd
-```
+{% endhighlight %}
 
 ## date
 
 Create a date object for use with the [date_modify](/docs/scripting/filters/#date_modify) filter.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set d = date('1-Jan-2018 10:00am') %}
 {{d|date_modify('+2 hours')|date('F d, Y g:ia')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 January 01, 2018 12:00pm
-```
+{% endhighlight %}
 
 ## date_lerp
 
@@ -821,15 +755,13 @@ Interpolate the timestamps between two dates with the given `unit` and `step`.
 
 **Returns:** An array of Unix timestamps.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{date_lerp('this month',unit='day',step=5)|map((v) => v|date('r'))|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 [
     "Sat, 01 Oct 2022 00:00:00 -0700",
     "Thu, 06 Oct 2022 00:00:00 -0700",
@@ -839,7 +771,7 @@ Interpolate the timestamps between two dates with the given `unit` and `step`.
     "Wed, 26 Oct 2022 00:00:00 -0700",
     "Mon, 31 Oct 2022 00:00:00 -0700"
 ]
-```
+{% endhighlight %}
 
 ## dict_set
 
@@ -862,8 +794,7 @@ The function returns a modified version of `object`.
 
 You can set deeply nested keys in a single line using dot-notation:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set var = {"group": {}} %}
 {% set var = dict_set(var, 'group.name', 'Support') %}
@@ -871,10 +802,9 @@ You can set deeply nested keys in a single line using dot-notation:
 {% set var = dict_set(var, 'group.manager.name.last', 'Halpue') %}
 {{var|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {
   "group": {
     "name": "Support",
@@ -886,12 +816,11 @@ You can set deeply nested keys in a single line using dot-notation:
     }
   }
 }
-```
+{% endhighlight %}
 
 Append items to an array by adding `.[]` to the key:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set var = {"group": {}} %}
 {% set var = dict_set(var, 'group.name', 'Support') %}
@@ -900,10 +829,9 @@ Append items to an array by adding `.[]` to the key:
 {% set var = dict_set(var, 'group.members.[]', 'Steven Emplois') %}
 {{var|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {
   "group": {
     "name": "Support",
@@ -914,12 +842,11 @@ Append items to an array by adding `.[]` to the key:
     ]
   }
 }
-```
+{% endhighlight %}
 
 Append to nested arrays:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set var = [1,2,[3,4,[5,6]]] %}
 {% set var = dict_set(var, '2.2.[]', 7) %}
@@ -927,10 +854,9 @@ Append to nested arrays:
 {% set var = dict_set(var, '2.3', 9) %}
 {{var|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 [
   1,
   2,
@@ -946,7 +872,7 @@ Append to nested arrays:
     9
   ]
 ]
-```
+{% endhighlight %}
 
 ## dict_unset
 
@@ -954,17 +880,15 @@ You can use the **dict_unset** function to remove items by key from an array or 
 
 You can unset deeply nested keys in a single line using dot-notation:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set person = {"person":{"name":{"first":"Jane","last":"Tester"},"age":28,"location":"Secret"}} %}
 {% set person = dict_unset(person, ['person.name.last','person.age','person.location']) %}
 {{person|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {
     "person": {
         "name": {
@@ -972,7 +896,7 @@ You can unset deeply nested keys in a single line using dot-notation:
         }
     }
 }
-```
+{% endhighlight %}
 
 ## dns_get_record
 
@@ -985,15 +909,13 @@ Resolve DNS records by hostname and type. This enables workflows like verifying 
 * **hostname**: The lookup hostname.
 * **type**: The record type (`a`, `aaaa`, `caa`, `cname`, `mx`, `ns`, `ptr`, `soa`, `srv`, `txt`)
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{dns_get_record('cerb.ai','a')|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 [
     {
         "host": "cerb.ai",
@@ -1010,7 +932,7 @@ Resolve DNS records by hostname and type. This enables workflows like verifying 
         "ip": "54.192.81.69"
     }
 ]
-```
+{% endhighlight %}
 
 ## dns_host_by_ip
 
@@ -1022,37 +944,33 @@ Resolve a hostname from an IP. If a name can’t be resolved for a valid IP, the
 
 * **ip**: The IP address to reverse lookup a hostname.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{dns_host_by_ip('54.148.127.4')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 cerb.email
-```
+{% endhighlight %}
 
 ## json_decode
 
 You can decode a JSON-encoded string with the **json_decode** function:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set json_string = "{\"name\":\"Joe Customer\",\"order_id\":12345}" %}
 {% set json = json_decode(json_string) %}
 Customer: {{json.name}}
 Order #: {{json.order_id}}	
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Customer: Joe Customer
 Order #: 12345
-```
+{% endhighlight %}
 
 This returns an [object](/docs/scripting/arrays-objects/).
 
@@ -1060,25 +978,22 @@ This returns an [object](/docs/scripting/arrays-objects/).
 
 This is nearly identical to [dict_set](#dict_set).
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set json_string = "{\"name\":\"Joe Customer\",\"order_id\":12345}" %}
 {% set json = json_decode(json_string) %}
 {% set json = jsonpath_set(json, 'order_id', '67890') %}
 {{json.order_id}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 67890
-```
+{% endhighlight %}
 
 You can specify an array by appending `[]` without a leading dot (`.`):
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set json_string = "{\"team\":{\"groups\":[]}}" %}
 {% set json = json_decode(json_string) %}
@@ -1087,10 +1002,9 @@ You can specify an array by appending `[]` without a leading dot (`.`):
 {% set json = jsonpath_set(json, 'team.groups[]', 'Development') %}
 {{json|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {
   "team": {
     "groups": [
@@ -1100,14 +1014,13 @@ You can specify an array by appending `[]` without a leading dot (`.`):
     ]
   }
 }
-```
+{% endhighlight %}
 
 ## kata_parse
 
 Parses a KATA text block into an object.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set kata %}
 colors@list:
@@ -1118,85 +1031,76 @@ size@int: 100
 {% endset %}
 {{kata_parse(kata)|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {
     "colors@list": "red\ngreen\nblue",
     "size@int": "100"
 }
-```
+{% endhighlight %}
 
 ## max
 
 Return the largest value in an array or object.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set numbers = [1,9,8,4,2] %}
 {{max(numbers)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 9
-```
+{% endhighlight %}
 
 ## min
 
 Return the smallest value in an array or object.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set numbers = [1,9,8,4,2] %}
 {{min(numbers)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 1
-```
+{% endhighlight %}
 
 ## random
 
 Return a random item from a string or array, or a random number between 0 and the given number (inclusive).
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{random([1,2,3,4,5,6,7,8,9,0])}}
 {{random("abcdefghijklmnopqrstuvwxyz")}}
 {{random(20)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 9
 o
 17
-```
+{% endhighlight %}
 
 ## random_string
 
 Generate a random string of the given length.  This is useful for generating confirmation codes or temporary passwords.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{random_string(16)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 61AE3XG3ZMW8QDTM
-```
+{% endhighlight %}
 
 ## range
 
@@ -1204,26 +1108,23 @@ Return an array with values between `from` and `to` (inclusive).
 
 `range(from,to,step)`
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{range(5,15)|json_encode}}
 {{range(5,15,2)|json_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 [5,6,7,8,9,10,11,12,13,14,15]
 [5,7,9,11,13,15]
-```
+{% endhighlight %}
 
 ## regexp_match_all
 
 `regexp_match_all(pattern, string, group)`
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set headers = 
 "X-Mailer: Cerb
@@ -1234,10 +1135,9 @@ To: support@cerb.example
 {% set results = regexp_match_all("#^(.*?): (.*?)$#m", headers) %}
 {{results|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 [
   [
     "X-Mailer: Cerb",
@@ -1255,65 +1155,59 @@ To: support@cerb.example
     "support@cerb.example"
   ]
 ]
-```
+{% endhighlight %}
 
 ## shuffle
 
 Randomize an array:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{shuffle([1,2,3,4,5])|json_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 [2,4,5,1,3]
-```
+{% endhighlight %}
 
 ## validate_email
 
 Validate an email address:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{validate_email('kina')|json_encode}}
 {{validate_email('kina#cerb.example')|json_encode}}
 {{validate_email('kina@cerb.example')|json_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 false
 false
 true
-```
+{% endhighlight %}
 
 ## validate_number
 
 Validate a number:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{validate_number('abcde')|json_encode}}
 {{validate_number('20.f')|json_encode}}
 {{validate_number(10)|json_encode}}
 {{validate_number('123.45')|json_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 false
 false
 true
 true
-```
+{% endhighlight %}
 
 ## vobject_parse
 
@@ -1330,8 +1224,7 @@ Parse a block of text in VObject format (e.g. vCard, iCal).
 
 **Returns:** An object with properties and parameters.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set vcard %}
 begin:vcard
@@ -1354,10 +1247,9 @@ end:vcard
 {% endset %}
 {{vobject_parse(vcard)|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {
     "VCARD": [
         {
@@ -1445,7 +1337,7 @@ end:vcard
         }
     ]
 }
-```
+{% endhighlight %}
 
 ## xml_attr
 
@@ -1463,8 +1355,7 @@ Return a single attribute from an XML node.
 
 **Returns:** A string from the given XML attribute, or `false`.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set xml_string %}
 &lt;?xml version = "1.0" encoding = "UTF-8"?&gt;
@@ -1488,12 +1379,11 @@ Return a single attribute from an XML node.
 {% set runtime = xml_attr(movie.Title,'runtime') %}
 The runtime of {{movie.Title}} is {{runtime ? (60*runtime)|secs_pretty : 'unknown'}}.
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 The runtime of The Shawshank Redemption is 2 hours, 22 mins.
-```
+{% endhighlight %}
 
 ## xml_attrs
 
@@ -1510,8 +1400,7 @@ Return all attributes from an XML node.
 
 **Returns:** An array of attribute keys and values.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set xml_string %}
 &lt;?xml version = "1.0" encoding = "UTF-8"?&gt;
@@ -1546,14 +1435,13 @@ Return all attributes from an XML node.
 {% set movies = xml_xpath(xml, '//Movie') %}
 {{xml_attrs(movies[1])|json_encode|json_pretty}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 {
     "rating": "R"
 }
-```
+{% endhighlight %}
 
 ## xml_decode
 
@@ -1567,8 +1455,7 @@ Use the [xml_xpath](#xml_xpath) function to extract values with XPath[^xpath] qu
 * **namespaces**: An optional array of namespaces.
 * **mode**: Use `html` to convert an HTML DOM into an XML document.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set string_of_xml = 
 "&lt;response&gt;
@@ -1579,23 +1466,21 @@ Use the [xml_xpath](#xml_xpath) function to extract values with XPath[^xpath] qu
 {% set xml = xml_decode(string_of_xml) %}
 {{xml_encode(xml)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 <?xml version="1.0"?>
 <response>
   <client_id>1</client_id>
   <invoice_id>123</invoice_id>
 </response>
-```
+{% endhighlight %}
 
 ## xml_encode
 
 You can encode an object as XML with the **xml_encode** function:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set string_of_xml = 
 "&lt;response xmlns=\"http://www.example.com/api/\"&gt;
@@ -1606,19 +1491,17 @@ You can encode an object as XML with the **xml_encode** function:
 {% set xml = xml_decode(string_of_xml) %}
 {{xml_encode(xml.client_id)}}	
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 <client_id>1</client_id>
-```
+{% endhighlight %}
 
 ## xml_xpath
 
 Use the **xml_xpath** function to extract values with XPath[^xpath] queries:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set string_of_xml = 
 "&lt;response&gt;
@@ -1632,20 +1515,18 @@ Use the **xml_xpath** function to extract values with XPath[^xpath] queries:
 Client ID: {{client_id}}
 Invoice ID: {{invoice_id}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Client ID: 1
 Invoice ID: 123
-```
+{% endhighlight %}
 
 ## xml_xpath_ns
 
 You can define an XML namespace with the **xml_xpath_ns** function:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set string_of_xml = 
 "&lt;response xmlns=\"http://www.example.com/api/\"&gt;
@@ -1660,13 +1541,12 @@ You can define an XML namespace with the **xml_xpath_ns** function:
 Client ID: {{client_id}}
 Invoice ID: {{invoice_id}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Client ID: 1
 Invoice ID: 123
-```
+{% endhighlight %}
 
 ## xml_xpath_remove
 
@@ -1677,8 +1557,7 @@ Remove elements from an XML document with an XPath query.
 * **xml**: An XML object created by [xml_decode](#xml_decode).
 * **path**: The [XPath](#xml_xpath) query to match elements for removal.
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set string_of_xml =
 "&lt;response&gt;
@@ -1690,15 +1569,14 @@ Remove elements from an XML document with an XPath query.
 {% set xml = xml_xpath_remove(xml, '//invoice_id') %}
 {{xml_encode(xml)}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 <?xml version="1.0"?>
 <response>
   <client_id>1</client_id>
 </response>
-```
+{% endhighlight %}
 
 <div class="section-nav">
 	<div class="left">

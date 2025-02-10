@@ -32,7 +32,7 @@ Here is an example of using the [\|filter](https://cerb.ai/docs/scripting/filter
 {% tabs filter_dictionary_keys %}
 
 {% tab filter_dictionary_keys automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -43,17 +43,17 @@ start:
   return:
     gitlab_headers@json: {{message_headers|filter((v,k) => k is prefixed ('x-gitlab'))|json_encode}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab filter_dictionary_keys output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 __return:
   gitlab_headers:
     x-gitlab-project: abc123
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

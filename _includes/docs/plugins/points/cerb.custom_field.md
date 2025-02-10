@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerb.custom_field&quot;&gt;
 			&lt;id&gt;example.plugin.custom_field&lt;/id&gt;
 			&lt;name&gt;Example Custom Field Type&lt;/name&gt;
@@ -15,13 +14,11 @@
 			&lt;params&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class CustomField_Example extends Extension_CustomField {
 	const ID = 'example.plugin.custom_field';
@@ -134,6 +131,5 @@ class CustomField_Example extends Extension_CustomField {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

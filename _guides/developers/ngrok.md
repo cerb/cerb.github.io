@@ -50,11 +50,9 @@ On Mac, you can also install ngrok using Homebrew[^homebrew] (note: you will nee
 
 Starting ngrok is incredibly simple:
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 ngrok http localhost:80
-</code>
-</pre>
+{% endhighlight %}
 
 Above, we're starting ngrok in `http` mode using `localhost` on port `80`.  You can replace these values according to your needs.
 

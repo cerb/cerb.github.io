@@ -64,8 +64,7 @@ You can build your own @Mention Email Notifications workflow using this template
 
 Change occurrences of **cerb.notifications.mention_emailer** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.notifications.mention_emailer
@@ -147,5 +146,4 @@ records:
               or '@' not in record_comment
             }}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

@@ -28,8 +28,7 @@ jumbotron:
 
 The **while:** command conditionally repeats a sequence of actions. This can implement controlled infinite loops for interactions and timers.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -42,14 +41,11 @@ start:
   return:
     counter@key: counter
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 counter: 5
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

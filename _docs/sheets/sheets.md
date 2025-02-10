@@ -44,20 +44,17 @@ State on sheets is maintained client-side, and paging/sorting/filtering is custo
 
 For example, this **data query**:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 type:worklist.records
 of:ticket
 query:(status:open limit:5)
 expand:[initial_message_sender_org_,owner_]
 format:dictionaries
-</code>
-</pre>
+{% endhighlight %}
 
 And this **sheet schema**:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 layout:
   style: table
@@ -97,8 +94,7 @@ columns:
     params:
       format: Y-m-d
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Will display this **sheet**:
 
@@ -121,17 +117,14 @@ You'll also notice that we're displaying the country of the initial sender's org
 
 By default, sheets display as a **table** of rows and columns.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 layout:
   style: table
-</code>
-</pre>
+{% endhighlight %}
 
 To specify fixed column widths:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 layout:
   style: table
   params:
@@ -141,8 +134,7 @@ layout:
 columns:
   text/name:
   text/description:
-</code>
-</pre>
+{% endhighlight %}
 
 ### Fieldsets
 
@@ -152,45 +144,37 @@ columns:
 
 The `fieldsets` layout style displays rows as **fieldsets** (vertically) rather than a table (horizontal). This is useful on profiles to summarize a single record, and in mobile environments.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 layout:
   style: fieldsets
-</code>
-</pre>
+{% endhighlight %}
 
 ### Columns
 
 The `columns` layout displays rows as equal width columns.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 layout:
   style: columns
-</code>
-</pre>
+{% endhighlight %}
 
 ### Grid
 
 The `grid` layout displays rows as a dynamically sized grid.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 layout:
   style: grid
-</code>
-</pre>
+{% endhighlight %}
 
 ### Buttons
 
 The `buttons` layout displays rows as buttons. This also supports one-click continue in [interactions](/docs/interactions/).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 layout:
   style: buttons
-</code>
-</pre>
+{% endhighlight %}
 
 ## Colors
 
@@ -204,8 +188,7 @@ If a color set contains a `_dark` suffix, it will be used automatically in dark 
 
 Entire rows can be colorized by using the same `color:` parameter on all columns.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 layout:
   colors:
     rainbow12@csv: #6e40aa, #b83cb0, #f6478d, #ff6956, #f59f30, #c4d93e, #83f557, #38f17a, #19d3b5, #29a0dd, #5069d9, #6e40aa
@@ -214,8 +197,7 @@ columns:
     params:
       color: rainbow12:0
       text_color: rainbow12:1
-</code>
-</pre>
+{% endhighlight %}
 
 # Columns
 
@@ -244,8 +226,7 @@ The `bold:` and `underline:` params control how the link is displayed.
 
 The `icon:` parameter has the same options as an [icon](#icon) column.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 columns:
   card/name:
     label: Name
@@ -258,8 +239,7 @@ columns:
       underline: yes
       #icon:
       #  image: circle-ok
-</code>
-</pre>
+{% endhighlight %}
 
 ## Code
 
@@ -272,16 +252,14 @@ The `syntax:` parameter may be one of:
 | `plaintext` | No syntax (default)
 | `diff` | Unified diff
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 columns:
   code/toolbar_kata:
     label: Code
     params:
       syntax: kata
       value_key: toolbar_kata
-</code>
-</pre>
+{% endhighlight %}
 
 ## Date
 
@@ -289,8 +267,7 @@ The `date` column type displays a datetime in various formats. The default is a 
 
 The timestamp can be provided as `value:` (a Unix timestamp in seconds) or `value_key:` (a dictionary key containing a Unix timestamp). When both of these are omitted, the `key:` is used.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 columns:
   date/updated:
     label: Updated
@@ -299,8 +276,7 @@ columns:
       format: d-M-Y H:i:s T
       #value: 1577836800
       #value_key: updated
-</code>
-</pre>
+{% endhighlight %}
 
 ## Icon
 
@@ -308,8 +284,7 @@ The `icon` column type displays an icon image, record profile image, or automati
 
 You'll find a list of icon names in **Setup >> Developers >> Icon Reference**.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 columns:
   icon/can_sign:
@@ -322,8 +297,7 @@ columns:
         circle-ok
         {% endif %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### record_uri:
 
@@ -333,8 +307,7 @@ The `record_uri:` may also be an image-based `automation_resource` token.
 
 If both `record_uri:` and `image:` are defined, the former will be checked first and if empty fall back to the latter.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 columns:
   icon/group:
@@ -342,8 +315,7 @@ columns:
     params:
       record_uri: cerb:group:123
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### svg:
 
@@ -351,8 +323,7 @@ Render arbitrary in-line SVG images with the `svg:` key. Rendered SVG images are
 
 This is particularly useful for dynamic or single-use images. For instance, a survey could display happy/sad or thumbs up/down images on buttons.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 columns:
   icon/group:
@@ -364,15 +335,13 @@ columns:
           ...
           &lt;/svg&gt;
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Interaction
 
 The `interaction` column type triggers an interaction when clicked.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 columns:
   interaction/ip:
@@ -386,8 +355,7 @@ columns:
         {% endif %}
       #record_uri: cerb:group:123
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Link
 
@@ -408,8 +376,7 @@ The `link` column type displays a relative or external link with some text.
 | `text_key:` | The dynamic key with the label of the link.
 | `text_template@raw:` | A [script](/docs/scripting/) that outputs a label for the link with placeholders for each row.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 columns:
   link/link:
@@ -422,22 +389,19 @@ columns:
       text_key: _label
       #text_template@raw: {{title}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Markdown
 
 The `markdown` column type displays Markdown formatted text as HTML.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 columns:
   markdown/content:
     label: Answer
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Search
 
@@ -449,8 +413,7 @@ For instance, a table of calculated results could open a search popup to the sou
 
 The `icon:` parameter has the same options as an [icon](#icon) column.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 columns:
   search/count:
@@ -460,8 +423,7 @@ columns:
       #query_key: query
       query_template@raw: owner.id:{{id}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Search Button
 
@@ -473,8 +435,7 @@ The `query:` (or `query_key:`, `query_template:`) param contains the search quer
 
 The `label:` (or `label_key:`, `label_template:`) param provides the text of the search link.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 columns:
   search_button/assignments_search:
@@ -484,8 +445,7 @@ columns:
       #query_key: query
       query_template@raw: owner.id:{{id}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Selection
 
@@ -495,8 +455,7 @@ The selected rows will add their `value:` (or `value_key:`, `value_template:`) t
 
 The `mode:` parameter controls whether `single` or `multiple` selection is used.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 columns:
   selection/id:
@@ -510,8 +469,7 @@ columns:
       #value_key: id
       #value_template@raw: {{id}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/automations/triggers/interaction.worker/elements/sheet.png" class="screenshot" alt="Example of a sheet selection column">
@@ -525,8 +483,7 @@ Use the `show_labels: yes` option to show the min and max values on either side 
 
 Specify custom `threshold_colors:` to override the defaults. This is a map with limits as keys and colors as values.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 columns:
   slider/importance:
@@ -539,8 +496,7 @@ columns:
       #value_template@raw: {{importance+10}}
       #show_labels@bool: no
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Text
 
@@ -552,8 +508,7 @@ The `icon:` parameter has the same options as an [icon](#icon) column.
 
 This type is usually the default when no column `type:` is specified.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 columns:
   text/gender:
@@ -568,8 +523,7 @@ columns:
       #icon:
       #  image: circle-ok
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Time Elapsed
 
@@ -579,13 +533,11 @@ The `value:` (or `value_key:`, `value_template:`) parameter specifies the value.
 
 The `precision` parameter controls how granular the date is. For instance, `precision: 3` is _"2 hours, 5 minutes, 29 seconds"_. The default is `2`.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 columns:
   time_elapsed/elapsed_response_first:
     label: First Response
     params:
       precision: 2
-</code>
-</pre>
+{% endhighlight %}
 

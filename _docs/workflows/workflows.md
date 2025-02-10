@@ -30,8 +30,7 @@ jumbotron:
 
 Here's a simple workflow KATA template that creates a new task using a configurable name and owner.
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 {% raw %}
 workflow:
   name: example.newTask
@@ -57,8 +56,7 @@ records:
       owner_id: {{config.taskOwner_id|default(0)}}
       title: {{config.taskName}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 When you make a changes to a workflow template, any records that were previously created by the workflow are automatically updated to match. The workflow manages the mapping between template "keys" and local record IDs.
 
@@ -69,7 +67,7 @@ When you make a changes to a workflow template, any records that were previously
 
 ## Schema
 
-```text
+{% highlight cerb %}
 config:
   chooser:
     default:
@@ -97,7 +95,7 @@ records:
     deletionPolicy:
     fields:
     updatePolicy:
-```
+{% endhighlight %}
 
 ### config:
 

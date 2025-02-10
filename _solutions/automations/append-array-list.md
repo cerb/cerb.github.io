@@ -30,8 +30,7 @@ Here are examples of different methods for appending values to arrays and lists 
 
 ## Using var.push:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -41,13 +40,11 @@ start:
       key: emails
       value: marketing@cerb.example
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Using var.set:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -57,13 +54,11 @@ start:
       key: emails:{{emails|length}}
       value: marketing@cerb.example
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Using |merge:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -71,13 +66,11 @@ start:
   set/append:
     emails@json: {{emails|merge(['marketing@cerb.example'])|json_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## Using |csv and string concatenation:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -85,5 +78,4 @@ start:
   set/append:
     emails@csv: {{emails|join(',')}}, marketing@cerb.example
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

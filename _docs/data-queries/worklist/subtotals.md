@@ -33,16 +33,14 @@ jumbotron:
 
 `worklist.subtotals` [data queries](/docs/data-queries/) run aggregate functions to categorize matching worklist records.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:worklist.subtotals 
 of:tickets 
 by:[created@month,group] 
 format:timeseries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}
@@ -51,13 +49,11 @@ format:timeseries
 
 The `of:` key specifies the type of [records](/docs/records/) to subtotal.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 of:tickets
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # by:
 
@@ -67,13 +63,11 @@ The `by:` key specifies which record [fields](/docs/records/#fields) to subtotal
 
 Multiple fields can be separated with commas to generated nested subtotals (e.g. _"tickets by owners by status"_).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 by:[owner,status] 
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Aggregate functions
 
@@ -94,24 +88,20 @@ The other functions may only be used against numeric fields. For example, you ca
 
 As of [9.0.7](/releases/9.0.7/) the desired function is appended to the `by:` key following a period (`.`):
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 by.avg:[worker,responseTime] 
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 In earlier versions, a separate `function:` key was specified:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 function:average
 by:[worker,responseTime] 
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 This still works, but is deprecated.
 
@@ -142,25 +132,21 @@ Histograms can be generated for date-based fields by appending a unit of time fo
 
 When using `@week` you can optionally specify if weeks should start on Sunday or Monday. The default is Monday.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 by:[created@month,worker] 
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Links
 
 The `by:` fields can specify `links` or `links.*` (e.g. `links.org`) fields. This could create a report like _"Sum of time tracking entries linked to organizations by month"_.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 by:[links.org] 
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Limits
 
@@ -170,25 +156,21 @@ Conversely, some _"high cardinality"_ fields have potentially infinite possible 
 
 You can **limit** the cardinality of a field by appending a tilde (`~`) to any `by:` field and providing a number. This only returns that number of the most common (top) values.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 by:[created@month~10,org~25]
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Limit ordering
 
 You can also return the least common (bottom) values by providing a negative number as the limit.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 by:[group~-5] 
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # timeout:
 
@@ -212,35 +194,29 @@ The `metric:` key lets you specify an arbitrary **equation** to modify the calcu
 
 In this equation, the metric value is represented by the placeholder `x`.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 metric:"x*100"
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Mathematical operations
 
 Basic mathematical operations are supported using `+` (addition), `-` (subtraction), `/` (division), `*` (multiplication), `**` (exponents).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 metric:"x**2"
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 You can group operations with parentheses (`()`).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 metric:"(x+2)*100"
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Filters
 
@@ -250,13 +226,11 @@ Numeric [filters](/docs/scripting/filters/) from [bot scripting](/docs/scripting
 * [number_format](/docs/scripting/filters/#number_format)
 * [round](/docs/scripting/filters/#round)
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 metric:"(x/4.33)|round"
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # group:
 
@@ -268,30 +242,26 @@ Suppose you want the average _weekly_ number of email replies sent per worker _o
 
 If you just use `created@week`:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 of:message
 by:[worker~20,created@week]
 query:(created:"-1 month")
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ...then you'll get back a row for every worker for every week in the past month. If there are 20 workers with 4 weekly samples, that's 80 rows.
 
 You can use `group:` to flatten those results with a function:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 of:message
 by:[worker~20,created@week]
 query:(created:"-1 month")
 group.avg:[worker]
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 This returns only a single row per worker, with the average count of their weekly samples over the past month.
 
@@ -325,15 +295,13 @@ subtotals are used, a row is returned for each distinct result (e.g. Support -> 
 
 ## Return a stacked bar chart of tickets by owner by status
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 type:worklist.subtotals
 of:tickets 
 by:[owner~10,status] 
 query:(owner.id:any) 
 format:categories
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/data-queries/data-queries-worklist-subtotals-owner-status.png" class="screenshot">

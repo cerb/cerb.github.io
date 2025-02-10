@@ -29,7 +29,7 @@ Here is an example of using the [\|html_to_text](/docs/scripting/filters/#html_t
 
 {% tabs convert-html-to-markdown %}
 {% tab convert-html-to-markdown automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -38,17 +38,17 @@ start:
   return:
     output: {{message_html|html_to_text(truncate=50000)}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab convert-html-to-markdown output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   output: |-
     # Title
     This is an HTML message
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}

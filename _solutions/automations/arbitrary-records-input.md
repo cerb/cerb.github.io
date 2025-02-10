@@ -34,7 +34,7 @@ You can accept any record type and ID as input parameters, then use them to crea
 {% tabs input_record_placeholder %}
 
 {% tab input_record_placeholder automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 inputs:
   text/record_type:
@@ -51,7 +51,7 @@ start:
   return:
     output: {{record__label}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

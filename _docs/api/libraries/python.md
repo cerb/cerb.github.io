@@ -32,16 +32,13 @@ The Python library for the Cerb API was contributed by [CyberTechCafe-LLC](https
 
 Install the module from `pip`:
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 pip install cerbapi
-</code>
-</pre>
+{% endhighlight %}
 
 # Usage
 
-<pre>
-<code class="language-python">
+{% highlight python %}
 from cerbapi import Cerb
 
 cerb = Cerb(
@@ -53,5 +50,4 @@ cerb = Cerb(
 print(cerb.get_record('ticket', 1))
 print(cerb.get_contexts())
 print(cerb.search_records('comment', query='author.worker:Rob'))
-</code>
-</pre>
+{% endhighlight %}

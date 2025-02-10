@@ -53,8 +53,7 @@ Click the **Update Template** button at the top of the popup.
 
 Paste the following workflow KATA into the large text box:
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: wgm.example.custom_records.academia
@@ -159,8 +158,7 @@ records:
             cf_{{records.course_schedule.id}}
             updated
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Continue** button three times.
 

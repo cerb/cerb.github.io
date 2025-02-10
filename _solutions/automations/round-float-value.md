@@ -32,7 +32,7 @@ Here are examples of rounding methods (round, ceil, floor, and precision control
 {% tabs round_float_value %}
 
 {% tab round_float_value automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -43,11 +43,11 @@ start:
     floor@int: {{number|round(0, 'floor')}}
     precision@float: {{number|round(5)}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab round_float_value output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 __return:
   round: 3
@@ -55,7 +55,7 @@ __return:
   floor: 3
   precision: 3.14159
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

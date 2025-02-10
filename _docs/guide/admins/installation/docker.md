@@ -41,7 +41,7 @@ First, make sure [Docker Desktop](https://www.docker.com/products/docker-desktop
 
 Navigate to the directory where you want to install a copy of Cerb. Then run the following commands:
 
-```shell
+{% highlight bash %}
 git clone -b v11.0 https://github.com/cerb/cerb-release.git v11.0
 
 # ... or download + unzip: https://github.com/cerb/cerb-release/archive/refs/heads/v11.0.zip
@@ -51,7 +51,7 @@ cd v11.0
 cd install/docker
 
 docker compose up --build
-```
+{% endhighlight %}
 
 It will take a few minutes to build the container images the first time you run them. Afterward, the containers will start almost instantly.
 
@@ -61,32 +61,32 @@ The guided installer will finish installing Cerb based on your needs. For testin
 
 ### Updating Cerb
 
-```shell
+{% highlight bash %}
 git stash
 
 git pull origin --rebase
 
 git stash pop
-```
+{% endhighlight %}
 
 ### Changing the web server port
 
 If you're already using port `80` for a different project, you can bind Cerb to a different port (e.g. `8080`) by editing the `docker-compose.yml` file before running `docker compose up`.
 
-```yaml
+{% highlight yaml %}
 services:
   web:
     image: nginx:latest
     ports:
       - "8080:80"
 ...
-```
+{% endhighlight %}
 
 ### Connecting to the MySQL console
 
-```shell
+{% highlight bash %}
 docker exec -it cerb-mysql-1 mysql -u root -p cerb
-```
+{% endhighlight %}
 
 The default password is `s3cr3t`.
 
@@ -100,9 +100,9 @@ Resume them later with `docker compose up --build` or the play button in Docker 
 
 To delete the containers and their data, use the command:
 
-```shell
+{% highlight bash %}
 docker compose down --volumes
-```
+{% endhighlight %}
 
 ### Editing code
 

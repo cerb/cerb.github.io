@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerberusweb.plugin.setup&quot;&gt;
 			&lt;id&gt;wgmcampfire.setup&lt;/id&gt;
 			&lt;name&gt;Setup&lt;/name&gt;
@@ -16,13 +15,11 @@
 				&lt;param key=&quot;tab_label&quot; value=&quot;Campfire Credentials&quot;/&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_PluginSetup {
 	public static function getByPlugin($plugin_id, $as_instances) {
@@ -35,6 +32,5 @@ class ExampleExtension extends Extension_PluginSetup {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

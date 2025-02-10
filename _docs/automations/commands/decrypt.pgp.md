@@ -28,8 +28,7 @@ jumbotron:
 
 The **decrypt.pgp:** command decrypts a PGP-encrypted text block.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   decrypt.pgp:
@@ -55,8 +54,7 @@ start:
       return:
         decrypted_message@key: decrypted_message
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

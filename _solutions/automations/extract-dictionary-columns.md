@@ -28,7 +28,7 @@ You can extract the same column from a list of dictionaries with the `|column` f
 {% tabs extract_dictionary_columns %}
 
 {% tab extract_dictionary_columns automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -42,16 +42,16 @@ start:
   return:
     emails: {{people|column('email')|join(', ')}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab extract_dictionary_columns output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   emails: kina@cerb.example, milo@cerb.example
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}
@@ -63,7 +63,7 @@ You can extract the same column from a list of dictionaries with the `|map` filt
 {% tabs extract_dictionary_columns %}
 
 {% tab extract_dictionary_columns automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -77,16 +77,16 @@ start:
   return:
     emails: {{people|map((v)=>v['email'])|join(', ')}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab extract_dictionary_columns output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   emails: kina@cerb.example, milo@cerb.example
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

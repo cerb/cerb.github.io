@@ -31,8 +31,7 @@ The **decision:** command conditionally selects one of multiple potential outcom
 
 # Syntax
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   decision:
@@ -46,8 +45,7 @@ start:
         return:
           output: It is a weekday.
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ## outcome:
 

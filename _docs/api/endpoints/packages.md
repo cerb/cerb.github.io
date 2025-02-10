@@ -40,8 +40,7 @@ Import a pre-built workflow package. You must have **administrator** privileges 
 ### Example
 {: .no_toc}
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 $json_string = <<< EOF
 {
@@ -94,5 +93,4 @@ $postfields = [
     ['prompts[worker_id]', '1']
 ];
 $out = $cerb->post($base_url . 'packages/import.json', $postfields);
-</code>
-</pre>
+{% endhighlight %}

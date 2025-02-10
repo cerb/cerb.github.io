@@ -48,8 +48,7 @@ You can build your own record reminders workflow using this template as a refere
 
 Change occurrences of **cerb.records.reminders** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.records.reminders
@@ -152,5 +151,4 @@ records:
             refresh_toolbar@bool: no
             refresh_widgets@list: Properties
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

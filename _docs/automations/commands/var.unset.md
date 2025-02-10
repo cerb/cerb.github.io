@@ -28,8 +28,7 @@ jumbotron:
 
 The **var.unset:** command removes a placeholder using a key path.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -44,19 +43,16 @@ start:
   return:
     person@key: person
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Result:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 person:
   name:
     first: Kina
     last: Halpue
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

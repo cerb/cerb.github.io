@@ -35,7 +35,7 @@ When using `Content-Type: application/x-www-form-urlencoded`, a `body:` dictiona
 {% tabs http_post_form %}
 
 {% tab http_post_form automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   http.request/post:
@@ -57,11 +57,11 @@ start:
             http_response@json: {{http_response.body}}
     on_error:
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab http_post_form policy %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 commands:
   http.request:
@@ -69,7 +69,7 @@ commands:
     deny/url@bool: {{inputs.url is not prefixed ('http://','https://')}}
     allow@bool: yes
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

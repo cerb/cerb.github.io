@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 &lt;extension point=&quot;cerb.card.widget&quot;&gt;
     &lt;id&gt;example.card.widget&lt;/id&gt;
     &lt;name&gt;Card Widget&lt;/name&gt;
@@ -15,13 +14,11 @@
     &lt;params&gt;
     &lt;/params&gt;
 &lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class CardWidget_Example extends Extension_CardWidget {
     function render(Model_CardWidget $model, $context, $context_id) {
@@ -40,5 +37,4 @@ class CardWidget_Example extends Extension_CardWidget {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

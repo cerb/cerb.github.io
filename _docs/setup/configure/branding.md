@@ -50,13 +50,11 @@ Using the `#cerb-logo` selector you can target the logo. This is useful if you w
 
 To reference a logo you previously uploaded, use:
 
-<pre>
-<code class="language-css">
+{% highlight css %}
 #cerb-logo {
   background-image:url(logo?v=1);
 }
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-box note">
 <p>If you refer to <tt>url(logo)</tt> manually then you should increment a version counter to prevent browsers from serving a stale cached image. If you let Cerb manage the logo it will do this for you automatically.</p>
@@ -64,10 +62,8 @@ To reference a logo you previously uploaded, use:
 
 You can also use an external logo URL like:
 
-<pre>
-<code class="language-css">
+{% highlight css %}
 #cerb-logo {
   background-image:url(https://example.com/logo.png);
 }
-</code>
-</pre>
+{% endhighlight %}

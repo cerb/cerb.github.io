@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;devblocks.search.engine&quot;&gt;
 			&lt;id&gt;devblocks.search.engine.elasticsearch&lt;/id&gt;
 			&lt;name&gt;Elasticsearch&lt;/name&gt;
@@ -15,17 +14,14 @@
 			&lt;params&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_DevblocksSearchEngine {
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerberusweb.page&quot;&gt;
 			&lt;id&gt;core.page.welcome&lt;/id&gt;
 			&lt;name&gt;Welcome Page&lt;/name&gt;
@@ -17,13 +16,11 @@
 				&lt;param key=&quot;menutitle&quot; value=&quot;&quot;/&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends CerberusPageExtension {
 	public function isVisible() {
@@ -33,6 +30,5 @@ class ExampleExtension extends CerberusPageExtension {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

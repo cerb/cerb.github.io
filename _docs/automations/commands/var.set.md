@@ -28,8 +28,7 @@ jumbotron:
 
 The **var.set:** command sets a value using a key path.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -44,16 +43,13 @@ start:
     output@text:
       {{person.name.first}} {{person.name.last}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Result:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 output: Kina Halpue
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

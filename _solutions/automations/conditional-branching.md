@@ -33,7 +33,7 @@ Here are examples of different approaches to conditional branching, demonstratin
 {% tabs conditional_branching %}
 
 {% tab conditional_branching automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -56,16 +56,16 @@ start:
         return:
           output: You picked option 3.
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab conditional_branching output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 __return:
   output: You picked option 2.
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}
@@ -75,7 +75,7 @@ __return:
 {% tabs conditional_branching %}
 
 {% tab conditional_branching automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -88,16 +88,16 @@ start:
   return:
     output: {{options[option]}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab conditional_branching output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 __return:
   output: You picked option 3
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

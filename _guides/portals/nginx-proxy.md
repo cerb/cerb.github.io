@@ -42,8 +42,7 @@ However, we highly recommend that you use a production-ready proxy like nginx[^n
 
 Create a new virtual host in nginx for your community portal. Use the following configuration file:
 
-<pre>
-<code class="language-nginx">
+{% highlight nginx %}
 # HTTPS
 server {
   set $cerb_host cerb.example;
@@ -105,8 +104,7 @@ server {
     return 301 https://$host$request_uri;
   }
 }
-</code>
-</pre>
+{% endhighlight %}
 
 Modify the variables at the top of the **server** block:
 
@@ -133,11 +131,9 @@ Reload nginx to start serving your community portal.
 
 On Ubuntu:
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 service nginx reload
-</code>
-</pre>
+{% endhighlight %}
 
 # Test the community portal
 

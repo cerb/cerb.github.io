@@ -42,8 +42,7 @@ The supported result formats are determined by each automation.
 
 # Examples
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:automation.invoke
 name:example.fetchApiData
@@ -52,5 +51,4 @@ inputs:(
 )
 format:dictionaries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

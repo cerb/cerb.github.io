@@ -31,7 +31,7 @@ The `is_untrusted` parameter sanitizes HTML output (e.g. script blocks and image
 
 {% tabs convert-markdown-to-html %}
 {% tab convert-markdown-to-html automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -41,17 +41,17 @@ start:
   return:
     output: {{markdown_text|markdown_to_html(is_untrusted=true)}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab convert-markdown-to-html output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   output: |-
     <h1>Title</h1>
     <p>This is a <strong>Markdown</strong> message.</p>
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}

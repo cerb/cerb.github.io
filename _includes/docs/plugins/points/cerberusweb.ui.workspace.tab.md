@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerberusweb.ui.workspace.tab&quot;&gt;
 			&lt;id&gt;core.workspace.tab.dashboard&lt;/id&gt;
 			&lt;name&gt;Dashboard&lt;/name&gt;
@@ -16,13 +15,11 @@
 				&lt;param key=&quot;label&quot; value=&quot;dashboard&quot;/&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_WorkspaceTab {
 	public function exportTabConfigJson(Model_WorkspacePage $page, Model_WorkspaceTab $tab) {
@@ -41,6 +38,5 @@ class ExampleExtension extends Extension_WorkspaceTab {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

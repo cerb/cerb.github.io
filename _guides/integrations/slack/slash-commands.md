@@ -83,8 +83,7 @@ Then click **(+)** above the worklist:
 
 Select **Import** at the top of the popup and paste the following behavior:
 
-<pre style="max-height:29.25em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "behavior":{
@@ -213,8 +212,7 @@ Select **Import** at the top of the popup and paste the following behavior:
   }
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 You should now see the following:
 

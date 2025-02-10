@@ -30,7 +30,7 @@ Cerb has several [filters](/docs/scripting/filters/) you can use to change the c
 {% tabs change_text_case %}
 
 {% tab change_text_case automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -41,11 +41,11 @@ start:
     capitalized: {{sentence|capitalize}}
     title: {{sentence|title}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab change_text_case output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 __return:
   upper: THIS IS A SENTENCE.
@@ -53,7 +53,7 @@ __return:
   capitalized: This is a sentence.
   title: This Is A Sentence.
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

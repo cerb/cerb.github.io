@@ -61,8 +61,7 @@ Dashboard prompts are configured on a dashboard by clicking the **Edit Dashboard
 
 They are defined by using a very simple text-based format known as [KATA](/docs/kata/):
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 date_range/input_date_range:
   label: Date range:
@@ -100,8 +99,7 @@ text/input_keywords:
   label: Keywords:
   default@json: null
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 This is a tree of `key: value` pairs.
 
@@ -134,8 +132,7 @@ When prompting with a chooser, the user selects one or more [records](/docs/reco
 <img src="/assets/images/docs/using-cerb/dashboards/prompts/filter-ui-chooser.png" class="screenshot">
 </div>
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 chooser/input_groups:
   label: Groups:
   default@json: null
@@ -143,8 +140,7 @@ chooser/input_groups:
     context: group
     query@text: id:>0
     single: no
-</code>
-</pre>
+{% endhighlight %}
 
 The available **params:** are:
 
@@ -156,8 +152,7 @@ The available **params:** are:
 
 The value of the placeholder is a comma-separated list of record IDs. You'd use it in a query like:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:worklist.subtotals
 of:tickets
@@ -170,8 +165,7 @@ query:(
 )
 format:timeseries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 If a chooser prompt's name ends in `_id` then its placeholder will support key expansion. For instance, a prompt named `prompt_worker_id` can also access `prompt_worker_first_name`.
 
@@ -183,8 +177,7 @@ When prompting with a date range, the user enters a start and end date (inclusiv
 <img src="/assets/images/docs/using-cerb/dashboards/prompts/filter-ui-daterange.png" class="screenshot">
 </div>
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 date_range/input_date_range:
   label: Date range:
   default: -1 month to now
@@ -199,8 +192,7 @@ date_range/input_date_range:
         query: jan 1 to now
       all:
         query: big bang to now
-</code>
-</pre>
+{% endhighlight %}
 
 The available **params:** are:
 
@@ -208,8 +200,7 @@ The available **params:** are:
 
 The value of the placeholder is a text string with format `"date1 to date2"`. This is suitable for passing directly to any date-based filters. Be sure you wrap it in quotes (`" "`).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:worklist.subtotals
 of:tickets
@@ -219,8 +210,7 @@ query:(
 )
 format:timeseries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### picklist
 
@@ -230,8 +220,7 @@ When prompting with a picklist, the user selects one item from a pre-defined lis
 <img src="/assets/images/docs/using-cerb/dashboards/prompts/filter-ui-picklist.png" class="screenshot">
 </div>
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 picklist/input_date_subtotal_by:
   label: By:
   default: month
@@ -242,8 +231,7 @@ picklist/input_date_subtotal_by:
       week
       month
       year
-</code>
-</pre>
+{% endhighlight %}
 
 The available **params:** are:
 
@@ -251,41 +239,34 @@ The available **params:** are:
 
 * **options:** a list of possible values for the picklist.
 
-	<pre>
-	<code class="language-cerb">
-	params:
-	  options@csv: day, week, month, year
-	</code>
-	</pre>
+{% highlight cerb %}
+params:
+  options@csv: day, week, month, year
+{% endhighlight %}
 
-	<pre>
-	<code class="language-cerb">
-	params:
-	  options@list:
-	    day
-	    week
-	    month
-	    year
-	</code>
-	</pre>
-	
+{% highlight cerb %}
+params:
+  options@list:
+    day
+    week
+    month
+    year
+{% endhighlight %}
+
 	As of [9.1.3](/releases/9.1.3/) you can also provide a map of labels and values:
-	
-	<pre>
-	<code class="language-cerb">
-	params:
-	  options:
-	    Open: o
-	    Waiting: w
-	    Closed: c
-	    Deleted: d
-	</code>
-	</pre>
+
+{% highlight cerb %}
+params:
+  options:
+    Open: o
+    Waiting: w
+    Closed: c
+    Deleted: d
+{% endhighlight %}
 
 In single selection mode (`multiple: no`), the value of the placeholder is the selected option:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:worklist.subtotals
 of:tickets
@@ -295,13 +276,11 @@ query:(
 )
 format:timeseries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 In multiple selection mode (`multiple: yes`), the value of the placeholder is an array of selected options:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:worklist.subtotals
 of:tickets
@@ -315,8 +294,7 @@ query:(
 )
 format:timeseries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### text
 
@@ -328,15 +306,13 @@ When prompting with text input, the user enters freeform text.
 </div>
 {% endcomment %}
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 text/input_subject:
   label: Search:
   default: some example text
   params:
     hidden@bool: no
-</code>
-</pre>
+{% endhighlight %}
 
 The optional **params:** are:
 
@@ -344,8 +320,7 @@ The optional **params:** are:
 
 The value of the placeholder is a text string. This is suitable for passing directly to any filters. Be sure you wrap it in quotes.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:worklist.records
 of:tickets
@@ -356,8 +331,7 @@ query:(
 )
 format:dictionaries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Widgets
 

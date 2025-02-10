@@ -69,8 +69,7 @@ Navigate to **Setup >> Packages >> Import**.
 
 Paste the following package:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
     "package": {
@@ -120,8 +119,7 @@ Paste the following package:
     ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Select your Stability.ai account.
 
@@ -135,16 +133,14 @@ Edit the **record.profile.image.editor** toolbar.
 
 Add the following interaction to the toolbar:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 interaction/stability:
   label: Stable Diffusion
   icon: picture
   uri: cerb:automation:example.interaction.recordProfileImage.stabilityai
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Save Changes** button.
 
@@ -169,13 +165,11 @@ Type a description of the image you'd like to generate in the prompt:
 <img src="/assets/images/guides/automations/stable-diffusion-images/ai-prompt.png" class="screenshot">
 </div>
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 {% raw %}
 A profile picture of a humanoid robot in cyberpunk graphic novel style
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the blue **Continue** button.
 

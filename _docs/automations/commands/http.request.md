@@ -34,8 +34,7 @@ The command also supports streaming large file uploads directly from attachment 
 
 A simple `GET` request:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   http.request/get:
@@ -46,13 +45,11 @@ start:
       return:
         body@key: http_response:body
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 A more complex `POST` request:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   http.request/post:
@@ -78,8 +75,7 @@ start:
   return:
     employee_id@int: {{body.id}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}
@@ -102,21 +98,17 @@ The HTTP method to use for the request.
 | `POST` | √
 | `PUT` | √
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 method: POST
-</code>
-</pre>
+{% endhighlight %}
 
 ### url:
 
 The URL of the HTTP endpoint to use for the request.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 url: https://api.example/employee/123
-</code>
-</pre> 
+{% endhighlight %} 
 
 ### headers:
 
@@ -124,37 +116,31 @@ A set of HTTP headers to include with the request.
 
 Headers should be described as a set of `name: value` pairs.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 headers:
   Content-Type: application/json
   X-Requester: Cerb
-</code>
-</pre> 
+{% endhighlight %} 
 
 The headers can optionally also be defined as a `@text` block.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 headers@text:
   Content-Type: application/json
   X-Requester: Cerb
-</code>
-</pre> 
+{% endhighlight %} 
 
 ### body:
 
 The body of the HTTP request (if applicable).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 body@text:
   This is the body content
   on multiple indented lines.
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 If the body is defined as a dictionary of `key: value` pairs, then it will automatically be encoded based on the `Content-Type:` header:
 
@@ -164,8 +150,7 @@ If the body is defined as a dictionary of `key: value` pairs, then it will autom
   
 This removes the need for extraneous `set:` commands to prepare the HTTP request.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 headers:
   Content-Type: application/json
@@ -174,20 +159,17 @@ body:
     name: Kina Halpue
     title: Customer Service Manager
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### timeout:
 
 The optional timeout in seconds. Decimal values are allowed (e.g. `0.5` for 500ms).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 timeout: 0.5
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### authentication:
 
@@ -195,11 +177,9 @@ The optional URI of a [connected account](/docs/records/types/connected_account/
 
 For instance, an OAuth2 connected account will include a bearer token in the `Authorization:` header.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 authentication: cerb:connected_account:my-oauth2-account
-</code>
-</pre>
+{% endhighlight %}
 
 ### response:
 
@@ -281,8 +261,7 @@ Set the `Content-Type:` header to `application/vnd.cerb.uri` and set the HTTP bo
 
 The automation will take care of streaming the bytes to the HTTP endpoint, which avoids memory issues with loading large attachment content into an automation variable.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   http.request/post:
@@ -295,5 +274,4 @@ start:
       body@text:
         cerb:attachment:123
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

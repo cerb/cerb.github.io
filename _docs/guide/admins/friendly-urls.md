@@ -47,12 +47,10 @@ Cerb supports URL rewriting to make the URLs shorter and more user-friendly.  Th
 
 This is all you should need to do to enable friendly URLs in Nginx:
 
-<pre class="command-line" data-user="user" data-host="host">
-<code class="language-bash">
+{% highlight bash %}
 cd /path/to/cerb
 touch .htaccess
-</code>
-</pre>
+{% endhighlight %}
 
 You can alternatively edit the `framework.config.php` file and manually set `DEVBLOCKS_REWRITE` to `true`.
 
@@ -60,23 +58,19 @@ You can alternatively edit the `framework.config.php` file and manually set `DEV
 
 If you’re using the Apache web server you can enable URL rewriting with the following commands:
 
-<pre class="command-line" data-user="user" data-host="host">
-<code class="language-bash">
+{% highlight bash %}
 cd /path/to/cerb
 cp .htaccess-dist .htaccess
-</code>
-</pre>
+{% endhighlight %}
 
 For this to work you will need to enable `mod_rewrite` in your Apache configuration.  It is usually already enabled.
 
 If `mod_rewrite` isn’t enabled, you can use the following commands on many Linux-based servers:
 
-<pre class="command-line" data-user="user" data-host="host">
-<code class="language-bash">
+{% highlight bash %}
 sudo a2enmod rewrite
 service apache2 reload
-</code>
-</pre>
+{% endhighlight %}
 
 If these commands don't work, you'll need to enable the module manually.
 

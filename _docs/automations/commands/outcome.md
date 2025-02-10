@@ -34,8 +34,7 @@ The **outcome:** command makes a sequence of commands conditional. Each outcome 
 
 # Syntax
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   outcome/weekend:
@@ -44,7 +43,6 @@ start:
       return:
         output: It is the weekend.
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Multiple outcomes can be grouped in a [decision](/docs/automations/commands/decision/) command. The first matching outcome is used.

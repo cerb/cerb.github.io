@@ -45,32 +45,26 @@ jumbotron:
 
 This simple automation, written in [KATA](/docs/kata/):
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   return:
     answer: {{a * b}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 With this input:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 a: 5
 b: 4
-</code>
-</pre>
+{% endhighlight %}
 
 Returns this output:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 answer: 20
-</code>
-</pre>
+{% endhighlight %}
 
 ### Dictionaries
 
@@ -106,8 +100,7 @@ The identifier may contain letters, numbers, and underscores.
 
 For instance, we could "hardcode" the inputs from the first example above as keys:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set/a:
@@ -117,8 +110,7 @@ start:
   return:
     answer: {{a * b}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 We use the `set:` command twice in the `start:` parent, so we name them `set/a:` and `set/b:`.
 
@@ -130,13 +122,11 @@ Values can be _dynamically_ generated from the output of **scripting**.
 
 In the previous examples we had this line:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 answer: {{a * b}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 This computes a new value by multiplying the value in placeholder `a` by the value in placeholder `b`.
 
@@ -160,14 +150,12 @@ Refer to the [**scripting**](/docs/scripting/) documentation for a full list of 
 
 In KATA, all values that immediately follow a key are assumed to be text by default:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 a: 5
 b: 4
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 In the example above, `5` and `4` are treated as text rather than numbers. However, in certain situations, like mathematical operations, a text value can be automatically **coerced** into a number.
 
@@ -177,8 +165,7 @@ Annotations start with `@` and are appended to a key name.
 
 For example, we can explicitly specify that a key's value is an integer (a non-fractional number) with `@int`:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -187,8 +174,7 @@ start:
   return:
     answer@int: {{a * b}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 In the above automation's dictionary, the value for the keys `a:`, `b:`, and `answer:` are now strictly numeric.
 
@@ -217,8 +203,7 @@ Multiple annotations may be joined with commas. They are evaluated from left to 
 
 For instance:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -227,8 +212,7 @@ start:
   return:
     answer@int: {{a * b}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The line `b@key,int: a` is setting the key `b:` to the value of the `a` key, and then converting it to an integer.
 
@@ -236,8 +220,7 @@ The line `b@key,int: a` is setting the key `b:` to the value of the `a` key, and
 
 An annotated key may be followed by an indented block of text to set a multiple-line value:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb linenos mark_lines="4 5 6 7 8 9 10 11 12 13" %}
 {% raw %}
 start:
   set:
@@ -257,14 +240,11 @@ start:
       {% set diff = countries.China.pop - countries['United States'].pop %}
       There are {{diff|number_format}} more people in China than the USA.
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 There are 1,111,562,602 more people in China than the USA.
-</code>
-</pre>
+{% endhighlight %}
 
 This approach is particularly useful when you need to create a dictionary with keys that contain characters like spaces, which are not valid in KATA keys.
 
@@ -291,8 +271,7 @@ The `type` must be one of:
 
 The values are available in the `inputs` placeholder.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 inputs:
   record/ticket:
@@ -306,8 +285,7 @@ start:
     result@text:
       Changed the subject on ticket {{inputs.ticket.mask}} to: {{inputs.subject}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Snippet examples
 
@@ -315,8 +293,7 @@ Automations that support custom `inputs:` can provide a `snippet:` key for each 
 
 This is used when inserting the automation into an editor from an interaction.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 inputs:
   text/subject:
@@ -325,8 +302,7 @@ inputs:
     snippet:
       subject: This is an example subject
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Exit states
 
@@ -351,8 +327,7 @@ If the `on_error:` event is omitted, a command error immediately exits the autom
 
 This [http.request](/docs/automations/commands/http.request/) command requests an invalid URL:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   http.request:
@@ -362,15 +337,13 @@ start:
       url: https://invalid.url.example/
   return:
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 There is no `on_error:` event, so the automation immediately exits in the `error` state. The `return:` command is never reached.
 
 We can add events to handle errors:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   http.request:
@@ -385,8 +358,7 @@ start:
       # Handle the error or provide a default
       return:
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The automation now always exits in the `return` state.
 
@@ -404,8 +376,7 @@ These two special commands are available during simulation:
 
 The following example simulates an `http.request:` command and provides mock output:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   http.request:
@@ -422,18 +393,15 @@ start:
       return:
         body@key: http_response:body
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Even though the URL is invalid, the simulated output is:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 body: { "output": "Good job!" }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Continuations
 
@@ -443,8 +411,7 @@ The continuation identifier is used to resume the automation from the same point
 
 For instance, here's a basic [interaction](/docs/automations/triggers/interaction.worker/) automation that pauses for user input:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await:
@@ -457,15 +424,13 @@ start:
     output@text:
       Hello, {{prompt_name}}!
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 At the `await:` command, the automation will send a web form to the user, create a continuation, and wait for any length of time to resume execution.
 
 An automation that supports continuations can exit in the `await:` state any number of times before concluding.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await/intro:
@@ -480,7 +445,7 @@ start:
           type: email
           placeholder: you@example.com
   
-  # (Confirmation code is generated, saved, and emailed)
+  # Confirmation code is generated, saved, and emailed
   
   await/confirm:
     form:
@@ -496,15 +461,14 @@ start:
           type: uri
           max_length: 8
   
-  # (Confirmation code is verified)
+  # Confirmation code is verified
   
   return:
     output@text:
       Thanks, {{prompt_name}}! 
       Your email address ({{prompt_email}}) been subscribed to our newsletter.
  {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 {% comment %}
 * They are the successor to Cerb's "bot behaviors" functionality after incorporating more than 10 years
@@ -579,8 +543,7 @@ Some automation [triggers](/docs/automations/#triggers) support **callers**. A c
 
 The following policy allows an [interaction](/docs/interactions/) on [project board](/docs/project-boards/) columns when a worker has write-access on the board, and otherwise denies it:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 callers:
   cerb.toolbar.projectBoardColumn:
@@ -591,8 +554,7 @@ callers:
       }}
     deny: yes
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 When a caller policy denies an interaction it is automatically hidden from [toolbars](/docs/automations/triggers/interaction.worker/#toolbars).
 
@@ -600,15 +562,13 @@ When a caller policy denies an interaction it is automatically hidden from [tool
 
 This policy allows all commands:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 commands:
   all:
     allow: yes
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The above policy is simple but not secure. Instead, we recommend adhering to the _"principle of least privilege"_[^polp]. This means only allowing the minimal set of commands required to accomplish an automation's purpose.
 
@@ -618,8 +578,7 @@ The following policy only allows:
 * The creation of new task records.
 * The reading of all records.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 commands:
   http.request:
@@ -637,8 +596,7 @@ commands:
   all:
     deny: yes
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Each command can have multiple `allow:` and `deny:` rules, but they must have a unique `/name` suffix.
 
@@ -650,8 +608,7 @@ The `all:` key matches all commands. This can be used as a final "catch-all" to 
 
 It is also possible to be permissive by default with exceptions. This following policy permits all HTTP requests _except_ connections to unencrypted `http://` endpoints: 
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 commands:
   http.request:
@@ -659,8 +616,7 @@ commands:
       {{inputs.url starts with 'http://' ? 'yes'}} 
     allow: yes
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Time limit
 
@@ -668,14 +624,12 @@ By default, automations are restricted to a maximum run duration of 25,000 milli
 
 This can be changed in the policy:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 settings: 
  time_limit_ms: 30000
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 In most cases, a better approach is to break up long tasks into smaller pieces and use automation timers and queues.
 
@@ -685,8 +639,7 @@ You can test policies from the automation simulator.
 
 You can also test rule logic from **Setup >> Developers >> Bot Scripting Tester**:
 
-<pre>
-<code class="language-cerb">
+{% highlight text %}
 {% raw %}
 {% set inputs = {
   url: 'https://api.example/some/path',
@@ -695,15 +648,13 @@ You can also test rule logic from **Setup >> Developers >> Bot Scripting Tester*
 {{inputs.url starts with 'https://api.example/' 
     and inputs.method == 'GET' ? 'yes'}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The test object above returns `yes`.
 
 We can change the inputs to exceed the granted permissions:
 
-<pre>
-<code class="language-cerb">
+{% highlight text %}
 {% raw %}
 {% set inputs = {
   url: 'https://danger.example/',
@@ -712,8 +663,7 @@ We can change the inputs to exceed the granted permissions:
 {{inputs.url starts with 'https://api.example/' 
     and inputs.method == 'GET' ? 'yes'}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The above test object now returns blank, which is interpreted as `no` and ignored. The policy returns the default `deny: yes`.
 
@@ -752,8 +702,7 @@ For events that run all handlers (e.g. `projectBoard.cardAction`), all non-disab
 
 Global automation events can be edited from **Search >> Automation Events**. This allows event handler KATA to be configured for global events that don't otherwise have a parent record (e.g. mail filtering).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 automation/onlyTasks:
   uri: cerb:automation:example.cards.task
@@ -762,9 +711,8 @@ automation/onlyTasks:
 
 automation/everythingElse:
   uri: cerb:automation:example.cards.generic
-</code>
-</pre>
 {% endraw %}
+{% endhighlight %}
 
 There can now be multiple `enabled:` or `disabled:` rules. The first rule to return `true` is used. This allows `deny-allow` and `allow-deny` strategies. By default, all handlers are enabled.
 

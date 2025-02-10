@@ -65,29 +65,27 @@ You now have a private key (decrypt/sign) and a public key (encrypt/verify).
 
 1. If you don't have a **Public Key** widget, you can click **Add Widget** at the bottom of the card popup and import this one:
 
-	<pre style="max-height:29.5em;">
-	<code class="language-json">
-	{% raw %}
-	{
-	    "widget": {
-	        "uid": "card_widget_pgp_ascii",
-	        "_context": "cerb.contexts.card.widget",
-	        "name": "Public Key",
-	        "record_type": "cerberusweb.contexts.gpg_public_key",
-	        "extension_id": "cerb.card.widget.sheet",
-	        "pos": "4",
-	        "width_units": "4",
-	        "zone": "content",
-	        "extension_params": {
-	            "data_query": "type:worklist.records\r\nof:gpg_public_key\r\nquery:(\r\n  id:{{record_id}}\r\n  limit:1\r\n  sort:[id]\r\n)\r\nformat:dictionaries",
-	            "cache_secs": "",
-	            "placeholder_simulator_yaml": "",
-	            "sheet_yaml": "layout:\r\n  style: fieldset\r\n  headings: false\r\n  paging: false\r\ncolumns:\r\n- text:\r\n    key: _label\r\n    label: Label\r\n    params:\r\n      value_template: |\r\n        &lt;pre&gt;\r\n        {{key_text}}\r\n        &lt;/pre&gt;\r\n- "
-	        }
-	    }
-	}
-	{% endraw %}
-	</code>
-	</pre>
+{% highlight json %}
+{% raw %}
+{
+		"widget": {
+				"uid": "card_widget_pgp_ascii",
+				"_context": "cerb.contexts.card.widget",
+				"name": "Public Key",
+				"record_type": "cerberusweb.contexts.gpg_public_key",
+				"extension_id": "cerb.card.widget.sheet",
+				"pos": "4",
+				"width_units": "4",
+				"zone": "content",
+				"extension_params": {
+						"data_query": "type:worklist.records\r\nof:gpg_public_key\r\nquery:(\r\n  id:{{record_id}}\r\n  limit:1\r\n  sort:[id]\r\n)\r\nformat:dictionaries",
+						"cache_secs": "",
+						"placeholder_simulator_yaml": "",
+						"sheet_yaml": "layout:\r\n  style: fieldset\r\n  headings: false\r\n  paging: false\r\ncolumns:\r\n- text:\r\n    key: _label\r\n    label: Label\r\n    params:\r\n      value_template: |\r\n        &lt;pre&gt;\r\n        {{key_text}}\r\n        &lt;/pre&gt;\r\n- "
+				}
+		}
+}
+{% endraw %}
+{% endhighlight %}
 
 1. Copy the public key text and share it with anyone who needs to send you encrypted messages. The public key is not a secret. You can upload it to key exchange servers or post it on your website.

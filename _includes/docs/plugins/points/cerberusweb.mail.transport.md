@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerberusweb.mail.transport&quot;&gt;
 			&lt;id&gt;core.mail.transport.null&lt;/id&gt;
 			&lt;name&gt;Null&lt;/name&gt;
@@ -15,13 +14,11 @@
 			&lt;params&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_MailTransport {
 	public function getLastError() {
@@ -37,6 +34,5 @@ class ExampleExtension extends Extension_MailTransport {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

@@ -34,7 +34,7 @@ Here are examples of using the [\|strip_lines](/docs/scripting/filters#strip_lin
 {% tabs strip_line_prefix %}
 
 {% tab strip_line_prefix automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -47,16 +47,16 @@ start:
   return:
     message: {{message|strip_lines(prefixes='>')}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab strip_line_prefix output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 __return:
   message: This is the reply
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

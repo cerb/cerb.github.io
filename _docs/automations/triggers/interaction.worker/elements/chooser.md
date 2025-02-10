@@ -31,8 +31,7 @@ jumbotron:
 
 In [interaction](/docs/automations/triggers/interaction.worker/) web forms, a **chooser** element displays a search popup for selecting [records](/docs/records/).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await:
@@ -52,8 +51,7 @@ start:
           content@text:
             You selected record IDs: {{prompt_chooser|join(', ')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/automations/triggers/interaction.worker/elements/chooser.png" class="screenshot">

@@ -28,9 +28,9 @@ However, unlike the traditional _paste_ action, snippets also support [sophistic
 
 In a common use case, an auto-responder message will use placeholders in a snippet like:
 
+{% highlight twig %}
 {% raw %}
-<pre>
-<code class="language-twig">Hi <b>{{first_name}}</b>,
+Hi <b>{{first_name}}</b>,
 
 Thanks for contacting us!
 
@@ -39,14 +39,14 @@ A new support ticket has been opened in response to your message:
 Reference #: <b>{{mask}}</b>
 Subject: <b>{{subject}}</b>
 
-We'll be in contact shortly.</code>
-</pre>
+We'll be in contact shortly.
 {% endraw %}
+{% endhighlight %}
 
 The above snippet results in the following text when used by an [automation](/docs/automations/) on a new ticket:
 
-<pre>
-<code class="language-text">Hi <b>Charlotte</b>,
+{% highlight text %}
+Hi <b>Charlotte</b>,
 
 Thanks for contacting us!
 
@@ -55,5 +55,5 @@ A new support ticket has been opened in response to your message:
 Reference #: <b>CRB-01092-002</b>
 Subject: <b>Do you accept purchase orders?</b>
 
-We'll be in contact shortly.</code>
-</pre>
+We'll be in contact shortly.
+{% endhighlight %}

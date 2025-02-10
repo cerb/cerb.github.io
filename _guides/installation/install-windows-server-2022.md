@@ -116,8 +116,7 @@ Set a MySQL root password.
 
 Enter your root password.
 
-<pre>
-<code class="language-sql">
+{% highlight sql %}
 CREATE DATABASE cerb CHARACTER SET utf8;
 
 CREATE USER cerb@localhost IDENTIFIED BY 's3cr3t';
@@ -125,8 +124,7 @@ CREATE USER cerb@localhost IDENTIFIED BY 's3cr3t';
 GRANT ALL PRIVILEGES ON cerb.* TO cerb@localhost;
 
 QUIT;
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-box note">
 	<p>Replace <tt>s3cr3t</tt> above with your own secret password. If you're using a remote database server, replace <tt>@localhost</tt> with a subnet used by your web servers, like: <tt>@'10.0.0.%'</tt></p>
@@ -136,7 +134,7 @@ QUIT;
 
 Edit `C:\Program Files\PHP\v8.0\php.ini`
 
-```ini
+{% highlight ini %}
 extension=php_curl.dll
 extension=php_gd.dll
 extension=php_mbstring.dll
@@ -145,27 +143,27 @@ extension=php_openssl.dll
 extension=php_mailparse.dll
 extension=php_tidy.dll
 extension=php_yaml.dll
-```
+{% endhighlight %}
 
 **Start >> Command Prompt**
 
-```shell
+{% highlight bash %}
 iisreset /restart
 
 exit
-```
+{% endhighlight %}
 
 # Download Cerb from Git Shell
 
 **Start >> Git Bash**
 
-```shell
+{% highlight bash %}
 cd /c/inetpub/wwwroot/
 
 git clone https://github.com/cerb/cerb-release.git cerb
 
 cd cerb
-```
+{% endhighlight %}
 
 # Permissions
 

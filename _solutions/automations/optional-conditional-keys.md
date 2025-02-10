@@ -33,7 +33,7 @@ The `gdpr:` key will be removed when the region is not `EU`.
 {% tabs optional_conditional_keys %}
 
 {% tab optional_conditional_keys automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -47,18 +47,18 @@ start:
       email: {{record.email}}
       gdpr@optional,bool: {{'EU' == record.region ? true}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab optional_conditional_keys output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 __return:
   output:
     name: Kina Halpue
     email: kina@cerb.example
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

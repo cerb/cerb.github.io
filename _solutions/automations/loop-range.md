@@ -25,7 +25,7 @@ With the [range()](/docs/scripting/functions/#range) function, you can loop thro
 {% tabs loop_numbers %}
 
 {% tab loop_numbers automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   return:
@@ -34,13 +34,13 @@ start:
       {{n}}...
       {% endfor %}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 ## Loop through a range with a step value
 
 {% tab loop_numbers output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 __return:
   output: |
@@ -50,17 +50,17 @@ __return:
     4...
     5...
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}
 
-With the ```step``` command, you can skip a certain number with each step. For example, ```step=2``` will return every second number in the range.
+With the `step` command, you can skip a certain number with each step. For example, `step=2` will return every second number in the range.
 
 {% tabs step_range %}
 
 {% tab step_range automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   return:
@@ -69,11 +69,11 @@ start:
       {{n}}...
       {% endfor %}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab step_range output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 __return:
   output: |
@@ -83,7 +83,7 @@ __return:
     7...
     9...
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

@@ -188,8 +188,7 @@ Switch to **Import** mode at the top.
 
 Paste the following behavior into the large textbox:
 
-<pre style="height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "behavior": {
@@ -366,8 +365,7 @@ Paste the following behavior into the large textbox:
   }
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Save Changes** button.
 
@@ -389,8 +387,7 @@ Switch to **Import** mode.
 
 Paste the following behavior into the large textbox:
 
-<pre style="height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {
   "behavior": {
     "uid": "behavior_salesforce_reset_sync",
@@ -421,8 +418,7 @@ Paste the following behavior into the large textbox:
     ]
   }
 }
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Save Changes** button.
 

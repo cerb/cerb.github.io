@@ -33,70 +33,69 @@ In this guide we'll walk through the process of linking Cerb to Dropbox. You'll 
 
 First, you need to create a new app on Dropbox for Cerb to connect to.
 
-1. Open <https://www.dropbox.com/developers/apps> and sign in.
+Open <https://www.dropbox.com/developers/apps> and sign in.
 
-1. In the top right, click **Create app**.
-    <div class="cerb-screenshot">
-    <img src="/assets/images/solutions/integrations/dropbox/plugin/dropbox-new-app.png" class="screenshot">
-    </div>
+In the top right, click **Create app**.
 
-1. Select **Dropbox API**.
+<div class="cerb-screenshot">
+<img src="/assets/images/solutions/integrations/dropbox/plugin/dropbox-new-app.png" class="screenshot">
+</div>
 
-1. Select the folders you want Cerb to be able to access.
+Select **Dropbox API**.
 
-1. Name your app (e.g. "Cerb").
+Select the folders you want Cerb to be able to access.
 
-1. Agree to the Dropbox API terms and conditions.
+Name your app (e.g. "Cerb").
 
-1. Click the blue **Create app** button.
+Agree to the Dropbox API terms and conditions.
 
-1. Configure your **OAuth 2 Redirect URIs**:
+Click the blue **Create app** button.
 
-  <pre>
-  <code class="language-text">
-  https://YOUR-CERB-HOST/oauth/callback
-  </code>
-  </pre>
+Configure your **OAuth 2 Redirect URIs**:
+
+{% highlight text %}
+https://YOUR-CERB-HOST/oauth/callback
+{% endhighlight %}
 
 Make a note of your **App key** and **App secret** for the next step.
 
 # Create the Dropbox service in Cerb
 
-1. Navigate to **Search >> Connected Services**.
+Navigate to **Search >> Connected Services**.
 
-1. Click the **(+)** icon in the top right of the list.
+Click the **(+)** icon in the top right of the list.
 
-1. Select **Dropbox**.
+Select **Dropbox**.
 
-	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/common/package-library-connected-services.png" class="screenshot">
-	</div>
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/common/package-library-connected-services.png" class="screenshot">
+</div>
 
-1. Enter your App Key and App Secret.
+Enter your App Key and App Secret.
 
-	<div class="cerb-screenshot">
-	<img src="/assets/images/solutions/integrations/dropbox/package-library-service-dropbox.png" class="screenshot">
-	</div>
+<div class="cerb-screenshot">
+<img src="/assets/images/solutions/integrations/dropbox/package-library-service-dropbox.png" class="screenshot">
+</div>
 
-1. Click the **Create** button.
+Click the **Create** button.
 
 # Link the connected account to Dropbox in Cerb
 
-1. Navigate to **Search >> Connected Accounts**.
+Navigate to **Search >> Connected Accounts**.
 
-1. Click the **(+)** icon in the top right of the list.
+Click the **(+)** icon in the top right of the list.
 
-1. Select **Dropbox**.
+Select **Dropbox**.
 
-1. Click the blue **Link to Dropbox** button.
+Click the blue **Link to Dropbox** button.
 
-1. Accept consent on Dropbox.
+Accept consent on Dropbox.
 
-    <div class="cerb-screenshot">
-    <img src="/assets/images/solutions/integrations/dropbox/plugin/oauth-approve.png" class="screenshot">
-    </div>
+<div class="cerb-screenshot">
+<img src="/assets/images/solutions/integrations/dropbox/plugin/oauth-approve.png" class="screenshot">
+</div>
     
-1. Click the **Save Changes** button.
+Click the **Save Changes** button.
 
 # Use the connected account in bot behaviors
 

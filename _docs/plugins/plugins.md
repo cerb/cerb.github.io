@@ -86,8 +86,7 @@ Each plugin must have a **manifest** file named `plugin.xml` that describes its 
 
 Here's a minimal manifest:
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 {% raw %}
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.devblocks.com/schema/plugin.xsd"&gt;
@@ -116,8 +115,7 @@ Here's a minimal manifest:
 	&lt;extensions/&gt;
 &lt;/plugin&gt;
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Plugin metadata
 
@@ -167,8 +165,7 @@ Extensions are defined in a plugin's [manifest](/docs/plugins/#manifests) within
 
 Each extension entry looks like:
 
-<pre style="max-height:29.5em;">
-<code class="language-xml">
+{% highlight xml %}
 {% raw %}
 &lt;extension point="com.example.extension_point"&gt;
 	&lt;id&gt;com.example.extension_name&lt;/id&gt;
@@ -180,8 +177,7 @@ Each extension entry looks like:
 	&lt;params/&gt;
 &lt;/extension&gt;
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * **`<extension point="...">`** specifies the [extension point](#extension-points) of the extension.
 
@@ -238,8 +234,7 @@ Each extension entry looks like:
 
 Plugins can add new **events** to Cerb based on the contributed functionality. The [activity log](/docs/activity-log/) will record the new events on [records](/docs/records/), [automations](/docs/automations/) can listen for them, etc.
 
-<pre style="max-height:29.5em;">
-<code class="language-xml">
+{% highlight xml %}
 {% raw %}
 &lt;event_points&gt;
 	&lt;event id="example.event"&gt;
@@ -248,8 +243,7 @@ Plugins can add new **events** to Cerb based on the contributed functionality. T
 	&lt;/event&gt;
 &lt;/event_points&gt;
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * **`<event id="...">`** specifies the ID of the event.
 
@@ -267,15 +261,13 @@ Plugins that need to maintain a _schema_ in the database can do so with **patche
 
 When you skip several versions of a plugin to upgrade to the latest version, Cerb will automatically handle the migration of your data through the intervening versions.  This is the same thing that happens when you upgrade Cerb itself.
 
-<pre style="max-height:29.5em;">
-<code class="language-xml">
+{% highlight xml %}
 {% raw %}
 &lt;patches&gt;
 	&lt;patch version="9.0.0" revision="1" file="patches/9.0.0.php" /&gt;
 &lt;/patches&gt;
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Classloader
 
@@ -283,8 +275,7 @@ The **class loader** is a map of source code classes and their filesystem paths.
 
 If your plugin introduces classes that will be referenced by code outside of the plugin, you should register them here. Class loader entries are automatically created for any [extensions](/docs/plugins/extensions/) you register.
 
-<pre style="max-height:29.5em;">
-<code class="language-xml">
+{% highlight xml %}
 {% raw %}
 &lt;class_loader&gt;
 	&lt;file path="api/dao/example.php"&gt;
@@ -297,22 +288,19 @@ If your plugin introduces classes that will be referenced by code outside of the
 	&lt;/file&gt;
 &lt;/class_loader&gt;
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Permissions
 
 Plugins can introduce new privileges into [roles](/docs/roles/).
 
-<pre style="max-height:29.5em;">
-<code class="language-xml">
+{% highlight xml %}
 {% raw %}
 &lt;acl&gt;
 	&lt;priv id="example.permission" label="acl.example.permission" /&gt;
 &lt;/acl&gt;
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * **`id="..."`** is the ID of the new privilege. This uses dot-notation like plugins and extensions. It should also use your plugin ID as a namespace prefix.
 
@@ -324,8 +312,7 @@ Most of the text you see in Cerb is provided by the **translation** system using
 
 Plugins can add new text to the translation system with a `strings.xml` file in TMX format, which can then be translated into any language by anyone, as well as shared in our official translation packs.
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 {% raw %}
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!DOCTYPE tmx PUBLIC "-//LISA OSCAR:1998//DTD for Translation Memory eXchange//EN" "tmx14.dtd"&gt;
@@ -340,8 +327,7 @@ Plugins can add new text to the translation system with a `strings.xml` file in 
 	&lt;/body&gt;
 &lt;/tmx&gt;
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Resources
 
@@ -361,23 +347,19 @@ Resources can then be accessed by URL with the format:
 
 In [templates](/docs/plugins/#templates):
 
-<pre>
-<code class="language-smarty">
+{% highlight smarty %}
 {% raw %}
 {devblocks_url}c=resource&plugin=example.plugin&f=path/to/resource/file.ext{/devblocks_url}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 From [bot scripting](/docs/scripting/):
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {{cerb_url('c=resource&plugin=example.plugin&f=path/to/resource/file.ext')}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-box note">
 <p>All plugin resources are public (world readable) and do not require a valid session to access. Do not store private content in this directory.</p>
@@ -391,36 +373,31 @@ Templates are stored in the plugin's `templates/` directory.
 
 They are referenced from plugin code like:
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 $tpl = DevblocksPlatform::services()->template();
 $tpl->assign('name', 'Kina Halpue');
 $tpl->display('devblocks:example.plugin::path/to/template.tpl');
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 In `->display()`, `example.plugin` should be your plugin's [ID](/docs/plugins/#ids). The `path/to/` is relative to the plugin's `templates/` directory.
 
 Here's an example template:
 
-<pre>
-<code class="language-smarty">
+{% highlight smarty %}
 {% raw %}
 &lt;div&gt;
 	Hello, &lt;b&gt;{$name}&lt;/b&gt;!
 &lt;/div&gt;
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Activity Points
 
 We previously mentioned **events** when discussing [automations](/docs/automations/) and the [activity log](/docs/records/#activity-log). Plugins can add new events to Cerb based on the contributed functionality. The activity log will record the new events on records, automations can listen for them, etc.
 
-<pre style="max-height:29.5em;">
-<code class="language-xml">
+{% highlight xml %}
 {% raw %}
 &lt;activity_points&gt;
 	&lt;activity point="example.event"&gt;
@@ -430,8 +407,7 @@ We previously mentioned **events** when discussing [automations](/docs/automatio
 	&lt;/activity&gt;
 &lt;/activity_points&gt;
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Library
 

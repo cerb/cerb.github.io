@@ -39,8 +39,7 @@ Navigate to **Search >> Workflows >> (+) >> Empty**.
 
 Paste the following KATA into the large text box:
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: wgm.example.custom_fieldsets
@@ -184,8 +183,7 @@ records:
       type: W
       custom_fieldset_id: {{records.test_fieldset.id}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Continue** button.
 

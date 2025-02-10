@@ -28,7 +28,7 @@ Here is an example of using the [array_diff()](/docs/scripting/functions/#array_
 
 {% tabs compare-list-differences %}
 {% tab compare-list-differences automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -38,15 +38,15 @@ start:
   return:
     output: These are new: {{diff|join(', ')}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab compare-list-differences output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   output: 'These are new: Cerb'
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}

@@ -96,8 +96,7 @@ You can build your own **Slack Notifications** workflow using this template as a
 
 Change occurrences of **cerb.integrations.slack.notifications** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.integrations.slack.notifications
@@ -206,5 +205,4 @@ records:
           uri: cerb:automation:cerb.integrations.slack.notifications.postMessage
           disabled: {{not message_ticket_group_slack_notifications_channel}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

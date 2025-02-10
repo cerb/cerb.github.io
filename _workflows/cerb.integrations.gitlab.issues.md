@@ -40,8 +40,7 @@ Navigate to **Search >> Workflows >> (+) >> Empty**.
 
 Paste the following KATA into the large text box:
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.integrations.gitlab.issues
@@ -388,8 +387,7 @@ records:
                 Linked GitLab Issues
                 Ticket
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Continue** button.
 

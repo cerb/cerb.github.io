@@ -63,8 +63,7 @@ You can build your own Simple Search workflow using this template as a reference
 
 Change occurrences of **cerb.search.simple** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.search.simple
@@ -295,5 +294,4 @@ records:
           uri: cerb:automation:cerb.search.simple.interaction
           icon: search
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

@@ -28,8 +28,7 @@ jumbotron:
 
 The **encrypt.pgp:** command encrypts a block of text using one or more PGP public keys.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   encrypt.pgp:
@@ -43,8 +42,7 @@ start:
       return:
         encrypted_message@key: encrypted_message
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

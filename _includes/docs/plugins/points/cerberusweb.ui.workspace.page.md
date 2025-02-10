@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerberusweb.ui.workspace.page&quot;&gt;
 			&lt;id&gt;core.workspace.page.workspace&lt;/id&gt;
 			&lt;name&gt;Workspace&lt;/name&gt;
@@ -16,19 +15,16 @@
 				&lt;param key=&quot;label&quot; value=&quot;common.workspace&quot;/&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_WorkspacePage {
 	public function renderPage(Model_WorkspacePage $page) {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

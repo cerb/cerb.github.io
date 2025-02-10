@@ -31,27 +31,23 @@ An **extension** field refers to a plugin [extension](/docs/plugins/extensions/)
 
 As JSON from [packages](/docs/packages/):
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
 	"extension_id": "example.plugin.extension.name"
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Records API
 
 In [PUT](/docs/api/endpoints/records/#update) or [POST](/docs/api/endpoints/records/#create) requests from the [API](/docs/api/):
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 {% raw %}
 &amp;fields[extension_id]=example.plugin.extension.name
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="section-nav">
 	<div class="left">

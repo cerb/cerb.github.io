@@ -116,18 +116,15 @@ In **To:** check **Contact email address**.
 
 Enter a **Subject:** like:
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 {% raw %}
 How likely are you to recommend Cerb to friends and colleagues?
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 In **Compose:** enter a message with placeholders like:
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 {% raw %}
 {% set inputs = { email: broadcast_email_address } -%}
 
@@ -138,8 +135,7 @@ We'd really appreciate your feedback on this two question survey about your expe
 
 #signature
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 You can see the queued email messages from **Setup >> Mail >> Outgoing >> Queue**. Each recipient receives a personalized survey link.
 
@@ -231,8 +227,7 @@ You can build your own customer satisfaction workflow using this template as a r
 
 Change occurrences of **cerb.satisfaction.surveys** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.satisfaction.surveys
@@ -1737,5 +1732,4 @@ records:
         # Every hour
         0 * * * *
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

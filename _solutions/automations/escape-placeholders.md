@@ -28,24 +28,24 @@ Sometimes you don't want a placeholder to be evaluated in a literal value. You c
 {% tabs escape_placeholders %}
 
 {% tab escape_placeholders automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   return:
     unescaped: You escape {{placeholders}} with the `@raw` annotation
     escaped@raw: You escape {{placeholders}} with the `@raw` annotation
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab escape_placeholders output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 __return:
   unescaped: You escape  with the `@raw` annotation
   escaped: You escape {{placeholders}} with the `@raw` annotation
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

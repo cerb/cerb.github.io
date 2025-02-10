@@ -33,17 +33,17 @@ This automation generates an array of 10 random numbers between 0 and 100 (inclu
 {% tabs random_array_values %}
 
 {% tab random_array_values automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   return:
     values@json: {{range(1, 10)|map((v) => random(0, 100))|json_encode}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab random_array_values output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   values:
@@ -58,7 +58,7 @@ __return:
   - 72
   - 37
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

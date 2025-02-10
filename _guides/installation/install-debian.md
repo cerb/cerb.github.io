@@ -45,55 +45,43 @@ debian-stretch-hvm-x86_64-gp2-2019-01-14-59254 (ami-086435e15fca39b20)
 
 Connect to your server using SSH:
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 ssh admin@1.2.3.4
-</code>
-</pre>
+{% endhighlight %}
 
 # Install packages
 
 It's a good idea to update your installed packages first:
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 sudo apt-get -y update
 
 sudo apt-get -y upgrade
-</code>
-</pre>
+{% endhighlight %}
 
 Install Dependencies:
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 sudo apt-get install -y software-properties-common
-</code>
-</pre>
+{% endhighlight %}
 
 Install PHP 7.0:
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 sudo apt-get install -y php7.0 php7.0-fpm php7.0-mysql php7.0-mbstring php7.0-gd php7.0-imap php7.0-curl php7.0-yaml php7.0-mailparse php7.0-dev php-pear
-</code>
-</pre>
+{% endhighlight %}
 
 Install Git:
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 sudo apt-get install -y git
-</code>
-</pre>
+{% endhighlight %}
 
 Install the Nginx web server:
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 sudo apt-get install -y nginx
-</code>
-</pre>
+{% endhighlight %}
 
 # Install MariaDB 10.2
 
@@ -103,8 +91,7 @@ We recommend using a dedicated database server that replicates to a standby serv
 
 If you need to install MariaDB on your EC2 instance instead, you can use these instructions:
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://ftp.utexas.edu/mariadb/repo/10.2/debian stretch main'
 
 sudo apt-get install -y mariadb-server
@@ -112,18 +99,15 @@ sudo apt-get install -y mariadb-server
 sudo mysql_secure_installation
 
 sudo service mysql restart
-</code>
-</pre>
+{% endhighlight %}
 
 # Create the database
 
 Connect to MariaDB:
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 mysql -h localhost -u root -p
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-box note"><p>If you're using a remote MySQL server, use its internal IP in place of <tt>localhost</tt> above.</p></div>
 
@@ -131,8 +115,7 @@ Enter your root password.
 
 Create a new database and user for Cerb:
 
-<pre>
-<code class="language-sql">
+{% highlight sql %}
 CREATE DATABASE cerb CHARACTER SET utf8;
 
 CREATE USER cerb@localhost IDENTIFIED BY 's3cr3t';
@@ -140,8 +123,7 @@ CREATE USER cerb@localhost IDENTIFIED BY 's3cr3t';
 GRANT ALL PRIVILEGES ON cerb.* TO cerb@localhost; 
 
 QUIT;
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-box note">
 	<p>Replace <tt>s3cr3t</tt> above with your own secret password. If you're using a remote database server, replace <tt>@localhost</tt> with a subnet used by your web servers, like: <tt>@'10.0.0.%'</tt></p>
@@ -151,8 +133,7 @@ QUIT;
 
 You should now be ready to install Cerb.
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 cd /usr/share/nginx/html/
 
 sudo git clone https://github.com/cerb/cerb-release.git cerb
@@ -160,18 +141,15 @@ sudo git clone https://github.com/cerb/cerb-release.git cerb
 sudo chown -R www-data:www-data cerb
 
 cd cerb
-</code>
-</pre>
+{% endhighlight %}
 
 You can test Cerb using PHP's built in webserver:
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 sudo service nginx stop
 
 sudo php -S 0.0.0.0:80
-</code>
-</pre>
+{% endhighlight %}
 
 Type your server IP into a browser.
 
@@ -187,11 +165,9 @@ Type `CTRL + C` to kill the PHP web server process.
 
 Since you just ran the web server as root, you should make sure any newly created files are owned by the `www-data` user and group:
 
-<pre>
-<code class="language-">
+{% highlight bash %}
 sudo chown -R www-data:www-data /usr/share/nginx/html/cerb/
-</code>
-</pre>
+{% endhighlight %}
 
 # Configure Nginx
 
@@ -207,26 +183,21 @@ Otherwise, you'll need a valid SSL certificate for your server. We recommend [Le
 
 Enable Perfect Forward Secrecy (this may take a few minutes):
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
-</code>
-</pre>
+{% endhighlight %}
 
 ### Creating a self-signed SSL certificate
 
 For testing, you can also create a self-signed SSL certificate.  You **should not** use these instructions in production:
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 -keyout /etc/ssl/private/nginx-selfsigned.key \
 -out /etc/ssl/certs/nginx-selfsigned.pem
-</code>
-</pre>
+{% endhighlight %}
 
-<pre>
-<code class="language-text">
+{% highlight text %}
 Country Name (2 letter code) [AU]:US
 State or Province Name (full name) [Some-State]:California
 Locality Name (eg, city) []:
@@ -234,23 +205,19 @@ Organization Name (eg, company) [Internet Widgits Pty Ltd]:Example, Inc.
 Organizational Unit Name (eg, section) []:Internet
 Common Name (e.g. server FQDN or YOUR name) []:cerb.example
 Email Address []:support@cerb.example
-</code>
-</pre>
+{% endhighlight %}
 
 ## Add a virtual host
 
 Add a new virtual host to Nginx:
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 sudo vi /etc/nginx/sites-available/cerb
-</code>
-</pre>
+{% endhighlight %}
 
 Type `i` to switch to insert mode and paste the following:
 
-<pre class="line-numbers">
-<code class="language-nginx">
+{% highlight nginx linenos %}
 {% raw %}
 server {
   listen 80;
@@ -356,8 +323,7 @@ server {
   }
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 On lines `3` and `29` change `cerb.example` to the domain name of your server.  If for some reason you don't have one, you can temporarily use your server IP.
 
@@ -369,33 +335,27 @@ Save the file with `:wq`
 
 To enable the site we need to add a symlink:
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 sudo ln -s /etc/nginx/sites-available/cerb /etc/nginx/sites-enabled/cerb
-</code>
-</pre>
+{% endhighlight %}
 
 ## Test Nginx configuration
 
 You can test the Nginx configuration file with:
 
-<pre class="command-line" data-output="2-3">
-<code class="language-bash">
+{% highlight bash %}
 sudo nginx -t
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful
-</code>
-</pre>
+{% endhighlight %}
 
 ## Restart Nginx and PHP-FPM
 
-<pre>
-<code class="language-bash">
+{% highlight bash %}
 sudo service nginx restart
 
 sudo service php7.0-fpm restart
-</code>
-</pre>
+{% endhighlight %}
 
 For more information about Nginx + PHP-FPM, see: <https://www.nginx.com/resources/wiki/start/topics/examples/phpfcgi/>
 

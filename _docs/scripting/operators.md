@@ -30,26 +30,23 @@ An **operator** makes comparisons between two values in an expression.
 
 As you've seen with the [set](/docs/scripting/commands/#set) command, a single `=` (equals) character _assigns_ a value to a variable:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set this = 0 %}
 {% set that = 1 %}
 this is {{this}} and that is {{that}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 this is 0 and that is 1
-```
+{% endhighlight %}
 
 # Equals
 
 To check if a variable is equal to a specific value, use two equal signs (`==`):
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set this = 1 %}
 {% set that = 1 %}
@@ -57,19 +54,17 @@ To check if a variable is equal to a specific value, use two equal signs (`==`):
 This and that are equal.
 {% endif -%}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 This and that are equal.
-```
+{% endhighlight %}
 
 # Doesn't equal
 
 To check that a variable isn't equal to a specific value, use `!=`:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set this = 0 %}
 {% set that = 1 %}
@@ -77,19 +72,17 @@ To check that a variable isn't equal to a specific value, use `!=`:
 This doesn't equal that.
 {% endif -%}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 This doesn't equal that.
-```
+{% endhighlight %}
 
 # Less than
 
 To check if one variable is less than another, use `<` or `<=`:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set little = 5 %}
 {% set big = 1000 %}
@@ -97,19 +90,17 @@ To check if one variable is less than another, use `<` or `<=`:
 {{little}} is less than {{big}}
 {% endif -%}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 5 is less than 1000
-```
+{% endhighlight %}
 
 # Greater than
 
 To check if one variable is greater than another, use `>` or `>=`:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set little = 5 %}
 {% set big = 1000 %}
@@ -117,48 +108,43 @@ To check if one variable is greater than another, use `>` or `>=`:
 {{big}} is greater than {{little}}
 {% endif -%}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 1000 is greater than 5
-```
+{% endhighlight %}
 
 # Value in list
 
 You can check if a value exists in a list by using the `in` test:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set colors = ['blue','green','red'] %}
 {% if 'red' in colors %}
 One of the colors is red.
 {% endif -%}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 One of the colors is red.
-```
+{% endhighlight %}
 
 You can also negate that test with `not in`:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 {% set colors = ['blue','green','red'] %}
 {% if 'orange' not in colors %}
 Orange is not one of the colors.
 {% endif -%}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
-```
+{% highlight text %}
 Orange is not one of the colors.
-```
+{% endhighlight %}
 
 <div class="section-nav">
 	<div class="left">

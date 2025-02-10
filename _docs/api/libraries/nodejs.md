@@ -30,8 +30,7 @@ This module can be included by **Node.js** applications to simplify interaction 
 
 # cerb.lib.js
 
-<pre>
-<code class="language-javascript">
+{% highlight javascript %}
 /***********************************************************************
 Cerb Web-API Library for Node.js
 (c) Copyright 2017 WebGroup Media LLC
@@ -152,8 +151,8 @@ exports.get = _get;
 exports.post = _post;
 exports.put = _put;
 exports.delete = _delete;
-exports.getAccessKey = _getAccessKey;</code>
-</pre>
+exports.getAccessKey = _getAccessKey;
+{% endhighlight %}
 
 Usage
 =====
@@ -163,8 +162,7 @@ Usage
 * Pass your API credentials to `cerb.setCredentials()`
 * Make API calls using `cerb.get()`, `cerb.post()`, etc.
 
-<pre>
-<code class="language-javascript">
+{% highlight javascript %}
 var cerb = require('./cerb.lib.js');
 
 var cerb_base_url = "https://cerb.example/rest/";
@@ -175,5 +173,5 @@ cerb.setCredentials(cerb_base_url, cerb_api_key, cerb_api_secret);
 
 cerb.get('workers/me.json', function(err, res, worker) {
     console.log(worker);
-});</code>
-</pre>
+});
+{% endhighlight %}

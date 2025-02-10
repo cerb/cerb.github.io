@@ -31,8 +31,7 @@ jumbotron:
 
 In [interaction](/docs/automations/triggers/interaction.worker/) web forms, an **audio** element plays a sound file.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await:
@@ -47,8 +46,7 @@ start:
             blob: data:audio/mpeg;base64,...
             #uri: cerb:resource:...
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/automations/triggers/interaction.worker/elements/audio.png" class="screenshot">

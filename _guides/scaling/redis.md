@@ -40,11 +40,9 @@ Redis[^redis] is an in-memory data structure store that serves as a powerful [ca
 
 Start Redis on a local port with the configuration:
 
-<pre class="command-line" data-user="user" data-host="host">
-<code class="language-bash">
+{% highlight bash %}
 docker run --name redis-cerb -p 6379:6379 -d redis
-</code>
-</pre>
+{% endhighlight %}
 
 Finally, configure Cerb to use Redis by navigating to **Setup >> Configure >> Cache** and entering these settings:
 
@@ -67,12 +65,10 @@ To verify that Redis is working properly:
 
 Start by connecting to the Redis CLI:
 
-<pre class="command-line" data-user="user" data-host="host">
-<code class="language-bash">
+{% highlight bash %}
 docker exec -it redis-cerb redis-cli
 ping
-</code>
-</pre>
+{% endhighlight %}
 
 You should receive `PONG` as a response.
 

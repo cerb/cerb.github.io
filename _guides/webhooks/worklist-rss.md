@@ -64,8 +64,7 @@ On the **Behaviors** tab, click the **Create Behavior** button.
 
 Select the **Import** tab and paste the following behavior to import it:
 
-<pre style="max-height:29.25em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "behavior":{
@@ -143,8 +142,7 @@ Select the **Import** tab and paste the following behavior to import it:
   }
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-box note">
 	<p>

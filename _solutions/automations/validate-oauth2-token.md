@@ -34,7 +34,7 @@ Create an example OAuth2 token from **Cerb >> Setup >> Developers >> OAuth2 Toke
 {% tabs validate_oauth2_token %}
 
 {% tab validate_oauth2_token automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -48,7 +48,7 @@ start:
     output: results
     on_error:
 {% endraw %}
-```
+{% endhighlight %}
 
 The `results` placeholder will contain keys for:
 - `app_` (OAuth)
@@ -64,14 +64,14 @@ Cerb does not assume a Bearer token follows a specific format. You can:
 {% endtab %}
 
 {% tab validate_oauth2_token policy %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 commands:
   api.command:
     deny/name@bool: {{inputs.name not in ['cerb.commands.oauth2.token.validate']}}
     allow@bool: yes
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

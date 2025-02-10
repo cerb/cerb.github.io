@@ -56,16 +56,13 @@ You can retrieve custom field information using the [/records](/docs/api/endpoin
 
 The available custom fields and fieldsets for a specific record type can also be retrieved using the [/contexts/list](/docs/api/endpoints/contexts/#list) endpoint:
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 GET /rest/contexts/list.json
-</code>
-</pre>
+{% endhighlight %}
 
 This will return a list of record types with custom field information, like the following example:
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {
    id: "cerberusweb.contexts.ticket",
    name: "Ticket",
@@ -126,18 +123,15 @@ This will return a list of record types with custom field information, like the 
          ]
       }
    ]
-}</code>
-</pre>
+}{% endhighlight %}
 
 ### Retrieving custom fields on records
 
 Custom fields can be retrieved on records using key expansion in `GET` requests:
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 GET /rest/records/tickets/123.json?expand=custom_
-</code>
-</pre>
+{% endhighlight %}
 
 The *keys* for custom fields are in the format `custom_123`, where `123` is the ID.  The labels and types of each custom field are in the `_labels` and `_types` keys respectively.
 
@@ -145,19 +139,16 @@ The *keys* for custom fields are in the format `custom_123`, where `123` is the 
 
 Custom fields can be retrieved in search results using key expansion in `POST` requests:
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 POST /rest/records/tickets/search.json
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 
 expand=custom_&q=subject:Receipt*
-</code>
-</pre>
+{% endhighlight %}
 
 When using an official library, the requests look like:
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $postfields = array(
     array('expand','custom_'),
     array('q','subject:Receipt*'),
@@ -166,8 +157,7 @@ $postfields = array(
     array('page','1'),
 );
 $out = $cerb->post($base_url . 'records/tickets/search.json', $postfields);
-</code>
-</pre>
+{% endhighlight %}
 
 The *keys* for custom fields are in the format `custom_123`, where `123` is the ID.  The labels and types of each custom field are in the `results_meta` key.
 
@@ -175,25 +165,21 @@ The *keys* for custom fields are in the format `custom_123`, where `123` is the 
 
 Custom fields can be set on records in `PUT` requests:
 
-<pre>
-<code class="language-http">
+{% highlight http %}
 PUT /rest/records/tickets/123.json?expand=custom_
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 
 fields[custom_14]=CERB-1234&fields[custom_143]=Critical
-</code>
-</pre>
+{% endhighlight %}
 
 When using an official library, the requests look like:
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $putfields = array(
     array('fields[custom_14]','CERB-1234'),
     array('fields[custom_143]','Critical'),
 );
 $out = $cerb->put($base_url . 'records/tickets/123.json?expand=custom_', $putfields);
-</code>
-</pre>
+{% endhighlight %}
 
 Each custom field value is sent as a form field in the format `fields[custom_123]=value`, where `123` is the ID, and `value` is determined by the [custom field type](#field-types).

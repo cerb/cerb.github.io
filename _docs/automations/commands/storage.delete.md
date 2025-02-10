@@ -27,8 +27,7 @@ jumbotron:
 
 The **storage.delete:** command removes a value from long-term storage.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   storage.set:
@@ -48,16 +47,13 @@ start:
   return:
     output@key: result
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Result:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 output: (null)
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

@@ -32,7 +32,7 @@ Here is an example of using the [\|sort](https://twig.symfony.com/doc/3.x/filter
 {% tabs sort_with_comparator %}
 
 {% tab sort_with_comparator automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -45,16 +45,16 @@ start:
   return:
     sorted: {{example_data|sort((a,b)=> a.key<=>b.key)|column('name')|join(', ')}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab sort_with_comparator output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 __return:
   sorted: Item 3, Item 2, Item 1
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

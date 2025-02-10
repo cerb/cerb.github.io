@@ -32,8 +32,7 @@ Import a raw message source.
 ### Example
 {: .no_toc}
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $mime = <<< EOF
 From: jeff@localhost
 To: support@localhost
@@ -48,8 +47,7 @@ $postfields = array(
     array('message', $mime),
 );
 $out = $cerb->post($base_url . 'parser/parse.json', $postfields);
-</code>
-</pre>
+{% endhighlight %}
 
 # Parse a reply
 
@@ -60,8 +58,7 @@ Parsing a reply to an existing message is fairly simple. You should use the quot
 ### Example
 {: .no_toc}
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $mime = <<< EOF
 From: ben@localhost
 To: support@localhost
@@ -76,5 +73,4 @@ $postfields = array(
     array('message', $mime),
 );
 $out = $cerb->post($base_url . 'parser/parse.json', $postfields);
-</code>
-</pre>
+{% endhighlight %}

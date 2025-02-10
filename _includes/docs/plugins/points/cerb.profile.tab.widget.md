@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerb.profile.tab.widget&quot;&gt;
 			&lt;id&gt;cerb.profile.tab.widget.behavior.tree&lt;/id&gt;
 			&lt;name&gt;Behavior Tree&lt;/name&gt;
@@ -15,13 +14,11 @@
 			&lt;params&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_ProfileWidget {
 	public function render(Model_ProfileWidget $model, $context, $context_id, $refresh_options) {
@@ -34,6 +31,5 @@ class ExampleExtension extends Extension_ProfileWidget {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

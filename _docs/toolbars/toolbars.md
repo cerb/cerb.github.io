@@ -50,8 +50,7 @@ Toolbars are configured using a [KATA](/docs/kata/) dialect, which can pass cust
 
 An interaction begins when it is clicked in the toolbar.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 interaction/participants:
   label: Participants
@@ -70,8 +69,7 @@ interaction/locationByIp:
   after:
     refresh_widgets@list: Actions
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 | Req'd | Key            |
 |:-----:|----------------|
@@ -89,8 +87,7 @@ interaction/locationByIp:
 
 Menus may contain any combination of interactions and submenus.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 menu/moreMenu:
   icon: more
@@ -104,8 +101,7 @@ menu/moreMenu:
           label: Debug
           icon: bug
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/automations/triggers/interaction.worker/toolbar-menu.png" class="screenshot">

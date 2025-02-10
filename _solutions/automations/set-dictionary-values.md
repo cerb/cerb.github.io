@@ -32,7 +32,7 @@ When a value (like a model ID selected from a [sheet](https://cerb.ai/docs/sheet
 {% tabs set_dictionary_values %}
 
 {% tab set_dictionary_values automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -53,18 +53,18 @@ start:
       {{model}} has {{models[model].params}} parameters{{models[model].tools ? ' and supports tools'}}.
       {% endfor %}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab set_dictionary_values output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 output@text:
   llama3.3 has 70b parameters and supports tools.
   phi4 has 14b parameters.
   mistral has 7b parameters and supports tools.
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

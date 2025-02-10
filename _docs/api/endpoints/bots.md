@@ -41,8 +41,7 @@ The parameters are the public variables defined on the behavior (if any).
 
 **Example:**
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $postfields = array(
   	array('var_name','Jeff@WGM'),
   	array('var_picklist','Red'),
@@ -53,5 +52,4 @@ $postfields = array(
   	array('var_tickets',json_encode(array(1024,1025,1026))),
 );
 $out = $cerb->post($base_url . 'bots/behavior/123/run.json', $postfields);
-</code>
-</pre>
+{% endhighlight %}

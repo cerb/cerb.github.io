@@ -50,8 +50,7 @@ The results can be returned in these formats:
 
 # Examples
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:attachment.manifest
 filter:*.xml
@@ -59,5 +58,4 @@ id:123
 limit:100
 format:dictionaries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

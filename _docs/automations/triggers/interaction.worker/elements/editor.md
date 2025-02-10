@@ -31,8 +31,7 @@ jumbotron:
 
 In [interaction](/docs/automations/triggers/interaction.worker/) web forms, an **editor** element displays a code editor with syntax highlighting, autocompletion, and a custom toolbar.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   await:
@@ -52,8 +51,7 @@ start:
             )
             format:dictionaries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/automations/triggers/interaction.worker/elements/editor.png" class="screenshot">
@@ -114,8 +112,7 @@ An optional custom validation script. Any output is considered to be an error.
 
 You can use `if...elseif` to check multiple conditions.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 editor/prompt_script:
   label: Script:
@@ -125,5 +122,4 @@ editor/prompt_script:
     {% elseif prompt_script|length < 25 %}
     A script must be at least 25 characters. 
     {% endif %}{% endraw %}
-</code>
-</pre>
+{% endhighlight %}

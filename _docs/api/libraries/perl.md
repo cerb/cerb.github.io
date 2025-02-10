@@ -26,8 +26,7 @@ jumbotron:
 
 # Cerb_WebAPI.pm
 
-<pre>
-<code class="language-perl">
+{% highlight perl %}
 #!/usr/bin/perl
 # @author Net Ground / www.netground.nl
 
@@ -159,5 +158,5 @@ sub _connect {
 
   return undef;
 }
-1;</code>
-</pre>
+1;
+{% endhighlight %}

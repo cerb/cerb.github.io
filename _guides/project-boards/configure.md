@@ -67,30 +67,29 @@ First, let's make sure the **Project Boards** plugin is enabled:
 
 # Create a project board
 
-1. Navigate to **Search >> Project Boards**.
+Navigate to **Search >> Project Boards**.
 
 	<div class="cerb-screenshot">
 	<img src="/assets/images/guides/project-boards/configure/search-projects.png" class="screenshot">
 	</div>
 
-1. Click the **(+)** icon above the worklist.
+Click the **(+)** icon above the worklist.
 
-1. Set the **Name** to `My assignments`.
+Set the **Name** to `My assignments`.
 
-1. In **Allow these record types in the project** select **Task**.
+In **Allow these record types in the project** select **Task**.
 
-1. We only want to add open or waiting tasks to the project.  Within tasks, set **Quick search query for adding cards** to:
-	<pre>
-	<code class="language-text">
-	status:[o,w]
-	</code>
-	</pre>
-	
-	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/project-boards/configure/project-config-tasks.png" class="screenshot">
-	</div>
+We only want to add open or waiting tasks to the project.  Within tasks, set **Quick search query for adding cards** to:
 
-1. Click the **Save Changes** button.
+{% highlight cerb %}
+status:[o,w]
+{% endhighlight %}
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/project-boards/configure/project-config-tasks.png" class="screenshot">
+</div>
+
+Click the **Save Changes** button.
 
 ## Add columns to the board
 
@@ -265,24 +264,27 @@ However, you also have complete control to change how each card is displayed.
 
 To demonstrate this, let's make the cards for closed tasks more obvious.  We don't need to see all those fields once something is completed.
 
-1. Click the gear button (⚙️) at the top of the project board's profile page.
-1. Scroll down to **Task** and click into the **Card custom template** text box.
-1. Paste the following template:
-	<pre>
-	<code class="language-twig">
-	{% raw %}
-	{% if is_completed %}
+Click the gear button (⚙️) at the top of the project board's profile page.
 
-	&lt;div style="font-size:120%;"&gt;
-		&lt;span class="glyphicons glyphicons-circle-ok" style="color:rgb(0,150,0);"&gt;&lt;/span&gt; Completed!
-	&lt;/div&gt;
+Scroll down to **Task** and click into the **Card custom template** text box.
 
-	{% endif %}
-	{% endraw %}
-	</code>
-	</pre>
-1. Click the **Save Changes** button to close the template editor popup.
-1. Click the **Save Changes** button to close the project board editor.
+Paste the following template:
+
+{% highlight twig %}
+{% raw %}
+{% if is_completed %}
+
+&lt;div style="font-size:120%;"&gt;
+	&lt;span class="glyphicons glyphicons-circle-ok" style="color:rgb(0,150,0);"&gt;&lt;/span&gt; Completed!
+&lt;/div&gt;
+
+{% endif %}
+{% endraw %}
+{% endhighlight %}
+
+Click the **Save Changes** button to close the template editor popup.
+
+Click the **Save Changes** button to close the project board editor.
 
 The project board will automatically refresh.  The cards in the completed column now show a green checkmark with the word **Completed!**.
 

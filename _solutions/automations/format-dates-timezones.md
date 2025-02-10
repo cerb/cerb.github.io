@@ -33,7 +33,7 @@ You can use any of the formating options from [PHP DateTime::format](https://www
 {% tabs format-dates-timezones %}
 
 {% tab format-dates-timezones automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   return:
@@ -45,11 +45,11 @@ start:
     iso8601: {{'now'|date('c')}}
     unix@int: {{'now'|date('U')}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab format-dates-timezones output %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 __return:
   now: February 07, 2025 09:09am PST
@@ -60,7 +60,7 @@ __return:
   iso8601: "2025-02-07T09:09:43-08:00"
   unix: 1738948183
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% endtabs %}

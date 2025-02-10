@@ -3,7 +3,7 @@ Cerb project website
 
 # To develop locally:
 
-```shell
+{% highlight bash %}
 git clone -b 11.0 https://github.com/cerb/cerb.github.io.git
 
 # ... or download + unzip: https://codeload.github.com/cerb/cerb.github.io/zip/refs/heads/10.4
@@ -11,4 +11,4 @@ git clone -b 11.0 https://github.com/cerb/cerb.github.io.git
 cd cerb.github.io
 
 docker compose up
-```
+{% endhighlight %}

@@ -28,23 +28,23 @@ Here is an example of using the [shuffle](/docs/scripting/functions/#shuffle) fu
 
 {% tabs shuffle-list-string %}
 {% tab shuffle-list-string automation %}
-```cerb
+{% highlight cerb %}
 {% raw %}
 start:
   return:
     shuffled_list: {{shuffle([1,2,3,4,5,6,7,8,9,10])|json_encode}}
     shuffled_text: {{shuffle("abcdefghijklmnopqrstuvwxyz"|split(''))|join('')}}
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 
 {% tab shuffle-list-string output %}
-```cerb
+{% highlight yaml %}
 {% raw %}
 __return:
   shuffled_list: '[2,4,5,1,7,10,8,9,6,3]'
   shuffled_text: wrgpudtahnqjemklsfizoybvcx
 {% endraw %}
-```
+{% endhighlight %}
 {% endtab %}
 {% endtabs %}

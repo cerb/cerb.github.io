@@ -51,8 +51,7 @@ In the **Name:** field, add some descriptive text like _"Company Letterhead"_.
 
 In the next large text box, paste the following template:
 
-<pre style="max-height:29.5em;">
-<code class="language-html">
+{% highlight html %}
 {% raw %}
 &lt;div id="body"&gt;
   &lt;img id="logo" src="https://cerb.ai/assets/cerb_logo.png"&gt;
@@ -117,19 +116,16 @@ blockquote a {
 }
 &lt;/style&gt;
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 In the **Signature** section, you can add HTML formatting to signatures. For example:
 
-<pre>
-<code class="language-twig">
+{% highlight twig %}
 {% raw %}
 -- 
 {% if first_name %}{{first_name}}{% else %}the **support** team{% endif %} @ [cerb.ai](https://cerb.ai/)
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 You can preview the HTML template by clicking on the last icon in the editor toolbar.
 

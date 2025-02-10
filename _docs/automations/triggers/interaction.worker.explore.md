@@ -66,8 +66,7 @@ An interaction automation [dictionary](/docs/automations/#dictionaries) starts w
 
 When suspending in the `await:explore:` state, the interaction displays the next record in an explore set.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 await:
   explore:
     title: The title of the explore set
@@ -79,8 +78,7 @@ await:
         icon: chevron-right
         icon_at: end
         keyboard: ]
-</code>
-</pre>
+{% endhighlight %}
 
 Interactions in a custom [toolbar](/docs/toolbars/) can use the following `after:` options:
 

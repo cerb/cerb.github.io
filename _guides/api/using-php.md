@@ -52,8 +52,7 @@ Let's start with a simple request for your account information.
 
 Create a new `index.php` file with the following content:
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 <?php
 require_once("CerbApi.php");
@@ -71,8 +70,7 @@ if(null != ($content_type = $cerb->getContentType())) {
 	echo $out;
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 You'll need to modify the following constants:
 
@@ -88,8 +86,7 @@ Run your `index.php` script in a browser or from the command line.
 
 You should receive back a JSON response with your worker details:
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "__build": 2017110901,
@@ -127,8 +124,7 @@ You should receive back a JSON response with your worker details:
   "updated": 1510279250
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Run a search
 
@@ -136,15 +132,13 @@ Now let's send a search request to the API to build a list of open tickets.
 
 Comment out the `$cerb->get()` request and add the following:
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 //$out = $cerb->get(CERB_BASE_URL . 'workers/me.json');
 
 $out = $cerb->get(CERB_BASE_URL . 'records/ticket/search.json?q=status:o&expand=owner_,custom_');
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 We're sending the following parameters to `records/ticket/search.json`:
 
@@ -153,8 +147,7 @@ We're sending the following parameters to `records/ticket/search.json`:
 
 The response should be a JSON array of ticket records, like:
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "__build": 2017110901,
@@ -200,8 +193,7 @@ The response should be a JSON array of ticket records, like:
   "total": 5
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Create a task
 
@@ -209,8 +201,7 @@ Comment out the last `$cerb->get()`.
 
 Let's create a task record through the API:
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 //$out = $cerb->get(CERB_BASE_URL . 'workers/me.json');
 //$out = $cerb->get(CERB_BASE_URL . 'records/ticket/search.json?q=status:o&expand=owner_,custom_');
@@ -220,13 +211,11 @@ $out = $cerb->post(CERB_BASE_URL . 'records/task/create.json', [
 	['fields[status]', 'open'],
 ]);
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 You should get a JSON response like:
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {
   "__build": 2017110901,
   "__status": "success",
@@ -248,8 +237,7 @@ You should get a JSON response like:
   "title": "Test the Cerb API",
   "updated": 1510362808
 }
-</code>
-</pre>
+{% endhighlight %}
 
 # Mark the task as completed
 
@@ -257,8 +245,7 @@ Comment out the `$cerb->post()` request.
 
 Now let's close the task record we just created. You'll need to replace `123.json` with the real `id` value in your last response above.
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 //$out = $cerb->get(CERB_BASE_URL . 'workers/me.json');
 //$out = $cerb->get(CERB_BASE_URL . 'records/ticket/search.json?q=status:o&expand=owner_,custom_');
@@ -271,13 +258,11 @@ $out = $cerb->put(CERB_BASE_URL . 'records/task/123.json?' . http_build_query([
 	'fields[status]' => 'closed',
 ]));
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 You should get back an updated ticket record with the new `status`:
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "__build": 2017110901,
@@ -292,8 +277,7 @@ You should get back an updated ticket record with the new `status`:
 	...
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Next steps
 

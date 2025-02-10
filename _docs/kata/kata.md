@@ -56,25 +56,21 @@ Key names end with a colon (`:`), which may be followed by either a value, or a 
 
 By convention, the indentation for each level should be two spaces.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 parent:
   child:
     name:
-</code>
-</pre>
+{% endhighlight %}
 
 ### Root
 
 The root of the tree is implicit, so there may be multiple keys at the top-level:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 picklist:
 date_range:
 text:
-</code>
-</pre>
+{% endhighlight %}
 
 ### Key names
 
@@ -84,41 +80,34 @@ Key names serve as _declarative_ instructions to a feature using KATA for custom
 
 A slash (`/`) may be appended to a key name to provide a unique identifier. This format should be read as `type/name:`.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 options:
   picklist/status:
   picklist/color:
   picklist/group:
-</code>
-</pre>
+{% endhighlight %}
 
 ### Values
 
 A key may be followed by a text value rather than children. KATA will not automatically detect its type, which often removes the need for escaping.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 object:
   color: red
-</code>
-</pre>
+{% endhighlight %}
 
 Values may also contain subsequent colons (`:`), which do not require escaping:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 widget:
   label: Status:
-</code>
-</pre>
+{% endhighlight %}
 
 ### Whitespace
 
 Sibling keys may be separated with blank lines for readability. The blank lines must contain the same indentation as the keys.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 widget/chart:
   type: chart
   label: Chart
@@ -128,8 +117,7 @@ widget/gauge:
   type: gauge
   label: Gauge
   data: ...
-</code>
-</pre>
+{% endhighlight %}
 
 ### Key annotations
 
@@ -137,8 +125,7 @@ KATA does not perform [type coercion](https://en.wikipedia.org/wiki/Type_convers
 
 To manipulate values, a comma-separated list of [annotations](#annotation-reference) may be appended to a key name starting with a `@` character. The annotations are processed in order.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 picklist:
   options:
@@ -151,15 +138,13 @@ picklist:
       yes
       {% endif %}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Text blocks
 
 When using key annotations, a value may contain multiple lines of text. Most annotations imply a text block (e.g. `@bool`, `@csv`, `@json`, `@list`). The `@text` annotation may be used for arbitrary text without any special handling.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 comment:
   content@text:
@@ -168,28 +153,24 @@ comment:
   author:
     name: Cerb
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Comments
 
 Lines that begin with `#` are treated as comments and are ignored.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 picklist:
   # The options from a placeholder
   options:
     color@csv: {{colors}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 You do not need to escape the `#` character in values or text blocks.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 # This is a comment
 article:
@@ -200,8 +181,7 @@ article:
     
     Some **bold** text.
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### References
 
@@ -211,8 +191,7 @@ You define a reference by prefixing an ampersand (`&`) to a top-level key.
 
 Any key can then use an `@ref` annotation to copy the contents and annotations of the reference.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 picklist:
   options@ref: colors
@@ -222,13 +201,11 @@ picklist:
   green
   blue
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 An `@ref` may target a child of a reference using dot-notation:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 picklist:
   options@ref: options.colors
@@ -239,13 +216,11 @@ picklist:
     green
     blue
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 And references themselves may contain `@ref` annotations:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 picklist:
   options@ref: options.colors
@@ -258,15 +233,13 @@ picklist:
   green
   blue
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 A reference's annotations take the place of `@ref`, and any remaining annotations will affect the copied content.
 
 For instance, this copies a reference as a `@text` block and _then_ converts it to a `@list`:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 picklist:
   options@ref,list: colors
@@ -276,13 +249,11 @@ picklist:
   green
   blue
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The result of all four examples above is:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 picklist:
   options@list:
@@ -290,8 +261,7 @@ picklist:
     green
     blue
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Dictionaries
 
@@ -301,16 +271,14 @@ Placeholders and scripting may be used in any value and do not require escaping.
 
 Use the [@raw](#raw) annotation to prevent tags from being parsed.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 chooser:
   label: {{label}}
   params:
     record_type: {{record_type}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 # Annotation Reference
 
@@ -318,13 +286,11 @@ chooser:
 
 `@base64` converts a key's value from base64-encoded[^base64] text into binary. This is particularly useful for HMAC keys and images.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 image@base64: QnVzdGVkISBUaGlzIGlzIG5vdCByZWFsbHkgYW4gaW1hZ2Uu
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### bit
 
@@ -339,13 +305,11 @@ The following values result in `0`:
 * `no`
 * `n`
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 result@bit: off
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Any other value returns a `1`.
 
@@ -364,49 +328,41 @@ The following values result in `false`:
 
 Any other value returns `true`.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 enabled@bool: yes
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### csv
 
 `@csv` converts a comma-separated list into an array.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 colors@csv: red,green,blue
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### date
 
 `@date` converts a human-readable absolute (`Jan 1 2025 08:00`) or relative (`+2 hours`) date text value into a Unix timestamp.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 when@date: +2 hours
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### int
 
 `@int` parses the key's value as a whole number.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 number@int: 123
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### json
 
@@ -414,8 +370,7 @@ number@int: 123
 
 This is particularly useful when combined with a placeholder based on an API response.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 person@json:
   {
@@ -425,35 +380,30 @@ person@json:
 
 numbers@json: [1,2,3]
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### key
 
 `@key` sets the value from a [dictionary](#dictionaries) path.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 http_status@key: response.http.status.code
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### list
 
 `@list` converts text into an array with one line per item.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 colors@list:
   red
   green
   blue
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### raw
 
@@ -461,14 +411,12 @@ colors@list:
 
 This is useful for returning templates to other functionality (e.g. [sheets](/docs/sheets/)).
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 template@raw:
   {{person}} is {{title}} at {{organization}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### ref
 
@@ -480,8 +428,7 @@ The annotations of the target key replace the `@ref`, and any remaining annotati
 
 See: [References](#references)
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 event/start@ref: menu
 
@@ -491,8 +438,7 @@ event/start@ref: menu
     Option 2
     Option 3
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### text
 
@@ -500,8 +446,7 @@ event/start@ref: menu
 
 This is useful when a text block can't be implied from any other attributes.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 content@text:
   This is a _bunch_ of content
@@ -509,15 +454,13 @@ content@text:
   that stops **here**
 format: markdown
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The first trailing linefeed is always removed so that multiple line scripts can return a single value.
 
 End the text block with one or more indented blank lines to keep linefeeds:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 content@text:
   This content ends
@@ -525,20 +468,17 @@ content@text:
   
 format: markdown
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### trim
 
 `@trim` removes leading and trailing whitespace from a key's value.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 content@trim:    this has no whitespace    
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 {% comment %}
 Kata is the word for "form" in Japanese, which refers to the refinement of perfected movements through repeated practice.
@@ -600,11 +540,9 @@ So what's the alternative?
 
 We could type a text _query_ like:
 
-<pre>
-<code class="language-cerb">
-	owner:me OR (owner:nobody priority:critical)
-</code>
-</pre>
+{% highlight cerb %}
+owner:me OR (owner:nobody priority:critical)
+{% endhighlight %}
 
 Let's look at the advantages:
 
@@ -618,11 +556,9 @@ Let's look at the advantages:
 
 * The query can become much more complex with only a little more typing. What about all issues of high or critical priority, which are overdue, and are assigned to either me or any co-worker who is out of the office?
 
-	<pre>
-	<code class="language-cerb">
-		priority:high,critical due:"before now" (owner:me OR owner:(available:no))
-	</code>
-	</pre>
+{% highlight cerb %}
+priority:high,critical due:"before now" (owner:me OR owner:(available:no))
+{% endhighlight %}
 
 Then we have another new requirement:
 
@@ -634,8 +570,6 @@ Then we have another new requirement:
 The priority of new issues will automatically be set by software (a bot).
 
 Priority is now a _dynamic_ field, whose appropriate value depends on various potentially complex conditions (the value of a client, the issue's impact on their workflow, etc).
-
-
 
 This automation also needed to be created by a human
 

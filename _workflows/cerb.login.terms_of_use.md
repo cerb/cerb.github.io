@@ -60,8 +60,7 @@ You can build your own **Worker Login Terms of Use** workflow using this templat
 
 Change occurrences of **cerb.login.terms_of_use** to your own workflow identifier. Use a prefix based on a domain you own (e.g. `com.example.workflow`).
 
-<pre style="max-height: 29.25em;">
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: cerb.login.terms_of_use
@@ -147,5 +146,4 @@ records:
         automation/tou:
           uri: cerb:automation:cerb.login.termsOfUse
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

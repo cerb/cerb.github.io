@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;cerb.portal&quot;&gt;
 			&lt;id&gt;cerb.bots.portal&lt;/id&gt;
 			&lt;name&gt;Conversational Bot&lt;/name&gt;
@@ -15,13 +14,11 @@
 			&lt;params&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_CommunityPortal {
 	/**
@@ -44,6 +41,5 @@ class ExampleExtension extends Extension_CommunityPortal {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

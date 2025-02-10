@@ -46,8 +46,7 @@ The automation [dictionary](/docs/automations/#dictionaries) starts with the fol
 |-|-|-
 | `data` | dictionary | The chart data as an array of series with the same length
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 return:
   data:
@@ -55,5 +54,4 @@ return:
     series0@csv: 104, 77, 84 
     series1@csv: 218, 335, 183
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}

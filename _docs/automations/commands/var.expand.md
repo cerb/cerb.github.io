@@ -29,8 +29,7 @@ jumbotron:
 
 The **var.expand:** command expands nested keys at a given dictionary path.
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 inputs:
   records/tickets:
@@ -45,17 +44,14 @@ start:
   return:
     owners@json: {{array_column(inputs.tickets,'owner__label','_label')|json_encode}}
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Result:
 
-<pre>
-<code class="language-yaml">
+{% highlight yaml %}
 owners:
   '[#ANB-75367-518] Always use HTML mode on replies': Kina Halpue
-</code>
-</pre>
+{% endhighlight %}
 
 * TOC
 {:toc}

@@ -72,8 +72,7 @@ If omitted, this defaults to the timezone of the current worker or the server.
 
 ## Return series data from a worklist
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 type:worklist.series 
 series.open_tickets:(
   of:tickets 
@@ -90,8 +89,7 @@ series.closed_tickets:(
   query:(status:c limit:24)
 )
 format:timeseries
-</code>
-</pre>
+{% endhighlight %}
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/data-queries/data-queries-worklist-timeseries-created.png" class="screenshot">

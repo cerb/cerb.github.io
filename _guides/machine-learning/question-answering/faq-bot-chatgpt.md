@@ -213,8 +213,7 @@ Here's a [package](/docs/packages/) of reference examples for using the OpenAI A
 
 Import it in Cerb from **Setup >> Packages >> Import**:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -259,8 +258,7 @@ Import it in Cerb from **Setup >> Packages >> Import**:
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Test the embeddings automation
 
@@ -268,16 +266,14 @@ Navigate to **Search >> Automations** and edit **example.services.embeddings.ope
 
 Paste the following into **Inputs** in the lower left:
 
-<pre>
-<code class="language-yaml">
+{% highlight yaml %}
 {% raw %}
 inputs:
   texts:
   - What is Cerb?
   - How much is it?
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Run** button. You should see **Output:** like:
 
@@ -299,8 +295,7 @@ First, let's import a few automations we can share between multiple FAQ bots.
 
 Navigate to **Setup >> Packages >> Import** and paste the following:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -348,8 +343,7 @@ Navigate to **Setup >> Packages >> Import** and paste the following:
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Import** button.
 
@@ -357,8 +351,7 @@ Click the **Import** button.
 
 Now let's import **Beethoven Bot** from **Setup >> Packages >> Import** by pasting the following:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -409,8 +402,7 @@ Now let's import **Beethoven Bot** from **Setup >> Packages >> Import** by pasti
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Import** button.
 
@@ -444,8 +436,7 @@ If you have existing resources you want to make available through semantic searc
 
 Once again, navigate to **Setup >> Packages >> Import** and paste the following package to create a new `faq` record type:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
     "package": {
@@ -527,8 +518,7 @@ Once again, navigate to **Setup >> Packages >> Import** and paste the following 
     ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Import** button.
 
@@ -547,8 +537,7 @@ The new `faq` record type has six fields:
 
 Here's a brief example FAQ in CSV format about music theory and Beethoven:
 
-<pre>
-<code class="language-csv">
+{% highlight csv %}
 {% raw %}
 Question,Answer
 "Who composed Moonlight Sonata?","Ludwig van Beethoven composed Piano Sonata No. 14 (popularly referred to as Moonlight Sonata) in 1801."
@@ -572,8 +561,7 @@ Question,Answer
 "When did Ludwig van Beethoven die?","Ludwig van Beethoven died on 26 March, 1827 in Vienna at the age of 56."
 "Who were Beethoven's parents?","Ludwig van Beethoven's father was Johann van Beethoven and his mother was Maria Magdalena Keverich."
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Save the example FAQ entries to a file named: `beethoven-faq.csv`
 
@@ -615,23 +603,20 @@ Navigate to **Search >> Automations** and edit the `example.faqBot.findSimilarDo
 
 **Inputs:**
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 inputs:
   query: Who was Beethoven's mother?
   limit: 5
   resource_uri: dataset.faq.embeddings.beethoven
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Click the **Run** icon.
 
 You should see output like:
 
-<pre>
-<code class="language-yaml">
+{% highlight yaml %}
 {% raw %}
 __exit: return
 __return:
@@ -660,8 +645,7 @@ __return:
         q: How many keys are on a piano?
         a: A full piano has 88 keys (52 white and 36 black).
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Ask Beethoven Bot another question:
 
@@ -723,8 +707,7 @@ First, navigate to **Search >> Custom Fields** and edit the **Topic** custom fie
 
 Then navigate to **Setup >> Packages >> Import** and paste the following package:
 
-<pre style="max-height:29.5em;">
-<code class="language-json">
+{% highlight json %}
 {% raw %}
 {
   "package": {
@@ -789,8 +772,7 @@ Then navigate to **Setup >> Packages >> Import** and paste the following package
   ]
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Enter the same topic you added to the custom field (e.g. `Cerb`) and click the **Import** button.
 
@@ -817,8 +799,7 @@ To edit the menu item for your bot, navigate to **Search >> Toolbars** and edit 
 If you wish to disable ChatGPT's text generation and only return the most similar FAQ entries, edit the `example.faqBot.interaction` automation and comment out the following two code blocks:
 
 Around line `91`:
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
             # Have ChatGPT summarize an answer
             #function/chatGpt:
@@ -828,12 +809,10 @@ Around line `91`:
             #    temperature@float: 0
             #    prompt@key: chatGptPrompt
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Around line `110`:
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
                 #chatGpt:
                 #  who@key: inputs:botName
@@ -842,8 +821,7 @@ Around line `110`:
                 #  message: {{chatgpt.response.choices[0].message.content}}
                 #  disclaimer: This answer is machine generated and may not be accurate.
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### Scaling for large FAQs or busy bots
 
@@ -857,8 +835,7 @@ Update the `example.faqBot.recordChanged.embeddings` automation to store embeddi
 
 In `example.faqBot.interaction` replace this block (around line `45`) with a function that fetches results from the vector database:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
             # Fetch docs
             function/docs:
@@ -869,12 +846,11 @@ In `example.faqBot.interaction` replace this block (around line `45`) with a fun
                 limit: 10
                 resource_uri@key: inputs:resourceUri
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 As long as you return an object with this same structure you won't need to make other changes:
 
-```yaml
+{% highlight yaml %}
 return:    
   response:
     results:
@@ -883,6 +859,6 @@ return:
         data:
           q: What is Cerb?
           a: Cerb is a customer service and support platform that helps businesses manage their customer interactions.
-```
+{% endhighlight %}
 
 If your Q&A entries are fairly small (under 40KB for Pinecone) you can store the questions and answers in the vector database metadata. Otherwise just store the IDs, and load the FAQ entries in Cerb with `record.search:` in your function.

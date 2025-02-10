@@ -67,8 +67,7 @@ The `file.write:` command can also optionally generate a ZIP file from multiple 
 | `files:` | objects | A list of `file:` objects to compress
 | `password:` | string | An optional password to encrypt the ZIP contents
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
   zip:
     password: s3cr3t
@@ -80,8 +79,7 @@ The `file.write:` command can also optionally generate a ZIP file from multiple 
          path: /path/to/example.txt
          bytes: This is arbitrary content
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 ### expires:
 
@@ -141,8 +139,7 @@ The `output:` placeholder receives a dictionary with these keys:
 
 ## Create a simple text file
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   file.write:
@@ -153,13 +150,11 @@ start:
       content: This is some text
     output: results
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The command returns this dictionary:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 results:
   uri: cerb:automation_resource:247cc278-450e-11ed-8cbd-e1c6a4043a12
   name: example.txt
@@ -167,13 +162,11 @@ results:
   expires_at: 1665017156
   size: 17
   id: 123
-</code>
-</pre>
+{% endhighlight %}
 
 ## Create a ZIP file from mixed bytes and attachments
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   file.write:
@@ -192,13 +185,11 @@ start:
       expires@date: +15 mins
     output: results
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 The command returns this dictionary:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 results:
   uri: cerb:automation_resource:835ed6f2-4511-11ed-a716-f9b7c189003f
   mime_type: application/zip
@@ -206,13 +197,11 @@ results:
   size: 557
   id: 123
   name: example.zip
-</code>
-</pre>
+{% endhighlight %}
 
 ## Create an attachment from an automation resource
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 start:
   record.create:
@@ -224,13 +213,11 @@ start:
         content: cerb:automation_resource:835ed6f2-4511-11ed-a716-f9b7c189003f
     output: results
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 Output:
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 results:
   _context: cerberusweb.contexts.attachment
   id: 1234
@@ -245,5 +232,4 @@ results:
   storage_sha1hash: fb528658ed4c4f8cd1b2e4b768b583e42c5a3ec3
   updated: 1665018318
   url_download: https://cerb.example/files/1234/example.zip
-</code>
-</pre>
+{% endhighlight %}

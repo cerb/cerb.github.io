@@ -3,8 +3,7 @@
 
 # Manifest
 
-<pre>
-<code class="language-xml">
+{% highlight xml %}
 		&lt;extension point=&quot;devblocks.cache.engine&quot;&gt;
 			&lt;id&gt;devblocks.cache.engine.disk&lt;/id&gt;
 			&lt;name&gt;Filesystem&lt;/name&gt;
@@ -15,13 +14,11 @@
 			&lt;params&gt;
 			&lt;/params&gt;
 		&lt;/extension&gt;
-</code>
-</pre>
+{% endhighlight %}
 
 # Code
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 {% raw %}
 class ExampleExtension extends Extension_DevblocksCacheEngine {
 	public function clean() {
@@ -52,6 +49,5 @@ class ExampleExtension extends Extension_DevblocksCacheEngine {
 	}
 }
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 

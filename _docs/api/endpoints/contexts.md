@@ -39,11 +39,9 @@ Retrieve a list of object contexts with IDs, names, custom fields and fieldsets.
 
 **Example:**
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $out = $cerb->get($base_url . 'contexts/list.json');
-</code>
-</pre>
+{% endhighlight %}
 
 # Activity Log
 
@@ -55,11 +53,9 @@ Retrieve a list of activity log event IDs and names, including those contributed
 
 **Example:**
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $out = $cerb->get($base_url . 'contexts/activity/events.json');
-</code>
-</pre>
+{% endhighlight %}
 
 ## Create
 
@@ -91,8 +87,7 @@ Create an activity log entry.
 
 **Example:**
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $postfields = array(
 	array('on','cerberusweb.contexts.worker:2'),
 	array('activity_point','example.worker_high_five'),
@@ -104,8 +99,7 @@ $postfields = array(
     ))),
 );
 $out = $cerb->post($base_url . 'contexts/activity/create.json', $postfields);
-</code>
-</pre>
+{% endhighlight %}
 
 # Links
 
@@ -123,8 +117,7 @@ Add any number of links to one context record.
 
 **Example:**
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $postfields = array(
   array('on','cerberusweb.contexts.ticket:1148'),
   array('targets', json_encode(array(
@@ -133,8 +126,7 @@ $postfields = array(
   ))),
 );
 $out = $cerb->post($base_url . 'contexts/link.json', $postfields);
-</code>
-</pre>
+{% endhighlight %}
 
 ## Unlink
 
@@ -150,8 +142,7 @@ Remove any number of links from one context record.
 
 **Example:**
 
-<pre>
-<code class="language-php">
+{% highlight php %}
 $postfields = array(
   array('on','cerberusweb.contexts.ticket:1148'),
   array('targets', json_encode(array(
@@ -159,5 +150,4 @@ $postfields = array(
   ))),
 );
 $out = $cerb->post($base_url . 'contexts/unlink.json', $postfields);
-</code>
-</pre>
+{% endhighlight %}

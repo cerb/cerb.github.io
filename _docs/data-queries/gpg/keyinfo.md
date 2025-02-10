@@ -46,20 +46,17 @@ jumbotron:
 
 #### Query: 
 
-<pre>
-<code class="language-cerb">
+{% highlight cerb %}
 {% raw %}
 type:gpg.keyinfo
 fingerprint:EB53CF5B6712E70F
 format:dictionaries
 {% endraw %}
-</code>
-</pre>
+{% endhighlight %}
 
 #### Response:
 
-<pre>
-<code class="language-json">
+{% highlight json %}
 {
   "data": {
     "disabled": false,
@@ -125,5 +122,4 @@ format:dictionaries
     "format": "dictionaries"
   }
 }
-</code>
-</pre>
+{% endhighlight %}
