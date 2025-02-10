@@ -8,14 +8,19 @@ summary: This guide provides comprehensive instructions for configuring Redis
   also includes troubleshooting tips, best practices for security, and common 
   Docker commands for managing Redis containers, all aimed at improving application 
   performance through effective caching.
-permalink: /docs/scaling/cache/redis
+topic: Scaling
 jumbotron:
   title: Redis
   breadcrumbs:
-    - label: Docs &raquo;
-      url: /docs/home/
-    - label: Cache &raquo;
-      url: /docs/setup/configure/cache/
+    -
+      label: Resources &raquo;
+      url: /resources/
+    -
+      label: Guides &raquo;
+      url: /resources/guides/
+    -
+      label: Scaling &raquo;
+      url: /resources/guides/#scaling
 ---
 
 * TOC
