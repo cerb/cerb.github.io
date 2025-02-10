@@ -15,8 +15,6 @@ jumbotron:
       url: /resources/guides/
     - label: Mail &raquo;
       url: /resources/guides/#mail
-    - label: Encryption &raquo;
-      url: /resources/guides/#mail-encryption
 ---
 
 ### Most email isn't secure

@@ -28,8 +28,6 @@ jumbotron:
     url: /resources/guides/
   - label: Machine Learning &raquo;
     url: /resources/guides/#machine-learning
-  - label: Question Answering &raquo;
-    url: /resources/guides/#machine-learning-question-answering
 ---
 
 * TOC

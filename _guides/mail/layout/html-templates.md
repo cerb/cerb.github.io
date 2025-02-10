@@ -24,8 +24,6 @@ jumbotron:
     url: /resources/guides/
   - label: Mail &raquo;
     url: /resources/guides/#mail
-  - label: Layout &raquo;
-    url: /resources/guides/#mail-layout
 ---
 
 * TOC

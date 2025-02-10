@@ -25,8 +25,6 @@ jumbotron:
     url: /resources/guides/
   - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  - label: AWS &raquo;
-    url: /resources/guides/#amazon-web-services
 ---
 
 # Introduction

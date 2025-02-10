@@ -26,8 +26,6 @@ jumbotron:
     url: /resources/guides/
   - label: Machine Learning &raquo;
     url: /resources/guides/#machine-learning
-  - label: Image Generation &raquo;
-    url: /resources/guides/#machine-learning-image-generation
 ---
 
 * TOC

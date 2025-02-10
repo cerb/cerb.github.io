@@ -25,8 +25,6 @@ jumbotron:
     url: /resources/
   - label: Guides &raquo;
     url: /resources/guides/
-  - label: Integrations &raquo;
-    url: /resources/guides/#integrations
   - label: Security &raquo;
     url: /resources/guides/#security
 ---

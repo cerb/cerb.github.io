@@ -25,8 +25,6 @@ jumbotron:
     url: /resources/guides/
   - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  - label: Slack &raquo;
-    url: /resources/guides/#slack
 ---
 
 ## Introduction

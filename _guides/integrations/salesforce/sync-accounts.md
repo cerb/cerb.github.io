@@ -23,8 +23,6 @@ jumbotron:
     url: /resources/guides/
   - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  - label: Salesforce &raquo;
-    url: /resources/guides/#salesforce
 ---
 
 * TOC

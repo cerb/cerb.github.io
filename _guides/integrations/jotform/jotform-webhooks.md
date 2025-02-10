@@ -23,8 +23,6 @@ jumbotron:
     url: /resources/guides/
   - label: Integrations &raquo;
     url: /resources/guides/#integrations
-  - label: JotForm &raquo;
-    url: /resources/guides/#jotform
 ---
 
 # Introduction
