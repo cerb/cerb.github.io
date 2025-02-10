@@ -150,13 +150,13 @@ To qualify for an academic discount, institutions must be accredited by an agenc
 
 ## Do you offer a discount to charities and non-profits?
 
-Yes! To receive a free Cerb license with more than two seats, a charity or non-profit must have a charter that seeks to improve the public good and be registered as a 501(c)(3) organization (or their own national equivalent).  The organization should be primarily funded through public donations or grants, and such contributions should be tax-deductible by the donors.
+Yes! To receive a free Cerb license with more than one seat, a charity or non-profit must have a charter that seeks to improve the public good and be registered as a 501(c)(3) organization (or their own national equivalent).  The organization should be primarily funded through public donations or grants, and such contributions should be tax-deductible by the donors.
 
 <div id="opensource"></div>
 
 ## What qualifies an open source project for a free license donation?
 
-To receive a free Cerb license with more than two seats, an open source project must have:
+To receive a free Cerb license with more than one seat, an open source project must have:
 
 * A website explaining the purpose of the project
 * 100% source code available in a public repository like GitHub
