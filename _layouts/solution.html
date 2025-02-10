@@ -12,11 +12,13 @@ jumbotron:
 
 <section class="solutions">
 	<article>
+        {% comment %}
         {% if page.social_image_url %}
 		<div class="cerb-screenshot">
 			<img src="{{ page.social_image_url }}" class="screenshot no-border">
 		</div>
         {% endif %}
+        {% endcomment %}
 
 		{{ content }}
 	</article>
