@@ -1,5 +1,5 @@
 ---
-title: Modify dates
+title: Date modification
 excerpt: Use the `|date_modify` filter to add or subtract units of time from dates.
 summary: This page demonstrates how to use the `|date_modify` filter to perform date 
   arithmetic. It shows how to add or subtract various time units from dates and format the results.
@@ -12,7 +12,7 @@ jumbotron:
     url: /solutions/
   - label: Automations &raquo;
     url: /solutions/#automations
-social_image_url: /assets/images/solutions/automations/modify-dates.png
+social_image_url: /assets/images/solutions/automations/date-modification.png
 ---
 
 {% comment %}

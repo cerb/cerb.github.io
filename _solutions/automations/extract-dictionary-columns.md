@@ -1,6 +1,6 @@
 ---
 title: Extract dictionary columns
-excerpt: Extract a column from a list of dictionaries
+excerpt: Extract a column from a list of dictionaries.
 summary: 'This page explains how to extract a column from a list of dictionaries using
   Cerb filters. Two methods are provided: `|column` and `|map`. The `|column` filter
   extracts the specified column directly, while the `|map` filter uses an arrow function

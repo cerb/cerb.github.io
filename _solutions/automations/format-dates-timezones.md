@@ -3,8 +3,8 @@ title: Format dates and timezones
 excerpt: Use the `|date` filter to format dates and handle different timezones.
 summary: This page demonstrates how to the `|date` filter to format dates and work with
   different timezones. Examples include formatting current time,
-  converting between timezones, and using common date format standards like RFC2822
-  and ISO8601.
+  converting between timezones, and using common date format standards like RFC-2822
+  and ISO-8601.
 layout: solution
 jumbotron:
   breadcrumbs:

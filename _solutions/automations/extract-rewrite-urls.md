@@ -2,6 +2,16 @@
 title: Extract and rewrite URLs in text
 excerpt: Extract all links from a text block and optionally rewrite them (e.g. click
   tracking).
+summary: This page explains how to extract and rewrite URLs found in HTML content
+  using Cerb. The `cerb_extract_uris()` function is used to identify these URLs along
+  with associated metadata such as tags, attributes, and URI parts. The extracted
+  URLs are then replaced with tokens within a template that can be modified using
+  the `|replace` filter for purposes like click tracking. For example, in an email
+  template, all links can be replaced with proxy URLs to track user interactions
+  effectively. The page provides examples demonstrating how to implement this 
+  functionality, including extracting and filtering URLs, sorting them by length,
+  combining multiple URLs into pairs, and replacing them within a template block.
+social_image_url: /assets/images/solutions/automations/extract-rewrite-urls.png
 layout: solution
 jumbotron:
   breadcrumbs:
@@ -11,7 +21,6 @@ jumbotron:
     url: /solutions/
   - label: Automations &raquo;
     url: /solutions/#automations
-social_image_url: /assets/images/solutions/automations/extract-rewrite-urls.png
 redirect_from:
 - /automation/cookbook/extract-rewrite-urls/
 ---

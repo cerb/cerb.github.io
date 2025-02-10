@@ -1,6 +1,12 @@
 ---
-title: Loop numbers
-excerpt: Loop through a range of numbers
+title: Loop through a range of numbers
+excerpt: Loop through a range of numbers with an optional step value.
+summary: 'This page describes the use of Cerb''s `range()` function, which allows looping
+  through a set range of numbers. The `range` function can be used in two ways: as
+  an automation command to loop through numbers and output them, or to generate a
+  list of numbers for return. Additionally, the `step` command is introduced, allowing
+  users to skip certain numbers with each step.'
+social_image_url: /assets/images/solutions/automations/loop-range.png
 layout: solution
 jumbotron:
   breadcrumbs:
@@ -11,7 +17,10 @@ jumbotron:
   - label: Automations &raquo;
     url: /solutions/#automations
 ---
-With the ```range``` function, you can loop through a set range of numbers.
+
+## Loop through a numeric range
+
+With the [range()](/docs/scripting/functions/#range) function, you can loop through a set range of numbers.
 
 {% tabs loop_numbers %}
 
@@ -27,6 +36,8 @@ start:
 {% endraw %}
 ```
 {% endtab %}
+
+## Loop through a range with a step value
 
 {% tab loop_numbers output %}
 ```cerb
