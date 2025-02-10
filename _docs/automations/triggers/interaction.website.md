@@ -198,18 +198,6 @@ start:
 
 When the interaction concludes in the `return` state, it returns any number of key/value pairs to the caller. Keys may be nested to return dictionaries.
 
-# Installation on websites
+# Deploy interactions on websites
 
-See: [10.0: NPS surveys with website interactions](https://github.com/cerb/cerb-release/discussions/6)
-
-{% comment %}
-* **[Interactions/Website]** Website interactions can be added to any website using this single tag above the `</body>`: `<script id="cerb-interactions" src="https://cerb.example/portal/surveys/assets/cerb.js" type="text/javascript" defer></script>`. A `data-cerb-interaction` attribute can then be added to any DOM element on the website (e.g. links, buttons, images) to start the interaction on click. The value can be any arbitrary interaction name. Additionally, a `data-interaction-params` attribute on the same element can pass arbitrary URL-encoded parameters (e.g `&param1=value1`).
-
-* **[Interactions/Website]** Website interactions can be automatically started on any website page by appending an anchor to the URL in the format: `#/interactionName&param1=value1`, where `interactionName` is any interaction name.
-
-* **[Interactions/Website]** Website interactions use events KATA to start a specific `interaction.website` automation based on the given parameters.
-
-* **[Interactions/Website]** In website interactions, the `<script>` is implemented with plain Javascript. The previous bot portal required the jQuery library.
-
-* **[Interactions/Website/Security]** Implemented Cross-Origin Resource Sharing (CORS) for website interaction portals. Multiple allowed origins can be specified. An entry of `*` allows any origin.
-{% endcomment %}
+See the [Add a conversational bot to any website](/guides/interactions/website/deploy-on-website/) guide for instructions on deploying interactions on any website.
