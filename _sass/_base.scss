@@ -52,8 +52,7 @@ body {
  * Set `margin-bottom` to maintain vertical rhythm
  */
 h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
+p, blockquote, ul, ol, dl,
 %vertical-rhythm {
 		margin-bottom: math.div($spacing-unit, 2);
 }
@@ -151,12 +150,11 @@ blockquote {
 /**
  * Code formatting
  */
-pre,
-code {
-		font-size: 15px;
-		border: 1px solid $grey-color-light;
-		border-radius: 3px;
-		background-color: #fff;
+p > code.highlighter-rouge {
+	font-size: 15px;
+	border: 1px solid $grey-color-light;
+	border-radius: 3px;
+	background-color: #fff;
 }
 
 code {
