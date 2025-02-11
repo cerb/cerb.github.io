@@ -28,10 +28,10 @@ jumbotron:
 Cerb uses the **OAuth 2.0**[^oauth2] industry standard for authenticating API requests.
 
 {% comment %}
-token
-3-legged
-user consent / grants
-scopes
+* token
+* 3-legged
+* user consent / grants
+* scopes
 {% endcomment %}
 
 Older versions (prior to [9.1](/releases/9.1/)) used <a href="/docs/api/authentication/request-signatures/">API authentication with request signatures</a> instead. XOAuth tokens should be used when possible, but request signature authentication will continue to be supported for the foreseeable future.

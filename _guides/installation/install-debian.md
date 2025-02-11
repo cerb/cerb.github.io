@@ -25,6 +25,10 @@ jumbotron:
     url: /resources/guides/#installation
 ---
 
+{% comment %}
+* Include permissions instructions from mail install guide
+{% endcomment %}
+
 # Introduction
 {:.no_toc}
 

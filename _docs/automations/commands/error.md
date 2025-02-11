@@ -34,3 +34,10 @@ start:
 {% endhighlight %}
 
 The error message is returned to the caller.
+
+{% comment %}
+* dictionary return
+* `__error` vs `__return`
+* `_message` in return
+* `__error:at:` and `message:`
+{% endcomment %}

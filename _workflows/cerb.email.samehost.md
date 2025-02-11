@@ -1,5 +1,5 @@
 ---
-title: Find contacts from the same host
+title: Similar Senders
 excerpt: Find a list of contacts with emails from the same hostname from an email profile card.
 summary: This page provides an implementation guide for the "Find contacts from the same host" workflow in Cerb, which extracts emails from the same hostname and displays a list of matching contacts.
 layout: integration

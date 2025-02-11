@@ -38,6 +38,8 @@ jumbotron:
 # What are packages?
 
 {% comment %}
+* Import from scheduler
+
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/packages/create/cerb-bots-banner.png" class="screenshot">
 </div>

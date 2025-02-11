@@ -1,5 +1,5 @@
 ---
-title: '@Mention Email Notifications'
+title: 'Email Notification Mentions'
 excerpt: Email workers when they are @mentioned in a comment.
 summary: This page provides detailed information on the @Mention Email Notifications
   workflow in Cerb. It covers the introduction, installation, usage, and reference

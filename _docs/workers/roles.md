@@ -22,6 +22,11 @@ jumbotron:
     url: /docs/workers/
 ---
 
+{% comment %}
+* Explain role queries, permissions, etc
+* Update screenshot
+{% endcomment %}
+
 [Workers](/docs/workers/) generally don't have equal authority in executing their duties. For instance, someone in an entry-level position shouldn't have access to destroy important business records without any oversight.
 
 In Cerb, sets of **privileges** are granted to workers using **roles**.

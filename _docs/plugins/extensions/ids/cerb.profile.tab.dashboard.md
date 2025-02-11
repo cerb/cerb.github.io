@@ -30,3 +30,7 @@ jumbotron:
 | **File:** | api/uri/profiles.php
 | **Class:** | ProfileTab_Dashboard
 
+{% comment %}
+* Extension params (layout)
+* Do for all cards/profiles/workspaces tabs/widgets
+{% endcomment %}
