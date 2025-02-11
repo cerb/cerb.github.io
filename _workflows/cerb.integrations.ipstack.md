@@ -12,6 +12,8 @@ summary: This page provides a comprehensive guide on integrating Cerb with IPsta
   IP addresses.
 layout: integration
 topic: Workflows
+workflow:
+  built_in: yes
 permalink: /workflows/cerb.integrations.ipstack/
 jumbotron:
   title: Geolocate IPs (IPstack)

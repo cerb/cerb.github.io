@@ -10,6 +10,8 @@ summary: This page provides a comprehensive guide on integrating Cerb with GitLa
   and unlink GitLab issues directly from Cerb, enhancing issue management and collaboration.
 layout: integration
 topic: Workflows
+workflow:
+  built_in: yes
 permalink: /workflows/cerb.integrations.gitlab.issues/
 jumbotron:
   title: GitLab Issues

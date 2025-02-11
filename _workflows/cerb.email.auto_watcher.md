@@ -13,6 +13,8 @@ summary: This page provides detailed information about the "Auto Watcher" workfl
   the auto-watcher feature.
 layout: integration
 topic: Workflows
+workflow:
+  built_in: yes
 permalink: /workflows/cerb.email.auto_watcher/
 jumbotron:
   title: Auto Watcher

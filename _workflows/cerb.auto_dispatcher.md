@@ -13,6 +13,8 @@ summary: This page provides a comprehensive guide on the Auto Dispatcher workflo
   can be enabled through the Cerb interface.
 layout: integration
 topic: Workflows
+workflow:
+  built_in: yes
 permalink: /workflows/cerb.auto_dispatcher/
 redirect_from:
   - /guides/bots/dispatch-assignments/

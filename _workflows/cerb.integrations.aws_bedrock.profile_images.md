@@ -14,6 +14,8 @@ summary: This webpage provides a comprehensive guide on generating profile image
   image generation within their Cerb environment.
 layout: integration
 topic: Workflows
+workflow:
+  built_in: yes
 permalink: /workflows/cerb.integrations.aws_bedrock.profile_images/
 jumbotron:
   title: Generate Profile Images (Amazon Bedrock)

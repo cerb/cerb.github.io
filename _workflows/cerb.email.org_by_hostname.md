@@ -14,6 +14,8 @@ summary: This page provides a detailed overview of the "Sender Org By Hostname" 
   email senders.
 layout: integration
 topic: Workflows
+workflow:
+  built_in: yes
 permalink: /workflows/cerb.email.org_by_hostname/
 jumbotron:
   title: Sender Org By Hostname

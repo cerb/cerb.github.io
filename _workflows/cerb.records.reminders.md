@@ -4,6 +4,8 @@ excerpt: Create reminders from record profiles and cards.
 summary: This page provides a detailed guide on creating and managing reminders. The page outlines the usage of the new "Reminder" button available on record profile pages and card popups, allowing users to quickly set reminders linked to specific records. Additionally, it offers a reference template for building custom record reminder workflows, including detailed instructions on modifying the workflow identifier and using domain-specific prefixes. The page also includes a comprehensive workflow script, detailing the necessary fields, inputs, and commands for creating reminders, as well as toolbar configurations for record profiles and cards.
 layout: integration
 topic: Workflows
+workflow:
+  built_in: yes
 permalink: /workflows/cerb.records.reminders/
 jumbotron:
   title: Record Reminders

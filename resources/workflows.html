@@ -25,11 +25,15 @@ jumbotron:
     url: /resources/
 ---
 
-<a href="/docs/workflows/">Workflows</a> are templates with versioned updates that keep a related set of records in sync between multiple environments (e.g. dev, staging, production).
+<p>
+    <a href="/docs/workflows/">Workflows</a> are templates with versioned updates that keep a related set of records in sync between multiple environments (e.g. dev, staging, production).
+</p>
+
+{% assign workflows = site.workflows | where:"workflow.built_in",true | sort: 'title' %}
+
+<h1>Built-in workflows</h1>
 
 <div class="integrations" style="column-count:2;column-width:500px;margin-bottom:20px;">
-	{% assign workflows = site.workflows | sort: 'title' %}
-	
 	<ul class="articles">
 	{% for workflow in workflows %}
 		<li style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
@@ -38,6 +42,21 @@ jumbotron:
 		</li>
 	{% endfor %}
 	</ul>
+</div>
+
+{% assign workflows = site.workflows | where:"workflow.built_in",false | sort: 'title' %}
+
+<h1>Community workflows</h1>
+
+<div class="integrations" style="column-count:2;column-width:500px;margin-bottom:20px;">
+    <ul class="articles">
+        {% for workflow in workflows %}
+        <li style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
+            <a href="{{ workflow.url }}">{{ workflow.title }}</a>
+            <div>{{ workflow.excerpt }}</div>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
 
 {% include testimonials.html %}

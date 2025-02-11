@@ -12,6 +12,8 @@ summary: This page outlines the "Worker Login Terms of Use" workflow for Cerb, w
   for configuring and automating the workflow within Cerb.
 layout: integration
 topic: Workflows
+workflow:
+  built_in: yes
 permalink: /workflows/cerb.login.terms_of_use/
 jumbotron:
   title: Worker Login Terms of Use

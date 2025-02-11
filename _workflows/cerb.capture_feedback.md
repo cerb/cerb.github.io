@@ -14,6 +14,8 @@ summary: This webpage provides a comprehensive guide on the "Capture Feedback" w
   and source URL, and provides a script for automating the feedback capture process.
 layout: integration
 topic: Workflows
+workflow:
+  built_in: yes
 permalink: /workflows/cerb.capture_feedback/
 jumbotron:
   title: Capture Feedback

@@ -12,6 +12,8 @@ summary: This page provides detailed information on the DMARC Reports workflow i
   and interact with DMARC report attachments effectively.
 layout: integration
 topic: Workflows
+workflow:
+  built_in: yes
 permalink: /workflows/cerb.email.dmarc_reports/
 redirect_from:
 - /guides/automations/interaction.worker/dmarc-reports/

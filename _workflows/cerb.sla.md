@@ -12,6 +12,8 @@ summary: This page provides a comprehensive guide on implementing and managing S
   to their specific needs.
 layout: integration
 topic: Workflows
+workflow:
+  built_in: yes
 permalink: /workflows/cerb.sla/
 jumbotron:
   title: Service Level Agreements

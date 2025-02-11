@@ -13,6 +13,8 @@ summary: 'This page provides a comprehensive guide on implementing and utilizing
   into Cerb.'
 layout: integration
 topic: Workflows
+workflow:
+  built_in: yes
 permalink: /workflows/cerb.satisfaction.surveys/
 redirect_from:
 - /packages/customer-satisfaction/

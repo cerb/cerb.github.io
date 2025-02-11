@@ -13,6 +13,8 @@ summary: This page provides a comprehensive guide on implementing PGP Inline Enc
   workflow, complete with detailed configuration and policy settings.
 layout: integration
 topic: Workflows
+workflow:
+  built_in: yes
 permalink: /workflows/cerb.email.pgp_inline/
 jumbotron:
   title: PGP Inline Encryption

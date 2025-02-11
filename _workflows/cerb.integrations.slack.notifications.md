@@ -11,6 +11,8 @@ summary: This page provides a comprehensive guide on integrating Cerb with Slack
   for posting messages to Slack channels.
 layout: integration
 topic: Workflows
+workflow:
+  built_in: yes
 permalink: /workflows/cerb.integrations.slack.notifications/
 redirect_from:
 - /packages/slack-bot/

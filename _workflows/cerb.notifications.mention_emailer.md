@@ -14,6 +14,8 @@ summary: This page provides detailed information on the @Mention Email Notificat
   and customize the notification system.
 layout: integration
 topic: Workflows
+workflow:
+  built_in: yes
 permalink: /workflows/cerb.notifications.mention_emailer/
 redirect_from:
   - /guides/bots/relay-comment-notifications-email/

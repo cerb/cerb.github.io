@@ -11,6 +11,8 @@ summary: This webpage provides a comprehensive guide on integrating Cerb with De
   wide range of languages and offers options for both free and production API endpoints.
 layout: integration
 topic: Workflows
+workflow:
+  built_in: yes
 permalink: /workflows/cerb.integrations.deepl.translate/
 jumbotron:
   title: Translate (DeepL)

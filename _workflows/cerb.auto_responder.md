@@ -12,6 +12,8 @@ summary: This page provides a comprehensive guide on setting up and using the Au
   with a template and detailed configuration options.
 layout: integration
 topic: Workflows
+workflow:
+  built_in: yes
 permalink: /workflows/cerb.auto_responder/
 redirect_from:
 - /packages/autoreply-bot/

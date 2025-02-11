@@ -11,6 +11,8 @@ summary: This page provides a comprehensive guide on the Simple Ticket Search wo
   how to adapt the workflow identifier and providing a structured script for implementation.
 layout: integration
 topic: Workflows
+workflow:
+  built_in: yes
 permalink: /workflows/cerb.search.simple/
 jumbotron:
   title: Simple Ticket Search
