@@ -100,26 +100,27 @@ Click the **Import** button.
 
 # Create the webhook
 
-1. Navigate to **Search >> Webhooks**.
+Navigate to **Search >> Webhooks**.
 
-1. Click the **(+)** icon above the worklist.
+Click the **(+)** icon above the worklist.
 
-1. Name the new webhook `Webhook Example`.
+Name the new webhook `Webhook Example`.
 
-1. Paste the following **Event KATA**:
-  ```
-  automation/example:
-      uri: cerb:automation:example.webhook.respond
-      disabled@bool: no
-  ```
+Paste the following **Event KATA**:
+
+{% highlight cerb %}
+automation/example:
+    uri: cerb:automation:example.webhook.respond
+    disabled@bool: no
+{% endhighlight %}
 	
-1. Click the **Save Changes** button.
+Click the **Save Changes** button.
 
-1. Copy the webhook **URL** from the worklist.
+Copy the webhook **URL** from the worklist.
 
-	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/webhooks/configure/add-webhook.png" class="screenshot">
-	</div>
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/webhooks/configure/add-webhook.png" class="screenshot">
+</div>
 	
 # Test the webhook
 

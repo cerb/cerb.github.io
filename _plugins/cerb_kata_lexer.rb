@@ -17,8 +17,8 @@ module Rouge
       state :root do
         mixin :basic
 
-        rule %r/(\s*)(#{identifier}:)( *)(.*?)(\n|$)/ do |m|
-            groups Text, Keyword, Text
+        rule %r/(\s*)(#{identifier}:)( *)([^\n]*?)(\n|$)/ do |m|
+            groups Text::Whitespace, Keyword, Text
 
             value = m[4]
 
@@ -40,7 +40,11 @@ module Rouge
 
             token Text, m[5]
 
-            @parent_indent = m[1].length
+            if @dedent
+                @dedent = false
+            else
+                @parent_indent = m[1].length
+            end
             push :value if m[2].include? '@' and 0 == m[4].length
         end
       end
@@ -51,13 +55,17 @@ module Rouge
         end
 
         rule %r/( +)/ do |m|
-            token Text
             if m[1].length <= @parent_indent
-                pop!; reset_stack; push :root
+                token Text::Whitespace
+                @dedent = true
+                pop!
+                push :root
+            else
+                token Text::Whitespace
             end
         end
 
-        rule %r/(.*?)(\n|$)/ do |m|
+        rule %r/([^\n]*?)(\n|$)/ do |m|
             value = m[1]
 
             if value.include?('{{') && value.include?('}}')

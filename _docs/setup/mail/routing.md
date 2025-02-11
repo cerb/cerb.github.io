@@ -47,36 +47,36 @@ Conditions include: `script`, `recipients`, `sender_email`, `spam_score`, `subje
 
 Actions include: `bucket`, `comment`, `group`, `importance`, `owner`, and `watchers`.
 
-  ```yaml
-  rule/dev:
-    if/to:
-      recipients: dev@, development@, bugs@
-    if/subj:
-      subject: [Bugs] *
-    then:
-      group: Development
-  
-  rule/sales:
-    if:
-      recipients: sales@
-    then:
-      group: Sales
-  
-  rule/billing:
-    if:
-      recipients: billing@, receipts@
-    then:
-      group: Billing
-  
-  rule/corp:
-    if:
-      recipients: corporate@, jobs@cerb.example, partners@cerb.example, corp@
-    then:
-      group: Corporate
-  
-  rule/support:
-    if:
-      recipients: support@, team@, help@
-    then:
-      group: Support
-  ```
+{% highlight cerb %}
+rule/dev:
+  if/to:
+    recipients: dev@, development@, bugs@
+  if/subj:
+    subject: [Bugs] *
+  then:
+    group: Development
+
+rule/sales:
+  if:
+    recipients: sales@
+  then:
+    group: Sales
+
+rule/billing:
+  if:
+    recipients: billing@, receipts@
+  then:
+    group: Billing
+
+rule/corp:
+  if:
+    recipients: corporate@, jobs@cerb.example, partners@cerb.example, corp@
+  then:
+    group: Corporate
+
+rule/support:
+  if:
+    recipients: support@, team@, help@
+  then:
+    group: Support
+{% endhighlight %}
