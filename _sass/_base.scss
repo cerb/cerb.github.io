@@ -150,11 +150,11 @@ blockquote {
 /**
  * Code formatting
  */
-p > code.highlighter-rouge {
+code.highlighter-rouge {
 	font-size: 15px;
 	border: 1px solid $grey-color-light;
 	border-radius: 3px;
-	background-color: #fff;
+	background-color: #eee;
 }
 
 code {

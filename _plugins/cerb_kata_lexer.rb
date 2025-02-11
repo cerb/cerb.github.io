@@ -25,7 +25,11 @@ module Rouge
       end
 
       state :value do
-        rule %r/(\s+)/ do |m|
+        rule %r/\n/ do
+            token Text
+        end
+
+        rule %r/( +)/ do |m|
             token Text
             if m[1].length <= @parent_indent
                 pop!; reset_stack; push :root

@@ -35,15 +35,22 @@ figure.highlight {
 
   .rouge-table {
     border: 0;
+    margin-bottom: 0;
 
     .gutter {
       border: 0;
+      padding: 0;
       border-right: 1px solid rgb(220, 220, 220);
       vertical-align: top;
     }
 
     .code {
       border: 0;
+      padding: 0;
+
+      > pre {
+        padding-bottom: 0;
+      }
     }
   }
 }
