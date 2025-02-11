@@ -18,7 +18,28 @@ module Rouge
         mixin :basic
 
         rule %r/(\s*)(#{identifier}:)( *)(.*?)(\n|$)/ do |m|
-            groups Text, Keyword, Text, Str, Text
+            groups Text, Keyword, Text
+
+            value = m[4]
+
+            if value.include?('{{') && value.include?('}}')
+                while value.match(/(.*?)({{.*?}})(.*)/)
+                    pre, twig, post = $1, $2, $3
+                    token Str, pre unless pre.empty?
+                    token Punctuation, '{{'
+
+                    inner_content = twig[2...-2]
+
+                    token Str, inner_content
+                    token Punctuation, '}}'
+                    value = post
+                end
+            else
+                token Str, value
+            end
+
+            token Text, m[5]
+
             @parent_indent = m[1].length
             push :value if m[2].include? '@' and 0 == m[4].length
         end
@@ -37,7 +58,25 @@ module Rouge
         end
 
         rule %r/(.*?)(\n|$)/ do |m|
-            groups Str, Text
+            value = m[1]
+
+            if value.include?('{{') && value.include?('}}')
+                while value.match(/(.*?)({{.*?}})(.*)/)
+                    pre, twig, post = $1, $2, $3
+                    token Str, pre unless pre.empty?
+                    token Punctuation, '{{'
+
+                    inner_content = twig[2...-2]
+
+                    token Str, inner_content
+                    token Punctuation, '}}'
+                    value = post
+                end
+            else
+                token Str, value
+            end
+
+            token Text, m[2]
         end
       end
     end
