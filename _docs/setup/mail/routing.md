@@ -67,7 +67,7 @@ In this scenario, tickets would be routed to the Development group if they were 
 
 ### script
 
-With the ```script``` condition, you can route based on any custom scripting you would like, such as boolean logic or negation. It also has access to the full `sender` dictionary.
+With the ```script``` condition, you can route based on any custom scripting you would like, such as boolean logic or negation.
 
 {% highlight yaml %}
 {% raw %}
