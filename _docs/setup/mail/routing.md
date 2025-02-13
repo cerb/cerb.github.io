@@ -63,7 +63,7 @@ rule/dev:
     group: Development
 {% endhighlight %}
 
-In this scenario, tickets would be routed to the Development group if they were either sent to `dev@`. `development@` or `bugs@`, or they had both a subject line containing `[Bugs]` and body containing `bug report`
+In this scenario, tickets would be routed to the Development group if they were either sent to `dev@`. `development@` or `bugs@`, or they had both a subject line containing `[Bugs]` and body containing `bug report`.
 
 ### script
 
