@@ -66,3 +66,20 @@ This form element can be conditionally hidden.
 hidden@bool: {{expression}}
 {% endraw %}
 {% endhighlight %}
+
+### references:
+
+{% highlight cerb %}
+{% raw %}
+await/router:
+  form:
+    title: How can we help?
+    elements:
+      say:
+        content@text:
+          ![Logo alt text =200x200](#logo)
+        references:
+          resource/logo:
+            uri: cerb:resource:portal.logo.cerb
+{% endraw %}
+{% endhighlight %}
