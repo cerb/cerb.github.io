@@ -52,8 +52,6 @@ start:
         params:
           to: customer@cerb.example
           subject: Welcome to the product!
-          status_id: 1
-          ticket_reopen: tomorrow 8am
           content@text:
             Welcome to the product!
 
