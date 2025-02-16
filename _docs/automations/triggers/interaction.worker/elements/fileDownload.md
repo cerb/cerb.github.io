@@ -67,6 +67,16 @@ The optional label to display above the form element.
 
 The filename to show on the download button.
 
+### hidden:
+
+This form element can be conditionally hidden.
+
+{% highlight cerb %}
+{% raw %}
+hidden@bool: {{not worker_is_superuser}}
+{% endraw %}
+{% endhighlight %}
+
 ### uri:
 
 A URI for an [attachment](/docs/records/types/attachment/), [automation resource](/docs/records/types/automation_resource/), or [resource](/docs/records/types/resource/) to download. Alternative to `data:`.

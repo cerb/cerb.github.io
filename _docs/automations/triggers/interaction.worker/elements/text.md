@@ -65,6 +65,16 @@ start:
 
 The optional label to display above the form element.
 
+### hidden:
+
+This form element can be conditionally hidden.
+
+{% highlight cerb %}
+{% raw %}
+hidden@bool: {{not worker_is_superuser}}
+{% endraw %}
+{% endhighlight %}
+
 ### required@bool:
 
 If user input is required on this element use a value of `yes`. Otherwise, omit.

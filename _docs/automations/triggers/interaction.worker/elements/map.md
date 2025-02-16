@@ -66,6 +66,16 @@ start:
 
 The maps element supports all of the functionality from [maps KATA](/docs/maps/#maps-kata).
 
+### hidden:
+
+This form element can be conditionally hidden.
+
+{% highlight cerb %}
+{% raw %}
+hidden@bool: {{not worker_is_superuser}}
+{% endraw %}
+{% endhighlight %}
+
 ### required@bool:
 
 If user input is required on this element use a value of `yes`. Otherwise, omit.

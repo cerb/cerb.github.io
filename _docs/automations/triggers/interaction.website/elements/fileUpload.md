@@ -135,6 +135,16 @@ The optional label to display above the form element.
 
 An optional comma-delimited list of file extensions or MIME types to accept in the browser file chooser. If omitted, all files are available for selection.
 
+### hidden:
+
+This form element can be conditionally hidden.
+
+{% highlight cerb %}
+{% raw %}
+hidden@bool: {{expression}}
+{% endraw %}
+{% endhighlight %}
+
 ### multiple@bool:
 
 If `yes`, multiple files may be uploaded at once. The result is an array of [automation resource](/docs/records/types/automation_resource/) dictionaries.

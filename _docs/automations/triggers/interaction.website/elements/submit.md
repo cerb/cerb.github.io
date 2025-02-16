@@ -45,3 +45,15 @@ start:
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/automations/triggers/interaction.website/elements/submit.png" class="screenshot">
 </div>
+
+# Syntax
+
+### hidden:
+
+This form element can be conditionally hidden.
+
+{% highlight cerb %}
+{% raw %}
+hidden@bool: {{expression}}
+{% endraw %}
+{% endhighlight %}

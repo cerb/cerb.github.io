@@ -71,6 +71,16 @@ The [record type](/docs/records/types/) to choose from.
 
 The optional [search query](/docs/search/) for filtering the search worklist.
 
+### hidden:
+
+This form element can be conditionally hidden.
+
+{% highlight cerb %}
+{% raw %}
+hidden@bool: {{not worker_is_superuser}}
+{% endraw %}
+{% endhighlight %}
+
 ### multiple:
 
 If `yes` then multiple records may be selected at once. The default is `no` for single selection.

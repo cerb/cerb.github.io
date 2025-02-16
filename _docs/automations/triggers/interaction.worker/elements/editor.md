@@ -80,6 +80,16 @@ The language for syntax highlighting and autocompletion.
 
 The default editor text.
 
+### hidden:
+
+This form element can be conditionally hidden.
+
+{% highlight cerb %}
+{% raw %}
+hidden@bool: {{not worker_is_superuser}}
+{% endraw %}
+{% endhighlight %}
+
 ### line_numbers@bool:
 
 If `no`, the editor line numbers in the left gutter are hidden. They are enabled by default.

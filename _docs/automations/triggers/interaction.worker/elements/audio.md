@@ -66,6 +66,16 @@ If `no`, the audio only starts when the play button is pressed. The default is `
 
 If `no`, the player controls are hidden. The default is `yes`.
 
+### hidden:
+
+This form element can be conditionally hidden.
+
+{% highlight cerb %}
+{% raw %}
+hidden@bool: {{not worker_is_superuser}}
+{% endraw %}
+{% endhighlight %}
+
 ### loop:
 
 If `no` (default), the audio plays once and stops. If `yes` the audio repeats indefinitely.

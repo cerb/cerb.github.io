@@ -89,6 +89,16 @@ The [datasets](/docs/dashboards/widgets/chart-kata/#datasets) to load and pass t
 | `dataQuery:` |
 | `manual:` | 
 
+### hidden:
+
+This form element can be conditionally hidden.
+
+{% highlight cerb %}
+{% raw %}
+hidden@bool: {{not worker_is_superuser}}
+{% endraw %}
+{% endhighlight %}
+
 ### schema:
 
 The [schema](/docs/dashboards/widgets/chart-kata/#chart) to render.

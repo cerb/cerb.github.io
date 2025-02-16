@@ -57,6 +57,16 @@ The optional label to display above the form element.
 
 The [record type](/docs/records/types/) to use for query autocompletion. For instance, `ticket` or `worker`.
 
+### hidden:
+
+This form element can be conditionally hidden.
+
+{% highlight cerb %}
+{% raw %}
+hidden@bool: {{not worker_is_superuser}}
+{% endraw %}
+{% endhighlight %}
+
 ### required@bool:
 
 If user input is required on this element use a value of `yes`. Otherwise, omit.

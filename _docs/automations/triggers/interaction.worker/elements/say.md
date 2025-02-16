@@ -54,3 +54,13 @@ Content to display in Markdown format.
 ### message:
 
 Message to display as plain text.
+
+### hidden:
+
+This form element can be conditionally hidden.
+
+{% highlight cerb %}
+{% raw %}
+hidden@bool: {{not worker_is_superuser}}
+{% endraw %}
+{% endhighlight %}

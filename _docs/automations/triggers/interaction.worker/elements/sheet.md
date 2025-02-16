@@ -171,6 +171,16 @@ The default filtering text, if `schema:layout:filtering:` is enabled.
 
 The optional selected dataset item(s) by default.
 
+### hidden:
+
+This form element can be conditionally hidden.
+
+{% highlight cerb %}
+{% raw %}
+hidden@bool: {{not worker_is_superuser}}
+{% endraw %}
+{% endhighlight %}
+
 ### schema:
 
 A [sheet](/docs/sheets/) schema defining the column types to display for each dataset item.
