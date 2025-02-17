@@ -1,12 +1,16 @@
 ---
-title: Smart Multirecord Search
+title: Smart Multi-Record Search
 excerpt: A smart search that can search multiple record types in a single query based on what you type.
-
+summary: This page describes the Smart Multi-record Search workflow in Cerb, which enables a smart 
+  search that can search multiple record types (organizations, email addresses, tickets, and workers)
+  simultaneously based on a single query. Access the Smart Search interaction from the global menu at 
+  the bottom right corner of any page, allowing for efficient searching across multiple record types 
+  with a single query.
 layout: integration
 topic: Workflows
-permalink: /workflows/wgm.search.multirecord/
+permalink: /workflows/wgm.search.multi_record/
 jumbotron:
-  title: Smart Multirecord Search
+  title: Smart Multi-Record Search
   tagline: ""
   breadcrumbs:
   - label: Resources &raquo;
@@ -31,7 +35,7 @@ Paste the following KATA into the large text box:
 {% highlight cerb %}
 {% raw %}
 workflow:
-  name: wgm.search.multi
+  name: wgm.search.multi_record
   version: 2025-02-14T02:58:27Z
   description: Multi-record smart search
   website: https://cerb.ai/resources/workflows/
@@ -41,7 +45,7 @@ workflow:
 records:
   automation/search:
     fields:
-      name: wgm.search.muiltirecord
+      name: wgm.search.multi_record
       extension_id: cerb.trigger.interaction.worker
       description@text:
       script@raw:
@@ -68,11 +72,11 @@ records:
                   value:
                     submit:
                       buttons:
-                        continue/go:
-                          label: Go
+                        continue/search:
+                          label: Search
                           icon: search
                           icon_at: start
-                          value: go                
+                          value: search                
                         
               await/query:
                 form:
@@ -238,16 +242,16 @@ records:
           data.query:
             deny/type@bool: {{query.type != 'worklist.records'}}
             allow@bool: yes
-  toolbar_section/globalmenu:
+  toolbar_section/global_menu:
     fields:
-      name: Multisearch
+      name: Smart Search
       toolbar_name: global.menu
       priority@int: 50
       is_disabled: 0
       toolbar_kata@raw:
-        interaction/zn1gme:
+        interaction/search:
           label: Smart Search
-          uri: cerb:automation:wgm.search.muiltirecord
+          uri: cerb:automation:wgm.search.multi_record
           icon: search
           #hidden@bool: {{row_selections ? 'no' : 'yes'}}
           #badge: 0

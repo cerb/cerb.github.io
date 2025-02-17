@@ -49,10 +49,10 @@ You can add your own scopes. The default provides an `api` scope that allows all
 
 {% highlight yaml %}
 "api":
-label: Make any API request on your behalf
-endpoints:
-- "*" #[GET, PATCH, POST, PUT, DELETE]
-  {% endhighlight %}
+  label: Make any API request on your behalf
+  endpoints:
+   - "*" #[GET, PATCH, POST, PUT, DELETE]
+{% endhighlight %}
 
 The scopes are set when a token is generated. If a worker logs in to Cerb from a third-party app, a confirmation screen will show them the requested scopes before they consent. If you use the token generator, you can pick a token's scope.
 

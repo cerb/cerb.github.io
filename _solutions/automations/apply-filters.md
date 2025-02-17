@@ -1,9 +1,15 @@
 ---
 title: Apply filters
 excerpt: Apply filters to a block of text.
-summary: 
+summary: "This page explains how to apply filters to a block of text in Cerb automation 
+  scripting. Filters can be applied using two methods: the `apply` tag, which changes 
+  the case of the text, or by chaining multiple filters together with `|`, allowing for 
+  more complex transformations such as lowercasing and indenting text. For example, 
+  applying an `upper` filter to a block of text results in all text being uppercase, while 
+  applying a combination of `lower`, `indent`, and `>` filters can be used to create a snippet 
+  that formats text with indentation and capitalization."
 layout: solution
-permalink: /solutions/automations/apply-filters
+social_image_url: /assets/images/solutions/automations/apply-filters.png
 jumbotron:
   breadcrumbs:
   - label: Resources &raquo;
@@ -15,7 +21,9 @@ jumbotron:
 
 ---
 
-You can filters to a block of text in scripting in 2 ways. The first is with the `apply` tag.
+You can apply filters to a block of text using automation [scripting](/docs/scripting/) in two ways.
+
+First, you can wrap a text block in the `apply` tag.
 
 {% tabs apply_filters %}
 
@@ -46,7 +54,7 @@ __return:
 
 {% endtabs %}
 
-You can also chain multiple filters together with `|`. This can sometimes be useful when creating things like snippets.
+Alternatively, you can chain multiple filters together with the pipe (`|`) character. This can be useful when creating [snippets](/docs/snippets/).
 
 {% tabs pipe_filters %}
 

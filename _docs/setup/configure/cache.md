@@ -36,6 +36,11 @@ By default, Cerb saves cache files to the filesystem in the `./storage/tmp/` dir
 
 If you experience filesystem I/O bottlenecks, or you want to [scale](/docs/scaling/) beyond a single web server, you may choose to set up a distributed cache using Redis[^redis], Valkey[^valkey], or Memcached[^memcached].  We support them all.
 
+# See also
+
+* Guide: [Scaling with Memcached](/guides/scaling/memcached/)
+* Guide: [Scaling with Redis](/guides/scaling/redis/)
+* Guide: [Scaling with Valkey](/guides/scaling/valkey/)
 
 # References
 

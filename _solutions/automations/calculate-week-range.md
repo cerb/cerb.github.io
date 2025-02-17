@@ -1,9 +1,9 @@
 ---
 title: Calculate week ranges
-excerpt: Use `date_lerp` to calculate the date ranges for a year.
-summary: 
+excerpt: Use `date_lerp` to calculate the weekly date ranges for a year.
+summary: This page provides a solution for calculating the weekly date ranges for a full year using the `date_lerp()` function in Cerb. The script interpolates timestamps between two dates.
 layout: solution
-permalink: /solutions/automations/calculate-week-range
+social_image_url: /assets/images/solutions/automations/calculate-week-range.png
 jumbotron:
   breadcrumbs:
   - label: Resources &raquo;
@@ -12,10 +12,9 @@ jumbotron:
     url: /solutions/
   - label: Automations &raquo;
     url: /solutions/#automations
-
 ---
 
-You can use `date_lerp` to calculate the date ranges for a full year. See: [date_lerp](/docs/scripting/functions/#date_lerp)
+You can use [`date_lerp()`](/docs/scripting/functions/#date_lerp) to calculate the date ranges for a full year. This interpolates the timestamps between two dates with the given unit and step.
 
 {% tabs calculate_date_range %}
 

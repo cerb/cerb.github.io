@@ -1,9 +1,11 @@
 ---
 title: Iterate objects with key and value
-excerpt: Iterate though a set of objects with both keys and values with repeat
-summary: 
+excerpt: Iterate though a set of objects with both keys and values with repeat.
+summary: "This page explains how to iterate over objects in Cerb using the `repeat:` 
+  command. When using `key, value` in `as:`, it sets two placeholders for accessing 
+  each item subsequent commands."
 layout: solution
-permalink: /solutions/automations/iterate-key-value
+social_image_url: /assets/images/solutions/automations/iterate-key-value.png
 jumbotron:
   breadcrumbs:
   - label: Resources &raquo;
@@ -14,8 +16,7 @@ jumbotron:
     url: /solutions/#automations
 ---
 
-When using `repeat`, if you render the `as` in the form of `key, valuue`, it will set two placeholders in the iterated value. This can be useful if you want to access both items easily in the following commands.
-
+When using the [`repeat:`](/docs/automations/commands/repeat/) command in [automations](/docs/automations/), you can specify two placeholders separated by a comma in the `as:` option (`key, value`) and they will be set with the respective key and value of each item.
 
 {% tabs iterate_key_value %}
 

@@ -1,9 +1,15 @@
 ---
-title: Calculate values
-excerpt: Compare values using boolean logic groups.
-summary: 
+title: Compare values using boolean logic
+excerpt: Compare values using boolean logic groups with `and`, `or`, and `not`.
+summary: This page from the Cerb documentation explains how to compare values using 
+  boolean logic groups in automations scripting, specifically through the use of boolean 
+  expressions and filters. The example demonstrates a script that sends a receipt email 
+  to a customer if the subject contains specific keywords, such as "receipt" or "kassenzettel",
+  while excluding emails sent from addresses starting with "noreply@" or "spammer@". The script 
+  uses Cerb's filtering capabilities, including the `|lower` filter to make the comparison 
+  case-insensitive.
 layout: solution
-permalink: /solutions/automations/compare-values
+social_image_url: /assets/images/solutions/automations/compare-values.png
 jumbotron:
   breadcrumbs:
   - label: Resources &raquo;
@@ -15,7 +21,7 @@ jumbotron:
 
 ---
 
-We can compare different values using boolean logic groups in automations scripting.
+Compare against a set of values using boolean logic in automations [scripting](/docs/scripting/).
 
 {% tabs compare_values %}
 
@@ -54,4 +60,4 @@ __return:
 
 {% endtabs %}
 
-In this case we use the `|lower` filter since `in` is case-sensitive.
+In this case we use the [`|lower`](/docs/scripting/filters/#lower) filter since `in` is case-sensitive.

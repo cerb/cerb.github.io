@@ -41,12 +41,13 @@ These messages will be delivered to the **Inbox** bucket in those groups, unless
 
 # Routing KATA
 
-Automations are available for complex workflows but are no longer required.
+<div class="cerb-box note">
+  <b>Note:</b> Automations are available for complex workflows but are no longer required.
+</div>
 
 Conditions include: `script`, `recipients`, `sender_email`, `spam_score`, `subject`, `body`, and `header`.
 
 Actions include: `bucket`, `comment`, `group`, `importance`, `owner`, and `watchers`.
-
 
 ## Conditions:
 
@@ -67,7 +68,7 @@ In this scenario, tickets would be routed to the Development group if they were 
 
 ### script
 
-With the ```script``` condition, you can route based on any custom scripting you would like, such as boolean logic or negation. It also has full access to the `sender` dictionary.
+With the `script` condition, you can route based on any custom scripting you would like, such as boolean logic or negation. It also has full access to the `sender` dictionary.
 
 {% highlight cerb %}
 {% raw %}
@@ -92,7 +93,7 @@ rule/trouble:
 
 ### recipients
 
-```recipients``` routes based on the address(es) the mail is sent to. You can use full addresses. prefixes or domains. You can include multiple addresses in a comma-separated list or in a line-separated list with the ```@list``` annotation.
+`recipients` routes based on the address(es) the mail is sent to. You can use full addresses. prefixes or domains. You can include multiple addresses in a comma-separated list or in a line-separated list with the `@list` annotation.
 
 {% highlight cerb %}
   rule/billing:
@@ -110,7 +111,7 @@ rule/trouble:
 {% endhighlight %}
 
 ### sender_email
-```sender_email``` routes based on the address(es) of the sender.  You can use full addresses. prefixes or domains. You can include multiple addresses in a comma-separated list or in a line-separated list with the ```@list``` annotation.
+`sender_email` routes based on the address(es) of the sender.  You can use full addresses. prefixes or domains. You can include multiple addresses in a comma-separated list or in a line-separated list with the `@list` annotation.
 
 {% highlight cerb %}
   rule/vip:
@@ -122,7 +123,7 @@ rule/trouble:
   {% endhighlight %}
 
 ### spam_score
-```spam_score``` routes based on the assigned spam score of an email. You can use ```<```,```>``` and ```=``` operators to specify a "greater than" or "less than" value.
+`spam_score` routes based on the assigned spam score of an email. You can use `<`,`>` and `=` operators to specify a "greater than" or "less than" value.
 
 {% highlight cerb %}
   rule/spam:
@@ -133,7 +134,7 @@ rule/trouble:
 {% endhighlight %}
 
 ### subject
-```subject``` routes based on the text of the email subject line.
+`subject` routes based on the text of the email subject line.
 
 {% highlight cerb %}
 rule/bugs:
@@ -144,7 +145,7 @@ rule/bugs:
 {% endhighlight %}
 
 ### body
-```body``` routes based on content of the email message body.
+`body` routes based on content of the email message body.
 
 {% highlight cerb %}
 rule/campaign:
@@ -155,13 +156,13 @@ rule/campaign:
 {% endhighlight %}
 
 ### header
-```header``` routes based on content from the message header
+`header` routes based on content from the message header
 
 {% highlight cerb %}
 rule/autoreplies:
   if:
     header: 
-      Auto-Submitted:"autoreplied"
+      Auto-Submitted: auto-generated
   then:
     group: Spam
     bucket: Autoreplies
@@ -172,7 +173,7 @@ rule/autoreplies:
 Actions are what you want to occur if the conditions are met. You can have multiple actions for each routing rule.
 
 ### bucket
-```bucket``` sets a bucket to route the ticket.
+`bucket` sets a bucket to route the ticket.
 
 {% highlight cerb %}
 rule/bugs:
@@ -185,8 +186,8 @@ rule/bugs:
     bucket: Bugs 
 {% endhighlight %}
 
-### commnent
-  ```comment``` adds a comment with the given text to the resulting ticket.
+### comment
+  `comment` adds a comment with the given text to the resulting ticket.
 
 {% highlight cerb %}
 rule/vip:
@@ -199,7 +200,7 @@ rule/vip:
 {% endhighlight %}
 
 ### group
-```group``` defines the group a ticket will be moved to. If you do not also use ```bucket`` the ticket will be placed in the group's Inbox.`
+`group` defines the group a ticket will be moved to. If you do not also use `bucket` the ticket will be placed in the group's inbox.
 
 {% highlight cerb %}
 rule/billing:
@@ -210,7 +211,7 @@ rule/billing:
 {% endhighlight %}
 
 ### importance
-```importance``` sets the "importance" field on the ticket. It can be a value between 0 and 100. 
+`importance` sets the "importance" field on the ticket. It can be a value between 0 and 100. 
 
 {% highlight cerb %}
 rule/vip:
@@ -228,7 +229,7 @@ rule/spam:
 {% endhighlight %}
 
 ### owner
-```owner``` assigns an owner to the ticket. This is done with the @mention name of the relevant worker.
+`owner` assigns an owner to the ticket. This is done with the @mention name of the relevant worker.
 
 {% highlight cerb %}
 rule/billing:
@@ -240,7 +241,7 @@ rule/billing:
 {% endhighlight %}
 
 ### watchers
-```watchers``` assigns watchers to a ticket with a comma-separated list of their @mention names. This cam be useful, for example, for assigning developers as watchers on tickets about bug reports or certain workers for tickets from a VIP customer.
+`watchers` assigns watchers to a ticket with a comma-separated list of their @mention names. This cam be useful, for example, for assigning developers as watchers on tickets about bug reports or certain workers for tickets from a VIP customer.
 
 {% highlight cerb %}
 rule/bugs:
