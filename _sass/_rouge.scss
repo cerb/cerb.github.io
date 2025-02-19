@@ -42,8 +42,14 @@ figure.highlight {
     .gutter {
       border: 0;
       padding: 0;
-      border-right: 1px solid rgb(220, 220, 220);
+      border-right: 1px solid rgb(100, 100, 100);
       vertical-align: top;
+
+      > pre {
+        padding: 0 0.5em 0 0;
+        text-align: right;
+        color: rgb(120, 120, 120)
+      }
     }
 
     .code {
@@ -51,7 +57,7 @@ figure.highlight {
       padding: 0;
 
       > pre {
-        padding-bottom: 0;
+        padding: 0 0 0 0.75em;
       }
     }
   }
