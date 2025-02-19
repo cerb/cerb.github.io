@@ -12,7 +12,15 @@ window.addEventListener('load', function () {
         codeBlock.append(copyButton);
         
         copyButton.addEventListener('click', function () {
-            let code = codeBlock.querySelector('code').innerText.trim();
+            let code;
+            
+            // Handle code blocks with line numbers
+            if(codeBlock.querySelector('.rouge-table')) {
+                code = codeBlock.querySelector('.code > pre').innerText.trim();
+            } else {
+                code = codeBlock.querySelector('code').innerText.trim();
+            }
+            
             window.navigator.clipboard.writeText(code);
             
             copyButton.innerText = 'Copied';
