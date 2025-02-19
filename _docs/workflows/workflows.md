@@ -30,7 +30,7 @@ jumbotron:
 
 Here's a simple workflow KATA template that creates a new task using a configurable name and owner.
 
-{% highlight text %}
+{% highlight cerb %}
 {% raw %}
 workflow:
   name: example.newTask
@@ -89,9 +89,9 @@ extensions:
   translation:
     id:
     langs:
-      {lang_code}:
+      __lang_code__:
 records:
-  {type}:
+  __record_type__:
     deletionPolicy:
     fields:
     updatePolicy:

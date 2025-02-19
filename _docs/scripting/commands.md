@@ -134,7 +134,7 @@ Remove whitespace between HTML tags in the enclosed block of text with **spacele
 {% endraw %}
 {% endhighlight %}
 
-{% highlight text %}
+{% highlight html %}
 <div><span>This will all be on a single line.</span></div>
 {% endhighlight %}
 

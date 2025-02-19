@@ -102,7 +102,7 @@ You can set deeply nested keys in a single line using dot-notation:
 {% endraw %}
 {% endhighlight %}
 
-{% highlight text %}
+{% highlight json %}
 {
   "group": {
     "name": "Support",
@@ -129,7 +129,7 @@ Append items to an array by adding `.[]` to the key:
 {% endraw %}
 {% endhighlight %}
 
-{% highlight text %}
+{% highlight json %}
 {
   "group": {
     "name": "Support",
@@ -154,7 +154,7 @@ Append to nested arrays:
 {% endraw %}
 {% endhighlight %}
 
-{% highlight text %}
+{% highlight json %}
 [
   1,
   2,
