@@ -70,6 +70,7 @@ format:dictionaries
 | [gpg.keyinfo](/docs/data-queries/gpg/keyinfo/) | Return details about a PGP public key
 | [metrics.timeseries](/docs/data-queries/metrics/timeseries/) | Aggregates metrics statistics over a date range
 | [platform.extensions](/docs/data-queries/platform/extensions/) | Return a filterable and pageable list of plugin extensions for a given point
+| [platform.extension.points](/docs/data-queries/platform/points/) | Return a filterable and pageable list of platform extension points
 | [record.fields](/docs/data-queries/record/fields/) | Return a filterable and pageable list of fields from a record type
 | [record.types](/docs/data-queries/record/types/) | Return a filterable and pageable list of record types
 | [ui.icons](/docs/data-queries/ui/icons/) | Return a filterable and pageable list of icons
