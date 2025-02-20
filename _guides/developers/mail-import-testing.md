@@ -1,5 +1,5 @@
 ---
-title: Testing Inbound Email
+title: Test inbound email
 excerpt: Learn how to test email processing using the mail import tool.
 summary: This guide demonstrates how to test email processing using the 
   mail import tool. It provides a complete example message with HTML 
@@ -9,10 +9,11 @@ summary: This guide demonstrates how to test email processing using the
   attachment handling, making it easy to test email-related features 
   without affecting your production environment.
 permalink: /guides/developers/testing-inbound-email/
+social_image_url: /assets/images/guides/mail/import/social.png
 layout: integration
 topic: Developers
 jumbotron:
-    title: Testing Inbound Email
+    title: Test inbound email
     tagline: ""
     breadcrumbs:
     - label: Resources &raquo;

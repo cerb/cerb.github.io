@@ -25,6 +25,9 @@ You can use this page to import email messages in Internet Message Format[^imf].
 
 This is useful for testing and development, as well as importing an individual message directly from another system like Gmail.
 
+See:
+* [Guide: Test inbound email](/guides/developers/testing-inbound-email/)
+
 # References
 
 [^imf]: RFC-5322: Internet Message Format - <https://tools.ietf.org/html/rfc5322>

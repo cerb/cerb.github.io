@@ -68,13 +68,46 @@ __return:
 
 {% endtabs %}
 
-## Converting from JSON
+## Converting from JSON using @json
 
-Here is an example of using the [json_decode()](/docs/scripting/json/) function to convert JSON strings back into native data types.
+The [@json](/docs/kata/#json) annotation converts a JSON string back into native types.
 
 {% tabs json-encode-decode2 %}
 
 {% tab json-encode-decode2 automation %}
+{% highlight cerb %}
+{% raw %}
+start:
+  set:
+    json_string@text: {"name":"Joe Customer","order_id":12345}
+    decoded_data@json: {{json_string}}
+  
+  return:
+    customer: {{decoded_data.name}}
+    order_num@int: {{decoded_data.order_id}}
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% tab json-encode-decode2 output %}
+{% highlight yaml %}
+{% raw %}
+__return:
+  customer: Joe Customer
+  order_num: 12345
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% endtabs %}
+
+## Converting from JSON using json_decode
+
+Here is an example of using the [json_decode()](/docs/scripting/json/) function to convert JSON strings back into native data types.
+
+{% tabs json-encode-decode3 %}
+
+{% tab json-encode-decode3 automation %}
 {% highlight cerb %}
 {% raw %}
 start:
@@ -89,7 +122,7 @@ start:
 {% endhighlight %}
 {% endtab %}
 
-{% tab json-encode-decode2 output %}
+{% tab json-encode-decode3 output %}
 {% highlight yaml %}
 {% raw %}
 __return:

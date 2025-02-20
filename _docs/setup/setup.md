@@ -71,9 +71,9 @@ The page is divided into sections, each with a blue menu designated by a downwar
   - [Profiles](/docs/setup/storage/profiles/)
   - [Objects](/docs/setup/storage/objects/)
 - **Developers**
-  - Automation Logs
-  - Bot Scripting Tester
-  - Data Query Tester
+  - [Automation Logs](/docs/setup/developers/automation-logs/)
+  - [Automation Scripting Tester](/docs/setup/developers/scripting-tester/)
+  - [Data Query Tester](/docs/setup/developers/data-query-tester/)
   - Export Bots
   - Icon Reference
   - OAuth2 Token Generator
