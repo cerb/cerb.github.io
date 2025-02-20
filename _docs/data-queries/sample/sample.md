@@ -66,6 +66,87 @@ format:geojson
 <img src="/assets/images/docs/data-queries/data-queries-sample-geopoints.png" class="screenshot">
 </div>
 
+# sample.records
+
+`sample.records` data queries return simulated dictionary data. This can be used in things like [sheets](/docs/sheets/).
+
+### Inputs
+{: .no_toc}
+
+`records:` `key:value` formatted pairings for each dictionary.
+
+### Response Formats
+{: .no_toc}
+
+* **dictionaries** (default) returns a table-based format suitable for [sheets](/docs/sheets/) and API results.
+
+### Examples:
+
+{% tabs sample_records %}
+
+{% tab sample_records query %}
+
+{% highlight cerb %}
+{% raw %}
+type:sample.records
+records:(
+  new_york:(name:"New York" coordinates:[-73.935242, 40.73061])
+  toronto:(name:"Toronto" coordinates:[-79.3839347, 43.6534817])
+  vancouver:(name:"Vancouver" coordinates:[-123.116226, 49.246292])
+  los_angeles:(name:"Los Angeles" coordinates:[-118.243683, 34.052235])
+)
+format:dictionaries
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% tab sample_records response %}
+
+{% highlight json %}
+{
+  "data": {
+    "new_york": {
+      "name": "New York",
+      "coordinates": [
+        "-73.935242",
+        "40.73061"
+      ]
+    },
+    "toronto": {
+      "name": "Toronto",
+      "coordinates": [
+        "-79.3839347",
+        "43.6534817"
+      ]
+    },
+    "vancouver": {
+      "name": "Vancouver",
+      "coordinates": [
+        "-123.116226",
+        "49.246292"
+      ]
+    },
+    "los_angeles": {
+      "name": "Los Angeles",
+      "coordinates": [
+        "-118.243683",
+        "34.052235"
+      ]
+    }
+  },
+  "_": {
+    "type": "sample.records",
+    "format": "dictionaries"
+  }
+}
+{% endhighlight %}
+{% endtab %}
+{% endtabs %}
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/data-queries/data-queries-sample-records.png" class="screenshot">
+</div>
+
 # sample.timeseries
 
 `sample.timeseries` data queries return simulated time-series data.
