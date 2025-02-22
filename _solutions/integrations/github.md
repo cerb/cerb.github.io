@@ -96,6 +96,6 @@ Next, you need to create a new oauth app on GitHub for Cerb to connect to. Revie
 
 # Use the connected account in bot behaviors
 
-You can use the connected account you just created to access [GitHub's API](https://developer.github.com/v3/) from bot behaviors in Cerb.  This is typically accomplished using the **Execute HTTP Request** action from a bot, and selecting the connected account in the **Authentication:** section.
+You can use the connected account you just created to access [GitHub's API](https://developer.github.com/v3/) within automations in Cerb.  This is typically accomplished using the ``http.request`` command and using the connected account in the ``authentication`` field.
 
-You can import the [GitHub Bot](/packages/github-bot/) package for a working example.
+You can import the [GitHub Issues](/workflows/wgm.integrations.github/) workflow for a working example.
