@@ -1,22 +1,12 @@
 ---
-title: Send commands to a Cerb bot using Slack
+title: Send commands to a Cerb automations using Slack
 excerpt: This page provides a detailed guide on integrating Cerb with Slack using
   Slack's slash commands feature.
-summary: This page provides a detailed guide on integrating Cerb with Slack using
-  Slack's slash commands feature. It outlines the steps to enable the webhooks plugin
-  in Cerb, create a bot behavior for handling webhook events, and set up a new webhook
-  in Cerb. The guide also explains how to add a new slash command in Slack that triggers
-  the Cerb bot, allowing users to send commands like "/cerb" to interact with Cerb
-  through Slack. Additionally, it offers suggestions for expanding the bot's capabilities,
-  such as personalizing interactions and using natural language processing to understand
-  various user intents. The page serves as a comprehensive resource for setting up
-  and testing the integration, with potential for further customization and functionality
-  enhancements.
 permalink: /guides/integrations/slack/slash-commands/
 layout: integration
 topic: Integrations
 jumbotron:
-  title: Send commands to a Cerb bot using Slack
+  title: Send commands to a Cerb automations using Slack
   tagline: ""
   breadcrumbs:
   - label: Resources &raquo;
@@ -27,268 +17,285 @@ jumbotron:
     url: /resources/guides/#integrations
 ---
 
-## Introduction
+# Introduction
 {:.no_toc}
 
 Slack makes it very easy to interact with third-party apps and services using their _slash commands_ feature.
 
-To demonstrate this functionality, we'll add a new chat command named **/cerb** and instruct Slack to send those messages to a webhook[^webhook] that triggers a bot behavior in Cerb.
+To demonstrate this functionality, we'll add a new chat command named **/cerb** and instruct Slack to send those messages to a webhook[^webhook] that triggers automations in Cerb.
 
 * TOC
 {:toc}
 
-## Enable the webhooks plugin in Cerb
+# Installation
 
-When a channel member uses our new **/cerb** command, Slack will deliver their message as an HTTP POST[^http-post] request to a URL we provide.
+## Requirements
 
-You can use any web-based technology to process these POST requests and send a response back to Slack.
+[Create a Slack connected account](/solutions/integrations/slack/) if you haven't already.
 
-Cerb makes this process really simple with its [webhooks](/docs/webhooks/) [plugin](/docs/plugins/).  You can install it from the [Plugin Library](/docs/plugins/#library).  The plugin enables Cerb to listen for arbitrary webhook requests and route them to bots.  Bot behaviors can process a request, perform actions in Cerb or interact with third-party services, and then send an appropriate response back to the caller.
+## Slack
 
-## Create the bot behavior in Cerb
+In the Slack app, enter a channel (e.g. `#testing`) and click on the triple dot menu in the top right.
 
-Once the Webhooks plugin is enabled, you'll be able to create new bot behaviors on the **Webhook received** event.
+Select **Edit settings**.
 
-First, let's create a new bot to keep things organized.
+Select the **Integrations** tab.
 
-Navigate to **Search** >> **Bots** and click the **(+)** icon above the worklist to add a new record.
+Click on the **Add an App** button.
 
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/common/worklist-add.png" class="screenshot">
-</div>
+Click **Add** to the right of the **Cerb** app.
 
-Enter the following details:
+## Cerb
 
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/slack/slash-commands/create-va.png" class="screenshot">
-</div>
+Click **Search >> Workflows >> (+) >> Empty** and paste the following KATA into the large text box:
 
-(You can find a logo image at <https://brandfolder.com/slack>)
-
-Click the **Save Changes** button.
-
-Click on the name of your new bot in the yellow notification bubble that appears above the worklist to open its [card](/docs/cards/).
-
-On the card popup, click the **Behaviors** button:
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/slack/slash-commands/popup-behaviors-button.png" class="screenshot">
-</div>
-
-Then click **(+)** above the worklist:
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/common/worklist-add.png" class="screenshot">
-</div>
-
-Select **Import** at the top of the popup and paste the following behavior:
-
-{% highlight json %}
+{% highlight cerb %}
 {% raw %}
-{
-  "behavior":{
-    "title":"Message from \/cerb in Slack",
-    "is_disabled":false,
-    "is_private":false,
-    "event":{
-      "key":"event.webhook.received",
-      "label":"Webhook received"
-    },
-    "nodes":[
-      {
-        "type":"switch",
-        "title":"Command:",
-        "nodes":[
-          {
-            "type":"outcome",
-            "title":"help",
-            "params":{
-              "groups":[
-                {
-                  "any":0,
-                  "conditions":[
-                    {
-                      "condition":"http_param",
-                      "name":"text",
-                      "oper":"is",
-                      "value":"help"
-                    }
-                  ]
-                }
-              ]
-            },
-            "nodes":[
-              {
-                "type":"action",
-                "title":"Send help text",
-                "params":{
-                  "actions":[
-                    {
-                      "action":"set_http_header",
-                      "name":"Content-Type",
-                      "value":"application\/json"
-                    },
-                    {
-                      "action":"set_http_body",
-                      "value":"{\r\n    \"response_type\": \"in_channel\",\r\n    \"text\": \"You can use these commands:\",\r\n    \"attachments\": [\r\n        {\r\n             \"text\":\"*\/cerb help*: This message.\",\r\n            \"mrkdwn_in\": [\"text\"]\r\n        },\r\n        {\r\n            \"text\":\"*\/cerb hi*: Say hello!\",\r\n            \"mrkdwn_in\": [\"text\"]\r\n        }\r\n    ]\r\n}"
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          {
-            "type":"outcome",
-            "title":"hi",
-            "params":{
-              "groups":[
-                {
-                  "any":0,
-                  "conditions":[
-                    {
-                      "condition":"http_param",
-                      "name":"text",
-                      "oper":"is",
-                      "value":"hi"
-                    }
-                  ]
-                }
-              ]
-            },
-            "nodes":[
-              {
-                "type":"action",
-                "title":"Say \"Hello, &lt;user&gt;!\"",
-                "params":{
-                  "actions":[
-                    {
-                      "action":"set_http_header",
-                      "name":"Content-Type",
-                      "value":"application\/json"
-                    },
-                    {
-                      "action":"set_http_body",
-                      "value":"{\r\n    \"response_type\": \"in_channel\",\r\n    \"text\": \"Hello, {{http_params.user_name}}!\"\r\n}"
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          {
-            "type":"outcome",
-            "title":"...else",
-            "params":{
-              "groups":[
-                {
-                  "any":0,
-                  "conditions":[]
-                }
-              ]
-            },
-            "nodes":[
-              {
-                "type":"action",
-                "title":"Say \"I'm not sure...\"",
-                "params":{
-                  "actions":[
-                    {
-                      "action":"set_http_header",
-                      "name":"Content-Type",
-                      "value":"application\/json"
-                    },
-                    {
-                      "action":"set_http_body",
-                      "value":"{\r\n    \"response_type\": \"in_channel\",\r\n    \"text\": \"I'm not sure what you're asking. Try **\/cerb help**\",\r\n    \"mrkdwn_in\": [\"text\"]\r\n}"
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-}
+workflow:
+  name: wgm.integrations.slack.bot
+  version: 2025-02-26T02:23:08Z
+  description: A demo of integrations with a slack bot
+  website: https://cerb.ai/resources/workflows/
+  requirements:
+    cerb_version: >=11.0 <11.1
+    cerb_plugins: cerberusweb.core,
+  config:
+    chooser/account:
+      label: Slack Account
+      record_type: connected_account
+      multiple@bool: no
+records:
+  webhook_listener/slack:
+    fields:
+      name: Slack
+      guid: {{random_string(40)}}
+      automations_kata@raw:
+        automation/slack:
+          uri: cerb:automation:wgm.integrations.slack.webhook
+          disabled@bool: no
+    updatePolicy: name
+  automation/router:
+    fields:
+      name: wgm.integrations.slack.webhook
+      extension_id: cerb.trigger.webhook.respond
+      description@text:
+      script@raw:
+        start:
+          set/config:
+            config@json: {{cerb_workflow_config('wgm.integrations.slack.bot')|json_encode}}
+            
+          decision/route:
+            outcome/help:
+               if@bool: {{request_params.text == "help"}}
+               then:
+                set:
+                  message:
+                    channel: {{request_params.channel_name}}
+                    text@text:
+                      You can use the following commands:
+                    attachments:
+                      0:
+                        color: #888888
+                        fields:
+                          0:
+                            title: /cerb help
+                            value: This help text.
+                            short@bool: yes
+                          1:
+                            title: /cerb hello
+                            value: Say hello!
+                            short@bool: yes
+                          2:
+                            title: /cerb calendar
+                            value: Respond with your next calendar event.
+            outcome/hello:
+               if@bool: {{request_params.text == "hello"}}
+               then:
+                 set:
+                  message:
+                    channel: #{{request_params.channel_name}}
+                    text@text: 
+                      Hello!!
+                      How are you today, {{request_params.user_name}}?
+            outcome/calendar:
+              if@bool: {{request_params.text == "calendar"}}
+              then:
+                function/calendar:
+                  uri: cerb:automation:wgm.integrations.slack.calendar
+                  inputs:
+                    user: {{request_params.user_name}}
+                    channel: {{request_params.channel_name}}
+                  output: results
+            
+          
+          http.request:
+            output: response
+            inputs:
+              url: https://slack.com/api/chat.postMessage
+              method: POST
+              authentication: cerb:connected_account:{{config.account}}
+              headers@text:
+                Content-Type: application/json; charset=utf8
+              body: {{message|json_encode}}
+              
+                
+          
+          
+      policy_kata@raw:
+        commands:
+          http.request:
+            deny/url@bool: {{inputs.url is not prefixed ('https://slack.com/api/')}}
+            deny/method@bool: {{inputs.method not in ['POST']}}
+            allow@bool: yes
+          function:
+            deny/uri@bool: {{uri != 'cerb:automation:wgm.integrations.slack.calendar'}}
+            allow@bool: yes
+        
+  automation/calendar:
+    fields:
+      name: wgm.integrations.slack.calendar
+      extension_id: cerb.trigger.automation.function
+      description@text:
+      script@raw:
+        inputs:
+          text/user:
+            type: freeform
+            required@bool: yes
+          text/channel:
+            type: freeform
+            required@bool: yes
+            
+        start:
+          set/config:
+            config@json: {{cerb_workflow_config('wgm.integrations.slack.bot')|json_encode}}
+            
+          record.search/worker:
+            output: results_worker
+            inputs:
+              record_type: worker
+              record_query: slackId: {{inputs.user}}
+         
+          record.search/event:
+            output: results_calendar_event
+            inputs:
+              record_type: calendar_event
+              record_query: calendar:(owner.worker:{{results_worker.id}}) startDate:(since:"now" until:"+7 days") sort:[startDate] limit:1
+         
+          set/message:
+            message:
+              channel: #{{inputs.channel}}
+              text@text:
+                Your next calendar event is:
+              attachments:
+                0:
+                  color: #888888
+                  footer: {{results_calendar_event.record_url}}
+                  fields:
+                    0:
+                      title: Event
+                      value: {{results_calendar_event._label}}
+                      short@bool: yes
+                    1:
+                      title: Starts
+                      value: in {{results_calendar_event.date_start|date_pretty}}
+                      short@bool: yes
+                    2:
+                      title: Ends
+                      value: in {{results_calendar_event.date_end|date_pretty}}
+                      short@bool: yes
+              
+          http.request:
+            output: response
+            inputs:
+              url: https://slack.com/api/chat.postMessage
+              method: POST
+              authentication: cerb:connected_account:{{config.account}}
+              headers@text:
+                Content-Type: application/json; charset=utf8
+              body: {{message|json_encode}}
+              
+                
+          
+          
+      policy_kata@raw:
+        commands:
+          record.search:
+            deny/type@bool: {{inputs.record_type is not record type ('worker','calendar_event')}}
+            allow@bool: yes
+          http.request:
+            deny/url@bool: {{inputs.url is not prefixed ('https://slack.com/api/')}}
+            deny/method@bool: {{inputs.method not in ['POST']}}
+            allow@bool: yes
+  custom_field/slackname:
+    fields:
+      name: Slack ID
+      context: worker
+      uri: slackid
+      type: S
+      pos@int: 0
 {% endraw %}
 {% endhighlight %}
 
-You should now see the following:
+### Configure the workflow
 
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/slack/slash-commands/va-behavior.png" class="screenshot">
-</div>
+|---
+| Field |
+|-|-
+| **Slack Account:** | A Slack [connected account](/solutions/integrations/slack/).
 
-If so, we're ready to create the webhook that triggers this behavior.
+Click the **Continue** button twice.
 
-## Create the new webhook in Cerb
+### Fill the custom field
 
-Navigate to **Setup** &raquo; **Services** &raquo; **Webhooks**.
-
-Click the **(+)** icon in the blue bar of the worklist to create a new webhook.
-
-Enter the following details:
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/slack/slash-commands/create_webhook.png" class="screenshot">
-</div>
-
-Click the **Save Changes** button.
-
-A new webhook will be added to the worklist.  You can copy the **URL** to your clipboard, since we'll be using it in the next step.
+Click your name in the top right corner and select "my card". Click "Edit" and enter your Slack username in the "Slack ID" box at the bottom.
 
 ## Add the new command in Slack
 
-Now that we have our webhook listener and bot behavior in place, we're ready to hook them up in Slack.
+Now that we have our webhook listener and automations in place, we're ready to hook them up in Slack.
 
-Visit the [Slack App Directory](https://slack.com/apps/build) and click the **Make a Custom Integration** button on the right.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/slack/slash-commands/slack_custom_integration.png" class="screenshot">
-</div>
-
-Select **Slash Commands** from the menu.
+Open up your Slack App and select "Slash Commands" in the menu on the left.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/slack/slash-commands/slack_slash_commands.png" class="screenshot">
 </div>
 
-Name the command **/cerb** and click the green **Add Slash Command Integration** button.
-
-Scroll down to the **Integration Settings** section.
-
-Paste your webhook URL from the previous step in the **URL** field.
-
-Set the **Customize Name** to **Cerb**.
-
-For **Customize Icon**, you can save the following image and upload it:
+Click "Add a New Command", name the command **/cerb**, and paste the URL from your webhook in Cerb (Search >> Webhooks) in the "Request URL" field. Then hit the green "Save" button.
 
 <div class="cerb-screenshot">
-<img src="/assets/cerb_mascot.png" class="screenshot" style="width:250px;height:auto;">
+<img src="/assets/images/guides/slack/slash-commands/create_command.png" class="screenshot">
 </div>
-
-If desired, you can add the **/cerb** command to the **Autocomplete help text** in Slack.
-
-Finally, click the green **Save Integration** button at the bottom of the page.
 
 ## Test the new /cerb command in Slack
 
 Join one of your Slack channels and try out the new **/cerb** command.
 
+**/cerb help** will present you with a list of available commands.
+
 <div class="cerb-screenshot">
-<img src="/assets/images/guides/slack/slash-commands/bot_chat.png" class="screenshot">
+<img src="/assets/images/guides/slack/slash-commands/chat_help.png" class="screenshot">
+</div>
+
+**/cerb hello** will greet you by name.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/slack/slash-commands/chat_hello.png" class="screenshot">
+</div>
+
+If you filled in the "Slack ID" custom field on your profile in Cerb, **/cerb calendar** will tell you the next event on your calendar.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/slack/slash-commands/chat_calendar.png" class="screenshot">
 </div>
 
 ## Where to go from here
 
-Your friendly new bot doesn't do much yet, but you have a great starting point with endless possibilities.
+Your friendly new app doesn't do much yet, but you have a great starting point with endless possibilities.
 
-You could modify the behavior we created to do anything that bots are capable of (which is a lot): add events to calendars, create reminders, add tasks, report about Cerb metrics, trigger webhooks in other services, post to social media, etc.
+You could modify the automations we created to do anything that automations are capable of (which is a lot): add events to calendars, create reminders, add tasks, report about Cerb metrics, trigger webhooks in other services, post to social media, etc.
 
-You could create a custom fieldset on workers to store their Slack user name, and the bot can use that field to look up a message sender's worker record.  The bot can then personalize its actions to use their calendar, their tasks, and so on.
+Using that custom field we made, automations can look up a message sender's worker record.  From there, it can perform all sorts of personalized actions using the worker's tasks, calendars, and so on.
 
-You could use our [classifiers](/docs/classifiers/) feature to support natural language in your Slack bot.  A classifier can convert freeform text into _"intents"_.  For instance, instead of only supporting the _"hi"_ command, your bot could learn the various ways people _intend_ to **say\_hello**: _hi, hello, what's up?, how are you?, hola, allo, yo, hey, etc_.
+You could use our [classifiers](/docs/classifiers/) feature to support natural language in your Slack app.  A classifier can convert freeform text into _"intents"_.  For instance, instead of only supporting the _"hello"_ command, your app could learn the various ways people _intend_ to **say\_hello**: _hi, hello, what's up?, how are you?, hola, allo, yo, hey, etc_.
 
 ## References
 
