@@ -1,8 +1,8 @@
 ---
 title: 'Data Queries: Data Query Types'
-excerpt: This page provides information on how to use `data.query.types` data queries to
-  retrieve details about available data query types.
-permalink: /docs/data-queries/data/querytypes/
+excerpt: "`data.query.types` returns a list of available data query types."
+summary: "This page provides information on how to use `data.query.types` data queries to retrieve details about available data query types, including inputs, response formats, and examples. The `data.query.types` data query returns a dictionary containing metadata for all supported data query types, with options to include or exclude custom query types."
+permalink: /docs/data-queries/data/query-types/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
   title: Data Query Types
@@ -18,7 +18,7 @@ jumbotron:
 
 # data.query.types
 
-`data.query.types` data queries return details about all available types of data queries.
+`data.query.types` return details about the available data query types.
 
 ### Inputs
 {: .no_toc}

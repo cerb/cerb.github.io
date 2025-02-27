@@ -1,7 +1,7 @@
 ---
 title: 'Data Queries: Platform Extension Points'
-excerpt: This page provides information on how to use `platform.extensions.points` data queries to
-  retrieve details about available platform extension points.
+excerpt: platform.extensions.points data queries to retrieve details about available platform extension points.
+summary: "This page provides information on how to use `platform.extensions.points` data queries to retrieve details about available platform extension points. The query returns a filterable and pageable list of platform extension points, with optional filtering, limiting, and pagination capabilities. Examples of response formats include dictionaries suitable for sheets and API results, as well as raw JSON output."
 permalink: /docs/data-queries/platform/points/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
@@ -21,20 +21,17 @@ jumbotron:
 `platform.extension.points` data queries return a filterable and pageable list of platform extension points.
 
 ### Inputs
-{: .no_toc}
 
 |-|-
-| `filter:` | An optional keyword used to filter the results
-| `limit:` | The desired number of results per page
-| `page:` | The desired starting page (zero-based)
+| `filter:` | An optional keyword used to filter the results.
+| `limit:` | The desired number of results per page.
+| `page:` | The desired starting page (zero-based).
 
 ### Response Formats
-{: .no_toc}
 
 * **dictionaries** (default) returns a table-based format suitable for [sheets](/docs/sheets/) and API results.
 
 ### Examples
-{: .no_toc}
 
 #### Query: 
 

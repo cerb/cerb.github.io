@@ -58,23 +58,47 @@ Subject: <b>Do you accept purchase orders?</b>
 We'll be in contact shortly.
 {% endhighlight %}
 
-## Prompts
-
-Snippets also support prompts for information prior to their pasting. You can use these prompts to dynamically insert relevant values into the snippet or to be used in further scripting. You set up prompts in the "Prompts"
-section at the bottom of the snippet editor.
-
-There are three types of prompt: `text`, `picklist`, and `checkbox`.
+# Prompts
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/snippets/snippet-prompt.png" class="screenshot">
 </div>
 
-### Text
-`text` prompts provide a text box. You can insert any text you wish and use the set placeholder elsewhere in the snippet. The `multiple@bool` parameter determines whether it's a single or multi-line textbox.
+In snippets, **prompts** are used to dynamically modify content based on additional information from a worker in real-time. These responses available as placeholders in the snippet.
 
-### Picklist
-`picklist` prompts provide a customizable picklist with multiple options. You can insert the chosen option as text in the snippet or use the result for further scripting.
+Prompts are configured in the "Prompts" section at the bottom of the snippet editor. They are defined in [KATA](/docs/kata/).
 
-### Checkbox
+There are three prompt types: `text:`, `picklist:`, and `checkbox:`.
 
-`checkbox` prompts provide a checkbox for true/false style answers. `checkbox` prompts return a `1` for true and blank for false. This can be used in further scripting in the snippet.
+## Text
+
+`text:` gathers a free-form text value.
+
+|---
+|-|-
+| **label:** | A label to describe the prompt's value.
+| **default:** | A default value.
+| **required@bool:** | If true, this prompt must contain a value.
+| **params:multiple@bool:** | If true, multiples lines of text may be provided. Otherwise, the default is a single line of text.
+
+## Picklist
+
+`picklist:` gathers a text value from a dropdown with pre-defined options.
+
+|---
+|-|-
+| **label:** | A label to describe the prompt's value.
+| **default:** | A default value.
+| **required@bool:** | If true, this prompt must contain a value.
+| **params:options@csv:** | A `@list` or `@csv` list of possible options. 
+
+## Checkbox
+
+`checkbox:` gathers a true/false value from a toggle. The value will be `1` for true and blank otherwise. This can be used to include or exclude paragraphs in a larger snippet based on various conditions.
+
+|---
+|-|-
+| **label:** | A label to describe the prompt's value.
+| **default:** | A default value.
+| **required@bool:** | If true, this prompt must contain a value.
+

@@ -1,6 +1,7 @@
 ---
 title: GitHub Issues
 excerpt: Integrate Cerb with GitHub's API
+summary: "This page explains how to integrate Cerb with GitHub's API, allowing users to automate tasks such as creating GitHub issues and interacting with repositories. The workflow contains multiple automations for demonstrating integration between Cerb and GitHub's API, including functions for getting a list of user repositories and creating new GitHub issues. To configure the workflow, users are prompted to select the connected GitHub account they created earlier and can update the configuration at any time by editing the workflow profile. Once configured, users can test the integration by running the automation functions and interacting with the workflow's global menu. The page provides step-by-step instructions and screenshots for a comprehensive guide on how to integrate Cerb with GitHub's API."
 layout: integration
 topic: Workflows
 permalink: /workflows/wgm.integrations.github/
@@ -43,7 +44,7 @@ workflow:
   description: Integrate Cerb with Github
   website: https://cerb.ai/resources/workflows/
   requirements:
-    cerb_version: >=11.0 <11.1
+    cerb_version: >=11.0 <11.2
     cerb_plugins: cerberusweb.core, 
   config:
     chooser/account:
@@ -70,9 +71,10 @@ records:
               authentication: cerb:connected_account:{{config.account}}
             on_success:
               set:
-                response_body@json: {{http_response.body}}
+                response_json@json: {{http_response.body}}
+                http_response@json: null
               return:
-                body: {{response_body}}
+                repositories@key: response_json
       policy_kata@raw:
         commands:
           http.request:
@@ -141,6 +143,7 @@ records:
                  label: Repository
                  required@bool: yes
                  type: freeform
+                 placeholder: (example-repo/example-project)
                text/prompt_title:
                 label: Issue Title
                 required@bool: yes

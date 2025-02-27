@@ -7,7 +7,7 @@ summary: This guide walks you through setting up a Squid proxy server for routin
   configuration files, running the proxy container, testing the setup, and verifying the 
   integration works correctly.
 permalink: /guides/security/squid/
-social_image_url: /assets/images/guides/security/squid/social.png
+#social_image_url: /assets/images/guides/security/squid/social.png
 layout: integration
 topic: Security
 jumbotron:
@@ -103,36 +103,27 @@ curl -s -x "http://cerb_proxy:FJ\!3G\!ht3Y@localhost:8888" -H "Accept: applicati
 
 # Configuring Cerb
 
-## Update Configuration File
+## Update the configuration file
 
-For a Docker-based Cerb installation, you need to modify the configuration file to use the Squid proxy.
+### In production
 
-The file to modify is `cerb.config.php` in the `install/docker/_conf` directory.
+Edit the `framework.config.php` file and add the following line with the other `define()` statements at the top:
 
-Add this line: `define('DEVBLOCKS_HTTP_PROXY', 'http://cerb_proxy:YOUR_PASSWORD@host.docker.internal:8888');` 
-
-**Before** `require_once(DEVBLOCKS_PATH . 'framework.defaults.php');`
-
-Note: `host.docker.internal` is a special DNS name that resolves to the host machine from inside Docker containers.
-
-## Restart Cerb
-
-After modifying the configuration, restart Cerb to apply the changes.
-
-{% highlight bash %}
-cd /path/to/cerb/install/docker
-docker compose down
-docker compose up -d
+{% highlight php %}
+{% raw %}
+define('DEVBLOCKS_HTTP_PROXY', 'http://cerb_proxy:YOUR_PASSWORD@host.docker.internal:8888');
+{% endraw %}
 {% endhighlight %}
 
-You can check to see if the config file has updated.
+* Replace `YOUR_PASSWORD` with your Squid password.
+* Replace `host.docker.internal` with your Squid hostname.
 
-{% highlight bash %}
-docker exec cerb-demo-php-fpm-1 cat /var/www/html/framework.config.php | grep DEVBLOCKS_HTTP_PROXY
-{% endhighlight %}
+### In Docker
 
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/security/squid/squid-config-check.png" class="screenshot">
+For a Docker-based Cerb installation, you need to modify the configuration file to use the Squid proxy. This will be a  file like `cerb.config.php` in the `install/docker/_conf/` directory.
+
+<div class="cerb-box note">
+  <p><code>host.docker.internal</code> is a special DNS name that resolves to the host machine from inside Docker containers.</p>
 </div>
 
 # Verifying Integration

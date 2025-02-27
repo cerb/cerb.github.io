@@ -1,7 +1,7 @@
 ---
-title: 'Data Queries: Autocomplete Completions'
-excerpt: This page provides information on how to use `autocomplete.completions` data queries to
-  retrieve details about available autocomplete options on an automation or automation event.
+title: "Data Queries: Autocomplete Completions"
+excerpt: "autocomplete.completions data queries return autocomplete suggestions for a KATA document."
+summary: "This page provides information on how to use autocomplete.completions data queries to retrieve details about available autocomplete options on automations and automation events."
 permalink: /docs/data-queries/autocomplete/completions/
 social_image_url: /assets/images/docs/data-queries/data-queries.png
 toc:
@@ -10,30 +10,30 @@ jumbotron:
   title: Data Query Types
   tagline: ~
   breadcrumbs:
-  - label: Docs &raquo;
-    url: /docs/home/
-  - label: Data Queries &raquo;
-    url: /docs/data-queries/
+    - label: Docs &raquo;
+      url: /docs/home/
+    - label: Data Queries &raquo;
+      url: /docs/data-queries/
 ---
 
 # autocomplete.completions
 
-`autocomplete.completions` data queries return details about all available autocomplete options within the automations and automation events editors.
+`autocomplete.completions` data queries return autocomplete suggestions for a KATA document. 
+
+This functionality is used by various [interactions](/docs/interactions/) in [automation](/docs/automations/) editors.
 
 ### Inputs
-{: .no_toc}
 
 |-|-
-| `schema:` | The type of record. Either `automation` or `automation_event`
-| `params:` | `trigger:` The type of automation <br> `path:` Where in the tree to start
+| `schema:` | The type of record (`automation` or `automation_event`).
+| `params:trigger:` | The extension ID of the automation trigger (e.g. `cerb.trigger.automation.function`).
+| `params:path:` | The optional colon-delimited KATA key path to autocomplete (e.g. `start:http.request:inputs:`). This defaults to the root.
 
 ### Response Formats
-{: .no_toc}
 
 * **dictionaries** (default) returns a table-based format suitable for [sheets](/docs/sheets/) and API results.
 
 ### Examples
-{: .no_toc}
 
 {% tabs autocomplete %}
 

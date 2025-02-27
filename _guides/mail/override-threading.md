@@ -33,12 +33,12 @@ Email threading uses the `In-Reply-To:` and `References:` headers to connect rel
 
 However, there are scenarios where you might want to override this default behavior.
 
-* **Preventing replies to closed tickets** from reopening them.
+* Preventing replies to closed tickets from reopening them.
 * Creating new tickets for messages that would otherwise thread with existing tickets.
 * Merging multiple messages from the same sender into a single conversation.
 * Implementing custom threading rules based on specific business requirements.
 
-This guide demonstrates how to use `mail.filter` automations to control threading behavior by modifying these email headers.
+This guide demonstrates how to use [mail.filter](/docs/automations/events/mail.filter/) automations to control threading behavior by modifying these email headers.
 
 # Preventing replies to closed tickets
 

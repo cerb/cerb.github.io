@@ -68,12 +68,12 @@ format:geojson
 
 # sample.records
 
-`sample.records` data queries return simulated dictionary data. This can be used in things like [sheets](/docs/sheets/).
+`sample.records` data queries return simulated dictionary data. For instance, this can be used to mock data in [sheets](/docs/sheets/).
 
 ### Inputs
 {: .no_toc}
 
-`records:` `key:value` formatted pairings for each dictionary.
+The `records:()` key is a collection of arbitrary key/value dictionaries.
 
 ### Response Formats
 {: .no_toc}
@@ -81,6 +81,7 @@ format:geojson
 * **dictionaries** (default) returns a table-based format suitable for [sheets](/docs/sheets/) and API results.
 
 ### Examples:
+{: .no_toc}
 
 {% tabs sample_records %}
 
