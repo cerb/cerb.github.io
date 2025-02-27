@@ -34,6 +34,8 @@ module Rouge
                     token Punctuation, '}}'
                     value = post
                 end
+
+                token Str, value if value.length
             else
                 token Str, value
             end
@@ -80,6 +82,9 @@ module Rouge
                     token Punctuation, '}}'
                     value = post
                 end
+
+                token Str, value if value.length
+
             else
                 token Str, value
             end
