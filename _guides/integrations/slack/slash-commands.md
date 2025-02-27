@@ -84,62 +84,78 @@ records:
           set/config:
             config@json: {{cerb_workflow_config('wgm.integrations.slack.bot')|json_encode}}
             
-          decision/route:
-            outcome/help:
-               if@bool: {{request_params.text == "help"}}
-               then:
+          record.search/worker:
+            output: results_worker
+            inputs:
+              record_type: worker
+              record_query: slack.username:${username} limit:1
+              record_query_params:
+                username: {{request_params.user_name}}
+         
+          decision/found:
+            outcome/notfound:
+              if@bool: {{results_worker.id is empty}}
+              then:
                 set:
                   message:
                     channel: {{request_params.channel_name}}
                     text@text:
-                      You can use the following commands:
-                    attachments:
-                      0:
-                        color: #888888
-                        fields:
+                      Worker not found. Have you set your Slack username in your Cerb profile?
+            outcome/found:
+             then:
+               decision/route:
+                 outcome/help:
+                   if@bool: {{request_params.text == "help"}}
+                   then:
+                    set:
+                      message:
+                        channel: #{{request_params.channel_name}}
+                        text@text:
+                          You can use the following commands:
+                        attachments:
                           0:
-                            title: /cerb help
-                            value: This help text.
-                            short@bool: yes
-                          1:
-                            title: /cerb hello
-                            value: Say hello!
-                            short@bool: yes
-                          2:
-                            title: /cerb calendar
-                            value: Respond with your next calendar event.
-            outcome/hello:
-               if@bool: {{request_params.text == "hello"}}
-               then:
-                 set:
-                  message:
-                    channel: #{{request_params.channel_name}}
-                    text@text: 
-                      Hello!!
-                      How are you today, {{request_params.user_name}}?
-            outcome/calendar:
-              if@bool: {{request_params.text == "calendar"}}
-              then:
-                function/calendar:
-                  uri: cerb:automation:wgm.integrations.slack.calendar
-                  inputs:
-                    user: {{request_params.user_name}}
-                    channel: {{request_params.channel_name}}
-                  output: results
-            
-          
-          http.request:
-            output: response
-            inputs:
-              url: https://slack.com/api/chat.postMessage
-              method: POST
-              authentication: cerb:connected_account:{{config.account}}
-              headers@text:
-                Content-Type: application/json; charset=utf8
-              body: {{message|json_encode}}
-              
-                
-          
+                            color: #888888
+                            fields:
+                              0:
+                                title: /cerb help
+                                value: This help text.
+                                short@bool: yes
+                              1:
+                                title: /cerb hello
+                                value: Say hello!
+                                short@bool: yes
+                              2:
+                                title: /cerb calendar
+                                value: Respond with your next calendar event.
+                 outcome/hello:
+                   if@bool: {{request_params.text == "hello"}}
+                   then:
+                     set:
+                      message:
+                        channel: #{{request_params.channel_name}}
+                        text@text: 
+                          Hello!!
+                          How are you today, {{results_worker.first_name}}?
+                 outcome/key:
+                   if@bool: {{request_params.text == "calendar"}}
+                    then:
+                      function/calendar:
+                        uri: cerb:automation:wgm.integrations.slack.calendar
+                        inputs:
+                          worker: {{results_worker.id}}
+                          channel: {{request_params.channel_name}}
+                        output: results_function
+        
+        
+         http.request:
+           output: response
+           inputs:
+                url: https://slack.com/api/chat.postMessage
+                method: POST
+                authentication: cerb:connected_account:{{config.account}}
+                headers@text:
+                  Content-Type: application/json; charset=utf8
+                body: {{message|json_encode}}
           
       policy_kata@raw:
         commands:
@@ -150,7 +166,9 @@ records:
           function:
             deny/uri@bool: {{uri != 'cerb:automation:wgm.integrations.slack.calendar'}}
             allow@bool: yes
-        
+          record.search:
+            deny/type@bool: {{inputs.record_type is not record type ('worker')}}
+            allow@bool: yes
   automation/calendar:
     fields:
       name: wgm.integrations.slack.calendar
@@ -158,8 +176,8 @@ records:
       description@text:
       script@raw:
         inputs:
-          text/user:
-            type: freeform
+          record/worker:
+            record_type: worker
             required@bool: yes
           text/channel:
             type: freeform
@@ -169,41 +187,53 @@ records:
           set/config:
             config@json: {{cerb_workflow_config('wgm.integrations.slack.bot')|json_encode}}
             
-          record.search/worker:
-            output: results_worker
-            inputs:
-              record_type: worker
-              record_query: slackId: {{inputs.user}}
-         
           record.search/event:
             output: results_calendar_event
             inputs:
               record_type: calendar_event
-              record_query: calendar:(owner.worker:{{results_worker.id}}) startDate:(since:"now" until:"+7 days") sort:[startDate] limit:1
+              record_query@text:
+                calendar:(owner.worker:(id:${username}))
+                startDate:(since:"now" until:"+7 days") 
+                sort:startDate
+                limit:1
+              record_query_params:
+                username: {{inputs.worker.id}}
          
-          set/message:
-            message:
-              channel: #{{inputs.channel}}
-              text@text:
-                Your next calendar event is:
-              attachments:
-                0:
-                  color: #888888
-                  footer: {{results_calendar_event.record_url}}
-                  fields:
-                    0:
-                      title: Event
-                      value: {{results_calendar_event._label}}
-                      short@bool: yes
-                    1:
-                      title: Starts
-                      value: in {{results_calendar_event.date_start|date_pretty}}
-                      short@bool: yes
-                    2:
-                      title: Ends
-                      value: in {{results_calendar_event.date_end|date_pretty}}
-                      short@bool: yes
-              
+          decision/events:
+            outcome/found:
+              if@bool: {{results_calendar_event.id is not empty}}
+              then:
+                set/message:
+                  message:
+                    channel: #{{inputs.channel}}
+                    text@text:
+                      Your next calendar event is:
+                    attachments:
+                      0:
+                        color: #888888
+                        footer: {{results_calendar_event.record_url}}
+                        fields:
+                          0:
+                            title: Event
+                            value: {{results_calendar_event._label}}
+                            short@bool: yes
+                          1:
+                            title: Starts
+                            value: in {{results_calendar_event.date_start|date_pretty}}
+                            short@bool: yes
+                          2:
+                            title: Ends
+                            value: in {{results_calendar_event.date_end|date_pretty}}
+                            short@bool: yes
+            outcome/else:
+              then:
+                set/message:
+                  message:
+                    channel: #{{inputs.channel}}
+                    text@text:
+                      No upcoming calendar events found.
+                
+                
           http.request:
             output: response
             inputs:
@@ -220,18 +250,25 @@ records:
       policy_kata@raw:
         commands:
           record.search:
-            deny/type@bool: {{inputs.record_type is not record type ('worker','calendar_event')}}
+            deny/type@bool: {{inputs.record_type is not record type ('calendar_event')}}
             allow@bool: yes
           http.request:
             deny/url@bool: {{inputs.url is not prefixed ('https://slack.com/api/')}}
             deny/method@bool: {{inputs.method not in ['POST']}}
             allow@bool: yes
+  custom_fieldset/slack:
+    fields:
+      name: Slack
+      context: worker
+      owner__context: app
+      owner_id: 0
   custom_field/slackname:
     fields:
-      name: Slack ID
+      name: Username
       context: worker
       uri: slackid
       type: S
+      custom_fieldset_id: {{records.slack.id}}
       pos@int: 0
 {% endraw %}
 {% endhighlight %}
@@ -247,7 +284,7 @@ Click the **Continue** button twice.
 
 ### Fill the custom field
 
-Click your name in the top right corner and select "my card". Click "Edit" and enter your Slack username in the "Slack ID" box at the bottom.
+Click your name in the top right corner and select "my card". Click "Edit" and then "Add Fieldset" to add the Slack fieldset if it's not already there. Then enter your Slack username in the "Username" box at the bottom.
 
 ## Add the new command in Slack
 
