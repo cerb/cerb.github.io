@@ -1,10 +1,9 @@
 ---
 title: Workers
-excerpt: This page provides information on configuring workers in Cerb.
-summary: This page provides information on configuring workers in Cerb. It likely
-  includes options and settings for managing worker accounts, permissions, roles,
-  and other related configurations to optimize the workflow and productivity within
-  the Cerb platform.
+excerpt: This page provides information on Workers tab in Team Setup.
+summary: This page provides information on configuring workers within Cerb. It likely
+  includes instructions or options for setting up and managing workers, which are essential
+  for organizing users and permissions in the Cerb platform.
 permalink: /docs/setup/team/workers/
 toc:
   title: Workers
@@ -12,12 +11,18 @@ toc:
 jumbotron:
   title: Workers
   breadcrumbs:
-  - label: Docs &raquo;
-    url: /docs/home/
-  - label: Setup &raquo;
-    url: /docs/setup/
-  - label: Team &raquo;
-    url: /docs/setup/#team
+    - label: Docs &raquo;
+      url: /docs/home/
+    - label: Setup &raquo;
+      url: /docs/setup/
+    - label: Team &raquo;
+      url: /docs/setup/#team
 ---
 
-You can configure [workers](/docs/workers/) here.
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/setup/team/workers.png" class="screenshot">
+</div>
+
+The Workers tab provides you with a pageable and filterable worklist of all the [workers](/docs/workers/) you have in Cerb. From here you can view, manage, and add new workers. You can also click any entry in the list to go to its profile page.
+
+The same info and functionality can be accessed from **Search** >> **Workers**.
