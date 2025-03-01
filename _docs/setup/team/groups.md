@@ -1,6 +1,6 @@
 ---
 title: Groups
-excerpt: This page provides information on configuring groups within Cerb.
+excerpt: This page provides information on Groups tab in Team Setup.
 summary: This page provides information on configuring groups within Cerb. It likely
   includes instructions or options for setting up and managing groups, which are essential
   for organizing users and permissions in the Cerb platform.
@@ -19,4 +19,10 @@ jumbotron:
     url: /docs/setup/#team
 ---
 
-You can configure [groups](/docs/groups/) here.
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/setup/team/groups.png" class="screenshot">
+</div>
+
+The Groups tab provides you with a pageable and filterable worklist of all the [groups](/docs/groups/) you have set up in Cerb. From here you can view, manage, and add new groups. You can also click any entry in the list to go to its profile page.
+
+The same info and functionality can be accessed from **Search** >> **Groups**.
