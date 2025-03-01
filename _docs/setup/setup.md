@@ -44,6 +44,7 @@ The page is divided into sections, each with a blue menu designated by a downwar
   - [Custom Fields](/docs/setup/records/custom-fields/)
   - [Snippets](/docs/setup/records/snippets/)
 - **Team**
+  - [Configure](/docs/setup/team/configure/)
   - [Roles](/docs/setup/team/roles/)
   - [Groups](/docs/setup/team/groups/)
   - [Workers](/docs/setup/team/workers/)
