@@ -30,9 +30,64 @@ jumbotron:
 
 In this guide we'll walk through the process of linking Cerb to GitHub. You'll be able to use GitHub's full API from bots in Cerb to automate whatever you need.
 
-# Create an OAuth application at GitHub
+# GitHub Authentication
 
-Next, you need to create a new oauth app on GitHub for Cerb to connect to. Review the [GitHub OAuth documentation](https://developer.github.com/apps/building-integrations/setting-up-and-registering-oauth-apps/) additionally if needed.
+There are two alternative authentication methods when using the GitHub API.
+
+* **Personal Access Tokens:** A long-lived secret token for a specific GitHub user. Rotating the token must be done manually. This is the simplest option.
+
+* **OAuth2:** A short-lived access token and long-lived refresh token. This allows multiple GitHub users to link their account to Cerb. It requires a more involved OAuth application setup, but is the most secure option since secret rotation is automatic and indefinite.
+
+## Method 1: Personal access token
+
+### Create a personal access token at GitHub
+
+To create a personal access token, log into GitHub.
+
+Click on your profile image in the top right.
+
+Select **Settings** from the menu.
+
+Select **Developer Settings** in the left sidebar.
+
+In the **Personal access tokens** section, click the "Tokens (classic)" button and then **Generate new token**.
+
+Name the token, set an expiration period, and select the necessary scopes for your needs.
+
+Click **Generate token** and copy down the token you are provided.
+
+### Create a connected service in Cerb
+
+In Cerb, navigate to **Search >> Connected Services >> (+)** and select the **Build** tab at the top.
+
+|---
+| Field |
+|-|-
+| **Name:** | `GitHub (Access Token)`
+| **Type:** | Token Bearer
+| **Token Name:** | `Bearer`
+
+Click the **Save Changes** button.
+
+### Create a connected account in Cerb
+
+In Cerb, navigate to **Search >> Connected Accounts >> (+)**.
+
+Select **GitHub (Access Token)**.
+
+Choose any name (e.g. `GitHub (example-user)`) and URI (e.g. `GitHub-example-user`).
+
+In **Token:** paste the personal access token you generated at GitHub in the first section above.
+
+Click the **Save Changes** button.
+
+[Test](#use-the-connected-account-in-automations) the connected account in automations.
+
+## Method 2: OAuth2
+
+### Create an OAuth application at GitHub
+
+Review the [GitHub OAuth documentation](https://developer.github.com/apps/building-integrations/setting-up-and-registering-oauth-apps/) additionally if needed.
 
 1. Visit the [GitHub OAuth applications](https://github.com/settings/developers) settings page.
 
@@ -56,7 +111,7 @@ Next, you need to create a new oauth app on GitHub for Cerb to connect to. Revie
 
 1. Make a note of your **Client ID** and **Client Secret** for the next step.
 
-# Create the GitHub service in Cerb
+### Create the GitHub service in Cerb
 
 1. Navigate to **Search >> Connected Services**.
 
@@ -76,7 +131,7 @@ Next, you need to create a new oauth app on GitHub for Cerb to connect to. Revie
 
 1. Click the **Create** button.
 
-# Link the connected account to GitHub in Cerb
+### Link the connected account to GitHub in Cerb
 
 1. Navigate to **Search >> Connected Accounts**.
 
@@ -94,7 +149,7 @@ Next, you need to create a new oauth app on GitHub for Cerb to connect to. Revie
 
 1. Click the **Save Changes** button.
 
-# Use the connected account in bot behaviors
+# Use the connected account in automations
 
 You can use the connected account you just created to access [GitHub's API](https://developer.github.com/v3/) within automations in Cerb.  This is typically accomplished using the ``http.request`` command and using the connected account in the ``authentication`` field.
 
