@@ -44,6 +44,6 @@ Your API key should be available on your Tavily home page. Click the copy button
 	<img src="/assets/images/solutions/integrations/tavily/service-tavily.png" class="screenshot">
 	</div>
 
-1. Click the **Create** button.
+5. Click the **Create** button.
 
 
