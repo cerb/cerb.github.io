@@ -30,8 +30,6 @@ Your API key should be available on your Tavily home page. Click the copy button
 <img src="/assets/images/solutions/integrations/tavily/api-key.png" class="screenshot">
 </div>
 
-1. Click the **Register application** button.
-
 # Create the Tavily service in Cerb
 
 1. Navigate to **Search >> Connected Services**.
