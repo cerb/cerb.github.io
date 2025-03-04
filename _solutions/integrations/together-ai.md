@@ -24,7 +24,7 @@ In this guide we'll walk through the process of linking Cerb to Together.ai. You
 
 Log in to your [Together.ai Account](https://api.together.ai/) or sign up if you don't already have one.
 
-Click your user icon in the top right and click **Settings*.
+Click your user icon in the top right and click **Settings**.
 
 Choose **API Keys** from the left menu and copy your user key from the top of the page.
 
