@@ -1,6 +1,6 @@
 ---
 title: GitHub
-excerpt: A step-by-step guide for integrating Cerb and GitHub
+excerpt: A step-by-step guide for integrating Cerb and GitHub.
 summary: This page provides a comprehensive guide on integrating Cerb with GitHub,
   enabling the use of GitHub's API through Cerb's bots for automation purposes. It
   outlines the steps to create an OAuth application on GitHub, including registering
@@ -151,6 +151,6 @@ Review the [GitHub OAuth documentation](https://developer.github.com/apps/buildi
 
 # Use the connected account in automations
 
-You can use the connected account you just created to access [GitHub's API](https://developer.github.com/v3/) within automations in Cerb.  This is typically accomplished using the ``http.request`` command and using the connected account in the ``authentication`` field.
+You can use the connected account you just created to access [GitHub's API](https://developer.github.com/v3/) within automations in Cerb.  This is typically accomplished using the [http.request:](/docs/automations/commands/http.request/) command and using the connected account in the `authentication` field.
 
 You can import the [GitHub Issues](/workflows/wgm.integrations.github/) workflow for a working example.

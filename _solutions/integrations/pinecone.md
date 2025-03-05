@@ -1,7 +1,7 @@
 ---
 title: Pinecone
-excerpt: A step-by-step guide for integrating Cerb and Pinecone
-summary: 
+excerpt: A step-by-step guide for integrating Cerb and Pinecone.
+summary: This page provides a step-by-step guide for integrating Cerb and Pinecone, a search engine that uses LLM embeddings. To begin, create a Pinecone API key by logging into your account, selecting "API keys," and creating a new key named "cerb." Next, navigate to the Cerb Connected Services section, click the "+" icon, select Pinecone, paste the API key, and click "Create." The guide then provides an example of how to generate embeddings using Cerb automations, demonstrating how to send a POST request to Pinecone's API with authentication and specifying model parameters.
 layout: solution
 jumbotron:
   breadcrumbs:
@@ -42,4 +42,35 @@ Copy the API key for use later.
 
 5. Click the **Create** button.
 
+# Examples
 
+## Generate embeddings
+
+<https://docs.pinecone.io/guides/inference/generate-embeddings>
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/embeddings:
+    output: http_response
+    inputs:
+      method: POST
+      url: https://api.pinecone.io/embed
+      authentication: cerb:connected_account:pinecone
+      headers:
+        Content-Type: application/json
+        X-Pinecone-API-Version: 2025-01
+      body:
+        model: multilingual-e5-large
+        parameters:
+          input_type: passage
+          truncate: END
+        inputs:
+          0:
+            text: Cerb automates helpdesk inboxes and workflows. It has evolved continuously since 2002 based on the feedback of thousands of teams; from solo founders to 1,000+ person enterprises managing millions of customer requests.
+    on_success:
+      set:
+        response@json: {{http_response.body}}
+        http_response@json: null
+{% endraw %}
+{% endhighlight %}

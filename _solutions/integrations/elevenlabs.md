@@ -1,7 +1,7 @@
 ---
 title: ElevenLabs
-excerpt: A step-by-step guide for integrating Cerb and ElevenLabs
-summary: 
+excerpt: A step-by-step guide for integrating Cerb and ElevenLabs.
+summary: This page provides a step-by-step guide for integrating Cerb with ElevenLabs, a text-to-speech and speech-to-text API. To begin, create an ElevenLabs API key by logging in to your account, selecting "API Keys", and creating a new key, which can then be pasted into the Cerb service creation process. In Cerb, navigate to Connected Services > Create, select ElevenLabs, paste the API key, and click Create. The guide includes examples of how to use the ElevenLabs API in Cerb, such as listing voices and converting text to speech, demonstrating the full capabilities of the integration.
 layout: solution
 jumbotron:
   breadcrumbs:
@@ -40,4 +40,47 @@ Name the key, click **Create** and then **Copy to Clipboard**
 
 5. Click the **Create** button.
 
+# Examples
 
+## List voices
+
+<https://elevenlabs.io/docs/api-reference/voices/get-all>
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/listVoices:
+    output: http_response
+    inputs:
+      method: GET
+      url: https://api.elevenlabs.io/v1/voices
+      authentication: cerb:connected_account:elevenlabs
+{% endraw %}
+{% endhighlight %}
+
+## Text to speech
+
+<https://elevenlabs.io/docs/api-reference/text-to-speech/convert>
+
+{% highlight cerb %}
+{% raw %}
+start:
+  set:
+    voice_id: 9BWtsMINqrJLrRacOk9x
+  http.request/getVoices:
+    output: http_response
+    inputs:
+      method: POST
+      url: https://api.elevenlabs.io/v1/text-to-speech/{{voice_id}}?output_format=mp3_44100_128
+      authentication: cerb:connected_account:elevenlabs
+      headers:
+        Content-Type: application/json
+      body:
+        text: This is speech from a Cerb automation.
+        model_id: eleven_multilingual_v2
+      #response:
+      #  resource:
+      #    expires@date: 1 hour
+      
+{% endraw %}
+{% endhighlight %}
