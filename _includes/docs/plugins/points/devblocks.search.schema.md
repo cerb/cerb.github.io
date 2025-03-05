@@ -4,16 +4,16 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;devblocks.search.schema&quot;&gt;
-			&lt;id&gt;cerb.search.schema.address&lt;/id&gt;
-			&lt;name&gt;Email Addresses&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/dao/address.php&lt;/file&gt;
-				&lt;name&gt;Search_Address&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;devblocks.search.schema&quot;>
+			<id>cerb.search.schema.address</id>
+			<name>Email Addresses</name>
+			<class>
+				<file>api/dao/address.php</file>
+				<name>Search_Address</name>
+			</class>
+			<params>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

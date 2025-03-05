@@ -174,10 +174,10 @@ You do not need to escape the `#` character in values or text blocks.
 {% raw %}
 # This is a comment
 article:
-  title: Using #commands &lt;-- not a comment
+  title: Using #commands <-- not a comment
   format: markdown
   content@text:
-    # Heading &lt;-- not a comment
+    # Heading <-- not a comment
     
     Some **bold** text.
 {% endraw %}

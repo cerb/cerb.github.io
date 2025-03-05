@@ -163,10 +163,10 @@ Output:
 {% raw %}
 results:
   bytes@text:
-    &lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-    &lt;feedback&gt;
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <feedback>
       ...
-    &lt;/feedback&gt;
+    </feedback>
   uri: cerb:attachment:1234
   name: smtp.example.com!cerb.ai!1661234567!1667654321.xml.gz
   offset_from: 0

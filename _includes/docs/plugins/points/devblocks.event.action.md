@@ -4,22 +4,22 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;devblocks.event.action&quot;&gt;
-			&lt;id&gt;example.bot.action&lt;/id&gt;
-			&lt;name&gt;Example Bot Action&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/App.php&lt;/file&gt;
-				&lt;name&gt;BotAction_Example&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-				&lt;param key=&quot;label&quot; value=&quot;Example Bot Action&quot;/&gt;
-				&lt;param key=&quot;events&quot;&gt;
-					&lt;value&gt;
-						&lt;data key=&quot;*&quot;/&gt;
-					&lt;/value&gt;
-				&lt;/param&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;devblocks.event.action&quot;>
+			<id>example.bot.action</id>
+			<name>Example Bot Action</name>
+			<class>
+				<file>api/App.php</file>
+				<name>BotAction_Example</name>
+			</class>
+			<params>
+				<param key=&quot;label&quot; value=&quot;Example Bot Action&quot;/>
+				<param key=&quot;events&quot;>
+					<value>
+						<data key=&quot;*&quot;/>
+					</value>
+				</param>
+			</params>
+		</extension>
 {% endhighlight %}
 
 ### Params

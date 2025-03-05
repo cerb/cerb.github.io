@@ -544,10 +544,10 @@ records:
                 icon:
                   svg:
                     data_template@raw:
-                      &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 100 100"&gt;
-                        &lt;circle cx="50" cy="50" r="50" fill="{% if rating &gt; 8 %}#65952E{% elseif rating &gt; 5 %}#888888{% else %}#BE3B2A{% endif %}" /&gt;
-                        &lt;text x="50%" y="55%" font-size="80" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle"&gt;{{rating}}&lt;/text&gt;
-                      &lt;/svg&gt;
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="50" fill="{% if rating > 8 %}#65952E{% elseif rating > 5 %}#888888{% else %}#BE3B2A{% endif %}" />
+                        <text x="50%" y="55%" font-size="80" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">{{rating}}</text>
+                      </svg>
             text/comment:
             date/created_at:
               label: When
@@ -666,10 +666,10 @@ records:
                 icon:
                   svg:
                     data_template@raw:
-                      &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 100 100"&gt;
-                        &lt;circle cx="50" cy="50" r="50" fill="{% if rating &gt; 7 %}#65952E{% elseif rating &gt; 5 %}#65952E{% elseif rating &gt; 3 %}#888888{% elseif rating &gt; 1 %}#BE3B2A{% else %}#BE3B2A{% endif %}" /&gt;
-                        &lt;text x="50%" y="55%" font-size="80" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle"&gt;{{rating}}&lt;/text&gt;
-                      &lt;/svg&gt;
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="50" fill="{% if rating > 7 %}#65952E{% elseif rating > 5 %}#65952E{% elseif rating > 3 %}#888888{% elseif rating > 1 %}#BE3B2A{% else %}#BE3B2A{% endif %}" />
+                        <text x="50%" y="55%" font-size="80" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">{{rating}}</text>
+                      </svg>
             card/message_worker__context:
               label: Worker
               params:
@@ -795,10 +795,10 @@ records:
                 icon:
                   svg:
                     data_template@raw:
-                      &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 100 100"&gt;
-                        &lt;circle cx="50" cy="50" r="50" fill="{% if rating &gt; 7 %}#65952E{% elseif rating &gt; 5 %}#65952E{% elseif rating &gt; 3 %}#888888{% elseif rating &gt; 1 %}#BE3B2A{% else %}#BE3B2A{% endif %}" /&gt;
-                        &lt;text x="50%" y="55%" font-size="80" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle"&gt;{{rating}}&lt;/text&gt;
-                      &lt;/svg&gt;
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="50" fill="{% if rating > 7 %}#65952E{% elseif rating > 5 %}#65952E{% elseif rating > 3 %}#888888{% elseif rating > 1 %}#BE3B2A{% else %}#BE3B2A{% endif %}" />
+                        <text x="50%" y="55%" font-size="80" font-weight="bold" fill="white" text-anchor="middle" alignment-baseline="middle">{{rating}}</text>
+                      </svg>
             card/ticket__context:
               label: Ticket
               params:

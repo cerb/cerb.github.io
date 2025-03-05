@@ -4,17 +4,17 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerberusweb.ui.workspace.tab&quot;&gt;
-			&lt;id&gt;core.workspace.tab.dashboard&lt;/id&gt;
-			&lt;name&gt;Dashboard&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/uri/internal/dashboards.php&lt;/file&gt;
-				&lt;name&gt;WorkspaceTab_Dashboards&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-				&lt;param key=&quot;label&quot; value=&quot;dashboard&quot;/&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerberusweb.ui.workspace.tab&quot;>
+			<id>core.workspace.tab.dashboard</id>
+			<name>Dashboard</name>
+			<class>
+				<file>api/uri/internal/dashboards.php</file>
+				<name>WorkspaceTab_Dashboards</name>
+			</class>
+			<params>
+				<param key=&quot;label&quot; value=&quot;dashboard&quot;/>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

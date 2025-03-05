@@ -4,22 +4,22 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerberusweb.ui.workspace.widget.datasource&quot;&gt;
-			&lt;id&gt;core.workspace.widget.datasource.manual&lt;/id&gt;
-			&lt;name&gt;Manual Input&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/uri/internal/dashboards/widget_datasources.php&lt;/file&gt;
-				&lt;name&gt;WorkspaceWidgetDatasource_Manual&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-				&lt;param key=&quot;widgets&quot;&gt;
-					&lt;value&gt;
-						&lt;data key=&quot;core.workspace.widget.counter&quot;/&gt;
-						&lt;data key=&quot;core.workspace.widget.gauge&quot;/&gt;
-					&lt;/value&gt;
-				&lt;/param&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerberusweb.ui.workspace.widget.datasource&quot;>
+			<id>core.workspace.widget.datasource.manual</id>
+			<name>Manual Input</name>
+			<class>
+				<file>api/uri/internal/dashboards/widget_datasources.php</file>
+				<name>WorkspaceWidgetDatasource_Manual</name>
+			</class>
+			<params>
+				<param key=&quot;widgets&quot;>
+					<value>
+						<data key=&quot;core.workspace.widget.counter&quot;/>
+						<data key=&quot;core.workspace.widget.gauge&quot;/>
+					</value>
+				</param>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

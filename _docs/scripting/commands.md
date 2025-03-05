@@ -127,9 +127,9 @@ Remove whitespace between HTML tags in the enclosed block of text with **spacele
 {% highlight twig %}
 {% raw %}
 {% spaceless %}
-&lt;div&gt;
-  &lt;span&gt;This will all be on a single line.&lt;/span&gt;
-&lt;/div&gt;
+<div>
+  <span>This will all be on a single line.</span>
+</div>
 {% endspaceless %}
 {% endraw %}
 {% endhighlight %}

@@ -34,10 +34,10 @@ Use the [xml_xpath()](/docs/scripting/functions/#xml_xpath) function to extract 
 {% highlight twig %}
 {% raw %}
 {% set string_of_xml = 
-"&lt;response&gt;
-  &lt;client_id&gt;1&lt;/client_id&gt;
-  &lt;invoice_id&gt;123&lt;/invoice_id&gt;
-&lt;/response&gt;"
+"<response>
+  <client_id>1</client_id>
+  <invoice_id>123</invoice_id>
+</response>"
 -%}
 {% set xml = xml_decode(string_of_xml) %}
 {% set client_id = xml_xpath(xml, '//client_id')|first %}
@@ -59,10 +59,10 @@ You can define an XML namespace with the [xml_xpath_ns()](/docs/scripting/functi
 {% highlight twig %}
 {% raw %}
 {% set string_of_xml = 
-"&lt;response xmlns=\"http://www.example.com/api/\"&gt;
-  &lt;client_id&gt;1&lt;/client_id&gt;
-  &lt;invoice_id&gt;123&lt;/invoice_id&gt;
-&lt;/response&gt;"
+"<response xmlns=\"http://www.example.com/api/\">
+  <client_id>1</client_id>
+  <invoice_id>123</invoice_id>
+</response>"
 -%}
 {% set xml = xml_decode(string_of_xml) %}
 {% set xml = xml_xpath_ns(xml, 'ns', 'http://www.example.com/api/') %}
@@ -85,10 +85,10 @@ You can encode an object as XML with the [xml_encode()](/docs/scripting/function
 {% highlight twig %}
 {% raw %}
 {% set string_of_xml = 
-"&lt;response xmlns=\"http://www.example.com/api/\"&gt;
-  &lt;client_id&gt;1&lt;/client_id&gt;
-  &lt;invoice_id&gt;123&lt;/invoice_id&gt;
-&lt;/response&gt;"
+"<response xmlns=\"http://www.example.com/api/\">
+  <client_id>1</client_id>
+  <invoice_id>123</invoice_id>
+</response>"
 -%}
 {% set xml = xml_decode(string_of_xml) %}
 {{xml_encode(xml.client_id)}}	

@@ -4,16 +4,16 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerberusweb.calendar.datasource&quot;&gt;
-			&lt;id&gt;calendar.datasource.calendar&lt;/id&gt;
-			&lt;name&gt;Calendar&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/uri/internal/calendars/calendar_datasources.php&lt;/file&gt;
-				&lt;name&gt;CalendarDatasource_Calendar&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerberusweb.calendar.datasource&quot;>
+			<id>calendar.datasource.calendar</id>
+			<name>Calendar</name>
+			<class>
+				<file>api/uri/internal/calendars/calendar_datasources.php</file>
+				<name>CalendarDatasource_Calendar</name>
+			</class>
+			<params>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

@@ -4,16 +4,16 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerberusweb.mail.transport&quot;&gt;
-			&lt;id&gt;core.mail.transport.null&lt;/id&gt;
-			&lt;name&gt;Null&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/plugin.classes.php&lt;/file&gt;
-				&lt;name&gt;CerbMailTransport_Null&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerberusweb.mail.transport&quot;>
+			<id>core.mail.transport.null</id>
+			<name>Null</name>
+			<class>
+				<file>api/plugin.classes.php</file>
+				<name>CerbMailTransport_Null</name>
+			</class>
+			<params>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

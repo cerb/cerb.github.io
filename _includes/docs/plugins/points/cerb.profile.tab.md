@@ -4,16 +4,16 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerb.profile.tab&quot;&gt;
-			&lt;id&gt;cerb.profile.tab.dashboard&lt;/id&gt;
-			&lt;name&gt;Dashboard&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/uri/profiles.php&lt;/file&gt;
-				&lt;name&gt;ProfileTab_Dashboard&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerb.profile.tab&quot;>
+			<id>cerb.profile.tab.dashboard</id>
+			<name>Dashboard</name>
+			<class>
+				<file>api/uri/profiles.php</file>
+				<name>ProfileTab_Dashboard</name>
+			</class>
+			<params>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

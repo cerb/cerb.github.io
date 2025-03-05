@@ -145,9 +145,9 @@ if(null != res) {
   
   JSONParser parser = JSON.createParser(http_body);
   
-  Map&lt;String,Object&gt; results =
-    Map&lt;String,Object&gt;) JSON.deserializeUntyped(http_body);
+  Map<String,Object> results =
+    Map<String,Object>) JSON.deserializeUntyped(http_body);
   
   Integer count = (Integer) results.get('count');
-  List&lt;Object&gt; rows = (List&lt;Object&gt;) results.get('results');
+  List<Object> rows = (List<Object>) results.get('results');
 }{% endhighlight %}

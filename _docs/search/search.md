@@ -234,7 +234,7 @@ To filter by records with a value greater than the expression, use `>` or `>=`:
 
 {% highlight cerb %}
 {% raw %}
-age:&gt;21
+age:>21
 {% endraw %}
 {% endhighlight %}
 
@@ -245,7 +245,7 @@ To filter by records with a value less than the expression, use `<` or `<=`:
 
 {% highlight cerb %}
 {% raw %}
-order:&lt;=100
+order:<=100
 {% endraw %}
 {% endhighlight %}
 
@@ -678,7 +678,7 @@ You can mix boolean filter groups by using parentheses (`()`):
 
 {% highlight cerb %}
 {% raw %}
-(mimetype:image/png size:&gt;100KB) OR (mimetype:image/jpeg size:&lt;100KB)
+(mimetype:image/png size:>100KB) OR (mimetype:image/jpeg size:<100KB)
 {% endraw %}
 {% endhighlight %}
 

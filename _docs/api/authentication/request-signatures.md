@@ -83,7 +83,7 @@ secret\n
 The generated signature should be sent with the request as a header in the following format:
 
 {% highlight text %}
-Cerb-Auth: &lt;access_key&gt;:&lt;signature&gt;
+Cerb-Auth: <access_key>:<signature>
 {% endhighlight %}
 
 <div class="cerb-box note"><p>

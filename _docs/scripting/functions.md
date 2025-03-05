@@ -414,7 +414,7 @@ For instance, this function can be used to rewrite all links in an email templat
 {% highlight twig %}
 {% raw %}
 {% set html %}
-This is some &lt;b&gt;HTML&lt;/b&gt; with &lt;a href="https://cerb.ai/"&gt;links&lt;/a&gt;.
+This is some <b>HTML</b> with <a href="https://cerb.ai/">links</a>.
 {% endset %}
 {% set results = cerb_extract_uris(html) %}
 {{results|json_encode|json_pretty}}
@@ -454,7 +454,7 @@ To rewrite links:
 {% highlight twig %}
 {% raw %}
 {% set html %}
-This is some &lt;b&gt;HTML&lt;/b&gt; with &lt;a href="https://cerb.ai/"&gt;links&lt;/a&gt;.
+This is some <b>HTML</b> with <a href="https://cerb.ai/">links</a>.
 {% endset %}
 {% set results = cerb_extract_uris(html) %}
 {% set new_urls = results.tokens|map(
@@ -1358,21 +1358,21 @@ Return a single attribute from an XML node.
 {% highlight twig %}
 {% raw %}
 {% set xml_string %}
-&lt;?xml version = "1.0" encoding = "UTF-8"?&gt;
-&lt;Movies&gt;
-    &lt;Movie rating="R"&gt;
-        &lt;Title runtime="142"&gt;The Shawshank Redemption&lt;/Title&gt;
-        &lt;Genre&gt;Drama&lt;/Genre&gt;
-        &lt;Director&gt;
-            &lt;Name highratedmovie="The Mist"&gt;
-                &lt;First&gt;Frank&lt;/First&gt;
-                &lt;Last&gt;Darabont&lt;/Last&gt;
-            &lt;/Name&gt;
-        &lt;/Director&gt;
-        &lt;Studio&gt;Columbia Pictures&lt;/Studio&gt;
-        &lt;Year&gt;1994&lt;/Year&gt;
-    &lt;/Movie&gt;
-&lt;/Movies&gt;
+<?xml version = "1.0" encoding = "UTF-8"?>
+<Movies>
+    <Movie rating="R">
+        <Title runtime="142">The Shawshank Redemption</Title>
+        <Genre>Drama</Genre>
+        <Director>
+            <Name highratedmovie="The Mist">
+                <First>Frank</First>
+                <Last>Darabont</Last>
+            </Name>
+        </Director>
+        <Studio>Columbia Pictures</Studio>
+        <Year>1994</Year>
+    </Movie>
+</Movies>
 {% endset %}
 {% set xml = xml_decode(xml_string) %}
 {% set movie = xml_xpath(xml, '//Movie')|first %}
@@ -1403,33 +1403,33 @@ Return all attributes from an XML node.
 {% highlight twig %}
 {% raw %}
 {% set xml_string %}
-&lt;?xml version = "1.0" encoding = "UTF-8"?&gt;
-&lt;Movies&gt;
-    &lt;Movie rating="R"&gt;
-        &lt;Title runtime="177"&gt;The Godfather&lt;/Title&gt;
-        &lt;Genre&gt; Crime Drama &lt;/Genre&gt;
-        &lt;Director&gt;
-            &lt;Name&gt;
-                &lt;First&gt;Francis Ford&lt;/First&gt;
-                &lt;Last&gt;Coppola&lt;/Last&gt;
-            &lt;/Name&gt;
-        &lt;/Director&gt;
-        &lt;Studio&gt;Paramount Pictures&lt;/Studio&gt;
-        &lt;Year&gt;1972&lt;/Year&gt;
-    &lt;/Movie&gt;
-    &lt;Movie rating= "R"&gt;
-        &lt;Title runtime="142"&gt;The Shawshank Redemption&lt;/Title&gt;
-        &lt;Genre&gt;Drama&lt;/Genre&gt;
-        &lt;Director&gt;
-            &lt;Name highratedmovie="The Mist"&gt;
-                &lt;First&gt;Frank&lt;/First&gt;
-                &lt;Last&gt;Darabont&lt;/Last&gt;
-            &lt;/Name&gt;
-        &lt;/Director&gt;
-        &lt;Studio&gt;Columbia Pictures&lt;/Studio&gt;
-        &lt;Year&gt;1994&lt;/Year&gt;
-    &lt;/Movie&gt;
-&lt;/Movies&gt;
+<?xml version = "1.0" encoding = "UTF-8"?>
+<Movies>
+    <Movie rating="R">
+        <Title runtime="177">The Godfather</Title>
+        <Genre> Crime Drama </Genre>
+        <Director>
+            <Name>
+                <First>Francis Ford</First>
+                <Last>Coppola</Last>
+            </Name>
+        </Director>
+        <Studio>Paramount Pictures</Studio>
+        <Year>1972</Year>
+    </Movie>
+    <Movie rating= "R">
+        <Title runtime="142">The Shawshank Redemption</Title>
+        <Genre>Drama</Genre>
+        <Director>
+            <Name highratedmovie="The Mist">
+                <First>Frank</First>
+                <Last>Darabont</Last>
+            </Name>
+        </Director>
+        <Studio>Columbia Pictures</Studio>
+        <Year>1994</Year>
+    </Movie>
+</Movies>
 {% endset %}
 {% set xml = xml_decode(xml_string) %}
 {% set movies = xml_xpath(xml, '//Movie') %}
@@ -1458,10 +1458,10 @@ Use the [xml_xpath](#xml_xpath) function to extract values with XPath[^xpath] qu
 {% highlight twig %}
 {% raw %}
 {% set string_of_xml = 
-"&lt;response&gt;
-  &lt;client_id&gt;1&lt;/client_id&gt;
-  &lt;invoice_id&gt;123&lt;/invoice_id&gt;
-&lt;/response&gt;"
+"<response>
+  <client_id>1</client_id>
+  <invoice_id>123</invoice_id>
+</response>"
 -%}
 {% set xml = xml_decode(string_of_xml) %}
 {{xml_encode(xml)}}
@@ -1483,10 +1483,10 @@ You can encode an object as XML with the **xml_encode** function:
 {% highlight twig %}
 {% raw %}
 {% set string_of_xml = 
-"&lt;response xmlns=\"http://www.example.com/api/\"&gt;
-  &lt;client_id&gt;1&lt;/client_id&gt;
-  &lt;invoice_id&gt;123&lt;/invoice_id&gt;
-&lt;/response&gt;"
+"<response xmlns=\"http://www.example.com/api/\">
+  <client_id>1</client_id>
+  <invoice_id>123</invoice_id>
+</response>"
 -%}
 {% set xml = xml_decode(string_of_xml) %}
 {{xml_encode(xml.client_id)}}	
@@ -1504,10 +1504,10 @@ Use the **xml_xpath** function to extract values with XPath[^xpath] queries:
 {% highlight twig %}
 {% raw %}
 {% set string_of_xml = 
-"&lt;response&gt;
-  &lt;client_id&gt;1&lt;/client_id&gt;
-  &lt;invoice_id&gt;123&lt;/invoice_id&gt;
-&lt;/response&gt;"
+"<response>
+  <client_id>1</client_id>
+  <invoice_id>123</invoice_id>
+</response>"
 -%}
 {% set xml = xml_decode(string_of_xml) %}
 {% set client_id = xml_xpath(xml, '//client_id')|first %}
@@ -1529,10 +1529,10 @@ You can define an XML namespace with the **xml_xpath_ns** function:
 {% highlight twig %}
 {% raw %}
 {% set string_of_xml = 
-"&lt;response xmlns=\"http://www.example.com/api/\"&gt;
-  &lt;client_id&gt;1&lt;/client_id&gt;
-  &lt;invoice_id&gt;123&lt;/invoice_id&gt;
-&lt;/response&gt;"
+"<response xmlns=\"http://www.example.com/api/\">
+  <client_id>1</client_id>
+  <invoice_id>123</invoice_id>
+</response>"
 -%}
 {% set xml = xml_decode(string_of_xml) %}
 {% set xml = xml_xpath_ns(xml, 'ns', 'http://www.example.com/api/') %}
@@ -1560,10 +1560,10 @@ Remove elements from an XML document with an XPath query.
 {% highlight twig %}
 {% raw %}
 {% set string_of_xml =
-"&lt;response&gt;
-  &lt;client_id&gt;1&lt;/client_id&gt;
-  &lt;invoice_id&gt;123&lt;/invoice_id&gt;
-&lt;/response&gt;"
+"<response>
+  <client_id>1</client_id>
+  <invoice_id>123</invoice_id>
+</response>"
 -%}
 {% set xml = xml_decode(string_of_xml) %}
 {% set xml = xml_xpath_remove(xml, '//invoice_id') %}

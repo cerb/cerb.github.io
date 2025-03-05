@@ -159,7 +159,7 @@ You will see output as your data exports. A large dataset will be broken up into
             "sender": "a.costa@fiaflux.example",
             "response_time": 0,
             "hash_header_message_id": "3eda2ef8f4f0459c8e24b909e3068a8c54a2bfe6",
-            "headers": "To: noreply@cerb.example\nFrom: a.costa@fiaflux.example\nSubject: What is Cerb?\nDate: Fri, 12 Jun 2020 07:02:30 +0000\nContent-Type: text\/plain; charset=utf-8\nMessage-Id: &lt;demo1.msg1@cerb.example&gt;\n",
+            "headers": "To: noreply@cerb.example\nFrom: a.costa@fiaflux.example\nSubject: What is Cerb?\nDate: Fri, 12 Jun 2020 07:02:30 +0000\nContent-Type: text\/plain; charset=utf-8\nMessage-Id: <demo1.msg1@cerb.example>\n",
             "content": "My team needs something like Cerb. How should I pitch it to our management team?\n\n- Alessio\n"
         },
         {
@@ -171,7 +171,7 @@ You will see output as your data exports. A large dataset will be broken up into
             "sender": "noreply@cerb.example",
             "response_time": 5376,
             "hash_header_message_id": "b45e8e5fd1f07457d4c188bb4ae9bad421b27ff3",
-            "headers": "To: a.costa@fiaflux.example\nFrom: noreply@cerb.example\nSubject: Re: What is Cerb?\nDate: Fri, 12 Jun 2020 08:32:06 +0000\nContent-Type: text\/plain; charset=utf-8\nMessage-Id: &lt;demo1.msg2@cerb.example&gt;\n",
+            "headers": "To: a.costa@fiaflux.example\nFrom: noreply@cerb.example\nSubject: Re: What is Cerb?\nDate: Fri, 12 Jun 2020 08:32:06 +0000\nContent-Type: text\/plain; charset=utf-8\nMessage-Id: <demo1.msg2@cerb.example>\n",
             "content": "> How should I pitch [Cerb] to our management team?\n\nHi Alessio,\n\nCerb helps you build and automate workflows; it improves team collaboration; and it can replace several other apps and services to reduce your costs.\n\nYour team only needs a web browser to use it, and they have the freedom to work from anywhere.\n\nYou have the flexibility to run Cerb on your own servers or as a fully managed service in the cloud.\n",
             "worker_id": 2
         }

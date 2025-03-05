@@ -4,18 +4,18 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;usermeet.login.authenticator&quot;&gt;
-			&lt;id&gt;sc.login.auth.ldap&lt;/id&gt;
-			&lt;name&gt;LDAP&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/App.php&lt;/file&gt;
-				&lt;name&gt;ScLdapLoginAuthenticator&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-				&lt;param key=&quot;switcher_icon&quot; value=&quot;images/fugue/address-book.png&quot;/&gt;
-				&lt;param key=&quot;switcher_label&quot; value=&quot;Log in with LDAP&quot;/&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;usermeet.login.authenticator&quot;>
+			<id>sc.login.auth.ldap</id>
+			<name>LDAP</name>
+			<class>
+				<file>api/App.php</file>
+				<name>ScLdapLoginAuthenticator</name>
+			</class>
+			<params>
+				<param key=&quot;switcher_icon&quot; value=&quot;images/fugue/address-book.png&quot;/>
+				<param key=&quot;switcher_label&quot; value=&quot;Log in with LDAP&quot;/>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

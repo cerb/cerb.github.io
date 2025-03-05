@@ -348,7 +348,7 @@ Copy and paste the following behavior into the large text box:
                 "actions": [
                   {
                     "action": "send_script",
-                    "script": "&lt;script&gt;\r\nDevblocks.playAudioUrl('{{_behavior.polly_speech_url}}');\r\n&lt;/script&gt;"
+                    "script": "<script>\r\nDevblocks.playAudioUrl('{{_behavior.polly_speech_url}}');\r\n</script>"
                   }
                 ]
               }
@@ -570,9 +570,9 @@ In a conversational bot behavior, you can use the **Respond with script** action
 
 {% highlight html %}
 {% raw %}
-&lt;script&gt;
+<script>
 Devblocks.playAudioUrl('{{_behavior.polly_speech_url}}');
-&lt;/script&gt;
+</script>
 {% endraw %}
 {% endhighlight %}
 

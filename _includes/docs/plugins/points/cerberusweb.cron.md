@@ -4,15 +4,15 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerberusweb.cron&quot;&gt;
-			&lt;id&gt;cron.mailbox&lt;/id&gt;
-			&lt;name&gt;Mailbox Checker and Email Downloader&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/cron.classes.php&lt;/file&gt;
-				&lt;name&gt;MailboxCron&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params/&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerberusweb.cron&quot;>
+			<id>cron.mailbox</id>
+			<name>Mailbox Checker and Email Downloader</name>
+			<class>
+				<file>api/cron.classes.php</file>
+				<name>MailboxCron</name>
+			</class>
+			<params/>
+		</extension>
 {% endhighlight %}
 
 # Code

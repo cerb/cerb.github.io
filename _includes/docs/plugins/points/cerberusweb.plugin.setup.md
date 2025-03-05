@@ -4,17 +4,17 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerberusweb.plugin.setup&quot;&gt;
-			&lt;id&gt;wgmcampfire.setup&lt;/id&gt;
-			&lt;name&gt;Setup&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/App.php&lt;/file&gt;
-				&lt;name&gt;WgmCampfire_Setup&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-				&lt;param key=&quot;tab_label&quot; value=&quot;Campfire Credentials&quot;/&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerberusweb.plugin.setup&quot;>
+			<id>wgmcampfire.setup</id>
+			<name>Setup</name>
+			<class>
+				<file>api/App.php</file>
+				<name>WgmCampfire_Setup</name>
+			</class>
+			<params>
+				<param key=&quot;tab_label&quot; value=&quot;Campfire Credentials&quot;/>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

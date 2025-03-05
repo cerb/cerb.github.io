@@ -4,17 +4,17 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerberusweb.ui.workspace.page&quot;&gt;
-			&lt;id&gt;core.workspace.page.workspace&lt;/id&gt;
-			&lt;name&gt;Workspace&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/uri/internal/workspaces.php&lt;/file&gt;
-				&lt;name&gt;WorkspacePage_Workspace&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-				&lt;param key=&quot;label&quot; value=&quot;common.workspace&quot;/&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerberusweb.ui.workspace.page&quot;>
+			<id>core.workspace.page.workspace</id>
+			<name>Workspace</name>
+			<class>
+				<file>api/uri/internal/workspaces.php</file>
+				<name>WorkspacePage_Workspace</name>
+			</class>
+			<params>
+				<param key=&quot;label&quot; value=&quot;common.workspace&quot;/>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

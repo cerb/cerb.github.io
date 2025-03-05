@@ -1,22 +1,22 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerb.automation.trigger&quot;&gt;
-			&lt;id&gt;cerb.trigger.api.request&lt;/id&gt;
-			&lt;name&gt;api.request&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/automations/triggers/api.request.php&lt;/file&gt;
-				&lt;name&gt;AutomationTrigger_ApiRequest&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-				&lt;param key=&quot;description&quot; value=&quot;Invoke an automation from the REST API with OAuth tokens&quot;/&gt;
-				&lt;param key=&quot;features&quot;&gt;
-					&lt;value&gt;
-						&lt;data key=&quot;inputs&quot;/&gt;
-					&lt;/value&gt;
-				&lt;/param&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerb.automation.trigger&quot;>
+			<id>cerb.trigger.api.request</id>
+			<name>api.request</name>
+			<class>
+				<file>api/automations/triggers/api.request.php</file>
+				<name>AutomationTrigger_ApiRequest</name>
+			</class>
+			<params>
+				<param key=&quot;description&quot; value=&quot;Invoke an automation from the REST API with OAuth tokens&quot;/>
+				<param key=&quot;features&quot;>
+					<value>
+						<data key=&quot;inputs&quot;/>
+					</value>
+				</param>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

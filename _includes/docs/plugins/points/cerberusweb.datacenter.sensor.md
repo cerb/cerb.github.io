@@ -4,16 +4,16 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerberusweb.datacenter.sensor&quot;&gt;
-			&lt;id&gt;cerberusweb.datacenter.sensor.external&lt;/id&gt;
-			&lt;name&gt;External&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/App.php&lt;/file&gt;
-				&lt;name&gt;WgmDatacenterSensorsSensorExternal&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerberusweb.datacenter.sensor&quot;>
+			<id>cerberusweb.datacenter.sensor.external</id>
+			<name>External</name>
+			<class>
+				<file>api/App.php</file>
+				<name>WgmDatacenterSensorsSensorExternal</name>
+			</class>
+			<params>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

@@ -53,17 +53,17 @@ In the next large text box, paste the following template:
 
 {% highlight html %}
 {% raw %}
-&lt;div id="body"&gt;
-  &lt;img id="logo" src="https://cerb.ai/assets/cerb_logo.png"&gt;
-  &lt;div id="content"&gt;
+<div id="body">
+  <img id="logo" src="https://cerb.ai/assets/cerb_logo.png">
+  <div id="content">
     {{message_body}}
-  &lt;/div&gt;
-  &lt;div id="footer"&gt;
-    Sent from &lt;a href="https://cerb.ai/"&gt;Cerb&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+  </div>
+  <div id="footer">
+    Sent from <a href="https://cerb.ai/">Cerb</a>
+  </div>
+</div>
 
-&lt;style type="text/css"&gt;
+<style type="text/css">
 body {
   margin: 0;
   padding: 0;
@@ -114,7 +114,7 @@ blockquote {
 blockquote a {
   color: rgb(0, 128, 255);
 }
-&lt;/style&gt;
+</style>
 {% endraw %}
 {% endhighlight %}
 

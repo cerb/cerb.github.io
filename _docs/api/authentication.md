@@ -133,7 +133,7 @@ You will need the following information to generate an access token:
 Once you receive an access token, you need to include it in the HTTP headers of API requests:
 
 {% highlight text %}
-Authorization: Bearer &lt;YOUR-ACCESS-TOKEN&gt;
+Authorization: Bearer <YOUR-ACCESS-TOKEN>
 {% endhighlight %}
 
 {% comment %}

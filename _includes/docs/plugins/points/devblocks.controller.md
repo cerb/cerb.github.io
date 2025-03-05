@@ -4,17 +4,17 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;devblocks.controller&quot;&gt;
-			&lt;id&gt;core.controller.ui&lt;/id&gt;
-			&lt;name&gt;UI Controller&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/uri/ui.php&lt;/file&gt;
-				&lt;name&gt;Controller_UI&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-				&lt;param key=&quot;uri&quot; value=&quot;ui&quot;/&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;devblocks.controller&quot;>
+			<id>core.controller.ui</id>
+			<name>UI Controller</name>
+			<class>
+				<file>api/uri/ui.php</file>
+				<name>Controller_UI</name>
+			</class>
+			<params>
+				<param key=&quot;uri&quot; value=&quot;ui&quot;/>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

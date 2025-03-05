@@ -4,16 +4,16 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;devblocks.cache.engine&quot;&gt;
-			&lt;id&gt;devblocks.cache.engine.disk&lt;/id&gt;
-			&lt;name&gt;Filesystem&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/services/cache.php&lt;/file&gt;
-				&lt;name&gt;DevblocksCacheEngine_Disk&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;devblocks.cache.engine&quot;>
+			<id>devblocks.cache.engine.disk</id>
+			<name>Filesystem</name>
+			<class>
+				<file>api/services/cache.php</file>
+				<name>DevblocksCacheEngine_Disk</name>
+			</class>
+			<params>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

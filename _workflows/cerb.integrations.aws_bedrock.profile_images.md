@@ -320,7 +320,7 @@ records:
                           text/image:
                             params:
                               value_template@raw:
-                                &lt;img src="{{url}}" style="width:512px;height:auto;"&gt;
+                                <img src="{{url}}" style="width:512px;height:auto;">
                     textarea/prompt_text:
                       label: Describe the image:
                       default: A profile picture of a tech worker

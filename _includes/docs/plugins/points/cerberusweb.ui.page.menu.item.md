@@ -4,18 +4,18 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerberusweb.ui.page.menu.item&quot;&gt;
-			&lt;id&gt;wgmclickatell.setup.menu.plugins.clickatell&lt;/id&gt;
-			&lt;name&gt;Clickatell&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/App.php&lt;/file&gt;
-				&lt;name&gt;WgmClickatell_SetupPluginsMenuItem&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-				&lt;param key=&quot;page_id&quot; value=&quot;core.page.configuration&quot;/&gt;
-				&lt;param key=&quot;menu_id&quot; value=&quot;core.setup.menu.services&quot;/&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerberusweb.ui.page.menu.item&quot;>
+			<id>wgmclickatell.setup.menu.plugins.clickatell</id>
+			<name>Clickatell</name>
+			<class>
+				<file>api/App.php</file>
+				<name>WgmClickatell_SetupPluginsMenuItem</name>
+			</class>
+			<params>
+				<param key=&quot;page_id&quot; value=&quot;core.page.configuration&quot;/>
+				<param key=&quot;menu_id&quot; value=&quot;core.setup.menu.services&quot;/>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

@@ -4,16 +4,16 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerb.portal&quot;&gt;
-			&lt;id&gt;cerb.bots.portal&lt;/id&gt;
-			&lt;name&gt;Conversational Bot&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/App.php&lt;/file&gt;
-				&lt;name&gt;Portal_ConvoBotWidget&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerb.portal&quot;>
+			<id>cerb.bots.portal</id>
+			<name>Conversational Bot</name>
+			<class>
+				<file>api/App.php</file>
+				<name>Portal_ConvoBotWidget</name>
+			</class>
+			<params>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

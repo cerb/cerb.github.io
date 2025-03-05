@@ -4,16 +4,16 @@
 # Manifest
 
 {% highlight xml %}
-&lt;extension point=&quot;cerb.card.widget&quot;&gt;
-    &lt;id&gt;example.card.widget&lt;/id&gt;
-    &lt;name&gt;Card Widget&lt;/name&gt;
-    &lt;class&gt;
-        &lt;file&gt;api/widgets/cards/example.php&lt;/file&gt;
-        &lt;name&gt;CardWidget_Example&lt;/name&gt;
-    &lt;/class&gt;
-    &lt;params&gt;
-    &lt;/params&gt;
-&lt;/extension&gt;
+<extension point=&quot;cerb.card.widget&quot;>
+    <id>example.card.widget</id>
+    <name>Card Widget</name>
+    <class>
+        <file>api/widgets/cards/example.php</file>
+        <name>CardWidget_Example</name>
+    </class>
+    <params>
+    </params>
+</extension>
 {% endhighlight %}
 
 # Code

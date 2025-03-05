@@ -1,15 +1,15 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerb.resource.type&quot;&gt;
-			&lt;id&gt;cerb.resource.dataset.csv&lt;/id&gt;
-			&lt;name&gt;Dataset (.csv)&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/resources/types/cerb.resource.dataset.csv.php&lt;/file&gt;
-				&lt;name&gt;ResourceType_DatasetCsv&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params/&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerb.resource.type&quot;>
+			<id>cerb.resource.dataset.csv</id>
+			<name>Dataset (.csv)</name>
+			<class>
+				<file>api/resources/types/cerb.resource.dataset.csv.php</file>
+				<name>ResourceType_DatasetCsv</name>
+			</class>
+			<params/>
+		</extension>
 {% endhighlight %}
 
 # Code

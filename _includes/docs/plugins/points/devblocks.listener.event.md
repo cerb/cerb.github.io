@@ -4,21 +4,21 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;devblocks.listener.event&quot;&gt;
-			&lt;id&gt;calls.listener&lt;/id&gt;
-			&lt;name&gt;Event Listener&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/App.php&lt;/file&gt;
-				&lt;name&gt;CallsEventListener&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-				&lt;param key=&quot;events&quot;&gt;
-					&lt;value&gt;
-						&lt;data key=&quot;cron.maint&quot;/&gt;
-					&lt;/value&gt;
-				&lt;/param&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;devblocks.listener.event&quot;>
+			<id>calls.listener</id>
+			<name>Event Listener</name>
+			<class>
+				<file>api/App.php</file>
+				<name>CallsEventListener</name>
+			</class>
+			<params>
+				<param key=&quot;events&quot;>
+					<value>
+						<data key=&quot;cron.maint&quot;/>
+					</value>
+				</param>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

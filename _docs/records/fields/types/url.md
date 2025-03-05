@@ -27,7 +27,7 @@ A **URL** field contains a hyperlink to a web page in the format:
 
 {% highlight text %}
 {% raw %}
-&lt;protocol&gt;://&lt;host:port&gt;/&lt;path-to-resource&gt;
+<protocol>://<host:port>/<path-to-resource>
 {% endraw %}
 {% endhighlight %}	
 

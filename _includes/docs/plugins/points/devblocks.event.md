@@ -4,29 +4,29 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;devblocks.event&quot;&gt;
-			&lt;id&gt;example.bot.event&lt;/id&gt;
-			&lt;name&gt;Example bot event&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/events/example.php&lt;/file&gt;
-				&lt;name&gt;Event_Example&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-				&lt;param key=&quot;contexts&quot;&gt;
-					&lt;value&gt;
-						&lt;data key=&quot;cerberusweb.contexts.app&quot;/&gt;
-						&lt;data key=&quot;cerberusweb.contexts.group&quot;/&gt;
-						&lt;data key=&quot;cerberusweb.contexts.role&quot;/&gt;
-						&lt;data key=&quot;cerberusweb.contexts.worker&quot;/&gt;
-					&lt;/value&gt;
-				&lt;/param&gt;
-				&lt;param key=&quot;options&quot;&gt;
-					&lt;value&gt;
-						&lt;data key=&quot;visibility&quot;/&gt;
-					&lt;/value&gt;
-				&lt;/param&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;devblocks.event&quot;>
+			<id>example.bot.event</id>
+			<name>Example bot event</name>
+			<class>
+				<file>api/events/example.php</file>
+				<name>Event_Example</name>
+			</class>
+			<params>
+				<param key=&quot;contexts&quot;>
+					<value>
+						<data key=&quot;cerberusweb.contexts.app&quot;/>
+						<data key=&quot;cerberusweb.contexts.group&quot;/>
+						<data key=&quot;cerberusweb.contexts.role&quot;/>
+						<data key=&quot;cerberusweb.contexts.worker&quot;/>
+					</value>
+				</param>
+				<param key=&quot;options&quot;>
+					<value>
+						<data key=&quot;visibility&quot;/>
+					</value>
+				</param>
+			</params>
+		</extension>
 {% endhighlight %}
 
 ### Params

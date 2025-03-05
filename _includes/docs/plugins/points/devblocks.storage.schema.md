@@ -4,19 +4,19 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;devblocks.storage.schema&quot;&gt;
-			&lt;id&gt;cerberusweb.storage.schema.attachments&lt;/id&gt;
-			&lt;name&gt;Attachments&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/dao/attachment.php&lt;/file&gt;
-				&lt;name&gt;Storage_Attachments&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-				&lt;param key=&quot;active_storage_profile&quot; value=&quot;devblocks.storage.engine.disk&quot;/&gt;
-				&lt;param key=&quot;archive_storage_profile&quot; value=&quot;devblocks.storage.engine.disk&quot;/&gt;
-				&lt;param key=&quot;archive_after_days&quot; value=&quot;7&quot;/&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;devblocks.storage.schema&quot;>
+			<id>cerberusweb.storage.schema.attachments</id>
+			<name>Attachments</name>
+			<class>
+				<file>api/dao/attachment.php</file>
+				<name>Storage_Attachments</name>
+			</class>
+			<params>
+				<param key=&quot;active_storage_profile&quot; value=&quot;devblocks.storage.engine.disk&quot;/>
+				<param key=&quot;archive_storage_profile&quot; value=&quot;devblocks.storage.engine.disk&quot;/>
+				<param key=&quot;archive_after_days&quot; value=&quot;7&quot;/>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

@@ -4,16 +4,16 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;devblocks.listener.http&quot;&gt;
-			&lt;id&gt;core.listeners.tour&lt;/id&gt;
-			&lt;name&gt;Core Helpdesk Tour&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/listeners.classes.php&lt;/file&gt;
-				&lt;name&gt;ChCoreTour&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;devblocks.listener.http&quot;>
+			<id>core.listeners.tour</id>
+			<name>Core Helpdesk Tour</name>
+			<class>
+				<file>api/listeners.classes.php</file>
+				<name>ChCoreTour</name>
+			</class>
+			<params>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

@@ -4,23 +4,23 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;usermeet.sc.controller&quot;&gt;
-			&lt;id&gt;cerberusweb.kb.sc.controller&lt;/id&gt;
-			&lt;name&gt;Knowledgebase&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/sc/kb.php&lt;/file&gt;
-				&lt;name&gt;UmScKbController&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-				&lt;param key=&quot;uri&quot; value=&quot;kb&quot;/&gt;
-				&lt;param key=&quot;menu_title&quot; value=&quot;common.knowledgebase&quot;/&gt;
-				&lt;param key=&quot;options&quot;&gt;
-					&lt;value&gt;
-						&lt;data key=&quot;configurable&quot;/&gt;
-					&lt;/value&gt;
-				&lt;/param&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;usermeet.sc.controller&quot;>
+			<id>cerberusweb.kb.sc.controller</id>
+			<name>Knowledgebase</name>
+			<class>
+				<file>api/sc/kb.php</file>
+				<name>UmScKbController</name>
+			</class>
+			<params>
+				<param key=&quot;uri&quot; value=&quot;kb&quot;/>
+				<param key=&quot;menu_title&quot; value=&quot;common.knowledgebase&quot;/>
+				<param key=&quot;options&quot;>
+					<value>
+						<data key=&quot;configurable&quot;/>
+					</value>
+				</param>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

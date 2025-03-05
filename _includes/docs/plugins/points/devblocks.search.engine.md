@@ -4,16 +4,16 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;devblocks.search.engine&quot;&gt;
-			&lt;id&gt;devblocks.search.engine.elasticsearch&lt;/id&gt;
-			&lt;name&gt;Elasticsearch&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/services/search.php&lt;/file&gt;
-				&lt;name&gt;DevblocksSearchEngineElasticSearch&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;devblocks.search.engine&quot;>
+			<id>devblocks.search.engine.elasticsearch</id>
+			<name>Elasticsearch</name>
+			<class>
+				<file>api/services/search.php</file>
+				<name>DevblocksSearchEngineElasticSearch</name>
+			</class>
+			<params>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

@@ -277,7 +277,7 @@ This package creates a new ticket with one message. The message has both plainte
       "attach": [
         "message:{{{uid.message_1}}}"
       ],
-      "content": "This is the &lt;b&gt;HTML&lt;/b&gt; version of the message."
+      "content": "This is the <b>HTML</b> version of the message."
     },
     {
       "uid": "attachment_image",

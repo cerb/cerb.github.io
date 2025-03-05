@@ -473,13 +473,13 @@ Escape strings and variables with the following modes:
 {% highlight twig %}
 {% raw %}
 {{'This is "escaped" for Javascript'|escape('js')}}
-{{'This is "escaped" for &lt;b&gt;HTML&lt;/b&gt;'|e('html')}}
+{{'This is "escaped" for <b>HTML</b>'|e('html')}}
 {% endraw %}
 {% endhighlight %}
 
 {% highlight text %}
 This\x20is\x20\x22escaped\x22\x20for\x20Javascript
-This is &quot;escaped&quot; for &lt;b&gt;HTML&lt;/b&gt;
+This is &quot;escaped&quot; for <b>HTML</b>
 {% endhighlight %}
 
 ## filter
@@ -605,17 +605,18 @@ Convert HTML content to plain text.
 {% highlight twig %}
 {% raw %}
 {% set html %}
-&lt;p&gt;
-	This has &lt;b&gt;bold&lt;/b&gt; and &lt;u&gt;underlined&lt;/u&gt; text with &lt;a href="https://cerb.ai/"&gt;links&lt;/a&gt;.
-&lt;/p&gt;&lt;p&gt;
+<p>
+	This has <b>bold</b> and <u>underlined</u> text with <a href="https://cerb.ai/">links</a>.
+</p>
+<p>
 	List:
-	&lt;ul&gt;
-		&lt;li&gt;This&lt;/li&gt;
-		&lt;li&gt;is&lt;/li&gt;
-		&lt;li&gt;a&lt;/li&gt;
-		&lt;li&gt;list&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/p&gt;
+	<ul>
+		<li>This</li>
+		<li>is</li>
+		<li>a</li>
+		<li>list</li>
+	</ul>
+</p>
 {% endset %}
 {{html|html_to_text}}
 {% endraw %}
@@ -1504,7 +1505,7 @@ Remove HTML tags from a string.
 
 {% highlight twig %}
 {% raw %}
-{% set html = "This &lt;b&gt;string&lt;/b&gt; has &lt;b&gt;HTML&lt;/b&gt; tags!" %}
+{% set html = "This <b>string</b> has <b>HTML</b> tags!" %}
 {{html|striptags}}
 {% endraw %}
 {% endhighlight %}

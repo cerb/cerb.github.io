@@ -4,16 +4,16 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerberusweb.renderer.prebody&quot;&gt;
-			&lt;id&gt;timetracking.renderer.prebody&lt;/id&gt;
-			&lt;name&gt;Time Tracking Pre-body Renderer&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/App.php&lt;/file&gt;
-				&lt;name&gt;ChTimeTrackingPreBodyRenderer&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerberusweb.renderer.prebody&quot;>
+			<id>timetracking.renderer.prebody</id>
+			<name>Time Tracking Pre-body Renderer</name>
+			<class>
+				<file>api/App.php</file>
+				<name>ChTimeTrackingPreBodyRenderer</name>
+			</class>
+			<params>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

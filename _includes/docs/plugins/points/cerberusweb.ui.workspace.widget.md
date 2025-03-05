@@ -4,16 +4,16 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerberusweb.ui.workspace.widget&quot;&gt;
-			&lt;id&gt;core.workspace.widget.bot&lt;/id&gt;
-			&lt;name&gt;Bot Custom Widget&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/uri/internal/dashboards.php&lt;/file&gt;
-				&lt;name&gt;WorkspaceWidget_BotBehavior&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerberusweb.ui.workspace.widget&quot;>
+			<id>core.workspace.widget.bot</id>
+			<name>Bot Custom Widget</name>
+			<class>
+				<file>api/uri/internal/dashboards.php</file>
+				<name>WorkspaceWidget_BotBehavior</name>
+			</class>
+			<params>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

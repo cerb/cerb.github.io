@@ -1,21 +1,21 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerb.connected_service.provider&quot;&gt;
-			&lt;id&gt;cerb.service.provider.aws&lt;/id&gt;
-			&lt;name&gt;Amazon Web Services&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/service_providers/aws.php&lt;/file&gt;
-				&lt;name&gt;ServiceProvider_Aws&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-				&lt;param key=&quot;options&quot;&gt;
-					&lt;value&gt;
-						&lt;data key=&quot;accounts&quot;/&gt;
-					&lt;/value&gt;
-				&lt;/param&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerb.connected_service.provider&quot;>
+			<id>cerb.service.provider.aws</id>
+			<name>Amazon Web Services</name>
+			<class>
+				<file>api/service_providers/aws.php</file>
+				<name>ServiceProvider_Aws</name>
+			</class>
+			<params>
+				<param key=&quot;options&quot;>
+					<value>
+						<data key=&quot;accounts&quot;/>
+					</value>
+				</param>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

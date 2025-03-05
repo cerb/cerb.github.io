@@ -4,16 +4,16 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerb.custom_field&quot;&gt;
-			&lt;id&gt;example.plugin.custom_field&lt;/id&gt;
-			&lt;name&gt;Example Custom Field Type&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/App.php&lt;/file&gt;
-				&lt;name&gt;CustomField_Example&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerb.custom_field&quot;>
+			<id>example.plugin.custom_field</id>
+			<name>Example Custom Field Type</name>
+			<class>
+				<file>api/App.php</file>
+				<name>CustomField_Example</name>
+			</class>
+			<params>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

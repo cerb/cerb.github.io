@@ -81,7 +81,7 @@ You now have a private key (decrypt/sign) and a public key (encrypt/verify).
 						"data_query": "type:worklist.records\r\nof:gpg_public_key\r\nquery:(\r\n  id:{{record_id}}\r\n  limit:1\r\n  sort:[id]\r\n)\r\nformat:dictionaries",
 						"cache_secs": "",
 						"placeholder_simulator_yaml": "",
-						"sheet_yaml": "layout:\r\n  style: fieldset\r\n  headings: false\r\n  paging: false\r\ncolumns:\r\n- text:\r\n    key: _label\r\n    label: Label\r\n    params:\r\n      value_template: |\r\n        &lt;pre&gt;\r\n        {{key_text}}\r\n        &lt;/pre&gt;\r\n- "
+						"sheet_yaml": "layout:\r\n  style: fieldset\r\n  headings: false\r\n  paging: false\r\ncolumns:\r\n- text:\r\n    key: _label\r\n    label: Label\r\n    params:\r\n      value_template: |\r\n        <pre>\r\n        {{key_text}}\r\n        </pre>\r\n- "
 				}
 		}
 }

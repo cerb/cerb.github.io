@@ -38,30 +38,30 @@ You can simply start a paragraph with a `>` character and then use the `<CTRL>` 
 For instance, this long line of text:
 
 {% highlight text %}
-&gt; This is a sentence with details that are pertinent to the discussion. The second sentence here is a side-hand comment that doesn't contribute to the discussion. There is one other interesting detail at the end of the third sentence.
+> This is a sentence with details that are pertinent to the discussion. The second sentence here is a side-hand comment that doesn't contribute to the discussion. There is one other interesting detail at the end of the third sentence.
 {% endhighlight %}
 
 Is reflowed with the keyboard shortcut to:
 
 {% highlight text %}
-&gt; This is a sentence with details that are pertinent to the discussion. The
-&gt; second sentence here is a side-hand comment that doesn't contribute to the
-&gt; discussion. There is one other interesting detail at the end of the third
-&gt; sentence.
+> This is a sentence with details that are pertinent to the discussion. The
+> second sentence here is a side-hand comment that doesn't contribute to the
+> discussion. There is one other interesting detail at the end of the third
+> sentence.
 {% endhighlight %}
 
 If you delete that second sentence from the quote, you're left with:
 
 {% highlight text %}
-&gt; This is a sentence with details that are pertinent to the discussion. [...] interesting detail at the end of the third
-&gt; sentence.
+> This is a sentence with details that are pertinent to the discussion. [...] interesting detail at the end of the third
+> sentence.
 {% endhighlight %}
 
 You can then use the keyboard shortcut again for a nice short quoted block:
 
 {% highlight text %}
-&gt; This is a sentence with details that are pertinent to the discussion.
-&gt; [...] interesting detail at the end of the third sentence.
+> This is a sentence with details that are pertinent to the discussion.
+> [...] interesting detail at the end of the third sentence.
 {% endhighlight %}
 
 It takes a little bit of work on your part, but it makes things much easier for the reader.

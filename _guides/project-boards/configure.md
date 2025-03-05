@@ -69,9 +69,9 @@ First, let's make sure the **Project Boards** plugin is enabled:
 
 Navigate to **Search >> Project Boards**.
 
-	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/project-boards/configure/search-projects.png" class="screenshot">
-	</div>
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/project-boards/configure/search-projects.png" class="screenshot">
+</div>
 
 Click the **(+)** icon above the worklist.
 
@@ -117,18 +117,18 @@ Let's add some cards to the board.  Click on the **(+)** icon at the top of the 
 
 First, add a task for creating the project board:
 
-1. Click **(+)** at the top of the worklist to create a new task.
+* Click **(+)** at the top of the worklist to create a new task.
 
-1. Enter the following details:
+* Enter the following details:
 	* **Name:** `Create a project board`
 	* **Status:** open
 	* **Owner:** (click the **me** button)
 	
-	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/project-boards/configure/task-new.png" class="screenshot">
-	</div>
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/project-boards/configure/task-new.png" class="screenshot">
+</div>
 
-1. Click the **Save Changes** button on the card.
+*Click the **Save Changes** button on the card.
 
 Repeat the steps above to add a few other cards with a different **name**:
 
@@ -274,9 +274,9 @@ Paste the following template:
 {% raw %}
 {% if is_completed %}
 
-&lt;div style="font-size:120%;"&gt;
-	&lt;span class="glyphicons glyphicons-circle-ok" style="color:rgb(0,150,0);"&gt;&lt;/span&gt; Completed!
-&lt;/div&gt;
+<div style="font-size:120%;">
+	<span class="glyphicons glyphicons-circle-ok" style="color:rgb(0,150,0);"></span> Completed!
+</div>
 
 {% endif %}
 {% endraw %}

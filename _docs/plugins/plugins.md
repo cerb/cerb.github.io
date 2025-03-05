@@ -88,32 +88,32 @@ Here's a minimal manifest:
 
 {% highlight xml %}
 {% raw %}
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.devblocks.com/schema/plugin.xsd"&gt;
-	&lt;id&gt;example.plugin&lt;/id&gt;
-	&lt;name&gt;Plugin Name&lt;/name&gt;
-	&lt;description&gt;This explains what your plugin does.&lt;/description&gt;
-	&lt;author&gt;Webgroup Media, LLC.&lt;/author&gt;
-	&lt;version&gt;0.0.0&lt;/version&gt;
-	&lt;link&gt;https://cerb.example/path/to/docs&lt;/link&gt;
-	&lt;image&gt;plugin.png&lt;/image&gt;
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.devblocks.com/schema/plugin.xsd">
+	<id>example.plugin</id>
+	<name>Plugin Name</name>
+	<description>This explains what your plugin does.</description>
+	<author>Webgroup Media, LLC.</author>
+	<version>0.0.0</version>
+	<link>https://cerb.example/path/to/docs</link>
+	<image>plugin.png</image>
 
-	&lt;requires&gt;
-		&lt;app_version min="9.3" max="9.3.99" /&gt;
-		&lt;!--&lt;php_extension name="curl" /&gt;--&gt;
-	&lt;/requires&gt;
+	<requires>
+		<app_version min="11.0" max="11.0.99" />
+		<!--<php_extension name="curl" />-->
+	</requires>
 
-	&lt;dependencies&gt;
-		&lt;require plugin_id="cerberusweb.core" version="9.3.0" /&gt;
-	&lt;/dependencies&gt;
+	<dependencies>
+		<require plugin_id="cerberusweb.core" version="11.0.0" />
+	</dependencies>
 
-	&lt;patches/&gt;
-	&lt;class_loader/&gt;
-	&lt;event_points/&gt;
-	&lt;acl/&gt;
-	&lt;activity_points/&gt;
-	&lt;extensions/&gt;
-&lt;/plugin&gt;
+	<patches/>
+	<class_loader/>
+	<event_points/>
+	<acl/>
+	<activity_points/>
+	<extensions/>
+</plugin>
 {% endraw %}
 {% endhighlight %}
 
@@ -167,15 +167,15 @@ Each extension entry looks like:
 
 {% highlight xml %}
 {% raw %}
-&lt;extension point="com.example.extension_point"&gt;
-	&lt;id&gt;com.example.extension_name&lt;/id&gt;
-	&lt;name&gt;Extension name&lt;/name&gt;
-	&lt;class&gt;
-		&lt;file&gt;relative/path/to/file.php&lt;/file&gt;
-		&lt;name&gt;Class_Name&lt;/name&gt;
-	&lt;/class&gt;
-	&lt;params/&gt;
-&lt;/extension&gt;
+<extension point="com.example.extension_point">
+	<id>com.example.extension_name</id>
+	<name>Extension name</name>
+	<class>
+		<file>relative/path/to/file.php</file>
+		<name>Class_Name</name>
+	</class>
+	<params/>
+</extension>
 {% endraw %}
 {% endhighlight %}
 
@@ -236,12 +236,12 @@ Plugins can add new **events** to Cerb based on the contributed functionality. T
 
 {% highlight xml %}
 {% raw %}
-&lt;event_points&gt;
-	&lt;event id="example.event"&gt;
-		&lt;name&gt;Example Event&lt;/name&gt;
-		&lt;param key="field_name" /&gt;
-	&lt;/event&gt;
-&lt;/event_points&gt;
+<event_points>
+	<event id="example.event">
+		<name>Example Event</name>
+		<param key="field_name" />
+	</event>
+</event_points>
 {% endraw %}
 {% endhighlight %}
 
@@ -263,9 +263,9 @@ When you skip several versions of a plugin to upgrade to the latest version, Cer
 
 {% highlight xml %}
 {% raw %}
-&lt;patches&gt;
-	&lt;patch version="9.0.0" revision="1" file="patches/9.0.0.php" /&gt;
-&lt;/patches&gt;
+<patches>
+	<patch version="9.0.0" revision="1" file="patches/9.0.0.php" />
+</patches>
 {% endraw %}
 {% endhighlight %}
 
@@ -277,16 +277,16 @@ If your plugin introduces classes that will be referenced by code outside of the
 
 {% highlight xml %}
 {% raw %}
-&lt;class_loader&gt;
-	&lt;file path="api/dao/example.php"&gt;
-		&lt;class name="Context_Example" /&gt;
-		&lt;class name="DAO_Example" /&gt;
-		&lt;class name="Model_Example" /&gt;
-		&lt;class name="Plugin_Example" /&gt;
-		&lt;class name="SearchFields_Example" /&gt;
-		&lt;class name="View_Example" /&gt;
-	&lt;/file&gt;
-&lt;/class_loader&gt;
+<class_loader>
+	<file path="api/dao/example.php">
+		<class name="Context_Example" />
+		<class name="DAO_Example" />
+		<class name="Model_Example" />
+		<class name="Plugin_Example" />
+		<class name="SearchFields_Example" />
+		<class name="View_Example" />
+	</file>
+</class_loader>
 {% endraw %}
 {% endhighlight %}
 
@@ -296,9 +296,9 @@ Plugins can introduce new privileges into [roles](/docs/roles/).
 
 {% highlight xml %}
 {% raw %}
-&lt;acl&gt;
-	&lt;priv id="example.permission" label="acl.example.permission" /&gt;
-&lt;/acl&gt;
+<acl>
+	<priv id="example.permission" label="acl.example.permission" />
+</acl>
 {% endraw %}
 {% endhighlight %}
 
@@ -314,18 +314,18 @@ Plugins can add new text to the translation system with a `strings.xml` file in 
 
 {% highlight xml %}
 {% raw %}
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!DOCTYPE tmx PUBLIC "-//LISA OSCAR:1998//DTD for Translation Memory eXchange//EN" "tmx14.dtd"&gt;
-&lt;tmx version="1.4"&gt;
-	&lt;header creationtool="Cerb" creationtoolversion="9.0.7" srclang="en_US" adminlang="en" datatype="unknown" o-tmf="unknown" segtype="sentence" creationid="" creationdate=""/&gt;
-	&lt;body&gt;
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx PUBLIC "-//LISA OSCAR:1998//DTD for Translation Memory eXchange//EN" "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtool="Cerb" creationtoolversion="9.0.7" srclang="en_US" adminlang="en" datatype="unknown" o-tmf="unknown" segtype="sentence" creationid="" creationdate=""/>
+	<body>
 
-		&lt;tu tuid='example.plugin.string_name'&gt;
-			&lt;tuv xml:lang="en_US"&gt;&lt;seg&gt;Replace this with your own text.&lt;/seg&gt;&lt;/tuv&gt;
-		&lt;/tu&gt;
+		<tu tuid='example.plugin.string_name'>
+			<tuv xml:lang="en_US"><seg>Replace this with your own text.</seg></tuv>
+		</tu>
 		
-	&lt;/body&gt;
-&lt;/tmx&gt;
+	</body>
+</tmx>
 {% endraw %}
 {% endhighlight %}
 
@@ -387,9 +387,9 @@ Here's an example template:
 
 {% highlight smarty %}
 {% raw %}
-&lt;div&gt;
-	Hello, &lt;b&gt;{$name}&lt;/b&gt;!
-&lt;/div&gt;
+<div>
+	Hello, <b>{$name}</b>!
+</div>
 {% endraw %}
 {% endhighlight %}
 
@@ -399,13 +399,13 @@ We previously mentioned **events** when discussing [automations](/docs/automatio
 
 {% highlight xml %}
 {% raw %}
-&lt;activity_points&gt;
-	&lt;activity point="example.event"&gt;
-		&lt;param key="label_key" value="Example Event" /&gt;
-		&lt;param key="string_key" value="activities.example_event" /&gt;
-		&lt;param key="options" value="api_create, notifications" /&gt;
-	&lt;/activity&gt;
-&lt;/activity_points&gt;
+<activity_points>
+	<activity point="example.event">
+		<param key="label_key" value="Example Event" />
+		<param key="string_key" value="activities.example_event" />
+		<param key="options" value="api_create, notifications" />
+	</activity>
+</activity_points>
 {% endraw %}
 {% endhighlight %}
 

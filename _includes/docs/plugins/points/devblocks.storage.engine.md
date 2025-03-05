@@ -4,16 +4,16 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;devblocks.storage.engine&quot;&gt;
-			&lt;id&gt;devblocks.storage.engine.disk&lt;/id&gt;
-			&lt;name&gt;Disk&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/services/storage.php&lt;/file&gt;
-				&lt;name&gt;DevblocksStorageEngineDisk&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;devblocks.storage.engine&quot;>
+			<id>devblocks.storage.engine.disk</id>
+			<name>Disk</name>
+			<class>
+				<file>api/services/storage.php</file>
+				<name>DevblocksStorageEngineDisk</name>
+			</class>
+			<params>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

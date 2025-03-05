@@ -4,16 +4,16 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerb.profile.tab.widget&quot;&gt;
-			&lt;id&gt;cerb.profile.tab.widget.behavior.tree&lt;/id&gt;
-			&lt;name&gt;Behavior Tree&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/uri/profiles.php&lt;/file&gt;
-				&lt;name&gt;ProfileWidget_BehaviorTree&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerb.profile.tab.widget&quot;>
+			<id>cerb.profile.tab.widget.behavior.tree</id>
+			<name>Behavior Tree</name>
+			<class>
+				<file>api/uri/profiles.php</file>
+				<name>ProfileWidget_BehaviorTree</name>
+			</class>
+			<params>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

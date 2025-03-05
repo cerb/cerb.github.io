@@ -4,18 +4,18 @@
 # Manifest
 
 {% highlight xml %}
-		&lt;extension point=&quot;cerberusweb.page&quot;&gt;
-			&lt;id&gt;core.page.welcome&lt;/id&gt;
-			&lt;name&gt;Welcome Page&lt;/name&gt;
-			&lt;class&gt;
-				&lt;file&gt;api/uri/welcome.php&lt;/file&gt;
-				&lt;name&gt;ChWelcomePage&lt;/name&gt;
-			&lt;/class&gt;
-			&lt;params&gt;
-				&lt;param key=&quot;uri&quot; value=&quot;welcome&quot;/&gt;
-				&lt;param key=&quot;menutitle&quot; value=&quot;&quot;/&gt;
-			&lt;/params&gt;
-		&lt;/extension&gt;
+		<extension point=&quot;cerberusweb.page&quot;>
+			<id>core.page.welcome</id>
+			<name>Welcome Page</name>
+			<class>
+				<file>api/uri/welcome.php</file>
+				<name>ChWelcomePage</name>
+			</class>
+			<params>
+				<param key=&quot;uri&quot; value=&quot;welcome&quot;/>
+				<param key=&quot;menutitle&quot; value=&quot;&quot;/>
+			</params>
+		</extension>
 {% endhighlight %}
 
 # Code

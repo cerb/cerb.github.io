@@ -38,21 +38,21 @@ The TMX format is pretty simple.  Each `<tu>` tag defines a new phrase with the 
 For example:
 
 {% highlight xml %}
-&lt;tmx&gt;
-	&lt;header creationtool="Cerb" creationtoolversion="8.1.4" srclang="en_US" /&gt;
-	&lt;body&gt;
-	 	&lt;!-- ... --&gt;
-		&lt;tu tuid="common.notspam"&gt;
-			&lt;tuv xml:lang="en_US"&gt;
-				&lt;seg&gt;not spam&lt;/seg&gt;
-			&lt;/tuv&gt;
-			&lt;tuv xml:lang="de_DE"&gt;
-				&lt;seg&gt;Kein Spam&lt;/seg&gt;
-			&lt;/tuv&gt;
-		&lt;/tu&gt;
-		&lt;!-- ... --&gt;
-	&lt;/body&gt;
-&lt;/tmx&gt;
+<tmx>
+	<header creationtool="Cerb" creationtoolversion="8.1.4" srclang="en_US" />
+	<body>
+	 	<!-- ... -->
+		<tu tuid="common.notspam">
+			<tuv xml:lang="en_US">
+				<seg>not spam</seg>
+			</tuv>
+			<tuv xml:lang="de_DE">
+				<seg>Kein Spam</seg>
+			</tuv>
+		</tu>
+		<!-- ... -->
+	</body>
+</tmx>
 {% endhighlight %}
 
 We store each translated language in its own TMX file, so there's only one `<tuv>` child within each `<tu>` phrase.
