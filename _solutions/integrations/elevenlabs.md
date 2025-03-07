@@ -2,6 +2,7 @@
 title: ElevenLabs
 excerpt: A step-by-step guide for integrating Cerb and ElevenLabs.
 summary: This page provides a step-by-step guide for integrating Cerb with ElevenLabs, a text-to-speech and speech-to-text API. To begin, create an ElevenLabs API key by logging in to your account, selecting "API Keys", and creating a new key, which can then be pasted into the Cerb service creation process. In Cerb, navigate to Connected Services > Create, select ElevenLabs, paste the API key, and click Create. The guide includes examples of how to use the ElevenLabs API in Cerb, such as listing voices and converting text to speech, demonstrating the full capabilities of the integration.
+social_image_url: /assets/images/solutions/integrations/cerb-and-elevenlabs.png
 layout: solution
 jumbotron:
   breadcrumbs:
