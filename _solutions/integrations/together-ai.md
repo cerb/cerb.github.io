@@ -2,6 +2,7 @@
 title: Together.ai
 excerpt: A step-by-step guide for integrating Cerb and Together AI.
 summary: This page provides a step-by-step guide for integrating Cerb with Together.ai, a language model integration option. To start, users need to obtain a Together.ai API key by logging in to their account, navigating to Settings > API Keys, and copying the user key. Next, they must create a new connected service in Cerb by searching for "Together.ai", selecting it from the list, and pasting the copied API key. The guide also includes an example of how to use Together.ai with Cerb's chat completions feature, showcasing how to make a POST request to the Together.ai API with authentication and headers.
+social_image_url: /assets/images/solutions/integrations/cerb-and-togetherai.png
 layout: solution
 jumbotron:
   breadcrumbs:

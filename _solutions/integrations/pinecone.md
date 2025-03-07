@@ -2,6 +2,7 @@
 title: Pinecone
 excerpt: A step-by-step guide for integrating Cerb and Pinecone.
 summary: This page provides a step-by-step guide for integrating Cerb and Pinecone, a search engine that uses LLM embeddings. To begin, create a Pinecone API key by logging into your account, selecting "API keys," and creating a new key named "cerb." Next, navigate to the Cerb Connected Services section, click the "+" icon, select Pinecone, paste the API key, and click "Create." The guide then provides an example of how to generate embeddings using Cerb automations, demonstrating how to send a POST request to Pinecone's API with authentication and specifying model parameters.
+social_image_url: /assets/images/solutions/integrations/cerb-and-pinecone.png
 layout: solution
 jumbotron:
   breadcrumbs:
