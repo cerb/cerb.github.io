@@ -1,9 +1,7 @@
 ---
 title: Workers
 excerpt: This page provides information on Workers tab in Team Setup.
-summary: This page provides information on configuring workers within Cerb. It likely
-  includes instructions or options for setting up and managing workers, which are essential
-  for organizing users and permissions in the Cerb platform.
+summary: "This page provides information on configuring workers within Cerb, outlining options for setting up and managing workers, which are essential for organizing users and permissions in the platform. The Workers tab offers a pageable and filterable worklist of all workers, allowing users to view, manage, and add new staff members, with access to individual profile pages through clickable entries."
 permalink: /docs/setup/team/workers/
 toc:
   title: Workers

@@ -1,6 +1,7 @@
 ---
 title: Dropbox Integration
 excerpt: A workflow demonstrating integration between Cerb and Dropbox.
+summary: "This page contains a workflow for integrating Cerb with Dropbox, a service for storing, sharing, and accessing files across devices."
 social_image_url: /assets/images/solutions/integrations/dropbox/cerb-and-dropbox.png
 layout: integration
 topic: Workflows

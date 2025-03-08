@@ -1,6 +1,7 @@
 ---
 title: 'Change editor line height'
 excerpt: Change any code editors maximum line height with Ctrl+Shift.
+summary: "This page explains how to change the maximum line height of any code editor using Ctrl+Shift+Up and Ctrl+Shift+Down, with the code editor only growing as tall as there are lines in the document, demonstrated by screenshots of short and long editors."
 layout: integration
 author: The Cerb Team
 permalink: /tips/change-editor-height/

@@ -1,6 +1,7 @@
 ---
 title: 'More efficient OR queries'
 excerpt: Ways to make search queries more efficient when using OR．
+summary: "This page discusses ways to make search queries more efficient when using the OR operator in Cerb, a tool for managing helpdesk operations. The author suggests that where and how you use the OR operator can impact efficiency, providing an example of how rewriting a query from `status:o (someFilter:1 OR otherFilter:2)` to `(status:o someFilter:1) OR (status:o otherFilter:2)` can improve results by reducing the scope of redundant filters."
 layout: integration
 author: The Cerb Team
 permalink: /tips/more-efficient-queries/

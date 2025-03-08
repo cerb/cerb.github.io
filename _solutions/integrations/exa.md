@@ -1,6 +1,7 @@
 ---
 title: Exa
 excerpt: A step-by-step guide for integrating Cerb and Exa.
+summary: "This page provides a step-by-step guide for integrating Cerb with Exa, a full-text search API. To begin, users need to obtain an Exa API key by logging into their Exa account and navigating to the API keys section. They then create a new service in Cerb's connected services list, selecting Exa and pasting the copied API key. The guide includes examples of how to use the Exa API for search, extract content from URLs, and provide answers to user queries, providing a comprehensive integration solution between Cerb and Exa."
 social_image_url: /assets/images/solutions/integrations/cerb-and-exa.png
 layout: solution
 jumbotron:

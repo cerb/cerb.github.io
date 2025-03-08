@@ -1,6 +1,7 @@
 ---
 title: "Chart: Time Series - Dashboard Widgets"
 excerpt: This page provides a overview of the time series chart widget.
+summary: "This page provides an overview of the Time Series chart widget, which displays a chart designed to visualize changes in data over time. The widget offers various configuration options, including chart format (line, spline, area, bar), axis label customization, legend display, and conditional hiding using a `hidden@bool:` statement."
 permalink: /docs/dashboards/widgets/timeseries/
 jumbotron:
   title:  "Chart: Time Series"

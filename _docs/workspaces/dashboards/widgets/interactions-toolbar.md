@@ -1,6 +1,7 @@
 ---
 title: Interactions Toolbar - Dashboard Widgets
 excerpt: A toolbar for running worker interactions
+summary: "This page provides an overview of the Interactions Toolbar widget, a dashboard feature that allows users to run worker interactions from any dashboard. The widget can display multiple interactions on a single toolbar or as a dropdown menu, and its configuration options include assigning labels and icons, setting hidden status, defining actions after interaction completion, and selecting whether the interactions will run within the widget or as separate popup windows."
 permalink: /docs/dashboards/widgets/interactions-toolbar/
 jumbotron:
   title: Interactions Toolbar

@@ -1,6 +1,7 @@
 ---
 title: Configure
 excerpt: This page provides information on Configure tab in Team Setup.
+summary: "This page provides information on configuring the Configure tab in Team Setup, where users can set up default pages added to a new worker's menu upon creation, allowing them to provide onboarding or tutorial content with quick access for new workers when they log in for the first time."
 permalink: /docs/setup/team/configure/
 toc:
   title: Configure

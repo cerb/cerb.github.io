@@ -1,9 +1,7 @@
 ---
 title: Groups
 excerpt: This page provides information on Groups tab in Team Setup.
-summary: This page provides information on configuring groups within Cerb. It likely
-  includes instructions or options for setting up and managing groups, which are essential
-  for organizing users and permissions in the Cerb platform.
+summary: "This page provides information on configuring groups within Cerb, outlining options for setting up and managing groups essential for organizing users and permissions in the platform. The Groups tab offers a pageable and filterable worklist of all created groups, allowing users to view, manage, and add new groups, with each entry providing access to its profile page."
 permalink: /docs/setup/team/groups/
 toc:
   title: Groups

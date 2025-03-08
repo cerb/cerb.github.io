@@ -1,6 +1,7 @@
 ---
 title: Automation Logs
 excerpt: This page shows how to access and use the Automation Logs page in the developer menu.
+summary: "This page provides an overview of how to access and use the Automation Logs feature in Cerb, offering a centralized location to view logs from active automations. To access the logs, click on Setup > Developers > Automation Logs. The page displays log messages with automation information, timestamp, log type (error or debug), and allows filtering through logs using a search box."
 permalink: /docs/setup/developers/automation-logs/
 toc:
   expand: Admin Guide

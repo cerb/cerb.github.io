@@ -1,6 +1,7 @@
 ---
 title: Test mail deliverability
 excerpt: Send a test mail to check for proper deliverability.
+summary: "This page provides instructions on how to test mail deliverability in Cerb by sending a test message to the mail-tester.com service, which verifies proper delivery and generates a deliverability score based on factors such as SPF, DKIM, DMARC, reverse DNS (PTR), etc. To do this, follow these steps: open a web browser to mail-tester.com, copy the destination email address, then in Cerb navigate to Search >> Tickets, select a group and bucket, paste the destination email address into the To field, set the subject and message content, select Open as the status of the conversation, and click Send Message. After sending the test message, switch back to mail-tester.com and check your score, which will indicate whether everything went well or if corrections are needed."
 permalink: /guides/mail/test-deliverability/
 layout: integration
 topic: Mail

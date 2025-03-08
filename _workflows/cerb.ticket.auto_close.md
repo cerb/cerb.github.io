@@ -1,6 +1,7 @@
 ---
 title: Close Idle Tickets
 excerpt: Automatically close tickets after no activity during a given duration.
+summary: "This page contains an example workflow to automatically close idle tickets after a configurable period of inactivity, sending a notification to the customer upon closure. To install this workflow, users paste a specific KATA code into the Workflows interface and configure settings such as the maximum idle period and closing message. The workflow consists of two resources: an automation that checks for ticket inactivity and closes tickets that have not received a response after a specified period; and an Automation Timer that triggers this automation at set intervals, with a default schedule of every hour."
 layout: integration
 topic: Workflows
 permalink: /workflows/cerb.ticket.auto_close/

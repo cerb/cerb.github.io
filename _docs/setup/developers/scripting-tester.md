@@ -1,6 +1,7 @@
 ---
 title: Automation Scripting Tester
 excerpt: This page shows how to access and use the Automation Scripting Tester in the developer menu.
+summary: "This page provides an overview of the Automation Scripting Tester, a tool used for writing one-off scripts in Cerb. The tester can be accessed by clicking on the \"Setup >> Developers >> Automation Scripting Tester\" link and allows users to write and run multiline scripts directly within the interface. Features include the ability to use the tester for simple transformations, such as text manipulation, and to quickly encode objects as JSON using various filters, including the `json_encode` filter."
 permalink: /docs/setup/developers/scripting-tester/
 toc:
   expand: Admin Guide

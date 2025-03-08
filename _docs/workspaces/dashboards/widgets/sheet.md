@@ -1,6 +1,7 @@
 ---
 title: Sheet - Dashboard Widgets
 excerpt: A highly customizable data grid tool for displaying records.
+summary: "This page describes the Sheet widget in Cerberus, a highly customizable data grid tool for displaying records. Sheets are similar to worklists but offer more flexibility, making them ideal for displaying complex datasets. The widget provides a range of customization options, allowing users to tailor its appearance and functionality to suit their needs."
 permalink: /docs/dashboards/widgets/sheet/
 toc:
   title: Calendar
