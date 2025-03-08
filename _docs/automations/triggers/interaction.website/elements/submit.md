@@ -39,6 +39,7 @@ start:
       elements:
         submit:
           continue@bool: yes
+          reset@bool: yes
 {% endraw %}
 {% endhighlight %}
 
@@ -47,6 +48,37 @@ start:
 </div>
 
 # Syntax
+
+### buttons:
+
+Alternatively, you can define custom buttons of type `continue` or `reset`. The clicked button will set the `submit/` placeholder to its `value:`.
+
+{% highlight cerb %}
+{% raw %}
+start:
+  await:
+    form:
+      title: Menu
+      elements:
+        submit/prompt_menu:
+          buttons:
+            continue/save:
+              label: Save
+              size: whole
+            continue/discard:
+              label: Discard
+              style: secondary
+              size: half
+            reset/back:
+              label: Back
+              value: back
+              size: half
+{% endraw %}
+{% endhighlight %}
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/automations/triggers/interaction.website/elements/submit-buttons.png" class="screenshot">
+</div>
 
 ### hidden:
 

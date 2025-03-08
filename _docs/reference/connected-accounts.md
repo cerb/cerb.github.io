@@ -29,16 +29,33 @@ This opens up entire third-party APIs to bots, rather than only offering a few h
 
 The _owner_ of a connected account determines how it's shared. For instance, a corporate ActivityPub account could be shared by an entire team, while a worker's private Salesforce account could be accessed by only them and their bots.
 
-We have [integration examples](/resources/guides/#integrations) for many popular services:
+We have [integration examples](/solutions/#integrations) for many popular services:
 
+- [Airtable](/solutions/integrations/airtable/)
 - [Amazon Web Services](/solutions/integrations/aws/)
+- [Azure](/solutions/integrations/azure/)
 - [Dropbox](/solutions/integrations/dropbox/)
+- [ElevenLabs](/solutions/integrations/elevenlabs/)
+- [Exa](/solutions/integrations/exa/)
 - [Facebook](/solutions/integrations/facebook/)
 - [GitHub](/solutions/integrations/github/)
+- [GitLab](/solutions/integrations/gitlab/)
+- [Gmail](/solutions/integrations/gmail/)
+- [ipstack](/solutions/integrations/ipstack/)
 - [LinkedIn](/solutions/integrations/linkedin/)
+- [Linkup](/solutions/integrations/linkup/)
+- [Notion](/solutions/integrations/notion/)
+- [OpenAI](/solutions/integrations/openai/)
+- [OpenWeather](/solutions/integrations/openweather/)
+- [Pinecone](/solutions/integrations/pinecone/)
+- [Postmark](/solutions/integrations/postmark/)
 - [Salesforce](/solutions/integrations/salesforce/)
+- [SambaNova](/solutions/integrations/sambanova/)
 - [Slack](/solutions/integrations/slack/)
+- [Smartsheet](/solutions/integrations/smartsheet/)
 - [Stripe](/solutions/integrations/stripe/)
+- [Tavily](/solutions/integrations/tavily/)
+- [Together.ai](/solutions/integrations/together-ai/)
 - [Twilio](/solutions/integrations/twilio/)
 
 We recommend creating an automation function for each service (e.g. _Facebook Bot_) to act as a delegate. That way the credentials and API interaction for a particular service are handled in a single place, and any number of other automations can use [automation.function:](/docs/automations/commands/automation.function/) to interface with those services in a secure and reusable way.

@@ -34,11 +34,9 @@ On websites, this can be used for surveys, sign-up forms, contact forms, trouble
 * TOC
 {:toc}
 
-{% comment %}
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/automations/triggers/interaction.website/" class="screenshot">
+<img src="/assets/images/docs/automations/triggers/interaction.website/popup.png" class="screenshot">
 </div>
-{% endcomment %}
 
 Website interactions are usually started on any website when a page element is interacted with -- a link, button, image, etc.
 

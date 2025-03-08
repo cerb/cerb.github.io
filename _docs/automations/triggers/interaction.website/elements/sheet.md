@@ -38,8 +38,8 @@ Selection prompt can be set to 'single' or 'multiple'.
 start:
   await:
     form:
+      title: Menu
       elements:
-        title: Menu
         sheet/prompt_choice:
           label: Make a selection:
           required@bool: yes

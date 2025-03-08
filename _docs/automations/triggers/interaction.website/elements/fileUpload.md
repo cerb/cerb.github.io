@@ -43,12 +43,14 @@ In [website interactions](/docs/automations/triggers/interaction.website/) forms
 {% highlight cerb %}
 {% raw %}
 start:
-  await/form:
+  await:
     form:
-      title: Form Title
+      title: File Uploader
       elements:
         fileUpload/prompt_file:
-          label: Upload a file:
+          label: Upload an image:
+          accept: .png,image/png,.jpg,image/jpeg
+          multiple@bool: no
           required@bool: yes
           validation@raw:
             {% if prompt_file_mime_type != 'image/png' %}

@@ -405,6 +405,19 @@ colors@list:
 {% endraw %}
 {% endhighlight %}
 
+### nowrap
+
+`@nowrap` reads the key's indented value as a text block and removes newlines and line feeds. This continues until the indent returns to the same level as the key.
+
+{% highlight cerb %}
+{% raw %}
+content@nowrap:
+  This is a _bunch_ of content 
+  on several lines 
+  that will be treated as a single line
+{% endraw %}
+{% endhighlight %}
+
 ### raw
 
 `@raw` returns a key's text without substituting `{% raw %}{{placeholders}}{% endraw %}` or executing [bot scripts](/docs/scripting/) using the [dictionary](#dictionaries).
