@@ -680,6 +680,7 @@ Automations are automatically **triggered** in response to events within Cerb.
 | [**interaction.worker**](/docs/automations/triggers/interaction.worker/) | √ | √ | Worker [interactions](/docs/interactions/) on [toolbars](/docs/toolbars/) and widgets
 | [**interaction.worker.explore**](/docs/automations/triggers/interaction.worker.explore/) | √ | √ | Worker [interactions](/docs/interactions/) that use custom logic to return the next record in explore mode
 | [**interaction.website**](/docs/automations/triggers/interaction.website/) | √ | √ | Website visitor [interactions](/docs/interactions/)
+| [**llm.tool**](/docs/automations/triggers/llm.tool/) | √ | | A reusable function that can be invoked by a large language model
 | [**map.clicked**](/docs/automations/triggers/map.clicked/) | √ | | Handlers for clicks on [map](/docs/maps/) regions and points
 | [**projectBoard.cardAction**](/docs/automations/triggers/projectBoard.cardAction/) | √ | | Actions that take place for new cards in a project board column
 | [**projectBoard.renderCard**](/docs/automations/triggers/projectBoard.renderCard/) | √ | | Dynamic card layouts on project boards
