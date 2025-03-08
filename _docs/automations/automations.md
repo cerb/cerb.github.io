@@ -558,7 +558,7 @@ callers:
 
 When a caller policy denies an interaction it is automatically hidden from [toolbars](/docs/automations/triggers/interaction.worker/#toolbars).
 
-#### Commands
+#### Allowed commands
 
 This policy allows all commands:
 
@@ -774,6 +774,7 @@ There can now be multiple `enabled:` or `disabled:` rules. The first rule to ret
 | [**function:**](/docs/automations/commands/function/) | Execute an [automation.function](/docs/automations/triggers/automation.function/) automation and return output.
 | [**http.request:**](/docs/automations/commands/http.request/) | Send data to an HTTP endpoint and return the response.
 | [**kata.parse:**](/docs/automations/commands/kata.parse/) | Parse an arbitrary [KATA](/docs/kata/) document with placeholders.
+| [**llm.agent:**](/docs/automations/commands/llm.agent/) | Send a message to a conversational AI agent using a large language model.
 | [**metric.increment:**](/docs/automations/commands/metric.increment/) | Add new samples to a [metric](/docs/metrics/).
 | [**queue.pop:**](/docs/automations/commands/queue.pop/) | Pop an item from a [queue](/docs/queues/).
 | [**queue.push:**](/docs/automations/commands/queue.push/) | Push an item into a [queue](/docs/queues/).
