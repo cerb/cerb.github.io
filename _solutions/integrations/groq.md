@@ -1,0 +1,93 @@
+---
+title: Groq
+excerpt: A step-by-step guide for integrating Cerb and Groq.
+social_image_url: /assets/images/solutions/integrations/cerb-and-groq.png
+layout: solution
+jumbotron:
+  breadcrumbs:
+    - label: Resources &raquo;
+      url: /resources/
+    - label: Solutions Hub &raquo;
+      url: /solutions/
+    - label: Integrations &raquo;
+      url: /solutions/#integrations
+---
+
+* TOC
+{:toc}
+
+# Introduction
+
+In this guide we'll walk through the process of linking Cerb to Groq. You'll be able to use Groq's full API in Cerb automations for AI inference.
+
+# Get a Groq API Key.
+
+Log in to your [Groq Account](https://console.groq.com/) or sign up if you don't already have one.
+
+Choose **API Keys** in the menu and then click the "Create API Key" button in the top right.
+
+Name the key (eg. `cerb`) and click **Submit**.
+
+Copy the API key for use later.
+
+# Create the Groq service in Cerb
+
+1. Navigate to **Search >> Connected Services**.
+
+2. Click the **(+)** icon in the top right of the list.
+
+3. Select **Groq**.
+
+4. Paste the key you copied earlier in the **API Key** field.
+
+5. Click the **Create** button.
+
+# Examples
+
+## Create Chat Completion
+
+<https://console.groq.com/docs/api-reference#chat-create>
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/hwu7xs:
+    output: http_response
+    inputs:
+      method: POST
+      url: https://api.groq.com/openai/v1/chat/completions
+      authentication: cerb:connected_account:groq
+      headers:
+        Content-Type: application/json
+      body:
+        model: llama-3.3-70b-versatile
+        messages:
+          0:
+            role: user
+            content: Tell me who is Beethoven
+    on_success:
+        set:
+          response@json: {{http_response.body}}
+          http_response@json: null
+{% endraw %}
+{% endhighlight %}
+
+## List Models
+
+<https://console.groq.com/docs/api-reference#models>
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/hwu7xs:
+    output: http_response
+    inputs:
+      method: GET
+      url: https://api.groq.com/openai/v1/models
+      authentication: cerb:connected_account:groq
+   on_success:
+      set:
+        response@json: {{http_response.body}}
+        http_response@json: null
+{% endraw %}
+{% endhighlight %}
