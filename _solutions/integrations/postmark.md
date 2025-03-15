@@ -2,6 +2,7 @@
 title: Postmark
 excerpt: A step-by-step guide for integrating Cerb and Postmark.
 summary: 'This page provides detailed instructions for integrating Postmark as an SMTP mail transport in Cerb for sending outgoing emails. It includes the necessary configuration settings such as host, port, encryption, and authentication using a Postmark API token. Additionally, it addresses the issue of Postmark replacing the `Message-Id:` header, which disrupts email threading in Cerb. To preserve the original message IDs, the page outlines a workflow that adds the `X-PM-KeepId: true` header to outgoing emails. This involves creating a workflow in Cerb that ensures the `X-PM-KeepId` header is included, thereby maintaining proper email threading. The instructions are aimed at administrators and include specific steps and code snippets to implement the solution.'
+social_image_url: /assets/images/solutions/integrations/cerb-and-postmark.png
 redirect_from:
   - /guides/integrations/postmark/
 layout: solution
