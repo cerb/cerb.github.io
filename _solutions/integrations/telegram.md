@@ -1,6 +1,7 @@
 ---
 title: Telegram
 excerpt: A step-by-step guide for integrating Cerb and Telegram.
+summary: "This page provides a step-by-step guide for integrating Cerb and Telegram, allowing users to utilize Telegram's full Bot API for text and voice messaging in Cerb automations. To start, users must create a new bot on the Telegram BotFather chat, obtaining an authorization token that will be used later in the integration process. Next, they need to set up a webhook by creating a new automation that sends a request to the Telegram API with their bot's token and a specified URL. This sets up the communication channel between Cerb and Telegram, enabling users to respond to messages sent via the bot. Examples of automations are provided, including tests for authorization and sending messages, which can be used as a starting point for more complex integrations."
 social_image_url: /assets/images/solutions/integrations/cerb-and-telegram.png
 layout: solution
 jumbotron:
@@ -18,7 +19,7 @@ jumbotron:
 
 # Introduction
 
-In this guide we'll walk through the process of linking Cerb to Telegram. You'll be able to use Telegram's full Bot API in Cerb automations.
+In this guide we'll walk through the process of linking Cerb to Telegram. You'll be able to use Telegram's full Bot API for text and voice messaging in Cerb automations.
 
 # Get a Telegram Bot Token.
 
@@ -44,18 +45,18 @@ Copy the authorization token for use later.
 
 # Set a Webhook
 
-In order to properly use your new Telegram Bot in Cerb, you need to set up a Webhook.
+In order to properly use your new Telegram Bot in Cerb, you need to set up a webhook.
 
 1. Navigate to **Search >> Webhooks**
 
 2. Click the **(+)** icon in the top right of the list.
 
-3. Name the Webhook.
+3. Name the webhook.
 
 4. Copy the Webhook URL.
 
-5. Run the following Automation (for more info see <https://core.telegram.org/bots/api#setwebhook>:
-{% highlight cerb %}
+5. Run the following automation (for more info see <https://core.telegram.org/bots/api#setwebhook>):
+{% highlight cerb linenos %}
 {% raw %}
 start:
   http.request/setwebhook:
@@ -75,6 +76,10 @@ start:
         http_response@json: null
 {% endraw %}
 {% endhighlight %}
+
+<div class="cerb-box note">
+<p>Use your webhook URL on Line 11 above.</p>
+</div>
 
 The webhook will receive requests in the format outlined here: <https://core.telegram.org/bots/api#update>
 
