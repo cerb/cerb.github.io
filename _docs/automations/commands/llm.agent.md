@@ -219,14 +219,25 @@ on_tool:
 
 ## output:
 
-The output is a list of new messages in response to the previous messages.
+The key specified in `output:` is set to a dictionary with the following structure:
+
+| Key         | Description                                                                                                                                                                               |
+|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `messages`  | A list of new agent messages.                                                                                                                                                             |
+
+Each message has the following schema:
+
+| Key       | Description                                 |
+|-----------|---------------------------------------------|
+| `content` | The Markdown-formatted text of the message. |
+| `type`    | Currently only `text` is supported.         |
 
 {% highlight cerb %}
 {% raw %}
-return:
+output:
   messages:
     0:
-      role: assistant
+      type: text
       content: The weather in Paris is 14 degrees Celsius and cloudy
 {% endraw %}
 {% endhighlight %}
