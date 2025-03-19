@@ -541,3 +541,32 @@ columns:
       precision: 2
 {% endhighlight %}
 
+## Toolbar
+
+The `toolbar` column type displays a [toolbar](/docs/toolbars/) for each row.
+
+{% highlight cerb %}
+{% raw %}
+columns:
+  toolbar/_toolbar:
+    label: Tickets
+    params:
+      text_align: right
+      kata:
+        interaction/name:
+          uri: cerb:automation:cerb.interaction.echo
+          badge@raw: {{ticket_count}}
+          label: All
+          inputs:
+            outputs:
+              search:
+                record_type: ticket
+                query@raw: participant.id:{{id}} subtotal:status
+          after:
+            refresh_widgets@bool: no
+{% endraw %}
+{% endhighlight %}
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/sheets/column_toolbar.png" class="screenshot">
+</div>

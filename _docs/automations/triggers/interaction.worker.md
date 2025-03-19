@@ -404,6 +404,7 @@ The following keys are available on all worker interactions:
 | `clipboard:` | Copy the given text to the worker's keyboard. This is only available in response to a worker gesture (e.g. clicking an interaction toolbar).
 | `open_link:` | Open a new browser tab with the given URL. 
 | `open_url:` | Open the given URL in the current browser tab. 
+| `search:` | Open a search popup with the given `record_type:` and `query:`.
 | `snippet:` | If the interaction was started from an editor, paste the given text at the cursor.
 | `timer:` | Start a time tracking timer with the given time entry record ID.
 
