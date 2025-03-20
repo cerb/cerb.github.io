@@ -55,11 +55,11 @@
   - friendly-urls
   - security
   #- scheduler
-  - guide/admins/quick-start
   - upgrading
   - backups
- # - scaling
   - setup
+  - guide/admins/config-file
+  - guide/admins/quick-start
 
 - title: Developer Guide
   docs:
