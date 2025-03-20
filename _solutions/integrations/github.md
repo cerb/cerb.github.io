@@ -28,7 +28,7 @@ jumbotron:
 
 # Introduction
 
-In this guide we'll walk through the process of linking Cerb to GitHub. You'll be able to use GitHub's full API from bots in Cerb to automate whatever you need.
+In this guide we'll walk through the process of linking Cerb to GitHub. You'll be able to use [GitHub's full API](https://docs.github.com/en/rest?apiVersion=2022-11-28) from bots in Cerb to automate whatever you need.
 
 # GitHub Authentication
 

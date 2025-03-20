@@ -14,7 +14,7 @@ jumbotron:
 social_image_url: /assets/images/solutions/automations/parse-vobject.png
 ---
 
-You can use the [file.read:](/docs/automations/commands/file.read/) automation command and [vobject_parse()](/docs/scripting/functions/#vobject_parse) scripting function o parse the content of VObject files return them as a JSON object. This can be useful if you are sent an iCal event invite or VCard contact.
+You can use the [file.read:](/docs/automations/commands/file.read/) automation command and [vobject_parse()](/docs/scripting/functions/#vobject_parse) scripting function to parse the content of VObject files return them as a JSON object. This can be useful if you are sent an iCal event invite or VCard contact.
 
 For example, if you are sent this iCal event:
 
