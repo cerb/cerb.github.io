@@ -153,4 +153,52 @@ Review the [GitHub OAuth documentation](https://developer.github.com/apps/buildi
 
 You can use the connected account you just created to access [GitHub's API](https://developer.github.com/v3/) within automations in Cerb.  This is typically accomplished using the [http.request:](/docs/automations/commands/http.request/) command and using the connected account in the `authentication` field.
 
-You can import the [GitHub Issues](/workflows/wgm.integrations.github/) workflow for a working example.
+## Examples
+
+### Get a list of repositories
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/getrepo:
+    output: http_response
+    inputs:
+      method: GET
+      url: https://api.github.com/user/repos
+      headers:
+        Content-Type: application/json
+        User-Agent: Cerb
+      authentication: cerb:connected_account:github
+    on_success:
+      set:
+        response@json: {{http_response.body}}
+        http_response@json: null
+{% endraw %}
+{% endhighlight %}
+
+## Create issue
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/createissue:
+    output: http_response
+    inputs:
+      method: POST
+      url: https://api.github.com/repos/[repo-path]/issues
+      headers:
+        Content-Type: application/json
+        User-Agent: Cerb
+      body:
+        title: Example Issue Title
+        body: This is the text of the issue
+      authentication: cerb:connected_account:github
+    on_success:
+      set:
+        response@json: {{http_response.body}}
+        http_response@json: null
+{% endraw %}
+{% endhighlight %}
+
+## Workflow
+Alternatively, you can import the [GitHub Issues](/workflows/wgm.integrations.github/) workflow for a working example.
