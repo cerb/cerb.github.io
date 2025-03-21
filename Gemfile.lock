@@ -59,7 +59,7 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
-    nokogiri (1.18.3-aarch64-linux-gnu)
+    nokogiri (1.18.4-aarch64-linux-gnu)
       racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -74,6 +74,9 @@ GEM
     rexml (3.4.0)
     rouge (4.5.1)
     safe_yaml (1.0.5)
+    sass-embedded (1.83.4)
+      google-protobuf (~> 4.29)
+      rake (>= 13)
     sass-embedded (1.83.4-aarch64-linux-gnu)
       google-protobuf (~> 4.29)
     terminal-table (3.0.2)
@@ -83,7 +86,6 @@ GEM
 
 PLATFORMS
   aarch64-linux-gnu
-  x86_64-linux-gnu
 
 DEPENDENCIES
   jekyll (~> 4.4)
