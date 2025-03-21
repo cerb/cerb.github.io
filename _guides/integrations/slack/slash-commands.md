@@ -1,5 +1,5 @@
 ---
-title: Send commands to a Cerb automations using Slack
+title: Send commands to Cerb automations using Slack
 excerpt: This page provides a detailed guide on integrating Cerb with Slack using the slash commands feature.
 summary: "This is a step-by-step guide to integrating Cerb with Slack using a webhook and slash commands."
 permalink: /guides/integrations/slack/slash-commands/

@@ -129,6 +129,100 @@ Accept consent on Slack.
 
 Click the **Save Changes** button.
 
+# Examples:
+
+## Send a message to a channel:
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request:
+   output: http_response
+   inputs:
+      url: https://slack.com/api/chat.postMessage
+      method: POST
+      authentication: cerb:connected_account:slack
+      headers@text:
+        Content-Type: application/json; charset=utf8
+      body:
+        channel: #app-testing
+        text@text:
+          Here is an example message using Block Kit:
+        blocks:
+          0:
+            type: section
+            text:
+              text: A message *with some bold text* and _some italicized text_.
+              type: mrkdwn
+            fields:
+              0:
+                type: mrkdwn
+                text: *Priority*
+              1:
+                type: mrkdwn
+                text: *Type*
+              2:
+                type: plain_text
+                text: High
+              3:
+                type: plain_text
+                text: Silly
+          1:
+            type: image
+            title:
+              type: plain_text
+              text: a cat
+            image_url: https://cataas.com/cat
+            alt_text: a cat
+   on_success:
+     set:
+        response@json: {{http_response.body}}
+        http_response@json: null
+{% endraw %}
+{% endhighlight %}
+
+## List channels:
+Requires  `channels:read` scope.
+{% highlight cerb %}
+{% raw %}
+start:
+  start:
+  http.request:
+   output: http_response
+   inputs:
+      url: https://slack.com/api/conversations.list
+      method: GET
+      authentication: cerb:connected_account:slack
+      headers@text:
+        Content-Type: application/json; charset=utf8
+    on_success:
+      set:
+        response@json: {{http_response.body}}
+        http_response@json: null
+{% endraw %}
+{% endhighlight %}
+
+## List Users
+Requires `users:read` scope.
+{% highlight cerb %}
+{% raw %}
+start:
+  start:
+  http.request:
+   output: http_response
+   inputs:
+      url: https://slack.com/api/users.list
+      method: GET
+      authentication: cerb:connected_account:slack
+      headers@text:
+        Content-Type: application/json; charset=utf8
+    on_success:
+      set:
+        response@json: {{http_response.body}}
+        http_response@json: null
+{% endraw %}
+{% endhighlight %}
+
 # Related Resources
 
+* Guide: [Send commands to a Cerb automations using Slack](guides/integrations/slack/slash-commands/)
 * Workflow: [Slack Notifications](/workflows/cerb.integrations.slack.notifications/)
