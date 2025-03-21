@@ -133,7 +133,7 @@ Review the consent form and then click **Authorize Cerb**.
 Click the **Save Changes** button.
 
 # Use the connected account in Cerb automations
-
+## Search issues
 Create an [automation.function](/docs/automations/triggers/automation.function/) automation:
 
 {% highlight cerb %}
@@ -167,6 +167,47 @@ From the **Inputs:** section in the lower left of the automation editor, simulat
 inputs:
   repo: cerb.ai/example-project
   query: tempore
+{% endraw %}
+{% endhighlight %}
+
+## Create issues
+Create an [automation.function](/docs/automations/triggers/automation.function/) automation:
+
+{% highlight cerb %}
+{% raw %}
+inputs:
+  text/repo:
+    type: freeform
+    required@bool: yes
+  text/title:
+    type: freeform
+    required@bool: yes
+  text/description:
+    type: freeform
+    required@bool: yes
+
+start:
+  http.request/search:
+    output: http_response
+    inputs:
+      method: POST
+      url: https://gitlab.com/api/v4/projects/{{inputs.repo|url_encode}}/issues?title={{inputs.title|url_encode}}&description={{inputs.description|url_encode}}
+      authentication: cerb:connected_account:gltlab
+    on_success:
+      return:
+        search_results@json: {{http_response.body}}
+    on_error:
+{% endraw %}
+{% endhighlight %}
+
+From the **Inputs:** section in the lower left of the automation editor, simulate with:
+
+{% highlight cerb %}
+{% raw %}
+inputs:
+  repo: cerb.ai/example-project
+  title: test issue
+  description: this is a test issue
 {% endraw %}
 {% endhighlight %}
 
