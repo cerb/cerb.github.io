@@ -2,7 +2,9 @@
 title: Configuration File
 excerpt: A guide to the Cerb config file, including settings and defaults.
 summary: "This page is a guide to the Cerb config file, including settings and their default values. The config file has multiple variables that can be set to meet specific needs, with some being required for setup while others are optional. The list includes both required and optional variables, providing descriptions of what each does, such as database settings, language encoding, and development mode options."
-permalink: /docs/guide/admins/config-file/
+permalink: /docs/config-file/
+redirect_from:
+- /docs/guide/admins/config-file/
 toc:
   title: Config File
   expand: Admin Guide
@@ -16,7 +18,19 @@ jumbotron:
     url: /docs/home/#admin-guide
 ---
 
-Cerb's config file has multiple variables you can set to your needs. Here is a list of variables, their default values if they have any, and a description of what they do.
+When self-hosting, you have access to low-level settings to fine-tune the platform on your servers.
+
+The defaults come from the `/libs/devblocks/framework.default.php` file.
+
+To override a setting, add a line to the `framework.config.php` file like:
+
+{% highlight php %}
+{% raw %}
+const APP_SETTING_STRING = "setting value";
+const APP_SETTING_NUMBER = 1234;
+const APP_SETTING_BOOLEAN = false;
+{% endraw %}
+{% endhighlight %}
 
 # Required Settings
 

@@ -55,11 +55,11 @@
   - guided-installer
   - friendly-urls
   - security
+  - config-file
   #- scheduler
   - upgrading
   - backups
   - setup
-  - guide/admins/config-file
   - guide/admins/quick-start
 
 - title: Developer Guide
