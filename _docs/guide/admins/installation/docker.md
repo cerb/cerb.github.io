@@ -112,7 +112,7 @@ You can edit files in your local filesystem and the changes will be reflected in
 		<a href="/docs/installation/" class="prev">&lt; Installation</a>
 	</div>
 	<div class="right align-right">
-		<a href="/docs/setup/" class="prev">Setup &gt;</a>
+		<a href="/docs/guided-installer/" class="prev">Guided Installer &gt;</a>
 	</div>
 </div>
 <div class="clear"></div>
