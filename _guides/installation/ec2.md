@@ -39,7 +39,7 @@ It used to take a lot of work to build and run your own servers -- especially wi
 
 While you can use an EC2 instance to replace a dedicated server or a virtual machine, we highly recommend adopting a cloud computing mindset.  This means treating your EC2 instances as disposable -- losing an EC2 instance shouldn't take your site offline.  You should run at least two EC2 instances in different availability zones with an auto-scaling group and put them behind a load balancer. You can use Amazon's Elastic Filesystem (EFS) service to share a distributed filesystem between instances, and the Relational Database Service (RDS) to share the database.
 
-If you require high availability and you're not familiar with cloud computing, we strongly recommend using [Cerb Cloud](/cloud/) where we handle everything for you.
+If you require high availability and you're not familiar with cloud computing, we strongly recommend using **Cerb Cloud** where we handle everything for you.
 
 * TOC
 {:toc}
