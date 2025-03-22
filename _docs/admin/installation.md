@@ -13,32 +13,42 @@ summary: This page provides information on the various installation options for 
   outlines the requirements and offers enterprise support contracts for additional
   technical assistance.
 permalink: /docs/installation/
+redirect_from:
+  - /install/
 jumbotron:
   title: Installation
-  tagline: Deploy Cerb in Docker, the cloud, or on your own servers
+  tagline: Deploy Cerb in the cloud, or self-host with Docker on your own servers
   breadcrumbs:
   - label: Docs &raquo;
     url: /docs/home/
 ---
 
-## Docker
+## Self Hosted (Docker)
 
-For self-hosted evaluation, testing, and development, we _strongly_ recommend using our pre-configured [Docker container](/docs/installation/docker/).
+If you desire to self-host **Cerb**, or are required to do so (e.g. HIPAA, GDPR, government), you can install the software on servers you control. You should have experience deploying containers and web applications. We offer optional enterprise support if you need assistance with server architecture outside Cerb functionality.
 
-This allows you to start using Cerb in a few minutes without any server configuration. We also provide sample data to simulate real-world use.
+Your first self-hosted seat is free forever with no time limit. A license is not required, but registration entitles you to direct email support from the developers. Additional seats may be added to your license at any time.
+
+We strongly recommend using one of our **Docker** container examples rather than installing components individually. This simplifies installation and upgrades by ensuring the server requirements are always met. You can upgrade Cerb by simply switching image tags.
+
+If you still need to [install Cerb on a bare metal server](/docs/installation/self-hosted/), use the example Dockerfile as a reference.
+
+<a href="/docs/installation/docker/" class="cerb-button">Read the Docker instructions &raquo;</a>
 
 ## Cerb Cloud
 
-[Cerb Cloud](/cloud/) is a subscription-based service that provides a ready-to-use, highly available, durable, and secure instance of Cerb in an ideal environment. We'll handle the technical details so you can focus on your mission.
+**Cerb Cloud** is a subscription-based service that provides a ready-to-use, highly available, durable, and secure instance of Cerb in an ideal environment. We'll handle the technical details so you can focus on your mission.
 
 All you need is a web browser. You can optionally bring your own domain name (e.g. `support.example.com`). We provide inbound and outbound email services, or you can connect to your existing email provider (e.g. O365, Gmail, Fastmail).
 
-[Sign up](/signup/) for a free trial of Cerb Cloud with no time limit (as long as you're actively using it).
-
-## On-Premises
-
-If you wish to self-host Cerb in production, or you have a requirement to do so (e.g. HIPAA, GDPR, government), you can [install](/docs/installation/self-hosted/) the software on servers you control.
-
-Your servers must meet the minimum requirements. You should have team members with experience managing servers and deploying web services using PHP and MySQL.
-
-We also provide enterprise support contracts for technical assistance outside the scope of Cerb functionality.
+<div class="grid">
+    <div class="whole">
+        <p>
+        <button type="button" class="cerb-button" data-cerb-interaction="signup">
+            Sign up to try Cerb Cloud for free
+            <br>
+            <small style="font-size:0.8em;">(no time limit, no payment info required)</small>
+        </button>
+        </p>
+    </div>
+</div>

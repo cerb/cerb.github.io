@@ -21,7 +21,7 @@ jumbotron:
     url: /docs/home/
   - label: Admin Guide &raquo;
   - label: Installation &raquo;
-    url: /docs/installation/self-hosted/
+    url: /docs/installation/
 ---
 
 * TOC

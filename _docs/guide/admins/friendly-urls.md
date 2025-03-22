@@ -19,10 +19,16 @@ jumbotron:
     url: /docs/home/
   - label: Admin Guide &raquo;
   - label: Installation &raquo;
-    url: /docs/installation/self-hosted/
+    url: /docs/installation/
 ---
 
 # Enabling friendly URLs
+
+<div class="cerb-box note">
+  <p>
+    This is automatically handled for you with <a href="/docs/installation/docker/">Docker</a> installations. You can <a href="/docs/security/">skip ahead</a>.
+  </p>
+</div>
 
 You may notice that your URLs look a bit ugly with `/index.php/` in every path by default. 
 

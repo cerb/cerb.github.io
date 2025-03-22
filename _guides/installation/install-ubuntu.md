@@ -25,6 +25,13 @@ jumbotron:
     url: /resources/guides/#installation
 ---
 
+<div class="cerb-box note">
+	<p>
+		We do not recommend installing Cerb components on your server directly. 
+		Use the <a href="/docs/installation/docker/">Docker instructions</a> as a reference.
+	</p>
+</div>
+
 # Introduction
 {:.no_toc}
 

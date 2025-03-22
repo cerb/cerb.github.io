@@ -26,6 +26,13 @@ jumbotron:
     url: /docs/installation/
 ---
 
+<div class="cerb-box note">
+	<p>
+		We do not recommend installing Cerb components on your server directly. 
+		Use the <a href="/docs/installation/docker/">Docker instructions</a> as a reference.
+	</p>
+</div>
+
 * TOC
 {:toc}
 
@@ -54,9 +61,9 @@ jumbotron:
 	- Windows
 
 - Any of these webserver applications:
+	- Caddy _(recommended, using PHP-FPM)_
 	- Nginx _(recommended, using PHP-FPM)_
 	- Apache
-	- lighttpd
 	- Microsoft Internet Information Server (IIS)
 	- Built-in PHP webserver (for development and evaluation)
 
@@ -89,7 +96,7 @@ jumbotron:
 - Any of these database servers:
 	- MySQL 8.0 or later
 	- MariaDB 10.5 or later
-	- Amazon Aurora
+	- Amazon Aurora 3.x or later
 
 <div class="cerb-box note">
 	<p>If you are unable to meet these requirements, consider <a href="/pricing/">Cerb Cloud</a>.</p>
@@ -122,7 +129,7 @@ When deploying Cerb on a production server you should use **Git** to manage the 
 * See what changes *would* occur before performing an upgrade.
 * Continuously merge your local changes with our future updates.
 
-You won't need to download the entire project again after your initial installation. You also won't have to hassle with copying your `framework.config.php` configuration file or storage directory when upgrading, or repeating any of your custom modifications to the source code.
+You won't need to download the entire project again after your initial installation. You also won't have to hassle with copying your `framework.config.php` [configuration file](/docs/config-file/) or storage directory when upgrading, or repeating any of your custom modifications to the source code.
 
 You can download Cerb into a specific directory with a single command:
 
@@ -147,7 +154,7 @@ Next, we need to make sure that Cerb's files are owned by the webserver's user a
 You only need to enable write access to the webserver in two locations:
 
 - `framework.config.php`
-	This is your configuration file.
+	This is your [configuration file](/docs/config-file/).
 - `storage/`
 	This is where any data unique to your installation is stored: third-party plugins, attachments, temporary files, caches, etc.
 
@@ -174,7 +181,7 @@ Create a new MySQL database using the console or your favorite GUI tool.
 From the MySQL console, you can issue the following SQL statements:
 
 {% highlight sql %}
-CREATE DATABASE cerb CHARACTER SET utf8;
+CREATE DATABASE cerb CHARACTER SET utf8mb4;
 
 CREATE USER cerb@localhost IDENTIFIED BY 'secret_password';
 
