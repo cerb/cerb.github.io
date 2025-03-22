@@ -59,8 +59,76 @@ In this guide we'll walk through the process of linking Cerb to Stripe. You'll b
 
 1. Click the **Create** button.
 
-# Use the connected account in bot behaviors
+# Use the connected account in automations
 
-You can use the connected account you just created to access [Stripe's API](https://stripe.com/docs/api/curl) from bot behaviors in Cerb.  This is typically accomplished using the **Execute HTTP Request** action from a bot, and selecting the connected account in the **Authentication:** section.
+You can use the connected account you just created to access [Stripe's API](https://stripe.com/docs/api/curl) from automations in Cerb.  This is typically accomplished using the `http.request` command and selecting the connected account in the `authentication` field.
+
+## Examples
+### Create a payment link
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/link:
+    output: http_response
+    inputs:
+      method: POST
+      url: https://api.stripe.com/v1/payment_links
+      headers:
+        Content-Type: application/x-www-form-urlencoded
+      authentication: cerb:connected_account:stripe
+      body:
+        line_items:
+          0:
+            price: price_1234567890abcdefghijkl
+            quantity: 1
+    on_success:
+      set:
+        response_body@json: {{http_response.body}}
+      return:
+        url: {{response_body.url}}
+{% endraw %}
+{% endhighlight %}
+
+### Create a subscription
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/subscription:
+    output: http_response
+    inputs:
+      method: POST
+      url: https://api.stripe.com/v1/subscriptions
+      headers:
+        Content-Type: application/x-www-form-urlencoded
+      authentication: cerb:connected_account:stripe
+      body:
+        customer: cus_1234567890abcdefghijkl
+        items:
+          0:
+            price: price_1234567890abcdefghijkl
+{% endraw %}
+{% endhighlight %}
+
+### Create an invoice
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/invoice:
+    output: http_response
+    inputs:
+      method: POST
+      url: https://api.stripe.com/v1/invoices
+      headers:
+        Content-Type: application/x-www-form-urlencoded
+      authentication: cerb:connected_account:stripe
+      body:
+        customer: cus_1234567890abcdefghijkl
+        subscription: sub_1234567890abcdefghijkl
+{% endraw %}
+{% endhighlight %}
+
+## Bot
 
 You can import the [Stripe Bot](/packages/stripe-bot/) package for a working example.
