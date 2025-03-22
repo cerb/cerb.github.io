@@ -28,9 +28,9 @@ jumbotron:
 * [Newsletter Archive](https://buttondown.com/cerb/archive/)
 * [Discussion Forums](https://github.com/cerb/cerb-release/discussions/)
 
-## Licenses
+## AI Agent
 
-<a href="javascript:;" data-cerb-bot-interaction="">Automated demos, license updates, and renewals</a>
+<a data-cerb-interaction="router" style="cursor:pointer;">Automated demos, license updates, and renewals</a>
 
 ## Sales
 
