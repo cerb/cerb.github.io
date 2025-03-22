@@ -15,7 +15,7 @@ toc:
 permalink: /docs/installation/docker/
 jumbotron:
   title: Launch Cerb in Docker
-  tagline: ""
+  tagline: Pre-built container images in an ideal environment
   breadcrumbs:
   - label: Docs &raquo;
     url: /docs/home/
@@ -24,20 +24,72 @@ jumbotron:
     url: /docs/installation/
 ---
 
-# Introduction
-{:.no_toc}
-
-Cerb ships with a Docker configuration for local evaluation, development, and testing. This creates preconfigured containers for Nginx (web server), PHP/FPM (code), and MySQL (database).
-
-By default, data is stored in two volumes (one for the database and the other for the `./storage/` directory). A virtual network is created to connect the containers.
+* TOC
+{:toc}
 
 # Install Docker
 
-First, make sure [Docker Desktop](https://www.docker.com/products/docker-desktop/) or the CLI is installed.
+First, make sure [Docker Desktop](https://www.docker.com/products/docker-desktop/) (desktops) or the [Docker Engine](https://docs.docker.com/engine/install/) (servers) is installed.
 
-# Using Docker
+# Launch Cerb
 
-### Starting containers with Docker Compose
+## Option 1: Docker Hub (Production)
+
+Cerb is available as a pre-built container image for `amd64` or `arm64` on [Docker Hub](https://hub.docker.com/r/cerb/cerb/). It must be paired with a web server that supports the FastCGI protocol (e.g. Caddy, nginx, Apache, IIS).
+
+[This repository](https://github.com/cerb/cerb-docker/) provides several usage examples. For example:
+
+{% highlight bash %}
+{% raw %}
+git checkout https://github.com/cerb/cerb-docker/
+
+# ... or download + unzip: https://github.com/cerb/cerb-docker/archive/refs/heads/main.zip
+
+cd cerb-docker/cerb-caddy-mysql
+
+vi .env
+
+docker compose up --build
+{% endraw %}
+{% endhighlight %}
+
+The `cerb` container listens on port `:9000` using FastCGI and **must not** be exposed to the public network. The container is configured using environment variables:
+
+|---
+| ENV | 
+|-|-
+| `CERB_AUTHORIZED_IPS` | A comma-separated list of IPv4 addresses or subnets that can access `/cron` and `/update` without a session. 
+| `CERB_INSTALL` | If `yes` the `/install/` path is available; otherwise it is blocked. Only enable during installation and disable afterward.
+| `MYSQL_HOST` | The database server hostname. This is created for you in the `cerb-caddy-mysql` example, but should be a dedicated server like Amazon RDS in production.
+| `MYSQL_DATABASE` | The database name. Use `CREATE DATABASE cerb CHARACTER SET utf8mb4` if using an external database server.
+| `MYSQL_USER` | The database user with `GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES`.
+| `MYSQL_PASSWORD` | The database user's password.
+
+The container uses the `/mnt/storage/` path for persistent data. In the example a local Docker volume binds to the path, but in production you should bind a shared filesystem like Amazon EFS, NFS, or GlusterFS. This allows you to scale containers horizontally.
+
+The [cerb-caddy-mysql](https://github.com/cerb/cerb-docker/tree/main/cerb-caddy-mysql/) example above provides additional configuration options:
+
+|---
+| ENV |
+|-|-
+| `CERB_VERSION` | The Cerb versioned image [tag](https://hub.docker.com/r/cerb/cerb/tags) to use. Use tags like `11` for 11.x, `11.1` for 11.1.x, or `11.1.0` for a specific version. The `latest` tag always points to the latest stable version.
+| `CERB_HOSTNAME` | If `localhost` a self-signed SSL certificate is generated; otherwise a LetsEncrypt certificate is automatically generated. Be sure the DNS for this hostname points to your server. Ports `:80` and `:443` must be exposed to the public network for LetsEncrypt to work.
+| `CERB_PORT` | The HTTP port. This should be `80` in production, but can be something like `8080` for testing.
+| `CERB_PORT_SSL` | The HTTPS/TLS port. This should be `443` in production, but can be something like `8443` for testing.
+
+A `docker-compose.yml` file is provided for reference and testing. In production, you should use a container orchestration service like Amazon ECS/Fargate, Google Cloud Run, Azure Containers, or Kubernetes.
+
+You can use the [cerb](https://github.com/cerb/cerb-docker/tree/main/cerb/) example to build your own customized image.
+
+## Option 2: GitHub (Development, Testing)
+
+The Cerb source code ships with a Docker configuration for local evaluation, development, and testing. This creates preconfigured containers for Nginx (web server), PHP/FPM (code), and MySQL (database).
+
+You can edit files in your local filesystem and the changes will be reflected instantly within the containers.
+
+By default, data is stored in two volumes (one for the database and the other for the `./storage/` directory). A virtual network is created to connect the containers.
+
+### Starting local containers with Docker Compose
 
 Navigate to the directory where you want to install a copy of Cerb. Then run the following commands:
 
@@ -104,9 +156,6 @@ To delete the containers and their data, use the command:
 docker compose down --volumes
 {% endhighlight %}
 
-### Editing code
-
-You can edit files in your local filesystem and the changes will be reflected instantly within the containers.
 <div class="section-nav">
 	<div class="left">
 		<a href="/docs/installation/" class="prev">&lt; Installation</a>

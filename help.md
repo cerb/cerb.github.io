@@ -23,9 +23,10 @@ jumbotron:
 ## Links
 
 * [Documentation](/docs/home/)
-* [Discussion Forums](https://github.com/cerb/cerb-release/discussions/)
 * [Issue Tracker](https://github.com/jstanden/cerb/issues/)
+* [Docker Hub](https://hub.docker.com/r/cerb/cerb/)
 * [Newsletter Archive](https://buttondown.com/cerb/archive/)
+* [Discussion Forums](https://github.com/cerb/cerb-release/discussions/)
 
 ## Licenses
 
