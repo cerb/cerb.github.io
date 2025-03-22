@@ -72,23 +72,46 @@ You should make the following files available to web requests:
 
 -  `ajax.php`
 -  `index.php`
--  `favicon.ico`
 
-Browser access to the following locations should be forbidden:
+Browser access to all other filesystem locations should be forbidden:
 
 -  `.git/`
 -  `api/`
 -  `features/`
 -  `libs/`
+-  `plugins/`
 -  `storage/`
+-  `tests/`
 -  `vendor/`
+
+### Caddy
+
+With **Caddy** you can use the following directive in your `Caddyfile`:
+
+{% highlight caddy %}
+{% raw %}
+route {
+  @rewritePaths {
+    not path_regexp ^/(index\.php|ajax\.php|install/index\.php)($|/.*)
+  }
+
+  rewrite @rewritePaths /index.php{uri}
+
+  reverse_proxy * cerb:9000 {
+    transport fastcgi {
+      split .php
+    }
+  }
+}
+{% endraw %}
+{% endhighlight %}
 
 ### Nginx
 
 With **nginx**, you can use the following directive in your server configuration:
 
 {% highlight nginx %}
-location ~ ^/cerb/(\.git|api|features|libs|storage|vendor)/ {
+location ~ ^/cerb/(\.git|api|features|libs|plugins|storage|tests|vendor)/ {
     return 403;
 }
 {% endhighlight %}
@@ -104,7 +127,9 @@ RewriteRule ^(.*/)?\.git(/|$) - [F,L]
 RewriteRule ^(.*/)?api(/|$) - [F,L]
 RewriteRule ^(.*/)?features(/|$) - [F,L]
 RewriteRule ^(.*/)?libs(/|$) - [F,L]
+RewriteRule ^(.*/)?plugins(/|$) - [F,L]
 RewriteRule ^(.*/)?storage(/|$) - [F,L]
+RewriteRule ^(.*/)?tests(/|$) - [F,L]
 RewriteRule ^(.*/)?vendor(/|$) - [F,L]
 {% endhighlight %}
 
