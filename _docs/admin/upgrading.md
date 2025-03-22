@@ -19,18 +19,39 @@ jumbotron:
     url: /docs/home/
   - label: Admin Guide &raquo;
   - label: Installation &raquo;
-    url: /docs/installation/self-hosted/
+    url: /docs/installation/
 keywords: upgrade
 ---
-
-* TOC
-{:toc}
 
 <div class="cerb-box note">
 	<p>If you're using <b>Cerb Cloud</b> then we handle upgrades for you already.</p>
 </div>
 
-The officially supported way of upgrading Cerb is by using **Git**[^git], a distributed version control system.  The latest stable build of the project can be found on [GitHub](http://github.com/cerb/cerb-release). This environment makes it much easier for people to collaborate and share improvements.
+* TOC
+{:toc}
+
+# Option 1: Production (Docker)
+
+The officially supported way of upgrading Cerb is by using [Docker image tags](https://hub.docker.com/r/cerb/cerb/tags/). This completely avoids the complexity of Git and dealing with file conflicts.
+
+Cerb uses semantic versioning with the following format: `<platform>.<feature>.<maintenance>`
+
+You can target version tags with this specificity:
+
+* `11` (the latest 11.x platform version)
+* `11.0` (the latest 11.0.x feature version)
+* `11.0.6` (a specific maintenance version)
+* `latest` (the latest stable version)
+
+In production, we _strongly_ recommend using a full version number (e.g. `11.0.6`) in your deployment. A cluster of Cerb containers must be running the exact same version.
+
+We recommend against "rolling" container upgrades because the code version will be inconsistent. For a zero-downtime upgrade, spin up a second cluster with the new version image. Once the new cluster is tested and ready, re-route traffic from your load balancer to the new cluster, and shut down the old one.
+
+For a single container (e.g. Docker Compose) you can use a "fuzzy" tag like `latest`, but you must be available to finalize the upgrade in the browser. This may happen unexpectedly if a container is replaced automatically.
+
+# Option 2: Development (Git)
+
+A source code installation of Cerb is upgraded by using **Git**[^git], a distributed version control system.  The latest stable build of the project can be found on [GitHub](http://github.com/cerb/cerb-release). This environment makes it much easier for people to collaborate and share improvements.
 
 You can use Git to quickly update your local Cerb files to the latest version. The major advantage of version control is that it will attempt to automatically merge official code improvements with any local configuration and customization you have performed. Git also gives you the ability to list all your changes to any project files, and to easily restore to an official version when desirable.
 
@@ -44,7 +65,7 @@ If you need to install Git, it's usually available in a package named `git`. The
 
 If you can't use Git, you really should consider using [Cerb Cloud](/pricing/) rather than managing it yourself.
 
-# Preparation
+## Preparation
 
 - **Always make a backup** of your Cerb database prior to upgrading.  See the chapter on [Backups](/docs/backups/) for more information.
 
@@ -54,7 +75,7 @@ If you can't use Git, you really should consider using [Cerb Cloud](/pricing/) r
 cd /path/to/cerb/
 {% endhighlight %}
 
-# Update using Git on a Unix-based server
+## Update using Git on a Unix-based server
 
 Verify that you're using Git:
 
@@ -62,7 +83,7 @@ Verify that you're using Git:
 git status
 {% endhighlight %}
 
-You can also verify that a `.git` directory exists. If the above command returns an error, or the `.git` directory doesn't exist, then you probably installed the software a different way.  You should reinstall Cerb from GitHub[^svn-to-git].
+You can also verify that a `.git` directory exists. If the above command returns an error, or the `.git` directory doesn't exist, then you probably installed the software a different way.  You should reinstall Cerb from GitHub.
 
 Restore the `/install` directory:
 
@@ -128,7 +149,7 @@ Remove the `./install` directory:
 rm -Rf install
 {% endhighlight %}
 
-# Dealing with conflicts
+## Dealing with conflicts
 
 If you encounter conflicts while updating, you can attempt to resolve them manually, or you can revert your changes and restore your `framework.config.php` settings by hand. Don't simply copy over the new file with your old file, because it may have changed in the recent version.
 
@@ -144,13 +165,11 @@ A handy tool to visualize and reconcile conflicts is built into Git:
 git mergetool
 {% endhighlight %}
 
-# Finishing the Upgrade
-
 ## Permissions
 
 You should set file ownership and permissions again after updating your files.
 
-### Unix-based servers
+#### Unix-based servers
 
 Change directory to your Cerb installation:
 
@@ -188,9 +207,11 @@ chmod -R u+w storage/
 	</p>
 </div>
 
-### Windows-based servers
+#### Windows-based servers
 
 Use Windows Explorer to set the appropriate write permissions on the `/cerb/storage` directory for your IIS user.
+
+# Finishing the Upgrade
 
 ## Database schema updates
 
@@ -199,6 +220,12 @@ Some Cerb updates contain database changes which require an administrator to fin
 After your files are updated, attempt to log into your Cerb instance as you normally would. If a database update is required the software will automatically prompt you. Upon finalizing you should be able to log in and continue working.
 
 ## Community Portals
+
+<div class="cerb-box note">
+	<p>
+		This is only required if you used the bundled <tt>index.php</tt> file to deploy a portal. This step isn't necessary if you use a true reverse proxy (e.g. Caddy, Nginx, or Apache <b>mod_proxy</b>) to serve your community portals.
+	</p>
+</div>
 
 Very rarely, the `index.php` file which drives Community Portals like the Support Center may change during an upgrade.
 
@@ -215,15 +242,8 @@ How to tell if you need to update your Community Portal file:
 define('SCRIPT_LAST_MODIFY', 1234567890); // last change
 {% endhighlight %}
 
-- If the number is different you should replace the `index.php` file for your community portal with the new version from Cerb.
-
-<div class="cerb-box note">
-	<p>
-		This is only required if you used the bundled <tt>index.php</tt> file to deploy a portal. This step isn't necessary if you use a true reverse proxy (e.g. Nginx or Apache <b>mod_proxy</b>) to serve your community portals.
-	</p>
-</div>
+If the number is different you should replace the `index.php` file for your community portal with the new version from Cerb.
 
 # References
 
 [^git]: <http://en.wikipedia.org/wiki/Git_(software)>
-[^svn-to-git]: <https://cerb.official.support/kb/article/71-Switching_a_Cerb5_installation_from_Subversion_to_Git>
