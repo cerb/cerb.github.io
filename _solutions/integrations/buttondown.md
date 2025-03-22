@@ -1,6 +1,7 @@
 ---
 title: Buttondown
 excerpt: A step-by-step guide for integrating Cerb and Buttondown.
+social_image_url: /assets/images/solutions/integrations/cerb-and-buttondown.png
 layout: solution
 jumbotron:
   breadcrumbs:
