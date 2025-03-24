@@ -47,7 +47,7 @@ By configuring the **layout** of a dashboard, different **zones** become availab
 <img src="/assets/images/docs/using-cerb/dashboards/prompts/dashboard-filter-bar.png" class="screenshot">
 </div>
 
-As of [9.0.4](/releases/9.0.4/), user-editable custom prompts can be added to the top of workspace [dashboards](/docs/dashboards/). These prompts automatically apply to all of the dashboard’s widgets. Previously, each widget had to be filtered individually.
+As of [9.0.4](/releases/9.0.4/), user-editable custom prompts can be added to the top of workspace [dashboards](/docs/dashboards/). These prompts automatically apply to all the dashboard's widgets. Previously, each widget had to be filtered individually.
 
 Each dashboard prompt is associated with a new placeholder that can be used when configuring queries widgets (e.g. [search queries](/docs/search/), [data queries](/docs/data-queries/)).
 

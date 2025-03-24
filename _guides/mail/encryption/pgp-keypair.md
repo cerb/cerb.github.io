@@ -35,7 +35,7 @@ Cerb no longer requires (or uses) the [GnuPG PHP extension](https://pecl.php.net
 
 PGP key-pairs can now be generated entirely in the browser. These support variable key lengths and multiple user IDs (UIDs), and follow the best practice of separate signing and encryption subkeys.
 
-This simplifies PGP setup for new users who don’t have an existing private key.
+This simplifies PGP setup for new users who don't have an existing private key.
 
 # Generating a new key-pair
 

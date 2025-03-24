@@ -938,7 +938,7 @@ Resolve DNS records by hostname and type. This enables workflows like verifying 
 
 (Added in [10.2.6](/releases/10.2.6/))
 
-Resolve a hostname from an IP. If a name can’t be resolved for a valid IP, the IP is returned. If an invalid IP is provided, the result is an empty string.
+Resolve a hostname from an IP. If a name can't be resolved for a valid IP, the IP is returned. If an invalid IP is provided, the result is an empty string.
 
 `dns_host_by_ip(ip)`
 

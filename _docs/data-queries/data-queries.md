@@ -77,7 +77,7 @@ format:dictionaries
 | [usage.behaviors](/docs/data-queries/usage/bot-behaviors/) | Return historical usage data for bot behaviors (e.g. uses, avg. runtime, and total runtime over time)
 | [usage.snippets](/docs/data-queries/usage/snippets/) | Return historical usage data for snippets (e.g. uses by worker over time)
 | [worklist.geo.points](/docs/data-queries/worklist/geopoints/) | Return geolocation data from worklist records
-| [worklist.metrics](/docs/data-queries/worklist/metrics/) | Return computed metrics based on worklist data (e.g. ‘average ticket first response time over the past year’)
+| [worklist.metrics](/docs/data-queries/worklist/metrics/) | Return computed metrics based on worklist data (e.g. 'average ticket first response time over the past year')
 | [worklist.records](/docs/data-queries/worklist/records/) | Retrieve record dictionaries with a search query
 | [worklist.series](/docs/data-queries/worklist/series/) | Return series-based data from any worklist (e.g. tickets created by month by status)
 | [worklist.subtotals](/docs/data-queries/worklist/subtotals/) | Run aggregate functions to categorize matching worklist records

@@ -62,7 +62,7 @@ You can alternatively edit the `framework.config.php` file and manually set `DEV
 
 ## Enabling friendly URLs with Apache
 
-If you’re using the Apache web server you can enable URL rewriting with the following commands:
+If you're using the Apache web server you can enable URL rewriting with the following commands:
 
 {% highlight bash %}
 cd /path/to/cerb
@@ -71,7 +71,7 @@ cp .htaccess-dist .htaccess
 
 For this to work you will need to enable `mod_rewrite` in your Apache configuration.  It is usually already enabled.
 
-If `mod_rewrite` isn’t enabled, you can use the following commands on many Linux-based servers:
+If `mod_rewrite` isn't enabled, you can use the following commands on many Linux-based servers:
 
 {% highlight bash %}
 sudo a2enmod rewrite
