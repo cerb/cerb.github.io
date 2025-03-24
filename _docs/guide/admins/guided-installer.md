@@ -29,7 +29,7 @@ To start the installer, open your browser to the location where you downloaded C
 
 ## Step 1: Requirements Check
 
-The first step of the installer checks if your server meets the requirements for installing Cerb. Correct any problems before proceeding, and then click the **Next Step** button.
+The first step of the installer checks if your server meets the requirements for installing Cerb. Correct any problems before proceeding, and then click the **Continue** button.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/installation/installer_requirements.png" class="screenshot">
@@ -57,13 +57,19 @@ MySQL supports many _storage engines_[^mysql-storage-engines] that offer differe
 
 In general, we recommend that you use InnoDB.  If you're in an environment that only supports MyISAM, or you just feel more comfortable with it, then go ahead and use it.
 
-This isn't a life-or-death decision.  You can easily switch between storage engines at any time (and even use different storage engines for each table).
+You can easily switch between storage engines at any time.
 
 **Host**
 
 This is the IP or hostname of your MySQL server.
 
 If MySQL is installed on the same server as your web server, this value is usually _localhost_.
+
+**Port**
+
+This is the listening port of your MySQL server.
+
+You can leave this blank unless you're running an unusual configuration.
 
 **Database Name**
 
@@ -89,15 +95,15 @@ If it can't write the file, it will generate the file for you to manually copy a
 
 ## Step 5: Database Initialization
 
-If successful, the installer will create your initial database structure. This may take a while because the database is created by incrementally running the updates from each previous version.  Don’t worry if it doesn’t look like anything is happening right away.
+The installer will automatically  create your initial database schema. This may take a moment depending on the resources available to your database server.
 
-## Step 6: Admin Account
+## Step 6: Creating Your Account
 
 In this step you'll create the administrator account that you use to log in.
 
 **Name**
 
-This is simply your first and last name (given and surname).
+Enter your first and last name.
 
 **Email Address**
 
@@ -127,19 +133,25 @@ You can also configure a personalized name for the email address, such as your o
 
 Once you're done, click the **Continue** button.
 
-## Step 7: Testing Mode
+## Step 7: Packages
 
-Without a license, Cerb operates in **testing mode**. This allows full functionality with a single seat.
+|---
+| Environment | 
+|-|-
+| **Demo** | Cerb will be configured for demonstration, development, and testing. Sample records will be created for tickets, contacts, and organizations. This test data can be removed later by deleting the `cerb.demo.data` [workflow](/docs/workflows/). 
+| **Production** | Cerb will be configured for real-world use with a minimal configuration.
 
-You can install a [purchased license](/pricing/self-hosted/) in **Setup >> Configure >> License**.
+Select an environment and click the **Continue** button.
+
+## Step 8: Community Mode
+
+Without a license, Cerb operates in **community mode**. This allows full functionality with a single seat.
+
+You can install a [purchased license](/pricing/) in **Setup >> Configure >> License**.
 
 Click the **Continue** button.
 
-## Step 9: Security
-
-Review the [security recommendations](/docs/security).
-
-## Step 10: Finished
+## Step 9: Finished
 
 That's it!  You're ready to start using Cerb.
 
