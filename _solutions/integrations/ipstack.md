@@ -53,12 +53,11 @@ Paste your API Access Key from above.
 {% highlight cerb %}
 {% raw %}
 start:
-  start:
   http.request/geolocate:
     output: http_response
     inputs:
       method: GET
-      url: http://api.ipstack.com/134.201.250.155
+      url: http://api.ipstack.com/1.2.3.4
       authentication: cerb:connected_account:ipstack
     on_success:
       set:
@@ -68,7 +67,9 @@ start:
 {% endhighlight %}
 
 ## Bulk IP lookup
+
 *Not available on free or basic tier*
+
 {% highlight cerb %}
 {% raw %}
 start:
@@ -76,7 +77,7 @@ start:
     output: http_response
     inputs:
       method: GET
-      url: http://api.ipstack.com/134.201.250.155,72.229.28.185,110.174.165.78
+      url: http://api.ipstack.com/1.2.3.4,5.4.3.2
       authentication: cerb:connected_account:ipstack
     on_success:
       set:

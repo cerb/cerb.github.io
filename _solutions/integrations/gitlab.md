@@ -133,7 +133,9 @@ Review the consent form and then click **Authorize Cerb**.
 Click the **Save Changes** button.
 
 # Use the connected account in Cerb automations
+
 ## Search issues
+
 Create an [automation.function](/docs/automations/triggers/automation.function/) automation:
 
 {% highlight cerb %}
@@ -171,6 +173,7 @@ inputs:
 {% endhighlight %}
 
 ## Create issues
+
 Create an [automation.function](/docs/automations/triggers/automation.function/) automation:
 
 {% highlight cerb %}

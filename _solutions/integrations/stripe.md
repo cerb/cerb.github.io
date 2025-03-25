@@ -31,40 +31,76 @@ In this guide we'll walk through the process of linking Cerb to Stripe. You'll b
 
 # Get your API keys from the Stripe dashboard
 
-1. Visit the [Stripe API keys](https://dashboard.stripe.com/account/apikeys) settings page.
+Visit the [Stripe API keys](https://dashboard.stripe.com/account/apikeys) settings page.
 
-	<div class="cerb-screenshot">
-	<img src="/assets/images/solutions/integrations/stripe/plugin/stripe-api-keys.png" class="screenshot">
-	</div>
+<div class="cerb-screenshot">
+<img src="/assets/images/solutions/integrations/stripe/plugin/stripe-api-keys.png" class="screenshot">
+</div>
 
-1. Make a note of your **Publishable Key** and **Secret Key** for the next step.
+Make a note of your **Secret Key** for the next step.
 
 # Create the Stripe service in Cerb
 
-1. Navigate to **Search >> Connected Services**.
+Navigate to **Search >> Connected Services**.
 
-1. Click the **(+)** icon in the top right of the list.
+Click the **(+)** icon in the top right of the list.
 
-1. Select **Stripe**.
+Select **Stripe**.
 
-	<div class="cerb-screenshot">
-	<img src="/assets/images/guides/common/package-library-connected-services.png" class="screenshot">
-	</div>
+<div class="cerb-screenshot">
+<img src="/assets/images/guides/common/package-library-connected-services.png" class="screenshot">
+</div>
 
-1. Enter your Publishable Key and Secret Key.
+Enter your **Secret Key**.
 
-	<div class="cerb-screenshot">
-	<img src="/assets/images/solutions/integrations/stripe/package-library-service-stripe.png" class="screenshot">
-	</div>
+<div class="cerb-screenshot">
+<img src="/assets/images/solutions/integrations/stripe/plugin/package-library-service-stripe.png" class="screenshot">
+</div>
 
-1. Click the **Create** button.
+Click the **Create** button.
 
 # Use the connected account in automations
 
-You can use the connected account you just created to access [Stripe's API](https://stripe.com/docs/api/curl) from automations in Cerb.  This is typically accomplished using the `http.request` command and selecting the connected account in the `authentication` field.
+You can use the connected account you just created to access [Stripe's API](https://docs.stripe.com/api) from automations in Cerb.  This is typically accomplished using the [http.request](/docs/automations/commands/http.request/) command and selecting the connected account in the `authentication` field.
 
-## Examples
-### Create a payment link
+## List customers
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/subs:
+    output: http_response
+    inputs:
+      method: GET
+      url: https://api.stripe.com/v1/customers
+      authentication: cerb:connected_account:stripe
+    on_success:
+      set:
+        response@json: {{http_response.body}}
+        http_response@json: null
+{% endraw %}
+{% endhighlight %}
+
+## List subscriptions
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/subs:
+    output: http_response
+    inputs:
+      method: GET
+      url: https://api.stripe.com/v1/subscriptions
+      authentication: cerb:connected_account:stripe
+    on_success:
+      set:
+        response@json: {{http_response.body}}
+        http_response@json: null
+{% endraw %}
+{% endhighlight %}
+
+## Create a payment link
+
 {% highlight cerb %}
 {% raw %}
 start:
@@ -89,7 +125,7 @@ start:
 {% endraw %}
 {% endhighlight %}
 
-### Create a subscription
+## Create a subscription
 
 {% highlight cerb %}
 {% raw %}
@@ -110,7 +146,7 @@ start:
 {% endraw %}
 {% endhighlight %}
 
-### Create an invoice
+## Create an invoice
 
 {% highlight cerb %}
 {% raw %}

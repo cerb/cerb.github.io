@@ -1,8 +1,6 @@
 ---
 title: Slack
-excerpt: This page provides a comprehensive guide on integrating Cerb with Slack,
-  detailing the steps to create a new Slack app and configure authentication using
-  either bot tokens or OAuth2.
+excerpt: A step-by-step guide for integrating Cerb and Slack.
 summary: This page provides a comprehensive guide on integrating Cerb with Slack,
   detailing the steps to create a new Slack app and configure authentication using
   either bot tokens or OAuth2. It explains how to set up a Slack connected account
@@ -131,7 +129,8 @@ Click the **Save Changes** button.
 
 # Examples:
 
-## Send a message to a channel:
+## Send a simple message to a channel
+
 {% highlight cerb %}
 {% raw %}
 start:
@@ -144,7 +143,31 @@ start:
       headers@text:
         Content-Type: application/json; charset=utf8
       body:
-        channel: #app-testing
+        channel: #testing
+        text@text:
+          Here is an example message.
+   on_success:
+     set:
+        response@json: {{http_response.body}}
+        http_response@json: null
+{% endraw %}
+{% endhighlight %}
+
+## Send a Block Kit message to a channel
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request:
+   output: http_response
+   inputs:
+      url: https://slack.com/api/chat.postMessage
+      method: POST
+      authentication: cerb:connected_account:slack
+      headers@text:
+        Content-Type: application/json; charset=utf8
+      body:
+        channel: #testing
         text@text:
           Here is an example message using Block Kit:
         blocks:
@@ -180,12 +203,11 @@ start:
 {% endraw %}
 {% endhighlight %}
 
-## List channels:
+## List channels
 Requires  `channels:read` scope.
 {% highlight cerb %}
 {% raw %}
 start:
-  start:
   http.request:
    output: http_response
    inputs:
@@ -202,18 +224,18 @@ start:
 {% endhighlight %}
 
 ## List Users
+
 Requires `users:read` scope.
 {% highlight cerb %}
 {% raw %}
 start:
-  start:
   http.request:
-   output: http_response
-   inputs:
-      url: https://slack.com/api/users.list
+    output: http_response
+    inputs:
+      url: https://slack.com/api/conversations.list
       method: GET
       authentication: cerb:connected_account:slack
-      headers@text:
+      headers:
         Content-Type: application/json; charset=utf8
     on_success:
       set:

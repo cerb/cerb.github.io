@@ -165,10 +165,10 @@ start:
     inputs:
       method: GET
       url: https://api.github.com/user/repos
+      authentication: cerb:connected_account:github
       headers:
         Content-Type: application/json
         User-Agent: Cerb
-      authentication: cerb:connected_account:github
     on_success:
       set:
         response@json: {{http_response.body}}
@@ -186,13 +186,13 @@ start:
     inputs:
       method: POST
       url: https://api.github.com/repos/[repo-path]/issues
+      authentication: cerb:connected_account:github
       headers:
         Content-Type: application/json
         User-Agent: Cerb
       body:
         title: Example Issue Title
         body: This is the text of the issue
-      authentication: cerb:connected_account:github
     on_success:
       set:
         response@json: {{http_response.body}}

@@ -20,11 +20,13 @@ jumbotron:
 
 In this guide we'll walk through the process of linking Cerb to Buttondown. You'll be able to use Buttondown's full API in Cerb automations for email newsletters.
 
-# Get a Buttondown API Key.
+# Get a Buttondown API key
 
 Log in to your [Buttondown Account](https://buttondown.com/requests) or sign up if you don't already have one.
 
-Click the *API Key* button in the top bar, or hit the `K` button on your keyboard.
+Navigate to the <https://buttondown.com/requests> page.
+
+Click the **API Key** button in the top bar, or hit the `K` button on your keyboard.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/solutions/integrations/buttondown/buttondown-key.png" class="screenshot">
