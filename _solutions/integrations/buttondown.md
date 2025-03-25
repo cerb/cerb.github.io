@@ -44,3 +44,63 @@ Copy the API key for use later.
 
 5. Click the **Create** button.
 
+# Examples
+
+## List newsletters
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/newsletters:
+    output: http_response
+    inputs:
+      method: GET
+      url: https://api.buttondown.com/v1/newsletters
+      authentication: cerb:connected_account:buttondown
+    on_success:
+      set:
+        response@json: {{http_response.body}}
+        http_response@json: null
+{% endraw %}
+{% endhighlight %}
+
+## List subscribers
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/subs:
+    output: http_response
+    inputs:
+      method: GET
+      url: https://api.buttondown.com/v1/subscribers
+      authentication: cerb:connected_account:buttondown
+    on_success:
+      set:
+        response@json: {{http_response.body}}
+        http_response@json: null
+{% endraw %}
+{% endhighlight %}
+
+## Add a subscriber
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/addSub:
+    output: http_response
+    inputs:
+      method: POST
+      url: https://api.buttondown.com/v1/subscribers
+      authentication: cerb:connected_account:buttondown
+      headers:
+        Content-Type: application/json
+      body:
+        email_address: customer@cerb.example
+        #tags@csv: tag-1, tag-2
+    on_success:
+      set:
+        response@json: {{http_response.body}}
+        http_response@json: null
+{% endraw %}
+{% endhighlight %}
