@@ -155,6 +155,32 @@ Click **Allow**.
 
 Click the **Save Changes** button.
 
+# Examples
+## Search Threads
+Scope required (any of the following):
+
+`https://www.googleapis.com/auth/gmail.modify`
+
+`https://www.googleapis.com/auth/gmail.readonly`
+
+`https://www.googleapis.com/auth/gmail.metadata`
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/search:
+    output: http_response
+    inputs:
+      method: GET
+      url: https://gmail.googleapis.com/gmail/v1/users/me/threads?q=from:team@cerb.ai
+      authentication: cerb:connected_account:gmail
+    on_success:
+      set:
+        response@json: {{http_response.body}}
+        http_response@json: null
+{% endraw %}
+{% endhighlight %}
+
 # Next steps
 
 See: [Authenticate a Gmail mailbox using IMAP and XOAUTH2](/guides/integrations/google/gmail-xoauth/)
