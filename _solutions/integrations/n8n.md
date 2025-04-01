@@ -20,13 +20,19 @@ jumbotron:
 
 In this guide we'll walk through the process of linking Cerb to n8n. You'll be able to use Cerb's API in n8n workflows.
 
+<div class="cerb-box note">
+  <p>
+    If you're using Docker, you may need to change the hostname <code>localhost</code> to <code>host.docker.internal</code> in the example URLs. 
+  </p>
+</div>
+
 # Create an Access Token in Cerb
 
 1. In Cerb, navigate to **Search >> Oauth Apps**.
 
 2. Click the **(+)** icon in the top right of the list.
 
-3. Name the app (eg `n8n`) and input the Callback URL found in n8n, (usually `http://YOUR-OAUTH-HOST//rest/oauth2-credential/callback`).
+3. Name the app (eg `n8n`) and input any Callback URL found in n8n, (usually `http://YOUR-N8N-HOST/rest/oauth2-credential/callback`).
 
 4. Click **Save Changes**.
 
@@ -65,6 +71,7 @@ Create a new workflow and paste the following JSON.
     {
       "parameters": {
         "path": "fcce0f03-ca9a-4d72-be69-e71022e81022",
+        "responseMode": "lastNode",
         "options": {}
       },
       "type": "n8n-nodes-base.webhook",
@@ -222,6 +229,10 @@ records:
         start:
           set:
             config@json: {{cerb_workflow_config('wgm.integrations.n8n')|json_encode}}
+          await/sending:
+            duration:
+              message: Sending to n8n...
+              until: 1 second
           http.request/n8n:
             output: http_response
             inputs:
@@ -246,6 +257,7 @@ records:
       toolbar_kata@raw:
         interaction/n8nPrompt:
           label: Send to n8n
+          icon: electricity
           uri: cerb:automation:wgm.n8n.interaction
           hidden@bool: {{record__type is not pattern ("ticket")}}
 {% endraw %}
