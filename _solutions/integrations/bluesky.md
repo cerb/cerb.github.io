@@ -48,6 +48,25 @@ Copy the password for use later.
 
 # Examples
 
+## Get timeline
+
+<https://docs.bsky.app/docs/api/app-bsky-feed-get-timeline>
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/getTimeline:
+    output: http_response
+    inputs:
+      method: GET
+      url: https://bsky.social/xrpc/app.bsky.feed.getTimeline
+      authentication: cerb:connected_account:bluesky
+    on_success:
+      set:
+        response@json: {{http_response.body}}
+{% endraw %}
+{% endhighlight %}
+
 ## Make a post
 
 <https://docs.bsky.app/docs/advanced-guides/posts>
