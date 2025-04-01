@@ -155,6 +155,101 @@ Click **Allow**.
 
 Click the **Save Changes** button.
 
+# Examples
+
+## Search threads
+
+<https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.threads/list>
+
+{% highlight cerb %}
+{% raw %}
+start:
+  set:
+    http_params:
+      q: from:team@cerb.ai
+      maxResults@int: 100
+  http.request/search:
+    output: http_response
+    inputs:
+      method: GET
+      url: https://gmail.googleapis.com/gmail/v1/users/me/threads?{{http_params|url_encode}}
+      authentication: cerb:connected_account:gmail
+{% endraw %}
+{% endhighlight %}
+
+## Retrieve thread
+
+<https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.threads/get>
+
+{% highlight cerb %}
+{% raw %}
+start:
+  set:
+    thread_id: a1b2c3d4e5f6
+    http_params:
+      format: metadata
+      metadataHeaders: Subject
+  http.request/getThread:
+    output: http_response
+    inputs:
+      method: GET
+      url: https://gmail.googleapis.com/gmail/v1/users/me/threads/{{thread_id}}?{{http_params|url_encode}}
+      authentication: cerb:connected_account:gmail
+{% endraw %}
+{% endhighlight %}
+
+## Batch retrieve threads
+
+<https://developers.google.com/workspace/gmail/api/guides/batch>
+
+{% highlight cerb %}
+{% raw %}
+start:
+  set:
+    mime_boundary: batch_{{random_string(6)}}
+    mime_body@text:
+      --{{mime_boundary}}
+      Content-Type: application/http
+      Content-ID: <a1b2c3d4e5f6>
+      
+      GET /gmail/v1/users/me/threads/a1b2c3d4e5f6?format=metadata&metadataHeaders=Subject HTTP/1.1
+      
+      --{{mime_boundary}}
+      Content-Type: application/http
+      Content-ID: <b2c3d4e5f6a1>
+      
+      GET /gmail/v1/users/me/threads/b2c3d4e5f6a1?format=metadata&metadataHeaders=Subject HTTP/1.1
+      
+      --{{mime_boundary}}
+      Content-Type: application/http
+      Content-ID: <c3d4e5f6a1b2>
+      
+      GET /gmail/v1/users/me/threads/c3d4e5f6a1b2?format=metadata&metadataHeaders=Subject HTTP/1.1
+      
+      --{{mime_boundary}}--
+      
+  http.request/getThreads:
+    output: http_response
+    inputs:
+      method: POST
+      url: https://www.googleapis.com/batch/gmail/v1
+      authentication: cerb:connected_account:gmail-cerb-devel
+      headers:
+        Content-Type: multipart/mixed; boundary={{mime_boundary}}
+        Content-Length@int: {{mime_body|length}}
+      body: {{mime_body}}
+    on_success:
+      set:
+        threads@json:
+          {% set response_boundary = http_response.headers['content-type']|split("boundary=")|last %}
+          {{http_response.body
+            |split('--' ~ response_boundary)[1:-1]
+            |map((v) => json_decode(v|trim|split("\r\n\r\n")|last))
+            |json_encode
+          }}
+{% endraw %}
+{% endhighlight %}
+
 # Next steps
 
 See: [Authenticate a Gmail mailbox using IMAP and XOAUTH2](/guides/integrations/google/gmail-xoauth/)
