@@ -39,3 +39,61 @@ The automation event [dictionary](/docs/automations/#dictionaries) starts with t
 # Outputs
 
 (none)
+
+# Examples
+Set a watcher if a ticket is moved to a particular group:
+{% tabs group %}
+
+{% tab group automation %}
+{% highlight cerb %}
+{% raw %}
+start:
+  decision/whatGroup:
+    outcome/Group1:
+      if@bool: {{ticket_group_id == 1}}
+      then:
+        record.update/watcher:
+          output: updated_ticket
+          inputs:
+            record_type: ticket
+            record_id: {{ticket_id}}
+            fields:
+              links@list:
+                worker:1
+    outcome/Group2:
+      if@bool: {{ticket_group_id == 2}}
+      then:
+        record.update/watcher:
+          output: updated_ticket
+          inputs:
+            record_type: ticket
+            record_id: {{ticket_id}}
+            fields:
+              links@list:
+                worker:2
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% tab group policy %}
+{% highlight cerb %}
+{% raw %}
+commands:
+  record.update:
+    deny/type@bool: {{inputs.record_type is not record type ('ticket')}}
+    allow@bool: yes
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% tab group event %}
+{% highlight cerb %}
+{% raw %}
+automation/group:
+  uri: cerb:automation:cerb.example.automation
+  disabled@bool: {{ticket_group_id == was_group_id}}
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% endtabs %}
