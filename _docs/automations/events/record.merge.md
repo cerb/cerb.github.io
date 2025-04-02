@@ -54,3 +54,33 @@ The automation event [dictionary](/docs/automations/#dictionaries) starts with t
 | Key | Type | Notes
 |-|-|-
 |`deny:` | string | If set, the merge is denied, and this key's value is the displayed error message. If omitted the merge is allowed. 
+
+# Examples
+
+Only allow admins to merge tickets:
+{% tabs merge %}
+
+{% tab merge automation %}
+{% highlight cerb %}
+{% raw %}
+start:
+  outcome/notAdmin:
+    if@bool: {{not worker_is_superuser}}
+    then:
+      return:
+        deny: Sorry, only admins can merge tickets.
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% tab merge event %}
+{% highlight cerb %}
+{% raw %}
+automation/group:
+  uri: cerb:automation:cerb.example.automation
+  disabled@bool: {{record_type is not record type ('ticket')}}
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% endtabs %}
