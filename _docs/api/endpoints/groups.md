@@ -38,26 +38,10 @@ Modify group rosters.
 
 ### Example
 
-{% highlight php %}
-$changes = [
-  "groups" => [
-    "1" => [
-      "workers" => [
-        "1" => "manager",
-        "2" => "remove",
-        "3" => "member",
-      ],
-    ],
-    "2" => [
-      "workers" => [
-        "2" => "remove",
-      ],
-    ],
-  ],
-];
+{% highlight http %}
+PUT /rest/groups/123.json
+Host: cerb.example
+Authorization: Bearer <token>
 
-$postfields = array(
-    array('json', json_encode($changes)),
-);
-$out = $cerb->put($base_url . 'groups/123.json', $postfields);
+json={"groups":{"1":{"workers":{"1":"manager","2":"remove","3":"member"}},"2":{"workers":{"2":"remove"}}}}
 {% endhighlight %}
