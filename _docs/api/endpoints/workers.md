@@ -30,6 +30,8 @@ Retrieve the object for the current worker based on the given API credentials.
 ### Example
 {: .no_toc}
 
-{% highlight php %}
-$out = $cerb->get($base_url . 'workers/me.json');
+{% highlight http %}
+GET /rest/workers/me.json
+Host: cerb.example
+Authorization: Bearer <token>
 {% endhighlight %}
