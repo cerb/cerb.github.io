@@ -28,6 +28,8 @@ Download an attachment.
 
 **Example:**
 
-{% highlight php %}
-$out = $cerb->get($base_url . 'attachments/1/download.json');
+{% highlight http %}
+GET /rest/attachments/1/download.json
+Host: cerb.example
+Authorization: Bearer <token>
 {% endhighlight %}
