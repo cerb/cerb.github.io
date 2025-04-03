@@ -32,21 +32,18 @@ Import a raw message source.
 ### Example
 {: .no_toc}
 
-{% highlight php %}
-$mime = <<< EOF
-From: jeff@localhost
+{% highlight http %}
+POST /rest/parser/parse.json
+Host: cerb.example
+Authorization: Bearer <token>
+
+message=From: jeff@localhost
 To: support@localhost
 Subject: This is a test through the Web-API.
 Message-Id: <abc2@local1234>
 X-Mailer: cURL+PHP5
 
 This is some message content.
-EOF;
-
-$postfields = array(
-    array('message', $mime),
-);
-$out = $cerb->post($base_url . 'parser/parse.json', $postfields);
 {% endhighlight %}
 
 # Parse a reply
@@ -58,19 +55,16 @@ Parsing a reply to an existing message is fairly simple. You should use the quot
 ### Example
 {: .no_toc}
 
-{% highlight php %}
-$mime = <<< EOF
-From: ben@localhost
+{% highlight http %}
+POST /rest/parser/parse.json
+Host: cerb.example
+Authorization: Bearer <token>
+
+message=From: ben@localhost
 To: support@localhost
 Subject: [parser #TKD-88128-525] This is a test through the Web-API.
 Message-Id: <abc1@local1234>
 X-Mailer: cURL+PHP5
 
 This is another reply using the subject masks.
-EOF;
-
-$postfields = array(
-    array('message', $mime),
-);
-$out = $cerb->post($base_url . 'parser/parse.json', $postfields);
 {% endhighlight %}
