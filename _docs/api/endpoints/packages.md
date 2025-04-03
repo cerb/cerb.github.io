@@ -40,10 +40,13 @@ Import a pre-built workflow package. You must have **administrator** privileges 
 ### Example
 {: .no_toc}
 
-{% highlight php %}
+{% highlight http %}
 {% raw %}
-$json_string = <<< EOF
-{
+POST /rest/packages/import.json
+Host: cerb.example
+Authorization: Bearer <token>
+
+package_json={
   "package": {
     "name": "Create a task",
     "revision": 1,
@@ -84,13 +87,7 @@ $json_string = <<< EOF
     }
   ]
 }
+&prompts[task_title]=This is a new task
+&prompts[worker_id]=1
 {% endraw %}
-EOF;
-
-$postfields = [
-    ['package_json', $json_string],
-    ['prompts[task_title]', 'This is a new task']
-    ['prompts[worker_id]', '1']
-];
-$out = $cerb->post($base_url . 'packages/import.json', $postfields);
 {% endhighlight %}
