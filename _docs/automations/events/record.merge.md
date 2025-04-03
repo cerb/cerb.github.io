@@ -77,7 +77,7 @@ start:
 {% highlight cerb %}
 {% raw %}
 automation/group:
-  uri: cerb:automation:cerb.example.automation
+  uri: cerb:automation:example.merge.adminsOnly
   disabled@bool: {{record_type is not record type ('ticket')}}
 {% endraw %}
 {% endhighlight %}

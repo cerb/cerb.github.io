@@ -88,7 +88,7 @@ commands:
 {% highlight cerb %}
 {% raw %}
 automation/png:
-  uri: cerb:automation:cerb.example.automation
+  uri: cerb:automation:example.png.mimefix
   disabled@bool: 
       {{
         change_type not in ['created']
@@ -137,7 +137,7 @@ commands:
 {% highlight cerb %}
 {% raw %}
 automation/reminder:
-  uri: cerb:automation:cerb.example.automation
+  uri: cerb:automation:example.calendarEvent.notification
   disabled@bool: 
     {{
       change_type not in ['created']

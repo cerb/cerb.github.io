@@ -103,7 +103,7 @@ start:
     output: http_response
     inputs:
       method: POST
-      url: translate.example/v2/translate
+      url: https://translate.example/v2/translate
       authentication: cerb:connected_account:translate
       headers:
         Content-Type: application/json
