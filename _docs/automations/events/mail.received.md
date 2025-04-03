@@ -41,3 +41,66 @@ The automation event [dictionary](/docs/automations/#dictionaries) starts with t
 # Outputs
 
 (none)
+
+# Examples
+
+Send an autoresponder when a new ticket is created:
+{% tabs auto %}
+
+{% tab auto automation %}
+{% highlight cerb %}
+{% raw %}
+record.create:
+    output: new_draft
+    inputs:
+      record_type: draft
+      fields:
+        name: Auto-Response
+        type: ticket.reply
+        ticket_id: {{message_ticket_id}}
+        is_queued: 1
+        queue_delivery_date@date: 5 mins
+        to: {{message_sender_address}}
+        params:
+          to: {{message_sender_address}}
+          subject: [#{{message_ticket_mask}}] {{message_ticket_subject}}
+          headers:
+            In-Reply-To@optional: {{message_headers['in-reply-to']}}
+            Auto-Submitted: auto-replied
+          content: Thank you for contacting us. We will respond as soon as possible.
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% tab auto policy %}
+{% highlight cerb %}
+{% raw %}
+commands:
+  record.create:
+    deny/type@bool: {{inputs.record_type is not record type ('draft')}}
+    allow@bool: yes
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% tab auto event %}
+{% highlight cerb %}
+{% raw %}
+automation/group:
+  uri: cerb:automation:cerb.example.automation
+  disabled@bool:
+    {{
+      not is_new_ticket
+      or not message_ticket_group_auto_responder_enabled
+      or message_ticket_subject is pattern (
+        '*out of the office*',
+        '*out of office*',
+        '*auto response*',
+        '*autoreply*',
+      )
+    }}
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% endtabs %}
