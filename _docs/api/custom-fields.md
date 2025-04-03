@@ -148,15 +148,16 @@ expand=custom_&q=subject:Receipt*
 
 When using an official library, the requests look like:
 
-{% highlight php %}
-$postfields = array(
-    array('expand','custom_'),
-    array('q','subject:Receipt*'),
-    array('sortBy','created'),
-    array('sortAsc','0'),
-    array('page','1'),
-);
-$out = $cerb->post($base_url . 'records/tickets/search.json', $postfields);
+{% highlight http %}
+POST /rest/records/tickets/search.json
+Host: cerb.example
+Authorization: Bearer <token>
+
+expand=custom_
+&q=subject%3AReceipt%2A
+&sortBy=created
+&sortAsc=0
+&page=1
 {% endhighlight %}
 
 The *keys* for custom fields are in the format `custom_123`, where `123` is the ID.  The labels and types of each custom field are in the `results_meta` key.
@@ -174,12 +175,13 @@ fields[custom_14]=CERB-1234&fields[custom_143]=Critical
 
 When using an official library, the requests look like:
 
-{% highlight php %}
-$putfields = array(
-    array('fields[custom_14]','CERB-1234'),
-    array('fields[custom_143]','Critical'),
-);
-$out = $cerb->put($base_url . 'records/tickets/123.json?expand=custom_', $putfields);
+{% highlight http %}
+PUT /rest/records/tickets/123.json?expand=custom_
+Host: cerb.example
+Authorization: Bearer <token>
+
+fields[custom_14]=CERB-1234
+&fields[custom_143]=Critical
 {% endhighlight %}
 
 Each custom field value is sent as a form field in the format `fields[custom_123]=value`, where `123` is the ID, and `value` is determined by the [custom field type](#field-types).
