@@ -20,7 +20,7 @@ jumbotron:
 
 In this guide we'll walk through the process of linking Cerb to Anthropic. You'll be able to use Anthropic's full API in Cerb automations as a LLM provider.
 
-# Get a Anthropic API Key.
+# Get an Anthropic API Key.
 
 Log in to your [Anthropic Account](https://console.anthropic.com/) or sign up if you don't already have one.
 
