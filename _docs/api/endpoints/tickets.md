@@ -61,26 +61,29 @@ Create a ticket object.
 ### Example
 {: .no_toc}
 
-{% highlight php %}
-$postfields = [
-    array('expand','bucket_,group_,custom_'),
-    array('group_id','6'),
-    array('bucket_id','6'),
-    array('org_id','123'), // optional
-    array('to','customer@example.com'),
-    array('cc','cc@example.com'), // optional
-    array('bcc','bcc@example.com'), // optional
-    array('subject','Testing compose from API'),
-    array('content','This is the raw message with an attachment'),
-    array('status','1'), // 0=open, 1=waiting, 2=closed, 3=deleted
-    array('reopen_at', strtotime('+1 day')),
-    array('file_id[]', '368'), // optional, can send multiple instances
-    array('html_template_id', '1'), // optional
-    array('custom_5','+1 hour'), // date custom field
-    array('custom_6',"Line 1\nLine 2\nLine 3"), // multi-line
-    array('custom_4','Option 3'), // picklist
-];
-$out = $cerb->post($base_url . 'tickets/compose.json', $postfields);
+{% highlight http %}
+POST /rest/tickets/compose.json
+Host: cerb.example
+Authorization: Bearer <token>
+
+expand=bucket_,group_,custom_
+&group_id=6
+&bucket_id=6
+&org_id=123
+&to=customer@example.com
+&cc=cc@example.com
+&bcc=bcc@example.com
+&subject=Testing compose from API
+&content=This is the raw message with an attachment
+&status=1
+&reopen_at=1712160000
+&file_id[]=368
+&html_template_id=1
+&custom_5=+1 hour
+&custom_6=Line 1
+Line 2
+Line 3
+&custom_4=Option 3
 {% endhighlight %}
 
 # Reply
@@ -127,23 +130,26 @@ Reply to a ticket message as a worker.
 ### Example
 {: .no_toc}
 
-{% highlight php %}
-$postfields = [
-    array('expand','bucket_,group_,custom_'),
-    array('message_id','1024'),
-    array('content','This is the raw message with an attachment'),
-    array('bcc','bcc@example.com'), // optional
-    array('bucket_id','6'), // group_id is unnecessary because this is non-zero
-    array('cc','cc@example.com'), // optional
-    array('custom_4','Option 3'), // picklist custom field
-    array('custom_5','+1 hour'), // date custom field
-    array('custom_6',"Line 1\nLine 2\nLine 3"), // multi-line custom field
-    array('file_id[]', '368'), // optional, can send multiple instances
-    array('reopen_at', strtotime('+1 day')),
-    array('status','1'), // 0=open, 1=waiting, 2=closed, 3=deleted
-    array('subject','Testing compose from API'), // optional
-    array('to','customer@example.com'), // optional
-    array('html_template_id', '1'), // optional
-];
-$out = $cerb->post($base_url . 'tickets/reply.json', $postfields);
+{% highlight http %}
+POST /rest/tickets/reply.json
+Host: cerb.example
+Authorization: Bearer <token>
+
+expand=bucket_,group_,custom_
+&message_id=1024
+&content=This is the raw message with an attachment
+&bcc=bcc@example.com
+&bucket_id=6
+&cc=cc@example.com
+&custom_4=Option 3
+&custom_5=+1 hour
+&custom_6=Line 1
+Line 2
+Line 3
+&file_id[]=368
+&reopen_at=1712160000
+&status=1
+&subject=Testing compose from API
+&to=customer@example.com
+&html_template_id=1
 {% endhighlight %}
