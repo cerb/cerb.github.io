@@ -31,10 +31,8 @@ Run a [data query](/docs/data-queries/).
 ### Example
 {: .no_toc}
 
-{% highlight php %}
-$query = http_build_query([
-  'q' => 'type:worklist.subtotals of:tickets by:[created@year,group]',
-]);
-  
-$out = $cerb->get($base_url . 'data/query.json?' . $query);
+{% highlight http %}
+GET /rest/data/query.json?q=type:worklist.subtotals%20of:tickets%20by:[created@year,group]
+Host: cerb.example
+Authorization: Bearer <token>
 {% endhighlight %}
