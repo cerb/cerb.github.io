@@ -57,6 +57,8 @@ Search automation logs.
 ## Example
 {:.no_toc}
 
-{% highlight php %}
-$out = $cerb->get($base_url . 'automation/logs/search.json?q=level:error');
+{% highlight http %}
+GET /rest/automation/logs/search.json?q=level:error  
+Host: cerb.example  
+Authorization: Bearer <token>  
 {% endhighlight %}
