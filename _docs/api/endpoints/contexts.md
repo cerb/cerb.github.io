@@ -39,8 +39,10 @@ Retrieve a list of object contexts with IDs, names, custom fields and fieldsets.
 
 **Example:**
 
-{% highlight php %}
-$out = $cerb->get($base_url . 'contexts/list.json');
+{% highlight http %}
+GET /rest/contexts/list.json  
+Host: cerb.example  
+Authorization: Bearer <token>  
 {% endhighlight %}
 
 # Activity Log
@@ -53,8 +55,10 @@ Retrieve a list of activity log event IDs and names, including those contributed
 
 **Example:**
 
-{% highlight php %}
-$out = $cerb->get($base_url . 'contexts/activity/events.json');
+{% highlight http %}
+GET /rest/contexts/activity/events.json  
+Host: cerb.example  
+Authorization: Bearer <token>  
 {% endhighlight %}
 
 ## Create
@@ -87,18 +91,15 @@ Create an activity log entry.
 
 **Example:**
 
-{% highlight php %}
-$postfields = array(
-	array('on','cerberusweb.contexts.worker:2'),
-	array('activity_point','example.worker_high_five'),
-    array('variables', json_encode(array(
-        'target' => 'Dan Hildebrandt',
-    ))),
-    array('urls', json_encode(array(
-        'target' => 'ctx://cerberusweb.contexts.worker:2'
-    ))),
-);
-$out = $cerb->post($base_url . 'contexts/activity/create.json', $postfields);
+{% highlight http %}
+POST /rest/contexts/activity/create.json
+Host: cerb.example
+Authorization: Bearer <token>
+
+on=cerberusweb.contexts.worker:2
+&activity_point=example.worker_high_five
+&variables={"target":"Dan Hildebrandt"}
+&urls={"target":"ctx://cerberusweb.contexts.worker:2"}
 {% endhighlight %}
 
 # Links
@@ -118,14 +119,12 @@ Add any number of links to one context record.
 **Example:**
 
 {% highlight php %}
-$postfields = array(
-  array('on','cerberusweb.contexts.ticket:1148'),
-  array('targets', json_encode(array(
-    'cerberusweb.contexts.org:17581',
-    'cerberusweb.contexts.address:5447',
-  ))),
-);
-$out = $cerb->post($base_url . 'contexts/link.json', $postfields);
+POST /rest/contexts/link.json
+Host: cerb.example
+Authorization: Bearer <token>
+
+on=cerberusweb.contexts.ticket:1148
+&targets=["cerberusweb.contexts.org:17581","cerberusweb.contexts.address:5447"]
 {% endhighlight %}
 
 ## Unlink
@@ -142,12 +141,11 @@ Remove any number of links from one context record.
 
 **Example:**
 
-{% highlight php %}
-$postfields = array(
-  array('on','cerberusweb.contexts.ticket:1148'),
-  array('targets', json_encode(array(
-    'cerberusweb.contexts.org:17581',
-  ))),
-);
-$out = $cerb->post($base_url . 'contexts/unlink.json', $postfields);
+{% highlight http %}
+POST /rest/contexts/unlink.json
+Host: cerb.example
+Authorization: Bearer <token>
+
+on=cerberusweb.contexts.ticket:1148
+&targets=["cerberusweb.contexts.org:17581"]
 {% endhighlight %}
