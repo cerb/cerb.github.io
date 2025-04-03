@@ -87,7 +87,7 @@ commands:
 {% highlight cerb %}
 {% raw %}
 automation/group:
-  uri: cerb:automation:cerb.example.automation
+  uri: cerb:automation:example.newticket.autoresponder
   disabled@bool:
     {{
       not is_new_ticket

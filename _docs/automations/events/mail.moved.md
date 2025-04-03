@@ -90,7 +90,7 @@ commands:
 {% highlight cerb %}
 {% raw %}
 automation/group:
-  uri: cerb:automation:cerb.example.automation
+  uri: cerb:automation:example.ticketMove.watcher
   disabled@bool: {{ticket_group_id == was_group_id}}
 {% endraw %}
 {% endhighlight %}
