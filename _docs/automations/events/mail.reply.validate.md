@@ -15,14 +15,14 @@ summary: This page provides detailed information on the `mail.reply.validate` au
 permalink: /docs/automations/events/mail.reply.validate/
 toc:
   title: mail.reply.validate
-  expand: Automations
+  expand: automations
 jumbotron:
   title: mail.reply.validate
   tagline: ~
   breadcrumbs:
   - label: Docs &raquo;
     url: /docs/home/
-  - label: Automations &raquo;
+  - label: automations &raquo;
     url: /docs/automations/
   - label: Events &raquo;
     url: /docs/automations/#events
@@ -55,3 +55,88 @@ The automation event [dictionary](/docs/automations/#dictionaries) starts with t
 | Key       | Type   | Notes                                                                          |
 |-----------|--------|--------------------------------------------------------------------------------|
 | `reject:` | string | If set, sending the message is aborted. If omitted, message sending continues. |
+
+# Examples
+
+Warn if another worker is currently replying to a ticket:
+{% tabs duplicate %}
+
+{% tab duplicate automation %}
+{% highlight cerb %}
+{% raw %}
+start:
+  record.search/drafts:
+    inputs:
+      record_type: draft
+      record_query@text:
+        ticket.id:${ticket_id} 
+        worker.id:!${worker_id} 
+        is.queued:no 
+        updated:"-15 mins to now"
+      record_query_params:
+        ticket_id: {{inputs.message.ticket_id}}
+        worker_id: {{worker_id}}
+    output: drafts
+    on_success:
+      outcome/notEmpty:
+        if@bool: {{drafts is not empty and drafts is iterable}}
+        then:
+          await:
+            form:
+              title: Duplication of effort?
+              elements:
+                sheet/others:
+                  data@key: drafts
+                  label: Other workers are currently responding to this ticket:
+                  schema:
+                    columns:
+                      date/updated:
+                        label: When
+                      card/worker_id:
+                        label: Who
+                      card/id:
+                        label: Draft
+                submit/prompt_continue:
+                  buttons:
+                    continue/yes:
+                      label: Reply anyway
+                      icon: circle-ok
+                      icon_at: start
+                      value: yes
+                    continue/no:
+                      label: Abort
+                      style: secondary
+                      value: no
+          outcome/abort:
+            if@bool: {{'yes' != prompt_continue}}
+            then:
+              return:
+                reject@bool: true
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% tab duplicate policy %}
+{% highlight cerb %}
+{% raw %}
+commands:
+  record.search:
+    deny/type@bool: {{inputs.record_type is not record type ('draft')}}
+    allow@bool: yes
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% tab duplicate event %}
+{% highlight cerb %}
+{% raw %}
+automation/duplicate:
+  uri: cerb:automation:example.mailDraft.duplicateCheck
+  inputs:
+    message@key: message_id
+  disabled@bool: no
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% endtabs %}
