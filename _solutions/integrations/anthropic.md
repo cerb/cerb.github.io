@@ -45,3 +45,50 @@ Copy the API key for use later.
 4. Paste the key you copied earlier in the **API Key** field.
 
 5. Click the **Create** button.
+
+# Examples
+
+## Chat completions
+
+<https://docs.anthropic.com/en/api/messages>
+
+{% tabs anthropic-chat-completion %}
+
+{% tab anthropic-chat-completion automation %}
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/chatCompletion:
+    output: http_response
+    inputs:
+      method: POST
+      url: https://api.anthropic.com/v1/messages
+      authentication: cerb:connected_account:anthropic
+      headers:
+        anthropic-version: 2023-06-01
+        content-type: application/json
+      body:
+        model: claude-3-opus-20240229
+        max_tokens@int: 1024
+        system: You are Beethoven Bot. You know everything about music theory and piano. Don't answer questions outside of this scope.
+        messages:
+          0:
+            role: user
+            content: What is G Major?
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% tab anthropic-chat-completion policy %}
+{% highlight cerb %}
+{% raw %}
+commands:
+  http.request:
+    deny/url@bool: {{inputs.url is not prefixed ('https://api.anthropic.com/')}}
+    allow@bool: yes
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% endtabs %}
+
