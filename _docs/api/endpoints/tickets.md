@@ -80,9 +80,7 @@ expand=bucket_,group_,custom_
 &file_id[]=368
 &html_template_id=1
 &custom_5=+1 hour
-&custom_6=Line 1
-Line 2
-Line 3
+&custom_6=Line 1\nLine 2\nLine 3
 &custom_4=Option 3
 {% endhighlight %}
 
@@ -143,9 +141,7 @@ expand=bucket_,group_,custom_
 &cc=cc@example.com
 &custom_4=Option 3
 &custom_5=+1 hour
-&custom_6=Line 1
-Line 2
-Line 3
+&custom_6=Line 1\nLine 2\nLine 3
 &file_id[]=368
 &reopen_at=1712160000
 &status=1

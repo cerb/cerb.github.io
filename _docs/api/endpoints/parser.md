@@ -38,12 +38,12 @@ Host: cerb.example
 Authorization: Bearer <token>
 
 message=From: jeff@localhost
-To: support@localhost
-Subject: This is a test through the Web-API.
-Message-Id: <abc2@local1234>
-X-Mailer: cURL+PHP5
+  To: support@localhost
+  Subject: This is a test through the Web-API.
+  Message-Id: <abc2@local1234>
+  X-Mailer: cURL+PHP5
 
-This is some message content.
+  This is some message content.
 {% endhighlight %}
 
 # Parse a reply
@@ -61,10 +61,10 @@ Host: cerb.example
 Authorization: Bearer <token>
 
 message=From: ben@localhost
-To: support@localhost
-Subject: [parser #TKD-88128-525] This is a test through the Web-API.
-Message-Id: <abc1@local1234>
-X-Mailer: cURL+PHP5
-
-This is another reply using the subject masks.
+  To: support@localhost
+  Subject: [parser #TKD-88128-525] This is a test through the Web-API.
+  Message-Id: <abc1@local1234>
+  X-Mailer: cURL+PHP5
+  
+  This is another reply using the subject masks.
 {% endhighlight %}
