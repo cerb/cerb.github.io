@@ -233,3 +233,31 @@ results:
   updated: 1665018318
   url_download: https://cerb.example/files/1234/example.zip
 {% endhighlight %}
+
+## Create a ZIP with a dynamic file list
+
+Use the [@kata](/docs/kata/#kata) annotation to build a file list using scripting.
+
+{% highlight cerb %}
+{% raw %}
+inputs:
+  records/files:
+    record_type: attachment
+    required@bool: yes
+
+start:
+  file.write:
+    output: results
+    inputs:
+      name: example.zip
+      mime_type: application/zip
+      content:
+        zip:
+          files@kata:
+            {% for file in inputs.files %}
+            file/{{file.id}}:
+              path: {{file.name}}
+              uri: cerb:attachment:{{file.id}}
+            {% endfor %}
+{% endraw %}
+{% endhighlight %}
