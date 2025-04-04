@@ -382,6 +382,22 @@ numbers@json: [1,2,3]
 {% endraw %}
 {% endhighlight %}
 
+### kata
+
+`@kata` parses text as a KATA-encoded value.
+
+This is particularly useful for dynamically generating KATA using scripting.
+
+{% highlight cerb %}
+{% raw %}
+records@kata:
+  {% for doc in docs %}
+    record/{{doc.id}}:
+      name: {{doc.name}}
+  {% endfor %}
+{% endraw %}
+{% endhighlight %}
+
 ### key
 
 `@key` sets the value from a [dictionary](#dictionaries) path.
