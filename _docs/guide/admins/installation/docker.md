@@ -81,6 +81,18 @@ A `docker-compose.yml` file is provided for reference and testing. In production
 
 You can use the [cerb](https://github.com/cerb/cerb-docker/tree/main/cerb/) example to build your own customized image.
 
+### Running the scheduler in the container from the host
+
+You can use `docker exec` to ping the scheduler in the container.
+
+{% highlight cerb %}
+{% raw %}
+docker exec cerb-docker-caddy-1 wget -O - --header "Host: localhost" "https://localhost/cron?loglevel=7&ignore_wait=1"
+{% endraw %}
+{% endhighlight %}
+
+You can add this to `crontab` on the host.
+
 ## Option 2: GitHub (Development, Testing)
 
 The Cerb source code ships with a Docker configuration for local evaluation, development, and testing. This creates preconfigured containers for Nginx (web server), PHP/FPM (code), and MySQL (database).
