@@ -11,6 +11,8 @@ summary: This page provides information about the "record.changed" automation ev
   both the new and former record dictionaries. There are no outputs specified for
   these events.
 permalink: /docs/automations/events/record.changed/
+redirect_from:
+  - /docs/automations/triggers/record.changed/
 toc:
   title: record.changed
   expand: Automations
@@ -36,22 +38,24 @@ Automations can dynamically be enabled/disabled by record type, field values, or
 
 The automation event [dictionary](/docs/automations/#dictionaries) starts with the following values:
 
-| Key | Type | Notes
-|-|-|-
-| `actor_*` | record | The current actor dictionary. Supports key expansion.
-| `inputs` | dictionary | [Custom input](/docs/automations/#inputs) values from the caller.
-| `is_new` | boolean | `true` if the record was created during the current request.
-| `record_*` | record | The new [record](/docs/records/types/) dictionary. Supports key expansion.
-| `was_record_*` | record | The former [record](/docs/records/types/) dictionary. Supports key expansion.
+| Key            | Type       | Notes                                                                         |
+|----------------|------------|-------------------------------------------------------------------------------|
+| `actor_*`      | record     | The current actor dictionary. Supports key expansion.                         |
+| `change_type`  | string     | `created`, `updated`, or `deleted`                                            |
+| `inputs`       | dictionary | [Custom input](/docs/automations/#inputs) values from the caller.             |
+| `is_new`       | boolean    | `true` if the record was created during the current request.                  |
+| `record_*`     | record     | The new [record](/docs/records/types/) dictionary. Supports key expansion.    |
+| `was_record_*` | record     | The former [record](/docs/records/types/) dictionary. Supports key expansion. |
 
 # Outputs
 
 (none)
 
-
 # Examples
 
-Set the proper MIME type if a file with a `.png` extension comes in as an `appllication/octet-stream`:
+## Fix attachment image MIME types
+
+Set the proper MIME type if a file with a `.png` extension comes in as an `application/octet-stream`:
 
 {% tabs png %}
 
@@ -101,6 +105,8 @@ automation/png:
 
 {% endtabs %}
 
+## Create notifications for new calendar events
+
 Create a notification when someone adds an event to your calendar:
 
 {% tabs reminder %}
@@ -148,6 +154,8 @@ automation/reminder:
 {% endtab %}
 
 {% endtabs %}
+
+## Add watchers on high-touch tickets
 
 Add a watcher (eg. a manager) if a ticket thread reaches a certain number of messages:
 
@@ -203,6 +211,8 @@ automation/manager:
     {{
       change_type not in ['updated']
       or record__context is not record type ('ticket')
+      or record_num_messages == was_record_num_messages
+      or record_num_messages not in [15,30]
     }}
 {% endraw %}
 {% endhighlight %}

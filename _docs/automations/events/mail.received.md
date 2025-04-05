@@ -45,12 +45,13 @@ The automation event [dictionary](/docs/automations/#dictionaries) starts with t
 # Examples
 
 Send an autoresponder when a new ticket is created:
-{% tabs auto %}
+{% tabs event-mail-received %}
 
-{% tab auto automation %}
+{% tab event-mail-received automation %}
 {% highlight cerb %}
 {% raw %}
-record.create:
+start:
+  record.create:
     output: new_draft
     inputs:
       record_type: draft
@@ -72,7 +73,7 @@ record.create:
 {% endhighlight %}
 {% endtab %}
 
-{% tab auto policy %}
+{% tab event-mail-received policy %}
 {% highlight cerb %}
 {% raw %}
 commands:
@@ -83,10 +84,10 @@ commands:
 {% endhighlight %}
 {% endtab %}
 
-{% tab auto event %}
+{% tab event-mail-received event %}
 {% highlight cerb %}
 {% raw %}
-automation/group:
+automation/autoreply:
   uri: cerb:automation:example.newticket.autoresponder
   disabled@bool:
     {{
@@ -99,6 +100,15 @@ automation/group:
         '*autoreply*',
       )
     }}
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% tab event-mail-received inputs %}
+{% highlight cerb %}
+{% raw %}
+message__context: message
+message_id: 1
 {% endraw %}
 {% endhighlight %}
 {% endtab %}

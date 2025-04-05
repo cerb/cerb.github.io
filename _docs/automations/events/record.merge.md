@@ -76,7 +76,7 @@ start:
 {% tab merge event %}
 {% highlight cerb %}
 {% raw %}
-automation/group:
+automation/merge:
   uri: cerb:automation:example.merge.adminsOnly
   disabled@bool: {{record_type is not record type ('ticket')}}
 {% endraw %}

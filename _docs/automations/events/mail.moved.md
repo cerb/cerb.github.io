@@ -42,15 +42,15 @@ The automation event [dictionary](/docs/automations/#dictionaries) starts with t
 
 # Examples
 Set a watcher if a ticket is moved to a particular group:
-{% tabs group %}
+{% tabs event-mail-moved %}
 
-{% tab group automation %}
+{% tab event-mail-moved automation %}
 {% highlight cerb %}
 {% raw %}
 start:
-  decision/whatGroup:
-    outcome/Group1:
-      if@bool: {{ticket_group_id == 1}}
+  decision/group:
+    outcome/group1:
+      if@bool: {{ticket_group_name == "Support"}}
       then:
         record.update/watcher:
           output: updated_ticket
@@ -60,8 +60,8 @@ start:
             fields:
               links@list:
                 worker:1
-    outcome/Group2:
-      if@bool: {{ticket_group_id == 2}}
+    outcome/group2:
+      if@bool: {{ticket_group_name == "Sales"}}
       then:
         record.update/watcher:
           output: updated_ticket
@@ -75,7 +75,7 @@ start:
 {% endhighlight %}
 {% endtab %}
 
-{% tab group policy %}
+{% tab event-mail-moved policy %}
 {% highlight cerb %}
 {% raw %}
 commands:
@@ -86,12 +86,22 @@ commands:
 {% endhighlight %}
 {% endtab %}
 
-{% tab group event %}
+{% tab event-mail-moved event %}
 {% highlight cerb %}
 {% raw %}
 automation/group:
   uri: cerb:automation:example.ticketMove.watcher
   disabled@bool: {{ticket_group_id == was_group_id}}
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% tab event-mail-moved inputs %}
+{% highlight cerb %}
+{% raw %}
+ticket_id: 1
+ticket_group_name: Sales
+was_ticket_group_name: Support
 {% endraw %}
 {% endhighlight %}
 {% endtab %}

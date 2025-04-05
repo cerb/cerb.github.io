@@ -86,3 +86,9 @@ Interactions in a custom [toolbar](/docs/toolbars/) can use the following `after
 |---
 | `explore_page:`    | string | A default for the next page in the explore set when the interaction doesn't return one.
 | `refresh_widgets@list:` | array | Refresh widgets if the current page is a record profile.
+
+# Examples
+
+## Auto assignment
+
+See: [Workflow: Auto Dispatcher](/workflows/cerb.auto_dispatcher/)
