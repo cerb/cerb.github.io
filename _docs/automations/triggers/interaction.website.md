@@ -27,6 +27,8 @@ jumbotron:
     url: /docs/automations/#triggers
 ---
 
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/dkpaBooNNGc" title="" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+
 **interaction.website** [automations](/docs/automations/) are [interactions](/docs/interactions/) with visitors on third-party websites that use [continuations](/docs/automations/#continuations) to pause and resume a multi-step workflow.
 
 On websites, this can be used for surveys, sign-up forms, contact forms, troubleshooters, customer service bots, and much more.

@@ -26,6 +26,8 @@ Authentication, API calls, chat history, and tool invocation are all automatical
 
 You simply provide a `system_prompt` with instructions, one or more new conversational `messages` turns, and an optional list of `tools`.
 
+<p><iframe width="1040" height="585" src="https://www.youtube.com/embed/dkpaBooNNGc" title="" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+
 {% highlight cerb %}
 {% raw %}
 llm.agent:

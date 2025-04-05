@@ -42,9 +42,7 @@ jumbotron:
 
 # Introduction
 
-<div class="cerb-screenshot">
-<img src="/assets/images/guides/interactions/website/deploy/cerb-bots-banner.png" class="screenshot">
-</div>
+<p><iframe width="1040" height="585" src="https://www.youtube.com/embed/dkpaBooNNGc" title="" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
 
 Traditionally, interactivity has been added to websites using forms. This requires front-end developers and designers to create pages, and back-end programmers to process form submissions and interact with other services (email, databases, APIs, etc).
 
