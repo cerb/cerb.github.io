@@ -43,106 +43,181 @@ In this guide we'll use the Stable Diffusion API to generate profile images for 
 <img src="/assets/images/guides/automations/stable-diffusion-images/ai-profile-editor.png" class="screenshot">
 </div>
 
-# Create a Stability.ai account
+# Connect Stability.ai to Cerb
+Follow the [Stability.ai integration guide](/solutions/integrations/stabilityai/) to get an API key and connect it to Cerb.
 
-The development of Stable Diffusion was funded by Stability.ai, who also provides a simple, low-cost API for using the model. It can also be self-hosted[^self-hosted].
+# Import the workflow
 
-Create a Stability.ai account if you don't have one already from: <https://platform.stability.ai>
-
-Create a new API key from: <https://platform.stability.ai/account/keys>
-
-Copy the API key to your clipboard for use later.
-
-# Create the connected service
-
-In Cerb, navigate to **Search >> Connected Services >> (+)**.
-
-Select **Stability.ai**
-
-Paste your **API Key** from above.
-
-Click the **Create** button.
-
-# Import the package
-
-Navigate to **Setup >> Packages >> Import**.
-
-Paste the following package:
-
-{% highlight json %}
-{% raw %}
-{
-    "package": {
-      "requires": {
-          "cerb_version": "10.4.2"
-      },
-      "configure": {
-        "placeholders": [
-        ],
-        "prompts": [
-          {
-            "type": "chooser",
-            "label": "Stability.ai Account:",
-            "key": "prompt_stabilityai_account_id",
-            "params": {
-              "context": "cerberusweb.contexts.connected_account",
-              "query": "stability",
-              "single": true
-            }
-          }
-        ]
-      }
-    },
-    "records": [
-        {
-            "uid": "automation_64f7e4fa1582d",
-            "_context": "automation",
-            "name": "example.services.textToImage.stabilityai",
-            "extension_id": "cerb.trigger.automation.function",
-            "description": "",
-            "script": "inputs:\r\n  text/text:\r\n    required@bool: yes\r\n    type_options:\r\n      max_length@int: 1000\r\n      truncate@bool: yes\r\n  text/n:\r\n    type: number\r\n    default: 2\r\n\r\n# [TODO] `outputs:` interface (for functions)\r\n\r\nstart:\r\n  set:\r\n    engine_id: stable-diffusion-xl-beta-v2-2-2\r\n  \r\n  http.request/openai:\r\n    output: http_response\r\n    inputs:\r\n      method: POST\r\n      url: https://api.stability.ai/v1/generation/{{engine_id}}/text-to-image\r\n      authentication: cerb:connected_account:{{{prompt_stabilityai_account_uri}}}\r\n      headers:\r\n        Content-Type: application/json\r\n        Accept: application/json\r\n      body:\r\n        text_prompts:\r\n          0:\r\n            text@key: inputs:text\r\n            weight@int: 1\r\n        samples@key,int: inputs:n\r\n        width@int: 320\r\n        height@int: 320\r\n        steps@int: 30\r\n        seed@int: 0\r\n        cfg_scale@int: 7\r\n        #style: 3d-model analog-film anime cinematic comic-book digital-art enhance fantasy-art isometric line-art low-poly modeling-compound neon-punk origami photographic pixel-art tile-texture\r\n    on_success:\r\n      set:\r\n        http_response@key,json: http_response:body\r\n        image_urls@list:\r\n      repeat:\r\n        each@csv: {{http_response.artifacts|keys|join(',')}}\r\n        as: artifact_id\r\n        do:\r\n          file.write:\r\n            output: fp_writer\r\n            inputs:\r\n              mime_type: image/png\r\n              expires@date: +1 hour\r\n              content:\r\n                text@key,base64: http_response:artifacts:{{artifact_id}}:base64\r\n            on_success:\r\n              var.set:\r\n                inputs:\r\n                  key: image_urls:{{image_urls|length}}\r\n                  value:\r\n                    url: {{cerb_url('c=ui&a=image&token=' ~ fp_writer.uri|split(':')|last)}}\r\n  \r\n  var.unset:\r\n    inputs:\r\n      key@csv: http_response, fp_writer\r\n  \r\n  return:\r\n    images@key: image_urls ",
-            "policy_kata": "commands:\r\n  http.request:\r\n    deny/url@bool: {{inputs.url is not pattern ('https://api.stability.ai/v1/generation/*/text-to-image')}}\r\n    allow@bool: yes\r\n  file.write:\r\n    allow@bool: yes\r\n    ",
-            "created_at": 1693967610,
-            "updated_at": 1693967610
-        },
-        {
-            "uid": "automation_64f7e4e7a08cf",
-            "_context": "automation",
-            "name": "example.interaction.recordProfileImage.stabilityai",
-            "extension_id": "cerb.trigger.interaction.worker",
-            "description": "",
-            "script": "start:\r\n  await/prompt:\r\n    form:\r\n      title: AI Image Generator\r\n      elements:\r\n        textarea/prompt_text:\r\n          label: Prompt:\r\n          required@bool: yes\r\n          max_length@int: 1000\r\n          truncate@bool: yes\r\n          placeholder: A profile picture of an android tech worker in cyberpunk graphic novel style\r\n  \r\n  function:\r\n    uri: cerb:automation:example.services.textToImage.stabilityai\r\n    output: result\r\n    inputs:\r\n      text@key: prompt_text\r\n      n: 4\r\n  \r\n  await/preview:\r\n    form:\r\n      elements:\r\n        say:\r\n          content@text:\r\n            {{prompt_text}}\r\n            ---------------\r\n        sheet/prompt_image:\r\n          required@bool: yes\r\n          data@key: result:images \r\n          limit: 5\r\n          schema:\r\n            layout:\r\n              headings@bool: no\r\n              paging@bool: no\r\n              filtering@bool: no\r\n              style: grid\r\n            columns:\r\n              selection/__index:\r\n                params:\r\n                  mode: single\r\n              text/image:\r\n                params:\r\n                  value_template@raw:\r\n                    <img src=\"{{url}}\" style=\"width:256px;height:auto;\">\r\n  \r\n  return:\r\n    image:\r\n      url: {{result.images[prompt_image].url}}",
-            "policy_kata": "commands:\r\n  function:\r\n    deny/uri@bool: {{uri != 'cerb:automation:example.services.textToImage.stabilityai'}}\r\n    allow@bool: yes",
-            "created_at": 1693967591,
-            "updated_at": 1693967591
-        }
-    ]
-}
-{% endraw %}
-{% endhighlight %}
-
-Select your Stability.ai account.
-
-Click the **Import** button.
-
-# Toolbar
-
-Navigate to **Search >> Toolbars**.
-
-Edit the **record.profile.image.editor** toolbar.
-
-Add the following interaction to the toolbar:
+Navigate to **Search >> Workflows >> (+) >> (empty)** and paste the following [KATA](/docs/kata/):
 
 {% highlight cerb %}
 {% raw %}
-interaction/stability:
-  label: Stable Diffusion
-  icon: picture
-  uri: cerb:automation:example.interaction.recordProfileImage.stabilityai
+workflow:
+  name: example.services.textToImage.stabilityai
+  version: 2025-04-06T04:01:50Z
+  description: Generate profile images with Stability.ai's models
+  website: https://cerb.ai/resources/workflows/
+  requirements:
+    cerb_version: >=11.0 <11.2
+    cerb_plugins: cerberusweb.core, 
+  config:
+    chooser/account:
+      label: Stability.ai Account
+      record_type: connected_account
+records:
+  automation/generateImage:
+    fields:
+      name: example.services.textToImage.stabilityai
+      extension_id: cerb.trigger.automation.function
+      description@text:
+      script@raw:
+        inputs:
+          text/text:
+            required@bool: yes
+            type_options:
+              max_length@int: 1000
+              truncate@bool: yes
+          text/n:
+            type: number
+            default: 2
+        
+        # [TODO] `outputs:` interface (for functions)
+        
+        start:
+          set:
+            engine_id: stable-diffusion-xl-beta-v2-2-2
+            config@json: {{cerb_workflow_config('example.services.textToImage.stabilityai')|json_encode}}
+          
+          http.request/openai:
+            output: http_response
+            inputs:
+              method: POST
+              url: https://api.stability.ai/v1/generation/{{engine_id}}/text-to-image
+              authentication: cerb:connected_account:{{config.account}}
+              headers:
+                Content-Type: application/json
+                Accept: application/json
+              body:
+                text_prompts:
+                  0:
+                    text@key: inputs:text
+                    weight@int: 1
+                samples@key,int: inputs:n
+                width@int: 320
+                height@int: 320
+                steps@int: 30
+                seed@int: 0
+                cfg_scale@int: 7
+                #style: 3d-model analog-film anime cinematic comic-book digital-art enhance fantasy-art isometric line-art low-poly modeling-compound neon-punk origami photographic pixel-art tile-texture
+            on_success:
+              set:
+                http_response@key,json: http_response:body
+                image_urls@list:
+              repeat:
+                each@csv: {{http_response.artifacts|keys|join(',')}}
+                as: artifact_id
+                do:
+                  file.write:
+                    output: fp_writer
+                    inputs:
+                      mime_type: image/png
+                      expires@date: +1 hour
+                      content:
+                        text@key,base64: http_response:artifacts:{{artifact_id}}:base64
+                    on_success:
+                      var.set:
+                        inputs:
+                          key: image_urls:{{image_urls|length}}
+                          value:
+                            url: {{cerb_url('c=ui&a=image&token=' ~ fp_writer.uri|split(':')|last)}}
+          
+          var.unset:
+            inputs:
+              key@csv: http_response, fp_writer
+          
+          return:
+            images@key: image_urls 
+      policy_kata@raw:
+        commands:
+          http.request:
+            deny/url@bool: {{inputs.url is not pattern ('https://api.stability.ai/v1/generation/*/text-to-image')}}
+            allow@bool: yes
+          file.write:
+            allow@bool: yes
+  automation/generateInteraction:
+    fields:
+      name: example.interaction.recordProfileImage.stabilityai
+      extension_id: cerb.trigger.interaction.worker
+      description@text:
+      script@raw:
+        start:
+          await/prompt:
+            form:
+              title: AI Image Generator
+              elements:
+                textarea/prompt_text:
+                  label: Prompt:
+                  required@bool: yes
+                  max_length@int: 1000
+                  truncate@bool: yes
+                  placeholder: A profile picture of an android tech worker in cyberpunk graphic novel style
+          
+          function:
+            uri: cerb:automation:example.services.textToImage.stabilityai
+            output: result
+            inputs:
+              text@key: prompt_text
+              n: 4
+          
+          await/preview:
+            form:
+              elements:
+                say:
+                  content@text:
+                    {{prompt_text}}
+                    ---------------
+                sheet/prompt_image:
+                  required@bool: yes
+                  data@key: result:images 
+                  limit: 5
+                  schema:
+                    layout:
+                      headings@bool: no
+                      paging@bool: no
+                      filtering@bool: no
+                      style: grid
+                    columns:
+                      selection/__index:
+                        params:
+                          mode: single
+                      text/image:
+                        params:
+                          value_template@raw:
+                            <img src="{{url}}" style="width:256px;height:auto;">
+          
+          return:
+            image:
+              url: {{result.images[prompt_image].url}}
+      policy_kata@raw:
+        commands:
+          function:
+            deny/uri@bool: {{uri != 'cerb:automation:example.services.textToImage.stabilityai'}}
+            allow@bool: yes
+  toolbar_section/generateToolbar:
+    fields:
+      name: Generate Profile
+      toolbar_name: record.profile.image.editor
+      priority@int: 50
+      is_disabled: 0
+      toolbar_kata@raw:
+        interaction/stability:
+          label: Stable Diffusion
+          icon: picture
+          uri: cerb:automation:example.interaction.recordProfileImage.stabilityai
 {% endraw %}
 {% endhighlight %}
 
-Click the **Save Changes** button.
+Click the **Continue** button and select your Stability.ai connected account when prompted.
 
 # Generate a profile image
 
