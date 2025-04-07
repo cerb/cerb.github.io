@@ -87,6 +87,17 @@ start:
 {% endhighlight %}
 {% endtab %}
 
+{% tab translate interaction policy %}
+{% highlight cerb %}
+{% raw %}
+commands:
+  function:
+    deny/uri@bool: {{uri != 'cerb:automation:example.translate.function'}}
+    allow@bool: yes
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
 {% tab translate function %}
 {% highlight cerb %}
 {% raw %}
@@ -121,6 +132,17 @@ start:
             source_lang: {{response_body.translations|first.detected_source_language}}
             target_lang: {{inputs.target_lang|default('EN')}}
             text: {{response_body.translations|first.text}}
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% tab translate function policy %}
+{% highlight cerb %}
+{% raw %}
+commands:
+  http.request:
+    deny/url@bool: {{inputs.url is not prefixed ('https://translate.example/v2/translate')}}
+    allow@bool: yes
 {% endraw %}
 {% endhighlight %}
 {% endtab %}
