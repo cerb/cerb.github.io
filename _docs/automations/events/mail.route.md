@@ -55,4 +55,4 @@ The automation event [dictionary](/docs/automations/#dictionaries) starts with t
 
 # Examples
 
-See [Mail Routing](docs/setup/mail/routing/) for more information about routing and Routing KATA.
+See [Mail Routing](/docs/setup/mail/routing/) for more information about routing and Routing KATA.
