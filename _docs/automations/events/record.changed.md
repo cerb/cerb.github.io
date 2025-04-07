@@ -203,6 +203,8 @@ automation/manager:
     {{
       change_type not in ['updated']
       or record__context is not record type ('ticket')
+      or record_num_messages == was_record_num_messages
+      or record_num_messages not in [15,30]
     }}
 {% endraw %}
 {% endhighlight %}
