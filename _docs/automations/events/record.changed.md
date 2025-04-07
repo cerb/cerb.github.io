@@ -51,7 +51,7 @@ The automation event [dictionary](/docs/automations/#dictionaries) starts with t
 
 # Examples
 
-Set the proper MIME type if a file with a `.png` extension comes in as an `appllication/octet-stream`:
+Set the proper MIME type if a file with a `.png` extension comes in as an `application/octet-stream`:
 
 {% tabs png %}
 
