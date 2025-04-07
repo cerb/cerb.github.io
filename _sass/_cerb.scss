@@ -584,6 +584,27 @@ div.pricing {
 	}
 }
 
+.youtube-video-container {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+
+	&::after {
+		display: block;
+		content: "";
+		padding-top: 56.25%;
+	}
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+
 footer {
 	line-height: 1.4em;
 	color: rgb(255,255,255);

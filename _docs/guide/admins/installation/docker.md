@@ -27,7 +27,7 @@ jumbotron:
 * TOC
 {:toc}
 
-<p><iframe width="1040" height="585" src="https://www.youtube.com/embed/NkKUDS6oicw" title="" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+<p class="youtube-video-container"><iframe width="1040" height="585" src="https://www.youtube.com/embed/NkKUDS6oicw" title="" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
 
 # Install Docker
 

@@ -27,7 +27,7 @@ jumbotron:
     url: /docs/automations/#triggers
 ---
 
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/dkpaBooNNGc" title="" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+<p class="youtube-video-container"><iframe width="1040" height="585" src="https://www.youtube.com/embed/dkpaBooNNGc" title="" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
 
 **interaction.website** [automations](/docs/automations/) are [interactions](/docs/interactions/) with visitors on third-party websites that use [continuations](/docs/automations/#continuations) to pause and resume a multi-step workflow.
 
