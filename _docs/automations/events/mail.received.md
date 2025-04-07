@@ -50,24 +50,25 @@ Send an autoresponder when a new ticket is created:
 {% tab auto automation %}
 {% highlight cerb %}
 {% raw %}
-record.create:
-    output: new_draft
-    inputs:
-      record_type: draft
-      fields:
-        name: Auto-Response
-        type: ticket.reply
-        ticket_id: {{message_ticket_id}}
-        is_queued: 1
-        queue_delivery_date@date: 5 mins
-        to: {{message_sender_address}}
-        params:
+start:
+  record.create:
+      output: new_draft
+      inputs:
+        record_type: draft
+        fields:
+          name: Auto-Response
+          type: ticket.reply
+          ticket_id: {{message_ticket_id}}
+          is_queued: 1
+          queue_delivery_date@date: 5 mins
           to: {{message_sender_address}}
-          subject: [#{{message_ticket_mask}}] {{message_ticket_subject}}
-          headers:
-            In-Reply-To@optional: {{message_headers['in-reply-to']}}
-            Auto-Submitted: auto-replied
-          content: Thank you for contacting us. We will respond as soon as possible.
+          params:
+            to: {{message_sender_address}}
+            subject: [#{{message_ticket_mask}}] {{message_ticket_subject}}
+            headers:
+              In-Reply-To@optional: {{message_headers['in-reply-to']}}
+              Auto-Submitted: auto-replied
+            content: Thank you for contacting us. We will respond as soon as possible.
 {% endraw %}
 {% endhighlight %}
 {% endtab %}
