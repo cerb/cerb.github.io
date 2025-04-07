@@ -55,4 +55,48 @@ The automation event [dictionary](/docs/automations/#dictionaries) starts with t
 
 # Examples
 
+Route based on LLM classification:
+
+{% tabs llm %}
+
+{% tab llm automation %}
+{% highlight cerb %}
+{% raw %}
+start:
+  function/classify:
+    uri: cerb:automation:example.llm.classify
+    inputs:
+      text: {{email_body}}
+    output: results
+
+  return:
+    group_name: {{results.group}}
+    bucket_name: {{results.bucket}}
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% tab llm policy %}
+{% highlight cerb %}
+{% raw %}
+commands:
+  function:
+    deny/uri@bool: {{uri != 'cerb:automation:example.llm.classify'}}
+    allow@bool: yes
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% tab llm event %}
+{% highlight cerb %}
+{% raw %}
+automation/llm:
+  uri: cerb:automation:example.llm.route
+  disabled@bool: no
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% endtabs %}
+
 See [Mail Routing](/docs/setup/mail/routing/) for more information about routing and Routing KATA.
