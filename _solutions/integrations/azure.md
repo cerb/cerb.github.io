@@ -1,12 +1,12 @@
 ---
 title: Azure
 excerpt: This page provides a detailed guide on integrating Cerb with Office365 by
-  configuring an Azure app and setting up Cerb.
+  configuring a Microsoft Entra app and setting up Cerb.
 summary: This page provides a detailed guide on integrating Cerb with Office365 by
-  configuring an Azure app and setting up Cerb. It includes step-by-step instructions
-  for creating a new app and client secret in Azure, as well as creating a connected
-  service and account in Cerb. The guide is designed to help users automate tasks
-  using Azure APIs with Cerb bots. It concludes with a reference to further steps
+  configuring a Microsoft Entra app and setting up Cerb. It includes step-by-step
+  instructions for creating a new app and client secret in Azure, as well as creating
+  a connected service and account in Cerb. The guide is designed to help users automate
+  tasks using Azure APIs with Cerb bots. It concludes with a reference to further steps
   for authenticating an Office365 mailbox using XOAUTH2.
 social_image_url: /assets/images/solutions/integrations/azure/cerb-and-azure.png
 redirect_from:
@@ -29,19 +29,17 @@ jumbotron:
 
 In this guide we'll walk through the process of linking Cerb to Office365. You can use the same process with any [Azure API](https://docs.microsoft.com/en-us/rest/api/azure/) from Cerb bots to automate whatever you need.
 
-# Configure an Azure app
+# Configure an Entra app
 
 ### Create a new app
 
-1. Log in to: <https://portal.azure.com/>
+1. Log in to: <https://entra.microsoft.com/>
 
-2. Navigate to **Azure Active Directory** in the top search box.
+2. Select **Applications >> App registrations** in the left sidebar.
 
-3. Select **App registrations** in the left sidebar.
+3. Click the **+ New registration** button at the top.
 
-4. Click the **+ New registration** button at the top.
-
-5. Enter:
+4. Enter:
 
     |-|-
     | Name: | `Cerb`
@@ -49,7 +47,7 @@ In this guide we'll walk through the process of linking Cerb to Office365. You c
     | Redirect URI Platform: | **Web**
     | Redirect URI: | `https://YOUR-CERB-HOST/oauth/callback`
 
-6. Click the blue **Register** button at the bottom.
+5. Click the blue **Register** button at the bottom.
 
 ### Create client secret
 

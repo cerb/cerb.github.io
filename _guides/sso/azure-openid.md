@@ -2,14 +2,14 @@
 title: Authenticate worker single sign-on (SSO) from Microsoft Azure AD using OpenID
   Connect
 excerpt: This page provides a comprehensive guide on setting up single sign-on (SSO)
-  for Cerb using Microsoft Azure Active Directory (AD) through the OpenID Connect
+  for Cerb using Microsoft Entra Active Directory (AD) through the OpenID Connect
   (OIDC) standard.
 summary: This page provides a comprehensive guide on setting up single sign-on (SSO)
-  for Cerb using Microsoft Azure Active Directory (AD) through the OpenID Connect
+  for Cerb using Microsoft Entra Active Directory (AD) through the OpenID Connect
   (OIDC) standard. It details the steps to configure Azure AD, including creating
   an OAuth app for Cerb, generating a client secret, and setting up optional claims.
   The guide also covers configuring Cerb to connect with Azure, enabling SSO, and
-  the process for logging in using Azure AD credentials. This setup allows Cerb workers
+  the process for logging in using Entra AD credentials. This setup allows Cerb workers
   to authenticate seamlessly with their existing Microsoft accounts, enhancing security
   and user convenience by potentially disabling password-based logins.
 social_image_url: /assets/images/solutions/integrations/azure/cerb-and-azure.png
@@ -19,7 +19,7 @@ redirect_url:
 layout: integration
 topic: SSO
 jumbotron:
-  title: Authenticate worker single sign-on (SSO) from Microsoft Azure AD using OpenID
+  title: Authenticate worker single sign-on (SSO) from Microsoft Entra AD using OpenID
     Connect
   tagline: ""
   breadcrumbs:
@@ -27,10 +27,8 @@ jumbotron:
       url: /resources/
     - label: Guides &raquo;
       url: /resources/guides/
-    - label: Integrations &raquo;
-      url: /resources/guides/#integrations
-    - label: Microsoft Azure &raquo;
-      url: /resources/guides/#microsoft-azure
+    - label: SSO &raquo;
+      url: /resources/guides/#sso
 ---
 
 <div class="cerb-screenshot">
@@ -42,21 +40,19 @@ jumbotron:
 
 # Introduction
 
-This guide demonstrates how to enable one-click single sign-on (SSO) for Cerb workers by authenticating against existing Microsoft Azure AD (Active Directory) accounts using the OpenID Connect (OIDC) standard.
+This guide demonstrates how to enable one-click single sign-on (SSO) for Cerb workers by authenticating against existing Microsoft Entra AD (Active Directory) accounts using the OpenID Connect (OIDC) standard.
 
 <div class="cerb-box note">
-<p>The email address for each account in Azure AD will need to be associated with a worker record in Cerb. You can also disable password-based logins for those accounts.</p>
+<p>The email address for each account in Entra AD will need to be associated with a worker record in Cerb. You can also disable password-based logins for those accounts.</p>
 </div>
 
-# Configure Azure AD
+# Configure Entra AD
 
-Log in to the [Azure Portal](https://portal.azure.com/).
+Log in to the [Entra Portal](https://entra.microsoft.com/).
 
 ### Create OAuth app for Cerb
 
-1. Navigate to **All services >> Azure Active Directory**.
-
-1. Select **App registrations** from the left menu.
+1. Select **Applications >> App registrations** from the left menu.
 
 1. Click the **New registration** button at the top.
 
@@ -114,7 +110,7 @@ Log in to Cerb as an administrator.
    | **Authorize Scope** | `openid email`
    | **Issuer** | `https://login.microsoftonline.com/{DIRECTORY-ID}/v2.0`
 
-   You can find the `{DIRECTORY-ID}` in the Azure portal for your app registration as **Directory (tenant) ID**.
+   You can find the `{DIRECTORY-ID}` in the Entra portal for your app registration as **Directory (tenant) ID**.
 
 1. Click the **Run Discovery** button.
 
