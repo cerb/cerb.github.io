@@ -225,7 +225,7 @@ These metrics are managed automatically by Cerb:
 |`cerb.behavior.duration`| How long behaviors are executed. Dimensions: `behavior_id` and `event`.
 |`cerb.behavior.invocations`| How often behaviors are executed. Dimensions: `behavior_id` and `event`.
 |[cerb.mail.routing.rule.matches](/docs/metrics/mail.routing.rule.matches/)| Mail routing rule usage over time. Dimensions: `rule_id` (by ruleset record), `rule_key` (by rule), and `node_key` (by condition).
-|`cerb.mail.transport.deliveries`| How many successful messages are sent through a mail transport. Dimensions: `transport_id` and `sender_id` (email address).
+|[cerb.mail.transport.deliveries](/docs/metrics/mail.transport.deliveries/)| How many successful messages are sent through a mail transport. Dimensions: `transport_id` and `sender_id` (email address).
 |[cerb.mail.transport.failures](/docs/metrics/mail.transport.failures/)| How many unsuccessful messages are attempted through a mail transport. Dimensions: `transport_id` and `sender_id` (email address).
 |`cerb.record.search`| How often each worker searches for a given record type. Dimensions: `record_type` and `worker_id`.
 |[cerb.snippet.uses](/docs/metrics/snippet.uses/)| Snippet usage over time by worker. Dimensions: `snippet_id` and `worker_id`. This replaces the `snippet_use_history` table but imports its data.
