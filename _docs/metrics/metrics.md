@@ -230,7 +230,7 @@ These metrics are managed automatically by Cerb:
 |`cerb.record.search`| How often each worker searches for a given record type. Dimensions: `record_type` and `worker_id`.
 |`cerb.snippet.uses`| Snippet usage over time by worker. Dimensions: `snippet_id` and `worker_id`. This replaces the `snippet_use_history` table but imports its data.
 |`cerb.tickets.open`| Open ticket counts over time by group and bucket. Dimensions: `group_id` and `bucket_id`. The metric is sampled every 15 minutes.
-|`cerb.tickets.open.elapsed`| How long tickets spent in the open status by group and bucket. Dimensions: `group_id` and `bucket_id`. The metric is sampled when an open ticket is moved to a new group/bucket, or an open ticket transitions to a non-open status.
+|[cerb.tickets.open.elapsed](/docs/metrics/tickets.open.elapsed/)| How long tickets spent in the open status by group and bucket. Dimensions: `group_id` and `bucket_id`. The metric is sampled when an open ticket is moved to a new group/bucket, or an open ticket transitions to a non-open status.
 |`cerb.webhook.invocations`| How often webhooks are executed. Dimensions: `webhook_id` and `client_ip`.
 |`cerb.workers.active`| Seat usage by workers. Dimensions: `worker_id`.
 
