@@ -29,4 +29,3 @@ This metric tracks the number of times individual mail routing rules, in additio
 | rule_key   | The individual rules (multiple conditions) |
 | node_key   | The individual conditions                  |
 
-# Examples
