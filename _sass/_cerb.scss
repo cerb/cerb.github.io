@@ -253,15 +253,19 @@ div.page-content {
 	flex-flow: row wrap;
 
 	.feature {
-		margin: 0px 0px 20px 0px;
+		margin: 0 0 20px 0;
 		flex: 2 2 100%;
+
+		> div {
+			padding: 1em;
+		}
 
 		&.half {
 			flex:1 1 50%;
 		}
 
 		h1 {
-			margin: 0px 0px 0px 0px;
+			margin: 0;
 			padding: 0;
 			font-weight: bold;
 			font-size: 2.7em;
@@ -274,28 +278,20 @@ div.page-content {
 			font-size: 1.8em;
 		}
 
-		p, ul {
-			margin: 0 20px;
+		p {
+			padding: 1em;
 			text-align: left;
-		}
-		
-		p { 
-			margin-bottom: 15px;
+			margin-bottom: 0;
 		}
 		
 		ul {
 			text-align: left;
 			list-style: circle;
-			margin-top: 10px;
-			
-			li {
-				margin-bottom: 10px;
-			}
 		}
 		
 		div.screenshot {
 			margin: 25px 0 0 0;
-			
+
 			img {
 				border: 1px solid rgb(235,235,235);
 
@@ -1026,7 +1022,7 @@ span.client-singularityu-org { background-position: -525px -760px; }
 span.client-seti-org { background-position: -700px -760px; }
 span.client-kiva-org { background-position: -875px -760px; }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
 	.features {
 		.feature {
 			&.half {

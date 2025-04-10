@@ -12,12 +12,12 @@ summary: "This page provides an overview of Cerb, an automation toolkit for cust
   free trials via Docker or Cerb Cloud and provides access to its source code on GitHub. Additionally, the
   page encourages users to subscribe to a newsletter for updates and resources related to Cerb."
 jumbotron:
-  title: Automate customer service inboxes and workflows
-  tagline: Manage high-volume email with automation, AI, personalized dashboards, and endless API integrations.
+  title: Cerb automates customer service inboxes and workflows
+  tagline: Build helpful AI agents, share high-productivity workspaces, and integrate with any API.
   style: jumbotron-center
 ---
 
-<div class="grid feature no-gutters" style="margin-bottom:50px;">
+<div class="grid no-gutters" style="margin-bottom:50px;">
 	<div class="unit one-third align-center" style="margin-top:10px;">
 		<a style="font-size:130%;color:black;font-weight:bold;" href="/docs/history/">Latest versions:</a>
 		<br>
@@ -35,109 +35,161 @@ jumbotron:
 </div>
 
 <div class="home features">
+	{% comment %}
 	<div class="feature">
 		<div class="align-center">
-			<p>
-				<b>Cerb</b> automates customer service inboxes and workflows.
-				It has evolved continuously since 2002 based on the feedback of thousands of teams; from solo founders to 1,000+ person enterprises managing millions of customer requests.
-			</p>
+			<h1>FEATURES</h1>
+		</div>
+	</div>
+	{% endcomment %}
 
-			<p>
-				Cerb integrates with any API-based service.
-				It can <a href="/docs/automations/">automate</a> nearly any repetitive digital process with its specialized <a href="/docs/kata/">KATA</a> language and browser-based coding tools.
-				Any toolbar in the UI can be extended with <a href="/docs/interactions/">interactive</a> multistep workflows that include human approval.
-			</p>
+	{% comment %}
+	<div class="feature half">
+		<div class="align-left">
+			<h2>Highlights</h2>
+			<ul>
+				<li>23+ years of continuous development</li>
+				<li>100% source-available license</li>
+				<li>Your first self-hosted seat is free forever</li>
+				<li>Scalable from solo founders to large enterprises</li>
+				<li>Deploy self-hosted or in Cerb Cloud</li>
+			</ul>
+		</div>
+	</div>
+	{% endcomment %}
 
-			<p>
-				Teams and individuals can build a personalized "mission control" using a wide array of configurable widgets to stay focused on their most important tasks.
-				Custom records and fields organize of any kind of task (email, social posts, orders, surveys, calls, tasks, text messages).
-				Pre-built solutions can be easily shared within the community using <a href="/resources/workflows/">workflows</a>.
-			</p>
+	<div class="feature half">
+		<div>
+			<a href="/docs/workspaces/">
+				<img src="/assets/images/home/features/thumbs/mission-control.png" width="1200" height="630" class="screenshot" style="width:100%;height:auto;">
+			</a>
+			<h2>Collaborative workspaces</h2>
+			<ul>
+				<li>Transform email and social accounts into a team inbox</li>
+				<li>Enable intelligent routing, assignment, and prioritization</li>
+				<li>Monitor tasks with real-time worklists and dashboards</li>
+				<li>Filter and manipulate data with powerful search and data queries</li>
+				<li>Follow notifications from any watched record activity or @mention</li>
+				<li>Bring your own data with custom records and fields</li>
+			</ul>
+		</div>
+	</div>
 
+	<div class="feature half">
+		<div class="align-left">
+			<a href="/docs/automations/">
+				<img src="/assets/images/home/features/thumbs/automate-workflows.png" width="1200" height="630" class="screenshot" style="width:100%;height:auto;">
+			</a>
+			<h2>Automations</h2>
+			<ul>
+				<li>Code from your browser with an integrated editor and debugger</li>
+				<li>Build rapidly with KATA -- our high-level automation language</li>
+				<li>Ditch the training wheels of vibe coding &amp; point-and-click tools</li>
+				<li>Trigger your code from events and interactive toolbars</li>
+				<li>Integrate with any web-based API</li>
+				<li>No programming experience required -- we'll help you learn</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="feature half">
+		<div class="align-left">
+			<a href="/docs/interactions/">
+				<img src="/assets/images/home/features/thumbs/interactive-agents.png" width="1200" height="630" class="screenshot" style="width:100%;height:auto;">
+			</a>
+			<h2>AI agents</h2>
+			<ul>
+				<li>Create conversational agents to assist workers and clients</li>
+				<li>Integrate with state-of-the-art language models from multiple providers</li>
+				<li>Give agents tools to reference knowledge and perform actions</li>
+				<li>Review chat transcripts to continuously improve agents</li>
+				<li>Transition seamlessly between chat and form-based interactions</li>
+				<li>Deploy agents on any website</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="feature half">
+		<div class="align-left">
+			<a href="/resources/workflows/">
+				<img src="/assets/images/home/features/thumbs/share-workflows.png" width="1200" height="630" class="screenshot" style="width:100%;height:auto;">
+			</a>
+			<h2>Versioned workflows</h2>
+			<ul>
+				<li>Build new features using Cerb's toolkit</li>
+				<li>Group related records and configuration into a workflow</li>
+				<li>Iterate confidently with a versioned change history</li>
+				<li>Synchronize changes through development, staging, and production</li>
+				<li>Enable pre-built workflows to save time</li>
+				<li>Collaborate with us to build exactly what you need</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="feature half">
+		<div class="align-left">
 			<p>
-				Try Cerb in <a href="/docs/installation/docker/">Docker</a> or <a href="/pricing/">Cerb Cloud</a> for free with no time limit.
-				100% of the source code is available on <a href="https://github.com/cerb/cerb-release/">GitHub</a>.
+				<a href="/solutions/#integrations">
+					<img src="/assets/images/home/features/thumbs/connected-accounts.png" width="1200" height="630" class="screenshot" style="width:100%;height:auto;">
+				</a>
 			</p>
+			<h2>Endless integrations</h2>
+			<ul>
+				<li>Use pre-configured connected services or create your own</li>
+				<li>Auth with OAuth, API keys, bearer tokens, HTTP basic, AWS, and more</li>
+				<li>Enable single sign-on with OpenID Connect and SAML identity providers</li>
+				<li>Trigger and catch webhooks for real-time event handling</li>
+				<li>Manage data through Cerb's OAuth2 REST API</li>
+				<li>Create customer-facing tools with community portals</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="feature half">
+		<div class="align-left">
+		</div>
+	</div>
+
+	<div class="feature">
+		<div class="align-center">
+			<h1>Deploy self-hosted or in Cerb Cloud</h1>
 		</div>
 	</div>
 
 	<div class="feature half">
 		<div class="align-center">
-			<h2>Build a personalized mission control</h2>
-			<p>
-				<a href="/docs/workspaces/">
-					<img src="/assets/images/home/features/mission-control.png" width="2400" height="1260" class="screenshot" style="width:100%;height:auto;">
-				</a>
-				<br>
-				Turn any email account into a team inbox.
-				Route, assign, and prioritize incoming email using automations.
-				Build and share custom <a href="/docs/workspaces/">workspaces</a> with <a href="/docs/worklists/">worklists</a>, <a href="/docs/sheets/">tables</a>, <a href="/docs/dashboards/widgets/chart-kata/">charts</a>, calendars, time-series data, <a href="/docs/interactions/">interactive automated shortcuts</a>, and more.
-				Use the built-in <a href="/docs/records/types/">record types</a> or <a href="/resources/guides/">synchronize data</a> with third-party sources.
-				Filter data with <a href="/docs/search/">search queries</a> and <a href="/docs/data-queries/">data queries</a>.
-				{% comment %}
-				Rather than having to repeatedly search for the same set of records, you can create a fully customizable <a href="/docs/worklists/">worklist</a> and add it to one of your <a href="/docs/workspaces/">workspaces</a>.
-				Customize the layout of <a href="/docs/profiles/">record pages</a> and <a href="/docs/cards/">card popups</a>.
-				Add <a href="/docs/dashboards/">dashboards</a> of widgets for visualizing charts, tables, time-series data, calendars, clocks, counters, gauges, worklists, and more.
-				Use <a href="/docs/data-queries/">data queries</a> to transform data from your records.
-				Import and display useful information from external data sources.
-				Create your own shortcuts to automate repetitive actions.
-				{% endcomment %}
-			</p>
+			<a href="/docs/installation/docker/" class="cerb-button">
+				Try Cerb in Docker
+			</a>
+			<ul>
+				<li>Installation takes less than 5 minutes</li>
+				<li>Your first self-hosted seat is free forever with no license or registration required</li>
+				<li>Add seats as your team grows</li>
+				<li>Every member of your team can run free local copies of Cerb for testing, development, and staging</li>
+				<li>Downgrade to a community license from self-hosted or Cerb Cloud at any time and retain permanent free access to your data</li>
+				<li>Cerb launches a guided tutorial on your first login</li>
+				<li>Switch seamlessly to Cerb Cloud at any time</li>
+			</ul>
 		</div>
 	</div>
 
 	<div class="feature half">
 		<div class="align-center">
-			<h2>Automate repetitive workflows</h2>
-			<p>
-				<a href="/docs/automations/">
-					<img src="/assets/images/home/features/automate-workflows.png" width="2400" height="1260" class="screenshot" style="width:100%;height:auto;">
-				</a>
-				<br>
-				Create sophisticated <a href="/docs/automations/">automations</a> using Cerb's low-code <a href="/docs/kata/">KATA</a> language and browser-based code editor.
-				Automate any action available in Cerb.
-				Generate dynamic values using inputs, placeholders, and <a href="/docs/scripting/">scripting</a>.
-				Trigger automations from <a href="/docs/automations/#events">events</a> or <a href="/docs/toolbars/">toolbars</a>.
-				Integrate with most web-based APIs using <a href="/docs/connected-services/">connected services</a> (AWS, Slack, Twilio, OpenAI, Hugging Face, GitHub, Dropbox, LinkedIn, Salesforce, and more).
-			</p>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-center">
-			<h2>Create interactive agents</h2>
-			<p>
-				<a href="/docs/interactions/">
-					<img src="/assets/images/home/features/interactive-agents.png" width="2400" height="1260" class="screenshot" style="width:100%;height:auto;">
-				</a>
-				<br>
-				Create multi-step dynamic <a href="/docs/interactions/">interactions</a> that gather input and present output with more than just text -- Markdown, data grids, images, maps, files, and more.
-				Integrate with models from Hugging Face, Ollama, OpenAI, <a href="/workflows/cerb.integrations.aws_bedrock.profile_images/">Amazon Bedrock</a>, and Stability AI.
-				<a href="/guides/machine-learning/question-answering/faq-bot-chatgpt/">Implement retrieval-augmented generation</a> using your existing self-help resources (docs, FAQs, articles).
-			</p>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-center">
-			<h2>Extend, integrate, and share</h2>
-			<p>
-				<a href="/resources/workflows/">
-					<img src="/assets/images/home/features/share-workflows.png" width="2400" height="1260" class="screenshot" style="width:100%;height:auto;">
-				</a>
-				<br>
-				Use <a href="/resources/workflows/">workflow</a> templates to build your own features with continuous integration and a versioned change history.
-				Keep multiple instances of Cerb in sync. Build workflows in development, test in staging, then deploy in production.
-				Share your solutions with the community.
-				Enable single sign-on functionality with any <a href="/guides/sso/azure-openid/">OpenID Connect</a> or <a href="/guides/sso/google-saml/">SAML</a> identity provider.
-				Trigger and catch <a href="/docs/webhooks/">webhooks</a> to handle real-time events with other services.
-				Access and manage your data from any service with Cerb's OAuth-based <a href="/docs/api/">REST API</a>.
-				Build customer-facing tools and services with <a href="/docs/portals/">community portals</a>.
-			</p>
+			<button type="button" class="cerb-button" data-cerb-interaction="signup">
+				Start a free Cerb Cloud trial
+			</button>
+			<ul>
+				<li>Highly available, secure, monitored, and scalable as a fully managed service</li>
+				<li>No time-limit as long as you're active, and no credit card is required</li>
+				<li>Deploy to secure servers in the United States, Europe, or Asia-Pacific</li>
+				<li>Compliant with EU-U.S. Data Privacy Framework (DPF) and GDPR</li>
+				<li>Automated, redundant, point-in-time backups with data recovery</li>
+				<li>Cerb Cloud SMTP for highly-deliverable, high-volume outgoing mail with SPF, DKIM, DMARC (or use your own mail server)</li>
+				<li>Cerb Cloud MX for instant delivery of inbound mail (or check any POP3/IMAP mailboxes)</li>
+				<li>Includes hosting for unlimited community portals (conversational bots, Support Centers)</li>
+				<li>Optionally bring your own domain name (e.g. support.example.com)</li>
+				<li>Switch seamlessly to self-hosted at any time</li>
+			</ul>
 		</div>
 	</div>
 </div>
-
-{% include tables/pricing.html %}
-
-{% include signup_button.html %}
