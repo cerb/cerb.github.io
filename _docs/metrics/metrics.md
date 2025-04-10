@@ -232,7 +232,7 @@ These metrics are managed automatically by Cerb:
 |`cerb.tickets.open`| Open ticket counts over time by group and bucket. Dimensions: `group_id` and `bucket_id`. The metric is sampled every 15 minutes.
 |[cerb.tickets.open.elapsed](/docs/metrics/tickets.open.elapsed/)| How long tickets spent in the open status by group and bucket. Dimensions: `group_id` and `bucket_id`. The metric is sampled when an open ticket is moved to a new group/bucket, or an open ticket transitions to a non-open status.
 |`cerb.webhook.invocations`| How often webhooks are executed. Dimensions: `webhook_id` and `client_ip`.
-|`cerb.workers.active`| Seat usage by workers. Dimensions: `worker_id`.
+|[cerb.workers.active](/docs/metrics/workers.active/)| Seat usage by workers. Dimensions: `worker_id`.
 
 # Using metrics in reports
 
