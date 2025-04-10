@@ -33,5 +33,3 @@ This can also be useful if a ticket spends time somewhere that extended waits ar
 |-----------|---------------------------------|
 | group_id  | The IDs of the relevant groups  |
 | bucket_id | The IDs of the relevant buckets |
-
-# Examples
