@@ -27,4 +27,3 @@ This metric tracks the number of times snippets are used, both by the snippet an
 |------------|--------------------------------|
 | snippet_id | The snippet records            |
 | worker_id  | the workers using the snippets |
-
