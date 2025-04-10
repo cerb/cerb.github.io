@@ -28,4 +28,3 @@ This metric tracks the number of messages send failures occur for each [mail tra
 | transport_id | The mail transport records                        |
 | sender_id    | The senders (email addresses) that send each mail |
 
-# Examples
