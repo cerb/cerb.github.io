@@ -54,7 +54,7 @@ Navigate to **Search >> Workflows >> (+) >> (empty)** and paste the following [K
 {% raw %}
 workflow:
   name: example.services.textToImage.stabilityai
-  version: 2025-04-06T04:01:50Z
+  version: 2025-04-12T03:58:11Z
   description: Generate profile images with Stability.ai's models
   website: https://cerb.ai/resources/workflows/
   requirements:
@@ -68,7 +68,7 @@ records:
   automation/generateImage:
     fields:
       name: example.services.textToImage.stabilityai
-      extension_id: cerb.trigger.automation.function
+      extension_id: cerb.trigger.interaction.worker
       description@text:
       script@raw:
         inputs:
@@ -77,72 +77,45 @@ records:
             type_options:
               max_length@int: 1000
               truncate@bool: yes
-          text/n:
-            type: number
-            default: 2
-        
-        # [TODO] `outputs:` interface (for functions)
         
         start:
           set:
-            engine_id: stable-diffusion-xl-beta-v2-2-2
             config@json: {{cerb_workflow_config('example.services.textToImage.stabilityai')|json_encode}}
           
-          http.request/openai:
+          await/feedback:
+            duration:
+              message: Generating image....
+              until: 1 second
+        
+          http.request/stability:
             output: http_response
             inputs:
               method: POST
-              url: https://api.stability.ai/v1/generation/{{engine_id}}/text-to-image
+              url: https://api.stability.ai/v2beta/stable-image/generate/core
               authentication: cerb:connected_account:{{config.account}}
               headers:
-                Content-Type: application/json
-                Accept: application/json
-              body:
-                text_prompts:
-                  0:
-                    text@key: inputs:text
-                    weight@int: 1
-                samples@key,int: inputs:n
-                width@int: 320
-                height@int: 320
-                steps@int: 30
-                seed@int: 0
-                cfg_scale@int: 7
-                #style: 3d-model analog-film anime cinematic comic-book digital-art enhance fantasy-art isometric line-art low-poly modeling-compound neon-punk origami photographic pixel-art tile-texture
+                Content-Type: multipart/form-data; boundary=data1b2c3d4
+                Accept: image/*
+              response:
+                resource:
+                  expires@date: 1 hour
+              body@text:
+                --data1b2c3d4
+                Content-Disposition: form-data; name="prompt"
+                
+                {{inputs.text}}
+                --data1b2c3d4
+                Content-Disposition: form-data; name="output_format"
+                
+                png
+                --data1b2c3d4--
             on_success:
-              set:
-                http_response@key,json: http_response:body
-                image_urls@list:
-              repeat:
-                each@csv: {{http_response.artifacts|keys|join(',')}}
-                as: artifact_id
-                do:
-                  file.write:
-                    output: fp_writer
-                    inputs:
-                      mime_type: image/png
-                      expires@date: +1 hour
-                      content:
-                        text@key,base64: http_response:artifacts:{{artifact_id}}:base64
-                    on_success:
-                      var.set:
-                        inputs:
-                          key: image_urls:{{image_urls|length}}
-                          value:
-                            url: {{cerb_url('c=ui&a=image&token=' ~ fp_writer.uri|split(':')|last)}}
-          
-          var.unset:
-            inputs:
-              key@csv: http_response, fp_writer
-          
-          return:
-            images@key: image_urls 
+              return:
+                image_url: {{cerb_url('c=ui&a=image&token=' ~ http_response.body|split(':')|last)}}
       policy_kata@raw:
         commands:
           http.request:
-            deny/url@bool: {{inputs.url is not pattern ('https://api.stability.ai/v1/generation/*/text-to-image')}}
-            allow@bool: yes
-          file.write:
+            deny/url@bool: {{inputs.url is not pattern ('https://api.stability.ai/v2beta/stable-image/generate/*')}}
             allow@bool: yes
   automation/generateInteraction:
     fields:
@@ -151,6 +124,10 @@ records:
       description@text:
       script@raw:
         start:
+          set/init:
+            samples@int: 4
+            image_urls@list:
+            
           await/prompt:
             form:
               title: AI Image Generator
@@ -162,13 +139,22 @@ records:
                   truncate@bool: yes
                   placeholder: A profile picture of an android tech worker in cyberpunk graphic novel style
           
-          function:
-            uri: cerb:automation:example.services.textToImage.stabilityai
-            output: result
-            inputs:
-              text@key: prompt_text
-              n: 4
-          
+          repeat/n:
+            each@csv: {{range(1, samples)|join(',')}}
+            as: n
+            do:
+              await/generate:
+                interaction:
+                  output: result
+                  uri: cerb:automation:example.services.textToImage.stabilityai
+                  inputs:
+                    text@key: prompt_text
+              var.set:
+                inputs:
+                  key: image_urls:{{image_urls|length}}
+                  value:
+                    url: {{result.image_url}}
+        
           await/preview:
             form:
               elements:
@@ -178,7 +164,7 @@ records:
                     ---------------
                 sheet/prompt_image:
                   required@bool: yes
-                  data@key: result:images 
+                  data@key: image_urls
                   limit: 5
                   schema:
                     layout:
@@ -197,7 +183,7 @@ records:
           
           return:
             image:
-              url: {{result.images[prompt_image].url}}
+              url: {{image_urls[prompt_image].url}}
       policy_kata@raw:
         commands:
           function:
@@ -242,7 +228,7 @@ Type a description of the image you'd like to generate in the prompt:
 
 {% highlight text %}
 {% raw %}
-A profile picture of a humanoid robot in cyberpunk graphic novel style
+A profile picture of a techie woman in cyberpunk graphic novel style
 {% endraw %}
 {% endhighlight %}
 
