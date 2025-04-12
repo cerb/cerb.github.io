@@ -26,23 +26,35 @@ jumbotron:
 
 # Introduction
 
-In this guide we'll walk through the process of linking Cerb to Salesforce. You'll be able to use the full Salesforce API from bots in Cerb to automate whatever you need.
+In this guide we'll walk through the process of linking Cerb to Salesforce. You'll be able to use the full Salesforce API from automations in Cerb to automate whatever you need.
 
 # Create an app at Salesforce
 
 Next, you need to create a new app on Salesforce for Cerb to connect to.
 
-## Configure basic information
+Log in to [Salesforce](https://login.salesforce.com).
 
-1. Log in to [Salesforce](https://login.salesforce.com).
+### In Salesforce Classic
 
 1. Click **Setup** in the top right.
 
-1. In the **Build** menu on the right, expand **Create** and select **Apps**.
+1. In the **Build** menu on the left, expand **Create** and select **Apps**.
 
 1. In the **Connected Apps** section at the bottom, click the **New** button.
 
-1. Enter the following details:
+### In the Lightning Experience
+
+1. Click the gear icon in the top right and choose **Setup**
+
+1. Under **Platform Tools** in the menu on the left, click **Apps >> App Manager**
+
+1. Click the **Create Connected App** button in the top right.
+
+1. Choose **Create a Connected App** and click **Continue**
+
+## Configure Basic information
+
+Enter the following details:
 
 - **Connected App Name:** `Salesforce for Cerb`
 - **API Name:** `Salesforce_for_Cerb`
@@ -73,6 +85,8 @@ In the **API (Enable OAuth Settings)** section:
 1. Scroll to the bottom and click the **Save** button.
 
 1. Click the **Continue** button.
+
+1. Click **Manage Consumer Details**
 
 1. Make a note of your **Consumer Key** and **Consumer secret**.  You'll need them in the next step.
 
@@ -117,6 +131,78 @@ In the **API (Enable OAuth Settings)** section:
 <div class="cerb-box note">
 	<p>It may take up to 10 minutes for your new app to be available in Salesforce.  If you have trouble with the OAuth authentication step, wait a few minutes and try again.</p>
 </div>
+
+# Examples
+
+## Create an Account record
+<https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_sobject_create.htm>
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/createAccount:
+    output: http_response
+    inputs:
+      method: POST
+      url: https://YOUR.SALESFORCE.DOMAIN.my.salesforce.com/services/data/v63.0/sobjects/Account/
+      headers:
+        Content-Type: application/json
+      authentication: cerb:connected_account:salesforce
+      body:
+        Name: Testerson LLC
+        NumberOfEmployees: 5
+        Industry: Testing
+    on_success:
+      set:
+        response@json: {{http_response.body}}
+        http_response@json: null
+{% endraw %}
+{% endhighlight %}
+
+## Get Account info
+<https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_get_field_values.htm>
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/createAccount:
+    output: http_response
+    inputs:
+      method: GET
+      url: https://YOUR.SALESFORCE.DOMAIN.my.salesforce.com/services/data/v63.0/sobjects/Account/ABCDEF12345?fields=Name,NumberOfEmployees,Industry
+      headers:
+        Content-Type: application/json
+      authentication: cerb:connected_account:salesforce
+    on_success:
+      set:
+        response@json: {{http_response.body}}
+        http_response@json: null
+{% endraw %}
+{% endhighlight %}
+
+## Update an Account record
+<https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_update_fields.htm>
+
+{% highlight cerb %}
+{% raw %}
+start:
+  http.request/createAccount:
+    output: http_response
+    inputs:
+      method: PATCH
+      url: https://YOUR.SALESFORCE.DOMAIN.my.salesforce.com/services/data/v63.0/sobjects/Account/ABCDEF12345
+      headers:
+        Content-Type: application/json
+      authentication: cerb:connected_account:salesforce
+      body:
+        BillingCity: Testerville
+    on_success:
+      set:
+        response@json: {{http_response.body}}
+        http_response@json: null
+{% endraw %}
+{% endhighlight %}
+
 
 # Use the connected account in bot behaviors
 
