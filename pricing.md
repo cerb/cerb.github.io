@@ -33,8 +33,6 @@ keywords: pricing price cost subscription
 
 {% include tables/pricing.html %}
 
-{% include signup_button.html %}
-
 <div style="font-size:125%;">
 	<b>Add <u>optional</u> enterprise technical support from Cerb's highly experienced developers with no long-term commitments:</b>
 </div>
