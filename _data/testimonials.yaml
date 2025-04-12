@@ -46,17 +46,11 @@
   quote: |
     I've worked with the Cerberus team for almost 15 years and continue to be a fan. Not only is Cerb a great product, but the team who develop and support it are a fantastic group of people. We are so appreciative of the teams' support and responsiveness; it translates into creating a product that allows us to be responsive to our customers, and we appreciate the many ways we can save time, energy (and money) by using Cerb as a cornerstone of our support infrastructure. Thank you!
 
-- client: dekart-com
-  author: Alex Railean, Dekart
-  when: 2017
-  quote: |
-    I am a huge fan of the software. In fact, I've been with this company since around 2005, and Cerberus is one of the few tools we've had back then, and which has persisted throughout a decade (with updates, of course).
-
-- client: kiva-org
-  author: Jim Cooley, Director of Technical Operations, Kiva
-  when: 2012
-  quote: |
-    We're loving Cerb6 over here at Kiva. We were especially elated when we were able to take advantage of the reporting capabilities introduced in 6.1 with the dashboard features. Also, upgrades have been a breeze, so we're able to stay on top of the newest features and bug fixes. Thanks for such a great product.
+#- client: dekart-com
+#  author: Alex Railean, Dekart
+#  when: 2017
+#  quote: |
+#    I am a huge fan of the software. In fact, I've been with this company since around 2005, and Cerberus is one of the few tools we've had back then, and which has persisted throughout a decade (with updates, of course).
 
 - client: tlgbrands-com
   author: Ross Jameson, I.T. Manager, TLG Brands Ltd
@@ -75,24 +69,6 @@
   when: 2012
   quote: |
     Love the product and the fact that they are always listening to their customers and making improvements and upgrades to the system.
-
-- client: cloudcontrollers-com
-  author: Jack Murgia, Owner, Cloud Controllers
-  when: 2010
-  quote: |
-    Cerb 5 sure is fast - nice work. I am using it on all cloud servers I create for clients, and hope that they will love Cerberus so much they'll buy more from you.
-
-- client: 3mediaweb-com
-  author: Marc Avila, CEO, 3 Media Web Solutions, Inc.
-  when: 2010
-  quote: |
-    Just wanted to let you know. Great job on ver 5 of Cerb Helpdesk. LOVE the Amazon S3 integration and the small UI improvements. Keep up the great innovation. You can see the thought and hard work that goes into the product.
-
-- client: 3rdsense-com
-  author: Denis N., 3RDsense
-  when: 2009
-  quote: |
-    I don't have any problems. I'm a PHP developer and very pleased with the software. Outstanding guys... keep it up. I really hope you become huge and wealthy that's in everyone's interest who uses Cerb. All I do so far is spreading the word on Cerberus.
 
 - client: sourcefire-com
   author: Brad P., Director of I.T., SourceFire
@@ -123,9 +99,3 @@
   author: Willie V., ThinkGeek
   quote: |
     When ThinkGeek started using Cerberus we soon realized how much wasted time we had spent dealing with conventional email clients. We became so efficient with our email customer relations using Cerberus that we started to get more work done elsewhere in the organization. No kidding! It's so easy to setup, maintain and use that we simply cannot imagine what life was like pre-cerberus. This isn't a TV Commercial, Cerberus works!
-
-- client: popcap-com
-  author: Aoife B., Director of Customer Support, PopCap Games
-  when: 2011
-  quote: |
-    Cerberus has changed the way we deal with Customer Support mails and it has been instrumental in how we have scaled our operations with our Social game titles. I'm very happy with your team there and the progress that is being made on our feedback.
