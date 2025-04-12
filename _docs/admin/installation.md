@@ -33,7 +33,7 @@ We strongly recommend using one of our **Docker** container examples rather than
 
 If you still need to [install Cerb on a bare metal server](/docs/installation/self-hosted/), use the example Dockerfile as a reference.
 
-<a href="/docs/installation/docker/" class="cerb-button">Read the Docker instructions &raquo;</a>
+<a href="/docs/installation/docker/" class="cerb-button">Try Cerb in Docker</a>
 
 ## Cerb Cloud
 
@@ -45,9 +45,7 @@ All you need is a web browser. You can optionally bring your own domain name (e.
     <div class="whole">
         <p>
         <button type="button" class="cerb-button" data-cerb-interaction="signup">
-            Sign up to try Cerb Cloud for free
-            <br>
-            <small style="font-size:0.8em;">(no time limit, no payment info required)</small>
+            Start a free Cerb Cloud trial
         </button>
         </p>
     </div>

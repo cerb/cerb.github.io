@@ -34,7 +34,7 @@ keywords: pricing price cost subscription
 {% include tables/pricing.html %}
 
 <div style="font-size:125%;">
-	<b>Add <u>optional</u> enterprise technical support from Cerb's highly experienced developers with no long-term commitments:</b>
+	<b>Add optional enterprise technical support from Cerb's highly experienced developers with no long-term commitments:</b>
 </div>
 
 <div class="grid" style="margin-left:15px;">
