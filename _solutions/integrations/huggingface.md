@@ -20,7 +20,7 @@ jumbotron:
 
 In this guide we'll walk through the process of linking Cerb to Hugging Face. You'll be able to use Hugging Face's full API in Cerb automations.
 
-# Get a Hugging Face API Key.
+# Get a Hugging Face API key
 
 Log in to your [Hugging Face Account](https://huggingface.co/settings/) or sign up if you don't already have one.
 

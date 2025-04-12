@@ -20,7 +20,7 @@ jumbotron:
 
 In this guide we'll walk through the process of linking Cerb to DeepL. You'll be able to use DeepL's full API in Cerb automations for translations.
 
-# Get a DeepL API Key.
+# Get a DeepL API key
 
 Log in to your [DeepL Account](https://www.deepl.com/en/your-account/) or sign up if you don't already have one.
 
@@ -28,7 +28,7 @@ Choose **API Keys and Limits** in the menu and click the copy button next to the
 
 If no key is provided, click the **Create key** button.
 
-Name the key (eg. `cerb`) and click **Create key**.
+Name the key (e.g. `cerb`) and click **Create key**.
 
 Copy the API key for use later.
 
@@ -54,7 +54,8 @@ Note: DeepL uses a different endpoint for their free and paid tiers. If you are 
 
 {% highlight cerb %}
 {% raw %}
-http.request/translate:
+start:
+  http.request/translate:
     output: http_response
     inputs:
       method: POST
@@ -66,6 +67,9 @@ http.request/translate:
         target_lang: JA
         text:
           0: I want this text to be translated.
+    on_success:
+      set:
+        response@json: {{http_response.body}}
 {% endraw %}
 {% endhighlight %}
 
