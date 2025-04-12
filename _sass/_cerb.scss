@@ -288,17 +288,11 @@ div.page-content {
 			text-align: left;
 			list-style: circle;
 		}
-		
-		div.screenshot {
-			margin: 25px 0 0 0;
 
-			img {
-				border: 1px solid rgb(235,235,235);
-
-				&.no-border {
-					border: 0;
-				}
-			}
+		img.screenshot {
+			width: 100%;
+			height: auto;
+			border-radius: 20px;
 		}
 	}
 }
@@ -937,7 +931,7 @@ a.cerb-button {
 }
 
 button.cerb-button, a.cerb-button {
-	text-decoration: none;
+	text-decoration: underline;
 	font-size: 32px;
 	font-weight: bold;
 	border: 0;
