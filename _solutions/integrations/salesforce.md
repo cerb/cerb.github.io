@@ -204,8 +204,8 @@ start:
 {% endhighlight %}
 
 
-# Use the connected account in bot behaviors
+# Use the connected account in automations
 
-You can use the connected account you just created to access the [Saleforce REST API](https://developer.salesforce.com/page/REST_API) from bot behaviors in Cerb.  This is typically accomplished using the **Execute HTTP Request** action from a bot, and selecting the connected account in the **Authentication:** section.
+You can use the connected account you just created to access the [Salesforce REST API](https://developer.salesforce.com/page/REST_API) from automations in Cerb.  This is typically accomplished using the `http.request` action from an automation, and selecting the connected account in the ``authentication`` field.
 
-You can import the [Salesforce Bot](/packages/salesforce-bot/) package for a working example.
+Alternatively, you can import the [Salesforce](/workflows/wgm.integrations.salesforce/) workflow for a working example.
