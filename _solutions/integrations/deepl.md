@@ -1,7 +1,7 @@
 ---
 title: DeepL
 excerpt: A step-by-step guide for integrating Cerb and DeepL.
-social_image_url: /assets/images/solutions/integrations/cerb-and-deepL.png
+social_image_url: /assets/images/solutions/integrations/cerb-and-deepl.png
 layout: solution
 jumbotron:
   breadcrumbs:
