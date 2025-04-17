@@ -1,6 +1,6 @@
 ---
 title: Metrics
-excerpt: his page provides a comprehensive overview of the metrics system in Cerb,
+excerpt: This page provides a comprehensive overview of the metrics system in Cerb,
  detailing how metrics are used to aggregate, store, and compute statistics for time-based
  data.
 summary: This page provides a comprehensive overview of the metrics system in Cerb,

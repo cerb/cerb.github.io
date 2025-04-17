@@ -12,6 +12,8 @@ jumbotron:
     url: /docs/home/
   - label: Metrics &raquo;
     url: /docs/metrics/
+search_index:
+  exclude: true
 ---
 
 * TOC

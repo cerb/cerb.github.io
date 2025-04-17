@@ -1,6 +1,7 @@
 ---
 title: n8n
 excerpt: A step-by-step guide for integrating Cerb and n8n.
+summary: This guide provides a step-by-step tutorial on integrating Cerb with n8n workflows. It covers the creation of a custom Cerb workflow that utilizes n8n as an external service.
 social_image_url: /assets/images/solutions/integrations/cerb-and-n8n.png
 layout: solution
 jumbotron:

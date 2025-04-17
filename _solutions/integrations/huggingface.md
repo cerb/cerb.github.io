@@ -1,6 +1,7 @@
 ---
 title: Hugging Face
 excerpt: A step-by-step guide for integrating Cerb and Hugging Face.
+summary: This page provides a step-by-step guide to integrating Cerb with Hugging Face, allowing users of Hugging Face's full API within Cerb automations. To start, create a new access token in the Hugging Face Account settings and copy it for later use, then navigate to Cerb's Connected Services and follow the prompts to add the Hugging Face service.
 social_image_url: /assets/images/solutions/integrations/cerb-and-huggingface.png
 layout: solution
 jumbotron:

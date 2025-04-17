@@ -1,6 +1,7 @@
 ---
 title: Anthropic
 excerpt: A step-by-step guide for integrating Cerb and Anthropic.
+summary: This page provides a step-by-step guide for integrating Cerb with Anthropic, enabling the use of Anthropic's full API in Cerb automations as an LLM provider. The process involves obtaining an Anthropic API key, creating the Anthropic service in Cerb, and configuring examples such as chat completions automation and policy.
 social_image_url: /assets/images/solutions/integrations/cerb-and-anthropic.png
 layout: solution
 jumbotron:

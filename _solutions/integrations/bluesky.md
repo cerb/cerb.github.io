@@ -1,6 +1,7 @@
 ---
 title: Bluesky
 excerpt: A step-by-step guide for integrating Cerb and Bluesky.
+summary: This page provides a step-by-step guide for integrating Cerb and Bluesky, allowing users to use Bluesky's full API in Cerb automations.
 social_image_url: /assets/images/solutions/integrations/cerb-and-bluesky.png
 layout: solution
 jumbotron:

@@ -1,6 +1,7 @@
 ---
 title: Buttondown
 excerpt: A step-by-step guide for integrating Cerb and Buttondown.
+summary: This page is a step-by-step guide for integrating Cerb and Buttondown, allowing users to leverage Buttondown's full API in Cerb automations for email newsletters.
 social_image_url: /assets/images/solutions/integrations/cerb-and-buttondown.png
 layout: solution
 jumbotron:

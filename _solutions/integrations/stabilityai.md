@@ -1,6 +1,7 @@
 ---
 title: Stability.ai
 excerpt: A step-by-step guide for integrating Cerb and Stability.ai.
+summary: This page provides a step-by-step guide for integrating Cerb and Stability.ai, allowing users to use Stability.ai's full API in Cerb automations for image generation. To start, users must obtain an API key from their Stability.ai account, then create the Stability.ai service in Cerb and use it to generate images using its API.
 social_image_url: /assets/images/solutions/integrations/cerb-and-stabilityai.png
 layout: solution
 jumbotron:

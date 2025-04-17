@@ -1,7 +1,7 @@
 ---
 title: Guided Installer
 excerpt: A guide to the Cerb config file, including settings and defaults.
-summary: ""
+summary: "This page provides a guide to the Cerb config file, including settings and defaults. The guided installer verifies requirements, initializes the database, and walks users through the initial configuration of the software. The process includes checking server requirements, selecting a MySQL driver and engine, setting database connection details, creating an administrator account, selecting an environment, and configuring community mode with or without a license."
 permalink: /docs/guided-installer/
 toc:
   title: Guided Installer

@@ -1,6 +1,7 @@
 ---
 title: DeepL
 excerpt: A step-by-step guide for integrating Cerb and DeepL.
+summary: This page provides a step-by-step guide to integrating Cerb and DeepL, allowing users to access DeepL's full API in Cerb automations for translations.
 social_image_url: /assets/images/solutions/integrations/cerb-and-deepl.png
 layout: solution
 jumbotron:
