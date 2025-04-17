@@ -22,7 +22,16 @@ jumbotron:
     url: /docs/home/
 ---
 
-**Workflows** are templates with versioned updates that keep a related set of records in sync between multiple environments (e.g. dev, staging, production).
+<p class="youtube-video-container"><iframe width="1040" height="585" src="https://www.youtube.com/embed/F0p2INrtq1U" title="" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+
+
+**Workflows** are text-based templates that define a set of records and configuration values. They enable anyone to create and share new features in Cerb, and synchronize ongoing changes between multiple environments (e.g. dev, staging, production).
+
+When a workflow is updated, its changes are automatically recorded in a versioned history. For instance, improvements to a workflow can be made by developers and tested on their own machines in a free, clean copy of Cerb. 
+
+A new version of a workflow can be confidently deployed to a staging or production environment and its records will be automatically synchronized. Changes with unexpected consequences can be easily rolled back to the last stable version.
+
+We provide a [library](/resources/workflows/) of pre-built workflows for common requirements; like email auto-replies, capturing user feedback, customer satisfaction surveys, service level agreements, and more.
 
 |---
 | **Since version:** | [11.0](/releases/11.0/)
