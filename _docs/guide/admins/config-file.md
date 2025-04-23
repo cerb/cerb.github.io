@@ -81,6 +81,7 @@ The following variables are required to set up Cerb.
 | `APP_OPT_FULLTEXT_THRESHOLD_IDS`               | 1000                        | Threshold to convert fulltext WHERE subqueries to IN(ids)                     |
 | `APP_OPT_GROUP_BEHAVIOR_TRIGGERS`              | false                       | Automatically trigger legacy group behaviors (without automation event binds) |
 | `APP_OPT_IIS_LEGACY_REWRITE`                   | false                       | Legacy IIS rewrite support                                                    |
+| `APP_OPT_PARSER_ATTACHMENT_DUPE_WITH_FILENAME` | false                       | Include filename when detecting duplicate file attachments                    |
 | `APP_OPT_SQL_SUBQUERY_TO_IDS`                  | false                       | Optimize WHERE subqueries as IN(ids)                                          |
 | `APP_OPT_SQL_SUBQUERY_TO_IDS_LIMIT`            | 500                         | Upper threshold to convert WHERE subqueries to ID                             |
 | `APP_PATH`                                     | `dirname(__FILE__)`         | Absolute home path of Cerb                                                    |
