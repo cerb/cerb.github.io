@@ -46,7 +46,9 @@ start:
 <img src="/assets/images/docs/automations/triggers/interaction.worker/elements/submit.png" class="screenshot">
 </div>
 
-### Custom buttons
+# Syntax
+
+### buttons:
 
 A `submit:` element may optionally specify any number of custom buttons.
 
@@ -86,8 +88,6 @@ start:
 <img src="/assets/images/docs/automations/triggers/interaction.worker/elements/submit-buttons.png" class="screenshot">
 </div>
 
-# Syntax
-
 ### hidden:
 
 This form element can be conditionally hidden.
@@ -95,5 +95,15 @@ This form element can be conditionally hidden.
 {% highlight cerb %}
 {% raw %}
 hidden@bool: {{not worker_is_superuser}}
+{% endraw %}
+{% endhighlight %}
+
+### is_automatic:
+
+If true, the form is automatically submitted. This is primarily useful in place of `await:duration:` before a long-running action.
+
+{% highlight cerb %}
+{% raw %}
+is_automatic@bool: yes
 {% endraw %}
 {% endhighlight %}

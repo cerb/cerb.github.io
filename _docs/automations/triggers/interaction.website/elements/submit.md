@@ -89,3 +89,13 @@ This form element can be conditionally hidden.
 hidden@bool: {{expression}}
 {% endraw %}
 {% endhighlight %}
+
+### is_automatic:
+
+If true, the form is automatically submitted. This is primarily useful in place of `await:duration:` before a long-running action.
+
+{% highlight cerb %}
+{% raw %}
+is_automatic@bool: yes
+{% endraw %}
+{% endhighlight %}
