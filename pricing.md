@@ -65,7 +65,7 @@ keywords: pricing price cost subscription
 	<div class="unit half">
 			<div style="text-align:left;">
 				<h2 style="color:rgb(165,73,3);"><b>Enterprise Support</b></h2>
-				<b>Greater of +$500/month or +$20/month per seat:</b>
+				<b>$500/month:</b>
 				<ul>
 					<li>
 						Top-priority support, training, and consultation:
