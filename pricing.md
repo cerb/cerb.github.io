@@ -40,8 +40,8 @@ keywords: pricing price cost subscription
 <div class="grid" style="margin-left:15px;">
 	<div class="unit half">
 			<div style="text-align:left;">
-				<h2 style="color:rgb(100,100,100);"><b>Standard Support</b></h2>
-				<b>Included with any license:</b>
+				<h2 style="color:rgb(150,150,150);"><b>Standard Support</b></h2>
+				<b>Included with every license:</b>
 				<ul>
 					<li>
 						Support:
@@ -64,8 +64,8 @@ keywords: pricing price cost subscription
 	
 	<div class="unit half">
 			<div style="text-align:left;">
-				<h2 style="color:rgb(165,73,3);"><b>Enterprise Support</b></h2>
-				<b>$500/month:</b>
+				<h2 style="color:rgb(220,120,45);"><b>Enterprise Support</b></h2>
+				<b>+$500/month:</b>
 				<ul>
 					<li>
 						Top-priority support, training, and consultation:

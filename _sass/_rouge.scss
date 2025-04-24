@@ -8,7 +8,31 @@ figure.highlight {
   max-height: 50em;
   overflow: auto;
 
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+    scrollbar-width: thin;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgb(69,69,69);
+  }
+
   pre {
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      width: 10px;
+      height: 10px;
+      scrollbar-width: thin;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: rgb(69,69,69);
+    }
+
     code {
       background-color: inherit;
       text-shadow: none;
