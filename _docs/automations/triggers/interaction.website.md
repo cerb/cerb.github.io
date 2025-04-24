@@ -92,6 +92,7 @@ A form can be created with any combination of the following element types:
 | Element |
 |-|-
 | [**fileUpload:**](/docs/automations/triggers/interaction.website/elements/fileUpload/) | File upload prompt
+| [**llmTranscript:**](/docs/automations/triggers/interaction.website/elements/llmTranscript/) | AI agent chat transcript
 | [**say:**](/docs/automations/triggers/interaction.website/elements/say/) | Block of text or Markdown
 | [**sheet:**](/docs/automations/triggers/interaction.website/elements/sheet/) | [Sheet](/docs/sheets/) with row selection
 | [**submit:**](/docs/automations/triggers/interaction.website/elements/submit/) | Continue to next step
@@ -136,6 +137,11 @@ This makes interactions much more modular and reusable.
 {: .no_toc}
 
 The `uri:` parameter specifies the delegate [automation](/docs/records/types/automation/). This must use the [interaction.website](/docs/automations/triggers/interaction.website/) trigger.
+
+### inputs:
+{: .no_toc}
+
+An optional dictionary of `inputs:` for the given `uri:` interaction.
 
 ### output:
 {: .no_toc}

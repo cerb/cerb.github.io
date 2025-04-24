@@ -111,6 +111,7 @@ A form can be created with any combination of the following element types:
 | [**editor:**](/docs/automations/triggers/interaction.worker/elements/editor/) | A code editor with syntax highlighting, autocompletion, and a custom toolbar
 | [**fileDownload:**](/docs/automations/triggers/interaction.worker/elements/fileDownload/) | File download prompt
 | [**fileUpload:**](/docs/automations/triggers/interaction.worker/elements/fileUpload/) | File upload prompt
+| [**llmTranscript:**](/docs/automations/triggers/interaction.worker/elements/llmTranscript/) | AI agent chat transcript
 | [**map:**](/docs/automations/triggers/interaction.worker/elements/map/) | Interactive [map](/docs/maps/) 
 | [**query:**](/docs/automations/triggers/interaction.worker/elements/query/) | [Search query](/docs/search/) prompt with autocompletion
 | [**say:**](/docs/automations/triggers/interaction.worker/elements/say/) | Block of text or Markdown
