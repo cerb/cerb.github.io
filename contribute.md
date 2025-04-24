@@ -11,7 +11,7 @@ search_index:
   exclude: true
 ---
 
-If you find Cerb useful, we'd greatly appreciate you taking one or more of the following actions:
+### If you find Cerb useful, we'd greatly appreciate you taking one or more of the following actions:
 
 * [Subscribe to our weekly email newsletter](https://newsletter.cerb.ai/#subscribe-form)
 * [Subscribe to our YouTube channel](https://www.youtube.com/@cerb_ai)

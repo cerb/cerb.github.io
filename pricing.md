@@ -46,7 +46,7 @@ keywords: pricing price cost subscription
 					<li>
 						Support:
 						<ul>
-							<li>By email</li>
+							<li>By email and forums</li>
 							<li>Same business day responses</li>
 							<li>Concept-level guidance</li>
               <li>Covers the latest major version (11.x)</li>
@@ -55,7 +55,7 @@ keywords: pricing price cost subscription
 					<li>
 							Cerb Cloud:
 							<ul>
-								<li>Mandatory scheduled upgrades to the latest stable version with one week of prior notice</li>
+								<li>Mandatory major version upgrades within one week of notice</li>
 							</ul>
 					</li>
 				</ul>
@@ -83,7 +83,7 @@ keywords: pricing price cost subscription
 						Cerb Cloud:
 						<ul>
 							<li>Schedule major software updates at your convenience</li>
-							<li>Access to early release versions</li>
+							<li>Early access to beta versions</li>
 							<li>Access to a staging environment to test new features prior to upgrading</li>
 							<li>Install custom plugins</li>
 						</ul>
