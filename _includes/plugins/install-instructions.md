@@ -1,4 +1,4 @@
-Navigate to: **Setup >> Plugins >> Installed Plugins**
+Navigate to: **Setup >> Configure >> Plugins >> Installed Plugins**
 
 Search for: `{{include.keyword}}`
 

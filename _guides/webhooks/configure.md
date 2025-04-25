@@ -48,7 +48,7 @@ You can create webhook URLs in Cerb and associate them with specific automations
 
 # Enable the webhooks plugin
 
-If you haven't already, you need to install the **Webhooks** plugin from **Setup >> Plugins**.
+If you haven't already, you need to install the **Webhooks** plugin from **Setup >> Configure >> Plugins**.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/guides/webhooks/configure/enable-plugin.png" class="screenshot">

@@ -39,7 +39,7 @@ The most popular [community portal](/docs/portals/) is the **Support Center**. T
 
 First, make sure that the necessary [plugin](/docs/plugins/) is enabled.
 
-Navigate to **Setup >> Plugins >> Installed**.
+Navigate to **Setup >> Configure >> Plugins >> Installed**.
 
 Type `support` in the search box and verify that the Support Center plugin is installed. If not, enable it.
 

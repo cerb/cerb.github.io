@@ -72,7 +72,7 @@ In this guide, we'll import a pre-built interaction and demonstrate how to add i
 
 ### Enable the website interactions plugin
 
-From **Cerb >> Setup >> Plugins >> Configure**, ensure the **Interactions for Websites** plugin is enabled.
+From **Cerb >> Setup >> Configure >> Plugins >> Configure**, ensure the **Interactions for Websites** plugin is enabled.
 
 ### Import the example workflow
 

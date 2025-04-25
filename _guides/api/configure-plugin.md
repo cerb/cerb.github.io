@@ -35,7 +35,7 @@ The REST-based[^rest] [Web API](/docs/api/) provides the ability to remote contr
 
 First, we need to enable the API plugin:
 
-1. Navigate to **Setup >> Plugins >> Installed Plugins**.
+1. Navigate to **Setup >> Configure >> Plugins >> Installed Plugins**.
 
 1. Search the plugins list for `API`.
 

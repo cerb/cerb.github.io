@@ -57,7 +57,7 @@ If your custom API performs actions in Cerb, you shouldn't rely on a secret URL 
 
 # Enable the webhooks plugin
 
-If you haven't already, enable the **Webhooks** plugin from **Setup >> Plugins**.
+If you haven't already, enable the **Webhooks** plugin from **Setup >> Configure >> Plugins**.
 
 # Import the package
 
