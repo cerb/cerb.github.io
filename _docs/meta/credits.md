@@ -8,7 +8,7 @@ summary: This page provides credits for the development and contributions to Cer
   played significant roles in its development. It outlines the platform and infrastructure
   used, including Devblocks, HTML5, PHP, MySQL, Amazon Web Services, Docker, and GitHub.
   The page also lists various libraries and tools integrated into Cerb, such as Ace,
-  C3.js, jQuery, PHPUnit, and Swift Mailer, among others, which support functionalities
+  C3.js, jQuery, PHPUnit, and Symfony Mailer, among others, which support functionalities
   like code editing, charting, and secure communications. Additionally, it mentions
   the licenses and references related to the project.
 permalink: /docs/credits/
@@ -84,9 +84,9 @@ jumbotron:
 
 - [jQuery UI Touch Punch](http://touchpunch.furf.com) converts mouse-based events in jQuery UI to touch gestures for mobile devices (e.g. tap, slide, drag/drop).
 
-- [mtdownling/cron-expression](https://github.com/mtdowling/cron-expression) is a PHP library for generating time intervals using Unix crontab syntax.
+- [League\CommonMark](https://commonmark.thephpleague.com) is a PHP library for converting lightweight Markdown[^markdown] text into HTML.
 
-- [Parsedown](http://michelf.com/projects/php-markdown/) is a PHP library for converting lightweight Markdown[^markdown] text into HTML.
+- [mtdownling/cron-expression](https://github.com/mtdowling/cron-expression) is a PHP library for generating time intervals using Unix crontab syntax.
 
 - [php-encryption](https://github.com/defuse/php-encryption) is a secure library for encrypting data in PHP.
 
@@ -100,7 +100,7 @@ jumbotron:
 
 - [steverhoades/oauth2-openid-connect-server](https://github.com/steverhoades/oauth2-openid-connect-server/) is a PHP library for implementing OpenID Connect server functionality.
 
-- [Swift Mailer](http://swiftmailer.org/) is a component-based library for sending email from PHP applications.
+- [Symfony Mailer](https://symfony.com/doc/current/mailer.html) is a component-based library for sending email from PHP applications.
 
 - [thephpleague/oauth2-client](https://github.com/thephpleague/oauth2-client/) is a PHP library for simplified integration with OAuth 2.0 service providers.
 
