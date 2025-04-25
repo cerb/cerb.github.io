@@ -600,8 +600,9 @@ footer {
 	color: rgb(255,255,255);
 	text-shadow: rgb(32,32,32) 0 1px 0;
 	padding: math.div(base.$spacing-unit, 2) 0;
-	background: url("/assets/images/home/email-meteors.png") no-repeat center center rgb(51,51,51);
-	background-size: cover;
+	//background: url("/assets/images/home/email-meteors.png") no-repeat center center rgb(51,51,51);
+	//background-size: cover;
+	background-color: rgb(28, 27, 28);
 	width: 100%;
 
 	b {
