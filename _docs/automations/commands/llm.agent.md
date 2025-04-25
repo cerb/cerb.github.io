@@ -88,6 +88,10 @@ llm:
   anthropic:
     model: claude-3-5-haiku-latest
     authentication: cerb:connected_account:anthropic
+  aws_bedrock:
+    model: anthropic.claude-3-5-haiku-20241022-v1:0
+    api_endpoint_url: https://bedrock-runtime.us-east-1.amazonaws.com
+    authentication: cerb:connected_account:aws
   groq:
     model: gemma2-9b-it
     authentication: cerb:connected_account:groq

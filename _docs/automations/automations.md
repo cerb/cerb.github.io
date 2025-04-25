@@ -774,6 +774,7 @@ There can now be multiple `enabled:` or `disabled:` rules. The first rule to ret
 | [**http.request:**](/docs/automations/commands/http.request/) | Send data to an HTTP endpoint and return the response.
 | [**kata.parse:**](/docs/automations/commands/kata.parse/) | Parse an arbitrary [KATA](/docs/kata/) document with placeholders.
 | [**llm.agent:**](/docs/automations/commands/llm.agent/) | Send a message to a conversational AI agent using a large language model.
+| [**llm.embed:**](/docs/automations/commands/llm.embed/) | Generate text vector embeddings using a large language model.
 | [**metric.increment:**](/docs/automations/commands/metric.increment/) | Add new samples to a [metric](/docs/metrics/).
 | [**queue.pop:**](/docs/automations/commands/queue.pop/) | Pop an item from a [queue](/docs/queues/).
 | [**queue.push:**](/docs/automations/commands/queue.push/) | Push an item into a [queue](/docs/queues/).
