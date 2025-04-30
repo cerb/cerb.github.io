@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Contribute
-excerpt: Help support Cerb's development through non-financial actions.
-summary: This page provides information on how to contribute to Cerb's development in non-financial ways, such as subscribing to the weekly email newsletter, following social media channels, starring on GitHub, requesting features or reporting bugs, and rating on G2.
-permalink: /contribute/
+title: Promote
+excerpt: Help support Cerb's development by promoting us on social media.
+summary: This page provides information on how to help promote Cerb in non-financial ways, such as subscribing to the weekly email newsletter, following social media channels, starring on GitHub, requesting features or reporting bugs, and rating on G2.
+permalink: /promote/
 jumbotron: 
-  title: Contribute
-  tagline: Help support Cerb's development through these non-financial actions
+  title: Promote
+  tagline: Help support Cerb's development by promoting us on social media
 search_index:
   exclude: true
 ---
