@@ -17,7 +17,7 @@ jumbotron:
   style: jumbotron-center
 ---
 
-<div class="grid no-gutters" style="margin-bottom:50px;">
+<div class="grid no-gutters" style="margin-bottom:30px;">
 	<div class="unit one-third align-center" style="margin-top:10px;">
 		<a style="font-size:130%;color:inherit;font-weight:bold;" href="/docs/history/">Latest versions:</a>
 		<br>
@@ -29,27 +29,41 @@ jumbotron:
 		<br>
 	</div>
 
-	<div class="unit two-thirds" style="margin-top:10px;">
+	<div class="unit two-thirds" style="margin:10px 0 10px 0;">
+		<div style="display:flex;flex-wrap:wrap;flex-direction:row;text-align:left;color:rgb(250,200,110);">
+			<div style="flex:1 1;white-space:nowrap;padding:0 0.5em;">
+				<svg class="icon"><use href="assets/images/icons.svg?v={{ site.version }}#fire" /></svg>
+				23+ years of continuous development
+			</div>
+			<div style="flex:1 1;white-space:nowrap;padding:0 0.5em;">
+				<svg class="icon"><use href="assets/images/icons.svg?v={{ site.version }}#lab" /></svg>
+				Production-tested with millions of conversations
+			</div>
+			<div style="flex:1 1;white-space:nowrap;padding:0 0.5em;">
+				<svg class="icon"><use href="assets/images/icons.svg?v={{ site.version }}#electricity" /></svg>
+				Fine-tuned for extreme productivity
+			</div>
+			<div style="flex:1 1;white-space:nowrap;padding:0 0.5em;">
+				<svg class="icon"><use href="assets/images/icons.svg?v={{ site.version }}#dashboard" /></svg>
+				Scale from a solo founder to an enterprise team
+			</div>
+			<div style="flex:1 1;white-space:nowrap;padding:0 0.5em;">
+				<svg class="icon"><use href="assets/images/icons.svg?v={{ site.version }}#gift" /></svg>
+				Your first self-hosted seat is free forever
+			</div>
+			<div style="flex:1 1;white-space:nowrap;padding:0 0.5em;">
+				<svg class="icon"><use href="assets/images/icons.svg?v={{ site.version }}#cloud" /></svg>
+				Deploy self-hosted or in Cerb Cloud
+			</div>
+		</div>
+	</div>
+
+	<div class="unit whole" style="margin-top:10px;">
 		{% include testimonials.html %}
 	</div>
 </div>
 
 <div class="home features">
-	{% comment %}
-	<div class="feature half">
-		<div class="align-left">
-			<h2>Highlights</h2>
-			<ul>
-				<li>23+ years of continuous development</li>
-				<li>100% source-available license</li>
-				<li>Your first self-hosted seat is free forever</li>
-				<li>Scalable from solo founders to large enterprises</li>
-				<li>Deploy self-hosted or in Cerb Cloud</li>
-			</ul>
-		</div>
-	</div>
-	{% endcomment %}
-
 	<div class="feature whole">
 		<div class="align-center">
 			<h1>Collaborative Workspaces</h1>
@@ -183,11 +197,6 @@ jumbotron:
 				<li>Manage data through Cerb's OAuth2 REST API</li>
 				<li>Create customer-facing tools with community portals</li>
 			</ul>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-left">
 		</div>
 	</div>
 
