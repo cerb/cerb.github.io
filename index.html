@@ -9,8 +9,7 @@ summary: "This page provides an overview of Cerb, an automation toolkit for cust
   various tasks. Cerb is commonly used to transform standard mailboxes into team-based webmail systems with
   features like automated triage and internal discussions. The page also details Cerb's capabilities in
   building interactive agents, extending integrations, and sharing solutions within the community. It offers
-  free trials via Docker or Cerb Cloud and provides access to its source code on GitHub. Additionally, the
-  page encourages users to subscribe to a newsletter for updates and resources related to Cerb."
+  free trials via Docker or Cerb Cloud and provides access to its source code on GitHub."
 jumbotron:
   title: Cerb automates customer service inboxes and workflows
   tagline: Build helpful AI agents, share high-productivity workspaces, and integrate with any API.
@@ -21,10 +20,10 @@ jumbotron:
 	<div class="unit one-third align-center" style="margin-top:10px;">
 		<a style="font-size:130%;color:inherit;font-weight:bold;" href="/docs/history/">Latest versions:</a>
 		<br>
-		<a href="/releases/11.1/" style="font-weight:bold;font-size:130%;">11.1</a>
+		<a href="/releases/11.1/" style="font-weight:bold;font-size:130%;text-decoration:underline;">11.1</a>
 		- April 24, 2025
 		<br>
-		<a href="/releases/11.0.8/" style="font-weight:bold;font-size:130%;">11.0.8</a>
+		<a href="/releases/11.0.8/" style="font-weight:bold;font-size:130%;text-decoration:underline;">11.0.8</a>
 		- April 22, 2025
 		<br>
 	</div>
@@ -77,43 +76,22 @@ jumbotron:
 
 <div class="home features">
 	<div class="feature whole">
+		{% comment %}autoplay loop muted playsinline{% endcomment %}
+		<video width="1200" height="630" class="screenshot" loop controls playsinline poster="/assets/images/home/features/thumbs/poster.png">
+			<source src="https://cdn.cerb.ai/assets/videos/home/cerb-preview.mp4" type="video/mp4" />
+		</video>
+	</div>
+
+	<div class="feature whole">
 		<div class="align-center">
-			<h1>Collaborative Workspaces</h1>
+			<h1>Shared Inboxes</h1>
 		</div>
 	</div>
 
 	<div class="feature half">
 		<div>
-			<video width="1200" height="630" class="screenshot" autoplay loop muted playsinline poster="/assets/images/home/features/thumbs/mission-control.png">
-				<source src="https://cdn.cerb.ai/assets/videos/home/collaborative-workspaces.mp4" type="video/mp4" />
-			</video>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-left">
-			<ul>
-				<li>Transform email and social accounts into a team inbox</li>
-				<li>Enable intelligent routing, assignment, and prioritization</li>
-				<li>Monitor tasks with real-time worklists and dashboards</li>
-				<li>Filter and manipulate data with powerful search and data queries</li>
-				<li>Organize profile pages for every record with custom widgets</li>
-				<li>Follow notifications from any watched record activity or @mention</li>
-				<li>Bring your own data with custom records and fields</li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="feature whole">
-		<div class="align-center">
-			<h1>Automations</h1>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-left">
 			<a href="/docs/automations/">
-				<img src="/assets/images/home/features/thumbs/automate-workflows.png" width="1200" height="630" class="screenshot">
+				<img src="/assets/images/home/features/thumbs/shared-inboxes.png" width="1200" height="630" class="screenshot">
 			</a>
 		</div>
 	</div>
@@ -121,12 +99,40 @@ jumbotron:
 	<div class="feature half">
 		<div class="align-left">
 			<ul>
-				<li>Code from your browser with an integrated editor and debugger</li>
-				<li>Build rapidly with KATA -- our high-level automation language</li>
-				<li>Ditch the training wheels of vibe coding &amp; point-and-click tools</li>
-				<li>Trigger your code from events and interactive toolbars</li>
-				<li>Integrate with any web-based API</li>
-				<li>No programming experience required -- we'll help you learn</li>
+				<li>Transform any email or social account into a team inbox</li>
+				<li>Handle thousands of issues per day</li>
+				<li>Automate routing, assignment, and prioritization</li>
+				<li>Display customer info and related data in conversations</li>
+				<li>Reply quickly with snippets and contextual auto-responses</li>
+				<li>Resolve common issues with custom shortcuts</li>
+				<li>Bulk update and reply to multiple related conversations at once</li>
+				<li>Enforce service level agreements and track customer satisfaction</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="feature whole">
+		<div class="align-center">
+			<h1>Collaborative Workspaces</h1>
+		</div>
+	</div>
+
+	<div class="feature half">
+		<div class="align-left">
+			<a href="/docs/automations/">
+				<img src="/assets/images/home/features/thumbs/mission-control.png" width="1200" height="630" class="screenshot">
+			</a>
+		</div>
+	</div>
+
+	<div class="feature half">
+		<div class="align-left">
+			<ul>
+				<li>Fully customize dashboards and pages with tabs and widgets</li>
+				<li>Filter and manipulate data with powerful search and data queries</li>
+				<li>Comment on records and @mention team members to notify them</li>
+				<li>Bring your own data with custom records and fields</li>
+				<li>Monitor new activity on watched records with notifications</li>
 			</ul>
 		</div>
 	</div>
@@ -160,7 +166,34 @@ jumbotron:
 
 	<div class="feature whole">
 		<div class="align-center">
-			<h1>Versioned Workflows</h1>
+			<h1>Automations</h1>
+		</div>
+	</div>
+
+	<div class="feature half">
+		<div class="align-left">
+			<a href="/docs/automations/">
+				<img src="/assets/images/home/features/thumbs/automate-workflows.png" width="1200" height="630" class="screenshot">
+			</a>
+		</div>
+	</div>
+
+	<div class="feature half">
+		<div class="align-left">
+			<ul>
+				<li>Code from your browser with an integrated editor and debugger</li>
+				<li>Build rapidly with KATA -- our high-level automation language</li>
+				<li>Ditch the training wheels of vibe coding &amp; point-and-click tools</li>
+				<li>Trigger your code from events and interactive toolbars</li>
+				<li>Integrate with any web-based API</li>
+				<li>No programming experience required -- we'll help you learn</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="feature whole">
+		<div class="align-center">
+			<h1>Workflow Templates</h1>
 		</div>
 	</div>
 
@@ -208,6 +241,7 @@ jumbotron:
 				<li>Trigger and catch webhooks for real-time event handling</li>
 				<li>Manage data through Cerb's OAuth2 REST API</li>
 				<li>Create customer-facing tools with community portals</li>
+				<li>Extend core functionality with plugins</li>
 			</ul>
 		</div>
 	</div>
