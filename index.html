@@ -61,6 +61,18 @@ jumbotron:
 	<div class="unit whole" style="margin-top:10px;">
 		{% include testimonials.html %}
 	</div>
+
+	<div class="unit whole" style="margin-top:20px;">
+		<div class="align-center">
+			<form id="demo-signup">
+				<label><input type="text" name="contact" placeholder="Enter your work email" spellcheck="false" style="font-size:2em;padding:0.25em;border-radius:5px;border:0;"></label>
+				<button type="submit" class="cerb-button" style="font-size:1.8em;margin:0;text-decoration:none;">Get a demo</button>
+			</form>
+			<div id="demo-status" style="color:rgb(185,185,185);font-weight:bold;">
+				Your email is protected by our <a href="/privacy/" target="_blank" style="font-weight:bold;color:inherit;text-decoration:underline;">privacy policy</a>.
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="home features">
@@ -200,6 +212,7 @@ jumbotron:
 		</div>
 	</div>
 
+	{% comment %}
 	<div class="feature whole">
 		<div class="align-center">
 			<h1>Deploy on your servers or as a cloud service</h1>
@@ -207,4 +220,7 @@ jumbotron:
 	</div>
 
 	{% include signup_button.html %}
+	{% endcomment %}
 </div>
+
+<script src="/assets/js/home.js?v={{ site.version }}"></script>
