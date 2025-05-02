@@ -64,9 +64,6 @@ div.cerb-screenshot {
 	}
 
 	video {
-		border:1px solid rgb(220,220,220);
-		@include m.border-radius(5px);
-
 		max-width: 100%;
 		height: auto;
 	}
@@ -299,7 +296,6 @@ div.page-content {
 		.screenshot {
 			width: 100%;
 			height: auto;
-			border-radius: 20px;
 		}
 	}
 }
