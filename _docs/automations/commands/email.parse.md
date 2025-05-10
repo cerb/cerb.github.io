@@ -87,3 +87,55 @@ The `output:` placeholder receives a dictionary with these keys:
 | Key |
 |-|-
 | `error` | The error message.
+
+# Examples
+
+### Parse a quoted-printable message with emoji
+
+{% tabs example %}
+
+{% tab example automation %}
+{% highlight cerb %}
+{% raw %}
+start:
+  set:
+    message_subject: Welcome 🌟 to our service!
+    message_body@text:
+      Hello and welcome to our new service! 😀
+      
+      We're delighted 🎉 to have you as a member of our community.
+      This is a sample email with emojis 🚀 and quoted-printable encoding.
+      
+      Have a great day! 🌈
+      
+      Best regards,
+      The Team 👋
+    
+  email.parse:
+    output: new_ticket
+    inputs:
+      message@text:
+        From: sender@example.com
+        To: recipient@example.com
+        Date: {{'now'|date('r')}}
+        MIME-Version: 1.0
+        Content-Type: text/plain; charset="UTF-8"
+        Content-Transfer-Encoding: quoted-printable
+        Subject: =?UTF-8?Q?{{message_subject|qp_encode}}?=
+        
+        {{message_body|qp_encode}}
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% tab example policy %}
+{% highlight cerb %}
+{% raw %}
+commands:
+  email.parse:
+    allow@bool: yes
+{% endraw %}
+{% endhighlight %}
+{% endtab %}
+
+{% endtabs %}
