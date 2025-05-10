@@ -125,6 +125,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | | `headers` | An array of email headers to set, with header names as keys
 | | `html_template_id` | An optional [HTML template](/docs/records/types/html_template/) ID if `format` is `parsedown`
 | | `in_reply_message_id` | The [message](/docs/records/types/message/) ID being responded to
+| | `is_autoreply` | `1` to avoid saving a copy of the reply on the ticket, `0` (or omit) to include
 | | `message_custom_fields` | An object with message custom field IDs as keys and their values
 | | `message_custom_fields_uri` | A read-only object with message custom field URIs as keys and their values
 | | `options_gpg_encrypt` | `1` to enable PGP encryption, `0` (or omit) to disable
