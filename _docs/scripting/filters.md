@@ -1095,6 +1095,80 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 13_0) AppleWebKit/605.1.15 (KHTML, like G
 this-is-the-title-of-a-record
 {% endhighlight %}
 
+## qp_decode
+
+(Added in [11.1.1](/releases/11.1.1/))
+
+Decode a string in quoted-printable format.
+
+{% highlight twig %}
+{% raw %}
+{% set message %}
+Hello and welcome to our new service! =F0=9F=98=80
+
+We're delighted =F0=9F=8E=89 to have you as a member of our community.
+This is a sample email with emojis =F0=9F=9A=80 and quoted-printable encodi=
+ng.
+
+Have a great day! =F0=9F=8C=88
+
+Best regards,
+The Team =F0=9F=91=8B
+{% endset %}
+
+{{message|qp_decode}}
+{% endraw %}
+{% endhighlight %}
+
+{% highlight text %}
+Hello and welcome to our new service! 😀
+
+We're delighted 🎉 to have you as a member of our community.
+This is a sample email with emojis 🚀 and quoted-printable encoding.
+
+Have a great day! 🌈
+
+Best regards,
+The Team 👋
+{% endhighlight %}
+
+## qp_encode
+
+(Added in [11.1.1](/releases/11.1.1/))
+
+Encode a string in quoted-printable format. For instance, creating tickets with emoji using [email.parse:](/docs/automations/commands/email.parse/).
+
+{% highlight twig %}
+{% raw %}
+{% set message %}
+Hello and welcome to our new service! 😀
+
+We're delighted 🎉 to have you as a member of our community.
+This is a sample email with emojis 🚀 and quoted-printable encoding.
+
+Have a great day! 🌈
+
+Best regards,
+The Team 👋
+{% endset %}
+
+{{message|qp_encode}}
+{% endraw %}
+{% endhighlight %}
+
+{% highlight text %}
+Hello and welcome to our new service! =F0=9F=98=80
+
+We're delighted =F0=9F=8E=89 to have you as a member of our community.
+This is a sample email with emojis =F0=9F=9A=80 and quoted-printable encodi=
+ng.
+
+Have a great day! =F0=9F=8C=88
+
+Best regards,
+The Team =F0=9F=91=8B
+{% endhighlight %}
+
 ## quote
 
 {% highlight twig %}
