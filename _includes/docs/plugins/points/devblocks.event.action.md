@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;devblocks.event.action&quot;>
+		<extension point="devblocks.event.action">
 			<id>example.bot.action</id>
 			<name>Example Bot Action</name>
 			<class>
@@ -12,10 +12,10 @@
 				<name>BotAction_Example</name>
 			</class>
 			<params>
-				<param key=&quot;label&quot; value=&quot;Example Bot Action&quot;/>
-				<param key=&quot;events&quot;>
+				<param key="label" value="Example Bot Action"/>
+				<param key="events">
 					<value>
-						<data key=&quot;*&quot;/>
+						<data key="*"/>
 					</value>
 				</param>
 			</params>

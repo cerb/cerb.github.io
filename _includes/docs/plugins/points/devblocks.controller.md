@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;devblocks.controller&quot;>
+		<extension point="devblocks.controller">
 			<id>core.controller.ui</id>
 			<name>UI Controller</name>
 			<class>
@@ -12,7 +12,7 @@
 				<name>Controller_UI</name>
 			</class>
 			<params>
-				<param key=&quot;uri&quot; value=&quot;ui&quot;/>
+				<param key="uri" value="ui"/>
 			</params>
 		</extension>
 {% endhighlight %}

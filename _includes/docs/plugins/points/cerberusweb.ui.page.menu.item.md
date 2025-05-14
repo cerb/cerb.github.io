@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerberusweb.ui.page.menu.item&quot;>
+		<extension point="cerberusweb.ui.page.menu.item">
 			<id>wgmclickatell.setup.menu.plugins.clickatell</id>
 			<name>Clickatell</name>
 			<class>
@@ -12,8 +12,8 @@
 				<name>WgmClickatell_SetupPluginsMenuItem</name>
 			</class>
 			<params>
-				<param key=&quot;page_id&quot; value=&quot;core.page.configuration&quot;/>
-				<param key=&quot;menu_id&quot; value=&quot;core.setup.menu.services&quot;/>
+				<param key="page_id" value="core.page.configuration"/>
+				<param key="menu_id" value="core.setup.menu.services"/>
 			</params>
 		</extension>
 {% endhighlight %}

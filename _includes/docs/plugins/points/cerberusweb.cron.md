@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerberusweb.cron&quot;>
+		<extension point="cerberusweb.cron">
 			<id>cron.mailbox</id>
 			<name>Mailbox Checker and Email Downloader</name>
 			<class>

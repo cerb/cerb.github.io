@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerberusweb.ui.page.section&quot;>
+		<extension point="cerberusweb.ui.page.section">
 			<id>assets.page.profiles.asset</id>
 			<name>Asset Section</name>
 			<class>
@@ -12,8 +12,8 @@
 				<name>PageSection_ProfilesAsset</name>
 			</class>
 			<params>
-				<param key=&quot;page_id&quot; value=&quot;core.page.profiles&quot;/>
-				<param key=&quot;uri&quot; value=&quot;asset&quot;/>
+				<param key="page_id" value="core.page.profiles"/>
+				<param key="uri" value="asset"/>
 			</params>
 		</extension>
 {% endhighlight %}

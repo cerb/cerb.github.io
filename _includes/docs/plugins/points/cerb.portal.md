@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerb.portal&quot;>
+		<extension point="cerb.portal">
 			<id>cerb.bots.portal</id>
 			<name>Conversational Bot</name>
 			<class>

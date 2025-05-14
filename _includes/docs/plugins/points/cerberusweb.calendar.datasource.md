@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerberusweb.calendar.datasource&quot;>
+		<extension point="cerberusweb.calendar.datasource">
 			<id>calendar.datasource.calendar</id>
 			<name>Calendar</name>
 			<class>

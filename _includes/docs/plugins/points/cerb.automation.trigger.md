@@ -1,7 +1,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerb.automation.trigger&quot;>
+		<extension point="cerb.automation.trigger">
 			<id>cerb.trigger.api.request</id>
 			<name>api.request</name>
 			<class>
@@ -9,10 +9,10 @@
 				<name>AutomationTrigger_ApiRequest</name>
 			</class>
 			<params>
-				<param key=&quot;description&quot; value=&quot;Invoke an automation from the REST API with OAuth tokens&quot;/>
-				<param key=&quot;features&quot;>
+				<param key="description" value="Invoke an automation from the REST API with OAuth tokens"/>
+				<param key="features">
 					<value>
-						<data key=&quot;inputs&quot;/>
+						<data key="inputs"/>
 					</value>
 				</param>
 			</params>

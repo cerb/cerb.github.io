@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerberusweb.ui.workspace.page&quot;>
+		<extension point="cerberusweb.ui.workspace.page">
 			<id>core.workspace.page.workspace</id>
 			<name>Workspace</name>
 			<class>
@@ -12,7 +12,7 @@
 				<name>WorkspacePage_Workspace</name>
 			</class>
 			<params>
-				<param key=&quot;label&quot; value=&quot;common.workspace&quot;/>
+				<param key="label" value="common.workspace"/>
 			</params>
 		</extension>
 {% endhighlight %}

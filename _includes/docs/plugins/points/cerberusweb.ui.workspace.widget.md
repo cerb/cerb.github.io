@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerberusweb.ui.workspace.widget&quot;>
+		<extension point="cerberusweb.ui.workspace.widget">
 			<id>core.workspace.widget.bot</id>
 			<name>Bot Custom Widget</name>
 			<class>

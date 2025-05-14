@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;usermeet.sc.controller&quot;>
+		<extension point="usermeet.sc.controller">
 			<id>cerberusweb.kb.sc.controller</id>
 			<name>Knowledgebase</name>
 			<class>
@@ -12,11 +12,11 @@
 				<name>UmScKbController</name>
 			</class>
 			<params>
-				<param key=&quot;uri&quot; value=&quot;kb&quot;/>
-				<param key=&quot;menu_title&quot; value=&quot;common.knowledgebase&quot;/>
-				<param key=&quot;options&quot;>
+				<param key="uri" value="kb"/>
+				<param key="menu_title" value="common.knowledgebase"/>
+				<param key="options">
 					<value>
-						<data key=&quot;configurable&quot;/>
+						<data key="configurable"/>
 					</value>
 				</param>
 			</params>

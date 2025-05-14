@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-<extension point=&quot;cerb.card.widget&quot;>
+<extension point="cerb.card.widget">
     <id>example.card.widget</id>
     <name>Card Widget</name>
     <class>

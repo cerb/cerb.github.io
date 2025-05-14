@@ -1,7 +1,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerb.resource.type&quot;>
+		<extension point="cerb.resource.type">
 			<id>cerb.resource.dataset.csv</id>
 			<name>Dataset (.csv)</name>
 			<class>

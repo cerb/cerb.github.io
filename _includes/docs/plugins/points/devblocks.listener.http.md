@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;devblocks.listener.http&quot;>
+		<extension point="devblocks.listener.http">
 			<id>core.listeners.tour</id>
 			<name>Core Helpdesk Tour</name>
 			<class>

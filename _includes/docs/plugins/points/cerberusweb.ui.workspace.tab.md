@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerberusweb.ui.workspace.tab&quot;>
+		<extension point="cerberusweb.ui.workspace.tab">
 			<id>core.workspace.tab.dashboard</id>
 			<name>Dashboard</name>
 			<class>
@@ -12,7 +12,7 @@
 				<name>WorkspaceTab_Dashboards</name>
 			</class>
 			<params>
-				<param key=&quot;label&quot; value=&quot;dashboard&quot;/>
+				<param key="label" value="dashboard"/>
 			</params>
 		</extension>
 {% endhighlight %}

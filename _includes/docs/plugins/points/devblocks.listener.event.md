@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;devblocks.listener.event&quot;>
+		<extension point="devblocks.listener.event">
 			<id>calls.listener</id>
 			<name>Event Listener</name>
 			<class>
@@ -12,9 +12,9 @@
 				<name>CallsEventListener</name>
 			</class>
 			<params>
-				<param key=&quot;events&quot;>
+				<param key="events">
 					<value>
-						<data key=&quot;cron.maint&quot;/>
+						<data key="cron.maint"/>
 					</value>
 				</param>
 			</params>

@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;usermeet.login.authenticator&quot;>
+		<extension point="usermeet.login.authenticator">
 			<id>sc.login.auth.ldap</id>
 			<name>LDAP</name>
 			<class>
@@ -12,8 +12,8 @@
 				<name>ScLdapLoginAuthenticator</name>
 			</class>
 			<params>
-				<param key=&quot;switcher_icon&quot; value=&quot;images/fugue/address-book.png&quot;/>
-				<param key=&quot;switcher_label&quot; value=&quot;Log in with LDAP&quot;/>
+				<param key="switcher_icon" value="images/fugue/address-book.png"/>
+				<param key="switcher_label" value="Log in with LDAP"/>
 			</params>
 		</extension>
 {% endhighlight %}

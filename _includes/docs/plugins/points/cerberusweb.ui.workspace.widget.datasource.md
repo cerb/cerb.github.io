@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerberusweb.ui.workspace.widget.datasource&quot;>
+		<extension point="cerberusweb.ui.workspace.widget.datasource">
 			<id>core.workspace.widget.datasource.manual</id>
 			<name>Manual Input</name>
 			<class>
@@ -12,10 +12,10 @@
 				<name>WorkspaceWidgetDatasource_Manual</name>
 			</class>
 			<params>
-				<param key=&quot;widgets&quot;>
+				<param key="widgets">
 					<value>
-						<data key=&quot;core.workspace.widget.counter&quot;/>
-						<data key=&quot;core.workspace.widget.gauge&quot;/>
+						<data key="core.workspace.widget.counter"/>
+						<data key="core.workspace.widget.gauge"/>
 					</value>
 				</param>
 			</params>

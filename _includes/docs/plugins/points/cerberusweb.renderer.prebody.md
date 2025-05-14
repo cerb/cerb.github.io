@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerberusweb.renderer.prebody&quot;>
+		<extension point="cerberusweb.renderer.prebody">
 			<id>timetracking.renderer.prebody</id>
 			<name>Time Tracking Pre-body Renderer</name>
 			<class>

@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;devblocks.search.engine&quot;>
+		<extension point="devblocks.search.engine">
 			<id>devblocks.search.engine.elasticsearch</id>
 			<name>Elasticsearch</name>
 			<class>

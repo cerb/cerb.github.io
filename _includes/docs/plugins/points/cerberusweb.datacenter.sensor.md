@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerberusweb.datacenter.sensor&quot;>
+		<extension point="cerberusweb.datacenter.sensor">
 			<id>cerberusweb.datacenter.sensor.external</id>
 			<name>External</name>
 			<class>

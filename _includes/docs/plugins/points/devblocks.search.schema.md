@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;devblocks.search.schema&quot;>
+		<extension point="devblocks.search.schema">
 			<id>cerb.search.schema.address</id>
 			<name>Email Addresses</name>
 			<class>

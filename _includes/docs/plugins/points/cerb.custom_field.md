@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerb.custom_field&quot;>
+		<extension point="cerb.custom_field">
 			<id>example.plugin.custom_field</id>
 			<name>Example Custom Field Type</name>
 			<class>

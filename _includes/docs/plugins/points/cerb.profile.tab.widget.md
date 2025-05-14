@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerb.profile.tab.widget&quot;>
+		<extension point="cerb.profile.tab.widget">
 			<id>cerb.profile.tab.widget.behavior.tree</id>
 			<name>Behavior Tree</name>
 			<class>

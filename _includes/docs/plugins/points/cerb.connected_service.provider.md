@@ -1,7 +1,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerb.connected_service.provider&quot;>
+		<extension point="cerb.connected_service.provider">
 			<id>cerb.service.provider.aws</id>
 			<name>Amazon Web Services</name>
 			<class>
@@ -9,9 +9,9 @@
 				<name>ServiceProvider_Aws</name>
 			</class>
 			<params>
-				<param key=&quot;options&quot;>
+				<param key="options">
 					<value>
-						<data key=&quot;accounts&quot;/>
+						<data key="accounts"/>
 					</value>
 				</param>
 			</params>

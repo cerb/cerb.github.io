@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;devblocks.storage.schema&quot;>
+		<extension point="devblocks.storage.schema">
 			<id>cerberusweb.storage.schema.attachments</id>
 			<name>Attachments</name>
 			<class>
@@ -12,9 +12,9 @@
 				<name>Storage_Attachments</name>
 			</class>
 			<params>
-				<param key=&quot;active_storage_profile&quot; value=&quot;devblocks.storage.engine.disk&quot;/>
-				<param key=&quot;archive_storage_profile&quot; value=&quot;devblocks.storage.engine.disk&quot;/>
-				<param key=&quot;archive_after_days&quot; value=&quot;7&quot;/>
+				<param key="active_storage_profile" value="devblocks.storage.engine.disk"/>
+				<param key="archive_storage_profile" value="devblocks.storage.engine.disk"/>
+				<param key="archive_after_days" value="7"/>
 			</params>
 		</extension>
 {% endhighlight %}

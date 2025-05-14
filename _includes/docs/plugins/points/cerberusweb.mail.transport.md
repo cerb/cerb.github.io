@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerberusweb.mail.transport&quot;>
+		<extension point="cerberusweb.mail.transport">
 			<id>core.mail.transport.null</id>
 			<name>Null</name>
 			<class>

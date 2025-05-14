@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;devblocks.cache.engine&quot;>
+		<extension point="devblocks.cache.engine">
 			<id>devblocks.cache.engine.disk</id>
 			<name>Filesystem</name>
 			<class>

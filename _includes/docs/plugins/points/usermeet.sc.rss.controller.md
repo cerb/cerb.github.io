@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;usermeet.sc.rss.controller&quot;>
+		<extension point="usermeet.sc.rss.controller">
 			<id>cerberusweb.kb.sc.rss.controller</id>
 			<name>Knowledgebase RSS</name>
 			<class>
@@ -12,7 +12,7 @@
 				<name>UmScKbRssController</name>
 			</class>
 			<params>
-				<param key=&quot;uri&quot; value=&quot;kb&quot;/>
+				<param key="uri" value="kb"/>
 			</params>
 		</extension>
 {% endhighlight %}

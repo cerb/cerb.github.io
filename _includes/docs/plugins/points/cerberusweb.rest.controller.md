@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerberusweb.rest.controller&quot;>
+		<extension point="cerberusweb.rest.controller">
 			<id>cerberusweb.datacenter.domains.rest</id>
 			<name>Domains</name>
 			<class>
@@ -12,7 +12,7 @@
 				<name>ChRest_Domains</name>
 			</class>
 			<params>
-				<param key=&quot;uri&quot; value=&quot;domains&quot;/>
+				<param key="uri" value="domains"/>
 			</params>
 		</extension>
 {% endhighlight %}

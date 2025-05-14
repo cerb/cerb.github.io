@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;devblocks.context&quot;>
+		<extension point="devblocks.context">
 			<id>cerberusweb.contexts.asset</id>
 			<name>Asset</name>
 			<class>
@@ -12,37 +12,37 @@
 				<name>Context_Asset</name>
 			</class>
 			<params>
-				<param key=&quot;names&quot;>
+				<param key="names">
 					<value>
-						<data key=&quot;asset&quot; value=&quot;singular&quot;/>
-						<data key=&quot;assets&quot; value=&quot;plural&quot;/>
+						<data key="asset" value="singular"/>
+						<data key="assets" value="plural"/>
 					</value>
 				</param>
-				<param key=&quot;alias&quot; value=&quot;asset&quot;/>
-				<param key=&quot;dao_class&quot; value=&quot;DAO_Asset&quot;/>
-				<param key=&quot;view_class&quot; value=&quot;View_Asset&quot;/>
-				<param key=&quot;options&quot;>
+				<param key="alias" value="asset"/>
+				<param key="dao_class" value="DAO_Asset"/>
+				<param key="view_class" value="View_Asset"/>
+				<param key="options">
 					<value>
-						<data key=&quot;cards&quot;/>
-						<data key=&quot;custom_fields&quot;/>
-						<data key=&quot;links&quot;/>
-						<data key=&quot;records&quot;/>
-						<data key=&quot;search&quot;/>
-						<data key=&quot;snippets&quot;/>
-						<data key=&quot;va_variable&quot;/>
-						<data key=&quot;watchers&quot;/>
-						<data key=&quot;workspace&quot;/>
+						<data key="cards"/>
+						<data key="custom_fields"/>
+						<data key="links"/>
+						<data key="records"/>
+						<data key="search"/>
+						<data key="snippets"/>
+						<data key="va_variable"/>
+						<data key="watchers"/>
+						<data key="workspace"/>
 					</value>
 				</param>
-				<param key=&quot;acl&quot;>
+				<param key="acl">
 					<value>
-						<data key=&quot;comment&quot;/>
-						<data key=&quot;create&quot;/>
-						<data key=&quot;delete&quot;/>
-						<data key=&quot;export&quot;/>
-						<data key=&quot;import&quot;/>
-						<data key=&quot;merge&quot;/>
-						<data key=&quot;update&quot;/>
+						<data key="comment"/>
+						<data key="create"/>
+						<data key="delete"/>
+						<data key="export"/>
+						<data key="import"/>
+						<data key="merge"/>
+						<data key="update"/>
 					</value>
 				</param>
 			</params>

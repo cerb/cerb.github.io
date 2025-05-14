@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;devblocks.event&quot;>
+		<extension point="devblocks.event">
 			<id>example.bot.event</id>
 			<name>Example bot event</name>
 			<class>
@@ -12,17 +12,17 @@
 				<name>Event_Example</name>
 			</class>
 			<params>
-				<param key=&quot;contexts&quot;>
+				<param key="contexts">
 					<value>
-						<data key=&quot;cerberusweb.contexts.app&quot;/>
-						<data key=&quot;cerberusweb.contexts.group&quot;/>
-						<data key=&quot;cerberusweb.contexts.role&quot;/>
-						<data key=&quot;cerberusweb.contexts.worker&quot;/>
+						<data key="cerberusweb.contexts.app"/>
+						<data key="cerberusweb.contexts.group"/>
+						<data key="cerberusweb.contexts.role"/>
+						<data key="cerberusweb.contexts.worker"/>
 					</value>
 				</param>
-				<param key=&quot;options&quot;>
+				<param key="options">
 					<value>
-						<data key=&quot;visibility&quot;/>
+						<data key="visibility"/>
 					</value>
 				</param>
 			</params>

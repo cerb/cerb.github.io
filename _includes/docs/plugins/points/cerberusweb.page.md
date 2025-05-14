@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerberusweb.page&quot;>
+		<extension point="cerberusweb.page">
 			<id>core.page.welcome</id>
 			<name>Welcome Page</name>
 			<class>
@@ -12,8 +12,8 @@
 				<name>ChWelcomePage</name>
 			</class>
 			<params>
-				<param key=&quot;uri&quot; value=&quot;welcome&quot;/>
-				<param key=&quot;menutitle&quot; value=&quot;&quot;/>
+				<param key="uri" value="welcome"/>
+				<param key="menutitle" value=""/>
 			</params>
 		</extension>
 {% endhighlight %}

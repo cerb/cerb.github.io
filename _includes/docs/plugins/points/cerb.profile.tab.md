@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerb.profile.tab&quot;>
+		<extension point="cerb.profile.tab">
 			<id>cerb.profile.tab.dashboard</id>
 			<name>Dashboard</name>
 			<class>

@@ -4,7 +4,7 @@
 # Manifest
 
 {% highlight xml %}
-		<extension point=&quot;cerberusweb.plugin.setup&quot;>
+		<extension point="cerberusweb.plugin.setup">
 			<id>wgmcampfire.setup</id>
 			<name>Setup</name>
 			<class>
@@ -12,7 +12,7 @@
 				<name>WgmCampfire_Setup</name>
 			</class>
 			<params>
-				<param key=&quot;tab_label&quot; value=&quot;Campfire Credentials&quot;/>
+				<param key="tab_label" value="Campfire Credentials"/>
 			</params>
 		</extension>
 {% endhighlight %}
