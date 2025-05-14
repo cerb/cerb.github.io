@@ -93,3 +93,6 @@ commands:
 
 {% endtabs %}
 
+# Resources
+
+* Guide: [Update organization contact details from their website](/guides/ai-agents/find-and-update-org-contact-fields/)
