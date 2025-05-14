@@ -95,4 +95,5 @@ commands:
 
 # Resources
 
+* Guide: [Summarize long ticket conversations](/guides/ai-agents/ticket-summarize/)
 * Guide: [Update organization contact details from their website](/guides/ai-agents/find-and-update-org-contact-fields/)
