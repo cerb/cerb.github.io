@@ -31,7 +31,7 @@ class ExampleExtension extends Extension_UmScController {
 	public function configure(Model_CommunityTool $instance)
 
 	/**
-	 * @param DevblocksHttpRequest
+	 * @param DevblocksHttpRequest $request
 	 * @return DevblocksHttpResponse
 	 */
 	public function handleRequest(DevblocksHttpRequest $request) {
