@@ -30,7 +30,7 @@ jumbotron:
 
 # Introduction
 
-One of the most common bot behaviors in Cerb is [sending an automatic reply](/guides/bots/send-automatic-replies/) back to the sender of a new message.  This is a good practice, because it confirms your receipt of a client's message, and it lets them know what to expect in terms of your support hours, SLA obligations, etc.
+One of the most common bot behaviors in Cerb is [sending an automatic reply](/workflows/cerb.auto_responder/) back to the sender of a new message.  This is a good practice, because it confirms your receipt of a client's message, and it lets them know what to expect in terms of your support hours, SLA obligations, etc.
 
 However, on occasion, a new message that you just received is itself an automatic reply from somewhere else.  You should avoid sending an automatic reply back to it.  At best, it's pointless and won't be read by a human. At worst, two misbehaving bots can endlessly send auto-replies back and forth to each other, creating a _mail loop_.
 
@@ -46,7 +46,7 @@ This example should catch most automatic responses, but you can continue to expa
 
 <div class="cerb-box note">
 	<p>
-		In Cerb 8.0+ you can <a href="/packages/auto-reply-bot/">import the Auto-Reply Bot package</a> instead.
+		In Cerb 11.0+ you can <a href="/workflows/cerb.auto_responder/"> use the Auto-Response Workflow</a> instead.
 	</p>
 </div>
 
