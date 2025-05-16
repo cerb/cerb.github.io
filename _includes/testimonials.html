@@ -1,12 +1,12 @@
 <div style="display:none;">
 	<div class="grid feature">
-		<div id="cerb-testimonials" style="color:rgb(182,182,182);">
+		<div id="cerb-testimonials">
 			<div class="cerb-testimonial">
 				<div style="font-size:0.9em;min-width:335px;">
-					<q class="cerb-testimonial-quote">{{ testimonial.quote }}</q>
 					<div>
+						<span class="client-logo"></span>
+						<q class="cerb-testimonial-quote">{{ testimonial.quote }}</q>
 						- <b class="cerb-testimonial-author"></b>
-						<span class="client-logo" style="display:none;"></span>
 					</div>
 				</div>
 			</div>
@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		let $client_logo = $testimonial_container.querySelector('.client-logo');
 
 		let testimonials = [
-			{% for testimonial in site.data.testimonials %}
+			{% assign testimonials = site.data.testimonials | where: "featured", true %}
+			{% for testimonial in testimonials %}
 			{
 				"client": {{testimonial.client|jsonify}},
 				"quote": {{testimonial.quote|normalize_whitespace|jsonify}},

@@ -1,24 +1,28 @@
 - client: 1password-com
   author: Roustem Karimov, Founder, 1Password
   when: 2012
+  featured: yes
   quote: |
     I just wanted to say thanks for continuous improvements in Cerberus Helpdesk. You are doing a fantastic job and I wish you great success!
 
 - client: eff-org
   author: Rebecca R., Intake Coordinator, Electronic Frontier Foundation
   when: 2011
+  featured: yes
   quote: |
     EFF is SO grateful for Cerberus's donation of the system to us. It's enabled me to take on many many additional   duties aside from our public communication.
 
 - client: advance-net
   author: Hussam AlOkush, Senior Director - Customer Success, Advance Digital Inc.
   when: 2016
+  featured: yes
   quote: |
     Webgroup Media has been a passionate partner of ours for over 10 years. Cerberus allowed us to gain efficiencies across 100's of our business support staff, Customize and streamline workflow across our companies and continues to be integral to the health of our teams.  Our team also is always eager to upgrade to the latest release and see which of their ideas were incorporated.  Great Product. Great Team!
 
 - client: fedpol-be
   author: Supervisor of a team within the Belgian Police
   when: 2024
+  featured: yes
   quote: |
     Since 2020, Cerb has become an integral part of our day-to-day operations. Our team of approximately 20 agents has found it to be a highly effective tool for managing our workflow. With over 250 emails a day, Cerb's features, automations, and customization options have been invaluable in helping us organize and streamline our processes. It has made a clear difference in supporting our team and enhancing our efficiency in fighting crime!
 
@@ -31,6 +35,7 @@
 - client: flexibits-com
   author: Michael Simmons, Co-Founder, Flexibits Inc.
   when: 2019
+  featured: yes
   quote: |
     We've been using Cerb since we started our business in 2011. It's easy to use, has frequent updates and enhancements, but best of all, it always "just works".
 

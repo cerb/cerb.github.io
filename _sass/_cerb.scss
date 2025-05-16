@@ -300,6 +300,19 @@ div.page-content {
 	}
 }
 
+#cerb-testimonials {
+	color: rgb(182,182,182);
+
+	.client-logo {
+		float: left;
+		margin: 0 1em;
+	}
+
+	blockquote {
+		border-left: 4px solid rgb(182,182,182);
+	}
+}
+
 #cerb-slides {
 	.cerb-slides-nav {
 		margin-bottom: 10px;
