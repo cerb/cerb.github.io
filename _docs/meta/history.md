@@ -15,7 +15,8 @@ redirect_from:
 - /releases/
 jumbotron:
   title: Release History
-  tagline: Cerb has 23 years worth of incremental improvements from community feedback
+  tagline: Production-tested with millions of conversations for over 23 years of active development.
+  #tagline: Cerb has 23 years worth of incremental improvements from community feedback
 ---
 
 {% assign last_section = '' %}

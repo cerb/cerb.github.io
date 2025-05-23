@@ -1,7 +1,7 @@
 ---
 layout: default
-title: The besieged support team's toolkit for challenges beyond no-code
-excerpt: Cerb is the besieged support team's toolkit for challenges beyond no-code. One support engineer manages, everyone else delivers superior service.
+title: The extensible platform for support teams who need more than no-code
+excerpt: Cerb is the extensible platform for support teams who need more than no-code. Deliver superior customer service with unlimited customization. Own your data.
 summary: "This page provides an overview of Cerb, a collaborative automation platform for customer support inboxes
   and workflows. It highlights Cerb's ability to integrate with any API-based service and automate
   digital processes using its KATA language and browser-based coding tools. The platform allows teams
@@ -11,12 +11,14 @@ summary: "This page provides an overview of Cerb, a collaborative automation pla
   building interactive agents, extending integrations, and sharing solutions within the community. It offers
   free trials via Docker or Cerb Cloud and provides access to its source code on GitHub."
 jumbotron:
-  title: The besieged support team's toolkit for challenges beyond no-code
-  tagline: One support engineer manages the platform, everyone else delivers superior customer service.
+  title: The extensible platform for support teams who need more than no-code
+  tagline: Deliver superior customer service with unlimited customization. Own your data.
+  #title: The besieged support team's toolkit for challenges beyond no-code
+  #tagline: One support engineer manages the platform, everyone else delivers superior customer service.
   style: jumbotron-center
 ---
 
-<div class="grid no-gutters" style="margin-bottom:30px;">
+<div class="grid no-gutters" style="margin-bottom:20px;">
 	<div class="unit one-third align-center" style="margin-top:10px;">
 		<a style="font-size:130%;color:inherit;font-weight:bold;" href="/docs/history/">Latest versions:</a>
 		<br>
@@ -57,6 +59,7 @@ jumbotron:
 		</div>
 	</div>
 
+	{% comment %}
 	<div class="unit whole" style="margin-top:20px;">
 		<div class="align-left" style="margin:0.5em;padding:0.5em;background-color:rgb(42, 42, 42);border:3px solid rgb(105, 70, 180);border-radius:1em;">
 			<h2><svg class="icon"><use href="assets/images/icons.svg?v={{ site.version }}#wrench" /></svg>What is a support engineer?</h2>
@@ -87,207 +90,89 @@ jumbotron:
 			</div>
 		</div>
 	</div>
+	{% endcomment %}
 
 	<div class="unit whole" style="margin-top:10px;">
 		{% include testimonials.html %}
 	</div>
-
-	<div class="unit whole" style="margin-top:20px;">
-		<div class="align-center">
-			<form id="demo-signup">
-				<b>Unlock your free 3-seat license with expert installation support:</b> (no commitment required)
-				<br>
-				<label><input type="text" name="contact" placeholder="Enter your work email" spellcheck="false" style="font-size:2em;padding:0.25em;border-radius:5px;border:0;"></label>
-				<button type="submit" class="cerb-button" style="font-size:1.8em;margin:0;text-decoration:none;">Send my free license</button>
-			</form>
-			<div id="demo-status" style="color:rgb(185,185,185);font-weight:bold;">
-				Your email is protected by our <a href="/privacy/" target="_blank" style="font-weight:bold;color:inherit;text-decoration:underline;">privacy policy</a>.
-			</div>
-		</div>
-	</div>
 </div>
 
 <div class="home features">
+	{% comment %}
 	<div class="feature whole">
 		{% comment %}autoplay loop muted playsinline{% endcomment %}
 		<video width="1280" height="720" class="screenshot" loop controls playsinline poster="/assets/images/home/features/thumbs/poster.png">
 			<source src="https://cdn.cerb.ai/assets/videos/home/cerb-preview.mp4?v={{ site.version }}" type="video/mp4" />
 		</video>
 	</div>
+	{% endcomment %}
 
 	<div class="feature whole">
 		<div class="align-center">
-			<h1>Shared Inboxes</h1>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div>
-			<a href="/docs/tickets/">
-				<img src="/assets/images/home/features/thumbs/shared-inboxes.png" width="1200" height="630" class="screenshot">
-			</a>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-left">
-			<ul>
-				<li>Transform any email or social account into a team inbox</li>
-				<li>Handle thousands of issues per day</li>
-				<li>Automate routing, assignment, and prioritization</li>
-				<li>Display customer info and related data in conversations</li>
-				<li>Reply quickly with snippets and contextual auto-responses</li>
-				<li>Resolve common issues with custom shortcuts</li>
-				<li>Bulk update and reply to multiple related conversations at once</li>
-				<li>Enforce service level agreements and track customer satisfaction</li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="feature whole">
-		<div class="align-center">
-			<h1>Collaborative Workspaces</h1>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-left">
-			<a href="/docs/workspaces/">
+			<h1>Build your support team's ideal workspace</h1>
+			<p class="align-center">
+				Transform email and social accounts into a team inbox.
+				Create personalized shared workspaces to keep your team focused and informed.
+				{% comment %}Filter records with expressive graph-based search queries.{% endcomment %}
+				Monitor performance and customer satisfaction with dashboards.
+				Get the right work in front of the right team members automatically -- no digging, no cherry-picking.
+			</p>
+			<a href="/features/">
 				<img src="/assets/images/home/features/thumbs/mission-control.png" width="1200" height="630" class="screenshot">
 			</a>
 		</div>
 	</div>
 
-	<div class="feature half">
-		<div class="align-left">
-			<ul>
-				<li>Fully customize dashboards and pages with tabs and widgets</li>
-				<li>Filter and manipulate data with powerful search and data queries</li>
-				<li>Comment on records and @mention team members to notify them</li>
-				<li>Bring your own data with custom records and fields</li>
-				<li>Monitor new activity on watched records with notifications</li>
-			</ul>
-		</div>
-	</div>
-
 	<div class="feature whole">
 		<div class="align-center">
-			<h1>AI Agents</h1>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-left">
-			<a href="/docs/interactions/">
-				<img src="/assets/images/home/features/thumbs/interactive-agents.png" width="1200" height="630" class="screenshot">
-			</a>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-left">
-			<ul>
-				<li>Create conversational agents to assist workers and clients</li>
-				<li>Integrate with state-of-the-art language models from multiple providers</li>
-				<li>Give agents tools to reference knowledge and perform actions</li>
-				<li>Review chat transcripts to continuously improve agents</li>
-				<li>Transition seamlessly between chat and form-based interactions</li>
-				<li>Deploy agents on any website</li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="feature whole">
-		<div class="align-center">
-			<h1>Automations</h1>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-left">
-			<a href="/docs/automations/">
+			<h1>Solve complex challenges with KATA, our intuitive automation language built for the browser</h1>
+			<p>
+				Bridge the gap between inflexible visual builders and complex custom development.
+				Embed interactive shortcuts throughout the UI to unify and automate your workflows.
+				Integrate with any API-based service.
+				Deploy and share your changes with versioned workflow templates.
+			</p>
+			<a href="/features/">
 				<img src="/assets/images/home/features/thumbs/automate-workflows.png" width="1200" height="630" class="screenshot">
 			</a>
 		</div>
 	</div>
 
-	<div class="feature half">
-		<div class="align-left">
-			<ul>
-				<li>Code from your browser with an integrated editor and debugger</li>
-				<li>Build rapidly with KATA -- our high-level automation language</li>
-				<li>Ditch the training wheels of vibe coding &amp; point-and-click tools</li>
-				<li>Trigger your code from events and interactive toolbars</li>
-				<li>Integrate with any web-based API</li>
-				<li>No programming experience required -- we'll help you learn</li>
-			</ul>
-		</div>
-	</div>
-
 	<div class="feature whole">
 		<div class="align-center">
-			<h1>Workflow Templates</h1>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-left">
-			<a href="/docs/workflows/">
-				<img src="/assets/images/home/features/thumbs/share-workflows.png" width="1200" height="630" class="screenshot">
+			<h1>Take advantage of leading language models to build helpful AI agents</h1>
+			<p>
+				Grant tools to agents and let them take action to complete tasks on your behalf.
+				Answer questions automatically based on your existing documentation.
+				Draft automatic responses and summarize long conversations.
+				Enrich conversations with relevant data from disparate systems.
+			</p>
+			<a href="/features/">
+				<img src="/assets/images/home/features/thumbs/interactive-agents.png" width="1200" height="630" class="screenshot">
 			</a>
 		</div>
 	</div>
 
-	<div class="feature half">
-		<div class="align-left">
-			<ul>
-				<li>Build new features using Cerb's toolkit</li>
-				<li>Group related records and configuration into a workflow</li>
-				<li>Iterate confidently with a versioned change history</li>
-				<li>Synchronize changes through development, staging, and production</li>
-				<li>Enable pre-built workflows to save time</li>
-				<li>Collaborate with us to build exactly what you need</li>
-			</ul>
-		</div>
-	</div>
-
 	<div class="feature whole">
 		<div class="align-center">
-			<h1>Endless Integrations</h1>
+			<a href="/features/" class="cerb-button">See more features &raquo;</a>
 		</div>
 	</div>
-
-	<div class="feature half">
-		<div class="align-left">
-			<a href="/solutions/#integrations">
-				<img src="/assets/images/home/features/thumbs/connected-accounts.png" width="1200" height="630" class="screenshot">
-			</a>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-left">
-			<ul>
-				<li>Use pre-configured connected services or create your own</li>
-				<li>Auth with OAuth, API keys, bearer tokens, HTTP basic, AWS, and more</li>
-				<li>Enable single sign-on with OpenID Connect and SAML identity providers</li>
-				<li>Trigger and catch webhooks for real-time event handling</li>
-				<li>Manage data through Cerb's OAuth2 REST API</li>
-				<li>Create customer-facing tools with community portals</li>
-				<li>Extend core functionality with plugins</li>
-			</ul>
-		</div>
-	</div>
-
-	{% comment %}
-	<div class="feature whole">
-		<div class="align-center">
-			<h1>Deploy on your servers or as a cloud service</h1>
-		</div>
-	</div>
-
-	{% include signup_button.html %}
-	{% endcomment %}
 </div>
+
+<div class="unit whole" style="margin-top:20px;">
+	<div class="align-center">
+		<form id="demo-signup">
+			<b>We'll help you get started with a free 3-seat self-hosted license or Cerb Cloud trial:</b>
+			<br>
+			<label><input type="text" name="contact" placeholder="Enter your work email" spellcheck="false" style="font-size:2em;padding:0.25em;border-radius:5px;border:0;"></label>
+			<button type="submit" class="cerb-button" style="font-size:1.8em;margin:0;text-decoration:none;">Contact me</button>
+		</form>
+		<div id="demo-status" style="color:rgb(185,185,185);font-weight:bold;">
+			Your email is protected by our <a href="/privacy/" target="_blank" style="font-weight:bold;color:inherit;text-decoration:underline;">privacy policy</a>.
+		</div>
+	</div>
+</div>
+
 
 <script src="/assets/js/home.js?v={{ site.version }}"></script>
