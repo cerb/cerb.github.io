@@ -51,7 +51,9 @@ The expected dictionary depends on the trigger.
 
 These [triggers](/docs/automations/#triggers) support the `await` state:
 
-| Trigger 
-|-
-| [interaction.worker](/docs/automations/triggers/interaction.worker/#await) | The dictionary describes a form for gathering user input.
+| Trigger                                                                        |
+|--------------------------------------------------------------------------------|
+| [automation.timer](/docs/automations/triggers/automation.timer/#await)         | The dictionary describes the next interval.
+| [interaction.website](/docs/automations/triggers/interaction.website/#outputs) | The dictionary describes a form for gathering website visitor input.
+| [interaction.worker](/docs/automations/triggers/interaction.worker/#outputs)   | The dictionary describes a form for gathering worker input.
 
