@@ -46,6 +46,13 @@
 .tab-content > li.active {
   display: block;
 }
+.tab-content > li {
+  > ul,
+  > ol {
+    margin-bottom: 15px;
+  }
+}
+
 
 /* The 2 following blocks can be removed if the script is not configured to show the toast message */
 #jekyll-tabs-copy-to-clipboard-message {
