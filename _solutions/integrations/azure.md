@@ -93,6 +93,12 @@ In this guide we'll walk through the process of linking Cerb to Office365. You c
 
 5. Click the **Save Changes** button.
 
+<div class="cerb-box note">
+  <p>
+    The <code>offline_access</code> scope is required for Cerb to automatically renew the access token every hour.
+  </p>
+</div>
+
 ### Create the connected account
 
 1. Navigate to **Search >> Connected Accounts**.
@@ -113,6 +119,24 @@ In this guide we'll walk through the process of linking Cerb to Office365. You c
 7. Click **Accept**.
 
 8. Click the **Save Changes** button.
+
+# Troubleshooting
+
+## When linking the connected account I get an "invalid_client" error
+
+* Verify that the "Callback URL" in Entra matches exactly. If you have `/index.php` in your Cerb URLs, then the endpoint should be: `https://{HOST}/index.php/oauth/callback`
+
+* Verify there is no trailing slash (`/`) in the Entra callback URL (e.g. `/oauth/callback`).
+
+## The access token stops working after an hour and isn't refreshed
+
+* Verify `offline_access` is included in the connected service's "Scope" field. This allows Cerb to refresh the access token every hour.
+
+* Verify that the scheduled task that pings the `/cron` endpoint is using the same hostname you configured in the callback URL. It should always use `https://`.
+
+## The connected account stops working after several months
+
+* Entra app secrets expire in 6 months by default. Establish a regular process for rotating secrets before then. Update the connected service in Cerb with the new secret. Edit and save your mailboxes to clear the failure count.
 
 # Next steps
 
