@@ -40,6 +40,8 @@ Cerb supports XOAUTH2 authentication for IMAP mailboxes since version [9.6](/rel
 
 This guide explains how to configure the new feature.
 
+<p class="youtube-video-container"><iframe width="1040" height="585" src="https://www.youtube.com/embed/tYsXwX653sI" title="" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+
 # Configure an Entra app
 
 If you haven't already configured an Office365 connected account in Cerb, [follow these instructions](/solutions/integrations/azure/).
