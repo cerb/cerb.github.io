@@ -1,6 +1,6 @@
 ---
 title: Search agent
-excerpt: "Search any record type using natural language queries."
+excerpt: "Search for records in Cerb's graph using natural language queries."
 summary: "This page describes the Search Agent in Cerb, a workflow that uses a natural language query to search records from various record types, such as tickets or virtual filters, using an AI-powered language model from Anthropic. The workflow is integrated with the Anthropic account, allowing users to search records with a natural language query, and the search results are displayed in a user-friendly interface. The workflow can be customized and extended using various tools and commands, such as the `get_record_types` and `get_record_filters` tools, to build and test search queries."
 permalink: /guides/ai-agents/search-agent/
 layout: integration
@@ -24,9 +24,7 @@ An [AI agent](/docs/automations/commands/llm.agent/) can generate search queries
 
 In this example we'll use Anthropic's Claude Haiku 3.5 model. You can use any language model from popular providers.
 
-<div class="cerb-screenshot">
-<img src="{{ page.social_image_url }}" class="screenshot">
-</div>
+<p class="youtube-video-container"><iframe width="1040" height="585" src="https://www.youtube.com/embed/3quC6aj6FqA" title="" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
 
 <div class="cerb-box note">
   <p>
