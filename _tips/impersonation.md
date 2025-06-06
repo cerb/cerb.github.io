@@ -23,6 +23,8 @@ jumbotron:
       url: /resources/tips/
 ---
 
+<p class="youtube-video-container"><iframe width="1040" height="585" src="https://www.youtube.com/embed/R7ENOIwOMsY" title="" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+
 It's sometimes useful to see Cerb as another [worker](/docs/workers/), whether that's to help them set up their interface or to see an issue from their perspective.  Administrators have the ability to impersonate other workers to help make this easy.
 
 To impersonate another worker, go to **Search >> Workers** and click on the name of the worker you want to impersonate.  This will take you to their profile page where you'll find an **Impersonate** button near the top:
