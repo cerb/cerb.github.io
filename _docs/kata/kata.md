@@ -29,7 +29,9 @@ jumbotron:
 </div>
 {% endcomment %}
 
-**KATA** (_"Key Annotated Tree of Attributes"_) is a human-friendly format for modeling structured data that is used throughout Cerb (since [9.6](/releases/9.6/)) to describe configurations, customizations, sheets, and automations.
+**KATA** (_"Key Annotated Tree of Attributes"_) is a human-friendly format for modeling structured data that is used throughout Cerb to describe configurations, customizations, sheets, and automations.
+
+<p class="youtube-video-container"><iframe width="1040" height="585" src="https://www.youtube.com/embed/6zaCwWaRV2c" title="" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
 
 KATA was inspired by YAML[^yaml] but avoids many of its pitfalls[^no-yaml].
 
