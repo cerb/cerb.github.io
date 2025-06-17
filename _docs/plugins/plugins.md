@@ -317,7 +317,7 @@ Plugins can add new text to the translation system with a `strings.xml` file in 
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tmx PUBLIC "-//LISA OSCAR:1998//DTD for Translation Memory eXchange//EN" "tmx14.dtd">
 <tmx version="1.4">
-	<header creationtool="Cerb" creationtoolversion="9.0.7" srclang="en_US" adminlang="en" datatype="unknown" o-tmf="unknown" segtype="sentence" creationid="" creationdate=""/>
+	<header creationtool="Cerb" creationtoolversion="11.1.0" srclang="en_US" adminlang="en" datatype="unknown" o-tmf="unknown" segtype="sentence" creationid="" creationdate=""/>
 	<body>
 
 		<tu tuid='example.plugin.string_name'>
