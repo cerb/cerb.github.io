@@ -24,6 +24,8 @@ jumbotron:
     url: /resources/guides/#impex
 ---
 
+<p class="youtube-video-container"><iframe width="1040" height="585" src="https://www.youtube.com/embed/Q3-XkH6s4qU" title="" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+
 You can transform and export data directly from Cerb into common formats expected by other apps and services (e.g. JSONL for training Hugging Face models).
 
 In this example we'll export information about PNG image attachments on the past 90 days of tickets.
