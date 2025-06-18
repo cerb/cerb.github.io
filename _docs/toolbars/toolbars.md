@@ -25,11 +25,7 @@ jumbotron:
     url: /docs/automations/
 ---
 
-{% comment %}
-<div class="cerb-screenshot">
-<img src="{{page.social_image_url}}" class="screenshot">
-</div>
-{% endcomment %}
+<p class="youtube-video-container"><iframe width="1040" height="585" src="https://www.youtube.com/embed/XGI7FInREps" title="" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
 
 A **toolbar** is a collection of [**interactions**](/docs/interactions/) and **menus**.
 
