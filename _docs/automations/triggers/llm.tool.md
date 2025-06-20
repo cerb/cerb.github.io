@@ -73,7 +73,7 @@ start:
       method: POST
       url: https://api.cerb.cloud/docs/search
       headers:
-        Content-Type: application/x-www-form-urlencoded
+        Content-Type: application/json
       body:
         query: {{inputs.query}}
         limit: 10
@@ -88,10 +88,10 @@ start:
           {% for result in response_json.results %}
           ----------------------------------------------------------------
           ID: {{result.id}}
-          URL: https://cerb.ai{{result.url}}
+          URL: {{result.url}}
           TITLE: {{result.title}}
           
-          {{result.content}}
+          {{result.summary}}
           
           {% endfor %}
           </search_results>

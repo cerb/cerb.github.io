@@ -245,6 +245,8 @@ records:
                 inputs:
                   method: POST
                   url: https://api.cerb.cloud/docs/search
+                  headers:
+                    Content-Type: application/json
                   body:
                     query@key: prompt_query 
                     limit@int: 10
@@ -278,10 +280,10 @@ records:
                           link/title:
                             params:
                               text_key: title
-                              href_template@raw: https://cerb.ai{{url}}
+                              href_template@raw: {{url}}
                               # [TODO] new tab
                           text/url:
-                          text/content:
+                          text/summary:
                     
                     submit/prompt_submit:
                       buttons:

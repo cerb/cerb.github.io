@@ -44,7 +44,7 @@ start:
       method: POST
       url: https://api.cerb.cloud/docs/search
       headers:
-        Content-Type: application/x-www-form-urlencoded
+        Content-Type: application/json
       body:
         query: How much does it cost?
         limit: 10
