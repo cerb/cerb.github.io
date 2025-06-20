@@ -26,6 +26,11 @@ def write_pages_to_json(pages, file)
     pages.each do |page|
         permalink = to_permalink(page.url)
 
+        # Handle the root page
+        if(page.url == '/' and permalink.length == 0)
+            permalink = 'index'
+        end
+
         # Skip pages with no title
         next if not page.data['title'] or page.data['search_index']
 
@@ -34,11 +39,32 @@ def write_pages_to_json(pages, file)
         next if permalink.index("docs-plugins-extensions-") == 0
         next if permalink.index("docs-automations-triggers-interaction-worker-callers-") == 0
 
+        page_tags = []
+
+        prefix_tags = [
+            'docs',
+            'docs-automations',
+            'docs-records-types',
+            'guides',
+            'releases',
+            'solutions',
+            'solutions-automations',
+            'tips',
+            'workflows'
+        ]
+
+        prefix_tags.each do |prefix|
+            if permalink.start_with?(prefix + '-')
+                page_tags << prefix
+            end
+        end
+
         row = {
             id: permalink,
             title: page.data['title'],
             url: page.url,
             summary: page.data['summary'] || '',
+            tags: page_tags,
             content: clean_markdown(ReverseMarkdown.convert(page.content))
         }
         file.write(JSON.generate(row) + "\n")
