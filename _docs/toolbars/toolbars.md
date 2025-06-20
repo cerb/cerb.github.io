@@ -126,5 +126,6 @@ Toolbars can be configured from **Search >> Toolbars**.
 | [mail.reply](/docs/toolbars/interactions/mail.reply/) | Replying to email messages
 | [record.card](/docs/toolbars/interactions/record.card/) | Viewing a record card popup
 | [record.profile](/docs/toolbars/interactions/record.profile/) | Viewing a record profile page
+| [record.profile.image.editor](/docs/toolbars/interactions/record.profile.image.editor/) | Editing a record profile image
 | [records.worklist](/docs/toolbars/interactions/records.worklist/) | Viewing a worklist of records
 
