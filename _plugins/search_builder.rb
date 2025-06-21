@@ -22,6 +22,31 @@ def clean_markdown(string)
     return string.gsub(/\[([^\]]+)\]\(([^)]+)\)/, '\1')
 end
 
+def get_page_tags(permalink)
+    page_tags = []
+    
+    prefix_tags = {
+        'docs-' => 'docs',
+        'docs-automations-' => 'docs-automations',
+        'docs-records-types-' => 'docs-records-types',
+        'docs-scripting' => 'docs-scripting',
+        'guides-' => 'guides',
+        'releases-' => 'releases',
+        'solutions-' => 'solutions',
+        'solutions-automations-' => 'solutions-automations',
+        'tips-' => 'tips',
+        'workflows-' => 'workflows'
+    }
+    
+    prefix_tags.each do |prefix, tag|
+        if permalink.start_with?(prefix)
+            page_tags << tag
+        end
+    end
+    
+    return page_tags
+end
+
 def extract_section_content(markdown_content, start_heading)
     lines = markdown_content.split("\n")
     start_idx = -1
@@ -94,24 +119,7 @@ def write_synthetic_sections(page, file)
     end
     
     # Get page tags
-    page_tags = []
-    prefix_tags = [
-        'docs',
-        'docs-automations',
-        'docs-records-types',
-        'guides',
-        'releases',
-        'solutions',
-        'solutions-automations',
-        'tips',
-        'workflows'
-    ]
-    
-    prefix_tags.each do |prefix|
-        if base_permalink.start_with?(prefix + '-')
-            page_tags << prefix
-        end
-    end
+    page_tags = get_page_tags(base_permalink)
     
     # Convert the processed HTML content back to clean Markdown once
     page_markdown = clean_markdown(ReverseMarkdown.convert(page.content))
@@ -194,25 +202,7 @@ def write_pages_to_json(pages, file)
         next if permalink.index("docs-plugins-extensions-") == 0
         next if permalink.index("docs-automations-triggers-interaction-worker-callers-") == 0
 
-        page_tags = []
-
-        prefix_tags = [
-            'docs',
-            'docs-automations',
-            'docs-records-types',
-            'guides',
-            'releases',
-            'solutions',
-            'solutions-automations',
-            'tips',
-            'workflows'
-        ]
-
-        prefix_tags.each do |prefix|
-            if permalink.start_with?(prefix + '-')
-                page_tags << prefix
-            end
-        end
+        page_tags = get_page_tags(permalink)
 
         row = {
             id: permalink,
