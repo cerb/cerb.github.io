@@ -22,6 +22,20 @@ def clean_markdown(string)
     return string.gsub(/\[([^\]]+)\]\(([^)]+)\)/, '\1')
 end
 
+def create_search_row(site, id, title, relative_url, summary, tags, content)
+    base_url = "https://cerb.ai"
+    absolute_url = "#{base_url}#{relative_url}"
+    
+    return {
+        id: id,
+        title: title,
+        url: absolute_url,
+        summary: summary,
+        tags: tags,
+        content: content
+    }
+end
+
 def get_page_tags(permalink)
     page_tags = []
     
@@ -110,7 +124,7 @@ def extract_section_content(markdown_content, start_heading)
     return section_content
 end
 
-def write_synthetic_sections(page, file)
+def write_synthetic_sections(site, page, file)
     return unless page.data['search_index'] && page.data['search_index']['sections']
     
     base_permalink = to_permalink(page.url)
@@ -154,19 +168,15 @@ def write_synthetic_sections(page, file)
             end
         end
         
-        row = {
-            id: section_permalink,
-            title: section['title'],
-            url: "#{page.url}##{to_permalink(section['heading'])}",
-            summary: section['summary'] || "#{section['title']} - #{page.data['title']}",
-            tags: page_tags,
-            content: section_content
-        }
+        section_url = "#{page.url}##{to_permalink(section['heading'])}"
+        section_summary = section['summary'] || "#{section['title']} - #{page.data['title']}"
+        
+        row = create_search_row(site, section_permalink, section['title'], section_url, section_summary, page_tags, section_content)
         file.write(JSON.generate(row) + "\n")
     end
 end
 
-def write_pages_to_json(pages, file)
+def write_pages_to_json(site, pages, file)
     pages.each do |page|
         permalink = to_permalink(page.url)
 
@@ -188,7 +198,7 @@ def write_pages_to_json(pages, file)
             
             # Generate synthetic sections if configured
             if search_index.is_a?(Hash) && search_index['sections']
-                write_synthetic_sections(page, file)
+                write_synthetic_sections(site, page, file)
                 
                 # Skip the main page if only_sections is true
                 if search_index['only_sections']
@@ -203,15 +213,10 @@ def write_pages_to_json(pages, file)
         next if permalink.index("docs-automations-triggers-interaction-worker-callers-") == 0
 
         page_tags = get_page_tags(permalink)
+        page_summary = page.data['summary'] || ''
+        page_content = clean_markdown(ReverseMarkdown.convert(page.content))
 
-        row = {
-            id: permalink,
-            title: page.data['title'],
-            url: page.url,
-            summary: page.data['summary'] || '',
-            tags: page_tags,
-            content: clean_markdown(ReverseMarkdown.convert(page.content))
-        }
+        row = create_search_row(site, permalink, page.data['title'], page.url, page_summary, page_tags, page_content)
         file.write(JSON.generate(row) + "\n")
     end
 end
@@ -229,14 +234,14 @@ Jekyll::Hooks.register :site, :post_write do |site|
         path = File.expand_path('_site/search.jsonl', site.source)
 
         File.open(path, 'w') do |file|
-            write_pages_to_json site.pages, file
-            write_pages_to_json site.collections['docs'].docs, file
-            write_pages_to_json site.collections['solutions'].docs, file
-            write_pages_to_json site.collections['workflows'].docs, file
-            write_pages_to_json site.collections['guides'].docs, file
-            write_pages_to_json site.collections['releases'].docs, file
-            write_pages_to_json site.collections['tips'].docs, file
-            write_pages_to_json site.collections['posts'].docs, file
+            write_pages_to_json site, site.pages, file
+            write_pages_to_json site, site.collections['docs'].docs, file
+            write_pages_to_json site, site.collections['solutions'].docs, file
+            write_pages_to_json site, site.collections['workflows'].docs, file
+            write_pages_to_json site, site.collections['guides'].docs, file
+            write_pages_to_json site, site.collections['releases'].docs, file
+            write_pages_to_json site, site.collections['tips'].docs, file
+            write_pages_to_json site, site.collections['posts'].docs, file
         end
     end
 end
