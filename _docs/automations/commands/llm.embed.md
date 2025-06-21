@@ -65,6 +65,13 @@ llm:
     authentication: cerb:connected_account:aws
     dimensions: 1024
     model: amazon.titan-embed-text-v2:0
+  docker:
+    api_endpoint_url: http://model-runner.docker.internal/
+    model: ai/mxbai-embed-large:latest
+  gemini:
+    api_endpoint_url: https://generativelanguage.googleapis.com/v1beta/openai
+    authentication: cerb:connected_account:gemini
+    model: text-embedding-004
   huggingface:
     api_endpoint_url: https://api-inference.huggingface.co
     authentication: cerb:connected_account:huggingface

@@ -92,6 +92,12 @@ llm:
     model: anthropic.claude-3-5-haiku-20241022-v1:0
     api_endpoint_url: https://bedrock-runtime.us-east-1.amazonaws.com
     authentication: cerb:connected_account:aws
+  docker:
+    api_endpoint_url: http://model-runner.docker.internal/
+    model: ai/llama3.2
+  gemini:
+    model: gemini-2.0-flash
+    authentication: cerb:connected_account:gemini
   groq:
     model: gemma2-9b-it
     authentication: cerb:connected_account:groq
