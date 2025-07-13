@@ -170,7 +170,7 @@ workflow:
   description: Generate profile images from a text prompt using Amazon Bedrock foundational models
   website: https://cerb.ai/workflows/cerb.integrations.aws_bedrock.profile_images/
   requirements:
-    cerb_version: >=11.0 <11.1
+    cerb_version: >=11.0 <11.2
     cerb_plugins: cerberusweb.core
   config:
     chooser/aws_account_id:

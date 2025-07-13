@@ -47,7 +47,7 @@ workflow:
   description: A custom fieldset for that includes an example of every custom field type
   website: https://cerb.ai/workflows/wgm.example.custom_fieldsets/
   requirements:
-    cerb_version: >=11.0 <11.1
+    cerb_version: >=11.0 <11.2
     cerb_plugins: cerberusweb.core
 
 records:

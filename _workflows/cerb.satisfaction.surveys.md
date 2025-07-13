@@ -237,7 +237,7 @@ workflow:
   description: Gather and monitor customer satisfaction metrics like NPS, CSAT, and CES.
   website: https://cerb.ai/workflows/cerb.satisfaction.surveys/
   requirements:
-    cerb_version: >=11.0 <11.1
+    cerb_version: >=11.0 <11.2
     cerb_plugins: cerberusweb.core, cerb.website.interactions
   config:
     text/portalTitle:

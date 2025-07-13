@@ -90,7 +90,7 @@ workflow:
   description: An example interactive bot you can deploy on any website.
   website: https://cerb.ai/
   requirements:
-    cerb_version: >=11.0.4 <11.1
+    cerb_version: >=11.0.4 <11.2
     cerb_plugins: cerberusweb.core, cerb.website.interactions
   config:
     text/bot_name:

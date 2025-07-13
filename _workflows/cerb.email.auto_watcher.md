@@ -63,7 +63,7 @@ workflow:
   description: Automatically add workers as a watcher when they reply to a ticket.
   website: https://cerb.ai/workflows/cerb.email.auto_watcher/
   requirements:
-    cerb_version: >=11.0 <11.1
+    cerb_version: >=11.0 <11.2
     cerb_plugins: cerberusweb.core,
 records:
   automation_event_listener/listenerMailDraft:

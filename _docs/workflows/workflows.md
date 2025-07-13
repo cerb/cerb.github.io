@@ -46,7 +46,7 @@ workflow:
   version@date: 2025-12-31T00:00:00Z
   description: This example workflow manages a task record
   requirements:
-    cerb_version: >=11.0 <11.1
+    cerb_version: >=11.0 <11.2
     cerb_plugins: cerberusweb.core,
   config:
     text/taskName:

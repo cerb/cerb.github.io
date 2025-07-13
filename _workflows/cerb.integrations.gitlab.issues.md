@@ -50,7 +50,7 @@ workflow:
   description: Search and link GitLab issues to tickets
   website: https://cerb.ai/workflows/cerb.integrations.gitlab.issues/
   requirements:
-    cerb_version: >=11.0 <11.1
+    cerb_version: >=11.0 <11.2
     cerb_plugins: cerberusweb.core
   config:
     chooser/gitlab_account_id:

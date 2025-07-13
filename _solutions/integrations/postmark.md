@@ -50,7 +50,7 @@ workflow:
   description: Add the `X-PM-KeepId:` header to outgoing mail when using Postmark SMTP.
   website: https://cerb.ai/resources/workflows/
   requirements:
-    cerb_version: >=11.0 <11.1
+    cerb_version: >=11.0 <11.2
     cerb_plugins: cerberusweb.core, 
 records:
   automation/automation_mailSend:

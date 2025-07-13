@@ -57,7 +57,7 @@ workflow:
   description: Create reminders from record profiles and cards
   website: https://cerb.ai/workflows/cerb.records.reminders/
   requirements:
-    cerb_version: >=11.0 <11.1
+    cerb_version: >=11.0 <11.2
     cerb_plugins: cerberusweb.core
   version: 2025-01-13T23:21:57Z
 records:

@@ -70,7 +70,7 @@ workflow:
   description: Translate inbound and outbound email messages using the DeepL API
   website: https://cerb.ai/workflows/cerb.integrations.deepl.translate/
   requirements:
-    cerb_version: >=11.0 <11.1
+    cerb_version: >=11.0 <11.2
     cerb_plugins: cerberusweb.core
   config:
     picklist/base_url:
