@@ -1798,7 +1798,7 @@ span.client-kiva-org { background-position: -875px -760px; }
 // Homepage styles
 .home-hero {
 	text-align: center;
-	padding: 50px 20px 60px;
+	padding: 50px 0 60px;
 	background-color: rgb(57, 98, 201);
 	background-image:
 		linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
@@ -1812,6 +1812,7 @@ span.client-kiva-org { background-position: -875px -760px; }
 	.hero-text {
 		max-width: 900px;
 		margin: 0 auto 40px;
+		padding: 0 20px;
 
 		h1 {
 			font-size: 2.4em;
@@ -1831,8 +1832,10 @@ span.client-kiva-org { background-position: -875px -760px; }
 	.hero-video {
 		max-width: 900px;
 		margin: 0 auto 30px;
+		padding: 0 20px;
 
 		video {
+			display: block;
 			width: 100%;
 			height: auto;
 			box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
