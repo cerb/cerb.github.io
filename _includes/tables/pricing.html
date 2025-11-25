@@ -1,53 +1,65 @@
-<div class="grid">
-    <div class="unit half">
-        <h1>
-            Self-Hosted
-        </h1>
-
-        <div style="font-size:125%;font-weight:bold;">
-            Free
+<div class="pricing-columns">
+    <div class="pricing-column">
+        <div class="pricing-header">
+            <h2>Self-Hosted</h2>
+            <div class="pricing-price">
+                <span class="price-amount">Free</span>
+                <span class="price-term">for your first 3 seats</span>
+            </div>
+            <div class="pricing-price-secondary">
+                <span class="price-amount">$40</span>
+                <span class="price-term">per seat/month after</span>
+            </div>
         </div>
-        <ul>
-            <li>Your first self-hosted seat is free forever with no license or registration required. Register for a free 3-seat license for the current version.</li>
-            <li>Self-hosted on your choice of infrastructure. We'll help you get installed.</li>
-            <li>You're responsible for installation, upgrades, scaling, monitoring, security, and backups.</li>
-            <li>Every member of your team can run free local copies of Cerb for testing, development, and staging.</li>
-        </ul>
-
-        <div style="font-size:125%;font-weight:bold;">
-            $40/seat/month
+        <div class="pricing-body">
+            <ul class="pricing-features">
+                <li>Install on your own infrastructure</li>
+                <li>Full control over your data and environment</li>
+                <li>Direct database access</li>
+                <li>Unlimited free development and staging instances</li>
+                <li>License never expires for versions released during subscription</li>
+                <li>You manage installation, updates, scaling, and backups</li>
+                <li>Configure your own email (POP3/IMAP)</li>
+                <li>Host your own community portals</li>
+            </ul>
+            <a data-cerb-interaction="signup" class="pricing-cta">Register for a free license</a>
         </div>
-        <ul>
-            <li>Your license never expires for versions released during your subscription.</li>
-            <li>Academic institutions, non-profits, charities, and open source projects are eligible for additional seats or discounts.</li>
-            <li>Downgrade to a community license from self-hosted or Cerb Cloud at any time and retain permanent free access to your data.</li>
-            <li>Optional real-time <a href="/enterprise-support/">enterprise support</a> is available.</li>
-        </ul>
-
-        <a data-cerb-interaction="signup" class="cerb-button">Register for a free 3-seat license</a>
     </div>
 
-    <div class="unit half">
-        <h1 style="font-weight:bold;">
-            <a href="/cloud/" style="color:inherit;font-weight:bold;text-decoration:underline;">Cerb Cloud</a>
-        </h1>
-
-        <div>
-            <span style="font-size:125%;font-weight:bold;">
-                $40/seat/month
-            </span>
-            <ul>
-                <li>Start with a free trial and no time-limit as long as you're active.</li>
-                <li>Highly available, secure, monitored, and scalable as a fully managed service.</li>
-                <li>Instant access to the latest stable version with same-day urgent bug fixes.</li>
-                <li>Automated, redundant, point-in-time backups with data recovery.</li>
-                <li>Includes optional Cerb Cloud SMTP service for highly deliverable, high-volume outgoing mail (SPF, DKIM, DMARC).</li>
-                <li>Includes optional Cerb Cloud MX service for instant delivery of inbound mail (POP3/IMAP is supported but not required).</li>
-                <li>Includes hosting for unlimited community portals (conversational bots, Support Centers).</li>
-                <li>Optionally bring your own domain name (e.g. support.example.com).</li>
+    <div class="pricing-column featured">
+        <div class="pricing-header">
+            <h2>Cerb Cloud</h2>
+            <div class="pricing-price">
+                <span class="price-amount">$40</span>
+                <span class="price-term">per seat/month</span>
+            </div>
+            <div class="pricing-price-secondary">
+                <span class="price-label">Fully managed</span>
+            </div>
+        </div>
+        <div class="pricing-body">
+            <ul class="pricing-features">
+                <li>Start with a free trial (no time limit while active)</li>
+                <li>High availability, security, and automatic scaling</li>
+                <li>Instant access to the latest version with same-day security patches</li>
+                <li>Automated, redundant backups with point-in-time recovery</li>
+                <li>Choose your data center: US, UK, Europe, or Asia-Pacific (GDPR compliant)</li>
+                <li>Optional high-deliverability SMTP (SPF, DKIM, DMARC)</li>
+                <li>Optional instant inbound mail delivery (or use POP3/IMAP)</li>
+                <li>Unlimited community portal hosting included</li>
+                <li>Bring your own domain (e.g. support.example.com)</li>
+                <li><a href="/cloud/">... and more</a></li>
             </ul>
 
-            <a data-cerb-interaction="signup" class="cerb-button">Start free trial</a>
+            <a data-cerb-interaction="signup" class="pricing-cta pricing-cta-primary">Start your free trial</a>
         </div>
     </div>
 </div>
+
+<p class="pricing-note">
+    <strong>Migrate anytime:</strong> Your data is 100% compatible between self-hosted and Cerb Cloud. Subscriptions are interchangeable.
+</p>
+
+<p class="pricing-note">
+    <strong>Need real-time help?</strong> Optional <a href="/enterprise-support/">enterprise support</a> adds priority support, training, and consultation for both options.
+</p>

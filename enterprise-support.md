@@ -9,64 +9,62 @@ jumbotron:
   tagline: "Top priority, real-time support for enterprise-level users of Cerb."
 ---
 
-<div style="font-size:125%;">
-	<b>Add optional enterprise technical support from Cerb's highly experienced developers with no long-term commitments:</b>
-</div>
+<div class="pricing-columns">
+    <div class="pricing-column">
+        <div class="pricing-header">
+            <h2>Standard Support</h2>
+            <div class="pricing-price">
+                <span class="price-amount">Included</span>
+                <span class="price-term">with every license</span>
+            </div>
+        </div>
+        <div class="pricing-body">
+            <ul class="pricing-features">
+                <li>Support by email and forums</li>
+                <li>Same business day responses</li>
+                <li>Concept-level guidance</li>
+                <li>Covers the latest major version (11.x)</li>
+            </ul>
+            <div class="pricing-section-label">Cerb Cloud</div>
+            <ul class="pricing-features">
+                <li>Mandatory major version upgrades within one week of notice</li>
+            </ul>
+        </div>
+    </div>
 
-<div class="grid" style="margin-left:15px;">
-	<div class="unit half">
-			<div style="text-align:left;">
-				<h2 style="color:rgb(150,150,150);"><b>Standard Support</b></h2>
-				<b>Included with every license:</b>
-				<ul>
-					<li>
-						Support:
-						<ul>
-							<li>By email and forums</li>
-							<li>Same business day responses</li>
-							<li>Concept-level guidance</li>
-              <li>Covers the latest major version (11.x)</li>
-						</ul>
-					</li>
-					<li>
-							Cerb Cloud:
-							<ul>
-								<li>Mandatory major version upgrades within one week of notice</li>
-							</ul>
-					</li>
-				</ul>
-			</div>
-	</div>
-	
-	<div class="unit half">
-			<div style="text-align:left;">
-				<h2 style="color:rgb(220,120,45);"><b>Enterprise Support</b></h2>
-				<b>+$500/month:</b>
-				<ul>
-					<li>
-						Top-priority support, training, and consultation:
-						<ul>
-							<li>By email or Slack (voice and screen sharing)</li>
-              <li>Up to three users in our Slack with a private support channel</li>
-							<li>Same business day responses</li>
-							<li>Emergency support within 1 hour (including nights, weekends, and holidays)</li>
-							<li>Hands-on guidance and review of your specific implementation</li>
-							<li>Developer support for automations, API, integration, and plugin development</li>
-              <li>Covers the last two major versions (10.x and 11.x)</li>
-						</ul>
-					</li>
-					<li>
-						Cerb Cloud:
-						<ul>
-							<li>Schedule major software updates at your convenience</li>
-							<li>Early access to beta versions</li>
-							<li>Access to a staging environment to test new features prior to upgrading</li>
-							<li>Install custom plugins</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-	</div>
+    <div class="pricing-column featured">
+        <div class="pricing-header">
+            <h2>Enterprise Support</h2>
+            <div class="pricing-price">
+                <span class="price-amount">$500</span>
+                <span class="price-term">per month</span>
+            </div>
+            <div class="pricing-price-secondary">
+                <span class="price-label">No long-term commitment</span>
+            </div>
+        </div>
+        <div class="pricing-body">
+            <ul class="pricing-features">
+                <li>Support by email or Slack (voice and screen sharing)</li>
+                <li>Private Slack channel for up to three team members</li>
+                <li>Same business day responses</li>
+                <li>Emergency support within 1 hour (nights, weekends, holidays)</li>
+                <li>Hands-on guidance for your specific implementation</li>
+                <li>Developer support for automations, API, integrations, and plugins</li>
+                <li>Covers the last two major versions (10.x and 11.x)</li>
+            </ul>
+            <div class="pricing-section-label">Cerb Cloud</div>
+            <ul class="pricing-features">
+                <li>Schedule major software updates at your convenience</li>
+                <li>Early access to beta versions</li>
+                <li>Staging environment to test new features before upgrading</li>
+                <li>Install custom plugins</li>
+            </ul>
+            {% comment %}
+            <a data-cerb-interaction="signup" class="pricing-cta pricing-cta-primary">Get enterprise support</a>
+            {% endcomment %}
+        </div>
+    </div>
 </div>
 
 <br/>

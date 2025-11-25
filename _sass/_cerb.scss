@@ -1019,6 +1019,165 @@ span.client-singularityu-org { background-position: -525px -760px; }
 span.client-seti-org { background-position: -700px -760px; }
 span.client-kiva-org { background-position: -875px -760px; }
 
+.pricing-columns {
+	display: flex;
+	gap: 24px;
+	max-width: 900px;
+	margin: 0 auto;
+
+	@media screen and (max-width: 700px) {
+		flex-direction: column;
+	}
+}
+
+.pricing-column {
+	flex: 1;
+	background-color: rgb(38, 38, 38);
+	border-radius: 12px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+
+	&.featured {
+		background-color: rgb(42, 45, 52);
+		box-shadow: 0 0 0 2px rgb(57, 98, 201);
+	}
+
+	.pricing-header {
+		padding: 28px 24px;
+		text-align: center;
+		background-color: rgb(32, 32, 32);
+
+		h2 {
+			margin: 0 0 16px 0;
+			font-size: 1.6em;
+			font-weight: 600;
+
+			a {
+				color: inherit;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.pricing-price {
+			margin-bottom: 4px;
+
+			.price-amount {
+				font-size: 2.4em;
+				font-weight: 700;
+				color: white;
+			}
+
+			.price-term {
+				font-size: 0.95em;
+				color: rgb(160, 160, 160);
+				margin-left: 4px;
+			}
+		}
+
+		.pricing-price-secondary {
+			.price-amount {
+				font-size: 1.3em;
+				font-weight: 600;
+				color: rgb(200, 200, 200);
+			}
+
+			.price-term {
+				font-size: 0.9em;
+				color: rgb(140, 140, 140);
+			}
+
+			.price-label {
+				font-size: 1em;
+				color: rgb(110, 180, 110);
+				font-weight: 500;
+			}
+		}
+	}
+
+	.pricing-body {
+		padding: 24px;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+
+		.pricing-features {
+			list-style: none;
+			margin: 0 0 24px 0;
+			padding: 0;
+			flex-grow: 1;
+
+			li {
+				padding: 10px 0 10px 28px;
+				position: relative;
+				color: rgb(210, 210, 210);
+				border-bottom: 1px solid rgb(55, 55, 55);
+
+				&:last-child {
+					border-bottom: none;
+				}
+
+				&:before {
+					content: '\2713';
+					position: absolute;
+					left: 0;
+					color: rgb(100, 180, 100);
+					font-weight: bold;
+				}
+			}
+		}
+
+		.pricing-section-label {
+			font-weight: bold;
+			color: rgb(180, 180, 180);
+			margin: 20px 0 8px 0;
+			padding-bottom: 6px;
+			border-bottom: 1px solid rgb(55, 55, 55);
+		}
+
+		.pricing-cta {
+			display: block;
+			text-align: center;
+			padding: 14px 24px;
+			border-radius: 8px;
+			font-size: 1.05em;
+			font-weight: 600;
+			text-decoration: none;
+			cursor: pointer;
+			transition: all 0.2s ease;
+			background-color: transparent;
+			border: 2px solid rgb(100, 100, 100);
+			color: white;
+
+			&:hover {
+				background-color: rgb(60, 60, 60);
+				border-color: rgb(140, 140, 140);
+			}
+
+			&.pricing-cta-primary {
+				background-color: rgb(57, 98, 201);
+				border-color: rgb(57, 98, 201);
+				color: white;
+
+				&:hover {
+					background-color: rgb(70, 115, 220);
+					border-color: rgb(70, 115, 220);
+				}
+			}
+		}
+	}
+}
+
+.pricing-note {
+	text-align: center;
+	margin-top: 24px;
+	color: rgb(180, 180, 180);
+}
+
 @media screen and (max-width: 750px) {
 	.features {
 		.feature {
