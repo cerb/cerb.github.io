@@ -103,3 +103,7 @@ automation/name:
       message: Hello, {{name}}!
 ```
 ~~~
+
+### Icons
+
+Always use inline SVG icons (preferably from [Lucide](https://lucide.dev/)). Never use emoji.
