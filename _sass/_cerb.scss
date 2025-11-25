@@ -1621,15 +1621,21 @@ span.client-kiva-org { background-position: -875px -760px; }
 	padding: 40px 20px;
 
 	.trust-stats {
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(3, auto);
 		justify-content: center;
-		gap: 60px;
-		flex-wrap: wrap;
-		max-width: 1000px;
+		gap: 30px 60px;
+		max-width: 900px;
 		margin: 0 auto;
 
 		@media screen and (max-width: 700px) {
-			gap: 30px;
+			grid-template-columns: repeat(2, auto);
+			gap: 25px 40px;
+		}
+
+		@media screen and (max-width: 450px) {
+			grid-template-columns: 1fr;
+			gap: 20px;
 		}
 	}
 
@@ -1638,7 +1644,7 @@ span.client-kiva-org { background-position: -875px -760px; }
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-		gap: 8px;
+		gap: 10px;
 
 		svg {
 			width: 32px;
@@ -1649,17 +1655,13 @@ span.client-kiva-org { background-position: -875px -760px; }
 		&:nth-child(2) svg { color: rgb(160, 120, 200); }
 		&:nth-child(3) svg { color: rgb(240, 160, 80); }
 		&:nth-child(4) svg { color: rgb(100, 160, 255); }
+		&:nth-child(5) svg { color: rgb(255, 140, 180); }
+		&:nth-child(6) svg { color: rgb(100, 210, 210); }
 
-		span:not(.trust-label) {
-			font-size: 1.5em;
-			font-weight: 700;
+		span {
+			font-size: 1em;
+			font-weight: 600;
 			color: white;
-		}
-
-		.trust-label {
-			font-size: 0.85em;
-			color: rgb(150, 150, 150);
-			font-weight: normal;
 		}
 	}
 }
@@ -1786,7 +1788,13 @@ span.client-kiva-org { background-position: -875px -760px; }
 
 .home-final-cta {
 	padding: 80px 20px;
-	background: linear-gradient(135deg, rgb(40, 55, 90) 0%, rgb(57, 98, 201) 100%);
+	background-color: rgb(57, 98, 201);
+	background-image:
+		linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+		linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+	background-size: 60px 60px, 60px 60px, 15px 15px, 15px 15px;
 	text-align: center;
 
 	h2 {
