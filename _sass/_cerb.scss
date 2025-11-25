@@ -1550,6 +1550,94 @@ span.client-kiva-org { background-position: -875px -760px; }
 	}
 }
 
+// Guides page sections (8 items)
+.guides-sections {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	gap: 10px;
+	margin-bottom: 40px;
+
+	@media screen and (max-width: 900px) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	@media screen and (max-width: 500px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.guides-section-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 12px 8px;
+	background-color: rgb(38, 38, 38);
+	border-radius: 10px;
+	text-decoration: none;
+	transition: all 0.2s ease;
+	border: 1px solid rgb(55, 55, 55);
+
+	&:hover {
+		background-color: rgb(45, 45, 45);
+		border-color: rgb(80, 80, 80);
+		transform: translateY(-2px);
+		text-decoration: none;
+
+		svg {
+			color: rgb(100, 160, 255);
+		}
+	}
+
+	svg {
+		width: 24px;
+		height: 24px;
+		margin-bottom: 6px;
+		transition: color 0.2s ease;
+	}
+
+	span {
+		font-size: 0.75em;
+		font-weight: 600;
+		color: rgb(200, 200, 200);
+	}
+
+	// Guide section icon colors
+	&:nth-child(1) svg { color: rgb(200, 150, 100); } // Integrations - orange
+	&:nth-child(2) svg { color: rgb(100, 160, 255); } // Mail - blue
+	&:nth-child(3) svg { color: rgb(100, 180, 100); } // Installation - green
+	&:nth-child(4) svg { color: rgb(200, 120, 160); } // SSO - pink
+	&:nth-child(5) svg { color: rgb(160, 120, 200); } // Webhooks - purple
+	&:nth-child(6) svg { color: rgb(100, 200, 200); } // API - cyan
+	&:nth-child(7) svg { color: rgb(200, 180, 100); } // AI Agents - gold
+	&:nth-child(8) svg { color: rgb(100, 200, 150); } // Security - teal
+}
+
+// Guide section title colors
+.guides-section-title {
+	&#integrations svg { color: rgb(200, 150, 100); }
+	&#mail svg { color: rgb(100, 160, 255); }
+	&#installation svg { color: rgb(100, 180, 100); }
+	&#sso svg { color: rgb(200, 120, 160); }
+	&#webhooks svg { color: rgb(160, 120, 200); }
+	&#api svg { color: rgb(100, 200, 200); }
+	&#ai-agents svg { color: rgb(200, 180, 100); }
+	&#security svg { color: rgb(100, 200, 150); }
+	&#scaling svg { color: rgb(150, 150, 200); }
+	&#portals svg { color: rgb(180, 140, 180); }
+	&#packages svg { color: rgb(140, 180, 140); }
+	&#import-export svg { color: rgb(180, 160, 120); }
+	&#developers svg { color: rgb(160, 120, 200); }
+	&#machine-learning svg { color: rgb(200, 120, 160); }
+	&#localization svg { color: rgb(100, 180, 180); }
+	&#automations svg { color: rgb(180, 140, 100); }
+	&#records svg { color: rgb(140, 160, 200); }
+	&#project-boards svg { color: rgb(160, 180, 140); }
+	&#interactions svg { color: rgb(100, 160, 255); }
+	&#classifiers svg { color: rgb(100, 180, 100); }
+	&#bots svg { color: rgb(200, 180, 100); }
+}
+
 .docs-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
