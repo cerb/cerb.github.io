@@ -1312,6 +1312,18 @@ span.client-kiva-org { background-position: -875px -760px; }
 		}
 	}
 
+	&.resource-card-address {
+		cursor: default;
+
+		&:hover {
+			transform: none;
+
+			.resource-icon {
+				color: rgb(150, 150, 150);
+			}
+		}
+	}
+
 	.resource-icon {
 		width: 48px;
 		height: 48px;
