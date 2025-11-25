@@ -1435,6 +1435,141 @@ span.client-kiva-org { background-position: -875px -760px; }
 	}
 }
 
+// Documentation index page
+.docs-sections {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 12px;
+	margin-bottom: 40px;
+
+	@media screen and (max-width: 900px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@media screen and (max-width: 500px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.docs-section-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 16px 12px;
+	background-color: rgb(38, 38, 38);
+	border-radius: 10px;
+	text-decoration: none;
+	transition: all 0.2s ease;
+	border: 1px solid rgb(55, 55, 55);
+
+	&:hover {
+		background-color: rgb(45, 45, 45);
+		border-color: rgb(80, 80, 80);
+		transform: translateY(-2px);
+		text-decoration: none;
+
+		svg {
+			color: rgb(100, 160, 255);
+		}
+	}
+
+	svg {
+		width: 28px;
+		height: 28px;
+		margin-bottom: 8px;
+		transition: color 0.2s ease;
+	}
+
+	span {
+		font-size: 0.85em;
+		font-weight: 600;
+		color: rgb(200, 200, 200);
+	}
+
+	// Section icon colors
+	&:nth-child(1) svg { color: rgb(100, 180, 100); } // Getting Started - green
+	&:nth-child(2) svg { color: rgb(100, 160, 255); } // Reference - blue
+	&:nth-child(3) svg { color: rgb(200, 150, 100); } // Admin Guide - orange
+	&:nth-child(4) svg { color: rgb(160, 120, 200); } // Developer Guide - purple
+	&:nth-child(5) svg { color: rgb(100, 200, 200); } // API - cyan
+	&:nth-child(6) svg { color: rgb(200, 120, 160); } // Meta - pink
+}
+
+.docs-section-title {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 1.5em;
+	font-weight: 700;
+	margin: 40px 0 16px 0;
+	padding-bottom: 8px;
+	border-bottom: 1px solid rgb(60, 60, 60);
+	color: white;
+
+	&:first-of-type {
+		margin-top: 0;
+	}
+
+	svg {
+		width: 24px;
+		height: 24px;
+		flex-shrink: 0;
+	}
+
+	// Section icon colors matching nav
+	&#getting-started svg { color: rgb(100, 180, 100); }
+	&#reference svg { color: rgb(100, 160, 255); }
+	&#admin-guide svg { color: rgb(200, 150, 100); }
+	&#developer-guide svg { color: rgb(160, 120, 200); }
+	&#api svg { color: rgb(100, 200, 200); }
+	&#meta svg { color: rgb(200, 120, 160); }
+}
+
+.docs-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 12px;
+
+	@media screen and (max-width: 700px) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.docs-item {
+	display: flex;
+	flex-direction: column;
+	padding: 14px 18px;
+	background-color: rgb(38, 38, 38);
+	border-radius: 8px;
+	text-decoration: none;
+	transition: all 0.15s ease;
+	border: 1px solid rgb(50, 50, 50);
+
+	&:hover {
+		background-color: rgb(45, 45, 45);
+		border-color: rgb(70, 70, 70);
+		text-decoration: none;
+
+		.docs-item-title {
+			color: rgb(100, 160, 255);
+		}
+	}
+
+	.docs-item-title {
+		font-weight: 600;
+		color: rgb(220, 220, 220);
+		margin-bottom: 4px;
+		transition: color 0.15s ease;
+	}
+
+	.docs-item-excerpt {
+		font-size: 0.85em;
+		color: rgb(140, 140, 140);
+		line-height: 1.4;
+	}
+}
+
 .feature-row {
 	margin: 60px 0;
 
