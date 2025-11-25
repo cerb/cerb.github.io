@@ -18,25 +18,19 @@ redirect_from:
 - /tips/
 jumbotron:
   title: Tips &amp; Tricks
+  tagline: ~
   breadcrumbs:
   - label: Resources &raquo;
     url: /resources/
 ---
 
-<div class="integrations" style="column-count:2;column-width:500px;margin-bottom:20px;">
-	<ul class="articles">
+{% assign tips = site.tips | sort: 'title' %}
 
-	{% assign tips = site.tips | sort: 'title' %}
-	{% for tip in tips %}
-	<li style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
-		<a href="{{ tip.url }}">{{ tip.title }}</a>
-		<div>
-		    {{tip.excerpt}}
-        </div>
-	</li>
-	{% endfor %}
-
-	</ul>
+<div class="docs-grid">
+{% for tip in tips %}
+  <a href="{{ tip.url }}" class="docs-item">
+    <span class="docs-item-title">{{ tip.title }}</span>
+    <span class="docs-item-excerpt">{{ tip.excerpt | truncatewords: 12 }}</span>
+  </a>
+{% endfor %}
 </div>
-
-{% include testimonials.html %}
