@@ -10,169 +10,182 @@ summary: "This page provides an overview of Cerb, a collaborative automation pla
   features like automated triage and internal discussions. The page also details Cerb's capabilities in
   building interactive agents, extending integrations, and sharing solutions within the community. It offers
   free trials via Docker or Cerb Cloud and provides access to its source code on GitHub."
-jumbotron:
-  title: The extensible platform for support teams who need more than no-code
-  tagline: Deliver superior customer service with unlimited customization. Own your data.
-  #title: The besieged support team's toolkit for challenges beyond no-code
-  #tagline: One support engineer manages the platform, everyone else delivers superior customer service.
-  style: jumbotron-center
 ---
 
-<div class="grid no-gutters" style="margin-bottom:20px;">
-	<div class="unit one-third align-center" style="margin-top:10px;">
-		<a style="font-size:130%;color:inherit;font-weight:bold;" href="/docs/history/">Latest versions:</a>
-		<br>
-		<a href="/releases/11.1.5/" style="font-weight:bold;font-size:130%;text-decoration:underline;">11.1.5</a>
-		- September 30, 2025
-		<br>
-		<a href="/releases/11.1/" style="font-weight:bold;font-size:130%;text-decoration:underline;">11.1</a>
-		- April 24, 2025
-		<br>
+<section class="home-hero">
+	<div class="hero-text">
+		<h1>The extensible platform for support teams who need more than no-code</h1>
+		<p>Deliver superior customer service with unlimited customization. Own your data.</p>
 	</div>
-
-	<div class="unit two-thirds" style="margin:10px 0 10px 0;">
-		<div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(325px, 1fr));text-align:left;color:rgb(250,200,110);">
-			<div style="white-space:nowrap;padding:0 0.5em;">
-				<svg class="icon"><use href="assets/images/icons.svg?v={{ site.version }}#fire" /></svg>
-				Proven with 23+ years of real world use
-			</div>
-			<div style="white-space:nowrap;padding:0 0.5em;">
-				<svg class="icon"><use href="assets/images/icons.svg?v={{ site.version }}#lab" /></svg>
-				Production-tested with millions of conversations
-			</div>
-			<div style="white-space:nowrap;padding:0 0.5em;">
-				<svg class="icon"><use href="assets/images/icons.svg?v={{ site.version }}#electricity" /></svg>
-				Fine-tuned for extreme productivity
-			</div>
-			<div style="white-space:nowrap;padding:0 0.5em;">
-				<svg class="icon"><use href="assets/images/icons.svg?v={{ site.version }}#dashboard" /></svg>
-				Scale from a solo founder to an enterprise team
-			</div>
-			<div style="white-space:nowrap;padding:0 0.5em;">
-				<svg class="icon"><use href="assets/images/icons.svg?v={{ site.version }}#gift" /></svg>
-				Your first self-hosted seat is free forever
-			</div>
-			<div style="white-space:nowrap;padding:0 0.5em;">
-				<svg class="icon"><use href="assets/images/icons.svg?v={{ site.version }}#cloud" /></svg>
-				Deploy self-hosted or in Cerb Cloud
-			</div>
-		</div>
-	</div>
-
-	{% comment %}
-	<div class="unit whole" style="margin-top:20px;">
-		<div class="align-left" style="margin:0.5em;padding:0.5em;background-color:rgb(42, 42, 42);border:3px solid rgb(105, 70, 180);border-radius:1em;">
-			<h2><svg class="icon"><use href="assets/images/icons.svg?v={{ site.version }}#wrench" /></svg>What is a support engineer?</h2>
-			<p>
-				A <b>support engineer</b> is a technical specialist who elevates customer support to an engineering discipline.
-				They combine strong analytical thinking, deep technical proficiency, and communication skills that bridge technical and non-technical worlds.
-				They build workspaces and dashboards, automate workflows, integrate systems, democratize team knowledge, and analyze data -- ultimately transforming support from reactive to proactive.
-			</p>
-
-			<div class="grid no-gutters">
-				<div class="unit half">
-					<div class="align-left" style="margin:0.5em;padding:0.5em;background-color:rgb(59, 55, 69);border-radius:1em;">
-						<h3><svg class="icon"><use href="assets/images/icons.svg?v={{ site.version }}#education" /></svg>Does that sound like someone on your team?</h3>
-						<p>
-							We can share our 23+ years of support engineering experience to train and mentor them, helping them quickly master Cerb's platform and implement solutions tailored to your specific needs.
-						</p>
-					</div>
-				</div>
-
-				<div class="unit half">
-					<div class="align-left" style="margin:0.5em;padding:0.5em;background-color:rgb(59, 55, 69);border-radius:1em;">
-						<h3><svg class="icon"><use href="assets/images/icons.svg?v={{ site.version }}#conversation" /></svg>Need technical expertise without hiring?</h3>
-						<p>
-							Our team can fill this role for you. Whether you choose our cloud service or self-hosted solution, our experts can help configure, customize, and maintain your support infrastructure -- giving you all the benefits of our 23+ years of support engineering experience without adding technical headcount.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	{% endcomment %}
-
-	<div class="unit whole" style="margin-top:10px;">
-		{% include testimonials.html %}
-	</div>
-</div>
-
-<div class="home features">
-	{% comment %}
-	<div class="feature whole">
-		{% comment %}autoplay loop muted playsinline{% endcomment %}
+	<div class="hero-video">
 		<video width="1280" height="720" class="screenshot" loop controls playsinline poster="/assets/images/home/features/thumbs/poster.png">
 			<source src="https://cdn.cerb.ai/assets/videos/home/cerb-preview.mp4?v={{ site.version }}" type="video/mp4" />
 		</video>
 	</div>
-	{% endcomment %}
+	<div class="hero-ctas">
+		<a href="/signup/" class="hero-cta hero-cta-primary">Start free trial</a>
+		<a href="/features/" class="hero-cta hero-cta-secondary">See all features</a>
+	</div>
+	<div class="hero-version">
+		<a href="/docs/history/">
+			<span class="version-badge">11.1.5</span>
+			<span class="version-text">See what's new</span>
+		</a>
+	</div>
+</section>
 
-	<div class="feature whole">
-		<div class="align-center">
-			<h1>Build your support team's ideal workspace</h1>
-			<p class="align-center">
-				Transform email and social accounts into a team inbox.
-				Create personalized shared workspaces to keep your team focused and informed.
-				{% comment %}Filter records with expressive graph-based search queries.{% endcomment %}
-				Monitor performance and customer satisfaction with dashboards.
-				Get the right work in front of the right team members automatically -- no digging, no cherry-picking.
-			</p>
-			<a href="/features/">
-				<img src="/assets/images/home/features/thumbs/mission-control.png" width="1200" height="630" class="screenshot">
-			</a>
+<section class="home-trust-bar">
+	<div class="trust-stats">
+		<div class="trust-stat">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+			<span>23+ years</span>
+			<span class="trust-label">of development</span>
+		</div>
+		<div class="trust-stat">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+			<span>Millions</span>
+			<span class="trust-label">of conversations</span>
+		</div>
+		<div class="trust-stat">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+			<span>Thousands</span>
+			<span class="trust-label">of teams</span>
+		</div>
+		<div class="trust-stat">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+			<span>Self-hosted</span>
+			<span class="trust-label">or Cerb Cloud</span>
+		</div>
+	</div>
+</section>
+
+<section class="home-logos">
+	<p class="logos-label">Trusted by teams at</p>
+	<div class="logos-strip">
+		<span class="client-logo client-1password-com"></span>
+		<span class="client-logo client-eff-org"></span>
+		<span class="client-logo client-advance-net"></span>
+		<span class="client-logo client-flexibits-com"></span>
+        <span class="client-logo client-conair-com"></span>
+		{% comment %}<span class="client-logo client-fedpol-be"></span>{% endcomment %}
+	</div>
+</section>
+
+<section class="home-features">
+	<div class="feature-row">
+		<h2>Build your support team's ideal workspace</h2>
+		<div class="feature-content">
+			<div class="feature-image">
+				<a href="/features/">
+					<img src="/assets/images/home/features/thumbs/mission-control.png" width="1200" height="630" class="tilt-left">
+				</a>
+			</div>
+			<div class="feature-description">
+				<ul>
+					<li>Transform email and social accounts into a team inbox</li>
+					<li>Create personalized shared workspaces</li>
+					<li>Monitor performance with customizable dashboards</li>
+					<li>Route work to the right people automatically</li>
+					<li>Track customer satisfaction and SLAs</li>
+				</ul>
+				<a href="/docs/tickets/" class="feature-link">Learn about shared inboxes</a>
+			</div>
 		</div>
 	</div>
 
-	<div class="feature whole">
-		<div class="align-center">
-			<h1>Solve complex challenges with KATA, our intuitive automation language built for the browser</h1>
-			<p>
-				Bridge the gap between inflexible visual builders and complex custom development.
-				Embed interactive shortcuts throughout the UI to unify and automate your workflows.
-				Integrate with any API-based service.
-				Deploy and share your changes with versioned workflow templates.
-			</p>
-			<a href="/features/">
-				<img src="/assets/images/home/features/thumbs/automate-workflows.png" width="1200" height="630" class="screenshot">
-			</a>
+	<div class="feature-row reverse">
+		<h2>Automate workflows with KATA</h2>
+		<div class="feature-content">
+			<div class="feature-image">
+				<a href="/features/">
+					<img src="/assets/images/home/features/thumbs/automate-workflows.png" width="1200" height="630" class="tilt-right">
+				</a>
+			</div>
+			<div class="feature-description">
+				<ul>
+					<li>Intuitive automation language built for the browser</li>
+					<li>Bridge no-code simplicity with full customization</li>
+					<li>Integrate with any API-based service</li>
+					<li>Deploy changes with versioned workflow templates</li>
+					<li>Embed shortcuts throughout the UI</li>
+				</ul>
+				<a href="/docs/automations/" class="feature-link">Explore automations</a>
+			</div>
 		</div>
 	</div>
 
-	<div class="feature whole">
-		<div class="align-center">
-			<h1>Take advantage of leading language models to build helpful AI agents</h1>
-			<p>
-				Grant tools to agents and let them take action to complete tasks on your behalf.
-				Answer questions automatically based on your existing documentation.
-				Draft automatic responses and summarize long conversations.
-				Enrich conversations with relevant data from disparate systems.
-			</p>
-			<a href="/features/">
-				<img src="/assets/images/home/features/thumbs/interactive-agents.png" width="1200" height="630" class="screenshot">
-			</a>
+	<div class="feature-row">
+		<h2>Build AI agents that take action</h2>
+		<div class="feature-content">
+			<div class="feature-image">
+				<a href="/features/">
+					<img src="/assets/images/home/features/thumbs/interactive-agents.png" width="1200" height="630" class="tilt-left">
+				</a>
+			</div>
+			<div class="feature-description">
+				<ul>
+					<li>Connect to leading language models</li>
+					<li>Grant tools so agents can complete tasks</li>
+					<li>Answer questions from your documentation</li>
+					<li>Draft responses and summarize conversations</li>
+					<li>Deploy agents on any website</li>
+				</ul>
+				<a href="/docs/interactions/" class="feature-link">Discover AI agents</a>
+			</div>
 		</div>
 	</div>
+</section>
 
-	<div class="feature whole">
-		<div class="align-center">
-			<a href="/features/" class="cerb-button">See more features &raquo;</a>
+<section class="home-testimonials">
+	<h2>What our customers say</h2>
+	<div class="testimonials-grid home-testimonials-grid">
+		{% assign featured = site.data.testimonials | where: "featured", true | slice: 0, 3 %}
+		{% for testimonial in featured %}
+		<div class="testimonial-card testimonial-featured">
+			<blockquote class="testimonial-content">
+				{{ testimonial.quote | strip | truncatewords: 50 }}
+			</blockquote>
+			<div class="testimonial-footer">
+				<span class="client-logo client-{{ testimonial.client }}"></span>
+				<div class="testimonial-author">
+					<span class="author-name">{{ testimonial.author }}</span>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	<div class="testimonials-more">
+		<a href="/clients/" class="feature-link">Read more testimonials</a>
+	</div>
+</section>
+
+<section class="home-pricing-preview">
+	<h2>Simple, transparent pricing</h2>
+	<div class="pricing-preview-cards">
+		<div class="pricing-preview-card">
+			<h3>Self-Hosted</h3>
+			<div class="pricing-preview-price">Free to start</div>
+			<p>First 3 seats free forever. Deploy on your infrastructure with Docker.</p>
+		</div>
+		<div class="pricing-preview-card">
+			<h3>Cerb Cloud</h3>
+			<div class="pricing-preview-price">$40/seat/month</div>
+			<p>Fully managed. High availability, automatic backups, global data centers.</p>
 		</div>
 	</div>
-</div>
+	<a href="/pricing/" class="feature-link">View full pricing details</a>
+</section>
 
-<div class="unit whole" style="margin-top:20px;">
-	<div class="align-center">
+<section class="home-final-cta">
+	<h2>Build the support workflow your team actually needs</h2>
+	<p>Stop adapting to your software. Start with a platform designed for customization.</p>
+	<div class="final-cta-form">
 		<form id="demo-signup">
-			<b>We'll help you get started with a free 3-seat self-hosted license or Cerb Cloud trial:</b>
-			<br>
-			<label><input type="text" name="contact" placeholder="Enter your work email" spellcheck="false" style="font-size:2em;padding:0.25em;border-radius:5px;border:0;"></label>
-			<button type="submit" class="cerb-button" style="font-size:1.8em;margin:0;text-decoration:none;">Try Cerb for free</button>
+			<input type="email" name="contact" placeholder="Enter your work email" spellcheck="false" required>
+			<button type="submit" class="hero-cta hero-cta-primary">Get started free</button>
 		</form>
-		<div id="demo-status" style="color:rgb(185,185,185);font-weight:bold;">
-			Your email is protected by our <a href="/privacy/" target="_blank" style="font-weight:bold;color:inherit;text-decoration:underline;">privacy policy</a>.
-		</div>
+		<p class="cta-privacy">Your email is protected by our <a href="/privacy/">privacy policy</a>.</p>
 	</div>
-</div>
-
+</section>
 
 <script src="/assets/js/home.js?v={{ site.version }}"></script>
