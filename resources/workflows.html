@@ -19,44 +19,53 @@ layout: page
 permalink: /resources/workflows/
 jumbotron:
   title: Workflows
-  tagline: Pre-built templates with versioned updates that keep related records in sync between multiple environments.
+  tagline: ~
   breadcrumbs:
   - label: Resources &raquo;
     url: /resources/
 ---
 
-<p>
-    <a href="/docs/workflows/">Workflows</a> are templates with versioned updates that keep a related set of records in sync between multiple environments (e.g. dev, staging, production).
+<p style="margin-bottom:30px;">
+	<a href="/docs/workflows/">Workflows</a> are templates with versioned updates that keep a related set of records in sync between multiple environments (e.g. dev, staging, production).
 </p>
+
+<div class="docs-sections workflows-sections">
+	<a href="#built-in-workflows" class="docs-section-card">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+		<span>Built-in</span>
+	</a>
+	<a href="#community-workflows" class="docs-section-card">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+		<span>Community</span>
+	</a>
+</div>
 
 {% assign workflows = site.workflows | where:"workflow.built_in",true | sort: 'title' %}
 
-<h1>Built-in workflows</h1>
+<h2 id="built-in-workflows" class="docs-section-title workflows-section-title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+Built-in workflows</h2>
 
-<div class="integrations" style="column-count:2;column-width:500px;margin-bottom:20px;">
-	<ul class="articles">
-	{% for workflow in workflows %}
-		<li style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
-			<a href="{{ workflow.url }}">{{ workflow.title }}</a>
-			<div>{{ workflow.excerpt }}</div>
-		</li>
-	{% endfor %}
-	</ul>
+<div class="docs-grid">
+{% for workflow in workflows %}
+  <a href="{{ workflow.url }}" class="docs-item">
+    <span class="docs-item-title">{{ workflow.title }}</span>
+    <span class="docs-item-excerpt">{{ workflow.excerpt | truncatewords: 12 }}</span>
+  </a>
+{% endfor %}
 </div>
 
 {% assign workflows = site.workflows | where:"workflow.built_in",false | sort: 'title' %}
 
-<h1>Community workflows</h1>
+<h2 id="community-workflows" class="docs-section-title workflows-section-title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+Community workflows</h2>
 
-<div class="integrations" style="column-count:2;column-width:500px;margin-bottom:20px;">
-    <ul class="articles">
-        {% for workflow in workflows %}
-        <li style="break-inside:avoid;page-break-inside: avoid;-webkit-column-break-inside: avoid;">
-            <a href="{{ workflow.url }}">{{ workflow.title }}</a>
-            <div>{{ workflow.excerpt }}</div>
-        </li>
-        {% endfor %}
-    </ul>
+<div class="docs-grid">
+{% for workflow in workflows %}
+  <a href="{{ workflow.url }}" class="docs-item">
+    <span class="docs-item-title">{{ workflow.title }}</span>
+    <span class="docs-item-excerpt">{{ workflow.excerpt | truncatewords: 12 }}</span>
+  </a>
+{% endfor %}
 </div>
-
-{% include testimonials.html %}

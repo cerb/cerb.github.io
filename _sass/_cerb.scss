@@ -1540,7 +1540,7 @@ span.client-kiva-org { background-position: -875px -760px; }
 }
 
 // Adjust section cards for 2 items on solutions page
-.docs-sections:has(.docs-section-card:nth-child(2):last-child) {
+.docs-sections:not(.workflows-sections):has(.docs-section-card:nth-child(2):last-child) {
 	grid-template-columns: repeat(2, 1fr);
 	max-width: 400px;
 
@@ -1613,6 +1613,21 @@ span.client-kiva-org { background-position: -875px -760px; }
 	&:nth-child(8) svg { color: rgb(100, 200, 150); } // Security - teal
 }
 
+// Workflows page sections (2 items)
+.workflows-sections.docs-sections {
+	grid-template-columns: repeat(2, 1fr);
+	max-width: 400px;
+
+	.docs-section-card:nth-child(1) svg { color: rgb(100, 160, 255); } // Built-in - blue
+	.docs-section-card:nth-child(2) svg { color: rgb(100, 180, 100); } // Community - green
+}
+
+// Workflow section title colors
+.workflows-section-title {
+	&#built-in-workflows svg { color: rgb(100, 160, 255); }
+	&#community-workflows svg { color: rgb(100, 180, 100); }
+}
+
 // Guide section title colors
 .guides-section-title {
 	&#integrations svg { color: rgb(200, 150, 100); }
@@ -1634,6 +1649,7 @@ span.client-kiva-org { background-position: -875px -760px; }
 	&#records svg { color: rgb(140, 160, 200); }
 	&#project-boards svg { color: rgb(160, 180, 140); }
 	&#interactions svg { color: rgb(100, 160, 255); }
+	&#classifiers svg { color: rgb(100, 180, 100); }
 	&#classifiers svg { color: rgb(100, 180, 100); }
 	&#bots svg { color: rgb(200, 180, 100); }
 }
