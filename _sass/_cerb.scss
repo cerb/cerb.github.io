@@ -1517,13 +1517,36 @@ span.client-kiva-org { background-position: -875px -760px; }
 		flex-shrink: 0;
 	}
 
-	// Section icon colors matching nav
+	// Docs section icon colors
 	&#getting-started svg { color: rgb(100, 180, 100); }
 	&#reference svg { color: rgb(100, 160, 255); }
 	&#admin-guide svg { color: rgb(200, 150, 100); }
 	&#developer-guide svg { color: rgb(160, 120, 200); }
 	&#api svg { color: rgb(100, 200, 200); }
 	&#meta svg { color: rgb(200, 120, 160); }
+
+	// Solutions section icon colors
+	&#automations svg { color: rgb(100, 180, 100); }
+	&#data-queries svg { color: rgb(100, 160, 255); }
+	&#integrations svg { color: rgb(200, 150, 100); }
+	&#search-queries svg { color: rgb(160, 120, 200); }
+	&#widgets svg { color: rgb(100, 200, 200); }
+}
+
+// Solutions page - 5 columns
+.solutions-section-title + .docs-grid {
+	// inherits from .docs-grid
+}
+
+// Adjust section cards for 2 items on solutions page
+.docs-sections:has(.docs-section-card:nth-child(2):last-child) {
+	grid-template-columns: repeat(2, 1fr);
+	max-width: 400px;
+
+	.docs-section-card {
+		&:nth-child(1) svg { color: rgb(100, 180, 100); } // Automations - green
+		&:nth-child(2) svg { color: rgb(200, 150, 100); } // Integrations - orange
+	}
 }
 
 .docs-grid {
