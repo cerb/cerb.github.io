@@ -16,23 +16,25 @@ jumbotron:
   tagline: Meet some of the thousands of organizations we've worked with
 ---
 
-<div>
-	<table width="100%" cellspacing="10" cellpadding="">
-		{% for testimonial in site.data.testimonials %}
-		<tr>
-			<td>
-				<span class="client-logo client-{{ testimonial.client }}"></span>
-			</td>
-			<td style="font-size:0.9em;padding-left:1em;">
-				{{ testimonial.quote }}
-				<br>
-				<b>- {{ testimonial.author }}</b>
-			</td>
-		</tr>
-		{% endfor %}
-	</table>
-
-	<div style="text-align:center;margin:20px 0 40px 0;background-color:white;">
-		<img src="/assets/cerb-clients.png">
+<div class="testimonials-grid">
+	{% for testimonial in site.data.testimonials %}
+	<div class="testimonial-card{% if testimonial.featured %} testimonial-featured{% endif %}">
+		<blockquote class="testimonial-content">
+			{{ testimonial.quote | strip }}
+		</blockquote>
+		<div class="testimonial-footer">
+			<span class="client-logo client-{{ testimonial.client }}"></span>
+			<div class="testimonial-author">
+				<span class="author-name">{{ testimonial.author }}</span>
+				{% if testimonial.when %}
+				<span class="author-date">{{ testimonial.when }}</span>
+				{% endif %}
+			</div>
+		</div>
 	</div>
+	{% endfor %}
+</div>
+
+<div class="clients-banner">
+	<img src="/assets/cerb-clients.png" alt="Cerb client logos">
 </div>
