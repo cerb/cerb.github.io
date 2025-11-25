@@ -10,173 +10,136 @@ jumbotron:
 
 <div class="home features">
 	<div class="feature whole" style="margin-top:20px;">
-		{% comment %}autoplay loop muted playsinline{% endcomment %}
 		<video width="1280" height="720" class="screenshot" loop controls playsinline poster="/assets/images/home/features/thumbs/poster.png">
 			<source src="https://cdn.cerb.ai/assets/videos/home/cerb-preview.mp4?v={{ site.version }}" type="video/mp4" />
 		</video>
 	</div>
 
-	<div class="feature whole">
-		<div class="align-center">
-			<h1>Shared Inboxes</h1>
+	<div class="feature-row">
+		<h2>Shared Inboxes</h2>
+		<div class="feature-content">
+			<div class="feature-image">
+				<a href="/docs/tickets/">
+					<img src="/assets/images/home/features/thumbs/shared-inboxes.png" width="1200" height="630" class="tilt-left">
+				</a>
+			</div>
+			<div class="feature-description">
+				<ul>
+					<li>Transform any email or social account into a team inbox</li>
+					<li>Handle thousands of issues per day</li>
+					<li>Automate routing, assignment, and prioritization</li>
+					<li>Display customer info and related data in conversations</li>
+					<li>Reply quickly with snippets and contextual auto-responses</li>
+					<li>Resolve common issues with custom shortcuts</li>
+					<li>Bulk update and reply to multiple related conversations at once</li>
+					<li>Enforce service level agreements and track customer satisfaction</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
-	<div class="feature half">
-		<div>
-			<a href="/docs/tickets/">
-				<img src="/assets/images/home/features/thumbs/shared-inboxes.png" width="1200" height="630" class="screenshot">
-			</a>
+	<div class="feature-row reverse">
+		<h2>Collaborative Workspaces</h2>
+		<div class="feature-content">
+			<div class="feature-image">
+				<a href="/docs/workspaces/">
+					<img src="/assets/images/home/features/thumbs/mission-control.png" width="1200" height="630" class="tilt-right">
+				</a>
+			</div>
+			<div class="feature-description">
+				<ul>
+					<li>Fully customize dashboards and pages with tabs and widgets</li>
+					<li>Filter and manipulate data with powerful search and data queries</li>
+					<li>Comment on records and @mention team members to notify them</li>
+					<li>Bring your own data with custom records and fields</li>
+					<li>Monitor new activity on watched records with notifications</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
-	<div class="feature half">
-		<div class="align-left">
-			<ul>
-				<li>Transform any email or social account into a team inbox</li>
-				<li>Handle thousands of issues per day</li>
-				<li>Automate routing, assignment, and prioritization</li>
-				<li>Display customer info and related data in conversations</li>
-				<li>Reply quickly with snippets and contextual auto-responses</li>
-				<li>Resolve common issues with custom shortcuts</li>
-				<li>Bulk update and reply to multiple related conversations at once</li>
-				<li>Enforce service level agreements and track customer satisfaction</li>
-			</ul>
+	<div class="feature-row">
+		<h2>AI Agents</h2>
+		<div class="feature-content">
+			<div class="feature-image">
+				<a href="/docs/interactions/">
+					<img src="/assets/images/home/features/thumbs/interactive-agents.png" width="1200" height="630" class="tilt-left">
+				</a>
+			</div>
+			<div class="feature-description">
+				<ul>
+					<li>Create conversational agents to assist workers and clients</li>
+					<li>Integrate with state-of-the-art language models from multiple providers</li>
+					<li>Give agents tools to reference knowledge and perform actions</li>
+					<li>Review chat transcripts to continuously improve agents</li>
+					<li>Transition seamlessly between chat and form-based interactions</li>
+					<li>Deploy agents on any website</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
-	<div class="feature whole">
-		<div class="align-center">
-			<h1>Collaborative Workspaces</h1>
+	<div class="feature-row reverse">
+		<h2>Automations</h2>
+		<div class="feature-content">
+			<div class="feature-image">
+				<a href="/docs/automations/">
+					<img src="/assets/images/home/features/thumbs/automate-workflows.png" width="1200" height="630" class="tilt-right">
+				</a>
+			</div>
+			<div class="feature-description">
+				<ul>
+					<li>Code from your browser with an integrated editor and debugger</li>
+					<li>Build rapidly with KATA -- our high-level automation language</li>
+					<li>Ditch the training wheels of vibe coding &amp; point-and-click tools</li>
+					<li>Trigger your code from events and interactive toolbars</li>
+					<li>Integrate with any web-based API</li>
+					<li>No programming experience required -- we'll help you learn</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
-	<div class="feature half">
-		<div class="align-left">
-			<a href="/docs/workspaces/">
-				<img src="/assets/images/home/features/thumbs/mission-control.png" width="1200" height="630" class="screenshot">
-			</a>
+	<div class="feature-row">
+		<h2>Workflow Templates</h2>
+		<div class="feature-content">
+			<div class="feature-image">
+				<a href="/docs/workflows/">
+					<img src="/assets/images/home/features/thumbs/share-workflows.png" width="1200" height="630" class="tilt-left">
+				</a>
+			</div>
+			<div class="feature-description">
+				<ul>
+					<li>Build new features using Cerb's toolkit</li>
+					<li>Group related records and configuration into a workflow</li>
+					<li>Iterate confidently with a versioned change history</li>
+					<li>Synchronize changes through development, staging, and production</li>
+					<li>Enable pre-built workflows to save time</li>
+					<li>Collaborate with us to build exactly what you need</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
-	<div class="feature half">
-		<div class="align-left">
-			<ul>
-				<li>Fully customize dashboards and pages with tabs and widgets</li>
-				<li>Filter and manipulate data with powerful search and data queries</li>
-				<li>Comment on records and @mention team members to notify them</li>
-				<li>Bring your own data with custom records and fields</li>
-				<li>Monitor new activity on watched records with notifications</li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="feature whole">
-		<div class="align-center">
-			<h1>AI Agents</h1>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-left">
-			<a href="/docs/interactions/">
-				<img src="/assets/images/home/features/thumbs/interactive-agents.png" width="1200" height="630" class="screenshot">
-			</a>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-left">
-			<ul>
-				<li>Create conversational agents to assist workers and clients</li>
-				<li>Integrate with state-of-the-art language models from multiple providers</li>
-				<li>Give agents tools to reference knowledge and perform actions</li>
-				<li>Review chat transcripts to continuously improve agents</li>
-				<li>Transition seamlessly between chat and form-based interactions</li>
-				<li>Deploy agents on any website</li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="feature whole">
-		<div class="align-center">
-			<h1>Automations</h1>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-left">
-			<a href="/docs/automations/">
-				<img src="/assets/images/home/features/thumbs/automate-workflows.png" width="1200" height="630" class="screenshot">
-			</a>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-left">
-			<ul>
-				<li>Code from your browser with an integrated editor and debugger</li>
-				<li>Build rapidly with KATA -- our high-level automation language</li>
-				<li>Ditch the training wheels of vibe coding &amp; point-and-click tools</li>
-				<li>Trigger your code from events and interactive toolbars</li>
-				<li>Integrate with any web-based API</li>
-				<li>No programming experience required -- we'll help you learn</li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="feature whole">
-		<div class="align-center">
-			<h1>Workflow Templates</h1>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-left">
-			<a href="/docs/workflows/">
-				<img src="/assets/images/home/features/thumbs/share-workflows.png" width="1200" height="630" class="screenshot">
-			</a>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-left">
-			<ul>
-				<li>Build new features using Cerb's toolkit</li>
-				<li>Group related records and configuration into a workflow</li>
-				<li>Iterate confidently with a versioned change history</li>
-				<li>Synchronize changes through development, staging, and production</li>
-				<li>Enable pre-built workflows to save time</li>
-				<li>Collaborate with us to build exactly what you need</li>
-			</ul>
-		</div>
-	</div>
-
-	<div class="feature whole">
-		<div class="align-center">
-			<h1>Endless Integrations</h1>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-left">
-			<a href="/solutions/#integrations">
-				<img src="/assets/images/home/features/thumbs/connected-accounts.png" width="1200" height="630" class="screenshot">
-			</a>
-		</div>
-	</div>
-
-	<div class="feature half">
-		<div class="align-left">
-			<ul>
-				<li>Use pre-configured connected services or create your own</li>
-				<li>Auth with OAuth, API keys, bearer tokens, HTTP basic, AWS, and more</li>
-				<li>Enable single sign-on with OpenID Connect and SAML identity providers</li>
-				<li>Trigger and catch webhooks for real-time event handling</li>
-				<li>Manage data through Cerb's OAuth2 REST API</li>
-				<li>Create customer-facing tools with community portals</li>
-				<li>Extend core functionality with plugins</li>
-			</ul>
+	<div class="feature-row reverse">
+		<h2>Endless Integrations</h2>
+		<div class="feature-content">
+			<div class="feature-image">
+				<a href="/solutions/#integrations">
+					<img src="/assets/images/home/features/thumbs/connected-accounts.png" width="1200" height="630" class="tilt-right">
+				</a>
+			</div>
+			<div class="feature-description">
+				<ul>
+					<li>Use pre-configured connected services or create your own</li>
+					<li>Auth with OAuth, API keys, bearer tokens, HTTP basic, AWS, and more</li>
+					<li>Enable single sign-on with OpenID Connect and SAML identity providers</li>
+					<li>Trigger and catch webhooks for real-time event handling</li>
+					<li>Manage data through Cerb's OAuth2 REST API</li>
+					<li>Create customer-facing tools with community portals</li>
+					<li>Extend core functionality with plugins</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
