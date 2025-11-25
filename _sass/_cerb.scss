@@ -1537,6 +1537,12 @@ span.client-kiva-org { background-position: -875px -760px; }
 	text-align: center;
 	padding: 50px 20px 60px;
 	background-color: rgb(57, 98, 201);
+	background-image:
+		linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+		linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+	background-size: 60px 60px, 60px 60px, 15px 15px, 15px 15px;
 	margin-left: calc(-50vw + 50%);
 	width: 100vw;
 
