@@ -1708,6 +1708,28 @@ span.client-kiva-org { background-position: -875px -760px; }
 		margin: 0 0 24px 0;
 	}
 
+	h2.feature-title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 12px;
+		padding: 12px 28px;
+		background-color: rgb(30, 30, 30);
+		margin: 0 0 24px;
+
+		svg {
+			width: 28px;
+			height: 28px;
+			color: rgba(255, 255, 255, 0.9);
+			flex-shrink: 0;
+		}
+
+		span {
+			color: white;
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+		}
+	}
+
 	.feature-content {
 		display: flex;
 		gap: 40px;
@@ -2169,5 +2191,59 @@ span.client-kiva-org { background-position: -875px -760px; }
 
 	&:after {
 		content: ' →';
+	}
+}
+
+.features-cta {
+	margin: 60px auto 0;
+	padding: 60px 40px;
+	max-width: 600px;
+	text-align: center;
+	background: linear-gradient(135deg, rgb(57, 98, 201) 0%, rgb(90, 60, 160) 100%);
+	border-radius: 24px;
+	box-shadow: 0 8px 32px rgba(57, 98, 201, 0.3);
+
+	h3 {
+		margin: 0 0 12px;
+		font-size: 28px;
+		font-weight: 600;
+		color: white;
+	}
+
+	p {
+		margin: 0 0 32px;
+		font-size: 18px;
+		color: rgba(255, 255, 255, 0.85);
+	}
+
+	.cta-button {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		padding: 16px 32px;
+		font-size: 18px;
+		font-weight: 600;
+		color: rgb(57, 98, 201);
+		background: white;
+		border-radius: 50px;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+		svg {
+			width: 20px;
+			height: 20px;
+			transition: transform 0.3s ease;
+		}
+
+		&:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+			text-decoration: none;
+
+			svg {
+				transform: translateX(4px);
+			}
+		}
 	}
 }
