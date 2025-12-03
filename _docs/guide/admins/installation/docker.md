@@ -43,13 +43,13 @@ Cerb is available as a pre-built container image for `amd64` or `arm64` on [Dock
 
 {% highlight bash %}
 {% raw %}
-git checkout https://github.com/cerb/cerb-docker/
+git clone https://github.com/cerb/cerb-docker/
 
 # ... or download + unzip: https://github.com/cerb/cerb-docker/archive/refs/heads/main.zip
 
 cd cerb-docker/cerb-caddy-mysql
 
-vi .env
+cat .env
 
 docker compose up --build
 {% endraw %}

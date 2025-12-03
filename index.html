@@ -62,6 +62,39 @@ summary: "Cerb is support software for teams who build. Design any support workf
 	</div>
 </section>
 
+<section class="home-docker">
+	<h2>Try Cerb locally in minutes</h2>
+	<p>Launch a container on your own machine with Docker. A single seat is free forever with no license required.</p>
+	<div class="docker-code">
+{% highlight bash %}
+{% raw %}
+git clone https://github.com/cerb/cerb-docker/
+{% endraw %}
+{% endhighlight %}
+    </div>
+	<div class="docker-code">
+{% highlight bash %}
+{% raw %}
+cd cerb-docker/cerb-caddy-mysql
+cat .env
+{% endraw %}
+{% endhighlight %}
+    </div>
+	<div class="docker-code">
+{% highlight bash %}
+{% raw %}
+docker compose up --build
+{% endraw %}
+{% endhighlight %}
+	</div>
+    <div class="docker-instructions">
+        Open your web browser to <code>http://localhost/</code> at the port you configured and accept the self-signed SSL certificate.
+    </div>
+    <div class="docker-instructions">
+        <a href="/docs/installation/docker/" class="feature-link">Read the full instructions</a>
+    </div>
+</section>
+
 <section class="home-logos">
 	<p class="logos-label">Trusted by teams at</p>
 	<div class="logos-strip">
