@@ -2118,7 +2118,8 @@ span.client-kiva-org { background-position: -875px -760px; }
 	}
 }
 
-.home-final-cta {
+.home-final-cta,
+.features-cta {
 	padding: 80px 20px;
 	background-color: rgb(57, 98, 201);
 	background-image:
@@ -2128,58 +2129,49 @@ span.client-kiva-org { background-position: -875px -760px; }
 		linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
 	background-size: 60px 60px, 60px 60px, 15px 15px, 15px 15px;
 	text-align: center;
+	margin-left: calc(-50vw + 50%);
+	width: 100vw;
 
-	h2 {
+	h2, h3 {
 		font-size: 2.2em;
+		font-weight: 600;
 		margin: 0 0 16px 0;
+		color: white;
 	}
 
 	> p {
 		font-size: 1.2em;
-		color: rgb(200, 210, 230);
+		color: rgba(255, 255, 255, 0.85);
 		margin: 0 0 30px 0;
 	}
 
-	.final-cta-form {
-		max-width: 500px;
-		margin: 0 auto;
+	.cta-button {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		padding: 16px 32px;
+		font-size: 18px;
+		font-weight: 600;
+		color: rgb(57, 98, 201);
+		background: white;
+		border-radius: 50px;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 
-		form {
-			display: flex;
-			gap: 12px;
-
-			@media screen and (max-width: 500px) {
-				flex-direction: column;
-			}
-
-			input[type="email"] {
-				flex: 1;
-				padding: 14px 18px;
-				border: none;
-				border-radius: 8px;
-				font-size: 1em;
-				background-color: white;
-				color: rgb(50, 50, 50);
-
-				&::placeholder {
-					color: rgb(120, 120, 120);
-				}
-			}
-
-			button {
-				white-space: nowrap;
-				border: none;
-			}
+		svg {
+			width: 20px;
+			height: 20px;
+			transition: transform 0.3s ease;
 		}
 
-		.cta-privacy {
-			font-size: 0.85em;
-			color: rgb(180, 190, 210);
-			margin-top: 16px;
+		&:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+			text-decoration: none;
 
-			a {
-				color: white;
-				text-decoration: underline;
+			svg {
+				transform: translateX(4px);
 			}
 		}
 	}
@@ -2238,56 +2230,3 @@ span.client-kiva-org { background-position: -875px -760px; }
 	}
 }
 
-.features-cta {
-	margin: 60px auto 0;
-	padding: 60px 40px;
-	max-width: 600px;
-	text-align: center;
-	background: linear-gradient(135deg, rgb(57, 98, 201) 0%, rgb(90, 60, 160) 100%);
-	border-radius: 24px;
-	box-shadow: 0 8px 32px rgba(57, 98, 201, 0.3);
-
-	h3 {
-		margin: 0 0 12px;
-		font-size: 28px;
-		font-weight: 600;
-		color: white;
-	}
-
-	p {
-		margin: 0 0 32px;
-		font-size: 18px;
-		color: rgba(255, 255, 255, 0.85);
-	}
-
-	.cta-button {
-		display: inline-flex;
-		align-items: center;
-		gap: 10px;
-		padding: 16px 32px;
-		font-size: 18px;
-		font-weight: 600;
-		color: rgb(57, 98, 201);
-		background: white;
-		border-radius: 50px;
-		text-decoration: none;
-		transition: all 0.3s ease;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-
-		svg {
-			width: 20px;
-			height: 20px;
-			transition: transform 0.3s ease;
-		}
-
-		&:hover {
-			transform: translateY(-2px);
-			box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-			text-decoration: none;
-
-			svg {
-				transform: translateX(4px);
-			}
-		}
-	}
-}
