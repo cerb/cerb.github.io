@@ -19,7 +19,7 @@ jumbotron:
 ---
 
 {% assign last_section = '' %}
-{% assign releases = site.releases | reverse %}
+{% assign releases = site.releases | sort: 'date' | reverse %}
 {% for post in releases %}
 {% assign section = post.date | date: "%B %Y" %}
 
