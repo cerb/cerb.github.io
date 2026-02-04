@@ -11,10 +11,9 @@ This is the official documentation website for Cerb (cerb.ai), a helpdesk and wo
 ```bash
 # Run the development server (Docker)
 docker compose up
-
-# The site will be available at http://127.0.0.1:4000
-# Changes trigger automatic incremental rebuilds
 ```
+
+The site will be available at http://127.0.0.1:4000. Changes trigger automatic incremental rebuilds.
 
 Without Docker:
 ```bash
@@ -93,17 +92,46 @@ search_index:
 
 ### KATA Code Blocks
 
-Cerb uses a custom configuration language called KATA. Use the `cerb` language identifier:
+Cerb uses a custom configuration language called KATA. Use the `cerb` language identifier with Jekyll's highlight syntax:
 
 ~~~markdown
-```cerb
+{% highlight cerb %}
+{% raw %}
 automation/name:
   start:
     outcome:
       message: Hello, {{name}}!
-```
+{% endraw %}
+{% endhighlight %}
 ~~~
 
 ### Icons
 
 Always use inline SVG icons (preferably from [Lucide](https://lucide.dev/)). Never use emoji.
+
+### Workflows vs Packages
+
+Prefer **workflows** over packages for distributing Cerb functionality. Workflows (introduced in 11.0) are text-based KATA templates that:
+
+- Define records (automations, toolbars, custom fields, etc.) and configuration values
+- Automatically synchronize changes when the template is updated
+- Support versioned history with easy rollback
+- Can be shared between environments (dev, staging, production)
+
+Workflow documentation lives in `_workflows/`. Use a workflow name prefix based on a domain you own (e.g., `com.example.feature`).
+
+### Code Blocks
+
+Always use Jekyll's `{% raw %}{% highlight LANG %}{% endraw %}` syntax instead of markdown code fences:
+
+~~~markdown
+{% highlight cerb %}
+{% raw %}
+start:
+  return:
+    output: Hello!
+{% endraw %}
+{% endhighlight %}
+~~~
+
+Use `cerb` for KATA, or `bash`, `python`, `json`, `text`, etc. as appropriate.
