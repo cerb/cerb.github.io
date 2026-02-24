@@ -49,8 +49,8 @@ Built-in workflows</h2>
 <div class="docs-grid">
 {% for workflow in workflows %}
   <a href="{{ workflow.url }}" class="docs-item">
-    <span class="docs-item-title">{{ workflow.title }}</span>
-    <span class="docs-item-excerpt">{{ workflow.excerpt | truncatewords: 12 }}</span>
+    <div class="docs-item-title">{{ workflow.title }}</div>
+    <div class="docs-item-excerpt">{{ workflow.excerpt | truncatewords: 12 }}</div>
   </a>
 {% endfor %}
 </div>
@@ -64,8 +64,8 @@ Community workflows</h2>
 <div class="docs-grid">
 {% for workflow in workflows %}
   <a href="{{ workflow.url }}" class="docs-item">
-    <span class="docs-item-title">{{ workflow.title }}</span>
-    <span class="docs-item-excerpt">{{ workflow.excerpt | truncatewords: 12 }}</span>
+    <div class="docs-item-title">{{ workflow.title }}</div>
+    <div class="docs-item-excerpt">{{ workflow.excerpt | truncatewords: 12 }}</div>
   </a>
 {% endfor %}
 </div>

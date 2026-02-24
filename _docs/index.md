@@ -69,8 +69,8 @@ jumbotron:
   {% assign item_id = item | prepend:"/docs/" %}
   {% assign solution = site.docs | where:"id",item_id | first %}
   <a href="{{ solution.url }}" class="docs-item">
-    <span class="docs-item-title">{% if solution.toc.title %}{{ solution.toc.title }}{% else %}{{ solution.title }}{% endif %}</span>
-    <span class="docs-item-excerpt">{{ solution.excerpt | truncatewords: 12 }}</span>
+    <div class="docs-item-title">{% if solution.toc.title %}{{ solution.toc.title }}{% else %}{{ solution.title }}{% endif %}</div>
+    <div class="docs-item-excerpt">{{ solution.excerpt | truncatewords: 12 }}</div>
   </a>
 {% endfor %}
 </div>

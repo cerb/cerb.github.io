@@ -61,8 +61,8 @@ jumbotron:
 <div class="docs-grid">
 {% for solution in group.items %}
   <a href="{{ solution.url }}" class="docs-item">
-    <span class="docs-item-title">{{ solution.title }}</span>
-    <span class="docs-item-excerpt">{{ solution.excerpt | truncatewords: 12 }}</span>
+    <div class="docs-item-title">{{ solution.title }}</div>
+    <div class="docs-item-excerpt">{{ solution.excerpt | truncatewords: 12 }}</div>
   </a>
 {% endfor %}
 </div>

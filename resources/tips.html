@@ -29,8 +29,8 @@ jumbotron:
 <div class="docs-grid">
 {% for tip in tips %}
   <a href="{{ tip.url }}" class="docs-item">
-    <span class="docs-item-title">{{ tip.title }}</span>
-    <span class="docs-item-excerpt">{{ tip.excerpt | truncatewords: 12 }}</span>
+    <div class="docs-item-title">{{ tip.title }}</div>
+    <div class="docs-item-excerpt">{{ tip.excerpt | truncatewords: 12 }}</div>
   </a>
 {% endfor %}
 </div>
