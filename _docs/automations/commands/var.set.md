@@ -60,8 +60,8 @@ output: Kina Halpue
 
 | Key | Req'd | 
 |-|:-:|-
-| `key:` | √ | The [key path](/docs/automations/#dictionaries) of the value to set, delimited with colons (`:`).
-| `value:` | √ | The value to set.
+| `key:` | **x** | The [key path](/docs/automations/#dictionaries) of the value to set, delimited with colons (`:`).
+| `value:` | **x** | The value to set.
 | `delimiter:` |  | An optional delimiter to use in `key:` paths.
 
 ## output:

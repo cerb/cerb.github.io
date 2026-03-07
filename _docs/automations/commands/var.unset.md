@@ -63,7 +63,7 @@ person:
 
 | Key | Req'd | 
 |-|:-:|-
-| `key:` | √ | One or more [key paths](/docs/automations/#dictionaries) to unset, delimited with colons (`:`).
+| `key:` | **x** | One or more [key paths](/docs/automations/#dictionaries) to unset, delimited with colons (`:`).
 
 ## output:
 

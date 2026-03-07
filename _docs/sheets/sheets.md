@@ -347,13 +347,11 @@ columns:
   interaction/ip:
     label: IP
     params:
+      uri: cerb:automation:wgm.interaction.locationByIP
+      text_template@raw: {{row.source_ip}}
+      inputs:
+        ip@raw: {{row.source_ip}}
       #image: circle-ok
-      #image_key: icon_key
-      image_template@raw:
-        {% if can_sign %}
-        circle-ok
-        {% endif %}
-      #record_uri: cerb:group:123
 {% endraw %}
 {% endhighlight %}
 

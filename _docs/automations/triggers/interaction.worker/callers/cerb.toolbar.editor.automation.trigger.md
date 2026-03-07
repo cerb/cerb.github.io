@@ -34,4 +34,4 @@ The caller expects the following `return:` dictionary:
 
 | Req'd | Key | Type | 
 |:-:|-|-|-
-| √ | **`trigger`** | record | The selected automation [trigger](/docs/automations/#triggers)
+| **x** | **`trigger`** | record | The selected automation [trigger](/docs/automations/#triggers)

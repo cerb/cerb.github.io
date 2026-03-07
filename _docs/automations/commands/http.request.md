@@ -94,9 +94,9 @@ The HTTP method to use for the request.
 | `GET` | 
 | `HEAD` | 
 | `OPTIONS` | 
-| `PATCH` | √
-| `POST` | √
-| `PUT` | √
+| `PATCH` | **x**
+| `POST` | **x**
+| `PUT` | **x**
 
 {% highlight cerb %}
 method: POST

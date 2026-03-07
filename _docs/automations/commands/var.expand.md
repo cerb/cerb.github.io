@@ -63,7 +63,7 @@ owners:
 | Key | Req'd | 
 |-|:-:|-
 | `key:` | | The [key path](/docs/automations/#dictionaries) to expand, delimited with colons (`:`). This must be a dictionary or an array of dictionaries. When omitted, key expansion happens in the root dictionary
-| `paths:` | √ | The paths to expand at the given dictionary keys.
+| `paths:` | **x** | The paths to expand at the given dictionary keys.
 
 ## on_simulate:
 

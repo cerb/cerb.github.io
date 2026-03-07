@@ -701,7 +701,7 @@ table.cerb-pricing-matrix {
 			
 			span {
 				&.yes:after {
-					content: '√';
+					content: '*';
 				}
 	
 				&.no:after {

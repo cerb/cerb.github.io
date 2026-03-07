@@ -60,8 +60,8 @@ output: This is the saved value.
 
 | Key | Req'd | 
 |-|:-:|-
-| `key:` | √ | The storage key to save. This is an arbitrary identifier.
-| `value:` | √ | The value to for the storage key.
+| `key:` | **x** | The storage key to save. This is an arbitrary identifier.
+| `value:` | **x** | The value to for the storage key.
 | `expires:` | | The optional date/time to expire the key (e.g. `+2 hours`, `31 Dec 2036`). Omit to not expire.
 
 ## output:

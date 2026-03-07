@@ -64,7 +64,7 @@ output: (null)
 
 | Key | Req'd | 
 |-|:-:|-
-| `key:` | √ | The storage key to delete. This is an arbitrary identifier.
+| `key:` | **x** | The storage key to delete. This is an arbitrary identifier.
 
 ## output:
 

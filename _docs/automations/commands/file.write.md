@@ -44,7 +44,7 @@ The `file.write:` command can also optionally generate a ZIP file from multiple 
 |---
 | Key | Req'd | Type
 |-|:-:|-
-| `content:` | √ | string, object
+| `content:` | **x** | string, object
 | `expires:` | | timestamp 
 | `mime_type:` | | string 
 | `name:` | | string

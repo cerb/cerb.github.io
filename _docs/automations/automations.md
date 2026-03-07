@@ -220,7 +220,7 @@ The line `b@key,int: a` is setting the key `b:` to the value of the `a` key, and
 
 An annotated key may be followed by an indented block of text to set a multiple-line value:
 
-{% highlight cerb linenos mark_lines="4 5 6 7 8 9 10 11 12 13" %}
+{% highlight cerb %}
 {% raw %}
 start:
   set:
@@ -673,24 +673,24 @@ Automations are automatically **triggered** in response to events within Cerb.
 
 | Trigger | [**Inputs**](#inputs) | [**Await**](#continuations) | 
 |-|:-:|:-:|-
-| [**automation.function**](/docs/automations/triggers/automation.function/) | √ | | A reusable function with shared functionality called by other automations
-| [**automation.timer**](/docs/automations/triggers/automation.timer/) | √ | √ | A scheduled automation with [continuations](#continuations)
-| [**behavior.action**](/docs/automations/triggers/behavior.action/) | √ | | Execute an automation from a legacy bot behavior
-| [**data.query**](/docs/automations/triggers/data.query/) | √ | | Return results for custom [data queries](/docs/data-queries/)
-| [**interaction.worker**](/docs/automations/triggers/interaction.worker/) | √ | √ | Worker [interactions](/docs/interactions/) on [toolbars](/docs/toolbars/) and widgets
-| [**interaction.worker.explore**](/docs/automations/triggers/interaction.worker.explore/) | √ | √ | Worker [interactions](/docs/interactions/) that use custom logic to return the next record in explore mode
-| [**interaction.website**](/docs/automations/triggers/interaction.website/) | √ | √ | Website visitor [interactions](/docs/interactions/)
-| [**llm.tool**](/docs/automations/triggers/llm.tool/) | √ | | A reusable function that can be invoked by a large language model
-| [**map.clicked**](/docs/automations/triggers/map.clicked/) | √ | | Handlers for clicks on [map](/docs/maps/) regions and points
-| [**projectBoard.cardAction**](/docs/automations/triggers/projectBoard.cardAction/) | √ | | Actions that take place for new cards in a project board column
-| [**projectBoard.renderCard**](/docs/automations/triggers/projectBoard.renderCard/) | √ | | Dynamic card layouts on project boards
-| [**reminder.remind**](/docs/automations/triggers/reminder.remind/) | √ | | Actions that run for [reminder](/docs/reminders/) alerts 
-| [**resource.get**](/docs/automations/triggers/resource.get/) | √ | | Dynamic [resource](/docs/resources/) content
-| [**scripting.function**](/docs/automations/triggers/scripting.function/) | √ | | Run an [automation](/docs/automations/) from the [cerb_automation()](/docs/scripting/functions/#cerb_automation) function in scripting
-| [**ui.chart.data**](/docs/automations/triggers/ui.chart.data/) | √ | | Data sources for [Chart KATA widgets](/docs/dashboards/)
-| [**ui.sheet.data**](/docs/automations/triggers/ui.sheet.data/) | √ | | Data sources for [sheets](/docs/sheets/)
-| [**ui.widget**](/docs/automations/triggers/ui.widget/) | √ | | Custom output for [card](/docs/records/types/card_widget/), [profile](/docs/records/types/profile_widget/), or [workspace](/docs/records/types/workspace_widget/) widgets
-| [**webhook.respond**](/docs/automations/triggers/webhook.respond/) | √ | | Handlers for [webhook listeners](/docs/webhooks/)
+| [**automation.function**](/docs/automations/triggers/automation.function/) | **x** | | A reusable function with shared functionality called by other automations
+| [**automation.timer**](/docs/automations/triggers/automation.timer/) | **x** | * | A scheduled automation with [continuations](#continuations)
+| [**behavior.action**](/docs/automations/triggers/behavior.action/) | **x** | | Execute an automation from a legacy bot behavior
+| [**data.query**](/docs/automations/triggers/data.query/) | **x** | | Return results for custom [data queries](/docs/data-queries/)
+| [**interaction.worker**](/docs/automations/triggers/interaction.worker/) | **x** | * | Worker [interactions](/docs/interactions/) on [toolbars](/docs/toolbars/) and widgets
+| [**interaction.worker.explore**](/docs/automations/triggers/interaction.worker.explore/) | **x** | * | Worker [interactions](/docs/interactions/) that use custom logic to return the next record in explore mode
+| [**interaction.website**](/docs/automations/triggers/interaction.website/) | **x** | * | Website visitor [interactions](/docs/interactions/)
+| [**llm.tool**](/docs/automations/triggers/llm.tool/) | **x** | | A reusable function that can be invoked by a large language model
+| [**map.clicked**](/docs/automations/triggers/map.clicked/) | **x** | | Handlers for clicks on [map](/docs/maps/) regions and points
+| [**projectBoard.cardAction**](/docs/automations/triggers/projectBoard.cardAction/) | **x** | | Actions that take place for new cards in a project board column
+| [**projectBoard.renderCard**](/docs/automations/triggers/projectBoard.renderCard/) | **x** | | Dynamic card layouts on project boards
+| [**reminder.remind**](/docs/automations/triggers/reminder.remind/) | **x** | | Actions that run for [reminder](/docs/reminders/) alerts 
+| [**resource.get**](/docs/automations/triggers/resource.get/) | **x** | | Dynamic [resource](/docs/resources/) content
+| [**scripting.function**](/docs/automations/triggers/scripting.function/) | **x** | | Run an [automation](/docs/automations/) from the [cerb_automation()](/docs/scripting/functions/#cerb_automation) function in scripting
+| [**ui.chart.data**](/docs/automations/triggers/ui.chart.data/) | **x** | | Data sources for [Chart KATA widgets](/docs/dashboards/)
+| [**ui.sheet.data**](/docs/automations/triggers/ui.sheet.data/) | **x** | | Data sources for [sheets](/docs/sheets/)
+| [**ui.widget**](/docs/automations/triggers/ui.widget/) | **x** | | Custom output for [card](/docs/records/types/card_widget/), [profile](/docs/records/types/profile_widget/), or [workspace](/docs/records/types/workspace_widget/) widgets
+| [**webhook.respond**](/docs/automations/triggers/webhook.respond/) | **x** | | Handlers for [webhook listeners](/docs/webhooks/)
 
 # Events
 

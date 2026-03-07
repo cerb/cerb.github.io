@@ -63,8 +63,8 @@ output@text:
 
 | Key | Req'd | 
 |-|:-:|-
-| `key:` | √ | The [key path](/docs/automations/#dictionaries) of the value to append to, delimited with colons (`:`).
-| `value:` | √ | The value to append.
+| `key:` | **x** | The [key path](/docs/automations/#dictionaries) of the value to append to, delimited with colons (`:`).
+| `value:` | **x** | The value to append.
 
 ## output:
 

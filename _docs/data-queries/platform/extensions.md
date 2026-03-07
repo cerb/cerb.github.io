@@ -33,12 +33,12 @@ jumbotron:
 ### Inputs
 {: .no_toc}
 
-|Req'd|Key|Notes
-|:-:|-|-
-|**√**| `point:` | An [extension point](/docs/records/types/)
-| | `filter:` | An optional keyword used to filter the results
-| | `limit:` | The desired number of results per page
-| | `page:` | The desired starting page (zero-based)
+| Req'd |Key|Notes
+|:-----:|-|-
+| **x** | `point:` | An [extension point](/docs/records/types/)
+|       | `filter:` | An optional keyword used to filter the results
+|       | `limit:` | The desired number of results per page
+|       | `page:` | The desired starting page (zero-based)
 
 ### Response Formats
 {: .no_toc}
