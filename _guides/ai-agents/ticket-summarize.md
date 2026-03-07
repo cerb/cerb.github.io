@@ -28,7 +28,7 @@ This is also useful for summarizing closed tickets before creating [text embeddi
 <img src="{{ page.social_image_url }}" class="screenshot">
 </div>
 
-In this example we'll use Anthropic's Claude Haiku 3.5 model. You can use any language model from popular providers.
+In this example we'll use Anthropic's Claude Haiku 4.5 model. You can use any language model from popular providers.
 
 <div class="cerb-box note">
   <p>
@@ -127,9 +127,9 @@ records:
                 #aws_bedrock:
                 #  api_endpoint_url: https://bedrock-runtime.us-west-2.amazonaws.com
                 #  authentication: cerb:connected_account:{{config.aws_account_id}}
-                #  model: anthropic.claude-3-5-haiku-20241022-v1:0
+                #  model: us.anthropic.claude-haiku-4-5-20251001-v1:0
                 anthropic:
-                  model: claude-3-5-haiku-latest
+                  model: claude-haiku-4-5
                   authentication: cerb:connected_account:{{config.anthropic_account_id}}
               system_prompt@text:
                 You are a helpful AI assistant who summarizes long threaded email conversations into a single detailed paragraph.

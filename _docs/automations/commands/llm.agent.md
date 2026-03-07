@@ -35,7 +35,7 @@ llm.agent:
   inputs:
     llm:
       anthropic:
-        model: claude-3-5-haiku-latest
+        model: claude-haiku-4-5
         authentication: cerb:connected_account:anthropic
     system_prompt@raw:
       You are a helpful AI assistant for Cerb, a web-based platform for 
@@ -86,10 +86,10 @@ The LLM provider is one of:
 {% raw %}
 llm:
   anthropic:
-    model: claude-3-5-haiku-latest
+    model: claude-haiku-4-5
     authentication: cerb:connected_account:anthropic
   aws_bedrock:
-    model: anthropic.claude-3-5-haiku-20241022-v1:0
+    model: us.anthropic.claude-haiku-4-5-20251001-v1:0
     api_endpoint_url: https://bedrock-runtime.us-east-1.amazonaws.com
     authentication: cerb:connected_account:aws
   docker:

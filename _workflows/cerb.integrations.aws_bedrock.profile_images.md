@@ -99,7 +99,11 @@ Add the following block to the `Statement` list:
 {
   "Sid": "CerbBedrockModels",
   "Effect": "Allow",
-  "Action": "bedrock:InvokeModel",
+  "Action": [
+    "bedrock:InvokeModel",
+    "aws-marketplace:Subscribe"
+    "aws-marketplace:ViewSubscriptions"
+  ],
   "Resource": "*"
 }
 {% endhighlight %}

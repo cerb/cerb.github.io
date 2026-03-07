@@ -26,7 +26,7 @@ An [AI agent](/docs/automations/commands/llm.agent/) can browse an organization'
 <img src="{{ page.social_image_url }}" class="screenshot">
 </div>
 
-In this example we'll use Anthropic's Claude Haiku 3.5 model. You can use any model from any provider that supports tools.
+In this example we'll use Anthropic's Claude Haiku 4.5 model. You can use any model from any provider that supports tools.
 
 The agent is given two [llm.tool:](/docs/automations/triggers/llm.tool/) tools:
 
@@ -145,7 +145,7 @@ records:
             inputs:
               llm:
                 anthropic:
-                  model: claude-3-5-haiku-latest
+                  model: claude-haiku-4-5
                   authentication: cerb:connected_account:{{config.anthropic_account_id}}
               system_prompt@text:
                 You are a helpful AI assistant.

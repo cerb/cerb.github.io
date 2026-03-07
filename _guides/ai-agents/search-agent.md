@@ -22,7 +22,7 @@ jumbotron:
 
 An [AI agent](/docs/automations/commands/llm.agent/) can generate search queries for any record type from natural language.
 
-In this example we'll use Anthropic's Claude Haiku 3.5 model. You can use any language model from popular providers.
+In this example we'll use Anthropic's Claude Haiku 4.5 model. You can use any language model from popular providers.
 
 <p class="youtube-video-container"><iframe width="1040" height="585" src="https://www.youtube.com/embed/3quC6aj6FqA" title="" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
 
@@ -113,7 +113,7 @@ records:
               llm:
                 anthropic:
                   #model: claude-sonnet-4-20250514
-                  model: claude-3-5-haiku-20241022
+                  model: claude-haiku-4-5
                   authentication: cerb:connected_account:{{config.anthropic_account_id}}
                   max_tokens@int: 2048
               system_prompt@text:
