@@ -50,9 +50,33 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this custom field 
 |   | `params` | [object](/docs/records/fields/types/object/) | JSON-encoded key/value object 
 |   | `pos` | [number](/docs/records/fields/types/number/) | Display order; positive integer; `0` is first 
-| **x** | **`type`** | [text](/docs/records/fields/types/text/) | `C` (checkbox), `D` (picklist), `E` (date), `F` (file), `I` (files), `L` (record link), `M` (list), `N` (number), `O` (decimal), `S` (single line of text), `T` (multiple lines of text), `U` (url), `W` (worker), `X` (multiple checkboxes), `Y` (currency) 
-|   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
-| **x** | **`uri`** | [text](/docs/records/fields/types/text/) | The unique alias for this custom field 
+| **x** | **`type`** | [text](/docs/records/fields/types/text/) | See [Types](#types) below
+|   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified
+| **x** | **`uri`** | [text](/docs/records/fields/types/text/) | The unique alias for this custom field
+
+#### Types
+
+|---
+| Type | ID | Params
+|-|-|-
+| Checkbox | `C` |
+| Currency | `Y` | `currency_id` (record ID of a [currency](/docs/records/types/currency/) record)
+| Date | `E` |
+| Decimal | `O` | `decimal_at` (number of decimal places; e.g. `4` for 3.1415)
+| File | `F` |
+| Files | `I` |
+| Latitude/Longitude | `cerb.custom_field.geo.point` |
+| List | `M` | `context` ([record type](/docs/records/types/) alias)
+| Multiple Checkboxes | `X` | `options` (one per line, linefeed delimited)
+| Multiple Lines of Text | `T` | `format` (blank for plaintext, or `markdown`)
+| Number | `N` |
+| Picklist | `D` | `options` (one per line, linefeed delimited)
+| Record Link | `L` | `context` ([record type](/docs/records/types/) alias)
+| Record Links | `cerb.custom_field.record.links` | `context` ([record type](/docs/records/types/) alias)
+| Single Line of Text | `S` |
+| Slider | `cerb.custom_field.slider` | `value_min`, `value_max`
+| URL | `U` |
+| Worker | `W` | `send_notifications` (`0` disabled, `1` enabled)
 
 ### Dictionary Placeholders
 
