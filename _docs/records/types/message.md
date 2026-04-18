@@ -122,6 +122,7 @@ These [filters](/docs/search/#filters) are available in message [search queries]
 | `created:` | [date](/docs/search/#dates) | Created
 | `fieldset:` | [record](/docs/search/#deep-search) | [Fieldset](/docs/records/types/custom_fieldset/)
 | `header.cc:` | [text](/docs/search/#text) | Cc
+| `header.cerbMailbox:` | [text](/docs/search/#text) | Inbound mailbox name from the `X-Cerberus-Mailbox` header; useful for reporting by mailbox
 | `header.deliveredTo:` | [text](/docs/search/#text) | Delivered-To
 | `header.from:` | [text](/docs/search/#text) | From
 | `header.messageId:` | [text](/docs/search/#text) | Message-Id Header
