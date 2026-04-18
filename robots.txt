@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /search.html
+Disallow: /assets/
+
+Sitemap: https://cerb.ai/sitemap.xml
