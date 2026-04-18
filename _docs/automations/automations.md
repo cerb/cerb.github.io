@@ -248,6 +248,71 @@ There are 1,111,562,602 more people in China than the USA.
 
 This approach is particularly useful when you need to create a dictionary with keys that contain characters like spaces, which are not valid in KATA keys.
 
+# Commands
+
+### State transitions
+
+|-|-
+| [**await:**](/docs/automations/commands/await/) | Pauses the automation in the `await` state with output. Creates a [continuation](#continuations) for resuming.
+| [**error:**](/docs/automations/commands/error/) | Unsuccessfully terminates the automation in the `error` state with output.
+| [**return:**](/docs/automations/commands/return/) | Successfully terminates the automation in the `return` state with output.
+
+### Flow control
+
+|-|-
+| [**decision:**](/docs/automations/commands/decision/) | Conditionally select one of multiple potential outcomes.
+| [**outcome:**](/docs/automations/commands/outcome/) | A conditional sequence of commands.
+| [**repeat:**](/docs/automations/commands/repeat/) | Iterate an array and repeat a sequence of commands for each value.
+| [**while:**](/docs/automations/commands/while/) | Conditionally loop a sequence of commands.
+
+### Logging
+
+|-|-
+| [**log:**](/docs/automations/commands/log/) | Log a debug message.
+| [**log.warn:**](/docs/automations/commands/log/) | Log a warning message.
+| [**log.error:**](/docs/automations/commands/log/) | Log an error message.
+| [**log.alert:**](/docs/automations/commands/log/) | Log an alert message.
+
+### Actions
+
+|-|-
+| [**api.command:**](/docs/automations/commands/api.command/) | Execute an API command and return the response.
+| [**data.query:**](/docs/automations/commands/data.query/) | Execute a [data query](/docs/data-queries/) and return the response.
+| [**decrypt.pgp:**](/docs/automations/commands/decrypt.pgp/) | Decrypt a PGP encrypted message.
+| [**email.parse:**](/docs/automations/commands/email.parse/) | Parse a MIME-encoded email message into a [ticket](/docs/records/types/ticket/).
+| [**encrypt.pgp:**](/docs/automations/commands/encrypt.pgp/) | Encrypt a message for one or more PGP public keys.
+| [**file.read:**](/docs/automations/commands/file.read/) | Read chunks of bytes from an [attachment](/docs/records/types/attachment/) or [automation resource](/docs/records/types/automation_resource/).
+| [**file.write:**](/docs/automations/commands/file.write/) | Write bytes to an [automation resource](/docs/records/types/automation_resource/).
+| [**function:**](/docs/automations/commands/function/) | Execute an [automation.function](/docs/automations/triggers/automation.function/) automation and return output.
+| [**http.request:**](/docs/automations/commands/http.request/) | Send data to an HTTP endpoint and return the response.
+| [**kata.parse:**](/docs/automations/commands/kata.parse/) | Parse an arbitrary [KATA](/docs/kata/) document with placeholders.
+| [**llm.agent:**](/docs/automations/commands/llm.agent/) | Send a message to a conversational AI agent using a large language model with tools and transcripts.
+| [**llm.chat:**](/docs/automations/commands/llm.chat/) | Send a message to a conversational large language model.
+| [**llm.embed:**](/docs/automations/commands/llm.embed/) | Generate text vector embeddings using a large language model.
+| [**metric.increment:**](/docs/automations/commands/metric.increment/) | Add new samples to a [metric](/docs/metrics/).
+| [**queue.pop:**](/docs/automations/commands/queue.pop/) | Pop an item from a [queue](/docs/queues/).
+| [**queue.push:**](/docs/automations/commands/queue.push/) | Push an item into a [queue](/docs/queues/).
+| [**record.create:**](/docs/automations/commands/record.create/) | Create a [record](/docs/records/).
+| [**record.delete:**](/docs/automations/commands/record.delete/) | Delete a [record](/docs/records/).
+| [**record.get:**](/docs/automations/commands/record.get/) | Retrieve a [record](/docs/records/).
+| [**record.search:**](/docs/automations/commands/record.search/) | Search [records](/docs/records/).
+| [**record.update:**](/docs/automations/commands/record.update/) | Update a [record](/docs/records/).
+| [**record.upsert:**](/docs/automations/commands/record.upsert/) | Create or update a [record](/docs/records/).
+| [**set:**](/docs/automations/commands/set/) | Set one or more placeholders.
+| [**storage.get:**](/docs/automations/commands/storage.get/) | Retrieve arbitrary data from long-term storage.
+| [**storage.set:**](/docs/automations/commands/storage.set/) | Save arbitrary data to long-term storage.
+| [**storage.delete:**](/docs/automations/commands/storage.delete/) | Delete data from long-term storage.
+| [**var.expand:**](/docs/automations/commands/var.expand/) | Expand paths on keys.
+| [**var.push:**](/docs/automations/commands/var.push/) | Add an element to a list placeholder.
+| [**var.set:**](/docs/automations/commands/var.set/) | Set a placeholder using a complex key path.
+| [**var.unset:**](/docs/automations/commands/var.unset/) | Unset a placeholder.
+
+### Simulation
+
+|-|-
+| `simulate.success:` | Simulate command output and execute the `on_success:` event.
+| `simulate.error:` | Simulate command output and execute the `on_error:` event.
+
 # Execution
 
 An automation can store, retrieve, and manipulate data using keys in the [working memory dictionary](#dictionaries).
@@ -773,71 +838,6 @@ Triggers are invoked **directly** by Cerb functionality — widgets, AI agents, 
 | [**ui.sheet.data**](/docs/automations/triggers/ui.sheet.data/) | **x** | | Data sources for [sheets](/docs/sheets/)
 | [**ui.widget**](/docs/automations/triggers/ui.widget/) | **x** | | Custom output for [card](/docs/records/types/card_widget/), [profile](/docs/records/types/profile_widget/), or [workspace](/docs/records/types/workspace_widget/) widgets
 | [**webhook.respond**](/docs/automations/triggers/webhook.respond/) | **x** | | Handlers for [webhook listeners](/docs/webhooks/)
-
-# Commands
-
-### State transitions
-
-|-|-
-| [**await:**](/docs/automations/commands/await/) | Pauses the automation in the `await` state with output. Creates a [continuation](#continuations) for resuming.
-| [**error:**](/docs/automations/commands/error/) | Unsuccessfully terminates the automation in the `error` state with output.
-| [**return:**](/docs/automations/commands/return/) | Successfully terminates the automation in the `return` state with output.
-
-### Flow control
-
-|-|-
-| [**decision:**](/docs/automations/commands/decision/) | Conditionally select one of multiple potential outcomes.
-| [**outcome:**](/docs/automations/commands/outcome/) | A conditional sequence of commands.
-| [**repeat:**](/docs/automations/commands/repeat/) | Iterate an array and repeat a sequence of commands for each value.
-| [**while:**](/docs/automations/commands/while/) | Conditionally loop a sequence of commands.
-
-### Logging
-
-|-|-
-| [**log:**](/docs/automations/commands/log/) | Log a debug message.
-| [**log.warn:**](/docs/automations/commands/log/) | Log a warning message.
-| [**log.error:**](/docs/automations/commands/log/) | Log an error message.
-| [**log.alert:**](/docs/automations/commands/log/) | Log an alert message.
-
-### Actions
-
-|-|-
-| [**api.command:**](/docs/automations/commands/api.command/) | Execute an API command and return the response.
-| [**data.query:**](/docs/automations/commands/data.query/) | Execute a [data query](/docs/data-queries/) and return the response.
-| [**decrypt.pgp:**](/docs/automations/commands/decrypt.pgp/) | Decrypt a PGP encrypted message.
-| [**email.parse:**](/docs/automations/commands/email.parse/) | Parse a MIME-encoded email message into a [ticket](/docs/records/types/ticket/).
-| [**encrypt.pgp:**](/docs/automations/commands/encrypt.pgp/) | Encrypt a message for one or more PGP public keys.
-| [**file.read:**](/docs/automations/commands/file.read/) | Read chunks of bytes from an [attachment](/docs/records/types/attachment/) or [automation resource](/docs/records/types/automation_resource/).
-| [**file.write:**](/docs/automations/commands/file.write/) | Write bytes to an [automation resource](/docs/records/types/automation_resource/).
-| [**function:**](/docs/automations/commands/function/) | Execute an [automation.function](/docs/automations/triggers/automation.function/) automation and return output.
-| [**http.request:**](/docs/automations/commands/http.request/) | Send data to an HTTP endpoint and return the response.
-| [**kata.parse:**](/docs/automations/commands/kata.parse/) | Parse an arbitrary [KATA](/docs/kata/) document with placeholders.
-| [**llm.agent:**](/docs/automations/commands/llm.agent/) | Send a message to a conversational AI agent using a large language model with tools and transcripts.
-| [**llm.chat:**](/docs/automations/commands/llm.chat/) | Send a message to a conversational large language model.
-| [**llm.embed:**](/docs/automations/commands/llm.embed/) | Generate text vector embeddings using a large language model.
-| [**metric.increment:**](/docs/automations/commands/metric.increment/) | Add new samples to a [metric](/docs/metrics/).
-| [**queue.pop:**](/docs/automations/commands/queue.pop/) | Pop an item from a [queue](/docs/queues/).
-| [**queue.push:**](/docs/automations/commands/queue.push/) | Push an item into a [queue](/docs/queues/).
-| [**record.create:**](/docs/automations/commands/record.create/) | Create a [record](/docs/records/).
-| [**record.delete:**](/docs/automations/commands/record.delete/) | Delete a [record](/docs/records/).
-| [**record.get:**](/docs/automations/commands/record.get/) | Retrieve a [record](/docs/records/).
-| [**record.search:**](/docs/automations/commands/record.search/) | Search [records](/docs/records/).
-| [**record.update:**](/docs/automations/commands/record.update/) | Update a [record](/docs/records/).
-| [**record.upsert:**](/docs/automations/commands/record.upsert/) | Create or update a [record](/docs/records/).
-| [**set:**](/docs/automations/commands/set/) | Set one or more placeholders.
-| [**storage.get:**](/docs/automations/commands/storage.get/) | Retrieve arbitrary data from long-term storage.
-| [**storage.set:**](/docs/automations/commands/storage.set/) | Save arbitrary data to long-term storage.
-| [**storage.delete:**](/docs/automations/commands/storage.delete/) | Delete data from long-term storage.
-| [**var.expand:**](/docs/automations/commands/var.expand/) | Expand paths on keys.
-| [**var.push:**](/docs/automations/commands/var.push/) | Add an element to a list placeholder.
-| [**var.set:**](/docs/automations/commands/var.set/) | Set a placeholder using a complex key path.
-| [**var.unset:**](/docs/automations/commands/var.unset/) | Unset a placeholder.
-
-### Simulation
-
-|-|-
-| `simulate.success:` | Simulate command output and execute the `on_success:` event.
-| `simulate.error:` | Simulate command output and execute the `on_error:` event.
 
 # Editor
 
