@@ -241,6 +241,26 @@ tools:
 {% endraw %}
 {% endhighlight %}
 
+Individual tools can be conditionally disabled using the `disable@bool:` key. When `yes`, the tool is omitted from the model's available tool list for that invocation. This enables per-worker tool permissions and dynamic tool selection based on context.
+
+{% highlight cerb %}
+{% raw %}
+tools:
+  automation/admin_tool:
+    uri: cerb:automation:example.llm.tool.admin
+    disable@bool: {{not worker_is_superuser}}
+  automation/docs_search:
+    uri: cerb:automation:example.llm.tool.docs.search
+  tool/restricted_action:
+    disable@bool: {{worker_role != 'manager'}}
+    description: Perform a restricted action.
+    parameters:
+      string/reason:
+        description: The reason for the action.
+        required@bool: yes
+{% endraw %}
+{% endhighlight %}
+
 Implement your tool logic in the `on_tool:` event.
 
 The current tool's details are stored in the `__tool` dictionary.
