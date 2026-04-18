@@ -16,6 +16,7 @@ encoding: UTF-8
 exclude:
   - .idea
   - .github
+  - CLAUDE.md
   - Dockerfile
   - docker-compose.yml
   - Gemfile
