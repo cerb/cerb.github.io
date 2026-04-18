@@ -667,54 +667,9 @@ We can change the inputs to exceed the granted permissions:
 
 The above test object now returns blank, which is interpreted as `no` and ignored. The policy returns the default `deny: yes`.
 
-# Triggers
-
-Automations are automatically **triggered** in response to events within Cerb.
-
-| Trigger | [**Inputs**](#inputs) | [**Await**](#continuations) | 
-|-|:-:|:-:|-
-| [**automation.function**](/docs/automations/triggers/automation.function/) | **x** | | A reusable function with shared functionality called by other automations
-| [**automation.timer**](/docs/automations/triggers/automation.timer/) | **x** | * | A scheduled automation with [continuations](#continuations)
-| [**behavior.action**](/docs/automations/triggers/behavior.action/) | **x** | | Execute an automation from a legacy bot behavior
-| [**data.query**](/docs/automations/triggers/data.query/) | **x** | | Return results for custom [data queries](/docs/data-queries/)
-| [**interaction.worker**](/docs/automations/triggers/interaction.worker/) | **x** | * | Worker [interactions](/docs/interactions/) on [toolbars](/docs/toolbars/) and widgets
-| [**interaction.worker.explore**](/docs/automations/triggers/interaction.worker.explore/) | **x** | * | Worker [interactions](/docs/interactions/) that use custom logic to return the next record in explore mode
-| [**interaction.website**](/docs/automations/triggers/interaction.website/) | **x** | * | Website visitor [interactions](/docs/interactions/)
-| [**llm.tool**](/docs/automations/triggers/llm.tool/) | **x** | | A reusable function that can be invoked by a large language model
-| [**map.clicked**](/docs/automations/triggers/map.clicked/) | **x** | | Handlers for clicks on [map](/docs/maps/) regions and points
-| [**projectBoard.cardAction**](/docs/automations/triggers/projectBoard.cardAction/) | **x** | | Actions that take place for new cards in a project board column
-| [**projectBoard.renderCard**](/docs/automations/triggers/projectBoard.renderCard/) | **x** | | Dynamic card layouts on project boards
-| [**reminder.remind**](/docs/automations/triggers/reminder.remind/) | **x** | | Actions that run for [reminder](/docs/reminders/) alerts 
-| [**resource.get**](/docs/automations/triggers/resource.get/) | **x** | | Dynamic [resource](/docs/resources/) content
-| [**scripting.function**](/docs/automations/triggers/scripting.function/) | **x** | | Run an [automation](/docs/automations/) from the [cerb_automation()](/docs/scripting/functions/#cerb_automation) function in scripting
-| [**ui.chart.data**](/docs/automations/triggers/ui.chart.data/) | **x** | | Data sources for [Chart KATA widgets](/docs/dashboards/)
-| [**ui.sheet.data**](/docs/automations/triggers/ui.sheet.data/) | **x** | | Data sources for [sheets](/docs/sheets/)
-| [**ui.widget**](/docs/automations/triggers/ui.widget/) | **x** | | Custom output for [card](/docs/records/types/card_widget/), [profile](/docs/records/types/profile_widget/), or [workspace](/docs/records/types/workspace_widget/) widgets
-| [**webhook.respond**](/docs/automations/triggers/webhook.respond/) | **x** | | Handlers for [webhook listeners](/docs/webhooks/)
-
 # Events
 
-In functionality that triggers automations (e.g. widgets), event handlers are defined in a [KATA](/docs/kata/) dialect.
-
-For events that expect a single handler (e.g. `interaction.worker`), the first matching (non-disabled) automation is executed and its end state is returned. This can be used to conditionally respond based on the event/caller.
-
-For events that run all handlers (e.g. `projectBoard.cardAction`), all non-disabled automations are executed in order, and their end states are returned.
-
-Global automation events can be edited from **Search >> Automation Events**. This allows event handler KATA to be configured for global events that don't otherwise have a parent record (e.g. mail filtering).
-
-{% highlight cerb %}
-{% raw %}
-automation/onlyTasks:
-  uri: cerb:automation:example.cards.task
-  disabled@bool:
-    {{card_type != 'task' ? 'yes'}}
-
-automation/everythingElse:
-  uri: cerb:automation:example.cards.generic
-{% endraw %}
-{% endhighlight %}
-
-There can now be multiple `enabled:` or `disabled:` rules. The first rule to return `true` is used. This allows `deny-allow` and `allow-deny` strategies. By default, all handlers are enabled.
+Events are **broadcast** by Cerb when something happens — a message is received, a record changes, a worker logs in. Unlike [triggers](#triggers), events are not aimed at a specific automation. Instead, they use **event listeners** to associate one or more automations with an event.
 
 | Event |
 |-|-
@@ -734,6 +689,90 @@ There can now be multiple `enabled:` or `disabled:` rules. The first rule to ret
 | [**reminder.remind**](/docs/automations/events/reminder.remind/) | Send notifications about a reminder
 | [**worker.authenticate.failed**](/docs/automations/events/worker.authenticate.failed/) | After a [worker](/docs/workers/) failed to log in (e.g. invalid password)
 | [**worker.authenticated**](/docs/automations/events/worker.authenticated/) | After a [worker](/docs/workers/) logged in successfully
+
+## Event Listeners
+
+An **event listener** is a record that binds an automation to a specific event. Listeners are managed at **Search >> Automation Event Listeners**.
+
+Each listener has an `event_kata` field that defines the binding using [KATA](/docs/kata/):
+
+{% highlight cerb %}
+{% raw %}
+automation/autoreply:
+  uri: cerb:automation:example.mail.received.autoreply
+  disabled@bool:
+    {{not is_new_ticket}}
+{% endraw %}
+{% endhighlight %}
+
+Each `automation/name:` entry specifies:
+
+| Key | Notes |
+|-|-|
+| `uri:` | The automation to run (e.g. `cerb:automation:example.name`) |
+| `disabled@bool:` | An optional condition — when `true`, this listener is skipped |
+| `inputs:` | Optional key/value pairs passed to the automation's `inputs:` |
+
+Multiple automations can be bound within a single listener's `event_kata`:
+
+{% highlight cerb %}
+{% raw %}
+automation/onlyTasks:
+  uri: cerb:automation:example.cards.task
+  disabled@bool:
+    {{card_type != 'task' ? 'yes'}}
+
+automation/everythingElse:
+  uri: cerb:automation:example.cards.generic
+{% endraw %}
+{% endhighlight %}
+
+There can be multiple `disabled:` rules per entry. The first rule to return `true` is used, enabling `allow-deny` or `deny-allow` strategies. By default, all listeners are enabled.
+
+For events that expect a **single** handler (e.g. `mail.route`), the first matching (non-disabled) automation — ordered by [priority](#priority) — is executed and its result returned.
+
+For events that run **all** handlers (e.g. `mail.received`), all non-disabled automations are executed in [priority](#priority) order and their results collected.
+
+Global automation events (those without a parent record, such as mail filtering) can be configured from **Search >> Automation Events**.
+
+### Priority
+{: #priority }
+
+Each event listener has a numeric **priority** from `0` to `255`. Lower numbers run first. When two listeners share the same priority, they run in the order they were created.
+
+When both automations and legacy [bot](/docs/records/types/bot/) behaviors are active on the same event, priority also determines their relative ordering:
+
+| Priority | Execution order |
+|-|-|
+| 0–127 | Automation runs **before** legacy behaviors |
+| 128–255 | Automation runs **after** legacy behaviors |
+
+This ordering was introduced in [11.1.8](/releases/11.1.8/). Prior to that version, automations always ran before legacy behaviors regardless of priority.
+
+# Triggers
+
+Triggers are invoked **directly** by Cerb functionality — widgets, AI agents, timers, and [function:](/docs/automations/commands/function/) calls from other automations. A trigger invokes a specific automation by name and passes structured inputs. Triggers do **not** use listeners.
+
+| Trigger | [**Inputs**](#inputs) | [**Await**](#continuations) |
+|-|:-:|:-:|-
+| [**automation.function**](/docs/automations/triggers/automation.function/) | **x** | | A reusable function with shared functionality called by other automations
+| [**automation.timer**](/docs/automations/triggers/automation.timer/) | **x** | * | A scheduled automation with [continuations](#continuations)
+| [**behavior.action**](/docs/automations/triggers/behavior.action/) | **x** | | Execute an automation from a legacy bot behavior
+| [**data.query**](/docs/automations/triggers/data.query/) | **x** | | Return results for custom [data queries](/docs/data-queries/)
+| [**interaction.worker**](/docs/automations/triggers/interaction.worker/) | **x** | * | Worker [interactions](/docs/interactions/) on [toolbars](/docs/toolbars/) and widgets
+| [**interaction.worker.explore**](/docs/automations/triggers/interaction.worker.explore/) | **x** | * | Worker [interactions](/docs/interactions/) that use custom logic to return the next record in explore mode
+| [**interaction.website**](/docs/automations/triggers/interaction.website/) | **x** | * | Website visitor [interactions](/docs/interactions/)
+| [**llm.tool**](/docs/automations/triggers/llm.tool/) | **x** | | A reusable function that can be invoked by a large language model
+| [**map.clicked**](/docs/automations/triggers/map.clicked/) | **x** | | Handlers for clicks on [map](/docs/maps/) regions and points
+| [**projectBoard.cardAction**](/docs/automations/triggers/projectBoard.cardAction/) | **x** | | Actions that take place for new cards in a project board column
+| [**projectBoard.renderCard**](/docs/automations/triggers/projectBoard.renderCard/) | **x** | | Dynamic card layouts on project boards
+| [**reminder.remind**](/docs/automations/triggers/reminder.remind/) | **x** | | Actions that run for [reminder](/docs/reminders/) alerts
+| [**resource.get**](/docs/automations/triggers/resource.get/) | **x** | | Dynamic [resource](/docs/resources/) content
+| [**scripting.function**](/docs/automations/triggers/scripting.function/) | **x** | | Run an [automation](/docs/automations/) from the [cerb_automation()](/docs/scripting/functions/#cerb_automation) function in scripting
+| [**ui.chart.data**](/docs/automations/triggers/ui.chart.data/) | **x** | | Data sources for [Chart KATA widgets](/docs/dashboards/)
+| [**ui.sheet.data**](/docs/automations/triggers/ui.sheet.data/) | **x** | | Data sources for [sheets](/docs/sheets/)
+| [**ui.widget**](/docs/automations/triggers/ui.widget/) | **x** | | Custom output for [card](/docs/records/types/card_widget/), [profile](/docs/records/types/profile_widget/), or [workspace](/docs/records/types/workspace_widget/) widgets
+| [**webhook.respond**](/docs/automations/triggers/webhook.respond/) | **x** | | Handlers for [webhook listeners](/docs/webhooks/)
 
 # Commands
 

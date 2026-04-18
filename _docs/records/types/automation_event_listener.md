@@ -28,6 +28,10 @@ jumbotron:
     url: /docs/records/types/
 ---
 
+**Automation event listeners** bind [automations](/docs/automations/) to [events](/docs/automations/#events). When Cerb broadcasts an event (e.g. a message is received, a record changes), all non-disabled listeners for that event run their bound automations in [priority](/docs/automations/#priority) order.
+
+See [Events](/docs/automations/#events) for a conceptual overview including the `event_kata` format and priority rules.
+
 |---
 |-|-
 | **Name (singular):** | Automation Event Listener
