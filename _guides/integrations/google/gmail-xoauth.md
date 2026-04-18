@@ -1,21 +1,20 @@
 ---
-title: Authenticate a Gmail mailbox using IMAP and XOAUTH2
+title: Authenticate a Gmail mailbox using IMAP or POP3 with XOAUTH2
 excerpt: This page provides a detailed guide on how to authenticate a Gmail mailbox
-  using IMAP and XOAUTH2 in Cerb.
+  using IMAP or POP3 with XOAUTH2 in Cerb.
 summary: This page provides a detailed guide on how to authenticate a Gmail mailbox
-  using IMAP and XOAUTH2 in Cerb. It explains the necessity of using OAuth2 access
-  tokens for Gmail authentication due to Google's retirement of passwords for POP3
-  and IMAP connections. The guide includes steps for configuring Google APIs and setting
-  up a Gmail mailbox in Cerb, detailing the necessary settings such as protocol, host,
-  and port. It also covers testing the mailbox connection to ensure successful authentication
-  and proper functioning, including running the scheduler to verify the mailbox setup
-  and process new messages.
+  using IMAP or POP3 with XOAUTH2 in Cerb. It explains the necessity of using OAuth2
+  access tokens for Gmail authentication due to Google's retirement of passwords for
+  POP3 and IMAP connections. The guide includes steps for configuring Google APIs and
+  setting up a Gmail mailbox in Cerb for either protocol, detailing the necessary settings
+  such as protocol, host, and port. It also covers testing the mailbox connection to
+  ensure successful authentication and proper functioning.
 permalink: /guides/integrations/google/gmail-xoauth/
 social_image_url: /assets/images/guides/google/cerb-and-google.png
 layout: integration
 topic: Integrations
 jumbotron:
-  title: Authenticate a Gmail mailbox using IMAP and XOAUTH2
+  title: Authenticate a Gmail mailbox using IMAP or POP3 with XOAUTH2
   tagline: ""
   breadcrumbs:
   - label: Resources &raquo;
@@ -37,9 +36,9 @@ Google has retired passwords when connecting to Gmail using POP3 and IMAP (but n
 
 To authenticate you need to use [OAuth2 access tokens](https://developers.google.com/gmail/imap/imap-smtp) instead.
 
-Cerb supports XOAUTH2 authentication for IMAP mailboxes since version [9.6](/releases/9.6/).
+Cerb supports XOAUTH2 authentication for IMAP mailboxes since version [9.6](/releases/9.6/) and for POP3 mailboxes since version [11.1.1](/releases/11.1.1/).
 
-This guide explains how to configure the new feature.
+This guide explains how to configure either protocol.
 
 # Configure Google APIs
 
@@ -51,6 +50,8 @@ Once your connected account is created you can continue to configuring the mailb
 
 In Cerb, navigate to **Search >> Email Mailboxes**.
 
+## IMAP
+
 Create or edit a mailbox with the following details:
 
 |-|-
@@ -61,6 +62,23 @@ Create or edit a mailbox with the following details:
 | Password: | (blank)
 | XOAuth2: | (your Gmail connected account from above)
 | Port: | 993
+
+Click the **Test** button at the bottom of the popup.
+
+If connected successfully, click the **Save Changes** button.
+
+## POP3
+
+Create or edit a mailbox with the following details:
+
+|-|-
+| Name: | Gmail
+| Protocol: | POP3 (TLS/SSL)
+| Host: | pop.gmail.com
+| User: | (your Gmail address)
+| Password: | (blank)
+| XOAuth2: | (your Gmail connected account from above)
+| Port: | 995
 
 Click the **Test** button at the bottom of the popup.
 
