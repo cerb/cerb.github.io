@@ -120,6 +120,14 @@ Prefer **workflows** over packages for distributing Cerb functionality. Workflow
 
 Workflow documentation lives in `_workflows/`. Use a workflow name prefix based on a domain you own (e.g., `com.example.feature`).
 
+### Liquid Expressions in Tables
+
+To include Liquid template expressions (e.g. `{{record.aliases|join(', ')}}`) inside markdown table cells without triggering a Liquid parse error, wrap them in `{% raw %}...{% endraw %}`:
+
+```markdown
+| `aliases` | array | Use {% raw %}`{{record.aliases|join(', ')}}`{% endraw %} in scripting |
+```
+
 ### Code Blocks
 
 Always use Jekyll's `{% raw %}{% highlight LANG %}{% endraw %}` syntax instead of markdown code fences:
