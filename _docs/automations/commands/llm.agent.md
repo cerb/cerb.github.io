@@ -122,6 +122,26 @@ The `authentication:` key is a connected account in URI format (e.g. `cerb:conne
 
 The optional `api_endpoint_url:` key overrides the default endpoint. For instance, this can be used with the `openai:` provider for any compatible API (e.g. SambaNova), or a locally hosted Ollama server.
 
+#### Gemini reasoning models
+
+For Gemini reasoning models, two optional parameters control thinking behavior:
+
+| Key | Values | Description
+|-|-|-
+| `thinking_level:` | `minimal`, `low`, `medium`, `high` | Sets the reasoning budget; higher levels use more tokens and increase latency
+| `thinking_include@bool:` | `yes` / `no` | When `yes`, includes the model's thinking content in the response (useful for debugging)
+
+{% highlight cerb %}
+{% raw %}
+llm:
+  gemini:
+    model: gemini-2.5-pro
+    authentication: cerb:connected_account:gemini
+    thinking_level: medium
+    thinking_include@bool: no
+{% endraw %}
+{% endhighlight %}
+
 ### system_prompt:
 
 {% highlight cerb %}
