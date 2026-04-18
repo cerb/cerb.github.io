@@ -45,6 +45,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
+|   | `aliases` | [text](/docs/records/fields/types/text/) | Alias names as a CRLF-delimited list
 |   | `city` | [text](/docs/records/fields/types/text/) | City 
 |   | `country` | [text](/docs/records/fields/types/text/) | Country 
 |   | `created` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was created 
@@ -69,6 +70,7 @@ These [placeholders](/docs/scripting/variables/#placeholders) are available in [
 | `_context` | text | [Record type](/docs/records/types/) extension ID
 | `_label` | text | Label
 | `_type` | text | [Record type](/docs/records/types/) alias
+| `aliases` | array | Alias names (e.g. `["Acme Corp", "Acme Inc"]`); use {% raw %}`{{record.aliases|join(', ')}}`{% endraw %} in scripting
 | `city` | text | City
 | `country` | text | Country
 | `created` | date | Created
@@ -103,7 +105,7 @@ These [filters](/docs/search/#filters) are available in organization [search que
 |---
 | Field | Type | Description
 |-|-|-
-| `alias:` | virtual | Aliases
+| `alias:` | [text](/docs/search/#text) | Aliases (e.g. `alias:Acme` or `alias:["Acme Corp","Acme Inc"]`)
 | `city:` | [text](/docs/search/#text) | City
 | `comments:` | [fulltext](/docs/search/#fulltext) | Comment Content
 | `contacts:` | [record](/docs/search/#deep-search) | [Contacts](/docs/records/types/contact/)
