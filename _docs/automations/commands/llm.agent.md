@@ -142,6 +142,24 @@ llm:
 {% endraw %}
 {% endhighlight %}
 
+#### OpenAI reasoning models
+
+For OpenAI reasoning models (e.g. `o3`, `o4-mini`), the optional `reasoning_effort:` parameter controls how much compute is spent on reasoning:
+
+| Key | Values | Description
+|-|-|-
+| `reasoning_effort:` | `none`, `low`, `medium`, `high`, `xhigh` | Sets the reasoning effort; higher levels improve quality at the cost of more tokens and latency
+
+{% highlight cerb %}
+{% raw %}
+llm:
+  openai:
+    model: o4-mini
+    authentication: cerb:connected_account:openai
+    reasoning_effort: medium
+{% endraw %}
+{% endhighlight %}
+
 ### system_prompt:
 
 {% highlight cerb %}
