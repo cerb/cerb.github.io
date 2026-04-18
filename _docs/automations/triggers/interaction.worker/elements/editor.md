@@ -76,6 +76,8 @@ The language for syntax highlighting and autocompletion.
 |`text`| Plain text
 |`yaml`| YAML (YAML Ain't Markup Language)
 
+When `syntax: markdown` is set, workers can paste images from the clipboard directly into the editor. The image is automatically uploaded as an [automation resource](/docs/records/types/automation_resource/) and an internal URL is inserted at the cursor. The URL can be post-processed in automation scripting to retrieve the underlying resource by token.
+
 ### default:
 
 The default editor text.
