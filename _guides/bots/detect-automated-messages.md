@@ -46,7 +46,7 @@ This example should catch most automatic responses, but you can continue to expa
 
 <div class="cerb-box note">
 	<p>
-		In Cerb 8.0+ you can <a href="/packages/auto-reply-bot/">import the Auto-Reply Bot package</a> instead.
+		In Cerb 11.0+ you can use the built-in <a href="/workflows/cerb.auto_responder/">Auto Responder workflow</a> instead.
 	</p>
 </div>
 

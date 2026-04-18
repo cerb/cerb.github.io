@@ -17,6 +17,7 @@ workflow:
 permalink: /workflows/cerb.auto_responder/
 redirect_from:
 - /packages/autoreply-bot/
+- /packages/auto-reply-bot/
 - /guides/bots/send-automatic-replies/
 jumbotron:
   title: Auto Responder
