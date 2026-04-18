@@ -22,6 +22,11 @@ def clean_markdown(string)
     return string.gsub(/\[([^\]]+)\]\(([^)]+)\)/, '\1')
 end
 
+def preprocess_html(html)
+    inline_tags = 'span|a|strong|em|b|i|code|small|sub|sup|label|button|mark'
+    html.gsub(/(<\/(?:#{inline_tags})>)\s*(<(?:#{inline_tags})[\s>])/, '\1 \2')
+end
+
 def create_search_row(site, id, title, relative_url, summary, tags, content)
     base_url = "https://cerb.ai"
     absolute_url = "#{base_url}#{relative_url}"
@@ -136,7 +141,7 @@ def write_synthetic_sections(site, page, file)
     page_tags = get_page_tags(base_permalink)
     
     # Convert the processed HTML content back to clean Markdown once
-    page_markdown = clean_markdown(ReverseMarkdown.convert(page.content))
+    page_markdown = clean_markdown(ReverseMarkdown.convert(preprocess_html(page.content)))
     
     page.data['search_index']['sections'].each do |section|
         next unless section['heading'] && section['title']
@@ -214,7 +219,7 @@ def write_pages_to_json(site, pages, file)
 
         page_tags = get_page_tags(permalink)
         page_summary = page.data['summary'] || ''
-        page_content = clean_markdown(ReverseMarkdown.convert(page.content))
+        page_content = clean_markdown(ReverseMarkdown.convert(preprocess_html(page.content)))
 
         row = create_search_row(site, permalink, page.data['title'], page.url, page_summary, page_tags, page_content)
         file.write(JSON.generate(row) + "\n")
