@@ -77,6 +77,7 @@ kramdown:
   smart_quotes: apos,apos,quot,quot
 plugins:
   - jekyll-redirect-from
+  - jekyll-sitemap
   - jekyll-tabs
 
 # Defaults
