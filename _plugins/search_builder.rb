@@ -227,26 +227,19 @@ def write_pages_to_json(site, pages, file)
 end
 
 Jekyll::Hooks.register :site, :post_write do |site|
-    # Only create the search index on a full build
-    if(!defined?@render_count)
-        @render_count = 1
-    end
+    next unless Jekyll.env == 'production'
 
-    if(@render_count == 1)
-        puts "Wrote the JSONL content index."
-        @render_count = @render_count - 1
+    puts "Wrote the JSONL content index."
+    path = File.expand_path('_site/search.jsonl', site.source)
 
-        path = File.expand_path('_site/search.jsonl', site.source)
-
-        File.open(path, 'w') do |file|
-            write_pages_to_json site, site.pages, file
-            write_pages_to_json site, site.collections['docs'].docs, file
-            write_pages_to_json site, site.collections['solutions'].docs, file
-            write_pages_to_json site, site.collections['workflows'].docs, file
-            write_pages_to_json site, site.collections['guides'].docs, file
-            write_pages_to_json site, site.collections['releases'].docs, file
-            write_pages_to_json site, site.collections['tips'].docs, file
-            write_pages_to_json site, site.collections['posts'].docs, file
-        end
+    File.open(path, 'w') do |file|
+        write_pages_to_json site, site.pages, file
+        write_pages_to_json site, site.collections['docs'].docs, file
+        write_pages_to_json site, site.collections['solutions'].docs, file
+        write_pages_to_json site, site.collections['workflows'].docs, file
+        write_pages_to_json site, site.collections['guides'].docs, file
+        write_pages_to_json site, site.collections['releases'].docs, file
+        write_pages_to_json site, site.collections['tips'].docs, file
+        write_pages_to_json site, site.collections['posts'].docs, file
     end
 end
