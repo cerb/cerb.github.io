@@ -37,3 +37,14 @@ The automation event [dictionary](/docs/automations/#dictionaries) starts with t
 # Outputs
 
 (none)
+
+# Legacy behaviors
+
+When both automations and legacy [bot](/docs/records/types/bot/) behaviors are active on the `record.viewed` event, they run in this order based on automation [priority](/docs/automations/#priority):
+
+| Priority | Execution order |
+|-|-|
+| 0–127 | Automation runs **before** legacy behaviors |
+| 128–255 | Automation runs **after** legacy behaviors |
+
+This ordering was introduced in [11.1.8](/releases/11.1.8/). Prior to that version, automations always ran before legacy behaviors regardless of priority.
