@@ -66,6 +66,9 @@ collections:
 markdown: kramdown
 highlighter: rouge
 
+sass:
+  sourcemap: never
+
 kramdown:
   auto_ids: true
   parse_block_html: false
