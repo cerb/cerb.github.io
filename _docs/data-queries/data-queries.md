@@ -72,6 +72,7 @@ format:dictionaries
 | [platform.extensions](/docs/data-queries/platform/extensions/) | Return a filterable and pageable list of plugin extensions for a given point
 | [platform.extension.points](/docs/data-queries/platform/points/) | Return a filterable and pageable list of platform extension points
 | [record.fields](/docs/data-queries/record/fields/) | Return a filterable and pageable list of fields from a record type
+| [record.filters](/docs/data-queries/record/filters/) | Return the available search filters for a record type
 | [record.types](/docs/data-queries/record/types/) | Return a filterable and pageable list of record types
 | [ui.icons](/docs/data-queries/ui/icons/) | Return a filterable and pageable list of icons
 | [usage.behaviors](/docs/data-queries/usage/bot-behaviors/) | Return historical usage data for bot behaviors (e.g. uses, avg. runtime, and total runtime over time)
