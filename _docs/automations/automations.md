@@ -310,8 +310,8 @@ This approach is particularly useful when you need to create a dictionary with k
 ### Simulation
 
 |-|-
-| `simulate.success:` | Simulate command output and execute the `on_success:` event.
-| `simulate.error:` | Simulate command output and execute the `on_error:` event.
+| [**simulate.success:**](/docs/automations/commands/simulate.success/) | Simulate command output and execute the `on_success:` event.
+| [**simulate.error:**](/docs/automations/commands/simulate.error/) | Simulate command output and execute the `on_error:` event.
 
 # Execution
 
@@ -436,8 +436,8 @@ Each [command](#commands) can provide an `on_simulate:` event that is used durin
 These two special commands are available during simulation:
 
 |-|-
-| **`simulate.success:`** | Simulate command output and execute the `on_success:` event.
-| **`simulate.error:`** | Simulate command output and execute the `on_error:` event.
+| [**simulate.success:**](/docs/automations/commands/simulate.success/) | Simulate command output and execute the `on_success:` event.
+| [**simulate.error:**](/docs/automations/commands/simulate.error/) | Simulate command output and execute the `on_error:` event.
 
 The following example simulates an `http.request:` command and provides mock output:
 
