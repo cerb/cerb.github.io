@@ -2,14 +2,28 @@
 
 Cerb project website
 
-# To develop locally:
+## Local development
 
 ```bash
-git clone -b 11.0 https://github.com/cerb/cerb.github.io.git
+git clone -b 11.1 https://github.com/cerb/cerb.github.io.git
 
-# ... or download + unzip: https://codeload.github.com/cerb/cerb.github.io/zip/refs/heads/11.0
+# ... or download + unzip: https://codeload.github.com/cerb/cerb.github.io/zip/refs/heads/11.1
 
 cd cerb.github.io
 
 docker compose up
 ```
+
+The site will be available at http://127.0.0.1:4000. Changes trigger automatic incremental rebuilds.
+
+## Production build
+
+```bash
+docker compose --profile build run --rm jekyll-build
+```
+
+Then sync `_site/` to S3.
+
+## Architecture and conventions
+
+See [CLAUDE.md](CLAUDE.md) for repo layout, collections, content conventions, and templating notes.
