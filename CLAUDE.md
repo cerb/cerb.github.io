@@ -128,6 +128,14 @@ To include Liquid template expressions (e.g. `{{record.aliases|join(', ')}}`) in
 | `aliases` | array | Use {% raw %}`{{record.aliases|join(', ')}}`{% endraw %} in scripting |
 ```
 
+### Verifying Internal Links
+
+Never guess internal link paths. Before adding a link to `/docs/*`, verify it exists in the built site:
+
+```bash
+find _site -path "*<slug>*/index.html"
+```
+
 ### Code Blocks
 
 Always use Jekyll's `{% raw %}{% highlight LANG %}{% endraw %}` syntax instead of markdown code fences:
