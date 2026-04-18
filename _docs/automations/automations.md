@@ -468,108 +468,6 @@ body: { "output": "Good job!" }
 {% endraw %}
 {% endhighlight %}
 
-### Continuations
-
-When an automation exits in the `await:` state, a snapshot of its current dictionary is saved and assigned a long random identifier. This snapshot is called a **continuation**.
-
-The continuation identifier is used to resume the automation from the same point at a future time with additional input.
-
-For instance, here's a basic [interaction](/docs/automations/triggers/interaction.worker/) automation that pauses for user input:
-
-{% highlight cerb %}
-{% raw %}
-start:
-  await:
-    form:
-      elements:
-        text/prompt_name:
-          label: What is your name?
-          required@bool: yes
-  return:
-    output@text:
-      Hello, {{prompt_name}}!
-{% endraw %}
-{% endhighlight %}
-
-At the `await:` command, the automation will send a web form to the user, create a continuation, and wait for any length of time to resume execution.
-
-An automation that supports continuations can exit in the `await:` state any number of times before concluding.
-
-{% highlight cerb %}
-{% raw %}
-start:
-  await/intro:
-    form:
-      elements:
-        text/prompt_name:
-          label: Name:
-          required@bool: yes
-        text/prompt_email:
-          label: Email:
-          required@bool: yes
-          type: email
-          placeholder: you@example.com
-  
-  # Confirmation code is generated, saved, and emailed
-  
-  await/confirm:
-    form:
-      elements:
-        say/hello:
-          content@text:
-            Hello, {{prompt_name}}!
-            
-            We just sent a confirmation code to {{prompt_email}}
-        text/prompt_code:
-          label: Confirmation Code:
-          required@bool: yes
-          type: uri
-          max_length: 8
-  
-  # Confirmation code is verified
-  
-  return:
-    output@text:
-      Thanks, {{prompt_name}}! 
-      Your email address ({{prompt_email}}) been subscribed to our newsletter.
- {% endraw %}
-{% endhighlight %}
-
-{% comment %}
-* They are the successor to Cerb's "bot behaviors" functionality after incorporating more than 10 years
-* successor to bot behaviors
-* interactive step debugger
-* not grouped into bots
-* don't need to exist in database as records before use (ad-hoc/reusable)
-* abstract syntax tree (AST) / cached performance
-{% endcomment %}
-
-### Timers
-
-Automations can use **timers** to run at a future time either once or on a recurring schedule.
-
-<div class="cerb-screenshot">
-<img src="/assets/images/docs/automations/automation-timer.png" class="screenshot">
-</div>
-
-Timers can be created procedurally by automations and interactions, or manually by workers.
-
-A timer specifies a name, a future datetime, an optional schedule, and a block of [events KATA](#events) to conditionally determine an [automation.timer](/docs/automations/triggers/automation.timer/) to run.
-
-On the first invocation of the timer, an automation is selected. This may optionally provide [inputs](#inputs). 
-
-When the automation concludes:
-
-* If the timer has a recurring schedule, it is rescheduled for the next occurrence.
-
-* Otherwise, a one-shot timer is disabled (or optionally deleted) at conclusion.
-
-If the automation ends in the `await` state, a [continuation](#continuations) is created, and the timer is rescheduled for the given datetime.
-
-The timer stores the continuation ID and the automation pauses at the current point. On the next timer invocation, the automation resumes where it left off rather than starting over.
-
-Schedules are defined in [Unix CRON expression format](https://en.wikipedia.org/wiki/Cron). When multiple expressions are specified, the timer is scheduled for the next most recent occurrence among them. 
-
 # Policies
 
 The permissions of automations are governed by **policies**. A policy is a collection of **rules** which describe the conditions where each action would be permitted or denied.
@@ -838,6 +736,108 @@ Triggers are invoked **directly** by Cerb functionality — widgets, AI agents, 
 | [**ui.sheet.data**](/docs/automations/triggers/ui.sheet.data/) | **x** | | Data sources for [sheets](/docs/sheets/)
 | [**ui.widget**](/docs/automations/triggers/ui.widget/) | **x** | | Custom output for [card](/docs/records/types/card_widget/), [profile](/docs/records/types/profile_widget/), or [workspace](/docs/records/types/workspace_widget/) widgets
 | [**webhook.respond**](/docs/automations/triggers/webhook.respond/) | **x** | | Handlers for [webhook listeners](/docs/webhooks/)
+
+# Continuations
+
+When an automation exits in the `await:` state, a snapshot of its current dictionary is saved and assigned a long random identifier. This snapshot is called a **continuation**.
+
+The continuation identifier is used to resume the automation from the same point at a future time with additional input.
+
+For instance, here's a basic [interaction](/docs/automations/triggers/interaction.worker/) automation that pauses for user input:
+
+{% highlight cerb %}
+{% raw %}
+start:
+  await:
+    form:
+      elements:
+        text/prompt_name:
+          label: What is your name?
+          required@bool: yes
+  return:
+    output@text:
+      Hello, {{prompt_name}}!
+{% endraw %}
+{% endhighlight %}
+
+At the `await:` command, the automation will send a web form to the user, create a continuation, and wait for any length of time to resume execution.
+
+An automation that supports continuations can exit in the `await:` state any number of times before concluding.
+
+{% highlight cerb %}
+{% raw %}
+start:
+  await/intro:
+    form:
+      elements:
+        text/prompt_name:
+          label: Name:
+          required@bool: yes
+        text/prompt_email:
+          label: Email:
+          required@bool: yes
+          type: email
+          placeholder: you@example.com
+  
+  # Confirmation code is generated, saved, and emailed
+  
+  await/confirm:
+    form:
+      elements:
+        say/hello:
+          content@text:
+            Hello, {{prompt_name}}!
+            
+            We just sent a confirmation code to {{prompt_email}}
+        text/prompt_code:
+          label: Confirmation Code:
+          required@bool: yes
+          type: uri
+          max_length: 8
+  
+  # Confirmation code is verified
+  
+  return:
+    output@text:
+      Thanks, {{prompt_name}}! 
+      Your email address ({{prompt_email}}) been subscribed to our newsletter.
+ {% endraw %}
+{% endhighlight %}
+
+{% comment %}
+* They are the successor to Cerb's "bot behaviors" functionality after incorporating more than 10 years
+* successor to bot behaviors
+* interactive step debugger
+* not grouped into bots
+* don't need to exist in database as records before use (ad-hoc/reusable)
+* abstract syntax tree (AST) / cached performance
+{% endcomment %}
+
+# Timers
+
+Automations can use **timers** to run at a future time either once or on a recurring schedule.
+
+<div class="cerb-screenshot">
+<img src="/assets/images/docs/automations/automation-timer.png" class="screenshot">
+</div>
+
+Timers can be created procedurally by automations and interactions, or manually by workers.
+
+A timer specifies a name, a future datetime, an optional schedule, and a block of [events KATA](#events) to conditionally determine an [automation.timer](/docs/automations/triggers/automation.timer/) to run.
+
+On the first invocation of the timer, an automation is selected. This may optionally provide [inputs](#inputs). 
+
+When the automation concludes:
+
+* If the timer has a recurring schedule, it is rescheduled for the next occurrence.
+
+* Otherwise, a one-shot timer is disabled (or optionally deleted) at the conclusion.
+
+If the automation ends in the `await` state, a [continuation](#continuations) is created, and the timer is rescheduled for the given datetime.
+
+The timer stores the continuation ID and the automation pauses at the current point. On the next timer invocation, the automation resumes where it left off rather than starting over.
+
+Schedules are defined in [Unix CRON expression format](https://en.wikipedia.org/wiki/Cron). When multiple expressions are specified, the timer is scheduled for the next most recent occurrence among them. 
 
 # Editor
 
