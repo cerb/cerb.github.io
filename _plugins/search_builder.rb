@@ -19,7 +19,8 @@ end
 
 def clean_markdown(string)
     string = string.gsub(/!\[.*?\]\(.*?\)/, '')
-    return string.gsub(/\[([^\]]+)\]\(([^)]+)\)/, '\1')
+    # Strip absolute links to just their text; keep relative links intact
+    return string.gsub(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/, '\1')
 end
 
 def preprocess_html(html)
