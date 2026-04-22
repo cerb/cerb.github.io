@@ -25,7 +25,11 @@ end
 
 def preprocess_html(html)
     inline_tags = 'span|a|strong|em|b|i|code|small|sub|sup|label|button|mark'
-    html.gsub(/(<\/(?:#{inline_tags})>)\s*(<(?:#{inline_tags})[\s>])/, '\1 \2')
+    # Match <pre> blocks first to preserve their internal whitespace, then normalize
+    # whitespace between adjacent inline tags outside of code blocks.
+    html.gsub(/(<pre[\s>].*?<\/pre>)|(<\/(?:#{inline_tags})>)\s*(<(?:#{inline_tags})[\s>])/m) do
+        $1 || "#{$2} #{$3}"
+    end
 end
 
 def create_search_row(site, id, title, relative_url, summary, tags, content)
