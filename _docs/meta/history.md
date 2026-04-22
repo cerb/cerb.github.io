@@ -1,6 +1,6 @@
 ---
 title: Release History
-excerpt: Cerb has 23 years worth of incremental improvements from community feedback.
+excerpt: Cerb has 24 years worth of incremental improvements from community feedback.
 summary: This page provides a comprehensive release history for Cerb, detailing updates
   and improvements from December 2012 to November 2024. It includes both feature upgrades
   and maintenance updates, highlighting the number of improvements in each release.
@@ -15,7 +15,7 @@ redirect_from:
 - /releases/
 jumbotron:
   title: Release History
-  tagline: Production-tested with millions of conversations for over 23 years of active development.
+  tagline: Production-tested with millions of conversations for over 24 years of active development.
 ---
 
 {% assign last_section = '' %}
