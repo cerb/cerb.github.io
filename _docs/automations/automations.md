@@ -632,7 +632,7 @@ The above test object now returns blank, which is interpreted as `no` and ignore
 
 # Events
 
-Events are **broadcast** by Cerb when something happens — a message is received, a record changes, a worker logs in. Unlike [triggers](#triggers), events are not aimed at a specific automation. Instead, they use **event listeners** to associate one or more automations with an event.
+Events are **broadcast** by Cerb when something happens -- a message is received, a record changes, a worker logs in. Unlike [triggers](#triggers), events are not aimed at a specific automation. Instead, they use **event listeners** to associate one or more automations with an event.
 
 | Event |
 |-|-
@@ -673,7 +673,7 @@ Each `automation/name:` entry specifies:
 | Key | Notes |
 |-|-|
 | `uri:` | The automation to run (e.g. `cerb:automation:example.name`) |
-| `disabled@bool:` | An optional condition — when `true`, this listener is skipped |
+| `disabled@bool:` | An optional condition -- when `true`, this listener is skipped |
 | `inputs:` | Optional key/value pairs passed to the automation's `inputs:` |
 
 Multiple automations can be bound within a single listener's `event_kata`:
@@ -692,7 +692,7 @@ automation/everythingElse:
 
 There can be multiple `disabled:` rules per entry. The first rule to return `true` is used, enabling `allow-deny` or `deny-allow` strategies. By default, all listeners are enabled.
 
-For events that expect a **single** handler (e.g. `mail.route`), the first matching (non-disabled) automation — ordered by [priority](#priority) — is executed and its result returned.
+For events that expect a **single** handler (e.g. `mail.route`), the first matching (non-disabled) automation -- ordered by [priority](#priority) -- is executed and its result returned.
 
 For events that run **all** handlers (e.g. `mail.received`), all non-disabled automations are executed in [priority](#priority) order and their results collected.
 
@@ -714,7 +714,7 @@ This ordering was introduced in [11.1.8](/releases/11.1.8/). Prior to that versi
 
 # Triggers
 
-Triggers are invoked **directly** by Cerb functionality — widgets, AI agents, timers, and [function:](/docs/automations/commands/function/) calls from other automations. A trigger invokes a specific automation by name and passes structured inputs. Triggers do **not** use listeners.
+Triggers are invoked **directly** by Cerb functionality -- widgets, AI agents, timers, and [function:](/docs/automations/commands/function/) calls from other automations. A trigger invokes a specific automation by name and passes structured inputs. Triggers do **not** use listeners.
 
 | Trigger | [**Inputs**](#inputs) | [**Await**](#continuations) |
 |-|:-:|:-:|-

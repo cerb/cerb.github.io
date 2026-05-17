@@ -67,5 +67,5 @@ Not applicable. `simulate.success:` always triggers the `on_success:` path. Use 
 
 # See also
 
-- [Simulation](/docs/automations/#simulation) — overview of how simulation works in automations
-- [simulate.error:](/docs/automations/commands/simulate.error/) — simulate a failed command outcome
+- [Simulation](/docs/automations/#simulation) -- overview of how simulation works in automations
+- [simulate.error:](/docs/automations/commands/simulate.error/) -- simulate a failed command outcome

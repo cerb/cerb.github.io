@@ -1,6 +1,6 @@
 ---
 title: Documentation
-excerpt: Guides and references for Cerb — from getting started to advanced automation with KATA.
+excerpt: Guides and references for Cerb -- from getting started to advanced automation with KATA.
 summary: This webpage serves as a comprehensive documentation hub for Cerb, covering
   various guides and references essential for different user roles. It includes an
   introduction and getting started section, an admin guide with topics like installation,

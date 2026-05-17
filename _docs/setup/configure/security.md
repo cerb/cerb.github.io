@@ -1,13 +1,10 @@
 ---
 title: Security
-excerpt: Configure security settings like session expiration and the IP allowlist.
-summary: This page provides information on security configurations for Cerb, specifically
-  focusing on remote administration and session expiration. It details how to set
-  up an allowlist of IP addresses that can access the `/debug` and `/cron` pages without
-  requiring a session, enhancing security by restricting access to these sensitive
-  areas. Additionally, it explains how to configure the lifespan of session cookies,
-  ensuring that sessions expire after a certain period, which requires users to log
-  in again from their devices, thereby maintaining secure access control.
+excerpt: Configure security settings like service tokens, session expiration, and the IP allowlist.
+summary: This page describes Cerb's security configuration -- service tokens for
+  authenticating anonymous access to privileged endpoints like /cron, /debug, and
+  /update; session expiration policies; and (deprecated) IP allowlists. Service
+  tokens were introduced in Cerb 11.2 and replace the previous IP-based allowlist.
 permalink: /docs/setup/configure/security/
 toc:
   expand: Admin Guide
@@ -26,10 +23,24 @@ jumbotron:
 <img src="/assets/images/docs/setup/security.png" class="screenshot">
 </div>
 
-### Remote Administration
+### Service Tokens
 
-This section configures the _allowlist_ of IPs that are able to access the `/debug` and `/cron` pages without a session.
+(Added in [11.2](/releases/11.2/))
+
+[Service tokens](/docs/records/types/service_token/) authenticate anonymous, privileged access to endpoints like `/cron`, `/debug`, and `/update` without requiring a worker session. Service tokens replace the [`AUTHORIZED_IPS_DEFAULTS`](/docs/config-file/#common-settings) IP allowlist and the removed `DEVELOPMENT_MODE_ALLOW_DEBUG` flag.
+
+Tokens are passed either in an HTTP `Authorization: Bearer <token>` header or as an `_authorization` HTTP POST parameter -- for instance, from a cronjob, monitoring tool, or deploy script. Each token can be restricted to specific endpoint **scopes** (e.g. `cron:*`, `debug:status`, `update`).
+
+When viewing a protected endpoint in a browser, you'll be prompted to enter a token to continue.
+
+A master service token can be configured in `framework.config.php` using `APP_SERVICE_TOKEN`. The master token's scope defaults to `*` (all endpoints) and can be restricted with `APP_SERVICE_TOKEN_SCOPE`. The master token is especially useful for `/update`, since worker logins are blocked until the update has finished.
+
+Service tokens are managed from **Setup &raquo; Configure &raquo; Security**.
 
 ### Session Expiration
 
 This section determines the lifespan of [session](/docs/setup/sessions/) cookies.  When a session expires, a worker will need to log in again from that particular device.
+
+### Remote Administration (deprecated)
+
+This legacy section configured the [`AUTHORIZED_IPS_DEFAULTS`](/docs/config-file/#common-settings) allowlist of IPs allowed to access `/cron`, `/debug`, and `/update` without a session. As of [11.2](/releases/11.2/), this has been replaced by [service tokens](/docs/records/types/service_token/), and the `DEVELOPMENT_MODE_ALLOW_DEBUG` configuration option has been removed.

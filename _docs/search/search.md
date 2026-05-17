@@ -544,6 +544,73 @@ watchers:1,2,3
 {% endraw %}
 {% endhighlight %}
 
+# Search indexes
+
+(Added in [11.2](/releases/11.2/))
+
+A [search index](/docs/records/types/search_index/) is a configurable, plugin-driven index over a specific [record type](/docs/records/types/) -- backed by a search extension (local full-text, TF-IDF, BM25, vector embeddings, Elasticsearch, Qdrant, Pinecone, etc.).
+
+Each search index defines:
+
+* A **record type** the index applies to
+* A **filter query** that constrains which records are indexed (e.g. open tickets updated in the last year)
+* A **content template** that formats the indexable text per record (e.g. `{% raw %}{{title}} {{content}}{% endraw %}`)
+* A **priority** that controls autocompletion ordering and default-filter behavior
+
+Indexes are managed from the search index [worklist](/docs/worklists/) (see [Search Index records](/docs/records/types/search_index/)).
+
+#### Using a search index in a query
+{:.no_toc}
+
+Each search index exposes a `filter:` keyword in queries on its record type. For instance, a search index named `by_title` on tickets adds:
+
+{% highlight cerb %}
+{% raw %}
+title:(urgent bug)
+{% endraw %}
+{% endhighlight %}
+
+When a search index has **priority `0`**, it overrides the default filter when a query is typed without an explicit `filter:`. For example, the default ticket search could be routed to a `by_part_number` index instead of the built-in name search.
+
+#### Wildcards
+{:.no_toc}
+
+Append `*` to a term to match any token in the vocabulary starting with that prefix. The expansion is combined with `OR`:
+
+{% highlight cerb %}
+{% raw %}
+title:(11.1* release*)
+{% endraw %}
+{% endhighlight %}
+
+Matches `11.1.6 released`, `11.1 release`, etc.
+
+#### Stemming
+{:.no_toc}
+
+Append `~` to a term to fuzzy-match its stem against the vocabulary. The expansion is combined with `OR`:
+
+{% highlight cerb %}
+{% raw %}
+docs:(automate~)
+{% endraw %}
+{% endhighlight %}
+
+Expands to `automate`, `automates`, `automation`, `automating`, `automated`, etc.
+
+#### Limiting and ranking results
+{:.no_toc}
+
+The `top:` parameter limits results to the highest-scoring matches:
+
+{% highlight cerb %}
+{% raw %}
+docs:(queue parallel top:10)
+{% endraw %}
+{% endhighlight %}
+
+Scores are computed using TF-IDF (or the strategy provided by the extension). Field-level boosting can be configured per search index via the content template (e.g. weight a document's title higher than its body).
+
 # Autocompletion
 
 As you type a query in the browser, **autocomplete suggestions** will assist you:
