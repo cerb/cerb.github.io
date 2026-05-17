@@ -39,11 +39,11 @@ Cerb uses semantic versioning with the following format: `<platform>.<feature>.<
 You can target version tags with this specificity:
 
 * `11` (the latest 11.x platform version)
-* `11.0` (the latest 11.0.x feature version)
-* `11.0.6` (a specific maintenance version)
+* `11.1` (the latest 11.1.x feature version)
+* `11.1.9` (a specific maintenance version)
 * `latest` (the latest stable version)
 
-In production, we _strongly_ recommend using a full version number (e.g. `11.0.6`) in your deployment. A cluster of Cerb containers must be running the exact same version.
+In production, we _strongly_ recommend using a full version number (e.g. `11.1.9`) in your deployment. A cluster of Cerb containers must be running the exact same version.
 
 We recommend against "rolling" container upgrades because the code version will be inconsistent. For a zero-downtime upgrade, spin up a second cluster with the new version image. Once the new cluster is tested and ready, re-route traffic from your load balancer to the new cluster, and shut down the old one.
 
@@ -128,7 +128,7 @@ git branch --remote
 Switch to the desired major version branch:
 
 {% highlight bash %}
-git checkout v11.0
+git checkout v11.1
 {% endhighlight %}
 
 Pull the latest updates:

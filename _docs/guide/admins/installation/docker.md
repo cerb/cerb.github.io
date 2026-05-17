@@ -108,11 +108,11 @@ By default, data is stored in two volumes (one for the database and the other fo
 Navigate to the directory where you want to install a copy of Cerb. Then run the following commands:
 
 {% highlight bash %}
-git clone -b v11.0 https://github.com/cerb/cerb-release.git v11.0
+git clone -b v11.1 https://github.com/cerb/cerb-release.git v11.1
 
-# ... or download + unzip: https://github.com/cerb/cerb-release/archive/refs/heads/v11.0.zip
+# ... or download + unzip: https://github.com/cerb/cerb-release/archive/refs/heads/v11.1.zip
 
-cd v11.0
+cd v11.1
 
 cd install/docker
 
