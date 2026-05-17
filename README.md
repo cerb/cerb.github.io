@@ -16,6 +16,12 @@ docker compose up
 
 The site will be available at http://127.0.0.1:4000. Changes trigger automatic incremental rebuilds.
 
+## Rebuild dependencies
+
+```bash
+docker compose --profile build build --no-cache jekyll-build
+```
+
 ## Production build
 
 ```bash
