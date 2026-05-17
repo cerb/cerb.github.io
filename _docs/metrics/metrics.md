@@ -197,6 +197,8 @@ The default retention time per period is:
 
 The 5-minute period is a "sliding window" over the trailing 24 hours. When a new 5-minute period starts, the oldest period (crossing 24 hours in age) is removed. This maintains a constant set of (288) most recent 5-minute periods per metric.
 
+In [11.2+](/releases/11.2/), the daily-period retention can be configured per metric. This is particularly useful for metrics with high dimensionality and low long-term value (like rate-limiters), where keeping daily aggregations forever would balloon storage with little analytical benefit. The 5-minute and hourly retention windows still apply at their defaults.
+
 # Eventual consistency
 
 When multiple samples are collected in a short time period, with the same metric and dimensions, they are combined into a single statistics set. This single set is then pushed into a background [queue](/docs/queues/) for processing.
@@ -228,6 +230,9 @@ These metrics are managed automatically by Cerb:
 |[cerb.mail.transport.deliveries](/docs/metrics/mail.transport.deliveries/)| How many successful messages are sent through a mail transport. Dimensions: `transport_id` and `sender_id` (email address).
 |[cerb.mail.transport.failures](/docs/metrics/mail.transport.failures/)| How many unsuccessful messages are attempted through a mail transport. Dimensions: `transport_id` and `sender_id` (email address).
 |[cerb.record.search](/docs/metrics/record.search/)| How often each worker searches for a given record type. Dimensions: `record_type` and `worker_id`.
+|[cerb.service.token.uses](/docs/metrics/cerb.service.token.uses/)| Authentications using a [service token](/docs/records/types/service_token/). Dimensions: `scope` and `client_ip`. ([11.2](/releases/11.2/)+)
+|[cerb.sessions.seat.kicks](/docs/metrics/cerb.sessions.seat.kicks/)| Worker sessions ended to free up a license seat. Dimensions: `worker_id`. ([11.2](/releases/11.2/)+)
+|[cerb.sessions.seat.kicks.duration](/docs/metrics/cerb.sessions.seat.kicks.duration/)| Cumulative idle seconds of worker sessions ended to free up a license seat. Dimensions: `worker_id`. ([11.2](/releases/11.2/)+)
 |[cerb.snippet.uses](/docs/metrics/snippet.uses/)| Snippet usage over time by worker. Dimensions: `snippet_id` and `worker_id`. This replaces the `snippet_use_history` table but imports its data.
 |[cerb.tickets.open](/docs/metrics/tickets.open/)| Open ticket counts over time by group and bucket. Dimensions: `group_id` and `bucket_id`. The metric is sampled every 15 minutes.
 |[cerb.tickets.open.elapsed](/docs/metrics/tickets.open.elapsed/)| How long tickets spent in the open status by group and bucket. Dimensions: `group_id` and `bucket_id`. The metric is sampled when an open ticket is moved to a new group/bucket, or an open ticket transitions to a non-open status.

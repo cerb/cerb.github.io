@@ -102,15 +102,21 @@ You can also use random samples to run A/B tests.
 <img src="/assets/images/docs/using-cerb/workspaces/bulk.png" class="screenshot">
 </div>
 
+In [11.2+](/releases/11.2/), bulk updates run as parallel background [queue jobs](/docs/records/types/queue_job/) rather than blocking the browser. When an update starts, the queue job progress monitor popup opens. If you close your browser or navigate away, the job continues in the background and you'll receive a notification when it completes.
+
+Bulk commenting is also available from the **Bulk Update** popup on every record type that supports [comments](/docs/records/types/comment/) (tickets, tasks, organizations, opportunities, time tracking, domains, servers, calls).
+
 # Import/Export
 
-Once you have a worklist filtered the way you want it, you can **export** data in CSV (comma-separated), JSON, or XML formats.  You also aren't limited to the fields displayed by the worklist; you can choose any fields, including those from related records.
+Once you have a worklist filtered the way you want it, you can **export** data in CSV (comma-separated), JSON, JSONL, or XML formats.  You also aren't limited to the fields displayed by the worklist; you can choose any fields, including those from related records.
 
-Similarly, you can also **import** records on most worklists in CSV format.  You'll be given the opportunity to map columns in your import file to record fields.
+Similarly, you can also **import** records on most worklists in CSV or JSONL format.  You'll be given the opportunity to map columns in your import file to record fields.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/using-cerb/workspaces/export.png" class="screenshot">
 </div>
+
+In [11.2+](/releases/11.2/), worklist imports and exports run as parallel background [queue jobs](/docs/records/types/queue_job/) rather than blocking the request. On completion, exported chunks are sorted and saved as a single file attachment linked to the job -- workers can close their browser and the export will continue in the background. They will receive a notification when the file is ready.
 
 # Explore Mode
 

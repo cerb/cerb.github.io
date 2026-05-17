@@ -231,9 +231,18 @@ search_index:
     - heading: "str_sub"
       title: "Scripting Filter: str_sub"
       summary: "Extract a substring using starting and ending positions"
+    - heading: "strip_data_uris"
+      title: "Scripting Filter: strip_data_uris"
+      summary: "Remove base64-encoded content from data URIs"
     - heading: "strip_lines"
       title: "Scripting Filter: strip_lines"
       summary: "Remove lines that begin with given prefixes"
+    - heading: "strip_pem_blocks"
+      title: "Scripting Filter: strip_pem_blocks"
+      summary: "Remove PEM-formatted blocks like PGP keys and SSL certificates"
+    - heading: "strip_url_querystrings"
+      title: "Scripting Filter: strip_url_querystrings"
+      summary: "Remove the query string from URLs in a block of text"
     - heading: "striptags"
       title: "Scripting Filter: striptags"
       summary: "Remove HTML tags from a string"
@@ -1791,6 +1800,24 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ
 HI
 {% endhighlight %}
 
+## strip_data_uris
+
+Remove the base64-encoded content from [data URIs](https://developer.mozilla.org/en-US/docs/Web/URI/Schemes/data) in a text block. This is particularly useful when sanitizing text for indexing by a custom [search index](/docs/records/types/search_index/), where the encoded payload contributes noise rather than searchable terms.
+
+`|strip_data_uris`
+
+{% highlight twig %}
+{% raw %}
+{% set html %}
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...">
+{% endset %}
+{{html|strip_data_uris}}{% endraw %}
+{% endhighlight %}
+
+{% highlight text %}
+<img src="data:image/png;base64,">
+{% endhighlight %}
+
 ## strip_lines
 
 Remove lines in a text block that begin with one of the given `prefixes`.
@@ -1810,6 +1837,51 @@ This is the original message
 
 {% highlight text %}
 This is the original message
+{% endhighlight %}
+
+## strip_pem_blocks
+
+Remove [PEM-formatted](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) blocks like PGP signatures, public keys, and SSL certificates from a block of text. This is particularly useful when sanitizing text for indexing by a custom [search index](/docs/records/types/search_index/), where the long base64 payloads contribute noise rather than searchable terms.
+
+`|strip_pem_blocks`
+
+{% highlight twig %}
+{% raw %}
+{% set message %}
+Hello,
+
+Here is my reply.
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEE...
+-----END PGP SIGNATURE-----
+{% endset %}
+{{message|strip_pem_blocks}}{% endraw %}
+{% endhighlight %}
+
+{% highlight text %}
+Hello,
+
+Here is my reply.
+{% endhighlight %}
+
+## strip_url_querystrings
+
+Remove the query string portion from URLs in a text block. This is particularly useful when sanitizing text for indexing by a custom [search index](/docs/records/types/search_index/), where tracking parameters and session IDs add noise.
+
+`|strip_url_querystrings`
+
+{% highlight twig %}
+{% raw %}
+{% set text %}
+Check out https://example.com/page?utm_source=email&utm_campaign=q4 for details.
+{% endset %}
+{{text|strip_url_querystrings}}{% endraw %}
+{% endhighlight %}
+
+{% highlight text %}
+Check out https://example.com/page for details.
 {% endhighlight %}
 
 ## striptags

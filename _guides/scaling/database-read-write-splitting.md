@@ -25,7 +25,7 @@ jumbotron:
 
 # Overview
 
-By default, Cerb directs all database queries — reads and writes — to a single primary (writer) server. As traffic grows, you can offload read-heavy queries to one or more MySQL/MariaDB replicas by enabling read/write splitting in Cerb's configuration.
+By default, Cerb directs all database queries -- reads and writes -- to a single primary (writer) server. As traffic grows, you can offload read-heavy queries to one or more MySQL/MariaDB replicas by enabling read/write splitting in Cerb's configuration.
 
 When a reader connection is configured:
 
@@ -44,7 +44,7 @@ This is especially useful for deployments where reporting, search, and list view
 
 Reader connection settings are defined as PHP constants in `framework.config.php`, located in the root of your Cerb installation (the same file where `APP_DB_HOST`, `APP_DB_USER`, etc. are set).
 
-In most setups, only the host needs to be set — the replica uses the same credentials as the primary:
+In most setups, only the host needs to be set -- the replica uses the same credentials as the primary:
 
 {% highlight php %}
 // Reader (replica) connection

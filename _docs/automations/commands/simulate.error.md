@@ -70,5 +70,5 @@ If the enclosing command has no `on_error:` handler, the automation exits in the
 
 # See also
 
-- [Simulation](/docs/automations/#simulation) — overview of how simulation works in automations
-- [simulate.success:](/docs/automations/commands/simulate.success/) — simulate a successful command outcome
+- [Simulation](/docs/automations/#simulation) -- overview of how simulation works in automations
+- [simulate.success:](/docs/automations/commands/simulate.success/) -- simulate a successful command outcome
