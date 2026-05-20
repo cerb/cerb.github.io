@@ -67,6 +67,22 @@ Each queue is associated with a **consumer extension** (`Extension_QueueConsumer
 
 New consumer extensions can be added with [plugins](/docs/plugins/). A consumer extension may optionally implement `onQueueJobComplete()` to perform post-processing when an entire [queue job](/docs/records/types/queue_job/) finishes -- for example, assembling chunks into a final export attachment.
 
+## Automation-backed queues
+
+An **automation-backed queue** uses the built-in `cerb.queue.consumer.automation` consumer to dispatch each batch of messages to a configured [automation](/docs/automations/). Previously, draining a user-created queue required wiring up an [automation timer](/docs/records/types/automation_timer/) plus a hand-written loop -- automation-backed queues replace that boilerplate.
+
+Each automation-backed queue has two configurable fields:
+
+|---
+| Field | Description
+|-|-
+| Batch size | Maximum number of messages dispatched to the automation per invocation. Use `1` for expensive operations (per-message), or `10`-`100+` to amortize batch operations.
+| Automations KATA | An [event handler](/docs/automations/events/) for the [`queue.consumer`](/docs/automations/events/queue.consumer/) event. As with event listeners, the most appropriate automation can be selected programmatically based on the inputs.
+
+The [Background Queue scheduler](#background-queue-scheduler) drains automation-backed queues -- there's no need to maintain a per-queue timer. The automation receives the [queue](/docs/records/types/queue/) record, the optional [queue job](/docs/records/types/queue_job/), and a `messages` array of `{uuid, message, available_at, job_id}` dicts.
+
+Any non-error response is considered successful delivery for the entire batch. If the automation returns an `error:` outcome, the messages are marked failed and retried per the queue's policy.
+
 # Success and failure
 
 An `in_flight` queue message is retried after a period of time unless it is marked `complete` or `failed` by a consumer.

@@ -587,6 +587,8 @@ This has ? emoji
 
 Format an array as a comma-separated values list. This is useful for exporting reports for Excel from bots.
 
+As of [11.2](/releases/11.2/), objects and dictionaries are automatically coerced to arrays. Previously, the filter failed unless the input was already an array.
+
 {% highlight twig %}
 {% raw %}
 {% set records = [
