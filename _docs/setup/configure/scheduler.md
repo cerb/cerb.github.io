@@ -37,6 +37,8 @@ Each job is repeated at a specific _interval_ -- a number of minutes, hours, or 
 
 Different jobs can run at the same time. A job is _locked_ while running to prevent multiple copies of itself from starting.
 
+As of [11.2](/releases/11.2/), a job's extension manifest can flag it as **parallel**. Parallel jobs limit concurrency through reserved [queue slots](/docs/queues/#concurrency-slots) rather than a hard lock, so multiple invocations can overlap when capacity is available. The built-in [Background Queue](/docs/queues/#background-queue-scheduler) runs this way -- it can fan out across slots to drain work in near real time rather than once per minute. Traditional locked jobs remain available for tasks that must not overlap (e.g. mailbox polling).
+
 Each job has a _"run now"_ link that will immediately run the job with logging enabled from inside your web browser. This is useful for troubleshooting and development, but the scheduler should be automated in production environments so that the jobs run without human intervention.
 
 * TOC
