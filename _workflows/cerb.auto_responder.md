@@ -108,12 +108,18 @@ Change occurrences of **cerb.auto_responder** to your own workflow identifier. U
 {% raw %}
 workflow:
   name: cerb.auto_responder
-  version: 2025-04-10T00:00:00Z
+  version: 2025-05-09T00:00:00Z
   description: Send an automatic response when new tickets are opened
   website: https://cerb.ai/workflows/cerb.auto_responder/
   requirements:
-    cerb_version: >=11.0 <11.2
+    cerb_version: >=11.0 <11.3
     cerb_plugins: cerberusweb.core,
+  config:
+    picklist/keep_copy:
+      label: Save a copy of the auto-reply on the ticket
+      options@csv: yes, no
+      default: yes
+      multiple@bool: no
 
 records:
   custom_fieldset/fieldset_auto_responder:
@@ -160,6 +166,8 @@ records:
       extension_id: cerb.trigger.mail.received
       script@raw:
         start:
+          set/config:
+            config@json: {{cerb_workflow_config('cerb.auto_responder')|json_encode}}
           outcome/validate:
             if@bool:
               {{
@@ -195,6 +203,7 @@ records:
                     In-Reply-To@optional: {{message_headers['in-reply-to']}}
                     Auto-Submitted: auto-replied
                   content: {{results.template}}
+                  is_autoreply@optional: {{'no' == config.keep_copy ? 1 : null}}
       policy_kata@raw:
         commands:
           record.create:

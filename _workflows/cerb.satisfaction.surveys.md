@@ -233,11 +233,11 @@ Change occurrences of **cerb.satisfaction.surveys** to your own workflow identif
 {% raw %}
 workflow:
   name: cerb.satisfaction.surveys
-  version: 2024-10-22T00:00:00Z
+  version: 2025-02-21T00:00:00Z
   description: Gather and monitor customer satisfaction metrics like NPS, CSAT, and CES.
   website: https://cerb.ai/workflows/cerb.satisfaction.surveys/
   requirements:
-    cerb_version: >=11.0 <11.2
+    cerb_version: >=11.0 <11.3
     cerb_plugins: cerberusweb.core, cerb.website.interactions
   config:
     text/portalTitle:

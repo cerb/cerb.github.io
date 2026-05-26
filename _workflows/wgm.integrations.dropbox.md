@@ -40,13 +40,12 @@ Click on **Search >> Workflows >> (+) >> (empty)** and paste the following [KATA
 {% highlight cerb %}
 {% raw %}
 workflow:
-  workflow:
   name: wgm.integrations.dropbox
-  version: 2025-02-28T23:25:56Z
+  version: 2026-05-25T20:00:00Z
   description: Sample integrations for Dropbox
   website: https://cerb.ai/resources/workflows/
   requirements:
-    cerb_version: >=11.0 <11.2
+    cerb_version: >=11.0 <11.3
     cerb_plugins: cerberusweb.core, 
   config:
     chooser/account:

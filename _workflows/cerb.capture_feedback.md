@@ -68,11 +68,11 @@ Change occurrences of **cerb.capture_feedback** to your own workflow identifier.
 {% raw %}
 workflow:
   name: cerb.capture_feedback
-  version: 2024-10-14T00:00:00Z
+  version: 2025-02-21T00:00:00Z
   description: Capture user feedback while reading email messages
   website: https://cerb.ai/workflows/cerb.capture_feedback/
   requirements:
-    cerb_version: >=11.0 <11.2
+    cerb_version: >=11.0 <11.3
     cerb_plugins: cerberusweb.core
 
 records:

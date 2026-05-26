@@ -40,11 +40,11 @@ Click on **Search >> Workflows >> (+) >> (empty)** and paste the following [KATA
 {% raw %}
 workflow:
   name: wgm.integrations.github
-  version: 2025-02-22T02:46:06Z
+  version: 2026-05-25T20:00:00Z
   description: Integrate Cerb with Github
   website: https://cerb.ai/resources/workflows/
   requirements:
-    cerb_version: >=11.0 <11.2
+    cerb_version: >=11.0 <11.3
     cerb_plugins: cerberusweb.core, 
   config:
     chooser/account:
