@@ -67,7 +67,7 @@ jumbotron:
 	- Microsoft Internet Information Server (IIS)
 	- Built-in PHP webserver (for development and evaluation)
 
-- PHP 8.2 (64-bit) or later
+- PHP 8.5 (64-bit) or later
 	- With the following extensions enabled:
 		- curl
 		- dom
