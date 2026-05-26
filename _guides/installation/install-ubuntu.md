@@ -1,12 +1,12 @@
 ---
-title: Install Cerb on Ubuntu Linux 24.04
+title: Install Cerb on Ubuntu Linux 26.04
 layout: integration
 topic: Installation
-excerpt: This guide will walk you through preparing an Ubuntu 24.04 server for installing
+excerpt: This guide will walk you through preparing an Ubuntu 26.04 server for installing
   Cerb, including Nginx, PHP-FPM, and MySQL.
-summary: This is a comprehensive guide for installing Cerb on an Ubuntu 24.04 LTS
+summary: This is a comprehensive guide for installing Cerb on an Ubuntu 26.04 LTS
   server. It covers the entire setup process, including provisioning a server using
-  Docker or Amazon EC2, installing necessary packages like PHP 8.3, Nginx, and MySQL,
+  Docker or Amazon EC2, installing necessary packages like PHP 8.5, Nginx, and MySQL,
   and configuring the MySQL database for Cerb. The guide also details the installation
   of Cerb itself, setting up Nginx with SSL certificates, creating virtual hosts,
   and testing the Nginx configuration. Additionally, it includes instructions for
@@ -14,7 +14,7 @@ summary: This is a comprehensive guide for installing Cerb on an Ubuntu 24.04 LT
   installation process.
 permalink: /guides/installation/ubuntu/
 jumbotron:
-  title: Install Cerb on Ubuntu Linux 24.04
+  title: Install Cerb on Ubuntu Linux 26.04
   tagline: ""
   breadcrumbs:
   - label: Resources &raquo;
@@ -47,7 +47,7 @@ If you don't already have a server, you can use Docker or Amazon EC2.
 ## Docker
 
 {% highlight bash %}
-docker run -it --rm -p 80:80 ubuntu:24.04 /bin/bash
+docker run -it --rm -p 80:80 -p 443:443 ubuntu:26.04 /bin/bash
 {% endhighlight %}
 
 For local evaluation, development, and testing, you can use the built-in [Docker](/docs/installation/docker/) configuration instead.
@@ -72,11 +72,11 @@ It's a good idea to update your installed packages first:
 apt-get update && apt-get -y upgrade
 {% endhighlight %}
 
-Install PHP 8.3:
+Install PHP 8.5:
 
 {% highlight bash %}
-apt-get install -y php8.3 php8.3-cli php8.3-fpm php8.3-mysql php8.3-mbstring php8.3-gd \
-   php8.3-curl php8.3-yaml php8.3-gmp php8.3-zip php8.3-mailparse php8.3-dom php8.3-xml
+apt-get install -y php8.5 php8.5-cli php8.5-fpm php8.5-mysql php8.5-mbstring php8.5-gd \
+   php8.5-curl php8.5-yaml php8.5-gmp php8.5-zip php8.5-mailparse php8.5-dom php8.5-xml
 {% endhighlight %}
 
 Install common tools:
@@ -98,14 +98,18 @@ We recommend using a dedicated database server that replicates to a standby serv
 If you need to install MySQL on your Docker or EC2 instance instead, you can use these instructions:
 
 {% highlight bash %}
-apt-get install -y mysql-server-8.0
+apt-get install -y mysql-server
 {% endhighlight %}
 
-In Docker you need to start the MySQL service. You really should use the `mysql:8.0` container instead.
+This installs MySQL 8.4 LTS on Ubuntu 26.04.
+
+In Docker you need to start the MySQL service. The `ubuntu:26.04` image doesn't run `systemd` as PID 1, so `service mysql start` (which invokes `systemctl`) will fail. Start `mysqld` directly instead:
 
 {% highlight bash %}
-service mysql start
+mysqld --user=mysql --daemonize
 {% endhighlight %}
+
+You really should use the `mysql:8.4` container instead.
 
 # Create the MySQL database
 
@@ -121,9 +125,11 @@ The default password is empty, just press `<ENTER>`.
 
 Set a root password.
 
-{% highlight bash %}
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 's3cr3t';
+{% highlight sql %}
+ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 's3cr3t';
 {% endhighlight %}
+
+<div class="cerb-box note"><p>MySQL 8.4 removed the legacy <tt>mysql_native_password</tt> plugin. Use <tt>caching_sha2_password</tt> (the default since MySQL 8.0).</p></div>
 
 <div class="cerb-box note"><p>Replace <tt>s3cr3t</tt> above with your own new password.</p></div>
 
@@ -259,7 +265,7 @@ server {
     #allow 10.0.0.0/16;
     deny all;
     include fastcgi_params;
-    fastcgi_pass   unix:/run/php/php8.3-fpm.sock;
+    fastcgi_pass unix:/run/php/php8.5-fpm.sock;
   }
 
   location / {
@@ -313,7 +319,7 @@ server {
     proxy_read_timeout 30;
     
     fastcgi_split_path_info ^(.+\.php)(/.+)$;
-    fastcgi_pass   unix:/run/php/php8.3-fpm.sock;
+    fastcgi_pass   unix:/run/php/php8.5-fpm.sock;
     fastcgi_index  index.php;
     include    fastcgi_params;
     fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
@@ -329,7 +335,7 @@ server {
     
     location ~ ^/install/(index|servercheck|phpinfo)\.php$ {
       fastcgi_split_path_info ^(.+\.php)(/.+)$;
-      fastcgi_pass unix:/run/php/php8.3-fpm.sock;
+      fastcgi_pass unix:/run/php/php8.5-fpm.sock;
       fastcgi_index  /install/index.php;
       include    fastcgi_params;
       fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
@@ -368,6 +374,8 @@ Save the file with `:wq`
 To enable the site we need to add a symlink:
 
 {% highlight bash %}
+unlink /etc/nginx/sites-enabled/default
+
 ln -s /etc/nginx/sites-available/cerb /etc/nginx/sites-enabled/cerb
 {% endhighlight %}
 
@@ -388,7 +396,7 @@ service nginx restart
 {% endhighlight %}
 
 {% highlight bash %}
-service php8.3-fpm restart
+service php8.5-fpm restart
 {% endhighlight %}
 
 For more information about Nginx + PHP-FPM, see: <https://www.nginx.com/resources/wiki/start/topics/examples/phpfcgi/>
