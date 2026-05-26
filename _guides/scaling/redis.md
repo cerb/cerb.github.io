@@ -34,7 +34,7 @@ Redis[^redis] is an in-memory data structure store that serves as a powerful [ca
 
 * Docker installed and running
 * A working Cerb installation in Docker
-* php8.3-redis package installed (for Ubuntu 24.04)
+* php8.5-redis package installed (for Ubuntu 24.04)
 
 # Local Development Setup
 
