@@ -40,6 +40,22 @@ A `singleton_key` ensures that only one job with a given key can be active at a 
 
 Queue jobs were introduced in [Cerb 11.2](/releases/11.2/).
 
+### Progress tracking
+
+The job's `count_*` totals sum each message's **cardinality** (its work units) rather than counting raw messages. A message's cardinality defaults to `1`, so single-op messages behave the same as a simple count. Producers that bundle many records per message -- such as `cerb.records.bulk_update`, `cerb.records.export`, and search re-indexing -- can set a higher cardinality (typically `100`), and the monitor will report progress in record-equivalent units.
+
+### Log
+
+Each successful or failed queue message can write a summary entry into a permanent job log alongside the live counters. The log captures a short message plus arbitrary metadata -- for instance, the affected `record_ids` on a [worklist](/docs/worklists/) bulk update -- and survives after the job completes for an audit trail.
+
+### Cancellation
+
+A queue job can be **paused** (stop processing but keep pending messages), **canceled** (immediately remove pending messages and mark the job done), or **deleted** (remove the job and its log). Cancellation was added in 11.2; previously, the only ways to stop a job were pause-then-delete.
+
+### Permissions
+
+Only the worker who initiated a queue job and administrators can view the job's details or download attachments linked to it (e.g. an export's resulting file). Other workers can see the job exists but not its contents.
+
 ### Records API
 
 These fields are available in the [Records API](/docs/api/endpoints/records/) and [packages](/docs/packages/):
@@ -67,11 +83,11 @@ These [placeholders](/docs/scripting/variables/#placeholders) are available in [
 | `_context` | text | [Record type](/docs/records/types/) extension ID
 | `_label` | text | Label
 | `_type` | text | [Record type](/docs/records/types/) alias
-| `count_available` | number | Count of messages still waiting to be processed
-| `count_done` | number | Count of messages that completed successfully
-| `count_failed` | number | Count of messages that failed
-| `count_inflight` | number | Count of messages currently being processed
-| `count_total` | number | Total count of messages in this job
+| `count_available` | number | [Work units](#progress-tracking) still waiting to be processed
+| `count_done` | number | [Work units](#progress-tracking) that completed successfully
+| `count_failed` | number | [Work units](#progress-tracking) that failed
+| `count_inflight` | number | [Work units](#progress-tracking) currently being processed
+| `count_total` | number | Total [work units](#progress-tracking) in this job
 | `created_at` | date | Created
 | `id` | number | Id
 | `name` | text | Name
