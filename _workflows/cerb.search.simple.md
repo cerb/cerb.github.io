@@ -69,11 +69,11 @@ Change occurrences of **cerb.search.simple** to your own workflow identifier. Us
 {% raw %}
 workflow:
   name: cerb.search.simple
-  version@date: 2024-10-16T00:00:00Z
+  version: 2025-02-21T00:00:00Z
   description: Simplified point-and-click ticket search popup without using search queries
   website: https://cerb.ai/workflows/cerb.search.simple/
   requirements:
-    cerb_version: >=11.0 <11.2
+    cerb_version: >=11.0 <11.3
     cerb_plugins: cerberusweb.core,
 records:
   automation/interactionSearchTickets:

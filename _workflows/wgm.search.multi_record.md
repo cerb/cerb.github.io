@@ -36,12 +36,12 @@ Paste the following KATA into the large text box:
 {% raw %}
 workflow:
   name: wgm.search.multi_record
-  version: 2025-02-14T02:58:27Z
+  version: 2026-05-25T20:00:00Z
   description: Multi-record smart search
   website: https://cerb.ai/resources/workflows/
   requirements:
-    cerb_version: >=11.0 <11.2
-    cerb_plugins: cerberusweb.core, 
+    cerb_version: >=11.0 <11.3
+    cerb_plugins: cerberusweb.core 
 records:
   automation/search:
     fields:

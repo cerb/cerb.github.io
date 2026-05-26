@@ -42,7 +42,10 @@ Click on **Search >> Workflows >> (+) >> (empty)** and paste the following [KATA
 workflow:
   name: cerb.ticket.auto_close
   description: Automatically close idle tickets
-  version: 2025-01-29T00:16:45Z
+  version: 2026-05-25T20:00:00Z
+  requirements:
+    cerb_version: >=11.0 <11.3
+    cerb_plugins: cerberusweb.core
   config:
     text/ticketAge:
       label: At what age should tickets be closed?

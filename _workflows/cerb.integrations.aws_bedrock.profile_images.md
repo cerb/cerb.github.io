@@ -170,11 +170,11 @@ Change occurrences of **cerb.integrations.aws_bedrock.profile_images** to your o
 {% raw %}
 workflow:
   name: cerb.integrations.aws_bedrock.profile_images
-  version: 2024-10-25T00:00:00Z
+  version: 2025-02-21T00:00:00Z
   description: Generate profile images from a text prompt using Amazon Bedrock foundational models
   website: https://cerb.ai/workflows/cerb.integrations.aws_bedrock.profile_images/
   requirements:
-    cerb_version: >=11.0 <11.2
+    cerb_version: >=11.0 <11.3
     cerb_plugins: cerberusweb.core
   config:
     chooser/aws_account_id:

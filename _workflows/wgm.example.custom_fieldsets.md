@@ -43,13 +43,12 @@ Paste the following KATA into the large text box:
 {% raw %}
 workflow:
   name: wgm.example.custom_fieldsets
-  version: 2024-10-10T00:00:00Z
+  version: 2026-05-25T20:00:00Z
   description: A custom fieldset for that includes an example of every custom field type
   website: https://cerb.ai/workflows/wgm.example.custom_fieldsets/
   requirements:
-    cerb_version: >=11.0 <11.2
+    cerb_version: >=11.0 <11.3
     cerb_plugins: cerberusweb.core
-
 records:
   custom_fieldset/test_fieldset:
     fields:

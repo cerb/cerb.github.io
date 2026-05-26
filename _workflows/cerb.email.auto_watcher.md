@@ -59,11 +59,11 @@ Change occurrences of **cerb.email.auto_watcher** to your own workflow identifie
 {% raw %}
 workflow:
   name: cerb.email.auto_watcher
-  version: 2024-11-11T23:17:32Z
+  version: 2025-02-21T00:00:00Z
   description: Automatically add workers as a watcher when they reply to a ticket.
   website: https://cerb.ai/workflows/cerb.email.auto_watcher/
   requirements:
-    cerb_version: >=11.0 <11.2
+    cerb_version: >=11.0 <11.3
     cerb_plugins: cerberusweb.core,
 records:
   automation_event_listener/listenerMailDraft:

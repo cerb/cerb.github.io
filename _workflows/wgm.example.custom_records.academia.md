@@ -59,9 +59,9 @@ workflow:
   name: wgm.example.custom_records.academia
   description: Demonstrates the use of custom records for use in academia
   website: https://cerb.ai/workflows/wgm.example.custom_records.academia/
-  version: 2024-10-10T00:00:00Z
+  version: 2026-05-25T20:00:00Z
   requirements:
-    cerb_version: >=11.0 <11.2
+    cerb_version: >=11.0 <11.3
     cerb_plugins: cerberusweb.core
 
 records:

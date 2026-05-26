@@ -75,9 +75,9 @@ workflow:
   name: wgm.example.new_ticket_interaction_with_snippets
   description: A workflow demonstrating how to create tickets from interactive snippet templates with dynamic prompts and form fields
   website: https://cerb.ai/workflows/wgm.example.custom_records.academia/
-  version: 2025-07-13T20:41:19Z
+  version: 2026-05-25T20:00:00Z
   requirements:
-    cerb_version: >=11.1.3 <11.2
+    cerb_version: >=11.1.3 <11.3
     cerb_plugins: cerberusweb.core
 records:
   snippet/snippetTemplate:

@@ -46,10 +46,10 @@ workflow:
   name: wgm.ticket.export_json
   description: Export tickets to a downloadable JSON file from their profile page.
   requirements:
-    cerb_plugins: cerberusweb.core,
-    cerb_version: >=11.0 <11.9
+    cerb_plugins: cerberusweb.core
+    cerb_version: >=11.0 <11.3
   website: https://cerb.ai/
-  version: 2026-02-25T03:49:23Z
+  version: version: 2026-05-25T20:00:00Z
 records:
   automation/automation_ticket_export:
     fields:

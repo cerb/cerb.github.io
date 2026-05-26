@@ -33,7 +33,10 @@ You can enable it from **Search >> Workflows >> (+) >> (empty)** and entering in
 workflow:
   name: cerb.email.samehost
   description: Find contacts from the same host as a given profile
-  version: 2025-01-18T01:10:19Z
+  version: 2026-05-25T20:00:00Z
+  requirements:
+    cerb_version: >=11.0 <11.3
+    cerb_plugins: cerberusweb.core
 records:
   automation/toolbarinteraction:
     fields:
