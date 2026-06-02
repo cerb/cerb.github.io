@@ -4,10 +4,10 @@ excerpt: A record worklist with configurable search queries and columns..
 summary: "This page provides information on the Worklist - Dashboard Widget, which allows users to configure a list of records with customizable search queries and columns. The widget can display any record type, set default search queries, specify fields to include or hide, and control how many records are displayed per page."
 permalink: /docs/dashboards/widgets/worklist/
 toc:
-  title: Clock
+  title: Worklist
   expand: Reference
 jumbotron:
-  title: Clock
+  title: Worklist
   tagline: ~
   breadcrumbs:
   - label: Docs &raquo;
