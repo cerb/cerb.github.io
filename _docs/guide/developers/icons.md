@@ -1,12 +1,13 @@
 ---
 title: Icon Reference
-excerpt: This page provides a comprehensive reference list of icons available in the
-  Cerb platform, licensed from GLYPHICONS.
-summary: This page provides a comprehensive reference list of icons available in the
-  Cerb platform, licensed from GLYPHICONS. It includes a wide variety of icons representing
-  different activities, objects, and concepts, such as transportation, communication,
-  technology, and everyday items. The list serves as a resource for users to identify
-  and utilize specific icons for their needs within the Cerb environment.
+excerpt: A reference of the icons available in the Cerb platform, drawn as a custom
+  set of modern SVG line icons.
+summary: This page is a reference of the icons available in the Cerb platform. As of
+  11.2, Cerb ships its own set of modern, monochromatic SVG line icons (replacing the
+  previous Glyphicons font). Each icon is referenced by name (e.g. in toolbar sections)
+  and inherits the surrounding text color, so it renders cleanly at any size in both
+  light and dark mode. When a toolbar specifies an unknown icon name, `zap` is used as
+  the default.
 permalink: /docs/developers/icons/
 toc:
   expand: Developer Guide
@@ -18,2447 +19,559 @@ jumbotron:
   - label: Developers &raquo;
 ---
 
+Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an icon by its name (shown below) from places like [toolbar](/docs/records/types/toolbar/) sections. Icons inherit the current text color and scale to any size. If an unknown icon name is given, `zap` is used as the default.
+
 <div style="column-width:200px;margin-bottom:20px;">
-    <div>
-        <span class="glyphicons glyphicons-activity" title=".glyphicons-activity" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">activity</span>
-    </div>
-    <div>
-        <span class="glyphicons glyphicons-address-book" title=".glyphicons-address-book" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">address-book</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-adjust" title=".glyphicons-adjust" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">adjust</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-adjust-alt" title=".glyphicons-adjust-alt" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">adjust-alt</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-airplane" title=".glyphicons-airplane" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">airplane</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-alarm" title=".glyphicons-alarm" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">alarm</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-albums" title=".glyphicons-albums" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">albums</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-alert" title=".glyphicons-alert" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">alert</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-align-center" title=".glyphicons-align-center" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">align-center</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-align-left" title=".glyphicons-align-left" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">align-left</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-align-right" title=".glyphicons-align-right" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">align-right</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-anchor" title=".glyphicons-anchor" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">anchor</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-asterisk" title=".glyphicons-asterisk" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">asterisk</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-atv-vehicle" title=".glyphicons-atv-vehicle" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">atv-vehicle</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-ax" title=".glyphicons-ax" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">ax</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-baby-formula" title=".glyphicons-baby-formula" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">baby-formula</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-ban" title=".glyphicons-ban" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">ban</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bank" title=".glyphicons-bank" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bank</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-barcode" title=".glyphicons-barcode" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">barcode</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-baseball" title=".glyphicons-baseball" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">baseball</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-basketball" title=".glyphicons-basketball" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">basketball</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bath-bathtub" title=".glyphicons-bath-bathtub" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bath-bathtub</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bath-shower" title=".glyphicons-bath-shower" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bath-shower</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bathrobe" title=".glyphicons-bathrobe" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bathrobe</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-beach-umbrella" title=".glyphicons-beach-umbrella" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">beach-umbrella</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bed" title=".glyphicons-bed" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bed</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bed-alt" title=".glyphicons-bed-alt" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bed-alt</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-beer" title=".glyphicons-beer" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">beer</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bell" title=".glyphicons-bell" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bell</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bicycle" title=".glyphicons-bicycle" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bicycle</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bin" title=".glyphicons-bin" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bin</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-binoculars" title=".glyphicons-binoculars" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">binoculars</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-birthday-cake" title=".glyphicons-birthday-cake" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">birthday-cake</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bishop" title=".glyphicons-bishop" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bishop</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bitcoin" title=".glyphicons-bitcoin" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bitcoin</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-blackboard" title=".glyphicons-blackboard" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">blackboard</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-blacksmith" title=".glyphicons-blacksmith" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">blacksmith</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-blog" title=".glyphicons-blog" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">blog</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bluetooth" title=".glyphicons-bluetooth" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bluetooth</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-boat" title=".glyphicons-boat" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">boat</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bold" title=".glyphicons-bold" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bold</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bomb" title=".glyphicons-bomb" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bomb</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-book" title=".glyphicons-book" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">book</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-book-open" title=".glyphicons-book-open" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">book-open</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bookmark" title=".glyphicons-bookmark" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bookmark</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bowling" title=".glyphicons-bowling" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bowling</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-briefcase" title=".glyphicons-briefcase" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">briefcase</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-brightness-increase" title=".glyphicons-brightness-increase" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">brightness-increase</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-brightness-reduce" title=".glyphicons-brightness-reduce" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">brightness-reduce</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bring-forward" title=".glyphicons-bring-forward" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bring-forward</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bring-to-front" title=".glyphicons-bring-to-front" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bring-to-front</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-brush" title=".glyphicons-brush" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">brush</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bucket" title=".glyphicons-bucket" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bucket</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bug" title=".glyphicons-bug" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bug</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-building" title=".glyphicons-building" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">building</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bullets" title=".glyphicons-bullets" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bullets</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bullhorn" title=".glyphicons-bullhorn" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bullhorn</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-buoy" title=".glyphicons-buoy" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">buoy</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-bus" title=".glyphicons-bus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">bus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cake" title=".glyphicons-cake" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cake</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-calculator" title=".glyphicons-calculator" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">calculator</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-calendar" title=".glyphicons-calendar" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">calendar</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-camera" title=".glyphicons-camera" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">camera</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-camera-small" title=".glyphicons-camera-small" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">camera-small</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-candle" title=".glyphicons-candle" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">candle</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-car" title=".glyphicons-car" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">car</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-car-hov" title=".glyphicons-car-hov" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">car-hov</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-car-rental" title=".glyphicons-car-rental" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">car-rental</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-car-wheel" title=".glyphicons-car-wheel" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">car-wheel</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cardio" title=".glyphicons-cardio" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cardio</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cargo" title=".glyphicons-cargo" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cargo</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cars" title=".glyphicons-cars" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cars</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cart-in" title=".glyphicons-cart-in" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cart-in</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cart-out" title=".glyphicons-cart-out" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cart-out</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cart-tick" title=".glyphicons-cart-tick" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cart-tick</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cat" title=".glyphicons-cat" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cat</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cd" title=".glyphicons-cd" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cd</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-celebration" title=".glyphicons-celebration" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">celebration</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-certificate" title=".glyphicons-certificate" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">certificate</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-charging-station" title=".glyphicons-charging-station" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">charging-station</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-charts" title=".glyphicons-charts" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">charts</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-chat" title=".glyphicons-chat" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">chat</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-check" title=".glyphicons-check" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">check</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-chevron-down" title=".glyphicons-chevron-down" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">chevron-down</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-chevron-left" title=".glyphicons-chevron-left" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">chevron-left</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-chevron-right" title=".glyphicons-chevron-right" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">chevron-right</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-chevron-up" title=".glyphicons-chevron-up" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">chevron-up</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-child" title=".glyphicons-child" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">child</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-circle-arrow-down" title=".glyphicons-circle-arrow-down" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">circle-arrow-down</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-circle-arrow-left" title=".glyphicons-circle-arrow-left" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">circle-arrow-left</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-circle-arrow-right" title=".glyphicons-circle-arrow-right" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">circle-arrow-right</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-circle-arrow-top" title=".glyphicons-circle-arrow-top" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">circle-arrow-top</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-circle-exclamation-mark" title=".glyphicons-circle-exclamation-mark" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">circle-exclamation-mark</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-circle-info" title=".glyphicons-circle-info" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">circle-info</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-circle-minus" title=".glyphicons-circle-minus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">circle-minus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-circle-ok" title=".glyphicons-circle-ok" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">circle-ok</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-circle-plus" title=".glyphicons-circle-plus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">circle-plus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-circle-question-mark" title=".glyphicons-circle-question-mark" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">circle-question-mark</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-circle-remove" title=".glyphicons-circle-remove" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">circle-remove</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-classic-hammer" title=".glyphicons-classic-hammer" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">classic-hammer</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-claw-hammer" title=".glyphicons-claw-hammer" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">claw-hammer</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cleaning" title=".glyphicons-cleaning" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cleaning</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-clock" title=".glyphicons-clock" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">clock</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cloud" title=".glyphicons-cloud" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cloud</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cloud-download" title=".glyphicons-cloud-download" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cloud-download</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cloud-minus" title=".glyphicons-cloud-minus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cloud-minus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cloud-plus" title=".glyphicons-cloud-plus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cloud-plus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cloud-upload" title=".glyphicons-cloud-upload" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cloud-upload</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cluster" title=".glyphicons-cluster" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cluster</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-coat-hanger" title=".glyphicons-coat-hanger" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">coat-hanger</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-coffee-cup" title=".glyphicons-coffee-cup" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">coffee-cup</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cogwheel" title=".glyphicons-cogwheel" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cogwheel</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cogwheels" title=".glyphicons-cogwheels" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cogwheels</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-coins" title=".glyphicons-coins" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">coins</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-collapse" title=".glyphicons-collapse" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">collapse</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-collapse-top" title=".glyphicons-collapse-top" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">collapse-top</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-comments" title=".glyphicons-comments" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">comments</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-commodities" title=".glyphicons-commodities" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">commodities</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-compass" title=".glyphicons-compass" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">compass</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-compressed" title=".glyphicons-compressed" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">compressed</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-construction-cone" title=".glyphicons-construction-cone" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">construction-cone</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-conversation" title=".glyphicons-conversation" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">conversation</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-copy" title=".glyphicons-copy" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">copy</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-copyright-mark" title=".glyphicons-copyright-mark" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">copyright-mark</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-credit-card" title=".glyphicons-credit-card" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">credit-card</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-crop" title=".glyphicons-crop" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">crop</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-crown" title=".glyphicons-crown" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">crown</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cup" title=".glyphicons-cup" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cup</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-currency-conversion" title=".glyphicons-currency-conversion" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">currency-conversion</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-cutlery" title=".glyphicons-cutlery" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">cutlery</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-dashboard" title=".glyphicons-dashboard" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">dashboard</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-database" title=".glyphicons-database" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">database</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-database-ban" title=".glyphicons-database-ban" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">database-ban</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-database-lock" title=".glyphicons-database-lock" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">database-lock</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-database-minus" title=".glyphicons-database-minus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">database-minus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-database-plus" title=".glyphicons-database-plus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">database-plus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-database-search" title=".glyphicons-database-search" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">database-search</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-delete" title=".glyphicons-delete" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">delete</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-dining-set" title=".glyphicons-dining-set" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">dining-set</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-direction" title=".glyphicons-direction" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">direction</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-disk-export" title=".glyphicons-disk-export" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">disk-export</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-disk-import" title=".glyphicons-disk-import" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">disk-import</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-disk-open" title=".glyphicons-disk-open" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">disk-open</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-disk-remove" title=".glyphicons-disk-remove" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">disk-remove</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-disk-save" title=".glyphicons-disk-save" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">disk-save</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-disk-saved" title=".glyphicons-disk-saved" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">disk-saved</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-display" title=".glyphicons-display" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">display</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-divide" title=".glyphicons-divide" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">divide</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-dog" title=".glyphicons-dog" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">dog</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-down-arrow" title=".glyphicons-down-arrow" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">down-arrow</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-download" title=".glyphicons-download" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">download</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-download-alt" title=".glyphicons-download-alt" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">download-alt</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-dress" title=".glyphicons-dress" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">dress</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-drink" title=".glyphicons-drink" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">drink</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-dumbbell" title=".glyphicons-dumbbell" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">dumbbell</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-duplicate" title=".glyphicons-duplicate" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">duplicate</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-ear-plugs" title=".glyphicons-ear-plugs" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">ear-plugs</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-earphone" title=".glyphicons-earphone" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">earphone</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-edit" title=".glyphicons-edit" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">edit</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-education" title=".glyphicons-education" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">education</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-eject" title=".glyphicons-eject" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">eject</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-electrical-plug" title=".glyphicons-electrical-plug" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">electrical-plug</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-electrical-socket-eu" title=".glyphicons-electrical-socket-eu" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">electrical-socket-eu</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-electrical-socket-us" title=".glyphicons-electrical-socket-us" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">electrical-socket-us</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-electricity" title=".glyphicons-electricity" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">electricity</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-embed" title=".glyphicons-embed" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">embed</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-embed-close" title=".glyphicons-embed-close" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">embed-close</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-envelope" title=".glyphicons-envelope" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">envelope</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-equalizer" title=".glyphicons-equalizer" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">equalizer</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-erase" title=".glyphicons-erase" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">erase</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-euro" title=".glyphicons-euro" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">euro</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-exit" title=".glyphicons-exit" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">exit</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-expand" title=".glyphicons-expand" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">expand</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-eye-close" title=".glyphicons-eye-close" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">eye-close</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-eye-minus" title=".glyphicons-eye-minus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">eye-minus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-eye-open" title=".glyphicons-eye-open" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">eye-open</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-eye-plus" title=".glyphicons-eye-plus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">eye-plus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-eyedropper" title=".glyphicons-eyedropper" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">eyedropper</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-fabric" title=".glyphicons-fabric" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">fabric</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-facetime-video" title=".glyphicons-facetime-video" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">facetime-video</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-factory" title=".glyphicons-factory" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">factory</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-family" title=".glyphicons-family" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">family</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-fast-backward" title=".glyphicons-fast-backward" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">fast-backward</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-fast-food" title=".glyphicons-fast-food" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">fast-food</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-fast-forward" title=".glyphicons-fast-forward" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">fast-forward</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-fax" title=".glyphicons-fax" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">fax</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-female" title=".glyphicons-female" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">female</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-file" title=".glyphicons-file" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">file</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-file-export" title=".glyphicons-file-export" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">file-export</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-file-import" title=".glyphicons-file-import" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">file-import</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-film" title=".glyphicons-film" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">film</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-filter" title=".glyphicons-filter" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">filter</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-fins" title=".glyphicons-fins" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">fins</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-fire" title=".glyphicons-fire" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">fire</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-firework" title=".glyphicons-firework" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">firework</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-fishes" title=".glyphicons-fishes" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">fishes</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-fit-frame-to-image" title=".glyphicons-fit-frame-to-image" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">fit-frame-to-image</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-fit-image-to-frame" title=".glyphicons-fit-image-to-frame" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">fit-image-to-frame</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-flag" title=".glyphicons-flag" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">flag</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-flash" title=".glyphicons-flash" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">flash</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-floppy-disk" title=".glyphicons-floppy-disk" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">floppy-disk</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-floppy-open" title=".glyphicons-floppy-open" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">floppy-open</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-floppy-remove" title=".glyphicons-floppy-remove" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">floppy-remove</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-floppy-save" title=".glyphicons-floppy-save" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">floppy-save</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-floppy-saved" title=".glyphicons-floppy-saved" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">floppy-saved</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-flowchart" title=".glyphicons-flowchart" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">flowchart</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-flower" title=".glyphicons-flower" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">flower</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-folder-closed" title=".glyphicons-folder-closed" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">folder-closed</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-folder-flag" title=".glyphicons-folder-flag" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">folder-flag</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-folder-heart" title=".glyphicons-folder-heart" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">folder-heart</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-folder-lock" title=".glyphicons-folder-lock" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">folder-lock</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-folder-minus" title=".glyphicons-folder-minus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">folder-minus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-folder-new" title=".glyphicons-folder-new" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">folder-new</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-folder-open" title=".glyphicons-folder-open" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">folder-open</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-folder-plus" title=".glyphicons-folder-plus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">folder-plus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-font" title=".glyphicons-font" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">font</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-forward" title=".glyphicons-forward" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">forward</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-french-press" title=".glyphicons-french-press" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">french-press</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-fullscreen" title=".glyphicons-fullscreen" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">fullscreen</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-gamepad" title=".glyphicons-gamepad" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">gamepad</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-gas-station" title=".glyphicons-gas-station" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">gas-station</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-gbp" title=".glyphicons-gbp" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">gbp</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-gift" title=".glyphicons-gift" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">gift</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-girl" title=".glyphicons-girl" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">girl</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-git-branch" title=".glyphicons-git-branch" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">git-branch</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-git-commit" title=".glyphicons-git-commit" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">git-commit</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-git-compare" title=".glyphicons-git-compare" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">git-compare</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-git-create" title=".glyphicons-git-create" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">git-create</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-git-delete" title=".glyphicons-git-delete" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">git-delete</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-git-merge" title=".glyphicons-git-merge" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">git-merge</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-git-private" title=".glyphicons-git-private" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">git-private</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-git-pull-request" title=".glyphicons-git-pull-request" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">git-pull-request</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-glass" title=".glyphicons-glass" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">glass</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-glasses" title=".glyphicons-glasses" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">glasses</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-global" title=".glyphicons-global" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">global</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-globe" title=".glyphicons-globe" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">globe</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-globe-af" title=".glyphicons-globe-af" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">globe-af</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-golf" title=".glyphicons-golf" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">golf</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-golf-course" title=".glyphicons-golf-course" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">golf-course</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-google-maps" title=".glyphicons-google-maps" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">google-maps</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-grater" title=".glyphicons-grater" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">grater</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-group" title=".glyphicons-group" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">group</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-hand-down" title=".glyphicons-hand-down" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">hand-down</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-hand-left" title=".glyphicons-hand-left" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">hand-left</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-hand-right" title=".glyphicons-hand-right" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">hand-right</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-hand-saw" title=".glyphicons-hand-saw" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">hand-saw</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-hand-up" title=".glyphicons-hand-up" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">hand-up</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-handshake" title=".glyphicons-handshake" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">handshake</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-hazard" title=".glyphicons-hazard" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">hazard</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-hazard-sign" title=".glyphicons-hazard-sign" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">hazard-sign</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-hdd" title=".glyphicons-hdd" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">hdd</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-header" title=".glyphicons-header" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">header</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-headphones" title=".glyphicons-headphones" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">headphones</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-headset" title=".glyphicons-headset" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">headset</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-heart" title=".glyphicons-heart" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">heart</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-heart-empty" title=".glyphicons-heart-empty" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">heart-empty</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-heat" title=".glyphicons-heat" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">heat</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-history" title=".glyphicons-history" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">history</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-hockey" title=".glyphicons-hockey" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">hockey</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-home" title=".glyphicons-home" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">home</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-hospital" title=".glyphicons-hospital" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">hospital</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-hospital-h" title=".glyphicons-hospital-h" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">hospital-h</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-hotspot" title=".glyphicons-hotspot" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">hotspot</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-hourglass" title=".glyphicons-hourglass" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">hourglass</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-hygiene-kit" title=".glyphicons-hygiene-kit" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">hygiene-kit</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-ice-cream" title=".glyphicons-ice-cream" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">ice-cream</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-ice-cream-no" title=".glyphicons-ice-cream-no" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">ice-cream-no</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-ice-lolly" title=".glyphicons-ice-lolly" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">ice-lolly</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-ice-lolly-tasted" title=".glyphicons-ice-lolly-tasted" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">ice-lolly-tasted</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-imac" title=".glyphicons-imac" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">imac</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-inbox" title=".glyphicons-inbox" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">inbox</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-inbox-in" title=".glyphicons-inbox-in" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">inbox-in</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-inbox-lock" title=".glyphicons-inbox-lock" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">inbox-lock</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-inbox-minus" title=".glyphicons-inbox-minus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">inbox-minus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-inbox-out" title=".glyphicons-inbox-out" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">inbox-out</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-inbox-plus" title=".glyphicons-inbox-plus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">inbox-plus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-invoice" title=".glyphicons-invoice" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">invoice</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-ipad" title=".glyphicons-ipad" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">ipad</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-iphone" title=".glyphicons-iphone" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">iphone</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-iphone-exchange" title=".glyphicons-iphone-exchange" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">iphone-exchange</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-iphone-shake" title=".glyphicons-iphone-shake" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">iphone-shake</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-iphone-transfer" title=".glyphicons-iphone-transfer" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">iphone-transfer</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-ipod" title=".glyphicons-ipod" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">ipod</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-ipod-shuffle" title=".glyphicons-ipod-shuffle" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">ipod-shuffle</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-italic" title=".glyphicons-italic" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">italic</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-justify" title=".glyphicons-justify" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">justify</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-kettle" title=".glyphicons-kettle" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">kettle</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-keyboard-wired" title=".glyphicons-keyboard-wired" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">keyboard-wired</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-keyboard-wireless" title=".glyphicons-keyboard-wireless" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">keyboard-wireless</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-keynote" title=".glyphicons-keynote" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">keynote</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-keys" title=".glyphicons-keys" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">keys</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-king" title=".glyphicons-king" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">king</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-kiosk" title=".glyphicons-kiosk" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">kiosk</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-kiosk-food" title=".glyphicons-kiosk-food" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">kiosk-food</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-kiosk-light" title=".glyphicons-kiosk-light" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">kiosk-light</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-kiosk-wheels" title=".glyphicons-kiosk-wheels" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">kiosk-wheels</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-knight" title=".glyphicons-knight" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">knight</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-lab" title=".glyphicons-lab" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">lab</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-lab-alt" title=".glyphicons-lab-alt" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">lab-alt</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-lamp" title=".glyphicons-lamp" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">lamp</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-leaf" title=".glyphicons-leaf" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">leaf</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-leather" title=".glyphicons-leather" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">leather</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-left-arrow" title=".glyphicons-left-arrow" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">left-arrow</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-left-indent" title=".glyphicons-left-indent" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">left-indent</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-life-preserver" title=".glyphicons-life-preserver" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">life-preserver</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-lightbulb" title=".glyphicons-lightbulb" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">lightbulb</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-link" title=".glyphicons-link" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">link</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-list" title=".glyphicons-list" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">list</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-list-alt" title=".glyphicons-list-alt" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">list-alt</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-lock" title=".glyphicons-lock" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">lock</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-log-book" title=".glyphicons-log-book" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">log-book</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-log-in" title=".glyphicons-log-in" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">log-in</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-log-out" title=".glyphicons-log-out" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">log-out</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-luggage" title=".glyphicons-luggage" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">luggage</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-macbook" title=".glyphicons-macbook" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">macbook</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-magic" title=".glyphicons-magic" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">magic</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-magnet" title=".glyphicons-magnet" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">magnet</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-male" title=".glyphicons-male" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">male</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-map" title=".glyphicons-map" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">map</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-marriage" title=".glyphicons-marriage" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">marriage</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-medicine" title=".glyphicons-medicine" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">medicine</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-menu-hamburger" title=".glyphicons-menu-hamburger" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">menu-hamburger</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-message-ban" title=".glyphicons-message-ban" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">message-ban</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-message-empty" title=".glyphicons-message-empty" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">message-empty</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-message-flag" title=".glyphicons-message-flag" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">message-flag</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-message-forward" title=".glyphicons-message-forward" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">message-forward</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-message-full" title=".glyphicons-message-full" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">message-full</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-message-in" title=".glyphicons-message-in" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">message-in</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-message-lock" title=".glyphicons-message-lock" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">message-lock</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-message-minus" title=".glyphicons-message-minus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">message-minus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-message-new" title=".glyphicons-message-new" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">message-new</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-message-out" title=".glyphicons-message-out" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">message-out</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-message-plus" title=".glyphicons-message-plus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">message-plus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-mic-mute" title=".glyphicons-mic-mute" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">mic-mute</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-microphone" title=".glyphicons-microphone" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">microphone</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-minus" title=".glyphicons-minus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">minus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-mms" title=".glyphicons-mms" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">mms</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-modal-window" title=".glyphicons-modal-window" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">modal-window</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-money" title=".glyphicons-money" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">money</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-moon" title=".glyphicons-moon" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">moon</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-more" title=".glyphicons-more" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">more</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-more-items" title=".glyphicons-more-items" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">more-items</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-more-windows" title=".glyphicons-more-windows" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">more-windows</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-mosquito-net" title=".glyphicons-mosquito-net" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">mosquito-net</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-motorcycle" title=".glyphicons-motorcycle" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">motorcycle</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-move" title=".glyphicons-move" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">move</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-multiple-displays" title=".glyphicons-multiple-displays" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">multiple-displays</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-music" title=".glyphicons-music" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">music</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-mute" title=".glyphicons-mute" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">mute</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-nails" title=".glyphicons-nails" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">nails</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-nameplate" title=".glyphicons-nameplate" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">nameplate</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-nameplate-alt" title=".glyphicons-nameplate-alt" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">nameplate-alt</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-new-window" title=".glyphicons-new-window" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">new-window</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-new-window-alt" title=".glyphicons-new-window-alt" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">new-window-alt</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-newspaper" title=".glyphicons-newspaper" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">newspaper</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-none-color-swatch" title=".glyphicons-none-color-swatch" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">none-color-swatch</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-note" title=".glyphicons-note" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">note</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-notes" title=".glyphicons-notes" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">notes</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-notes-2" title=".glyphicons-notes-2" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">notes-2</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-ok" title=".glyphicons-ok" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">ok</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-ok-2" title=".glyphicons-ok-2" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">ok-2</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-old-man" title=".glyphicons-old-man" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">old-man</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-option-horizontal" title=".glyphicons-option-horizontal" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">option-horizontal</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-option-vertical" title=".glyphicons-option-vertical" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">option-vertical</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-oxygen-bottle" title=".glyphicons-oxygen-bottle" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">oxygen-bottle</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-package" title=".glyphicons-package" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">package</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-pants" title=".glyphicons-pants" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">pants</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-paperclip" title=".glyphicons-paperclip" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">paperclip</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-paragraph" title=".glyphicons-paragraph" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">paragraph</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-parents" title=".glyphicons-parents" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">parents</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-paste" title=".glyphicons-paste" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">paste</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-pause" title=".glyphicons-pause" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">pause</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-pawn" title=".glyphicons-pawn" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">pawn</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-pen" title=".glyphicons-pen" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">pen</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-pencil" title=".glyphicons-pencil" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">pencil</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-person" title=".glyphicons-person" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">person</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-person-running" title=".glyphicons-person-running" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">person-running</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-person-walking" title=".glyphicons-person-walking" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">person-walking</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-person-wheelchair" title=".glyphicons-person-wheelchair" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">person-wheelchair</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-phone-alt" title=".glyphicons-phone-alt" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">phone-alt</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-piano" title=".glyphicons-piano" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">piano</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-picture" title=".glyphicons-picture" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">picture</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-pie-chart" title=".glyphicons-pie-chart" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">pie-chart</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-piggy-bank" title=".glyphicons-piggy-bank" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">piggy-bank</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-pin" title=".glyphicons-pin" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">pin</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-pin-flag" title=".glyphicons-pin-flag" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">pin-flag</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-pipe" title=".glyphicons-pipe" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">pipe</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-pizza" title=".glyphicons-pizza" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">pizza</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-plate-of-food" title=".glyphicons-plate-of-food" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">plate-of-food</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-play" title=".glyphicons-play" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">play</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-play-button" title=".glyphicons-play-button" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">play-button</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-playing-dices" title=".glyphicons-playing-dices" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">playing-dices</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-playlist" title=".glyphicons-playlist" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">playlist</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-plus" title=".glyphicons-plus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">plus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-podcast" title=".glyphicons-podcast" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">podcast</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-podium" title=".glyphicons-podium" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">podium</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-pool" title=".glyphicons-pool" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">pool</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-pot" title=".glyphicons-pot" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">pot</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-power" title=".glyphicons-power" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">power</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-print" title=".glyphicons-print" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">print</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-projector" title=".glyphicons-projector" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">projector</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-pushpin" title=".glyphicons-pushpin" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">pushpin</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-qrcode" title=".glyphicons-qrcode" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">qrcode</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-queen" title=".glyphicons-queen" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">queen</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-quote" title=".glyphicons-quote" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">quote</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-rabbit" title=".glyphicons-rabbit" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">rabbit</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-radar" title=".glyphicons-radar" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">radar</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-random" title=".glyphicons-random" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">random</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-record" title=".glyphicons-record" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">record</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-redo" title=".glyphicons-redo" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">redo</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-refresh" title=".glyphicons-refresh" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">refresh</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-registration-mark" title=".glyphicons-registration-mark" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">registration-mark</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-remote-control" title=".glyphicons-remote-control" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">remote-control</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-remote-control-tv" title=".glyphicons-remote-control-tv" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">remote-control-tv</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-remove" title=".glyphicons-remove" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">remove</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-remove-2" title=".glyphicons-remove-2" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">remove-2</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-repeat" title=".glyphicons-repeat" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">repeat</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-resize-full" title=".glyphicons-resize-full" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">resize-full</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-resize-small" title=".glyphicons-resize-small" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">resize-small</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-restart" title=".glyphicons-restart" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">restart</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-retweet" title=".glyphicons-retweet" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">retweet</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-retweet-2" title=".glyphicons-retweet-2" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">retweet-2</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-rewind" title=".glyphicons-rewind" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">rewind</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-riflescope" title=".glyphicons-riflescope" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">riflescope</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-right-arrow" title=".glyphicons-right-arrow" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">right-arrow</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-right-indent" title=".glyphicons-right-indent" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">right-indent</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-ring" title=".glyphicons-ring" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">ring</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-road" title=".glyphicons-road" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">road</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-rotation-lock" title=".glyphicons-rotation-lock" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">rotation-lock</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-roundabout" title=".glyphicons-roundabout" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">roundabout</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-router" title=".glyphicons-router" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">router</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-ruble" title=".glyphicons-ruble" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">ruble</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-rugby" title=".glyphicons-rugby" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">rugby</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-ruler" title=".glyphicons-ruler" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">ruler</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sampler" title=".glyphicons-sampler" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sampler</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-saw-blade" title=".glyphicons-saw-blade" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">saw-blade</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-scale" title=".glyphicons-scale" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">scale</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-scale-classic" title=".glyphicons-scale-classic" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">scale-classic</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-scissors" title=".glyphicons-scissors" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">scissors</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-scissors-alt" title=".glyphicons-scissors-alt" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">scissors-alt</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-screenshot" title=".glyphicons-screenshot" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">screenshot</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-scuba-diving" title=".glyphicons-scuba-diving" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">scuba-diving</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-search" title=".glyphicons-search" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">search</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-security-camera" title=".glyphicons-security-camera" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">security-camera</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-send" title=".glyphicons-send" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">send</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-send-backward" title=".glyphicons-send-backward" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">send-backward</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-send-to-back" title=".glyphicons-send-to-back" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">send-to-back</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-server" title=".glyphicons-server" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">server</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-server-ban" title=".glyphicons-server-ban" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">server-ban</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-server-flag" title=".glyphicons-server-flag" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">server-flag</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-server-lock" title=".glyphicons-server-lock" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">server-lock</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-server-minus" title=".glyphicons-server-minus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">server-minus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-server-new" title=".glyphicons-server-new" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">server-new</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-server-plus" title=".glyphicons-server-plus" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">server-plus</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-settings" title=".glyphicons-settings" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">settings</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-share" title=".glyphicons-share" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">share</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-share-alt" title=".glyphicons-share-alt" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">share-alt</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sheriffs-star" title=".glyphicons-sheriffs-star" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sheriffs-star</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-shield" title=".glyphicons-shield" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">shield</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-shirt" title=".glyphicons-shirt" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">shirt</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-shoe-steps" title=".glyphicons-shoe-steps" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">shoe-steps</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-shoes" title=".glyphicons-shoes" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">shoes</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-shop" title=".glyphicons-shop" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">shop</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-shop-window" title=".glyphicons-shop-window" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">shop-window</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-shopping-bag" title=".glyphicons-shopping-bag" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">shopping-bag</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-shopping-cart" title=".glyphicons-shopping-cart" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">shopping-cart</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-show-big-thumbnails" title=".glyphicons-show-big-thumbnails" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">show-big-thumbnails</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-show-lines" title=".glyphicons-show-lines" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">show-lines</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-show-thumbnails" title=".glyphicons-show-thumbnails" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">show-thumbnails</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-show-thumbnails-with-lines" title=".glyphicons-show-thumbnails-with-lines" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">show-thumbnails-with-lines</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-shower" title=".glyphicons-shower" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">shower</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-shredder" title=".glyphicons-shredder" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">shredder</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-signal" title=".glyphicons-signal" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">signal</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-skateboard" title=".glyphicons-skateboard" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">skateboard</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-skull" title=".glyphicons-skull" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">skull</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-smoking" title=".glyphicons-smoking" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">smoking</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sms" title=".glyphicons-sms" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sms</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-snorkel-diving" title=".glyphicons-snorkel-diving" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">snorkel-diving</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-snowflake" title=".glyphicons-snowflake" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">snowflake</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-soccer-ball" title=".glyphicons-soccer-ball" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">soccer-ball</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sort" title=".glyphicons-sort" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sort</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sort-by-alphabet" title=".glyphicons-sort-by-alphabet" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sort-by-alphabet</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sort-by-alphabet-alt" title=".glyphicons-sort-by-alphabet-alt" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sort-by-alphabet-alt</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sort-by-attributes" title=".glyphicons-sort-by-attributes" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sort-by-attributes</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sort-by-attributes-alt" title=".glyphicons-sort-by-attributes-alt" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sort-by-attributes-alt</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sort-by-order" title=".glyphicons-sort-by-order" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sort-by-order</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sort-by-order-alt" title=".glyphicons-sort-by-order-alt" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sort-by-order-alt</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sorting" title=".glyphicons-sorting" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sorting</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sound-5-1" title=".glyphicons-sound-5-1" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sound-5-1</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sound-6-1" title=".glyphicons-sound-6-1" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sound-6-1</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sound-7-1" title=".glyphicons-sound-7-1" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sound-7-1</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sound-dolby" title=".glyphicons-sound-dolby" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sound-dolby</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sound-stereo" title=".glyphicons-sound-stereo" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sound-stereo</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-spade" title=".glyphicons-spade" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">spade</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-speakers" title=".glyphicons-speakers" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">speakers</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-spray" title=".glyphicons-spray" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">spray</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-star" title=".glyphicons-star" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">star</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-star-empty" title=".glyphicons-star-empty" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">star-empty</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-star-half" title=".glyphicons-star-half" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">star-half</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-stats" title=".glyphicons-stats" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">stats</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-step-backward" title=".glyphicons-step-backward" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">step-backward</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-step-forward" title=".glyphicons-step-forward" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">step-forward</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-stethoscope" title=".glyphicons-stethoscope" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">stethoscope</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-stop" title=".glyphicons-stop" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">stop</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-stop-sign" title=".glyphicons-stop-sign" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">stop-sign</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-stopwatch" title=".glyphicons-stopwatch" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">stopwatch</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-stroller" title=".glyphicons-stroller" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">stroller</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-subscript" title=".glyphicons-subscript" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">subscript</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-subtitles" title=".glyphicons-subtitles" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">subtitles</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-suitcase" title=".glyphicons-suitcase" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">suitcase</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sun" title=".glyphicons-sun" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sun</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sunglasses" title=".glyphicons-sunglasses" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sunglasses</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-superscript" title=".glyphicons-superscript" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">superscript</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-sweater" title=".glyphicons-sweater" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">sweater</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-t-shirt" title=".glyphicons-t-shirt" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">t-shirt</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-table" title=".glyphicons-table" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">table</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-table-tennis" title=".glyphicons-table-tennis" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">table-tennis</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-tablet" title=".glyphicons-tablet" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">tablet</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-tag" title=".glyphicons-tag" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">tag</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-tags" title=".glyphicons-tags" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">tags</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-target" title=".glyphicons-target" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">target</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-taxi" title=".glyphicons-taxi" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">taxi</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-tea-kettle" title=".glyphicons-tea-kettle" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">tea-kettle</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-temple-buddhist" title=".glyphicons-temple-buddhist" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">temple-buddhist</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-temple-christianity-church" title=".glyphicons-temple-christianity-church" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">temple-christianity-church</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-temple-hindu" title=".glyphicons-temple-hindu" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">temple-hindu</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-temple-islam" title=".glyphicons-temple-islam" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">temple-islam</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-tent" title=".glyphicons-tent" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">tent</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-text-background" title=".glyphicons-text-background" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">text-background</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-text-bigger" title=".glyphicons-text-bigger" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">text-bigger</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-text-color" title=".glyphicons-text-color" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">text-color</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-text-height" title=".glyphicons-text-height" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">text-height</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-text-resize" title=".glyphicons-text-resize" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">text-resize</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-text-size" title=".glyphicons-text-size" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">text-size</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-text-smaller" title=".glyphicons-text-smaller" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">text-smaller</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-text-strike" title=".glyphicons-text-strike" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">text-strike</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-text-underline" title=".glyphicons-text-underline" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">text-underline</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-text-width" title=".glyphicons-text-width" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">text-width</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-thumbs-down" title=".glyphicons-thumbs-down" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">thumbs-down</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-thumbs-up" title=".glyphicons-thumbs-up" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">thumbs-up</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-tie" title=".glyphicons-tie" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">tie</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-tint" title=".glyphicons-tint" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">tint</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-tower" title=".glyphicons-tower" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">tower</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-tractor" title=".glyphicons-tractor" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">tractor</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-train" title=".glyphicons-train" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">train</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-transfer" title=".glyphicons-transfer" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">transfer</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-translate" title=".glyphicons-translate" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">translate</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-transport" title=".glyphicons-transport" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">transport</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-tree-conifer" title=".glyphicons-tree-conifer" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">tree-conifer</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-tree-deciduous" title=".glyphicons-tree-deciduous" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">tree-deciduous</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-truck" title=".glyphicons-truck" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">truck</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-turtle" title=".glyphicons-turtle" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">turtle</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-tv" title=".glyphicons-tv" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">tv</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-uk-rat-12" title=".glyphicons-uk-rat-12" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">uk-rat-12</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-uk-rat-12a" title=".glyphicons-uk-rat-12a" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">uk-rat-12a</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-uk-rat-15" title=".glyphicons-uk-rat-15" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">uk-rat-15</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-uk-rat-18" title=".glyphicons-uk-rat-18" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">uk-rat-18</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-uk-rat-pg" title=".glyphicons-uk-rat-pg" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">uk-rat-pg</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-uk-rat-r18" title=".glyphicons-uk-rat-r18" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">uk-rat-r18</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-uk-rat-u" title=".glyphicons-uk-rat-u" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">uk-rat-u</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-umbrella" title=".glyphicons-umbrella" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">umbrella</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-unchecked" title=".glyphicons-unchecked" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">unchecked</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-underground" title=".glyphicons-underground" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">underground</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-underwear" title=".glyphicons-underwear" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">underwear</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-undo" title=".glyphicons-undo" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">undo</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-unlock" title=".glyphicons-unlock" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">unlock</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-unshare" title=".glyphicons-unshare" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">unshare</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-up-arrow" title=".glyphicons-up-arrow" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">up-arrow</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-upload" title=".glyphicons-upload" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">upload</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-us-rat-g" title=".glyphicons-us-rat-g" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">us-rat-g</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-us-rat-no-one-17" title=".glyphicons-us-rat-no-one-17" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">us-rat-no-one-17</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-us-rat-pg" title=".glyphicons-us-rat-pg" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">us-rat-pg</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-us-rat-pg-13" title=".glyphicons-us-rat-pg-13" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">us-rat-pg-13</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-us-rat-restricted" title=".glyphicons-us-rat-restricted" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">us-rat-restricted</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-usd" title=".glyphicons-usd" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">usd</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-user" title=".glyphicons-user" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">user</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-user-add" title=".glyphicons-user-add" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">user-add</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-user-alert" title=".glyphicons-user-alert" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">user-alert</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-user-asterisk" title=".glyphicons-user-asterisk" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">user-asterisk</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-user-ban" title=".glyphicons-user-ban" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">user-ban</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-user-conversation" title=".glyphicons-user-conversation" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">user-conversation</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-user-flag" title=".glyphicons-user-flag" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">user-flag</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-user-key" title=".glyphicons-user-key" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">user-key</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-user-lock" title=".glyphicons-user-lock" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">user-lock</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-user-remove" title=".glyphicons-user-remove" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">user-remove</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-vases" title=".glyphicons-vases" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">vases</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-vcard" title=".glyphicons-vcard" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">vcard</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-vector-path-all" title=".glyphicons-vector-path-all" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">vector-path-all</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-vector-path-circle" title=".glyphicons-vector-path-circle" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">vector-path-circle</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-vector-path-curve" title=".glyphicons-vector-path-curve" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">vector-path-curve</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-vector-path-line" title=".glyphicons-vector-path-line" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">vector-path-line</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-vector-path-polygon" title=".glyphicons-vector-path-polygon" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">vector-path-polygon</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-vector-path-square" title=".glyphicons-vector-path-square" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">vector-path-square</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-video-hd" title=".glyphicons-video-hd" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">video-hd</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-video-sd" title=".glyphicons-video-sd" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">video-sd</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-voice" title=".glyphicons-voice" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">voice</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-voicemail" title=".glyphicons-voicemail" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">voicemail</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-volume-down" title=".glyphicons-volume-down" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">volume-down</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-volume-up" title=".glyphicons-volume-up" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">volume-up</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-wallet" title=".glyphicons-wallet" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">wallet</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-warning-sign" title=".glyphicons-warning-sign" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">warning-sign</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-watch" title=".glyphicons-watch" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">watch</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-webcam" title=".glyphicons-webcam" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">webcam</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-wifi" title=".glyphicons-wifi" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">wifi</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-wifi-alt" title=".glyphicons-wifi-alt" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">wifi-alt</span>
-    </div>
-    <div>
-        <span class="glyphicons glyphicons-woman" title=".glyphicons-woman" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">woman</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-wrench" title=".glyphicons-wrench" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">wrench</span>
-    </div>
-    <div>
-        <span class="glyphicons glyphicons-yen" title=".glyphicons-yen" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">yen</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-zoom-in" title=".glyphicons-zoom-in" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">zoom-in</span>
-    </div>
-	<div>
-        <span class="glyphicons glyphicons-zoom-out" title=".glyphicons-zoom-out" style="font-size:200%;margin:5px;"></span>
-        <span style="vertical-align:bottom;">zoom-out</span>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-adjust" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='5' y1='3' x2='5' y2='21'/><line x1='12' y1='3' x2='12' y2='21'/><line x1='19' y1='3' x2='19' y2='21'/><rect x='2.5' y='7' width='5' height='3' rx='1.5'/><rect x='9.5' y='13' width='5' height='3' rx='1.5'/><rect x='16.5' y='5' width='5' height='3' rx='1.5'/></svg></span>
+        <span style="vertical-align:middle;">adjust</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-alert" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3'/><path d='M12 9v4'/><path d='M12 17h.01'/></svg></span>
+        <span style="vertical-align:middle;">alert</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-antenna" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle fill='currentColor' stroke='none' cx='12' cy='8' r='1.5'/><line x1='12' y1='9.5' x2='12' y2='21'/><path d='M15 5a4.2 4.2 0 0 1 0 6'/><path d='M18 3a8 8 0 0 1 0 10'/><path d='M9 5a4.2 4.2 0 0 0 0 6'/><path d='M6 3a8 8 0 0 0 0 10'/></svg></span>
+        <span style="vertical-align:middle;">antenna</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-ban" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><g stroke-width='2.5'><circle cx='12' cy='12' r='10'/><line x1='4.93' y1='4.93' x2='19.07' y2='19.07'/></g></svg></span>
+        <span style="vertical-align:middle;">ban</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-bell" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg></span>
+        <span style="vertical-align:middle;">bell</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-bold" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-width='4' d='M6 12h9a4 4 0 0 1 0 8H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h7a4 4 0 0 1 0 8'/></svg></span>
+        <span style="vertical-align:middle;">bold</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-book" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20'/></svg></span>
+        <span style="vertical-align:middle;">book</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-book-open" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 7v14'/><path d='M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z'/></svg></span>
+        <span style="vertical-align:middle;">book-open</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-bot" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 8V4H8'/><rect width='16' height='12' x='4' y='8' rx='2'/><path d='M2 14h2'/><path d='M20 14h2'/><path d='M15 13v2'/><path d='M9 13v2'/></svg></span>
+        <span style="vertical-align:middle;">bot</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-bot-message" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 6V2H8'/><path d='m8 18-4 4V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2Z'/><path d='M2 12h2'/><path d='M9 11v2'/><path d='M15 11v2'/><path d='M20 12h2'/></svg></span>
+        <span style="vertical-align:middle;">bot-message</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-branch" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M8 9V15'/><path d='M8 14 13 11 15 11'/><rect x='5' y='3' width='6' height='6' rx='2'/><rect x='5' y='15' width='6' height='6' rx='2'/><rect x='15' y='8' width='6' height='6' rx='2'/></svg></span>
+        <span style="vertical-align:middle;">branch</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-calendar" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M8 2v4'/><path d='M16 2v4'/><rect width='18' height='18' x='3' y='4' rx='2'/><path d='M3 10h18'/></svg></span>
+        <span style="vertical-align:middle;">calendar</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-camera" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z'/><circle cx='12' cy='13' r='3'/></svg></span>
+        <span style="vertical-align:middle;">camera</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-check" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='18' height='18' x='3' y='3' rx='2'/><path d='m9 12 2 2 4-4'/></svg></span>
+        <span style="vertical-align:middle;">check</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-chevron-down" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M12 15.5l-7-7 2-2 5 5 5-5 2 2z'/></svg></span>
+        <span style="vertical-align:middle;">chevron-down</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-chevron-left" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M8.5 12l7-7 2 2-5 5 5 5-2 2z'/></svg></span>
+        <span style="vertical-align:middle;">chevron-left</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-chevron-right" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M15.5 12l-7 7-2-2 5-5-5-5 2-2z'/></svg></span>
+        <span style="vertical-align:middle;">chevron-right</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-chevron-up" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M12 8.5l7 7-2 2-5-5-5 5-2-2z'/></svg></span>
+        <span style="vertical-align:middle;">chevron-up</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-circle-arrow-down" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' fill='currentColor' fill-rule='evenodd' d='M2 12A10 10 0 1 0 22 12A10 10 0 1 0 2 12ZM15 6 15 12 18 12 12 18 6 12 9 12 9 6Z'/></svg></span>
+        <span style="vertical-align:middle;">circle-arrow-down</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-circle-arrow-left" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' fill='currentColor' fill-rule='evenodd' d='M2 12A10 10 0 1 0 22 12A10 10 0 1 0 2 12ZM18 15 12 15 12 18 6 12 12 6 12 9 18 9Z'/></svg></span>
+        <span style="vertical-align:middle;">circle-arrow-left</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-circle-arrow-right" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' fill='currentColor' fill-rule='evenodd' d='M2 12A10 10 0 1 0 22 12A10 10 0 1 0 2 12ZM6 9 12 9 12 6 18 12 12 18 12 15 6 15Z'/></svg></span>
+        <span style="vertical-align:middle;">circle-arrow-right</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-circle-arrow-up" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' fill='currentColor' fill-rule='evenodd' d='M2 12A10 10 0 1 0 22 12A10 10 0 1 0 2 12ZM9 18 9 12 6 12 12 6 18 12 15 12 15 18Z'/></svg></span>
+        <span style="vertical-align:middle;">circle-arrow-up</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-circle-exclamation-mark" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' fill='currentColor' fill-rule='evenodd' d='M2 12A10 10 0 1 0 22 12A10 10 0 1 0 2 12ZM10.5 6 13.5 6 13 13.5 11 13.5ZM10.5 17.5A1.5 1.5 0 1 0 13.5 17.5A1.5 1.5 0 1 0 10.5 17.5Z'/></svg></span>
+        <span style="vertical-align:middle;">circle-exclamation-mark</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-circle-info" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' fill='currentColor' fill-rule='evenodd' d='M2 12A10 10 0 1 0 22 12A10 10 0 1 0 2 12ZM10.5 6.5A1.5 1.5 0 1 0 13.5 6.5A1.5 1.5 0 1 0 10.5 6.5ZM10.5 10.5 13.5 10.5 13.5 18 10.5 18Z'/></svg></span>
+        <span style="vertical-align:middle;">circle-info</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-circle-minus" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' fill='currentColor' fill-rule='evenodd' d='M2 12A10 10 0 1 0 22 12A10 10 0 1 0 2 12ZM6 10.5 18 10.5 18 13.5 6 13.5Z'/></svg></span>
+        <span style="vertical-align:middle;">circle-minus</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-circle-ok" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' fill='currentColor' fill-rule='evenodd' d='M2 12A10 10 0 1 0 22 12A10 10 0 1 0 2 12ZM6.44 13.06 10.5 17.12 17.56 10.06 15.44 7.94 10.5 12.88 8.56 10.94Z'/></svg></span>
+        <span style="vertical-align:middle;">circle-ok</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-circle-plus" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' fill='currentColor' fill-rule='evenodd' d='M2 12A10 10 0 1 0 22 12A10 10 0 1 0 2 12ZM10.5 6 13.5 6 13.5 10.5 18 10.5 18 13.5 13.5 13.5 13.5 18 10.5 18 10.5 13.5 6 13.5 6 10.5 10.5 10.5Z'/></svg></span>
+        <span style="vertical-align:middle;">circle-plus</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-circle-question-mark" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' fill='currentColor' fill-rule='evenodd' d='M2 12A10 10 0 1 0 22 12A10 10 0 1 0 2 12ZM8.15 8.67A4 4 0 0 1 15.92 10C15.92 12 13.5 13.7 12.24 13.95A1 1 0 0 1 11.6 12.05C12.5 12 13.8 11 13.92 10A2 2 0 0 0 10.03 9.33ZM10.7 17A1.3 1.3 0 1 0 13.3 17A1.3 1.3 0 1 0 10.7 17Z'/></svg></span>
+        <span style="vertical-align:middle;">circle-question-mark</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-circle-remove" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' fill='currentColor' fill-rule='evenodd' d='M2 12A10 10 0 1 0 22 12A10 10 0 1 0 2 12ZM6.44 8.56 9.88 12 6.44 15.44 8.56 17.56 12 14.12 15.44 17.56 17.56 15.44 14.12 12 17.56 8.56 15.44 6.44 12 9.88 8.56 6.44Z'/></svg></span>
+        <span style="vertical-align:middle;">circle-remove</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-clipboard" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='8' height='4' x='8' y='2' rx='1'/><path d='M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2'/><line x1='8' y1='11' x2='16' y2='11'/><line x1='8' y1='15' x2='16' y2='15'/><line x1='8' y1='19' x2='13' y2='19'/></svg></span>
+        <span style="vertical-align:middle;">clipboard</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-clock" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 14'/></svg></span>
+        <span style="vertical-align:middle;">clock</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-cloud" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 19H6a3.5 3.5 0 0 1 0-7a6.5 6.5 0 0 1 12-2a4.5 4.5 0 0 1 0 9Z'/></svg></span>
+        <span style="vertical-align:middle;">cloud</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-cloud-download" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 15H6a3.5 3.5 0 0 1 0-7a6.5 6.5 0 0 1 12-2a4.5 4.5 0 0 1 0 9Z'/><polygon fill='currentColor' stroke-width='1' points='12 9 14 9 14 18.5 16 18.5 13 22.5 10 18.5 12 18.5'/></svg></span>
+        <span style="vertical-align:middle;">cloud-download</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-cloud-upload" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 21H6a3.5 3.5 0 0 1 0-7a6.5 6.5 0 0 1 12-2a4.5 4.5 0 0 1 0 9Z'/><polygon fill='currentColor' stroke-width='1' points='12 15 14 15 14 5.5 16 5.5 13 1.5 10 5.5 12 5.5'/></svg></span>
+        <span style="vertical-align:middle;">cloud-upload</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-comments" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' d='M4 4h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 5v-5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z'/></svg></span>
+        <span style="vertical-align:middle;">comments</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-compass" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><polygon stroke-width='1' points='16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88'/><circle fill='currentColor' stroke='none' cx='12' cy='12' r='1.5'/></svg></span>
+        <span style="vertical-align:middle;">compass</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-conversation" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' d='M8 4c-3.3 0-6 2.2-6 5 0 1.4.7 2.7 1.8 3.6L2 16l4-1.5c.6.2 1.3.3 2 .3 3.3 0 6-2.2 6-5S11.3 4 8 4z'/><path fill='currentColor' d='M22 14c0-2-1.4-3.7-3.4-4.6.3.5.4 1 .4 1.6 0 3.3-3.1 6-7 6-.4 0-.7 0-1.1-.1.9 1.9 3.1 3.1 5.6 3.1.6 0 1.2-.1 1.8-.2L22 21l-1.5-3c1-.9 1.5-2 1.5-3z'/></svg></span>
+        <span style="vertical-align:middle;">conversation</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-copy" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='8' height='4' x='8' y='2' rx='1'/><path d='M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2'/><polygon fill='currentColor' stroke='none' points='10.5 9 13.5 9 13.5 15 15.5 15 12 19 8.5 15 10.5 15'/></svg></span>
+        <span style="vertical-align:middle;">copy</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-crosshairs" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/><line x1='12' y1='2' x2='12' y2='22'/><line x1='2' y1='12' x2='22' y2='12'/></svg></span>
+        <span style="vertical-align:middle;">crosshairs</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-dice" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='12' height='12' x='2' y='10' rx='2'/><path d='m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6'/><path d='M6 18h.01'/><path d='M10 14h.01'/><path d='M15 6h.01'/><path d='M18 9h.01'/></svg></span>
+        <span style="vertical-align:middle;">dice</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-disk-export" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='17' width='15' height='5' rx='1.5'/><circle fill='currentColor' cx='13.5' cy='19.5' r='1'/><polygon fill='currentColor' stroke='none' points='11.5 16 11.5 10 13.5 10 9.5 4 5.5 10 7.5 10 7.5 16'/></svg></span>
+        <span style="vertical-align:middle;">disk-export</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-disk-save" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='17' width='15' height='5' rx='1.5'/><circle fill='currentColor' cx='13.5' cy='19.5' r='1'/><polygon fill='currentColor' stroke='none' points='11.5 4 11.5 10 13.5 10 9.5 16 5.5 10 7.5 10 7.5 4'/></svg></span>
+        <span style="vertical-align:middle;">disk-save</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-down-arrow" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon fill='currentColor' stroke='none' points='15 5 15 12 18 12 12 19 6 12 9 12 9 5'/></svg></span>
+        <span style="vertical-align:middle;">down-arrow</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-duplicate" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='8' width='14' height='14' rx='2'/><path d='M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2'/></svg></span>
+        <span style="vertical-align:middle;">duplicate</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-edit" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7'/><path d='M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z'/></svg></span>
+        <span style="vertical-align:middle;">edit</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-embed" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='16 18 22 12 16 6'/><polyline points='8 6 2 12 8 18'/></svg></span>
+        <span style="vertical-align:middle;">embed</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-erase" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 21H8a2 2 0 0 1-1.42-.587l-3.994-3.999a2 2 0 0 1 0-2.828l10-10a2 2 0 0 1 2.829 0l5.999 6a2 2 0 0 1 0 2.828L12.834 21'/><path d='m5.082 11.09 8.828 8.828'/></svg></span>
+        <span style="vertical-align:middle;">erase</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-eye-close" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z'/><circle cx='12' cy='12' r='3'/><line x1='3' y1='3' x2='21' y2='21'/></svg></span>
+        <span style="vertical-align:middle;">eye-close</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-eye-open" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z'/><circle cx='12' cy='12' r='3'/></svg></span>
+        <span style="vertical-align:middle;">eye-open</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-fast-backward" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon fill='currentColor' stroke='none' points='21 5 13 12 21 19'/><polygon fill='currentColor' stroke='none' points='13 5 5 12 13 19'/></svg></span>
+        <span style="vertical-align:middle;">fast-backward</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-fast-forward" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon fill='currentColor' stroke='none' points='3 5 11 12 3 19'/><polygon fill='currentColor' stroke='none' points='11 5 19 12 11 19'/></svg></span>
+        <span style="vertical-align:middle;">fast-forward</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-file" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-width='1.5' d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z'/><path stroke-width='1.5' d='M14 2v4a2 2 0 0 0 2 2h4'/></svg></span>
+        <span style="vertical-align:middle;">file</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-file-export" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-width='1.5' d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z'/><path stroke-width='1.5' d='M14 2v4a2 2 0 0 0 2 2h4'/><polygon fill='currentColor' stroke-width='1' points='7 14 15 14 15 12 19 15 15 18 15 16 7 16'/></svg></span>
+        <span style="vertical-align:middle;">file-export</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-file-import" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-width='1.5' d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z'/><path stroke-width='1.5' d='M14 2v4a2 2 0 0 0 2 2h4'/><polygon fill='currentColor' stroke-width='1' points='17 14 9 14 9 12 5 15 9 18 9 16 17 16'/></svg></span>
+        <span style="vertical-align:middle;">file-import</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-folder" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z'/></svg></span>
+        <span style="vertical-align:middle;">folder</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-folder-open" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2'/></svg></span>
+        <span style="vertical-align:middle;">folder-open</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-folder-plus" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z'/><line x1='12' y1='10' x2='12' y2='16'/><line x1='9' y1='13' x2='15' y2='13'/></svg></span>
+        <span style="vertical-align:middle;">folder-plus</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-gear" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' fill-rule='evenodd' d='M19.93 10.96L21.42 10.76Q21.91 10.7 21.91 11.2L21.91 12.8Q21.91 13.3 21.42 13.24L19.93 13.04 19.44 12.98A7.5 7.5 0 0 1 17.95 16.57L18.35 16.87 19.54 17.78Q19.93 18.09 19.58 18.44L18.44 19.58Q18.09 19.93 17.78 19.54L16.87 18.35 16.57 17.95A7.5 7.5 0 0 1 12.98 19.44L13.04 19.93 13.24 21.42Q13.3 21.91 12.8 21.91L11.2 21.91Q10.7 21.91 10.76 21.42L10.96 19.93 11.02 19.44A7.5 7.5 0 0 1 7.43 17.95L7.13 18.35 6.22 19.54Q5.91 19.93 5.56 19.58L4.42 18.44Q4.07 18.09 4.46 17.78L5.65 16.87 6.05 16.57A7.5 7.5 0 0 1 4.56 12.98L4.07 13.04 2.58 13.24Q2.09 13.3 2.09 12.8L2.09 11.2Q2.09 10.7 2.58 10.76L4.07 10.96 4.56 11.02A7.5 7.5 0 0 1 6.05 7.43L5.65 7.13 4.46 6.22Q4.07 5.91 4.42 5.56L5.56 4.42Q5.91 4.07 6.22 4.46L7.13 5.65 7.43 6.05A7.5 7.5 0 0 1 11.02 4.56L10.96 4.07 10.76 2.58Q10.7 2.09 11.2 2.09L12.8 2.09Q13.3 2.09 13.24 2.58L13.04 4.07 12.98 4.56A7.5 7.5 0 0 1 16.57 6.05L16.87 5.65 17.78 4.46Q18.09 4.07 18.44 4.42L19.58 5.56Q19.93 5.91 19.54 6.22L18.35 7.13 17.95 7.43A7.5 7.5 0 0 1 19.44 11.02L19.93 10.96ZM6.5 12A5.5 5.5 0 1 0 17.5 12A5.5 5.5 0 1 0 6.5 12Z'/></svg></span>
+        <span style="vertical-align:middle;">gear</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-gender-female" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='8' r='6'/><line x1='12' y1='14' x2='12' y2='22'/><line x1='9' y1='18' x2='15' y2='18'/></svg></span>
+        <span style="vertical-align:middle;">gender-female</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-gender-male" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='10' cy='14' r='6'/><line x1='14.24' y1='9.76' x2='20' y2='4'/><path d='M15 4h5v5'/></svg></span>
+        <span style="vertical-align:middle;">gender-male</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-globe" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><path d='M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20'/><path d='M2 12h20'/></svg></span>
+        <span style="vertical-align:middle;">globe</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-hammer" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9'/><path d='m18 15 4-4'/><path d='m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12 8.4V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5'/></svg></span>
+        <span style="vertical-align:middle;">hammer</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-hash" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='4' y1='9' x2='20' y2='9'/><line x1='4' y1='15' x2='20' y2='15'/><line x1='10' y1='3' x2='8' y2='21'/><line x1='16' y1='3' x2='14' y2='21'/></svg></span>
+        <span style="vertical-align:middle;">hash</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-header" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-width='4' d='M6 12h12'/><path stroke-width='4' d='M6 20V4'/><path stroke-width='4' d='M18 20V4'/></svg></span>
+        <span style="vertical-align:middle;">header</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-history" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8'/><path d='M3 3v5h5'/><path d='M12 7v5l4 2'/></svg></span>
+        <span style="vertical-align:middle;">history</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-id-card" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='6' width='20' height='15' rx='2'/><path d='M9 6V5a3 3 0 0 1 6 0v1'/><circle fill='currentColor' stroke='none' cx='8' cy='11' r='2.4'/><path fill='currentColor' stroke='none' d='M4.5 18a3.5 3.5 0 0 1 7 0z'/><line x1='15' y1='11' x2='19' y2='11'/><line x1='15' y1='14' x2='19' y2='14'/><line x1='15' y1='17' x2='18' y2='17'/></svg></span>
+        <span style="vertical-align:middle;">id-card</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-italic" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='19' y1='4' x2='10' y2='4'/><line x1='14' y1='20' x2='5' y2='20'/><line x1='15' y1='4' x2='9' y2='20'/></svg></span>
+        <span style="vertical-align:middle;">italic</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-lab" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M10 2v7.53a2 2 0 0 1-.21.89L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.07-10.13A2 2 0 0 1 14 9.53V2'/><path d='M8.5 2h7'/><path d='M7 16h10'/></svg></span>
+        <span style="vertical-align:middle;">lab</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-left-arrow" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon fill='currentColor' stroke='none' points='19 15 12 15 12 18 5 12 12 6 12 9 19 9'/></svg></span>
+        <span style="vertical-align:middle;">left-arrow</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-link" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'/><path d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'/></svg></span>
+        <span style="vertical-align:middle;">link</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-list" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='8' y1='6' x2='21' y2='6'/><line x1='8' y1='12' x2='21' y2='12'/><line x1='8' y1='18' x2='21' y2='18'/><line x1='3' y1='6' x2='3.01' y2='6'/><line x1='3' y1='12' x2='3.01' y2='12'/><line x1='3' y1='18' x2='3.01' y2='18'/></svg></span>
+        <span style="vertical-align:middle;">list</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-lock" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0 1 10 0v4'/></svg></span>
+        <span style="vertical-align:middle;">lock</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-magic" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72'/><path d='m14 7 3 3'/><path d='M5 6v4'/><path d='M19 14v4'/><path d='M10 2v2'/><path d='M7 8H3'/><path d='M21 16h-4'/><path d='M11 3H9'/></svg></span>
+        <span style="vertical-align:middle;">magic</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-mail" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='4' width='20' height='16' rx='2'/><path d='m22 7-10 6L2 7'/></svg></span>
+        <span style="vertical-align:middle;">mail</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-map" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z'/><path d='M15 5.764v15'/><path d='M9 3.236v15'/></svg></span>
+        <span style="vertical-align:middle;">map</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-megaphone" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m3 11 18-5v12L3 14v-3z'/><path d='M11.6 16.8a3 3 0 1 1-5.8-1.6'/></svg></span>
+        <span style="vertical-align:middle;">megaphone</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-mention" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='4'/><path d='M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8'/></svg></span>
+        <span style="vertical-align:middle;">mention</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-menu-hamburger" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='4' y1='6' x2='20' y2='6'/><line x1='4' y1='12' x2='20' y2='12'/><line x1='4' y1='18' x2='20' y2='18'/></svg></span>
+        <span style="vertical-align:middle;">menu-hamburger</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-merge" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M8 9V15'/><path d='M8 10 13 13 15 13'/><rect x='5' y='3' width='6' height='6' rx='2'/><rect x='5' y='15' width='6' height='6' rx='2'/><rect x='15' y='10' width='6' height='6' rx='2'/></svg></span>
+        <span style="vertical-align:middle;">merge</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-minus" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M6 10.5 18 10.5 18 13.5 6 13.5Z'/></svg></span>
+        <span style="vertical-align:middle;">minus</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-moon" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M21 14A9 9 0 1 1 10 3 6 6 0 0 0 21 14z'/></svg></span>
+        <span style="vertical-align:middle;">moon</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-more" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><g stroke-width='1.5'><circle fill='currentColor' cx='6' cy='12' r='2'/><circle fill='currentColor' cx='12' cy='12' r='2'/><circle fill='currentColor' cx='18' cy='12' r='2'/></g></svg></span>
+        <span style="vertical-align:middle;">more</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-more-vertical" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><g stroke-width='1.5'><circle fill='currentColor' cx='12' cy='6' r='2'/><circle fill='currentColor' cx='12' cy='12' r='2'/><circle fill='currentColor' cx='12' cy='18' r='2'/></g></svg></span>
+        <span style="vertical-align:middle;">more-vertical</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-move" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 2v20'/><path d='m15 19-3 3-3-3'/><path d='m19 9 3 3-3 3'/><path d='M2 12h20'/><path d='m5 9-3 3 3 3'/><path d='m9 5 3-3 3 3'/></svg></span>
+        <span style="vertical-align:middle;">move</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-move-horizontal" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M2 12h20'/><path d='m5 9-3 3 3 3'/><path d='m19 9 3 3-3 3'/></svg></span>
+        <span style="vertical-align:middle;">move-horizontal</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-move-vertical" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 2v20'/><path d='m9 5 3-3 3 3'/><path d='m15 19-3 3-3-3'/></svg></span>
+        <span style="vertical-align:middle;">move-vertical</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-new-window" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M15 3h6v6'/><path d='M10 14 21 3'/><path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/></svg></span>
+        <span style="vertical-align:middle;">new-window</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-paperclip" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48'/></svg></span>
+        <span style="vertical-align:middle;">paperclip</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-paste" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='8' height='4' x='8' y='2' rx='1'/><path d='M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2'/><polygon fill='currentColor' stroke='none' points='10.5 19 13.5 19 13.5 13 15.5 13 12 9 8.5 13 10.5 13'/></svg></span>
+        <span style="vertical-align:middle;">paste</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-pause" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect fill='currentColor' stroke='none' x='6' y='5' width='4' height='14' rx='1'/><rect fill='currentColor' stroke='none' x='14' y='5' width='4' height='14' rx='1'/></svg></span>
+        <span style="vertical-align:middle;">pause</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-pen" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 20h9'/><path d='M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z'/></svg></span>
+        <span style="vertical-align:middle;">pen</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-people" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' fill-rule='evenodd' d='M0.8 22 L0.8 14 A3.7 3.7 0 0 1 8.2 14 L8.2 22 Z M15.8 22 L15.8 14 A3.7 3.7 0 0 1 23.2 14 L23.2 22 Z M6 22 L6 16 A6 6 0 0 1 18 16 L18 22 Z'/><circle fill='currentColor' stroke='none' cx='5' cy='8.2' r='2.6'/><circle fill='currentColor' stroke='none' cx='19' cy='8.2' r='2.6'/><circle fill='currentColor' stroke='none' cx='12' cy='8.5' r='3'/></svg></span>
+        <span style="vertical-align:middle;">people</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-picture" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='18' height='18' x='3' y='3' rx='2'/><circle cx='9' cy='9' r='2'/><path d='m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21'/></svg></span>
+        <span style="vertical-align:middle;">picture</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-placeholders" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1'/><path d='M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1'/></svg></span>
+        <span style="vertical-align:middle;">placeholders</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-play" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon fill='currentColor' points='7 5 19 12 7 19'/></svg></span>
+        <span style="vertical-align:middle;">play</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-play-button" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><polygon fill='currentColor' points='9 8 16 12 9 16'/></svg></span>
+        <span style="vertical-align:middle;">play-button</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-plus" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M10.5 6 13.5 6 13.5 10.5 18 10.5 18 13.5 13.5 13.5 13.5 18 10.5 18 10.5 13.5 6 13.5 6 10.5 10.5 10.5Z'/></svg></span>
+        <span style="vertical-align:middle;">plus</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-print" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2'/><path d='M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6'/><rect width='12' height='8' x='6' y='14' rx='1'/></svg></span>
+        <span style="vertical-align:middle;">print</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-pushpin" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 17v5'/><path d='M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z'/></svg></span>
+        <span style="vertical-align:middle;">pushpin</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-quote" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M10 11h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6c0 2.667-1.333 4.333-4 5'/><path d='M19 11h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6c0 2.667-1.333 4.333-4 5'/></svg></span>
+        <span style="vertical-align:middle;">quote</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-refresh" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 12a9 9 0 0 1-15 6.7L3 16'/><path d='M3 12a9 9 0 0 1 15-6.7L21 8'/><polyline points='21 3 21 8 16 8'/><polyline points='3 21 3 16 8 16'/></svg></span>
+        <span style="vertical-align:middle;">refresh</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-remove" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M6.44 8.56 9.88 12 6.44 15.44 8.56 17.56 12 14.12 15.44 17.56 17.56 15.44 14.12 12 17.56 8.56 15.44 6.44 12 9.88 8.56 6.44Z'/></svg></span>
+        <span style="vertical-align:middle;">remove</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-repeat" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 12A9 9 0 1 1 18 5.3L21 8'/><polyline points='21 3 21 8 16 8'/></svg></span>
+        <span style="vertical-align:middle;">repeat</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-resize-full" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='15 3 21 3 21 9'/><polyline points='9 21 3 21 3 15'/><line x1='21' y1='3' x2='14' y2='10'/><line x1='3' y1='21' x2='10' y2='14'/></svg></span>
+        <span style="vertical-align:middle;">resize-full</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-resize-small" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='4 14 10 14 10 20'/><polyline points='20 10 14 10 14 4'/><line x1='14' y1='10' x2='21' y2='3'/><line x1='3' y1='21' x2='10' y2='14'/></svg></span>
+        <span style="vertical-align:middle;">resize-small</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-restart" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 12A9 9 0 0 1 20.8 13.87'/><path d='M20.22 15.66A9 9 0 0 1 18.69 18.02'/><path d='M17.29 19.28A9 9 0 0 1 13.87 20.8'/><path d='M12 21A9 9 0 1 1 18 5.3L21 8'/><polyline points='21 3 21 8 16 8'/></svg></span>
+        <span style="vertical-align:middle;">restart</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-right-arrow" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon fill='currentColor' stroke='none' points='5 9 12 9 12 6 19 12 12 18 12 15 5 15'/></svg></span>
+        <span style="vertical-align:middle;">right-arrow</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-save" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z'/><path d='M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7'/><path d='M7 3v4a1 1 0 0 0 1 1h7'/></svg></span>
+        <span style="vertical-align:middle;">save</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-search" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><g stroke-width='3'><circle cx='11' cy='11' r='6'/><path d='m21 21-4.35-4.35'/></g></svg></span>
+        <span style="vertical-align:middle;">search</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-send" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M22 2 15 22 11.5 13.5ZM22 2 10.5 12.5 2 9Z'/></svg></span>
+        <span style="vertical-align:middle;">send</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-share" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M4 18Q4 3 14 3L14 0 22 6 14 12 14 9Q4 9 4 18Z'/></svg></span>
+        <span style="vertical-align:middle;">share</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-signal" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='3' y1='21' x2='3' y2='17'/><line x1='7.5' y1='21' x2='7.5' y2='14'/><line x1='12' y1='21' x2='12' y2='11'/><line x1='16.5' y1='21' x2='16.5' y2='8'/><line x1='21' y1='21' x2='21' y2='5'/></svg></span>
+        <span style="vertical-align:middle;">signal</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-sort-asc" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='3' y1='3' x2='7' y2='3'/><line x1='3' y1='7.5' x2='10' y2='7.5'/><line x1='3' y1='12' x2='13' y2='12'/><line x1='3' y1='16.5' x2='16' y2='16.5'/><line x1='3' y1='21' x2='19' y2='21'/></svg></span>
+        <span style="vertical-align:middle;">sort-asc</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-sort-desc" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='3' y1='3' x2='19' y2='3'/><line x1='3' y1='7.5' x2='16' y2='7.5'/><line x1='3' y1='12' x2='13' y2='12'/><line x1='3' y1='16.5' x2='10' y2='16.5'/><line x1='3' y1='21' x2='7' y2='21'/></svg></span>
+        <span style="vertical-align:middle;">sort-desc</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-sparkles" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z'/><path d='M20 3v4'/><path d='M22 5h-4'/><path d='M4 17v2'/><path d='M5 18H3'/></svg></span>
+        <span style="vertical-align:middle;">sparkles</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-step-backward" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect fill='currentColor' stroke='none' x='4' y='4' width='3' height='16' rx='1'/><polygon fill='currentColor' stroke='none' points='18 4 8 12 18 20'/></svg></span>
+        <span style="vertical-align:middle;">step-backward</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-step-forward" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon fill='currentColor' stroke='none' points='6 4 16 12 6 20'/><rect fill='currentColor' stroke='none' x='17' y='4' width='3' height='16' rx='1'/></svg></span>
+        <span style="vertical-align:middle;">step-forward</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-stop" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect fill='currentColor' stroke='none' x='5.5' y='5.5' width='13' height='13' rx='1.5'/></svg></span>
+        <span style="vertical-align:middle;">stop</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-sun" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='4'/><path d='M12 2v2'/><path d='M12 20v2'/><path d='m4.93 4.93 1.41 1.41'/><path d='m17.66 17.66 1.41 1.41'/><path d='M2 12h2'/><path d='M20 12h2'/><path d='m6.34 17.66-1.41 1.41'/><path d='m19.07 4.93-1.41 1.41'/></svg></span>
+        <span style="vertical-align:middle;">sun</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-table" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3v18'/><rect width='18' height='18' x='3' y='3' rx='2'/><path d='M3 9h18'/><path d='M3 15h18'/></svg></span>
+        <span style="vertical-align:middle;">table</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-tag" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12.59 2.59A2 2 0 0 0 11.17 2H4a2 2 0 0 0-2 2v7.17a2 2 0 0 0 .59 1.41l8.7 8.7a2 2 0 0 0 2.83 0l6.59-6.59a2 2 0 0 0 0-2.83z'/><circle fill='currentColor' cx='7' cy='7' r='1'/></svg></span>
+        <span style="vertical-align:middle;">tag</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-tags" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m15 5 6.3 6.3a2.4 2.4 0 0 1 0 3.4L17 19'/><path d='M9.586 5.586A2 2 0 0 0 8.172 5H3a1 1 0 0 0-1 1v5.172a2 2 0 0 0 .586 1.414L8.29 18.29a2.426 2.426 0 0 0 3.42 0l3.58-3.58a2.426 2.426 0 0 0 0-3.42z'/><circle fill='currentColor' cx='6.5' cy='9.5' r='1'/></svg></span>
+        <span style="vertical-align:middle;">tags</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-target" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><circle cx='12' cy='12' r='6'/><circle fill='currentColor' stroke='none' cx='12' cy='12' r='2'/></svg></span>
+        <span style="vertical-align:middle;">target</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-text-size" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 14h-5'/><path d='M16 16v-3.5a2.5 2.5 0 0 1 5 0V16'/><path d='m3 16 4.5-11 4.5 11'/><path d='M4 14h7'/></svg></span>
+        <span style="vertical-align:middle;">text-size</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-thumbs-down" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M17 14V2'/><path d='M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z'/></svg></span>
+        <span style="vertical-align:middle;">thumbs-down</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-thumbs-up" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M7 10v12'/><path d='M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z'/></svg></span>
+        <span style="vertical-align:middle;">thumbs-up</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-toolbox" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='8' width='20' height='13' rx='2'/><path d='M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2'/><line x1='2' y1='13' x2='22' y2='13'/><rect x='10' y='11' width='4' height='4' rx='1'/></svg></span>
+        <span style="vertical-align:middle;">toolbox</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-trash" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 6h18'/><path d='M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6'/><path d='M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2'/><line x1='10' y1='11' x2='10' y2='17'/><line x1='14' y1='11' x2='14' y2='17'/></svg></span>
+        <span style="vertical-align:middle;">trash</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-unchecked" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='18' height='18' x='3' y='3' rx='2'/></svg></span>
+        <span style="vertical-align:middle;">unchecked</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-unlock" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0 1 9.9-1'/></svg></span>
+        <span style="vertical-align:middle;">unlock</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-up-arrow" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon fill='currentColor' stroke='none' points='9 19 9 12 6 12 12 5 18 12 15 12 15 19'/></svg></span>
+        <span style="vertical-align:middle;">up-arrow</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-user" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle fill='currentColor' stroke='none' cx='12' cy='8' r='4'/><path fill='currentColor' stroke='none' d='M5 21v-3a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v3z'/></svg></span>
+        <span style="vertical-align:middle;">user</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-user-lock" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle fill='currentColor' stroke='none' cx='6.5' cy='7' r='3.5'/><path fill='currentColor' stroke='none' d='M2 21v-5a4.5 4.5 0 0 1 9 0v5z'/><rect x='14' y='15' width='7' height='6' rx='1'/><path d='M15.5 15v-2a2 2 0 0 1 4 0v2'/></svg></span>
+        <span style="vertical-align:middle;">user-lock</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-wifi" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 20h.01'/><path d='M2 8.82a15 15 0 0 1 20 0'/><path d='M5 12.859a10 10 0 0 1 14 0'/><path d='M8.5 16.429a5 5 0 0 1 7 0'/></svg></span>
+        <span style="vertical-align:middle;">wifi</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-wrench" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z'/></svg></span>
+        <span style="vertical-align:middle;">wrench</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-zap" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon fill='currentColor' stroke='none' points='16 0 6 13 11.5 13 8 24 17 11 12 11'/></svg></span>
+        <span style="vertical-align:middle;">zap</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-zoom-in" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='8'/><line x1='21' y1='21' x2='16.65' y2='16.65'/><line x1='11' y1='8' x2='11' y2='14'/><line x1='8' y1='11' x2='14' y2='11'/></svg></span>
+        <span style="vertical-align:middle;">zoom-in</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-zoom-out" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='8'/><line x1='21' y1='21' x2='16.65' y2='16.65'/><line x1='8' y1='11' x2='14' y2='11'/></svg></span>
+        <span style="vertical-align:middle;">zoom-out</span>
     </div>
 </div>
-
-Icons licensed from [GLYPHICONS](https://www.glyphicons.com/).
