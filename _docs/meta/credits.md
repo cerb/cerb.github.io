@@ -108,10 +108,6 @@ jumbotron:
 
 - [Twig](http://www.twig-project.org/) is an open source template engine for the PHP programming language by Fabien Potencier. It focuses on being fast, secure, and flexible.
 
-# Licenses
-
-- [GLYPHICONS](http://glyphicons.com) is a library of precisely prepared monochromatic icons and symbols, created with an emphasis to simplicity and easy orientation.
-
 # References
 
 [^s3]: <http://aws.amazon.com/s3/>
