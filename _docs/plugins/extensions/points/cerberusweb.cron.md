@@ -36,7 +36,6 @@ jumbotron:
 | Mail Queue Processor | `cron.mail_queue`
 | Mailbox Checker and Email Downloader | `cron.mailbox`
 | Maintenance | `cron.maint`
-| Network and service monitoring | `cerberusweb.datacenter.sensors.cron`
 | Notifications Emailer | `wgm.notifications.emailer.cron`
 | Packages Importer | `cron.packages`
 | Reminders | `cron.reminders`

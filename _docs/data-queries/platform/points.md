@@ -127,11 +127,6 @@ format:dictionaries
       "class": "CerberusPageExtension"
     },
     {
-      "id": "cerberusweb.plugin.setup",
-      "name": "Plugin Setup",
-      "class": "Extension_PluginSetup"
-    },
-    {
       "id": "cerb.portal",
       "name": "Portal",
       "class": "Extension_CommunityPortal"
@@ -185,16 +180,6 @@ format:dictionaries
       "id": "cerberusweb.cron",
       "name": "Scheduled Job",
       "class": "CerberusCronPageExtension"
-    },
-    {
-      "id": "devblocks.search.engine",
-      "name": "Search Engine",
-      "class": "Extension_DevblocksSearchEngine"
-    },
-    {
-      "id": "devblocks.search.schema",
-      "name": "Search Schema",
-      "class": "Extension_DevblocksSearchSchema"
     },
     {
       "id": "cerberusweb.datacenter.sensor",

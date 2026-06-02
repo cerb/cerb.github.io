@@ -51,7 +51,6 @@ jumbotron:
 | Parser | `cerberusweb.rest.controller.parser`
 | Records | `cerberusweb.rest.controller.records`
 | Saved Searches | `cerberusweb.rest.controller.saved_searches`
-| Sensors | `cerberusweb.datacenter.sensors.rest`
 | Servers | `cerberusweb.datacenter.servers.rest`
 | Snippets | `cerberusweb.rest.controller.snippets`
 | Tasks | `cerberusweb.rest.controller.tasks`

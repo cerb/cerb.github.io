@@ -107,7 +107,6 @@ jumbotron:
 | Scheduled Behavior Section | `core.page.profiles.scheduled_behavior`
 | Scheduled Behavior Section | `core.page.setup.scheduled_behavior`
 | Scheduler Section | `core.page.setup.scheduler`
-| Search Section | `core.page.setup.search`
 | Security Section | `core.page.setup.security`
 | Sensor Page Section | `cerberusweb.profiles.sensor`
 | Server Page Section | `cerberusweb.profiles.server`
