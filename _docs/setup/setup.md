@@ -34,7 +34,6 @@ The page is divided into sections, each with a blue menu designated by a downwar
   - [License](/docs/setup/configure/license/)
   - [Localization](/docs/setup/configure/localization/)
   - [Scheduler](/docs/setup/configure/scheduler/)
-  - [Search](/docs/setup/configure/search/)
 - **Security**
   - [Configure](/docs/setup/configure/security/)
   - [Authentication](/docs/setup/configure/authentication/)

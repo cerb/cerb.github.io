@@ -598,6 +598,19 @@ docs:(automate~)
 
 Expands to `automate`, `automates`, `automation`, `automating`, `automated`, etc.
 
+#### Excluded terms
+{:.no_toc}
+
+Prefix a term with `-` to exclude documents that match it. At least one included (non-excluded) term is required:
+
+{% highlight cerb %}
+{% raw %}
+messages:(apple -tablet)
+{% endraw %}
+{% endhighlight %}
+
+Matches documents that contain `apple` while excluding any that also contain `tablet`. Excluded terms can be combined with [wildcards](#wildcards) and [stemming](#stemming).
+
 #### Limiting and ranking results
 {:.no_toc}
 

@@ -28,7 +28,7 @@ jumbotron:
 | **Name:** | Notifications Emailer
 | **Identifier (ID):** | wgm.notifications.emailer
 | **Author:** | Webgroup Media, LLC.
-| **Path:** | storage/plugins/wgm.notifications.emailer/
+| **Path:** | plugins/wgm.notifications.emailer/
 | **Image:** | <img src="/assets/images/plugins/wgm.notifications.emailer.png" class="screenshot">
 
 This plugin automatically sends an email to workers if they have received new notifications.  It sends digests, so if you receive 100 new assignments you'll only receive a single email about them.

@@ -217,8 +217,6 @@ Each extension entry looks like:
 | [Resource Type](/docs/plugins/extensions/points/cerb.resource.type/) | `cerb.resource.type`
 | [Rest API Controller](/docs/plugins/extensions/points/cerberusweb.rest.controller/) | `cerberusweb.rest.controller`
 | [Scheduled Job](/docs/plugins/extensions/points/cerberusweb.cron/) | `cerberusweb.cron`
-| [Search Engine](/docs/plugins/extensions/points/devblocks.search.engine/) | `devblocks.search.engine`
-| [Search Schema](/docs/plugins/extensions/points/devblocks.search.schema/) | `devblocks.search.schema`
 | [Sensor Type](/docs/plugins/extensions/points/cerberusweb.datacenter.sensor/) | `cerberusweb.datacenter.sensor`
 | [Storage Engine](/docs/plugins/extensions/points/devblocks.storage.engine/) | `devblocks.storage.engine`
 | [Storage Schema](/docs/plugins/extensions/points/devblocks.storage.schema/) | `devblocks.storage.schema`
@@ -411,48 +409,38 @@ We previously mentioned **events** when discussing [automations](/docs/automatio
 
 # Library
 
-### Features
+### Active
 
-| [Devblocks](/docs/plugins/devblocks.core/) | `devblocks.core`
+|---
+| Plugin | ID
+|-|-
 | [Cerb Core](/docs/plugins/cerberusweb.core/) | `cerberusweb.core`
-| [Chat Bots](/docs/plugins/cerb.bots.portal.widget/) | `cerb.bots.portal.widget`
-| [Knowledgebase](/docs/plugins/cerberusweb.kb/) | `cerberusweb.kb`
+| [Devblocks](/docs/plugins/devblocks.core/) | `devblocks.core`
+| [Interactions for Websites](/docs/plugins/cerb.website.interactions/) | `cerb.website.interactions`
 | [Project Boards](/docs/plugins/cerb.project_boards/) | `cerb.project_boards`
-| [Support Center](/docs/plugins/cerberusweb.support_center/) | `cerberusweb.support_center`
+| [Time Tracking](/docs/plugins/cerberusweb.timetracking/) | `cerberusweb.timetracking`
+| [Translation Editor](/docs/plugins/cerberusweb.translators/) | `cerberusweb.translators`
 | [Web Services API (JSON/XML)](/docs/plugins/cerberusweb.restapi/) | `cerberusweb.restapi`
 | [Webhooks](/docs/plugins/cerb.webhooks/) | `cerb.webhooks`
 
-### Authentication
+### Deprecated
 
-| [LDAP Integration](/docs/plugins/wgm.ldap/) | `wgm.ldap`
+These plugins are still bundled with Cerb for backward compatibility, but new functionality should be built using [automations](/docs/automations/) and [custom records](/docs/records/) instead.
 
-### Integration
-
-| [JIRA Integration](/docs/plugins/wgm.jira/) | `wgm.jira`
-
-### Legacy
-
-| [Legacy Printing](/docs/plugins/cerb.legacy.print/) | `cerb.legacy.print`
-| [Legacy Profile Attachments Download](/docs/plugins/cerb.legacy.profile.attachments/) | `cerb.legacy.profile.attachments`
-| [Ticket Profile "Move To" Shortcut](/docs/plugins/cerb.profile.ticket.moveto/) | `cerb.profile.ticket.moveto`
-| [Notifications Emailer](/docs/plugins/wgm.notifications.emailer/) | `wgm.notifications.emailer`
-| [Record Simulator](/docs/plugins/cerberusweb.simulator/) | `cerberusweb.simulator`
-
-### Localization
-
-| [Translation Editor](/docs/plugins/cerberusweb.translators/) | `cerberusweb.translators`
-
-### Record Types
-
+|---
+| Plugin | ID
+|-|-
+| [Bot Behaviors](/docs/plugins/cerb.behaviors.legacy/) | `cerb.behaviors.legacy`
 | [Call Logging](/docs/plugins/cerberusweb.calls/) | `cerberusweb.calls`
+| [Chat Bots for Websites](/docs/plugins/cerb.bots.portal.widget/) | `cerb.bots.portal.widget`
+| [Classifiers](/docs/plugins/cerb.classifiers/) | `cerb.classifiers`
 | [Collaborative Feed Reader](/docs/plugins/cerberusweb.feed_reader/) | `cerberusweb.feed_reader`
 | [Domains](/docs/plugins/cerberusweb.datacenter.domains/) | `cerberusweb.datacenter.domains`
-| [Feedback Capture](/docs/plugins/cerberusweb.feedback/) | `cerberusweb.feedback`
+| [JIRA Integration](/docs/plugins/wgm.jira/) | `wgm.jira`
+| [LDAP Integration](/docs/plugins/wgm.ldap/) | `wgm.ldap`
+| [Legacy Knowledgebase](/docs/plugins/cerberusweb.kb/) | `cerberusweb.kb`
+| [Notifications Emailer](/docs/plugins/wgm.notifications.emailer/) | `wgm.notifications.emailer`
 | [Opportunity Tracking](/docs/plugins/cerberusweb.crm/) | `cerberusweb.crm`
-| [Sensors](/docs/plugins/cerberusweb.datacenter.sensors/) | `cerberusweb.datacenter.sensors`
-| [Servers](/docs/plugins/cerberusweb.datacenter.servers/) | `cerberusweb.datacenter.servers`
-| [Time Tracking](/docs/plugins/cerberusweb.timetracking/) | `cerberusweb.timetracking`
-
-### Storage
-
 | [S3 Gatekeeper Storage Engine](/docs/plugins/wgm.storage.s3.gatekeeper/) | `wgm.storage.s3.gatekeeper`
+| [Servers](/docs/plugins/cerberusweb.datacenter.servers/) | `cerberusweb.datacenter.servers`
+| [Support Center](/docs/plugins/cerberusweb.support_center/) | `cerberusweb.support_center`

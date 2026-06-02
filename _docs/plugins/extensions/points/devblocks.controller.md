@@ -31,13 +31,11 @@ jumbotron:
 | Avatars Controller | `core.controller.avatars`
 | Cerb Controller | `core.controller.page`
 | Debug Controller | `core.controller.debug`
-| Download ZIP Controller | `cerb.legacy.profile.attachments.controller`
 | Explorer Controller | `core.controller.explorer`
 | Files Controller | `core.controller.files`
 | Internal Controller | `core.controller.internal`
 | OAuth Controller | `core.controller.oauth`
 | Portal Controller | `core.controller.portal`
-| Print Controller | `cerb.legacy.print.controller`
 | REST Controller | `rest.controller`
 | Resource Controller | `core.controller.resource`
 | SSO Controller | `controller.sso`

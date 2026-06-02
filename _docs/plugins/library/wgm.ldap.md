@@ -26,7 +26,7 @@ jumbotron:
 | **Name:** | LDAP Integration
 | **Identifier (ID):** | wgm.ldap
 | **Author:** | Webgroup Media, LLC.
-| **Path:** | storage/plugins/wgm.ldap/
+| **Path:** | plugins/wgm.ldap/
 | **Image:** | <img src="/assets/images/plugins/wgm.ldap.png" class="screenshot">
 
 Authenticate worker and customer logins via LDAP.

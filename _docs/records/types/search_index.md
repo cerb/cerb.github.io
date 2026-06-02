@@ -8,6 +8,8 @@ summary: A search index manages a custom search filter on any record type. Each
   API fields, dictionary placeholders, search filters, and worklist columns
   available on search index records, introduced in Cerb 11.2.
 permalink: /docs/records/types/search_index/
+redirect_from:
+- /docs/setup/configure/search/
 toc:
   title: Search Index
   expand: Records

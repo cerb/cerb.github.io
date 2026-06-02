@@ -45,13 +45,6 @@ Devblocks is a PHP7 application development framework.
 | [**Redis**](/docs/plugins/extensions/devblocks.cache.engine.redis/) | `devblocks.cache.engine.redis`
 
 
-### Search Engine
-
-| Elasticsearch | `devblocks.search.engine.elasticsearch`
-| MySQL Fulltext | `devblocks.search.engine.mysql_fulltext`
-| Sphinx | `devblocks.search.engine.sphinx`
-
-
 ### Storage Engine
 
 | Amazon S3 | `devblocks.storage.engine.s3`

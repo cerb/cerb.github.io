@@ -1,5 +1,5 @@
 ---
-title: 'Plugin: Knowledgebase'
+title: 'Plugin: Legacy Knowledgebase'
 excerpt: This page provides detailed information about the Knowledgebase plugin for
   Cerb, developed by Webgroup Media, LLC.
 summary: This page provides detailed information about the Knowledgebase plugin for
@@ -14,10 +14,10 @@ summary: This page provides detailed information about the Knowledgebase plugin 
   within Cerb.
 permalink: /docs/plugins/cerberusweb.kb/
 toc:
-  title: Knowledgebase
+  title: Legacy Knowledgebase
   expand: Plugins
 jumbotron:
-  title: Knowledgebase
+  title: Legacy Knowledgebase
   tagline: ~
   breadcrumbs:
   - label: Docs &raquo;
@@ -28,11 +28,12 @@ jumbotron:
 
 |---
 |-|-
-| **Name:** | Knowledgebase
+| **Name:** | Legacy Knowledgebase
 | **Identifier (ID):** | cerberusweb.kb
 | **Author:** | Webgroup Media, LLC.
 | **Path:** | features/cerberusweb.kb/
 | **Image:** | <img src="/assets/images/plugins/cerberusweb.kb.png" class="screenshot">
+| **Status:** | Deprecated
 
 Create and categorize articles to share knowledge between workers or your community.
 

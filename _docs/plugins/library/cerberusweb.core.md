@@ -235,7 +235,6 @@ The core functionality of Cerb.
 | Scheduled Behavior Section | `core.page.profiles.scheduled_behavior`
 | Scheduled Behavior Section | `core.page.setup.scheduled_behavior`
 | Scheduler Section | `core.page.setup.scheduler`
-| Search Section | `core.page.setup.search`
 | Security Section | `core.page.setup.security`
 | Sessions Section | `core.page.setup.sessions`
 | Skill Section | `core.page.profiles.skill`
