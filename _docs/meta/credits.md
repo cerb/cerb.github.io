@@ -66,8 +66,6 @@ jumbotron:
 
 - [Ace-Diff](https://ace-diff.github.io/ace-diff/) extends Ace Editor with diff/merging functionality.
 
-- [Amazon S3 PHP Class](http://undesigned.org.za/2007/10/22/amazon-s3-php-class) is a PHP library by Donovan Schönknecht for working with Amazon's S3[^s3] web service.
-
 - [C3.js](https://c3js.org) is a Javascript charting library built on top of D3.
 
 - [Composer](https://getcomposer.org/) is a package manager for PHP.
@@ -110,5 +108,4 @@ jumbotron:
 
 # References
 
-[^s3]: <http://aws.amazon.com/s3/>
 [^markdown]: <http://daringfireball.net/projects/markdown/>
