@@ -275,7 +275,7 @@ Paste the following template:
 {% if is_completed %}
 
 <div style="font-size:120%;">
-	<span class="glyphicons glyphicons-circle-ok" style="color:rgb(0,150,0);"></span> Completed!
+	<span class="cerb-icons cerb-icon-circle-ok"></span> Completed!
 </div>
 
 {% endif %}
