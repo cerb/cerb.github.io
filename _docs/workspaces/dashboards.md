@@ -253,7 +253,7 @@ params:
     year
 {% endhighlight %}
 
-	As of [9.1.3](/releases/9.1.3/) you can also provide a map of labels and values:
+As of [9.1.3](/releases/9.1.3/) you can also provide a map of labels and values:
 
 {% highlight cerb %}
 params:
@@ -338,17 +338,21 @@ format:dictionaries
 |---
 | Type | Description
 |-|-
-| Automation | 
+| [Automation](/docs/dashboards/widgets/automation/) | Runs an [automation](/docs/automations/) and renders its output (HTML, charts, custom layouts).
 | [Calendar](/docs/dashboards/widgets/calendar/) | A calendar widget with dates and events.
 | [Chart KATA](/docs/dashboards/widgets/chart-kata/) | A highly customizable chart combining multiple datasources from data queries and automations.
-| Chart: Pie |
+| [Chart: Categories](/docs/dashboards/widgets/chart-categories/) | A bar chart for categorical data.
+| [Chart: Pie](/docs/dashboards/widgets/chart-pie/) | A pie or donut chart for proportions of a whole.
+| [Chart: Scatterplot](/docs/dashboards/widgets/chart-scatterplot/) | An X/Y plot for comparing two numeric dimensions.
+| [Chart: Table](/docs/dashboards/widgets/chart-table/) | A tabular layout of data query results.
 | [Chart: Time Blocks](/docs/dashboards/widgets/timeblocks/) | A heatmap-style chart useful for availability visualizations.
 | [Chart: Time Series](/docs/dashboards/widgets/timeseries/) | A chart used for visualizing changes over time.
 | [Clock](/docs/dashboards/widgets/clock/) | A clock widget with a configurable timezone and format (12/24-hr).
-| Countdown |
-| Counter |
-| [Interactions Toolbar ](/docs/dashboards/widgets/interactions-toolbar/ )| A toolbar widget for running worker interactions.
-| Knowledgebase Browser |
+| [Countdown](/docs/dashboards/widgets/countdown/) | Counts down to (or up from) a target date.
+| [Counter](/docs/dashboards/widgets/counter/) | A single large number drawn from a data source, with optional prefix/suffix and units.
+| [Gauge](/docs/dashboards/widgets/gauge/) | A meter showing a current value within a min/max range, with colored thresholds.
+| [Interactions Toolbar](/docs/dashboards/widgets/interactions-toolbar/) | A toolbar widget for running worker interactions.
+| [Knowledgebase Browser](/docs/dashboards/widgets/kb-browser/) | An embedded category tree for browsing [knowledgebase](/docs/records/types/kb_article/) articles.
 | [Map](/docs/dashboards/widgets/map/) | A map widget that displays interactive geographic visualizations with regions and data points.
 | [Project Board](/docs/dashboards/widgets/project-board/) | A project board that visually organizes and automates multi-step processes.
 | [Record Fields](/docs/dashboards/widgets/record-fields/) | A widget that displays field metadata for record types.

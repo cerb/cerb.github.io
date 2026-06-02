@@ -51,3 +51,83 @@ The automation [dictionary](/docs/automations/#dictionaries) starts with the fol
 | Key | Type | Notes
 |-|-|-
 | `html` | text | The HTML to render for the widget
+
+# Example
+
+A workspace widget that greets the current worker and prints the number of tickets they're watching.
+
+{% tabs ui-widget %}
+
+{% tab ui-widget event-handler %}
+
+On the [Automation widget](/docs/dashboards/widgets/automation/), select the **Automation** toolbar button and bind the widget to the automation by URI:
+
+{% highlight cerb %}
+{% raw %}
+automation/greeting:
+  uri: cerb:automation:example.dashboard.greeting
+  disabled@bool: no
+  inputs:
+    title: Welcome back
+{% endraw %}
+{% endhighlight %}
+
+The first enabled handler wins, so the same widget can switch between automations based on role, [dashboard prompts](/docs/dashboards/#prompts), or any other condition.
+
+{% endtab %}
+
+{% tab ui-widget automation %}
+
+{% highlight cerb %}
+{% raw %}
+inputs:
+  text/title:
+    default: Welcome
+    required@bool: no
+
+start:
+  data.query/watched:
+    output: watched
+    inputs:
+      query@text:
+        type:worklist.metrics
+        values.count:(
+          of:ticket
+          function:count
+          field:id
+          query:(
+            watchers:(id:{{worker_id}})
+            status:o
+          )
+        )
+        format:table
+
+  return:
+    html@text:
+      <h3>{{inputs.title}}, {{worker_first_name}}.</h3>
+      <p>You're watching <b>{{watched.data.rows|first.value}}</b> open tickets.</p>
+{% endraw %}
+{% endhighlight %}
+
+The automation receives `worker_*` and `widget_*` placeholders automatically. The returned `html` is rendered inline in the widget's zone -- styles can come from inline CSS, the dashboard's stylesheet, or Cerb's built-in classes.
+
+{% endtab %}
+
+{% tab ui-widget automation policy %}
+
+The automation's [policy](/docs/automations/#policies) must allow `data.query`, otherwise the call is blocked when the widget renders. Scope the allow to the specific query type the automation needs:
+
+{% highlight cerb %}
+{% raw %}
+commands:
+  data.query:
+    deny/type@bool: {{query.type != 'worklist.metrics'}}
+    allow@bool: yes
+{% endraw %}
+{% endhighlight %}
+
+The `deny` rule fires first -- any query whose `type:` is not `worklist.metrics` is rejected before the `allow` is considered.
+
+{% endtab %}
+
+{% endtabs %}
