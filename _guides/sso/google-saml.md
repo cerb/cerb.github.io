@@ -48,11 +48,9 @@ This guide demonstrates how to enable one-click single sign-on (SSO) for Cerb wo
 
 1. Click **Apps**.
 
-1. Click **SAML Apps**.
+1. Click **Web and mobile Apps**.
 
-1. Click the yellow **(+)** in the bottom right.
-
-1. At the bottom of the popup, click **Setup my own custom app**.
+1. Click **Add app**, then **Add custom SAML app**.
 
 ### Google IdP Information
 
