@@ -78,7 +78,6 @@ The following variables are required to set up Cerb.
 | `APP_DB_READER_USER`                           | APP_DB_USER                 | Read-only MySQL user (if different)                                                |
 | `APP_DEFAULT_CONTROLLER`                       | core.controller.page        | Default controller for un-routed requests                                          |
 | `APP_OPT_AUTOCOMPLETE_TICKET_QUERY`            |                             | Additional filters for ticket autocompletion (e.g. `sort:-created`)                |
-| `APP_OPT_DEPRECATED_PORTAL_CUSTOM_TEMPLATES`   | true                        | Show deprecation warning on custom portal templates                                |
 | `APP_OPT_DEPRECATED_PROFILE_QUICK_SEARCH`      | false                       | Display a legacy search query bar on ticket profiles                               |
 | `APP_OPT_GROUP_BEHAVIOR_TRIGGERS`              | false                       | Automatically trigger legacy group behaviors (without automation event binds)      |
 | `APP_OPT_IIS_LEGACY_REWRITE`                   | false                       | Legacy IIS rewrite support                                                         |

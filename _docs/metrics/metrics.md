@@ -229,7 +229,11 @@ These metrics are managed automatically by Cerb:
 |[cerb.mail.routing.rule.matches](/docs/metrics/mail.routing.rule.matches/)| Mail routing rule usage over time. Dimensions: `rule_id` (by ruleset record), `rule_key` (by rule), and `node_key` (by condition).
 |[cerb.mail.transport.deliveries](/docs/metrics/mail.transport.deliveries/)| How many successful messages are sent through a mail transport. Dimensions: `transport_id` and `sender_id` (email address).
 |[cerb.mail.transport.failures](/docs/metrics/mail.transport.failures/)| How many unsuccessful messages are attempted through a mail transport. Dimensions: `transport_id` and `sender_id` (email address).
+|[cerb.queue.messages.open](/docs/metrics/cerb.queue.messages.open/)| Available and in-flight queue messages per queue and job. Dimensions: `queue_id`, `job_id`, and `status_id`. ([11.2](/releases/11.2/)+)
+|[cerb.queue.messages.processed](/docs/metrics/cerb.queue.messages.processed/)| Done and failed queue messages per queue and job. Dimensions: `queue_id`, `job_id`, and `status_id`. ([11.2](/releases/11.2/)+)
 |[cerb.record.search](/docs/metrics/record.search/)| How often each worker searches for a given record type. Dimensions: `record_type` and `worker_id`.
+|[cerb.scheduler.duration](/docs/metrics/cerb.scheduler.duration/)| How long each scheduler job runs, in milliseconds. Dimensions: `job`. ([11.2](/releases/11.2/)+)
+|[cerb.scheduler.invocations](/docs/metrics/cerb.scheduler.invocations/)| How often each scheduler job runs. Dimensions: `job`. ([11.2](/releases/11.2/)+)
 |[cerb.service.token.uses](/docs/metrics/cerb.service.token.uses/)| Authentications using a [service token](/docs/records/types/service_token/). Dimensions: `scope` and `client_ip`. ([11.2](/releases/11.2/)+)
 |[cerb.sessions.seat.kicks](/docs/metrics/cerb.sessions.seat.kicks/)| Worker sessions ended to free up a license seat. Dimensions: `worker_id`. ([11.2](/releases/11.2/)+)
 |[cerb.sessions.seat.kicks.duration](/docs/metrics/cerb.sessions.seat.kicks.duration/)| Cumulative idle seconds of worker sessions ended to free up a license seat. Dimensions: `worker_id`. ([11.2](/releases/11.2/)+)

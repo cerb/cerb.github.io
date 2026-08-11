@@ -63,6 +63,8 @@ start:
 
 Save the queue push result to this placeholder.
 
+This parameter is optional as of [Cerb 11.2](/releases/11.2/). It's only needed when you want to capture the resulting queue message IDs.
+
 ## on_simulate:
 
 The [commands](/docs/automations/#commands) to run during simulation instead of pushing messages to the queue.
