@@ -124,11 +124,11 @@ Forking copies a conversation so you can take it somewhere else. **The original 
 
 <div class="cerb-box note">
 	<p>
-		<b>A cross-provider fork is not a faithful copy.</b> It carries the conversation and the
-		provider settings, but not the session's system prompt, tools, mounts, or agent identity, and
-		not its context window or authentication -- the fork resolves those from its own provider
-		block instead. Treat it as a way to see how another model answers the same history, rather
-		than as a way to move an agent's setup between providers.
+		<b>A cross-provider fork copies the conversation, not the agent.</b> It carries the turns and
+		the provider settings, but deliberately not the session's system prompt, tools, mounts, or
+		agent identity, and not its context window or authentication -- the fork resolves those from
+		its own provider block instead. It exists to show how another model answers the same history,
+		rather than to move an agent's setup between providers.
 	</p>
 </div>
 
