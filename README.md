@@ -5,9 +5,9 @@ Cerb project website
 ## Local development
 
 ```bash
-git clone -b 11.1 https://github.com/cerb/cerb.github.io.git
+git clone -b 12.0 https://github.com/cerb/cerb.github.io.git
 
-# ... or download + unzip: https://codeload.github.com/cerb/cerb.github.io/zip/refs/heads/11.1
+# ... or download + unzip: https://codeload.github.com/cerb/cerb.github.io/zip/refs/heads/12.0
 
 cd cerb.github.io
 
