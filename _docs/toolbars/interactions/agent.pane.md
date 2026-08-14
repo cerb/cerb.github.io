@@ -24,6 +24,8 @@ An agent pane is a collapsible chat that sits beside an editor. This toolbar dec
 
 It ships with no sections, so items are authored per environment.
 
+<p class="youtube-video-container"><iframe width="1280" height="720" src="https://www.youtube.com/embed/TPSTDjX6Unw" title="AI agents in the sidebar of Cerb editors" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+
 # Placeholders
 
 | Placeholder  | Notes                                                                                                             |

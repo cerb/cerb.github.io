@@ -23,6 +23,8 @@ An **AI agent** in Cerb is an ordinary [worker](/docs/workers/) record with an `
 
 An AI worker can never sign in. Interactive logins and SSO are refused outright, and an AI worker doesn't require an email address.
 
+<p class="youtube-video-container"><iframe width="1280" height="720" src="https://www.youtube.com/embed/dOjF7-nofbA" title="Watch every AI agent conversation with LLM transcripts" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+
 <div class="cerb-box note">
 	<p>
 		To list only AI workers, search workers with <code>isAi:y</code>. You can also give that
@@ -46,6 +48,8 @@ Four record types work together, and you don't need all of them to get started:
 ## Agent models
 
 An [agent model](/docs/records/types/agent_model/) record holds everything needed to call one model: the provider, the model ID, an optional API endpoint URL, an encrypted [connected account](/docs/records/types/connected_account/) for credentials, the size of its context window, whether it accepts images, and a block of provider-specific parameters.
+
+<p class="youtube-video-container"><iframe width="1280" height="720" src="https://www.youtube.com/embed/vF-F3vkKoCI" title="Agent models in Cerb; any provider, any model" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
 
 You don't need to know model IDs by heart. Once the provider and credentials are set, the editor asks the provider which models that key can actually use and offers them as a list. That live list is also the only accurate one for a self-hosted OpenAI-compatible endpoint -- llama.cpp, LM Studio, vLLM, or a local Ollama -- where a hardcoded list can't know what's loaded.
 
@@ -89,6 +93,8 @@ When you need the model list *as data* -- to filter it, round-robin it, or feed 
 ## Agent filesystems
 
 An [agent filesystem](/docs/records/types/agent_filesystem/) is a named volume of files that both agents and workers can read and write. Each volume tracks its file count and total size, and a ZIP archive can be bulk-imported in the background.
+
+<p class="youtube-video-container"><iframe width="1280" height="720" src="https://www.youtube.com/embed/LAy--sYJQYk" title="Agent filesystems and virtual terminal in Cerb 11.2+" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
 
 An automation makes volumes available to an agent by listing them under `mounts:`. Doing so enables a single `agent_fs` tool covering every mounted volume -- because there's one tool regardless of how many volumes are mounted, adding a mount doesn't change the tool schema or invalidate the cached prompt prefix.
 

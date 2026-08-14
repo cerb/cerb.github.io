@@ -17,6 +17,8 @@ jumbotron:
 
 It replaced jQuery UI, Ace.js, ace-diff, D3, c3, dagre-d3, TopoJSON, miniColors, and `async.js`.
 
+<p class="youtube-video-container"><iframe width="1280" height="720" src="https://www.youtube.com/embed/ArVRK6cwsBM" title="Goodbye jQuery UI: Cerb 11.2 ships its own component library" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+
 * TOC
 {:toc}
 

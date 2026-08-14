@@ -35,6 +35,8 @@ jumbotron:
 * TOC
 {:toc}
 
+<p class="youtube-video-container"><iframe width="1280" height="720" src="https://www.youtube.com/embed/a2IhZPPLWls" title="Custom search indexes in Cerb 11.2" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+
 ### Usage tracking
 
 Search Index [worklists](/docs/worklists/) offer a 'Records' [sparklines column](/docs/worklists/#sparkline-columns) charting indexed record count, with a 2h/1d/30d range toggle. A matching `records:` [quick search filter](/docs/search/#parameterized-metrics-filters) queries the same data -- for instance, `records:(since:today)`.

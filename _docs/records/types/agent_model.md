@@ -30,6 +30,8 @@ jumbotron:
 
 An **agent model** configures a single LLM model that [automations](/docs/automations/) and [AI agents](/docs/agents/) can use. It holds the provider, the model ID, an optional API endpoint override, the [connected account](/docs/records/types/connected_account/) supplying credentials, the size of the model's context window, whether it accepts images, and a block of provider-specific parameters.
 
+<p class="youtube-video-container"><iframe width="1280" height="720" src="https://www.youtube.com/embed/vF-F3vkKoCI" title="Agent models in Cerb; any provider, any model" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+
 Once a model exists, an automation references it **by name** rather than repeating a provider block inline:
 
 {% highlight cerb %}

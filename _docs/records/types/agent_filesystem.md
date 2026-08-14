@@ -30,6 +30,8 @@ jumbotron:
 
 An **agent filesystem** is a named volume of [agent files](/docs/records/types/agent_file/) that [AI agents](/docs/agents/) and [workers](/docs/workers/) can both read and write. Each volume caches its file count and total size.
 
+<p class="youtube-video-container"><iframe width="1280" height="720" src="https://www.youtube.com/embed/LAy--sYJQYk" title="Agent filesystems and virtual terminal in Cerb 11.2+" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+
 A volume's `name` must start with a letter, followed by letters, digits, or dashes.
 
 ### Mounting a volume
