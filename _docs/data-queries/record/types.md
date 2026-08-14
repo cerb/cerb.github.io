@@ -34,6 +34,7 @@ jumbotron:
 | Req'd | Key               | Notes                                                                                                                                                      |
 |:-----:|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |       | `exclude_custom:` | `yes` to exclude custom record types (default `no`)                                                                                                        |
+|       | `only_custom:`    | `yes` to include only custom record types (default `no`). The complement of `exclude_custom:`.                                                             |
 |       | `filter:`         | An optional keyword used to filter the results                                                                                                             |
 |       | `limit:`          | The desired number of results per page                                                                                                                     |
 |       | `options:`        | `autocomplete`, `avatars`, `cards`, `comments`, `custom_fields`, `links`, `owner`, `records`, `search`, `snippets`, `va_variable`, `watchers`, `workspace` |

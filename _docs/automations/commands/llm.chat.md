@@ -20,8 +20,6 @@ jumbotron:
 
 The **llm.chat:** [automation](/docs/automations/) command interfaces with Large Language Model (LLM) providers for single-turn chat completions without transcripts, memory, or tools.
 
-(Added in [11.1.3](/releases/11.1.3/))
-
 Authentication and API calls are automatically handled by the command.
 
 You simply provide a `system_prompt` with instructions, one or more `messages`, and the LLM provider configuration. The final message must be a user turn.
@@ -58,13 +56,82 @@ start:
 
 ## inputs:
 
-| Key              | Type | Notes                                  |
-|------------------|------|----------------------------------------|
-| `llm:`           | list | The LLM provider and model to use.     |
-| `messages:`      | list | The messages to send.                  |
-| `system_prompt:` | text | The optional instructions for the LLM. |
+| Key              | Type | Notes                                                                |
+|------------------|------|----------------------------------------------------------------------|
+| `llm:`           | list | The LLM provider and model to use.                                   |
+| `messages:`      | list | The messages to send.                                                |
+| `model:`         | text | An optional [agent model](/docs/records/types/agent_model/) by name. |
+| `system_prompt:` | text | The optional instructions for the LLM.                               |
+
+### model:
+
+Reference a configured [agent model](/docs/records/types/agent_model/) by name instead of repeating a provider block inline:
+
+{% highlight cerb %}
+{% raw %}
+llm.chat:
+  output: results
+  inputs:
+    model: haiku
+    messages:
+      0:
+        role: user
+        content: Summarize this conversation in one sentence.
+{% endraw %}
+{% endhighlight %}
+
+Autocompletion reads the model records rather than a static list, so a newly added model appears on reload. Disabled records are excluded, since they can't be referenced.
+
+List several names to provide a fallback chain -- the first name resolving to an enabled record wins, and missing or disabled names are skipped. Optional overrides ride under the name in that model's provider grammar. If names were given and none of them resolve, the command fails rather than substituting something else.
+
+The list doesn't have to be written by hand. Resolve a router with [`llm.router:`](/docs/automations/commands/llm.router/) and pass its models straight through:
+
+{% highlight cerb %}
+{% raw %}
+llm.router:
+  output: routed
+  inputs:
+    router: fast
+
+llm.chat:
+  output: results
+  inputs:
+    model@key: routed:models
+    messages:
+      0:
+        role: user
+        content: Summarize this conversation in one sentence.
+{% endraw %}
+{% endhighlight %}
+
+**Leaving `model:` out entirely is the easiest path**: with no `llm:` block either, the [default model router](/docs/records/types/agent_model_router/) supplies the list, so one record decides what the whole installation uses. The command fails only if no default router is configured or it resolves nothing.
+
+`model:` names [agent model](/docs/records/types/agent_model/) records, not routers -- a router name here simply won't match. To use a router by name, resolve it with [`llm.router:`](/docs/automations/commands/llm.router/) as above.
+
+<div class="cerb-box note">
+	<p>
+		Unlike <a href="/docs/automations/commands/llm.agent/"><code>llm.agent:</code></a>,
+		this command has no <code>agent:</code> input and no session, so it can't inherit models from
+		an <a href="/docs/agents/">AI worker</a>'s router or from a transcript. Name the models,
+		resolve a router, or rely on the default.
+	</p>
+</div>
+
+An explicit `llm:` block wins for the call and `model:` is ignored.
 
 ### llm:
+
+<div class="cerb-box note">
+	<p>
+		<b>Prefer an <a href="/docs/records/types/agent_model/">agent model</a> record over an inline
+		<code>llm:</code> block.</b> A model record keeps credentials and tuning in one place, offers
+		the provider's live model list so nobody has to remember an ID, and makes a model swap one edit
+		instead of one per automation. Setting a
+		<a href="/docs/records/types/agent_model_router/">default model router</a> goes further --
+		it applies to every call that doesn't configure something of its own, so most automations can
+		omit both <code>llm:</code> and <code>model:</code> entirely.
+	</p>
+</div>
 
 The LLM provider is one of:
 
@@ -96,9 +163,15 @@ llm:
   openai:
     model: gpt-4o
     authentication: cerb:connected_account:openai
+  qwen:
+    model: qwen3.7-plus
+    authentication: cerb:connected_account:qwen
   together:
     model: meta-llama/Llama-3.3-70B-Instruct-Turbo
     authentication: cerb:connected_account:together-ai
+  zai:
+    model: glm-4.6
+    authentication: cerb:connected_account:zai
 {% endraw %}
 {% endhighlight %}
 
@@ -108,33 +181,30 @@ The `authentication:` key is a connected account in URI format (e.g. `cerb:conne
 
 The optional `api_endpoint_url:` key overrides the default endpoint. For instance, this can be used with the `openai:` provider for any compatible API (e.g. SambaNova), or a locally hosted Ollama server.
 
-#### Gemini reasoning models
+#### Streaming
 
-For Gemini reasoning models, two optional parameters control thinking behavior:
+Every chat provider streams its response, and streaming is on by default wherever it's supported.
 
-| Key | Values | Description
-|-|-|-
-| `thinking_level:` | `minimal`, `low`, `medium`, `high` | Sets the reasoning budget; higher levels use more tokens and increase latency
-| `thinking_include@bool:` | `yes` / `no` | When `yes`, includes the model's thinking content in the response (useful for debugging)
+This matters for long turns. A streamed turn replaces the total request timeout with an **inactivity** cutoff, so a turn that's actively producing output is never interrupted -- only a genuinely stalled one is. It also means a running turn can be stopped, keeping whatever it had already written.
 
-{% highlight cerb %}
-{% raw %}
-llm:
-  gemini:
-    model: gemini-2.5-pro
-    authentication: cerb:connected_account:gemini
-    thinking_level: medium
-    thinking_include@bool: no
-{% endraw %}
-{% endhighlight %}
+| Key                  | Notes                                                          |
+|----------------------|----------------------------------------------------------------|
+| `stream@bool:`       | Set to `no` to send a single blocking request instead          |
+| `stream_stall_secs:` | How long the provider may go silent before the turn is cut off |
 
-#### OpenAI reasoning models
+Turn streaming off when something between Cerb and the provider buffers responses rather than passing them through -- a proxy in front of Ollama, or an OpenAI-compatible endpoint that doesn't stream correctly.
 
-For OpenAI reasoning models (e.g. `o3`, `o4-mini`), the optional `reasoning_effort:` parameter controls how much compute is spent on reasoning:
+Raise `stream_stall_secs:` when the wait before the *first* token is long. Ollama sends no keepalive while it works, so a local server loading a large model off disk, or Ollama Cloud queueing behind other requests, counts as silence for that whole wait. The default allowance is generous, but a very large local model can outlast it.
 
-| Key | Values | Description
-|-|-|-
-| `reasoning_effort:` | `none`, `low`, `medium`, `high`, `xhigh` | Sets the reasoning effort; higher levels improve quality at the cost of more tokens and latency
+On AWS Bedrock, streaming is used automatically on the models that support it. Bedrock reports that per model, and a model that can't stream falls back to a normal request rather than failing, so neither key is needed there.
+
+#### Reasoning
+
+On reasoning models, the optional `effort:` key controls how much compute is spent on reasoning. It's the same canonical key [`llm.agent:`](/docs/automations/commands/llm.agent/#reasoning) uses, so one authoring form drives every provider that supports reasoning.
+
+| Key       | Values                                       | Description                                                                                              |
+|-----------|----------------------------------------------|----------------------------------------------------------------------------------------------------------|
+| `effort:` | e.g. `low`, `medium`, `high`, `xhigh`, `max` | How much compute to spend on reasoning. Higher levels improve quality at the cost of tokens and latency. |
 
 {% highlight cerb %}
 {% raw %}
@@ -142,9 +212,34 @@ llm:
   openai:
     model: o4-mini
     authentication: cerb:connected_account:openai
-    reasoning_effort: medium
+    effort: medium
 {% endraw %}
 {% endhighlight %}
+
+The level is passed through to the provider verbatim. Cerb doesn't clamp or whitelist it, because the levels a model accepts vary by model and version; the provider's API validates it.
+
+Gemini additionally accepts `thinking_include@bool:`, which includes the model's thinking content in the response -- useful when debugging.
+
+On **AWS Bedrock**, `effort:` and the grouped `thinking:` block apply to **Anthropic models only**. Bedrock forwards the parameter straight to the model, so asking a Nova, DeepSeek, or Kimi model to think fails the request rather than being ignored -- leave both keys off there. Use `thinking:` with `type: adaptive` on current Anthropic models, or `type: enabled` on older ones (Haiku 4.5, Sonnet 4.5, Opus 4.5), where `effort:` becomes a thinking budget sized to fit inside `max_tokens`. Nothing is sent unless you set one of the keys.
+
+{% highlight cerb %}
+{% raw %}
+llm:
+  gemini:
+    model: gemini-2.5-pro
+    authentication: cerb:connected_account:gemini
+    effort: medium
+    thinking_include@bool: no
+{% endraw %}
+{% endhighlight %}
+
+<div class="cerb-box note">
+	<p>
+		The older provider-specific keys -- Gemini's <code>thinking_level:</code> and OpenAI's
+		<code>reasoning_effort:</code> -- were <b>removed</b> in Cerb 11.2 in favor of
+		<code>effort:</code>. Update any automation still authoring them.
+	</p>
+</div>
 
 ### system_prompt:
 
@@ -179,19 +274,19 @@ For few-shot prompting with examples:
 messages:
   0:
     role: user
-    content: "Great service! Very helpful staff."
+    content: Great service! Very helpful staff.
   1:
     role: assistant
     content: positive
   2:
     role: user
-    content: "This product is terrible and doesn't work."
+    content: This product is terrible and doesn't work.
   3:
     role: assistant
     content: negative
   4:
     role: user
-    content: "Thank you for the quick response! This solved my problem perfectly."
+    content: Thank you for the quick response! This solved my problem perfectly.
 {% endraw %}
 {% endhighlight %}
 
@@ -205,10 +300,10 @@ The key specified in `output:` is set to a dictionary with the following structu
 
 Each message in the `messages` array has the following structure:
 
-| Key       | Description                                 |
-|-----------|---------------------------------------------|
-| `content` | The text response from the LLM.            |
-| `type`    | Currently only `text` is supported.        |
+| Key       | Description                         |
+|-----------|-------------------------------------|
+| `content` | The text response from the LLM.     |
+| `type`    | Currently only `text` is supported. |
 
 {% highlight cerb %}
 {% raw %}

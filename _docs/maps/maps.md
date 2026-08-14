@@ -34,6 +34,10 @@ jumbotron:
 
 Cerb can create interactive **map** visualizations with geospatial data from any source using the standard GeoJSON format.
 
+Maps render through Cerb's own [`CerbUI.Map`](/docs/developers/cerb-ui/) component, which decodes GeoJSON and TopoJSON, projects, and draws the SVG itself -- no external mapping library is involved. Its Web Mercator and AlbersUsa projections are validated against D3's equivalents.
+
+Projections now also pick a sensible default scale, so choosing `albersUsa` no longer renders the map too small to read until you find a workable scale by trial and error.
+
 A **map schema** is defined using [KATA](/docs/kata/), which may include map resources, additional properties to fetch and merge, region colorization, point datasets, point sizing and colorization, labels, click interactions, and more.
 
 <div class="cerb-screenshot">
@@ -806,7 +810,7 @@ This is a comma-separated value file (`.csv`). We need to convert it to our 'Map
 
 For demonstration, we'll do the conversion manually, so you're better prepared to create your own resources.
 
-You could write a simple script for this in any programming language; but you can also use the **Setup >> Developers >> Bot Scripting Tester** and write a quick and disposable script in Cerb's [bot scripting](/docs/scripting/) language.
+You could write a simple script for this in any programming language; but you can also use the **Setup >> Developers >> Automation Scripting Tester** and write a quick and disposable script in Cerb's [bot scripting](/docs/scripting/) language.
 
 {% highlight twig %}
 {% raw %}

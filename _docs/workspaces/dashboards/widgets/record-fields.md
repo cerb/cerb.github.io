@@ -22,6 +22,8 @@ jumbotron:
 
 With the [**Record Fields**](/docs/records/#fields) widget, you can display a list of fields from any record type. This is useful for viewing field metadata like keys, types, requirements, and descriptions.
 
+The 'Fields' tab shows a preview grid matching the widget's actual output, custom fieldsets appear as collapsible sections with all/none shortcuts, and search buttons and record links use a badge-count toolbar style.
+
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/dashboards/widgets/record-fields/record-fields.png" class="screenshot">
 </div>

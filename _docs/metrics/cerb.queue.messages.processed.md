@@ -23,8 +23,6 @@ search_index:
 
 This counter tracks each [queue](/docs/queues/) message that finishes processing, broken down by queue, [job](/docs/records/types/queue_job/), and final status (done or failed). Use it to measure throughput, watch for a rising share of failures, and confirm that work is draining at the rate you expect.
 
-Available in [Cerb 11.2](/releases/11.2/) and later.
-
 # Dimensions
 
 | Dimension | Description                                                  |

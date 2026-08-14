@@ -1,8 +1,8 @@
 ---
 title: Automations
 excerpt: This page provides information on how to search automation logs in Cerb.
-summary: This page provides information on how to search automation logs in Cerb,
-  available from version 10.4.9 onwards. It details the REST API endpoint `GET /rest/automations/logs/search.json`
+summary: This page provides information on how to search automation logs in Cerb.
+  It details the REST API endpoint `GET /rest/automations/logs/search.json`
   used for retrieving automation logs. The page outlines the parameters that can be
   used in the search, such as `limit`, `page`, and `q` for query filters. It also
   describes various query filters that can be applied, including filtering by automation
@@ -25,8 +25,6 @@ jumbotron:
 ---
 
 # Search logs
-
-(Available in [10.4.9](/releases/10.4.9/) or later)
 
 **GET /rest/automations/logs/search.json**
 

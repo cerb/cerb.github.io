@@ -32,6 +32,8 @@ jumbotron:
 
 The **Chart KATA** widget can build complex, dynamic charts with mixed visualizations and datasets from multiple sources. The datasets and chart schema are both defined using a [KATA](/docs/kata/) dialect.
 
+This is available as a **card** and **profile** widget as well as a workspace widget. On a profile widget, `record_` placeholders resolve against the profile's record, and the widget renders in light or dark mode according to the viewer's preference.
+
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/dashboards/widgets/chart-kata/chart-kata-combined.png" class="screenshot">
 </div>
@@ -424,7 +426,6 @@ tooltip:
   grouped@bool: no
 {% endraw %}
 {% endhighlight %}
-
 
 ### Pie: Tickets created this year by bucket
 

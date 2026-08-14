@@ -23,8 +23,6 @@ search_index:
 
 This counter tracks how long each [scheduler](/docs/setup/configure/scheduler/) job runs, in milliseconds. Use it to find jobs that are getting slower over time, to size your scheduler interval against the work it has to do, and to catch a job that is starting to exceed its window.
 
-Available in [Cerb 11.2](/releases/11.2/) and later.
-
 # Dimensions
 
 | Dimension | Description                                                  |

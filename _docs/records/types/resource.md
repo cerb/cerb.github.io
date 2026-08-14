@@ -39,6 +39,8 @@ jumbotron:
 * TOC
 {:toc}
 
+Resource choosers accept a scope query, so a chooser can be narrowed to one resource type and offer only relevant records.
+
 ### Records API
 
 These fields are available in the [Records API](/docs/api/endpoints/records/) and [packages](/docs/packages/):
@@ -81,7 +83,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 |---
 | Field | Type | Description
 |-|-|-
-| `comment_count` | number | [Comment](/docs/records/types/comments/) count on the record
+| `comment_count` | number | [Comment](/docs/records/types/comment/) count on the record
 | `comments` | comments | [Comments](/docs/guide/developers/dictionaries/#key-expansion)
 | `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
 | `links` | links | [Links](/docs/guide/developers/dictionaries/#key-expansion)

@@ -54,11 +54,11 @@ Navigate to **Search >> Workflows >> (+) >> (empty)** and paste the following [K
 {% raw %}
 workflow:
   name: example.services.textToImage.stabilityai
-  version: 2025-04-12T03:58:11Z
+  version: 2026-08-11T00:00:00Z
   description: Generate profile images with Stability.ai's models
   website: https://cerb.ai/resources/workflows/
   requirements:
-    cerb_version: >=11.0 <11.2
+    cerb_version: >=11.0 <12.0
     cerb_plugins: cerberusweb.core, 
   config:
     chooser/account:

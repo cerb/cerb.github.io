@@ -7,7 +7,7 @@ summary: This page documents Cerb's scheduler -- the system that runs background
   queue, automation timers, and reminders. It explains how jobs are scheduled,
   locked while running, and manually invoked from the UI; how to wire up a
   cronjob or scheduled task to request /cron every minute; how /cron is
-  authenticated with service tokens (as of 11.2); and provides a reference table
+  authenticated with service tokens; and provides a reference table
   of every built-in cron job with its default interval.
 permalink: /docs/setup/configure/scheduler/
 redirect_from:
@@ -25,6 +25,17 @@ jumbotron:
     url: /docs/setup/#configure
 ---
 
+<div class="cerb-box note">
+	<p>
+		Deployment options are split into <b>Development</b> and <b>Production</b>. Development offers an <b>Auto-Run</b> option
+		that runs jobs entirely in the browser, with a countdown ring showing the next interval.
+		Production shows an example <code>/cron</code> request using a
+		<a href="/docs/records/types/service_token/">service token</a>. Each job displays its run
+		count and duration <a href="/docs/metrics/">metrics</a>, and the <b>edit</b> and
+		<b>run now</b> actions open in a popup.
+	</p>
+</div>
+
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/setup/scheduler.png" class="screenshot">
 </div>
@@ -37,7 +48,7 @@ Each job is repeated at a specific _interval_ -- a number of minutes, hours, or 
 
 Different jobs can run at the same time. A job is _locked_ while running to prevent multiple copies of itself from starting.
 
-As of [11.2](/releases/11.2/), a job's extension manifest can flag it as **parallel**. Parallel jobs limit concurrency through reserved [queue slots](/docs/queues/#concurrency-slots) rather than a hard lock, so multiple invocations can overlap when capacity is available. The built-in [Background Queue](/docs/queues/#background-queue-scheduler) runs this way -- it can fan out across slots to drain work in near real time rather than once per minute. Traditional locked jobs remain available for tasks that must not overlap (e.g. mailbox polling).
+A job's extension manifest can flag it as **parallel**. Parallel jobs limit concurrency through reserved [queue slots](/docs/queues/#concurrency-slots) rather than a hard lock, so multiple invocations can overlap when capacity is available. The built-in [Background Queue](/docs/queues/#background-queue-scheduler) runs this way -- it can fan out across slots to drain work in near real time rather than once per minute. Traditional locked jobs remain available for tasks that must not overlap (e.g. mailbox polling).
 
 Each job has a _"run now"_ link that will immediately run the job with logging enabled from inside your web browser. This is useful for troubleshooting and development, but the scheduler should be automated in production environments so that the jobs run without human intervention.
 
@@ -54,7 +65,7 @@ For Cerb's scheduled jobs to automatically run in the background, you need to co
 
 We recommend using **curl** or **wget** to request your scheduler URL every minute.
 
-The `/cron` page doesn't require a worker login. As of [11.2](/releases/11.2/), it is authenticated with [service tokens](/docs/records/types/service_token/) -- manage them at [Setup &raquo; Configure &raquo; Security](/docs/setup/configure/security/). The legacy `AUTHORIZED_IPS_DEFAULTS` IP allowlist has been deprecated.
+The `/cron` page doesn't require a worker login. It is authenticated with [service tokens](/docs/records/types/service_token/) -- manage them at [Setup &raquo; Configure &raquo; Security](/docs/setup/configure/security/). The legacy `AUTHORIZED_IPS_DEFAULTS` IP allowlist has been deprecated.
 
 Create a token scoped to `cron:*` (or narrower, like `cron:maint`) so the cronjob can't authenticate against `/debug` or `/update`. Then use one of the examples below.
 

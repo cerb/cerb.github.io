@@ -2,12 +2,12 @@
 title: Icon Reference
 excerpt: A reference of the icons available in the Cerb platform, drawn as a custom
   set of modern SVG line icons.
-summary: This page is a reference of the icons available in the Cerb platform. As of
-  11.2, Cerb ships its own set of modern, monochromatic SVG line icons (replacing the
+summary: This page is a reference of the icons available in the Cerb platform. Cerb
+  ships its own set of modern, monochromatic SVG line icons (replacing the
   previous Glyphicons font). Each icon is referenced by name (e.g. in toolbar sections)
   and inherits the surrounding text color, so it renders cleanly at any size in both
-  light and dark mode. When a toolbar specifies an unknown icon name, `zap` is used as
-  the default.
+  light and dark mode. An icon name must be registered to be accepted by the icon
+  pickers, and new glyphs are authored in the Icon Builder.
 permalink: /docs/developers/icons/
 toc:
   expand: Developer Guide
@@ -19,12 +19,24 @@ jumbotron:
   - label: Developers &raquo;
 ---
 
-Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an icon by its name (shown below) from places like [toolbar](/docs/records/types/toolbar/) sections. Icons inherit the current text color and scale to any size. If an unknown icon name is given, `zap` is used as the default.
+Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an icon by its name (shown below) from places like [toolbar](/docs/records/types/toolbar/) sections.
+
+An icon is a mask tinted with the current text color, which is why it inherits the surrounding color for free, scales to any size, and recolors itself in dark mode without a second asset. It's also why an icon is always a single color.
+
+The same set is browsable in-app from the 'Icon' component of **Setup &raquo; Developers &raquo; UI Reference**, where icons can be filtered by name and clicking one copies its markup to the clipboard. New glyphs are authored in the [Icon Builder](/docs/setup/developers/icon-builder/).
 
 <div style="column-width:200px;margin-bottom:20px;">
     <div style="break-inside:avoid;margin:5px 0;">
-        <span class="cerb-icon" title=".cerb-icon-adjust" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='5' y1='3' x2='5' y2='21'/><line x1='12' y1='3' x2='12' y2='21'/><line x1='19' y1='3' x2='19' y2='21'/><rect x='2.5' y='7' width='5' height='3' rx='1.5'/><rect x='9.5' y='13' width='5' height='3' rx='1.5'/><rect x='16.5' y='5' width='5' height='3' rx='1.5'/></svg></span>
+        <span class="cerb-icon" title=".cerb-icon-academic-cap" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M22 10 12 5 2 10l10 5z'/><path d='M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5'/><path d='M22 10v6'/></svg></span>
+        <span style="vertical-align:middle;">academic-cap</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-adjust" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='5' y1='3' x2='5' y2='21'/><line x1='12' y1='3' x2='12' y2='21'/><line x1='19' y1='3' x2='19' y2='21'/><rect fill='currentColor' x='2.5' y='7' width='5' height='3' rx='1.5'/><rect fill='currentColor' x='9.5' y='13' width='5' height='3' rx='1.5'/><rect fill='currentColor' x='16.5' y='5' width='5' height='3' rx='1.5'/></svg></span>
         <span style="vertical-align:middle;">adjust</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-ai-text-generate" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 6 H13'/><path d='M3 12 H9'/><path d='M3 18 H12'/><path fill='currentColor' stroke='none' d='M18 11 Q18 15 22 15 Q18 15 18 19 Q18 15 14 15 Q18 15 18 11 Z'/><path fill='currentColor' stroke='none' d='M19.5 3 Q19.5 5.2 21.7 5.2 Q19.5 5.2 19.5 7.4 Q19.5 5.2 17.3 5.2 Q19.5 5.2 19.5 3 Z'/></svg></span>
+        <span style="vertical-align:middle;">ai-text-generate</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-alert" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3'/><path d='M12 9v4'/><path d='M12 17h.01'/></svg></span>
@@ -35,8 +47,20 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">antenna</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-archive" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='3' width='20' height='5' rx='1'/><path d='M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8'/><path d='M10 12h4'/></svg></span>
+        <span style="vertical-align:middle;">archive</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-autocomplete" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 5 H15'/><path d='M3 11 H11'/><path d='M3 17 H9'/><path fill='currentColor' stroke='none' d='M18 13 Q18 17 22 17 Q18 17 18 21 Q18 17 14 17 Q18 17 18 13 Z'/><path fill='currentColor' stroke='none' d='M20 6 Q20 8.2 22.2 8.2 Q20 8.2 20 10.4 Q20 8.2 17.8 8.2 Q20 8.2 20 6 Z'/></svg></span>
+        <span style="vertical-align:middle;">autocomplete</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-ban" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><g stroke-width='2.5'><circle cx='12' cy='12' r='10'/><line x1='4.93' y1='4.93' x2='19.07' y2='19.07'/></g></svg></span>
         <span style="vertical-align:middle;">ban</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-barcode" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><g stroke-linecap='butt'><line x1='3' y1='4' x2='3' y2='20' stroke-width='2'/><line x1='6.5' y1='4' x2='6.5' y2='20' stroke-width='1'/><line x1='9' y1='4' x2='9' y2='20' stroke-width='3'/><line x1='12' y1='4' x2='12' y2='20' stroke-width='1'/><line x1='14.5' y1='4' x2='14.5' y2='20' stroke-width='2'/><line x1='17.5' y1='4' x2='17.5' y2='20' stroke-width='1'/><line x1='20.5' y1='4' x2='20.5' y2='20' stroke-width='2'/></g></svg></span>
+        <span style="vertical-align:middle;">barcode</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-bell" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg></span>
@@ -47,12 +71,16 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">bold</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
-        <span class="cerb-icon" title=".cerb-icon-book" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20'/></svg></span>
+        <span class="cerb-icon" title=".cerb-icon-book" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M5 3h13a1 1 0 0 1 1 1v15H7a2 2 0 0 1-2-2z'/><path d='M5 17a2 2 0 0 1 2-2h12'/><path d='M5 3v14'/><path d='M7 19v3l1.5-1.5L10 22v-3'/></svg></span>
         <span style="vertical-align:middle;">book</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-book-open" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 7v14'/><path d='M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z'/></svg></span>
         <span style="vertical-align:middle;">book-open</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-bookmark" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z'/></svg></span>
+        <span style="vertical-align:middle;">bookmark</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-bot" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 8V4H8'/><rect width='16' height='12' x='4' y='8' rx='2'/><path d='M2 14h2'/><path d='M20 14h2'/><path d='M15 13v2'/><path d='M9 13v2'/></svg></span>
@@ -63,8 +91,44 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">bot-message</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-bot-route" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 2v2'/><rect x='6' y='4' width='12' height='8' rx='2'/><path d='M9.5 7v2'/><path d='M14.5 7v2'/><path d='M12 12v6'/><path d='M4 18v-2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2'/><circle cx='4' cy='20' r='2' fill='currentColor' stroke='none'/><circle cx='12' cy='20' r='2' fill='currentColor' stroke='none'/><circle cx='20' cy='20' r='2' fill='currentColor' stroke='none'/></svg></span>
+        <span style="vertical-align:middle;">bot-route</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-brain" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z'/><path d='M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z'/><path d='M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4'/></svg></span>
+        <span style="vertical-align:middle;">brain</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-branch" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M8 9V15'/><path d='M8 14 13 11 15 11'/><rect x='5' y='3' width='6' height='6' rx='2'/><rect x='5' y='15' width='6' height='6' rx='2'/><rect x='15' y='8' width='6' height='6' rx='2'/></svg></span>
         <span style="vertical-align:middle;">branch</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-bucket" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4.5 7 6 19.2a1 1 0 0 0 1 .8h10a1 1 0 0 0 1-.8L19.5 7Z'/><path d='M7 7a5 5 0 0 1 10 0'/></svg></span>
+        <span style="vertical-align:middle;">bucket</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-bug" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M9.5 5 7.5 3'/><path d='M14.5 5 16.5 3'/><path d='M9 7.13v-1a3 3 0 0 1 6 0v1'/><path d='M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6'/><path d='M6.5 10C4.6 9.8 3 8.1 3 6'/><path d='M6 14H2'/><path d='M3 20c0-2.1 1.7-3.9 3.8-4'/><path d='M21 6c0 2.1-1.6 3.8-3.5 4'/><path d='M22 14h-4'/><path d='M17.2 16c2.1.1 3.8 1.9 3.8 4'/></svg></span>
+        <span style="vertical-align:middle;">bug</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-building-apartments" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='4' y='2' width='16' height='20' rx='1'/><rect fill='currentColor' stroke='none' x='7' y='6' width='3' height='3'/><rect fill='currentColor' stroke='none' x='14' y='6' width='3' height='3'/><rect fill='currentColor' stroke='none' x='7' y='11' width='3' height='3'/><rect fill='currentColor' stroke='none' x='14' y='11' width='3' height='3'/><path d='M10 22v-3a2 2 0 0 1 4 0v3'/></svg></span>
+        <span style="vertical-align:middle;">building-apartments</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-building-gov" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='12 2 21 7 3 7'/><line x1='3' y1='22' x2='21' y2='22'/><line x1='5' y1='18' x2='19' y2='18'/><line x1='6' y1='11' x2='6' y2='17'/><line x1='10' y1='11' x2='10' y2='17'/><line x1='14' y1='11' x2='14' y2='17'/><line x1='18' y1='11' x2='18' y2='17'/></svg></span>
+        <span style="vertical-align:middle;">building-gov</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-building-house" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m3 10 9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/><polyline points='9 21 9 13 15 13 15 21'/><path fill='currentColor' stroke='none' d='M16.5 4 19.5 4 19.5 9.63 16.5 7.3Z'/></svg></span>
+        <span style="vertical-align:middle;">building-house</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-building-office" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z'/><path d='M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2'/><path d='M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2'/><path d='M10 6h4'/><path d='M10 10h4'/><path d='M10 14h4'/><path d='M10 18h4'/></svg></span>
+        <span style="vertical-align:middle;">building-office</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-calculator" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='16' height='20' x='4' y='2' rx='2'/><line x1='8' y1='6' x2='16' y2='6'/><line x1='16' y1='14' x2='16' y2='18'/><path d='M8 10h.01'/><path d='M12 10h.01'/><path d='M16 10h.01'/><path d='M8 14h.01'/><path d='M12 14h.01'/><path d='M8 18h.01'/><path d='M12 18h.01'/></svg></span>
+        <span style="vertical-align:middle;">calculator</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-calendar" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M8 2v4'/><path d='M16 2v4'/><rect width='18' height='18' x='3' y='4' rx='2'/><path d='M3 10h18'/></svg></span>
@@ -75,8 +139,60 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">camera</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
-        <span class="cerb-icon" title=".cerb-icon-check" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='18' height='18' x='3' y='3' rx='2'/><path d='m9 12 2 2 4-4'/></svg></span>
+        <span class="cerb-icon" title=".cerb-icon-cart" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='8' cy='21' r='1'/><circle cx='19' cy='21' r='1'/><path d='M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12'/></svg></span>
+        <span style="vertical-align:middle;">cart</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-chart-area" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-linejoin='miter' d='M3 3V21H21'/><path fill='currentColor' d='M7 17 7 15 10 11 13 13 16 8 19 10 19 17Z'/></svg></span>
+        <span style="vertical-align:middle;">chart-area</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-chart-axis-x" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-linejoin='miter' d='M5 4V19H19'/><polyline points='16 16 19 19 16 22'/><polyline points='8 14 11 11 14 12 17 7'/></svg></span>
+        <span style="vertical-align:middle;">chart-axis-x</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-chart-axis-y" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-linejoin='miter' d='M5 4V19H19'/><polyline points='2 7 5 4 8 7'/><polyline points='8 14 11 11 14 12 17 7'/></svg></span>
+        <span style="vertical-align:middle;">chart-axis-y</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-chart-axis-y2" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-linejoin='miter' d='M19 4V19H5'/><polyline points='16 7 19 4 22 7'/><polyline points='7 7 10 12 13 11 16 14'/></svg></span>
+        <span style="vertical-align:middle;">chart-axis-y2</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-chart-bar" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-linejoin='miter' d='M3 3V21H21'/><rect fill='currentColor' stroke='none' x='6.5' y='13' width='3' height='4'/><rect fill='currentColor' stroke='none' x='11.5' y='9' width='3' height='8'/><rect fill='currentColor' stroke='none' x='16.5' y='6' width='3' height='11'/></svg></span>
+        <span style="vertical-align:middle;">chart-bar</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-chart-bar-stacked" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-linejoin='miter' d='M3 3V21H21'/><rect fill='currentColor' stroke='none' x='6.5' y='13' width='3' height='4'/><rect fill='currentColor' stroke='none' x='6.5' y='11' width='3' height='1.2'/><rect fill='currentColor' stroke='none' x='11.5' y='14' width='3' height='3'/><rect fill='currentColor' stroke='none' x='11.5' y='7' width='3' height='6.2'/><rect fill='currentColor' stroke='none' x='16.5' y='12.5' width='3' height='4.5'/><rect fill='currentColor' stroke='none' x='16.5' y='9' width='3' height='2.7'/><rect fill='currentColor' stroke='none' x='16.5' y='5' width='3' height='3.2'/></svg></span>
+        <span style="vertical-align:middle;">chart-bar-stacked</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-chart-kata" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M7 4a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2 2 2 0 0 1 2 2v4a2 2 0 0 0 2 2'/><path d='M17 4a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2 2 2 0 0 0-2 2v4a2 2 0 0 1-2 2'/><rect fill='currentColor' stroke='none' x='8.6' y='14' width='1.8' height='4'/><rect fill='currentColor' stroke='none' x='11.1' y='11' width='1.8' height='7'/><rect fill='currentColor' stroke='none' x='13.6' y='13' width='1.8' height='5'/></svg></span>
+        <span style="vertical-align:middle;">chart-kata</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-chart-line" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-linejoin='miter' d='M3 3V21H21'/><path d='m19 9-5 5-4-4-3 3'/></svg></span>
+        <span style="vertical-align:middle;">chart-line</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-chart-pie" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21.21 15.89A10 10 0 1 1 8 2.83'/><path fill='currentColor' stroke='none' d='M22 12A10 10 0 0 0 12 2v10z'/></svg></span>
+        <span style="vertical-align:middle;">chart-pie</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-chart-scatterplot" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-linejoin='miter' d='M3 3V21H21'/><circle fill='currentColor' stroke='none' cx='7' cy='15.5' r='1.3'/><circle fill='currentColor' stroke='none' cx='9.5' cy='13' r='1.3'/><circle fill='currentColor' stroke='none' cx='12' cy='14' r='1.3'/><circle fill='currentColor' stroke='none' cx='14.5' cy='10.5' r='1.3'/><circle fill='currentColor' stroke='none' cx='17' cy='11.5' r='1.3'/><circle fill='currentColor' stroke='none' cx='19' cy='7.5' r='1.3'/></svg></span>
+        <span style="vertical-align:middle;">chart-scatterplot</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-chart-timeblocks" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-linejoin='miter' d='M3 3V21H21'/><rect fill='currentColor' stroke='none' x='6' y='5' width='8' height='2.6'/><rect fill='currentColor' stroke='none' x='10' y='8.6' width='7' height='2.6'/><rect fill='currentColor' stroke='none' x='6.5' y='12.2' width='5' height='2.6'/><rect fill='currentColor' stroke='none' x='9' y='15.8' width='8' height='2.6'/></svg></span>
+        <span style="vertical-align:middle;">chart-timeblocks</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-check" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg></span>
         <span style="vertical-align:middle;">check</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-checked" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='18' height='18' x='3' y='3' rx='2'/><path d='m9 12 2 2 4-4'/></svg></span>
+        <span style="vertical-align:middle;">checked</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-chevron-down" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M12 15.5l-7-7 2-2 5 5 5-5 2 2z'/></svg></span>
@@ -95,6 +211,10 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">chevron-up</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-circle" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/></svg></span>
+        <span style="vertical-align:middle;">circle</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-circle-arrow-down" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' fill='currentColor' fill-rule='evenodd' d='M2 12A10 10 0 1 0 22 12A10 10 0 1 0 2 12ZM15 6 15 12 18 12 12 18 6 12 9 12 9 6Z'/></svg></span>
         <span style="vertical-align:middle;">circle-arrow-down</span>
     </div>
@@ -111,7 +231,7 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">circle-arrow-up</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
-        <span class="cerb-icon" title=".cerb-icon-circle-exclamation-mark" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' fill='currentColor' fill-rule='evenodd' d='M2 12A10 10 0 1 0 22 12A10 10 0 1 0 2 12ZM10.5 6 13.5 6 13 13.5 11 13.5ZM10.5 17.5A1.5 1.5 0 1 0 13.5 17.5A1.5 1.5 0 1 0 10.5 17.5Z'/></svg></span>
+        <span class="cerb-icon" title=".cerb-icon-circle-exclamation-mark" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' fill='currentColor' fill-rule='evenodd' d='M2 12A10 10 0 1 0 22 12A10 10 0 1 0 2 12ZM10 5.5 14 5.5 13.2 14 10.8 14ZM10.1 17.6A1.9 1.9 0 1 0 13.9 17.6A1.9 1.9 0 1 0 10.1 17.6Z'/></svg></span>
         <span style="vertical-align:middle;">circle-exclamation-mark</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
@@ -131,7 +251,7 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">circle-plus</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
-        <span class="cerb-icon" title=".cerb-icon-circle-question-mark" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' fill='currentColor' fill-rule='evenodd' d='M2 12A10 10 0 1 0 22 12A10 10 0 1 0 2 12ZM8.15 8.67A4 4 0 0 1 15.92 10C15.92 12 13.5 13.7 12.24 13.95A1 1 0 0 1 11.6 12.05C12.5 12 13.8 11 13.92 10A2 2 0 0 0 10.03 9.33ZM10.7 17A1.3 1.3 0 1 0 13.3 17A1.3 1.3 0 1 0 10.7 17Z'/></svg></span>
+        <span class="cerb-icon" title=".cerb-icon-circle-question-mark" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' fill='currentColor' fill-rule='evenodd' d='M2 12A10 10 0 1 0 22 12A10 10 0 1 0 2 12ZM7.7 8.5A4.4 4.4 0 0 1 16.3 10C16.3 12.4 13.7 14 12.5 14.4A1.3 1.3 0 0 1 11.5 12C12.3 11.7 13.7 10.8 13.7 10A1.8 1.8 0 0 0 10.2 9.5ZM10.1 17.6A1.9 1.9 0 1 0 13.9 17.6A1.9 1.9 0 1 0 10.1 17.6Z'/></svg></span>
         <span style="vertical-align:middle;">circle-question-mark</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
@@ -151,12 +271,28 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">cloud</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
-        <span class="cerb-icon" title=".cerb-icon-cloud-download" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 15H6a3.5 3.5 0 0 1 0-7a6.5 6.5 0 0 1 12-2a4.5 4.5 0 0 1 0 9Z'/><polygon fill='currentColor' stroke-width='1' points='12 9 14 9 14 18.5 16 18.5 13 22.5 10 18.5 12 18.5'/></svg></span>
+        <span class="cerb-icon" title=".cerb-icon-cloud-download" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 15H6a3.5 3.5 0 0 1 0-7a6.5 6.5 0 0 1 12-2a4.5 4.5 0 0 1 0 9Z'/><line x1='12.5' y1='11' x2='12.5' y2='22'/><polyline points='9.5 19 12.5 22 15.5 19'/></svg></span>
         <span style="vertical-align:middle;">cloud-download</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
-        <span class="cerb-icon" title=".cerb-icon-cloud-upload" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 21H6a3.5 3.5 0 0 1 0-7a6.5 6.5 0 0 1 12-2a4.5 4.5 0 0 1 0 9Z'/><polygon fill='currentColor' stroke-width='1' points='12 15 14 15 14 5.5 16 5.5 13 1.5 10 5.5 12 5.5'/></svg></span>
+        <span class="cerb-icon" title=".cerb-icon-cloud-upload" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 15H6a3.5 3.5 0 0 1 0-7a6.5 6.5 0 0 1 12-2a4.5 4.5 0 0 1 0 9Z'/><line x1='12.5' y1='20' x2='12.5' y2='7'/><polyline points='9.5 10 12.5 7 15.5 10'/></svg></span>
         <span style="vertical-align:middle;">cloud-upload</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-coffee" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M17 8h1a4 4 0 1 1 0 8h-1'/><path d='M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z'/><path stroke-width='1' d='M6 2C7 3 5 4 6 5C7 6 5 7 6 8'/><path stroke-width='1' d='M10 2C11 3 9 4 10 5C11 6 9 7 10 8'/><path stroke-width='1' d='M14 2C15 3 13 4 14 5C15 6 13 7 14 8'/></svg></span>
+        <span style="vertical-align:middle;">coffee</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-coins" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='8' cy='8' r='6'/><path d='M18.09 10.37A6 6 0 1 1 10.34 18'/><path d='M7 6h1v4'/><path d='m16.71 13.88.7.71-2.82 2.82'/></svg></span>
+        <span style="vertical-align:middle;">coins</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-collection" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M19 11H5m14 0a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2m14 0V9a2 2 0 0 0-2-2M5 11V9a2 2 0 0 1 2-2m0 0V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2M7 7h10'/></svg></span>
+        <span style="vertical-align:middle;">collection</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-color-palette" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z'/><circle fill='currentColor' stroke='none' cx='13.5' cy='6.5' r='1.4'/><circle fill='currentColor' stroke='none' cx='17.5' cy='10.5' r='1.4'/><circle fill='currentColor' stroke='none' cx='6.5' cy='12.5' r='1.4'/><circle fill='currentColor' stroke='none' cx='8.5' cy='7.5' r='1.4'/></svg></span>
+        <span style="vertical-align:middle;">color-palette</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-comments" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' d='M4 4h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 5v-5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z'/></svg></span>
@@ -167,23 +303,63 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">compass</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-computer-desktop" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='20' height='14' x='2' y='3' rx='2'/><line x1='8' y1='21' x2='16' y2='21'/><line x1='12' y1='17' x2='12' y2='21'/></svg></span>
+        <span style="vertical-align:middle;">computer-desktop</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-computer-laptop" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 16V7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9'/><path d='M1 17h22l-1.6 2.4a1 1 0 0 1-.83.6H3.43a1 1 0 0 1-.83-.6z'/></svg></span>
+        <span style="vertical-align:middle;">computer-laptop</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-computer-tablet" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='16' height='21' x='4' y='1.5' rx='2.5'/><rect width='11' height='13' x='6.5' y='4.5' rx='1.5' stroke-width='1.2'/><circle cx='12' cy='19.5' r='1.3' fill='currentColor' stroke='none'/></svg></span>
+        <span style="vertical-align:middle;">computer-tablet</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-console" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='18' height='18' x='3' y='3' rx='2'/><path d='m7 9 3 3-3 3'/><path d='M13 15h4'/></svg></span>
+        <span style="vertical-align:middle;">console</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-conversation" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' d='M8 4c-3.3 0-6 2.2-6 5 0 1.4.7 2.7 1.8 3.6L2 16l4-1.5c.6.2 1.3.3 2 .3 3.3 0 6-2.2 6-5S11.3 4 8 4z'/><path fill='currentColor' d='M22 14c0-2-1.4-3.7-3.4-4.6.3.5.4 1 .4 1.6 0 3.3-3.1 6-7 6-.4 0-.7 0-1.1-.1.9 1.9 3.1 3.1 5.6 3.1.6 0 1.2-.1 1.8-.2L22 21l-1.5-3c1-.9 1.5-2 1.5-3z'/></svg></span>
         <span style="vertical-align:middle;">conversation</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
-        <span class="cerb-icon" title=".cerb-icon-copy" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='8' height='4' x='8' y='2' rx='1'/><path d='M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2'/><polygon fill='currentColor' stroke='none' points='10.5 9 13.5 9 13.5 15 15.5 15 12 19 8.5 15 10.5 15'/></svg></span>
+        <span class="cerb-icon" title=".cerb-icon-copy" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M5 17.5H4A1.5 1.5 0 0 1 2.5 16V4A1.5 1.5 0 0 1 4 2.5h7.5L16 7v1'/><path d='M14 8.5H9.5A1.5 1.5 0 0 0 8 10v10.5A1.5 1.5 0 0 0 9.5 22h9A1.5 1.5 0 0 0 20 20.5V14.5z'/><path d='M14 8.5V13a1.5 1.5 0 0 0 1.5 1.5H20'/></svg></span>
         <span style="vertical-align:middle;">copy</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
-        <span class="cerb-icon" title=".cerb-icon-crosshairs" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/><line x1='12' y1='2' x2='12' y2='22'/><line x1='2' y1='12' x2='22' y2='12'/></svg></span>
+        <span class="cerb-icon" title=".cerb-icon-cpu" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><g stroke-width='1.5' stroke-linecap='square'><rect width='16' height='16' x='4' y='4' rx='2'/><rect width='6' height='6' x='9' y='9' rx='1'/><path d='M9 2v2'/><path d='M15 2v2'/><path d='M9 20v2'/><path d='M15 20v2'/><path d='M20 9h2'/><path d='M20 15h2'/><path d='M2 9h2'/><path d='M2 15h2'/></g></svg></span>
+        <span style="vertical-align:middle;">cpu</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-crosshairs" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/><line x1='12' y1='1.5' x2='12' y2='8'/><line x1='12' y1='22.5' x2='12' y2='16'/><line x1='1.5' y1='12' x2='8' y2='12'/><line x1='22.5' y1='12' x2='16' y2='12'/></svg></span>
         <span style="vertical-align:middle;">crosshairs</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-crown" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M2.5 5.5 5.5 17 18.5 17 21.5 5.5 15.5 10.5 12 3.5 8.5 10.5Z'/><path d='M5.5 21h13'/></svg></span>
+        <span style="vertical-align:middle;">crown</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-cube" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z'/><path d='m3.3 7 8.7 5 8.7-5'/><path d='M12 22V12'/></svg></span>
+        <span style="vertical-align:middle;">cube</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-dashboard" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='3' width='7' height='9' rx='1'/><rect x='14' y='3' width='7' height='5' rx='1'/><rect x='14' y='12' width='7' height='9' rx='1'/><rect x='3' y='16' width='7' height='5' rx='1'/></svg></span>
+        <span style="vertical-align:middle;">dashboard</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-database" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><ellipse cx='12' cy='5' rx='9' ry='3'/><path d='M3 5V19A9 3 0 0 0 21 19V5'/><path d='M3 12A9 3 0 0 0 21 12'/></svg></span>
+        <span style="vertical-align:middle;">database</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-dequeue" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='3' y1='12' x2='10' y2='12'/><polyline points='6 9 3 12 6 15'/><line x1='13' y1='6' x2='13' y2='18'/><line x1='16' y1='6' x2='16' y2='18'/><line x1='19' y1='6' x2='19' y2='18'/></svg></span>
+        <span style="vertical-align:middle;">dequeue</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-dice" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='12' height='12' x='2' y='10' rx='2'/><path d='m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6'/><path d='M6 18h.01'/><path d='M10 14h.01'/><path d='M15 6h.01'/><path d='M18 9h.01'/></svg></span>
         <span style="vertical-align:middle;">dice</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
-        <span class="cerb-icon" title=".cerb-icon-disk-export" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='17' width='15' height='5' rx='1.5'/><circle fill='currentColor' cx='13.5' cy='19.5' r='1'/><polygon fill='currentColor' stroke='none' points='11.5 16 11.5 10 13.5 10 9.5 4 5.5 10 7.5 10 7.5 16'/></svg></span>
+        <span class="cerb-icon" title=".cerb-icon-disk-export" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='17' width='15' height='5' rx='1.5'/><circle fill='currentColor' cx='13.5' cy='19.5' r='1'/><polygon fill='currentColor' stroke='none' points='11.5 15 11.5 10 13.5 10 9.5 4 5.5 10 7.5 10 7.5 15'/></svg></span>
         <span style="vertical-align:middle;">disk-export</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
@@ -191,8 +367,16 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">disk-save</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-dot" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle fill='currentColor' stroke='none' cx='12' cy='12' r='4'/></svg></span>
+        <span style="vertical-align:middle;">dot</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-down-arrow" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon fill='currentColor' stroke='none' points='15 5 15 12 18 12 12 19 6 12 9 12 9 5'/></svg></span>
         <span style="vertical-align:middle;">down-arrow</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-download" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/><polyline points='7 10 12 15 17 10'/><line x1='12' y1='3' x2='12' y2='15'/></svg></span>
+        <span style="vertical-align:middle;">download</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-duplicate" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='8' width='14' height='14' rx='2'/><path d='M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2'/></svg></span>
@@ -203,8 +387,16 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">edit</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-editor" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='3' width='20' height='18' rx='2'/><path d='M2 8h20'/><path d='M5 5.5h.01'/><path d='M8 5.5h.01'/><g stroke-width='1.7'><path d='M10.25 10.5H9.75a1 1 0 0 0-1 1v2.5a1 1 0 0 1-1 1a1 1 0 0 1 1 1v2.5c0 .55.45 1 1 1h.5'/><path d='M13.75 10.5H14.25a1 1 0 0 1 1 1v2.5a1 1 0 0 0 1 1a1 1 0 0 0-1 1v2.5c0 .55-.45 1-1 1h-.5'/></g></svg></span>
+        <span style="vertical-align:middle;">editor</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-embed" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='16 18 22 12 16 6'/><polyline points='8 6 2 12 8 18'/></svg></span>
         <span style="vertical-align:middle;">embed</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-enqueue" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='3' y1='12' x2='10' y2='12'/><polyline points='7 9 10 12 7 15'/><line x1='13' y1='6' x2='13' y2='18'/><line x1='16' y1='6' x2='16' y2='18'/><line x1='19' y1='6' x2='19' y2='18'/></svg></span>
+        <span style="vertical-align:middle;">enqueue</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-erase" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 21H8a2 2 0 0 1-1.42-.587l-3.994-3.999a2 2 0 0 1 0-2.828l10-10a2 2 0 0 1 2.829 0l5.999 6a2 2 0 0 1 0 2.828L12.834 21'/><path d='m5.082 11.09 8.828 8.828'/></svg></span>
@@ -219,6 +411,18 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">eye-open</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-face-frown" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><path d='M16 16s-1.5-2-4-2-4 2-4 2'/><line x1='9' y1='9' x2='9.01' y2='9'/><line x1='15' y1='9' x2='15.01' y2='9'/></svg></span>
+        <span style="vertical-align:middle;">face-frown</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-face-neutral" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><line x1='8' y1='15' x2='16' y2='15'/><line x1='9' y1='9' x2='9.01' y2='9'/><line x1='15' y1='9' x2='15.01' y2='9'/></svg></span>
+        <span style="vertical-align:middle;">face-neutral</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-face-smile" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><path d='M8 14s1.5 2 4 2 4-2 4-2'/><line x1='9' y1='9' x2='9.01' y2='9'/><line x1='15' y1='9' x2='15.01' y2='9'/></svg></span>
+        <span style="vertical-align:middle;">face-smile</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-fast-backward" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon fill='currentColor' stroke='none' points='21 5 13 12 21 19'/><polygon fill='currentColor' stroke='none' points='13 5 5 12 13 19'/></svg></span>
         <span style="vertical-align:middle;">fast-backward</span>
     </div>
@@ -231,12 +435,28 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">file</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-file-document" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-width='1.5' d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z'/><path stroke-width='1.5' d='M14 2v4a2 2 0 0 0 2 2h4'/><line stroke-width='1.5' x1='8' y1='9' x2='10' y2='9'/><line stroke-width='1.5' x1='8' y1='13' x2='16' y2='13'/><line stroke-width='1.5' x1='8' y1='17' x2='16' y2='17'/></svg></span>
+        <span style="vertical-align:middle;">file-document</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-file-export" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-width='1.5' d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z'/><path stroke-width='1.5' d='M14 2v4a2 2 0 0 0 2 2h4'/><polygon fill='currentColor' stroke-width='1' points='7 14 15 14 15 12 19 15 15 18 15 16 7 16'/></svg></span>
         <span style="vertical-align:middle;">file-export</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-file-image" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-width='1.5' d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z'/><path stroke-width='1.5' d='M14 2v4a2 2 0 0 0 2 2h4'/><circle stroke-width='1.5' cx='10' cy='12' r='2'/><path stroke-width='1.5' d='m20 17-1.296-1.296a2.41 2.41 0 0 0-3.408 0L9 22'/></svg></span>
+        <span style="vertical-align:middle;">file-image</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-file-import" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-width='1.5' d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z'/><path stroke-width='1.5' d='M14 2v4a2 2 0 0 0 2 2h4'/><polygon fill='currentColor' stroke-width='1' points='17 14 9 14 9 12 5 15 9 18 9 16 17 16'/></svg></span>
         <span style="vertical-align:middle;">file-import</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-file-zip" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path stroke-width='1.5' d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z'/><path stroke-width='1.5' d='M14 2v4a2 2 0 0 0 2 2h4'/><polyline stroke-width='1.5' points='10.5 9 13.5 10.5 10.5 12 13.5 13.5 10.5 15 13.5 16.5'/><rect stroke-width='1.5' x='10.5' y='17.5' width='3' height='3.5' rx='1'/></svg></span>
+        <span style="vertical-align:middle;">file-zip</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-flag" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z'/><line x1='4' y1='22' x2='4' y2='15'/></svg></span>
+        <span style="vertical-align:middle;">flag</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-folder" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z'/></svg></span>
@@ -251,6 +471,22 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">folder-plus</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-form" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='3' width='18' height='18' rx='2'/><rect x='6' y='7' width='3.5' height='3.5' rx='0.5' stroke-width='1.5'/><line x1='12' y1='8.75' x2='18' y2='8.75'/><rect x='6' y='13.5' width='3.5' height='3.5' rx='0.5' stroke-width='1.5'/><line x1='12' y1='15.25' x2='18' y2='15.25'/></svg></span>
+        <span style="vertical-align:middle;">form</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-function" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><g stroke-width='1.8'><path d='M2 11h8'/><path d='M2.5 19a3 3 0 0 0 3.5-3V7a3 3 0 0 1 4-1.5'/><path d='M14.5 5a10.5 10.5 0 0 0 0 14'/><path d='M15.25 9l4 6'/><path d='M19.25 9l-4 6'/><path d='M20 5a10.5 10.5 0 0 1 0 14'/></g></svg></span>
+        <span style="vertical-align:middle;">function</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-funnel" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='22 3 2 3 10 12.46 10 19 14 21 14 12.46'/></svg></span>
+        <span style="vertical-align:middle;">funnel</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-gauge" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3.34 19a10 10 0 1 1 17.32 0'/><path d='m12 14 4-4'/><circle fill='currentColor' stroke='none' cx='12' cy='14' r='1.75'/></svg></span>
+        <span style="vertical-align:middle;">gauge</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-gear" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' fill-rule='evenodd' d='M19.93 10.96L21.42 10.76Q21.91 10.7 21.91 11.2L21.91 12.8Q21.91 13.3 21.42 13.24L19.93 13.04 19.44 12.98A7.5 7.5 0 0 1 17.95 16.57L18.35 16.87 19.54 17.78Q19.93 18.09 19.58 18.44L18.44 19.58Q18.09 19.93 17.78 19.54L16.87 18.35 16.57 17.95A7.5 7.5 0 0 1 12.98 19.44L13.04 19.93 13.24 21.42Q13.3 21.91 12.8 21.91L11.2 21.91Q10.7 21.91 10.76 21.42L10.96 19.93 11.02 19.44A7.5 7.5 0 0 1 7.43 17.95L7.13 18.35 6.22 19.54Q5.91 19.93 5.56 19.58L4.42 18.44Q4.07 18.09 4.46 17.78L5.65 16.87 6.05 16.57A7.5 7.5 0 0 1 4.56 12.98L4.07 13.04 2.58 13.24Q2.09 13.3 2.09 12.8L2.09 11.2Q2.09 10.7 2.58 10.76L4.07 10.96 4.56 11.02A7.5 7.5 0 0 1 6.05 7.43L5.65 7.13 4.46 6.22Q4.07 5.91 4.42 5.56L5.56 4.42Q5.91 4.07 6.22 4.46L7.13 5.65 7.43 6.05A7.5 7.5 0 0 1 11.02 4.56L10.96 4.07 10.76 2.58Q10.7 2.09 11.2 2.09L12.8 2.09Q13.3 2.09 13.24 2.58L13.04 4.07 12.98 4.56A7.5 7.5 0 0 1 16.57 6.05L16.87 5.65 17.78 4.46Q18.09 4.07 18.44 4.42L19.58 5.56Q19.93 5.91 19.54 6.22L18.35 7.13 17.95 7.43A7.5 7.5 0 0 1 19.44 11.02L19.93 10.96ZM6.5 12A5.5 5.5 0 1 0 17.5 12A5.5 5.5 0 1 0 6.5 12Z'/></svg></span>
         <span style="vertical-align:middle;">gear</span>
     </div>
@@ -263,12 +499,20 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">gender-male</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-gift" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='8' width='18' height='4' rx='1'/><path d='M12 8v13'/><path d='M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7'/><path d='M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5'/></svg></span>
+        <span style="vertical-align:middle;">gift</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-globe" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><path d='M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20'/><path d='M2 12h20'/></svg></span>
         <span style="vertical-align:middle;">globe</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-hammer" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9'/><path d='m18 15 4-4'/><path d='m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12 8.4V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5'/></svg></span>
         <span style="vertical-align:middle;">hammer</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-handshake" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m11 17 2 2a1 1 0 1 0 3-3'/><path d='m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4'/><path d='m21 3 1 11h-2'/><path d='M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3'/><path d='M3 4h8'/></svg></span>
+        <span style="vertical-align:middle;">handshake</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-hash" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='4' y1='9' x2='20' y2='9'/><line x1='4' y1='15' x2='20' y2='15'/><line x1='10' y1='3' x2='8' y2='21'/><line x1='16' y1='3' x2='14' y2='21'/></svg></span>
@@ -279,24 +523,68 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">header</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-heart" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z'/></svg></span>
+        <span style="vertical-align:middle;">heart</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-hierarchy" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='9' y='2' width='6' height='6' rx='1'/><rect x='2' y='16' width='6' height='6' rx='1'/><rect x='16' y='16' width='6' height='6' rx='1'/><path d='M12 12V8'/><path d='M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3'/></svg></span>
+        <span style="vertical-align:middle;">hierarchy</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-history" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8'/><path d='M3 3v5h5'/><path d='M12 7v5l4 2'/></svg></span>
         <span style="vertical-align:middle;">history</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-hourglass" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M5 22h14'/><path d='M5 2h14'/><path d='M17 22v-4.17a2 2 0 0 0-.59-1.41L12 12l-4.41 4.42A2 2 0 0 0 7 17.83V22'/><path d='M7 2v4.17a2 2 0 0 0 .59 1.41L12 12l4.41-4.42A2 2 0 0 0 17 6.17V2'/></svg></span>
+        <span style="vertical-align:middle;">hourglass</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-id-card" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='6' width='20' height='15' rx='2'/><path d='M9 6V5a3 3 0 0 1 6 0v1'/><circle fill='currentColor' stroke='none' cx='8' cy='11' r='2.4'/><path fill='currentColor' stroke='none' d='M4.5 18a3.5 3.5 0 0 1 7 0z'/><line x1='15' y1='11' x2='19' y2='11'/><line x1='15' y1='14' x2='19' y2='14'/><line x1='15' y1='17' x2='18' y2='17'/></svg></span>
         <span style="vertical-align:middle;">id-card</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-inbox" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='22 12 16 12 14 15 10 15 8 12 2 12'/><path d='M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z'/></svg></span>
+        <span style="vertical-align:middle;">inbox</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-index-folders" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 10a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-2.5a1 1 0 0 1-.8-.4l-.9-1.2A1 1 0 0 0 15 3h-2a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1Z'/><path d='M20 21a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-2.9a1 1 0 0 1-.88-.55l-.42-.85a1 1 0 0 0-.92-.6H13a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1Z'/><path d='M3 5a2 2 0 0 0 2 2h3'/><path d='M3 3v13a2 2 0 0 0 2 2h3'/></svg></span>
+        <span style="vertical-align:middle;">index-folders</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-infinity" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z'/></svg></span>
+        <span style="vertical-align:middle;">infinity</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-italic" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='19' y1='4' x2='10' y2='4'/><line x1='14' y1='20' x2='5' y2='20'/><line x1='15' y1='4' x2='9' y2='20'/></svg></span>
         <span style="vertical-align:middle;">italic</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-kanban" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><g stroke-linejoin='miter'><rect x='3' y='4' width='5' height='16'/><rect x='9.5' y='4' width='5' height='11'/><rect x='16' y='4' width='5' height='13'/></g></svg></span>
+        <span style="vertical-align:middle;">kanban</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-key" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m15.5 7.5 3 3L22 7l-3-3'/><path d='m21 2-9.6 9.6'/><circle cx='7.5' cy='15.5' r='5.5'/></svg></span>
+        <span style="vertical-align:middle;">key</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-keyboard" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='20' height='16' x='2' y='4' rx='2'/><path d='M6 8h.01'/><path d='M10 8h.01'/><path d='M14 8h.01'/><path d='M18 8h.01'/><path d='M8 12h.01'/><path d='M12 12h.01'/><path d='M16 12h.01'/><path d='M7 16h10'/></svg></span>
+        <span style="vertical-align:middle;">keyboard</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-lab" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M10 2v7.53a2 2 0 0 1-.21.89L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.07-10.13A2 2 0 0 1 14 9.53V2'/><path d='M8.5 2h7'/><path d='M7 16h10'/></svg></span>
         <span style="vertical-align:middle;">lab</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-lambda" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M9 4 18 20'/><path d='M11.6 8.6 6 20'/></svg></span>
+        <span style="vertical-align:middle;">lambda</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-left-arrow" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon fill='currentColor' stroke='none' points='19 15 12 15 12 18 5 12 12 6 12 9 19 9'/></svg></span>
         <span style="vertical-align:middle;">left-arrow</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-light-bulb" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5'/><path d='M9 18h6'/><path d='M10 22h4'/></svg></span>
+        <span style="vertical-align:middle;">light-bulb</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-link" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'/><path d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'/></svg></span>
@@ -307,8 +595,88 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">list</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-location" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0'/><circle cx='12' cy='10' r='3'/></svg></span>
+        <span style="vertical-align:middle;">location</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-lock" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0 1 10 0v4'/></svg></span>
         <span style="vertical-align:middle;">lock</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-anthropic" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><g fill='currentColor' stroke='none' transform='translate(0.5 4) scale(0.5)'><path d='M32.73 0H25.7846L38.4499 32H45.3953L32.73 0Z'/><path d='M12.6653 0L0 32H7.08167L9.67193 25.28H22.9219L25.5122 32H32.5939L19.9286 0H12.6653ZM11.9626 19.3371L16.2969 8.09143L20.6313 19.3371H11.9626Z'/></g></svg></span>
+        <span style="vertical-align:middle;">logo-anthropic</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-azure" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M7.49 2.97 Q7.65 2.5 8.15 2.5 L8.5 2.5 Q8.8 2.5 8.9 2.78 L11.07 8.81 Q11.24 9.28 11.08 9.75 L9.72 13.63 Q9.57 14.05 9.12 14.05 L7.3 14.05 A0.8 0.8 0 0 0 6.8 15.48 L8.11 16.51 Q8.58 16.88 8.38 17.45 L7.22 20.75 Q6.96 21.5 6.16 21.5 L2.2 21.5 Q1 21.5 1.4 20.37 Z M8 14.85 L13.2 14.85 Q13.7 14.85 13.87 15.32 L15.91 21 Q16.23 21.9 15.47 21.3 L7.85 15.28 Q7.3 14.85 8 14.85 Z M10.49 3.57 Q10.1 2.5 11.24 2.5 L15.41 2.5 Q16.06 2.5 16.28 3.11 L22.42 20.16 Q22.9 21.5 21.48 21.5 L17.54 21.5 Q16.94 21.5 16.74 20.94 Z'/></svg></span>
+        <span style="vertical-align:middle;">logo-azure</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-bedrock" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' fill-rule='evenodd' d='M13.05 15.513h3.08c.214 0 .389.177.389.394v1.82a1.704 1.704 0 011.296 1.661c0 .943-.755 1.708-1.685 1.708-.931 0-1.686-.765-1.686-1.708 0-.807.554-1.484 1.297-1.662v-1.425h-2.69v4.663a.395.395 0 01-.188.338l-2.69 1.641a.385.385 0 01-.405-.002l-4.926-3.086a.395.395 0 01-.185-.336V16.3L2.196 14.87A.395.395 0 012 14.555L2 14.528V9.406c0-.14.073-.27.192-.34l2.465-1.462V4.448c0-.129.062-.249.165-.322l.021-.014L9.77 1.058a.385.385 0 01.407 0l2.69 1.675a.395.395 0 01.185.336V7.6h3.856V5.683a1.704 1.704 0 01-1.296-1.662c0-.943.755-1.708 1.685-1.708.931 0 1.685.765 1.685 1.708 0 .807-.553 1.484-1.296 1.662v2.311a.391.391 0 01-.389.394h-4.245v1.806h6.624a1.69 1.69 0 011.64-1.313c.93 0 1.685.764 1.685 1.707 0 .943-.754 1.708-1.685 1.708a1.69 1.69 0 01-1.64-1.314H13.05v1.937h4.953l.915 1.18a1.66 1.66 0 01.84-.227c.931 0 1.685.764 1.685 1.707 0 .943-.754 1.708-1.685 1.708-.93 0-1.685-.765-1.685-1.708 0-.346.102-.668.276-.937l-.724-.935H13.05v1.806zM9.973 1.856L7.93 3.122V6.09h-.778V3.604L5.435 4.669v2.945l2.11 1.36L9.712 7.61V5.334h.778V7.83c0 .136-.07.263-.184.335L7.963 9.638v2.081l1.422 1.009-.446.646-1.406-.998-1.53 1.005-.423-.66 1.605-1.055v-1.99L5.038 8.29l-2.26 1.34v1.676l1.972-1.189.398.677-2.37 1.429V14.3l2.166 1.258 2.27-1.368.397.677-2.176 1.311V19.3l1.876 1.175 2.365-1.426.398.678-2.017 1.216 1.918 1.201 2.298-1.403v-5.78l-4.758 2.893-.4-.675 5.158-3.136V3.289L9.972 1.856zM16.13 18.47a.913.913 0 00-.908.92c0 .507.406.918.908.918a.913.913 0 00.907-.919.913.913 0 00-.907-.92zm3.63-3.81a.913.913 0 00-.908.92c0 .508.406.92.907.92a.913.913 0 00.908-.92.913.913 0 00-.908-.92zm1.555-4.99a.913.913 0 00-.908.92c0 .507.407.918.908.918a.913.913 0 00.907-.919.913.913 0 00-.907-.92zM17.296 3.1a.913.913 0 00-.907.92c0 .508.406.92.907.92a.913.913 0 00.908-.92.913.913 0 00-.908-.92z'/></svg></span>
+        <span style="vertical-align:middle;">logo-bedrock</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-claude" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z'/></svg></span>
+        <span style="vertical-align:middle;">logo-claude</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-copilot" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M4.67 1.09 Q5.6 0.5 6.7 0.5 L11 0.5 Q12.1 0.5 11.8 1.56 L8.3 14.04 Q8 15.1 6.9 15.12 L2.4 15.18 Q1.3 15.2 0.93 14.16 L0.47 12.84 Q0.1 11.8 0.32 10.72 L0.98 7.58 Q1.2 6.5 1.6 5.48 L2.5 3.22 Q2.9 2.2 3.83 1.61 Z'/><path fill='currentColor' stroke='none' d='M14.84 1.92 Q15.5 0.8 16.3 1.82 L18.4 4.48 Q19.2 5.5 17.9 5.54 L13.9 5.66 Q12.6 5.7 13.26 4.58 Z'/><path fill='currentColor' stroke='none' transform='rotate(180 12 12)' d='M4.67 1.09 Q5.6 0.5 6.7 0.5 L11 0.5 Q12.1 0.5 11.8 1.56 L8.3 14.04 Q8 15.1 6.9 15.12 L2.4 15.18 Q1.3 15.2 0.93 14.16 L0.47 12.84 Q0.1 11.8 0.32 10.72 L0.98 7.58 Q1.2 6.5 1.6 5.48 L2.5 3.22 Q2.9 2.2 3.83 1.61 Z'/><path fill='currentColor' stroke='none' transform='rotate(180 12 12)' d='M14.84 1.92 Q15.5 0.8 16.3 1.82 L18.4 4.48 Q19.2 5.5 17.9 5.54 L13.9 5.66 Q12.6 5.7 13.26 4.58 Z'/></svg></span>
+        <span style="vertical-align:middle;">logo-copilot</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-deepseek" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><g fill='currentColor' stroke='none' transform='translate(1.22 3.94) scale(0.387)'><path d='M55.6128,3.4712c-.5953-.2917-.8517.2642-1.1998.5466-.1191.0911-.2198.2095-.3206.3188-.8701.9292-1.8867 1.5398-3.2148 1.4668-1.9417-.1094-3.5995.5012-5.065 1.9863-.3114-1.8313-1.3463-2.9248-2.9217-3.6262-.8242-.3645-1.6577-.729-2.2348-1.5217-.403-.5647-.5129-1.1934-.7144-1.813-.1283-.3735-.2565-.7563-.687-.8201-.4671-.0728-.6503.3188-.8335.647-.7327 1.3394-1.0166 2.8154-.9892 4.3096.0641 3.3621 1.4838 6.0406 4.3047 7.9449.3206.2187.403.4372.3023.7563-.1924.656-.4214 1.2937-.6228 1.9497-.1283.4192-.3207.5103-.7694.3279-1.5479-.6467-2.8852-1.6035-4.0667-2.7605-2.0058-1.9407-3.8193-4.0818-6.0815-5.7583-.5312-.3918-1.0625-.7561-1.6121-1.1025-2.3081-2.2412.3023-4.0818.9068-4.3003.6319-.2278.2198-1.0115-1.8227-1.0022-2.0425.009-3.9109.6924-6.2922 1.6035-.348.1367-.7145.2368-1.09.3188-2.1615-.4099-4.4055-.5012-6.7502-.2368-4.4147.4919-7.9408 2.5784-10.5328 6.1409C.1914,13.1289-.5413,17.9941.3563,23.0691c.9434,5.3481 3.6727,9.7761 7.8676,13.2385 4.3506,3.5896 9.3606,5.3481 15.0758,5.011 3.4713-.2004 7.3364-.665 11.6961-4.355 1.099.5467 2.2531.7652 4.1674.9292 1.4746.1367 2.8943-.0728 3.9933-.3005 1.7219-.3645 1.6029-1.959.9801-2.2505-5.0466-2.3506-3.9385-1.394-4.9459-2.1685 2.5645-3.0339 6.4297-6.1865 7.9409-16.4001.119-.8108.0183-1.3211 0-1.9771-.0092-.4008.0824-.5556.5404-.6013 1.2639-.1458 2.4912-.4919 3.6178-1.1115 3.2698-1.7857 4.5886-4.7195 4.9-8.2364.0459-.5376-.0091-1.0935-.577-1.3757ZM27.119,35.123c-4.8909-3.8447-7.263-5.1113-8.2431-5.0566-.9159.0547-.751 1.1025-.5496 1.7859.2107.6741.4855 1.1389.8701 1.731.2656.3918.4489.9748-.2655 1.4123-1.5754.9749-4.314-.3281-4.4423-.3918-3.1872-1.877-5.8525-4.3553-7.7302-7.7444-1.8135-3.262-2.8667-6.7605-3.0408-10.4961-.0458-.9019.2198-1.221 1.1174-1.3848 1.1815-.2187 2.3997-.2644 3.5812-.0913 4.9918.729 9.2415 2.9612 12.8043 6.4963 2.0333 2.0135 3.572 4.419 5.1566 6.7696 1.6852 2.4963 3.4987 4.8745 5.8068 6.8242.8151.6833 1.4654 1.2026 2.0882 1.5854-1.8775.2095-5.01.2552-7.1532-1.4397ZM29.4637,20.0442c0-.4009.3206-.7197.7237-.7197.0916 0 .174.018.2473.0453.1008.0366.1924.0913.2656.1731.1283.1277.2015.3098.2015.5012 0 .4009-.3205.7197-.7234.7197s-.7145-.3188-.7145-.7197ZM36.7452,23.7798c-.4671.1914-.9342.3552-1.383.3735-.6961.0364-1.4563-.2461-1.8684-.5923-.6411-.5376-1.0991-.8381-1.2914-1.7766-.0825-.4009-.0367-1.0205.0367-1.3757.1648-.7654-.0184-1.2573-.5587-1.7039-.4397-.3645-.9984-.4646-1.6121-.4646-.229 0-.4395-.1003-.5953-.1823-.2565-.1275-.467-.4464-.2656-.8382.0641-.1274.3756-.4373.4489-.4919.8335-.4739 1.7952-.3189 2.6836.0364.8244.3371 1.4472.9567 2.3447 1.8313.9159 1.0568 1.0807 1.3486 1.6028 2.1411.4123.6196.7878 1.2573 1.0442 1.9863.1557.4556-.0458.8291-.5862 1.0569Z'/></g></svg></span>
+        <span style="vertical-align:middle;">logo-deepseek</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-docker" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z'/></svg></span>
+        <span style="vertical-align:middle;">logo-docker</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-gemini" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M12 24A14.304 14.304 0 0 0 0 12 14.304 14.304 0 0 0 12 0a14.305 14.305 0 0 0 12 12 14.305 14.305 0 0 0-12 12'/></svg></span>
+        <span style="vertical-align:middle;">logo-gemini</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-github" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/></svg></span>
+        <span style="vertical-align:middle;">logo-github</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-groq" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' fill-rule='evenodd' d='M12.036 2c-3.853-.035-7 3-7.036 6.781-.035 3.782 3.055 6.872 6.908 6.907h2.42v-2.566h-2.292c-2.407.028-4.38-1.866-4.408-4.23-.029-2.362 1.901-4.298 4.308-4.326h.1c2.407 0 4.358 1.915 4.365 4.278v6.305c0 2.342-1.944 4.25-4.323 4.279a4.375 4.375 0 01-3.033-1.252l-1.851 1.818A7 7 0 0012.029 22h.092c3.803-.056 6.858-3.083 6.879-6.816v-6.5C18.907 4.963 15.817 2 12.036 2z'/></svg></span>
+        <span style="vertical-align:middle;">logo-groq</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-huggingface" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M12.025 1.13c-5.77 0-10.449 4.647-10.449 10.378 0 1.112.178 2.181.503 3.185.064-.222.203-.444.416-.577a.96.96 0 0 1 .524-.15c.293 0 .584.124.84.284.278.173.48.408.71.694.226.282.458.611.684.951v-.014c.017-.324.106-.622.264-.874s.403-.487.762-.543c.3-.047.596.06.787.203s.31.313.4.467c.15.257.212.468.233.542.01.026.653 1.552 1.657 2.54.616.605 1.01 1.223 1.082 1.912.055.537-.096 1.059-.38 1.572.637.121 1.294.187 1.967.187.657 0 1.298-.063 1.921-.178-.287-.517-.44-1.041-.384-1.581.07-.69.465-1.307 1.081-1.913 1.004-.987 1.647-2.513 1.657-2.539.021-.074.083-.285.233-.542.09-.154.208-.323.4-.467a1.08 1.08 0 0 1 .787-.203c.359.056.604.29.762.543s.247.55.265.874v.015c.225-.34.457-.67.683-.952.23-.286.432-.52.71-.694.257-.16.547-.284.84-.285a.97.97 0 0 1 .524.151c.228.143.373.388.43.625l.006.04a10.3 10.3 0 0 0 .534-3.273c0-5.731-4.678-10.378-10.449-10.378M8.327 6.583a1.5 1.5 0 0 1 .713.174 1.487 1.487 0 0 1 .617 2.013c-.183.343-.762-.214-1.102-.094-.38.134-.532.914-.917.71a1.487 1.487 0 0 1 .69-2.803m7.486 0a1.487 1.487 0 0 1 .689 2.803c-.385.204-.536-.576-.916-.71-.34-.12-.92.437-1.103.094a1.487 1.487 0 0 1 .617-2.013 1.5 1.5 0 0 1 .713-.174m-10.68 1.55a.96.96 0 1 1 0 1.921.96.96 0 0 1 0-1.92m13.838 0a.96.96 0 1 1 0 1.92.96.96 0 0 1 0-1.92M8.489 11.458c.588.01 1.965 1.157 3.572 1.164 1.607-.007 2.984-1.155 3.572-1.164.196-.003.305.12.305.454 0 .886-.424 2.328-1.563 3.202-.22-.756-1.396-1.366-1.63-1.32q-.011.001-.02.006l-.044.026-.01.008-.03.024q-.018.017-.035.036l-.032.04a1 1 0 0 0-.058.09l-.014.025q-.049.088-.11.19a1 1 0 0 1-.083.116 1.2 1.2 0 0 1-.173.18q-.035.029-.075.058a1.3 1.3 0 0 1-.251-.243 1 1 0 0 1-.076-.107c-.124-.193-.177-.363-.337-.444-.034-.016-.104-.008-.2.022q-.094.03-.216.087-.06.028-.125.063l-.13.074q-.067.04-.136.086a3 3 0 0 0-.135.096 3 3 0 0 0-.26.219 2 2 0 0 0-.12.121 2 2 0 0 0-.106.128l-.002.002a2 2 0 0 0-.09.132l-.001.001a1.2 1.2 0 0 0-.105.212q-.013.036-.024.073c-1.139-.875-1.563-2.317-1.563-3.203 0-.334.109-.457.305-.454m.836 10.354c.824-1.19.766-2.082-.365-3.194-1.13-1.112-1.789-2.738-1.789-2.738s-.246-.945-.806-.858-.97 1.499.202 2.362c1.173.864-.233 1.45-.685.64-.45-.812-1.683-2.896-2.322-3.295s-1.089-.175-.938.647 2.822 2.813 2.562 3.244-1.176-.506-1.176-.506-2.866-2.567-3.49-1.898.473 1.23 2.037 2.16c1.564.932 1.686 1.178 1.464 1.53s-3.675-2.511-4-1.297c-.323 1.214 3.524 1.567 3.287 2.405-.238.839-2.71-1.587-3.216-.642-.506.946 3.49 2.056 3.522 2.064 1.29.33 4.568 1.028 5.713-.624m5.349 0c-.824-1.19-.766-2.082.365-3.194 1.13-1.112 1.789-2.738 1.789-2.738s.246-.945.806-.858.97 1.499-.202 2.362c-1.173.864.233 1.45.685.64.451-.812 1.683-2.896 2.322-3.295s1.089-.175.938.647-2.822 2.813-2.562 3.244 1.176-.506 1.176-.506 2.866-2.567 3.49-1.898-.473 1.23-2.037 2.16c-1.564.932-1.686 1.178-1.464 1.53s3.675-2.511 4-1.297c.323 1.214-3.524 1.567-3.287 2.405.238.839 2.71-1.587 3.216-.642.506.946-3.49 2.056-3.522 2.064-1.29.33-4.568 1.028-5.713-.624'/></svg></span>
+        <span style="vertical-align:middle;">logo-huggingface</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-meta" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><g fill='currentColor' stroke='none' transform='translate(0.5 4.4) scale(0.08)'><path d='m31.06,125.96c0,10.98 2.41,19.41 5.56,24.51 4.13,6.68 10.29,9.51 16.57,9.51 8.1,0 15.51,-2.01 29.79,-21.76 11.44,-15.83 24.92,-38.05 33.99,-51.98l15.36,-23.6c10.67,-16.39 23.02,-34.61 37.18,-46.96 11.56,-10.08 24.03,-15.68 36.58,-15.68 21.07,0 41.14,12.21 56.5,35.11 16.81,25.08 24.97,56.67 24.97,89.27 0,19.38-3.82,33.62-10.32,44.87-6.28,10.88-18.52,21.75-39.11,21.75l0,-31.02c17.63,0 22.03,-16.2 22.03,-34.74 0,-26.42-6.16,-55.74-19.73,-76.69-9.63,-14.86-22.11,-23.94-35.84,-23.94-14.85,0-26.8,11.2-40.23,31.17-7.14,10.61-14.47,23.54-22.7,38.13l-9.06,16.05c-18.2,32.27-22.81,39.62-31.91,51.75-15.95,21.24-29.57,29.29-47.5,29.29-21.27,0-34.72,-9.21-43.05,-23.09-6.8,-11.31-10.14,-26.15-10.14,-43.06z'/><path d='m24.49,37.3c14.24,-21.95 34.79,-37.3 58.36,-37.3 13.65,0 27.22,4.04 41.39,15.61 15.5,12.65 32.02,33.48 52.63,67.81l7.39,12.32c17.84,29.72 27.99,45.01 33.93,52.22 7.64,9.26 12.99,12.02 19.94,12.02 17.63,0 22.03,-16.2 22.03,-34.74l27.4,-.86c0,19.38-3.82,33.62-10.32,44.87-6.28,10.88-18.52,21.75-39.11,21.75-12.8,0-24.14,-2.78-36.68,-14.61-9.64,-9.08-20.91,-25.21-29.58,-39.71l-25.79,-43.08c-12.94,-21.62-24.81,-37.74-31.68,-45.04-7.39,-7.85-16.89,-17.33-32.05,-17.33-12.27,0-22.69,8.61-31.41,21.78z'/><path d='m82.35,31.23c-12.27,0-22.69,8.61-31.41,21.78-12.33,18.61-19.88,46.33-19.88,72.95 0,10.98 2.41,19.41 5.56,24.51l-26.48,17.44c-6.8,-11.31-10.14,-26.15-10.14,-43.06 0,-30.75 8.44,-62.8 24.49,-87.55 14.24,-21.95 34.79,-37.3 58.36,-37.3z'/></g></svg></span>
+        <span style="vertical-align:middle;">logo-meta</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-mistral" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect fill='currentColor' stroke='none' x='3.5' y='3.5' width='3.4' height='3.4'/><rect fill='currentColor' stroke='none' x='17.1' y='3.5' width='3.4' height='3.4'/><rect fill='currentColor' stroke='none' x='3.5' y='6.9' width='6.8' height='3.4'/><rect fill='currentColor' stroke='none' x='13.7' y='6.9' width='6.8' height='3.4'/><rect fill='currentColor' stroke='none' x='3.5' y='10.3' width='17' height='3.4'/><rect fill='currentColor' stroke='none' x='3.5' y='13.7' width='3.4' height='3.4'/><rect fill='currentColor' stroke='none' x='10.3' y='13.7' width='3.4' height='3.4'/><rect fill='currentColor' stroke='none' x='17.1' y='13.7' width='3.4' height='3.4'/><rect fill='currentColor' stroke='none' x='0.1' y='17.1' width='10.2' height='3.4'/><rect fill='currentColor' stroke='none' x='13.7' y='17.1' width='10.2' height='3.4'/></svg></span>
+        <span style="vertical-align:middle;">logo-mistral</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-moonshot" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' fill-rule='evenodd' transform='translate(1.09 1.28) scale(0.04625)' d='M418.766,93.78C388.626,53.17 345.086,22.07 292.446,7.97C239.806,-6.13 186.536,-0.97 140.136,19.13L418.766,93.78ZM40.776,100.85C61.376,70.84 88.586,46.43 119.776,29.15L325.036,84.15C311.566,91.92 297.136,105.31 285.966,120.03L454.736,165.25C459.526,181.08 462.646,197.49 463.956,214.24L40.776,100.85ZM456.686,292.45C454.306,301.35 451.436,309.99 448.116,318.34L2.446,198.93C3.746,190.03 5.586,181.12 7.966,172.22C13.566,151.31 21.846,131.84 32.346,114.08L250.436,172.52C241.706,185 233.756,198.56 226.756,213.07L460.516,275.71C459.446,281.3 458.166,286.88 456.676,292.47L456.686,292.45ZM13.486,310.23C2.676,279.96 -1.934,247.22 0.746,213.95L206.426,269.06C204.946,273.74 203.556,278.48 202.266,283.29C199.646,293.08 197.506,302.85 195.846,312.55L417.946,372.06C407.606,385.79 395.826,398.23 382.896,409.21L13.486,310.23ZM172.206,456.69C102.096,437.9 48.116,388.98 20.476,327.59L187.846,372.44C187.576,388.05 188.546,403.26 190.676,417.85L312.286,450.43C268.876,466.39 220.286,469.57 172.206,456.69Z'/></svg></span>
+        <span style="vertical-align:middle;">logo-moonshot</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-ollama" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M16.361 10.26a.894.894 0 0 0-.558.47l-.072.148.001.207c0 .193.004.217.059.353.076.193.152.312.291.448.24.238.51.3.872.205a.86.86 0 0 0 .517-.436.752.752 0 0 0 .08-.498c-.064-.453-.33-.782-.724-.897a1.06 1.06 0 0 0-.466 0zm-9.203.005c-.305.096-.533.32-.65.639a1.187 1.187 0 0 0-.06.52c.057.309.31.59.598.667.362.095.632.033.872-.205.14-.136.215-.255.291-.448.055-.136.059-.16.059-.353l.001-.207-.072-.148a.894.894 0 0 0-.565-.472 1.02 1.02 0 0 0-.474.007Zm4.184 2c-.131.071-.223.25-.195.383.031.143.157.288.353.407.105.063.112.072.117.136.004.038-.01.146-.029.243-.02.094-.036.194-.036.222.002.074.07.195.143.253.064.052.076.054.255.059.164.005.198.001.264-.03.169-.082.212-.234.15-.525-.052-.243-.042-.28.087-.355.137-.08.281-.219.324-.314a.365.365 0 0 0-.175-.48.394.394 0 0 0-.181-.033c-.126 0-.207.03-.355.124l-.085.053-.053-.032c-.219-.13-.259-.145-.391-.143a.396.396 0 0 0-.193.032zm.39-2.195c-.373.036-.475.05-.654.086-.291.06-.68.195-.951.328-.94.46-1.589 1.226-1.787 2.114-.04.176-.045.234-.045.53 0 .294.005.357.043.524.264 1.16 1.332 2.017 2.714 2.173.3.033 1.596.033 1.896 0 1.11-.125 2.064-.727 2.493-1.571.114-.226.169-.372.22-.602.039-.167.044-.23.044-.523 0-.297-.005-.355-.045-.531-.288-1.29-1.539-2.304-3.072-2.497a6.873 6.873 0 0 0-.855-.031zm.645.937a3.283 3.283 0 0 1 1.44.514c.223.148.537.458.671.662.166.251.26.508.303.82.02.143.01.251-.043.482-.08.345-.332.705-.672.957a3.115 3.115 0 0 1-.689.348c-.382.122-.632.144-1.525.138-.582-.006-.686-.01-.853-.042-.57-.107-1.022-.334-1.35-.68-.264-.28-.385-.535-.45-.946-.03-.192.025-.509.137-.776.136-.326.488-.73.836-.963.403-.269.934-.46 1.422-.512.187-.02.586-.02.773-.002zm-5.503-11a1.653 1.653 0 0 0-.683.298C5.617.74 5.173 1.666 4.985 2.819c-.07.436-.119 1.04-.119 1.503 0 .544.064 1.24.155 1.721.02.107.031.202.023.208a8.12 8.12 0 0 1-.187.152 5.324 5.324 0 0 0-.949 1.02 5.49 5.49 0 0 0-.94 2.339 6.625 6.625 0 0 0-.023 1.357c.091.78.325 1.438.727 2.04l.13.195-.037.064c-.269.452-.498 1.105-.605 1.732-.084.496-.095.629-.095 1.294 0 .67.009.803.088 1.266.095.555.288 1.143.503 1.534.071.128.243.393.264.407.007.003-.014.067-.046.141a7.405 7.405 0 0 0-.548 1.873c-.062.417-.071.552-.071.991 0 .56.031.832.148 1.279L3.42 24h1.478l-.05-.091c-.297-.552-.325-1.575-.068-2.597.117-.472.25-.819.498-1.296l.148-.29v-.177c0-.165-.003-.184-.057-.293a.915.915 0 0 0-.194-.25 1.74 1.74 0 0 1-.385-.543c-.424-.92-.506-2.286-.208-3.451.124-.486.329-.918.544-1.154a.787.787 0 0 0 .223-.531c0-.195-.07-.355-.224-.522a3.136 3.136 0 0 1-.817-1.729c-.14-.96.114-2.005.69-2.834.563-.814 1.353-1.336 2.237-1.475.199-.033.57-.028.776.01.226.04.367.028.512-.041.179-.085.268-.19.374-.431.093-.215.165-.333.36-.576.234-.29.46-.489.822-.729.413-.27.884-.467 1.352-.561.17-.035.25-.04.569-.04.319 0 .398.005.569.04a4.07 4.07 0 0 1 1.914.997c.117.109.398.457.488.602.034.057.095.177.132.267.105.241.195.346.374.43.14.068.286.082.503.045.343-.058.607-.053.943.016 1.144.23 2.14 1.173 2.581 2.437.385 1.108.276 2.267-.296 3.153-.097.15-.193.27-.333.419-.301.322-.301.722-.001 1.053.493.539.801 1.866.708 3.036-.062.772-.26 1.463-.533 1.854a2.096 2.096 0 0 1-.224.258.916.916 0 0 0-.194.25c-.054.109-.057.128-.057.293v.178l.148.29c.248.476.38.823.498 1.295.253 1.008.231 2.01-.059 2.581a.845.845 0 0 0-.044.098c0 .006.329.009.732.009h.73l.02-.074.036-.134c.019-.076.057-.3.088-.516.029-.217.029-1.016 0-1.258-.11-.875-.295-1.57-.597-2.226-.032-.074-.053-.138-.046-.141.008-.005.057-.074.108-.152.376-.569.607-1.284.724-2.228.031-.26.031-1.378 0-1.628-.083-.645-.182-1.082-.348-1.525a6.083 6.083 0 0 0-.329-.7l-.038-.064.131-.194c.402-.604.636-1.262.727-2.04a6.625 6.625 0 0 0-.024-1.358 5.512 5.512 0 0 0-.939-2.339 5.325 5.325 0 0 0-.95-1.02 8.097 8.097 0 0 1-.186-.152.692.692 0 0 1 .023-.208c.208-1.087.201-2.443-.017-3.503-.19-.924-.535-1.658-.98-2.082-.354-.338-.716-.482-1.15-.455-.996.059-1.8 1.205-2.116 3.01a6.805 6.805 0 0 0-.097.726c0 .036-.007.066-.015.066a.96.96 0 0 1-.149-.078A4.857 4.857 0 0 0 12 3.03c-.832 0-1.687.243-2.456.698a.958.958 0 0 1-.148.078c-.008 0-.015-.03-.015-.066a6.71 6.71 0 0 0-.097-.725C8.997 1.392 8.337.319 7.46.048a2.096 2.096 0 0 0-.585-.041Zm.293 1.402c.248.197.523.759.682 1.388.03.113.06.244.069.292.007.047.026.152.041.233.067.365.098.76.102 1.24l.002.475-.12.175-.118.178h-.278c-.324 0-.646.041-.954.124l-.238.06c-.033.007-.038-.003-.057-.144a8.438 8.438 0 0 1 .016-2.323c.124-.788.413-1.501.696-1.711.067-.05.079-.049.157.013zm9.825-.012c.17.126.358.46.498.888.28.854.36 2.028.212 3.145-.019.14-.024.151-.057.144l-.238-.06a3.693 3.693 0 0 0-.954-.124h-.278l-.119-.178-.119-.175.002-.474c.004-.669.066-1.19.214-1.772.157-.623.434-1.185.68-1.382.078-.062.09-.063.159-.012z'/></svg></span>
+        <span style="vertical-align:middle;">logo-ollama</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-openai" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' transform='translate(0.69 0.835) scale(0.145)' d='M59.733 56.192v-14.57c0-1.227.46-2.148 1.533-2.76l29.293-16.87c3.988-2.3 8.742-3.374 13.649-3.374 18.404 0 30.06 14.263 30.06 29.446 0 1.073 0 2.3-.154 3.527l-30.366-17.79q-2.76-1.611-5.521 0zm68.4 56.745V78.122c0-2.147-.921-3.681-2.761-4.754L86.878 50.977l12.576-7.209c1.073-.613 1.994-.613 3.067 0l29.293 16.87c8.436 4.908 14.109 15.337 14.109 25.458 0 11.655-6.9 22.391-17.79 26.839zM50.684 82.264l-12.576-7.361c-1.073-.613-1.533-1.534-1.533-2.76v-33.74c0-16.41 12.576-28.833 29.6-28.833 6.441 0 12.421 2.147 17.484 5.981L53.446 33.035c-1.84 1.073-2.76 2.607-2.76 4.755v44.475zm27.07 15.643L59.731 87.785v-21.47l18.021-10.122 18.02 10.122v21.47zm11.578 46.623c-6.442 0-12.422-2.148-17.484-5.981l30.212-17.485c1.84-1.073 2.761-2.606 2.761-4.754V71.834l12.73 7.361c1.073.613 1.533 1.534 1.533 2.761v33.74c0 16.409-12.73 28.833-29.752 28.833zm-36.348-34.2L23.691 93.46c-8.436-4.908-14.11-15.336-14.11-25.458 0-11.809 7.056-22.391 17.944-26.839V76.13c0 2.148.92 3.681 2.76 4.754l38.342 22.237-12.576 7.209c-1.073.613-1.994.613-3.067 0m-1.686 25.152c-17.33 0-30.06-13.037-30.06-29.14 0-1.227.154-2.454.307-3.681l30.212 17.484q2.761 1.61 5.521 0l38.494-22.237v14.57c0 1.227-.46 2.147-1.533 2.76l-29.293 16.87c-3.988 2.3-8.742 3.374-13.65 3.374zm38.034 18.249c18.557 0 34.046-13.189 37.575-30.673 17.176-4.448 28.219-20.551 28.219-36.96 0-10.736-4.601-21.164-12.883-28.68.767-3.22 1.228-6.441 1.228-9.66 0-21.931-17.791-38.342-38.342-38.342-4.14 0-8.128.612-12.116 1.993C86.111 4.661 76.603.367 66.174.367 47.617.367 32.128 13.556 28.6 31.04 11.423 35.488.381 51.59.381 68c0 10.737 4.6 21.165 12.882 28.68-.767 3.22-1.227 6.441-1.227 9.661 0 21.93 17.79 38.341 38.342 38.341 4.14 0 8.127-.612 12.115-1.993 6.9 6.748 16.41 11.042 26.84 11.042'/></svg></span>
+        <span style="vertical-align:middle;">logo-openai</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-qwen" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M21.21 6.75 20.56 7.93 19.52 8.84 19.06 8.9 8.98 8.9 7.81 8.42 6.99 7.05 6.86 5.68 9.11 1.74 10.29 1.01 11.74 1 13.07 1.82 13.96 3.57 19.34 3.59 20.35 4.2 21.18 5.61ZM3.77 19.35 2.79 17.68 2.77 16.61 4 14.68 2.28 11.72 1.43 10.24 1.39 8.71 1.98 7.69 3.26 6.77 4.9 6.79 5.9 7.36 11.04 16.23 11 18.09 10.56 18.86 9.5 19.78 4.52 19.76ZM15.98 22.27 14.76 23 13.28 23 11.95 22.06 11.27 20.82 11.28 19.82 15.96 11.66 17.48 10.01 19.33 10 20.39 10.68 22.4 14.13 22.45 16.19 21.67 17.44 20.94 17.83 18.89 17.85Z'/></svg></span>
+        <span style="vertical-align:middle;">logo-qwen</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-xai" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><g fill='currentColor' stroke='none' transform='translate(-1.82 -2.80) scale(0.038)'><polygon transform='translate(-134 -113.32)' points='508.67 574.07 761.27 213.32 639.19 213.32 447.64 486.9'/><polygon transform='translate(-134 -113.32)' points='356.08 792 417.12 704.83 356.08 617.66 234 792'/><polygon transform='translate(-134 -113.32)' points='508.67 792 630.75 792 356.08 399.72 234 399.72'/><polygon transform='translate(-134 -113.32)' points='761.27 256.91 661.27 399.72 671.27 792 751.27 792'/></g></svg></span>
+        <span style="vertical-align:middle;">logo-xai</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-logo-z-ai" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' fill-rule='evenodd' d='M2 6.5A4.5 4.5 0 0 1 6.5 2H17.5A4.5 4.5 0 0 1 22 6.5V17.5A4.5 4.5 0 0 1 17.5 22H6.5A4.5 4.5 0 0 1 2 17.5ZM5.12 6.15 12.18 6.15 10.96 7.88 5.12 7.88ZM13.38 6.15 18.89 6.15 10.62 17.86 5.12 17.86ZM13.05 16.13 18.54 16.13 18.54 17.86 11.82 17.86Z'/></svg></span>
+        <span style="vertical-align:middle;">logo-z-ai</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-magic" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72'/><path d='m14 7 3 3'/><path d='M5 6v4'/><path d='M19 14v4'/><path d='M10 2v2'/><path d='M7 8H3'/><path d='M21 16h-4'/><path d='M11 3H9'/></svg></span>
@@ -319,8 +687,20 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">mail</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-mail-lock" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0 1 10 0v4'/><path d='M4 13l8 5 8-5'/></svg></span>
+        <span style="vertical-align:middle;">mail-lock</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-mailbox" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M2 21 H22'/><path d='M2 21 V12.5 A3.5 3.5 0 0 1 9 12.5 V21'/><path d='M5.5 9 H18.5'/><path d='M18.5 9 A3.5 3.5 0 0 1 22 12.5 V21'/><path d='M16 2 V15'/><path fill='currentColor' stroke='none' d='M16 2 H20 V5 H16 Z'/></svg></span>
+        <span style="vertical-align:middle;">mailbox</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-map" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z'/><path d='M15 5.764v15'/><path d='M9 3.236v15'/></svg></span>
         <span style="vertical-align:middle;">map</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-mask" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' fill-rule='evenodd' d='M2.5 8.5 C5 7.5 9 7 12 7 C15 7 19 7.5 21.5 8.5 C21.8 10.5 21.5 13 20.5 14.5 C19.5 15.8 18 16.5 16 16.5 C14 16.5 12.8 15.5 12 13.8 C11.2 15.5 10 16.5 8 16.5 C6 16.5 4.5 15.8 3.5 14.5 C2.5 13 2.2 10.5 2.5 8.5 Z M4 11 C4 12.1 5.34 12.6 7 12.6 C8.66 12.6 10 12.1 10 11 C10 9.9 8.66 9.4 7 9.4 C5.34 9.4 4 9.9 4 11 Z M14 11 C14 12.1 15.34 12.6 17 12.6 C18.66 12.6 20 12.1 20 11 C20 9.9 18.66 9.4 17 9.4 C15.34 9.4 14 9.9 14 11 Z'/></svg></span>
+        <span style="vertical-align:middle;">mask</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-megaphone" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m3 11 18-5v12L3 14v-3z'/><path d='M11.6 16.8a3 3 0 1 1-5.8-1.6'/></svg></span>
@@ -339,8 +719,16 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">merge</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-microphone" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z'/><path d='M19 10v2a7 7 0 0 1-14 0v-2'/><line x1='12' y1='19' x2='12' y2='22'/></svg></span>
+        <span style="vertical-align:middle;">microphone</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-minus" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M6 10.5 18 10.5 18 13.5 6 13.5Z'/></svg></span>
         <span style="vertical-align:middle;">minus</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-mobile" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='12' height='21' x='6' y='1.5' rx='3'/><rect width='7' height='12' x='8.5' y='4.5' rx='1.5' stroke-width='1.2'/><circle cx='12' cy='19' r='1.2' fill='currentColor' stroke='none'/></svg></span>
+        <span style="vertical-align:middle;">mobile</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-moon" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M21 14A9 9 0 1 1 10 3 6 6 0 0 0 21 14z'/></svg></span>
@@ -353,6 +741,10 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-more-vertical" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><g stroke-width='1.5'><circle fill='currentColor' cx='12' cy='6' r='2'/><circle fill='currentColor' cx='12' cy='12' r='2'/><circle fill='currentColor' cx='12' cy='18' r='2'/></g></svg></span>
         <span style="vertical-align:middle;">more-vertical</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-mouse" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='5' y='2' width='14' height='20' rx='7'/><path d='M12 6v4'/></svg></span>
+        <span style="vertical-align:middle;">mouse</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-move" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 2v20'/><path d='m15 19-3 3-3-3'/><path d='m19 9 3 3-3 3'/><path d='M2 12h20'/><path d='m5 9-3 3 3 3'/><path d='m9 5 3-3 3 3'/></svg></span>
@@ -371,11 +763,31 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">new-window</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-newspaper" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2'/><path d='M18 14h-8'/><path d='M15 18h-5'/><path d='M10 6h8v4h-8V6Z'/></svg></span>
+        <span style="vertical-align:middle;">newspaper</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-nodes" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='9' y='3' width='12' height='6' rx='1'/><rect x='9' y='15' width='12' height='6' rx='1'/><path d='M4 6h5'/><path d='M4 18h5'/><line x1='4' y1='6' x2='4' y2='18'/></svg></span>
+        <span style="vertical-align:middle;">nodes</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-octagon" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon stroke-linejoin='miter' stroke-linecap='square' points='8.27 3 15.73 3 21 8.27 21 15.73 15.73 21 8.27 21 3 15.73 3 8.27'/></svg></span>
+        <span style="vertical-align:middle;">octagon</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-paintbrush" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z'/><path d='M9 8c-2 3-4 3.5-7 4l8 10c2-1 6-5 6-7'/><path d='M14.5 17.5 4.5 15'/></svg></span>
+        <span style="vertical-align:middle;">paintbrush</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-paperclip" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48'/></svg></span>
         <span style="vertical-align:middle;">paperclip</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
-        <span class="cerb-icon" title=".cerb-icon-paste" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='8' height='4' x='8' y='2' rx='1'/><path d='M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2'/><polygon fill='currentColor' stroke='none' points='10.5 19 13.5 19 13.5 13 15.5 13 12 9 8.5 13 10.5 13'/></svg></span>
+        <span class="cerb-icon" title=".cerb-icon-parentheses" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M8 21s-4-3-4-9 4-9 4-9'/><path d='M16 3s4 3 4 9-4 9-4 9'/></svg></span>
+        <span style="vertical-align:middle;">parentheses</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-paste" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M5.5 16H4.5A1.5 1.5 0 0 1 3 14.5V4A1.5 1.5 0 0 1 4.5 2.5h6.5L15 6.5v1'/><rect width='6' height='3.5' x='11' y='6.5' rx='1'/><path d='M17 8.5h1A1.5 1.5 0 0 1 19.5 10v10.5A1.5 1.5 0 0 1 18 22h-7A1.5 1.5 0 0 1 9.5 20.5V10A1.5 1.5 0 0 1 11 8.5h1'/></svg></span>
         <span style="vertical-align:middle;">paste</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
@@ -387,8 +799,12 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">pen</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
-        <span class="cerb-icon" title=".cerb-icon-people" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' fill-rule='evenodd' d='M0.8 22 L0.8 14 A3.7 3.7 0 0 1 8.2 14 L8.2 22 Z M15.8 22 L15.8 14 A3.7 3.7 0 0 1 23.2 14 L23.2 22 Z M6 22 L6 16 A6 6 0 0 1 18 16 L18 22 Z'/><circle fill='currentColor' stroke='none' cx='5' cy='8.2' r='2.6'/><circle fill='currentColor' stroke='none' cx='19' cy='8.2' r='2.6'/><circle fill='currentColor' stroke='none' cx='12' cy='8.5' r='3'/></svg></span>
-        <span style="vertical-align:middle;">people</span>
+        <span class="cerb-icon" title=".cerb-icon-phone-handset" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'/></svg></span>
+        <span style="vertical-align:middle;">phone-handset</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-phone-headset" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H4a1 1 0 0 1-1-1v-5a9 9 0 0 1 18 0v5a1 1 0 0 1-1 1h-2a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3'/><path d='M21 16v2a4 4 0 0 1-4 4h-5'/></svg></span>
+        <span style="vertical-align:middle;">phone-headset</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-picture" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='18' height='18' x='3' y='3' rx='2'/><circle cx='9' cy='9' r='2'/><path d='m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21'/></svg></span>
@@ -407,8 +823,16 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">play-button</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-plug" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 22v-5'/><path d='M9 8V2'/><path d='M15 8V2'/><path d='M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z'/></svg></span>
+        <span style="vertical-align:middle;">plug</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-plus" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M10.5 6 13.5 6 13.5 10.5 18 10.5 18 13.5 13.5 13.5 13.5 18 10.5 18 10.5 13.5 6 13.5 6 10.5 10.5 10.5Z'/></svg></span>
         <span style="vertical-align:middle;">plus</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-pointer" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z'/></svg></span>
+        <span style="vertical-align:middle;">pointer</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-print" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2'/><path d='M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6'/><rect width='12' height='8' x='6' y='14' rx='1'/></svg></span>
@@ -419,8 +843,20 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">pushpin</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-qr-code" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='3' width='5' height='5' rx='1'/><rect x='16' y='3' width='5' height='5' rx='1'/><rect x='3' y='16' width='5' height='5' rx='1'/><path d='M21 16h-3a2 2 0 0 0-2 2v3'/><path d='M21 21v.01'/><path d='M12 7v3a2 2 0 0 1-2 2H7'/><path d='M3 12h.01'/><path d='M12 3h.01'/><path d='M12 16v.01'/><path d='M16 12h1'/><path d='M21 12v.01'/><path d='M12 21v-1'/></svg></span>
+        <span style="vertical-align:middle;">qr-code</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-quote" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M10 11h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6c0 2.667-1.333 4.333-4 5'/><path d='M19 11h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6c0 2.667-1.333 4.333-4 5'/></svg></span>
         <span style="vertical-align:middle;">quote</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-rect" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='6' width='18' height='12' stroke-linejoin='miter'/></svg></span>
+        <span style="vertical-align:middle;">rect</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-rect-rounded" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='7' width='20' height='10' rx='4'/></svg></span>
+        <span style="vertical-align:middle;">rect-rounded</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-refresh" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 12a9 9 0 0 1-15 6.7L3 16'/><path d='M3 12a9 9 0 0 1 15-6.7L21 8'/><polyline points='21 3 21 8 16 8'/><polyline points='3 21 3 16 8 16'/></svg></span>
@@ -447,12 +883,28 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">restart</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-return" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='9 10 4 15 9 20'/><path d='M20 4v7a4 4 0 0 1-4 4H4'/></svg></span>
+        <span style="vertical-align:middle;">return</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-right-arrow" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon fill='currentColor' stroke='none' points='5 9 12 9 12 6 19 12 12 18 12 15 5 15'/></svg></span>
         <span style="vertical-align:middle;">right-arrow</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-rocket" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z'/><path d='m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z'/><path d='M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0'/><path d='M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5'/></svg></span>
+        <span style="vertical-align:middle;">rocket</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-rss" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 11a9 9 0 0 1 9 9'/><path d='M4 4a16 16 0 0 1 16 16'/><circle fill='currentColor' stroke='none' cx='5' cy='19' r='1.5'/></svg></span>
+        <span style="vertical-align:middle;">rss</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-save" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z'/><path d='M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7'/><path d='M7 3v4a1 1 0 0 0 1 1h7'/></svg></span>
         <span style="vertical-align:middle;">save</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-scissors" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='6' cy='6' r='3'/><path d='M8.12 8.12 12 12'/><path d='M20 4 8.12 15.88'/><circle cx='6' cy='18' r='3'/><path d='M14.8 14.8 20 20'/></svg></span>
+        <span style="vertical-align:middle;">scissors</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-search" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><g stroke-width='3'><circle cx='11' cy='11' r='6'/><path d='m21 21-4.35-4.35'/></g></svg></span>
@@ -463,12 +915,36 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">send</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-server" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='20' height='8' x='2' y='2' rx='2'/><rect width='20' height='8' x='2' y='14' rx='2'/><line x1='6' y1='6' x2='6.01' y2='6'/><line x1='6' y1='18' x2='6.01' y2='18'/></svg></span>
+        <span style="vertical-align:middle;">server</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-share" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path fill='currentColor' stroke='none' d='M4 18Q4 3 14 3L14 0 22 6 14 12 14 9Q4 9 4 18Z'/></svg></span>
         <span style="vertical-align:middle;">share</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-shield" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z'/></svg></span>
+        <span style="vertical-align:middle;">shield</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-sign-out" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><g transform='rotate(90 12 12)'><path d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/><polyline points='7 8 12 3 17 8'/><line x1='12' y1='3' x2='12' y2='15'/></g></svg></span>
+        <span style="vertical-align:middle;">sign-out</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-signal" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='3' y1='21' x2='3' y2='17'/><line x1='7.5' y1='21' x2='7.5' y2='14'/><line x1='12' y1='21' x2='12' y2='11'/><line x1='16.5' y1='21' x2='16.5' y2='8'/><line x1='21' y1='21' x2='21' y2='5'/></svg></span>
         <span style="vertical-align:middle;">signal</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-signature" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 16c2.5 0 3-9 4.5-9s.5 7 2 7 2-4.5 3.5-4.5 1 3.5 2.5 3.5 1.5-1 3-1'/><path d='M3 20h18'/></svg></span>
+        <span style="vertical-align:middle;">signature</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-signpost" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M11 3v3'/><path d='M11 14v7'/><path d='M3 6h14l4 4-4 4H3z'/></svg></span>
+        <span style="vertical-align:middle;">signpost</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-slider" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='2.5' y1='12' x2='5.2' y2='12'/><line x1='12.8' y1='12' x2='21.5' y2='12'/><circle cx='9' cy='12' r='3.8'/></svg></span>
+        <span style="vertical-align:middle;">slider</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-sort-asc" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='3' y1='3' x2='7' y2='3'/><line x1='3' y1='7.5' x2='10' y2='7.5'/><line x1='3' y1='12' x2='13' y2='12'/><line x1='3' y1='16.5' x2='16' y2='16.5'/><line x1='3' y1='21' x2='19' y2='21'/></svg></span>
@@ -479,8 +955,32 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">sort-desc</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-sparkle" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z'/></svg></span>
+        <span style="vertical-align:middle;">sparkle</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-sparkles" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z'/><path d='M20 3v4'/><path d='M22 5h-4'/><path d='M4 17v2'/><path d='M5 18H3'/></svg></span>
         <span style="vertical-align:middle;">sparkles</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-speaker" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='16' height='20' x='4' y='2' rx='2'/><circle cx='12' cy='14' r='4'/><path d='M12 6h.01'/></svg></span>
+        <span style="vertical-align:middle;">speaker</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-spinner" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='12' y1='2' x2='12' y2='6'/><line x1='12' y1='18' x2='12' y2='22'/><line x1='4.93' y1='4.93' x2='7.76' y2='7.76'/><line x1='16.24' y1='16.24' x2='19.07' y2='19.07'/><line x1='2' y1='12' x2='6' y2='12'/><line x1='18' y1='12' x2='22' y2='12'/><line x1='4.93' y1='19.07' x2='7.76' y2='16.24'/><line x1='16.24' y1='7.76' x2='19.07' y2='4.93'/></svg></span>
+        <span style="vertical-align:middle;">spinner</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-split-pane" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='3' width='18' height='18' rx='2'/><path d='M12 3v18'/><path d='M9.5 12h-2'/><path d='M16.5 12h-2'/></svg></span>
+        <span style="vertical-align:middle;">split-pane</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-square" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='5' y='5' width='14' height='14' stroke-linejoin='miter'/></svg></span>
+        <span style="vertical-align:middle;">square</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-star" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26'/></svg></span>
+        <span style="vertical-align:middle;">star</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-step-backward" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect fill='currentColor' stroke='none' x='4' y='4' width='3' height='16' rx='1'/><polygon fill='currentColor' stroke='none' points='18 4 8 12 18 20'/></svg></span>
@@ -495,8 +995,16 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">stop</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-stopwatch" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='9' y1='2' x2='15' y2='2'/><line x1='12' y1='2' x2='12' y2='6'/><circle cx='12' cy='14' r='8'/><line x1='12' y1='14' x2='14.5' y2='11.5'/></svg></span>
+        <span style="vertical-align:middle;">stopwatch</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-sun" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='4'/><path d='M12 2v2'/><path d='M12 20v2'/><path d='m4.93 4.93 1.41 1.41'/><path d='m17.66 17.66 1.41 1.41'/><path d='M2 12h2'/><path d='M20 12h2'/><path d='m6.34 17.66-1.41 1.41'/><path d='m19.07 4.93-1.41 1.41'/></svg></span>
         <span style="vertical-align:middle;">sun</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-tab" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 10V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v4'/><path d='M9 10V7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v3'/><path d='M3 10h18v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Z'/></svg></span>
+        <span style="vertical-align:middle;">tab</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-table" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3v18'/><rect width='18' height='18' x='3' y='3' rx='2'/><path d='M3 9h18'/><path d='M3 15h18'/></svg></span>
@@ -515,7 +1023,23 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">target</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
-        <span class="cerb-icon" title=".cerb-icon-text-size" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 14h-5'/><path d='M16 16v-3.5a2.5 2.5 0 0 1 5 0V16'/><path d='m3 16 4.5-11 4.5 11'/><path d='M4 14h7'/></svg></span>
+        <span class="cerb-icon" title=".cerb-icon-telescope" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m10.065 12.493-6.18 1.318a.934.934 0 0 1-1.108-.702l-.537-2.15a1.07 1.07 0 0 1 .691-1.265l13.504-4.44'/><path d='m13.56 11.747 4.332-.924'/><path d='m16 21-3.105-6.21'/><path d='M16.485 5.94a2 2 0 0 1 1.455-2.425l1.09-.272a1 1 0 0 1 1.212.727l1.515 6.06a1 1 0 0 1-.727 1.213l-1.09.272a2 2 0 0 1-2.425-1.455z'/><path d='m6.158 8.633 1.114 4.456'/><path d='m8 21 3.105-6.21'/><circle cx='12' cy='13' r='2'/></svg></span>
+        <span style="vertical-align:middle;">telescope</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-template" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='18' height='7' x='3' y='3' rx='1'/><rect width='9' height='7' x='3' y='14' rx='1'/><rect width='5' height='7' x='16' y='14' rx='1'/></svg></span>
+        <span style="vertical-align:middle;">template</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-text" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 6h14'/><path d='M3 12h18'/><path d='M3 18h12'/></svg></span>
+        <span style="vertical-align:middle;">text</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-text-color" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M7 16 12 4 17 16'/><path d='M8.7 12h6.6'/><rect fill='currentColor' stroke='none' x='4' y='20' width='16' height='2.5' rx='1'/></svg></span>
+        <span style="vertical-align:middle;">text-color</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-text-size" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M2.5 17 7 4 11.5 17'/><path d='M3.9 13h6.2'/><path d='M19 3v18'/><path d='m17 5 2-2 2 2'/><path d='m17 19 2 2 2-2'/></svg></span>
         <span style="vertical-align:middle;">text-size</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
@@ -527,12 +1051,40 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">thumbs-up</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-ticket" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M5 5H19A2 2 0 0 1 21 7V10.2A1.8 1.8 0 0 0 21 13.8V17A2 2 0 0 1 19 19H5A2 2 0 0 1 3 17V13.8A1.8 1.8 0 0 0 3 10.2V7A2 2 0 0 1 5 5Z'/><path stroke-linecap='square' d='M15 7v2'/><path stroke-linecap='square' d='M15 11.5v2'/><path stroke-linecap='square' d='M15 16v2'/></svg></span>
+        <span style="vertical-align:middle;">ticket</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-todo" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='5' width='6' height='6' rx='1'/><path d='m3 17 2 2 4-4'/><path d='M13 6h8'/><path d='M13 12h8'/><path d='M13 18h8'/></svg></span>
+        <span style="vertical-align:middle;">todo</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-toggle" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='7' width='20' height='10' rx='5'/><circle fill='currentColor' stroke='none' cx='16' cy='12' r='3'/></svg></span>
+        <span style="vertical-align:middle;">toggle</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-token" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='5' y='2.5' width='14' height='19' rx='2'/><circle cx='12' cy='9' r='2.5'/><path d='M12 11.5v4'/></svg></span>
+        <span style="vertical-align:middle;">token</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-toolbox" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='2' y='8' width='20' height='13' rx='2'/><path d='M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2'/><line x1='2' y1='13' x2='22' y2='13'/><rect x='10' y='11' width='4' height='4' rx='1'/></svg></span>
         <span style="vertical-align:middle;">toolbox</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-transfer" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m16 3 4 4-4 4'/><path d='M20 7H4'/><path d='m8 21-4-4 4-4'/><path d='M4 17h16'/></svg></span>
+        <span style="vertical-align:middle;">transfer</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-translate" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m5 8 6 6'/><path d='m4 14 6-6 2-3'/><path d='M2 5h12'/><path d='M7 2h1'/><path d='m22 22-5-10-5 10'/><path d='M14 18h6'/></svg></span>
+        <span style="vertical-align:middle;">translate</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-trash" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M3 6h18'/><path d='M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6'/><path d='M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2'/><line x1='10' y1='11' x2='10' y2='17'/><line x1='14' y1='11' x2='14' y2='17'/></svg></span>
         <span style="vertical-align:middle;">trash</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-trophy" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9H4.5a2.5 2.5 0 0 1 0-5H6'/><path d='M18 9h1.5a2.5 2.5 0 0 0 0-5H18'/><path d='M4 22h16'/><path d='M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22'/><path d='M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22'/><path d='M18 2H6v7a6 6 0 0 0 12 0V2Z'/></svg></span>
+        <span style="vertical-align:middle;">trophy</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-unchecked" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='18' height='18' x='3' y='3' rx='2'/></svg></span>
@@ -547,16 +1099,48 @@ Cerb ships a custom set of modern, monochromatic SVG line icons. Reference an ic
         <span style="vertical-align:middle;">up-arrow</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
-        <span class="cerb-icon" title=".cerb-icon-user" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle fill='currentColor' stroke='none' cx='12' cy='8' r='4'/><path fill='currentColor' stroke='none' d='M5 21v-3a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v3z'/></svg></span>
+        <span class="cerb-icon" title=".cerb-icon-upload" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/><polyline points='7 8 12 3 17 8'/><line x1='12' y1='3' x2='12' y2='15'/></svg></span>
+        <span style="vertical-align:middle;">upload</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-user" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2'/><circle cx='12' cy='7' r='4'/></svg></span>
         <span style="vertical-align:middle;">user</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
-        <span class="cerb-icon" title=".cerb-icon-user-lock" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle fill='currentColor' stroke='none' cx='6.5' cy='7' r='3.5'/><path fill='currentColor' stroke='none' d='M2 21v-5a4.5 4.5 0 0 1 9 0v5z'/><rect x='14' y='15' width='7' height='6' rx='1'/><path d='M15.5 15v-2a2 2 0 0 1 4 0v2'/></svg></span>
+        <span class="cerb-icon" title=".cerb-icon-user-lock" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='5.5' cy='7' r='3.5'/><path d='M10 21v-2.5a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4V21'/><rect x='14' y='15' width='7' height='6' rx='1'/><path d='M15.5 15v-2a2 2 0 0 1 4 0v2'/></svg></span>
         <span style="vertical-align:middle;">user-lock</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-users" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/><circle cx='9' cy='7' r='4'/><path d='M22 21v-2a4 4 0 0 0-3-3.87'/><path d='M16 3.13a4 4 0 0 1 0 7.75'/></svg></span>
+        <span style="vertical-align:middle;">users</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-webhook" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c.01-.7.2-1.4.57-2'/><path d='m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06'/><path d='m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 0 8'/></svg></span>
+        <span style="vertical-align:middle;">webhook</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-widget" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='3' width='7.5' height='7.5' rx='1' fill='currentColor' stroke='none'/><rect x='13.5' y='3' width='7.5' height='7.5' rx='1'/><rect x='3' y='13.5' width='7.5' height='7.5' rx='1'/><rect x='13.5' y='13.5' width='7.5' height='7.5' rx='1'/></svg></span>
+        <span style="vertical-align:middle;">widget</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-wifi" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 20h.01'/><path d='M2 8.82a15 15 0 0 1 20 0'/><path d='M5 12.859a10 10 0 0 1 14 0'/><path d='M8.5 16.429a5 5 0 0 1 7 0'/></svg></span>
         <span style="vertical-align:middle;">wifi</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-window-bottom" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='3' width='18' height='18' rx='2'/><path d='M3 15h18'/></svg></span>
+        <span style="vertical-align:middle;">window-bottom</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-window-left" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='3' width='18' height='18' rx='2'/><path d='M9 3v18'/></svg></span>
+        <span style="vertical-align:middle;">window-left</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-window-right" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='3' width='18' height='18' rx='2'/><path d='M15 3v18'/></svg></span>
+        <span style="vertical-align:middle;">window-right</span>
+    </div>
+    <div style="break-inside:avoid;margin:5px 0;">
+        <span class="cerb-icon" title=".cerb-icon-window-top" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='3' width='18' height='18' rx='2'/><path d='M3 9h18'/></svg></span>
+        <span style="vertical-align:middle;">window-top</span>
     </div>
     <div style="break-inside:avoid;margin:5px 0;">
         <span class="cerb-icon" title=".cerb-icon-wrench" style="display:inline-block;width:2em;height:2em;vertical-align:middle;margin:5px;"><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z'/></svg></span>

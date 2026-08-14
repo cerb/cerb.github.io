@@ -38,6 +38,10 @@ jumbotron:
 * TOC
 {:toc}
 
+### Usage tracking
+
+Automation [worklists](/docs/worklists/) offer a 'Usage' [sparklines column](/docs/worklists/#sparkline-columns) charting runs, errors, and duration, with a 2h/1d/30d range toggle. A matching `usage:` [quick search filter](/docs/search/#parameterized-metrics-filters) queries the same data -- for instance, `usage:(since:today)`.
+
 ### Records API
 
 These fields are available in the [Records API](/docs/api/endpoints/records/) and [packages](/docs/packages/):
@@ -79,7 +83,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 |---
 | Field | Type | Description
 |-|-|-
-| `comment_count` | number | [Comment](/docs/records/types/comments/) count on the record
+| `comment_count` | number | [Comment](/docs/records/types/comment/) count on the record
 | `comments` | comments | [Comments](/docs/guide/developers/dictionaries/#key-expansion)
 | `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
 | `links` | links | [Links](/docs/guide/developers/dictionaries/#key-expansion)

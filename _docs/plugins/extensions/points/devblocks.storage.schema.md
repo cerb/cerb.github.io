@@ -29,8 +29,11 @@ jumbotron:
 # Extensions
 
 | Attachments | `cerberusweb.storage.schema.attachments`
+| Automation Resources | `cerb.storage.schema.automation.resources`
 | Avatars | `cerberusweb.storage.schema.context_avatar`
 | Message Content | `cerberusweb.storage.schema.message_content`
+| Record Changeset | `cerberusweb.storage.schema.record.changeset`
+| Resources | `cerb.storage.schema.resources`
 
 <div class="section-nav">
 	<div class="left">

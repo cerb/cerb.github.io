@@ -44,9 +44,49 @@ The most useful feature of worklists is their ability to pull out interesting se
 
 For instance, you can build a worklist of email messages sent by organizations in the health care industry who have an enterprise SLA and also have at least one female contact whose name starts with the letter 'M'.
 
+A worklist remembers its query per worker, so the filter you leave on it is the filter you come back to -- across sessions, and including on a page you reached from a link that carried a query. If a worklist shows fewer records than you expect, check for a filter chip above it, and check that the quick search box is empty: a query typed but not applied still sits there waiting.
+
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/using-cerb/workspaces/deep_search.png" class="screenshot">
 </div>
+
+# Columns
+
+Click the gear icon on a worklist to choose which columns are visible.
+
+This is a searchable menu of available fields, segmented by [custom fieldset](/docs/records/types/custom_fieldset/), with icons hinting at each field's data type. Selecting a field dims it in the menu but leaves it in place, and the selected fields reorder in a single sortable column.
+
+Start typing to filter. Filtering flattens the fieldset groups into a single list of matching fields, so the groups reappear when the filter is cleared.
+
+### Sparkline columns
+
+Several record types offer a **sparklines** column -- a mini-chart of recent activity per row, with a `2h`/`1d`/`30d` range toggle in the column header.
+
+These load asynchronously, per page, and only when the column is actually visible, so they cost nothing on worklists where you haven't enabled them.
+
+|---
+| Record type | Column | Shows
+|-|-|-
+| [Automation](/docs/records/types/automation/) | Usage | Runs, errors, duration
+| [Automation event](/docs/records/types/automation_event/) | Usage | Runs, errors, duration
+| Bot behavior | Usage | Runs, duration
+| [Mailbox](/docs/records/types/mailbox/) | Usage | Messages received, errors
+| [Mail routing rule](/docs/records/types/mail_routing_rule/) | Usage | Rule matches
+| [Mail transport](/docs/records/types/mail_transport/) | Usage | Deliveries, failures
+| [Queue](/docs/records/types/queue/) | Activity | Done, failed, open
+| [Search index](/docs/records/types/search_index/) | Records | Indexed record count
+| [Service token](/docs/records/types/service_token/) | Usage | Authentications
+| [Snippet](/docs/records/types/snippet/) | Usage | Uses
+| [Webhook listener](/docs/records/types/webhook_listener/) | Usage | Invocations
+| [Metric](/docs/records/types/metric/) | Dataset | Min, max, average, sum, count
+
+The Metric 'Dataset' column adapts to counters versus gauges, so each metric is charted the way it's meant to be read.
+
+Because these are backed by [metrics](/docs/metrics/), each one also brings a matching quick search filter. See [parameterized metrics filters](/docs/search/#parameterized-metrics-filters).
+
+### Distribution bar columns
+
+A **distribution bar** column shows how a row's related records are split between states as a single horizontal stacked bar -- for instance, a [task project](/docs/records/types/task_project/) worklist can show its tasks divided between done, stashed, todo, and in-progress.
 
 # Sorting
 
@@ -102,7 +142,7 @@ You can also use random samples to run A/B tests.
 <img src="/assets/images/docs/using-cerb/workspaces/bulk.png" class="screenshot">
 </div>
 
-In [11.2+](/releases/11.2/), bulk updates run as parallel background [queue jobs](/docs/records/types/queue_job/) rather than blocking the browser. When an update starts, the queue job progress monitor popup opens. If you close your browser or navigate away, the job continues in the background and you'll receive a notification when it completes.
+Bulk updates run as parallel background [queue jobs](/docs/records/types/queue_job/) rather than blocking the browser. When an update starts, the queue job progress monitor popup opens. If you close your browser or navigate away, the job continues in the background and you'll receive a notification when it completes.
 
 Bulk commenting is also available from the **Bulk Update** popup on every record type that supports [comments](/docs/records/types/comment/) (tickets, tasks, organizations, opportunities, time tracking, domains, servers, calls).
 
@@ -116,7 +156,7 @@ Similarly, you can also **import** records on most worklists in CSV or JSONL for
 <img src="/assets/images/docs/using-cerb/workspaces/export.png" class="screenshot">
 </div>
 
-In [11.2+](/releases/11.2/), worklist imports and exports run as parallel background [queue jobs](/docs/records/types/queue_job/) rather than blocking the request. On completion, exported chunks are sorted and saved as a single file attachment linked to the job -- workers can close their browser and the export will continue in the background. They will receive a notification when the file is ready.
+Worklist imports and exports run as parallel background [queue jobs](/docs/records/types/queue_job/) rather than blocking the request. On completion, exported chunks are sorted and saved as a single file attachment linked to the job -- workers can close their browser and the export will continue in the background. They will receive a notification when the file is ready.
 
 # Explore Mode
 

@@ -50,7 +50,7 @@ Before you begin, verify you have:
 Copy the `cerb-package-exporter.php` script to a directory on your server:
 
 {% highlight bash %}
-curl -O "https://raw.githubusercontent.com/cerb/cerb-release/v11.2/install/extras/impex/cerb-package-exporter.php"
+curl -O "https://raw.githubusercontent.com/cerb/cerb-release/v12.0/install/extras/impex/cerb-package-exporter.php"
 {% endhighlight %}
 
 # Configuration

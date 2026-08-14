@@ -25,6 +25,15 @@ jumbotron:
     url: /docs/records/types/
 ---
 
+<div class="cerb-box warning">
+	<p>
+		<b>Moved to an optional plugin in <a href="/releases/12.0/">12.0</a>, and deprecated.</b>
+		Legacy bot behaviors now live in the <code>cerb.behaviors.legacy</code> plugin. On upgrade it
+		is enabled automatically only if active behaviors exist, so installations without them stay
+		clean. They will not be retired during 12.x, and gained improvements in 12.0. New work should use <a href="/docs/automations/">automations</a>.
+	</p>
+</div>
+
 |---
 |-|-
 | **Name (singular):** | Bot
@@ -78,7 +87,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 | Field | Type | Description
 |-|-|-
 | `behaviors` | records | Behaviors
-| `comment_count` | number | [Comment](/docs/records/types/comments/) count on the record
+| `comment_count` | number | [Comment](/docs/records/types/comment/) count on the record
 | `comments` | comments | [Comments](/docs/guide/developers/dictionaries/#key-expansion)
 | `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
 | `links` | links | [Links](/docs/guide/developers/dictionaries/#key-expansion)

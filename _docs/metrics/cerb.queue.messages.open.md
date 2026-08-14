@@ -21,18 +21,17 @@ search_index:
 
 # Description
 
-This gauge snapshots the number of available and in-flight messages in each [queue](/docs/queues/), broken down by queue, [job](/docs/records/types/queue_job/), and status. Use it to spot stalled queues and backpressure -- a queue whose open count climbs and never drains is a sign that its consumer can't keep up or has failed.
-
-Available in [Cerb 11.2](/releases/11.2/) and later.
+This gauge snapshots the number of available and in-flight messages in each [queue](/docs/queues/), broken down by queue and status. Use it to spot stalled queues and backpressure -- a queue whose open count climbs and never drains is a sign that its consumer can't keep up or has failed.
 
 # Dimensions
 
 | Dimension | Description                                                  |
 |-----------|--------------------------------------------------------------|
 | queue_id  | The [queue](/docs/queues/) the messages belong to |
-| job_id    | The [queue job](/docs/records/types/queue_job/) the messages belong to (`0` when not part of a job) |
 | status_id | The message status: available or in-flight |
 
 # Related
 
-See also [cerb.queue.messages.processed](/docs/metrics/cerb.queue.messages.processed/) for completed and failed message counts.
+See also [cerb.queue.messages.processed](/docs/metrics/cerb.queue.messages.processed/) for completed and failed message counts, which *is* broken down by [job](/docs/records/types/queue_job/).
+
+This gauge has no `job_id` dimension. Jobs are short-lived, so charting a gauge by job has little value -- and omitting it makes the gauge cheap enough to sample more often.

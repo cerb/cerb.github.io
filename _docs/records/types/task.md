@@ -55,7 +55,9 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `reopen` | [timestamp](/docs/records/fields/types/timestamp/) | If the status is `waiting`, the date/time to automatically change the status back to `open` 
 |   | `status` | [text](/docs/records/fields/types/text/) | `o` (open), `w` (waiting), `c` (closed); alternative to `status_id` 
 |   | `status_id` | [number](/docs/records/fields/types/number/) | `0` (open), `1` (closed), `2` (waiting); alternative to `status` 
-| **x** | **`title`** | [text](/docs/records/fields/types/text/) | The name of this task 
+|   | `is_active` | [boolean](/docs/records/fields/types/boolean/) | Is this task actively being worked on? (`0` or `1`)
+|   | `project_id` | [number](/docs/records/fields/types/number/) | The ID of the parent [task project](/docs/records/types/task_project/).
+| **x** | **`title`** | [text](/docs/records/fields/types/text/) | The name of this task. May contain 4-byte emoji. 
 |   | `updated` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 
 ### Dictionary Placeholders
@@ -85,7 +87,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 |---
 | Field | Type | Description
 |-|-|-
-| `comment_count` | number | [Comment](/docs/records/types/comments/) count on the record
+| `comment_count` | number | [Comment](/docs/records/types/comment/) count on the record
 | `comments` | comments | [Comments](/docs/guide/developers/dictionaries/#key-expansion)
 | `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
 | `links` | links | [Links](/docs/guide/developers/dictionaries/#key-expansion)

@@ -29,6 +29,8 @@ jumbotron:
 # Extensions
 
 | [**Amazon Web Services**](/docs/plugins/extensions/cerb.service.provider.aws/) | `cerb.service.provider.aws`
+| **API Key** | `cerb.service.provider.api_key`
+| **AT Protocol** | `cerb.service.provider.atproto`
 | [**Cerb API (Legacy Signatures)**](/docs/plugins/extensions/cerb.service.provider.cerb.api.legacy/) | `cerb.service.provider.cerb.api.legacy`
 | [**Facebook Pages**](/docs/plugins/extensions/wgm.facebook.pages.service.provider/) | `wgm.facebook.pages.service.provider`
 | [**HTTP Basic Authentication**](/docs/plugins/extensions/cerb.service.provider.http.basic/) | `cerb.service.provider.http.basic`
@@ -37,6 +39,7 @@ jumbotron:
 | [**OAuth2 Provider**](/docs/plugins/extensions/cerb.service.provider.oauth2/) | `cerb.service.provider.oauth2`
 | [**OpenID Connect Identity Provider**](/docs/plugins/extensions/cerb.service.provider.oidc/) | `cerb.service.provider.oidc`
 | [**SAML Identity Provider**](/docs/plugins/extensions/cerb.service.provider.saml.idp/) | `cerb.service.provider.saml.idp`
+| **Telegram Bot** | `cerb.service.provider.telegram.bot`
 | [**Token Bearer**](/docs/plugins/extensions/cerb.service.provider.token.bearer/) | `cerb.service.provider.token.bearer`
 
 <div class="section-nav">

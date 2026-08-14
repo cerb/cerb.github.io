@@ -1,9 +1,7 @@
 ---
 title: Chart - Interaction Form Element
-excerpt: This page provides information on the "chart" interaction form element introduced
-  in Cerb 11.0.
-summary: This page provides information on the "chart" interaction form element introduced
-  in Cerb 11.0. It explains how this element is used to render interactive data visualizations
+excerpt: This page provides information on the "chart" interaction form element.
+summary: This page provides information on the "chart" interaction form element. It explains how this element is used to render interactive data visualizations
   within web forms. The page includes a detailed example of a chart configuration,
   showcasing how to display ticket data by group over the past year using a bar chart.
   It outlines the syntax for defining the chart's label, datasets, and schema, including
@@ -26,8 +24,6 @@ jumbotron:
   - label: Elements &raquo;
     url: /docs/automations/triggers/interaction.worker/#elements
 ---
-
-(Added in [11.0](/releases/11.0/))
 
 In [interaction](/docs/automations/triggers/interaction.worker/) web forms, a **chart** element renders an interactive data visualization.
 

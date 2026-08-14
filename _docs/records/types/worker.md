@@ -37,6 +37,14 @@ jumbotron:
 * TOC
 {:toc}
 
+### AI workers
+
+An [AI agent](/docs/agents/) is an ordinary worker record with `is_ai` set, rather than a separate record type. That means an agent can own a [ticket](/docs/records/types/ticket/), be `@mentioned`, belong to a [group](/docs/groups/), and hold [API](/docs/api/) credentials, because those already belong to workers.
+
+An AI worker can never sign in -- interactive logins and SSO are refused -- and doesn't require an email address.
+
+To list only AI workers, search workers with `isAi:y`. A [search facet](/docs/search/#search-facets) can give that query its own entry in the **Search** menu.
+
 ### Records API
 
 These fields are available in the [Records API](/docs/api/endpoints/records/) and [packages](/docs/packages/):
@@ -53,6 +61,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | **x** | **`first_name`** | [text](/docs/records/fields/types/text/) | Given name 
 |   | `gender` | [text](/docs/records/fields/types/text/) | `F` (female), `M` (male), or blank or unknown 
 |   | `image` | [image](/docs/records/fields/types/image/) | The profile image, base64-encoded in [data URI format](https://en.wikipedia.org/wiki/Data_URI_scheme) 
+|   | `is_ai` | [boolean](/docs/records/fields/types/boolean/) | Is this an [AI worker](/docs/agents/)? An automated identity that can never log in. 
 |   | `is_disabled` | [boolean](/docs/records/fields/types/boolean/) | Is this worker deactivated and prevented from logging in? 
 |   | `is_mfa_required` | [boolean](/docs/records/fields/types/boolean/) | Is this worker required to use multi-factor authentication? 
 |   | `is_password_disabled` | [boolean](/docs/records/fields/types/boolean/) | Is this worker allowed to log in with a password? 
@@ -89,6 +98,7 @@ These [placeholders](/docs/scripting/variables/#placeholders) are available in [
 | `full_name` | text | Full Name
 | `gender` | text | Gender
 | `id` | worker | Id
+| `is_ai` | boolean | AI
 | `is_disabled` | boolean | Disabled
 | `is_superuser` | boolean | Administrator
 | `language` | text | Language
@@ -108,7 +118,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 |---
 | Field | Type | Description
 |-|-|-
-| `comment_count` | number | [Comment](/docs/records/types/comments/) count on the record
+| `comment_count` | number | [Comment](/docs/records/types/comment/) count on the record
 | `comments` | comments | [Comments](/docs/guide/developers/dictionaries/#key-expansion)
 | `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
 | `emails` | records | Emails
@@ -135,6 +145,7 @@ These [filters](/docs/search/#filters) are available in worker [search queries](
 | `group.manager:` | [record](/docs/search/#deep-search) | [Group Manager](/docs/records/types/group/)
 | `id:` | [number](/docs/search/#numbers) | Id
 | `isAdmin:` | [boolean](/docs/search/#booleans) | Administrator
+| `isAi:` | [boolean](/docs/search/#booleans) | AI
 | `isAvailable:` | virtual | Calendar Availability
 | `isBusy:` | virtual | Calendar Availability
 | `isDisabled:` | [boolean](/docs/search/#booleans) | Disabled
@@ -172,6 +183,7 @@ These columns are available on worker [worklists](/docs/worklists/):
 | `w_first_name` | First Name
 | `w_gender` | Gender
 | `w_id` | Id
+| `w_is_ai` | AI
 | `w_is_disabled` | Disabled
 | `w_is_mfa_required` | Mfa Required
 | `w_is_password_disabled` | Password Disabled

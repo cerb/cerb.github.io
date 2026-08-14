@@ -4,7 +4,7 @@ excerpt: Configure security settings like service tokens, session expiration, an
 summary: This page describes Cerb's security configuration -- service tokens for
   authenticating anonymous access to privileged endpoints like /cron, /debug, and
   /update; session expiration policies; and (deprecated) IP allowlists. Service
-  tokens were introduced in Cerb 11.2 and replace the previous IP-based allowlist.
+  tokens replace the previous IP-based allowlist.
 permalink: /docs/setup/configure/security/
 toc:
   expand: Admin Guide
@@ -25,8 +25,6 @@ jumbotron:
 
 ### Service Tokens
 
-(Added in [11.2](/releases/11.2/))
-
 [Service tokens](/docs/records/types/service_token/) authenticate anonymous, privileged access to endpoints like `/cron`, `/debug`, and `/update` without requiring a worker session. Service tokens replace the [`AUTHORIZED_IPS_DEFAULTS`](/docs/config-file/#common-settings) IP allowlist and the removed `DEVELOPMENT_MODE_ALLOW_DEBUG` flag.
 
 Tokens are passed either in an HTTP `Authorization: Bearer <token>` header or as an `_authorization` HTTP POST parameter -- for instance, from a cronjob, monitoring tool, or deploy script. Each token can be restricted to specific endpoint **scopes** (e.g. `cron:*`, `debug:status`, `update`).
@@ -43,4 +41,4 @@ This section determines the lifespan of [session](/docs/setup/sessions/) cookies
 
 ### Remote Administration (deprecated)
 
-This legacy section configured the [`AUTHORIZED_IPS_DEFAULTS`](/docs/config-file/#common-settings) allowlist of IPs allowed to access `/cron`, `/debug`, and `/update` without a session. As of [11.2](/releases/11.2/), this has been replaced by [service tokens](/docs/records/types/service_token/), and the `DEVELOPMENT_MODE_ALLOW_DEBUG` configuration option has been removed.
+This legacy section configured the [`AUTHORIZED_IPS_DEFAULTS`](/docs/config-file/#common-settings) allowlist of IPs allowed to access `/cron`, `/debug`, and `/update` without a session. It has been replaced by [service tokens](/docs/records/types/service_token/), and the `DEVELOPMENT_MODE_ALLOW_DEBUG` configuration option has been removed.

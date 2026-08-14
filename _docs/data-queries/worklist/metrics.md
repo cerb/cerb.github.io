@@ -41,7 +41,7 @@ Each `values.*` series should provide:
 * `of:` (record type)
 * `field:` (record field using quick search keys)
 * `function:` (count,min,max,average,sum)
-* `metric:` (an equation to apply to each value; [9.1.6](/releases/9.1.6/) or later)
+* `metric:` (an equation to apply to each value)
 * `query:` (the query to filter the results for this series)
 * `query.required:` (the required query to filter the results for this series)
 
@@ -49,7 +49,7 @@ Optionally, multiple functions can be specified for a series, like `functions:[s
 
 # Response Formats
 
-* **pie** returns data for use in pie and donut charts (as of [9.5.6](/releases/9.5.6/)).
+* **pie** returns data for use in pie and donut charts.
 
 * **table** (default) returns tabular output, suitable for display with the 'Chart: Table' visualization widget. Multiple metrics are returned as rows.
 

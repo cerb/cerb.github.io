@@ -182,8 +182,6 @@ Enter text within quotes to search for exact phrases:
 #### Mixing terms and phrases
 {:.no_toc}
 
-(Added in [10.1](/releases/10.1/))
-
 {% highlight cerb %}
 {% raw %}
 content:("an exact phrase" other terms)
@@ -192,8 +190,6 @@ content:("an exact phrase" other terms)
 
 #### Negation
 {:.no_toc}
-
-(Added in [10.1](/releases/10.1/))
 
 {% highlight cerb %}
 {% raw %}
@@ -375,8 +371,6 @@ created:"big bang to first day of this month"
 
 #### Advanced
 
-Since: [9.6](/releases/9.6/)
-
 Date-based filters may use an optional advanced parameterized expression, with the format:
 
 {% highlight cerb %}
@@ -544,9 +538,31 @@ watchers:1,2,3
 {% endraw %}
 {% endhighlight %}
 
-# Search indexes
+## Parameterized metrics filters
 
-(Added in [11.2](/releases/11.2/))
+Record types that expose a [sparklines column](/docs/worklists/#sparkline-columns) also expose a matching filter backed by the same [metrics](/docs/metrics/). The filter name reflects what it measures -- `usage:`, `activity:`, or `records:` -- and it takes a parenthesized group of sub-filters.
+
+Inside the group, each metric the record type publishes becomes a comparable field, and `since:` and `until:` bound the window:
+
+{% highlight text %}
+usage:(runs:>0 since:today)
+usage:(runs:>1000)
+usage:(errors:>0)
+usage:(received:>0 since:today)
+activity:(failed:>0 since:-1week)
+records:(count:>0)
+{% endhighlight %}
+
+Omitting `since:`/`until:` matches over all recorded history.
+
+|---
+| Filter | Record types | Fields
+|-|-|-
+| `usage:` | [automation](/docs/records/types/automation/), [automation event](/docs/records/types/automation_event/), bot behavior, [mailbox](/docs/records/types/mailbox/), [mail routing rule](/docs/records/types/mail_routing_rule/), [mail transport](/docs/records/types/mail_transport/), [service token](/docs/records/types/service_token/), [snippet](/docs/records/types/snippet/), [webhook listener](/docs/records/types/webhook_listener/) | Varies by type -- e.g. `runs`, `errors`, `duration`, `received`, `deliveries`, `uses`
+| `activity:` | [queue](/docs/records/types/queue/) | `done`, `failed`, `open`
+| `records:` | [search index](/docs/records/types/search_index/) | Indexed record count
+
+# Search indexes
 
 A [search index](/docs/records/types/search_index/) is a configurable, plugin-driven index over a specific [record type](/docs/records/types/) -- backed by a search extension (local full-text, TF-IDF, BM25, vector embeddings, Elasticsearch, Qdrant, Pinecone, etc.).
 
@@ -623,6 +639,20 @@ docs:(queue parallel top:10)
 {% endhighlight %}
 
 Scores are computed using TF-IDF (or the strategy provided by the extension). Field-level boosting can be configured per search index via the content template (e.g. weight a document's title higher than its body).
+
+# Search facets
+
+A **facet** is a named subset of a record type that gets its own entry in the **Search** menu, with its own icon and a filter that's always applied.
+
+Some useful views are a filtered slice of an existing record type rather than a type of their own. [AI workers](/docs/agents/) are the obvious case: they *are* [workers](/docs/workers/), but "Workers" isn't where you'd look for them. A facet named "Agents" puts them where you would.
+
+Facets sit beside the real record types rather than nested in a submenu, because someone looking for "Agents" isn't thinking of it as a kind of worker.
+
+Each facet keeps its own columns and sort, so customizing a facet doesn't disturb the parent record type's search.
+
+# Indexing freshness
+
+A record can be re-indexed on demand rather than waiting for the next scheduler sweep, so a newly created record is findable right away. Bulk writers get a short defer window, so a large import doesn't re-index the same index once per record.
 
 # Autocompletion
 

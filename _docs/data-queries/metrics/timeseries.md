@@ -32,7 +32,7 @@ jumbotron:
 `metrics.timeseries` [data queries](/docs/data-queries/) aggregates [metrics](/docs/metrics/) statistics over a date range. This can retrieve multiple series each with a different metric and function (avg, sum, min, max, count). A series can also be aggregated or filtered by any combination of metric [dimensions](/docs/metrics/#dimensions).
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/data-queries/data-queries-metrics-timeseries.png" class="screenshot">
+<img src="/assets/images/docs/data-queries/metrics-timeseries.png" class="screenshot">
 </div>
 
 {% highlight cerb %}
@@ -59,6 +59,8 @@ timezone:Europe/Berlin
 format:timeseries
 {% endraw %}
 {% endhighlight %}
+
+The ['Chart: Metrics Explorer'](/docs/dashboards/widgets/metrics-explorer/) widget can write one of these queries for you with **Copy &raquo; Data Query**. Expect two differences from the example above: it uses the `faceted_*` functions rather than `avg`, `min`, and `max`, and it templates the metric as {% raw %}`metric:"{{record_name}}"`{% endraw %}. That placeholder only resolves against a [metric](/docs/metrics/) record, so pasting the query anywhere else returns nothing until you replace it with the metric's name.
 
 * TOC
 {:toc}
@@ -104,6 +106,23 @@ Each `series.*` series should provide:
 
 Dimension filters can use negation. For instance, `query:(worker_id:![1,2,3])`
 
+This makes proportional charts straightforward -- one series for a dimension and another for everything else, stacked against each other:
+
+{% highlight cerb %}
+{% raw %}
+series.mine:(
+  label:Mine
+  metric:cerb.tickets.open
+  query:(group_id:1)
+)
+series.others:(
+  label:Others
+  metric:cerb.tickets.open
+  query:(group_id:!1)
+)
+{% endraw %}
+{% endhighlight %}
+
 Record-based dimension can use [deep search filers](/docs/search/).
 
 # timeout:
@@ -115,6 +134,8 @@ The default is **20000** milliseconds (20 seconds).
 # timezone:
 
 Statistics are stored in GMT/UTC. The `timezone:` location shifts timestamps when grouping metrics by `period`.
+
+Day-based period units collapse into UTC consistently, so a day boundary means the same thing regardless of where the query runs.
 
 For example:
 

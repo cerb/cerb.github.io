@@ -28,22 +28,27 @@ jumbotron:
 
 # Extensions
 
+| **Automation** | `cerb.profile.tab.widget.automation`
+| **Automation: Graph** | `cerb.profile.tab.widget.automation.graph`
 | [**Behavior Tree**](/docs/plugins/extensions/cerb.profile.tab.widget.behavior.tree/) | `cerb.profile.tab.widget.behavior.tree`
 | [**Calendar Availability**](/docs/plugins/extensions/cerb.profile.tab.widget.calendar.availability/) | `cerb.profile.tab.widget.calendar.availability`
 | [**Calendar**](/docs/plugins/extensions/cerb.profile.tab.widget.calendar/) | `cerb.profile.tab.widget.calendar`
 | [**Chart: Categories**](/docs/plugins/extensions/cerb.profile.tab.widget.chart.categories/) | `cerb.profile.tab.widget.chart.categories`
+| **Chart: KATA** | `cerb.profile.tab.widget.chart.kata`
 | [**Chart: Pie**](/docs/plugins/extensions/cerb.profile.tab.widget.chart.pie/) | `cerb.profile.tab.widget.chart.pie`
 | [**Chart: Scatterplot**](/docs/plugins/extensions/cerb.profile.tab.widget.chart.scatterplot/) | `cerb.profile.tab.widget.chart.scatterplot`
 | [**Chart: Table**](/docs/plugins/extensions/cerb.profile.tab.widget.chart.table/) | `cerb.profile.tab.widget.chart.table`
+| **Chart: Time Blocks** | `cerb.profile.tab.widget.chart.timeblocks`
 | [**Chart: Time Series**](/docs/plugins/extensions/cerb.profile.tab.widget.chart.time_series/) | `cerb.profile.tab.widget.chart.time_series`
 | [**Comments**](/docs/plugins/extensions/cerb.profile.tab.widget.comments/) | `cerb.profile.tab.widget.comments`
-| [**Custom**](/docs/plugins/extensions/cerb.profile.tab.widget.bot/) | `cerb.profile.tab.widget.bot`
+| [**Custom (Deprecated)**](/docs/plugins/extensions/cerb.profile.tab.widget.bot/) | `cerb.profile.tab.widget.bot`
 | [**Data Query Visualization**](/docs/plugins/extensions/cerb.profile.tab.widget.visualization/) | `cerb.profile.tab.widget.visualization`
-| [**Form Interaction**](/docs/plugins/extensions/cerb.profile.tab.widget.form_interaction/) | `cerb.profile.tab.widget.form_interaction`
-| [**HTML/Javascript**](/docs/plugins/extensions/cerb.profile.tab.widget.html/) | `cerb.profile.tab.widget.html`
+| [**Interactions Toolbar**](/docs/plugins/extensions/cerb.profile.tab.widget.form_interaction/) | `cerb.profile.tab.widget.form_interaction`
+| [**(Deprecated) HTML/Javascript**](/docs/plugins/extensions/cerb.profile.tab.widget.html/) | `cerb.profile.tab.widget.html`
 | [**Knowledgebase Article**](/docs/plugins/extensions/cerb.profile.tab.widget.kb_article/) | `cerb.profile.tab.widget.kb_article`
-| [**Map: Geo Points**](/docs/plugins/extensions/cerb.profile.tab.widget.map.geopoints/) | `cerb.profile.tab.widget.map.geopoints`
+| [**Map**](/docs/plugins/extensions/cerb.profile.tab.widget.map.geopoints/) | `cerb.profile.tab.widget.map.geopoints`
 | [**Project Board**](/docs/plugins/extensions/cerb.profile.tab.widget.project_board/) | `cerb.profile.tab.widget.project_board`
+| **Queue Job Monitor** | `cerb.profile.tab.widget.queue.job.monitor`
 | [**Record Fields**](/docs/plugins/extensions/cerb.profile.tab.widget.fields/) | `cerb.profile.tab.widget.fields`
 | [**Responsibilities**](/docs/plugins/extensions/cerb.profile.tab.widget.responsibilities/) | `cerb.profile.tab.widget.responsibilities`
 | [**Sheet**](/docs/plugins/extensions/cerb.profile.tab.widget.sheet/) | `cerb.profile.tab.widget.sheet`

@@ -28,6 +28,8 @@ jumbotron:
 
 # Extensions
 
+| Automations | `cron.automations`
+| Background Queue | `cron.background_queue`
 | Bot Scheduled Behavior | `cron.bot.scheduled_behavior`
 | Feeds Cron | `feeds.cron`
 | Heartbeat | `cron.heartbeat`

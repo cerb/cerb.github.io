@@ -59,6 +59,8 @@ of:tickets
 
 The `by:` key specifies which record [fields](/docs/records/#fields) to subtotal by.
 
+On [tickets](/docs/records/types/ticket/), `by:sender.first` and `by:sender.last` subtotal by the sender's first or last name.
+
 ### Nested subtotals
 
 Multiple fields can be separated with commas to generated nested subtotals (e.g. _"tickets by owners by status"_).
@@ -86,7 +88,7 @@ The `count` function is the default when no preference is given, and it can be t
 
 The other functions may only be used against numeric fields. For example, you can't average _group names_, but you can average _response times_.
 
-As of [9.0.7](/releases/9.0.7/) the desired function is appended to the `by:` key following a period (`.`):
+The desired function is appended to the `by:` key following a period (`.`):
 
 {% highlight cerb %}
 {% raw %}
@@ -178,8 +180,6 @@ The time limit of the query in milliseconds (0-60000). Default: `20000`.
 
 # timezone:
 
-(Available in [10.2.0](/releases/10.2/) or later)
-
 The `timezone:` key generates date labels in the given timezone location for bins like `by:[created@day]`.
 
 An option like `timezone:America/Los_Angeles` uses the offset UTC-7 or UTC-8 depending on Daylight Saving Time.
@@ -187,8 +187,6 @@ An option like `timezone:America/Los_Angeles` uses the offset UTC-7 or UTC-8 dep
 If omitted, this defaults to the timezone of the current worker or the server.
 
 # metric:
-
-(Available in [9.0.7](/releases/9.0.7/) or later)
 
 The `metric:` key lets you specify an arbitrary **equation** to modify the calculated value for each row in the results.
 
@@ -233,8 +231,6 @@ metric:"(x/4.33)|round"
 {% endhighlight %}
 
 # group:
-
-(Available in [9.0.7](/releases/9.0.7/) or later)
 
 Occasionally you may need to treat nested subtotals as _"samples"_ and calculate statistics using them.
 

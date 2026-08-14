@@ -1,9 +1,9 @@
 ---
 title: Chooser - Interaction Form Element
-excerpt: This page introduces the "chooser" interaction form element added in Cerb
-  11.0, which is used in web forms to display a search popup for selecting records.
-summary: This page introduces the "chooser" interaction form element added in Cerb
-  11.0, which is used in web forms to display a search popup for selecting records.
+excerpt: This page introduces the "chooser" interaction form element, which is used
+  in web forms to display a search popup for selecting records.
+summary: This page introduces the "chooser" interaction form element, which is used
+  in web forms to display a search popup for selecting records.
   It provides a code example demonstrating how to implement a chooser element, including
   options for setting a label, specifying the record type, applying a search query
   for filtering, allowing multiple selections, and marking the input as required.
@@ -26,8 +26,6 @@ jumbotron:
   - label: Elements &raquo;
     url: /docs/automations/triggers/interaction.worker/#elements
 ---
-
-(Added in [11.0](/releases/11.0/))
 
 In [interaction](/docs/automations/triggers/interaction.worker/) web forms, a **chooser** element displays a search popup for selecting [records](/docs/records/).
 

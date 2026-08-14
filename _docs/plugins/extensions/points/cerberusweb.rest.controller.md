@@ -31,6 +31,7 @@ jumbotron:
 | Activity Log | `cerberusweb.rest.controller.activity_log`
 | Addresses | `cerberusweb.rest.controller.addresses`
 | Attachments | `cerberusweb.rest.controller.attachments`
+| Automations | `cerberusweb.rest.controller.automations`
 | Bots | `cerberusweb.rest.controller.bots`
 | Calendars | `cerberusweb.rest.controller.calendars`
 | Comments | `cerberusweb.rest.controller.comments`

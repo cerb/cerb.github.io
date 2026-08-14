@@ -5,7 +5,7 @@ excerpt: Queues store a set of temporary messages from producers and distribute 
 summary: This page explains how queues work in Cerb -- naming conventions, message
   states, consumers, and how parallel background processing is wired up through
   the Background Queue scheduler, queue jobs, consumer extensions, and concurrency
-  slots. Cerb 11.2 introduced first-class queue jobs, the Extension_QueueConsumer
+  slots. Queue jobs, the Extension_QueueConsumer
   extension point, and the APP_QUEUE_CONCURRENCY_SLOTS configuration option.
 permalink: /docs/queues/
 toc: ~

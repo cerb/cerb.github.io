@@ -78,7 +78,7 @@ For example:
 {% highlight cerb %}
 {% raw %}
 results:
-  consumer_id: "0x1ec8aee9cb856fd48e0a8d3225229102"
+  consumer_id: 0x1ec8aee9cb856fd48e0a8d3225229102
   messages:
     1ec8aedf82d0642e858367a0b25a73aa:
       queue: example.queue.name

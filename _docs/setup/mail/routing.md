@@ -1,9 +1,7 @@
 ---
 title: 'Setup: Mail Routing'
-excerpt: This page provides guidance on setting up mail routing in Cerb, introduced
-  in version 11.0.
-summary: This page provides guidance on setting up mail routing in Cerb, introduced
-  in version 11.0. It explains how to configure rules to automatically direct incoming
+excerpt: This page provides guidance on setting up mail routing in Cerb.
+summary: This page provides guidance on setting up mail routing in Cerb. It explains how to configure rules to automatically direct incoming
   emails to specific groups based on message properties such as recipient addresses.
   Examples include routing emails sent to `support@*` to the Support group, `orders@*`
   to Sales, and `receipts@*` to Billing. The page also introduces the concept of Routing
@@ -27,8 +25,6 @@ jumbotron:
   - label: Mail &raquo;
     url: /docs/setup/#incoming-mail
 ---
-
-(Added in [11.0](/releases/11.0/))
 
 You can configure rules to automatically route new mail to groups based on message properties.
 

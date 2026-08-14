@@ -45,5 +45,3 @@ When both automations and legacy [bot](/docs/records/types/bot/) behaviors are a
 |-|-|
 | 0–127 | Automation runs **before** legacy behaviors |
 | 128–255 | Automation runs **after** legacy behaviors |
-
-This ordering was introduced in [11.1.8](/releases/11.1.8/). Prior to that version, automations always ran before legacy behaviors regardless of priority.

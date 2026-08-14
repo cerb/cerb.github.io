@@ -45,11 +45,18 @@ For instance, a troubleshooter interaction can ask a series of increasingly spec
 
 You can build your own interactions and add them to toolbars found through Cerb on widgets, cards, profiles, sheets, worklists, email messages, and more.
 
+# Running and resuming
+
+Every interaction you can run -- plus the conversations still waiting on you -- opens from one searchable **command bar**, rather than from whichever toolbar happened to own it. Resumable interactions are listed first, and each entry shows its automation's description.
+
+An interaction abandoned by navigating away or closing a popup isn't lost. Worker interactions can be listed, resumed where they left off, and disposed of when they're no longer wanted.
+
 The following [triggers](/docs/automations/#triggers) are used to build interactions:
 
 | Trigger | 
 |-|-
 | [interaction.worker](/docs/automations/triggers/interaction.worker/) | Interactions with a [worker](/docs/workers/) using web forms.
+| [interaction.worker.agent](/docs/automations/triggers/interaction.worker.agent/) | Agent chats that can also drive the host editor they were launched beside.
 | [interaction.worker.explore](/docs/automations/triggers/interaction.worker.explore/) | Interactions use custom logic to return the next record in explore mode.
 | [interaction.website](/docs/automations/triggers/interaction.website/) | Interactions with visitors on third-party websites using web forms.
-
+| [interaction.internal](/docs/plugins/extensions/cerb.trigger.interaction.internal/) | Interactions Cerb uses and manages internally, kept out of the way of your own.

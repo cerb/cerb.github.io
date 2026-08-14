@@ -62,11 +62,11 @@ Copy and paste the following workflow template:
 {% raw %}
 workflow:
   name: wgm.ai_agent.org_update
-  version: 2025-05-13T00:00:00Z
+  version: 2026-08-11T00:00:00Z
   description: Automatically update organization contact details from their website using Anthropic Claude.
   website: https://cerb.ai/resources/workflows/
   requirements:
-    cerb_version: >=11.0 <11.2
+    cerb_version: >=11.0 <12.0
     cerb_plugins: cerberusweb.core,
   config:
     chooser/anthropic_account_id:

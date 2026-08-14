@@ -109,6 +109,8 @@ You'll also notice that we're displaying the country of the initial sender's org
 * TOC
 {:toc}
 
+`code` columns emit the raw code with a language marker and highlight it in the browser. The output stays plain text, so an API consumer or a non-Cerb UI portal receives the code unchanged and can highlight it with its own system. `kata` is supported alongside the other languages.
+
 # Layout
 
 ## Styles
@@ -282,7 +284,7 @@ columns:
 
 The `icon` column type displays an icon image, record profile image, or automation resource.
 
-You'll find a list of icon names in **Setup >> Developers >> Icon Reference**.
+You'll find a list of icon names in **Setup >> Developers >> UI Reference**, under the 'Icon' component. See the [icon reference](/docs/developers/icons/) for the full set.
 
 {% highlight cerb %}
 {% raw %}

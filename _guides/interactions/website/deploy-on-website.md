@@ -86,11 +86,11 @@ Paste the following workflow template:
 {% raw %}
 workflow:
   name: wgm.example.website.agent
-  version: 2025-02-07T02:17:36Z
+  version: 2026-08-11T00:00:00Z
   description: An example interactive bot you can deploy on any website.
   website: https://cerb.ai/
   requirements:
-    cerb_version: >=11.0.4 <11.2
+    cerb_version: >=11.0.4 <12.0
     cerb_plugins: cerberusweb.core, cerb.website.interactions
   config:
     text/bot_name:

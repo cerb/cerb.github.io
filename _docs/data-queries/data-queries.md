@@ -68,6 +68,7 @@ format:dictionaries
 | [classifier.prediction](/docs/data-queries/classifier/prediction/) | Return a predicted classification for the given text using the given classifier
 | [data.query.types](/docs/data-queries/data/query-types/) | Return a list of data query types
 | [gpg.keyinfo](/docs/data-queries/gpg/keyinfo/) | Return details about a PGP public key
+| [metrics.subtotals](/docs/data-queries/metrics/subtotals/) | Flat metric subtotals by dimension, with no time axis
 | [metrics.timeseries](/docs/data-queries/metrics/timeseries/) | Aggregates metrics statistics over a date range
 | [platform.extensions](/docs/data-queries/platform/extensions/) | Return a filterable and pageable list of plugin extensions for a given point
 | [platform.extension.points](/docs/data-queries/platform/points/) | Return a filterable and pageable list of platform extension points

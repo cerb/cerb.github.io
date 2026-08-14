@@ -20,4 +20,15 @@ jumbotron:
     url: /docs/setup/#plugins
 ---
 
+<div class="cerb-box note">
+	<p>
+		Plugins can be enabled or disabled in a single click directly from the worklist, and
+		separate worklists are provided for modern features, legacy features, and third-party
+		plugins. There's no <b>uninstall</b> action -- removing a plugin is a filesystem
+		operation. See
+		<a href="/docs/workflows/">workflows</a> for the preferred path to most user-level
+		extensibility.
+	</p>
+</div>
+
 See: [Plugins](/docs/plugins/)

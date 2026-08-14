@@ -6,7 +6,7 @@ summary: A search index manages a custom search filter on any record type. Each
   index is backed by a search extension (e.g. local full-text, TF-IDF, BM25, vector
   embeddings, Elasticsearch, Qdrant, Pinecone). This page documents the Records
   API fields, dictionary placeholders, search filters, and worklist columns
-  available on search index records, introduced in Cerb 11.2.
+  available on search index records.
 permalink: /docs/records/types/search_index/
 redirect_from:
 - /docs/setup/configure/search/
@@ -35,6 +35,10 @@ jumbotron:
 * TOC
 {:toc}
 
+### Usage tracking
+
+Search Index [worklists](/docs/worklists/) offer a 'Records' [sparklines column](/docs/worklists/#sparkline-columns) charting indexed record count, with a 2h/1d/30d range toggle. A matching `records:` [quick search filter](/docs/search/#parameterized-metrics-filters) queries the same data -- for instance, `records:(since:today)`.
+
 Search indexes provide configurable, plugin-driven [search](/docs/search/) on any [record type](/docs/records/types/). Each search index manages a linked custom filter, exposed as a `filter:` keyword on the record type's worklists.
 
 A search index has:
@@ -42,10 +46,14 @@ A search index has:
 * A **type** (an extension that provides the indexing strategy -- local full-text, vector embeddings, Elasticsearch, etc.)
 * A **record type** the index applies to
 * A **filter query** that constrains which records are included (e.g. "open tickets updated in the last year")
-* A **content template** that formats the indexable text per record (e.g. `{% raw %}{{title}} {{content}}{% endraw %}`)
+* A **content template** that formats the indexable text per record (e.g. `{% raw %}{{title}} {{content}}{% endraw %}`). Since it's a [scripting](/docs/scripting/) template, it can also strip noise before indexing -- [`strip_lines`](/docs/scripting/filters/#strip_lines) for quoted replies, [`strip_pem_blocks`](/docs/scripting/filters/#strip_pem_blocks) for keys and signatures, [`strip_data_uris`](/docs/scripting/filters/#strip_data_uris) for inline images, and [`strip_url_querystrings`](/docs/scripting/filters/#strip_url_querystrings) for tracking parameters -- which keeps the index smaller and its matches more relevant. The built-in message index does exactly this.
 * A **priority** that controls autocompletion order; setting priority to `0` makes the index act as the default search filter when no explicit `filter:` is provided
 
-Search indexes were introduced in [11.2](/releases/11.2/). New index types can be implemented via [plugins](/docs/plugins/).
+The **type** and **record type** are set when the index is created and can't be changed afterward -- the editor shows them as fixed values. Everything else stays editable.
+
+The **filter name** and the **filter query** are separate things, and it's easy to conflate them. The filter name is the keyword you type (`filter:header.from`), and it's optional -- leave it blank and the index has no keyword of its own. The filter query constrains which records get indexed at all, and leaving it blank indexes every record of that type.
+
+New index types can be implemented via [plugins](/docs/plugins/).
 
 ### Records API
 
@@ -92,7 +100,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 |---
 | Field | Type | Description
 |-|-|-
-| `comment_count` | number | [Comment](/docs/records/types/comments/) count on the record
+| `comment_count` | number | [Comment](/docs/records/types/comment/) count on the record
 | `comments` | comments | [Comments](/docs/guide/developers/dictionaries/#key-expansion)
 | `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
 | `links` | links | [Links](/docs/guide/developers/dictionaries/#key-expansion)

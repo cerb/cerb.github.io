@@ -7,8 +7,7 @@ summary: Service tokens authenticate anonymous, privileged access to endpoints
   be scoped to specific endpoints, are passed via Authorization Bearer header or
   the _authorization POST parameter, and replace the AUTHORIZED_IPS_DEFAULTS
   allowlist. This page documents the Records API fields, dictionary placeholders,
-  search filters, and worklist columns available on service token records,
-  introduced in Cerb 11.2.
+  search filters, and worklist columns available on service token records.
 permalink: /docs/records/types/service_token/
 toc:
   title: Service Token
@@ -35,13 +34,17 @@ jumbotron:
 * TOC
 {:toc}
 
+### Usage tracking
+
+Service Token [worklists](/docs/worklists/) offer a 'Usage' [sparklines column](/docs/worklists/#sparkline-columns) charting authentications, with a 2h/1d/30d range toggle. A matching `usage:` [quick search filter](/docs/search/#parameterized-metrics-filters) queries the same data -- for instance, `usage:(since:today)`.
+
 A service token authenticates anonymous, privileged access to endpoints like `/cron`, `/debug`, and `/update`. Service tokens replace the [`AUTHORIZED_IPS_DEFAULTS`](/docs/config-file/#common-settings) IP allowlist -- and the now-removed `DEVELOPMENT_MODE_ALLOW_DEBUG` flag -- with a more flexible, auditable mechanism that works regardless of where requests originate.
 
 Tokens are passed either in an HTTP `Authorization: Bearer <token>` header or as an `_authorization` POST parameter -- for instance, from a cronjob, monitoring tool, or deploy script. Each token can be restricted to specific endpoint **scopes** (e.g. `cron:*`, `debug:*`, `update`). When viewing a protected endpoint in the browser, a token can be entered through a login prompt to continue.
 
 A master service token may be configured in `framework.config.php` using [`APP_SERVICE_TOKEN`](/docs/config-file/#optional-settings) -- particularly useful for `/update`, since worker logins are blocked until the update finishes. The master token's scope defaults to `*` (all endpoints) but may be restricted with [`APP_SERVICE_TOKEN_SCOPE`](/docs/config-file/#optional-settings).
 
-Service tokens are managed from [Setup &raquo; Configure &raquo; Security](/docs/setup/configure/security/). Tokens were introduced in [Cerb 11.2](/releases/11.2/).
+Service tokens are managed from [Setup &raquo; Configure &raquo; Security](/docs/setup/configure/security/).
 
 ### Records API
 
@@ -83,7 +86,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 |---
 | Field | Type | Description
 |-|-|-
-| `comment_count` | number | [Comment](/docs/records/types/comments/) count on the record
+| `comment_count` | number | [Comment](/docs/records/types/comment/) count on the record
 | `comments` | comments | [Comments](/docs/guide/developers/dictionaries/#key-expansion)
 | `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
 | `links` | links | [Links](/docs/guide/developers/dictionaries/#key-expansion)

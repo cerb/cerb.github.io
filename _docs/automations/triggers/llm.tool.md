@@ -29,8 +29,6 @@ jumbotron:
 
 The description and inputs are used by the AI agent to understand how to use the tool.
 
-(Added in [11.1](/releases/11.1/))
-
 # Inputs
 
 The automation [dictionary](/docs/automations/#dictionaries) starts with the following values:

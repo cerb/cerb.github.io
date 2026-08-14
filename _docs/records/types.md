@@ -34,6 +34,10 @@ This reference can be used when building [automations](/docs/automations/), [sea
 | Alias | Record
 |-|-
 | `activity_log` | [Activity Logs](/docs/records/types/activity_log/)
+| `agent_file` | [Agent Files](/docs/records/types/agent_file/)
+| `agent_filesystem` | [Agent Filesystems](/docs/records/types/agent_filesystem/)
+| `agent_model` | [Agent Models](/docs/records/types/agent_model/)
+| `agent_model_router` | [Agent Model Routers](/docs/records/types/agent_model_router/)
 | `address` | [Email Addresses](/docs/records/types/address/)
 | `attachment` | [Attachments](/docs/records/types/attachment/)
 | `automation` | [Automations](/docs/records/types/automation/)
@@ -87,6 +91,7 @@ This reference can be used when building [automations](/docs/automations/), [sea
 | `service_token` | [Service Tokens](/docs/records/types/service_token/)
 | `snippet` | [Snippets](/docs/records/types/snippet/)
 | `task` | [Tasks](/docs/records/types/task/)
+| `task_project` | [Task Projects](/docs/records/types/task_project/)
 | `ticket` | [Tickets](/docs/records/types/ticket/)
 | `toolbar` | [Toolbars](/docs/records/types/toolbar/)
 | `toolbar_section` | [Toolbar Sections](/docs/records/types/toolbar_section/)

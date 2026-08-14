@@ -29,8 +29,17 @@ jumbotron:
 # Extensions
 
 | Activity Log | `cerberusweb.contexts.activity_log`
+| Agent File | `cerb.contexts.agent.file`
+| Agent Filesystem | `cerb.contexts.agent.filesystem`
+| Agent Model | `cerb.contexts.agent.model`
+| Agent Model Router | `cerb.contexts.agent.model.router`
 | Application | `cerberusweb.contexts.app`
 | Attachment | `cerberusweb.contexts.attachment`
+| Automation | `cerb.contexts.automation`
+| Automation Event | `cerb.contexts.automation.event`
+| Automation Event Listener | `cerb.contexts.automation.event.listener`
+| Automation Resource | `cerb.contexts.automation.resource`
+| Automation Timer | `cerb.contexts.automation.timer`
 | Behavior Scheduled | `cerberusweb.contexts.behavior.scheduled`
 | Behavior | `cerberusweb.contexts.behavior`
 | Bot | `cerberusweb.contexts.bot`
@@ -55,6 +64,8 @@ jumbotron:
 | Domain | `cerberusweb.contexts.datacenter.domain`
 | Draft | `cerberusweb.contexts.mail.draft`
 | Email Address | `cerberusweb.contexts.address`
+| Email Delivery Log | `cerb.contexts.mail.delivery.log`
+| Email Inbound Log | `cerb.contexts.mail.inbound.log`
 | Email Signature | `cerberusweb.contexts.email.signature`
 | Email Template | `cerberusweb.contexts.mail.html_template`
 | Email Transport | `cerberusweb.contexts.mail.transport`
@@ -66,8 +77,10 @@ jumbotron:
 | Jira Project | `cerberusweb.contexts.jira.project`
 | Knowledgebase Article | `cerberusweb.contexts.kb_article`
 | Knowledgebase Category | `cerberusweb.contexts.kb_category`
+| Mail Routing Rule | `cerb.contexts.mail.routing.rule`
 | Mailbox Account | `cerberusweb.contexts.mailbox`
 | Message | `cerberusweb.contexts.message`
+| Metric | `cerb.contexts.metric`
 | Notification | `cerberusweb.contexts.notification`
 | OAuth App | `cerberusweb.contexts.oauth.app`
 | Opportunity | `cerberusweb.contexts.opportunity`
@@ -80,19 +93,27 @@ jumbotron:
 | Profile Widget | `cerberusweb.contexts.profile.widget`
 | Project Board Column | `cerberusweb.contexts.project.board.column`
 | Project Board | `cerberusweb.contexts.project.board`
+| Queue | `cerb.contexts.queue`
+| Queue Job | `cerb.contexts.queue.job`
 | Reminder | `cerberusweb.contexts.reminder`
+| Resource | `cerb.contexts.resource`
 | Role | `cerberusweb.contexts.role`
 | Saved Search | `cerberusweb.contexts.context.saved.search`
-| Sensor | `cerberusweb.contexts.datacenter.sensor`
+| Search Index | `cerb.contexts.search.index`
 | Server | `cerberusweb.contexts.datacenter.server`
+| Service Token | `cerb.contexts.service.token`
 | Snippet | `cerberusweb.contexts.snippet`
 | Task | `cerberusweb.contexts.task`
+| Task Project | `cerb.contexts.task.project`
 | Ticket | `cerberusweb.contexts.ticket`
 | Time Tracking Activity | `cerberusweb.contexts.timetracking.activity`
 | Time Tracking | `cerberusweb.contexts.timetracking`
+| Toolbar | `cerb.contexts.toolbar`
+| Toolbar Section | `cerb.contexts.toolbar.section`
 | Web Api Credentials | `cerberusweb.contexts.webapi.credential`
 | Webhook Listener | `cerberusweb.contexts.webhook_listener`
 | Worker | `cerberusweb.contexts.worker`
+| Workflow | `cerb.contexts.workflow`
 | Workspace Page | `cerberusweb.contexts.workspace.page`
 | Workspace Tab | `cerberusweb.contexts.workspace.tab`
 | Workspace Widget | `cerberusweb.contexts.workspace.widget`

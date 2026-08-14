@@ -33,7 +33,6 @@ jumbotron:
 | Search Page | `core.page.search`
 | Setup Page | `core.page.configuration`
 | Signin Page | `core.page.signin`
-| Welcome Page | `core.page.welcome`
 
 <div class="section-nav">
 	<div class="left">

@@ -28,6 +28,7 @@ jumbotron:
 
 # Extensions
 
+| **Daily Task Board** | `cerb.workspace.tab.daily_task_board`
 | [**Dashboard**](/docs/plugins/extensions/core.workspace.tab.dashboard/) | `core.workspace.tab.dashboard`
 | [**Worklists**](/docs/plugins/extensions/core.workspace.tab.worklists/) | `core.workspace.tab.worklists`
 

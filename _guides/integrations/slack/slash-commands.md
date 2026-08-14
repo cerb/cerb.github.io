@@ -53,11 +53,11 @@ Click **Search >> Workflows >> (+) >> Empty** and paste the following KATA into 
 {% raw %}
 workflow:
   name: wgm.integrations.slack.bot
-  version: 2025-02-26T02:23:08Z
+  version: 2026-08-11T02:23:08Z
   description: A demo of integrations with a slack bot
   website: https://cerb.ai/resources/workflows/
   requirements:
-    cerb_version: >=11.0 <11.2
+    cerb_version: >=11.0 <12.0
     cerb_plugins: cerberusweb.core,
   config:
     chooser/account:
@@ -155,7 +155,7 @@ records:
                 authentication: cerb:connected_account:{{config.account}}
                 headers@text:
                   Content-Type: application/json; charset=utf8
-                body: {{message|json_encode}}
+                body@key: message
           
       policy_kata@raw:
         commands:
@@ -242,10 +242,7 @@ records:
               authentication: cerb:connected_account:{{config.account}}
               headers@text:
                 Content-Type: application/json; charset=utf8
-              body: {{message|json_encode}}
-              
-                
-          
+              body@key: message
           
       policy_kata@raw:
         commands:

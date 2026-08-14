@@ -67,7 +67,7 @@ Paste the following policy:
 {% endraw %}
 {% endhighlight %}
 
-You can add new permissions here depending on the services your automation needs to access. This is covered in those specific guides.
+You can add new permissions here depending on the services your automation needs to access. This is covered in those specific guides -- see the [Amazon Bedrock](/solutions/integrations/bedrock/) guide for a worked example.
 
 Click the **Next** button in the lower right.
 

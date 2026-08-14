@@ -52,10 +52,10 @@ Copy and paste the following workflow template:
 workflow:
   name: wgm.agent.search
   description: An intelligent search agent in the search menu.
-  version: 2025-06-04T00:55:51Z
+  version: 2026-08-11T00:55:51Z
   requirements:
     cerb_plugins: cerberusweb.core, 
-    cerb_version: >=11.1.2 <11.2
+    cerb_version: >=11.1.2 <12.0
   config:
     chooser/anthropic_account_id:
       label: Anthropic Account:

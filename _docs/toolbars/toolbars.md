@@ -116,6 +116,7 @@ Toolbars can be configured from **Search >> Toolbars**.
 
 | Toolbar | 
 |-|-
+| [agent.pane](/docs/toolbars/interactions/agent.pane/) | Chats offered by an editor's [agent](/docs/agents/) pane.
 | [automation.editor](/docs/toolbars/interactions/automation.editor/) | Editing an automation
 | [comment.editor](/docs/toolbars/interactions/comment.editor/) | Editing a comment
 | [draft.read](/docs/toolbars/interactions/draft.read/) | Reading a draft message
@@ -128,4 +129,3 @@ Toolbars can be configured from **Search >> Toolbars**.
 | [record.profile](/docs/toolbars/interactions/record.profile/) | Viewing a record profile page
 | [record.profile.image.editor](/docs/toolbars/interactions/record.profile.image.editor/) | Editing a record profile image
 | [records.worklist](/docs/toolbars/interactions/records.worklist/) | Viewing a worklist of records
-

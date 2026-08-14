@@ -47,7 +47,7 @@ By configuring the **layout** of a dashboard, different **zones** become availab
 <img src="/assets/images/docs/using-cerb/dashboards/prompts/dashboard-filter-bar.png" class="screenshot">
 </div>
 
-As of [9.0.4](/releases/9.0.4/), user-editable custom prompts can be added to the top of workspace [dashboards](/docs/dashboards/). These prompts automatically apply to all the dashboard's widgets. Previously, each widget had to be filtered individually.
+User-editable custom prompts can be added to the top of workspace [dashboards](/docs/dashboards/). These prompts automatically apply to all the dashboard's widgets, rather than filtering each widget individually.
 
 Each dashboard prompt is associated with a new placeholder that can be used when configuring queries widgets (e.g. [search queries](/docs/search/), [data queries](/docs/data-queries/)).
 
@@ -253,7 +253,7 @@ params:
     year
 {% endhighlight %}
 
-As of [9.1.3](/releases/9.1.3/) you can also provide a map of labels and values:
+You can also provide a map of labels and values:
 
 {% highlight cerb %}
 params:
@@ -333,6 +333,20 @@ format:dictionaries
 {% endraw %}
 {% endhighlight %}
 
+# Auto-refresh
+
+Worklist and widget tabs can refresh themselves on an interval of one, five, or fifteen minutes. A countdown ring shows when the next refresh is due; click the ring to change the interval.
+
+A page that reloads while you're reading it is worse than a stale one, so the countdown **holds** rather than drains whenever a refresh would interrupt:
+
+* while the browser tab is in the background
+* while a popup is open in front of you
+* while the countdown ring itself is scrolled out of view
+
+That last case is the important one -- it means a refresh only ever lands at the top-of-tab glance view, and never yanks you upward mid-read further down the page. A minimized or docked popup doesn't count as interrupting, so a parked peek won't freeze the timer indefinitely.
+
+When the countdown resumes it picks up where it held, plus a short grace period, so dismissing a dialog or returning to the tab never triggers a refresh the same instant.
+
 # Widgets
 
 |---
@@ -340,7 +354,9 @@ format:dictionaries
 |-|-
 | [Automation](/docs/dashboards/widgets/automation/) | Runs an [automation](/docs/automations/) and renders its output (HTML, charts, custom layouts).
 | [Calendar](/docs/dashboards/widgets/calendar/) | A calendar widget with dates and events.
+| [Automation: Graph](/docs/dashboards/widgets/automation-graph/) | A read-only control-flow graph of an [automation](/docs/automations/).
 | [Chart KATA](/docs/dashboards/widgets/chart-kata/) | A highly customizable chart combining multiple datasources from data queries and automations.
+| [Chart: Metrics Explorer](/docs/dashboards/widgets/metrics-explorer/) | An interactive metric chart builder for record cards.
 | [Chart: Categories](/docs/dashboards/widgets/chart-categories/) | A bar chart for categorical data.
 | [Chart: Pie](/docs/dashboards/widgets/chart-pie/) | A pie or donut chart for proportions of a whole.
 | [Chart: Scatterplot](/docs/dashboards/widgets/chart-scatterplot/) | An X/Y plot for comparing two numeric dimensions.

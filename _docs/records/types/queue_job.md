@@ -7,7 +7,7 @@ summary: Queue jobs group together related queue messages so workers can monitor
   and other parallel queue activity. Each job tracks progress counters, an optional
   singleton key, worker ownership, and arbitrary metadata. This page documents the
   Records API fields, dictionary placeholders, search filters, and worklist columns
-  available on queue job records, introduced in Cerb 11.2.
+  available on queue job records.
 permalink: /docs/records/types/queue_job/
 toc:
   title: Queue Job
@@ -38,8 +38,6 @@ A queue job groups a batch of [queue](/docs/queues/) messages under a single rec
 
 A `singleton_key` ensures that only one job with a given key can be active at a time -- for example, search re-indexing for a particular index.
 
-Queue jobs were introduced in [Cerb 11.2](/releases/11.2/).
-
 ### Progress tracking
 
 The job's `count_*` totals sum each message's **cardinality** (its work units) rather than counting raw messages. A message's cardinality defaults to `1`, so single-op messages behave the same as a simple count. Producers that bundle many records per message -- such as `cerb.records.bulk_update`, `cerb.records.export`, and search re-indexing -- can set a higher cardinality (typically `100`), and the monitor will report progress in record-equivalent units.
@@ -50,7 +48,7 @@ Each successful or failed queue message can write a summary entry into a permane
 
 ### Cancellation
 
-A queue job can be **paused** (stop processing but keep pending messages), **canceled** (immediately remove pending messages and mark the job done), or **deleted** (remove the job and its log). Cancellation was added in 11.2; previously, the only ways to stop a job were pause-then-delete.
+A queue job can be **paused** (stop processing but keep pending messages), **canceled** (immediately remove pending messages and mark the job done), or **deleted** (remove the job and its log).
 
 ### Permissions
 
@@ -103,7 +101,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 |---
 | Field | Type | Description
 |-|-|-
-| `comment_count` | number | [Comment](/docs/records/types/comments/) count on the record
+| `comment_count` | number | [Comment](/docs/records/types/comment/) count on the record
 | `comments` | comments | [Comments](/docs/guide/developers/dictionaries/#key-expansion)
 | `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
 | `links` | links | [Links](/docs/guide/developers/dictionaries/#key-expansion)

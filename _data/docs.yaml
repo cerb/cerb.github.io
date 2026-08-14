@@ -7,6 +7,7 @@
 - title: Reference
   docs:
     - activity-log
+    - agents
     - automations
     - buckets
     - calendars
@@ -68,6 +69,7 @@
   - scripting
   #- automations
   - plugins
+  - developers/cerb-ui
   - developers/icons
 
 - title: API

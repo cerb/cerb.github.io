@@ -23,8 +23,6 @@ search_index:
 
 This counter tracks how often a [worker](/docs/workers/) session is terminated by Cerb to free up a license seat. A spike here may indicate that you have more concurrent workers than available seats -- workers with the oldest idle sessions are kicked first to make room.
 
-Available in [Cerb 11.2](/releases/11.2/) and later.
-
 # Dimensions
 
 | Dimension | Description                                                  |

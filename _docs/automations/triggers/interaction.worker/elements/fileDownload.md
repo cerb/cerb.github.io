@@ -55,8 +55,6 @@ start:
 
 ### data:
 
-(Added in [11.0](/releases/11.0/))
-
 The raw content to download. Alternative to `uri:`.
 
 ### label:

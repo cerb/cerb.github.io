@@ -79,6 +79,12 @@ An interaction automation [dictionary](/docs/automations/#dictionaries) starts w
 
 ## await:form:
 
+<div class="cerb-box note">
+	<p>
+		<b>You don't have to write this by hand.</b> The automation editor includes a visual <b>Form Builder</b>: drag components onto a canvas that renders as the finished form, and the <a href="/docs/kata/">KATA</a> below is generated for you.
+	</p>
+</div>
+
 When suspending in the `await:form:` state, the interaction displays a web form with the desired elements. The form may prompt for user input, validate it, and set dictionary keys (placeholders) with the responses.
 
 {% highlight cerb %}
@@ -94,6 +100,39 @@ await:
 
 The title of this form to be displayed in the interaction popup. This is usually a summary of the current step.
 
+### resume:
+{: .no_toc}
+
+An [interaction](/docs/interactions/) that parks is offered back to you later -- in the command bar's Resume list, and in an [agent pane](/docs/toolbars/interactions/agent.pane/)'s History. The optional `resume:` block overrides how it reads there.
+
+{% highlight cerb %}
+{% raw %}
+await:
+  form:
+    title: Draft a reply
+    resume:
+      label: Reply to {{ticket_subject}}
+      preview: {{last_message_excerpt}}
+      icon: mail
+      color: '#3b82f6'
+    elements:
+      # ...
+{% endraw %}
+{% endhighlight %}
+
+| Key        | Notes                                                                 |
+|------------|-----------------------------------------------------------------------|
+| `label:`   | The conversation's name in the list                                   |
+| `preview:` | A line of context below the name, to tell similar conversations apart |
+| `icon:`    | An [icon](/docs/developers/icons/) name                               |
+| `color:`   | The icon's color                                                      |
+
+**None of this is required.** A resumable conversation is already named and iconed after the toolbar item that launched it, and a form containing an [`llmTranscript`](/docs/automations/triggers/interaction.worker/elements/llmTranscript/) additionally picks up the model provider's brand mark and an excerpt of the latest prompt. Set a key here only when you know a better value than those defaults.
+
+Values are **sticky**: an await that omits a key leaves the stored one alone. That's what keeps a long LLM turn parked on `await:queue:` from blanking the name its conversation was given.
+
+Whether a conversation can be resumed at all isn't decided here -- that's the launcher's business.
+
 ### elements:
 {: .no_toc}
 
@@ -105,6 +144,7 @@ A form can be created with any combination of the following element types:
 
 | Element |
 |-|-
+| [**agentPrompt:**](/docs/automations/triggers/interaction.worker/elements/agentPrompt/) | Composer for an [AI agent](/docs/agents/) conversation
 | [**audio:**](/docs/automations/triggers/interaction.worker/elements/audio/) | Play an audio file
 | [**chart:**](/docs/automations/triggers/interaction.worker/elements/chart/) | Render an interactive data visualization
 | [**chooser:**](/docs/automations/triggers/interaction.worker/elements/chooser/) | A search popup for selecting records
@@ -119,6 +159,9 @@ A form can be created with any combination of the following element types:
 | [**submit:**](/docs/automations/triggers/interaction.worker/elements/submit/) | Continue to next step
 | [**text:**](/docs/automations/triggers/interaction.worker/elements/text/) | Text input with data types
 | [**textarea:**](/docs/automations/triggers/interaction.worker/elements/textarea/) | Multiple lines of text
+| [**uiCommand:**](/docs/automations/triggers/interaction.worker/elements/uiCommand/) | Run a command in the host editor
+
+A `uiCommand:` element round-trips a command to the editor an interaction was launched beside, which requires a caller that provides a command bridge. It's advertised on the [interaction.worker.agent](/docs/automations/triggers/interaction.worker.agent/) trigger, which extends this one and offers every element listed here as well.
 
 When the interaction suspends in the `await` state, a `submit:` element is automatically appended to the form if one doesn't already exist.
 

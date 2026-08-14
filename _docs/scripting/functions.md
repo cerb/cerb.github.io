@@ -206,8 +206,6 @@ These functions are available in bot scripts and snippets:
 
 ## array_column
 
-(Added in [9.2.1](/releases/9.2.1/))
-
 The **array_column** function extracts a column from the elements of an array:
 
 {% highlight twig %}
@@ -227,8 +225,6 @@ The email addresses are: kina@cerb.example, milo@cerb.example, janey@cerb.exampl
 
 ## array_combine
 
-(Added in [9.0](/releases/9.0/))
-
 The **array_combine** function creates a new array with the given `keys` and `values`:
 
 {% highlight twig %}
@@ -245,8 +241,6 @@ Janey Youve can be reached at janey@cerb.example
 {% endhighlight %}
 
 ## array_count_values
-
-(Added in [10.0.4](/releases/10.0.4/))
 
 The **array_count_values** function takes an array of values as input, and returns an array with distinct values as keys and their count of occurrences. This function only works on arrays of strings or numbers.
 
@@ -284,8 +278,6 @@ These are new: Cerb
 
 ## array_extract_keys
 
-(Added in [9.6.4](/releases/9.6.4/))
-
 Returns the given keys from all elements of a list.
 
 {% highlight twig %}
@@ -317,8 +309,6 @@ customer@cerb.example,"Automating email replies",open
 
 ## array_fill_keys
 
-(Added in [10.0](/releases/10.0/))
-
 Create an array with the given keys, each set to the default value.
 
 `array_fill_keys(keys,value)`
@@ -334,8 +324,6 @@ Create an array with the given keys, each set to the default value.
 {% endhighlight %}
 
 ## array_intersect
-
-(Added in [9.0](/releases/9.0/))
 
 Returns a new array for all the elements in array1 that are also present in array2. This is the opposite of [array_diff](#array_diff).
 
@@ -354,8 +342,6 @@ These are in both: Apple, Microsoft
 
 ## array_matches
 
-(Added in [9.6.4](/releases/9.6.4/))
-
 Compares an array of values to an array of patterns.
 
 {% highlight twig %}
@@ -373,8 +359,6 @@ Matches: sales@cerb.example
 
 ## array_sort_keys
 
-(Added in [9.0](/releases/9.0/))
-
 Sort an associative array by its keys rather than its values.
 
 {% highlight twig %}
@@ -391,8 +375,6 @@ a,m,z
 
 ## array_unique
 
-(Added in [9.0](/releases/9.0/))
-
 Return a new array with only the distinct values from the `array` argument.
 
 {% highlight twig %}
@@ -407,8 +389,6 @@ Unique values 1,2,3,4,5,6
 {% endhighlight %}
 
 ## array_values
-
-(Added in [9.0](/releases/9.0/))
 
 Return the values from an associative array as a new indexed array. For instance, this can affect the output in JSON encoding by using `[]` rather than `{key:value}`.
 
@@ -502,8 +482,6 @@ https://cerb.example/avatars/worker/1?v=1513212702
 
 ## cerb_calendar_get_relative_date
 
-(Added in [11.0](/releases/11.0/))
-
 Calculate a future timestamp using calendar availability. For instance, this can be used for SLAs to generate a due date like "+4 business hours".
 
 `cerb_calendar_get_relative_date(calendar,rel_date,now)`
@@ -527,8 +505,6 @@ Due: Mon, 21 Oct 2024 09:00:00 -0700
 
 ## cerb_calendar_time_elapsed
 
-(Added in [10.1.1](/releases/10.1.1/))
-
 Calculate the time elapsed (in seconds) between two dates using calendar availability.
 
 `cerb_calendar_time_elapsed(calendar,date_from,date_to)`
@@ -550,8 +526,6 @@ Calculate the time elapsed (in seconds) between two dates using calendar availab
 
 ## cerb_current_worker
 
-(Added in [10.4.14](/releases/10.4.14/))
-
 Return a dictionary for the currently logged in worker. This returns an empty dictionary when used outside a browser session.
 
 `cerb_current_worker(expand)`
@@ -570,8 +544,6 @@ Hello Kina!
 {% endhighlight %}
 
 ## cerb_extract_uris
-
-(Added in [9.5.3](/releases/9.5.3/))
 
 Return an array of URLs found in HTML content, along with metadata (e.g. tag, attributes, URI parts).
 
@@ -661,8 +633,6 @@ https://cerb.example/files/1/original_message.html
 
 ## cerb_has_priv
 
-(Added in [9.0](/releases/9.0/))
-
 Returns a boolean depending on whether the given actor has the given privilege among their roles. If no actor is given, the current worker is assumed. This allows bot functionality, snippets, and widgets, to adapt based on worker permissions. This is particularly useful in HTML-based profile widgets.
 
 {% highlight twig %}
@@ -724,8 +694,6 @@ Return an [object](/docs/scripting/arrays-objects/) with every placeholder in th
 
 ## cerb_plugin_enabled
 
-(Added in [11.0](/releases/11.0/))
-
 Test if a Cerb plugin is installed and enabled.
 
 For instance, this can be used to make dashboard tabs or widgets conditional on a particular plugin being enabled (e.g. project boards).
@@ -747,8 +715,6 @@ For instance, this can be used to make dashboard tabs or widgets conditional on 
 
 ## cerb_record_readable
 
-(Added in [9.0](/releases/9.0/))
-
 Returns a boolean if the given actor has read access to the given record. If no actor is provided then the current worker is assumed. This allows bots and widgets to adapt based on record permissions. For instance, an HTML widget on a profile dashboard could only show a button to workers who can modify the record.
 
 {% highlight twig %}
@@ -764,8 +730,6 @@ Worker #1 can read ticket #123.
 {% endhighlight %}
 
 ## cerb_record_writeable
-
-(Added in [9.0](/releases/9.0/))
 
 Returns a boolean if the given actor has write access to the given record. If no actor is provided then the current worker is assumed. This allows bots and widgets to adapt based on record permissions. For instance, an HTML widget on a profile dashboard could only show a button to workers who can modify the record.
 
@@ -799,8 +763,6 @@ https://cerb.example/profiles/ticket/5
 
 ## cerb_workflow_config
 
-(Added in [11.0](/releases/11.0/))
-
 Perform runtime configuration lookups from any feature that supports automation scripting (e.g. automations, workflows, snippets). For instance, you can create a workflow just for sharing values (e.g. API keys) between multiple workflows.
 
 `cerb_workflow_config(name_or_id,key,default)`
@@ -821,8 +783,6 @@ sup3rs3cr3t
 {% endhighlight %}
 
 ## cerb_workflow_resources
-
-(Added in [11.0](/releases/11.0/))
 
 Perform runtime resource lookups and return a map of workflow resources and their local record IDs. This is useful from automations, event listeners, and toolbars.
 
@@ -1073,8 +1033,6 @@ You can unset deeply nested keys in a single line using dot-notation:
 
 ## dns_get_record
 
-(Added in [10.2.6](/releases/10.2.6/))
-
 Resolve DNS records by hostname and type. This enables workflows like verifying domain ownership via TXT records, validating SPF/DKIM, verifying MX servers, etc.
 
 `dns_get_record(hostname,type)`
@@ -1108,8 +1066,6 @@ Resolve DNS records by hostname and type. This enables workflows like verifying 
 {% endhighlight %}
 
 ## dns_host_by_ip
-
-(Added in [10.2.6](/releases/10.2.6/))
 
 Resolve a hostname from an IP. If a name can't be resolved for a valid IP, the IP is returned. If an invalid IP is provided, the result is an empty string.
 
@@ -1342,6 +1298,31 @@ Randomize an array:
 
 {% highlight text %}
 [2,4,5,1,3]
+{% endhighlight %}
+
+## uuid
+
+Generate a UUID (version 1).
+
+`uuid()`
+
+{% highlight twig %}
+{% raw %}
+{{uuid()}}
+{% endraw %}
+{% endhighlight %}
+
+{% highlight text %}
+5f9d7c1e-3b2a-11f0-9c1d-0242ac120002
+{% endhighlight %}
+
+This is useful for minting a stable identifier within a script. For instance, an [agent](/docs/agents/) session ID shared between [`llm.agent:`](/docs/automations/commands/llm.agent/#session_id), an [`agentPrompt`](/docs/automations/triggers/interaction.worker/elements/agentPrompt/) composer, and an [`llmTranscript`](/docs/automations/triggers/interaction.worker/elements/llmTranscript/) element:
+
+{% highlight cerb %}
+{% raw %}
+set:
+  session_id: {{uuid()}}
+{% endraw %}
 {% endhighlight %}
 
 ## validate_email

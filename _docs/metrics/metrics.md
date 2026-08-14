@@ -15,7 +15,7 @@ summary: This page provides a comprehensive overview of the metrics system in Ce
   of retention strategies to manage storage and processing costs and describes how
   metrics can be efficiently collected and processed in high volumes without performance
   degradation.
-social_image_url: /assets/images/docs/data-queries/data-queries-metrics-timeseries.png
+social_image_url: /assets/images/docs/metrics/metrics-explorer.png
 permalink: /docs/metrics/
 toc: ~
 jumbotron:
@@ -27,7 +27,7 @@ jumbotron:
 ---
 
 <div class="cerb-screenshot">
-<img src="/assets/images/docs/data-queries/data-queries-metrics-timeseries.png" class="screenshot">
+<img src="/assets/images/docs/metrics/metrics-explorer.png" class="screenshot">
 </div>
 
 {% comment %}
@@ -197,7 +197,7 @@ The default retention time per period is:
 
 The 5-minute period is a "sliding window" over the trailing 24 hours. When a new 5-minute period starts, the oldest period (crossing 24 hours in age) is removed. This maintains a constant set of (288) most recent 5-minute periods per metric.
 
-In [11.2+](/releases/11.2/), the daily-period retention can be configured per metric. This is particularly useful for metrics with high dimensionality and low long-term value (like rate-limiters), where keeping daily aggregations forever would balloon storage with little analytical benefit. The 5-minute and hourly retention windows still apply at their defaults.
+The daily-period retention can be configured per metric. This is particularly useful for metrics with high dimensionality and low long-term value (like rate-limiters), where keeping daily aggregations forever would balloon storage with little analytical benefit. The 5-minute and hourly retention windows still apply at their defaults.
 
 # Eventual consistency
 
@@ -226,17 +226,20 @@ These metrics are managed automatically by Cerb:
 |[cerb.automation.invocations](/docs/metrics/automation.invocations/)| How often automations are executed. Dimensions: `automation_id`, `trigger`, `exit_state`.
 |[cerb.behavior.duration](/docs/metrics/behavior.duration/)| How long behaviors are executed. Dimensions: `behavior_id` and `event`.
 |[cerb.behavior.invocations](/docs/metrics/behavior.invocations/)| How often behaviors are executed. Dimensions: `behavior_id` and `event`.
+|[cerb.mail.mailbox.errors](/docs/metrics/cerb.mail.mailbox.errors/)| Mailbox check failures by mailbox and error status code. Dimensions: `mailbox_id` and `status`.
+|[cerb.mail.mailbox.received](/docs/metrics/cerb.mail.mailbox.received/)| Messages downloaded from a mailbox. Dimensions: `mailbox_id`.
 |[cerb.mail.routing.rule.matches](/docs/metrics/mail.routing.rule.matches/)| Mail routing rule usage over time. Dimensions: `rule_id` (by ruleset record), `rule_key` (by rule), and `node_key` (by condition).
 |[cerb.mail.transport.deliveries](/docs/metrics/mail.transport.deliveries/)| How many successful messages are sent through a mail transport. Dimensions: `transport_id` and `sender_id` (email address).
 |[cerb.mail.transport.failures](/docs/metrics/mail.transport.failures/)| How many unsuccessful messages are attempted through a mail transport. Dimensions: `transport_id` and `sender_id` (email address).
-|[cerb.queue.messages.open](/docs/metrics/cerb.queue.messages.open/)| Available and in-flight queue messages per queue and job. Dimensions: `queue_id`, `job_id`, and `status_id`. ([11.2](/releases/11.2/)+)
-|[cerb.queue.messages.processed](/docs/metrics/cerb.queue.messages.processed/)| Done and failed queue messages per queue and job. Dimensions: `queue_id`, `job_id`, and `status_id`. ([11.2](/releases/11.2/)+)
+|[cerb.queue.messages.open](/docs/metrics/cerb.queue.messages.open/)| Available and in-flight queue messages per queue. Dimensions: `queue_id` and `status_id`.
+|[cerb.queue.messages.processed](/docs/metrics/cerb.queue.messages.processed/)| Done and failed queue messages per queue and job. Dimensions: `queue_id`, `job_id`, and `status_id`.
 |[cerb.record.search](/docs/metrics/record.search/)| How often each worker searches for a given record type. Dimensions: `record_type` and `worker_id`.
-|[cerb.scheduler.duration](/docs/metrics/cerb.scheduler.duration/)| How long each scheduler job runs, in milliseconds. Dimensions: `job`. ([11.2](/releases/11.2/)+)
-|[cerb.scheduler.invocations](/docs/metrics/cerb.scheduler.invocations/)| How often each scheduler job runs. Dimensions: `job`. ([11.2](/releases/11.2/)+)
-|[cerb.service.token.uses](/docs/metrics/cerb.service.token.uses/)| Authentications using a [service token](/docs/records/types/service_token/). Dimensions: `scope` and `client_ip`. ([11.2](/releases/11.2/)+)
-|[cerb.sessions.seat.kicks](/docs/metrics/cerb.sessions.seat.kicks/)| Worker sessions ended to free up a license seat. Dimensions: `worker_id`. ([11.2](/releases/11.2/)+)
-|[cerb.sessions.seat.kicks.duration](/docs/metrics/cerb.sessions.seat.kicks.duration/)| Cumulative idle seconds of worker sessions ended to free up a license seat. Dimensions: `worker_id`. ([11.2](/releases/11.2/)+)
+|[cerb.scheduler.duration](/docs/metrics/cerb.scheduler.duration/)| How long each scheduler job runs, in milliseconds. Dimensions: `job`.
+|[cerb.scheduler.invocations](/docs/metrics/cerb.scheduler.invocations/)| How often each scheduler job runs. Dimensions: `job`.
+|[cerb.search.index.records](/docs/metrics/cerb.search.index.records/)| Records held by each search index over time. Dimensions: `index_id` and `engine`.
+|[cerb.service.token.uses](/docs/metrics/cerb.service.token.uses/)| Authentications using a [service token](/docs/records/types/service_token/). Dimensions: `token_id`, `scope`, and `client_ip`.
+|[cerb.sessions.seat.kicks](/docs/metrics/cerb.sessions.seat.kicks/)| Worker sessions ended to free up a license seat. Dimensions: `worker_id`.
+|[cerb.sessions.seat.kicks.duration](/docs/metrics/cerb.sessions.seat.kicks.duration/)| Cumulative idle seconds of worker sessions ended to free up a license seat. Dimensions: `worker_id`.
 |[cerb.snippet.uses](/docs/metrics/snippet.uses/)| Snippet usage over time by worker. Dimensions: `snippet_id` and `worker_id`. This replaces the `snippet_use_history` table but imports its data.
 |[cerb.tickets.open](/docs/metrics/tickets.open/)| Open ticket counts over time by group and bucket. Dimensions: `group_id` and `bucket_id`. The metric is sampled every 15 minutes.
 |[cerb.tickets.open.elapsed](/docs/metrics/tickets.open.elapsed/)| How long tickets spent in the open status by group and bucket. Dimensions: `group_id` and `bucket_id`. The metric is sampled when an open ticket is moved to a new group/bucket, or an open ticket transitions to a non-open status.

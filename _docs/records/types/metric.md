@@ -37,6 +37,10 @@ jumbotron:
 * TOC
 {:toc}
 
+### Usage tracking
+
+Metric [worklists](/docs/worklists/) offer a 'Dataset' [sparklines column](/docs/worklists/#sparkline-columns) charting min, max, average, sum, and count, with a 2h/1d/30d range toggle.
+
 ### Records API
 
 These fields are available in the [Records API](/docs/api/endpoints/records/) and [packages](/docs/packages/):

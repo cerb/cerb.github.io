@@ -3,7 +3,7 @@ title: record.profile.image.editor
 excerpt: The profile image editor toolbar is displayed when editing a record's profile
   image, and allows automations to generate profile images.
 summary: This page provides detailed information about the profile image editor toolbar
-  in Cerb, available since version 10.4.2. It explains how the toolbar facilitates
+  in Cerb. It explains how the toolbar facilitates
   the creation of profile images through interaction.worker automations, allowing
   for the generation of images from text, emojis, file uploads, or external APIs like
   Stable Diffusion. The page outlines the configuration process, including how to
@@ -26,8 +26,6 @@ jumbotron:
   - label: Toolbars &raquo;
     url: /docs/toolbars/
 ---
-
-**Available since:** [10.4.2](/releases/10.4.2/)
 
 The profile image editor [toolbar](/docs/toolbars/) is displayed when editing a record's profile image, and allows [interaction.worker](/docs/interactions/) automations to generate profile images.
 

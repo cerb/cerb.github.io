@@ -39,9 +39,7 @@ The page is divided into sections, each with a blue menu designated by a downwar
   - [Authentication](/docs/setup/configure/authentication/)
   - [Sessions](/docs/setup/configure/sessions/)
 - **Records**
-  - [Avatars](/docs/setup/records/avatars/)
-  - [Custom Fields](/docs/setup/records/custom-fields/)
-  - [Snippets](/docs/setup/records/snippets/)
+  - [Record Types](/docs/records/types/) -- a reference for every record type and its fields, API keys, and search filters
 - **Team**
   - [Configure](/docs/setup/team/configure/)
   - [Roles](/docs/setup/team/roles/)
@@ -69,14 +67,20 @@ The page is divided into sections, each with a blue menu designated by a downwar
 - **Storage**
   - [Overview](/docs/setup/storage/overview/)
   - [Profiles](/docs/setup/storage/profiles/)
-  - [Objects](/docs/setup/storage/objects/)
 - **Developers**
   - [Automation Logs](/docs/setup/developers/automation-logs/)
   - [Automation Scripting Tester](/docs/setup/developers/scripting-tester/)
   - [Data Query Tester](/docs/setup/developers/data-query-tester/)
+  - [Agent Filesystem Terminal](/docs/setup/developers/agent-filesystem-terminal/)
+  - Automation Events
+  - Database Schema
   - Export Bots
-  - Icon Reference
+  - [Icon Builder](/docs/setup/developers/icon-builder/)
+  - LLM Agent Transcripts
   - OAuth2 Token Generator
   - Platform
+  - [Sheet Builder](/docs/setup/developers/sheet-builder/)
+  - Toolbars
+  - [UI Reference](/docs/developers/cerb-ui/)
 - **Plugins**
   - [Configure](/docs/setup/plugins/installed/)

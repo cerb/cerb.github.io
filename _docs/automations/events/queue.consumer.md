@@ -25,8 +25,6 @@ jumbotron:
     url: /docs/automations/#events
 ---
 
-(Added in [11.2](/releases/11.2/))
-
 **queue.consumer** [automation](/docs/automations/) [events](/docs/automations/#events) are triggered by the [Background Queue scheduler](/docs/queues/#background-queue-scheduler) to process a batch of messages from an [automation-backed queue](/docs/queues/#automation-backed-queues).
 
 The batch size is configured per [queue](/docs/records/types/queue/) -- use `1` for expensive per-message operations, or `10`-`100+` to amortize batch operations.

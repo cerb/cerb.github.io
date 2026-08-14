@@ -28,6 +28,7 @@ jumbotron:
 
 # Extensions
 
+| Automation | `core.bot.action.automation`
 | Classifier Prediction | `core.va.action.classifier_prediction`
 | Create Attachment | `core.va.action.create_attachment`
 | Create Domain | `va.action.create_domain`

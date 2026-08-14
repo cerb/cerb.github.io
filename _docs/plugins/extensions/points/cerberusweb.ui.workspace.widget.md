@@ -33,21 +33,25 @@ jumbotron:
 | [**(Deprecated) Pie Chart**](/docs/plugins/extensions/core.workspace.widget.pie_chart/) | `core.workspace.widget.pie_chart`
 | [**(Deprecated) Scatterplot**](/docs/plugins/extensions/core.workspace.widget.scatterplot/) | `core.workspace.widget.scatterplot`
 | [**(Deprecated) Subtotals**](/docs/plugins/extensions/core.workspace.widget.subtotals/) | `core.workspace.widget.subtotals`
+| **Automation** | `core.workspace.widget.automation`
+| **Automation: Graph** | `core.workspace.widget.automation.graph`
 | [**Bot Behavior Tree**](/docs/plugins/extensions/cerb.workspace.widget.behavior.tree/) | `cerb.workspace.widget.behavior.tree`
-| [**Bot Custom Widget**](/docs/plugins/extensions/core.workspace.widget.bot/) | `core.workspace.widget.bot`
+| [**Bot Custom Widget (Deprecated)**](/docs/plugins/extensions/core.workspace.widget.bot/) | `core.workspace.widget.bot`
 | [**Calendar**](/docs/plugins/extensions/core.workspace.widget.calendar/) | `core.workspace.widget.calendar`
+| **Chart KATA** | `cerb.workspace.widget.chart.kata`
 | [**Chart: Categories**](/docs/plugins/extensions/cerb.workspace.widget.chart.categories/) | `cerb.workspace.widget.chart.categories`
 | [**Chart: Pie**](/docs/plugins/extensions/cerb.workspace.widget.chart.pie/) | `cerb.workspace.widget.chart.pie`
 | [**Chart: Scatterplot**](/docs/plugins/extensions/cerb.workspace.widget.chart.scatterplot/) | `cerb.workspace.widget.chart.scatterplot`
 | [**Chart: Table**](/docs/plugins/extensions/cerb.workspace.widget.chart.table/) | `cerb.workspace.widget.chart.table`
+| **Chart: Time Blocks** | `cerb.workspace.widget.chart.timeblocks`
 | [**Chart: Time Series**](/docs/plugins/extensions/cerb.workspace.widget.chart.timeseries/) | `cerb.workspace.widget.chart.timeseries`
 | [**Clock**](/docs/plugins/extensions/core.workspace.widget.clock/) | `core.workspace.widget.clock`
 | [**Countdown**](/docs/plugins/extensions/core.workspace.widget.countdown/) | `core.workspace.widget.countdown`
 | [**Counter**](/docs/plugins/extensions/core.workspace.widget.counter/) | `core.workspace.widget.counter`
-| [**Form Interaction**](/docs/plugins/extensions/core.workspace.widget.form_interaction/) | `core.workspace.widget.form_interaction`
+| [**Interactions Toolbar**](/docs/plugins/extensions/core.workspace.widget.form_interaction/) | `core.workspace.widget.form_interaction`
 | [**Gauge**](/docs/plugins/extensions/core.workspace.widget.gauge/) | `core.workspace.widget.gauge`
 | [**Knowledgebase Browser**](/docs/plugins/extensions/kb.workspace.widget.kb.browser/) | `kb.workspace.widget.kb.browser`
-| [**Map: Geo Points**](/docs/plugins/extensions/cerb.workspace.widget.map.geopoints/) | `cerb.workspace.widget.map.geopoints`
+| [**Map**](/docs/plugins/extensions/cerb.workspace.widget.map.geopoints/) | `cerb.workspace.widget.map.geopoints`
 | [**Project Board**](/docs/plugins/extensions/cerb.workspace.widget.project_board/) | `cerb.workspace.widget.project_board`
 | [**Record Fields**](/docs/plugins/extensions/core.workspace.widget.record.fields/) | `core.workspace.widget.record.fields`
 | [**Sheet**](/docs/plugins/extensions/core.workspace.widget.sheet/) | `core.workspace.widget.sheet`

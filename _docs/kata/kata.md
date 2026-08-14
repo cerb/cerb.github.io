@@ -89,6 +89,32 @@ options:
   picklist/group:
 {% endhighlight %}
 
+#### Names used as placeholders
+
+Where a `type/name:` identifier becomes a **dictionary key** -- something you read back later as a placeholder -- the name must be a valid variable name: letters, numbers, and underscores only.
+
+{% highlight cerb %}
+{% raw %}
+inputs:
+  text/order_number:      # valid
+  text/order-number:      # rejected
+{% endraw %}
+{% endhighlight %}
+
+The reason is that a dash isn't part of a variable reference. {% raw %}`{{a-b}}`{% endraw %} is the subtraction `a - b`, which renders as `0` with no error. Rather than let a dashed name silently produce zero everywhere it's read -- a worklist export column full of zeros, or a snippet placeholder that evaluates to nothing -- Cerb rejects it.
+
+This is enforced where a name actually lands in a dictionary:
+
+* `inputs:`
+* `await:form:elements:`
+* [Snippet](/docs/snippets/) and dashboard prompts
+* [Worklist](/docs/worklists/) export columns
+* LLM tool `parameters:`
+
+It's also available declaratively as `nameFormat: variable`.
+
+The parser still accepts the wider character set elsewhere, deliberately. Most `type/name:` names are labels, IDs, or handles that are never read back as a placeholder, so enforcing the narrow rule everywhere would reject working content for no benefit.
+
 ### Values
 
 A key may be followed by a text value rather than children. KATA will not automatically detect its type, which often removes the need for escaping.
@@ -513,6 +539,21 @@ content@trim:    this has no whitespace
 
 {% comment %}
 Kata is the word for "form" in Japanese, which refers to the refinement of perfected movements through repeated practice.
+
+# Editing
+
+Cerb edits KATA with its own in-browser editor ([`CerbUI.KataEditor`](/docs/developers/cerb-ui/)).
+
+|---
+| Shortcut | Action
+|-|-
+| `Mod`+`F` | Find and replace
+| `Mod`+`/` | Toggle line comments
+| `Tab` / `Shift`+`Tab` | Indent / dedent by two spaces
+
+It also provides KATA-aware syntax highlighting, contextual autocompletion, code folding (including fold-to-depth), indentation guides that continue across blank lines, and gutter markers. A `cerb:` URI in the gutter is clickable and opens the record it references.
+
+Large documents render through viewport virtualization, so a long configuration stays responsive.
 
 # Purpose
 

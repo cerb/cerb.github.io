@@ -27,6 +27,16 @@ jumbotron:
     url: /docs/records/types/
 ---
 
+<div class="cerb-box warning">
+	<p>
+		<b>Moved to an optional plugin in <a href="/releases/12.0/">12.0</a>.</b> File bundles now
+		live in the <code>cerb.file_bundles</code> plugin, which is <b>disabled by default</b>.
+		On upgrade the plugin is enabled automatically only if you already have file bundle records;
+		otherwise the empty table is dropped and the plugin recreates it if an administrator enables
+		it later. Installations that never used file bundles stay clean.
+	</p>
+</div>
+
 |---
 |-|-
 | **Name (singular):** | File Bundle
@@ -74,7 +84,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 | Field | Type | Description
 |-|-|-
 | `attachments` | attachments | [Attachments](/docs/guide/developers/dictionaries/#key-expansion)
-| `comment_count` | number | [Comment](/docs/records/types/comments/) count on the record
+| `comment_count` | number | [Comment](/docs/records/types/comment/) count on the record
 | `comments` | comments | [Comments](/docs/guide/developers/dictionaries/#key-expansion)
 | `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
 | `links` | links | [Links](/docs/guide/developers/dictionaries/#key-expansion)

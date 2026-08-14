@@ -109,7 +109,7 @@ Disable this option only if your replica lag is consistently near zero and you h
 
 **Reads are not going to the replica**
 
-Verify that `APP_DB_READER_HOST` is defined and non-empty. Check the PHP error log for connection failures — if Cerb cannot reach the replica, it may silently fall back to the primary.
+Verify that `APP_DB_READER_HOST` is defined and non-empty. Check the PHP error log for connection failures -- if Cerb cannot reach the replica, it may silently fall back to the primary.
 
 **Connection timeout errors**
 

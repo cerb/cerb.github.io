@@ -476,6 +476,12 @@ The permissions of automations are governed by **policies**. A policy is a colle
     <img src="/assets/images/docs/automations/editor-policy.png" class="screenshot">
 </div>
 
+### Generating a policy
+
+The editor can generate a **least-privilege** policy for you: it reads the script in front of it and writes the tightest policy that still allows it to run.
+
+This is a much better starting point than a broad policy that quietly permits more than the script needs. Regenerate it after adding commands, and review the result -- the generator describes what the script does today, not what you intend to allow tomorrow.
+
 ### Scopes
 
 | Scope | 
@@ -600,7 +606,7 @@ In most cases, a better approach is to break up long tasks into smaller pieces a
 
 You can test policies from the automation simulator.
 
-You can also test rule logic from **Setup >> Developers >> Bot Scripting Tester**:
+You can also test rule logic from **Setup >> Developers >> Automation Scripting Tester**:
 
 {% highlight text %}
 {% raw %}
@@ -710,8 +716,6 @@ When both automations and legacy [bot](/docs/records/types/bot/) behaviors are a
 | 0–127 | Automation runs **before** legacy behaviors |
 | 128–255 | Automation runs **after** legacy behaviors |
 
-This ordering was introduced in [11.1.8](/releases/11.1.8/). Prior to that version, automations always ran before legacy behaviors regardless of priority.
-
 # Triggers
 
 Triggers are invoked **directly** by Cerb functionality -- widgets, AI agents, timers, and [function:](/docs/automations/commands/function/) calls from other automations. A trigger invokes a specific automation by name and passes structured inputs. Triggers do **not** use listeners.
@@ -723,6 +727,7 @@ Triggers are invoked **directly** by Cerb functionality -- widgets, AI agents, t
 | [**behavior.action**](/docs/automations/triggers/behavior.action/) | **x** | | Execute an automation from a legacy bot behavior
 | [**data.query**](/docs/automations/triggers/data.query/) | **x** | | Return results for custom [data queries](/docs/data-queries/)
 | [**interaction.worker**](/docs/automations/triggers/interaction.worker/) | **x** | * | Worker [interactions](/docs/interactions/) on [toolbars](/docs/toolbars/) and widgets
+| [**interaction.worker.agent**](/docs/automations/triggers/interaction.worker.agent/) | **x** | * | Worker [interactions](/docs/interactions/) where an AI agent drives the host editor it was launched beside
 | [**interaction.worker.explore**](/docs/automations/triggers/interaction.worker.explore/) | **x** | * | Worker [interactions](/docs/interactions/) that use custom logic to return the next record in explore mode
 | [**interaction.website**](/docs/automations/triggers/interaction.website/) | **x** | * | Website visitor [interactions](/docs/interactions/)
 | [**llm.tool**](/docs/automations/triggers/llm.tool/) | **x** | | A reusable function that can be invoked by a large language model
@@ -843,6 +848,12 @@ Schedules are defined in [Unix CRON expression format](https://en.wikipedia.org/
 
 The automation editor includes syntax highlighting, autocompletion for the [KATA](/docs/kata/) syntax, a step-based debugger with full access to the current state, a simulator, and a reference for each trigger event.
 
+### Starter templates
+
+A new automation opens on a filterable list of starter templates rather than an empty editor. Picking one seeds a working trigger, script, and policy; several ask a few questions first and generate the script from your answers.
+
+The bundled templates cover AI agent chats and agent tools, worker interactions, reacting to ticket changes, and sending a Slack message. Plugins can contribute their own through the `cerb.automation.template` extension point.
+
 A contextual toolbar provides interactions for adding [inputs](#inputs), [commands](#commands), and [exit states](#exit-states).
 
 ### Change History
@@ -861,6 +872,14 @@ This opens a popup that displays the differences between a past version and the 
 
 The left editor is read-only, but the right editor may be modified. Any changes will update the differences in real-time.
 
+### Simulate initial state
+
+Test runs can be primed from a form built out of the trigger's own inputs, instead of hand-writing an initial state document. Each trigger describes what it can simulate, so a mail filter, a webhook responder, and a worker interaction each prompt for the fields that actually apply to them.
+
+### What changed
+
+The editor's 'Run' tab can show a diff between a run's input and output state -- what the automation actually changed -- instead of two state documents to compare by eye.
+
 ### Export
 
 An automation may be exported by clicking on the **Export** button in the editor toolbar.
@@ -873,9 +892,11 @@ This creates a [package](/docs/packages/) that can be imported into another Cerb
 
 ### Visualizations
 
-The automation editor has a 'Visualization' tab with a flowchart for the current script.
+The automation editor has a 'Visualization' tab with a control-flow graph for the current script, mapping its decisions, outcomes, and loops. This makes an unfamiliar or deeply nested automation much easier to follow.
 
-Clicking on a node highlights the relevant line of code in the editor.
+Double-clicking a node, or one of its properties, jumps to that line in the code. This makes the graph a way to navigate a long script rather than only to read it.
+
+The same graph is also available as an ['Automation: Graph'](/docs/dashboards/widgets/automation-graph/) card, profile, and workspace [widget](/docs/dashboards/), so it can be surfaced outside the editor. Outside the dialog the graph gains a toolbar -- a Graph/Code switcher, fit and zoom controls, and a minimap -- which makes it more practical for reading a large script.
 
 <div class="cerb-screenshot">
     <img src="/assets/images/docs/automations/editor-visualization.png" class="screenshot">

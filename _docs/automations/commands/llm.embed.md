@@ -20,8 +20,6 @@ jumbotron:
 
 The **llm.embed:** [automation](/docs/automations/) command interfaces with Large Language Model (LLM) providers to generate text vector embeddings. 
 
-(Added in [11.1](/releases/11.1/))
-
 Authentication and API calls are automatically handled by the command.
 
 You simply provide a list of `texts:` to embed.

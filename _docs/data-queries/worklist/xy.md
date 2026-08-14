@@ -39,9 +39,9 @@ Each `series.*` should provide:
 * `label:` (human-friendly series name for visualizations)
 * `of:` (record type)
 * `x:` field(@year,month,day,hour,minute,second)
-* `x.metric:` (an equation to apply to each x-axis value; [9.1.6](/releases/9.1.6/) or later)
+* `x.metric:` (an equation to apply to each x-axis value)
 * `y:` (field)
-* `y.metric:` (an equation to apply to each y-axis value; [9.1.6](/releases/9.1.6/) or later)
+* `y.metric:` (an equation to apply to each y-axis value)
 * `query:` (the query to filter the results for this series)
 * `query.required:` (the required query to filter the results for this series)
 

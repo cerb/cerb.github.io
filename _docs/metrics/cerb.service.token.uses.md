@@ -25,11 +25,10 @@ This counter tracks each authentication using a [service token](/docs/records/ty
 
 Use this metric to monitor cron health (e.g. confirm `cron:maint` is invoked once a day), spot misconfigured monitoring tools that share a single token across many checks, or detect unexpected traffic on a particular scope.
 
-Available in [Cerb 11.2](/releases/11.2/) and later.
-
 # Dimensions
 
 | Dimension | Description                                                  |
 |-----------|--------------------------------------------------------------|
+| token_id  | The [service token](/docs/records/types/service_token/) that authenticated |
 | scope     | The endpoint scope used by the token (e.g. `cron:maint`, `debug:status`, `update`) |
 | client_ip | The IP address of the client presenting the token             |

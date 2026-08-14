@@ -1,11 +1,9 @@
 ---
 title: Workflows
-excerpt: This page provides an overview of Cerb's Workflow KATA, a feature introduced
-  in version 11.0, which allows users to create and manage workflows as templates
-  with versioned updates.
-summary: This page provides an overview of Cerb's Workflow KATA, a feature introduced
-  in version 11.0, which allows users to create and manage workflows as templates
-  with versioned updates. These workflows help synchronize related records across
+excerpt: This page provides an overview of Cerb's Workflow KATA, which allows users
+  to create and manage workflows as templates with versioned updates.
+summary: This page provides an overview of Cerb's Workflow KATA, which allows users
+  to create and manage workflows as templates with versioned updates. These workflows help synchronize related records across
   different environments like development, staging, and production. The page includes
   a sample workflow template for creating tasks with configurable names and owners,
   and explains the schema components such as config, extensions, and records. It details
@@ -24,7 +22,6 @@ jumbotron:
 
 <p class="youtube-video-container"><iframe width="1040" height="585" src="https://www.youtube.com/embed/F0p2INrtq1U" title="" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
 
-
 **Workflows** are text-based templates that define a set of records and configuration values. They enable anyone to create and share new features in Cerb, and synchronize ongoing changes between multiple environments (e.g. dev, staging, production).
 
 When a workflow is updated, its changes are automatically recorded in a versioned history. For instance, improvements to a workflow can be made by developers and tested on their own machines in a free, clean copy of Cerb. 
@@ -32,10 +29,6 @@ When a workflow is updated, its changes are automatically recorded in a versione
 A new version of a workflow can be confidently deployed to a staging or production environment and its records will be automatically synchronized. Changes with unexpected consequences can be easily rolled back to the last stable version.
 
 We provide a [library](/resources/workflows/) of pre-built workflows for common requirements; like email auto-replies, capturing user feedback, customer satisfaction surveys, service level agreements, and more.
-
-|---
-| **Since version:** | [11.0](/releases/11.0/)
-| **Found at:** | Search >> Workflows
 
 Here's a simple workflow KATA template that creates a new task using a configurable name and owner.
 
@@ -46,7 +39,7 @@ workflow:
   version@date: 2025-12-31T00:00:00Z
   description: This example workflow manages a task record
   requirements:
-    cerb_version: >=11.0 <11.2
+    cerb_version: >=11.0 <12.0
     cerb_plugins: cerberusweb.core,
   config:
     text/taskName:
@@ -71,6 +64,16 @@ When you make a changes to a workflow template, any records that were previously
 
 * TOC
 {:toc}
+
+<div class="cerb-box note">
+	<p>
+		Editing a workflow-managed record from the interface warns you first, since the next
+		synchronization may overwrite the change.
+		This applies to <code>automation</code>, <code>automation_event_listener</code>,
+		<code>custom_field</code>, <code>custom_fieldset</code>, <code>custom_record</code>,
+		<code>mail_routing_rule</code>, and <code>toolbar_section</code> records.
+	</p>
+</div>
 
 # Workflow KATA
 

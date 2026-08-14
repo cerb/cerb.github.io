@@ -37,7 +37,7 @@ start:
       simulate.success:
         status_code: 200
         content_type: application/json
-        body: '{"result":"ok"}'
+        body: {"result":"ok"}
     on_success:
       return:
         body@key: http_response:body

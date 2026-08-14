@@ -316,7 +316,6 @@ Also allow specific characters:
 {% endraw %}
 {% endhighlight %}
 
-
 {% highlight text %}
 Ignore nonalphanumeric but allow spaces!
 {% endhighlight %}
@@ -324,8 +323,6 @@ Ignore nonalphanumeric but allow spaces!
 ## append
 
 Append a suffix to the current text.
-
-(Introduced in [10.0.3](/releases/10.0.3/))
 
 `|append(suffix, delimiter, trim)`
 
@@ -374,8 +371,6 @@ Sum the numeric elements of an array.
 
 Convert between number system bases.
 
-(Introduced in [9.0.8](/releases/9.0.8/))
-
 {% highlight twig %}
 {% raw %}
 {% set int = 123456789 %}
@@ -423,8 +418,6 @@ VGhpcyB3YXMgYmFzZTY0LWVuY29kZWQ=
 
 ## base64url_decode
 
-(Added in [9.1.8](/releases/9.1.8/))
-
 Decode a base64url-encoded string:
 
 {% highlight twig %}
@@ -439,8 +432,6 @@ This was base64url-encoded
 {% endhighlight %}
 
 ## base64url_encode
-
-(Added in [9.1.8](/releases/9.1.8/))
 
 Encode a string in base64url:
 
@@ -511,8 +502,6 @@ Kina
 
 ## cerb_translate
 
-(Added in [9.0](/releases/9.0/))
-
 Converts string IDs (like `status.open`) into text in the current worker's language.
 
 {% highlight twig %}
@@ -526,8 +515,6 @@ The ticket is open.
 {% endhighlight %}
 
 ## column
-
-(Added in [10.1.1](/releases/10.1.1/))
 
 Extract a key from each item in an array as a new array. This has the same effect as the [array_column()](/docs/scripting/functions/#array_column) function.
 
@@ -583,11 +570,9 @@ This has ? emoji
 
 ## csv
 
-(Added in [9.6.4](/releases/9.6.4/))
-
 Format an array as a comma-separated values list. This is useful for exporting reports for Excel from bots.
 
-As of [11.2](/releases/11.2/), objects and dictionaries are automatically coerced to arrays. Previously, the filter failed unless the input was already an array.
+Objects and dictionaries are automatically coerced to arrays.
 
 {% highlight twig %}
 {% raw %}
@@ -733,8 +718,6 @@ This is &quot;escaped&quot; for <b>HTML</b>
 {% endhighlight %}
 
 ## filter
-
-(Added in [10.1.1](/releases/10.1.1/))
 
 Exclude items from an array using an arrow function.
 
@@ -884,8 +867,6 @@ List:
 
 ## image_info
 
-(Added in [9.6.7](/releases/9.6.7/))
-
 Returns information about an image. The image may be provided as bytes or in [data URI format](https://en.wikipedia.org/wiki/Data_URI_scheme). 
 
 `|image_info()`
@@ -910,8 +891,6 @@ data:image/png;base64,iVBORw0KGgoAAAA....
 {% endhighlight %}
 
 ## indent
-
-(Added in [9.6.4](/releases/9.6.4/))
 
 Prefix the start of each line with a given marker in a block of text.
 
@@ -1094,8 +1073,6 @@ why are you yelling?
 
 ## map
 
-(Added in [10.1.1](/releases/10.1.1/))
-
 Apply a function to each item in an array to create a new array.
 
 `|map(func)`
@@ -1122,8 +1099,6 @@ Averages:
 {% endhighlight %}
 
 ## markdown_to_html
-
-(Added in [9.5.4](/releases/9.5.4/))
 
 Convert Markdown[^markdown] formatting to HTML:
 
@@ -1206,8 +1181,6 @@ That will be $16,858.00
 {% endhighlight %}
 
 ## parse_csv
-
-(Added in [10.2.4](/releases/10.2.4/))
 
 Parse a document with rows of comma-separated columns. Returns an array of rows with elements for columns.
 
@@ -1309,8 +1282,6 @@ Parse a URL string into an object for validation.
 
 ## parse_user_agent
 
-(Added in [10.3.2](/releases/10.3.2/))
-
 Parse a user-agent string into an object for validation.
 
 {% highlight twig %}
@@ -1332,8 +1303,6 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 13_0) AppleWebKit/605.1.15 (KHTML, like G
 
 ## permalink
 
-(Added in [9.2.3](/releases/9.2.3/))
-
 {% highlight twig %}
 {% raw %}
 {% set text = "This is the title of a record!" %}
@@ -1346,8 +1315,6 @@ this-is-the-title-of-a-record
 {% endhighlight %}
 
 ## qp_decode
-
-(Added in [11.1.1](/releases/11.1.1/))
 
 Decode a string in quoted-printable format.
 
@@ -1383,8 +1350,6 @@ The Team 👋
 {% endhighlight %}
 
 ## qp_encode
-
-(Added in [11.1.1](/releases/11.1.1/))
 
 Encode a string in quoted-printable format. For instance, creating tickets with emoji using [email.parse:](/docs/automations/commands/email.parse/).
 
@@ -1438,8 +1403,6 @@ You should quote it.
 {% endhighlight %}
 
 ## reduce
-
-(Added in [10.1.1](/releases/10.1.1/))
 
 Reduce an array of items into a single output value.
 
@@ -1509,8 +1472,6 @@ Order Processing - 7 Days
 {% endhighlight %}
 
 ## repeat
-
-(Added in [10.2.3](/releases/10.2.3/))
 
 Repeat a string a given number of times.
 
@@ -1732,8 +1693,6 @@ Split a string on comma delimiters. This automatically handles whitespace paddin
 
 ## stat
 
-(Added in [10.3.8](/releases/10.3.8/))
-
 Calculate a statistical measure for a given array of numbers.
 
 `|stat(measure, decimals)`
@@ -1754,8 +1713,6 @@ Calculate a statistical measure for a given array of numbers.
 {% endhighlight %}
 
 ## str_pos
-
-(Added in [10.1.2](/releases/10.1.2/))
 
 Return the position of a substring (needle) within a larger text (haystack). This returns `-1` if the substring is not found.
 
@@ -1779,8 +1736,6 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ
 {% endhighlight %}
 
 ## str_sub
-
-(Added in [10.1.2](/releases/10.1.2/))
 
 Extract a substring from a larger string using starting and ending positions. This is an alternative to [\|slice(from,length)](/docs/scripting/filters/#slice).
 
@@ -2074,8 +2029,6 @@ name=Kina&action=light_on
 {% endhighlight %}
 
 ## values
-
-(Added in [10.1.1](/releases/10.1.1/))
 
 Return the values of an array with sequential keys. This is the filter equivalent of the [array_values()](/docs/scripting/functions/#array_values) function.
 

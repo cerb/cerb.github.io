@@ -128,7 +128,7 @@ git branch --remote
 Switch to the desired major version branch:
 
 {% highlight bash %}
-git checkout v11.2
+git checkout v12.0
 {% endhighlight %}
 
 Pull the latest updates:

@@ -26,6 +26,19 @@ jumbotron:
 
 **Project boards** are based on the kanban[^kanban-dev] development process, which itself was derived from improvements to just-in-time production pioneered by Japanese manufacturer Toyota in the 1940s[^kanban].
 
+<div class="cerb-box note">
+	<p>
+		<b>Project boards vs. the Daily Task Board.</b> A project board is a shared, team-facing
+		board whose columns you define. The
+		<a href="/docs/workspaces/#daily-task-board">Daily Task Board</a> is a personal,
+		day-oriented board whose columns and
+		placement are <i>derived</i> from a task's own status and dates rather than stored on the
+		board. Use a project board to model a process; use a Daily Task Board to plan your day.
+	</p>
+</div>
+
+A card's board placement derives from its [task project](/docs/records/types/task_project/) and active flag rather than a stored board configuration, and the board templates are restyled on [Cerb UI](/docs/developers/cerb-ui/).
+
 With kanban, each project has a **board**, and each unit of work in that project is represented by a **card**.  Cards are organized into **columns** on the board based on their stage of completion. Typically, cards move from left to right through the columns of the process.
 
 One of the core principles of kanban is limiting the amount of work in progress.  For instance, while there may be a large number of cards in a leftmost column named **"TODO"**, there is an agreed upon limit of 2-3 cards in the next **"In Progress"** column.  Cerb does not enforce these limits for you, but a useful convention is adding the limit to the end of the column name -- like **"In Progress (3)"**.

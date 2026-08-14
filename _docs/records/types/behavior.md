@@ -27,6 +27,19 @@ jumbotron:
     url: /docs/records/types/
 ---
 
+<div class="cerb-box warning">
+	<p>
+		<b>Moved to an optional plugin in <a href="/releases/12.0/">12.0</a>, and deprecated.</b>
+		Legacy bot behaviors now live in the <code>cerb.behaviors.legacy</code> plugin. On upgrade it
+		is enabled automatically only if active behaviors exist, so installations without them stay
+		clean. They will not be retired during 12.x, and gained improvements in 12.0. New work should use <a href="/docs/automations/">automations</a>.
+	</p>
+</div>
+
+### Change history
+
+Legacy behaviors now track a change history the way [automations](/docs/automations/) do. From a behavior tree, click the event and choose **Edit History** to compare any two revisions in the diff viewer.
+
 |---
 |-|-
 | **Name (singular):** | Behavior
@@ -36,6 +49,10 @@ jumbotron:
 
 * TOC
 {:toc}
+
+### Usage tracking
+
+Behavior [worklists](/docs/worklists/) offer a 'Usage' [sparklines column](/docs/worklists/#sparkline-columns) charting runs and duration, with a 2h/1d/30d range toggle. A matching `usage:` [quick search filter](/docs/search/#parameterized-metrics-filters) queries the same data -- for instance, `usage:(since:today)`.
 
 ### Records API
 
@@ -82,7 +99,7 @@ These optional placeholders are also available with **key expansion** in [dictio
 |---
 | Field | Type | Description
 |-|-|-
-| `comment_count` | number | [Comment](/docs/records/types/comments/) count on the record
+| `comment_count` | number | [Comment](/docs/records/types/comment/) count on the record
 | `comments` | comments | [Comments](/docs/guide/developers/dictionaries/#key-expansion)
 | `custom_<id>` | mixed | [Custom Fields](/docs/guide/developers/dictionaries/#key-expansion)
 | `links` | links | [Links](/docs/guide/developers/dictionaries/#key-expansion)

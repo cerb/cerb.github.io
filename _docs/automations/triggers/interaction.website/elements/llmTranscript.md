@@ -35,9 +35,6 @@ start:
         llmTranscript/prompt_transcript:
           session_id: {{results.session_id}}
           hidden@bool: {{prompt_user is empty}}
-          tool_labels:
-            docs_search@raw: Searching documentation: {{query}}
-            docs_fetch@raw: Reading documentation
         text/prompt_user:
           required@bool: yes
           placeholder: (ask a question about Cerb)
@@ -60,16 +57,17 @@ start:
 
 The transcript ID to display. This can be retrieved from [llm.agent:](/docs/automations/commands/llm.agent/) output.
 
-### tool_labels:
+### label:
 
-A dictionary of tool names and the text to render in the transcript. This may include placeholders for the tool parameters.
+An optional label displayed above the transcript.
 
-{% highlight cerb %}
-{% raw %}
-tool_labels:
-  example_tool@raw: Running tool: {{param_name}}
-{% endraw %}
-{% endhighlight %}
+<div class="cerb-box note">
+	<p>
+		Tool display names and icons aren't configured here. They're set on the tool itself in
+		<a href="/docs/automations/commands/llm.agent/#tools"><code>llm.agent:</code></a>, with
+		<code>labels:</code> (<code>summary:</code> and <code>active:</code>) and an <code>icon:</code>.
+	</p>
+</div>
 
 ### hidden:
 
