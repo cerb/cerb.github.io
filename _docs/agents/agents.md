@@ -23,6 +23,8 @@ An **AI agent** in Cerb is an ordinary [worker](/docs/workers/) record with an `
 
 An AI worker can never sign in. Interactive logins and SSO are refused outright, and an AI worker doesn't require an email address.
 
+**None of this is required.** AI in Cerb is additive rather than a dependency: with no [agent model](/docs/records/types/agent_model/) configured, there's nothing to switch off and nothing to ignore -- the interface is simply the one you already had. Link a model and the features that depend on one become available. Everything else in Cerb works the same either way.
+
 <p class="youtube-video-container"><iframe width="1280" height="720" src="https://www.youtube.com/embed/dOjF7-nofbA" title="Watch every AI agent conversation with LLM transcripts" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
 
 <div class="cerb-box note">
