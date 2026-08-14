@@ -76,7 +76,7 @@ The page is divided into sections, each with a blue menu designated by a downwar
   - Database Schema
   - Export Bots
   - [Icon Builder](/docs/setup/developers/icon-builder/)
-  - LLM Agent Transcripts
+  - [LLM Agent Transcripts](/docs/setup/developers/llm-agent-transcripts/)
   - OAuth2 Token Generator
   - Platform
   - [Sheet Builder](/docs/setup/developers/sheet-builder/)
