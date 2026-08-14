@@ -141,6 +141,7 @@ You can use the connected account you just created to access [AWS APIs](https://
 
 # Related resources
 
+* Guide: [Run large language models on Amazon Bedrock](/solutions/integrations/bedrock/)
 * Workflow: [Generate Profile Images (Amazon Bedrock)](/workflows/cerb.integrations.aws_bedrock.profile_images/)
 * Guide: [Run AWS Lambda functions from a Cerb bot](/guides/integrations/aws/lambda/)
 * Guide: [Give Cerb bots the power of speech with Amazon Polly](/guides/integrations/aws/polly-speech/)
