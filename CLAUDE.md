@@ -120,6 +120,19 @@ Prefer **workflows** over packages for distributing Cerb functionality. Workflow
 
 Workflow documentation lives in `_workflows/`. Use a workflow name prefix based on a domain you own (e.g., `com.example.feature`).
 
+### Markdown Tables
+
+Always write out full Markdown table syntax: leading and trailing pipes on every row, a complete separator row, and cells padded so the columns line up in the source.
+
+```markdown
+| Key         | Type    | Notes                                    |
+|-------------|---------|------------------------------------------|
+| `command:`  | text    | The name of the host command to run      |
+| `params:`   | list    | Optional parameters passed to the command |
+```
+
+Don't use the abbreviated forms (`|-|-`, or rows with no trailing pipe). They render the same, but they're unreadable in the source and make a table painful to edit or extend later.
+
 ### Liquid Expressions in Tables
 
 To include Liquid template expressions (e.g. `{{record.aliases|join(', ')}}`) inside markdown table cells without triggering a Liquid parse error, wrap them in `{% raw %}...{% endraw %}`:
