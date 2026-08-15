@@ -93,11 +93,11 @@ Change occurrences of **cerb.email.dmarc_reports** to your own workflow identifi
 {% raw %}
 workflow:
   name: cerb.email.dmarc_reports
-  version: 2025-02-21T00:00:00Z
+  version: 2026-08-13T00:00:00Z
   description: Parse DMARC report attachments in email
   website: https://cerb.ai/workflows/cerb.email.dmarc_reports/
   requirements:
-    cerb_version: >=11.0 <11.3
+    cerb_version: >=12.0 <12.1
     cerb_plugins: cerberusweb.core
 
 records:
@@ -263,7 +263,7 @@ records:
           interaction/dmarcReport:
             label: Open DMARC Report
             uri: cerb:automation:cerb.email.dmarcReports.interaction
-            icon: briefcase
+            icon: toolbox
             hidden@bool:
               {{
                 not (

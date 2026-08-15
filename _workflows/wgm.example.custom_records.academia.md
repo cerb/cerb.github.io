@@ -61,7 +61,7 @@ workflow:
   website: https://cerb.ai/workflows/wgm.example.custom_records.academia/
   version: 2026-05-25T20:00:00Z
   requirements:
-    cerb_version: >=11.0 <11.3
+    cerb_version: >=11.0 <12.1
     cerb_plugins: cerberusweb.core
 
 records:

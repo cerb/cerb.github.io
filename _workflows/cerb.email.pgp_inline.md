@@ -148,11 +148,11 @@ Change occurrences of **cerb.email.pgp_inline** to your own workflow identifier.
 {% raw %}
 workflow:
   name: cerb.email.pgp_inline
-  version: 2025-02-21T00:00:00Z
+  version: 2026-08-13T00:00:00Z
   description: Encrypt messages with PGP and paste them inline in outgoing email
   website: https://cerb.ai/workflows/cerb.email.pgp_inline/
   requirements:
-    cerb_version: >=11.0 <11.3
+    cerb_version: >=12.0 <12.1
     cerb_plugins: cerberusweb.core
 
 records:
@@ -216,6 +216,6 @@ records:
         interaction/encryptWithPGP:
           uri: cerb:automation:cerb.email.pgpInline.interaction
           tooltip: Encrypt with PGP
-          icon: message-lock
+          icon: mail-lock
 {% endraw %}
 {% endhighlight %}

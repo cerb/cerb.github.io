@@ -146,7 +146,7 @@ workflow:
   description: Automatically assign tickets to workers based on priority
   website: https://cerb.ai/workflows/cerb.auto_dispatcher/
   requirements:
-    cerb_version: >=11.0 <11.3
+    cerb_version: >=11.0 <12.1
     cerb_plugins: cerberusweb.core,
   config:
     text/rejectReasons:

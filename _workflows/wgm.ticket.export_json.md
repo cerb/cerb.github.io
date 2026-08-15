@@ -47,9 +47,9 @@ workflow:
   description: Export tickets to a downloadable JSON file from their profile page.
   requirements:
     cerb_plugins: cerberusweb.core
-    cerb_version: >=11.0 <11.3
+    cerb_version: >=11.0 <12.1
   website: https://cerb.ai/
-  version: version: 2026-05-25T20:00:00Z
+  version: 2026-05-25T20:00:00Z
 records:
   automation/automation_ticket_export:
     fields:

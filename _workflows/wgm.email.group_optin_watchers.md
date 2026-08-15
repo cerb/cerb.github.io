@@ -47,7 +47,7 @@ workflow:
   description: Automatically add group watchers as ticket watchers for new/moved tickets.
   website: https://cerb.ai/workflows/wgm.email.group_optin_watchers/
   requirements:
-    cerb_version: >=11.0 <11.3
+    cerb_version: >=11.0 <12.1
     cerb_plugins: cerberusweb.core,
 records:
   automation_event_listener/listenerMailMoved:

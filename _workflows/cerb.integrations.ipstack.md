@@ -78,11 +78,11 @@ Change occurrences of **cerb.integrations.ipstack** to your own workflow identif
 {% raw %}
 workflow:
   name: cerb.integrations.ipstack
-  version: 2025-02-21T00:00:00Z
+  version: 2026-08-07T00:00:00Z
   description: Geolocate IPs and render locations on maps.
   website: https://cerb.ai/workflows/cerb.integrations.ipstack/
   requirements:
-    cerb_version: >=11.0 <11.3
+    cerb_version: >=11.0 <12.1
     cerb_plugins: cerberusweb.core,
   config:
     chooser/ipstack_account_id:
@@ -289,7 +289,6 @@ records:
       toolbar_name: global.menu
       priority: 200
       is_disabled: 0
-      workflow_id@int: {{workflow_id}}
       toolbar_kata@raw:
         interaction/lookupIp:
           label: Location by IP

@@ -162,7 +162,7 @@ workflow:
   description: Enforce Service Level Agreements (SLA) for tickets from organizations
   website: https://cerb.ai/workflows/cerb.sla/
   requirements:
-    cerb_version: >=11.0 <11.3
+    cerb_version: >=11.0 <12.1
     cerb_plugins: cerberusweb.core
 records:
   custom_record/sla_plan:
