@@ -116,6 +116,7 @@ There's no shared command vocabulary. Each host editor declares its own set, so 
 |-----------------------------|------------------------------------------------------------------------------------------------------------|
 | Automation editor           | `getFields`, `setField`, `editField`, `grepField`, `getDiff`, `changeTab`, `highlightLine`, `highlightKey` |
 | Automation Scripting Tester | `getEditorValue`, `setEditorValue`, `editField`, `grepField`, `highlightLine`, `getDiff`                   |
+| Command bar                 | `getPage`, `openSearch`                                                                                    |
 | Data Query Tester           | `getEditorValue`, `setEditorValue`, `editField`, `grepField`, `highlightLine`                              |
 | Icon Builder                | `getGeometry`, `setGeometry`, `getIconGeometry`                                                            |
 | Mail Reply                  | `getFields`, `setField`                                                                                    |
@@ -125,17 +126,28 @@ Two shapes recur. A host that edits **one document** offers `getEditorValue` and
 
 A [worklist](/docs/worklists/) search bar is the one host that isn't an editor, and the only one that can *act* rather than only read and write: `getFields` returns its current query and record type as JSON, `setField` accepts the single key `query`, and `runSearch` runs whatever is in the field. Because a search is an asynchronous refresh while the bridge fills synchronously, `runSearch` reports only that the search started -- the agent reads results server-side on its next turn.
 
+The command bar is the other non-editor host, and the only one that acts on the app rather than on a document: `getPage` reports which page Cerb routed, and `openSearch` opens a prefilled search popup for a record type. Both are one-way -- neither reports what's on the worker's screen, or what a search matched.
+
 None of that is guaranteed, though. Don't carry a command name from one host to another and expect it to work -- an unrecognized command isn't an error; it simply returns an empty string.
 
 <div class="cerb-box note">
 	<p>
 		<b>A host's command names are not the agent's tool names.</b> The names above are what
-		<code>command:</code> accepts. The tools a model calls are whatever your automation declares
-		them to be -- a chat offering <code>get_fields</code>, <code>set_query</code>, and
-		<code>run_search</code> is naming its own tools, and the <code>uiCommand</code> elements behind
-		them still have to say <code>getFields</code>, <code>setField</code>, and
-		<code>runSearch</code>. Putting a tool name in <code>command:</code> returns an empty string,
-		silently.
+		<code>command:</code> accepts. The tools a model calls are named separately -- a chat offering
+		<code>get_fields</code>, <code>set_query</code>, and <code>run_search</code> is naming tools,
+		and the <code>uiCommand</code> elements behind them still have to say <code>getFields</code>,
+		<code>setField</code>, and <code>runSearch</code>. Putting a tool name in <code>command:</code>
+		returns an empty string, silently.
+	</p>
+</div>
+
+<div class="cerb-box note">
+	<p>
+		<b>You may not need this element at all.</b> An agent chat on the
+		<a href="/docs/automations/triggers/interaction.worker.agent/#tools">interaction.worker.agent</a>
+		trigger is handed its host's commands as tools automatically, dispatched for it. Reach for
+		<code>uiCommand</code> when you want to run a command yourself -- at a moment of your choosing,
+		or one the model never asked for.
 	</p>
 </div>
 

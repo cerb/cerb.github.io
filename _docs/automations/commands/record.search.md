@@ -56,6 +56,16 @@ start:
 | `record_query_params:` | Query parameters with untrusted user input as keys/values. Reference these as `${param}` in queries.
 | `validation@raw:` | An optional template to validate results. Any non-empty output triggers the `on_error:` event.
 
+### record_query:
+
+The [search query](/docs/search/) that filters the results.
+
+A query's `limit:` is clamped to **1-250** results. Larger values are silently reduced to `250`, so a `limit:1000` returns a partial result set without any warning.
+
+Use `limit:1` to return a single dictionary rather than an array of dictionaries.
+
+This command has no paging input, so 250 records is the most a single `record.search:` can return. To work through a larger set, use a [`data.query:`](/docs/automations/commands/data.query/) command with a [`worklist.records`](/docs/data-queries/worklist/records/) query, which supports a `page:` key.
+
 ### validation@raw:
 
 A template with scripting syntax where any output is considered to be an error that triggers the `on_error:` event.

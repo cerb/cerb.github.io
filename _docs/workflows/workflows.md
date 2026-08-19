@@ -87,6 +87,10 @@ config:
     multiple@bool:
     record_query:
     record_type:
+  query:
+    default:
+    label:
+    record_type:
   text:
     default:
     label:
@@ -114,7 +118,29 @@ records:
 |---
 | **chooser:** | An interactive record chooser.
 | **picklist:** | A single-selection dropdown or multiple-selection set of checkboxes.
-| **text:** | A text input. 
+| **query:** | A [search query](/docs/search/) over one record type, with filter autocompletion.
+| **text:** | A text input.
+
+#### query:
+
+A `query/` field prompts for a Cerb [search query](/docs/search/) rather than free text. It takes a required `record_type:` and autocompletes that type's filter vocabulary as the value is typed, so what an admin supplies is written in Cerb's own search grammar and can be validated before it's stored.
+
+{% highlight cerb %}
+{% raw %}
+workflow:
+  name: example.config.searchQuery
+  config:
+    query/agentModels:
+      label: Which models may this workflow use?
+      record_type: agent_model
+      default: privacy:>=zdr
+records:
+{% endraw %}
+{% endhighlight %}
+
+This is how a workflow sets a **boundary** rather than a value. The example above scopes which [agent models](/docs/records/types/agent_model/) the workflow's agents may reach; the automations inside it pass the value to [`llm.router:`](/docs/automations/commands/llm.router/) as a {% raw %}`models_query/`{% endraw %} key, where it can only narrow the pool and never widen it.
+
+An unknown `record_type:` fails validation when the template is saved rather than when the workflow runs.
 
 ### extensions:
 

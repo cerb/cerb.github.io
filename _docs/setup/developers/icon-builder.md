@@ -79,6 +79,6 @@ Adding an icon to the set is a source change followed by a CSS rebuild. Nothing 
 
 The Icon Builder is one of the editors with an [agent pane](/docs/toolbars/interactions/agent.pane/). An agent chatting beside it can read the geometry you're editing, look up any icon in the shipped set to work from, and write geometry back.
 
-That set-wide lookup is what lets an agent match the house style rather than guess at it -- asked for a new glyph, it can check whether one already exists and read a comparable icon's geometry before drawing.
+That set-wide lookup is what lets an agent match the house style rather than guess at it -- asked for a new glyph, it can list every icon name in the set to check whether one already exists, then read a comparable icon's geometry before drawing. The listing is answered by Cerb rather than by the editor, since the browser has no way to say what the whole set contains.
 
 Agent edits land in the undo history like your own, so a change you didn't want can be stepped back rather than having overwritten your work.

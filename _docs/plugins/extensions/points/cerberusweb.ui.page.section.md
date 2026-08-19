@@ -33,7 +33,6 @@ jumbotron:
 | Agent File Section | `cerberusweb.page.profiles.agent_file`
 | Agent Filesystem Section | `cerberusweb.page.profiles.agent_filesystem`
 | Agent Filesystem Terminal | `core.page.setup.developers.agent_filesystem_terminal`
-| Agent Model Router Section | `cerberusweb.page.profiles.agent_model_router`
 | Agent Model Section | `cerberusweb.page.profiles.agent_model`
 | Attachment Section | `core.page.profiles.attachment`
 | Authentication Section | `core.page.setup.auth`

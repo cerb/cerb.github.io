@@ -30,7 +30,7 @@ It ships with no sections, so items are authored per environment.
 
 | Placeholder  | Notes                                                                                                             |
 |--------------|-------------------------------------------------------------------------------------------------------------------|
-| `component`  | The host the pane is mounted on: `automation`, `bot_scripting`, `data_query`, `icon`, `mail_reply`, or `worklist` |
+| `component`  | The host the pane is mounted on: `automation`, `bot_scripting`, `commandbar`, `data_query`, `icon`, `mail_reply`, or `worklist` |
 | `worker_*`   | The current [worker](/docs/records/types/worker/)                                                                 |
 | `worklist_*` | On `worklist` hosts only -- see [Worklist search fields](#worklist-search-fields)                                 |
 
@@ -71,14 +71,31 @@ return:
 |------------------------------------------------------|-----------------|
 | Automation editor                                    | `automation`    |
 | Automation Scripting Tester                          | `bot_scripting` |
+| Command bar                                          | `commandbar`    |
 | Data Query Tester                                    | `data_query`    |
 | [Icon Builder](/docs/setup/developers/icon-builder/) | `icon`          |
 | Mail Reply                                           | `mail_reply`    |
 | [Worklist](/docs/worklists/) search fields           | `worklist`      |
 
-An agent chat can read and write its host using the [`uiCommand`](/docs/automations/triggers/interaction.worker/elements/uiCommand/) element. That element is only available on the [interaction.worker.agent](/docs/automations/triggers/interaction.worker.agent/) trigger, so build a chat that drives its host on that trigger rather than [interaction.worker](/docs/automations/triggers/interaction.worker/).
+An agent chat gets its host's commands as tools automatically, and can drive the host directly with the [`uiCommand`](/docs/automations/triggers/interaction.worker/elements/uiCommand/) element. Both come from the [interaction.worker.agent](/docs/automations/triggers/interaction.worker.agent/) trigger, so build a chat that drives its host on that trigger rather than [interaction.worker](/docs/automations/triggers/interaction.worker/).
 
 An item also needs a [policy](/docs/automations/#policies) allowing the `agent.pane` caller, or its tile never appears in the pane.
+
+## Command bar
+
+The command bar is the one host that isn't tied to a screen at all. Its menu is the [`global.menu`](/docs/toolbars/interactions/global.menu/) toolbar merged with the items on this toolbar gated to `commandbar`, so a chat that follows a worker around Cerb is authored here, alongside every editor chat, rather than in a second place.
+
+Gate an item to the command bar with:
+
+{% highlight cerb %}
+{% raw %}
+hidden@bool: {{component != 'commandbar'}}
+{% endraw %}
+{% endhighlight %}
+
+A chat there can read which page the worker is on and open a prefilled search popup for any record type. Both are one-way: the command bar can put something in front of a worker, but nothing comes back through the bridge -- an agent knows where they are, never what's on the screen, and never what a search it opened matched.
+
+The command bar's ordinary non-agentic shortcuts are unaffected. Those stay [`interaction.worker`](/docs/automations/triggers/interaction.worker/) items and keep working alongside a chat.
 
 ## Worklist search fields
 

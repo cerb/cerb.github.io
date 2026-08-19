@@ -79,11 +79,14 @@ llm.agent:
 | `mounts:`        | list | Optional [agent filesystems](/docs/records/types/agent_filesystem/) to mount. |
 | `session_id:`    | text | An optional existing session to join.                                         |
 | `system_prompt:` | text | The optional instructions for the LLM.                                        |
+| `terminal:`      | list | Optional command-line namespaces the agent's terminal offers.                 |
 | `tools:`         | list | An optional list of tools.                                                    |
 
 ### agent:
 
-Run the turn as an [AI worker](/docs/agents/). This attributes the turn to that agent -- its name and image appear in the transcript -- and sources its models from the agent's [model router](/docs/records/types/agent_model_router/).
+Run the turn as an [AI worker](/docs/agents/). This attributes the turn to that agent -- its name and image appear in the transcript, and the conversation uses that agent's memory and credentials.
+
+**An agent is identity, not model policy.** Naming one says who the work is attributed to, never what it may run, so the same agent can do cheap work and expensive work. Which models a turn may use depends on the work, through [`model:`](#model), rather than on whose name is on it.
 
 It accepts an `@mention`, a bare handle, a worker ID, or a `cerb:worker:<id>` URI. A human or disabled worker is rejected.
 
@@ -99,7 +102,7 @@ llm.agent:
 {% endraw %}
 {% endhighlight %}
 
-An explicit `model:` or `llm:` still wins. Naming an agent is what lets a **portable** automation avoid naming models at all -- omit everything and the default router is used.
+An explicit `model:` or `llm:` still wins.
 
 ### model:
 
@@ -107,9 +110,9 @@ Reference an [agent model](/docs/records/types/agent_model/) record by name, whi
 
 List several names to provide a fallback chain -- the first enabled record wins. Optional overrides ride under the name in that model's provider grammar.
 
-The list doesn't have to be written by hand. Resolve a router with [`llm.router:`](/docs/automations/commands/llm.router/) and pass its models here, or name an [`agent:`](#agent) and inherit the list from that agent's [model router](/docs/records/types/agent_model_router/).
+The list doesn't have to be written by hand. Resolve a pool with [`llm.router:`](/docs/automations/commands/llm.router/) and pass its models here as {% raw %}`model@key: routed:models`{% endraw %}, which is how an automation asks for a *capability* -- `hasVision:y`, `privacy:>=zdr` -- instead of a name.
 
-**Leaving `model:` out entirely is the easiest path**: the [default model router](/docs/records/types/agent_model_router/) resolves the list, so one record decides what the whole installation uses.
+**Leaving `model:` out entirely is the easiest path**: the turn falls through to every [available](/docs/records/types/agent_model/#availability) model, in the [`priority`](/docs/records/types/agent_model/#priority) order an admin set on the records. That's also the most portable form, since the automation then names nothing installation-specific at all.
 
 It also doesn't need to be set when sharing a [`session_id:`](#session_id) with an [`agentPrompt`](/docs/automations/triggers/interaction.worker/elements/agentPrompt/) element. Submitting the prompt records the worker's chosen model on the transcript, and `llm.agent:` inherits it from there.
 
@@ -117,9 +120,33 @@ An explicit `llm:` block wins for the call and `model:` is ignored.
 
 ### mounts:
 
-Mount [agent filesystems](/docs/records/types/agent_filesystem/) and give the agent an `agent_fs` tool to browse them. Each key is a filesystem name. See [agent filesystems](/docs/records/types/agent_filesystem/#mounting-a-volume) for the full mount grammar.
+Mount [agent filesystems](/docs/records/types/agent_filesystem/) and give the agent an `agent_terminal` tool to browse them. Each key is a filesystem name. See [agent filesystems](/docs/records/types/agent_filesystem/#mounting-a-volume) for the full mount grammar.
 
 Leaving the block empty mounts nothing but `/tmp` -- a scratch pad plus the scripting pipeline, so the agent can park and transform text without spending context on it.
+
+### terminal:
+
+Configure the `agent_terminal` tool itself, as opposed to the volumes `mounts:` puts inside it.
+
+Today that means the [`cerb` command line](/docs/agents/#the-cerb-command-line) -- how an agent asks Cerb about itself. Each key is a namespace it's allowed to run:
+
+{% highlight cerb %}
+{% raw %}
+llm.agent:
+  inputs:
+    terminal:
+      cerb:
+        records:
+{% endraw %}
+{% endhighlight %}
+
+| Namespace | Notes
+|-|-
+| `records:` | The record types in this installation, and the keys each one can be searched or written by
+
+A namespace that isn't named isn't reachable, and with none named the `cerb` command doesn't exist for that agent.
+
+Writing `terminal:` at all enables the tool, so it works on its own: the command line plus `/tmp` and the pipeline, with no volumes mounted. Writing both gives the agent one tool that does both.
 
 ### commands:
 
@@ -159,9 +186,10 @@ Render the [`agentPrompt`](/docs/automations/triggers/interaction.worker/element
 		<code>llm:</code> block.</b> A model record keeps credentials and tuning in one place, offers
 		the provider's live model list so nobody has to remember an ID, and makes a model swap one edit
 		instead of one per automation. Setting a
-		<a href="/docs/records/types/agent_model_router/">default model router</a> goes further --
-		it applies to every call that doesn't configure something of its own, so most automations can
-		omit <code>llm:</code>, <code>model:</code>, and <code>agent:</code> entirely.
+		<a href="/docs/records/types/agent_model/#priority">priority</a> on those records goes
+		further -- it orders every call that doesn't configure something of its own, so most
+		automations can omit <code>llm:</code>, <code>model:</code>, and <code>agent:</code>
+		entirely.
 	</p>
 </div>
 
@@ -231,7 +259,18 @@ llm:
 {% endraw %}
 {% endhighlight %}
 
-The level is passed through to the provider verbatim -- Anthropic translates it to `output_config.effort`, while OpenAI and Gemini translate it to `reasoning_effort`. Cerb doesn't clamp or whitelist the value, because the levels a model accepts vary by model and version; the provider's API validates it.
+The level is passed through to the provider verbatim -- Anthropic translates it to `output_config.effort`, while OpenAI and Gemini translate it to `reasoning_effort`. Cerb doesn't clamp or whitelist the value, because the levels a model accepts vary by model and version; the provider's API validates it. That's deliberate: a new model works the day it ships, and an unsupported level comes back as the vendor's own error rather than as something Cerb guessed at.
+
+**Every chat provider forwards `effort:`.** A level you set is either sent or refused -- never silently dropped. `effort:` autocompletion offers the levels each provider actually documents rather than a generic list.
+
+<div class="cerb-box note">
+	<p>
+		<b>Ollama is the one provider where the mapping isn't one-to-one.</b> Its <code>think</code>
+		parameter isn't a graded scale, so <code>none</code> turns reasoning off, <code>low</code>,
+		<code>medium</code>, and <code>high</code> map across directly, and anything above
+		<code>high</code> is sent as <code>high</code> rather than rejected.
+	</p>
+</div>
 
 The optional `thinking:` block controls whether the model's reasoning is returned:
 
@@ -263,6 +302,50 @@ On older models that require an explicit token budget (`type: enabled`), the bud
 		<code>thinking_include@bool:</code> is still accepted.
 	</p>
 </div>
+
+#### OpenAI endpoints
+
+An [agent model](/docs/records/types/agent_model/) pointed at OpenAI's **own** API talks to the `/v1/responses` endpoint, where function tools and reasoning work together. The older `/v1/chat/completions` endpoint refuses function tools on a reasoning turn for gpt-5.4 and newer, which costs a tool-using agent its reasoning in exactly the configuration where it matters most.
+
+`/v1/responses` also returns reasoning summaries, which is the only way an OpenAI model shows its thinking. Author that with the same `thinking: display:` block Anthropic uses, so it reads the same across providers; it's on by default for a model flagged as supporting thinking.
+
+Every **other** endpoint keeps using `/v1/chat/completions` -- Azure, llama.cpp, vLLM, MLX, and every OpenAI-compatible provider.
+
+| Key    | Values               | Description                                                        |
+|--------|----------------------|--------------------------------------------------------------------|
+| `api:` | `chat`, `responses`  | Pin the endpoint dialect, instead of resolving it from the host    |
+
+`api: responses` is **refused** on an endpoint that can't serve it rather than quietly downgraded.
+
+#### Passing through provider extensions
+
+The OpenAI-compatible ecosystem puts its knobs somewhere other than where the OpenAI spec does, and a fixed set of typed keys can't keep up. `extra_body:` passes arbitrary parameters through to the inference server:
+
+{% highlight cerb %}
+{% raw %}
+llm:
+  openai:
+    model: qwen3
+    api_endpoint_url: http://localhost:10240/v1
+    extra_body:
+      chat_template_kwargs:
+        reasoning_effort: medium
+{% endraw %}
+{% endhighlight %}
+
+The key is named and shaped after the OpenAI SDK's own `extra_body`, deliberately -- a server documents its extensions as `extra_body={...}` snippets, and one transcribes straight into [KATA](/docs/kata/). Like the SDK, the **contents** merge into the top level of the request body, so the example above puts a top-level `chat_template_kwargs` on the wire rather than a key called `extra_body`.
+
+<div class="cerb-box note">
+	<p>
+		The case that forced this: Apple-silicon oMLX serving Qwen3 forwards
+		<code>chat_template_kwargs</code> to the Jinja template but doesn't map the standard top-level
+		<code>reasoning_effort</code> into it -- so <code>effort:</code> reached the server, was
+		dropped, and nothing said so. llama.cpp, vLLM, SGLang, and unsloth all have their own such
+		keys.
+	</p>
+</div>
+
+Cerb keeps ownership of the request's **structure**. `model`, `messages`, `stream`, `stream_options`, and `tools` are resolved from the session, so they can't be overwritten here -- a passthrough that could would break a turn in ways no error message would explain.
 
 ### system_prompt:
 

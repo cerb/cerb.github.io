@@ -104,16 +104,17 @@ llm.chat:
 {% endraw %}
 {% endhighlight %}
 
-**Leaving `model:` out entirely is the easiest path**: with no `llm:` block either, the [default model router](/docs/records/types/agent_model_router/) supplies the list, so one record decides what the whole installation uses. The command fails only if no default router is configured or it resolves nothing.
+**Leaving `model:` out entirely is the easiest path**: with no `llm:` block either, the call falls through to every [available](/docs/records/types/agent_model/#availability) [agent model](/docs/records/types/agent_model/), in the [`priority`](/docs/records/types/agent_model/#priority) order an admin set on the records. The command fails only if that resolves nothing -- every model is unlisted, disabled, or missing.
 
-`model:` names [agent model](/docs/records/types/agent_model/) records, not routers -- a router name here simply won't match. To use a router by name, resolve it with [`llm.router:`](/docs/automations/commands/llm.router/) as above.
+To narrow that pool by what the work needs rather than by name, resolve one with [`llm.router:`](/docs/automations/commands/llm.router/) as above and pass its models here.
 
 <div class="cerb-box note">
 	<p>
 		Unlike <a href="/docs/automations/commands/llm.agent/"><code>llm.agent:</code></a>,
-		this command has no <code>agent:</code> input and no session, so it can't inherit models from
-		an <a href="/docs/agents/">AI worker</a>'s router or from a transcript. Name the models,
-		resolve a router, or rely on the default.
+		this command has no <code>agent:</code> input and no session, so it can't inherit a model
+		from a transcript. Name the models, resolve a pool with
+		<a href="/docs/automations/commands/llm.router/"><code>llm.router:</code></a>, or rely on the
+		default.
 	</p>
 </div>
 
@@ -127,9 +128,9 @@ An explicit `llm:` block wins for the call and `model:` is ignored.
 		<code>llm:</code> block.</b> A model record keeps credentials and tuning in one place, offers
 		the provider's live model list so nobody has to remember an ID, and makes a model swap one edit
 		instead of one per automation. Setting a
-		<a href="/docs/records/types/agent_model_router/">default model router</a> goes further --
-		it applies to every call that doesn't configure something of its own, so most automations can
-		omit both <code>llm:</code> and <code>model:</code> entirely.
+		<a href="/docs/records/types/agent_model/#priority">priority</a> on those records goes
+		further -- it orders every call that doesn't configure something of its own, so most
+		automations can omit both <code>llm:</code> and <code>model:</code> entirely.
 	</p>
 </div>
 

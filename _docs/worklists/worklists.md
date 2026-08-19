@@ -25,7 +25,7 @@ jumbotron:
 
 A **worklist** is a [searchable](#search), [pageable](#pagination), [sortable](#sorting), and customizable set of [records](/docs/records/) displayed using rows and columns.
 
-Each row of a worklist is a matching record, and each column is a particular [field](/docs/records/fields/) from that record. The displayed columns can be customized for each worklist based on your needs.
+Each row of a worklist is a matching record, and each column is a particular [field](/docs/records/#fields) from that record. The displayed columns can be customized for each worklist based on your needs.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/using-cerb/workspaces/worklist.png" class="screenshot">
@@ -145,6 +145,8 @@ You can also use random samples to run A/B tests.
 Bulk updates run as parallel background [queue jobs](/docs/records/types/queue_job/) rather than blocking the browser. When an update starts, the queue job progress monitor popup opens. If you close your browser or navigate away, the job continues in the background and you'll receive a notification when it completes.
 
 Bulk commenting is also available from the **Bulk Update** popup on every record type that supports [comments](/docs/records/types/comment/) (tickets, tasks, organizations, opportunities, time tracking, domains, servers, calls).
+
+The popup can also be extended with actions of your own. An [automation](/docs/automations/) on the [`record.bulkUpdate`](/docs/automations/triggers/record.bulkUpdate/) trigger runs for each batch of selected records, and can prompt for whatever it needs before the job starts.
 
 # Import/Export
 

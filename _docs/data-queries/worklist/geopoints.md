@@ -62,7 +62,7 @@ of:tickets
 
 ## point:
 
-The `point:` key specifies the record [field](/docs/records/fields/) containing latitude/longitude data.
+The `point:` key specifies the record [field](/docs/records/#fields) containing latitude/longitude data.
 
 {% highlight cerb %}
 {% raw %}
@@ -72,7 +72,7 @@ point:coordinates
 
 ## fields:
 
-The `fields:` key specifies the record [fields](/docs/records/fields/) to include with each plotted point.
+The `fields:` key specifies the record [fields](/docs/records/#fields) to include with each plotted point.
 
 {% highlight cerb %}
 {% raw %}

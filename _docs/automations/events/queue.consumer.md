@@ -43,4 +43,4 @@ The automation event [dictionary](/docs/automations/#dictionaries) starts with t
 
 (none)
 
-Any non-error response is treated as successful delivery of the entire batch. If the automation returns an `error:` outcome, the messages remain in their current state and the queue's retry policy determines what happens next.
+Any non-error response is treated as successful delivery of the entire batch. If the automation returns an `error:` outcome, the messages are marked failed and retried per the [queue's retry policy](/docs/queues/#retries).

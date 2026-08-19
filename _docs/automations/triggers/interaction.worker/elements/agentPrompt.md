@@ -68,13 +68,15 @@ Render the composer **before** the turn runs. Submitting it primes the session w
 
 ### agent:
 
-The [AI worker](/docs/agents/) this composer is talking to. The agent's name and image appear in the transcript, and the models it offers come from that agent's [model router](/docs/records/types/agent_model_router/).
+The [AI worker](/docs/agents/) this composer is talking to. The agent's name and image appear in the transcript, and the conversation uses that agent's memory and credentials.
+
+**Identity only.** It doesn't supply the model catalog -- see [`models:`](#models) for that.
 
 ### models:
 
 Which [agent models](/docs/records/types/agent_model/) the worker can pick between in the composer's model picker.
 
-Naming an `agent:` is usually enough -- the agent's router already supplies the list. Use `models:` to narrow or override it.
+**Omit it and the worker is offered every [available](/docs/records/types/agent_model/#availability) model**, in the [`priority`](/docs/records/types/agent_model/#priority) order an admin set on the records. To narrow that, resolve a pool with [`llm.router:`](/docs/automations/commands/llm.router/) and pass it in as {% raw %}`models@key: routed:models`{% endraw %}, or list the names here.
 
 Each entry is an [agent model](/docs/records/types/agent_model/) record name, optionally with overrides in that model's provider grammar. A record can be mounted more than once as {% raw %}`<record-name>/<alias>:`{% endraw %} to offer it twice with different settings. A model whose record is missing or disabled drops out of the picker.
 

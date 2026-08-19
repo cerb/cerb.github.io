@@ -250,6 +250,8 @@ This approach is particularly useful when you need to create a dictionary with k
 
 # Commands
 
+Every command an automation runs must be permitted by its [policy](#policies). A new automation starts with an empty policy, which denies everything -- so the examples on these command pages won't run until the command is allowed. The editor can [generate a least-privilege policy](#generating-a-policy) from a script.
+
 ### State transitions
 
 |-|-
@@ -298,6 +300,7 @@ This approach is particularly useful when you need to create a dictionary with k
 | [**record.search:**](/docs/automations/commands/record.search/) | Search [records](/docs/records/).
 | [**record.update:**](/docs/automations/commands/record.update/) | Update a [record](/docs/records/).
 | [**record.upsert:**](/docs/automations/commands/record.upsert/) | Create or update a [record](/docs/records/).
+| [**records.update:**](/docs/automations/commands/records.update/) | Update a batch of [records](/docs/records/) of the same type.
 | [**set:**](/docs/automations/commands/set/) | Set one or more placeholders.
 | [**storage.get:**](/docs/automations/commands/storage.get/) | Retrieve arbitrary data from long-term storage.
 | [**storage.set:**](/docs/automations/commands/storage.set/) | Save arbitrary data to long-term storage.
@@ -734,6 +737,7 @@ Triggers are invoked **directly** by Cerb functionality -- widgets, AI agents, t
 | [**map.clicked**](/docs/automations/triggers/map.clicked/) | **x** | | Handlers for clicks on [map](/docs/maps/) regions and points
 | [**projectBoard.cardAction**](/docs/automations/triggers/projectBoard.cardAction/) | **x** | | Actions that take place for new cards in a project board column
 | [**projectBoard.renderCard**](/docs/automations/triggers/projectBoard.renderCard/) | **x** | | Dynamic card layouts on project boards
+| [**record.bulkUpdate**](/docs/automations/triggers/record.bulkUpdate/) | **x** | | Custom actions on the [bulk update](/docs/worklists/#bulk-update) popup of a [worklist](/docs/worklists/)
 | [**reminder.remind**](/docs/automations/triggers/reminder.remind/) | **x** | | Actions that run for [reminder](/docs/reminders/) alerts
 | [**resource.get**](/docs/automations/triggers/resource.get/) | **x** | | Dynamic [resource](/docs/resources/) content
 | [**scripting.function**](/docs/automations/triggers/scripting.function/) | **x** | | Run an [automation](/docs/automations/) from the [cerb_automation()](/docs/scripting/functions/#cerb_automation) function in scripting

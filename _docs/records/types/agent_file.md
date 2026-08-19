@@ -1,7 +1,7 @@
 ---
 title: Agent File Records
 excerpt: This page provides detailed information about Agent File records in Cerb, including their structure and usage within the system.
-summary: An agent file is a single file stored inside an agent filesystem volume. Files are created and modified through the filesystem command set -- by an AI agent using its agent_fs tool, or by a worker in the Setup Agent Filesystem Terminal -- rather than edited directly as records. Each file tracks its name, extension, size, content, and optional frontmatter parsed from the document. This page documents the Records API fields and search filters available on agent file records.
+summary: An agent file is a single file stored inside an agent filesystem volume. Files are created and modified through the filesystem command set -- by an AI agent using its agent_terminal tool, or by a worker in the Setup Agent Filesystem Terminal -- rather than edited directly as records. Each file tracks its name, extension, size, content, and optional frontmatter parsed from the document. This page documents the Records API fields and search filters available on agent file records.
 permalink: /docs/records/types/agent_file/
 toc:
   title: Agent File
@@ -30,7 +30,7 @@ jumbotron:
 
 An **agent file** is a single file stored inside an [agent filesystem](/docs/records/types/agent_filesystem/) volume.
 
-In normal use you don't create or edit these records directly. Files are written through the filesystem command set -- by an [AI agent](/docs/agents/) using its `agent_fs` tool, or by a worker in **Setup &raquo; Developers &raquo; Agent Filesystem Terminal**. The record type exists so files are searchable, linkable, and reportable like any other record.
+In normal use you don't create or edit these records directly. Files are written through the filesystem command set -- by an [AI agent](/docs/agents/) using its `agent_terminal` tool, or by a worker in **Setup &raquo; Developers &raquo; Agent Filesystem Terminal**. The record type exists so files are searchable, linkable, and reportable like any other record.
 
 ### Frontmatter
 

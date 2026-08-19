@@ -46,10 +46,12 @@ llm.embed:
 
 ## inputs:
 
-| Key      | Type | Notes                              |
-|----------|------|------------------------------------|
-| `llm:`   | list | The LLM provider and model to use. |
-| `texts:` | list | A list of text passages to embed.  |
+| Key      | Type         | Notes                                                       |
+|----------|--------------|--------------------------------------------------------------|
+| `llm:`   | list         | **Required.** The LLM provider and model to use.             |
+| `texts:` | list or text | **Required.** The text passages to embed.                    |
+
+The `output:` key is **required** as well.
 
 ### llm:
 
@@ -102,6 +104,10 @@ The `authentication:` key is a connected account in URI format (e.g. `cerb:conne
 
 The optional `api_endpoint_url:` key overrides the default endpoint. For instance, this can be used with the `openai:` provider for any compatible API (e.g. SambaNova), or a locally hosted Ollama server.
 
+Unlike [`llm.chat:`](/docs/automations/commands/llm.chat/#model) and [`llm.agent:`](/docs/automations/commands/llm.agent/#model), this command doesn't accept a `model:` key for naming an [agent model](/docs/records/types/agent_model/) or router. An `llm:` block that names the provider and model inline is always required.
+
+Not every provider offers embeddings. Ollama, OpenAI, AWS Bedrock, Pinecone, and VoyageAI support them, as does any provider that inherits the OpenAI-compatible dialect (like those above). Groq is the exception: it speaks the OpenAI dialect but has no embeddings API, so it returns an `LLM provider does not support vector embeddings` error.
+
 ### texts:
 
 The text passages to embed.
@@ -118,9 +124,17 @@ texts:
 
 The text keys must be unique but are arbitrary.
 
+A plain string is also accepted for `texts:` and is treated as a single passage:
+
+{% highlight cerb %}
+{% raw %}
+texts: What is Cerb?
+{% endraw %}
+{% endhighlight %}
+
 ## output:
 
-The key specified in `output:` is set to a dictionary with the following structure:
+The `output:` key is **required**. It's set to a dictionary with the following structure:
 
 | Key          | Description                       |
 |--------------|-----------------------------------|

@@ -32,7 +32,6 @@ jumbotron:
 | Agent File | `cerb.contexts.agent.file`
 | Agent Filesystem | `cerb.contexts.agent.filesystem`
 | Agent Model | `cerb.contexts.agent.model`
-| Agent Model Router | `cerb.contexts.agent.model.router`
 | Application | `cerberusweb.contexts.app`
 | Attachment | `cerberusweb.contexts.attachment`
 | Automation | `cerb.contexts.automation`

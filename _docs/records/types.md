@@ -37,7 +37,6 @@ This reference can be used when building [automations](/docs/automations/), [sea
 | `agent_file` | [Agent Files](/docs/records/types/agent_file/)
 | `agent_filesystem` | [Agent Filesystems](/docs/records/types/agent_filesystem/)
 | `agent_model` | [Agent Models](/docs/records/types/agent_model/)
-| `agent_model_router` | [Agent Model Routers](/docs/records/types/agent_model_router/)
 | `address` | [Email Addresses](/docs/records/types/address/)
 | `attachment` | [Attachments](/docs/records/types/attachment/)
 | `automation` | [Automations](/docs/records/types/automation/)

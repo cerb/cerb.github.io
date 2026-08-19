@@ -5,7 +5,7 @@ summary: This webpage serves as a comprehensive scripting reference for filters 
   in Cerb's bot scripts and snippets. It details a wide array of filters, such as
   `abs`, `alphanum`, `append`, `array_sum`, `base_convert`, `base64_encode`, `capitalize`,
   `cerb_translate`, `date`, `escape`, `filter`, `hash`, `json_encode`, `markdown_to_html`,
-  `md5`, `number_format`, `parse_csv`, `regexp`, `reverse`, `sha1`, `sort`, `split`,
+  `md5`, `number_format`, `number_pretty`, `parse_csv`, `regexp`, `reverse`, `sha1`, `sort`, `split`,
   `striptags`, `title`, `trim`, `truncate`, `upper`, `url_encode`, and many more.
   Each filter is explained with its functionality, parameters, and examples, providing
   users with the necessary tools to manipulate data, format strings, handle arrays,
@@ -159,6 +159,9 @@ search_index:
     - heading: "number_format"
       title: "Scripting Filter: number_format"
       summary: "Format a number with thousand separators and decimal places"
+    - heading: "number_pretty"
+      title: "Scripting Filter: number_pretty"
+      summary: "Format a large number in a human-readable form with a magnitude suffix"
     - heading: "parse_csv"
       title: "Scripting Filter: parse_csv"
       summary: "Parse a document with rows of comma-separated columns"
@@ -1179,6 +1182,43 @@ That will be ${{cost|number_format(2,'.',',')}}
 {% highlight text %}
 That will be $16,858.00
 {% endhighlight %}
+
+## number_pretty
+
+Format a large number in a human-readable form, with a magnitude suffix of `K`, `M`, `B`, or `T`:
+
+{% highlight twig %}
+{% raw %}
+{{12345678|number_pretty(1)}}
+{% endraw %}
+{% endhighlight %}
+
+{% highlight text %}
+12.3M
+{% endhighlight %}
+
+The optional argument determines the number of digits of precision, and defaults to none:
+
+{% highlight twig %}
+{% raw %}
+{{32768|number_pretty}}
+{% endraw %}
+{% endhighlight %}
+
+{% highlight text %}
+32K
+{% endhighlight %}
+
+<div class="cerb-box note">
+	<p>
+		This <b>truncates</b> rather than rounds, which is where it parts ways with
+		<a href="#bytes_pretty"><code>bytes_pretty</code></a>. A 32,768-token context window is
+		universally called "32K", never "33K", and truncating also keeps <code>999999</code> from
+		rounding up into a nonsensical <code>1000K</code>.
+	</p>
+</div>
+
+A number below 1,000 is returned as-is, and a negative number keeps its sign. A non-numeric value returns an empty string.
 
 ## parse_csv
 

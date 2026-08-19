@@ -1,7 +1,7 @@
 ---
 title: Agent Filesystem Terminal
 excerpt: This page shows how to access and use the Agent Filesystem Terminal in the developer menu.
-summary: "This page documents the Agent Filesystem Terminal in Cerb's developer menu. It's a human-driven terminal over agent filesystems, running the same command evaluator an AI agent gets through its agent_fs tool, so a volume can be explored and exercised without wiring up an agent. The page covers mounting volumes and the read-only default, the payload and find boxes that carry file content and edit text out of band, the output pane's fixed height and the pipeline and /tmp answers for large output, and the fact that the whole session lives in the browser and is lost on reload."
+summary: "This page documents the Agent Filesystem Terminal in Cerb's developer menu. It's a human-driven terminal over agent filesystems, running the same command evaluator an AI agent gets through its agent_terminal tool, so a volume can be explored and exercised without wiring up an agent. The page covers mounting volumes and the read-only default, the Commands panel that enables the same cerb command line an agent gets, the payload and find boxes that carry file content and edit text out of band, the output pane's fixed height and the pipeline and /tmp answers for large output, and the fact that the whole session lives in the browser and is lost on reload."
 permalink: /docs/setup/developers/agent-filesystem-terminal/
 toc:
   expand: Admin Guide
@@ -16,7 +16,7 @@ jumbotron:
       url: /docs/setup/#developers
 ---
 
-The Agent Filesystem Terminal lets you drive an [agent filesystem](/docs/records/types/agent_filesystem/) by hand, using the same [command set](/docs/agents/#filesystem-commands) an [AI agent](/docs/agents/) gets through its `agent_fs` tool.
+The Agent Filesystem Terminal lets you drive an [agent filesystem](/docs/records/types/agent_filesystem/) by hand, using the same [command set](/docs/agents/#filesystem-commands) an [AI agent](/docs/agents/) gets through its `agent_terminal` tool.
 
 Because both run through one evaluator, what you can do here and what an agent can do can't drift apart -- which makes this the place to explore a volume, or to exercise the command layer before any agent is wired to it.
 
@@ -48,6 +48,14 @@ Every mount arrives **read-only**. Switch a chip to `rw` to allow `write`, `appe
 </div>
 
 `/tmp` is always writable, since it's where oversized command output is spilled.
+
+# Commands panel
+
+Beside the mounts, a **Commands** panel turns each [`cerb` command namespace](/docs/agents/#the-cerb-command-line) on or off for this session -- the same command line an [automation](/docs/automations/commands/llm.agent/#terminal) gives an agent through its `terminal:` block.
+
+With `records` enabled you can run `cerb records types`, `cerb records filters <type>`, and `cerb records fields <type>` here exactly as an agent would, which is the quickest way to see what an agent will be told about your installation.
+
+With no namespace enabled the `cerb` command isn't merely hidden -- it doesn't exist, and typing it says so.
 
 # Running commands
 
@@ -106,3 +114,4 @@ An agent gets the same commands, the same evaluator, and the same persistent wor
 
 * An agent's mounts come from the [automation's](/docs/agents/#agent-filesystems) `mounts:` block, resolved on the server. Here you compose the mount set by hand.
 * The Payload and Find boxes are specific to this screen. An agent passes the same values as part of its tool call.
+* The `cerb` namespaces an agent may run come from its automation's `terminal:` block. Here you enable them yourself, from the Commands panel.

@@ -6,7 +6,7 @@ summary: This page provides a comprehensive guide on creating interactive map vi
   schema defined with KATA, which includes resources, properties, region colorization,
   point datasets, and interactions. The page explains how to handle map resources
   efficiently, using reusable resource records to store detailed map data, and describes
-  various projection types like Mercator, Natural Earth, and AlbersUSA. It also covers
+  the two supported projection types, Mercator and AlbersUSA. It also covers
   the customization of map regions and points, including filtering, labeling, and
   colorization based on property values. Additionally, the page includes an example
   of visualizing COVID-19 cases in the U.S., demonstrating how to integrate external
@@ -134,19 +134,6 @@ Mercator has been the general purpose standard projection for nearly 500 years.
 map:
   projection:
     type: mercator
-    scale: 90
-{% endraw %}
-{% endhighlight %}
-
-#### naturalEarth
-
-Natural Earth is a relatively new projection, suitable for showing worldwide maps at a small scale.
-
-{% highlight cerb %}
-{% raw %}
-map:
-  projection:
-    type: naturalEarth
     scale: 90
 {% endraw %}
 {% endhighlight %}

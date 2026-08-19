@@ -62,6 +62,8 @@ of:ticket
 
 The `query:` key specifies the [query](/docs/search/) for filtering the results.
 
+A query's `limit:` is clamped to **1-250** results. Larger values are silently reduced to `250`, so a `limit:1000` returns a partial result set without any warning. Use [`page:`](#page) to retrieve the results beyond the first page.
+
 # query.required:
 
 The `query.required:` key specifies the required [query](/docs/search/) for filtering the results. This is used to set the scope and should never contain placeholders with user input.
@@ -79,6 +81,8 @@ expand:[custom_,group_,owner_]
 # page:
 
 The `page:` key specifies the page to return. Pages numbering is zero-based. This is used by functionality like [sheets](/docs/sheets/).
+
+Since a query returns at most 250 results, `page:` is how you work through a larger set. With `limit:250`, `page:0` returns results 1-250, `page:1` returns 251-500, and so on.
 
 # timeout:
 
