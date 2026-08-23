@@ -20,7 +20,7 @@ jumbotron:
     url: /docs/home/
 ---
 
-<p class="youtube-video-container"><iframe width="1040" height="585" src="https://www.youtube.com/embed/F0p2INrtq1U" title="" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+<p class="youtube-video-container"><iframe width="1040" height="585" src="https://www.youtube.com/embed/F0p2INrtq1U" title="Using workflows in Cerb" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
 
 **Workflows** are text-based templates that define a set of records and configuration values. They enable anyone to create and share new features in Cerb, and synchronize ongoing changes between multiple environments (e.g. dev, staging, production).
 

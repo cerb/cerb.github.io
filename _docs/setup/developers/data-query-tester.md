@@ -29,7 +29,7 @@ That separation is the point. A query that returns nothing inside a widget gives
 
 # Access
 
-Click **Setup &raquo; Configure &raquo; Developers &raquo; Data Query Tester**. This tool is limited to administrators -- anyone else gets a permission error rather than a hidden menu item.
+Click **Setup &raquo; Developers &raquo; Data Query Tester**. This tool is limited to administrators -- anyone else gets a permission error rather than a hidden menu item.
 
 # The editor
 
@@ -94,22 +94,25 @@ The Data Query Tester can host an [agent pane](/docs/toolbars/interactions/agent
 
 <div class="cerb-box note">
 	<p>
-		<b>Nothing appears until an admin authors it.</b> The <code>agent.pane</code>
-		<a href="/docs/toolbars/">toolbar</a> ships with no items at all, and a pane with nothing to
-		launch hides its own toggle. On a fresh installation this tester has no visible agent pane --
-		that's the toolbar being empty, not a missing feature.
+		The pane appears once an <a href="/docs/agents/">agent</a> is enabled on the
+		<code>data_query</code> surface -- <b>a pane with nothing to launch hides its own toggle</b>,
+		so there is no agent affordance here until you turn one on. The agent also needs an
+		<a href="/docs/records/types/agent_model/">agent model</a> under
+		<b>Search &raquo; Agent Models</b>, without which the chat opens but every turn errors.
 	</p>
 </div>
 
-Author items on the `agent.pane` toolbar and gate them to this editor:
+Enable an agent here by giving it a `data_query` block under `components:` in the **AI** tab of its [worker](/docs/records/types/worker/) record:
 
 {% highlight cerb %}
 {% raw %}
-hidden@bool: {{component != 'data_query'}}
+components:
+  data_query:
+    description: Help writing data queries
 {% endraw %}
 {% endhighlight %}
 
-Each item's automation must use the [interaction.worker.agent](/docs/automations/triggers/interaction.worker.agent/) trigger, which is the only one offering the [`uiCommand`](/docs/automations/triggers/interaction.worker/elements/uiCommand/) element these commands run through.
+The agent's automation must use the [interaction.worker.agent](/docs/automations/triggers/interaction.worker.agent/) trigger, which is the only one offering the [`uiCommand`](/docs/automations/triggers/interaction.worker/elements/uiCommand/) element these commands run through.
 
 An agent here has five commands:
 

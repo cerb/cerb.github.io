@@ -47,6 +47,8 @@ A **map schema** is defined using [KATA](/docs/kata/), which may include map res
 * TOC
 {:toc}
 
+<p class="youtube-video-container"><iframe width="1280" height="720" src="https://www.youtube.com/embed/nUWPBBq730Q" title="Building interactive SVG maps with Cerb UI" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+
 # GeoJSON
 
 GeoJSON[^geojson] is a text format for describing geometric (latitude/longitude) **features** for use in maps.
@@ -797,7 +799,7 @@ This is a comma-separated value file (`.csv`). We need to convert it to our 'Map
 
 For demonstration, we'll do the conversion manually, so you're better prepared to create your own resources.
 
-You could write a simple script for this in any programming language; but you can also use the **Setup >> Developers >> Automation Scripting Tester** and write a quick and disposable script in Cerb's [bot scripting](/docs/scripting/) language.
+You could write a simple script for this in any programming language; but you can also use the **Setup >> Developers >> Automation Scripting Tester** and write a quick and disposable script in Cerb's [automation scripting](/docs/scripting/) language.
 
 {% highlight twig %}
 {% raw %}

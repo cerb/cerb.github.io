@@ -38,6 +38,8 @@ jumbotron:
     <img src="/assets/images/docs/automations/editor.png" class="screenshot">
 </div>
 
+<p class="youtube-video-container"><iframe width="1280" height="720" src="https://www.youtube.com/embed/jrgZZLrS0o4" title="An introduction to automations in Cerb" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+
 * TOC
 {:toc}
 
@@ -97,6 +99,8 @@ For instance, the command [http.request:](/docs/automations/commands/http.reques
 When the same command appears multiple times within the same parent, each instance must have a unique name. Commands are named by appending a forward slash (`/`) and an identifier.
 
 The identifier may contain letters, numbers, and underscores.
+
+Two siblings with the same name don't parse, so the document never becomes an automation. The error names the key and the line: `` `set:` has a sibling with the same name (line 4) ``
 
 For instance, we could "hardcode" the inputs from the first example above as keys:
 
@@ -182,22 +186,24 @@ Annotations are **not** part of a key's name or path. The key path `start:set/a:
 
 Here are some common annotations:
 
-| Annotation | 
-|-|-
-| **`@base64:`** | Binary data encoded as Base64 text
-| **`@bit:`** | `0` (`off`, `false`, `no`, `n`) or `1` (any non-false value)
-| **`@bool:`** | `false` (`no`, `n`, `off`, `0`) or `true` (any non-false value) 
-| **`@csv:`** | An array encoded as comma-separated text
-| **`@date:`** | A human-readable absolute (`Jan 1 2025 08:00`) or relative (`+2 hours`) date
-| **`@float:`** | A floating point number
-| **`@int:`** | A non-fractional number
-| **`@json:`** | A dictionary encoded as JSON text 
-| **`@kata:`** | A dictionary encoded as KATA text
-| **`@key:`** | A copy of the value from the given key path
-| **`@list:`** | An array encoded as a line-delimited text block
-| **`@optional:`** | Remove the key if the value is empty
-| **`@text:`** | A multiple line text block
-| **`@trim:`** | Remove the value's leading and trailing whitespace
+| Annotation    | Description                                                                   |
+|---------------|-------------------------------------------------------------------------------|
+| `@base64:`    | Binary data encoded as Base64 text                                            |
+| `@bit:`       | `0` (blank, `0`, `false`, `off`, `no`, `n`) or `1` (any other value)          |
+| `@bool:`      | `false` (blank, `0`, `false`, `off`, `no`, `n`) or `true` (any other value)   |
+| `@csv:`       | An array encoded as comma-separated text                                      |
+| `@date:`      | A human-readable absolute (`Jan 1 2025 08:00`) or relative (`+2 hours`) date  |
+| `@float:`     | A decimal number                                                              |
+| `@int:`       | A non-fractional number                                                       |
+| `@json:`      | A dictionary encoded as JSON text                                             |
+| `@kata:`      | A dictionary encoded as KATA text                                             |
+| `@key:`       | A copy of the value from the given key path                                   |
+| `@list:`      | An array encoded as a line-delimited text block                               |
+| `@optional:`  | Remove the key if the value is empty (`0` and `false` are kept)               |
+| `@text:`      | A multiple line text block                                                    |
+| `@trim:`      | Remove the value's leading and trailing whitespace                            |
+
+See the [annotation reference](/docs/kata/#annotation-reference) for the complete set.
 
 Multiple annotations may be joined with commas. They are evaluated from left to right.
 
@@ -250,7 +256,20 @@ This approach is particularly useful when you need to create a dictionary with k
 
 # Commands
 
-Every command an automation runs must be permitted by its [policy](#policies). A new automation starts with an empty policy, which denies everything -- so the examples on these command pages won't run until the command is allowed. The editor can [generate a least-privilege policy](#generating-a-policy) from a script.
+
+<p class="youtube-video-container"><iframe width="1280" height="720" src="https://www.youtube.com/embed/3IART8xOuLU" title="Every command available in Cerb automations" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+Commands that read or change data **outside** the automation must be permitted by its [policy](#policies). A new automation starts with an empty policy, which denies those -- so the examples on their command pages won't run until the command is allowed. The editor can [generate a least-privilege policy](#generating-a-policy) from a script.
+
+The rest run with no policy at all. Every [state transition](#state-transitions), [flow control](#flow-control), [logging](#logging), and [simulation](#simulation) command is exempt, along with the [actions](#actions) that only work within the automation's own [dictionary](#dictionaries):
+
+|-|-
+| **State transitions** | `await:`, `error:`, `return:`
+| **Flow control** | `decision:`, `outcome:`, `repeat:`, `while:`
+| **Logging** | `log:`, `log.warn:`, `log.error:`, `log.alert:`
+| **Simulation** | `simulate.success:`, `simulate.error:`
+| **Actions** | `kata.parse:`, `set:`, `var.expand:`, `var.push:`, `var.set:`, `var.unset:`
+
+Every other action requires a rule. The `start:` command that begins execution isn't gated either.
 
 ### State transitions
 
@@ -603,6 +622,8 @@ settings:
 {% endraw %}
 {% endhighlight %}
 
+The limit is checked between commands, not during one, so it never interrupts a command that's already running. A long [http.request:](/docs/automations/commands/http.request/#timeout) will run to completion and only then exit the automation, discarding its response. Commands that can wait a while should have their own timeouts set below this limit.
+
 In most cases, a better approach is to break up long tasks into smaller pieces and use automation timers and queues.
 
 ### Testing policy rules
@@ -725,6 +746,7 @@ Triggers are invoked **directly** by Cerb functionality -- widgets, AI agents, t
 
 | Trigger | [**Inputs**](#inputs) | [**Await**](#continuations) |
 |-|:-:|:-:|-
+| [**agent.tool**](/docs/automations/triggers/agent.tool/) | **x** | | The work behind an [agent tool](/docs/records/types/agent_tool/) record that an AI agent calls
 | [**automation.function**](/docs/automations/triggers/automation.function/) | **x** | | A reusable function with shared functionality called by other automations
 | [**automation.timer**](/docs/automations/triggers/automation.timer/) | **x** | * | A scheduled automation with [continuations](#continuations)
 | [**behavior.action**](/docs/automations/triggers/behavior.action/) | **x** | | Execute an automation from a legacy bot behavior

@@ -36,6 +36,14 @@ By default, Cerb saves cache files to the filesystem in the `./storage/tmp/` dir
 
 If you experience filesystem I/O bottlenecks, or you want to [scale](/docs/scaling/) beyond a single web server, you may choose to set up a distributed cache using Redis[^redis], Valkey[^valkey], or Memcached[^memcached].  We support them all.
 
+<div class="cerb-box note">
+	<p>
+		On <a href="/pricing/">Cerb Cloud</a> the cache engine is <b>pinned by the platform</b> and
+		can't be changed. The same applies to the <a href="/docs/setup/storage/overview/">storage</a> engine.
+		Both are managed for you as part of the subscription.
+	</p>
+</div>
+
 # See also
 
 * Guide: [Scaling with Memcached](/guides/scaling/memcached/)

@@ -1,22 +1,22 @@
 ---
-title: LLM Agent Transcripts
-excerpt: This page shows how to access and use the LLM Agent Transcripts browser in the developer menu.
-summary: "This page documents the LLM Agent Transcripts browser in Cerb's developer menu. Every agent conversation is recorded automatically and can be read back turn by turn, with token accounting, tool calls, thinking, images, and the filesystem volumes the session mounted. The page covers what is and isn't recorded, the fact that transcripts are never pruned and can only be deleted one at a time by hand, the one-way Active-to-Archived triage flow, forking a conversation onto another provider and what a cross-provider fork does not carry over, the preview-only compaction estimator, and the important fact that a transcript is not a record type -- it has no search filters, no worklist, and no Records API."
+title: Agent Transcripts
+excerpt: This page shows how to access and use the Agent Transcripts browser in the Setup AI menu.
+summary: "This page documents the Agent Transcripts browser in Cerb's Setup AI menu -- listed there as Transcripts, and known as LLM Agent Transcripts before 12.0. Every agent conversation is recorded automatically and can be read back turn by turn, with token accounting, tool calls, thinking, images, and the filesystem volumes the session mounted. The page covers what is and isn't recorded, the fact that transcripts are never pruned and can only be deleted one at a time by hand, the one-way Active-to-Archived triage flow, forking a conversation onto another provider and what a cross-provider fork does not carry over, the preview-only compaction estimator, and the important fact that a transcript is not a record type -- it has no search filters, no worklist, and no Records API."
 permalink: /docs/setup/developers/llm-agent-transcripts/
 toc:
   expand: Admin Guide
 jumbotron:
-  title: LLM Agent Transcripts
+  title: Agent Transcripts
   breadcrumbs:
     - label: Docs &raquo;
       url: /docs/home/
     - label: Setup &raquo;
       url: /docs/setup/
-    - label: Developers &raquo;
-      url: /docs/setup/#developers
+    - label: AI &raquo;
+      url: /docs/setup/#ai
 ---
 
-The LLM Agent Transcripts browser is where you read back what an [AI agent](/docs/agents/) actually did -- every turn of every conversation, with the tokens it consumed, the tools it called, the files it reached, and the reply it gave.
+The Agent Transcripts browser is where you read back what an [AI agent](/docs/agents/) actually did -- every turn of every conversation, with the tokens it consumed, the tools it called, the files it reached, and the reply it gave.
 
 <p class="youtube-video-container"><iframe width="1280" height="720" src="https://www.youtube.com/embed/dOjF7-nofbA" title="Watch every AI agent conversation with LLM transcripts" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
 
@@ -25,7 +25,9 @@ The LLM Agent Transcripts browser is where you read back what an [AI agent](/doc
 
 # Access
 
-Click **Setup &raquo; Configure &raquo; Developers &raquo; LLM Agent Transcripts**. This tool is limited to administrators.
+Click **Setup &raquo; AI &raquo; Transcripts**. This tool is limited to administrators.
+
+Before 12.0 this page was called **LLM Agent Transcripts** and lived under **Setup &raquo; Developers**. Only its name and its place in the menu changed; the page and its address are the same.
 
 <div class="cerb-box note">
 	<p>

@@ -20,7 +20,7 @@ jumbotron:
     url: /docs/dashboards/#widgets
 ---
 
-The **Gauge** widget displays a value as a meter between a configured minimum and maximum, with up to seven colored thresholds. It's useful for visualizing utilization (e.g. license seats in use), progress against a goal (e.g. tickets resolved this week), and health indicators (e.g. SLA compliance).
+The **Gauge** widget displays a value as a meter between a configured minimum and maximum, with up to seven colored thresholds. It's useful for visualizing utilization (e.g. [concurrency slots](/docs/queues/#concurrency-slots) in use), progress against a goal (e.g. tickets resolved this week), and health indicators (e.g. SLA compliance).
 
 # Configuration
 

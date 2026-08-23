@@ -4,8 +4,9 @@ excerpt: This page provides information on the "llmTranscript" interaction form 
   in Cerb's web forms.
 summary: This page documents the llmTranscript element for worker interaction forms in Cerb.
   It displays an llm.agent conversation, and is the read-side counterpart to the agentPrompt
-  composer. The page covers its keys and their defaults -- session_id, label, view, layout,
-  thinking, tools, expand, tokens, and hidden -- including how to share one session between
+  composer. The page covers its keys and their defaults -- session_id, agent, label, view, layout,
+  thinking, tools, expand, tokens, and hidden -- including how to give a transcript an identity so
+  each agent turn is bylined by the agent rather than by the model, and how to share one session between
   the composer, the llm.agent command, and this element, what raw shows that summary doesn't,
   why expand only affects raw bodies, and the fact that these keys control display rather than
   access.
@@ -56,6 +57,54 @@ The transcript ID to display. This can be retrieved from [llm.agent:](/docs/auto
 
 You can instead mint one ID with {% raw %}`{{uuid()}}`{% endraw %} and pass it to the [`agentPrompt`](/docs/automations/triggers/interaction.worker/elements/agentPrompt/) element, [`llm.agent:`](/docs/automations/commands/llm.agent/), and this element, so all three work on the same conversation. See [`session_id:`](/docs/automations/commands/llm.agent/#session_id).
 
+### agent:
+
+Who the transcript says is speaking. Without it, every agent turn is bylined "Agent" and its avatar is the model provider's mark.
+
+Name an [AI worker](/docs/agents/) and the name and avatar come from that record:
+
+{% highlight cerb %}
+{% raw %}
+llmTranscript/transcript:
+  session_id: {{session_id}}
+  agent: '@cerb'
+{% endraw %}
+{% endhighlight %}
+
+It accepts an `@mention`, a worker ID, or a `cerb:worker:<id|handle>` URI -- the same forms [`llm.agent:`](/docs/automations/commands/llm.agent/#agent) takes -- and a human worker is refused.
+
+Or write the identity inline, for a chat with no worker behind it:
+
+{% highlight cerb %}
+{% raw %}
+llmTranscript/transcript:
+  session_id: {{session_id}}
+  agent:
+    name: Cerb
+    icon: bot
+    color: blue
+{% endraw %}
+{% endhighlight %}
+
+| Key     | Notes                                                                                                    |
+|---------|------------------------------------------------------------------------------------------------------------|
+| `name:` | The byline on every agent turn                                                                            |
+| `icon:` | A [cerb-icons](/docs/developers/icons/) name for the avatar                                               |
+| `color:`| A Cerb UI hue -- `red`, `blue`, `green`, `gray`, `orange`, or `purple` -- or any CSS color                |
+
+A hue resolves to the theme's own color rather than the CSS keyword of the same name, so it matches every other pill and tag in the product. Left out, the color is hashed from the name, which is stable but not chosen.
+
+The model stays visible either way: its mark moves to a small badge on the lower right of the avatar, in the provider's brand color, so a reader can see who they're talking to and still see that it's an AI.
+
+<div class="cerb-box note">
+	<p>
+		<b>This is display only.</b> Nothing is written to the conversation, so an agent renamed
+		today relabels the chats it already had. Naming an AI worker on
+		<a href="/docs/automations/commands/llm.agent/#agent"><code>llm.agent:</code></a> is what
+		gives a chat a real identity -- attribution, memory, and credentials.
+	</p>
+</div>
+
 ### label:
 
 An optional label displayed above the transcript.
@@ -105,7 +154,7 @@ How tool calls are shown. The values work the same way they do for `thinking:`.
 
 `raw` **adds** to the summary line rather than replacing it, so a row reads the same whether or not it's expanded. The summary itself reads as active or past depending on the state of the call -- "Searching the knowledge base" while it runs, "Searched the knowledge base" once it's done.
 
-Tool display names and icons aren't configured here, and they show in every mode. They're set on the tool itself in [`llm.agent:`](/docs/automations/commands/llm.agent/#tools), with `labels:` (`summary:` and `active:`) and an `icon:`, so one definition covers every transcript the tool appears in.
+Tool display names and icons aren't configured here, and they show in every mode. They're set on the tool itself -- on an [agent tool](/docs/records/types/agent_tool/) record, or with `labels:` (`summary:` and `active:`) and an `icon:` in [`llm.agent:`](/docs/automations/commands/llm.agent/#tools) -- so one definition covers every transcript the tool appears in.
 
 <div class="cerb-box note">
 	<p>

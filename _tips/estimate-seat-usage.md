@@ -1,12 +1,12 @@
 ---
-title: 'Estimate seat usage'
-excerpt: Estimate seat usage from activity log data.
-summary: "This page provides tips on estimating seat usage from activity log data. It suggests using data queries to retrieve raw data, such as the number of activity logs by worker over the past week, and offers examples of queries that can be run using the Data Query Tester, including filtering workers by group and showing distinct workers per day."
+title: 'Estimate worker activity'
+excerpt: Estimate worker activity from activity log data.
+summary: "This page provides tips on estimating worker activity from activity log data. It suggests using data queries to retrieve raw data, such as the number of activity logs by worker over the past week, and offers examples of queries that can be run using the Data Query Tester, including filtering workers by group and showing distinct workers per day."
 layout: integration
 author: The Cerb Team
 permalink: /tips/estimate-seat-usage/
 jumbotron:
-  title: 'Estimate seat usage'
+  title: 'Estimate worker activity'
   breadcrumbs:
     -
       label: Resources &raquo;
@@ -15,9 +15,9 @@ jumbotron:
       label: Tips &raquo;
       url: /resources/tips/
 ---
-You can use a [data query](docs/data-queries/) to get at raw data like the activity log counts by worker over the past week. This can help you estimate seat usage and if you have the correct ammount.
+You can use a [data query](/docs/data-queries/) to get at raw data like the activity log counts by worker over the past week. This can help you see who is active, how that varies by team, and when your busy periods are.
 
-You can add these queries to a chart or run then in the data query tester found in **Setup >> Developers >> Data Query Tester**: 
+You can add these queries to a chart, or run them in the [Data Query Tester](/docs/setup/developers/data-query-tester/) at **Setup &raquo; Developers &raquo; Data Query Tester**:
 
 Use the following query:
 

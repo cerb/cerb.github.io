@@ -21,7 +21,9 @@ search_index:
 
 # Description
 
-This metric tracks seat usage across workers. You can use these reports to see how efficiently you are making use of your seat allocations, whether your number of seats needs adjusting and busy times in your organization. You can filter the metric by individual workers or groups of workers to see their activity.
+This metric tracks which workers were active over time. Use it to see the busy times in your organization, and to compare activity between individuals or teams. You can filter it by individual workers or groups of workers.
+
+It no longer reports against a limit. Workers and simultaneous logins are unlimited on every installation, so there's no seat allocation to size this against -- what a [subscription](/docs/setup/configure/license/) raises is concurrency instead.
 
 # Dimensions
 

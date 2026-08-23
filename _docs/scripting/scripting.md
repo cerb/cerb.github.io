@@ -65,6 +65,8 @@ Hello, {{first_name}}!
 
 # Topics
 
+<p class="youtube-video-container"><iframe width="1280" height="720" src="https://www.youtube.com/embed/oXiTG2R01OY" title="An introduction to scripting in Cerb with Twig" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+
 * [Variables](/docs/scripting/variables/)
 * [Strings](/docs/scripting/strings/)
 * [Arrays and Objects](/docs/scripting/arrays-objects/)

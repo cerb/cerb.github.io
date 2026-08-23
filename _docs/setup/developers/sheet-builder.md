@@ -25,9 +25,11 @@ The Sheet Builder is a visual builder for [sheet](/docs/sheets/) [KATA](/docs/ka
 * TOC
 {:toc}
 
+<p class="youtube-video-container"><iframe width="1280" height="720" src="https://www.youtube.com/embed/AAI724qVtc4" title="Building sheet layouts visually with the Cerb Sheet Builder" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+
 # Access
 
-Click **Setup &raquo; Configure &raquo; Developers &raquo; Sheet Builder**. This tool is limited to administrators.
+Click **Setup &raquo; Developers &raquo; Sheet Builder**. This tool is limited to administrators.
 
 # What it produces
 

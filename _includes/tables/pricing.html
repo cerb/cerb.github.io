@@ -4,25 +4,37 @@
             <h2>Self-Hosted</h2>
             <div class="pricing-price">
                 <span class="price-amount">Free</span>
-                <span class="price-term">for your first 3 seats</span>
+                <span class="price-term">unlimited workers and seats</span>
             </div>
             <div class="pricing-price-secondary">
                 <span class="price-amount">$40</span>
-                <span class="price-term">per seat/month after</span>
+                <span class="price-term">per seat/month to unlock</span>
             </div>
         </div>
         <div class="pricing-body">
+            <div class="pricing-section-label">Community -- free forever</div>
             <ul class="pricing-features">
+                <li>Unlimited workers and seats, with no registration or license key</li>
+                <li>Three <a href="/docs/queues/#concurrency-slots">concurrency slots</a></li>
+                <li>Two AI agent turns per slot</li>
+                <li>Every feature of the platform</li>
                 <li>Install on your own infrastructure</li>
-                <li>Full control over your data and environment</li>
-                <li>Direct database access</li>
+                <li>Full control over your data, with direct database access</li>
                 <li>Unlimited free development and staging instances</li>
-                <li>License never expires for versions released during subscription</li>
-                <li>You manage installation, updates, scaling, and backups</li>
                 <li>Configure your own email (POP3/IMAP)</li>
                 <li>Host your own community portals</li>
+                <li>Self-support: documentation, guides, <a href="https://www.youtube.com/@cerb_ai">videos</a>, and forums</li>
+                <li>Email answered as we're able</li>
             </ul>
-            <a data-cerb-interaction="signup" class="pricing-cta">Register for a free license</a>
+            <div class="pricing-section-label">Licensed -- $40 per seat/month</div>
+            <ul class="pricing-features">
+                <li>Worker count is self-reported and unenforced</li>
+                <li>Uncapped concurrency slots -- size the pool to your hardware</li>
+                <li>Configure queue lanes to balance batch work against AI agent turns</li>
+                <li>Six AI agent turns per slot instead of two</li>
+                <li>Direct support by email, same business day</li>
+            </ul>
+            <a href="/docs/installation/" class="pricing-cta">Install it free</a>
         </div>
     </div>
 
@@ -34,20 +46,30 @@
                 <span class="price-term">per seat/month</span>
             </div>
             <div class="pricing-price-secondary">
-                <span class="price-label">Fully managed</span>
+                <span class="price-amount">+ $40</span>
+                <span class="price-term">per slot/month, first three included</span>
             </div>
         </div>
         <div class="pricing-body">
+            <div class="pricing-section-label">Free trial -- no time limit while active</div>
             <ul class="pricing-features">
-                <li>Start with a free trial (no time limit while active)</li>
-                <li>High availability, security, and automatic scaling</li>
+                <li>Hosted in our US data center</li>
+                <li>Three concurrency slots included, at two AI agent turns per slot</li>
+                <li>We provision the compute and handle all scaling and monitoring</li>
+                <li>Tuned infrastructure: Redis caching, containers, and MySQL replicas</li>
+                <li>Automated backups with point-in-time recovery</li>
                 <li>Instant access to the latest version with same-day security patches</li>
-                <li>Automated, redundant backups with point-in-time recovery</li>
-                <li>Choose your data center: US, UK, Europe, or Asia-Pacific (GDPR compliant)</li>
-                <li>Optional high-deliverability SMTP (SPF, DKIM, DMARC)</li>
                 <li>Optional instant inbound mail delivery (or use POP3/IMAP)</li>
-                <li>Unlimited community portal hosting included</li>
+            </ul>
+            <div class="pricing-section-label">Subscribed -- $40 per seat + $40 per slot/month</div>
+            <ul class="pricing-features">
+                <li>Choose your data center: US, UK, Europe, or Asia-Pacific (GDPR compliant)</li>
                 <li>Bring your own domain (e.g. support.example.com)</li>
+                <li>Unlimited community portal hosting</li>
+                <li>Six AI agent turns per slot instead of two</li>
+                <li>Configure queue lanes without sizing the servers yourself</li>
+                <li>Optional high-deliverability SMTP (SPF, DKIM, DMARC)</li>
+                <li>Direct support by email, same business day</li>
                 <li><a href="/cloud/">... and more</a></li>
             </ul>
 
@@ -55,6 +77,18 @@
         </div>
     </div>
 </div>
+
+<p class="pricing-note">
+    <strong>Two dimensions, so you only pay for what you use:</strong> a large team with little AI usage pays mostly for seats. A small team running heavy AI pays mostly for slots. Self-hosted pays for seats alone, and slots are uncapped.
+</p>
+
+<p class="pricing-note">
+    <strong>Seats are never enforced.</strong> No login is blocked, no session is ended, and nobody is displaced to make room for someone else. Running above your number during a busy stretch won't interrupt anyone's work.
+</p>
+
+<p class="pricing-note">
+    <strong>Ready to subscribe?</strong> Cerb reports your seat count for you -- the different workers who signed in each month, averaged over the months on record. Idle accounts never count. <a data-cerb-interaction="signup" style="cursor:pointer;">Get in touch</a> and we'll size it with you.
+</p>
 
 <p class="pricing-note">
     <strong>Migrate anytime:</strong> Your data is 100% compatible between self-hosted and Cerb Cloud. Subscriptions are interchangeable.

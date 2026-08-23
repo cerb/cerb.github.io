@@ -1,8 +1,8 @@
 ---
 title: 'Scripting Reference: Tests'
-excerpt: A reference of the template tests in bot scripting.
+excerpt: A reference of the template tests in automation scripting.
 summary: This webpage serves as a scripting reference for tests in Cerb, detailing
-  various boolean expressions that can be used in bot scripts and snippets. It explains
+  various boolean expressions that can be used in automation scripting and snippets. It explains
   how to perform tests using the `is` and `is not` operators, which return `true`
   or `false` values. The page covers a range of tests including checking if a variable
   is empty, even, iterable, null, numeric, odd, matches a pattern, is prefixed or
@@ -30,10 +30,12 @@ Tests are performed using the `is` and `is not` operators.
 
 When used as output, a test returns `1` for `true`, and nothing for `false`.
 
-These tests are available in bot scripts and snippets:
+These tests are available in automation scripting and snippets:
 
 * TOC
 {:toc}
+
+<p class="youtube-video-container"><iframe width="1280" height="720" src="https://www.youtube.com/embed/qXYcCa2YK4g" title="Cerb scripting: Every test with real examples" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
 
 ## empty
 
@@ -54,7 +56,7 @@ not something: {{"something" is not empty}}
 []: 1
 {}: 1
 false: 1
-not something: 1 
+not something: 1
 {% endhighlight %}
 
 ## even
@@ -80,13 +82,13 @@ The **iterable** test checks if a variable is an array or iterable object.
 {% highlight twig %}
 {% raw %}
 123: {{123 is iterable ? 'iterable' : 'not iterable'}}
-[1,2,3]: {{[1,2,3] is iterable ? 'iterable' : 'not iterable'}}
+[1,2]: {{[1,2] is iterable ? 'iterable' : 'not iterable'}}
 {% endraw %}
 {% endhighlight %}
 
 {% highlight text %}
 123: not iterable
-[1,2,3]: iterable
+[1,2]: iterable
 {% endhighlight %}
 
 ## null
@@ -95,18 +97,21 @@ The **null** test checks if a variable is `null`.
 
 {% highlight twig %}
 {% raw %}
-undefined: {{unknownVariable is null ? 'null' : 'defined'}}
-123: {{123 is null ? 'null' : 'constant'}}
 {% set name = 'Kina Halpue' %}
-name: {{name is null ? 'null' : 'defined'}}
+{% set nickname = null %}
+name: {{name is null ? 'null' : 'not null'}}
+nickname: {{nickname is null ? 'null' : 'not null'}}
+missing: {{missing is null ? 'null' : 'not null'}}
 {% endraw %}
 {% endhighlight %}
 
 {% highlight text %}
-undefined: null
-123: constant
-name: defined
+name: not null
+nickname: null
+missing: null
 {% endhighlight %}
+
+A variable that was never set is also `null`. Asking a [dictionary](/docs/guide/developers/dictionaries/) for a key it doesn't have returns `null` rather than raising an error, so this test can't tell a variable that was set to `null` from one that was never set at all.
 
 ## numeric
 
@@ -132,8 +137,8 @@ The **odd** test checks if a numeric variable is odd.
 
 {% highlight twig %}
 {% raw %}
-1: {{1 is even ? 'even' : 'odd'}}
-2: {{2 is even ? 'even' : 'odd'}}
+1: {{1 is odd ? 'odd' : 'even'}}
+2: {{2 is odd ? 'odd' : 'even'}}
 {% endraw %}
 {% endhighlight %}
 

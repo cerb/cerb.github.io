@@ -33,4 +33,13 @@ Migrations run as parallel background [queue jobs](/docs/records/types/queue_job
 
 This page displays the active _storage schemas_, with the total number of objects and total size for each schema.
 
+<div class="cerb-box note">
+	<p>
+		On <a href="/pricing/">Cerb Cloud</a> the storage engine is <b>pinned by the platform</b> and
+		can't be changed. The same applies to the
+		<a href="/docs/setup/configure/cache/">cache</a> engine. Both are managed for you as part of
+		the subscription.
+	</p>
+</div>
+
 Click the **(edit)** link for a schema to configure how its content is stored and archived.

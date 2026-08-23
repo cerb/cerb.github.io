@@ -45,6 +45,7 @@ jumbotron:
 | Automation Timer Section | `cerb.page.profiles.automation_timer`
 | Behavior Section | `core.page.profiles.behavior`
 | Bot Section | `core.page.profiles.bot`
+| AI Section | `core.page.setup.ai`
 | Branding Section | `core.page.setup.branding`
 | Bucket Section | `core.page.profiles.bucket`
 | Cache Section | `core.page.setup.cache`
@@ -117,6 +118,7 @@ jumbotron:
 | Project Section | `cerb.page.profiles.task_project`
 | Queue Job Section | `cerb.page.profiles.queue_job`
 | Queue Section | `cerb.page.profiles.queue`
+| Queues Section | `core.page.setup.queues`
 | Records Section | `core.page.setup.records`
 | Reminder Section | `core.page.profiles.reminder`
 | Requirements | `core.page.setup.developers.requirements`

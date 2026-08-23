@@ -38,6 +38,8 @@ For instance, a worklist can display new customer messages that need a response,
 * TOC
 {:toc}
 
+<p class="youtube-video-container"><iframe width="1280" height="720" src="https://www.youtube.com/embed/cWF2lkmnAYU" title="Adding sparkline trend columns to Cerb worklists" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
+
 # Search
 
 The most useful feature of worklists is their ability to pull out interesting sets of records from your data using [search queries](/docs/search/).

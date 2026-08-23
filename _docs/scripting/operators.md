@@ -116,7 +116,7 @@ To check if one variable is greater than another, use `>` or `>=`:
 
 # Value in list
 
-You can check if a value exists in a list by using the `in` test:
+You can check if a value exists in a list by using the `in` operator:
 
 {% highlight twig %}
 {% raw %}
@@ -131,7 +131,7 @@ One of the colors is red.
 One of the colors is red.
 {% endhighlight %}
 
-You can also negate that test with `not in`:
+You can also negate it with the `not in` operator:
 
 {% highlight twig %}
 {% raw %}

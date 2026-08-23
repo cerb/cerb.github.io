@@ -46,6 +46,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
 |   | `editor_query_worker` | [text](/docs/records/fields/types/text/) |  
+|   | `image` | [image](/docs/records/fields/types/image/) | The profile image, base64-encoded in [data URI format](https://en.wikipedia.org/wiki/Data_URI_scheme) 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 |   | `member_query_worker` | [text](/docs/records/fields/types/text/) |  
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this role 

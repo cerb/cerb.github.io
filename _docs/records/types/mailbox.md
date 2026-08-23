@@ -57,10 +57,38 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |   | `num_fails` | [number](/docs/records/fields/types/number/) | The number of consecutive failures 
 |   | `password` | [text](/docs/records/fields/types/text/) | The mailbox password 
 |   | `port` | [number](/docs/records/fields/types/number/) | The port to connect to; e.g. `587` 
-|   | `protocol` | [text](/docs/records/fields/types/text/) | The protocol to use: `pop3`, `pop3-ssl`, `imap`, `imap-ssl` 
+|   | `protocol` | [text](/docs/records/fields/types/text/) | The protocol to use. One of six exact lowercase values -- see [below](#protocol-values) 
 |   | `timeout_secs` | [number](/docs/records/fields/types/number/) | The socket timeout in seconds when downloading mail 
 |   | `updated_at` | [timestamp](/docs/records/fields/types/timestamp/) | The date/time when this record was last modified 
 | **x** | **`username`** | [text](/docs/records/fields/types/text/) | The mailbox username 
+
+#### Protocol values
+
+`protocol` accepts **six** values, each stored exactly as written, in lowercase:
+
+| Value             | Connection                              | Default port |
+|-------------------|-----------------------------------------|--------------|
+| `pop3`            | Unencrypted                             | 110          |
+| `pop3-starttls`   | STARTTLS upgrade on the plain port      | 110          |
+| `pop3-ssl`        | Implicit TLS on a dedicated port        | 995          |
+| `imap`            | Unencrypted                             | 143          |
+| `imap-starttls`   | STARTTLS upgrade on the plain port      | 143          |
+| `imap-ssl`        | Implicit TLS on a dedicated port        | 993          |
+
+`-starttls` and `-ssl` are **not interchangeable**.  STARTTLS opens a plain connection on the standard
+port and upgrades it; implicit TLS is encrypted from the first byte on a dedicated port.  Choosing
+`imap-ssl` when your server expects STARTTLS connects to the wrong port with the wrong handshake.
+
+<div class="cerb-box note">
+	<p>
+		<b>Values are matched exactly, in lowercase.</b>  The
+		<a href="/docs/api/endpoints/records/">Records API</a>, <a href="/docs/packages/">packages</a>,
+		and <a href="/docs/workflows/">workflows</a> reject anything else at validation rather than
+		storing it, so <code>IMAP-SSL</code>, <code>imaps</code>, or <code>imap_ssl</code> fail with a
+		validation error instead of being accepted.  The editor's dropdown can only produce a valid
+		value.
+	</p>
+</div>
 
 ### Dictionary Placeholders
 

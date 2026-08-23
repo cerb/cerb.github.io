@@ -25,8 +25,6 @@ jumbotron:
     url: /docs/automations/
 ---
 
-<p class="youtube-video-container"><iframe width="1040" height="585" src="https://www.youtube.com/embed/XGI7FInREps" title="" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
-
 A **toolbar** is a collection of [**interactions**](/docs/interactions/) and **menus**.
 
 Top-level toolbar items are displayed as **buttons**. Items within a menu are displayed as **links**.
@@ -114,9 +112,16 @@ menu/moreMenu:
 
 Toolbars can be configured from **Search >> Toolbars**.
 
+<div class="cerb-box note">
+	<p>
+		There is no longer an <code>agent.pane</code> toolbar. Which
+		<a href="/docs/agents/">AI agents</a> an editor's agent pane and the command bar offer is
+		configured <a href="/docs/toolbars/interactions/agent.pane/">on each agent</a> instead.
+	</p>
+</div>
+
 | Toolbar | 
 |-|-
-| [agent.pane](/docs/toolbars/interactions/agent.pane/) | Chats offered by an editor's [agent](/docs/agents/) pane.
 | [automation.editor](/docs/toolbars/interactions/automation.editor/) | Editing an automation
 | [comment.editor](/docs/toolbars/interactions/comment.editor/) | Editing a comment
 | [draft.read](/docs/toolbars/interactions/draft.read/) | Reading a draft message

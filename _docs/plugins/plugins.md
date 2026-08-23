@@ -351,7 +351,7 @@ In [templates](/docs/plugins/#templates):
 {% endraw %}
 {% endhighlight %}
 
-From [bot scripting](/docs/scripting/):
+From [automation scripting](/docs/scripting/):
 
 {% highlight twig %}
 {% raw %}

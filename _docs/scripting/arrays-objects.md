@@ -104,15 +104,15 @@ You can set deeply nested keys in a single line using dot-notation:
 
 {% highlight json %}
 {
-  "group": {
-    "name": "Support",
-    "manager": {
-      "name": {
-        "first": "Kina",
-        "last": "Halpue"
-      }
+    "group": {
+        "name": "Support",
+        "manager": {
+            "name": {
+                "first": "Kina",
+                "last": "Halpue"
+            }
+        }
     }
-  }
 }
 {% endhighlight %}
 
@@ -131,14 +131,14 @@ Append items to an array by adding `.[]` to the key:
 
 {% highlight json %}
 {
-  "group": {
-    "name": "Support",
-    "members": [
-      "Kina Halpue",
-      "William Portcullis",
-      "Steven Emplois"
-    ]
-  }
+    "group": {
+        "name": "Support",
+        "members": [
+            "Kina Halpue",
+            "William Portcullis",
+            "Steven Emplois"
+        ]
+    }
 }
 {% endhighlight %}
 

@@ -4,7 +4,7 @@ excerpt: This page provides detailed information on automation inputs for Cerb, 
   focusing on text inputs such as email.
 summary: This page provides detailed information on automation inputs for Cerb, specifically
   focusing on text inputs such as email. It outlines the requirements for these inputs,
-  including whether they are mandatory, their default values, and their data types.
+  including whether they are mandatory, their default values, their descriptions, the values they allow, and their data types.
   The page includes a comprehensive table listing various data types supported by
   Cerb, such as boolean, date, decimal, email, freeform text, geopoint, IP addresses,
   record types, numbers, timestamps, URIs, and URLs, along with examples for each
@@ -37,6 +37,27 @@ inputs:
 ### required:
 
 ### default:
+
+### description:
+
+A sentence describing what the value is for.
+
+This is what an [AI agent](/docs/agents/) reads when the automation answers an [agent tool](/docs/records/types/agent_tool/), since an [`agent.tool`](/docs/automations/triggers/agent.tool/) script's `inputs:` block *is* the schema the model is shown.
+
+### allowed_values:
+
+A list restricting the input to a fixed set of values.
+
+{% highlight cerb %}
+inputs:
+  text/priority:
+    description: How urgent the request is
+    required@bool: yes
+    allowed_values@list:
+      low
+      normal
+      high
+{% endhighlight %}
 
 ### type:
 

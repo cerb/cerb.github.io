@@ -29,7 +29,7 @@ Because both run through one evaluator, what you can do here and what an agent c
 
 # Access
 
-Click **Setup &raquo; Configure &raquo; Developers &raquo; Agent Filesystem Terminal**. This tool is limited to administrators.
+Click **Setup &raquo; Developers &raquo; Agent Filesystem Terminal**. This tool is limited to administrators.
 
 # Mounting
 

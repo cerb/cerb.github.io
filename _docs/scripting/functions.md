@@ -1,9 +1,9 @@
 ---
 title: 'Scripting Reference: Functions'
 excerpt: This webpage serves as a comprehensive scripting reference for functions
-  available in Cerb's bot scripts and snippets.
+  available in Cerb's automation scripting and snippets.
 summary: This webpage serves as a comprehensive scripting reference for functions
-  available in Cerb's bot scripts and snippets. It details a wide array of functions,
+  available in Cerb's automation scripting and snippets. It details a wide array of functions,
   including those for manipulating arrays (e.g., array_column, array_diff, array_sort_keys),
   handling JSON and XML data (e.g., json_decode, xml_decode, xml_xpath), and performing
   various utility operations (e.g., random_string, validate_email, clamp_int). Additionally,
@@ -53,6 +53,9 @@ search_index:
     - heading: "array_sort_keys"
       title: "Scripting Function: array_sort_keys"
       summary: "Sort an associative array by its keys rather than values"
+    - heading: "array_sum"
+      title: "Scripting Function: array_sum"
+      summary: "Sum the numeric elements of an array"
     - heading: "array_unique"
       title: "Scripting Function: array_unique"
       summary: "Return a new array with only distinct values"
@@ -80,6 +83,9 @@ search_index:
     - heading: "cerb_current_worker"
       title: "Scripting Function: cerb_current_worker"
       summary: "Return a dictionary for the currently logged in worker"
+    - heading: "cerb_extract_mentions"
+      title: "Scripting Function: cerb_extract_mentions"
+      summary: "Return the workers named by @mention in text"
     - heading: "cerb_extract_uris"
       title: "Scripting Function: cerb_extract_uris"
       summary: "Return an array of URLs found in HTML content with metadata"
@@ -152,6 +158,9 @@ search_index:
     - heading: "min"
       title: "Scripting Function: min"
       summary: "Return the smallest value in an array or object"
+    - heading: "placeholders_list"
+      title: "Scripting Function: placeholders_list"
+      summary: "Alias for cerb_placeholders_list"
     - heading: "random"
       title: "Scripting Function: random"
       summary: "Return a random item from string/array or random number"
@@ -188,6 +197,9 @@ search_index:
     - heading: "xml_encode"
       title: "Scripting Function: xml_encode"
       summary: "Encode an object as XML"
+    - heading: "xml_tag"
+      title: "Scripting Function: xml_tag"
+      summary: "Return an XML node's element name"
     - heading: "xml_xpath"
       title: "Scripting Function: xml_xpath"
       summary: "Extract values from XML using XPath queries"
@@ -199,10 +211,12 @@ search_index:
       summary: "Remove elements from XML document with XPath query"
 ---
 
-These functions are available in bot scripts and snippets:
+These functions are available in automation scripting and snippets:
 
 * TOC
 {:toc}
+
+<p class="youtube-video-container"><iframe width="1280" height="720" src="https://www.youtube.com/embed/S-EI-uMJZx0" title="Cerb scripting: All 60+ functions with examples" frameBorder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></p>
 
 ## array_column
 
@@ -371,6 +385,20 @@ Sort an associative array by its keys rather than its values.
 
 {% highlight text %}
 a,m,z
+{% endhighlight %}
+
+## array_sum
+
+Sum the numeric elements of an array.
+
+{% highlight twig %}
+{% raw %}
+{{array_sum([1,2,3,4,5])}}
+{% endraw %}
+{% endhighlight %}
+
+{% highlight text %}
+15
 {% endhighlight %}
 
 ## array_unique
@@ -543,6 +571,31 @@ Hello {{cerb_current_worker().first_name}}!
 Hello Kina!
 {% endhighlight %}
 
+## cerb_extract_mentions
+
+Return the workers named by `@mention` in a block of text.
+
+`cerb_extract_mentions(text)`
+
+**Arguments:**
+
+| Name   | Notes                          |
+|--------|--------------------------------|
+| `text` | Plain text to scan. Not HTML.  |
+
+**Returns:** A plain list of worker [dictionaries](/docs/guide/developers/dictionaries/), one per matched worker. Empty when nothing matches.
+
+Each element is a full worker dictionary, so any [worker placeholder](/docs/records/types/worker/) can be read from it.
+
+{% highlight twig %}
+{% raw %}
+{% set mentioned = cerb_extract_mentions("Paging @kina for review") %}
+{% for worker in mentioned %}
+{{worker.full_name}} -- {{worker.title}}
+{% endfor %}
+{% endraw %}
+{% endhighlight %}
+
 ## cerb_extract_uris
 
 Return an array of URLs found in HTML content, along with metadata (e.g. tag, attributes, URI parts).
@@ -665,30 +718,30 @@ Return an [object](/docs/scripting/arrays-objects/) with every placeholder in th
 
 {% highlight text %}
 {
-  "worker__context": "cerberusweb.contexts.worker",
-  "worker__loaded": true,
-  "worker__label": "Kina Halpue",
-  "worker__image_url": "https://cerb.example/avatars/worker/1?v=1512582324",
-  "worker_at_mention_name": "Kina",
-  "worker_calendar_id": 7,
-  "worker_dob": null,
-  "worker_id": 1,
-  "worker_first_name": "Kina",
-  "worker_full_name": "Kina Halpue",
-  "worker_gender": "F",
-  "worker_is_disabled": 0,
-  "worker_is_superuser": 1,
-  "worker_language": "en_US",
-  "worker_last_name": "Halpue",
-  "worker_location": "",
-  "worker_mobile": "15555555555",
-  "worker_phone": "",
-  "worker_time_format": "D, d M Y h:i a",
-  "worker_timezone": "America/Los_Angeles",
-  "worker_title": "Customer Support",
-  "worker_updated": 1512582324,
-  "worker_record_url": "https://cerb.example/profiles/worker/1-Kina-Halpue",
-  ...
+    "worker__context": "cerberusweb.contexts.worker",
+    "worker__loaded": true,
+    "worker__label": "Kina Halpue",
+    "worker__image_url": "https://cerb.example/avatars/worker/1?v=1512582324",
+    "worker_at_mention_name": "Kina",
+    "worker_calendar_id": 7,
+    "worker_dob": null,
+    "worker_id": 1,
+    "worker_first_name": "Kina",
+    "worker_full_name": "Kina Halpue",
+    "worker_gender": "F",
+    "worker_is_disabled": 0,
+    "worker_is_superuser": 1,
+    "worker_language": "en_US",
+    "worker_last_name": "Halpue",
+    "worker_location": "",
+    "worker_mobile": "15555555555",
+    "worker_phone": "",
+    "worker_time_format": "D, d M Y h:i a",
+    "worker_timezone": "America/Los_Angeles",
+    "worker_title": "Customer Support",
+    "worker_updated": 1512582324,
+    "worker_record_url": "https://cerb.example/profiles/worker/1-Kina-Halpue",
+    ...
 }
 {% endhighlight %}
 
@@ -939,15 +992,15 @@ You can set deeply nested keys in a single line using dot-notation:
 
 {% highlight text %}
 {
-  "group": {
-    "name": "Support",
-    "manager": {
-      "name": {
-        "first": "Kina",
-        "last": "Halpue"
-      }
+    "group": {
+        "name": "Support",
+        "manager": {
+            "name": {
+                "first": "Kina",
+                "last": "Halpue"
+            }
+        }
     }
-  }
 }
 {% endhighlight %}
 
@@ -966,14 +1019,14 @@ Append items to an array by adding `.[]` to the key:
 
 {% highlight text %}
 {
-  "group": {
-    "name": "Support",
-    "members": [
-      "Kina Halpue",
-      "William Portcullis",
-      "Steven Emplois"
-    ]
-  }
+    "group": {
+        "name": "Support",
+        "members": [
+            "Kina Halpue",
+            "William Portcullis",
+            "Steven Emplois"
+        ]
+    }
 }
 {% endhighlight %}
 
@@ -1135,13 +1188,13 @@ You can specify an array by appending `[]` without a leading dot (`.`):
 
 {% highlight text %}
 {
-  "team": {
-    "groups": [
-      "Support",
-      "Sales",
-      "Development"
-    ]
-  }
+    "team": {
+        "groups": [
+            "Support",
+            "Sales",
+            "Development"
+        ]
+    }
 }
 {% endhighlight %}
 
@@ -1198,6 +1251,12 @@ Return the smallest value in an array or object.
 {% highlight text %}
 1
 {% endhighlight %}
+
+## placeholders_list
+
+An alias for [cerb_placeholders_list](#cerb_placeholders_list), with identical behavior.
+
+Prefer `cerb_placeholders_list`, which matches the rest of the `cerb_` family.
 
 ## random
 
@@ -1497,17 +1556,19 @@ end:vcard
 
 Return a single attribute from an XML node.
 
-`xml_attr(xml_node, attr)`
+`xml_attr(xml_node, attr, default)`
 
 **Arguments:**
 
-|---
-| Name | Notes
-|-|-
-| `xml_node` | An single XML node, usually from [xml_xpath](#xml_xpath)
-| `attr` | The name of an attribute
+| Name       | Notes                                                                    |
+|------------|--------------------------------------------------------------------------|
+| `xml_node` | A single XML node, usually from [xml_xpath](#xml_xpath)                  |
+| `attr`     | The name of an attribute                                                 |
+| `default`  | Optional. Returned when the attribute is absent. Defaults to `null`.     |
 
-**Returns:** A string from the given XML attribute, or `false`.
+**Returns:** The attribute's value, or `default` when the attribute is absent (`null` if no default was given). Returns `false` when `xml_node` isn't an XML node.
+
+An attribute that is present but empty returns an empty string, not the default.
 
 {% highlight twig %}
 {% raw %}
@@ -1550,7 +1611,7 @@ Return all attributes from an XML node.
 |---
 | Name | Notes
 |-|-
-| `xml_node` | An single XML node, usually from [xml_xpath](#xml_xpath)
+| `xml_node` | A single XML node, usually from [xml_xpath](#xml_xpath)
 
 **Returns:** An array of attribute keys and values.
 
@@ -1632,7 +1693,14 @@ Use the [xml_xpath](#xml_xpath) function to extract values with XPath[^xpath] qu
 
 ## xml_encode
 
-You can encode an object as XML with the **xml_encode** function:
+Serialize an existing XML node back to a string.
+
+The argument must be a `SimpleXMLElement`, usually from [xml_decode](#xml_decode) or [xml_xpath](#xml_xpath); anything else returns `false`.
+
+<div class="cerb-box note">
+<p>There is also an <a href="/docs/scripting/filters/#xml_encode"><b>xml_encode</b> filter</a>, and it is a different function that does the opposite job: it <em>builds</em> XML from an array. Piping a node into the filter won't serialize it, and passing an array to this function returns <code>false</code>.</p>
+</div>
+
 
 {% highlight twig %}
 {% raw %}
@@ -1650,6 +1718,22 @@ You can encode an object as XML with the **xml_encode** function:
 {% highlight text %}
 <client_id>1</client_id>
 {% endhighlight %}
+
+## xml_tag
+
+Return an XML node's element name.
+
+`xml_tag(xml_node)`
+
+**Arguments:**
+
+| Name       | Notes                                                   |
+|------------|----------------------------------------------------------|
+| `xml_node` | A single XML node, usually from [xml_xpath](#xml_xpath) |
+
+**Returns:** The element's tag name. Returns `false` when `xml_node` isn't an XML node.
+
+Despite the name, this inspects a node rather than building one. It belongs with [xml_attr](#xml_attr) and [xml_attrs](#xml_attrs) as the node-inspection family used after [xml_decode](#xml_decode).
 
 ## xml_xpath
 

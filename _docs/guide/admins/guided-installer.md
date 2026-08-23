@@ -1,7 +1,7 @@
 ---
 title: Guided Installer
 excerpt: A guide to the Cerb config file, including settings and defaults.
-summary: "This page provides a guide to the Cerb config file, including settings and defaults. The guided installer verifies requirements, initializes the database, and walks users through the initial configuration of the software. The process includes checking server requirements, selecting a MySQL driver and engine, setting database connection details, creating an administrator account, selecting an environment, and configuring community mode with or without a license."
+summary: "This page provides a guide to the Cerb config file, including settings and defaults. The guided installer verifies requirements, initializes the database, and walks users through the initial configuration of the software. The process includes checking server requirements, selecting a MySQL driver and engine, setting database connection details, creating an administrator account, selecting an environment, and configuring the Community Edition with or without a license."
 permalink: /docs/guided-installer/
 toc:
   title: Guided Installer
@@ -143,11 +143,11 @@ Once you're done, click the **Continue** button.
 
 Select an environment and click the **Continue** button.
 
-## Step 8: Community Mode
+## Step 8: Community Edition
 
-Without a license, Cerb operates in **community mode**. This allows full functionality with a single seat.
+Without a subscription, Cerb runs as the **Community Edition**, with full functionality and unlimited workers. What a subscription raises is [concurrency](/docs/setup/configure/license/) -- how much work the installation runs at once.
 
-You can install a [purchased license](/pricing/) in **Setup >> Configure >> License**.
+You can install a [purchased subscription](/pricing/) in **Setup &raquo; Configure &raquo; Subscription**.
 
 Click the **Continue** button.
 
