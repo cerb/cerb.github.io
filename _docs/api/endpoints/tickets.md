@@ -49,8 +49,8 @@ Create a ticket object.
 | | `dont_send` | integer | `0`=create/send normally, `1`=create ticket without sending
 | | `file_id[]` | ids | Upload with [attachments](/docs/api/endpoints/attachments/)
 | **x** | `group_id` | integer
-| | `html_template_id` | id | [html template](/docs/api/endpoints/mail-html-template/)
-| | `org_id` | id | [organization](/docs/api/endpoints/organizations/)
+| | `html_template_id` | id | [html template](/docs/records/types/html_template/)
+| | `org_id` | id | [organization](/docs/records/types/org/)
 | | `owner_id` | id | [worker](/docs/api/endpoints/workers/)
 | | `reopen_at` | mixed | unix timestamp or string (e.g. "Friday 2pm", "+2 hours")
 | | `send_at` | mixed | When the message should be delivered. Defaults to `now`. Unix timestamp or string (e.g. "Friday 2pm", "+2 hours")
@@ -106,11 +106,11 @@ Reply to a ticket message as a worker.
 | | `dont_send` | boolean | Save the reply in Cerb without sending email: 0=no, 1=yes
 | | `file_id[]` | ids | Upload with [attachments](/docs/api/endpoints/attachments/)
 | | `group_id` | id | Move the ticket to a new [group](/docs/api/endpoints/groups/)
-| | `html_template_id` | id | [mail template](/docs/api/endpoints/mail-html-template/)
+| | `html_template_id` | id | [mail template](/docs/records/types/html_template/)
 | | `is_autoreply` | boolean | Automatically include auto-reply mail headers: 0=no, 1=yes
 | | `is_broadcast` | boolean | Set the broadcast flag: 0=no, 1=yes
 | | `is_forward` | boolean | Send the message without updating the ticket with the new subject or requesters: 0=no, 1=yes
-| **x** | `message_id` | id | The [ticket](/docs/api/tickets/) [message](/docs/api/messages/) being replied to
+| **x** | `message_id` | id | The [ticket](/docs/api/endpoints/tickets/) [message](/docs/records/types/message/) being replied to
 | | `owner_id` | id | Assign the ticket to a [worker](/docs/api/endpoints/workers/), or `0` to unassign from the current owner
 | | `reopen_at` | mixed | unix timestamp or string (e.g. "Friday 2pm", "+2 hours")
 | | `send_at` | mixed | When the message should be delivered. Defaults to `now`. Unix timestamp or string (e.g. "Friday 2pm", "+2 hours")

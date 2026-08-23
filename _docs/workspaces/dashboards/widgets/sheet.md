@@ -20,7 +20,7 @@ jumbotron:
     url: /docs/dashboards/#widgets
 ---
 
-The [**Sheet**](/docs/sheet) widget provides you with a highly customizable grid based vizualization tool. Sheets are similar to worklists, but far more flexible.
+The [**Sheet**](/docs/sheets/) widget provides you with a highly customizable grid based vizualization tool. Sheets are similar to worklists, but far more flexible.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/dashboards/widgets/sheet-widget.png" class="screenshot">

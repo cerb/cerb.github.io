@@ -26,4 +26,4 @@ By default, Cerb stores objects in the database and the local filesystem (in the
 
 You can create a new **storage profile** here to store objects in different locations, like Amazon Simple Storage Service (S3).
 
-Once a profile is created here, you can use it on a [storage schema](/docs/setup/storage-overview/).
+Once a profile is created here, you can use it on a [storage schema](/docs/setup/storage/overview/).

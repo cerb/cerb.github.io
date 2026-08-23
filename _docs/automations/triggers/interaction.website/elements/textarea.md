@@ -28,7 +28,7 @@ jumbotron:
     url: /docs/automations/triggers/interaction.website/#elements
 ---
 
-In [website interactions](/docs/automations/triggers/interaction.website/) forms, a **textarea** element displays a multi-line text input without the extra functionality of an [editor](/docs/automations/triggers/interaction.website/elements/editor/).
+In [website interactions](/docs/automations/triggers/interaction.website/) forms, a **textarea** element displays a multi-line text input.
 
 {% highlight cerb %}
 {% raw %}

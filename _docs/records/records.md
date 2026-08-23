@@ -50,7 +50,7 @@ Each record type has a set of **fields** to describe its attributes. Your `first
 | [Context](/docs/records/fields/types/context/) | A [record type](/docs/records/types/)
 | [Extension](/docs/records/fields/types/extension/) | A [plugin](/docs/plugins/) extension
 | [Float](/docs/records/fields/types/float/) | A floating point number
-| [Image](/docs/records/fields/types/images/) | A Base64-encoded images
+| [Image](/docs/records/fields/types/image/) | A Base64-encoded image
 | [Links](/docs/records/fields/types/links/) | A list of `context:id` pairs representing linked records
 | [Number](/docs/records/fields/types/number/) | An integer (whole number)
 | [Object](/docs/records/fields/types/object/) | A collection of _keys_ and their associated _values_

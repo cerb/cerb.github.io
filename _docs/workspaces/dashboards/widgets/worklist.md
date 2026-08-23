@@ -20,7 +20,7 @@ jumbotron:
     url: /docs/dashboards/#widgets
 ---
 
-The [worklist](/docs/worklists) widget provides a list of records with configurable types, search queries and columns.
+The [worklist](/docs/worklists/) widget provides a list of records with configurable types, search queries and columns.
 
 When selecting columns, fields from [custom fieldsets](/docs/records/types/custom_fieldset/) are split into their own sections with an all/none toggle. Changing a widget's configuration also clears its per-worker cache, so a [workflow](/docs/workflows/)-managed worklist can't keep showing a worker the previous columns or query.
 

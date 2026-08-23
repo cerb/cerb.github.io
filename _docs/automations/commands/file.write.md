@@ -32,7 +32,7 @@ The **file.write:** command writes arbitrary bytes to a temporary [automation re
 
 This is much more efficient than storing a large amount of data within the automation state.
 
-The `file.write:` command can also optionally generate a ZIP file from multiple [attachments](/docs/records/types/automations/) or automation resources.
+The `file.write:` command can also optionally generate a ZIP file from multiple [attachments](/docs/records/types/attachment/) or automation resources.
 
 * TOC
 {:toc}

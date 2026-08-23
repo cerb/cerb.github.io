@@ -37,7 +37,7 @@ Service tokens are managed from **Setup &raquo; Configure &raquo; Security**.
 
 ### Session Expiration
 
-This section determines the lifespan of [session](/docs/setup/sessions/) cookies.  When a session expires, a worker will need to log in again from that particular device.
+This section determines the lifespan of [session](/docs/setup/configure/sessions/) cookies.  When a session expires, a worker will need to log in again from that particular device.
 
 ### Remote Administration (deprecated)
 

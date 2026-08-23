@@ -599,7 +599,7 @@ ID,Subject
 
 ## date
 
-Use the **date** filter to format a [string](/docs/scripting/#strings) or [variable](/docs/scripting/#variables) as a date:
+Use the **date** filter to format a [string](/docs/scripting/strings/) or [variable](/docs/scripting/variables/) as a date:
 
 {% highlight twig %}
 {% raw %}
@@ -754,7 +754,7 @@ Return the first item of an array, object, or string:
 
 ## format
 
-Insert variables into a [string](/docs/scripting/#strings):
+Insert variables into a [string](/docs/scripting/strings/):
 
 {% highlight twig %}
 {% raw %}

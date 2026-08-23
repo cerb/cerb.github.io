@@ -29,7 +29,7 @@ jumbotron:
 <img src="/assets/images/docs/setup/mail_transports.png" class="screenshot">
 </div>
 
-In Cerb, outgoing email messages are sent using **mail transports**.  This page displays your available mail transports.  Your first transport was created during the [installation](/docs/installation/#step-7-outgoing-mail) process.
+In Cerb, outgoing email messages are sent using **mail transports**.  This page displays your available mail transports.  Your first transport was created during the [installation](/docs/installation/) process.
 
 By default there are two types of mail transports available:
 

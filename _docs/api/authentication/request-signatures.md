@@ -41,7 +41,7 @@ First, [enable the Web API plugin](/guides/api/configure-plugin/) and create a k
 
 # Authenticating with the provided libraries
 
-The process of signing a request is automatically handled by the [libraries](/docs/api/libraries/) for PHP, Perl, Python, Apex, and Node.js.
+The process of signing a request is automatically handled by the [libraries](#api-libraries) for PHP, Perl, Python, Apex, and Node.js.
 
 # Authenticating from custom scripts
 

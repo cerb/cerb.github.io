@@ -393,7 +393,7 @@ Here's an example template:
 
 # Activity Points
 
-We previously mentioned **events** when discussing [automations](/docs/automations/) and the [activity log](/docs/records/#activity-log). Plugins can add new events to Cerb based on the contributed functionality. The activity log will record the new events on records, automations can listen for them, etc.
+We previously mentioned **events** when discussing [automations](/docs/automations/) and the [activity log](/docs/activity-log/). Plugins can add new events to Cerb based on the contributed functionality. The activity log will record the new events on records, automations can listen for them, etc.
 
 {% highlight xml %}
 {% raw %}

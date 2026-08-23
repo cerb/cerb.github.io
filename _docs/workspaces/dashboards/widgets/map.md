@@ -20,7 +20,7 @@ jumbotron:
     url: /docs/dashboards/#widgets
 ---
 
-With the [**Map**](/docs/maps) widget, you can display interactive geographic visualizations on your dashboard. Maps can show regions (countries, states, etc.) and points of interest with customizable colors and data.
+With the [**Map**](/docs/maps/) widget, you can display interactive geographic visualizations on your dashboard. Maps can show regions (countries, states, etc.) and points of interest with customizable colors and data.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/dashboards/widgets/map-widget.png" class="screenshot">

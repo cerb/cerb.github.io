@@ -34,6 +34,6 @@ The configuration is a [KATA](/docs/kata/) event handler for the [ui.widget](/do
 
 The selected automation should return content suitable for inline rendering -- typically HTML, but the automation can also drive charts and interactive controls through Cerb's standard rendering helpers.
 
-Because handlers can be conditional, a single widget can pick between automations based on the current worker, [dashboard prompts](/docs/dashboards/#prompts), or any other [placeholder](/docs/scripting/#placeholders).
+Because handlers can be conditional, a single widget can pick between automations based on the current worker, [dashboard prompts](/docs/dashboards/#prompts), or any other [placeholder](/docs/scripting/variables/).
 
 See [`ui.widget`](/docs/automations/triggers/ui.widget/#example) for a worked example.

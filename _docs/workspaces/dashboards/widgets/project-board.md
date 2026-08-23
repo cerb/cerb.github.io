@@ -20,7 +20,7 @@ jumbotron:
     url: /docs/dashboards/#widgets
 ---
 
-The [**Project Board**](/docs/project-boards) widget helps teams visually organize work into cards and columns. When cards move between columns, [**automations**](/docs/automations/) can trigger actions like updating task statuses or changing card appearances.
+The [**Project Board**](/docs/project-boards/) widget helps teams visually organize work into cards and columns. When cards move between columns, [**automations**](/docs/automations/) can trigger actions like updating task statuses or changing card appearances.
 
 <div class="cerb-screenshot">
 <img src="/assets/images/docs/dashboards/widgets/project-board/project-board.png" class="screenshot">

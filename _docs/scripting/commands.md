@@ -55,7 +55,7 @@ Evaluate a variable or expression without outputting anything:
 {% endraw %}
 {% endhighlight %}
 
-This is primarily useful for expanding placeholders in dictionaries before serializing the object to [JSON](/docs/scripting/#json) or [XML](/docs/scripting/#xml):
+This is primarily useful for expanding placeholders in dictionaries before serializing the object to [JSON](/docs/scripting/json/) or [XML](/docs/scripting/xml/):
 
 {% highlight twig %}
 {% raw %}

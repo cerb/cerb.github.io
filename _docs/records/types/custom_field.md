@@ -44,7 +44,7 @@ These fields are available in the [Records API](/docs/api/endpoints/records/) an
 |---
 | Req'd | Field | Type | Notes
 |:-:|-|-|-
-| **x** | **`context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/#record-type) to add the field to 
+| **x** | **`context`** | [context](/docs/records/fields/types/context/) | The [record type](/docs/records/types/) to add the field to 
 |   | `custom_fieldset_id` | [number](/docs/records/fields/types/number/) | The ID of the parent [custom fieldset](/docs/records/types/custom_fieldset/); if any 
 |   | `links` | [links](/docs/records/fields/types/links/) | An array of record `type:id` tuples to link to. Prefix with `-` to unlink. 
 | **x** | **`name`** | [text](/docs/records/fields/types/text/) | The name of this custom field 

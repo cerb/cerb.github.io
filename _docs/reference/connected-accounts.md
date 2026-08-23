@@ -58,4 +58,4 @@ We have [integration examples](/solutions/#integrations) for many popular servic
 - [Together.ai](/solutions/integrations/together-ai/)
 - [Twilio](/solutions/integrations/twilio/)
 
-We recommend creating an automation function for each service (e.g. _Facebook Bot_) to act as a delegate. That way the credentials and API interaction for a particular service are handled in a single place, and any number of other automations can use [automation.function:](/docs/automations/commands/automation.function/) to interface with those services in a secure and reusable way.
+We recommend creating an automation function for each service (e.g. _Facebook Bot_) to act as a delegate. That way the credentials and API interaction for a particular service are handled in a single place, and any number of other automations can use [automation.function:](/docs/automations/commands/function/) to interface with those services in a secure and reusable way.
