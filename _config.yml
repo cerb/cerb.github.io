@@ -22,6 +22,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - PLANS
   - README.md
 keep_files: [assets]
 
