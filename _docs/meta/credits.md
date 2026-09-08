@@ -7,10 +7,11 @@ summary: This page provides credits for the development and contributions to Cer
   highlighting key individuals such as Jeff Standen and Dan Hildebrandt, who have
   played significant roles in its development. It outlines the platform and infrastructure
   used, including Devblocks, HTML5, PHP, MySQL, Amazon Web Services, Docker, and GitHub.
-  The page also lists various libraries and tools integrated into Cerb, such as Ace,
-  C3.js, jQuery, PHPUnit, and Symfony Mailer, among others, which support functionalities
-  like code editing, charting, and secure communications. Additionally, it mentions
-  the licenses and references related to the project.
+  The page also lists various libraries and tools integrated into Cerb, such as
+  jQuery and the plugins bundled with it, PHPUnit, Symfony Mailer, and Twig, among others, which support functionalities
+  like templating, unit testing, and secure communications. It credits Lucide, the ISC-licensed icon library the
+  guided installer's icons come from and that Cerb's AI icon assistants independently echo.
+  Additionally, it mentions the licenses and references related to the project.
 permalink: /docs/credits/
 layout: docs
 jumbotron:
@@ -62,29 +63,37 @@ jumbotron:
 
 # Libraries
 
-- [Ace](https://ace.c9.io) is a high performance code editor for the web. It provides syntax highlighting in 110+ languages, themes, code autocompletion, indent/outdent, parentheses matching, code folding, and much more.
-
-- [Ace-Diff](https://ace-diff.github.io/ace-diff/) extends Ace Editor with diff/merging functionality.
-
-- [C3.js](https://c3js.org) is a Javascript charting library built on top of D3.
-
 - [Composer](https://getcomposer.org/) is a package manager for PHP.
 
-- [D3.js](https://d3js.org) is a Javascript library for manipulating documents based on data.
+- [CssToInlineStyles](https://github.com/tijsverkoyen/CssToInlineStyles) is a PHP library that folds a stylesheet into inline `style` attributes, which is how HTML email survives mail clients that discard stylesheets.
+
+- [dragonmantank/cron-expression](https://github.com/dragonmantank/cron-expression) is a PHP library for parsing Unix crontab syntax and calculating run times. It's the maintained fork of the original `mtdowling` package.
 
 - [Guzzle](https://github.com/guzzle/guzzle/) is an extension PHP HTTP client library.
 
-- [HumanizeDuration](https://github.com/EvanHahn/HumanizeDuration.js) is a Javascript library for generating human-friendly relative times from a measure of time (e.g. days, hours, seconds, milliseconds).
+- [Horde IMAP Client](https://github.com/bytestream/horde-imap-client) is a PHP library implementing the IMAP and POP3 protocols. It's the client behind mailbox checking.
 
-- [jQuery](http://jquery.com/) is a fast and concise JavaScript library that simplifies HTML document traversal, event handling, animation, and asynchronous interactions (Ajax).
+- [HTML Purifier](http://htmlpurifier.org/) is a PHP library for sanitizing untrusted HTML, including inbound mail bodies and rich text.
 
-- [jQuery UI](http://jqueryui.com/) is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library.
+- [jQuery](http://jquery.com/) is a fast and concise JavaScript library that simplifies HTML document traversal, event handling, animation, and asynchronous interactions (Ajax). Cerb bundles it with these plugins:
 
-- [jQuery UI Touch Punch](http://touchpunch.furf.com) converts mouse-based events in jQuery UI to touch gestures for mobile devices (e.g. tap, slide, drag/drop).
+  - [jQuery throttle / debounce](http://benalman.com/projects/jquery-throttle-debounce-plugin/) v1.1, by "Cowboy" Ben Alman, dual licensed under MIT and GPL.
+
+  - [jQuery Hotkeys](https://github.com/tzuryby/jquery.hotkeys), copyright John Resig, dual licensed under MIT and GPL v2. Based on the plugin by Tzury Bar Yochay, from an original idea by [Binny V A](http://www.openjs.com/scripts/events/keyboard_shortcuts/).
+
+  - [hoverIntent](http://briancherne.github.io/jquery-hoverIntent/) v1.10.2, by Brian Cherne, MIT licensed.
+
+  - [jQuery MD5](https://github.com/blueimp/jQuery-MD5) v1.2.1, by Sebastian Tschan, MIT licensed. It builds on the JavaScript MD5 implementation by Paul Johnston, with contributions from Greg Holt, Andrew Kepert, Ydnar, and Lostinet, distributed under the BSD license.
+
+  - [jquery-visible](https://github.com/customd/jquery-visible), which declares no author or license in its source.
+
+- [lcobucci/clock](https://github.com/lcobucci/clock) is a PHP clock abstraction, used to validate token timestamps against a controllable source of time.
+
+- [lcobucci/jwt](https://github.com/lcobucci/jwt) is a PHP library for issuing and verifying JSON Web Tokens, used on the OAuth2 and OpenID Connect paths.
 
 - [League\CommonMark](https://commonmark.thephpleague.com) is a PHP library for converting lightweight Markdown[^markdown] text into HTML.
 
-- [mtdownling/cron-expression](https://github.com/mtdowling/cron-expression) is a PHP library for generating time intervals using Unix crontab syntax.
+- [OpenPGP-PHP](https://github.com/singpolyma/openpgp-php) is a PHP library for PGP encryption and signature verification.
 
 - [php-encryption](https://github.com/defuse/php-encryption) is a secure library for encrypting data in PHP.
 
@@ -94,9 +103,17 @@ jumbotron:
 
 - [PHPUnit](https://phpunit.de/) is a programmer-oriented unit testing framework for PHP.
 
+- [PhpUserAgent](https://packagist.org/packages/donatj/phpuseragentparser) is a PHP library for parsing user-agent strings.
+
+- [ramsey/uuid](https://github.com/ramsey/uuid) is a PHP library for generating UUIDs, used for record and agent session identifiers.
+
+- [Rangy](https://github.com/timdown/rangy) v1.3.1-dev is a cross-browser JavaScript library for working with text ranges and selections, copyright Tim Down and MIT licensed. The [classifier](/docs/records/types/classifier/) editor uses it to highlight spans of example text.
+
+- [sebastian/diff](https://github.com/sebastianbergmann/diff) is a PHP diffing library, behind the differences shown in record change history and the editors.
+
 - [Smarty](http://www.smarty.net/) is a template engine for PHP. It facilitates the separation of presentation (HTML/CSS) from application logic.
 
-- [steverhoades/oauth2-openid-connect-server](https://github.com/steverhoades/oauth2-openid-connect-server/) is a PHP library for implementing OpenID Connect server functionality.
+- [svg-sanitize](https://packagist.org/packages/enshrined/svg-sanitize) is a PHP library for sanitizing uploaded SVG, including custom icons.
 
 - [Symfony Mailer](https://symfony.com/doc/current/mailer.html) is a component-based library for sending email from PHP applications.
 
@@ -105,6 +122,12 @@ jumbotron:
 - [thephpleague/oauth2-server](https://oauth2.thephpleague.com/) is a PHP library for implementing standards compliant OAuth 2.0 servers.
 
 - [Twig](http://www.twig-project.org/) is an open source template engine for the PHP programming language by Fabien Potencier. It focuses on being fast, secure, and flexible.
+
+# Icons
+
+- [Lucide](https://lucide.dev/) is an open source icon library, used under the ISC license. Cerb's guided installer draws its interface icons from Lucide's own geometry.
+
+  Separately, the AI assistants that help design icons in the [Icon Builder](/docs/setup/developers/icon-builder/) tend to produce Lucide-like shapes. Nothing in Cerb tells them to -- their instructions describe the format and point at Cerb's own icons for its conventions -- so that resemblance comes from what the models learned long before they saw Cerb.
 
 # References
 
